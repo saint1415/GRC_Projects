@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Transportation and Warehousing |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

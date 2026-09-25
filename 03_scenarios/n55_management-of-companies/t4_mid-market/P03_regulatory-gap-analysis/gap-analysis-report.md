@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Holding company managing operating subsidiaries) |
 | Tier / Vertical | Mid-Market / Management of Companies and Enterprises |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | SEC Regulation S-K Item 106 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

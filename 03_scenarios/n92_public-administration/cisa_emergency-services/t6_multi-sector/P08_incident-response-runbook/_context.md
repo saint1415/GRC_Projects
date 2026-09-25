@@ -15,6 +15,9 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| CJIS incident reporting (IR-6) | CJIS Security Policy v6.1, IR-6 | Personnel report suspected incidents to the organization's incident response capability immediately, and no more than 1 hour after discovery | Organizational incident handlers, and the CSO, SIB Chief or Interface Agency Official, and the FBI CJIS ISO | Verify applicability |
+| HIPAA breach of unsecured PHI | 45 CFR 164.404, 164.406, 164.408, 164.410 | Individuals and media: without unreasonable delay, no later than 60 calendar days after discovery. HHS: at the same time if 500 or more; within 60 days of calendar year end if fewer than 500. BA to CE: no later than 60 days. | Affected individuals; HHS OCR; prominent media if more than 500 residents of a state or jurisdiction; covered entity (from BA) | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | SEC Form 8-K Item 1.05 (material cybersecurity incident) | Form 8-K Item 1.05; SEC Release 33-11216 | 4 business days after the materiality determination (delay possible only on U.S. Attorney General finding) | SEC (public filing to investors) | Publicly traded companies (SEC registrants) only |
 | CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
@@ -26,6 +29,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-EMERGENCY-R01 | FBI CJIS Security Policy | CJISSECPOL v6.1 (06/25/2026), approved by the CJIS Advisory Policy Board; access tied to 28 CFR Part 20 and user agreements |
+| C-EMERGENCY-R02 | Criminal history record information security | 28 CFR 20.21(f) |
+| C-EMERGENCY-R03 | Criminal intelligence systems operating policies | 28 CFR Part 23 (23.20) |
+| C-EMERGENCY-R04 | HIPAA Security Rule (EMS) | 45 CFR Part 164, Subpart C (164.302-164.318) |
+| C-EMERGENCY-R05 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
+| C-EMERGENCY-R06 | FCC EAS cybersecurity requirements | 47 CFR Part 11 (Report and Order, 91 FR 48289) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

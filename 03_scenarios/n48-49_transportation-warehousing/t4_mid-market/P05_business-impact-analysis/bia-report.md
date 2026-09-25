@@ -1,6 +1,6 @@
 # Business Impact Analysis: Cris Santos Company | Transportation and Warehousing | Mid-Market
 
-**Organization:** Cris Santos Company (Long-haul truckload carrier) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
+**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 
 ## 1. Overview and purpose
 [FILL: Why this BIA was done and which contingency plans it feeds]

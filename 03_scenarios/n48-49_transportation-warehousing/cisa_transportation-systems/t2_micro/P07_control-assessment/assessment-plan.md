@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarding and customs brokerage office) |
+| Organization | Cris Santos Company (Short line freight railroad) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Micro / Transportation Systems |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

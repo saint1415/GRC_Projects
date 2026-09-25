@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
 | Size tier | Small (60 employees) |
 | Vertical | Transportation and Warehousing |
 | Method | NIST SP 800-30 Rev. 1 |

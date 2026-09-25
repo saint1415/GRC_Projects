@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Independent pharmacy) |
 | Tier / Vertical | Sole Proprietorship / Healthcare and Public Health |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | HIPAA Security Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

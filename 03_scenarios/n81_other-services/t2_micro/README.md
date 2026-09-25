@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Donor and member PII, giving history; Payment card and ACH/bank data for donations and services; Congregant/pastoral care and counseling notes; Children's and youth program participant data; Vehicle owner / VIN data (repair shops); Client appointment and personal care records
+- **Critical systems:** Donor/member management (ChMS/CRM); Online giving and payment platforms; POS and appointment-booking systems; Shop management and diagnostic systems (auto repair); Email/productivity tenants and website/CMS; Volunteer background check portals
 
 ## Who regulates it
-[see vertical overlay]
+FTC FTC Act Section 5, Disposal Rule, COPPA. Jurisdiction generally does NOT reach non-profit organizations (15 U.S.C. 44).; State Attorneys General State breach notification, charitable solicitation and consumer privacy laws; IRS (Exempt Organizations) Tax-exempt status. No cyber rules, but donor data sits on Form 990 Schedule B
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FTC Act Section 5 (unfair/deceptive practices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None. |
+| [State breach notification laws](https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business) | State statutes | Varies by state. |
+| [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/standards/pci-dss/) | PCI Security Standards Council standard (contractual, not law) | Validation level (SAQ vs. QSA ROC) depends on annual card-transaction volume under card-brand merchant-level programs. Those levels are set by the card brands and were not verified here. |
+| [FTC/FACTA Disposal Rule](https://www.ecfr.gov/current/title-16/part-682) | 16 CFR Part 682 (682.3) | None. |
+| [COPPA Rule](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | 'Operator' excludes nonprofits exempt from FTC Act Section 5 (16 CFR 312.2). |
+| [HIPAA (only if a covered entity)](https://www.ecfr.gov/current/title-45/part-164/subpart-E) | 45 CFR Part 164, Subpart E (164.500-164.534) | Function-based (45 CFR 160.103); self-administered group health plans with fewer than 50 participants are excluded. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Business and its key vendors. 15-25 risks; qualitative scales; named owners. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Service ticketing and point-of-sale system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: NIST Cybersecurity Framework (CSF) 2.0. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. |

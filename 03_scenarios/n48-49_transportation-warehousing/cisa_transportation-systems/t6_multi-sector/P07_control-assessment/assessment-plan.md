@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (Short line freight railroad (one division of a diversified holding company)) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Multi-Sector / Transportation Systems |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

@@ -1,6 +1,6 @@
-# System Security Plan: Dispatch and fleet telematics system
+# System Security Plan: Terminal operating system (TOS) and gate automation
 
-**Organization:** Cris Santos Company (Long-haul truckload carrier) | **Tier:** Mid-Market | **Vertical:** Transportation and Warehousing
+**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port) | **Tier:** Mid-Market | **Vertical:** Transportation and Warehousing
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example
 
 ## 1. System Name and Identifier

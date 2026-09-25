@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarder and customs broker) |
+| Organization | Cris Santos Company (Freight broker arranging rail and truck shipments) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Sole Proprietorship / Transportation Systems |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

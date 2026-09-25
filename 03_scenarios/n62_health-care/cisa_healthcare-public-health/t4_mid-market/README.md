@@ -22,14 +22,25 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Protected Health Information / ePHI (HIPAA); SUD treatment records (42 CFR Part 2); PHR / consumer health app data (FTC HBNR); Payment card and patient financial/billing data; Medicaid applicant/beneficiary data (42 CFR 431.300); Genomic, reproductive and behavioral health data (heightened state protections); Medical device telemetry; Public health surveillance and immunization registry data; Pharmaceutical supply chain and clinical trial data
+- **Critical systems:** Electronic Health Record (EHR) / clinical systems; PACS/imaging and laboratory information systems (LIS); Networked medical devices / IoMT (infusion pumps, monitors); Revenue cycle, claims clearinghouse connections; Pharmacy systems and e-prescribing (EPCS); Patient portals and telehealth; HIE / interoperability interfaces (FHIR APIs); Building/clinical OT (HVAC, medical gas, nurse call); Public health surveillance/reporting systems (eCR, ELR); Pharma manufacturing OT and cold chain monitoring; Blood/organ/tissue tracking systems
 
 ## Who regulates it
-[see vertical overlay]
+HHS (Sector Risk Management Agency) SRMA for HPH per CISA and NSM-22 (cyber coordination led by ASPR); HHS OCR HIPAA enforcement; FDA CDRH Medical device cybersecurity (FD&C 524B); CMS CoPs incl. Emergency Preparedness; CISA CIRCIA rulemaking; cross-sector cyber services
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [HIPAA Security Rule](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. |
+| [HIPAA Breach Notification Rule](https://www.ecfr.gov/current/title-45/part-164/subpart-D) | 45 CFR 164.400-164.414 | Media notice only when more than 500 residents of a state or jurisdiction are affected. HHS notice is contemporaneous for 500 or more; fewer than 500 goes in an annual log due within 60 days after calendar year end. |
+| [HIPAA Security Rule NPRM (2025)](https://www.federalregister.gov/documents/2025/01/06/2024-30983/hipaa-security-rule-to-strengthen-the-cybersecurity-of-electronic-protected-health-information) | 90 FR 898 (Jan 6, 2025), FR Doc 2024-30983; RIN 0945-AA22 | None proposed beyond existing flexibility. |
+| [FDA premarket cybersecurity (cyber devices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section360n-2&num=0&edition=prelim) | FD&C Act sec. 524B, 21 U.S.C. 360n-2 | No size threshold; FDA may exempt device categories (524B(d)). |
+| [FTC Health Breach Notification Rule](https://www.ecfr.gov/current/title-16/part-318) | 16 CFR Part 318 | FTC notice is contemporaneous (within 60 days) for 500 or more individuals; fewer than 500 may be logged and reported annually within 60 days after year end. Media notice for 500 or more residents of a state. |
+| [42 CFR Part 2 (SUD records)](https://www.ecfr.gov/current/title-42/part-2) | 42 U.S.C. 290dd-2; 42 CFR Part 2 | No size threshold (2.16(a)(2) exempts family/friends and other informal caregivers). |
+| [CMS Emergency Preparedness CoP](https://www.ecfr.gov/current/title-42/section-482.15) | 42 CFR 482.15 (hospitals; parallel rules for 16 other provider types) | No size threshold. |
+| [HPH Cybersecurity Performance Goals (CPGs)](https://hhscyber.hhs.gov/cybersecurity-performance-goals.html) | HHS HPH CPGs - voluntary | None; 'Essential' and 'Enhanced' tiers. |
+| [HHS 405(d) HICP](https://405d.hhs.gov/cornerstone/hicp) | Cybersecurity Act of 2015 sec. 405(d); Health Industry Cybersecurity Practices (HICP) - voluntary | Tailored guidance by organization size (small/medium/large). |
+| [HITECH 'recognized security practices'](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section17941&num=0&edition=prelim) | 42 U.S.C. 17941 (Pub. L. 116-321) | None. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Hospitals: 100 or more beds (CAHs covered regardless). Otherwise, exceeding the SBA size standard for the NAICS code. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +49,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Hospital EHR and clinical systems. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: HIPAA Security Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Wholesale Trade | Sole Proprietorship
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor) | **Tier:** Sole Proprietorship | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) | **Tier:** Sole Proprietorship | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

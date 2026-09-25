@@ -22,14 +22,21 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Material non-public information (MNPI), M&A and financial reporting data; Consolidated employee HR/payroll data, SSNs; Group health plan PHI; Customer financial information (if financial subsidiaries); Intercompany treasury and banking credentials
+- **Critical systems:** Consolidation / ERP and financial close systems (ICFR scope); Treasury management and payment systems; Shared-services identity (AD/Entra ID) spanning subsidiaries; Board portals; HRIS / benefits platforms
 
 ## Who regulates it
-[see vertical overlay]
+Securities and Exchange Commission (SEC) Cyber disclosure for public registrants (Reg S-K Item 106; Form 8-K Item 1.05); ICFR under SOX 404; Board of Governors of the Federal Reserve System Bank and savings & loan holding companies (Reg Y incident notification; Interagency Information Security Guidelines); FTC Section 5 and the Safeguards Rule for non-bank financial subsidiaries
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [SEC Cybersecurity Disclosure - Reg S-K Item 106](https://www.ecfr.gov/current/title-17/section-229.106) | 17 CFR 229.106 | Applies regardless of size. Smaller reporting companies got a later compliance date for the Form 8-K item only. |
+| [SEC Form 8-K Item 1.05 (Material Cybersecurity Incidents)](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | Form 8-K Item 1.05 (adopted in Release 33-11216, 88 FR 51896) | Smaller reporting companies received an additional 270 days to comply after the rule became effective. |
+| [SOX Section 404 - Management assessment of internal controls](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section7262&num=0&edition=prelim) | 15 U.S.C. 7262 | Section 404(b) auditor attestation does not apply to issuers that are neither large accelerated nor accelerated filers (15 U.S.C. 7262(c)). |
+| [Federal Reserve Computer-Security Incident Notification](https://www.ecfr.gov/current/title-12/part-225/subpart-N) | 12 CFR 225.300-225.303 (Reg Y Subpart N) | None. |
+| [Interagency Guidelines Establishing Information Security Standards](https://www.ecfr.gov/current/title-12/part-225/appendix-Appendix%20F%20to%20Part%20225) | 12 CFR Part 225, Appendix F | None. |
+| [HIPAA (sponsored group health plans)](https://www.ecfr.gov/current/title-45/part-164/subpart-E) | 45 CFR Part 164, Subpart E (164.500-164.534) | A plan with fewer than 50 participants that is administered by the employer itself is excluded from 'group health plan' (45 CFR 160.103). |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Size-based prong: exceeds the SBA size standard for its NAICS code. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +45,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Shared corporate services platform (ERP and identity). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: SEC Regulation S-K Item 106. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | One consolidated information security policy. Plain-language rules covering access; incident response; data handling; acceptable use. |

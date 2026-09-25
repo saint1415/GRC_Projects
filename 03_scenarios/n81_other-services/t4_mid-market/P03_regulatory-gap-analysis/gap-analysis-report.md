@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Electronics and device repair service) |
 | Tier / Vertical | Mid-Market / Other Services (except Public Administration) |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NIST Cybersecurity Framework (CSF) 2.0 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

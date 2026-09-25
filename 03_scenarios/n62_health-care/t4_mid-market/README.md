@@ -22,14 +22,23 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Protected Health Information / ePHI (HIPAA); SUD treatment records (42 CFR Part 2); PHR / consumer health app data (FTC HBNR); Payment card and patient financial/billing data; Medicaid applicant/beneficiary data (42 CFR 431.300); Genomic, reproductive and behavioral health data (heightened state protections); Medical device telemetry; Child care and family services case files (state law / program rules)
+- **Critical systems:** Electronic Health Record (EHR) / clinical systems; PACS/imaging and laboratory information systems (LIS); Networked medical devices / IoMT (infusion pumps, monitors); Revenue cycle, claims clearinghouse connections; Pharmacy systems and e-prescribing (EPCS); Patient portals and telehealth; HIE / interoperability interfaces (FHIR APIs); Building/clinical OT (HVAC, medical gas, nurse call); Case management systems (social assistance); Child care management/attendance and subsidy billing systems
 
 ## Who regulates it
-[see vertical overlay]
+HHS Office for Civil Rights (OCR) HIPAA Privacy, Security and Breach Notification enforcement; Section 1557; HHS SAMHSA / OCR 42 CFR Part 2 (SUD records); CMS Conditions of Participation (incl. Emergency Preparedness); Medicaid safeguarding; HHS ASTP/ONC Health IT certification (HTI-1 DSI), information blocking; FTC Health Breach Notification Rule for non-HIPAA health apps/PHRs; HHS ACF / state human services agencies Safeguarding of public-assistance applicant data (e.g., 45 CFR 205.50 for TANF) in social assistance
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [HIPAA Security Rule](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. |
+| [HIPAA Privacy Rule](https://www.ecfr.gov/current/title-45/part-164/subpart-E) | 45 CFR Part 164, Subpart E (164.500-164.534) | Covered entity status turns on function, not size. 'Small health plan' = annual receipts of $5M or less (160.103; relevant to historical compliance timing only). A group health plan with fewer than 50 participants that is self-administered by the employer is not a 'group health plan' under 160.103. |
+| [HIPAA Breach Notification Rule](https://www.ecfr.gov/current/title-45/part-164/subpart-D) | 45 CFR 164.400-164.414 | Media notice only when more than 500 residents of a state or jurisdiction are affected. HHS notice is contemporaneous for 500 or more; fewer than 500 goes in an annual log due within 60 days after calendar year end. |
+| [HIPAA Security Rule NPRM (2025)](https://www.federalregister.gov/documents/2025/01/06/2024-30983/hipaa-security-rule-to-strengthen-the-cybersecurity-of-electronic-protected-health-information) | 90 FR 898 (Jan 6, 2025), FR Doc 2024-30983; RIN 0945-AA22 | None proposed beyond existing flexibility. |
+| [42 CFR Part 2 (SUD records)](https://www.ecfr.gov/current/title-42/part-2) | 42 U.S.C. 290dd-2; 42 CFR Part 2 | No size threshold (2.16(a)(2) exempts family/friends and other informal caregivers). |
+| [FTC Health Breach Notification Rule](https://www.ecfr.gov/current/title-16/part-318) | 16 CFR Part 318 | FTC notice is contemporaneous (within 60 days) for 500 or more individuals; fewer than 500 may be logged and reported annually within 60 days after year end. Media notice for 500 or more residents of a state. |
+| [Section 1557 - Patient care decision support tools](https://www.ecfr.gov/current/title-45/section-92.210) | 42 U.S.C. 18116; 45 CFR 92.210 | No size threshold. |
+| [CMS Emergency Preparedness CoP](https://www.ecfr.gov/current/title-42/section-482.15) | 42 CFR 482.15 (hospitals; parallel rules for 16 other provider types) | No size threshold. |
+| [HIPAA applicability to social assistance](https://www.ecfr.gov/current/title-45/section-160.103) | 45 CFR 160.103 ('covered entity', 'health care provider') | Function-based, not size-based. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +47,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Electronic health record (EHR) and practice management system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: HIPAA Security Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

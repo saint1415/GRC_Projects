@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Wholesale Trade | Multi-Sector
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor (one division of a diversified holding company)) | **Tier:** Multi-Sector | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers (one division of a diversified holding company)) | **Tier:** Multi-Sector | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

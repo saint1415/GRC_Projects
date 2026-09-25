@@ -22,14 +22,22 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Federal Tax Information (FTI); Criminal Justice Information (CJI) / CHRI; Medicaid, SNAP, TANF applicant/beneficiary data; Motor vehicle records (DPPA); Voter registration data; Court records (sealed/juvenile); PHI (public health, public hospitals, employee health plans); Employee and pension data
+- **Critical systems:** Tax / revenue administration systems; Eligibility and enrollment systems (Medicaid/SNAP/TANF); DMV/licensing systems; Voter registration databases and election management systems; CAD/911 and records management (see c-emergency); ERP/financial and payroll; Utility SCADA owned by municipalities; Court case management systems
 
 ## Who regulates it
-[see vertical overlay]
+IRS Office of Safeguards FTI safeguards (IRC 6103(p)(4); Pub 1075); FBI CJIS Division / state CJIS Systems Agencies (CSA) CJIS Security Policy compliance and audits; CMS Medicaid/CHIP and state exchange data safeguards; HHS OCR HIPAA for government health plans and providers (hybrid entities); CISA and FEMA (DHS) SLCGP administration; voluntary cyber services; CIRCIA rulemaking; U.S. Election Assistance Commission (EAC) VVSG and voting system certification (voluntary)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [IRS Publication 1075 (FTI safeguards)](https://www.irs.gov/pub/irs-pdf/p1075.pdf) | 26 U.S.C. 6103(p)(4); IRS Pub. 1075 (Rev. 11-2021) | No size threshold. |
+| [FBI CJIS Security Policy](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJISSECPOL v6.1 (06/25/2026), approved by the CJIS Advisory Policy Board; access tied to 28 CFR Part 20 and user agreements | No size threshold. Since Oct 1, 2024, audits sanction pre-modernization ('existing') requirements plus [Priority 1] requirements; other priorities phase in. |
+| [HIPAA Security Rule (state/local hybrid entities)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. |
+| [Medicaid applicant/beneficiary safeguards](https://www.ecfr.gov/current/title-42/part-431/subpart-F) | 42 CFR 431.300-431.307 (SSA 1902(a)(7)) | None. |
+| [Driver's Privacy Protection Act](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2721&num=0&edition=prelim) | 18 U.S.C. 2721-2725 | None. |
+| [State and Local Cybersecurity Grant Program (SLCGP)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section665g&num=0&edition=prelim) | 6 U.S.C. 665g | Grant condition only. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | SLTT jurisdiction population of 50,000 or more (proposed). |
+| [GovRAMP (formerly StateRAMP)](https://govramp.org/) | GovRAMP program (nonprofit membership organization; NOT law) | Tiered verification (Core, Ready, Provisional/Authorized); Snapshot programs for progressing vendors. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +46,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Business and its key vendors. 15-25 risks; qualitative scales; named owners. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Case management system hosted for state and local agencies. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: NIST SP 800-53 Rev. 5 (Release 5.2.0) control baseline. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. |

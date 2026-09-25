@@ -2,9 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarder and customs broker) |
+| Organization | Cris Santos Company (Freight broker arranging rail and truck shipments) |
 | Tier / Vertical | Sole Proprietorship / Transportation Systems |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | TSA Security Directive 1580/82-2022-01 series (rail cybersecurity) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

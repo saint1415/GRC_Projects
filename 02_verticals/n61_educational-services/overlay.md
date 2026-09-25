@@ -6,26 +6,39 @@
 **Primary system:** Student information system (SIS) and learning management system
 
 ## Regulators and sector risk management agency
-[Pending research]
+U.S. Department of Education - Student Privacy Policy Office (SPPO) FERPA / PPRA administration and enforcement; U.S. Department of Education - Federal Student Aid (FSA) Enforces GLBA Safeguards compliance for Title IV institutions via the PPA, SAIG agreement and annual compliance audits; FTC GLBA Safeguards Rule (16 CFR 314) and COPPA (16 CFR 312); FCC / USAC CIPA certifications for E-Rate schools and libraries; CISA / DHS Education Facilities Subsector of the Government Services and Facilities Sector
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**GLBA Safeguards Rule (as enforced by FSA for Title IV institutions)**, 16 CFR 314.4. It is the only prescriptive, audited cybersecurity control requirement in U.S. education: FSA tests it in the annual compliance audit, and findings can affect Title IV eligibility. FERPA is disclosure-oriented with no control catalog, so pair it with FERPA's 'reasonable methods' access control requirement. For K-12 districts outside Title IV, use NIST CSF 2.0 (or CIS Controls) plus FERPA/COPPA/CIPA.
+Source: https://www.ecfr.gov/current/title-16/section-314.4
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| N61-R01 | [FERPA](https://www.ecfr.gov/current/title-34/part-99) | 20 U.S.C. 1232g; 34 CFR Part 99 | Educational agencies and institutions that receive funds under any ED-administered program (99.1). This includes nearly all public K-12 and Title IV colleges. | No size threshold. It does not apply solely because students receive non-monetary benefits (99.1(b)), so many private K-12 schools that take no ED funds are outside FERPA. | In force. FERPA has no breach notification requirement. |
+| N61-R02 | [GLBA Safeguards Rule (Title IV institutions)](https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2023-02-09/updates-gramm-leach-bliley-act-cybersecurity-requirements) | 16 CFR Part 314 | Postsecondary institutions and third-party servicers participating in Title IV. Each agreed in its Program Participation Agreement to comply with 16 CFR 314 (FSA Electronic Announcement GENERAL-23-09). 'Customer information' = information obtained in providing a financial service to a student (e.g., Title IV administration, institutional loans). | 314.6: institutions holding customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) (written risk assessment), (d)(2) (continuous monitoring/pen testing), (h) (written IR plan) and (i) (annual board report). The 314.4(j) FTC notice applies only to events affecting 500 or more consumers. | In force. FSA enforces through annual compliance audits (findings affect Title IV administrative capability, 34 CFR 668.16(c)). FSA also encouraged adoption of NIST SP 800-171 (Dec 18, 2020 EA). |
+| N61-R03 | [COPPA Rule (2025 amendments)](https://www.ecfr.gov/current/title-16/part-312) | 15 U.S.C. 6501-6506; 16 CFR Part 312 | Operators of websites/online services directed to children under 13, or with actual knowledge (ed-tech vendors, K-12 platforms). | The 'operator' definition excludes nonprofits exempt from FTC Act Section 5 (16 CFR 312.2). Security program is scaled to 'size, complexity, and nature and scope of activities.' | Amended rule 90 FR 16918 (Apr 22, 2025), effective June 23, 2025; compliance date Apr 22, 2026 (except 312.11(d)(1), (d)(4), (g)). |
+| N61-R04 | [CIPA (E-Rate)](https://www.ecfr.gov/current/title-47/section-54.520) | 47 U.S.C. 254(h); 47 CFR 54.520 | K-12 schools, school districts and libraries receiving E-Rate discounts for internet access/internal connections. | Applies only to E-Rate recipients. | In force. |
+| N61-R05 | [HIPAA Security Rule (hybrid entities)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | Universities with covered health care components (academic medical centers, clinics billing electronically) that designate as hybrid entities (45 CFR 164.105). Student health records covered by FERPA are excluded from PHI. | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. | In force; eCFR text current as of 2026-09-23 unchanged by the Jan 2025 NPRM (see separate entry). |
+| N61-R06 | [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Proposed 226.2(b)(9): LEAs, educational service agencies and SEAs with 1,000 or more students, and every IHE receiving Title IV funding. | LEA/ESA/SEA: student population of 1,000 or more. IHE: any Title IV participant (no size floor). Otherwise, exceeding the SBA size standard. | PROPOSED ONLY. NPRM 89 FR 23644 (Apr 4, 2024). CISA held town halls (Feb 13 and May 26, 2026 notices) to refine scope. Fall 2025 Unified Agenda targeted a final rule for 09/2026. As of 2026-09-25 no final rule is in the Federal Register; CISA says it 'continues to work on the final rule.' Reporting is not yet mandatory. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [Title IV breach report to FSA](https://fsapartners.ed.gov/title-iv-program-eligibility/cybersecurity/cybersecurity-breach-intake) | SAIG Enrollment Agreement (per DCL GEN-15-18); FSA Cybersecurity Breach Intake | Immediately upon an actual or suspected breach | FSA (CPSSAIG@ed.gov and/or the FSA Cybersecurity Breach Intake Form) |
+| [FTC Safeguards notification event](https://www.ecfr.gov/current/title-16/section-314.4) | 16 CFR 314.4(j) | As soon as possible, no later than 30 days after discovery | FTC (online form), when unencrypted customer information of 500 or more consumers is acquired without authorization |
+| [State breach laws / state student-data laws]() | State statutes | Varies | Affected students/parents; often the state AG and/or state education agency |
+| [CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia) | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
-- **Sector AI rules and guidance:** None identified beyond cross-sector obligations
+- **Sensitive data:** Education records / student PII (FERPA); Student financial aid data, FAFSA/ISIR and FTI-derived data (GLBA, SAIG); Children's personal information (under 13, COPPA); Student health and counseling records (FERPA or HIPAA); Special education (IDEA) records; Research data incl. CUI, export-controlled and human-subjects data; Employee HR/payroll
+- **Critical systems:** Student Information System (SIS); Learning Management System (LMS); Financial aid / ERP (e.g., bursar, SAIG/EDConnect); Identity and SSO for students/staff; Assessment and proctoring platforms; Campus safety: access control, emergency notification, CCTV; Research computing / HPC and CUI enclaves
+- **Sector AI rules and guidance:** ED Secretary's Supplemental Priority on Advancing AI in Education 91 FR 18774 (FR Doc 2026-07087) Final priority and definitions ED may use in discretionary grant competitions to advance AI in education.; ED Dear Colleague Letter on use of federal grant funds for AI ED OPEPD DCL, July 22, 2025 Says AI uses are allowable under existing formula and discretionary grants when aligned with statutory and regulatory requirements; sets principles for responsible use.; Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT used in consequential decisions on education access or eligibility (e.g., admissions).
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Ransomware with student record exposure
 - **Scenario AI use case (P10):** AI admissions and student-success risk scoring
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+CISA lists the Education Facilities Subsector under the Government Services and Facilities Sector (Pre-K-12, higher education, business and trade schools). Research universities with DoD contracts also fall under DFARS 252.204-7012/CMMC (see n54). All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

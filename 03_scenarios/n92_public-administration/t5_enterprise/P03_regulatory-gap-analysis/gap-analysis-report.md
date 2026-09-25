@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (GovTech systems integrator serving state and local agencies) |
 | Tier / Vertical | Enterprise / Public Administration |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NIST SP 800-53 Rev. 5 (Release 5.2.0) control baseline |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

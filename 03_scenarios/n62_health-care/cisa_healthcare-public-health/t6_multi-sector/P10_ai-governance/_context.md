@@ -10,7 +10,7 @@
 | Scenario brief | [README.md](../README.md) |
 
 **AI use case:** Clinical decision support (sepsis prediction) model
-**Sector AI rules and guidance:** None identified; see cross-sector obligations
+**Sector AI rules and guidance:** Section 1557 patient care decision support tools 45 CFR 92.210 Non-discrimination duty to identify and mitigate discrimination risk from clinical algorithms/AI tools.; ONC HTI-1 DSI transparency 45 CFR 170.315(b)(11) Transparency/source attributes and risk management for predictive DSIs in certified health IT.; FDA AI-Enabled Device Software Functions guidance FDA draft guidance (FR Doc 2024-31543, Jan 7, 2025) Lifecycle management and marketing submission recommendations for AI-enabled device software functions.; FDA PCCP guidance for AI-enabled devices FDA final guidance (FR Doc 2024-28361, Dec 4, 2024) Marketing submission recommendations for Predetermined Change Control Plans for AI-enabled device software functions.
 **Cross-sector AI obligations:** [`00_universal/cross-sector/`](../../../../../00_universal/cross-sector)
 
 ## Regulatory drivers to trace in this deliverable
@@ -18,6 +18,17 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-HPH-R01 | HIPAA Security Rule | 45 CFR Part 164, Subpart C (164.302-164.318) |
+| C-HPH-R02 | HIPAA Breach Notification Rule | 45 CFR 164.400-164.414 |
+| C-HPH-R03 | HIPAA Security Rule NPRM (2025) | 90 FR 898 (Jan 6, 2025), FR Doc 2024-30983; RIN 0945-AA22 |
+| C-HPH-R04 | FDA premarket cybersecurity (cyber devices) | FD&C Act sec. 524B, 21 U.S.C. 360n-2 |
+| C-HPH-R05 | FTC Health Breach Notification Rule | 16 CFR Part 318 |
+| C-HPH-R06 | 42 CFR Part 2 (SUD records) | 42 U.S.C. 290dd-2; 42 CFR Part 2 |
+| C-HPH-R07 | CMS Emergency Preparedness CoP | 42 CFR 482.15 (hospitals; parallel rules for 16 other provider types) |
+| C-HPH-R08 | HPH Cybersecurity Performance Goals (CPGs) | HHS HPH CPGs - voluntary |
+| C-HPH-R09 | HHS 405(d) HICP | Cybersecurity Act of 2015 sec. 405(d); Health Industry Cybersecurity Practices (HICP) - voluntary |
+| C-HPH-R10 | HITECH 'recognized security practices' | 42 U.S.C. 17941 (Pub. L. 116-321) |
+| C-HPH-R11 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

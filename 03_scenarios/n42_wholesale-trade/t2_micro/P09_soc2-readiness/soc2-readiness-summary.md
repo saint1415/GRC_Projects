@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) |
 | Tier / Vertical | Micro / Wholesale Trade |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

@@ -2,9 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) |
 | Tier / Vertical | Mid-Market / Wholesale Trade |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NIST SP 800-171 R2 via CMMC Level 2 / DFARS 252.204-7012 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

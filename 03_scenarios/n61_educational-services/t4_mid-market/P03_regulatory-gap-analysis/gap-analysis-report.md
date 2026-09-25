@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Private college) |
 | Tier / Vertical | Mid-Market / Educational Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | GLBA Safeguards Rule (as enforced by FSA for Title IV institutions) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

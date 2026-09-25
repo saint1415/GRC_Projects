@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Mid-Market / Wholesale Trade |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

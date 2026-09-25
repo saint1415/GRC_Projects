@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarder and customs broker) |
+| Organization | Cris Santos Company (Freight broker arranging rail and truck shipments) |
 | Size tier | Sole Proprietorship (Owner only (0 employees)) |
 | Vertical | Transportation Systems |
 | Method | NIST SP 800-30 Rev. 1 |

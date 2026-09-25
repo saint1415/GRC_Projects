@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
+| Organization | Cris Santos Company (Short line freight railroad) |
 | Tier / Vertical | Small / Transportation Systems |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

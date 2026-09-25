@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Wholesale Trade | Micro
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor) | **Tier:** Micro | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) | **Tier:** Micro | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

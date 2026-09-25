@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (CPA and tax preparation firm (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Professional, Scientific, and Technical Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | FTC Safeguards Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

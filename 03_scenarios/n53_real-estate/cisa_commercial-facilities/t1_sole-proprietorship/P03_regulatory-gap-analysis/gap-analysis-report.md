@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Commercial office and retail property owner-operator) |
 | Tier / Vertical | Sole Proprietorship / Commercial Facilities |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | CISA CPGs 2.0 (with PCI DSS v4.0.1 for payment environments) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

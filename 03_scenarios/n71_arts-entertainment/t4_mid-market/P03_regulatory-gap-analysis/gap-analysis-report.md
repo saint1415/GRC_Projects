@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Live event venue operator with ticketing) |
 | Tier / Vertical | Mid-Market / Arts, Entertainment, and Recreation |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | PCI DSS v4.0.1 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

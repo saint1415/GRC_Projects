@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Bed-and-breakfast inn) |
 | Tier / Vertical | Sole Proprietorship / Accommodation and Food Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | PCI DSS v4.0.1 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

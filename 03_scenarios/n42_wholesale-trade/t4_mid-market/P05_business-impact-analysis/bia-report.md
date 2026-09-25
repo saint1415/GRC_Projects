@@ -1,6 +1,6 @@
 # Business Impact Analysis: Cris Santos Company | Wholesale Trade | Mid-Market
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 
 ## 1. Overview and purpose
 [FILL: Why this BIA was done and which contingency plans it feeds]

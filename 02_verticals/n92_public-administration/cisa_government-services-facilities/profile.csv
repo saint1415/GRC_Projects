@@ -1,0 +1,12 @@
+field,value
+regulators,"DHS (CISA; also Federal Protective Service) and GSA - Co-Sector Risk Management Agencies NSM-22 (Apr 30, 2024) designates 'Government Services and Facilities: Co-Sector Risk Management Agencies: DHS and GSA'; CISA Sector page; Education Facilities and National Monuments and Icons subsectors; Election Infrastructure (designated Jan 2017 as a subset of the government facilities sector); U.S. Election Assistance Commission Voting system guidelines/certification; U.S. Department of Education FERPA and FSA GLBA enforcement for Education Facilities subsector entities"
+primary_regulation,NIST SP 800-53 Rev. 5 (Release 5.2.0) control baseline
+primary_regulation_citation,"NIST SP 800-53 Rev. 5 (Release 5.2.0, Aug 27, 2025)"
+primary_regulation_url,https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+primary_regulation_rationale,"It is the common control catalog underpinning FISMA (federal facilities), IRS Pub 1075, CJIS v6 and GovRAMP. Election offices should overlay the VVSG 2.0 security requirements. Education Facilities should use the n61 target (GLBA Safeguards / FERPA)."
+sensitive_data,"Voter registration and election results data; FTI, CJI, benefits data; Education records (Education Facilities subsector); Facility security plans and physical access data; Classified/CUI (federal facilities)"
+critical_systems,"Election management systems, e-pollbooks, voter registration databases, tabulators; Building automation / physical access control and video surveillance; Government ERP, email and identity platforms; SIS/LMS (education facilities); Public-facing service portals"
+ai_specific,Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT in decisions on essential government services/public benefits.
+assurance_alternatives,
+notes,"Exact current CISA name: 'Government Services and Facilities Sector' (CISA sector list, fetched 2026-09-25). The CISA sector page lists two subsectors, Education Facilities and National Monuments and Icons. CISA's election security page says DHS designated election infrastructure 'a subset of the government facilities sector' in January 2017. The sector page does not name the SRMA; NSM-22 names DHS and GSA as co-SRMAs. EO 14239 (Mar 2025) directed a review of critical infrastructure policy, and no replacement designation was found in the Federal Register. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

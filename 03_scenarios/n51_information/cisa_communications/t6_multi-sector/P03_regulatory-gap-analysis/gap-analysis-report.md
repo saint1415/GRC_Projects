@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Regional broadband and wired telecommunications carrier (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Communications |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | FCC CPNI Rules |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

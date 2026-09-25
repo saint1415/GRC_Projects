@@ -6,26 +6,37 @@
 **Primary system:** Service ticketing and point-of-sale system
 
 ## Regulators and sector risk management agency
-[Pending research]
+FTC FTC Act Section 5, Disposal Rule, COPPA. Jurisdiction generally does NOT reach non-profit organizations (15 U.S.C. 44).; State Attorneys General State breach notification, charitable solicitation and consumer privacy laws; IRS (Exempt Organizations) Tax-exempt status. No cyber rules, but donor data sits on Form 990 Schedule B
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**NIST Cybersecurity Framework (CSF) 2.0**, NIST CSWP 29 (CSF 2.0), voluntary. NAICS 81 is mostly small businesses and nonprofits with no sector cyber regulation, and many are outside FTC jurisdiction. NIST CSF 2.0, with its small-business Quick Start Guides and Govern function, is the most appropriate voluntary baseline. Overlay PCI DSS where cards are taken, and state breach law for incident obligations.
+Source: https://www.nist.gov/cyberframework
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| N81-R01 | [FTC Act Section 5 (unfair/deceptive practices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | For-profit repair/maintenance, personal care, laundry and similar businesses. Religious, grantmaking, civic and professional organizations organized as nonprofits are generally outside FTC jurisdiction (15 U.S.C. 44). | None. | In force. |
+| N81-R02 | [State breach notification laws](https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business) | State statutes | Businesses and (in most states) nonprofits holding residents' PI. | Varies by state. | In force. Not enumerated. |
+| N81-R03 | [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/standards/pci-dss/) | PCI Security Standards Council standard (contractual, not law) | Any merchant or service provider that stores, processes or transmits payment card data. | Validation level (SAQ vs. QSA ROC) depends on annual card-transaction volume under card-brand merchant-level programs. Those levels are set by the card brands and were not verified here. | v4.0.1 published June 11, 2024 (PCI SSC blog). Not a law. Check for any later revision. |
+| N81-R04 | [FTC/FACTA Disposal Rule](https://www.ecfr.gov/current/title-16/part-682) | 16 CFR Part 682 (682.3) | Employers, staffing firms and landlords that use background/consumer reports, plus their disposal vendors. | None. | In force. |
+| N81-R05 | [COPPA Rule](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | For-profit operators of child-directed online services (e.g., youth-activity apps). | 'Operator' excludes nonprofits exempt from FTC Act Section 5 (16 CFR 312.2). | Amended; compliance date Apr 22, 2026. |
+| N81-R06 | [HIPAA (only if a covered entity)](https://www.ecfr.gov/current/title-45/part-164/subpart-E) | 45 CFR Part 164, Subpart E (164.500-164.534) | Faith-based or civic organizations that operate clinics or health services and bill electronically in standard transactions; organizations sponsoring self-insured group health plans. | Function-based (45 CFR 160.103); self-administered group health plans with fewer than 50 participants are excluded. | In force. The eCFR still shows the 2024 reproductive health care amendments (164.502(a)(5)(iii)); a federal court reportedly vacated them in June 2025. That status is not confirmed from a .gov source here. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [State breach notification]() | State statutes | Varies by state | Affected individuals; often the state AG |
+| [Payment card compromise]() | Card brand rules / merchant agreement (contractual) | Per contract | Acquirer / card brands |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** Donor and member PII, giving history; Payment card and ACH/bank data for donations and services; Congregant/pastoral care and counseling notes; Children's and youth program participant data; Vehicle owner / VIN data (repair shops); Client appointment and personal care records
+- **Critical systems:** Donor/member management (ChMS/CRM); Online giving and payment platforms; POS and appointment-booking systems; Shop management and diagnostic systems (auto repair); Email/productivity tenants and website/CMS; Volunteer background check portals
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Customer device data exposure and point-of-sale compromise
 - **Scenario AI use case (P10):** AI-assisted diagnostics and customer chatbot
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+Very limited federal cyber regulation for this sector. The key applicability nuance: FTC Act Section 5 (and so COPPA 'operator' status) generally excludes nonprofits (15 U.S.C. 44). All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Wholesale Trade | Mid-Market
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

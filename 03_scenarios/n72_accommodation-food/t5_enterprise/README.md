@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Payment card data (PAN, track data) at POS and PMS; Guest PII: passports/IDs, loyalty profiles, stay history; Employee PII and biometric time-clock data; Reservation and online-ordering account credentials; Guest Wi-Fi usage data
+- **Critical systems:** Property Management System (PMS); Point-of-sale (POS) and payment terminals; Central reservation system / channel manager; Online ordering and delivery integrations; Guest Wi-Fi and IPTV networks; Electronic door locks / key card systems; Loyalty/CRM platforms
 
 ## Who regulates it
-[see vertical overlay]
+FTC FTC Act Section 5 data security/privacy enforcement; State Attorneys General State breach notification and consumer privacy laws; PCI Security Standards Council / card brands (private) PCI DSS via acquirer contracts, not a government regulator; CISA / DHS SRMA, Commercial Facilities Sector (Lodging subsector)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/standards/pci-dss/) | PCI Security Standards Council standard (contractual, not law) | Validation level (SAQ vs. QSA ROC) depends on annual card-transaction volume under card-brand merchant-level programs. Those levels are set by the card brands and were not verified here. |
+| [FTC Act Section 5 (unfair/deceptive practices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None. |
+| [FTC/FACTA Disposal Rule](https://www.ecfr.gov/current/title-16/part-682) | 16 CFR Part 682 (682.3) | None. |
+| [State breach notification laws](https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business) | State statutes (all 50 states, DC, territories) | Varies by state. |
+| [Illinois Biometric Information Privacy Act](https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57) | 740 ILCS 14 | None. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Proposed 226.2(a): covered only if the entity exceeds the SBA small-business size standard for its NAICS code (13 CFR 121). Large hotel and restaurant chains could be covered. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise risk register integrated with ERM. 60+ risks; aggregation to enterprise risk (NIST IR 8286). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Property management and point-of-sale system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: PCI DSS v4.0.1. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies within a policy hierarchy. Policies; standards; procedures; exceptions process. |

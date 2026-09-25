@@ -1,6 +1,6 @@
-# System Security Plan: Dispatch and fleet telematics system
+# System Security Plan: Core business SaaS stack (email, files, client and billing records)
 
-**Organization:** Cris Santos Company (Long-haul truckload carrier) | **Tier:** Micro | **Vertical:** Transportation and Warehousing
+**Organization:** Cris Santos Company (Freight forwarding and customs brokerage office) | **Tier:** Micro | **Vertical:** Transportation and Warehousing
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example
 
 ## 1. System Name and Identifier

@@ -2,9 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (Short line freight railroad (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Transportation Systems |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | TSA Security Directive 1580/82-2022-01 series (rail cybersecurity) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

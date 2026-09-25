@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Transportation Systems | Multi-Sector
 
-**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) | **Tier:** Multi-Sector | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (Short line freight railroad (one division of a diversified holding company)) | **Tier:** Multi-Sector | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

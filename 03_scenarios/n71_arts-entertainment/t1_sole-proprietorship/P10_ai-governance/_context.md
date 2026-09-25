@@ -18,6 +18,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N71-R01 | Nevada Gaming Commission Regulation 5.260 (Cybersecurity) | NGC Reg. 5.260 (amended Jan 29, 2026) |
+| N71-R02 | NIGC MICS - Information technology | 25 CFR 543.20 |
+| N71-R03 | BSA/AML program for casinos | 31 CFR 1021.210 (program), 1021.320 (SARs); casino definition 31 CFR 1010.100(t)(5) |
+| N71-R04 | PCI DSS v4.0.1 | PCI Security Standards Council standard (contractual, not law) |
+| N71-R05 | FTC Act Section 5 (unfair/deceptive practices) | 15 U.S.C. 45(a) |
+| N71-R06 | COPPA Rule | 16 CFR Part 312 |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

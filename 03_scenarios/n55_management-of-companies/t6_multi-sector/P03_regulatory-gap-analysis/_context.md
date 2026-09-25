@@ -9,14 +9,21 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** [see vertical overlay], 
-**Why:** 
+**Regulation to analyze:** SEC Regulation S-K Item 106, 17 CFR 229.106
+**Why:** Holding companies' distinctive cyber obligation is enterprise governance: board oversight, management accountability and consolidated risk processes across subsidiaries. That is exactly what Item 106 requires registrants to disclose. For private holding companies, use NIST CSF 2.0 (Govern function) as the equivalent target. Bank holding companies should add 12 CFR 225 App. F.
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N55-R01 | SEC Cybersecurity Disclosure - Reg S-K Item 106 | 17 CFR 229.106 |
+| N55-R02 | SEC Form 8-K Item 1.05 (Material Cybersecurity Incidents) | Form 8-K Item 1.05 (adopted in Release 33-11216, 88 FR 51896) |
+| N55-R03 | SOX Section 404 - Management assessment of internal controls | 15 U.S.C. 7262 |
+| N55-R04 | Federal Reserve Computer-Security Incident Notification | 12 CFR 225.300-225.303 (Reg Y Subpart N) |
+| N55-R05 | Interagency Guidelines Establishing Information Security Standards | 12 CFR Part 225, Appendix F |
+| N55-R06 | HIPAA (sponsored group health plans) | 45 CFR Part 164, Subpart E (164.500-164.534) |
+| N55-R07 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

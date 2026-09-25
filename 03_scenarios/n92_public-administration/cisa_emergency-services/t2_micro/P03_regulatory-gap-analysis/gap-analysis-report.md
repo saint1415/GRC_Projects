@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Private ambulance (EMS) provider) |
 | Tier / Vertical | Micro / Emergency Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | HIPAA Security Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarder and customs broker) |
+| Organization | Cris Santos Company (Freight broker arranging rail and truck shipments) |
 | Tier / Vertical | Sole Proprietorship / Transportation Systems |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

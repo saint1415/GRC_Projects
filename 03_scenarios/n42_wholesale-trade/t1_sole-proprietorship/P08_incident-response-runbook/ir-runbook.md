@@ -1,10 +1,10 @@
-# Incident Response Runbook: Supplier compromise disrupting order fulfillment
+# Incident Response Runbook: Supplier compromise introducing tampered or counterfeit products into distribution
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) |
 | Tier / Vertical | Sole Proprietorship / Wholesale Trade |
-| Incident type | Supplier compromise disrupting order fulfillment |
+| Incident type | Supplier compromise introducing tampered or counterfeit products into distribution |
 | Framework | NIST SP 800-61 Rev. 3 (CSF 2.0 Community Profile) |
 | Runbook owner | [FILL] |
 | Last tested | [FILL] |
@@ -26,7 +26,7 @@
 ## 2. Detection and declaration (Detect / RS.MA)
 | Trigger | Source | Action |
 |---|---|---|
-| [FILL: indicator specific to Supplier compromise disrupting order fulfillment] | [FILL] | Open incident ticket and notify the incident commander |
+| [FILL: indicator specific to Supplier compromise introducing tampered or counterfeit products into distribution] | [FILL] | Open incident ticket and notify the incident commander |
 
 **Declare an incident when:** [FILL: criteria]. **Record the time of discovery.** Notification clocks may start here.
 

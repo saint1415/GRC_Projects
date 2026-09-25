@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
+| Organization | Cris Santos Company (Short line freight railroad) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Enterprise / Transportation Systems |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

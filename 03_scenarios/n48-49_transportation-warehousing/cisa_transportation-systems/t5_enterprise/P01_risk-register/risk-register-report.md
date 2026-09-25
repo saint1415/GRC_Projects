@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
+| Organization | Cris Santos Company (Short line freight railroad) |
 | Size tier | Enterprise (12,000 employees) |
 | Vertical | Transportation Systems |
 | Method | NIST SP 800-30 Rev. 1 |

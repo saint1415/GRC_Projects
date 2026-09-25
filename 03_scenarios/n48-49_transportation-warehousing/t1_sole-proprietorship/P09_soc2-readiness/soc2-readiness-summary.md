@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Freight forwarder and customs broker) |
 | Tier / Vertical | Sole Proprietorship / Transportation and Warehousing |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

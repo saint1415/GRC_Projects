@@ -6,26 +6,38 @@
 **Primary system:** Computer-aided dispatch (CAD) and electronic patient care reporting (ePCR)
 
 ## Regulators and sector risk management agency
-[Pending research]
+CISA (Sector Risk Management Agency) 'CISA ... serves as the Emergency Services Sector Risk Management Agency.' Disciplines: Emergency Management, EMS, Fire and Rescue, Law Enforcement, Public Works.; FBI CJIS Division / state CSAs CJIS Security Policy for law enforcement and PSAPs with CJI access; HHS OCR HIPAA for EMS agencies that bill electronically; FCC 911/EAS rules; EAS cybersecurity rule (47 CFR Part 11) for EAS participants
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**HIPAA Security Rule**, 45 CFR Part 164, Subpart C (164.302-164.318). Cris Santos Company is a private ambulance provider here, a HIPAA covered entity when it bills electronically, so the Security Rule binds it directly. Research note: the sector research chose the FBI CJIS Security Policy v6.1, which applies when the provider accesses criminal justice information (for example, through a shared CAD with law enforcement); treat it as secondary.
+Source: https://www.ecfr.gov/current/title-45/part-164/subpart-C
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-EMERGENCY-R01 | [FBI CJIS Security Policy](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJISSECPOL v6.1 (06/25/2026), approved by the CJIS Advisory Policy Board; access tied to 28 CFR Part 20 and user agreements | Every criminal justice and noncriminal justice agency, contractor or private entity with access to CJI or systems that process it (police, sheriffs, 911/PSAPs with CJI access, courts, corrections, and their vendors). | No size threshold. Since Oct 1, 2024, audits sanction pre-modernization ('existing') requirements plus [Priority 1] requirements; other priorities phase in. | Current version v6.1 dated 06/25/2026 (supersedes v6.0 of 12/27/2024). |
+| C-EMERGENCY-R02 | [Criminal history record information security](https://www.ecfr.gov/current/title-28/section-20.21) | 28 CFR 20.21(f) | State criminal justice agencies and CHRI systems funded or covered under 28 CFR Part 20. | None. | In force. |
+| C-EMERGENCY-R03 | [Criminal intelligence systems operating policies](https://www.ecfr.gov/current/title-28/part-23) | 28 CFR Part 23 (23.20) | Law enforcement agencies operating criminal intelligence systems funded under the Omnibus Crime Control Act (e.g., fusion-center and RISS-connected systems). | Applies based on federal funding. | In force. |
+| C-EMERGENCY-R04 | [HIPAA Security Rule (EMS)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | EMS/ambulance services (public or private) that are covered health care providers transmitting claims electronically, and their BAs (e.g., ePCR and billing vendors). | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. | In force; eCFR text current as of 2026-09-23 unchanged by the Jan 2025 NPRM (see separate entry). |
+| C-EMERGENCY-R05 | [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Proposed 226.2(b)(5): entities providing law enforcement, fire and rescue, EMS, emergency management, or public works contributing to public health and safety to a population of 50,000 or more. | Serves a population of 50,000 or more (proposed). | PROPOSED ONLY. NPRM 89 FR 23644 (Apr 4, 2024). CISA held town halls (Feb 13 and May 26, 2026 notices) to refine scope. Fall 2025 Unified Agenda targeted a final rule for 09/2026. As of 2026-09-25 no final rule is in the Federal Register; CISA says it 'continues to work on the final rule.' Reporting is not yet mandatory. |
+| C-EMERGENCY-R06 | [FCC EAS cybersecurity requirements](https://www.federalregister.gov/documents/2026/07/31/2026-15601/modernization-of-the-nations-alerting-systems-protecting-the-nations-communications-systems-from) | 47 CFR Part 11 (Report and Order, 91 FR 48289) | EAS participants (broadcasters, cable, etc.). Emergency management alert originators are affected indirectly. | Not verified. | Effective Sept 29, 2026. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [CJIS incident reporting (IR-6)](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJIS Security Policy v6.1, IR-6 | Personnel report suspected incidents to the organization's incident response capability immediately, and no more than 1 hour after discovery | Organizational incident handlers, and the CSO, SIB Chief or Interface Agency Official, and the FBI CJIS ISO |
+| [HIPAA breach of unsecured PHI](https://www.ecfr.gov/current/title-45/part-164/subpart-D) | 45 CFR 164.404, 164.406, 164.408, 164.410 | Individuals and media: without unreasonable delay, no later than 60 calendar days after discovery. HHS: at the same time if 500 or more; within 60 days of calendar year end if fewer than 500. BA to CE: no later than 60 days. | Affected individuals; HHS OCR; prominent media if more than 500 residents of a state or jurisdiction; covered entity (from BA) |
+| [CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia) | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** Criminal Justice Information (CJI), CHRI, NCIC data; Criminal intelligence (28 CFR 23); EMS patient care records (PHI); 911 call recordings and caller location (ALI/ANI); Body-worn camera / evidence video; Officer and responder personnel data
+- **Critical systems:** Computer-Aided Dispatch (CAD); 911 call handling equipment / NG911 ESInet; Records Management Systems (RMS) and jail management; Land Mobile Radio (LMR/P25) and FirstNet devices; Mobile data terminals and AVL; ePCR systems; Mass notification / IPAWS alert origination; Evidence management and BWC platforms
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Computer-aided dispatch outage from ransomware
 - **Scenario AI use case (P10):** AI-assisted emergency call triage
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+Sector name and SRMA verified on the CISA sector page. The FCC 2026 EAS cybersecurity rule binds EAS participants, not emergency management agencies, and is included for context. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

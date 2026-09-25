@@ -2,9 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Freight forwarding and customs brokerage office) |
 | Tier / Vertical | Micro / Transportation and Warehousing |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | USCG Maritime Cybersecurity Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

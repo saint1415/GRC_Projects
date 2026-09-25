@@ -83,7 +83,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 
 | Item | Status | Affects |
 |---|---|---|
-| HIPAA Security Rule NPRM (90 FR 898) | Proposed Jan 2025; still pending | Health Care P03, P06, P07 |
+| HIPAA Security Rule NPRM (90 FR 898) | Proposed Jan 2025; regulatory agenda projects a final rule July 2027 | Health Care P03, P06, P07 |
 | CIRCIA final rule (6 CFR 226) | Targeted Sept 2026; not published | Cross-sector P08 notification baseline |
 | FedRAMP Consolidated Rules 2026 | Mandatory 2027-01-01; no new Rev 5 certifications after 2027-06-11 | P02, P04 for federal-facing scenarios |
 | CMMC phase-in | Phase 2 starts 2026-11-10 | Defense Industrial Base, Manufacturing, Construction |
@@ -96,6 +96,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 | TSA pipeline directives 01G and 02G | Expire 2027-01-15 and 2027-05-02 | Energy |
 | NIST SP 800-60 Rev. 2 | Working draft | P02 categorization |
 | New state privacy laws | Oklahoma, Louisiana (2027-01-01), Alabama (2027-05-01), Vermont (2028-01-01) | Cross-sector |
+| FBI CJIS Security Policy | v6.1 (2026-06-25) is current; 1-hour incident reporting | Public Administration, Emergency Services |
 | NSM-22 review (EO 14239) | Under review; still in effect | CISA sector list |
 
 ---

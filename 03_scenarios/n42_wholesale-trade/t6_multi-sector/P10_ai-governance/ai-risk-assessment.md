@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Wholesale Trade |
 | AI use case | Demand forecasting and automated reordering |
 | Framework | NIST AI RMF 1.0 (+ AI 600-1 if generative) |

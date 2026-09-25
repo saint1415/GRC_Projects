@@ -28,4 +28,4 @@ Always finish with `python3 tools/validate.py`.
 
 1. Every source has `last_verified` in the source register. Every vertical requirement has a `verified` flag.
 2. When you confirm a fact against the primary source, set `verified=true` and update the date.
-3. Anything proposed but not final (for example, the HIPAA Security Rule NPRM) stays out of requirement tables. It goes in the watch list in `PLAN.md` and the `pending_rule_change` column of P03.
+3. Anything proposed but not final (for example, the HIPAA Security Rule NPRM or CIRCIA) may appear in `requirements.csv` only with a `status` that says it is proposed. Track it in the watch list in `PLAN.md` and the `pending_rule_change` column of P03, and never treat it as a current obligation.

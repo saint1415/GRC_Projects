@@ -15,6 +15,9 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| Material cybersecurity incident disclosure | Form 8-K Item 1.05 | Within 4 business days after determining materiality | SEC / investors (public filing) | Verify applicability |
+| Computer-security notification incident (BHC/SLHC) | 12 CFR 225.302 | As soon as possible and no later than 36 hours after determining a notification incident occurred | Federal Reserve Board-designated point of contact | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
@@ -24,6 +27,13 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N55-R01 | SEC Cybersecurity Disclosure - Reg S-K Item 106 | 17 CFR 229.106 |
+| N55-R02 | SEC Form 8-K Item 1.05 (Material Cybersecurity Incidents) | Form 8-K Item 1.05 (adopted in Release 33-11216, 88 FR 51896) |
+| N55-R03 | SOX Section 404 - Management assessment of internal controls | 15 U.S.C. 7262 |
+| N55-R04 | Federal Reserve Computer-Security Incident Notification | 12 CFR 225.300-225.303 (Reg Y Subpart N) |
+| N55-R05 | Interagency Guidelines Establishing Information Security Standards | 12 CFR Part 225, Appendix F |
+| N55-R06 | HIPAA (sponsored group health plans) | 45 CFR Part 164, Subpart E (164.500-164.534) |
+| N55-R07 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

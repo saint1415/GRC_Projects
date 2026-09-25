@@ -1,6 +1,6 @@
 # Business Impact Analysis: Cris Santos Company | Wholesale Trade | Multi-Sector
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor (one division of a diversified holding company)) | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers (one division of a diversified holding company)) | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 
 ## 1. Overview and purpose
 [FILL: Why this BIA was done and which contingency plans it feeds]

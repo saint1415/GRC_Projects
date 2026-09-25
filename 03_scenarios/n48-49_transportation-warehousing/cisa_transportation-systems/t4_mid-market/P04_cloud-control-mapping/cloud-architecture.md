@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Transportation Systems | Mid-Market
 
-**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (Short line freight railroad) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

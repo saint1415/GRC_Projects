@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Education records / student PII (FERPA); Student financial aid data, FAFSA/ISIR and FTI-derived data (GLBA, SAIG); Children's personal information (under 13, COPPA); Student health and counseling records (FERPA or HIPAA); Special education (IDEA) records; Research data incl. CUI, export-controlled and human-subjects data; Employee HR/payroll
+- **Critical systems:** Student Information System (SIS); Learning Management System (LMS); Financial aid / ERP (e.g., bursar, SAIG/EDConnect); Identity and SSO for students/staff; Assessment and proctoring platforms; Campus safety: access control, emergency notification, CCTV; Research computing / HPC and CUI enclaves
 
 ## Who regulates it
-[see vertical overlay]
+U.S. Department of Education - Student Privacy Policy Office (SPPO) FERPA / PPRA administration and enforcement; U.S. Department of Education - Federal Student Aid (FSA) Enforces GLBA Safeguards compliance for Title IV institutions via the PPA, SAIG agreement and annual compliance audits; FTC GLBA Safeguards Rule (16 CFR 314) and COPPA (16 CFR 312); FCC / USAC CIPA certifications for E-Rate schools and libraries; CISA / DHS Education Facilities Subsector of the Government Services and Facilities Sector
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FERPA](https://www.ecfr.gov/current/title-34/part-99) | 20 U.S.C. 1232g; 34 CFR Part 99 | No size threshold. It does not apply solely because students receive non-monetary benefits (99.1(b)), so many private K-12 schools that take no ED funds are outside FERPA. |
+| [GLBA Safeguards Rule (Title IV institutions)](https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2023-02-09/updates-gramm-leach-bliley-act-cybersecurity-requirements) | 16 CFR Part 314 | 314.6: institutions holding customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) (written risk assessment), (d)(2) (continuous monitoring/pen testing), (h) (written IR plan) and (i) (annual board report). The 314.4(j) FTC notice applies only to events affecting 500 or more consumers. |
+| [COPPA Rule (2025 amendments)](https://www.ecfr.gov/current/title-16/part-312) | 15 U.S.C. 6501-6506; 16 CFR Part 312 | The 'operator' definition excludes nonprofits exempt from FTC Act Section 5 (16 CFR 312.2). Security program is scaled to 'size, complexity, and nature and scope of activities.' |
+| [CIPA (E-Rate)](https://www.ecfr.gov/current/title-47/section-54.520) | 47 U.S.C. 254(h); 47 CFR 54.520 | Applies only to E-Rate recipients. |
+| [HIPAA Security Rule (hybrid entities)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | LEA/ESA/SEA: student population of 1,000 or more. IHE: any Title IV participant (no size floor). Otherwise, exceeding the SBA size standard. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Student information system (SIS) and learning management system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: GLBA Safeguards Rule (as enforced by FSA for Title IV institutions). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

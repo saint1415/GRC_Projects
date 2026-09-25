@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Independent insurance agency) |
 | Tier / Vertical | Sole Proprietorship / Financial Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NYDFS 23 NYCRR Part 500 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Freight forwarding and customs brokerage office) |
 | Size tier | Micro (7 employees) |
 | Vertical | Transportation and Warehousing |
 | Method | NIST SP 800-30 Rev. 1 |

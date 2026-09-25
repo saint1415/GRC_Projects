@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Grocery retailer with stores and online ordering) |
 | Tier / Vertical | Enterprise / Retail Trade |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | PCI DSS v4.0.1 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

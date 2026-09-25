@@ -1,10 +1,10 @@
-# AI Risk Assessment: Route optimization and driver-monitoring AI
+# AI Risk Assessment: Container and berth scheduling optimization
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Transportation and Warehousing |
-| AI use case | Route optimization and driver-monitoring AI |
+| AI use case | Container and berth scheduling optimization |
 | Framework | NIST AI RMF 1.0 (+ AI 600-1 if generative) |
 | Assessor / date | [FILL] |
 

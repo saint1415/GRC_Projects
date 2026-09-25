@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Patron PII and player-loyalty data; Payment card data and cage/credit (marker) records; BSA/AML records (SARs are confidential), CTRs, KYC documents; Surveillance video; Online/sports wagering account data, geolocation; Children's data (family entertainment apps); Employee licensing/background data
+- **Critical systems:** Casino management system (CMS) / slot accounting; Table games and sports-betting/iGaming platforms; Surveillance and access control; Cage, credit and kiosk/TITO systems; Ticketing and point-of-sale; Loyalty/CRM platforms; Hotel PMS integration (integrated resorts)
 
 ## Who regulates it
-[see vertical overlay]
+State gaming regulators (e.g., Nevada Gaming Control Board / Nevada Gaming Commission) Casino cybersecurity, internal controls, licensing; National Indian Gaming Commission (NIGC) Minimum internal control standards for tribal gaming (25 CFR 543); FinCEN (Treasury) Bank Secrecy Act AML program, SAR/CTR for casinos and card clubs; FTC FTC Act Section 5 and COPPA for consumer-facing entertainment; CISA / DHS SRMA, Commercial Facilities Sector (Gaming, Entertainment and Media, Sports Leagues, Public Assembly, Outdoor Events subsectors)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [Nevada Gaming Commission Regulation 5.260 (Cybersecurity)](https://www.gaming.nv.gov/siteassets/content/divisions/administration/history/regulation-5.260-adp-01.29.2026-eff-01.29.2026.pdf) | NGC Reg. 5.260 (amended Jan 29, 2026) | Group I licensees (as defined in Reg 6.010(8)) must also designate a qualified individual, have an annual internal audit of cyber practices, and obtain an annual independent review and written attestation. Other covered entities are exempt from 5.260(5). |
+| [NIGC MICS - Information technology](https://www.ecfr.gov/current/title-25/section-543.20) | 25 CFR 543.20 | Tiered by annual gross gaming revenue (25 CFR 543.2): Tier A >$3M-$8M, Tier B >$8M-$15M, Tier C >$15M; operations of $3M or less follow separate small-operation provisions (not itemized here). |
+| [BSA/AML program for casinos](https://www.ecfr.gov/current/title-31/part-1021) | 31 CFR 1021.210 (program), 1021.320 (SARs); casino definition 31 CFR 1010.100(t)(5) | Only casinos/card clubs with gross annual gaming revenue over $1 million are 'financial institutions' under BSA (31 CFR 1010.100(t)(5)). |
+| [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/standards/pci-dss/) | PCI Security Standards Council standard (contractual, not law) | Validation level (SAQ vs. QSA ROC) depends on annual card-transaction volume under card-brand merchant-level programs. Those levels are set by the card brands and were not verified here. |
+| [FTC Act Section 5 (unfair/deceptive practices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None. |
+| [COPPA Rule](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | Nonprofits exempt from FTC Act Section 5 are excluded from 'operator'. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Ticketing and venue operations platform. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: PCI DSS v4.0.1. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

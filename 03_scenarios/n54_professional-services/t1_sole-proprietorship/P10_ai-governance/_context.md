@@ -10,7 +10,7 @@
 | Scenario brief | [README.md](../README.md) |
 
 **AI use case:** Generative AI for tax and document preparation
-**Sector AI rules and guidance:** None identified; see cross-sector obligations
+**Sector AI rules and guidance:** Colorado SB26-189 (Automated Decision-Making Technology) Colo. SB26-189 (repeals and reenacts SB24-205) Duties for developers and deployers of ADMT used in consequential decisions on employment, education, financial/lending, housing, insurance, health care and government services. Relevant to consulting firms that build or deploy such tools.; ABA Formal Opinion 512 (Generative AI tools) ABA Standing Committee on Ethics and Professional Responsibility, Formal Op. 512 (July 2024) Ethics guidance applying competence, confidentiality, communication and fee rules to lawyers' use of generative AI. Not law.
 **Cross-sector AI obligations:** [`00_universal/cross-sector/`](../../../../00_universal/cross-sector)
 
 ## Regulatory drivers to trace in this deliverable
@@ -18,6 +18,15 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N54-R01 | FTC Safeguards Rule (GLBA) | 16 CFR Part 314 |
+| N54-R02 | IRC 7216 preparer disclosure/use limits | 26 U.S.C. 7216; 26 CFR 301.7216-1 to -3 |
+| N54-R03 | IRS Publication 4557 / WISP expectation | IRS Pub. 4557 (Rev. 5-2024); IRS Pub. 5708 (WISP template) |
+| N54-R04 | FAR Basic Safeguarding clause | 48 CFR 52.204-21 (prescribed at FAR 4.1903) |
+| N54-R05 | DFARS 252.204-7012 + CMMC | 48 CFR 252.204-7012; 32 CFR Part 170; 48 CFR 204.7502 / 252.204-7021 |
+| N54-R06 | HIPAA (as business associate) | 45 CFR 164.302-164.318, 164.410, 164.504(e) |
+| N54-R07 | ABA Model Rules 1.1 (cmt. 8) and 1.6(c) | ABA Model Rules of Professional Conduct (model rules, NOT law; binding only as adopted by each state's highest court) |
+| N54-R08 | AICPA Code of Professional Conduct - Confidential Client Information | AICPA Code ET sec. 1.700 (professional standard, NOT law; incorporated by many state boards of accountancy) |
+| N54-R09 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

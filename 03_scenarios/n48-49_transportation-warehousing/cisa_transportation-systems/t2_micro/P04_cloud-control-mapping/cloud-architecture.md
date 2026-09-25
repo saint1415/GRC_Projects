@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Transportation Systems | Micro
 
-**Organization:** Cris Santos Company (Freight forwarding and customs brokerage office) | **Tier:** Micro | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (Short line freight railroad) | **Tier:** Micro | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

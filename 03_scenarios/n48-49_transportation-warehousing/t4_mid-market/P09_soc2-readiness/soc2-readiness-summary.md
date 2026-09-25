@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
 | Tier / Vertical | Mid-Market / Transportation and Warehousing |
 | Criteria | AICPA 2017 TSC (With Revised Points of Focus, 2022) |
 | Categories in scope | Security + [FILL] |

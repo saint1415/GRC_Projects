@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Transportation and Warehousing | Mid-Market
 
-**Organization:** Cris Santos Company (Long-haul truckload carrier) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port) | **Tier:** Mid-Market | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

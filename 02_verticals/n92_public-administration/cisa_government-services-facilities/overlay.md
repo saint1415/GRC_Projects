@@ -6,26 +6,41 @@
 **Primary system:** Physical access control and building automation system
 
 ## Regulators and sector risk management agency
-[Pending research]
+DHS (CISA; also Federal Protective Service) and GSA - Co-Sector Risk Management Agencies NSM-22 (Apr 30, 2024) designates 'Government Services and Facilities: Co-Sector Risk Management Agencies: DHS and GSA'; CISA Sector page; Education Facilities and National Monuments and Icons subsectors; Election Infrastructure (designated Jan 2017 as a subset of the government facilities sector); U.S. Election Assistance Commission Voting system guidelines/certification; U.S. Department of Education FERPA and FSA GLBA enforcement for Education Facilities subsector entities
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**NIST SP 800-53 Rev. 5 (Release 5.2.0) control baseline**, NIST SP 800-53 Rev. 5 (Release 5.2.0, Aug 27, 2025). It is the common control catalog underpinning FISMA (federal facilities), IRS Pub 1075, CJIS v6 and GovRAMP. Election offices should overlay the VVSG 2.0 security requirements. Education Facilities should use the n61 target (GLBA Safeguards / FERPA).
+Source: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-GOVERNMENT-R01 | [FISMA (federal facilities/systems)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3554&num=0&edition=prelim) | 44 U.S.C. 3551-3558 (3554 agency responsibilities) | Federal agencies and contractors operating federal information systems. It does not directly bind state/local governments. | None. | In force. |
+| C-GOVERNMENT-R02 | [IRS Publication 1075 (FTI safeguards)](https://www.irs.gov/pub/irs-pdf/p1075.pdf) | 26 U.S.C. 6103(p)(4); IRS Pub. 1075 (Rev. 11-2021) | Federal, state and local agencies and their contractors that receive FTI (e.g., revenue, child support, Medicaid/SNAP eligibility, workforce agencies). | No size threshold. | Rev. 11-2021 is the edition served at irs.gov/pub/irs-pdf/p1075.pdf as of 2026-09-25. |
+| C-GOVERNMENT-R03 | [FBI CJIS Security Policy](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJISSECPOL v6.1 (06/25/2026), approved by the CJIS Advisory Policy Board; access tied to 28 CFR Part 20 and user agreements | Every criminal justice and noncriminal justice agency, contractor or private entity with access to CJI or systems that process it (police, sheriffs, 911/PSAPs with CJI access, courts, corrections, and their vendors). | No size threshold. Since Oct 1, 2024, audits sanction pre-modernization ('existing') requirements plus [Priority 1] requirements; other priorities phase in. | Current version v6.1 dated 06/25/2026 (supersedes v6.0 of 12/27/2024). |
+| C-GOVERNMENT-R04 | [EAC Voluntary Voting System Guidelines 2.0](https://www.eac.gov/voting-equipment/voluntary-voting-system-guidelines) | Help America Vote Act (52 U.S.C. 20971); VVSG 2.0 (adopted Feb 10, 2021) | Voting system manufacturers; state/local election officials procuring systems. | Voluntary federally, but mandatory in some states by state law. | VVSG 2.0 in effect; EAC stopped certifying to VVSG 1.0/1.1 as of Nov 16, 2023. |
+| C-GOVERNMENT-R05 | [FERPA (Education Facilities subsector)](https://www.ecfr.gov/current/title-34/part-99) | 34 CFR Part 99 | ED-funded schools/IHEs. | Funding-based applicability (99.1). | In force. |
+| C-GOVERNMENT-R06 | [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Proposed 226.2(b)(8) SLTT entities (50,000+ population) and (b)(9) education facilities (LEAs with 1,000+ students; Title IV IHEs). | Population of 50,000 or more (SLTT); 1,000 or more students (LEA/ESA/SEA). | PROPOSED ONLY. NPRM 89 FR 23644 (Apr 4, 2024). CISA held town halls (Feb 13 and May 26, 2026 notices) to refine scope. Fall 2025 Unified Agenda targeted a final rule for 09/2026. As of 2026-09-25 no final rule is in the Federal Register; CISA says it 'continues to work on the final rule.' Reporting is not yet mandatory. |
+| C-GOVERNMENT-R07 | [State and Local Cybersecurity Grant Program (SLCGP)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section665g&num=0&edition=prelim) | 6 U.S.C. 665g | States, territories and Tribal governments (and their local sub-recipients) accepting SLCGP funds. | Grant condition only. | Appropriations authorized FY2022-FY2025 per the U.S. Code text; reauthorization and FY2026+ funding status NOT verified (the FEMA page returned HTTP 403). |
+| C-GOVERNMENT-R08 | [GovRAMP (formerly StateRAMP)](https://govramp.org/) | GovRAMP program (nonprofit membership organization; NOT law) | Cloud/SaaS vendors to SLTT governments; participating governments. | Tiered verification (Core, Ready, Provisional/Authorized); Snapshot programs for progressing vendors. | Active; stateramp.org now redirects to govramp.org. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [FTI unauthorized disclosure / data breach](https://www.irs.gov/pub/irs-pdf/p1075.pdf) | IRS Pub. 1075 sec. 1.8.4 (and TIGTA reporting) | Immediately, no later than 24 hours after discovery, without waiting for an internal investigation | TIGTA (local Field Division / Special Agent-in-Charge) AND IRS Office of Safeguards |
+| [CJIS incident reporting (IR-6)](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJIS Security Policy v6.1, IR-6 | Personnel report suspected incidents to the organization's incident response capability immediately, and no more than 1 hour after discovery | Organizational incident handlers, and the CSO, SIB Chief or Interface Agency Official, and the FBI CJIS ISO |
+| [Federal agency incident reporting (federal facilities)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3554&num=0&edition=prelim) | 44 U.S.C. 3554 / OMB and CISA federal incident notification guidelines | Per CISA Federal Incident Notification Guidelines (not re-verified here) | CISA |
+| [CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia) | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
-- **Sector AI rules and guidance:** None identified beyond cross-sector obligations
+- **Sensitive data:** Voter registration and election results data; FTI, CJI, benefits data; Education records (Education Facilities subsector); Facility security plans and physical access data; Classified/CUI (federal facilities)
+- **Critical systems:** Election management systems, e-pollbooks, voter registration databases, tabulators; Building automation / physical access control and video surveillance; Government ERP, email and identity platforms; SIS/LMS (education facilities); Public-facing service portals
+- **Sector AI rules and guidance:** Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT in decisions on essential government services/public benefits.
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Intrusion into building access control and automation systems
 - **Scenario AI use case (P10):** Facial recognition for facility access
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+Exact current CISA name: 'Government Services and Facilities Sector' (CISA sector list, fetched 2026-09-25). The CISA sector page lists two subsectors, Education Facilities and National Monuments and Icons. CISA's election security page says DHS designated election infrastructure 'a subset of the government facilities sector' in January 2017. The sector page does not name the SRMA; NSM-22 names DHS and GSA as co-SRMAs. EO 14239 (Mar 2025) directed a review of critical infrastructure policy, and no replacement designation was found in the Federal Register. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (B2B SaaS software publisher) |
 | Tier / Vertical | Micro / Information |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | CCPA Cybersecurity Audit Regulations |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

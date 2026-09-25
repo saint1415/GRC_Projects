@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Residential real estate brokerage (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Real Estate and Rental and Leasing |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | FTC Safeguards Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

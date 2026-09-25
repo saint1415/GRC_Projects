@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Acute-care hospital) |
 | Tier / Vertical | Enterprise / Healthcare and Public Health |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | HIPAA Security Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

@@ -1,6 +1,6 @@
-# System Security Plan: Warehouse management and order fulfillment system
+# System Security Plan: Order management, warehouse, and reseller portal (ERP)
 
-**Organization:** Cris Santos Company (Pharmaceutical wholesale distributor) | **Tier:** Micro | **Vertical:** Wholesale Trade
+**Organization:** Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers) | **Tier:** Micro | **Vertical:** Wholesale Trade
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example
 
 ## 1. System Name and Identifier

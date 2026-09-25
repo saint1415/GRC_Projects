@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Facilities support contractor operating government buildings (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Government Services and Facilities |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NIST SP 800-53 Rev. 5 (Release 5.2.0) control baseline |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

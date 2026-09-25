@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Pharmaceutical wholesale distributor (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers (one division of a diversified holding company)) |
 | Size tier | Multi-Sector (45,000 employees) |
 | Vertical | Wholesale Trade |
 | Method | NIST SP 800-30 Rev. 1 |

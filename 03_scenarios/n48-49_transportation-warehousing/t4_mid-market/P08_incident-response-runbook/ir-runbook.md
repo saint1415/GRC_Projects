@@ -1,10 +1,10 @@
-# Incident Response Runbook: Ransomware disrupting dispatch and fleet telematics
+# Incident Response Runbook: Ransomware disrupting terminal operating system
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
 | Tier / Vertical | Mid-Market / Transportation and Warehousing |
-| Incident type | Ransomware disrupting dispatch and fleet telematics |
+| Incident type | Ransomware disrupting terminal operating system |
 | Framework | NIST SP 800-61 Rev. 3 (CSF 2.0 Community Profile) |
 | Runbook owner | [FILL] |
 | Last tested | [FILL] |
@@ -26,7 +26,7 @@
 ## 2. Detection and declaration (Detect / RS.MA)
 | Trigger | Source | Action |
 |---|---|---|
-| [FILL: indicator specific to Ransomware disrupting dispatch and fleet telematics] | [FILL] | Open incident ticket and notify the incident commander |
+| [FILL: indicator specific to Ransomware disrupting terminal operating system] | [FILL] | Open incident ticket and notify the incident commander |
 
 **Declare an incident when:** [FILL: criteria]. **Record the time of discovery.** Notification clocks may start here.
 

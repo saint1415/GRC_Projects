@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Staffing and temporary help firm) |
 | Tier / Vertical | Small / Administrative and Support and Waste Management and Remediation Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | NIST Cybersecurity Framework (CSF) 2.0 |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

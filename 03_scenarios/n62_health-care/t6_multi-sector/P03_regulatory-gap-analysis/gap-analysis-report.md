@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Multi-specialty physician practice (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Health Care and Social Assistance |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | HIPAA Security Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

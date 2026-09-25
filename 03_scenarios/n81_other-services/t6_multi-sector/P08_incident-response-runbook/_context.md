@@ -15,6 +15,8 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| State breach notification | State statutes | Varies by state | Affected individuals; often the state AG | Verify applicability |
+| Payment card compromise | Card brand rules / merchant agreement (contractual) | Per contract | Acquirer / card brands | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | SEC Form 8-K Item 1.05 (material cybersecurity incident) | Form 8-K Item 1.05; SEC Release 33-11216 | 4 business days after the materiality determination (delay possible only on U.S. Attorney General finding) | SEC (public filing to investors) | Publicly traded companies (SEC registrants) only |
 | CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
@@ -26,6 +28,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N81-R01 | FTC Act Section 5 (unfair/deceptive practices) | 15 U.S.C. 45(a) |
+| N81-R02 | State breach notification laws | State statutes |
+| N81-R03 | PCI DSS v4.0.1 | PCI Security Standards Council standard (contractual, not law) |
+| N81-R04 | FTC/FACTA Disposal Rule | 16 CFR Part 682 (682.3) |
+| N81-R05 | COPPA Rule | 16 CFR Part 312 |
+| N81-R06 | HIPAA (only if a covered entity) | 45 CFR Part 164, Subpart E (164.500-164.534) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

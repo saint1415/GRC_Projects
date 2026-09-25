@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Registered investment adviser) |
 | Tier / Vertical | Sole Proprietorship / Finance and Insurance |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | Interagency Guidelines Establishing Information Security Standards |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

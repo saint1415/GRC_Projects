@@ -1,0 +1,4 @@
+obligation,citation,trigger,deadline,notify,source_url,verified
+Business associate breach notice,45 CFR 164.410,,No later than 60 calendar days after discovery,HIPAA covered entity client,https://www.ecfr.gov/current/title-45/section-164.410,true
+State data breach notification,State statutes (all 50 states),,Varies by state,Affected residents; often the state AG/regulator and consumer reporting agencies,,false
+CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending,proposed 6 CFR 226.5,,72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment,CISA,https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia,true

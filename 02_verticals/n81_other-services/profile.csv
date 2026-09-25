@@ -1,0 +1,12 @@
+field,value
+regulators,"FTC FTC Act Section 5, Disposal Rule, COPPA. Jurisdiction generally does NOT reach non-profit organizations (15 U.S.C. 44).; State Attorneys General State breach notification, charitable solicitation and consumer privacy laws; IRS (Exempt Organizations) Tax-exempt status. No cyber rules, but donor data sits on Form 990 Schedule B"
+primary_regulation,NIST Cybersecurity Framework (CSF) 2.0
+primary_regulation_citation,"NIST CSWP 29 (CSF 2.0), voluntary"
+primary_regulation_url,https://www.nist.gov/cyberframework
+primary_regulation_rationale,"NAICS 81 is mostly small businesses and nonprofits with no sector cyber regulation, and many are outside FTC jurisdiction. NIST CSF 2.0, with its small-business Quick Start Guides and Govern function, is the most appropriate voluntary baseline. Overlay PCI DSS where cards are taken, and state breach law for incident obligations."
+sensitive_data,"Donor and member PII, giving history; Payment card and ACH/bank data for donations and services; Congregant/pastoral care and counseling notes; Children's and youth program participant data; Vehicle owner / VIN data (repair shops); Client appointment and personal care records"
+critical_systems,Donor/member management (ChMS/CRM); Online giving and payment platforms; POS and appointment-booking systems; Shop management and diagnostic systems (auto repair); Email/productivity tenants and website/CMS; Volunteer background check portals
+ai_specific,
+assurance_alternatives,
+notes,"Very limited federal cyber regulation for this sector. The key applicability nuance: FTC Act Section 5 (and so COPPA 'operator' status) generally excludes nonprofits (15 U.S.C. 44). All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

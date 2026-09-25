@@ -1,10 +1,10 @@
-# AI Risk Assessment: Container risk-scoring model
+# AI Risk Assessment: Track and equipment defect detection (computer vision)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port (one division of a diversified holding company)) |
+| Organization | Cris Santos Company (Short line freight railroad (one division of a diversified holding company)) |
 | Tier / Vertical | Multi-Sector / Transportation Systems |
-| AI use case | Container risk-scoring model |
+| AI use case | Track and equipment defect detection (computer vision) |
 | Framework | NIST AI RMF 1.0 (+ AI 600-1 if generative) |
 | Assessor / date | [FILL] |
 

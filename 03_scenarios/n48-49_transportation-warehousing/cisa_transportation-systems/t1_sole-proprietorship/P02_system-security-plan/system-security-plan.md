@@ -1,6 +1,6 @@
 # System Security Plan: Core business SaaS stack (email, files, client and billing records)
 
-**Organization:** Cris Santos Company (Freight forwarder and customs broker) | **Tier:** Sole Proprietorship | **Vertical:** Transportation Systems
+**Organization:** Cris Santos Company (Freight broker arranging rail and truck shipments) | **Tier:** Sole Proprietorship | **Vertical:** Transportation Systems
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example
 
 ## 1. System Name and Identifier

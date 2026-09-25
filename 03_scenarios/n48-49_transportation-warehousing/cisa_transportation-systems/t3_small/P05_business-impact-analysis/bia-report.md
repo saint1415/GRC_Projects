@@ -1,6 +1,6 @@
 # Business Impact Analysis: Cris Santos Company | Transportation Systems | Small
 
-**Organization:** Cris Santos Company (Marine cargo terminal operator at a U.S. port) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
+**Organization:** Cris Santos Company (Short line freight railroad) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 
 ## 1. Overview and purpose
 [FILL: Why this BIA was done and which contingency plans it feeds]

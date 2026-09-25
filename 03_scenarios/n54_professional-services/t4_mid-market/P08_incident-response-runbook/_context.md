@@ -15,6 +15,11 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| FTC Safeguards notification event | 16 CFR 314.4(j) | As soon as possible, no later than 30 days after discovery | FTC (online form), when unencrypted customer information of 500 or more consumers is acquired without authorization | Verify applicability |
+| DoD cyber incident report | 48 CFR 252.204-7012(c) (definition of 'rapidly report') | Within 72 hours of discovery | DoD via https://dibnet.dod.mil (requires a DoD-approved medium assurance certificate) | Verify applicability |
+| Business associate breach notice to covered entity | 45 CFR 164.410 | Without unreasonable delay, no later than 60 calendar days after discovery | HIPAA covered entity client | Verify applicability |
+| Client data theft (tax professionals) | IRS guidance (not a regulation) | As quickly as possible ('Speed is critical') | Local IRS Stakeholder Liaison (who notifies IRS-CI), law enforcement, and state tax agencies | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
@@ -25,6 +30,15 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N54-R01 | FTC Safeguards Rule (GLBA) | 16 CFR Part 314 |
+| N54-R02 | IRC 7216 preparer disclosure/use limits | 26 U.S.C. 7216; 26 CFR 301.7216-1 to -3 |
+| N54-R03 | IRS Publication 4557 / WISP expectation | IRS Pub. 4557 (Rev. 5-2024); IRS Pub. 5708 (WISP template) |
+| N54-R04 | FAR Basic Safeguarding clause | 48 CFR 52.204-21 (prescribed at FAR 4.1903) |
+| N54-R05 | DFARS 252.204-7012 + CMMC | 48 CFR 252.204-7012; 32 CFR Part 170; 48 CFR 204.7502 / 252.204-7021 |
+| N54-R06 | HIPAA (as business associate) | 45 CFR 164.302-164.318, 164.410, 164.504(e) |
+| N54-R07 | ABA Model Rules 1.1 (cmt. 8) and 1.6(c) | ABA Model Rules of Professional Conduct (model rules, NOT law; binding only as adopted by each state's highest court) |
+| N54-R08 | AICPA Code of Professional Conduct - Confidential Client Information | AICPA Code ET sec. 1.700 (professional standard, NOT law; incorporated by many state boards of accountancy) |
+| N54-R09 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

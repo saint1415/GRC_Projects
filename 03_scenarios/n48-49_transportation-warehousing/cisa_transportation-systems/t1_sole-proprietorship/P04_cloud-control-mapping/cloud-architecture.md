@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Transportation Systems | Sole Proprietorship
 
-**Organization:** Cris Santos Company (Freight forwarder and customs broker) | **Tier:** Sole Proprietorship | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
+**Organization:** Cris Santos Company (Freight broker arranging rail and truck shipments) | **Tier:** Sole Proprietorship | **Provider:** [FILL: AWS | Azure | GCP | SaaS only]
 
 ## Diagram
 

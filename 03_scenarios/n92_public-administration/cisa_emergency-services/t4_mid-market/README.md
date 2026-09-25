@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Criminal Justice Information (CJI), CHRI, NCIC data; Criminal intelligence (28 CFR 23); EMS patient care records (PHI); 911 call recordings and caller location (ALI/ANI); Body-worn camera / evidence video; Officer and responder personnel data
+- **Critical systems:** Computer-Aided Dispatch (CAD); 911 call handling equipment / NG911 ESInet; Records Management Systems (RMS) and jail management; Land Mobile Radio (LMR/P25) and FirstNet devices; Mobile data terminals and AVL; ePCR systems; Mass notification / IPAWS alert origination; Evidence management and BWC platforms
 
 ## Who regulates it
-[see vertical overlay]
+CISA (Sector Risk Management Agency) 'CISA ... serves as the Emergency Services Sector Risk Management Agency.' Disciplines: Emergency Management, EMS, Fire and Rescue, Law Enforcement, Public Works.; FBI CJIS Division / state CSAs CJIS Security Policy for law enforcement and PSAPs with CJI access; HHS OCR HIPAA for EMS agencies that bill electronically; FCC 911/EAS rules; EAS cybersecurity rule (47 CFR Part 11) for EAS participants
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FBI CJIS Security Policy](https://le.fbi.gov/file-repository/cjis_security_policy_v6-1_20260625.pdf) | CJISSECPOL v6.1 (06/25/2026), approved by the CJIS Advisory Policy Board; access tied to 28 CFR Part 20 and user agreements | No size threshold. Since Oct 1, 2024, audits sanction pre-modernization ('existing') requirements plus [Priority 1] requirements; other priorities phase in. |
+| [Criminal history record information security](https://www.ecfr.gov/current/title-28/section-20.21) | 28 CFR 20.21(f) | None. |
+| [Criminal intelligence systems operating policies](https://www.ecfr.gov/current/title-28/part-23) | 28 CFR Part 23 (23.20) | Applies based on federal funding. |
+| [HIPAA Security Rule (EMS)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR Part 164, Subpart C (164.302-164.318) | No size exemption; 164.306(b)(2) lets entities factor size, complexity, capabilities and cost when choosing measures. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Serves a population of 50,000 or more (proposed). |
+| [FCC EAS cybersecurity requirements](https://www.federalregister.gov/documents/2026/07/31/2026-15601/modernization-of-the-nations-alerting-systems-protecting-the-nations-communications-systems-from) | 47 CFR Part 11 (Report and Order, 91 FR 48289) | Not verified. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Computer-aided dispatch (CAD) and electronic patient care reporting (ePCR). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: HIPAA Security Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

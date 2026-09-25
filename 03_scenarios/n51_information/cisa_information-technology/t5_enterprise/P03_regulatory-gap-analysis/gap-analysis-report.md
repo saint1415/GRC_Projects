@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Cloud hosting and managed infrastructure provider) |
 | Tier / Vertical | Enterprise / Information Technology |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | FedRAMP (Rev5 NIST SP 800-53 baselines / 20x) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

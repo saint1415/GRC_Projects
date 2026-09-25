@@ -2,9 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
 | Tier / Vertical | Enterprise / Transportation and Warehousing |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | USCG Maritime Cybersecurity Rule |
 | Assessment date | [FILL] |
 
 ## 1. Applicability

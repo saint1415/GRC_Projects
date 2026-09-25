@@ -16,6 +16,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N72-R01 | PCI DSS v4.0.1 | PCI Security Standards Council standard (contractual, not law) |
+| N72-R02 | FTC Act Section 5 (unfair/deceptive practices) | 15 U.S.C. 45(a) |
+| N72-R03 | FTC/FACTA Disposal Rule | 16 CFR Part 682 (682.3) |
+| N72-R04 | State breach notification laws | State statutes (all 50 states, DC, territories) |
+| N72-R05 | Illinois Biometric Information Privacy Act | 740 ILCS 14 |
+| N72-R06 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

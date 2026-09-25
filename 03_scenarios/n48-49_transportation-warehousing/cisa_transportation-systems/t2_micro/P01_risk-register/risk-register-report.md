@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Freight forwarding and customs brokerage office) |
+| Organization | Cris Santos Company (Short line freight railroad) |
 | Size tier | Micro (7 employees) |
 | Vertical | Transportation Systems |
 | Method | NIST SP 800-30 Rev. 1 |

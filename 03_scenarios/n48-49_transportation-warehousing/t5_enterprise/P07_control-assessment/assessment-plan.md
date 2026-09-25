@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Long-haul truckload carrier) |
+| Organization | Cris Santos Company (Marine cargo terminal operator at a U.S. port) |
 | System assessed | [FILL: from P02] |
 | Tier / Vertical | Enterprise / Transportation and Warehousing |
 | Procedures | NIST SP 800-53A Rev. 5 (Release 5.2.0) |

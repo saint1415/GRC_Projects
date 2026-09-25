@@ -22,14 +22,23 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Federal Tax Information / tax return information (IRC 7216); SSNs, bank and account numbers (GLBA customer information); Attorney-client privileged and confidential client information; PHI held as a HIPAA business associate; Federal Contract Information (FCI) and Controlled Unclassified Information (CUI); Client IP and trade secrets, M&A material non-public information
+- **Critical systems:** Tax preparation and e-file software; Document/practice management systems (DMS, e-discovery); Client portals and secure file transfer; Email and M365/Google Workspace tenants; Accounting/ERP and time & billing; RMM/PSA tools (MSPs and IT consultants); GCC-High / CUI enclaves for defense contractors
 
 ## Who regulates it
-[see vertical overlay]
+Federal Trade Commission (FTC) Enforces the GLBA Safeguards Rule for tax preparers/accountants and FTC Act Section 5 data security; Internal Revenue Service (IRS) Tax-preparer data protection (IRC 7216; Pub 4557 guidance; e-file provider rules); DoD (CMMC Program) / FAR Council / GSA Federal contractor safeguarding (FAR 52.204-21, DFARS 252.204-7012, CMMC); HHS Office for Civil Rights HIPAA enforcement for firms acting as business associates; State bars / state boards of accountancy Professional conduct and confidentiality rules (state-adopted; not federal)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FTC Safeguards Rule (GLBA)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR Part 314 | 314.6: institutions holding customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) (written risk assessment), (d)(2) (continuous monitoring/pen testing), (h) (written IR plan) and (i) (annual board report). The 314.4(j) FTC notice applies only to events affecting 500 or more consumers. |
+| [IRC 7216 preparer disclosure/use limits](https://www.ecfr.gov/current/title-26/section-301.7216-1) | 26 U.S.C. 7216; 26 CFR 301.7216-1 to -3 | None. |
+| [IRS Publication 4557 / WISP expectation](https://www.irs.gov/pub/irs-pdf/p4557.pdf) | IRS Pub. 4557 (Rev. 5-2024); IRS Pub. 5708 (WISP template) | Scales to firm size (per the Safeguards Rule). |
+| [FAR Basic Safeguarding clause](https://www.ecfr.gov/current/title-48/section-52.204-21) | 48 CFR 52.204-21 (prescribed at FAR 4.1903) | No size threshold. Does not apply to acquisitions solely of COTS items (FAR 4.1902). |
+| [DFARS 252.204-7012 + CMMC](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012; 32 CFR Part 170; 48 CFR 204.7502 / 252.204-7021 | No small-business exemption. The CMMC level (1-3) is set per contract. |
+| [HIPAA (as business associate)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR 164.302-164.318, 164.410, 164.504(e) | No size exemption. |
+| [ABA Model Rules 1.1 (cmt. 8) and 1.6(c)](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/) | ABA Model Rules of Professional Conduct (model rules, NOT law; binding only as adopted by each state's highest court) | None. |
+| [AICPA Code of Professional Conduct - Confidential Client Information](https://www.aicpa-cima.com/resources/landing/code-of-professional-conduct) | AICPA Code ET sec. 1.700 (professional standard, NOT law; incorporated by many state boards of accountancy) | None. |
+| [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Proposed 226.2(a): entities in a CI sector that exceed the SBA small-business size standard for their NAICS code (13 CFR 121), or that meet a sector-based criterion regardless of size. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +47,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise risk register integrated with ERM. 60+ risks; aggregation to enterprise risk (NIST IR 8286). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Tax preparation software and client document portal. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: FTC Safeguards Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies within a policy hierarchy. Policies; standards; procedures; exceptions process. |

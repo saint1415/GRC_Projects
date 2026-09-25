@@ -22,14 +22,23 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** SSNs, I-9 identity documents, work authorization data; Background check / consumer reports (FCRA); Payroll, bank account and tax withholding data (PEOs); Benefits enrollment and group health plan PHI; Payment card data captured by call centers; Call recordings and biometric time-clock data; Customer site access credentials (security guard/janitorial firms)
+- **Critical systems:** Applicant tracking systems (ATS) and VMS; Payroll / HCM / PEO platforms; Contact-center (CCaaS), IVR and call-recording platforms; Workforce management and time & attendance (incl. biometric clocks); Guard tour / access control and CCTV systems; Fleet routing/telematics and scale-house systems (waste)
 
 ## Who regulates it
-[see vertical overlay]
+FTC FCRA Disposal Rule, Telemarketing Sales Rule, FTC Act Section 5; Federal Communications Commission (FCC) TCPA calling restrictions for call centers (47 CFR 64.1200); Consumer Financial Protection Bureau / FTC FCRA employment background-check rules; DHS / USCIS Form I-9 retention for employers and recruiters/referrers for a fee; PHMSA (DOT) Hazmat security plans for waste haulers transporting listed hazardous materials; HHS OCR HIPAA for call centers and staffing firms acting as business associates
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FTC/FACTA Disposal Rule](https://www.ecfr.gov/current/title-16/part-682) | 16 CFR Part 682 (682.3) | None. |
+| [FCRA employment background checks](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1681b&num=0&edition=prelim) | 15 U.S.C. 1681b(b) | None. |
+| [Form I-9 retention](https://www.ecfr.gov/current/title-8/section-274a.2) | 8 CFR 274a.2(b)(2) | None. |
+| [HIPAA (as business associate)](https://www.ecfr.gov/current/title-45/part-164/subpart-C) | 45 CFR 164.302-164.318, 164.410, 164.504(e) | No size exemption. |
+| [TCPA / Telemarketing Sales Rule](https://www.ecfr.gov/current/title-47/section-64.1200) | 47 CFR 64.1200; 16 CFR Part 310 | None. |
+| [PCI DSS v4.0.1](https://www.pcisecuritystandards.org/standards/pci-dss/) | PCI Security Standards Council standard (contractual, not law) | Validation level (SAQ vs. QSA ROC) depends on annual card-transaction volume under card-brand merchant-level programs. Those levels are set by the card brands and were not verified here. |
+| [FAR Basic Safeguarding clause](https://www.ecfr.gov/current/title-48/section-52.204-21) | 48 CFR 52.204-21 (prescribed at FAR 4.1903) | No size threshold. Does not apply to acquisitions solely of COTS items (FAR 4.1902). |
+| [NYC Local Law 144 (Automated Employment Decision Tools)](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) | NYC Admin. Code 20-870 et seq. (Local Law 144 of 2021) | None. |
+| [PHMSA hazmat security plans](https://www.ecfr.gov/current/title-49/part-172/subpart-I) | 49 CFR 172.800-172.804 | Applicability depends on the material/quantity thresholds in 49 CFR 172.800 (not itemized here). |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +47,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Group and division registers. Division registers roll up to group ERM. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Payroll and applicant tracking system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: NIST Cybersecurity Framework (CSF) 2.0. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | Group policies with division supplements. Group policy plus division-specific standards. |

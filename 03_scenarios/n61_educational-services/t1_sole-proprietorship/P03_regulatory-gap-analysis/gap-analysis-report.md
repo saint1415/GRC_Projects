@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company (Tutoring and educational support service) |
 | Tier / Vertical | Sole Proprietorship / Educational Services |
-| Regulation analyzed | [see vertical overlay] |
+| Regulation analyzed | GLBA Safeguards Rule (as enforced by FSA for Title IV institutions) |
 | Assessment date | [FILL] |
 
 ## 1. Applicability
