@@ -1,0 +1,12 @@
+field,value
+regulators,General Services Administration / federal contracting agencies (FAR); Department of Defense (DFARS/CMMC) for defense construction contractors; OSHA (safety; no cyber rules)
+primary_regulation,FAR 52.204-21 / CMMC Level 1 (escalating to NIST SP 800-171 R2 / CMMC Level 2 when CUI is handled)
+primary_regulation_citation,48 CFR 52.204-21; 32 CFR Part 170
+primary_regulation_url,https://www.ecfr.gov/current/title-48/section-52.204-21
+primary_regulation_rationale,"Construction has no sector-specific cyber regulation; the binding obligations most firms face come through federal contracts. The 15 FAR requirements are the minimum; firms handling CUI (e.g., controlled building plans for federal/defense facilities) must meet DFARS 7012/NIST SP 800-171 R2 and CMMC Level 2."
+sensitive_data,Federal Contract Information (FCI); CUI incl. controlled building/facility drawings; Employee PII and payroll (certified payroll/Davis-Bacon); Bid and pricing data; Client facility security details
+critical_systems,Project management and BIM/CAD platforms; ERP/accounting and payroll; Building automation/BAS installed for clients; Telematics for heavy equipment; Video surveillance and access control installs
+ai_specific,
+assurance_alternatives,
+notes,"Not a CISA critical infrastructure sector; CIRCIA would reach construction firms only via another criterion (e.g., DFARS 7012 contractor). SEC cross-cutting note in n11."
+last_verified,2026-09-25

@@ -1,0 +1,12 @@
+field,value
+regulators,SRMA: Environmental Protection Agency (EPA); State drinking water primacy agencies
+primary_regulation,SDWA sec. 1433 Risk & Resilience Assessment
+primary_regulation_citation,42 U.S.C. 300i-2
+primary_regulation_url,https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section300i-2&num=0&edition=prelim
+primary_regulation_rationale,The only binding federal requirement explicitly covering water-system cybersecurity; the RRA's required elements (incl. automated systems security) provide the gap-analysis scope. Use EPA's Water Cybersecurity Assessment Tool / CISA CPGs for control-level detail since statute is not prescriptive.
+sensitive_data,"RRA and ERP contents; Customer PII, billing and payment card data; SCADA network diagrams and asset inventories; PCII (if submitted)"
+critical_systems,"SCADA/HMI; PLCs and RTUs at treatment plants, pump stations and lift stations; Chemical dosing controls; Remote access / telemetry (cellular/radio); Laboratory information systems; Customer billing / AMI"
+ai_specific,
+assurance_alternatives,
+notes,"No federal mandatory cyber incident-reporting rule for water systems as of 2026-09-25 (CIRCIA pending). EPA's 2023 sanitary-survey cyber memo was withdrawn (Oct. 2023) - not re-verified here. State rules (e.g., state PUC or state water cyber laws) may apply."
+last_verified,2026-09-25

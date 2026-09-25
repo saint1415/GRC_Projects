@@ -1,0 +1,12 @@
+field,value
+regulators,"U.S. Department of Agriculture (USDA) - co-SRMA for Food and Agriculture; Food and Drug Administration (FDA/HHS) - co-SRMA; FSMA food defense; Environmental Protection Agency (EPA) - pesticides, agricultural environmental rules"
+primary_regulation,NIST Cybersecurity Framework (CSF) 2.0
+primary_regulation_citation,"NIST CSWP 29 (Feb. 26, 2024)"
+primary_regulation_url,https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final
+primary_regulation_rationale,"Primary agricultural production has no binding federal cybersecurity regulation (farms are largely exempt from 21 CFR 121, which is a food-defense, not IT-security, rule). CSF 2.0 is the sector-neutral baseline referenced by USDA/CISA; use 21 CFR 121 as a supplemental checklist for any farm mixed-type facility that processes food."
+sensitive_data,Farm operational and yield data; Employee PII / H-2A worker records; Food defense plans and vulnerability assessments; USDA program participant data; Payment card data (PCI DSS) for direct sales
+critical_systems,Precision-agriculture platforms and GPS/GNSS guidance; Connected tractors/equipment telematics; Irrigation and grain-handling PLC/SCADA; Livestock/dairy automation and environmental controls; Cold-chain monitoring; Farm ERP/accounting
+ai_specific,
+assurance_alternatives,
+notes,"No sector-wide mandatory cyber rule for primary agriculture. CIRCIA proposed rule would cover food & ag entities only via the SBA size-standard criterion (no ag-specific sector criterion). Cross-cutting (not repeated per unit): public companies in any sector are subject to the SEC cybersecurity disclosure rule (17 CFR 229.106 / Reg. S-K Item 106 annual disclosure; Form 8-K Item 1.05 within 4 business days of determining an incident is material; effective Sep. 5, 2023): https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure"
+last_verified,2026-09-25

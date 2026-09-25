@@ -1,0 +1,12 @@
+field,value
+regulators,"SRMA: Department of Homeland Security (CISA); CISA Chemical Security (CFATS - authority lapsed; ChemLock voluntary program); U.S. Coast Guard (MTSA waterfront chemical facilities); EPA (Risk Management Program, 40 CFR Part 68 - process safety, not cyber-specific)"
+primary_regulation,CFATS RBPS 8 (Cyber) - as voluntary benchmark
+primary_regulation_citation,6 CFR 27.230(a)(8)
+primary_regulation_url,https://www.ecfr.gov/current/title-6/section-27.230
+primary_regulation_rationale,"Although unenforceable since the July 2023 lapse, RBPS 8 remains the only chemical-sector-specific federal cyber performance standard and is likely to return if CFATS is reauthorized. MTSA-regulated chemical terminals should instead gap against 33 CFR 101 Subpart F (binding)."
+sensitive_data,"Chemical-terrorism Vulnerability Information (CVI, 6 CFR 27.400) - legacy; SSI for MTSA facilities (49 CFR Part 1520); Process safety information and formulations; EAR-controlled chemical technology (e.g., CWC/Australia Group items); Employee PII"
+critical_systems,DCS; Safety instrumented systems (SIS); PLCs/SCADA for tank farms and terminals; Laboratory information management systems; MES/ERP; Loading rack automation
+ai_specific,
+assurance_alternatives,
+notes,OSHA PSM omitted (not cyber-specific). EPA RMP 2024 amendments contain no cyber provisions (not re-verified in full text).
+last_verified,2026-09-25

@@ -1,0 +1,2 @@
+component,layer,provider,service_model,control_id,control_name,responsibility,implementation_note,evidence_source,shared_responsibility_ref,regulatory_driver
+[FILL],[Identity|Network|Compute|Data|Logging|Physical|SaaS],[AWS|Azure|GCP|SaaS vendor],[IaaS|PaaS|SaaS],[e.g. IA-2],[FILL],[Provider|Customer|Shared],[FILL],[FILL],[SRC-AWS-SRM|SRC-AZURE-SRM|SRC-GCP-SRM],[requirement_id]

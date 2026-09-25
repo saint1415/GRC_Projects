@@ -1,0 +1,61 @@
+tier_id,project_id,scope,expected_depth,artifact_form
+t1,P01,Whole business as one system,10-15 risks; qualitative 5-level scales; owner is every risk owner,Single CSV register plus one-page summary
+t1,P02,The owner's core SaaS stack as one system boundary,Short-form plan: boundary; data types; key safeguards per CSF Function,Two to four page system profile using the SSP outline headings
+t1,P03,Primary regulation that applies to the owner,Requirement-level checklist; self-attested evidence,CSV gap table plus a half-page action list
+t1,P04,SaaS tenants only (no IaaS),SaaS shared responsibility; customer-side controls only (identity; data; endpoints),Simple diagram plus control map CSV
+t1,P05,3-5 business functions (e.g. client delivery; billing; communications),MTD/RTO/RPO by function; single-person dependency called out,One-page BIA table
+t1,P06,One consolidated information security policy,Plain-language rules covering access; incident response; data handling; acceptable use,Single policy document (3-5 pages)
+t1,P07,6-10 controls,Examine and test methods; interview is self-review,Assessment worksheet CSV plus short results memo
+t1,P08,One incident type,Who to call and what to do in the first 24 hours; outside help contacts,Two-page runbook
+t1,P09,Security criteria (CC series) only,Readiness self-check; many criteria marked not applicable with rationale,Checklist CSV plus summary
+t1,P10,One third-party AI tool the owner uses,Use-case risk screen; data-sharing rules; human review of outputs,One-page AI use assessment
+t2,P01,Business and its key vendors,15-25 risks; qualitative scales; named owners,CSV register plus summary memo
+t2,P02,Core business system(s) run by the MSP and SaaS vendors,Standard SSP outline with inherited controls from MSP/SaaS noted,SSP document (5-10 pages) plus control table
+t2,P03,Primary regulation,Requirement-level; documentary evidence collected,Gap table plus remediation plan
+t2,P04,SaaS plus any single cloud workload,Customer vs provider responsibility; MSP responsibilities called out,Diagram plus control map CSV
+t2,P05,All business functions (5-10),MTD/RTO/RPO; vendor dependencies,BIA table plus summary
+t2,P06,3 core policies,Access control; incident response; data classification,Three short policies
+t2,P07,10-15 controls,Examine/interview/test; MSP evidence requested,Assessment worksheet plus findings list
+t2,P08,One incident type,Full lifecycle; MSP and insurer in the notification chain,Runbook (3-5 pages)
+t2,P09,Security plus one other relevant category,Readiness self-assessment; evidence inventory,Checklist CSV plus gap summary
+t2,P10,One AI use case,Risk tier; data protection; human-in-the-loop decisions,AI risk assessment (3-5 pages)
+t3,P01,Organization-level register tied to key systems,25-40 risks; semi-quantitative scoring (NIST SP 800-30 Appendix G-I),CSV register plus risk report
+t3,P02,One major system with a defined boundary,Full SSP outline per SP 800-18 Rev. 2; control implementation statements,SSP document plus control implementation CSV
+t3,P03,Primary regulation plus the most relevant secondary regulation,Requirement-level with evidence and control crosswalk,Gap table plus remediation roadmap
+t3,P04,One cloud environment (IaaS/PaaS) plus SaaS,Control-by-component mapping; shared responsibility by service,Architecture diagram plus control map CSV
+t3,P05,All business processes,MTD/RTO/RPO; resource and dependency mapping,BIA workbook plus report
+t3,P06,5 policies,Information security; access control; incident response; data classification; acceptable use,Policy set with control mapping
+t3,P07,15-25 controls,Formal assessment plan; examine/interview/test,Assessment plan; results CSV; POA&M
+t3,P08,One incident type,Full runbook with regulatory notification clocks,Runbook plus contact matrix
+t3,P09,Security plus relevant categories,Readiness assessment against all applicable criteria,Checklist CSV plus readiness report
+t3,P10,1-2 AI use cases,AI RMF Govern/Map/Measure/Manage; bias testing plan,AI risk assessment plus use-case inventory
+t4,P01,Enterprise and system-level registers,40-60 risks; semi-quantitative; risk appetite statements,Enterprise register plus system registers
+t4,P02,A major system (Moderate impact),Full SSP with baseline tailoring and inherited controls,SSP plus control implementation CSV
+t4,P03,All applicable regulations for the primary business line,Requirement-level; evidence sampling,Gap table plus program roadmap
+t4,P04,Multi-account/subscription cloud environment,Landing zone and workload layers; shared responsibility per service,Architecture diagram plus control map CSV
+t4,P05,All business units and processes,Quantified impact (financial; operational; regulatory),BIA workbook plus executive report
+t4,P06,5 policies plus supporting standards,Policies plus standards for key domains,Policy set plus standards index
+t4,P07,25-40 controls,Independent-style assessment with sampling,Assessment plan; results; POA&M
+t4,P08,Two incident types,Runbooks integrated with crisis management and legal,Runbooks plus notification matrix
+t4,P09,All relevant categories,Readiness assessment for a Type 2 audit,Readiness report plus evidence map
+t4,P10,AI use-case portfolio,Inventory; risk tiering; model risk controls,AI governance assessment plus inventory
+t5,P01,Enterprise risk register integrated with ERM,60+ risks; aggregation to enterprise risk (NIST IR 8286),ERM-aligned register plus board reporting
+t5,P02,A high-value system (Moderate or High impact),Full SSP; common control provider inheritance,SSP plus control implementation CSV
+t5,P03,All applicable regulations across the enterprise,Requirement-level; evidence sampling; regulator-ready,Gap tables plus compliance roadmap
+t5,P04,Multi-cloud enterprise architecture,Platform; landing zone; workload; SaaS layers; common controls,Architecture diagrams plus control map CSV
+t5,P05,Enterprise-wide BIA,Quantified impact; dependency mapping; third parties,BIA workbook plus executive report
+t5,P06,5 policies within a policy hierarchy,Policies; standards; procedures; exceptions process,Policy set plus governance framework
+t5,P07,40+ controls,Formal assessment; statistical sampling; independence,Assessment plan; results; POA&M
+t5,P08,Incident type with SEC materiality assessment step,Runbooks integrated with crisis; legal; disclosure committee,Runbooks plus notification and disclosure matrix
+t5,P09,All categories; multiple service lines,Readiness for Type 2 across service lines,Readiness report plus evidence map
+t5,P10,Enterprise AI portfolio,AI governance committee; inventory; tiering; monitoring,AI governance assessment plus inventory
+t6,P01,Group and division registers,Division registers roll up to group ERM,Group register plus division registers
+t6,P02,One system per division or a shared corporate system,SSP with common controls inherited from corporate,SSP plus common control catalog
+t6,P03,Each division's primary regulation plus group-wide obligations,Regulation-by-division matrix,Gap tables per division plus group roadmap
+t6,P04,Shared corporate cloud platform plus division workloads,Common vs division-specific controls,Architecture diagrams plus control map CSV
+t6,P05,Group and division BIAs,Cross-division dependencies and shared services,BIA workbooks plus group summary
+t6,P06,Group policies with division supplements,Group policy plus division-specific standards,Policy set plus supplements
+t6,P07,Common controls plus division samples,Assess common controls once; sample division controls,Assessment plan; results; POA&M
+t6,P08,Incident spanning divisions,Notification matrix across all division regulators,Runbook plus multi-regulator notification matrix
+t6,P09,Service lines per division,Scoping decisions per division,Readiness report per in-scope division
+t6,P10,Group AI governance program,Group standards; division use cases; regulator-specific rules,AI governance assessment plus inventory

@@ -1,0 +1,12 @@
+field,value
+regulators,Federal Energy Regulatory Commission (FERC); North American Electric Reliability Corporation (NERC) - ERO; Department of Energy (DOE CESER) - Energy SRMA; Nuclear Regulatory Commission (NRC); Environmental Protection Agency (EPA) - Water SRMA; Transportation Security Administration (TSA) - gas pipelines/LNG
+primary_regulation,NERC CIP Reliability Standards
+primary_regulation_citation,16 U.S.C. 824o; NERC CIP-002 through CIP-015
+primary_regulation_url,https://www.nerc.com/standards/reliability-standards/cip
+primary_regulation_rationale,"The most mature, mandatory, auditable cyber regime among utilities (penalties up to FPA civil penalty limits, CMEP audits). Water utilities should instead use SDWA 1433 RRA; nuclear 10 CFR 73.54; gas pipelines TSA SD 2021-02 series."
+sensitive_data,"CEII - Critical Energy/Electric Infrastructure Information (18 CFR 388.113); BES Cyber System Information (CIP-011); Safeguards Information (10 CFR 73.21-73.22); SSI (49 CFR Part 1520) for TSA-regulated pipelines; Water RRA/ERP content; Customer PII, usage/smart-meter data and payment card data"
+critical_systems,SCADA/EMS; DCS in generating plants; Distribution management systems (ADMS/OMS); AMI/smart meters; Protective relays and substation automation (IEC 61850); Water treatment PLC/HMI; Customer information and billing systems
+ai_specific,
+assurance_alternatives,NERC CIP compliance audits by regional entities (mandatory for applicable entities)
+notes,"See child units for detail. DOE issued an RFI (FR 2026-18370, Sep. 9, 2026) implementing an Aug. 26, 2026 Executive Order declaring a national emergency to secure the U.S. bulk-power system (foreign-adversary equipment/supply chain) - watch for new DOE prohibitions. Public utilities: see SEC cross-cutting note in n11."
+last_verified,2026-09-25

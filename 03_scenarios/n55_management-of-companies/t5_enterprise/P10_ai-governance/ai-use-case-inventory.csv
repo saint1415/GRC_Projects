@@ -1,0 +1,2 @@
+use_case_id,use_case,business_owner,vendor_or_model,build_or_buy,data_categories,affects_individuals,consequential_decision_category,risk_tier,human_in_the_loop,applicable_laws,assessment_date,status
+AI-001,Enterprise generative AI assistant across subsidiaries,[FILL],[FILL],[Build|Buy|Configure],[FILL],[Yes|No],[None|Employment|Credit|Housing|Insurance|Education|Health care|Government services|Legal|Safety/CI],[High|Medium|Low],[FILL],[FILL],[YYYY-MM-DD],[Proposed|Approved|In production|Retired]

@@ -1,0 +1,2 @@
+poam_id,control_id,weakness,source,risk_level,remediation_plan,milestones,resources_required,owner,scheduled_completion,status
+POAM-001,[FILL],[FILL],[P07 assessment|P03 gap|Other],[Very Low..Very High],[FILL],[FILL],[FILL],[FILL],[YYYY-MM-DD],[Open|In progress|Closed]

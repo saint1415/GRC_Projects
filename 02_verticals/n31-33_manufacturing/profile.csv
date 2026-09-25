@@ -1,0 +1,12 @@
+field,value
+regulators,"Department of Defense (DFARS/CMMC, DCSA); Department of State DDTC (ITAR); Department of Commerce BIS (EAR, ICTS); FDA (medical device cybersecurity, food facilities); CISA (Chemical & Critical Manufacturing SRMA)"
+primary_regulation,FD&C Act section 524B (cyber devices)
+primary_regulation_citation,21 U.S.C. 360n-2
+primary_regulation_url,https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section360n-2&num=0&edition=prelim
+primary_regulation_rationale,"Cris Santos Company's primary industry here is connected medical devices, and section 524B is binding on every premarket submission for a cyber device (vulnerability monitoring and disclosure plan, secure development, patching, SBOM). Research note: for defense suppliers the better target is NIST SP 800-171 via DFARS 252.204-7012 and CMMC (see the Defense Industrial Base child); for other manufacturers with no binding rule, benchmark against NIST CSF 2.0 and NIST SP 800-82 Rev. 3."
+sensitive_data,Device design files and source code; SBOMs and vulnerability data; export-controlled technical data (EAR/ITAR where applicable); patient data received from devices in service (may be PHI when handled for a covered entity)
+critical_systems,MES; ERP / PLM; DCS / PLCs / robotics; SCADA and historians; Quality/LIMS; CAD/CAM and CNC networks
+ai_specific,
+assurance_alternatives,
+notes,"FAR CUI proposed rule (FR 2024-30437, Jan. 15, 2025) not yet final; FAR is being rewritten under the Revolutionary FAR Overhaul (2026 proposed rules). NIST SP 800-171 Rev. 3 exists but CMMC and DoD assessments remain tied to Rev. 2. SEC cross-cutting note in n11."
+last_verified,2026-09-25

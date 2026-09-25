@@ -1,0 +1,27 @@
+# Regulatory Gap Analysis: Cris Santos Company | Critical Manufacturing | Mid-Market
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company (Power and distribution transformer manufacturer) |
+| Tier / Vertical | Mid-Market / Critical Manufacturing |
+| Regulation analyzed | NIST Cybersecurity Framework 2.0 with NIST SP 800-82 Rev. 3 (OT) |
+| Assessment date | [FILL] |
+
+## 1. Applicability
+[FILL: Does the regulation apply at this size and in this business? Cite the threshold or exemption from the vertical requirements.]
+
+## 2. Method
+Requirements were decomposed to citation level, crosswalked to CSF 2.0 and SP 800-53, and assessed as Met, Partially met, or Not met based on evidence. See `00_universal/projects/P03_regulatory-gap-analysis/README.md`.
+
+## 3. Results summary
+| Section of regulation | Met | Partially met | Not met | N/A |
+|---|---|---|---|---|
+| [FILL] | | | | |
+
+## 4. Priority gaps and roadmap
+| Gap | Risk level | Action | Owner | Target |
+|---|---|---|---|---|
+| [FILL] | | | | |
+
+## 5. Pending regulatory changes
+[FILL: Proposed rules that would change these results, with citations.]

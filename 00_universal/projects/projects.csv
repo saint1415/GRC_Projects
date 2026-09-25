@@ -1,0 +1,11 @@
+project_id,slug,name,notion_title,primary_sources,template_files
+P01,P01_risk-register,Risk Register,Build a Risk Register,SRC-800-30;SRC-IR-8286;SRC-CSF2,risk-register.csv;risk-register-report.md
+P02,P02_system-security-plan,System Security Plan (SSP),Write a System Security Plan (SSP),SRC-800-18;SRC-FIPS-199;SRC-800-53;SRC-800-53B,system-security-plan.md;control-implementation.csv
+P03,P03_regulatory-gap-analysis,Regulatory Gap Analysis,Do a HIPAA Gap Analysis,SRC-HIPAA-SR;SRC-800-66;SRC-CSF2,gap-analysis.csv;gap-analysis-report.md
+P04,P04_cloud-control-mapping,Control-to-Cloud Architecture Mapping,Map NIST 800-53 Controls to a Cloud Architecture,SRC-800-53;SRC-AWS-SRM;SRC-AZURE-SRM;SRC-GCP-SRM,cloud-architecture.md;cloud-control-map.csv
+P05,P05_business-impact-analysis,Business Impact Analysis (BIA),Run a Business Impact Analysis (BIA),SRC-800-34;SRC-FIPS-199;SRC-IR-8286D,bia.csv;bia-report.md
+P06,P06_security-policies,Security Policy Set,Draft a Set of Security Policies,SRC-SANS-POL;SRC-800-53;SRC-CSF2,policy-control-map.csv;POL-01_information-security.md;POL-02_access-control.md;POL-03_incident-response.md;POL-04_data-classification.md;POL-05_acceptable-use.md
+P07,P07_control-assessment,Security Control Assessment,Perform a Mock Security Control Assessment,SRC-800-53A;SRC-800-37,assessment-plan.md;assessment-results.csv;poam.csv
+P08,P08_incident-response-runbook,Incident Response Runbook,Build an Incident Response Runbook,SRC-800-61;SRC-CSF2,ir-runbook.md;notification-matrix.csv
+P09,P09_soc2-readiness,SOC 2 Readiness Checklist,Complete a SOC 2 Readiness Checklist,SRC-TSC,soc2-readiness.csv;soc2-readiness-summary.md
+P10,P10_ai-governance,AI Governance Risk Assessment,Create an AI Governance / Risk Assessment,SRC-AI-RMF;SRC-AI-600-1;SRC-AI-PLAYBOOK,ai-risk-assessment.md;ai-use-case-inventory.csv

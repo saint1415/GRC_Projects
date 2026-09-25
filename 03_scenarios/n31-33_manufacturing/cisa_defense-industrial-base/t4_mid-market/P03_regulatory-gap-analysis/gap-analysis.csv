@@ -1,0 +1,2 @@
+req_id,regulation,citation,requirement_summary,requirement_type,applies_at_this_tier,csf2_subcategories,sp800_53_controls,crosswalk_source,current_state,evidence,status,gap_description,gap_risk_level,remediation_action,owner,target_date,pending_rule_change
+G-001,CMMC Level 2 / NIST SP 800-171 Rev. 2,[FILL: section/paragraph],[FILL],[e.g. Required|Addressable|Mandatory],[Yes|No - cite exemption],[FILL],[FILL],[Official (cite) | Author mapping],[FILL],[FILL],[Met|Partially met|Not met|Not applicable],[FILL],[Very Low..Very High],[FILL],[FILL],[YYYY-MM-DD],[FILL or None]
