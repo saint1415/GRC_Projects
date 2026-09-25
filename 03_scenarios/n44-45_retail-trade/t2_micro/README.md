@@ -22,14 +22,22 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Cardholder data (PAN) and sensitive authentication data; Customer PII and loyalty/purchase history; Consumer credit applications/NPI (store cards, auto financing and leasing); Biometric data (facial recognition, loss prevention); Precise geolocation (mobile apps); Children's personal information
+- **Critical systems:** POS terminals and payment gateways/tokenization; E-commerce platform and mobile apps; Loyalty/CRM and customer data platforms; Inventory and supply chain/ERP; Store networks, Wi-Fi and CCTV/biometric systems; Auto dealer management systems (DMS) and F&I systems
 
 ## Who regulates it
-[see vertical overlay]
+Federal Trade Commission (FTC Act, Safeguards Rule for retailers extending credit/auto dealers, Red Flags, COPPA, INFORM); California Privacy Protection Agency and state attorneys general; PCI Security Standards Council (standard setter, not a regulator) and payment brands (enforcement via acquirers); Securities and Exchange Commission (public retailers)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [PCI DSS v4.0.1](https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1) | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law | PCI SSC sets no size tiers. Merchant/service-provider levels and validation requirements (ROC vs SAQ) are set by each payment brand (Visa, Mastercard, Amex, Discover, JCB), not by PCI SSC. |
+| [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None (no size threshold). |
+| [FTC Safeguards Rule (GLBA)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR Part 314 | 314.6: institutions maintaining customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) written risk assessment, (d)(2) continuous monitoring/annual pen test & semiannual vuln scans, (h) written IR plan, and (i) annual board report. FTC notice under 314.4(j) only if 500+ consumers affected. |
+| [FTC Red Flags Rule (Identity Theft Prevention Program)](https://www.ecfr.gov/current/title-16/part-681) | 16 CFR 681.1 (FCRA sec. 615(e)) | No numeric threshold; applies to creditors with covered accounts (risk-based). |
+| [FACTA card receipt truncation](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1681c&num=0&edition=prelim) | 15 U.S.C. 1681c(g) | None. |
+| [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. |
+| [COPPA Rule (amended 2025)](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | None (no size threshold). |
+| [INFORM Consumers Act](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45f&num=0&edition=prelim) | 15 U.S.C. 45f | 'High-volume third party seller' = 200+ discrete sales of new/unused consumer products AND $5,000+ gross revenue in any continuous 12-month period in prior 24 months. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +46,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Business and its key vendors. 15-25 risks; qualitative scales; named owners. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: E-commerce and point-of-sale platform. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: PCI DSS v4.0.1. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. |

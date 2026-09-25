@@ -6,26 +6,41 @@
 **Primary system:** E-commerce and point-of-sale platform
 
 ## Regulators and sector risk management agency
-[Pending research]
+Federal Trade Commission (FTC Act, Safeguards Rule for retailers extending credit/auto dealers, Red Flags, COPPA, INFORM); California Privacy Protection Agency and state attorneys general; PCI Security Standards Council (standard setter, not a regulator) and payment brands (enforcement via acquirers); Securities and Exchange Commission (public retailers)
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**PCI DSS v4.0.1**, PCI DSS v4.0.1 (PCI SSC, June 2024). Nearly every retailer accepts cards, PCI DSS is the only prescriptive, testable control standard universally imposed on retail (via acquirer contracts), and its 12 requirements map cleanly to a gap assessment. It is not law; supplement with FTC Safeguards Rule for retailers issuing credit or auto dealers, and CCPA cyber-audit regs for large California-facing retailers.
+Source: https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| N44-45-R01 | [PCI DSS v4.0.1](https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1) | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law | Merchants and service providers that store, process or transmit cardholder data; enforced contractually via acquirers and card brands. | PCI SSC sets no size tiers. Merchant/service-provider levels and validation requirements (ROC vs SAQ) are set by each payment brand (Visa, Mastercard, Amex, Discover, JCB), not by PCI SSC. | v4.0.1 published June 11, 2024; v4.0 retired Dec 31, 2024; 51 future-dated requirements mandatory since Mar 31, 2025. PCI SSC ran an RFC (June-July 2026) on v4.0.1 toward the next version; v4.0.1 remains current. |
+| N44-45-R02 | [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | Most for-profit businesses in commerce. Statutory carve-outs in 45(a)(2) include banks, S&Ls, federal credit unions, common carriers subject to the Acts to regulate commerce, and air carriers/foreign air carriers. | None (no size threshold). | In force. |
+| N44-45-R03 | [FTC Safeguards Rule (GLBA)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR Part 314 | Non-bank 'financial institutions' under FTC jurisdiction, expressly including a retailer that issues its own credit card directly to consumers and an automobile dealership that leases autos on a nonoperating basis for > 90 days (16 CFR 314.2 examples). Relevant to NAICS 441 auto dealers and retailers with private-label credit. | 314.6: institutions maintaining customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) written risk assessment, (d)(2) continuous monitoring/annual pen test & semiannual vuln scans, (h) written IR plan, and (i) annual board report. FTC notice under 314.4(j) only if 500+ consumers affected. | Amended rule in force (86 FR 70308, Dec 9, 2021); notification amendment 314.4(j) effective May 13, 2024 (314.5). |
+| N44-45-R04 | [FTC Red Flags Rule (Identity Theft Prevention Program)](https://www.ecfr.gov/current/title-16/part-681) | 16 CFR 681.1 (FCRA sec. 615(e)) | Financial institutions and creditors under FTC FCRA jurisdiction (e.g., retailers/auto dealers offering deferred-payment financing with covered accounts). | No numeric threshold; applies to creditors with covered accounts (risk-based). | In force. |
+| N44-45-R05 | [FACTA card receipt truncation](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1681c&num=0&edition=prelim) | 15 U.S.C. 1681c(g) | Any person accepting credit/debit cards. | None. | In force. |
+| N44-45-R06 | [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | For-profit businesses doing business in California that meet any threshold. | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. | Regulations approved by OAL Sept 22, 2025; effective Jan 1, 2026. ADMT compliance for existing uses by Jan 1, 2027. Risk-assessment submissions for 2026-2027 due Apr 1, 2028. |
+| N44-45-R07 | [COPPA Rule (amended 2025)](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | Operators of websites/apps directed to children or with actual knowledge of collecting from children (e.g., toy/kids e-commerce). | None (no size threshold). | Amended rule effective June 23, 2025; compliance required by Apr 22, 2026 (except certain safe-harbor provisions). |
+| N44-45-R08 | [INFORM Consumers Act](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45f&num=0&edition=prelim) | 15 U.S.C. 45f | Online marketplaces hosting third-party sellers. | 'High-volume third party seller' = 200+ discrete sales of new/unused consumer products AND $5,000+ gross revenue in any continuous 12-month period in prior 24 months. | In force; effective 180 days after Dec 29, 2022 enactment (June 27, 2023). |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [FTC Safeguards Rule notification event (unauthorized acquisition of unencrypted customer information)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR 314.4(j) | As soon as possible, no later than 30 days after discovery; only if 500+ consumers | FTC via online form at ftc.gov |
+| [Form 8-K Item 1.05 material cybersecurity incident disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) |
+| [State data breach notification laws](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82) | Varies by state (e.g., Cal. Civ. Code 1798.82) | Varies | Affected residents; some states require AG notice |
+| [Card brand account data compromise reporting (contractual)](https://www.pcisecuritystandards.org/faq/articles/Frequently_Asked_Question/How-do-I-contact-the-payment-card-brands/) | Payment brand operating rules (Visa/Mastercard etc.) - not law | Per brand rules / acquirer contract (not verified) | Acquiring bank and card brands |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
-- **Sector AI rules and guidance:** None identified beyond cross-sector obligations
-- **Assurance alternatives to SOC 2:** None noted
+- **Sensitive data:** Cardholder data (PAN) and sensitive authentication data; Customer PII and loyalty/purchase history; Consumer credit applications/NPI (store cards, auto financing and leasing); Biometric data (facial recognition, loss prevention); Precise geolocation (mobile apps); Children's personal information
+- **Critical systems:** POS terminals and payment gateways/tokenization; E-commerce platform and mobile apps; Loyalty/CRM and customer data platforms; Inventory and supply chain/ERP; Store networks, Wi-Fi and CCTV/biometric systems; Auto dealer management systems (DMS) and F&I systems
+- **Sector AI rules and guidance:** FTC Docket 2023190 (Dec 2023 press release) 5-year ban on facial recognition for surveillance; requires notice, deletion, information security program and independent assessments; signals FTC Act Section 5 expectations for AI biometric use in stores.; Cal. Code Regs. tit. 11, Art. 11 (ADMT) Businesses using automated decisionmaking technology for significant decisions must provide pre-use notice, opt-out/access rights; compliance by Jan 1, 2027 for existing uses.
+- **Assurance alternatives to SOC 2:** PCI DSS validation for card payments (PCI SSC standard, enforced through card-brand contracts)
 - **Scenario incident (P08):** Payment card data compromise (e-commerce skimming)
 - **Scenario AI use case (P10):** Dynamic pricing and personalized offers
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+Retail has no sector-specific federal cyber regulator; FTC is the de facto regulator. Merchant levels (1-4) are defined by card brands, not PCI SSC. CFPB may also supervise larger retail credit/auto finance activities (not researched). Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

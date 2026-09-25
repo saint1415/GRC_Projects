@@ -15,9 +15,12 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| CPNI breach notification (current rule) | 47 CFR 64.2011(b)-(c) | As soon as practicable, no later than 7 business days after reasonable determination; customers only after 7 full business days post-LE notice (unless urgent/LE directs otherwise) | USSS and FBI via FCC central reporting facility; then customers | Verify applicability |
+| Form 8-K Item 1.05 material cybersecurity incident disclosure | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) | Verify applicability |
+| State data breach notification laws | Varies by state (e.g., Cal. Civ. Code 1798.82) | Varies | Affected residents; some states require AG notice | Verify applicability |
+| Bank service provider notification (IT/data processors serving banks) | 12 CFR 53.4; 225.303; 304.24 | As soon as possible when an incident materially disrupts/degrades covered services for 4+ hours | Bank-designated point of contact at each affected banking organization customer | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
-| SEC Form 8-K Item 1.05 (material cybersecurity incident) | Form 8-K Item 1.05; SEC Release 33-11216 | 4 business days after the materiality determination (delay possible only on U.S. Attorney General finding) | SEC (public filing to investors) | Publicly traded companies (SEC registrants) only |
-| CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
 
@@ -26,6 +29,14 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N51-R01 | FTC Act Section 5 | 15 U.S.C. 45(a) |
+| N51-R02 | COPPA Rule (amended 2025) | 16 CFR Part 312 |
+| N51-R03 | CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) |
+| N51-R04 | DOJ Data Security Program (bulk sensitive data rule) | 28 CFR Part 202 (implementing E.O. 14117) |
+| N51-R05 | Protecting Americans' Data from Foreign Adversaries Act of 2024 (PADFA) | 15 U.S.C. 9901 |
+| N51-R06 | FCC CPNI rules | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 |
+| N51-R07 | FedRAMP | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) |
+| N51-R08 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

@@ -24,14 +24,22 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 > **Industry note:** At this size, Cris Santos Company works in the Finance and Insurance vertical as a registered investment adviser (NAICS 523940) instead of the vertical's primary industry (NAICS 522110). Reason: A sole proprietor cannot hold a bank charter. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Nonpublic personal information (NPI) under GLBA; Account numbers, credentials and cardholder data; Consumer report/credit data (FCRA); Insurance underwriting/claims data incl. health information; Trading and market data; material nonpublic information; KYC/AML identity documents and SAR data
+- **Critical systems:** Core banking and payments (wire, ACH, card processing); Online/mobile banking and authentication; Trading, order management and clearing systems; Policy administration and claims systems; General ledger and treasury; Third-party core processors and cloud service providers
 
 ## Who regulates it
-[see vertical overlay]
+OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law incl. ECOA/Reg B); FTC (non-bank financial institutions: Safeguards Rule); State insurance regulators (NAIC coordinates) and NYDFS; FFIEC (interagency examination standards)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [Gramm-Leach-Bliley Act privacy & safeguards](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section6801&num=0&edition=prelim) | 15 U.S.C. 6801-6809 | None in statute. |
+| [Interagency Guidelines Establishing Information Security Standards](https://www.ecfr.gov/current/title-12/part-30/appendix-Appendix%20B%20to%20Part%2030) | 12 CFR 30 App. B (OCC); 12 CFR 208 App. D-2 & 225 App. F (FRB); 12 CFR 364 App. B (FDIC) | No size exemption; program must be appropriate to size and complexity. |
+| [FTC Safeguards Rule (GLBA)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR Part 314 | 314.6: institutions maintaining customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) written risk assessment, (d)(2) continuous monitoring/annual pen test & semiannual vuln scans, (h) written IR plan, and (i) annual board report. FTC notice under 314.4(j) only if 500+ consumers affected. |
+| [NYDFS Cybersecurity Regulation (Second Amendment)](https://www.dfs.ny.gov/system/files/documents/2023/12/rf23_nycrr_part_500_amend02_20231101.pdf) | 23 NYCRR Part 500 | Limited exemption (500.19(a)): < 20 employees and independent contractors (incl. affiliates); OR < $7,500,000 gross annual revenue in each of last 3 fiscal years from NY operations; OR < $15,000,000 year-end total assets (incl. affiliates) -> exempt from 500.4, 500.5, 500.6, 500.8, 500.10, portions of 500.14, 500.15 and 500.16. 'Class A company' = >= $20M NY revenue and (> 2,000 employees or > $1B gross revenue) in each of last 2 fiscal years -> extra duties (independent audit, EDR, PAM, password controls). |
+| [SEC Regulation S-P (2024 amendments)](https://www.ecfr.gov/current/title-17/section-248.30) | 17 CFR 248.30 (Release 34-100155, 89 FR 47688) | Tiered compliance: 'larger entities' (investment company groups with net assets >= $1B; RIAs with AUM >= $1.5B; broker-dealers and transfer agents that are not RFA 'small entities') had 18 months; smaller entities 24 months. |
+| [SEC Regulation S-ID (Identity Theft Red Flags)](https://www.ecfr.gov/current/title-17/section-248.201) | 17 CFR 248.201 | None. |
+| [NAIC Insurance Data Security Model Law #668](https://content.naic.org/sites/default/files/model-law-668.pdf) | NAIC Model #668 (2017); enacted state-by-state (e.g., state insurance codes) | Model sec. 9: licensees with fewer than 10 employees (incl. independent contractors) exempt from Section 4 (information security program); HIPAA-compliant licensees deemed compliant with Section 4. |
+| [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -40,7 +48,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Core business SaaS stack (email, files, client and billing records). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: Interagency Guidelines Establishing Information Security Standards. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | One consolidated information security policy. Plain-language rules covering access; incident response; data handling; acceptable use. |

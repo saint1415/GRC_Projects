@@ -16,6 +16,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-IT-R01 | FedRAMP | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) |
+| C-IT-R02 | CMMC Program | 32 CFR Part 170; DFARS 252.204-7021 (48 CFR rule, 90 FR 43560) |
+| C-IT-R03 | DFARS Safeguarding CDI & Cyber Incident Reporting | 48 CFR 252.204-7012 |
+| C-IT-R04 | DOJ Data Security Program (bulk sensitive data rule) | 28 CFR Part 202 (implementing E.O. 14117) |
+| C-IT-R05 | Bank service provider notification rule | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) |
+| C-IT-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

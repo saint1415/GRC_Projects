@@ -15,8 +15,10 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| Form 8-K Item 1.05 material cybersecurity incident disclosure | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) | Verify applicability |
+| State data breach notification laws | Varies by state | Varies | Affected residents; AGs in some states | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
-| CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
 
@@ -25,6 +27,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-COMMERCIAL-FACILITIES-R01 | PCI DSS v4.0.1 | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law |
+| C-COMMERCIAL-FACILITIES-R02 | FTC Act Section 5 | 15 U.S.C. 45(a) |
+| C-COMMERCIAL-FACILITIES-R03 | CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) |
+| C-COMMERCIAL-FACILITIES-R04 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
+| C-COMMERCIAL-FACILITIES-R05 | CISA Cross-Sector Cybersecurity Performance Goals 2.0 (voluntary) | CISA CPGs 2.0 (aligned to NIST CSF 2.0) |
+| C-COMMERCIAL-FACILITIES-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

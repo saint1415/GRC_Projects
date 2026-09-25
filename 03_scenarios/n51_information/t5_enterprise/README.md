@@ -22,14 +22,22 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Consumer PII and behavioral/advertising data; Customer Proprietary Network Information (CPNI) and call detail records; Children's personal information; Bulk sensitive personal data (geolocation, biometric, health, financial) under 28 CFR 202; Customer-hosted data (processor/service-provider data); Federal data (FedRAMP), CUI
+- **Critical systems:** Multi-tenant cloud/SaaS platforms and identity (IAM/SSO); CI/CD and software build/signing pipelines; Data centers and hosting infrastructure; Telecom core networks, OSS/BSS, lawful-intercept systems; CDN/DNS and content delivery; Customer data platforms and data warehouses
 
 ## Who regulates it
-[see vertical overlay]
+Federal Communications Commission (telecom/VoIP/cable/satellite); Federal Trade Commission (non-common-carrier tech, COPPA, PADFA data brokers); DOJ National Security Division (Data Security Program, 28 CFR 202); GSA FedRAMP PMO (cloud services to federal agencies); California Privacy Protection Agency / state AGs; Securities and Exchange Commission (public companies)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None (no size threshold). |
+| [COPPA Rule (amended 2025)](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | None. |
+| [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. |
+| [DOJ Data Security Program (bulk sensitive data rule)](https://www.ecfr.gov/current/title-28/part-202) | 28 CFR Part 202 (implementing E.O. 14117) | Applies by data volume ('bulk', 28 CFR 202.205, over preceding 12 months): human 'omic > 1,000 persons (genomic > 100); biometric > 1,000; precise geolocation > 1,000 devices; personal health > 10,000; personal financial > 10,000; covered personal identifiers > 100,000. Government-related data has no volume threshold. |
+| [Protecting Americans' Data from Foreign Adversaries Act of 2024 (PADFA)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section9901&num=0&edition=prelim) | 15 U.S.C. 9901 | No size threshold. |
+| [FCC CPNI rules](https://www.ecfr.gov/current/title-47/part-64/subpart-U) | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 | No size exemption in current rules. Delayed 2023 amendment would exempt from FCC/law-enforcement notice breaches affecting fewer than 500 customers where no harm is reasonably likely. |
+| [FedRAMP](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3608&num=0&edition=prelim) | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) | None by size; baseline (Low/Moderate/High, 20x classes) by impact level. |
+| [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +46,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise risk register integrated with ERM. 60+ risks; aggregation to enterprise risk (NIST IR 8286). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Multi-tenant SaaS production platform. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: CCPA Cybersecurity Audit Regulations. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies within a policy hierarchy. Policies; standards; procedures; exceptions process. |

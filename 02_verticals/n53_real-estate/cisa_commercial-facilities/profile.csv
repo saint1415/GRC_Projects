@@ -1,0 +1,12 @@
+field,value
+regulators,Sector Risk Management Agency: Department of Homeland Security (CISA)
+primary_regulation,CISA CPGs 2.0 (with PCI DSS v4.0.1 for payment environments)
+primary_regulation_citation,CISA Cross-Sector CPGs 2.0; PCI DSS v4.0.1
+primary_regulation_url,https://www.cisa.gov/cross-sector-cybersecurity-performance-goals
+primary_regulation_rationale,"No mandatory sector-specific cyber regulation exists for commercial facilities (lodging, gaming, venues, retail, real estate); the CISA CPGs are the SRMA's own baseline and cover IT/OT (building systems) broadly, while PCI DSS is the only mandatory-by-contract standard for card-heavy venues. State gaming regulators may impose additional rules (not researched)."
+sensitive_data,Guest/visitor PII and loyalty data; Payment card data; Video surveillance and biometric data; Ticketing and event attendee data
+critical_systems,Building management/HVAC and physical access control (OT); Property management systems (hotels); POS and ticketing; Gaming systems (casinos); Mass notification and life-safety systems
+ai_specific,
+assurance_alternatives,
+notes,CISA subsectors: Entertainment and Media; Gaming; Lodging; Outdoor Events; Public Assembly; Real Estate; Retail; Sports Leagues. Verified 2026-09-25.
+last_verified,2026-09-25

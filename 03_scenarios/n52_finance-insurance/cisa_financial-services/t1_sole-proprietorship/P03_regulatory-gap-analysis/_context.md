@@ -9,16 +9,22 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** [see vertical overlay], 
-**Why:** 
+**Regulation to analyze:** NYDFS 23 NYCRR Part 500, 23 NYCRR 500
+**Why:** Cris Santos Company is a payment processor in this vertical. Payment processors commonly hold New York money transmitter licenses, which makes them NYDFS covered entities; confirm licensing in step 1 of P03 and check the 500.19 limited exemptions for smaller tiers. As a bank service provider it also owes notice to bank customers under the Computer-Security Incident Notification Rule. Research note: The most prescriptive and widely benchmarked US financial-services cybersecurity regulation, spanning banks, insurers, lenders and money transmitters, with explicit controls (MFA, asset inventory, PAM, EDR for Class A), governance, annual certification and hard deadlines - analogous to the HIPAA Security Rule. Map federally chartered banks additionally to the Interagency Guidelines and nonbanks to the FTC Safeguards Rule, which cover similar elements.
 
-**Applicability check first:** at this size the business is an independent insurance agency. Decide whether [see vertical overlay] applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
+**Applicability check first:** at this size the business is an independent insurance agency. Decide whether NYDFS 23 NYCRR Part 500 applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-FINANCIAL-R01 | Computer-Security Incident Notification Rule | 12 CFR Part 53 (OCC); 12 CFR 225 Subpart N (FRB); 12 CFR 304 Subpart C (FDIC) |
+| C-FINANCIAL-R02 | Interagency Guidelines Establishing Information Security Standards | 12 CFR 30 App. B (OCC); 12 CFR 208 App. D-2 & 225 App. F (FRB); 12 CFR 364 App. B (FDIC) |
+| C-FINANCIAL-R03 | NCUA cyber incident reporting | 12 CFR 748.1(c) |
+| C-FINANCIAL-R04 | SEC Regulation SCI | 17 CFR 242.1000-242.1007 |
+| C-FINANCIAL-R05 | NYDFS Cybersecurity Regulation (Second Amendment) | 23 NYCRR Part 500 |
+| C-FINANCIAL-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Guest/visitor PII and loyalty data; Payment card data; Video surveillance and biometric data; Ticketing and event attendee data
+- **Critical systems:** Building management/HVAC and physical access control (OT); Property management systems (hotels); POS and ticketing; Gaming systems (casinos); Mass notification and life-safety systems
 
 ## Who regulates it
-[see vertical overlay]
+Sector Risk Management Agency: Department of Homeland Security (CISA)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [PCI DSS v4.0.1](https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1) | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law | PCI SSC sets no size tiers. Merchant/service-provider levels and validation requirements (ROC vs SAQ) are set by each payment brand (Visa, Mastercard, Amex, Discover, JCB), not by PCI SSC. |
+| [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None (no size threshold). |
+| [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. |
+| [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
+| [CISA Cross-Sector Cybersecurity Performance Goals 2.0 (voluntary)](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals) | CISA CPGs 2.0 (aligned to NIST CSF 2.0) | None. |
+| [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise risk register integrated with ERM. 60+ risks; aggregation to enterprise risk (NIST IR 8286). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Building automation and access control system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: CISA CPGs 2.0 (with PCI DSS v4.0.1 for payment environments). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies within a policy hierarchy. Policies; standards; procedures; exceptions process. |

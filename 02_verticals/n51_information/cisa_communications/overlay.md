@@ -6,26 +6,39 @@
 **Primary system:** Network operations and customer billing systems (OSS/BSS)
 
 ## Regulators and sector risk management agency
-[Pending research]
+Sector Risk Management Agency: Department of Homeland Security (CISA); Federal Communications Commission
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**FCC CPNI Rules**, 47 CFR 64.2001-64.2011 (47 U.S.C. 222). The only codified, sector-specific privacy/security safeguard rule for carriers, with annual officer certification and FCC enforcement; pair with NIST CSF 2.0 / CISA CPGs 2.0 for broader network security because the FCC rescinded its 2025 CALEA-based cybersecurity ruling and no general carrier cybersecurity rule exists.
+Source: https://www.ecfr.gov/current/title-47/part-64/subpart-U
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-COMMUNICATIONS-R01 | [FCC CPNI rules](https://www.ecfr.gov/current/title-47/part-64/subpart-U) | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 | Telecommunications carriers and interconnected VoIP providers (TRS providers under parallel rules). | No size exemption in current rules. Delayed 2023 amendment would exempt from FCC/law-enforcement notice breaches affecting fewer than 500 customers where no harm is reasonably likely. | Current 64.2011 in force (LE notice within 7 business days). 2023 Data Breach Reporting Order (FCC 23-111, 89 FR 9968) expanded 'breach' to covered PII and added FCC notice; Sixth Circuit DENIED petitions for review on Aug 13, 2025 (Ohio Telecom Ass'n v. FCC), but the 64.2011 amendments remain 'delayed indefinitely' pending an FCC effective-date notice (eCFR current through 2026-09-23 still shows old text). |
+| C-COMMUNICATIONS-R02 | [FCC Network Outage Reporting (NORS)](https://www.ecfr.gov/current/title-47/part-4) | 47 CFR Part 4 (4.9) | Wireline, wireless, cable, satellite, interconnected VoIP, covered 911 providers, submarine cable licensees. | Thresholds are outage-based (duration >= 30 minutes and user-minute / 911 / special-facility criteria), not company size. | In force. |
+| C-COMMUNICATIONS-R03 | [CALEA system security and integrity](https://www.ecfr.gov/current/title-47/section-1.20003) | 47 U.S.C. 1001-1010; 47 CFR 1.20000-1.20008 | Telecommunications carriers (incl. facilities-based broadband and interconnected VoIP). | None. | In force. FCC's Jan 2025 declaratory ruling reading CALEA sec. 105 to impose broader cybersecurity duties was rescinded by Order on Reconsideration adopted Nov 20, 2025 (90 FR 58006). |
+| C-COMMUNICATIONS-R04 | [FCC submarine cable landing license national-security rules](https://www.federalregister.gov/documents/2026/07/27/2026-15123/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security) | 47 CFR 1.767-1.768, 1.70000 et seq. (90 FR 48648; 91 FR 46844) | Submarine cable landing licensees and SLTE owners/operators. | None. | First order effective Nov 26, 2025 (some sections delayed); Second Report and Order effective Sept 25, 2026 except listed sections delayed indefinitely. |
+| C-COMMUNICATIONS-R05 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Covered entities in critical infrastructure sectors as defined in the final rule (scope still being refined). | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. | NOT YET IN EFFECT: no final rule published as of 2026-09-25. CISA held additional town halls (Feb and May 2026 notices) to refine scope and burden before a final rule. Statutory reporting duties apply only once the final rule is effective. |
+| C-COMMUNICATIONS-R06 | [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | Exchange Act reporting companies (public issuers), including public companies in any sector. | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). | In force; effective Sept 5, 2023. No rescission found in Federal Register as of 2026-09-25. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [CPNI breach notification (current rule)](https://www.ecfr.gov/current/title-47/section-64.2011) | 47 CFR 64.2011(b)-(c) | As soon as practicable, no later than 7 business days after reasonable determination; customers only after 7 full business days post-LE notice (unless urgent/LE directs otherwise) | USSS and FBI via FCC central reporting facility; then customers |
+| [CPNI/covered-data breach notification (2023 amendments - NOT yet effective)](https://www.federalregister.gov/documents/2024/02/12/2024-01667/data-breach-reporting-requirements) | 47 CFR 64.2011 as amended by 89 FR 9968 (delayed indefinitely) | FCC/USSS/FBI no later than 7 business days; customers without unreasonable delay and no later than 30 days after reasonable determination | FCC, USSS, FBI; affected customers |
+| [Network outage reporting (NORS)](https://www.ecfr.gov/current/title-47/part-4) | 47 CFR 4.9 | Notification within 120 minutes (e.g., wireline); initial report within 72 hours; final report within 30 days | FCC (NORS) |
+| [CIRCIA covered cyber incident / ransom payment reports (pending final rule)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** CPNI and call detail records; Lawful intercept (CALEA) data and court orders; Subscriber PII; Network topology and outage data (NORS filings presumptively confidential)
+- **Critical systems:** Core/IMS and signaling (SS7/Diameter/5GC); Lawful-intercept platforms; OSS/BSS and customer portals; 911/NG911 routing; Submarine cable landing stations/SLTE; Satellite ground segments
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Network intrusion exposing customer proprietary network information (CPNI)
 - **Scenario AI use case (P10):** Customer-service chatbot with account access
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+CISA describes the sector as terrestrial, satellite, wireless and wireline. FCC Jan 2025 CALEA cybersecurity declaratory ruling and NPRM were rescinded Nov 20, 2025. Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

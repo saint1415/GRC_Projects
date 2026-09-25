@@ -1,0 +1,12 @@
+field,value
+regulators,"Federal Trade Commission (general data security/privacy enforcement); Department of Defense (CMMC/DFARS for defense-supply-chain distributors); U.S. Customs and Border Protection (CTPAT supply chain security, voluntary); Securities and Exchange Commission (public wholesalers); State attorneys general / California Privacy Protection Agency"
+primary_regulation,NIST SP 800-171 R2 via CMMC Level 2 / DFARS 252.204-7012
+primary_regulation_citation,32 CFR 170.14; 48 CFR 252.204-7012
+primary_regulation_url,https://www.ecfr.gov/current/title-32/part-170
+primary_regulation_rationale,"For supply-chain-focused wholesalers, the most prescriptive, auditable and contractually enforced US control set is NIST SP 800-171 R2 (110 requirements) as required by DFARS 7012 and assessed under CMMC Level 2 (Phase 1 live since Nov 10, 2025). It flows down to subcontractors and distributors handling CUI. Wholesalers with no federal/defense business should instead use CISA CPGs 2.0 / NIST CSF 2.0 plus CTPAT MSC cybersecurity criteria as the benchmark, because no sector-wide federal cyber rule applies to wholesale trade."
+sensitive_data,"Controlled Unclassified Information (CUI) and Federal Contract Information (FCI); Covered defense information / export-controlled technical data; Customer and supplier commercial data, pricing, EDI transaction data; B2B payment card and bank account data; Employee PII; Import/export filings and trade data"
+critical_systems,"ERP (order-to-cash, procure-to-pay); Warehouse management systems (WMS); EDI/VAN and supplier/customer portals; Transportation management systems (TMS); Distribution-center OT (conveyors, sortation, automated storage); Customs filing integrations (ACE)"
+ai_specific,
+assurance_alternatives,
+notes,"No sector-specific federal cybersecurity regulator for wholesale trade; obligations are driven by customer contracts (DoD/federal), cross-sector laws (FTC Act, state privacy/breach laws, SEC for public companies), and voluntary CTPAT. DOJ 28 CFR 202 (bulk sensitive data) may apply if data/vendor arrangements involve countries of concern (see n51). Pharmaceutical wholesale distributors also face DSCSA traceability obligations (not researched here). Verified 2026-09-25."
+last_verified,2026-09-25

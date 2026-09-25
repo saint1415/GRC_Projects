@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** CPNI and call detail records; Lawful intercept (CALEA) data and court orders; Subscriber PII; Network topology and outage data (NORS filings presumptively confidential)
+- **Critical systems:** Core/IMS and signaling (SS7/Diameter/5GC); Lawful-intercept platforms; OSS/BSS and customer portals; 911/NG911 routing; Submarine cable landing stations/SLTE; Satellite ground segments
 
 ## Who regulates it
-[see vertical overlay]
+Sector Risk Management Agency: Department of Homeland Security (CISA); Federal Communications Commission
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FCC CPNI rules](https://www.ecfr.gov/current/title-47/part-64/subpart-U) | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 | No size exemption in current rules. Delayed 2023 amendment would exempt from FCC/law-enforcement notice breaches affecting fewer than 500 customers where no harm is reasonably likely. |
+| [FCC Network Outage Reporting (NORS)](https://www.ecfr.gov/current/title-47/part-4) | 47 CFR Part 4 (4.9) | Thresholds are outage-based (duration >= 30 minutes and user-minute / 911 / special-facility criteria), not company size. |
+| [CALEA system security and integrity](https://www.ecfr.gov/current/title-47/section-1.20003) | 47 U.S.C. 1001-1010; 47 CFR 1.20000-1.20008 | None. |
+| [FCC submarine cable landing license national-security rules](https://www.federalregister.gov/documents/2026/07/27/2026-15123/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security) | 47 CFR 1.767-1.768, 1.70000 et seq. (90 FR 48648; 91 FR 46844) | None. |
+| [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
+| [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Group and division registers. Division registers roll up to group ERM. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Network operations and customer billing systems (OSS/BSS). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: FCC CPNI Rules. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | Group policies with division supplements. Group policy plus division-specific standards. |

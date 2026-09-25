@@ -9,14 +9,22 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** [see vertical overlay], 
-**Why:** 
+**Regulation to analyze:** CCPA Cybersecurity Audit Regulations, Cal. Code Regs. tit. 11, 7120-7124
+**Why:** For software/SaaS/data processors there is no HIPAA-like federal sector rule; the CCPA cyber-audit regulations are the closest legally mandated, control-enumerated audit standard (independent auditor, defined program components, executive certification to CPPA) and apply by revenue/data-volume thresholds that most mid/large information companies meet. Use FedRAMP (NIST SP 800-53 Rev5) instead for federal-facing cloud providers (c-it) and FCC CPNI rules for carriers (c-communications).
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N51-R01 | FTC Act Section 5 | 15 U.S.C. 45(a) |
+| N51-R02 | COPPA Rule (amended 2025) | 16 CFR Part 312 |
+| N51-R03 | CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) |
+| N51-R04 | DOJ Data Security Program (bulk sensitive data rule) | 28 CFR Part 202 (implementing E.O. 14117) |
+| N51-R05 | Protecting Americans' Data from Foreign Adversaries Act of 2024 (PADFA) | 15 U.S.C. 9901 |
+| N51-R06 | FCC CPNI rules | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 |
+| N51-R07 | FedRAMP | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) |
+| N51-R08 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

@@ -15,8 +15,10 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| FTC Safeguards Rule notification event (unauthorized acquisition of unencrypted customer information) | 16 CFR 314.4(j) | As soon as possible, no later than 30 days after discovery; only if 500+ consumers | FTC via online form at ftc.gov | Verify applicability |
+| Form 8-K Item 1.05 material cybersecurity incident disclosure | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) | Verify applicability |
+| State data breach notification laws | Varies by state (e.g., Cal. Civ. Code 1798.82) | Varies | Affected residents; some states require AG notice | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
-| SEC Form 8-K Item 1.05 (material cybersecurity incident) | Form 8-K Item 1.05; SEC Release 33-11216 | 4 business days after the materiality determination (delay possible only on U.S. Attorney General finding) | SEC (public filing to investors) | Publicly traded companies (SEC registrants) only |
 | CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
@@ -26,6 +28,11 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N53-R01 | FTC Safeguards Rule (GLBA) | 16 CFR Part 314 |
+| N53-R02 | FTC Act Section 5 | 15 U.S.C. 45(a) |
+| N53-R03 | CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) |
+| N53-R04 | PCI DSS v4.0.1 | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law |
+| N53-R05 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

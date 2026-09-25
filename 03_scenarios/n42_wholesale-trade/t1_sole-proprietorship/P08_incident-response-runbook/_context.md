@@ -9,12 +9,16 @@
 | Universal method | [P08_incident-response-runbook/README.md](../../../../00_universal/projects/P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Supplier compromise disrupting order fulfillment
+**Incident type:** Supplier compromise introducing tampered or counterfeit products into distribution
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| DFARS cyber incident report affecting covered defense information | 48 CFR 252.204-7012(c) | Within 72 hours of discovery | DoD (DIBNet portal); subcontractors also notify prime | Verify applicability |
+| Form 8-K Item 1.05 material cybersecurity incident disclosure | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) | Verify applicability |
+| State data breach notification laws (all 50 states) for personal information | Varies by state (e.g., Cal. Civ. Code 1798.82) | Varies (e.g., 'most expedient time possible'; some states 30-60 days) | Affected residents; some states require AG notice | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
@@ -24,6 +28,14 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| N42-R01 | FTC Act Section 5 | 15 U.S.C. 45(a) |
+| N42-R02 | CMMC Program | 32 CFR Part 170; DFARS 252.204-7021 (48 CFR rule, 90 FR 43560) |
+| N42-R03 | DFARS Safeguarding CDI & Cyber Incident Reporting | 48 CFR 252.204-7012 |
+| N42-R04 | FAR Basic Safeguarding of Covered Contractor Information Systems | 48 CFR 52.204-21 |
+| N42-R05 | Section 889 telecom/video surveillance prohibition | 48 CFR 52.204-25 (FY2019 NDAA sec. 889) |
+| N42-R06 | CTPAT (Customs Trade Partnership Against Terrorism) | CBP program; SAFE Port Act of 2006 (voluntary) |
+| N42-R07 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
+| N42-R08 | CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

@@ -6,26 +6,38 @@
 **Primary system:** Building automation and access control system
 
 ## Regulators and sector risk management agency
-[Pending research]
+Sector Risk Management Agency: Department of Homeland Security (CISA)
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**CISA CPGs 2.0 (with PCI DSS v4.0.1 for payment environments)**, CISA Cross-Sector CPGs 2.0; PCI DSS v4.0.1. No mandatory sector-specific cyber regulation exists for commercial facilities (lodging, gaming, venues, retail, real estate); the CISA CPGs are the SRMA's own baseline and cover IT/OT (building systems) broadly, while PCI DSS is the only mandatory-by-contract standard for card-heavy venues. State gaming regulators may impose additional rules (not researched).
+Source: https://www.cisa.gov/cross-sector-cybersecurity-performance-goals
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-COMMERCIAL-FACILITIES-R01 | [PCI DSS v4.0.1](https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1) | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law | Merchants and service providers that store, process or transmit cardholder data; enforced contractually via acquirers and card brands. | PCI SSC sets no size tiers. Merchant/service-provider levels and validation requirements (ROC vs SAQ) are set by each payment brand (Visa, Mastercard, Amex, Discover, JCB), not by PCI SSC. | v4.0.1 published June 11, 2024; v4.0 retired Dec 31, 2024; 51 future-dated requirements mandatory since Mar 31, 2025. PCI SSC ran an RFC (June-July 2026) on v4.0.1 toward the next version; v4.0.1 remains current. |
+| C-COMMERCIAL-FACILITIES-R02 | [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | Most for-profit businesses in commerce. Statutory carve-outs in 45(a)(2) include banks, S&Ls, federal credit unions, common carriers subject to the Acts to regulate commerce, and air carriers/foreign air carriers. | None (no size threshold). | In force. |
+| C-COMMERCIAL-FACILITIES-R03 | [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | For-profit businesses doing business in California that meet any threshold. | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. | Regulations approved by OAL Sept 22, 2025; effective Jan 1, 2026. ADMT compliance for existing uses by Jan 1, 2027. Risk-assessment submissions for 2026-2027 due Apr 1, 2028. |
+| C-COMMERCIAL-FACILITIES-R04 | [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | Exchange Act reporting companies (public issuers), including public companies in any sector. | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). | In force; effective Sept 5, 2023. No rescission found in Federal Register as of 2026-09-25. |
+| C-COMMERCIAL-FACILITIES-R05 | [CISA Cross-Sector Cybersecurity Performance Goals 2.0 (voluntary)](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals) | CISA CPGs 2.0 (aligned to NIST CSF 2.0) | All critical infrastructure owners/operators (voluntary). | None. | Current version 2.0 (release date not stated on page). |
+| C-COMMERCIAL-FACILITIES-R06 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Covered entities in critical infrastructure sectors as defined in the final rule (scope still being refined). | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. | NOT YET IN EFFECT: no final rule published as of 2026-09-25. CISA held additional town halls (Feb and May 2026 notices) to refine scope and burden before a final rule. Statutory reporting duties apply only once the final rule is effective. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [Form 8-K Item 1.05 material cybersecurity incident disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) |
+| [State data breach notification laws](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82) | Varies by state | Varies | Affected residents; AGs in some states |
+| [CIRCIA covered cyber incident / ransom payment reports (pending final rule)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** Guest/visitor PII and loyalty data; Payment card data; Video surveillance and biometric data; Ticketing and event attendee data
+- **Critical systems:** Building management/HVAC and physical access control (OT); Property management systems (hotels); POS and ticketing; Gaming systems (casinos); Mass notification and life-safety systems
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
 - **Assurance alternatives to SOC 2:** None noted
 - **Scenario incident (P08):** Ransomware on building automation systems
 - **Scenario AI use case (P10):** Video analytics for building access
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+CISA subsectors: Entertainment and Media; Gaming; Lodging; Outdoor Events; Public Assembly; Real Estate; Retail; Sports Leagues. Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

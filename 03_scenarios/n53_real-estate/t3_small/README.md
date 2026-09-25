@@ -22,14 +22,19 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Tenant/applicant PII and consumer reports (screening); Bank account and wire instructions (closing/escrow funds); NPI in settlement and mortgage files; Payment card/ACH rent data; Building access/badge and CCTV data
+- **Critical systems:** Property management and tenant portals; Escrow/settlement and wire transfer workflows (BEC target); Building automation/BMS and access control; Leasing CRM and screening integrations; Accounting/ERP
 
 ## Who regulates it
-[see vertical overlay]
+Federal Trade Commission (Safeguards Rule for appraisers and settlement service providers; FTC Act); HUD (Fair Housing Act); State real estate commissions, AGs and California Privacy Protection Agency; SEC (public REITs and real estate companies)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FTC Safeguards Rule (GLBA)](https://www.ecfr.gov/current/title-16/part-314) | 16 CFR Part 314 | 314.6: institutions maintaining customer information on fewer than 5,000 consumers are exempt from 314.4(b)(1) written risk assessment, (d)(2) continuous monitoring/annual pen test & semiannual vuln scans, (h) written IR plan, and (i) annual board report. FTC notice under 314.4(j) only if 500+ consumers affected. |
+| [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None (no size threshold). |
+| [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. |
+| [PCI DSS v4.0.1](https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1) | PCI Security Standards Council, PCI DSS v4.0.1 (June 2024) - industry standard, not law | PCI SSC sets no size tiers. Merchant/service-provider levels and validation requirements (ROC vs SAQ) are set by each payment brand (Visa, Mastercard, Amex, Discover, JCB), not by PCI SSC. |
+| [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +43,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Organization-level register tied to key systems. 25-40 risks; semi-quantitative scoring (NIST SP 800-30 Appendix G-I). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One major system with a defined boundary. Full SSP outline per SP 800-18 Rev. 2; control implementation statements. System: Transaction management and closing communications system. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation plus the most relevant secondary regulation. Requirement-level with evidence and control crosswalk. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation plus the most relevant secondary regulation. Requirement-level with evidence and control crosswalk. Regulation: FTC Safeguards Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | One cloud environment (IaaS/PaaS) plus SaaS. Control-by-component mapping; shared responsibility by service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business processes. MTD/RTO/RPO; resource and dependency mapping. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies. Information security; access control; incident response; data classification; acceptable use. |

@@ -7,26 +7,42 @@
 **Primary system:** Multi-tenant SaaS production platform
 
 ## Regulators and sector risk management agency
-[Pending research]
+Federal Communications Commission (telecom/VoIP/cable/satellite); Federal Trade Commission (non-common-carrier tech, COPPA, PADFA data brokers); DOJ National Security Division (Data Security Program, 28 CFR 202); GSA FedRAMP PMO (cloud services to federal agencies); California Privacy Protection Agency / state AGs; Securities and Exchange Commission (public companies)
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**CCPA Cybersecurity Audit Regulations**, Cal. Code Regs. tit. 11, 7120-7124. For software/SaaS/data processors there is no HIPAA-like federal sector rule; the CCPA cyber-audit regulations are the closest legally mandated, control-enumerated audit standard (independent auditor, defined program components, executive certification to CPPA) and apply by revenue/data-volume thresholds that most mid/large information companies meet. Use FedRAMP (NIST SP 800-53 Rev5) instead for federal-facing cloud providers (c-it) and FCC CPNI rules for carriers (c-communications).
+Source: https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| N51-R01 | [FTC Act Section 5](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | Most for-profit businesses in commerce. Statutory carve-outs in 45(a)(2) include banks, S&Ls, federal credit unions, common carriers subject to the Acts to regulate commerce, and air carriers/foreign air carriers. | None (no size threshold). | In force. |
+| N51-R02 | [COPPA Rule (amended 2025)](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | Operators of child-directed sites/apps/online services, or with actual knowledge (ed-tech, gaming, media, SaaS). | None. | Effective June 23, 2025; compliance deadline Apr 22, 2026. |
+| N51-R03 | [CCPA/CPRA + 2026 CPPA regulations (cyber audits, risk assessments, ADMT)](https://cppa.ca.gov/regulations/ccpa_updates.html) | Cal. Civ. Code 1798.100 et seq. (business def. 1798.140(d)); Cal. Code Regs. tit. 11, 7000 et seq. (cyber audits 7120-7124) | For-profit businesses doing business in California that meet any threshold. | Business if ANY of: annual gross revenue > $25,000,000 as CPI-adjusted (= $26,625,000 effective Jan 1, 2025); buys/sells/shares PI of 100,000+ consumers or households; or derives 50%+ of revenue from selling/sharing PI. Cyber audit required if 50%+ revenue from selling/sharing PI, OR revenue threshold met AND processed PI of 250,000+ consumers/households or sensitive PI of 50,000+ consumers. First audit report due Apr 1, 2028 (2026 revenue > $100M), Apr 1, 2029 ($50M-$100M), Apr 1, 2030 (< $50M). Data subject to GLBA is exempt at the data level (Civ. Code 1798.145(e)), except the 1798.150 breach private right of action. | Regulations approved by OAL Sept 22, 2025; effective Jan 1, 2026. ADMT compliance for existing uses by Jan 1, 2027. Risk-assessment submissions for 2026-2027 due Apr 1, 2028. |
+| N51-R04 | [DOJ Data Security Program (bulk sensitive data rule)](https://www.ecfr.gov/current/title-28/part-202) | 28 CFR Part 202 (implementing E.O. 14117) | Any U.S. person/company engaging in covered data transactions (data brokers, SaaS/hosting, adtech, vendors with offshore access). | Applies by data volume ('bulk', 28 CFR 202.205, over preceding 12 months): human 'omic > 1,000 persons (genomic > 100); biometric > 1,000; precise geolocation > 1,000 devices; personal health > 10,000; personal financial > 10,000; covered personal identifiers > 100,000. Government-related data has no volume threshold. | Final rule 90 FR 1636 (Jan 8, 2025), effective Apr 8, 2025; in force. |
+| N51-R05 | [Protecting Americans' Data from Foreign Adversaries Act of 2024 (PADFA)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section9901&num=0&edition=prelim) | 15 U.S.C. 9901 | Data brokers (as defined in statute). | No size threshold. | In force; enacted Apr 24, 2024, effective 60 days later (June 23, 2024). |
+| N51-R06 | [FCC CPNI rules](https://www.ecfr.gov/current/title-47/part-64/subpart-U) | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 | Telecommunications carriers and interconnected VoIP providers (TRS providers under parallel rules). | No size exemption in current rules. Delayed 2023 amendment would exempt from FCC/law-enforcement notice breaches affecting fewer than 500 customers where no harm is reasonably likely. | Current 64.2011 in force (LE notice within 7 business days). 2023 Data Breach Reporting Order (FCC 23-111, 89 FR 9968) expanded 'breach' to covered PII and added FCC notice; Sixth Circuit DENIED petitions for review on Aug 13, 2025 (Ohio Telecom Ass'n v. FCC), but the 64.2011 amendments remain 'delayed indefinitely' pending an FCC effective-date notice (eCFR current through 2026-09-23 still shows old text). |
+| N51-R07 | [FedRAMP](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3608&num=0&edition=prelim) | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) | Cloud service providers (IaaS/PaaS/SaaS) selling to federal agencies. | None by size; baseline (Low/Moderate/High, 20x classes) by impact level. | In force; FedRAMP 20x authorizations issuing alongside Rev5 as of 2026 (fedramp.gov). |
+| N51-R08 | [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | Exchange Act reporting companies (public issuers), including public companies in any sector. | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). | In force; effective Sept 5, 2023. No rescission found in Federal Register as of 2026-09-25. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [CPNI breach notification (current rule)](https://www.ecfr.gov/current/title-47/section-64.2011) | 47 CFR 64.2011(b)-(c) | As soon as practicable, no later than 7 business days after reasonable determination; customers only after 7 full business days post-LE notice (unless urgent/LE directs otherwise) | USSS and FBI via FCC central reporting facility; then customers |
+| [Form 8-K Item 1.05 material cybersecurity incident disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | Form 8-K Item 1.05; 88 FR 51896 | Within four business days after determining the incident is material | SEC / investors (public filing) |
+| [State data breach notification laws](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82) | Varies by state (e.g., Cal. Civ. Code 1798.82) | Varies | Affected residents; some states require AG notice |
+| [Bank service provider notification (IT/data processors serving banks)](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR 53.4; 225.303; 304.24 | As soon as possible when an incident materially disrupts/degrades covered services for 4+ hours | Bank-designated point of contact at each affected banking organization customer |
+| [CIRCIA covered cyber incident / ransom payment reports (pending final rule)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
-- **Sector AI rules and guidance:** None identified beyond cross-sector obligations
-- **Assurance alternatives to SOC 2:** None noted
+- **Sensitive data:** Consumer PII and behavioral/advertising data; Customer Proprietary Network Information (CPNI) and call detail records; Children's personal information; Bulk sensitive personal data (geolocation, biometric, health, financial) under 28 CFR 202; Customer-hosted data (processor/service-provider data); Federal data (FedRAMP), CUI
+- **Critical systems:** Multi-tenant cloud/SaaS platforms and identity (IAM/SSO); CI/CD and software build/signing pipelines; Data centers and hosting infrastructure; Telecom core networks, OSS/BSS, lawful-intercept systems; CDN/DNS and content delivery; Customer data platforms and data warehouses
+- **Sector AI rules and guidance:** Cal. Code Regs. tit. 11 (ADMT article) Pre-use notice, opt-out and access rights for ADMT used for significant decisions; compliance by Jan 1, 2027.; Colo. SB26-189 (signed May 14, 2026; repeals/reenacts SB24-205) Developer documentation duties to deployers, 3-year recordkeeping, consumer rights to human review/correction for consequential decisions; effective Jan 1, 2027.
+- **Assurance alternatives to SOC 2:** ISO/IEC 27001 certification; FedRAMP authorization for federal customers
 - **Scenario incident (P08):** Cloud credential compromise exposing customer data
 - **Scenario AI use case (P10):** Generative AI feature embedded in the SaaS product
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+Telecom common carriers are outside FTC Section 5 (15 U.S.C. 45(a)(2)); FCC regulates them. OMB M-22-18/M-23-16 secure software self-attestation requirements for federal software suppliers were rescinded by OMB M-26-05 (Jan 23, 2026) - agencies may still use the CISA attestation form at their discretion. Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

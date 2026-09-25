@@ -6,26 +6,39 @@
 **Primary system:** Hosting control plane and customer portal
 
 ## Regulators and sector risk management agency
-[Pending research]
+Sector Risk Management Agency: Department of Homeland Security (CISA); GSA FedRAMP PMO; Department of Defense (CMMC/DFARS); DOJ National Security Division (28 CFR 202)
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**FedRAMP (Rev5 NIST SP 800-53 baselines / 20x)**, 44 U.S.C. 3607-3616. The most comprehensive, government-recognized control baseline for IT/cloud providers, reusable across agencies and widely used as a commercial benchmark; for DoD-facing IT firms add NIST SP 800-171 (CMMC). OMB M-22-18 software attestation is no longer mandatory (rescinded by M-26-05).
+Source: https://www.fedramp.gov/
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-IT-R01 | [FedRAMP](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3608&num=0&edition=prelim) | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) | Cloud service providers (IaaS/PaaS/SaaS) selling to federal agencies. | None by size; baseline (Low/Moderate/High, 20x classes) by impact level. | In force; FedRAMP 20x authorizations issuing alongside Rev5 as of 2026 (fedramp.gov). |
+| C-IT-R02 | [CMMC Program](https://www.ecfr.gov/current/title-32/part-170) | 32 CFR Part 170; DFARS 252.204-7021 (48 CFR rule, 90 FR 43560) | DoD contractors and subcontractors that process, store or transmit FCI or CUI on contractor information systems (flows down the supply chain). | No small-business exemption. Applies to DoD solicitations/contracts above the micro-purchase threshold; excludes procurements exclusively for COTS items (32 CFR 170.3(c)). | 32 CFR 170 effective Dec 16, 2024; DFARS acquisition rule effective Nov 10, 2025 = start of Phase 1. Phase 2 begins one year after Phase 1 (Nov 10, 2026), Phase 3 one year later, Phase 4 (full) one year after that. |
+| C-IT-R03 | [DFARS Safeguarding CDI & Cyber Incident Reporting](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012 | DoD contractors/subcontractors with covered defense information. | None. | In force. |
+| C-IT-R04 | [DOJ Data Security Program (bulk sensitive data rule)](https://www.ecfr.gov/current/title-28/part-202) | 28 CFR Part 202 (implementing E.O. 14117) | Any U.S. person/company engaging in covered data transactions (data brokers, SaaS/hosting, adtech, vendors with offshore access). | Applies by data volume ('bulk', 28 CFR 202.205, over preceding 12 months): human 'omic > 1,000 persons (genomic > 100); biometric > 1,000; precise geolocation > 1,000 devices; personal health > 10,000; personal financial > 10,000; covered personal identifiers > 100,000. Government-related data has no volume threshold. | Final rule 90 FR 1636 (Jan 8, 2025), effective Apr 8, 2025; in force. |
+| C-IT-R05 | [Bank service provider notification rule](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) | Bank service providers (IT/data processors under the Bank Service Company Act). | None. | In force; effective Apr 1, 2022, compliance date May 1, 2022 (86 FR 66424). |
+| C-IT-R06 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Covered entities in critical infrastructure sectors as defined in the final rule (scope still being refined). | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. | NOT YET IN EFFECT: no final rule published as of 2026-09-25. CISA held additional town halls (Feb and May 2026 notices) to refine scope and burden before a final rule. Statutory reporting duties apply only once the final rule is effective. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [DFARS cyber incident report affecting covered defense information](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012(c) | Within 72 hours of discovery | DoD (DIBNet portal); subcontractors also notify prime |
+| [Bank service provider notification](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR 53.4; 225.303; 304.24 | As soon as possible (4+ hour material disruption) | Affected banking organization customers |
+| [FedRAMP incident communications](https://www.fedramp.gov/) | FedRAMP Incident Communications Procedures / agency ATO terms (US-CERT/CISA reporting) | Per FedRAMP procedures (not verified in this pass) | Agency customers, FedRAMP PMO, CISA |
+| [CIRCIA covered cyber incident / ransom payment reports (pending final rule)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** Customer/tenant data in cloud services; Source code, signing keys and build artifacts; Federal data and CUI; Credentials/identity data; Bulk sensitive personal data (28 CFR 202)
+- **Critical systems:** Cloud control planes and hypervisors; Identity providers and PKI; Software supply chain/CI-CD; Managed service provider RMM tools; DNS, CDN and internet routing
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
-- **Assurance alternatives to SOC 2:** None noted
+- **Assurance alternatives to SOC 2:** FedRAMP authorization for federal customers; ISO/IEC 27001 certification
 - **Scenario incident (P08):** Compromise of provider tooling affecting downstream customers
 - **Scenario AI use case (P10):** AI-driven security operations (alert triage)
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+OMB M-26-05 (Jan 23, 2026) rescinded M-22-18 and M-23-16. Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

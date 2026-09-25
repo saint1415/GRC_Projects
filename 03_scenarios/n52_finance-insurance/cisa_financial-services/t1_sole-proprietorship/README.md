@@ -24,14 +24,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 > **Industry note:** At this size, Cris Santos Company works in the Financial Services vertical as an independent insurance agency (NAICS 524210) instead of the vertical's primary industry (NAICS 522320). Reason: A sole proprietor does not typically operate a payment processor. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** NPI and account data; Payment messages (SWIFT, Fedwire, ACH files); Market and trading data; Authentication credentials and HSM keys
+- **Critical systems:** Payment, clearing and settlement systems; Core banking processors; Trading and market-data systems (SCI systems); Authentication/fraud platforms; Backup and data vaulting (e.g., immutable backups)
 
 ## Who regulates it
-[see vertical overlay]
+Sector Risk Management Agency: Department of the Treasury; Federal banking agencies (OCC, FRB, FDIC), NCUA, SEC, CFTC via FFIEC/FBIIC coordination
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [Computer-Security Incident Notification Rule](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR Part 53 (OCC); 12 CFR 225 Subpart N (FRB); 12 CFR 304 Subpart C (FDIC) | None (no size threshold). |
+| [Interagency Guidelines Establishing Information Security Standards](https://www.ecfr.gov/current/title-12/part-30/appendix-Appendix%20B%20to%20Part%2030) | 12 CFR 30 App. B (OCC); 12 CFR 208 App. D-2 & 225 App. F (FRB); 12 CFR 364 App. B (FDIC) | No size exemption; program must be appropriate to size and complexity. |
+| [NCUA cyber incident reporting](https://www.ecfr.gov/current/title-12/section-748.1) | 12 CFR 748.1(c) | None. |
+| [SEC Regulation SCI](https://www.ecfr.gov/current/title-17/section-242.1000) | 17 CFR 242.1000-242.1007 | Volume-based for ATSs: during 4 of prior 6 months, NMS stocks >= 5% in any single stock AND >= 0.25% of all NMS stock ADDV, or >= 1% of all NMS stock ADDV; non-NMS equities >= 5% ADDV; 6-month grace period after first meeting threshold. |
+| [NYDFS Cybersecurity Regulation (Second Amendment)](https://www.dfs.ny.gov/system/files/documents/2023/12/rf23_nycrr_part_500_amend02_20231101.pdf) | 23 NYCRR Part 500 | Limited exemption (500.19(a)): < 20 employees and independent contractors (incl. affiliates); OR < $7,500,000 gross annual revenue in each of last 3 fiscal years from NY operations; OR < $15,000,000 year-end total assets (incl. affiliates) -> exempt from 500.4, 500.5, 500.6, 500.8, 500.10, portions of 500.14, 500.15 and 500.16. 'Class A company' = >= $20M NY revenue and (> 2,000 employees or > $1B gross revenue) in each of last 2 fiscal years -> extra duties (independent audit, EDR, PAM, password controls). |
+| [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -40,7 +46,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Core business SaaS stack (email, files, client and billing records). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: NYDFS 23 NYCRR Part 500. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | One consolidated information security policy. Plain-language rules covering access; incident response; data handling; acceptable use. |

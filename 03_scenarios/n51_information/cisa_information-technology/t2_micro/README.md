@@ -22,14 +22,20 @@ This folder is a complete, self-contained sample. Read this page first, then ope
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
 ## What the business handles
-- **Sensitive data:** [see vertical overlay]
-- **Critical systems:** [see vertical overlay]
+- **Sensitive data:** Customer/tenant data in cloud services; Source code, signing keys and build artifacts; Federal data and CUI; Credentials/identity data; Bulk sensitive personal data (28 CFR 202)
+- **Critical systems:** Cloud control planes and hypervisors; Identity providers and PKI; Software supply chain/CI-CD; Managed service provider RMM tools; DNS, CDN and internet routing
 
 ## Who regulates it
-[see vertical overlay]
+Sector Risk Management Agency: Department of Homeland Security (CISA); GSA FedRAMP PMO; Department of Defense (CMMC/DFARS); DOJ National Security Division (28 CFR 202)
 
 | Requirement | Citation | Size thresholds / exemptions |
 |---|---|---|
+| [FedRAMP](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3608&num=0&edition=prelim) | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) | None by size; baseline (Low/Moderate/High, 20x classes) by impact level. |
+| [CMMC Program](https://www.ecfr.gov/current/title-32/part-170) | 32 CFR Part 170; DFARS 252.204-7021 (48 CFR rule, 90 FR 43560) | No small-business exemption. Applies to DoD solicitations/contracts above the micro-purchase threshold; excludes procurements exclusively for COTS items (32 CFR 170.3(c)). |
+| [DFARS Safeguarding CDI & Cyber Incident Reporting](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012 | None. |
+| [DOJ Data Security Program (bulk sensitive data rule)](https://www.ecfr.gov/current/title-28/part-202) | 28 CFR Part 202 (implementing E.O. 14117) | Applies by data volume ('bulk', 28 CFR 202.205, over preceding 12 months): human 'omic > 1,000 persons (genomic > 100); biometric > 1,000; precise geolocation > 1,000 devices; personal health > 10,000; personal financial > 10,000; covered personal identifiers > 100,000. Government-related data has no volume threshold. |
+| [Bank service provider notification rule](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) | None. |
+| [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
 
 Whether each requirement applies at this size is decided in P03 (gap analysis), step 1.
 
@@ -38,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Business and its key vendors. 15-25 risks; qualitative scales; named owners. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Hosting control plane and customer portal. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: [see vertical overlay]. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: FedRAMP (Rev5 NIST SP 800-53 baselines / 20x). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. |

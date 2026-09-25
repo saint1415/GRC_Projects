@@ -13,11 +13,11 @@ naics6,industry_title,basis,size_standard,footnotes,source,ecfr_date
 334510,Electromedical and Electrotherapeutic Apparatus Manufacturing,employees,1250,,13 CFR 121.201,2026-09-22
 335311,"Power, Distribution, and Specialty Transformer Manufacturing",employees,800,,13 CFR 121.201,2026-09-22
 336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,employees,1250,7,13 CFR 121.201,2026-09-22
-424210,Drugs and Druggists' Sundries Merchant Wholesalers,employees,250,,13 CFR 121.201,2026-09-22
+423430,Computer and Computer Peripheral Equipment and Software Merchant Wholesalers,employees,250,,13 CFR 121.201,2026-09-22
 424690,Other Chemical and Allied Products Merchant Wholesalers,employees,175,,13 CFR 121.201,2026-09-22
 445110,Supermarkets and Other Grocery Retailers (except Convenience Retailers),receipts_musd,40.0,,13 CFR 121.201,2026-09-22
 456110,Pharmacies and Drug Retailers,receipts_musd,37.5,,13 CFR 121.201,2026-09-22
-484121,"General Freight Trucking, Long-Distance, Truckload",receipts_musd,34.0,,13 CFR 121.201,2026-09-22
+482112,Short Line Railroads,employees,1500,,13 CFR 121.201,2026-09-22
 486210,Pipeline Transportation of Natural Gas,receipts_musd,41.5,,13 CFR 121.201,2026-09-22
 488320,Marine Cargo Handling,receipts_musd,47.0,,13 CFR 121.201,2026-09-22
 488510,Freight Transportation Arrangement,receipts_musd,20.0,10,13 CFR 121.201,2026-09-22

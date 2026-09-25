@@ -9,16 +9,22 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** [see vertical overlay], 
-**Why:** 
+**Regulation to analyze:** FCC CPNI Rules, 47 CFR 64.2001-64.2011 (47 U.S.C. 222)
+**Why:** The only codified, sector-specific privacy/security safeguard rule for carriers, with annual officer certification and FCC enforcement; pair with NIST CSF 2.0 / CISA CPGs 2.0 for broader network security because the FCC rescinded its 2025 CALEA-based cybersecurity ruling and no general carrier cybersecurity rule exists.
 
-**Applicability check first:** at this size the business is an owner-operated wireless internet service provider (WISP). Decide whether [see vertical overlay] applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
+**Applicability check first:** at this size the business is an owner-operated wireless internet service provider (WISP). Decide whether FCC CPNI Rules applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-COMMUNICATIONS-R01 | FCC CPNI rules | 47 U.S.C. 222; 47 CFR 64.2001-64.2011 |
+| C-COMMUNICATIONS-R02 | FCC Network Outage Reporting (NORS) | 47 CFR Part 4 (4.9) |
+| C-COMMUNICATIONS-R03 | CALEA system security and integrity | 47 U.S.C. 1001-1010; 47 CFR 1.20000-1.20008 |
+| C-COMMUNICATIONS-R04 | FCC submarine cable landing license national-security rules | 47 CFR 1.767-1.768, 1.70000 et seq. (90 FR 48648; 91 FR 46844) |
+| C-COMMUNICATIONS-R05 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
+| C-COMMUNICATIONS-R06 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

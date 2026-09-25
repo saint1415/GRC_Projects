@@ -15,8 +15,12 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| Banking organization notification incident | 12 CFR 53.3; 225.302; 304.23 | No later than 36 hours after determination | Primary federal regulator | Verify applicability |
+| Bank service provider notification | 12 CFR 53.4; 225.303; 304.24 | As soon as possible (4+ hour material disruption of covered services) | Bank customers' designated contacts | Verify applicability |
+| SCI event notification | 17 CFR 242.1002(b) | Immediately upon reasonable basis to conclude; written notice within 24 hours; updates thereafter | SEC | Verify applicability |
+| Credit union reportable cyber incident | 12 CFR 748.1(c) | No later than 72 hours | NCUA | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
-| CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
 
@@ -25,6 +29,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-FINANCIAL-R01 | Computer-Security Incident Notification Rule | 12 CFR Part 53 (OCC); 12 CFR 225 Subpart N (FRB); 12 CFR 304 Subpart C (FDIC) |
+| C-FINANCIAL-R02 | Interagency Guidelines Establishing Information Security Standards | 12 CFR 30 App. B (OCC); 12 CFR 208 App. D-2 & 225 App. F (FRB); 12 CFR 364 App. B (FDIC) |
+| C-FINANCIAL-R03 | NCUA cyber incident reporting | 12 CFR 748.1(c) |
+| C-FINANCIAL-R04 | SEC Regulation SCI | 17 CFR 242.1000-242.1007 |
+| C-FINANCIAL-R05 | NYDFS Cybersecurity Regulation (Second Amendment) | 23 NYCRR Part 500 |
+| C-FINANCIAL-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

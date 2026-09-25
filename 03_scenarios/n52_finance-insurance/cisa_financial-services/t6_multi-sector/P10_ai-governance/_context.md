@@ -10,7 +10,7 @@
 | Scenario brief | [README.md](../README.md) |
 
 **AI use case:** Transaction fraud-detection model
-**Sector AI rules and guidance:** None identified; see cross-sector obligations
+**Sector AI rules and guidance:** NYDFS Industry Letter (Oct 16, 2024) AI-specific cyber risk guidance under Part 500.
 **Cross-sector AI obligations:** [`00_universal/cross-sector/`](../../../../../00_universal/cross-sector)
 
 ## Regulatory drivers to trace in this deliverable
@@ -18,6 +18,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-FINANCIAL-R01 | Computer-Security Incident Notification Rule | 12 CFR Part 53 (OCC); 12 CFR 225 Subpart N (FRB); 12 CFR 304 Subpart C (FDIC) |
+| C-FINANCIAL-R02 | Interagency Guidelines Establishing Information Security Standards | 12 CFR 30 App. B (OCC); 12 CFR 208 App. D-2 & 225 App. F (FRB); 12 CFR 364 App. B (FDIC) |
+| C-FINANCIAL-R03 | NCUA cyber incident reporting | 12 CFR 748.1(c) |
+| C-FINANCIAL-R04 | SEC Regulation SCI | 17 CFR 242.1000-242.1007 |
+| C-FINANCIAL-R05 | NYDFS Cybersecurity Regulation (Second Amendment) | 23 NYCRR Part 500 |
+| C-FINANCIAL-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

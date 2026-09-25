@@ -2,30 +2,44 @@
 # Vertical overlay: Transportation Systems
 
 **Level:** CISA critical infrastructure sector (child of NAICS 48-49 Transportation and Warehousing)
-**Primary industry for Cris Santos Company:** NAICS 488320 Marine Cargo Handling. Marine cargo terminal operator at a U.S. port.
-**Primary system:** Terminal operating system (TOS)
+**Primary industry for Cris Santos Company:** NAICS 482112 Short Line Railroads. Short line freight railroad.
+**Primary system:** Train dispatching and positive train control back office
 
 ## Regulators and sector risk management agency
-[Pending research]
+Co-Sector Risk Management Agencies: Department of Homeland Security (TSA, USCG) and Department of Transportation; Transportation Security Administration; U.S. Coast Guard
 
 ## Primary regulation for the gap analysis (P03)
-**[Pending]**, . 
-Source: 
+**TSA Security Directive 1580/82-2022-01 series (rail cybersecurity)**, SD 1580/82-2022-01E; SD Pipeline-2021-02G. Cris Santos Company operates a short line freight railroad in this vertical. TSA rail directives apply only to railroads TSA has designated; confirm designation in step 1 of P03. Research note: For the CISA sector's highest-risk operators (freight/passenger rail, transit, pipelines), the performance-based TSA SDs are the binding requirements (implementation plan, segmentation, access control, monitoring, patching, assessment program, IR testing) and TSA audits against them. Use USCG Subpart F for maritime. Note SDs are revised roughly annually and the TSA NPRM would codify them if finalized.
+Source: https://www.tsa.gov/sd-and-ea
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
 |---|---|---|---|---|---|
+| C-TRANSPORTATION-R01 | [TSA rail and public transportation cybersecurity Security Directives](https://www.tsa.gov/sd-and-ea) | SD 1580-21-01E (freight rail), SD 1582-21-01E (public transportation/passenger rail), SD 1580/82-2022-01E (mitigation actions & testing); authority 49 U.S.C. 114 | TSA-designated higher-risk freight railroads, passenger rail and rail transit owner/operators. | Applicability set by TSA risk designation, not by employee/revenue thresholds. | Current: 1580-21-01E and 1582-21-01E (Jan 15, 2026); 1580/82-2022-01E (May 1, 2026). Renewed periodically. |
+| C-TRANSPORTATION-R02 | [TSA pipeline cybersecurity Security Directives](https://www.tsa.gov/sd-and-ea) | SD Pipeline-2021-01G; SD Pipeline-2021-02G | TSA-designated critical hazardous liquid and natural gas pipeline owner/operators (NAICS 486). | Applicability by TSA criticality designation. | Current: Pipeline-2021-01G (Jan 15, 2026); Pipeline-2021-02G (May 1, 2026). |
+| C-TRANSPORTATION-R03 | [TSA aviation cybersecurity emergency amendments/security program changes](https://www.tsa.gov/news/press/releases/2023/03/07/tsa-issues-new-cybersecurity-requirements-airport-and-aircraft) | TSA security programs (49 CFR parts 1542, 1544, 1546) - content is SSI | TSA-regulated airport and aircraft operators. | By TSA regulatory status, not size. | Issued Mar 7, 2023; specific current versions are Sensitive Security Information and not publicly posted. |
+| C-TRANSPORTATION-R04 | [USCG Cybersecurity in the Marine Transportation System](https://www.ecfr.gov/current/title-33/part-101/subpart-F) | 33 CFR Part 101, Subpart F (101.600-101.670); 90 FR 6298 | Owners/operators of U.S.-flagged vessels, facilities and OCS facilities required to have security plans under 33 CFR parts 104, 105, 106 (not foreign-flagged vessels). | No size threshold; applicability tied to MTSA security plan requirement. | Effective July 16, 2025. Training by Jan 12, 2026 and annually; Cybersecurity Assessment and Cybersecurity Plan submission no later than July 16, 2027 (per current eCFR). |
+| C-TRANSPORTATION-R05 | [Reporting of cyber incidents in the maritime domain](https://www.ecfr.gov/current/title-33/section-6.16-1) | 33 CFR 6.16-1 (E.O. 14116, 89 FR 13973, Feb 26, 2024) | Vessels, harbors, ports, waterfront facilities. | None. | In force. |
+| C-TRANSPORTATION-R06 | [TSA Enhancing Surface Cyber Risk Management (proposed rule)](https://www.federalregister.gov/documents/2024/11/07/2024-24704/enhancing-surface-cyber-risk-management) | 89 FR 88488 (Nov 7, 2024); proposed 49 CFR parts 1570, 1580, 1582, 1586 and pipeline part | Certain pipeline, freight/passenger rail and OTRB owner/operators. | Applicability criteria in proposal (risk/size-based); final TBD. | PROPOSED - comment period closed Feb 5, 2025; no final rule found in Federal Register as of 2026-09-25. SDs remain the operative requirements. |
+| C-TRANSPORTATION-R07 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Covered entities in critical infrastructure sectors as defined in the final rule (scope still being refined). | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. | NOT YET IN EFFECT: no final rule published as of 2026-09-25. CISA held additional town halls (Feb and May 2026 notices) to refine scope and burden before a final rule. Statutory reporting duties apply only once the final rule is effective. |
 
 ## Incident and breach notification (`incident-notification.csv`)
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
+| [TSA SD cybersecurity incident reporting (rail, passenger rail/transit, pipeline)](https://www.federalregister.gov/documents/2024/11/07/2024-24704/enhancing-surface-cyber-risk-management) | SD 1580-21-01 / 1582-21-01 / Pipeline-2021-01 series | Within 24 hours of identification | CISA (central reporting) |
+| [Report actual or threatened cyber incident involving vessel, harbor, port or waterfront facility](https://www.ecfr.gov/current/title-33/section-6.16-1) | 33 CFR 6.16-1 (as amended by E.O. 14116); 33 CFR 101.620(b)(7) (reportable cyber incidents to National Response Center) | Immediately | FBI, CISA and the Captain of the Port; National Response Center (1-800-424-8802) for reportable cyber incidents if not already reported under 6.16-1 |
+| [Aviation significant cybersecurity incident reporting](https://www.tsa.gov/news/press/releases/2023/03/07/tsa-issues-new-cybersecurity-requirements-airport-and-aircraft) | TSA security programs (SSI) | Per security program (SSI) | CISA |
+| [CIRCIA covered cyber incident / ransom payment reports (pending final rule)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA |
 
 ## Sector context
-- **Sensitive data:** 
-- **Critical systems:** 
+- **Sensitive data:** Security Sensitive Information (SSI); OT/ICS network diagrams and configurations; Passenger PII; Cargo and hazmat shipment data
+- **Critical systems:** Positive Train Control and signaling; Pipeline SCADA/ICS; Air traffic and airport operational systems; Port/terminal OT (cranes, gates); Transit fare collection and dispatch
 - **Sector AI rules and guidance:** None identified beyond cross-sector obligations
 - **Assurance alternatives to SOC 2:** None noted
-- **Scenario incident (P08):** Ransomware disrupting terminal operating system
-- **Scenario AI use case (P10):** Container risk-scoring model
+- **Scenario incident (P08):** Ransomware on dispatch and train control back-office systems
+- **Scenario AI use case (P10):** Track and equipment defect detection (computer vision)
 
-_Last verified: n/a. Unverified items are marked in the CSV `verified` column._
+## Notes
+CISA page lists 7 subsectors: Aviation; Highway and Motor Carrier; Maritime; Mass Transit and Passenger Rail; Pipeline Systems; Freight Rail; Postal and Shipping. Verified 2026-09-25.
+
+_Last verified: 2026-09-25. Unverified items are marked in the CSV `verified` column._

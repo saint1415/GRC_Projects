@@ -15,9 +15,12 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
+| DFARS cyber incident report affecting covered defense information | 48 CFR 252.204-7012(c) | Within 72 hours of discovery | DoD (DIBNet portal); subcontractors also notify prime | Verify applicability |
+| Bank service provider notification | 12 CFR 53.4; 225.303; 304.24 | As soon as possible (4+ hour material disruption) | Affected banking organization customers | Verify applicability |
+| FedRAMP incident communications | FedRAMP Incident Communications Procedures / agency ATO terms (US-CERT/CISA reporting) | Per FedRAMP procedures (not verified in this pass) | Agency customers, FedRAMP PMO, CISA | Verify applicability |
+| CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
 | State data breach notification | State breach notification statutes (all 50 states, DC, PR, USVI; Guam 9 GCA Ch. 48) | Varies by state (for example 'without unreasonable delay' or a fixed number of days) | Affected residents; state attorney general or regulator where the state requires it; consumer reporting agencies above state-set counts | Always check. Apply the law of each state where affected residents live |
 | SEC Form 8-K Item 1.05 (material cybersecurity incident) | Form 8-K Item 1.05; SEC Release 33-11216 | 4 business days after the materiality determination (delay possible only on U.S. Attorney General finding) | SEC (public filing to investors) | Publicly traded companies (SEC registrants) only |
-| CIRCIA covered cyber incident and ransom payment reports | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644) | Proposed: 72 hours (incident); 24 hours after ransom payment | CISA | NOT YET REQUIRED: final rule not published as of 2026-09-25 (reporting is voluntary until then). Proposed scope: critical infrastructure entities above the SBA size standard, or meeting a sector criterion regardless of size |
 | OFAC sanctions check before any ransom payment | OFAC Updated Advisory on Potential Sanctions Risks for Facilitating Ransomware Payments (Sept. 21, 2021); 31 CFR ch. V | Before any payment; full and timely reporting to law enforcement or CISA is a mitigating factor | OFAC (license if sanctioned party); law enforcement (FBI) or CISA | All U.S. persons. Strict liability for payments to sanctioned parties |
 | Covered telecommunications / Kaspersky article discovered | FAR 52.204-25 (Section 889) and FAR 52.204-23 | Within 1 business day of identification (further report within 10 business days) | Contracting officer (DoD contracts: https://dibnet.dod.mil) | Only if Cris Santos Company holds federal contracts or subcontracts |
 
@@ -26,6 +29,12 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 
 | ID | Requirement | Citation |
 |---|---|---|
+| C-IT-R01 | FedRAMP | 44 U.S.C. 3607-3616 (FedRAMP Authorization Act, FY2023 NDAA) |
+| C-IT-R02 | CMMC Program | 32 CFR Part 170; DFARS 252.204-7021 (48 CFR rule, 90 FR 43560) |
+| C-IT-R03 | DFARS Safeguarding CDI & Cyber Incident Reporting | 48 CFR 252.204-7012 |
+| C-IT-R04 | DOJ Data Security Program (bulk sensitive data rule) | 28 CFR Part 202 (implementing E.O. 14117) |
+| C-IT-R05 | Bank service provider notification rule | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) |
+| C-IT-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.
