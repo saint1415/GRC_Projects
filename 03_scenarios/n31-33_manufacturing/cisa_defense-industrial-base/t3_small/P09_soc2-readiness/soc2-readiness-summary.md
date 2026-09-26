@@ -79,10 +79,11 @@ Two Security criteria rely on work that CMMC does not require: CC7.5 and CC9.1 (
 ## 5. Remediation plan and evidence calendar
 All remediation items are already on the CMMC roadmap (P03 section 4) and the POA&M (P07). No separate SOC 2 project is funded.
 
-| Quarter | Criteria addressed | Evidence to start collecting |
+| Quarter | Criteria addressed (by target date in `soc2-readiness.csv`) | Evidence to start collecting |
 |---|---|---|
-| 2026 Q4 | CC1.1, CC2.2, CC2.3, CC6.3, CC6.4, CC6.5, CC6.7, CC3.4, CC8.1, CC7.3, CC7.4, CC9.2 | Policy acknowledgments, termination and access review records, visitor logs, destruction certificates, change tickets, tabletop report, flowdown clauses |
-| 2027 Q1 | CC1.2, CC1.4, CC2.1, CC4.1, CC5.2, CC5.3, CC6.1, CC6.8, CC7.1, CC7.2, CC7.5, CC9.1 | Minutes of owner reviews, training records, baselines, scan reports, weekly log reviews, managed detection tickets, restore test, C3PAO assessment results |
-| 2027 Q1 to Q2 | CC3.3 | Updated risk assessment with fraud scenarios |
+| 2026 Q4 | CC1.1, CC1.2, CC1.4, CC2.1, CC2.2, CC2.3, CC3.4, CC4.1, CC5.2, CC5.3, CC6.1, CC6.3, CC6.4, CC6.5, CC6.7, CC7.1, CC7.3, CC7.4, CC7.5, CC8.1, CC9.1, CC9.2 (22) | Policy acknowledgments, owner review minutes, training records, termination and access review records, visitor logs, destruction certificates, baselines, change tickets, scan reports, tabletop report, restore test, flowdown clauses |
+| 2027 Q1 | CC3.3, CC6.8, CC7.2 (3) | Updated risk assessment with fraud scenarios, allowlisting enforcement records, weekly log reviews and managed detection tickets |
+
+The C3PAO assessment (2027-02-15 to 2027-02-26) will test most of this evidence and gives Customer C independent confirmation for the criteria it overlaps.
 
 **Response to Customer C:** send this summary, the readiness checklist, and a one-page letter stating the CMMC Level 2 target date. Commit to an updated self-assessment after the C3PAO assessment, by 2027-04-30.
