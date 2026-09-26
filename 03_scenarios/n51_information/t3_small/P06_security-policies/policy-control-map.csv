@@ -1,2 +1,26 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment using SP 800-30 Rev. 1,RA-3; PM-9,ID.RA-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC3.2,No
+POL-01,4.4,Risk acceptance authority by risk level,PM-9,GV.RM-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),No
+POL-01,4.8,Change control; security review of new features; no production data outside production,CM-3; SA-3; SA-3(2); SA-8,PR.PS-06,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC8.1,Yes
+POL-01,4.9,Sub-processor security review before onboarding and annual SOC 2 review,SA-9; SR-6,GV.SC-05; GV.SC-07,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); Customer DPA (30-day sub-processor notice),Yes
+POL-01,4.10,Public security and AI statements reviewed against practice,CA-7,GV.OC-03,N51-R01 (15 U.S.C. 45(a); deception),No
+POL-02,4.1,Unique accounts; shared break-glass role only by dated exception,AC-2; IA-2; IA-4,PR.AA-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC6.1,Yes
+POL-02,4.3,MFA for all workforce sign-ins; hardware keys for production and administrators,IA-2(1); IA-2(2),PR.AA-03,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),Yes
+POL-02,4.4,Just-in-time named privileged access with session recording,AC-2; AC-6; AC-6(9),PR.AA-05,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC6.3,Yes
+POL-02,4.5,Customer-approved and time-limited view-as-tenant access,AC-3; AC-6; AU-6,PR.AA-05,N51-R01 (15 U.S.C. 45(a); deception); Customer DPA (use limited to providing the service),Yes
+POL-02,4.6,Same-day access removal; single sign-on only,AC-2; PS-4; PS-7,PR.AA-05,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),Yes
+POL-02,4.7,Quarterly access reviews across all in-scope systems,AC-2; AC-6,PR.AA-05,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC6.2,Yes
+POL-02,4.8,No long-lived static cloud keys; secrets manager; secret scanning,IA-5; IA-4,PR.AA-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),Yes
+POL-02,4.9,1-year protected log archive; weekly privileged review; cloud activity alerts,AU-2; AU-6; AU-11; AC-6(9); SI-4,DE.CM-01; DE.CM-03; DE.CM-09,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC7.2,Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),Yes
+POL-03,4.3,Severity scheme; incidents tracked to closure,IR-4; IR-5,RS.MA-03,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC7.3,Yes
+POL-03,4.4,Customer notice within 72 hours of confirmation (48 hours for 3 customers),IR-6,RS.CO-02,Customer DPA (contract); Fla. Stat. 501.171(6) (third-party agent notice),Yes
+POL-03,4.5,Legal notices meet the P08 notification matrix deadlines,IR-6,RS.CO-02; RS.CO-03,Fla. Stat. 501.171(3)-(5); state breach laws where affected individuals reside,Yes
+POL-03,4.8,Annual incident response training and tabletop test,IR-2; IR-3,ID.IM-02,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC7.4,No
+POL-04,4.2,Encrypt Restricted and Confidential data at rest and in transit,SC-8; SC-28,PR.DS-01; PR.DS-02,N51-R01 (15 U.S.C. 45(a); deception) (security page encryption claim),Yes
+POL-04,4.3,No customer data outside production and listed sub-processors; masked test data,SA-3(2),PR.DS-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 C1.1,Yes
+POL-04,4.5,Customer data used only to provide the service; AI provider limits,PT-2; SA-9,GV.OC-03,N51-R03 (Cal. Civ. Code 1798.140 service provider); N51-R01 (15 U.S.C. 45(a); deception),Yes
+POL-04,4.6,Delete customer data within 90 days of termination; no personal data in logs,SI-12,ID.AM-08,N51-R01 (15 U.S.C. 45(a); deception); Customer DPA (90-day deletion),Yes
+POL-04,4.7,Separate write-once backups restore-tested every 6 months,CP-9,PR.DS-11,Customer DPA (contract) (99.9% SLA); SOC 2 A1.2,Yes
+POL-05,4.3,Annual awareness training; phishing simulations; secure coding for engineers,AT-2; AT-3,PR.AT-01; PR.AT-02,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness); SOC 2 CC1.4,Yes
+POL-05,4.8,Approved generative AI tools only,PL-4,GV.PO-01,N51-R01 (15 U.S.C. 45(a); 45(n) unfairness),No

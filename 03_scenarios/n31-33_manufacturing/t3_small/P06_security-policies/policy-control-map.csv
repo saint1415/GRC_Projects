@@ -1,2 +1,28 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment using SP 800-30; product risks also in the design risk file,RA-3; PM-9,ID.RA-01; GV.RM-01,N62-R01 (164.308(a)(1)(ii)(A)); 21 CFR 820.10(c),No
+POL-01,4.4,Risk acceptance authority; High patient-safety risks never accepted without remediation,PM-9,GV.RM-01,N62-R01 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,"Security requirements, threat modeling, testing, and SBOM in every device and device cloud release",SA-8; SA-11; CM-8,ID.RA-01; PR.PS-06,N31-33-R05 (524B(b)(2)-(3)),Yes
+POL-01,4.8,Sanctions for policy violations,PS-8,GV.RR-04,N62-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.9,"No BAA, no PHI (subcontractor BAAs)",SA-9,GV.SC-05,N62-R01 (164.308(b)(1); 164.314(a)),Yes
+POL-01,4.10,Annual control evaluation and annual independent testing of the device cloud,CA-2; CA-8,ID.IM-02,N62-R01 (164.308(a)(8)),Yes
+POL-01,4.11,Six-year retention of security documentation and CVD records,SI-12,GV.PO-02,N62-R01 (164.316(b)(2)(i)),No
+POL-02,4.1,Unique accounts; shared MES logins only under a time-limited exception,IA-2; AC-2,PR.AA-01,N62-R01 (164.312(a)(2)(i)),Yes
+POL-02,4.3,No standing production access to PHI; ticket-approved time-limited access,AC-6; AC-2,PR.AA-05,N62-R01 (164.308(a)(4)),Yes
+POL-02,4.4,MFA everywhere; hardware keys for privileged cloud roles,IA-2(1); IA-2(2),PR.AA-03,N62-R01 (164.312(d)),No
+POL-02,4.5,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,N62-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.6,"Quarterly access reviews, including production roles and signing rights",AC-2; AC-6,PR.AA-05,N62-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.7,Two-person release signing; backup administration separate from production,AC-5,PR.AA-05,N31-33-R05 (524B(b)(2)),Yes
+POL-02,4.8,"No default, hardcoded, or shared device credentials; unique device identity",IA-3; IA-5,PR.AA-01; PR.AA-03,N31-33-R05 (524B(b)(2)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.4,Published CVD policy; 3-business-day acknowledgment; ISAO participation,RA-5(11); PM-15,ID.RA-08,N31-33-R05 (524B(b)(1)),Yes
+POL-03,4.5,Controlled or uncontrolled risk assessment; documented MDR and 806 decisions,IR-6; IR-4,RS.AN-03,21 CFR 803.50; 803.53; 806.10,Yes
+POL-03,4.6,Out-of-cycle fixes for uncontrolled risks; customer notice within 30 days,SI-2,RS.MI-02,N31-33-R05 (524B(b)(2)(B)),Yes
+POL-03,4.7,Business associate breach notice to hospitals within 60 days or BAA terms; Florida 10-day agent notice,IR-6,RS.CO-02,N62-R03 (164.410); Fla. Stat. 501.171(6),Yes
+POL-03,4.9,Annual incident response tabletop,IR-3,ID.IM-02,N62-R01 (164.308(a)(6)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,N62-R01 (164.312(a)(2)(iv); 164.312(e)(2)(ii)),No
+POL-04,4.3,Signing keys in an HSM or non-exportable key service; split backup shares,SC-12,PR.DS-01,N31-33-R05 (524B(b)(2)),Yes
+POL-04,4.4,PHI only in approved systems; masked before logs leave the device cloud,AC-3; SI-12,PR.DS-01,N62-R01 (164.308(b)(1)),No
+POL-04,4.6,Restricted data inventory and machine-readable SBOM for each release,CM-8,ID.AM-02; ID.AM-07,N31-33-R05 (524B(b)(3)),Yes
+POL-04,4.8,"Separated, immutable, encrypted backups restore-tested quarterly",CP-9; CP-4,PR.DS-11,N62-R01 (164.308(a)(7)(ii)(A); (D)),Yes
+POL-05,4.3,Annual awareness training; quarterly phishing exercises; role training for engineers,AT-2; AT-3,PR.AT-01; PR.AT-02,N62-R01 (164.308(a)(5)(ii)(A)),No
+POL-05,4.8,Approved AI tools only; no source code or PHI in public AI tools,PL-4; AC-20,GV.PO-01,N62-R01 (164.308(b)(1)); business risk (trade secrets),No
