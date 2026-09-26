@@ -12,7 +12,7 @@
 
 ## 1. GOVERN
 - **Accountable owner:** Risk and Fraud Manager for AI-001; IT Manager for AI-002.
-- **Decision authority:** under POL-01 4.5, High-tier risks need the majority owner and CEO. The COO approves the conditions and reports them to the CEO. The CEO accepted R-020 and R-021 treatment plans on 2026-08-31 as part of P01.
+- **Decision authority:** the related risks in P01 are Moderate (R-020, R-023) and Low (R-021, R-022), within the COO's authority under POL-01 4.5. Because AI-001 is tiered High, the COO also reports the decision and its conditions to the majority owner and CEO.
 - **Policies that apply:**
   - POL-04 4.8: training extracts must be token-only, minimized, and covered by use limits and deletion terms
   - POL-05 4.7: approved generative AI tools only; no Restricted or Confidential data in public chatbots
@@ -132,7 +132,7 @@ Results use the first test run on 2026-08-18, on Q2 2026 transactions (about 23 
 | Value chain and component integration | Tool vendor terms can change | Annual review of the enterprise assistant's terms by the Compliance and Risk Manager |
 
 ## 6. Decision
-**Approve continued production of AI-001 with conditions.** COO, 2026-08-31. The majority owner and CEO accepted the related High-tier risk treatment plans the same day. Conditions:
+**Approve continued production of AI-001 with conditions.** COO, 2026-08-31, reported to the majority owner and CEO the same day. Conditions:
 1. Daily decline-rate and drift monitoring with alerts live by **2026-09-30** (R-020).
 2. Prepaid step-up routing in place by **2026-09-30**; vendor fix in the Q4 2026 update, retested with the bias plan before release (R-021).
 3. Training extract minimized and the PAN block live by **2026-09-30**. Contract amendment with use limits, deletion, and incident notice signed by **2026-11-30** (R-022).
