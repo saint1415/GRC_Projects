@@ -124,7 +124,8 @@ A worksheet for counting consumers and deciding encryption status is due with th
 2. Re-verify, by independent callback, every payoff and every disbursement instruction on the affected agent's and lender's open files before funds move.
 3. Reschedule closings that cannot fund on time (P05 BP-01, MTD 8 hours); tell lenders so rate locks can be extended where possible.
 4. Restore any mailbox content the attacker deleted from the vendor's retention (there is no independent email backup until POAM-004 closes).
-5. Tell affected clients, agents, and lenders when the channel is safe again (RC.CO).
+5. If the Closing Communications Portal must be taken offline, phone every client with a pending closing and tell them that no wire instructions will be sent until it is back. An outage invites fraudsters to fill the gap (P05 BP-02).
+6. Tell affected clients, agents, and lenders when the channel is safe again (RC.CO).
 
 ## 8. Post-incident (ID.IM)
 - Lessons-learned meeting within 14 days of closing the incident; documentation within 30 days (POL-03 4.8).
