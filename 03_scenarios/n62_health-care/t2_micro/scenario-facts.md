@@ -93,3 +93,7 @@ These facts were added in Phase 2 because the deliverables needed them. They do 
 | Assessor | The P07 assessor is an independent HIPAA security consultant, not involved in the risk analysis or in operating any control | P07 |
 | ECG workstation patching | P07 testing found that the MSP had excluded the procedure-room workstation (SYS-07 host) from patching since April 2026, at the device vendor's request, without telling the practice | P01, P07 |
 | Productivity suite BAA | The Office Manager accepted the productivity suite BAA in the admin console on 2026-08-14, after the fieldwork found the gap | P01, P03, P07 |
+| MSP contract | Covers help desk, patching, antivirus, firewall, Wi-Fi, and backup administration, with a 4-business-hour response time and no recovery time commitment | P05, P07 |
+| Office security | Keyed suite entry with an after-hours alarm; keys held by the Office Manager and both physicians; locked network closet | P02, P03 |
+| Finances and payroll | A cash reserve covers about 30 days of expenses; payroll runs biweekly through an outside payroll service | P01, P05 |
+| Past events | A staff phone was lost in 2025 and a fax was misdirected; both were handled informally with no record. Two desktops were retired in 2025 with no disposal record | P03, P09 |
