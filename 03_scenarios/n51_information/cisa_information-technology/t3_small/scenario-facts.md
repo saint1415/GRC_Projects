@@ -106,3 +106,14 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-08-10 to 2026-08-21 | Control assessment fieldwork (DC-1 walkthrough 2026-08-12; DC-2 visit 2026-08-18) |
 | 2026-08-24 to 2026-09-04 | SOC 2 readiness self-assessment and AI risk assessment |
 | 2026-09-25 | Deliverables approved by the COO (Moderate and below) and the CEO (High) |
+
+## 7. Facts added while building the deliverables
+These details were added during the build and are used consistently across P02 to P10.
+- **Bank contacts:** designated points of contact are on file for 9 of the 14 banks, last verified in 2023 (P03 G-227; POAM-019).
+- **Incident history:** 3 security incidents were handled ad hoc in 2025-2026, one of them a compromised customer VM rebuilt from a clean template (P07 IR-4).
+- **SIEM volume:** about 9,800 alerts in July 2026, 71% auto-closed by the AI triage feature without review (P07 AU-6; P10).
+- **RMM tool:** the vendor keeps audit logs for 90 days by default; the contract has no security or incident notice terms (P08; POAM-020).
+- **Contract engineers:** 2 contract engineers work alongside the 60 employees (P03 PS-7; P10 fairness groups).
+- **DC-1 colocation report:** SOC 2 Type 2 (Security and Availability), period 2025-07-01 to 2026-06-30, unqualified, reviewed 2026-09-02 by the Controller and the IT Manager (P09).
+- **AI-002:** an enterprise coding assistant is in pilot with 4 software engineers (P10).
+- **Assessment scope:** the P07 mock assessment covered 22 controls with a contracted independent assessor who is not the FedRAMP advisor.
