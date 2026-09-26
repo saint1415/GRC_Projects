@@ -13,6 +13,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Size | $28.2 million in annual receipts (fictional), about $77,000 per day. Under the SBA size standard of $47.0 million for NAICS 522320, so SBA-small |
 | Volume | About 95 million card transactions a year (about 260,000 a day; peak about 45 per second), about $6.8 billion in processed volume. About 38% card-present, 62% card-not-present |
 | Sponsor bank | A **national bank** (supervised by the OCC) is the processor's sponsor (acquiring) bank. It holds the card network memberships, registered the processor with the card brands as its third-party processor, and is the originating depository institution for merchant funding ACH files. The sponsor agreement (2023, renewed 2026-01-01) states that the processor's settlement, reconciliation, and merchant funding file services are performed for the bank and are subject to examination under the Bank Service Company Act, 12 U.S.C. 1867(c) |
+| Contract commitments | Merchant agreements promise 99.9% monthly availability for authorization. The sponsor agreement requires clearing and merchant funding files by the bank's daily cutoff, and notice to the bank of any suspected account data compromise within 24 hours |
 | Second bank (pending) | A letter of intent (2026-06) with an FDIC-supervised **state nonmember bank** for a second sponsor program. Target signing 2027-Q1. No services are performed for it yet |
 | PCI DSS status | **Service provider**, PCI DSS v4.0.1. Level 1 under Visa's service provider levels (more than 300,000 transactions a year; levels are set by the card brands, not PCI SSC). Validates with an annual Report on Compliance (ROC) by a Qualified Security Assessor (QSA), an Attestation of Compliance (AOC), and quarterly external scans by an Approved Scanning Vendor (ASV). Last AOC: "Compliant", dated 2025-12-01. Next ROC fieldwork: 2026-11-02 to 2026-11-13; AOC due to the sponsor bank by 2026-12-01 |
 | GLBA status | A non-bank **financial institution** under the FTC Safeguards Rule, 16 CFR Part 314: its business is data processing of financial data, an activity listed in 12 CFR 225.28(b)(14) and financial in nature under 12 U.S.C. 1843(k). Holds customer information of other financial institutions' customers (cardholders) (314.1(b)). Not eligible for the 314.6 exception (far more than 5,000 consumers) |
@@ -110,8 +111,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Date | Event |
 |---|---|
 | 2026-03-14 | Platform cut over from managed hosting to the cloud tenant (significant change) |
+| 2026-05-19 | A faulty extract job starts writing full PANs to a data warehouse training table (found 2026-08-05) |
 | 2026-07-13 to 2026-07-24 | Risk assessment and gap analysis fieldwork |
 | 2026-08-03 to 2026-08-07 | Control assessment fieldwork |
+| 2026-08-10 | Sponsor bank's compliance contact informed of the warehouse PAN finding as a PCI DSS compliance matter |
+| 2026-08-12 | Notice analysis for the warehouse PAN finding completed: not a notification event (P08 section 6.6) |
 | 2026-08-31 | Deliverables approved by the COO (and by the CEO for High risks) |
 | 2026-11-02 to 2026-11-13 | QSA ROC fieldwork for the 2026 PCI DSS assessment |
 | 2026-12-01 | 2026 AOC due to the sponsor bank |

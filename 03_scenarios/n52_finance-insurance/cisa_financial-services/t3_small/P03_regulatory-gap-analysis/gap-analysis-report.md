@@ -11,7 +11,7 @@
 | Approved | COO, 2026-08-31 |
 
 ## 1. Applicability
-Applicability was decided first, one rule at a time, before any gap was rated. Regulatory text was checked against the eCFR on 2026-09-23 and the U.S. Code; card brand rules were checked on Visa's public site.
+Applicability was decided first, one rule at a time, before any gap was rated. Regulatory text comes from the eCFR and the U.S. Code; card brand rules come from Visa's public site. (Library note: every citation in this section was re-verified against those primary sources on 2026-09-26, using the eCFR point-in-time text for 2026-09-23.)
 
 ### 1.1 PCI DSS v4.0.1: applies, as a service provider (primary)
 - **Why it applies.** PCI DSS is not a law. It binds the company by contract: the sponsor agreement and the card brands' rules require every entity that stores, processes, or transmits cardholder data for a brand member to comply. The company does all three for its merchants, so PCI DSS calls it a **service provider**. The QSA assessed it that way in 2025.
@@ -125,7 +125,7 @@ All 15 High gaps must be closed before the QSA's fieldwork starts on 2026-11-02,
 The full list, with evidence, is in `gap-analysis.csv`. High and Moderate gaps are carried into the risk register (P01) and the POA&M (P07).
 
 ## 5. Pending regulatory changes
-- **PCI DSS.** v4.0.1 is the current version in the PCI SSC document library (checked 2026-09-26). Every future-dated v4.0 requirement took effect on 2025-03-31 and is assessed here as a current requirement. No newer version is assumed.
+- **PCI DSS.** v4.0.1 is the current version in the PCI SSC document library (library note: re-checked 2026-09-26). Every future-dated v4.0 requirement took effect on 2025-03-31 and is assessed here as a current requirement. No newer version is assumed.
 - **CIRCIA** (6 U.S.C. 681b; proposed 6 CFR Part 226, 89 FR 23644, 2024-04-04). No final rule had been published as of 2026-09-25, and CISA held further town halls in 2026. If finalized as proposed, covered entities would report covered cyber incidents to CISA within 72 hours and ransom payments within 24 hours. Whether a processor of this size would be covered depends on the final size and sector criteria. **Not a current obligation.**
 - **FDIC 12 CFR 304.24.** Not a rule change, but a scheduled applicability change: it applies once the second sponsor agreement is signed (section 1.4).
 
