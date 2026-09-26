@@ -53,7 +53,7 @@ Counts: 3 High, 5 Moderate, 2 Low.
 **Key findings:**
 1. **The PLC program has no farm-held backup.** It exists only on the integrator's laptop (gap 5). If the PLC or HMI were lost, the 6-hour RTO for BP-01 depends entirely on the integrator's availability.
 2. **Backups are unproven.** The data hub and file share backups have never been restore-tested and sit in the same cloud account as production (gap 6), so the RTOs for BP-01 (flow history), BP-06, and BP-08 are unproven. This is risk R-003 in P01.
-3. **SYS-01 recovery commitments must be checked.** The FMIS vendor's SOC 2 report (P09) states an RTO of 8 hours and an RPO of 1 hour. That RTO is longer than the 6-hour RTO for BP-01 and the 2-hour RTO for BP-03 alarms routed through it, so the manual workarounds, not the vendor, carry those processes for the first hours of a vendor outage.
+3. **SYS-01 recovery commitments must be checked.** The FMIS vendor's SOC 2 report (P09) states an RTO of 8 hours and an RPO of 1 hour. That RTO is longer than the 6-hour RTO for BP-01, so manual irrigation, not the vendor, carries that process for the first hours of a vendor outage. The 1-hour RPO meets every process that depends on SYS-01.
 
 ## 5. Resource requirements
 | Resource | Description | Supports |
