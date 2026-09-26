@@ -1,2 +1,31 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment (SP 800-30) and targeted risk analyses,RA-3; PM-9,ID.RA-01,N44-45-R01 (12.3),Yes
+POL-01,4.5,PCI DSS scope confirmed yearly; every SAQ answer backed by evidence,CA-2; PL-2,ID.AM-03,N44-45-R01 (12.5),No
+POL-01,4.8,"Service provider agreements, provider list, responsibility matrix, annual AOC or SOC 2 check",SA-9; SR-6,GV.SC-05; GV.SC-07,N44-45-R01 (12.8); N44-45-R02 (45(n)),Yes
+POL-01,4.10,Sanctions for policy violations,PS-8,GV.RR-04,N44-45-R02 (45(n)),No
+POL-01,4.12,Privacy and pricing claims reviewed before publication,PT-5,GV.OC-03,N44-45-R02 (45(a)),No
+POL-01,4.13,"Change control for checkout page, theme, tags, and apps",CM-3,PR.PS-01,N44-45-R01 (6.5),Yes
+POL-01,4.14,"Payment page script inventory, authorization, integrity, and tamper detection",CM-7; CM-8; SI-7; SI-4,ID.AM-02; PR.PS-01; DE.CM-09,N44-45-R01 (6.4.3; 11.6.1),Yes
+POL-02,4.1,Unique accounts; no shared POS or storefront accounts,IA-2; AC-2,PR.AA-01,N44-45-R01 (8.2),Yes
+POL-02,4.2,Least privilege; no script or app rights for contractors,AC-6; AC-3,PR.AA-05,N44-45-R01 (7.2),Yes
+POL-02,4.3,MFA for all administrator and remote access,IA-2(1); IA-2(2),PR.AA-03,N44-45-R01 (8.4),Yes
+POL-02,4.5,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,N44-45-R01 (8.2),Yes
+POL-02,4.6,Quarterly access and app reviews,AC-2; AC-6,PR.AA-05,N44-45-R01 (7.2),Yes
+POL-02,4.9,System credentials stored securely and rotated every 90 days,IA-5,PR.AA-01,N44-45-R01 (8.6),Yes
+POL-02,4.11,"On-demand, named, MFA vendor remote access",AC-17; IA-2(1),PR.AA-03,N44-45-R01 (8.4); N44-45-R02 (45(n)),Yes
+POL-02,4.12,"Network separation for IoT, POS back office, office, and guest Wi-Fi",SC-7; AC-18,PR.IR-01,N44-45-R02 (45(n)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N44-45-R01 (12.10),Yes
+POL-03,4.4,Keep logs 1 year; weekly review; same-day triage of payment page alerts,AU-6; AU-11; SI-4,DE.CM-03,N44-45-R01 (12.10); N44-45-R02 (45(n)),Yes
+POL-03,4.5,Acquirer notice within 24 hours of suspected compromise,IR-6,RS.CO-02,N44-45-R01 (12.10); merchant agreement,Yes
+POL-03,4.6,Preserve evidence with chain of custody,IR-4,RS.AN-03,N44-45-R01 (12.10),Yes
+POL-03,4.7,Meet notification deadlines,IR-6,RS.CO-02; RS.CO-03,Fla. Stat. 501.171; N44-45-R02 (45(n)),No
+POL-03,4.9,Annual incident response training and test,IR-2; IR-3,ID.IM-02,N44-45-R01 (12.10),No
+POL-04,4.2,Never store card numbers or sensitive authentication data,SI-12,PR.DS-01,N44-45-R01 (3.2; 3.3; 4.2),No
+POL-04,4.3,Encrypt Restricted data; no Restricted email attachments,SC-28; SC-8,PR.DS-01; PR.DS-02,N44-45-R02 (45(n)),Yes
+POL-04,4.5,Customer data used only for noticed purposes,PT-3,GV.OC-03,N44-45-R02 (45(a)),No
+POL-04,4.8,Isolated immutable backups restore-tested quarterly,CP-9; CP-4,PR.DS-11,N44-45-R02 (45(n)),Yes
+POL-04,4.10,Receipt truncation checked after POS updates,SI-15,PR.DS-01,N44-45-R05 (15 U.S.C. 1681c(g)),No
+POL-05,4.3,Annual training; quarterly phishing exercises; PIN pad tamper training,AT-2; AT-3,PR.AT-01; PR.AT-02,N44-45-R01 (12.6; 9.5),Yes
+POL-05,4.5,PIN pad inspections at opening and weekly,PL-4,PR.AT-01,N44-45-R01 (9.5),No
+POL-05,4.8,"No scripts, tags, or apps outside the change process",PL-4,PR.PS-01,N44-45-R01 (6.4.3),No
+POL-05,4.11,Approved AI tools only for customer data,PL-4,GV.PO-01,N44-45-R02 (45(n)),No
