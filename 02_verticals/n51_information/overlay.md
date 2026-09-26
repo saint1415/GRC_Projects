@@ -10,8 +10,8 @@
 Federal Communications Commission (telecom/VoIP/cable/satellite); Federal Trade Commission (non-common-carrier tech, COPPA, PADFA data brokers); DOJ National Security Division (Data Security Program, 28 CFR 202); GSA FedRAMP PMO (cloud services to federal agencies); California Privacy Protection Agency / state AGs; Securities and Exchange Commission (public companies)
 
 ## Primary regulation for the gap analysis (P03)
-**CCPA Cybersecurity Audit Regulations**, Cal. Code Regs. tit. 11, 7120-7124. For software/SaaS/data processors there is no HIPAA-like federal sector rule; the CCPA cyber-audit regulations are the closest legally mandated, control-enumerated audit standard (independent auditor, defined program components, executive certification to CPPA) and apply by revenue/data-volume thresholds that most mid/large information companies meet. Use FedRAMP (NIST SP 800-53 Rev5) instead for federal-facing cloud providers (c-it) and FCC CPNI rules for carriers (c-communications).
-Source: https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf
+**SOC 2 Trust Services Criteria with FTC Act Section 5 data security expectations**, AICPA 2017 Trust Services Criteria (2022 points of focus); 15 U.S.C. 45(a). Decision 2026-09-26: keep the SaaS gap analysis federal and contractual. Customers require SOC 2, and the FTC enforces reasonable data security under Section 5 against companies whose security practices are unfair or whose security promises are deceptive. The CCPA cybersecurity audit regulations (N51 requirements) are kept as a state-specific applicability check only.
+Source: https://www.ftc.gov/business-guidance/privacy-security/data-security
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |

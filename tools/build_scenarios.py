@@ -244,8 +244,11 @@ def write_scenario(u, tier_id, vd):
     t, p, o = f["_tier"], f["_size"], f["_override"]
     d = unit_dir(u, S) / t["slug"]
     d.mkdir(parents=True, exist_ok=True)
-    legal = {"t1": COMPANY, "t2": f"{COMPANY}, LLC", "t3": f"{COMPANY}, LLC",
+    legal_default = {"t1": COMPANY, "t2": f"{COMPANY}, LLC", "t3": f"{COMPANY}, LLC",
              "t4": f"{COMPANY}, Inc.", "t5": f"{COMPANY}, Inc.", "t6": f"{COMPANY} Holdings, Inc."}[tier_id]
+    facts_file = d / "scenario-facts.md"
+    m = re.search(r"^\| Legal name \| ([^|]+?) \|", facts_file.read_text(), re.M) if facts_file.exists() else None
+    legal = m.group(1).split(" (")[0].strip() if m else legal_default
 
     # ---- meeting brief
     role = as_role(o["business"] if o else u["business"])

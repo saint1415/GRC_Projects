@@ -46,7 +46,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Multi-tenant SaaS production platform. |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: CCPA Cybersecurity Audit Regulations. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: SOC 2 Trust Services Criteria with FTC Act Section 5 data security expectations. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | One consolidated information security policy. Plain-language rules covering access; incident response; data handling; acceptable use. |
