@@ -20,7 +20,7 @@
 
 **Secondary regulation (Small tier: primary plus the most relevant secondary).**
 - **FERPA** applies because the college receives funds under Department of Education programs. FERPA is disclosure-oriented. Its security-relevant duty is 99.31(a)(1)(ii): use "reasonable methods" so school officials reach only the records they have a legitimate educational interest in. Eight FERPA requirements were assessed.
-- **FERPA has no breach notification clock.** The Department's Student Privacy Policy Office guidance says FERPA does not require an institution to notify students that information from their education records was stolen or otherwise subject to an unauthorized release, but it does require the institution to keep a record of each disclosure (34 CFR 99.32(a)(1)). Breach notice duties come from the FTC (314.4(j)), the SAIG Enrollment Agreement, and Florida law (see P08).
+- **FERPA has no breach notification clock.** The Department's Student Privacy Policy Office guidance says FERPA does not require an institution to notify students that information from their education records was stolen or otherwise subject to an unauthorized release, but it does require the institution to keep a record of each disclosure (34 CFR 99.32(a)(1); source: SPPO-21-03, https://studentprivacy.ed.gov/sites/default/files/resource_document/file/Parent%20Guide%20to%20Data%20Breach.pdf). Breach notice duties come from the FTC (314.4(j)), the SAIG Enrollment Agreement, and Florida law (see P08).
 - **Title IV requirements** closely tied to the Safeguards Rule were added: the SAIG Enrollment Agreement breach notice, 34 CFR 668.16(c)(1) internal controls, and the HEA limits on use of FAFSA data and federal tax information.
 
 ## 2. Method

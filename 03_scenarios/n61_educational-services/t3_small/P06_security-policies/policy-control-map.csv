@@ -31,7 +31,7 @@ POL-04,4.5,FAFSA data and federal tax information used only for aid administrati
 POL-04,4.6,Secure disposal within two years of last use unless retention is required,MP-6,ID.AM-08,N61-R02 (314.4(c)(6)(i)); Fla. Stat. 501.171(8),No
 POL-04,4.7,Isolated immutable backups restore-tested quarterly,CP-9; CP-4,PR.DS-11,N61-R02 (314.4(h)(2)),Yes
 POL-04,4.8,Retention schedule reviewed annually,SI-12,GV.PO-02,N61-R02 (314.4(c)(6)(ii)),Yes
-POL-04,4.9,Record every disclosure of education records in the SIS,PM-21,PR.DS-05,N61-R01 (99.32(a); 99.33(a)),No
+POL-04,4.9,Record every disclosure of education records in the SIS,PM-21,GV.OC-03,N61-R01 (99.32(a); 99.33(a)),No
 POL-05,4.3,Annual training updated to current risks; quarterly phishing exercises,AT-2,PR.AT-01,N61-R02 (314.4(e)(1)),Yes
 POL-05,4.8,Approved AI tools only; early-alert use limited to the pilot,PL-4; CM-7,GV.PO-01,N61-R01 (99.31(a)(1)(i)(B)),No
 POL-05,4.9,Look up records only with a job need; access logged and reviewed,AU-6,DE.CM-03,N61-R01 (99.31(a)(1)(ii)); N61-R02 (314.4(c)(8)),Yes

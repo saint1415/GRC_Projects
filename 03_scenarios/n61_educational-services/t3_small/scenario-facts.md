@@ -71,6 +71,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 - Annual FERPA and security awareness training for staff
 - Separation of duties between financial aid (awarding) and the business office (disbursing), as 34 CFR 668.16(c)(2) requires
 - Annual Title IV compliance audit
+- A cyber insurance policy with a breach hotline and a panel of breach counsel and forensic firms (used in P08)
 
 **Missing or weak, found in the 2026 assessments:**
 1. The Qualified Individual has never delivered a written report to the Board of Managers (16 CFR 314.4(i)).
@@ -98,6 +99,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | P09 SOC 2 | The college is not a service organization. (a) Security-only (CC1-CC9) readiness self-benchmark requested by the Board of Managers; (b) review of the SIS and LMS vendors' SOC 2 Type 2 reports |
 | P10 AI | AI-001: student-success early-alert risk scoring (pilot in 2 programs since the May 2026 term). AI-002: admissions applicant scoring (feature available in the CRM, not approved) |
 | Cloud | Vendor-agnostic. Services are described by category, with AWS, Azure, and Google Cloud equivalents noted only where needed for shared responsibility |
+
+**Details added while completing P06 to P10:**
+- The AI-001 pilot runs in the patient care technician (on campus) and IT support (online) programs, covering 214 students in the May 2026 term, with 2 pilot advisors. Its inputs include two ISIR-derived fields (Pell eligibility, first-generation status) and home ZIP code (P10).
+- The financial aid servicer holds 6 local administrator accounts in the FAMS (P07, P08).
+- The SIS vendor's SOC 2 Type 2 report covers the 12 months ending 2026-03-31; the LMS vendor's covers the 12 months ending 2026-05-31. Both were reviewed on 2026-08-14 (P09).
 
 ## 6. Assessment calendar (fictional)
 
