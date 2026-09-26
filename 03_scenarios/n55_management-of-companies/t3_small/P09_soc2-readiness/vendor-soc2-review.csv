@@ -1,0 +1,15 @@
+review_item,what_to_check,erp_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability and Confidentiality relevant to the group's use,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Multi-entity ERP application, hosting, support, and data centers in scope",All in scope; the ERP runs on a public cloud provider that is carved out as a subservice organization,Confirm the vendor reviews the cloud provider's own SOC 2 (CUEC and vendor monitoring section)
+Subservice organizations,Carve-out vs inclusive; which hosting and support providers,Cloud hosting provider carved out; offshore support center included,None
+Exceptions noted,Test exceptions and management responses,1 exception: change tickets for 3 of 40 sampled emergency changes approved after deployment; management added a post-deployment review,Accept; watch for repeat in the next report
+Complementary user entity controls (CUECs),Controls the group must operate for the vendor's controls to work,User provisioning and removal; periodic user access review; MFA through the customer's identity provider; segregation of duties in role assignment; review of vendor-master and journal change reports,"Map to AC-2, PS-4, IA-2(2), AC-5, AU-6. Two are open gaps: access reviews and timely removal (POAM-001, POAM-002); change report review not yet performed (POAM-011)"
+Availability commitments,Recovery objectives vs the group BIA (P05: ERP supports BP-03 RTO 48 h and BP-09 RTO 72 h),RTO 4 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or later in transit,None
+Incident notification,Vendor commitment to notify customers,Notify affected customers within 72 hours of confirming a security incident,Acceptable; add to the P08 contact list
+Customer data location and deletion,Where data is stored; deletion at contract end,U.S. regions; deletion within 90 days of termination on request,Record in the supplier inventory (GV.SC-10)
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-09-30 requested,Obtain before 2026-10-31
+Relevance to Finance,Does the ERP hold Finance customer information?,No. The ERP receives only Finance's loan GL summary (no borrower-level data). The loan servicing vendor's SOC 2 is the Finance-critical review,Review the loan servicing vendor's SOC 2 by 2026-11-30 (16 CFR 314.4(f)(3))
+Review sign-off,Reviewer and date,"IT Manager with the Controller, 2026-09-18",Annual
