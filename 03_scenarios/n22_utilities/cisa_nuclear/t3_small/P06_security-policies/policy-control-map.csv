@@ -1,2 +1,22 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.2,"Written designation of cybersecurity lead, OT security lead, and Part 37 program owner",PM-2,GV.RR-02,C-NUCLEAR-S01 (37.43(a)(2)),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,C-NUCLEAR-S05 (ID.RA-05); C-NUCLEAR-S01 (37.55),No
+POL-01,4.9,Vendor security review and terms before connection or data access,SA-9,GV.SC-05,C-NUCLEAR-S05 (GV.SC-05),Yes
+POL-01,4.10,Annual control assessment feeds the Part 37 program review,CA-2,ID.IM-01,C-NUCLEAR-S01 (37.55),No
+POL-01,4.11,Retention of security program and regulatory records,SI-12,GV.PO-02,C-NUCLEAR-S01 (37.103); C-NUCLEAR-S04 (264.74),No
+POL-02,4.3,Security-related information only for people on the RSO's information access list,AC-3; AC-6,PR.AA-05,C-NUCLEAR-S01 (37.43(d)(3); 37.43(d)(6)),Yes
+POL-02,4.4,MFA for all access; hardware keys for administrators and restricted library members,IA-2(1),PR.AA-03,C-NUCLEAR-S01 (37.43(d)(7)),Yes
+POL-02,4.5,"Same-day removal of accounts, Part 37 list entries, and badges at termination",PS-4; AC-2; PE-2,PR.AA-05,C-NUCLEAR-S01 (37.23(e)(5); 37.43(d)(6)),Yes
+POL-02,4.6,Quarterly access reviews; monthly Part 37 list reconciliation,AC-2; AC-6,PR.AA-05,C-NUCLEAR-S01 (37.23(e)(5)),Yes
+POL-02,4.8,No default passwords on any device; credentials in the password vault,IA-5; CM-6,PR.AA-01,C-NUCLEAR-S05 (PR.AA-01),Yes
+POL-02,4.10,"Vendor and MSP remote access with named accounts, MFA, and per-session OT approval",AC-17; IA-2(1),DE.CM-06,C-NUCLEAR-S05 (PR.AA-03; DE.CM-06),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-NUCLEAR-S05 (RS.MA-02),Yes
+POL-03,4.3,Report suspected cyber activity at the security systems to the RSO at once,IR-6,RS.MA-02,C-NUCLEAR-S01 (37.57(b)),Yes
+POL-03,4.4,RSO decides Part 37 reportability; LLEA and State notice within 4 hours,IR-6,RS.CO-02,C-NUCLEAR-S01 (37.57(a)-(b)),Yes
+POL-03,4.8,"Annual tabletop with the RSO, controls integrator, and alarm company",IR-3,ID.IM-02,C-NUCLEAR-S05 (ID.IM-02),No
+POL-04,4.2,Security-Related files labeled and stored only in the restricted library or locked cabinet,MP-4; AC-3,PR.DS-01,C-NUCLEAR-S01 (37.43(d)(1); 37.43(d)(7)),Yes
+POL-04,4.3,Background investigation files restricted to the RSO and HR Manager,MP-4; AC-3,PR.DS-01,C-NUCLEAR-S01 (37.31(a)-(b)),Yes
+POL-04,4.8,"Regulatory records backed up separately, protected from alteration, restore-tested quarterly",CP-9; CP-4,PR.DS-11,C-NUCLEAR-S01 (37.101),Yes
+POL-05,4.3,"Annual training, monthly reminders, quarterly phishing exercises, Part 37 information handling",AT-2,PR.AT-01,C-NUCLEAR-S01 (37.43(c)),Yes
+POL-05,4.6,"No USB media or laptops on HMIs, PLCs, or security devices without approval",MP-7,PR.PS-01,C-NUCLEAR-S05 (PR.PS-01),No
+POL-05,4.8,Approved generative AI tools only; no company data in public chatbots,PL-4,GV.PO-01,C-NUCLEAR-S05 (GV.PO-01),No

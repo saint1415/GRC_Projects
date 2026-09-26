@@ -1,2 +1,25 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment using SP 800-30 and SP 800-82 threat guidance,RA-3; PM-9,ID.RA-05,N21-BM (SP 800-82r3 4.1.2),No
+POL-01,4.4,Risk acceptance authority; no High acceptance of safety or environmental risks,PM-9,GV.RM-02,N21-BM (SP 800-82r3 4.1.1),No
+POL-01,4.5,Safety first: no security measure may bypass safety shutdowns; OT change impact review,CM-4,GV.RM-02,N21-BM (SP 800-82r3 5.3.1),No
+POL-01,4.8,Sanctions,PS-8,GV.RR-04,N21-BM (SP 800-82r3 6.2.8),No
+POL-01,4.9,Supplier security schedule before SCADA access or Restricted data,SA-9,GV.SC-05,N21-BM (SP 800-82r3 6.1.5); Fla. Stat. 501.171(6),Yes
+POL-01,4.11,Annual recheck of applicable cybersecurity laws and rules,PL-1,GV.OC-03,N21-R03 (proposed; tracked),No
+POL-02,4.1,Unique accounts; documented compensating controls for OCC shared HMI stations,IA-2; AC-2,PR.AA-01,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.3,"MFA for email, SaaS, VPN, cloud admin, and all remote SCADA access",IA-2(1); IA-2(2),PR.AA-03,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.4,"Vendor remote access only through the jump host, per-session approval, recorded",AC-17; MA-4,PR.AA-05,N21-BM (SP 800-82r3 6.2.10),Yes
+POL-02,4.5,Same-day access removal including SCADA local accounts,PS-4; AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.8),Yes
+POL-02,4.6,Quarterly access reviews including SCADA accounts,AC-2; AC-6,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.9,Change default passwords before connecting any device,IA-5,PR.AA-01,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.10,IT/OT boundary through the OT DMZ; no dual-homed devices; no internet-reachable field management,SC-7; AC-4,PR.IR-01,N21-BM (SP 800-82r3 5.2.3),Yes
+POL-02,4.11,Badge access to the OCC; field keys and combinations logged and changed,PE-3,PR.AA-06,N21-BM (SP 800-82r3 5.2.2),Yes
+POL-03,4.2,Report suspected incidents within 1 hour; Production Controllers report odd HMI behavior,IR-6,RS.MA-02,N21-BM (SP 800-82r3 6.4.2),No
+POL-03,4.4,Authority to isolate the SCADA network,IR-4,RS.MI-01,N21-BM (SP 800-82r3 6.4.4),Yes
+POL-03,4.6,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5); 40 CFR 110.6,No
+POL-03,4.8,Annual joint IT and operations tabletop,IR-3,ID.IM-02,N21-BM (SP 800-82r3 3.3.8),No
+POL-04,4.2,Encrypt Restricted data; document OT exceptions,SC-28; SC-8,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2),No
+POL-04,4.5,"Wipe or certified destruction of media, including retired OT devices",MP-6,ID.AM-08,N21-BM (SP 800-82r3 6.2.7),No
+POL-04,4.6,"Isolated, immutable, offline backups including controller programs; quarterly restore test",CP-9,PR.DS-11,N21-BM (SP 800-82r3 6.2.4),Yes
+POL-05,4.3,Annual training for all staff including field crews; quarterly phishing exercises,AT-2,PR.AT-01,N21-BM (SP 800-82r3 6.2.2),Yes
+POL-05,4.5,No USB or personal devices on SCADA equipment; scanning kiosk,MP-7,,N21-BM (SP 800-82r3 6.2.7),No
+POL-05,4.8,Approved generative AI tools only,PL-4,,N21-BM (SP 800-82r3 3.3.4),No

@@ -1,0 +1,13 @@
+review_item,what_to_check,msp_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-05-31,None
+Trust services categories,Security required; Availability relevant to 24x7 monitoring,Security; Availability,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Help desk, patching, EDR monitoring, backup monitoring, and the RMM tool in scope",All in scope; the EDR platform and RMM tool are carved-out subservice organizations,Request the EDR and RMM providers' assurance summaries
+Subservice organizations,Carve-out vs inclusive,EDR platform and RMM tool carved out,Confirm the MSP reviews their SOC 2 reports (listed as a complementary subservice organization control)
+Exceptions noted,Test exceptions and management responses,1 exception: MFA not enforced for 2 of 40 sampled technician accounts on the RMM tool for 3 weeks; remediated,Ask for evidence of RMM MFA enforcement for the company's tenant; this is the path in P01 R-016
+Complementary user entity controls (CUECs),Controls the company must operate for the MSP's controls to work,Customer approves technician access; customer notifies MSP of departures; customer restricts which systems get RMM agents; customer reviews monthly reports,Map to AC-2 (POAM-001 departure gap) and to the rule that no RMM agents go on OT (P04 finding 5)
+Availability commitments,Monitoring coverage and response times vs the company's needs,24x7 EDR alert triage; 30-minute response to critical alerts,"Meets business IT needs; the MSP has no OT scope, so OT monitoring needs its own service (POAM-007)"
+Access to customer environments,How MSP staff reach customer systems,Named technician accounts with MFA through the RMM tool; privileged access logged,Confirm the company's cloud backup account is excluded from MSP administrator access (P01 R-019)
+Incident notification,MSP commitment to notify customers,Notify within 72 hours of confirming an incident affecting customer data,Negotiate 24-hour security incident notice in the security addendum (POAM-018)
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-08-31 received,None
+Review sign-off,Reviewer and date,IT Manager 2026-09-10,Annual

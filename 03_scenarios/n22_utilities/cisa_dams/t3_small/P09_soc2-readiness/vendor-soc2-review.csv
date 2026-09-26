@@ -1,0 +1,14 @@
+review_item,what_to_check,instrumentation_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality matter for dam safety data,Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Data platform, AI anomaly module, data centers, and support staff in scope",Platform and hosting in scope; the AI anomaly module was released after the period and is not covered,Ask the vendor for its model change and validation controls for the AI module (P10); confirm it will be in the next report
+Subservice organizations,Carve-out vs inclusive; which cloud provider,Public cloud provider carved out,Vendor to confirm it reviews the cloud provider's SOC 2 report (listed as a vendor control)
+Exceptions noted,Any test exceptions and management responses,1 exception: quarterly access review for vendor support staff was late in one quarter; remediated,Accept; check in the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Customer manages its user accounts and SSO; customer reviews user activity; customer validates data sent to the platform; customer keeps its own dam safety decision process,"Map to company controls: AC-2 (in place), AU-6 (quarterly platform activity review, first due 2026-10-31), SI-10 data validation at the DMZ replica (planned), and the Chief Dam Safety Engineer's trigger-point review (in place)"
+Availability commitments,"Uptime and recovery objectives vs the BIA (BP-02: RTO 4 h, RPO 1 h)",99.5% monthly uptime; RTO 8 h; RPO 1 h,RTO does not meet the 4-hour BIA value. Acceptable only because raw data stays in the OT historian and data loggers and manual reads cover the gap (P05). Record as an accepted dependency
+Encryption,At rest and in transit,AES-256 at rest; TLS 1.2 or higher in transit,None
+Data location and use,Where dam safety data is stored and whether the vendor uses it to train models,"U.S. data centers; customer data used to train the customer's own anomaly model only, per the system description",Get a contract clause: no use of company data to train models for other customers; data treated as Confidential (POL-04)
+Incident notification,Vendor commitment to notify customers,Within 72 hours of confirming a security incident affecting customer data,Negotiate 24-hour notice at renewal; the company must decide quickly whether an event is a 12.10 condition
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 received,Request an updated bridge letter before 2026-12-31
+Review sign-off,Reviewer and date,Chief Dam Safety Engineer and IT Manager 2026-08-20,Annual

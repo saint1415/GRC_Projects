@@ -1,0 +1,14 @@
+review_item,what_to_check,cold_chain_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because alerting supports cold storage CCP monitoring,Security and Availability,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Sensor data ingestion, dashboard, alerting (SMS, email, voice), data retention",All in scope; the SMS and voice delivery provider is a carved-out subservice organization,Ask how the vendor monitors SMS delivery failures; this is the company's single alert path today
+Subservice organizations,Carve-out vs inclusive; hosting and messaging providers,Cloud hosting provider and messaging provider carved out,Confirm the vendor reviews both providers' SOC 2 reports (listed as a vendor control)
+Exceptions noted,Test exceptions and management responses,1 exception: alert delivery latency test missed the stated target in 2 of 40 samples; remediated with a second messaging route in 2026-02,Accept; verify in the next report; supports the company's own escalation design (P01 R-005)
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,Customer configures alert thresholds and recipients and tests them; maintains gateway network connectivity; manages user accounts and MFA; reviews alert acknowledgment reports,"Two are open gaps: single recipient with no escalation (P01 R-005) and gateway on corporate Wi-Fi (P01 R-029). Map to SI-4, AC-2, SC-7"
+Availability commitments,Uptime and alerting commitments vs the company's BIA (BP-01: MTD 2 h; RTO 1 h; RPO 15 min),99.9% monthly platform availability; alert dispatch within 5 minutes of threshold breach; gateway buffers 24 hours locally,Meets the BIA if the company fixes its CUECs; add these commitments to the contract
+Data retention and export,Retention long enough for HACCP records (9 CFR 417.5(e): 1 or 2 years),Default 2 years; export available,Export monthly into the records application so the company holds its own copy
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2+ from gateway to platform,None
+Incident notification,Vendor commitment to notify customers of security incidents and outages,Status page for outages; security incident notice within 72 hours of confirmation,Negotiate 24-hour notice for any incident affecting alert delivery or data integrity
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 provided,Request an updated bridge letter at renewal
+Review sign-off,Reviewer and date,"IT Manager with the Warehouse and Logistics Manager, 2026-08-21",Annual

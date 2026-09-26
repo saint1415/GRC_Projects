@@ -1,2 +1,29 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.2,Security lead and CMMC Affirming Official designated in writing,PM-2,GV.RR-02,N23-R04 (32 CFR 170.22(a)(1)),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N23-R01,No
+POL-01,4.7,Call-back and second approval for every bank detail change,AC-5; AC-3,PR.AA-05,N23-R01 (52.204-21(b)(1)(ii)); FAR 52.232-33,Yes
+POL-01,4.8,Approved external systems list and vendor terms before FCI is shared,SA-9; AC-20,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-01,4.9,No Section 889 covered equipment; confirm actual manufacturer,SR-5,GV.SC-05,N23-R02 (52.204-25(b)),Yes
+POL-01,4.10,Affirmations and representations only after evidence and counsel review,CA-2,GV.OV-01,N23-R04 (32 CFR 170.22); N23-R02 (52.204-26),No
+POL-01,4.12,6-year retention of CMMC evidence and security records,SI-12,GV.PO-02,N23-R04 (32 CFR 170.15(c)(2)),No
+POL-01,4.13,"Flow down FAR 52.204-21, 52.204-25, and CMMC level to subcontracts",SA-4,GV.SC-05,N23-R01 (52.204-21(c)); N23-R02 (52.204-25(e)); N23-R04 (32 CFR 170.23),No
+POL-02,4.1,Unique accounts; no shared trailer or laptop accounts,IA-2; AC-2,PR.AA-01,N23-R01 (52.204-21(b)(1)(v)),Yes
+POL-02,4.3,No single person can change bank details and release payment; dual approval,AC-5; AC-3,PR.AA-05,N23-R01 (52.204-21(b)(1)(ii)),Yes
+POL-02,4.4,MFA everywhere; phishing-resistant MFA for payment roles and admins,IA-2(1); IA-2(2); IA-2(8),PR.AA-03,N23-R01 (52.204-21(b)(1)(vi)),Yes
+POL-02,4.5,Same-day termination; external users removed at closeout,PS-4; AC-2,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)),Yes
+POL-02,4.8,Change default passwords before first use,IA-5,PR.AA-01,N23-R01 (52.204-21(b)(1)(vi)),Yes
+POL-02,4.9,Only managed devices reach FCI systems,AC-19; IA-3,PR.AA-01,N23-R01 (52.204-21(b)(1)(i)),No
+POL-02,4.10,"Badges, locked trailers, visitor sign-in and escort, key inventory",PE-2; PE-3; PE-8,PR.AA-06,N23-R01 (52.204-21(b)(1)(viii)); N23-R01 (52.204-21(b)(1)(ix)),Yes
+POL-02,4.11,Named approvers for public website content,AC-22,PR.DS-01,N23-R01 (52.204-21(b)(1)(iv)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,Fla. Stat. 501.171,Yes
+POL-03,4.4,Bank recall and IC3 complaint for suspected payment diversion,IR-4,RS.MI-01,N23-R01,Yes
+POL-03,4.7,Section 889 reports within 1 and 10 business days,IR-6,RS.CO-02,N23-R02 (52.204-25(d)),Yes
+POL-03,4.8,Export logs at incident start; 90-day image preservation if CDI,IR-4; AU-11,RS.AN-03,N23-R03 (252.204-7012(e)),No
+POL-03,4.9,Annual incident response test,IR-3,ID.IM-02,N23-R01,No
+POL-04,4.2,CUI not accepted; quarantine and notify,MP-3,ID.AM-07,N23-R01 (52.204-21(b)(2)); N23-R03,No
+POL-04,4.3,FCI only inside the assessed boundary; no personal accounts,AC-20,PR.DS-01,N23-R01 (52.204-21(b)(1)(iii)); N23-R04 (252.204-7021(d)(2)),Yes
+POL-04,4.5,"Sanitize media before disposal or reuse, with records",MP-6,ID.AM-08,N23-R01 (52.204-21(b)(1)(vii)),Yes
+POL-04,4.6,Isolated immutable backups tested quarterly,CP-9,PR.DS-11,N23-R01,Yes
+POL-05,4.3,Annual training; payment-fraud training; phishing exercises,AT-2; AT-3,PR.AT-01,N23-R01,Yes
+POL-05,4.4,Never act on a bank change received by email,AT-2,PR.AT-01,N23-R01,Yes
+POL-05,4.9,Approved generative AI tools only,PL-4,GV.PO-01,N23-R01 (52.204-21(b)(1)(iii)),No

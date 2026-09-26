@@ -1,2 +1,21 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual cybersecurity risk assessment feeding the RRA and ERP,RA-3; PM-9,ID.RA-01; GV.RM-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); (b)),No
+POL-01,4.8,Security terms before vendor OT access or data access,SA-9,GV.SC-05,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No
+POL-01,4.10,"Keep RRA, ERP, and certifications at least 5 years",SI-12,GV.PO-02,C-WATER-R01 (300i-2(d)),No
+POL-01,4.11,Security changes must not disable hardwired safeguards or manual operation,SC-24; CM-3,PR.IR-03,C-WATER-R01 (300i-2(b)(3)),No
+POL-02,4.1,Unique accounts including on HMIs; no shared logins,IA-2; AC-2,PR.AA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),Yes
+POL-02,4.3,MFA for all remote access to OT and for administrators,IA-2(1),PR.AA-03,C-WATER-R01 (300i-2(a)(1)(A)(ii)),Yes
+POL-02,4.4,Vendor remote access only through the gateway with per-session approval and recording,AC-17; AC-17(1); MA-4,PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); (b)(1)),Yes
+POL-02,4.5,Same-day removal of all access including OT accounts,PS-4; AC-2,PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii)),Yes
+POL-02,4.8,Change default and commissioning passwords before connecting devices,IA-5,PR.AA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),Yes
+POL-02,4.9,PLC key switches in RUN; program mode by approval,CM-5,PR.PS-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No
+POL-03,4.2,"Report suspected incidents within 1 hour, including unexpected HMI behavior",IR-6,RS.MA-02,C-WATER-R01 (300i-2(b)(4)),No
+POL-03,4.3,Move to manual control and verify water quality when SCADA integrity is in doubt,CP-2; IR-4,RS.MI-01,C-WATER-R01 (300i-2(b)(2)),Yes
+POL-03,4.5,Tier 1 notice and primacy agency consultation within 24 hours when required,IR-6,RS.CO-02,40 CFR 141.202(b),No
+POL-03,4.9,Annual OT cyber tabletop with the integrator,IR-3,ID.IM-02,C-WATER-R01 (300i-2(b)(2)),No
+POL-04,4.3,"Restricted data (RRA, ERP, SCADA diagrams) only in approved locations with named-role access",AC-3,PR.DS-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No
+POL-04,4.5,Unreadable disposal of media and customer records,MP-6,ID.AM-08,Fla. Stat. 501.171 (8),No
+POL-04,4.6,Offline OT backups monthly and after changes; business backups isolated and tested,CP-9,PR.DS-11,C-WATER-R01 (300i-2(b)(2)),Yes
+POL-05,4.3,Annual awareness and OT role-based training; phishing exercises,AT-2; AT-3,PR.AT-01; PR.AT-02,C-WATER-R01 (300i-2(a)(1)(A)(ii)),Yes
+POL-05,4.5,No unapproved software or removable media on OT,CM-11; MP-7,PR.PS-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No
+POL-05,4.8,Approved generative AI tools only; no Restricted data in unapproved tools,PL-4,GV.PO-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No

@@ -1,2 +1,27 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.2,Security lead and Food Defense Coordinator designated in writing,PM-2,GV.RR-02,C-FOOD-AG-R01 (121.4(d)),No
+POL-01,4.3,Annual risk assessment including control-system adulteration scenarios,RA-3; PM-9,ID.RA-01,C-FOOD-AG-R01 (121.157(b)(2)),Yes
+POL-01,4.5,Risk register feeds the food defense reanalysis decision,RA-3,ID.RA-01,C-FOOD-AG-R01 (121.157(b)(2)),Yes
+POL-01,4.6,OT change control with FSQA approval and food defense check,CM-3,PR.PS-01,C-FOOD-AG-R01 (121.157(b)(1); 121.157(c)); 9 CFR 417.4(a)(3),Yes
+POL-01,4.9,"Sanctions, including for tampering with controls or records",PS-8,GV.RR-04,C-FOOD-AG-R01 (121.4(d)),No
+POL-01,4.10,Vendor security terms and annual review of critical vendors,SA-9; SR-6,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.1,"Unique accounts on HMIs, SCADA, recipe system, and records application",IA-2; AC-2,PR.AA-01,9 CFR 417.5(b); C-FOOD-AG-R01 (121.305(f)),Yes
+POL-02,4.3,Two-person approval for formulation and critical setpoint changes,AC-5,PR.AA-05,C-FOOD-AG-R01 (121.135(a)),No
+POL-02,4.4,MFA for all remote OT access and cloud administration,IA-2(1),PR.AA-03,None (SP 800-82 Rev. 3 OT benchmark),No
+POL-02,4.5,"OT remote access only through the gateway with approved, recorded sessions",AC-17; MA-4,PR.AA-05,C-FOOD-AG-R01 (121.130(a)(3); 121.135(a)),Yes
+POL-02,4.6,Same-day removal of IT and OT access at termination,PS-4; AC-2,PR.AA-05,C-FOOD-AG-R01 (121.130(b)),Yes
+POL-02,4.8,Default passwords changed on every device before connection,IA-5,PR.AA-01,9 CFR 417.2(c)(4),Yes
+POL-02,4.10,Physical access to restricted areas; visitor escort; key control,PE-3,PR.AA-06,C-FOOD-AG-R01 (121.135(a)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-FOOD-AG-R01 (121.4(b)(2)),Yes
+POL-03,4.4,Hold and evaluate product when controls or records are affected,IR-4,RS.MA-01,9 CFR 417.3(b),Yes
+POL-03,4.5,Suspected tampering triggers food defense corrective action,IR-4,RS.MI-01,C-FOOD-AG-R01 (121.145; 121.157(b)(3)),Yes
+POL-03,4.6,"Meet FSIS, FDA, and personal-data notification deadlines",IR-6,RS.CO-02,9 CFR 418.2; 21 U.S.C. 350f(d); Fla. Stat. 501.171,Yes
+POL-03,4.8,Restore OT from clean backups and verify formulations,CP-10; SI-7,RC.RP-03,C-FOOD-AG-R01 (121.135(a)),Yes
+POL-03,4.9,Annual tabletop including FSQA and Controls Engineer,IR-3,ID.IM-02,None (NIST CSF 2.0 benchmark),No
+POL-04,4.2,Food defense plan in a restricted library plus onsite printed copy,AC-3,PR.DS-01,C-FOOD-AG-R01 (121.315(c); 121.325),No
+POL-04,4.3,"Named, audited, locked electronic food safety records",AU-9,PR.DS-10,9 CFR 417.5(d); 21 CFR 123.9(f); C-FOOD-AG-R01 (121.305(c)),Yes
+POL-04,4.5,"Retention of HACCP, seafood HACCP, and food defense records",SI-12; AU-11,PR.DS-11,9 CFR 417.5(e); C-FOOD-AG-R01 (121.315),No
+POL-04,4.6,Isolated immutable backups including PLC programs; quarterly restore tests,CP-9,PR.DS-11,9 CFR 417.5(e),Yes
+POL-05,4.3,Security and food defense awareness for all workers including temporary staff,AT-2; AT-3,PR.AT-01,C-FOOD-AG-R01 (121.4(b)(2); 121.4(e)),Yes
+POL-05,4.5,No unapproved media or devices on HMIs or plant networks,MP-7; CM-11,PR.PS-01,None (SP 800-82 Rev. 3 OT benchmark),No
+POL-05,4.8,Approved generative AI tools only; no Restricted data in unapproved tools,PL-4,GV.PO-01,None (NIST AI RMF benchmark),No
