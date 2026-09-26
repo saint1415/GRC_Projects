@@ -9,10 +9,10 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** NYDFS 23 NYCRR Part 500, 23 NYCRR 500
-**Why:** Cris Santos Company is a payment processor in this vertical. Payment processors commonly hold New York money transmitter licenses, which makes them NYDFS covered entities; confirm licensing in step 1 of P03 and check the 500.19 limited exemptions for smaller tiers. As a bank service provider it also owes notice to bank customers under the Computer-Security Incident Notification Rule. Research note: The most prescriptive and widely benchmarked US financial-services cybersecurity regulation, spanning banks, insurers, lenders and money transmitters, with explicit controls (MFA, asset inventory, PAM, EDR for Class A), governance, annual certification and hard deadlines - analogous to the HIPAA Security Rule. Map federally chartered banks additionally to the Interagency Guidelines and nonbanks to the FTC Safeguards Rule, which cover similar elements.
+**Regulation to analyze:** PCI DSS v4.0.1 (as a service provider), PCI DSS v4.0.1 (PCI SSC, June 2024)
+**Why:** Decision 2026-09-26: keep the payment processor national rather than state-specific. As a payment processor it stores, processes, and transmits cardholder data for merchants, so PCI DSS applies to it as a service provider through card-brand and acquirer contracts. It is also a bank service provider to its sponsor and client banks, so the federal notice duty in 12 CFR 53.4 applies (verify text). NYDFS Part 500 is kept only as an applicability check if the company holds a New York license.
 
-**Applicability check first:** at this size the business is an independent insurance agency. Decide whether NYDFS 23 NYCRR Part 500 applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
+**Applicability check first:** at this size the business is an independent insurance agency. Decide whether PCI DSS v4.0.1 (as a service provider) applies directly or only through contracts. If it does not apply, analyze the regulation that governs this business, and record the reasoning.
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

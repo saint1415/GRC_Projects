@@ -9,8 +9,8 @@
 Sector Risk Management Agency: Department of the Treasury; Federal banking agencies (OCC, FRB, FDIC), NCUA, SEC, CFTC via FFIEC/FBIIC coordination
 
 ## Primary regulation for the gap analysis (P03)
-**NYDFS 23 NYCRR Part 500**, 23 NYCRR 500. Cris Santos Company is a payment processor in this vertical. Payment processors commonly hold New York money transmitter licenses, which makes them NYDFS covered entities; confirm licensing in step 1 of P03 and check the 500.19 limited exemptions for smaller tiers. As a bank service provider it also owes notice to bank customers under the Computer-Security Incident Notification Rule. Research note: The most prescriptive and widely benchmarked US financial-services cybersecurity regulation, spanning banks, insurers, lenders and money transmitters, with explicit controls (MFA, asset inventory, PAM, EDR for Class A), governance, annual certification and hard deadlines - analogous to the HIPAA Security Rule. Map federally chartered banks additionally to the Interagency Guidelines and nonbanks to the FTC Safeguards Rule, which cover similar elements.
-Source: https://www.dfs.ny.gov/system/files/documents/2023/12/rf23_nycrr_part_500_amend02_20231101.pdf
+**PCI DSS v4.0.1 (as a service provider)**, PCI DSS v4.0.1 (PCI SSC, June 2024). Decision 2026-09-26: keep the payment processor national rather than state-specific. As a payment processor it stores, processes, and transmits cardholder data for merchants, so PCI DSS applies to it as a service provider through card-brand and acquirer contracts. It is also a bank service provider to its sponsor and client banks, so the federal notice duty in 12 CFR 53.4 applies (verify text). NYDFS Part 500 is kept only as an applicability check if the company holds a New York license.
+Source: https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |

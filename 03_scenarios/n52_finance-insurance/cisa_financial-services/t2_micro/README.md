@@ -44,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Business and its key vendors. 15-25 risks; qualitative scales; named owners. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Payment processing platform (cardholder data environment). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: NYDFS 23 NYCRR Part 500. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: PCI DSS v4.0.1 (as a service provider). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. |

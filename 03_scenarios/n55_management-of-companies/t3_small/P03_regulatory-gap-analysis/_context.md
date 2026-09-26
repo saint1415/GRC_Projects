@@ -9,8 +9,8 @@
 | Universal method | [P03_regulatory-gap-analysis/README.md](../../../../00_universal/projects/P03_regulatory-gap-analysis/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Regulation to analyze:** SEC Regulation S-K Item 106, 17 CFR 229.106
-**Why:** Holding companies' distinctive cyber obligation is enterprise governance: board oversight, management accountability and consolidated risk processes across subsidiaries. That is exactly what Item 106 requires registrants to disclose. For private holding companies, use NIST CSF 2.0 (Govern function) as the equivalent target. Bank holding companies should add 12 CFR 225 App. F.
+**Regulation to analyze:** NIST CSF 2.0 group profile (voluntary benchmark), NIST CSWP 29 (CSF 2.0), Govern function emphasis
+**Why:** Decision 2026-09-26: at Small size the holding company is private, so SEC Regulation S-K Item 106 and Form 8-K Item 1.05 do not apply. The gap analysis benchmarks group-level cyber governance across subsidiaries against CSF 2.0 (organizational profile), emphasizing the Govern function, and records SEC Item 106 as not applicable with the reason.
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

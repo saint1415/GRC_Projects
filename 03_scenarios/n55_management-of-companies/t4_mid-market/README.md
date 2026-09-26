@@ -45,7 +45,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Shared corporate services platform (ERP and identity). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: SEC Regulation S-K Item 106. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: NIST CSF 2.0 group profile (voluntary benchmark). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies plus supporting standards. Policies plus standards for key domains. |

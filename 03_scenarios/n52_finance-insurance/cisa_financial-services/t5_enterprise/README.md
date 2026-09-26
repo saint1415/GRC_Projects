@@ -44,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise risk register integrated with ERM. 60+ risks; aggregation to enterprise risk (NIST IR 8286). |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Payment processing platform (cardholder data environment). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: NYDFS 23 NYCRR Part 500. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations across the enterprise. Requirement-level; evidence sampling; regulator-ready. Regulation: PCI DSS v4.0.1 (as a service provider). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | 5 policies within a policy hierarchy. Policies; standards; procedures; exceptions process. |

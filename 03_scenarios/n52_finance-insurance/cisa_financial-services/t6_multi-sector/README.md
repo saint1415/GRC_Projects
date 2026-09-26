@@ -44,7 +44,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Group and division registers. Division registers roll up to group ERM. |
 | P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Payment processing platform (cardholder data environment). |
-| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: NYDFS 23 NYCRR Part 500. |
+| P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: PCI DSS v4.0.1 (as a service provider). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. |
 | P06 | [Security Policy Set](P06_security-policies/_context.md) | Group policies with division supplements. Group policy plus division-specific standards. |

@@ -9,8 +9,8 @@
 Securities and Exchange Commission (SEC) Cyber disclosure for public registrants (Reg S-K Item 106; Form 8-K Item 1.05); ICFR under SOX 404; Board of Governors of the Federal Reserve System Bank and savings & loan holding companies (Reg Y incident notification; Interagency Information Security Guidelines); FTC Section 5 and the Safeguards Rule for non-bank financial subsidiaries
 
 ## Primary regulation for the gap analysis (P03)
-**SEC Regulation S-K Item 106**, 17 CFR 229.106. Holding companies' distinctive cyber obligation is enterprise governance: board oversight, management accountability and consolidated risk processes across subsidiaries. That is exactly what Item 106 requires registrants to disclose. For private holding companies, use NIST CSF 2.0 (Govern function) as the equivalent target. Bank holding companies should add 12 CFR 225 App. F.
-Source: https://www.ecfr.gov/current/title-17/section-229.106
+**NIST CSF 2.0 group profile (voluntary benchmark)**, NIST CSWP 29 (CSF 2.0), Govern function emphasis. Decision 2026-09-26: at Small size the holding company is private, so SEC Regulation S-K Item 106 and Form 8-K Item 1.05 do not apply. The gap analysis benchmarks group-level cyber governance across subsidiaries against CSF 2.0 (organizational profile), emphasizing the Govern function, and records SEC Item 106 as not applicable with the reason.
+Source: https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final
 
 ## Key requirements (`requirements.csv`)
 | ID | Requirement | Citation | Applies to | Size thresholds / exemptions | Status |
