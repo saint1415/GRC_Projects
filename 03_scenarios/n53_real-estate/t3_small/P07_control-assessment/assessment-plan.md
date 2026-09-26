@@ -55,14 +55,14 @@ Small tier scope: 15-25 controls. **22 controls, 141 determination statements.**
 
 **What the tests showed about the main threat.** A password alone opened a contractor mailbox and the transaction platform; a legacy mail client bypassed MFA settings entirely; a new forwarding rule and a foreign sign-in raised no alert; and 2 of 3 closers said they would call the phone number printed in a payoff letter. Together these are the conditions for the business email compromise scenario in P08.
 
-All 22 controls have weaknesses and each has a POA&M item in `poam.csv` (POAM-001 to POAM-022). Four more items (POAM-023 to POAM-026) carry gaps from P03 for controls not assessed here. The High items are POAM-001 to POAM-004.
+All 22 controls have weaknesses and each has a POA&M item in `poam.csv` (POAM-001 to POAM-022). Six more items (POAM-023 to POAM-028) carry gaps from P03 that the assessed controls did not cover. The High items are POAM-001 to POAM-004 and POAM-028.
 
 | POA&M risk level | Items |
 |---|---|
-| High | 4 |
-| Moderate | 20 |
+| High | 5 |
+| Moderate | 21 |
 | Low | 2 |
-| **Total** | **26** |
+| **Total** | **28** |
 
 ## 5. Deliverables
-`assessment-results.csv` (141 rows), `poam.csv` (26 items), this plan and summary. The results were accepted by the COO on 2026-09-21.
+`assessment-results.csv` (141 rows), `poam.csv` (28 items), this plan and summary. The results were accepted by the COO on 2026-09-21.

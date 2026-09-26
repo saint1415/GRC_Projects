@@ -87,7 +87,7 @@ The order puts worker safety first, then the shared services everything else nee
 | 5 | SYS-01 ERP and APS (BP-01) | 24 h | Printed 5-day schedule; restore from backups in a separate account and region (to be built; P01 R-002) |
 | 6 | SYS-05 MES and kiosks, rebuilt single-homed on the plant network | 24 h | Paper travelers from the traveler kit |
 | 7 | SYS-03 integration service | 24 h | Manual work order release by the Production Planning Manager |
-| 8 | SYS-12 TMU library and field laptops (BP-09) | 24 h | Verified offline copy on an encrypted drive held by the Field Service Manager |
+| 8 | SYS-12 TMU library and field laptops (BP-09) | 24 h | Verified offline copy on an encrypted drive held by the VP Engineering (known-good images with supplier hashes) |
 | 9 | SYS-06 core cutting and winding HMIs (BP-02) | 48 h | Manual recipe entry from printed winding sheets with an engineering double-check |
 | 10 | SYS-04 PLM vault (BP-06) | 48 h | Released drawings in the traveler kit; hold new designs |
 | 11 | SYS-10 EDI connectivity (BP-07, BP-08) | 48 h | Phone and email orders to the top 10 suppliers; paper bills of lading |

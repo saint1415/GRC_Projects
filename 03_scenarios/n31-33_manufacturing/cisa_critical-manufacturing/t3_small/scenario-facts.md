@@ -63,6 +63,14 @@ All 10 deliverables in this folder use the facts below. The company, its plant, 
 
 **SSP system (P02):** the *ERP and Production Scheduling Platform (EPSP)*: SYS-01, SYS-02, SYS-03, SYS-05, the planning and purchasing endpoints in SYS-09, the site-to-site VPN and IT/OT firewall that connect them, and the ERP backups; interconnections to SYS-04, SYS-06, SYS-07, SYS-08, and SYS-10 are outside the boundary.
 
+**Additional system facts (added 2026-09-26 while completing P02 and P04 to P10):**
+- About 118 office users work in the ERP; about 160 production workers, supervisors, and test technicians use MES accounts (badge number and PIN) on the 25 kiosks. Each shift also has a shared MES supervisor override account.
+- About 45 planning, purchasing, sales, quality, and finance endpoints are inside the EPSP boundary. The identity provider is fed by 2 directory servers in the HQ server room.
+- The MES server and the 25 kiosks have no malicious code protection; the MES database is backed up only to a local disk on the MES server. ERP VMs are snapshotted weekly.
+- The ERP software vendor connects only through a VPN account enabled per support ticket. AI-001 reads a nightly ERP extract under its own service identity.
+- After the P07 finding, the Controls Engineer blocked the drying oven HMI web port at the IT/OT firewall on 2026-08-17; the password change needs an OEM visit before 2026-09-30.
+- The MSP's SOC 2 Type 2 report (Security only) covers 12 months ending 2026-03-31, with one remediated exception; the RMM software vendor is a carved-out subservice organization. One addendum utility asked in 2026 whether the company has a SOC 2 report.
+
 ## 4. Current security posture: partially compliant
 
 **In place today:**

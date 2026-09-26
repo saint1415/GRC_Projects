@@ -9,7 +9,7 @@ POL-01,4.8,Product vulnerability disclosure and firmware verification,SI-7; SR-1
 POL-01,4.9,No covered telecommunications or Kaspersky articles; purchasing check,SR-3; CM-8,GV.SC-05,"FAR 52.204-25(b)(2), (d); FAR 52.204-23 (P03 G-080, G-081)",Yes
 POL-01,4.12,Sanctions,PS-8,GV.RR-04,None binding; CSF 2.0 benchmark (P03 G-009),No
 POL-01,4.13,"Contingency plan with manual production, tested annually",CP-2; CP-4,RC.RP-01; ID.IM-02,"None binding; CSF 2.0 benchmark (P03 G-032, G-059)",Yes
-POL-02,4.1,Unique accounts; no shared logins on OT,IA-2; AC-2,PR.AA-01,FAR 52.204-21(b)(1)(v) (P03 G-068); None binding; CSF 2.0 benchmark (P03 G-033),Yes
+POL-02,4.1,Unique accounts; no shared logins on OT,IA-2; AC-2,PR.AA-01,FAR 52.204-21(b)(1)(v) (P03 G-068); CSF 2.0 benchmark (P03 G-033),Yes
 POL-02,4.2,Least privilege; 2 ERP super users; payment segregation,AC-6; AC-3,PR.AA-05,FAR 52.204-21(b)(1)(ii) (P03 G-065),Yes
 POL-02,4.3,MFA for all sensitive and remote access; hardware keys for admins,IA-2(1); IA-2(2),PR.AA-03,FAR 52.204-21(b)(1)(vi) (P03 G-069),Yes
 POL-02,4.4,Same-day access removal; 1-business-day utility notice,PS-4; AC-2,GV.RR-04,Utility addendum sec. 3 (CIP-013-2 R1.2.3 flow-down; P03 G-084),Yes
@@ -25,7 +25,7 @@ POL-03,4.7,Meet contract and legal notice deadlines,IR-6,RS.CO-02,Utility addend
 POL-03,4.8,Coordinate response with affected utilities,IR-4,RS.CO-03,Utility addendum sec. 2 (CIP-013-2 R1.2.2 flow-down; P03 G-083),Yes
 POL-03,4.11,"Annual tabletop with Plant Manager, Controls Engineer, MSP",IR-3,ID.IM-02,None binding; CSF 2.0 benchmark (P03 G-031),No
 POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,None binding; CSF 2.0 benchmark (P03 G-039),Yes
-POL-04,4.4,Data inventory for Restricted data and FCI,CM-12,ID.AM-07,FAR 52.204-21 scoping (P03 G-063); None binding; CSF 2.0 benchmark (P03 G-022),No
+POL-04,4.4,Data inventory for Restricted data and FCI,CM-12,ID.AM-07,FAR 52.204-21 scoping (P03 G-063); CSF 2.0 benchmark (P03 G-022),No
 POL-04,4.5,"FCI labeled, restricted, not public, not in unapproved tools",AC-3; AC-22,ID.AM-07,"FAR 52.204-21(b)(1)(i), (iii), (iv) (P03 G-064, G-066, G-067)",No
 POL-04,4.6,Export records kept at least 5 years,SI-12,GV.OC-03,C-CRITICAL-MFG-R03 (15 CFR 762.6; P03 G-091),No
 POL-04,4.7,Firmware hash verified on receipt and before loading,SI-7; SR-11,ID.RA-09,Utility addendum sec. 5 (CIP-013-2 R1.2.5 flow-down; P03 G-086),No

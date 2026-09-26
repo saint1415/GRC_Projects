@@ -61,7 +61,7 @@ Other options considered:
 - CC7.5: recovery unproven.
 - CC9.2: supplier risk not managed.
 
-**How to answer utilities now.** Answer honestly, with dates. For each Not ready item, cite the POA&M item and its milestone. Several are due in 2026 Q4, so the company should send its first answers after the October milestones:
+**How to answer utilities now.** Answer honestly, with dates. For each Not ready item, cite the POA&M item and its milestone. Several fixes are due in September and October 2026, so the company should send its first answers after those milestones:
 - routers off between sessions;
 - notices in the matrix;
 - the 2 open advisories disclosed.
