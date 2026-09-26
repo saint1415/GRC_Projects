@@ -16,7 +16,7 @@ The vertical profile names SP 800-53 Rev. 5 as the primary control set because F
 ### 1.1 Who the customers are
 | Contract | Customer | What the company operates | How security terms reach the company |
 |---|---|---|---|
-| CT-F | GSA Public Buildings Service (one federal office building) | GSA's BAS on the GSA Building Systems Network (BSN), through GSA's virtual desktop with PIV cards | FAR clauses; the statement of work incorporates the GSA Building Technologies Technical Reference Guide (BTTRG) v3.0 (May 1, 2024) and GSA IT Security Policy CIO 2100.1 |
+| CT-F | GSA Public Buildings Service (one federal office building) | GSA's BAS on the GSA Building Systems Network (BSN), through GSA's virtual desktop with PIV cards | FAR clauses; the statement of work incorporates the GSA Building Technologies Technical Reference Guide (BTTRG) Version 3.0, dated May 1, 2024 (title and version verified on gsa.gov, IT Security Procedural Guides page, 2026-09-26), and GSA IT Security Policy CIO 2100.1 |
 | CT-S | State agency (regional office complex) | The company's own BAS supervisory platform and the agency's access control tenant | Contract cybersecurity exhibit requiring SP 800-53 Rev. 5 Moderate controls. Florida requires state agency IT service contracts to meet state and federal standards including NIST CSF and to assign security responsibilities (Fla. Stat. 282.318(4)(h)) |
 | CT-C | County (government center and 4 service centers) | Same platform as CT-S | Security addendum requiring compliance with the county's cybersecurity standards, which the county must adopt consistent with NIST CSF (Fla. Stat. 282.3185(4)(a)) |
 

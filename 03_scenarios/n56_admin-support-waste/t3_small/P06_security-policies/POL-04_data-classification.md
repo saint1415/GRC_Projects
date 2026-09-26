@@ -59,7 +59,7 @@ A legal hold stops any purge. (SI-12; ID.AM-08)
 Violations are handled under the sanctions statement (POL-01 section 4.7). Compliance is checked through the annual control assessment (P07) and the quarterly purge and I-9 quality check.
 
 ## 6. Exceptions
-Exceptions follow POL-01 section 4.6. They must be written, risk-rated, approved by the policy owner (or by the President for High risk), and expire within 12 months.
+Exceptions follow POL-01 section 4.6. They must be written, risk-rated, approved at the risk acceptance level in POL-01 section 4.4 (IT Manager for Low, COO for Moderate, President for High and Very High), and expire within 12 months.
 
 ## 7. Related documents
 POL-01; POL-02; POL-05; electronic Form I-9 procedure (due 2026-12-31); P10 AI approved-tools list

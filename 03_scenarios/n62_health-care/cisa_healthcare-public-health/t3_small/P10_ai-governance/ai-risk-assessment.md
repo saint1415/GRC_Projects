@@ -72,7 +72,7 @@
 | Metrics | Sensitivity, positive predictive value, alert rate per 100 encounters, and alert-to-screen response rate, per group |
 | Threshold | Flag any group whose sensitivity is more than 10 percentage points below the overall rate, or whose alert response rate differs by more than 10 points |
 | Small numbers | A small hospital sees about 12 sepsis cases a month. Groups with fewer than 20 cases are reported as "watch," pooled over rolling 12 months, and compared with the vendor's subgroup results. A flag is acted on whenever the mitigation does not reduce care for anyone else |
-| Vendor evidence | Request the vendor's fairness and validity results by subgroup in external data (170.315(b)(11)(iv)(B)(7)(ii) and (iv)) and any results from rural or critical access settings |
+| Vendor evidence | Request the vendor's validity and fairness results in its test data and in external data (170.315(b)(11)(iv)(B)(7)(i)-(iv)), broken out by subgroup and any results from rural or critical access settings |
 | Frequency | Monthly metrics to the medical staff quality committee; full subgroup review each quarter; re-validation after any model version change |
 
 ## 5. MANAGE

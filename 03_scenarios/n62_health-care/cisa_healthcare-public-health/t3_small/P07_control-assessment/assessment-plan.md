@@ -51,7 +51,7 @@ Small tier scope: 15-25 controls. **22 controls, 186 determination statements.**
 | Other than satisfied | 133 |
 | **Total** | **186** |
 
-**Fully other than satisfied (7 controls):** AC-17, AU-6, CP-4, CP-10, IR-8, RA-5, SC-28. No plan, process, or technology existed for these at fieldwork.
+**Fully other than satisfied (7 controls):** AC-17, AU-6, CP-4, CP-10, IR-8, RA-5, SC-28. None of their determination statements was satisfied at fieldwork. Some had partial practices (laptops are encrypted, and the vendor VPN exists), but not what the statements require.
 **Fully satisfied (1 control):** IA-2(1), hardware-key MFA for administrators.
 **Largely satisfied:** RA-3 (the 2026 analysis exists), IA-5 password strength and issuance, CP-9 backup execution (a test restore worked; the problem is isolation, not whether backups run).
 

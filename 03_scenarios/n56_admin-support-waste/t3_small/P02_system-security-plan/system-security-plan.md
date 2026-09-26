@@ -69,7 +69,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Inherited** from the SaaS and cloud providers, as evidenced by their SOC 2 reports (P09 Part B) or service documentation.
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems. Examples: PM-series program-level controls beyond PM-1, PM-2, and PM-9.
 
-Two privacy controls outside the Moderate baseline were added by tailoring because they carry legal duties: PT-5 (FCRA disclosure and applicant notice) and SI-12(1) (remove SSNs from the reporting copy).
+Five controls outside the Moderate baseline were added by tailoring: three program-level controls that a small firm needs because the security program and this system share one owner, PM-1, PM-2, and PM-9; and two privacy controls that carry legal duties, PT-5 (FCRA disclosure and applicant notice) and SI-12(1) (remove SSNs from the reporting copy). The other 65 controls are in the Moderate baseline.
 
 ## 7. Authorization Boundary Description
 The boundary contains firm-managed components and the firm's configuration of vendor services:

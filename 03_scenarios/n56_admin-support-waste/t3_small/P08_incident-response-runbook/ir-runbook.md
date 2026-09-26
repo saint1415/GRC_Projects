@@ -88,7 +88,7 @@
 | Day 0-3 | IRS notice to dataloss@irs.gov, subject "W2 Data Loss", with contact details only (IRS guidance) | Controller |
 | Per contract (72 hours for the two largest clients) | Client notices, only if client data was involved | COO |
 | As soon as known | Breach determination under Fla. Stat. 501.171 and other states' laws, documented | HR and Compliance Manager and counsel |
-| Within 30 days of determination | Florida individual notices by mail or email (English and Spanish templates); Department of Legal Affairs notice if 500 or more Floridians (15 more days only with written good cause) | HR and Compliance Manager and counsel |
+| Within 30 days of determination | Florida individual notices by mail or email (English and Spanish templates); Department of Legal Affairs notice if 500 or more Floridians. Individual notices may get 15 more days only if good cause for delay is given to the department in writing within the 30 days (501.171(3)(a)) | HR and Compliance Manager and counsel |
 | Without unreasonable delay | Nationwide consumer reporting agencies if more than 1,000 people are notified at once | HR and Compliance Manager |
 | Per each state's law | Notices to residents of other states and their regulators | Counsel |
 
