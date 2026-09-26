@@ -8,7 +8,7 @@
 | Approved by | COO |
 | Effective date | 2026-09-08 |
 | Review cycle | Annually (next review 2027-09-04), and after major changes or incidents |
-| Implements (SP 800-53 Rev. 5) | RA-2, MP-1, MP-6, SC-8, SC-28, SI-12, CP-9, CA-3 |
+| Implements (SP 800-53 Rev. 5) | RA-2, MP-1, MP-6, SC-8, SC-28, SI-12, CP-9, CA-3, AC-21 |
 | CSF 2.0 | ID.AM-07, PR.DS-01, PR.DS-02, PR.DS-11, ID.AM-08 |
 | HIPAA Security Rule | 164.310(d); 164.312(a)(2)(iv), (e); 164.308(a)(7)(ii)(A); 164.316(b)(2)(i) |
 
@@ -43,7 +43,7 @@ All Cris Santos Company workforce members (owners, employees, contractors, stude
 4.6 Backups of Restricted data must be encrypted, stored apart from production (a separate account or location), protected from alteration, and restore-tested quarterly. (CP-9; PR.DS-11; 164.308(a)(7)(ii)(A))
 4.7 Restricted data must not be entered into AI tools or other third-party services unless the tool is on the approved list and the vendor has a signed BAA (see P10 and POL-05). (SA-9)
 4.8 Records must be kept for at least the longest applicable period: security documentation 6 years (45 CFR 164.316(b)(2)(i)); EMS records at least 5 years (Rule 64J-1.014, F.A.C.); certification statements and claim documentation 7 years from the date of service (42 CFR 424.516(f)). (SI-12)
-4.9 **Criminal justice information (CJI) must not be accepted** into company systems. No new data feed from a law enforcement agency or the county may be connected until the Privacy Officer and Security Officer confirm it carries no CJI, or until the company has a CJIS compliance program and a signed agreement in place. (CA-3; SA-9)
+4.9 **Criminal justice information (CJI) must not be accepted** into company systems. No new data feed from a law enforcement agency or the county may be connected until the Privacy Officer and Security Officer confirm it carries no CJI, or until the company has a CJIS compliance program and a signed agreement in place. (CA-3; AC-21)
 
 ## 5. Compliance and enforcement
 Violations are handled under the sanctions procedure (POL-01 section 4.7). Sanctions range from retraining to termination, depending on intent and harm. Compliance is checked through the annual control assessment (P07) and the access reviews in this policy set.
