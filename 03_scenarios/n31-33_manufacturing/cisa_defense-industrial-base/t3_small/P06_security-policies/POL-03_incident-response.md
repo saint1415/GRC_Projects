@@ -39,6 +39,7 @@ All Cris Santos Company workforce members (owners, employees, temporary workers,
 4.8 The company must give DoD access to additional information or equipment for forensic analysis on request, and provide damage assessment information if the Contracting Officer asks. (IR-7; 252.204-7012(f), (g))
 4.9 The incident response plan must be tested at least annually by a tabletop that includes a DIBNet reporting drill, and after any major incident. (IR-3; ID.IM-02; 3.6.3)
 4.10 Lessons learned must be documented within 30 days of closing an incident and added to the risk register and training. (IR-4; ID.IM-03)
+4.11 No ransom or extortion payment may be made without approval from the President, legal counsel, and the cyber insurer, and an OFAC sanctions check. Paying never removes a reporting duty. (IR-4)
 
 ## 5. Compliance and enforcement
 Violations are handled under the sanctions statement in POL-01 section 4.8. Sanctions range from retraining to termination, depending on intent and harm. A suspected unauthorized release of ITAR or EAR technical data is also referred to the Contracts Manager (Empowered Official) for a voluntary disclosure decision. Compliance is checked through the annual self-assessment against SP 800-171A objectives, the control assessment (P07), and the reviews in this policy set.
