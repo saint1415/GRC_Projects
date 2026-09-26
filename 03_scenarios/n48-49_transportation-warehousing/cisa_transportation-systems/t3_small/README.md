@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open any project folder (P01-P10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [scenario-facts.md](scenario-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -16,7 +18,7 @@ This folder is a self-contained scenario. Read this page first, then open any pr
 | SBA size status | Small (SBA standard for NAICS 482112: 1,500 employees; 13 CFR 121.201) |
 | Primary industry | NAICS 482112 Short Line Railroads |
 | Vertical | Transportation Systems (CISA critical infrastructure sector) |
-| Primary system | Train dispatching and positive train control back office |
+| Primary system | Train Dispatch and PTC Operations Platform (TDPO) |
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
@@ -43,7 +45,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 | # | Project | What it covers here |
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Organization-level register tied to key systems. 25-40 risks; semi-quantitative scoring (NIST SP 800-30 Appendix G-I). |
-| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One major system with a defined boundary. Full SSP outline per SP 800-18 Rev. 2; control implementation statements. System: Train dispatching and positive train control back office. |
+| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One major system with a defined boundary. Full SSP outline per SP 800-18 Rev. 2; control implementation statements. System: Train Dispatch and PTC Operations Platform (TDPO). |
 | P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Primary regulation plus the most relevant secondary regulation. Requirement-level with evidence and control crosswalk. Regulation: TSA Security Directive 1580/82-2022-01 series (rail cybersecurity). |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | One cloud environment (IaaS/PaaS) plus SaaS. Control-by-component mapping; shared responsibility by service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business processes. MTD/RTO/RPO; resource and dependency mapping. |

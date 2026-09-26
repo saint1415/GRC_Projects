@@ -9,7 +9,7 @@
 | Universal method | [P02_system-security-plan/README.md](../../../../../00_universal/projects/P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** Process control (DCS) and batch management system
+**System to document:** Process Control and Batch Management System (PCBMS)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
