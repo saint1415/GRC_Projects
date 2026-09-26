@@ -82,7 +82,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 2. The BAS integrator's remote access uses an always-on vendor remote-support tool on the BAS server, with a shared vendor account, no MFA, no session approval, and no session logging.
 3. The BAS server and engineering workstations use one shared "engineer" login that is not in the identity provider. P07 testing also found manufacturer default passwords on 12 BACnet field controllers at Property B and on 2 NVRs.
 4. The BAS server runs an operating system past vendor support, is excluded from EDR, and is patched only when the integrator visits. The BAS software is two major versions behind.
-5. There is no OT asset inventory and no network diagram for BAS, access control, or video devices.
+5. There is no OT asset inventory and no network diagram for BAS, access control, or video devices. P07 testing found 31 of 144 field controllers at Property B missing from the integrator's device list.
 6. BAS backups are a weekly server image in the same cloud account as production, not immutable. Field controller programs and graphics are held only by the integrator. No restore has ever been tested.
 7. There is no written incident response plan, and no manual (degraded-mode) operating procedures for HVAC or doors.
 8. There is no central log collection or review for the BAS, access control administrator actions, firewalls, or remote access sessions. Default retention only.

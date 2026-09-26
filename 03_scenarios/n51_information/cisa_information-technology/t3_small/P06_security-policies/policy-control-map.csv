@@ -1,2 +1,26 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-IT-R01 (readiness target: Rev5 Class C RA-3),No
+POL-01,4.4,Risk acceptance authority by level; no lingering High multi-customer risks,PM-9,GV.RM-01,Internal governance,No
+POL-01,4.7,Sanctions for policy violations,PS-8,GV.RR-04,C-IT-R01 (readiness target: Rev5 Class C PS-8),No
+POL-01,4.8,Critical vendor reviews and incident notice terms,SA-9; SR-6; SR-8,GV.SC-05; GV.SC-07,"C-IT-R01 (readiness target: Rev5 Class C SA-9, SR-6, SR-8)",Yes
+POL-01,4.9,Annual independent control assessment,CA-2,ID.IM-01,C-IT-R01 (readiness target: Rev5 Class C CA-2),No
+POL-01,4.10,Register of legal and contractual security requirements,PM-1,GV.OC-03,C-IT-R05 (12 CFR 53.4); Fla. Stat. 501.171; MSA,No
+POL-02,4.1,"Unique accounts; no shared RMM, hypervisor, or BMC accounts",IA-2; AC-2; AC-2(9),PR.AA-01,"C-IT-R01 (readiness target: Rev5 Class C AC-2(9), IA-2)",Yes
+POL-02,4.2,Least privilege; production admin separate from backup deletion,AC-5; AC-6,PR.AA-05,"C-IT-R01 (readiness target: Rev5 Class C AC-5, AC-6)",Yes
+POL-02,4.3,Phishing-resistant MFA for all access; admin interfaces only via SSO or bastion,IA-2(1); IA-2(2); AC-17,PR.AA-03,"C-IT-R01 (readiness target: Rev5 Class C IA-2(1), AC-17)",Yes
+POL-02,4.4,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,"C-IT-R01 (readiness target: Rev5 Class C PS-4, AC-2(3))",Yes
+POL-02,4.5,Quarterly privileged access reviews,AC-2; AC-6,PR.AA-05,"C-IT-R01 (readiness target: Rev5 Class C AC-2, AC-6(7))",Yes
+POL-02,4.7,Break-glass accounts for critical systems,AC-2,PR.AA-05,C-IT-R01 (readiness target: Rev5 Class C AC-2),Yes
+POL-02,4.8,Scoped service credentials; default accounts disabled; signing keys in HSM,IA-5; SC-12,PR.AA-01,"C-IT-R01 (readiness target: Rev5 Class C IA-5, SC-12)",Yes
+POL-02,4.9,RMM console IP restriction and two-person approval for multi-customer scripts,AC-17; MA-4,PR.IR-01,C-IT-R01 (readiness target: Rev5 Class C AC-17); C-IT-R05 (12 CFR 53.4),Yes
+POL-02,4.10,MFA required for customer administrator roles,IA-8; IA-2(1),PR.AA-03,C-IT-R01 (readiness target: Rev5 Class C IA-8),Yes
+POL-03,4.2,Report suspected incidents to the NOC within 15 minutes,IR-6,RS.MA-02,C-IT-R01 (readiness target: Rev5 Class C IR-6),Yes
+POL-03,4.4,Incident commander may contain across customers without further approval,IR-4,RS.MI-01,C-IT-R01 (readiness target: Rev5 Class C IR-4),Yes
+POL-03,4.6,Record determination time and meet each notice clock,IR-6,RS.CO-02; RS.CO-03,C-IT-R05 (12 CFR 53.4(a)); Fla. Stat. 501.171(6); MSA 72-hour notice,Yes
+POL-03,4.9,Annual tabletop exercise and incident training,IR-2; IR-3,ID.IM-02,"C-IT-R01 (readiness target: Rev5 Class C IR-2, IR-3)",No
+POL-04,4.2,Encrypt Restricted data; inventory cryptographic modules,SC-8; SC-13; SC-28,PR.DS-01; PR.DS-02,"C-IT-R01 (readiness target: Rev5 Class C SC-13, SC-28(1)) and CMU-CSO-CMD",Yes
+POL-04,4.6,Cryptographic erase and certified destruction,MP-6,ID.AM-08,C-IT-R01 (readiness target: Rev5 Class C MP-6); Fla. Stat. 501.171(8),No
+POL-04,4.7,Immutable separate-account backups tested quarterly,CP-9; CP-6,PR.DS-11,"C-IT-R01 (readiness target: Rev5 Class C CP-9, CP-6)",Yes
+POL-04,4.8,Retention schedule for logs and customer data,SI-12; AU-11,PR.DS-11,"C-IT-R01 (readiness target: Rev5 Class C AU-11, SI-12)",No
+POL-05,4.3,"Awareness, insider threat, phishing exercises, role-based training",AT-2; AT-3,PR.AT-01; PR.AT-02,"C-IT-R01 (readiness target: Rev5 Class C AT-2(2), AT-2(3), AT-3)",No
+POL-05,4.8,Approved AI tools only; no customer data in public AI tools,PL-4,PR.PS-05,MSA confidentiality clause,No
