@@ -6,7 +6,7 @@
 | Tier / Vertical | Small / Mining, Quarrying, and Oil and Gas Extraction |
 | Primary benchmark | NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29, all 106 subcategories), applied to OT with NIST SP 800-82 Rev. 3, *Guide to Operational Technology (OT) Security* (September 2023). **Voluntary benchmark: no binding federal sector cybersecurity rule applies** (section 1) |
 | Secondary regulation | Florida Information Protection Act, Fla. Stat. 501.171 (binding): data security, breach notice, and third-party agent duties for royalty owner and employee personal information |
-| Assessment dates | 2026-07-13 to 2026-07-24 (OCC and field walkthroughs 2026-07-15 and 2026-07-16) |
+| Assessment dates | 2026-07-13 to 2026-07-24 (OCC and field walkthroughs 2026-07-15 and 2026-07-16). Rows G-055 (PR.AA-03) and G-071 (PR.IR-01) updated 2026-08-07 with the P07 modem finding |
 | Assessors | IT Manager with the SCADA and Automation Supervisor; applicability reviewed with outside counsel |
 | Workbook | `gap-analysis.csv` (116 rows) |
 | Regulatory driver label | `N21-BM` in the other deliverables points to this benchmark (see `../scenario-facts.md` section 5) |
