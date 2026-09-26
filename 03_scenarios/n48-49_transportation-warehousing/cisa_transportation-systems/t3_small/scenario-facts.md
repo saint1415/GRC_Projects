@@ -126,3 +126,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-13 to 2026-07-24 | Risk assessment and gap analysis fieldwork (applicability confirmed 2026-07-15) |
 | 2026-08-03 to 2026-08-07 | Control assessment fieldwork (dispatch center and Central Yard walkthrough 2026-08-05; tower site and detector visit 2026-08-06) |
 | 2026-08-31 | Deliverables approved by the President and General Manager; High risks and budget approved by the majority owner |
+
+## 7. Facts added while building P01 to P10 (2026-09-26)
+
+| Fact | Used in |
+|---|---|
+| About 310 operating days a year, so about $117,000 revenue per operating day | P05 |
+| 10 business processes, BP-01 to BP-10 (BP-09 is the TSA and hazmat security obligations process) | P05, P01, P08 |
+| 23 staff remote-access VPN users; 37 office users can read the shared file area; 4 stale contractor administrator accounts on the dispatch servers; one common padlock key for 7 tower shelters and 3 detector bungalows, held by 22 people | P01, P02, P07 |
+| CAD application keeps warrants and train sheets 2 years; CAD server backups kept 30 days | P02, P04 |
+| 2026 Q4 and 2027 Q1 security budget of $142,000 approved by the majority owner on 2026-08-31 | P01, P07 |
+| TSA TSOC telephone number 1-866-655-7023, as published for IC Surface-2025-01 in the TSA notice at FR Doc. 2026-17894 (2026-09-01); company target is to make the 1570.203 report within 12 hours | P08 |
+| PTC back office vendor SOC 2 Type 2: Security and Availability, 12 months ending 2026-03-31, unqualified, one change-approval exception | P09 |
+| AI pilot results (38 runs, 2026-03 to 2026-07): recall 86% (55 of 64), precision 24% (97 of 412), low-light recall 74%, jointed-rail recall 81% | P10 |

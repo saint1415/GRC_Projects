@@ -64,7 +64,7 @@ Small tier scope: 15-25 controls. **22 controls, 181 determination statements.**
 
 **New finding (stop-and-notify used).** On 2026-08-12 the assessor found the SIS keyswitch in the remote program position, with SIS engineering software installed on the DCS engineering workstation (CM-05[03], CM-05[06]). Together these meant the SIS logic could have been changed from the DCS EWS, which the integrator's remote tool also reached.
 - The Controls Engineer returned the keyswitch to run and locked it the same day.
-- The Plant Manager added a keyswitch check to each shift's rounds on 2026-09-15.
+- The Plant Manager added a keyswitch check to each shift's rounds on 2026-08-17.
 - The finding became P01 R-007 (High), P03 G-040 and G-052, and POAM-003.
 
 **Other results that changed the picture:**

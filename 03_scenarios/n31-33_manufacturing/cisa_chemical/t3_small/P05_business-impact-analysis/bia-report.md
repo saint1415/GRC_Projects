@@ -48,7 +48,7 @@ Dollar values are scaled to $74 million in annual revenue, about $296,000 of shi
 - **BP-01 is limited by recipes and configuration, not hardware.** Spare DCS hardware is on site. What cannot be replaced quickly is a clean, verified DCS configuration and the 420 master recipes.
 - **BP-07 and BP-08 RPO of 1 hour** come from the ERP vendor's replication, which the SOC 2 report states (P09 Part B).
 
-**Key finding: the 12-hour RTO for BP-01 is unproven.** DCS backups exist only on the engineering workstation and one USB drive in the control room. Both are on the same network as the DCS, and neither has ever been restored (gap 8; risk R-006; POAM-004). A ransomware event that reaches the EWS could destroy the running system and its backups together. Until an offline copy exists and a restore has been tested on spare hardware, the realistic recovery time for Blend Hall A after a destructive attack is **measured in weeks** (rebuild by the DCS integrator from its own project files, which are two releases old).
+**Key finding: the 12-hour RTO for BP-01 is unproven.** DCS backups exist only on the engineering workstation and one USB drive in the control room. Both are on the same network as the DCS, and neither has ever been restored (gap 8; risk R-006; POAM-004 and POAM-005). A ransomware event that reaches the EWS could destroy the running system and its backups together. Until an offline copy exists and a restore has been tested on spare hardware, the realistic recovery time for Blend Hall A after a destructive attack is **measured in weeks** (rebuild by the DCS integrator from its own project files, which are two releases old).
 
 ## 5. Resource requirements
 | Resource | Description | Supports |
@@ -72,7 +72,7 @@ Dollar values are scaled to $74 million in annual revenue, about $296,000 of shi
 | 1 | Emergency notification (BP-09) | 0.5 h | Cellular phones and printed call list in the control room and gatehouse (to be issued; POAM-011) |
 | 2 | SIS verified and tanks in a safe state (BP-02) | 4 h | Manual isolation, portable detectors, standby watch |
 | 3 | Tank farm level monitoring (BP-03) | 8 h | Manual gauging each shift; stop unloading |
-| 4 | Clean DCS configuration and recipes (BP-04, BP-01) | 12 h target, **unproven** | Offline backup and spare-hardware restore (POAM-004); integrator rebuild as last resort |
+| 4 | Clean DCS configuration and recipes (BP-04, BP-01) | 12 h target, **unproven** | Offline backup (POAM-004) and spare-hardware restore test (POAM-005); integrator rebuild as last resort |
 | 5 | Blend Hall A restart (BP-01) | 12 h after step 4 | Blend Hall B for non-ammonia products |
 | 6 | ERP access and loading rack (BP-07) | 8 h | Paper shipping papers; rack in local mode |
 | 7 | LIMS (BP-05) | 8 h | Paper worksheets |
