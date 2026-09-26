@@ -8,7 +8,7 @@
 
 1. **Confirm applicability (macro).** Does the regulation apply at this tier? Check the size thresholds and exemptions in the vertical `requirements.csv`. Record the applicability decision and its citation. If it does not apply, say so and analyze the next most relevant regulation.
 2. **Decompose the regulation.** Break it into individually verifiable requirements, citing section and paragraph (for HIPAA, 45 CFR 164.308-164.316 standards and implementation specifications). Keep the regulation's own requirement types, such as HIPAA's Required and Addressable.
-3. **Crosswalk.** Map each requirement to CSF 2.0 subcategories and SP 800-53 controls. For HIPAA, use NIST SP 800-66 Rev. 2 and its CPRT mapping (SRC-800-66). For other regulations, use an official crosswalk if one exists. Otherwise make your own mapping and mark it as such.
+3. **Crosswalk.** Map each requirement to CSF 2.0 subcategories and SP 800-53 controls. For HIPAA, use NIST's official mapping (OLIR 110 to SP 800-53 and OLIR 109 to CSF 1.1; SRC-OLIR-HIPAA-53, SRC-OLIR-HIPAA-CSF), which SP 800-66 Rev. 2 points to. For other regulations, use an official crosswalk if one exists. Otherwise make your own mapping and mark it as such.
 4. **Assess current state (granular).** For each requirement, record what exists today, the evidence, and a status: Met, Partially met, Not met, or Not applicable.
 5. **Rate and plan.** Rate each gap using the risk scale from P01 and write a remediation action with owner and date. Feed high gaps into the risk register (P01).
 

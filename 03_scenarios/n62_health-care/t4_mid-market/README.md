@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open any project folder (P01-P10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [scenario-facts.md](scenario-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -17,7 +19,7 @@ This folder is a self-contained scenario. Read this page first, then open any pr
 | SBA size status | Not small (SBA standard for NAICS 621111: $16.0 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 621111 Offices of Physicians (except Mental Health Specialists) |
 | Vertical | Health Care and Social Assistance (NAICS sector 62) |
-| Primary system | Electronic health record (EHR) and practice management system |
+| Primary system | Enterprise Clinical Platform (ECP) |
 | IT footprint | Multi-cloud or hybrid with on-premises systems, several business applications, dedicated security tooling |
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
@@ -46,7 +48,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 | # | Project | What it covers here |
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Enterprise and system-level registers. 40-60 risks; semi-quantitative; risk appetite statements. |
-| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Electronic health record (EHR) and practice management system. |
+| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Enterprise Clinical Platform (ECP). |
 | P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | All applicable regulations for the primary business line. Requirement-level; evidence sampling. Regulation: HIPAA Security Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). |

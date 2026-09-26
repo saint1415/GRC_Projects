@@ -1,6 +1,6 @@
 # Plan: Completing the GRC Project List for Cris Santos Company
 
-**Status as of 2026-09-26:** Phases 0 and 1 are complete. The flagship sample (Health Care, Small) has all 10 deliverables filled in and validated. Phase 2 (the Health Care scalability ladder) is next.
+**Status as of 2026-09-26:** Phases 0, 1, and 2 are complete. Health Care is finished at all six sizes (60 deliverables), each validated. Phase 3 (the named verticals at Small) is next.
 
 ---
 
@@ -66,7 +66,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 |---|---|---|---|
 | **0. Foundation** (done) | Universal layer, tiers, 36 verticals, generator, validator, 216 scaffolds | Repository structure | Any scenario is ready to fill in |
 | **1. Flagship** (done) | **Health Care (NAICS 62), Small** | 10 completed deliverables | One end-to-end sample for meetings. It mirrors the Notion HIPAA project |
-| **2. Scalability ladder** | Health Care across all 6 tiers | 50 more (5 tiers x 10) | Shows the same method scaling from a sole practitioner to a multi-sector enterprise |
+| **2. Scalability ladder** (done) | Health Care across all 6 tiers | 50 more (5 tiers x 10) | Shows the same method scaling from a sole practitioner to a multi-sector enterprise |
 | **3. Named verticals** | Small tier for Manufacturing (31-33), Wholesale (42), Retail (44-45), Transportation and Warehousing (48-49), Information/SaaS (51), Finance (52), Education (61), Defense Industrial Base (CISA) | 80 (8 x 10) | Covers the industries you named, including supply chain and federal/defense |
 | **4. Full sector coverage** | Small tier for every remaining vertical (27) | 270 | Every NAICS and CISA sector has at least one complete sample |
 | **5. Full matrix** (optional) | Remaining tier x vertical combinations | Up to 1,750 more (2,160 total) | Complete library. Prioritize by meeting demand |
@@ -81,6 +81,24 @@ The Notion list orders projects by career value. Building them in **dependency o
 | Reusable output for Phase 2 | `02_verticals/n62_health-care/hipaa-security-rule-crosswalk.csv`: 69 HIPAA requirements from NIST SP 800-66r2 data, with an author mapping to CSF 2.0 and SP 800-53 |
 | Headline results | 31 risks (3 High); 69 HIPAA requirements (10 met, 41 partially met, 11 not met, 7 N/A); 70 SSP controls; 164 SP 800-53A determination statements (57 satisfied); 21 POA&M items |
 | Validation | `tools/validate.py` checks completed samples for unfinished markers and invalid CSF or SP 800-53 IDs |
+
+### Phase 2 record (completed 2026-09-26)
+| Size | Folder | Risks | HIPAA rows (met / partial / not met / N/A) | Controls assessed (statements) |
+|---|---|---|---|---|
+| Sole Proprietorship | `t1_sole-proprietorship` | 15 | 14 / 33 / 15 / 7 | 10 (38) |
+| Micro | `t2_micro` | 23 | 10 / 34 / 18 / 7 | 13 (91) |
+| Small (Phase 1) | `t3_small` | 31 | 10 / 41 / 11 / 7 | 22 (164) |
+| Mid-Market | `t4_mid-market` | 50 | 24 / 57 / 2 / 7 (90 rows incl. breach and ASC) | 34 (242) |
+| Enterprise | `t5_enterprise` | 65 | 63 / 41 / 0 / 9 (113 rows, all regimes) | 44 (263) |
+| Multi-Sector | `t6_multi-sector` | 87 (group + 3 divisions) | Care Delivery 44 / 18 / 0 / 7, plus Health Plan and SaaS tables | 39 (261) |
+
+**Decisions confirmed with you:**
+- Maturity realistic by size.
+- Florida headquarters with multi-state operations for Enterprise and Multi-Sector (state law handled generically).
+- Multi-Sector divisions: a health plan and a health-tech SaaS.
+- Specialty mix scaled from the Phase 1 practice.
+
+**Official NIST HIPAA mapping obtained:** OLIR 110 and 109 were added to the Health Care vertical and shown in every P03 gap analysis (see `02_verticals/n62_health-care/hipaa-crosswalk-README.md`).
 
 ---
 

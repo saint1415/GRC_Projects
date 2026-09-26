@@ -103,6 +103,12 @@ These facts were added while building the deliverables. They do not change secti
 | Chief Human Resources Officer | Workforce onboarding, terminations, and training records |
 | LIS Application Manager | Day-to-day LIS administration and test build (reports to the Vice President, Laboratory Services) |
 | Director of Cloud Platform Engineering | Cloud landing zones in both clouds (common control provider) |
+| Director of Network Engineering | Enterprise network, SD-WAN, NAC (common control provider) |
+| Director of Endpoint Engineering | Workstations, EDR, and endpoint baselines (common control provider) |
+| Vice President, Facilities | Physical security of sites and the central lab |
+| Vice President, Corporate Communications | Media and patient communications during incidents |
+| Vice President, Investor Relations | Investor communications; member of the disclosure committee |
+| Patient safety officer | Reviews technology-related patient safety events, including AI errors |
 
 **Acquired practices.** AQ-01 to AQ-08 (8 practices acquired 2025-2026). AQ-01 to AQ-05 are fully integrated. AQ-06, AQ-07, and AQ-08 remain on legacy identity directories and flat networks (the "3 of 8"). AQ-07 (acquired 2025-11) and AQ-08 (acquired 2026-04) still run their own EHR instances (the "2 of 8"); their EHR migrations are due 2026-11-30 and 2027-04-30. Together AQ-06 to AQ-08 have about 610 workforce members and 14 sites (included in the 159).
 
@@ -113,5 +119,9 @@ These facts were added while building the deliverables. They do not change secti
 **Service lines offered to external clients (P09).** SL-1: the patient-app platform, licensed to about 45 independent practices under business associate agreements (the group acts as a business associate for these clients). SL-1 has had an annual SOC 2 Type 2 report (Security, Availability, Confidentiality) since 2024. SL-2: lab reference testing for about 260 external client practices (no SOC 2 report yet).
 
 **42 CFR Part 2.** The group does not operate a federally assisted substance use disorder program. It receives some Part 2 records from outside programs with patient consent and handles them as a lawful holder (42 CFR 2.16(a) policies).
+
+**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Three members joined after the 2025 acquisitions.
+
+**Employee health plan.** The company's employee group health plan is a separate covered entity handled by the benefits program; it is outside the scope of these deliverables.
 
 **Recording consent.** Recording consent laws differ by state. The group applies all-party prior consent for ambient documentation in all four states, using Florida (Fla. Stat. 934.03(2)(d)) as the worked example.

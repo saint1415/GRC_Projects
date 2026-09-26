@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open any project folder (P01-P10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [scenario-facts.md](scenario-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -17,7 +19,7 @@ This folder is a self-contained scenario. Read this page first, then open any pr
 | SBA size status | Not small (SBA standard for NAICS 621111: $16.0 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 621111 Offices of Physicians (except Mental Health Specialists) |
 | Vertical | Health Care and Social Assistance (NAICS sector 62) |
-| Primary system | Electronic health record (EHR) and practice management system |
+| Primary system | Group Data Platform |
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
@@ -46,7 +48,7 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 | # | Project | What it covers here |
 |---|---|---|
 | P01 | [Risk Register](P01_risk-register/_context.md) | Group and division registers. Division registers roll up to group ERM. |
-| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Electronic health record (EHR) and practice management system. |
+| P02 | [System Security Plan (SSP)](P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Group Data Platform. |
 | P03 | [Regulatory Gap Analysis](P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: HIPAA Security Rule. |
 | P04 | [Control-to-Cloud Architecture Mapping](P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. |
 | P05 | [Business Impact Analysis (BIA)](P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. |

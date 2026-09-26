@@ -199,6 +199,11 @@ def scenario_facts(u, tier_id, vd):
     title = f"{COMPANY} | {u['name']} | {t['name']}"
     if tier_id == "t6":
         business = f"{business} (one division of a diversified holding company)"
+    facts = unit_dir(u, S) / t["slug"] / "scenario-facts.md"
+    if facts.exists():  # a completed sample names its own SSP system
+        m = re.search(r"\*\*SSP system \(P02\):\*\* the \*([^*]+)\*", facts.read_text())
+        if m:
+            system = m.group(1)
     return {
         "company": COMPANY, "scenario_title": title, "tier_name": t["name"], "vertical_name": u["name"],
         "naics": naics6, "business": business, "headcount": headcount_text(p), "system_name": system,

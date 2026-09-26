@@ -31,7 +31,7 @@
 
 ## 1. Preparation checks (Identify / Protect)
 - [ ] Immutable backups in separate accounts, restore-tested within the last 90 days for tier-1 systems (CP-9, CP-4)
-- [ ] EDR on all endpoints and servers, **including AQ-06 to AQ-08 (gap until POAM-013 closes)**
+- [ ] EDR on all endpoints and servers, **including AQ-07 and AQ-08 (gap until POAM-013 closes)**
 - [ ] SIEM receives logs from all ePHI systems, **except the AQ-07 and AQ-08 EHRs (gap until POAM-005 closes)**; logs retained 1 year online and 6 years in the archive (AU-11)
 - [ ] Break-glass accounts sealed and tested this quarter (POL-02 4.11)
 - [ ] Downtime kits and the EHR read-only downtime service verified at clinics, the lab, imaging, and ASCs (P05)
