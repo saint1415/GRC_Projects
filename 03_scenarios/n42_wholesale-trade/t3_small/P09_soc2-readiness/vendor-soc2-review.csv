@@ -1,0 +1,13 @@
+review_item,what_to_check,portal_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability needed for the resellers' request,Security; Availability,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Portal application, catalog and ordering services, API used for the ERP sync, and supporting infrastructure",All in scope; the hosting provider and the hosted payment page provider are carved-out subservice organizations,Obtain the hosting provider's SOC 2 summary; payment page is outside company systems by design
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Hosting provider and payment page provider carved out; vendor monitors both annually per its description,Confirm in the next report that monitoring was tested
+Exceptions noted,Any test exceptions and management responses,1 exception: 2 of 40 sampled production changes lacked documented approval; remediated with a new approval gate in 2026-04,Accept; check in the next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,Enable and enforce MFA for customer users; provision and remove users; review user access; protect API credentials for integrations; review portal audit logs; report suspected incidents to the vendor,"Map to company controls IA-2(2), AC-2, IA-5, AU-6, IR-6. Gaps: reseller MFA optional (CC6.1), no user review (CC6.2), no log review (CC7.2)"
+Availability commitments,Uptime and recovery objectives vs the company's BIA (BP-03: RTO 8 h; RPO 1 h),99.9% monthly uptime; RTO 4 h; RPO 1 h stated in the system description,Meets BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,"Notify affected customers without undue delay after confirming an incident, per the system description; no fixed hours in the contract",Negotiate 72-hour security incident notice at renewal
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-09-30 requested,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-08-20,Annual
