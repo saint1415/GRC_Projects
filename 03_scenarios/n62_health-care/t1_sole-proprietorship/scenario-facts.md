@@ -74,3 +74,17 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 |---|---|
 | 2026-07-20 to 2026-07-24 | Self-assessment with the on-call IT consultant (after BAA signature) |
 | 2026-08-31 | Deliverables adopted by the physician-owner |
+
+## 7. Facts added while building the deliverables (Phase 2)
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| IT consultant BAA | The on-call IT consultant signed a BAA on 2026-07-17, before the self-assessment began. Before that date the consultant had remote access to the laptop with no BAA. The consultant's remote-support tool was still installed with unattended access turned on (found in P07 testing on 2026-07-23 and turned off that day) | P01, P03, P07, P08 |
+| AI scribe trial dates | The owner used the consumer AI scribe app for two weeks, 2026-07-06 to 2026-07-17 (8 clinic days, about 96 recorded visits), and paused it on 2026-07-20 when the self-assessment started. Patients were not asked for consent before recording | P01, P10 |
+| Billing company access | The billing company works claims in the EHR/PM through its own named user accounts with a billing role, and submits claims electronically to payers on the practice's behalf | P02, P04, P05 |
+| Clinical photos | Skin-condition photos are taken with the phone camera and stay in the phone's camera roll. Only some are uploaded to the EHR chart | P01, P04, P05 |
+| Cyber insurance | No standalone cyber insurance policy. Whether the professional liability policy includes a cyber endorsement is unconfirmed (owner action in P08) | P01, P08 |
+| EHR vendor assurance | The EHR vendor provided its SOC 2 Type 2 report (Security and Availability categories) under a nondisclosure agreement. The owner reviewed it on 2026-07-23 | P02, P09 |
+| EHR decision support | The EHR has rule-based preventive care and drug interaction reminders that the owner uses during visits (AI-002 in the P10 inventory) | P10 |
+| Cloud fax MFA | The cloud fax portal supports MFA, but it was not turned on (found in P04 mapping) | P04 |
