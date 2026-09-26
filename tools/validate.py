@@ -30,10 +30,12 @@ families = {c.split("-")[0] for c in ctrl_ids}
 CSF_RE = re.compile(r"\b(?:GV|ID|PR|DE|RS|RC)\.[A-Z]{2}(?:-\d{2})?\b")
 CTRL_RE = re.compile(r"\b(" + "|".join(sorted(families)) + r")-(\d{1,2})(\((\d{1,2})\))?(?![\d.])")
 
+CSF_V1_FILES = {"hipaa-nist-official-mapping.csv"}
 layer_files = [p for d in (U / "projects", U / "cross-sector", T, V) for p in d.rglob("*") if p.suffix in (".md", ".csv")]
 for p in layer_files:
     text = p.read_text()
-    for m in CSF_RE.findall(text):
+    csf_check = p.name not in CSF_V1_FILES  # official NIST files that cite CSF 1.1 on purpose
+    for m in CSF_RE.findall(text) if csf_check else []:
         if m not in csf_ids:
             errors.append(f"{p.relative_to(ROOT)}: unknown CSF 2.0 ID {m}")
     if p.parent.name.startswith("P") or p.parent == U / "projects":

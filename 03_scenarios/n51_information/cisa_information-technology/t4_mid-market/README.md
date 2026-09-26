@@ -12,7 +12,7 @@ This folder is a self-contained scenario. Read this page first, then open any pr
 | Legal form | Privately held corporation |
 | Ownership | Private equity-backed; board with an audit committee |
 | Employees | 600 employees |
-| Annual receipts (fictional) | $80.0 million |
+| Annual receipts (fictional) | $100.0 million |
 | Size tier | Mid-Market: Business that exceeds the SBA size standard for its primary NAICS industry and has fewer than 1,000 employees |
 | SBA size status | Not small (SBA standard for NAICS 518210: $40.0 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 518210 Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services |

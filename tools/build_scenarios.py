@@ -104,7 +104,7 @@ def size_profile(tier_id, naics6):
         elif basis == "assets_musd":
             p.update(employees=600, assets=2500.0)
         else:
-            p.update(employees=600, receipts=round(cap * 2, 1) if cap else 150.0)
+            p.update(employees=600, receipts=max(round(cap * 2, 1), 100.0) if cap else 150.0)
     elif tier_id == "t5":
         p.update(employees=12000, receipts=4800.0)
     elif tier_id == "t6":

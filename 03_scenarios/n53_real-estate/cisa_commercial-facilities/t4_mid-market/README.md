@@ -12,7 +12,7 @@ This folder is a self-contained scenario. Read this page first, then open any pr
 | Legal form | Privately held corporation |
 | Ownership | Private equity-backed; board with an audit committee |
 | Employees | 600 employees |
-| Annual receipts (fictional) | $68.0 million |
+| Annual receipts (fictional) | $100.0 million |
 | Size tier | Mid-Market: Business that exceeds the SBA size standard for its primary NAICS industry and has fewer than 1,000 employees |
 | SBA size status | Not small (SBA standard for NAICS 531120: $34.0 million in average annual receipts; 13 CFR 121.201). See footnote 9 in 13 CFR 121.201 for exceptions. |
 | Primary industry | NAICS 531120 Lessors of Nonresidential Buildings (except Miniwarehouses) |
