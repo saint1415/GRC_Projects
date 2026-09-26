@@ -13,6 +13,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Ownership | Privately held. Cris Santos is the majority shareholder of the holding company and chairs both boards |
 | Workforce | 120 employees: 48 in the branches (tellers, universal bankers, branch managers), 22 in lending, 18 in deposit and loan operations (including the wire room), 14 in finance, compliance, BSA and risk, 8 in IT and security, 10 in executive and administrative roles |
 | Size | $510 million in total assets (fictional). Under the SBA size standard of $850 million in total assets for NAICS 522110, so SBA-small |
+| Revenue | About $20 million a year in net revenue (fictional), about $80,000 per business day; used to scale BIA impact values (P05) |
 | Customers | About 13,800 consumer and 2,200 business deposit customers. About 9,000 consumer and 1,400 business users are enrolled in online and mobile banking |
 | Payments volume | About 35 outgoing wires per business day (about $4 million per day on average); 140 business customers originate ACH through business online banking |
 | Lending | $380 million loan portfolio. About 350 small business loan applications a year, most under $250,000 |

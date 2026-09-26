@@ -1,2 +1,27 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment including supply chain threats,RA-3; PM-9,ID.RA-01,N42-R03 (SP 800-171 R2 3.11.1),No
+POL-01,4.8,No SPRS score or CMMC affirmation without a documented assessment,CA-2,GV.OV-01,N42-R02 (32 CFR 170.22); DFARS 252.204-7019/-7020,No
+POL-01,4.9,FedRAMP Moderate or equivalent cloud for CUI; provider reviews,SA-9,GV.SC-05,N42-R03 (252.204-7012(b)(2)(ii)(D)),Yes
+POL-01,4.11,"C-SCRM plan per SP 800-161 Rev. 1, reviewed annually",SR-1; SR-2; PM-30,GV.SC-01,DFARS 252.246-7008(b) (Prime B subcontract),Yes
+POL-01,4.12,Authorized sources first; approved brokers only; no brokers for DoD jobs without approval,SR-5; SR-6,GV.SC-06,DFARS 252.246-7008(b)(1)-(2) (Prime B subcontract),Yes
+POL-01,4.13,Manufacturer of record for every SKU; block covered manufacturers on federal orders,SR-5; SR-3,GV.SC-07,N42-R05 (52.204-25(b)),Yes
+POL-01,4.14,Supplier notice and flowdown terms in purchase orders,SR-8; SR-3,GV.SC-05,N42-R05 (52.204-25(e)); DFARS 252.246-7008(e) (Prime B subcontract),No
+POL-02,4.1,Unique accounts; no shared WMS zone accounts,IA-2; AC-2,PR.AA-01,N42-R04 (52.204-21(b)(1)(v)); N42-R03 (SP 800-171 R2 3.5.1),Yes
+POL-02,4.3,CUI access list for the CUI share and lab,AC-3,PR.AA-05,"N42-R03 (SP 800-171 R2 3.1.1, 3.1.2)",Yes
+POL-02,4.4,"MFA for all sensitive and administrator access, including the CUI share",IA-2(1); IA-2(2),PR.AA-03,N42-R03 (SP 800-171 R2 3.5.3),Yes
+POL-02,4.5,Same-day access removal; lab exit checklist,PS-4; AC-2,PR.AA-05,N42-R03 (SP 800-171 R2 3.9.2),No
+POL-02,4.11,"VPN with MFA; MSP sessions authorized, approved, and timed out",AC-17; MA-4,PR.AA-05,"N42-R03 (SP 800-171 R2 3.1.12, 3.1.15, 3.7.5)",Yes
+POL-03,4.2,Report suspected incidents and suspect products within 1 hour,IR-6,RS.MA-02,N42-R03 (SP 800-171 R2 3.6.2),Yes
+POL-03,4.4,"Quarantine suspect counterfeit, tampered, or covered items",SR-11; IR-4,RS.MA-01,DFARS 252.246-7008(b)(3)(ii) (Prime B subcontract),Yes
+POL-03,4.5,"Meet DIBNet 72-hour, Section 889 1-business-day, and sourcing notice clocks",IR-6,RS.CO-02,N42-R03 (252.204-7012(c)); N42-R05 (52.204-25(d)),Yes
+POL-03,4.6,Preserve images and monitoring data 90 days after a DIBNet report,IR-4; AU-11,RS.AN-03,N42-R03 (252.204-7012(e)),Yes
+POL-03,4.9,Annual incident response tabletop,IR-3,ID.IM-02,N42-R03 (SP 800-171 R2 3.6.3),No
+POL-04,4.2,"CUI only in the CUI share, lab workstations, and prime file share",AC-4; AC-3,PR.DS-10,N42-R03 (SP 800-171 R2 3.1.3; 252.204-7012(b)(2)(ii)(D)),Yes
+POL-04,4.4,FIPS-validated encryption for CUI,SC-13; SC-28,PR.DS-01,"N42-R03 (SP 800-171 R2 3.13.11, 3.13.16)",Yes
+POL-04,4.5,USB storage blocked; issued encrypted drives only in the lab,MP-7,PR.DS-01,"N42-R03 (SP 800-171 R2 3.8.7, 3.8.8)",Yes
+POL-04,4.7,FCI only to vendors bound by FAR 52.204-21; DoD orders excluded from forecasting feed,SA-9,GV.SC-05,N42-R04 (52.204-21(b)(1)),Yes
+POL-04,4.9,Isolated immutable backups tested quarterly,CP-9,PR.DS-11,N42-R03 (SP 800-171 R2 3.8.9),Yes
+POL-05,4.3,Annual and quarterly training; phishing exercises; role-based and anti-counterfeit training,AT-2; AT-3; SR-11(1),PR.AT-01,"N42-R03 (SP 800-171 R2 3.2.1, 3.2.2, 3.2.3)",Yes
+POL-05,4.6,Call-back verification of bank-detail changes,AT-2,PR.AT-01,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-05,4.10,Approved generative AI tools only; no CUI or FCI in AI tools,PL-4,GV.PO-01,N42-R03 (SP 800-171 R2 3.1.20),No
+POL-05,4.11,Escort visitors; drivers stay in the driver area,PE-3,PR.AA-06,N42-R03 (SP 800-171 R2 3.10.3); N42-R04 (52.204-21(b)(1)(ix)),Yes

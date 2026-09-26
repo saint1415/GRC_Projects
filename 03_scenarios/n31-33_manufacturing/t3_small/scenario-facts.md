@@ -103,9 +103,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | P02 SSP | Device Cloud Service (DCS) |
 | P03 regulation | Primary: FD&C Act section 524B, with the FDA regulations and guidance that implement it (21 CFR 803, 806, 820; FDA premarket cybersecurity guidance issued 2026-02-03; FDA postmarket cybersecurity guidance, December 2016). Secondary: HIPAA Security Rule for the device cloud as a business associate |
 | P04 cloud | The device cloud on a public cloud tenant plus the SaaS services that support it. Vendor-agnostic; AWS, Azure, and Google Cloud names appear only in an equivalents table |
+| P05 BIA | 11 business processes (BP-01 to BP-11). BP-01 remote monitoring: MTD 4 h, RTO 2 h, RPO 15 min |
+| P07 assessment | 22 controls on the DCS plus the device update path; 20 POA&M items (POAM-001 to POAM-020). R-032 response: customer advisory by 2026-09-11 and fixed firmware by 2026-10-11 (30 and 60 days after 2026-08-12); an 806.10 report is planned because ISAO membership is not yet active |
 | P08 incident | Exploited vulnerability in a fielded PM-2 monitor, with coordinated disclosure, hospital and FDA communications, and HIPAA business associate duties if PHI in the device cloud is affected |
-| P09 SOC 2 | (a) SOC 2 Type 2 readiness for the device cloud (Security, Availability, Confidentiality), requested by hospital customers; (b) review of the cloud provider's SOC 2 Type 2 report (subservice organization) |
-| P10 AI | AI-001 skin-image analysis function (in development); AI-002 generative AI coding assistants used by engineers |
+| P09 SOC 2 | (a) SOC 2 Type 2 readiness for the device cloud (Security, Availability, Confidentiality), requested by hospital customers. Target observation period 2027-01-01 to 2027-06-30, report by 2027-09-30; (b) review of the cloud provider's SOC 2 Type 2 report (subservice organization; period 2025-04-01 to 2026-03-31) |
+| P10 AI | AI-001 skin-image analysis function (in development): flags possible stage 1 and deep tissue pressure injuries in photos nurses take of at-risk skin; locked model built in-house and run in the device cloud; trained on 14,200 de-identified images from 3 partner hospitals (Fitzpatrick I-II 48%, III-IV 39%, V-VI 13%). AI-002 enterprise generative AI coding assistant (10-engineer pilot from 2026-11-01); AI-003 unapproved public AI assistants (prohibited) |
 
 ## 6. Assessment calendar (fictional)
 

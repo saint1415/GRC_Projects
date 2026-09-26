@@ -74,7 +74,7 @@
 
 ## 5. MANAGE
 **Human-in-the-loop design:**
-- The model recommends. The loan officer decides and records their own analysis of cash flow and collateral in the LOS before seeing the recommendation is final.
+- The model recommends. The loan officer decides, and records their own analysis of cash flow and collateral in the LOS before the decision is final.
 - From 2026-09-15, a second credit officer reviews every model-recommended decline before the notice goes out.
 - Officers may override in either direction with a written reason. Overrides are tracked by group as part of the bias testing plan.
 - The model cannot decline an application automatically.
