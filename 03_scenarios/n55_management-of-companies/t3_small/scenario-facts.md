@@ -55,7 +55,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-10 | Supply distribution and warehouse management system | Vendor SaaS (subsidiary system) | Contractor customer accounts and pricing | Single sign-on through SYS-02 |
 | SYS-11 | Home Services field-service management system | Vendor SaaS (subsidiary system) | Consumer names, addresses, service history | **Local accounts, not in single sign-on** (see gaps) |
 | SYS-12 | Finance loan origination and servicing system | Vendor SaaS (subsidiary system) | Customer information: SSNs, bank accounts, credit reports, payment history | Single sign-on through SYS-02. Vendor has a SOC 2 Type 2 report |
-| SYS-13 | Generative AI assistant (enterprise add-on to SYS-03) | SaaS | Whatever the user can reach in SYS-03 | Pilot with 25 users across all four entities since 2026-07-06 (see P10) |
+| SYS-13 | Generative AI assistant (enterprise add-on to SYS-03) | SaaS | Whatever the user can reach in SYS-03 | Pilot with 25 users across all four entities since 2026-07-06 (holding company 12, Supply 6, Home Services 3, Finance 4; no Home Services technicians). Plugins, connectors, and agent features off. Interviews found 5 other employees using free public chatbots (see P10) |
 
 **SSP system (P02):** the *Shared Corporate Services Platform (SCSP)*: SYS-01, SYS-02, SYS-03 (including SYS-13), SYS-04, SYS-05, SYS-08, SYS-09, and their interfaces to SYS-06, SYS-07, SYS-10, SYS-11, and SYS-12.
 
@@ -80,7 +80,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 2. Written security policies exist only in Finance's 2023 WISP, which has not been updated. The holding company, Supply, and Home Services have no adopted policies.
 3. The Qualified Individual's annual written report to Finance's Board of Managers was not delivered for 2025, and Finance's written risk assessment has not been updated since 2023 (16 CFR 314.4(b), (i)).
 4. The shared identity tenant is flat. It has 7 global administrator accounts (including 2 MSP accounts). Administrators use push MFA, not phishing-resistant MFA. No conditional access policy blocks unmanaged devices.
-5. File sharing is too broad. 3 of 41 collaboration sites grant access to all group employees, including Finance's loan-documents archive (about 2,100 files with customer information). This was found on 2026-08-12, when the AI assistant pilot showed a loan document to a Supply user.
+5. File sharing is too broad. 3 of 41 collaboration sites grant access to all group employees, including Finance's loan-documents archive (about 2,100 files with customer information). This was found on 2026-08-12, when the AI assistant pilot showed a loan document to a Supply user. The other two all-employee sites are the group HR site (benefits enrollment exports) and the group accounting site (vendor bank-detail forms). Finance sent a notice letter to the one affected consumer on 2026-08-21; FTC notice was not required (one consumer, below the 500-consumer threshold in 16 CFR 314.4(j)).
 6. There is no central log collection or review. Identity sign-in and email audit logs are kept only for the 30 days the current license allows.
 7. EDR alerts are monitored only during business hours by the IT team. Nobody covers nights or weekends.
 8. Email and files in the productivity suite have no independent backup. Cloud tenant backups share the production account and region. No restore has ever been tested.

@@ -89,7 +89,7 @@
 | Within 5 business days of a Visa PFI notice | PFI contracted; Visa and acquirer told the PFI's name | Controller |
 | Day 0-5 | Staff briefing: what happened, fallback steps, do not discuss outside the hotel | General Manager |
 | As soon as practical | Voluntary report to the U.S. Secret Service or FBI (IC3) | IT Manager |
-| Within 30 days of determination | Florida individual notices; Department of Legal Affairs notice if 500+ Florida residents (15-day extension possible with written good cause) | General Manager and counsel |
+| Within 30 days of determination | Florida individual notices; Department of Legal Affairs notice if 500+ Florida residents (individual notices may get a 15-day extension with written good cause) | General Manager and counsel |
 | Without unreasonable delay | Consumer reporting agencies if more than 1,000 individuals are notified | General Manager and counsel |
 | Per each state | Notices to non-Florida residents; most guests live outside Florida | Counsel |
 

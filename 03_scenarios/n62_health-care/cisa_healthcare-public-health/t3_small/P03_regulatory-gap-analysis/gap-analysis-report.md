@@ -27,7 +27,7 @@ HIPAA rows excluded, with reasons:
 | HIPAA Breach Notification Rule (C-HPH-R02), 45 CFR 164.400-414 | Applies | Drives the P08 notification matrix |
 | Fla. Stat. 501.171 | Applies | Florida breach notice; in the P08 matrix |
 | EMTALA, 42 CFR 489.24 | Applies | 489.24(b) defines "hospital" to include a CAH. Governs how the ED may use diversion during an IT outage (P08) |
-| Medicare Promoting Interoperability Program, 42 CFR 495.24 | Applies (payment program) | CAHs attest to a security risk analysis under 45 CFR 164.308(a)(1). For 2023 and later, CMS selects the measures in annual rulemaking (495.24(f)); confirm the current list in the latest IPPS final rule. P01 supports the attestation |
+| Medicare Promoting Interoperability Program, 42 CFR 495.24 | Applies (payment program) | CAHs attest to a security risk analysis under 45 CFR 164.308(a)(1). For 2023 and later, a CAH must meet the objectives and measures CMS selects for each EHR reporting period (495.24(f)(1)(i)(A)); confirm the current list in the latest IPPS final rule. P01 supports the attestation |
 | Section 1557, 45 CFR 92.210 (parent vertical ID N62-R07) | Applies | Medicare Part A and Medicaid are federal financial assistance. Drives the sepsis model review in P10 |
 | HHS HPH CPGs (C-HPH-R08) and 405(d) HICP (C-HPH-R09) | Voluntary | HHS describes the CPGs as a voluntary subset of practices. HICP (2023 edition) classes hospitals of 1-50 beds as small organizations, so Technical Volume 1 applies. Neither is incorporated into 485.625 |
 | HITECH recognized security practices (C-HPH-R10), 42 U.S.C. 17941 | Applies as a mitigating factor | OCR must consider recognized security practices in place for the prior 12 months. Operating the CPGs and HICP practices now builds that record |
