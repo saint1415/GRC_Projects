@@ -122,3 +122,21 @@ All 10 deliverables in this folder use the facts below. The company, the hydroel
 | 2026-09-30 | Plan and schedule for Form 3 negative responses sent to the FERC Regional Engineer, with a corrected statement on the 2025 certification letter |
 | 2026-11-17 | Next FERC dam safety inspection (security portion included) |
 | 2026-12-31 | 2026 Annual Security Compliance Certification Letter due (Security Program Rev. 3A, 8.0) |
+
+## 7. Facts added while completing the deliverables (fictional)
+
+| Fact | Used in |
+|---|---|
+| Additional role titles: Field Services Manager and Recreation and Lands Manager (process owners) | P05 |
+| About $59,700 of revenue per day ($21.8 million over 365 days); generation about $37,800 per day; field services about $17,600 per working day | P05 |
+| Remediation budget of $265,000 for 2026 Q4 to 2027 Q2, approved by the President on 2026-08-31; about $24,600 of related costs (training, kiosk, retainer, outside review, carrier fee) come from the 2027 operating budget | P01, P07 |
+| Section 9 determination on 2026-07-16: Form 3 Q1-3 Yes, Q4 No; the gate release scenario exceeds the Table 9.1c threshold of more than 60 people within 3 miles; the whole PCDMS is treated as Critical | P02, P03 |
+| An upstream county-owned water control structure is the only other dam in the basin; no contact procedure exists yet | P03, P08 |
+| A 2023 gate hoist failure was reported under 18 CFR 12.10 with a written report; in 2025 operators isolated the OT network and ran gates locally during a SCADA server failure | P03, P07 |
+| Instrumentation monitoring plan (rev. 2025-03) defines trigger points for all 64 instruments; annual sheriff meeting held 2026-02-10 | P03 |
+| Corporate server backups are restore-tested quarterly; immutable retention is not yet enabled | P03, P04 |
+| SCADA event journal keeps 90 days; SCADA locks accounts after 5 failed sign-ins; SCADA passwords require 12 characters | P02, P07 |
+| Interim control from 2026-09-15: after-hours remote HMI access is view-only; gate and unit commands only from the control room or local panels | P02, P07, P08 |
+| P07 test details: 1,412 gate and unit commands in July 2026 attributed to the shared account; last PLC and HMI backup 2026-04-11 and 2 governor configurations never backed up; 11 of 38 control network devices missing from the 2018 drawings; a test laptop on the control LAN undetected for 2 hours; 3 unlabeled USB drives in the control room; 3 of 8 staff interviewed unaware of cyber reporting; 2 of 4 gate enclosure keys not in the key register | P07 |
+| Instrumentation vendor SOC 2 Type 2: period ending 2026-03-31, unqualified, 1 exception; RTO 8 hours, RPO 1 hour; AI module released after the period | P09 |
+| AI-001 pilot results: back-test detected 21 of 23 historical events (open-standpipe piezometers 4 of 6); 214 shadow-mode alerts from 2026-04-01 to 2026-08-15, 9 confirmed; wet-season false alarms 1.9 a day vs 0.6 in the dry season. Staff briefed on generative AI rules on 2026-08-28 | P10 |

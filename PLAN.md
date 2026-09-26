@@ -145,6 +145,7 @@ All Small tier, Florida, partially compliant.
 | FAR overhaul (proposed Part 40, NIST SP 800-171 Rev. 3, 72-hour CUI reporting) | Proposed June 2026 | Federal contractor scenarios |
 | NERC CIP future versions | Effective 2028-2029 | Utilities and Energy |
 | TSA pipeline directives 01G and 02G | Expire 2027-01-15 and 2027-05-02 | Energy |
+| NIST SP 800-82 Rev. 4 (OT security guide) | Initial public draft published 2026-09-21; Rev. 3 remains final | OT samples (utilities, water, dams, energy, manufacturing, transportation) |
 | NIST SP 800-60 Rev. 2 | Working draft | P02 categorization |
 | New state privacy laws | Oklahoma, Louisiana (2027-01-01), Alabama (2027-05-01), Vermont (2028-01-01) | Cross-sector |
 | FBI CJIS Security Policy | v6.1 (2026-06-25) is current; 1-hour incident reporting | Public Administration, Emergency Services |
