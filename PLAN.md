@@ -1,6 +1,6 @@
 # Plan: Completing the GRC Project List for Cris Santos Company
 
-**Status as of 2026-09-26:** Phases 0, 1, and 2 are complete. Health Care is finished at all six sizes (60 deliverables), each validated. Phase 3 (the named verticals at Small) is next.
+**Status as of 2026-09-26:** Phases 0 to 3 are complete: 14 finished samples (140 deliverables), each validated. Health Care is finished at all six sizes, and the eight named verticals are finished at Small. Phase 4 (remaining verticals at Small) is next.
 
 ---
 
@@ -67,7 +67,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 | **0. Foundation** (done) | Universal layer, tiers, 36 verticals, generator, validator, 216 scaffolds | Repository structure | Any scenario is ready to fill in |
 | **1. Flagship** (done) | **Health Care (NAICS 62), Small** | 10 completed deliverables | One end-to-end sample for meetings. It mirrors the Notion HIPAA project |
 | **2. Scalability ladder** (done) | Health Care across all 6 tiers | 50 more (5 tiers x 10) | Shows the same method scaling from a sole practitioner to a multi-sector enterprise |
-| **3. Named verticals** | Small tier for Manufacturing (31-33), Wholesale (42), Retail (44-45), Transportation and Warehousing (48-49), Information/SaaS (51), Finance (52), Education (61), Defense Industrial Base (CISA) | 80 (8 x 10) | Covers the industries you named, including supply chain and federal/defense |
+| **3. Named verticals** (done) | Small tier for Manufacturing (31-33), Wholesale (42), Retail (44-45), Transportation and Warehousing (48-49), Information/SaaS (51), Finance (52), Education (61), Defense Industrial Base (CISA) | 80 (8 x 10) | Covers the industries you named, including supply chain and federal/defense |
 | **4. Full sector coverage** | Small tier for every remaining vertical (27) | 270 | Every NAICS and CISA sector has at least one complete sample |
 | **5. Full matrix** (optional) | Remaining tier x vertical combinations | Up to 1,750 more (2,160 total) | Complete library. Prioritize by meeting demand |
 
@@ -99,6 +99,30 @@ The Notion list orders projects by career value. Building them in **dependency o
 - Specialty mix scaled from the Phase 1 practice.
 
 **Official NIST HIPAA mapping obtained:** OLIR 110 and 109 were added to the Health Care vertical and shown in every P03 gap analysis (see `02_verticals/n62_health-care/hipaa-crosswalk-README.md`).
+
+### Phase 3 record (completed 2026-09-26)
+All Small tier, Florida, partially compliant.
+
+| Vertical | Business | P03 regulation | Risks (High+) | P07 controls (statements) |
+|---|---|---|---|---|
+| Manufacturing (31-33) | Connected medical device maker | FD&C Act 524B and FDA guidance (Feb. 3, 2026) | 32 (5) | 22 (129) |
+| Defense Industrial Base (CISA) | Aircraft parts maker with CUI | NIST SP 800-171 Rev. 2 (110 requirements), CMMC Level 2 | 32 (7) | 20 (131) |
+| Wholesale (42) | IT distributor, supply chain focus | SP 800-171 Rev. 2 for the CUI stream, FAR 52.204-21, C-SCRM | 35 (9) | 25 (130) |
+| Retail (44-45) | One-store grocery with online ordering | PCI DSS v4.0.1 | 32 (3) | 22 (149) |
+| Transportation (48-49) | Marine cargo terminal | USCG 33 CFR 101 Subpart F | 33 (4) | 24 (155) |
+| Information (51) | Workforce scheduling SaaS | SOC 2 TSC with FTC Act Section 5 | 34 (4) | 23 (164) |
+| Finance (52) | Cris Santos Bank, N.A. (OCC) | 12 CFR 30 App. B and 12 CFR 53 | 32 (5) | 21 (153) |
+| Education (61) | Private career college (Title IV) | FTC Safeguards Rule 16 CFR 314 and FERPA | 33 (4) | 24 (164) |
+
+**Decisions confirmed with you:**
+- SaaS gap target is SOC 2 plus the FTC Act, with the CCPA as an applicability check only.
+- All eight companies are in Florida.
+- The bank has a national (OCC) charter.
+- The grocery has no pharmacy.
+
+**Regulatory changes found and verified:**
+- FDA reissued its premarket cybersecurity guidance on 2026-02-03.
+- CFPB amended Regulation B, effective 2026-07-21, so the "effects test" no longer applies (12 CFR 1002.6(a)).
 
 ---
 
