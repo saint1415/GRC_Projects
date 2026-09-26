@@ -1,0 +1,14 @@
+review_item,what_to_check,waste_tracking_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,Security required; Availability and Confidentiality needed for the company's use,Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Waste tracking application, customer portal, manifest module, and supporting infrastructure in scope",All in scope; the e-signature service is a carved-out subservice organization,Obtain the e-signature provider's assurance summary
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Cloud hosting provider carved out,Confirm the vendor reviews the hosting provider's SOC 2 (listed as a complementary subservice organization control)
+Exceptions noted,Any test exceptions and management responses,1 exception: quarterly access review completed late in one quarter; remediated,Accept; monitor in next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,Customer administers its users and roles; enforces MFA through its identity provider; reviews user access periodically; protects exported manifests and reports,"Map to company controls AC-2, IA-2(1), AC-6. Access reviews are a company gap (POAM-006)"
+Availability commitments,Recovery objectives vs the company's BIA (BP-03 RTO 8 h; RPO 4 h),RTO 8 h; RPO 1 h stated in the system description,Meets BIA; confirm in contract
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Audit trail for regulated records,Manifest and container changes logged with user and time,Change history retained for the contract term,Confirm export of change history at contract end (40 CFR 264.74 retention)
+Incident notification,Vendor commitment to notify customers,Notify within 72 hours of confirmation per system description,Negotiate 24-hour notice at renewal
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-07-31 received,None
+Review sign-off,Reviewer and date,IT Manager and Compliance and Transportation Manager 2026-08-20,Annual
