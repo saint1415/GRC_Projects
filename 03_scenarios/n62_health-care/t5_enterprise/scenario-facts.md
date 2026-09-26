@@ -77,3 +77,41 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis |
 | 2026-07-13 to 2026-08-28 | Control assessment (internal audit, second-line GRC) |
 | 2026-09-10 | Results to the risk committee |
+
+## 7. Facts added for the Phase 2 deliverables
+These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Sites and volumes.** 159 sites in total: 140 clinics, 6 ASCs, 12 imaging centers, and 1 central lab (Florida). About 36,000 clinic visits per business day. Revenue of about $4.8 billion a year is about $13.2 million per calendar day (about $18.5 million per business day).
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Information Officer (CIO) | IT operations; owns the enterprise platform (common control provider) |
+| Chief Operating Officer (COO) | Business owner for clinical operations; authorizing official for the LIS (P02) |
+| Chief Audit Executive | Heads Internal Audit; reports to the audit committee; leads the P07 assessment |
+| Chief Compliance Officer | Regulatory compliance program; second line with the GRC team |
+| Controller | SOX program owner for financial reporting controls |
+| Vice President, Laboratory Services | LIS system owner and owner of the lab reference testing service line |
+| Laboratory Director (CLIA) | CLIA laboratory director for the central lab (42 CFR Part 493) |
+| Vice President, Revenue Cycle | Clearinghouse relationship and claims fallback |
+| Vice President, Integration Management Office | Integration of acquired practices |
+| Vice President, Digital Health | Patient-app platform service line owner |
+| Director of Clinical Engineering | Medical device inventory and device security |
+| Director of Identity and Access Management | Identity platform (SYS-02) |
+| Director of Third-Party Risk Management | Vendor tiering, BAAs, SOC report reviews (in the GRC team) |
+| Vice President, ASC Operations | The 6 ASCs and their emergency preparedness programs |
+| Chief Human Resources Officer | Workforce onboarding, terminations, and training records |
+| LIS Application Manager | Day-to-day LIS administration and test build (reports to the Vice President, Laboratory Services) |
+| Director of Cloud Platform Engineering | Cloud landing zones in both clouds (common control provider) |
+
+**Acquired practices.** AQ-01 to AQ-08 (8 practices acquired 2025-2026). AQ-01 to AQ-05 are fully integrated. AQ-06, AQ-07, and AQ-08 remain on legacy identity directories and flat networks (the "3 of 8"). AQ-07 (acquired 2025-11) and AQ-08 (acquired 2026-04) still run their own EHR instances (the "2 of 8"); their EHR migrations are due 2026-11-30 and 2027-04-30. Together AQ-06 to AQ-08 have about 610 workforce members and 14 sites (included in the 159).
+
+**Laboratory Information System (LIS).** Commercial LIS software, customer-managed on Cloud provider A (IaaS and managed database) in a dedicated workload account of the enterprise landing zone, with instrument middleware and analyzers on-premises at the central lab. About 26,000 test results per day; about 520 LIS user accounts; about 260 external client practices use the lab outreach portal (about 3,100 client user accounts). The central lab holds a CLIA certificate.
+
+**Claims routing.** Primary clearinghouse: 70% of claims. Secondary clearinghouse (legacy contract from acquisitions): 18%. Direct payer connections: 12%. Claims through the primary clearinghouse are about $64.6 million a week.
+
+**Service lines offered to external clients (P09).** SL-1: the patient-app platform, licensed to about 45 independent practices under business associate agreements (the group acts as a business associate for these clients). SL-1 has had an annual SOC 2 Type 2 report (Security, Availability, Confidentiality) since 2024. SL-2: lab reference testing for about 260 external client practices (no SOC 2 report yet).
+
+**42 CFR Part 2.** The group does not operate a federally assisted substance use disorder program. It receives some Part 2 records from outside programs with patient consent and handles them as a lawful holder (42 CFR 2.16(a) policies).
+
+**Recording consent.** Recording consent laws differ by state. The group applies all-party prior consent for ambient documentation in all four states, using Florida (Fla. Stat. 934.03(2)(d)) as the worked example.

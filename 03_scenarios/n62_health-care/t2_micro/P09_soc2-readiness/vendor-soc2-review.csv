@@ -1,0 +1,13 @@
+review_item,what_to_check,ehr_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because the practice cannot see patients without the EHR,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,EHR/PM platform; patient portal; e-prescribing; clearinghouse connection; lab interface; data centers,"Platform, portal, and interfaces in scope; clearinghouse and e-prescribing network are carved-out subservice organizations",Ask the vendor how it monitors the clearinghouse (it handles the practice's claims)
+Subservice organizations,Carve-out or inclusive; which hosting provider,"Hosting provider, clearinghouse, and e-prescribing network carved out; vendor states it reviews their SOC reports yearly",Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 terminated vendor employees' access removed late; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the practice must run for the vendor's controls to work,User provisioning and removal; role assignment; MFA enforcement; review of user access and audit reports,"Mapped to AC-2, IA-2(1), AU-6. Two are open gaps at the practice: removal (POAM-001, POAM-006) and review (POAM-008)"
+Availability commitments,Recovery objectives versus the practice's BIA (RTO 4 h; RPO 1 h for BP-01 to BP-03),RTO 4 h; RPO 15 min stated in the system description,Meets the BIA; ask for the same figures in the contract at renewal
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,System description: customers notified within 72 hours of confirming a security incident affecting their data; BAA requires breach notice per 164.410,Ask for security incident notice within 24 hours at BAA renewal
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager with the independent consultant, 2026-08-20",Repeat each year when the new report is issued

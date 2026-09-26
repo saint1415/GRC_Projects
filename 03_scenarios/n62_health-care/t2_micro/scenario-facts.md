@@ -75,3 +75,21 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-20 to 2026-07-31 | Risk analysis and gap analysis with the MSP |
 | 2026-08-10 to 2026-08-12 | Control assessment (independent consultant) |
 | 2026-08-31 | Deliverables approved by the owner physician |
+
+## 7. Facts added while building the deliverables
+These facts were added in Phase 2 because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Physicians | The owner physician and one **associate physician**. The associate physician runs the AI scribe pilot (started 2026-06-01) | P01, P10 |
+| Endpoints | SYS-03 is 6 desktops (2 front desk, 1 billing, 2 clinical stations, 1 procedure-room workstation connected to SYS-07) and 4 laptops (both physicians, office manager, billing). The 2 tablets are used by the physicians in exam rooms; they are MSP-managed with a passcode and built-in device encryption | P01, P02, P04, P07 |
+| Shared drive | The "shared drive" is the practice's shared folder in the productivity suite (SYS-02). It is synced to the desktops by the suite's sync client. SYS-05 copies it nightly and keeps 30 days of versions (the default). SYS-05 is administered with one MSP administrator account | P01, P04, P05, P08 |
+| Backup vendor | The SYS-05 subscription is held by the MSP and resold to the practice, so the backup vendor is the MSP's subcontractor. The MSP BAA requires subcontractor BAAs; flow-down has not been verified | P03, P04, P07 |
+| Clearinghouse and lab | The clearinghouse is contracted through the EHR vendor as its subcontractor. Reference laboratory orders and results flow through the EHR vendor's lab interface | P02, P05 |
+| Internet | One business internet line; no failover | P01, P05 |
+| Cyber insurance | The practice holds a cyber liability policy with a 24x7 breach hotline and panel vendors (breach counsel, forensics). The policy requires prompt notice and use of panel vendors | P08 |
+| Former MA account | Found active on 2026-07-21 during the risk analysis, 3 months after termination, and disabled that day. The EHR and email sign-in logs showed no use after the termination date | P01, P03, P07 |
+| Referral network | A local hospital's referral network sent a security questionnaire in July 2026; the response is due 2026-09-30 | P09 |
+| Assessor | The P07 assessor is an independent HIPAA security consultant, not involved in the risk analysis or in operating any control | P07 |
+| ECG workstation patching | P07 testing found that the MSP had excluded the procedure-room workstation (SYS-07 host) from patching since April 2026, at the device vendor's request, without telling the practice | P01, P07 |
+| Productivity suite BAA | The Office Manager accepted the productivity suite BAA in the admin console on 2026-08-14, after the fieldwork found the gap | P01, P03, P07 |

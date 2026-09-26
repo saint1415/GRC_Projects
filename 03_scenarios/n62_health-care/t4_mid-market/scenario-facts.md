@@ -84,3 +84,22 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-06 to 2026-07-31 | Risk analysis and gap analysis |
 | 2026-08-03 to 2026-08-21 | Control assessment (co-sourced internal audit) |
 | 2026-09-15 | Results to the audit committee |
+
+## 7. Facts added during the Phase 2 build (fictional; used across P01-P10)
+These details were added so the deliverables could be specific. They do not change sections 1-6.
+
+| Topic | Added fact |
+|---|---|
+| Sites | Clinics are numbered Clinic 1 to Clinic 8. The central business office (CBO) shares the headquarters building and network with Clinic 1, so the 10 network sites are the 8 clinics, the ASC, and the imaging center |
+| Segmentation | Medical devices are on a separate VLAN at Clinics 1-3, the ASC, and the imaging center. Clinics 4-8 are flat (devices share the workstation VLAN) |
+| Legacy systems | The 2 legacy Windows systems are the C-arm fluoroscopy console at the ASC and one MRI console at the imaging center. Both are vendor-locked; the vendors support them only on those versions |
+| Revenue split | Clinics about $60 million, ASC about $22 million, imaging center about $12 million, other ancillary services about $6 million, over about 250 operating days a year. That is about $240,000 per operating day for the clinics, $88,000 for the ASC, and $48,000 for the imaging center |
+| Clearinghouse | One clearinghouse handles eligibility, claims, and remittance for all payers. About $1.9 million in expected collections per week flows through it |
+| Cyber insurance | $10 million aggregate limit, $250,000 retention. The carrier's panel supplies breach counsel and forensics. The policy requires notice through the carrier hotline before incident vendors are engaged |
+| EHR vendor recovery commitments | The EHR vendor's SOC 2 system description states RTO 12 hours and RPO 1 hour. Each site has a downtime report workstation that receives an hourly read-only extract (schedules, medication lists, allergies, problem lists) |
+| Workforce activity | 118 terminations and 64 internal transfers in the 12 months to 2026-06-30. The last access review was completed in January 2026. The June 2026 phishing simulation click rate was 7.8% |
+| Backups | Daily backups of the workloads account to the backup account, with 35-day write-once retention and separate administrator credentials |
+| MSSP | 24x7 monitoring; contract requires a call to the Security Manager within 30 minutes of a high-severity alert. Medical devices, the PACS, and the interface engine do not send logs to the SIEM today |
+| Joint venture | A regional hospital system and the company are forming a joint venture for a second ASC. The company's CBO and the Enterprise Clinical Platform will provide revenue cycle and clinical platform services to the joint venture, which is why the partner asked for a SOC 2 Type 2 report |
+| AI tools | AI-001 scribe in use since 2026-02 (40 providers); AI-003 triage flags suspected intracranial hemorrhage on head CT and pulmonary embolism on chest CT angiography; AI-004 prior-authorization automation in use since 2025-11; AI-005 website chatbot in use since 2026-04 (scheduling and general questions). AI-002 is the EHR's built-in rule-based alert library (212 active rules) |
+| Terminology | "Enterprise Clinical Platform (ECP)" is the SSP system in P02, identifier CSC-ECP-01 |

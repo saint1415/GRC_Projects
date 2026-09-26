@@ -1,2 +1,44 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security Officer and Privacy Officer designated in writing,PM-2,GV.RR-02,N62-R01 (164.308(a)(2)),No
+POL-02,A.2,Annual risk analysis with SP 800-30; risks owned and treated,RA-3; PM-9,ID.RA-01,N62-R01 (164.308(a)(1)(ii)(A)-(B)),Yes
+POL-02,A.3,Risk acceptance authority; High risks never accepted,PM-9,GV.RM-01,N62-R01 (164.308(a)(1)(ii)(B)),No
+POL-02,A.4,HIPAA sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,N62-R01 (164.308(a)(1)(ii)(C)),No
+POL-02,A.5,"No BAA, no ePHI; MSP subcontractor BAAs checked yearly",SA-9,GV.SC-05,N62-R01 (164.308(b)(1); 164.314(a)),Yes
+POL-02,A.6,Annual independent evaluation,CA-2,ID.IM-01,N62-R01 (164.308(a)(8)),No
+POL-02,A.7,Six-year retention of security documentation,SI-12,GV.PO-02,N62-R01 (164.316(b)(2)(i)),No
+POL-02,A.8,Annual policy review; policies available to staff,PL-1,GV.PO-02,N62-R01 (164.316(b)(2)(ii)-(iii)),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,N62-R01 (164.316(a)),No
+POL-02,B.1,Unique accounts; no shared or generic accounts,IA-2; AC-2,PR.AA-01,N62-R01 (164.312(a)(2)(i)),Yes
+POL-02,B.2,Role-based least privilege with written approval,AC-2; AC-3; AC-6,PR.AA-05,N62-R01 (164.308(a)(4)(ii)(B)-(C)),Yes
+POL-02,B.3,MFA everywhere including MSP-held administrator logins,IA-2(1),PR.AA-03,N62-R01 (164.312(d)),Yes
+POL-02,B.4,Termination checklist completed by the last day,PS-4; AC-2,PR.AA-05,N62-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,B.5,Monthly account reconciliation; quarterly role check,AC-2; AC-6,PR.AA-05,N62-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,B.6,10-minute device lock; 15-minute EHR timeout; no exemptions,AC-11; AC-12,PR.AA-03,N62-R01 (164.310(c); 164.312(a)(2)(iii)),No
+POL-02,B.7,Emergency EHR administrator access,AC-2,PR.AA-05,N62-R01 (164.312(a)(2)(ii)),Yes
+POL-02,B.8,Named MSP and vendor accounts with MFA; yearly technician list,AC-17; IA-2(1); SA-9,PR.AA-05,N62-R01 (164.308(b)(1)),Yes
+POL-02,B.9,Password length; yearly Wi-Fi password change,IA-5,PR.AA-01,N62-R01 (164.308(a)(5)(ii)(D)),No
+POL-02,C.1,Minimum necessary look-ups only,PL-4,PR.AT-01,N62-R01 (164.310(b)); N62-R02,No
+POL-02,C.2,No ePHI in personal accounts or public AI tools,PL-4,PR.AT-01,N62-R01 (164.310(b)),No
+POL-02,C.3,Lock screens; never share passwords or MFA codes,AC-11; PL-4,PR.AA-03,N62-R01 (164.310(b)-(c)),No
+POL-02,C.4,Training at hire and yearly; phishing simulations,AT-2,PR.AT-01,N62-R01 (164.308(a)(5)),Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-02,C.6,Signed policy acknowledgment,PL-4,PR.AT-01,N62-R01 (164.310(b)),No
+POL-03,4.1,Ransomware runbook kept and printed,IR-8,RS.MA-01,N62-R01 (164.308(a)(6)),No
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.3,Log every incident,IR-5,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),No
+POL-03,4.4,Four-factor breach risk assessment; discovery date recorded,IR-6,RS.AN-03,N62-R03 (164.402; 164.404(a)(2)),Yes
+POL-03,4.5,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,N62-R03 (164.404-164.408); Fla. Stat. 501.171,Yes
+POL-03,4.6,Insurer hotline first; MSP engaged under BAA,IR-4,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),No
+POL-03,4.7,Ransom payment only with approvals and OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.8,Business associate incident reports logged and handled,IR-6; SA-9,GV.SC-08,N62-R01 (164.314(a)(2)(i)); N62-R03 (164.410),Yes
+POL-03,4.9,Annual tabletop exercise with the MSP,IR-3,ID.IM-02,N62-R01 (164.308(a)(6)),No
+POL-03,4.10,Lessons learned within 30 days,IR-4,ID.IM-02,N62-R01 (164.308(a)(6)(ii)),No
+POL-04,4.1,Three classification levels,RA-2,ID.AM-07,N62-R01 (164.308(a)(1)(ii)(A)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,N62-R01 (164.312(a)(2)(iv); 164.312(e)(2)(ii)),Yes
+POL-04,4.3,Restricted data only in approved systems,AC-3,PR.DS-01,N62-R01 (164.310(d)),No
+POL-04,4.4,Device and ePHI inventory,CM-8,ID.AM-01,N62-R01 (164.310(d)(2)(iii)),No
+POL-04,4.5,New tools approved and under BAA before receiving Restricted data,SA-9,GV.SC-05,N62-R01 (164.308(b)(1)),Yes
+POL-04,4.6,Approved AI tools only,SA-9; PL-4,GV.SC-05,N62-R01 (164.308(b)(1)); N62-R02,Yes
+POL-04,4.7,90-day immutable backup versions; quarterly restore test,CP-9; CP-4,PR.DS-11,N62-R01 (164.308(a)(7)(ii)(A); 164.308(a)(7)(ii)(D)),Yes
+POL-04,4.8,Wipe or certified destruction with records,MP-6,ID.AM-08,N62-R01 (164.310(d)(2)(i)-(ii)),No
+POL-04,4.9,Retention of medical records and security documents,SI-12,GV.PO-02,N62-R01 (164.316(b)(2)(i)),No
