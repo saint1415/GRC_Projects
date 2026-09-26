@@ -1,0 +1,14 @@
+review_item,what_to_check,epcr_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,Security required; Availability and Confidentiality needed for the company's use,Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,ePCR application; hospital delivery portal; state data export; hosting in scope,All in scope; hosting provider carved out as a subservice organization,Confirm the vendor reviews the hosting provider's own SOC 2 report
+Subservice organizations,Carve-out vs inclusive; which cloud or hosting providers,Hosting provider carved out,As above
+Exceptions noted,Any test exceptions and management responses,1 exception: change approvals missing for 3 of 40 sampled production changes; management added an automated approval gate,Accept; confirm the gate in next year's report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and timely removal; MFA through the customer's identity provider; role assignment; review of access audit reports; device security for offline tablets,"Map to company controls AC-2, IA-2(1), AU-6, AC-19. Open gaps: removal timing (POAM-001) and audit review (POAM-009)"
+Availability commitments,Uptime and recovery objectives vs the company's BIA (BP-03 RTO 8 h; RPO 1 h),RTO 4 h; RPO 15 min stated in the system description,Meets BIA; confirm in contract
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit; tablet app stores offline records encrypted,None
+Incident notification,Vendor commitment to notify customers,"Notify within 72 hours of confirming a security incident, per the system description; BAA requires breach notice per 164.410",Negotiate 24-hour notice of security incidents at BAA renewal
+State data export,"Vendor's controls over the EMSTARS export (Rule 64J-1.014, F.A.C.)",Export job monitoring is in scope; failed jobs alert the vendor's support team,Ask for a monthly export confirmation report
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-07-31 requested,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-08-21,Annual

@@ -1,0 +1,13 @@
+review_item,what_to_check,ticketing_pos_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,SOC 2 Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability relevant to the BIA; Confidentiality relevant to customer records,Security and Availability (Confidentiality not included),Ask whether Confidentiality will be added at the next cycle
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Independent CPA firm; unqualified opinion,None
+System description scope,"Ticketing, customer records, POS, status portal, text and email messaging, and hosting in scope",All in scope; text messaging gateway and hosting provider are carved-out subservice organizations,Confirm the vendor reviews the carved-out providers' own reports
+Exceptions noted,Test exceptions and management responses,1 exception: 3 of 40 sampled vendor production changes lacked a documented approval; remediated with a new approval step,Accept; check in the next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,Customer manages user provisioning and removal; assigns roles by least privilege; enables MFA; reviews audit logs and exports; does not store payment card data or credentials in free-text fields,"Map to AC-2, AC-3, IA-2(1), AU-6, SI-12. Four are open gaps: POAM-001, POAM-007, POAM-008, POAM-015"
+Availability commitments,"Recovery objectives versus the BIA (BP-01 and BP-03: RTO 4 h, RPO 1 h)",RTO 4 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Restricted fields and data purge,Ability to limit who sees sensitive fields and to purge them,Role-based field permissions and a restricted credential field with automatic purge are available but off by default,Enable for POAM-001
+Incident notification,Vendor commitment to notify customers,Notify affected customers within 72 hours of confirming an incident (system description),Inside the 10-day outer limit for third-party agents in Fla. Stat. 501.171(6)(a); ask for 24 hours at renewal to match the company's contract clocks
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 received,Request an updated letter before the Manufacturer A audit
+Review sign-off,Reviewer and date,"IT Manager with the Controller, 2026-08-20",Annual

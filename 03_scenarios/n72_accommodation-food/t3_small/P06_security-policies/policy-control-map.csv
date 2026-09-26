@@ -1,2 +1,25 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment and targeted risk analyses,RA-3; PM-9,ID.RA-05,N72-R01 (Req 12.3),No
+POL-01,4.5,PCI DSS scope documented and confirmed every 12 months; SAQ answers backed by evidence,CM-8; PL-2,ID.AM-01,N72-R01 (Req 12.5),Yes
+POL-01,4.8,Sanctions for policy violations,PS-8,GV.RR-04,N72-R01 (Req 12.1),No
+POL-01,4.9,Background checks before access to card data or guest records,PS-3,GV.RR-04,N72-R01 (Req 12.7); N72-R03 (16 CFR 682.3),No
+POL-01,4.10,"Service provider list, agreements, and annual AOC or SOC 2 check",SA-9,GV.SC-05; GV.SC-07,N72-R01 (Req 12.8),Yes
+POL-01,4.12,"Privacy, fee, and rate statements reviewed for accuracy",PM-9,GV.OC-03,N72-R02 (15 U.S.C. 45(a); 16 CFR 464.2-464.3),No
+POL-02,4.1,Unique accounts; no shared front desk or night audit logins,IA-2; AC-2,PR.AA-01,N72-R01 (Req 8.2.1),Yes
+POL-02,4.2,Least privilege; full card number display limited to named users,AC-6; AC-3,PR.AA-05,N72-R01 (Req 7.2; 3.4.1),Yes
+POL-02,4.3,"MFA for PMS, email, cloud, and all remote access",IA-2(1); IA-2(2),PR.AA-03,N72-R01 (Req 8.4),Yes
+POL-02,4.4,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,N72-R01 (Req 8.2.5),Yes
+POL-02,4.7,Vendor default passwords changed; system credentials managed,IA-5; CM-6,PR.AA-01,N72-R01 (Req 2.2.2; 8.6),Yes
+POL-02,4.8,"Vendor remote access on request only, with MFA and logging",AC-17; MA-4,PR.AA-03,N72-R01 (Req 8.2.7; 8.4.3),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N72-R01 (Req 12.10.1),Yes
+POL-03,4.4,Acquirer and card brand notice; preserve evidence,IR-4; IR-6,RS.CO-02,N72-R01 (Req 12.10.1),No
+POL-03,4.5,Breach notice decisions and deadlines,IR-6,RS.CO-03,N72-R04 (Fla. Stat. 501.171),No
+POL-03,4.7,Annual incident response test,IR-3,ID.IM-02,N72-R01 (Req 12.10.2),No
+POL-04,4.2,Card data only in approved payment services,SC-28; SI-12,PR.DS-01,N72-R01 (Req 3.2.1),Yes
+POL-04,4.3,No card security codes stored,SI-12,PR.DS-01,N72-R01 (Req 3.3.1),Yes
+POL-04,4.4,Card forms replaced by payment links; interim handling,MP-4; MP-6,PR.DS-01,N72-R01 (Req 9.4),Yes
+POL-04,4.7,Retention schedule (guest register 2 years; ID scans 30 days),SI-12,ID.AM-07,N72-R04 (Fla. Stat. 501.171(8)); Fla. Stat. 509.101(2),Yes
+POL-04,4.8,Isolated immutable backups tested quarterly,CP-9,PR.DS-11,N72-R01 (Req 12.10.1),Yes
+POL-05,4.3,Annual training; monthly reminders; phishing exercises,AT-2,PR.AT-01,N72-R01 (Req 12.6; 5.4),Yes
+POL-05,4.5,Shift inspections of payment devices,SR-9; CM-8,PR.PS-01,N72-R01 (Req 9.5.1),No
+POL-05,4.10,Approved AI tools only; controlled changes to pricing and chatbot,PL-4,GV.PO-01,N72-R02,No
