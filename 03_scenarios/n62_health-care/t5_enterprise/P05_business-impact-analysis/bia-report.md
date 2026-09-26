@@ -99,7 +99,7 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| Clearinghouse concentration and untested manual fallback | P01 R-005; P03 G-042; POAM-019 |
+| Clearinghouse concentration and untested manual fallback | P01 R-005; P03 G-024 and G-026; POAM-019 |
 | LIS recovery 5.5 h against 4 h RTO | P01 R-031; P02 CP-10; POAM-011 |
 | AQ-07 and AQ-08 RPO 24 h and RTO 24 h against BIA targets | P01 R-015; POAM-005 |
 | Courier and specimen tracking vendor without SOC report | P01 R-037; POAM-015 |
