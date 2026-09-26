@@ -261,9 +261,12 @@ def write_scenario(u, tier_id, vd):
         size_rows.append(("Total assets (fictional)", money(p["assets"])))
     pr = vd["profile"]
     L = [GENERATED, f"# {f['scenario_title']}", "", f"> {intro}", "",
-         "This folder is a complete, self-contained sample. Read this page first, then open any project folder (P01-P10). "
-         "Each project folder has a `_context.md` explaining what that deliverable looks like for this company.", "",
-         "## At a glance", "| | |", "|---|---|",
+         "This folder is a self-contained scenario. Read this page first, then open any project folder (P01-P10). "
+         "Each project folder has a `_context.md` explaining what that deliverable looks like for this company.", ""]
+    if (d / "scenario-facts.md").exists():
+        L += ["> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share "
+              "(locations, systems, current security posture) are in [scenario-facts.md](scenario-facts.md). Read it second.", ""]
+    L += ["## At a glance", "| | |", "|---|---|",
          f"| Legal name | {legal} |", f"| Legal form | {t['legal_form']} |", f"| Ownership | {t['ownership']} |"]
     L += [f"| {k} | {v} |" for k, v in size_rows]
     L += [f"| Size tier | {t['name']}: {t['definition']} |",
@@ -303,7 +306,7 @@ def write_scenario(u, tier_id, vd):
           f"- Universal methods: [`00_universal/`]({rel(d, U / 'README.md')})",
           f"- Tier definition: [`01_tiers/tiers.csv`]({rel(d, T / 'tiers.csv')})",
           f"- Vertical overlay: [`overlay.md`]({rel(d, vd['dir'] / 'overlay.md')})",
-          f"- Generated {TODAY}. Size facts are fictional but consistent with the cited SBA and Census definitions.", ""]
+          f"- Size facts are fictional but consistent with the cited SBA and Census definitions.", ""]
     (d / "README.md").write_text("\n".join(L))
 
     # ---- project folders
@@ -367,7 +370,8 @@ def main():
         sys.exit("Run tools/refresh_sba_standards.py first.")
     index = [GENERATED, f"# Scenario index: {COMPANY}", "",
              f"{len(units)} verticals x {len(tiers)} tiers = {len(units) * len(tiers)} scenarios. "
-             "NAICS sectors are bold; CISA sectors are nested beneath their parent sector.", "",
+             "NAICS sectors are bold; CISA sectors are nested beneath their parent sector. "
+             "**sample** marks a scenario whose 10 deliverables are completed.", "",
              "| Vertical | " + " | ".join(t["name"] for t in tiers.values()) + " |",
              "|---|" + "---|" * len(tiers)]
     ordered = []
@@ -384,7 +388,8 @@ def main():
         for tid in tiers:
             d, _ = write_scenario(u, tid, vd)
             count += 1
-            cells.append(f"[open]({d.relative_to(S)}/README.md)")
+            done = (d / "scenario-facts.md").exists()
+            cells.append(f"[{'**sample**' if done else 'open'}]({d.relative_to(S)}/README.md)")
         label = f"**{u['naics_sector']} {u['name']}**" if u["level"] == "naics_sector" else f"&nbsp;&nbsp;↳ {u['name']} (CISA)"
         index.append(f"| {label} | " + " | ".join(cells) + " |")
     (S / "INDEX.md").write_text("\n".join(index) + "\n")

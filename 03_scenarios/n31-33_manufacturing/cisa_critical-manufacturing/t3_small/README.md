@@ -3,7 +3,7 @@
 
 > Cris Santos Company, LLC is a small business with 200 employees, operating as a power and distribution transformer manufacturer.
 
-This folder is a complete, self-contained sample. Read this page first, then open any project folder (P01-P10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open any project folder (P01-P10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
 ## At a glance
 | | |
@@ -59,4 +59,4 @@ Whether each requirement applies at this size is decided in P03 (gap analysis), 
 - Universal methods: [`00_universal/`](../../../../00_universal/README.md)
 - Tier definition: [`01_tiers/tiers.csv`](../../../../01_tiers/tiers.csv)
 - Vertical overlay: [`overlay.md`](../../../../02_verticals/n31-33_manufacturing/cisa_critical-manufacturing/overlay.md)
-- Generated 2026-09-25. Size facts are fictional but consistent with the cited SBA and Census definitions.
+- Size facts are fictional but consistent with the cited SBA and Census definitions.

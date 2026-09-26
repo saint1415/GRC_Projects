@@ -1,6 +1,6 @@
 # Plan: Completing the GRC Project List for Cris Santos Company
 
-**Status as of 2026-09-25:** Phase 0 (foundation) is complete. The universal framework, tiers, verticals, generator, and all 216 scenario scaffolds exist. Phases 1-5 fill in the deliverables.
+**Status as of 2026-09-26:** Phases 0 and 1 are complete. The flagship sample (Health Care, Small) has all 10 deliverables filled in and validated. Phase 2 (the Health Care scalability ladder) is next.
 
 ---
 
@@ -65,13 +65,22 @@ The Notion list orders projects by career value. Building them in **dependency o
 | Phase | Scope | Deliverables | Outcome |
 |---|---|---|---|
 | **0. Foundation** (done) | Universal layer, tiers, 36 verticals, generator, validator, 216 scaffolds | Repository structure | Any scenario is ready to fill in |
-| **1. Flagship** | **Health Care (NAICS 62), Small** | 10 completed deliverables | One end-to-end sample for meetings. It mirrors the Notion HIPAA project |
+| **1. Flagship** (done) | **Health Care (NAICS 62), Small** | 10 completed deliverables | One end-to-end sample for meetings. It mirrors the Notion HIPAA project |
 | **2. Scalability ladder** | Health Care across all 6 tiers | 50 more (5 tiers x 10) | Shows the same method scaling from a sole practitioner to a multi-sector enterprise |
 | **3. Named verticals** | Small tier for Manufacturing (31-33), Wholesale (42), Retail (44-45), Transportation and Warehousing (48-49), Information/SaaS (51), Finance (52), Education (61), Defense Industrial Base (CISA) | 80 (8 x 10) | Covers the industries you named, including supply chain and federal/defense |
 | **4. Full sector coverage** | Small tier for every remaining vertical (27) | 270 | Every NAICS and CISA sector has at least one complete sample |
 | **5. Full matrix** (optional) | Remaining tier x vertical combinations | Up to 1,750 more (2,160 total) | Complete library. Prioritize by meeting demand |
 
 **Recommended sample for your first meeting:** `03_scenarios/n62_health-care/t3_small/`. Read its `README.md` first; [docs/meeting-guide.md](docs/meeting-guide.md) explains how to run the meeting from it.
+
+### Phase 1 record (completed 2026-09-26)
+| Item | Result |
+|---|---|
+| Sample | [`03_scenarios/n62_health-care/t3_small/`](03_scenarios/n62_health-care/t3_small/README.md), with shared facts in `scenario-facts.md` |
+| Decisions confirmed with you | Florida location, with state law cited only where unavoidable; vendor-agnostic cloud; partially compliant posture; generic vendor names; role titles only; 2 clinics, 12 providers, ~18,000 patients; 42 CFR Part 2 excluded; SOC 2 as both a customer-assurance self-assessment and an EHR vendor report review |
+| Reusable output for Phase 2 | `02_verticals/n62_health-care/hipaa-security-rule-crosswalk.csv`: 69 HIPAA requirements from NIST SP 800-66r2 data, with an author mapping to CSF 2.0 and SP 800-53 |
+| Headline results | 31 risks (3 High); 69 HIPAA requirements (10 met, 41 partially met, 11 not met, 7 N/A); 70 SSP controls; 164 SP 800-53A determination statements (57 satisfied); 21 POA&M items |
+| Validation | `tools/validate.py` checks completed samples for unfinished markers and invalid CSF or SP 800-53 IDs |
 
 ---
 

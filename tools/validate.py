@@ -97,6 +97,22 @@ for p in md_files:
         if not (p.parent / target).resolve().exists():
             errors.append(f"{p.relative_to(ROOT)}: broken link {target}")
 
+# ---- completed samples (scenario-facts.md present): definition of done
+for facts in S.rglob("scenario-facts.md"):
+    sd = facts.parent
+    for p in [x for x in sd.rglob("*") if x.suffix in (".md", ".csv") and x.name not in ("README.md", "_context.md")]:
+        text = p.read_text()
+        if "[FILL" in text or "{{" in text:
+            errors.append(f"{p.relative_to(ROOT)}: unfinished template marker in a completed sample")
+        for m in CSF_RE.findall(text):
+            if m not in csf_ids:
+                errors.append(f"{p.relative_to(ROOT)}: unknown CSF 2.0 ID {m}")
+        for fam, num, _, enh in CTRL_RE.findall(text):
+            cid = f"{fam}-{int(num)}" + (f"({int(enh)})" if enh else "")
+            if cid not in ctrl_ids:
+                errors.append(f"{p.relative_to(ROOT)}: unknown SP 800-53 control {cid}")
+    print(f"Completed sample checked: {sd.relative_to(S)}")
+
 # ---- scenario count
 tiers = rows(T / "tiers.csv")
 readmes = list(S.rglob("t*_*/README.md"))
