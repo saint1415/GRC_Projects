@@ -64,7 +64,7 @@
 | 6. **Start the Part 37 assessment.** The RSO decides whether this is suspicious activity related to possible theft, sabotage, or diversion (37.57(b)). If yes, notify the LLEA as appropriate, and note the time: the Florida notice is due no later than 4 hours after that | Radiation Safety Officer | Decision and time recorded |
 | 7. Start the incident log: timeline, actions, who, and when | IT Manager | Log open |
 
-**Why step 1 comes first.** Part 37 treats deliberate damage to "the components of the security system" as sabotage (37.5). If an attacker is working toward the PACS or cameras, the company must be able to detect and respond at the vault whatever happens to the network. The IDS runs independently, and people provide the rest.
+**Why step 1 comes first.** Part 37 treats deliberate damage to "the components of the security system" as sabotage (37.5). If an attacker is working toward the PACS or cameras, the company must be able to detect and respond at the vault whatever happens to the network. The IDS runs independently, and people provide the rest. Treating cyber tampering with security systems as possible sabotage or suspicious activity under 37.57 is the company's reading of the rule. The RSO will confirm it with the Florida Bureau of Radiation Control at the next inspection, and until then will notify rather than wait.
 
 ## 4. Analysis (RS.AN)
 1. **Scope:** which accounts, endpoints, cloud workloads, and SaaS tenants are affected? Check EDR, identity provider sign-in logs, cloud audit logs, SYS-01 file access logs (especially the Radiation Safety and HR libraries), and firewall logs.
