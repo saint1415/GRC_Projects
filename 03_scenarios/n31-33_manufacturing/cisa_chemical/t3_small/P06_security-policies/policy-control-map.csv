@@ -1,2 +1,25 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.2,Security officer for IT and OT designated in writing,PM-2,GV.RR-02,"C-CHEMICAL-R01 (27.230(a)(17), voluntary benchmark)",No
+POL-01,4.4,Risk acceptance levels; no High acceptance of toxic release risks,PM-9,GV.RM-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 40 CFR 68.15(b)",No
+POL-01,4.8,Security clauses and SOC 2 review for vendors,SA-9,GV.SC-05,"C-CHEMICAL-R01 (27.230(a)(8), (a)(12), voluntary benchmark)",Yes
+POL-01,4.9,Annual control assessment,CA-2,ID.IM-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,4.10,Cyber risks in RMP hazard reviews,RA-3,ID.RA-04,40 CFR 68.50(a)(2),No
+POL-01,4.11,MOC for control system and recipe changes; regulatory inventory limits,CM-3,PR.PS-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 40 CFR 68.48(c); 68.50(d); 68.52(c)",Yes
+POL-02,4.1,Unique accounts including DCS operator stations,IA-2; AC-2,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,4.3,MFA for remote and administrative access,IA-2(1),PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,4.4,Same-day removal of all access including OT accounts and rack cards,PS-4; AC-2,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), (a)(12), voluntary benchmark)",Yes
+POL-02,4.6,"OT remote access only through the gateway with MFA, approval, and recording",AC-17; MA-4,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,4.8,SIS engineering access and keyswitch control,CM-5; AC-3,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 40 CFR 68.56(d)",Yes
+POL-02,4.9,Change default passwords before connecting devices,IA-5,PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-03,4.2,Report suspected incidents immediately; treat as a process upset,IR-6,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(15), voluntary benchmark)",Yes
+POL-03,4.3,Safe state first; no restart on an unverified DCS,IR-4,RC.RP-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 40 CFR 68.52(b)(4)",Yes
+POL-03,4.5,"Immediate release notification to NRC, SERC, and LEPC",IR-6,RS.CO-02,40 CFR 302.6; 355.40-355.43,Yes
+POL-03,4.6,Notification path independent of the business network,CP-8,RS.CO-02,40 CFR 68.90(b)(3),No
+POL-03,4.9,Annual OT tabletop and notification exercise,IR-3,ID.IM-02,40 CFR 68.96(a),No
+POL-03,4.12,OT contingency plan from the BIA,CP-2,RC.RP-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-04,4.2,Protect legacy CVI,AC-3; MP-4,PR.DS-01,"C-CHEMICAL-R01 (27.400 CVI, legacy)",No
+POL-04,4.5,Approved and scanned media only on OT workstations,MP-7,PR.PS-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-04,4.6,Offline or immutable backups; quarterly restores; SIS compare,CP-9; CP-4,PR.DS-11,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-05,4.3,Annual awareness training for all; OT training for operators and contractors,AT-2; AT-3,PR.AT-02,"C-CHEMICAL-R01 (27.230(a)(11), voluntary benchmark); 40 CFR 68.54",Yes
+POL-05,4.4,No software installation; OT software only under MOC,CM-11; CM-7,PR.PS-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-05,4.8,Approved generative AI tools only; no formulations or process data in public tools,PL-4,GV.PO-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No

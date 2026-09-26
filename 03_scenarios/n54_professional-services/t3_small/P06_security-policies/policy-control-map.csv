@@ -1,2 +1,34 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Written information security program with an index of its parts,PM-1; PL-2,GV.PO-01,N54-R01 (314.3(a)),No
+POL-01,4.2,Qualified Individual designated in writing,PM-2,GV.RR-02,N54-R01 (314.4(a)),No
+POL-01,4.3,Annual written risk assessment with the 314.4(b)(1) criteria,RA-3; PM-9,ID.RA-01; ID.RA-04,N54-R01 (314.4(b); 314.4(b)(1)),Yes
+POL-01,4.5,Annual independent assessment; penetration test and six-month vulnerability assessments,CA-2; CA-8; RA-5,ID.RA-01; ID.IM-02,N54-R01 (314.4(d)(2)),Yes
+POL-01,4.6,Annual written report to the Partner Group,PM-9; CA-7,GV.OV-01,N54-R01 (314.4(i)),No
+POL-01,4.9,"Service provider due diligence, contract terms, and annual assessment",SA-9; SR-6,GV.SC-05; GV.SC-07,N54-R01 (314.4(f)(1)-(3)),Yes
+POL-01,4.10,Written IRC 6713 and 7216 notice to contractor staff before access,PS-6; SA-9,GV.SC-05,N54-R02 (301.7216-2(d)(2)),Yes
+POL-01,4.11,Sanctions for security and confidentiality violations,PS-8,GV.RR-04,N54-R02 (301.7216-1(a)),No
+POL-02,4.1,Unique accounts; shared mailboxes only through delegated access,IA-2; AC-2,PR.AA-01,N54-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.2,Role-based least privilege; team-based client folder access,AC-3; AC-6,PR.AA-05,N54-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.3,MFA for everyone; number matching; hardware keys for administrators; legacy protocols blocked,IA-2(1); IA-2(2); IA-5,PR.AA-03,N54-R01 (314.4(c)(5)),Yes
+POL-02,4.4,Mandatory client portal MFA; call-back before client MFA reset,IA-8,PR.AA-03,N54-R01 (314.4(c)(5)),Yes
+POL-02,4.5,Same-day disable at termination; seasonal end dates,PS-4; AC-2,PR.AA-05,N54-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.6,Quarterly access reviews; monthly admin review,AC-2; AC-6,PR.AA-05,N54-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.7,Separate administrator accounts; two break-glass accounts,AC-6; AC-2,PR.AA-05,N54-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.10,Remote access through VPN or SSO with MFA; MSP tool restricted; no access from outside the United States without approval,AC-17; IA-2(1),PR.AA-03,N54-R01 (314.4(c)(5)); N54-R02 (301.7216-2(c)(2)),Yes
+POL-03,4.1,Written incident response plan covering 314.4(h)(1)-(7),IR-8,RS.MA-01,N54-R01 (314.4(h)),No
+POL-03,4.2,Report suspected incidents immediately and within 1 hour,IR-6,RS.MA-02,N54-R01 (314.4(h)(4)),Yes
+POL-03,4.4,Record the discovery date that starts the FTC clock,IR-6,RS.MA-02,N54-R01 (314.4(j)(2)),Yes
+POL-03,4.6,"Meet notification deadlines (IRS next business day, FTC 30 days, Florida 30 days)",IR-6,RS.CO-02; RS.CO-03,N54-R01 (314.4(j)); N54-R03 (IRS Pub. 1345); Fla. Stat. 501.171,Yes
+POL-03,4.7,"Freeze refund bank, address, and email changes during a suspected compromise",IR-4,RS.MI-01,N54-R01 (314.4(h)(2)),Yes
+POL-03,4.10,Annual tabletop before filing season; lessons learned within 30 days,IR-3; IR-4,ID.IM-04,N54-R01 (314.4(h)(7)),Yes
+POL-04,4.2,Encrypt Restricted data at rest and in transit; no plain attachments,SC-28; SC-8,PR.DS-01; PR.DS-02,N54-R01 (314.4(c)(3)),Yes
+POL-04,4.4,"Inventory of Restricted data locations and recipients, including AI sub-processors",CM-8,ID.AM-07,N54-R01 (314.4(c)(2)),No
+POL-04,4.5,Disclose tax return information only as 301.7216-2 permits or with prior written consent,AC-21; PT-4,GV.OC-03,N54-R02 (301.7216-2; 301.7216-3),No
+POL-04,4.6,Dispose of customer information within two years of last use unless the schedule requires longer,SI-12,ID.AM-08,N54-R01 (314.4(c)(6)),Yes
+POL-04,4.7,Certified destruction; printer-scanner drives wiped before lease return,MP-6,ID.AM-08,N54-R01 (314.4(c)(6)); Fla. Stat. 501.171(8),Yes
+POL-04,4.8,Immutable encrypted backups restore-tested quarterly,CP-9; CP-4,PR.DS-11,N54-R01 (314.4(c)(3)),Yes
+POL-04,4.9,No Restricted data in AI tools without approval and a confirmed IRC 7216 basis,SA-9,GV.SC-05,N54-R02 (301.7216-3(a)(1)),Yes
+POL-05,4.3,Training before access and annually; phishing exercises at least quarterly,AT-2,PR.AT-01,N54-R01 (314.4(e)(1)),Yes
+POL-05,4.4,"Call-back verification for bank, address, and email changes",AT-3,PR.AT-02,N54-R01 (314.4(e)(1)); N54-R03 (IRS Pub. 4557),No
+POL-05,4.9,Approved generative AI tools only; human review of AI output,PL-4,GV.PO-01,N54-R02 (301.7216-1(a)),No
+POL-05,4.10,Access client files only as work requires; access is logged and reviewed,AU-6,DE.CM-03,N54-R01 (314.4(c)(8)),Yes

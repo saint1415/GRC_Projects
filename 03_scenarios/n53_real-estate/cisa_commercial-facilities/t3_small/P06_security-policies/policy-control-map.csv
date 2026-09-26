@@ -1,2 +1,33 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.2,Security lead and building system owners designated in writing,PM-2,GV.RR-02,C-COMMERCIAL-FACILITIES-R05 (CPG 1.A),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 2.B),No
+POL-01,4.4,Risk acceptance authority by risk level,PM-9,GV.RM-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B),No
+POL-01,4.8,Vendor security addendum; annual review of remote management providers,SA-4; SA-9; SR-6,GV.SC-05; GV.SC-07,C-COMMERCIAL-FACILITIES-R05 (CPG 1.D; 1.E),Yes
+POL-01,4.9,Annual independent control assessment,CA-2,ID.IM-02,C-COMMERCIAL-FACILITIES-R05 (CPG 2.C),No
+POL-01,4.10,"Change control for BAS, access control, and vendor-enabled features",CM-3,PR.PS-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.N),Yes
+POL-01,4.11,Life-safety systems stay separate; read-only relays only,PL-8,ID.AM-03,C-COMMERCIAL-FACILITIES-R05 (CPG 3.I),No
+POL-02,4.1,"Unique accounts; no shared logins, including OT and vendors",IA-2; AC-2,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.C),Yes
+POL-02,4.2,Least privilege; 2 named platform administrators; separate admin accounts,AC-6; AC-3,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.G; 3.H),Yes
+POL-02,4.3,MFA for all sensitive and remote access; hardware keys for admins,IA-2(1),PR.AA-03,C-COMMERCIAL-FACILITIES-R05 (CPG 3.F),Yes
+POL-02,4.4,Same-day account and badge removal at termination,PS-4; AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),Yes
+POL-02,4.6,Tenant roster attestation; auto-suspend badges unused for 60 days,PE-2; AC-2,PR.AA-06,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),Yes
+POL-02,4.7,Break-glass accounts sealed offline and tested quarterly,AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 6.A),Yes
+POL-02,4.8,16-character passwords; change defaults at commissioning; OT passwords in the password manager,IA-5,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.A; 3.B),Yes
+POL-02,4.9,"Integrator access through the gateway with MFA, approval, and recording",AC-17; MA-4,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 1.E; 3.F),Yes
+POL-03,4.1,Runbooks with OT safety steps and manual operating procedures,IR-8; CP-2,RS.MA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.C; 6.A),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 5.B),Yes
+POL-03,4.5,Documented breach determination; written no-harm determinations kept 5 years,IR-6,RS.CO-02,Fla. Stat. 501.171(4)(c),No
+POL-03,4.6,Meet notice deadlines in the P08 matrix,IR-6,RS.CO-02; RS.CO-03,Fla. Stat. 501.171(3)-(5); C-COMMERCIAL-FACILITIES-R01 (PCI DSS 12.10.1),No
+POL-03,4.7,"Ransom only with owner, counsel, insurer approval and OFAC check",IR-4,RS.MA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 5.B),Yes
+POL-03,4.8,Annual tabletop with engineering and console staff,IR-3,ID.IM-02,C-COMMERCIAL-FACILITIES-R05 (CPG 1.C),No
+POL-03,4.9,Central security logs kept 1 year; weekly review; OT alerts,AU-2; AU-6; AU-11,PR.PS-04; DE.AE-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.Q; 4.B),Yes
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.K),No
+POL-04,4.3,Card data only in P2PE terminals; never on paper or email,MP-4; MP-6,PR.DS-01,C-COMMERCIAL-FACILITIES-R01 (PCI DSS 3.2.1; 3.3.1.2; 9.4),Yes
+POL-04,4.4,Data inventory and quarterly OT asset inventory,CM-8,ID.AM-01; ID.AM-07,C-COMMERCIAL-FACILITIES-R05 (CPG 2.A),Yes
+POL-04,4.5,Certified destruction; shred paper with personal information,MP-6,ID.AM-08,Fla. Stat. 501.171(8),Yes
+POL-04,4.6,"Retention limits, including 30 days for visitor ID images",SI-12,ID.AM-08,Fla. Stat. 501.171(8),No
+POL-04,4.7,"Isolated immutable backups, controller programs, quarterly restore tests",CP-9; CP-4,PR.DS-11,C-COMMERCIAL-FACILITIES-R05 (CPG 3.O),Yes
+POL-05,4.3,"Annual awareness, phishing exercises, OT and card-handling role training",AT-2; AT-3,PR.AT-01; PR.AT-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.J); C-COMMERCIAL-FACILITIES-R01 (PCI DSS 9.5.1.3; 12.6.1),Yes
+POL-05,4.5,No unapproved software or devices on OT networks,CM-11; CM-7,PR.PS-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.P),No
+POL-05,4.6,USB control and contractor laptop scans; autorun disabled,MP-7; CM-7,PR.PS-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.M; 3.R),No
+POL-05,4.8,Approved AI tools and analytics features only,PL-4,GV.PO-01,C-COMMERCIAL-FACILITIES-R02 (15 U.S.C. 45(a)),No

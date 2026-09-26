@@ -94,7 +94,7 @@ R-034 was added on 2026-08-15 after the control assessment (P07) found the OEM d
 - **Contract and procedure actions (no capital):**
   - The obligations register.
   - Disclosure of the 2 open supplier advisories to utilities by 2026-09-30.
-  - Access-revocation notices for the 3 departed field technicians.
+  - Late access-revocation notices for the 2 field technicians whose 2026 departures were not reported to their utilities.
   - Firmware hash verification.
   - Correcting the SAM representation.
 

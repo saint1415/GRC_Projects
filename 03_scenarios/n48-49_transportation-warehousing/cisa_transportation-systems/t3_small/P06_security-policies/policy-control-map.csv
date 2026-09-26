@@ -1,2 +1,25 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Cybersecurity Lead designated in writing,PM-2,GV.RR-02,C-TRANSPORTATION-BM (GV.RR-02),No
+POL-01,4.3,Annual SP 800-30 risk assessment shared with the hazmat plan review,RA-3; PM-9,ID.RA-05,C-TRANSPORTATION-S06 (172.802(a)); C-TRANSPORTATION-BM (ID.RA-05),No
+POL-01,4.4,Annual independent control assessment; POA&M to closure,CA-2,ID.IM-02,C-TRANSPORTATION-BM (ID.IM-02),No
+POL-01,4.5,Annual check of TSA and FRA applicability,PM-9,GV.OC-03,C-TRANSPORTATION-S01 (1570.105(b)),No
+POL-01,4.7,Security terms in vendor contracts,SA-9; SA-4,GV.SC-05,C-TRANSPORTATION-BM (GV.SC-05); C-TRANSPORTATION-S04 (236.1033(f)),Yes
+POL-01,4.10,Keep security records at least 5 years,SI-12,GV.PO-02,C-TRANSPORTATION-S01 (1570.203); C-TRANSPORTATION-S05 (part 225),No
+POL-02,4.1,Unique accounts including dispatch consoles,IA-2; AC-2,PR.AA-01,C-TRANSPORTATION-BM (PR.AA-01),Yes
+POL-02,4.3,MFA everywhere remote or privileged; hardware keys for admins and vendors,IA-2(1); IA-2(2),PR.AA-03,C-TRANSPORTATION-BM (PR.AA-03),Yes
+POL-02,4.4,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,C-TRANSPORTATION-BM (PR.AA-05),Yes
+POL-02,4.5,Quarterly access reviews,AC-2; AC-6,PR.AA-05,C-TRANSPORTATION-BM (PR.AA-05),Yes
+POL-02,4.8,No default passwords on any device,IA-5,PR.AA-01,C-TRANSPORTATION-BM (PR.AA-01),Yes
+POL-02,4.9,Vendor access on request through the jump host with session recording,AC-17; MA-4,PR.IR-01,C-TRANSPORTATION-BM (PR.IR-01; DE.CM-06),Yes
+POL-02,4.11,"Physical access to HQ, dispatch, towers, and onboard PTC housings",PE-3,PR.AA-06,C-TRANSPORTATION-BM (PR.AA-06); C-TRANSPORTATION-S04 (236.1006(a)),Yes
+POL-03,4.2,Report suspected incidents to dispatch within 1 hour,IR-6,RS.MA-02,C-TRANSPORTATION-BM (RS.MA-02),Yes
+POL-03,4.4,Report cyber attacks to TSA within 24 hours,IR-6,RS.CO-02,C-TRANSPORTATION-S01 (1570.203(a)(1); Appendix A to part 1570),Yes
+POL-03,4.5,Report unauthorized SSI release to TSA,IR-6,RS.CO-02,C-TRANSPORTATION-S03 (1520.9(c)),Yes
+POL-03,4.9,Manual dispatch when movement-authority systems are suspect,IR-4; CP-2,RC.RP-01,C-TRANSPORTATION-BM (RC.RP-01),Yes
+POL-03,4.10,Annual tabletop including a manual dispatch step,IR-3,ID.IM-02,C-TRANSPORTATION-BM (ID.IM-02),No
+POL-04,4.2,"SSI stored, shared, marked, and destroyed per part 1520",AC-3; MP-3; MP-4,PR.DS-01,C-TRANSPORTATION-S03 (1520.9(a)-(b)),No
+POL-04,4.4,Encrypt Restricted data and SSI at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-TRANSPORTATION-BM (PR.DS-01; PR.DS-02),No
+POL-04,4.6,Isolated immutable backups tested quarterly,CP-9; CP-4,PR.DS-11,C-TRANSPORTATION-BM (PR.DS-11),Yes
+POL-05,4.3,Annual awareness training for all employees; phishing exercises; role-based training,AT-2; AT-3,PR.AT-01; PR.AT-02,C-TRANSPORTATION-BM (PR.AT-01; PR.AT-02),Yes
+POL-05,4.5,No personal devices or USB media on operations equipment,CM-7,PR.PS-05,C-TRANSPORTATION-BM (PR.PS-05),No
+POL-05,4.8,Approved AI tools only; AI supplements required inspections,PL-4,GV.PO-01,C-TRANSPORTATION-S08 (213.233(b)),No

@@ -57,7 +57,7 @@ R-032 was added on 2026-08-28 after control assessment testing (P07) found five 
   - MSP-managed EDR with 24x7 alerting
   - Backup redesign and SaaS backup
   - Penetration test of the Closing Communications Portal and the external network
-  - Quarterly vulnerability scanning
+  - Monthly vulnerability scanning
 - **Procedure changes (staff time):** written disbursement verification procedure (R-002, R-031), dual approval on all escrow wires (R-033), owner payout change procedure (R-027), same-day contractor offboarding (R-007).
 - **Accepted:**
   - R-021: Low, hotspot workaround
