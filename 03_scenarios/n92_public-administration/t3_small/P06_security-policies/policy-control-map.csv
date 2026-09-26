@@ -1,2 +1,26 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01; GV.RM-01,Contract (SP 800-53 Moderate RA-3); N92-R02 (CJISSECPOL v6.1 RA-3),No
+POL-01,4.4,No acceptance of risks that breach CJIS or Pub. 1075 terms,PM-9,GV.RM-01,N92-R02 (Appendix H 3.01); N92-R01 (Exhibit 7 I(13)),No
+POL-01,4.5,"Screening, training, and signed certifications before CJI or FTI access",PS-2; PS-3; PS-6,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-3; Appendix H); N92-R01 (Pub. 1075 sec. 2.C.3; Exhibit 7 II(4)),Yes
+POL-01,4.8,"Sanctions, with misuse of CJI or FTI reported to the agency",PS-8,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-8),No
+POL-01,4.9,"No approval, no agency data (vendors)",SA-9; SR-6,GV.SC-05; GV.SC-07,N92-R01 (Pub. 1075 Exhibit 7 I(8)); N92-R02 (CJISSECPOL v6.1 SA-9),Yes
+POL-01,4.11,Seven-year retention of security records and audit logs,SI-12; AU-11,PR.PS-04,N92-R01 (Pub. 1075 sec. 4 AU-11); N92-R02 (CJISSECPOL v6.1 AU-11),Yes
+POL-02,4.3,MFA for all; hardware keys for administrators; MFA for local agency accounts,IA-2(1); IA-2(2); IA-8,PR.AA-03,N92-R02 (CJISSECPOL v6.1 IA-2(1)-(2)),Yes
+POL-02,4.4,Just-in-time admin rights; ticket-linked support access,AC-6; AC-2,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-6); Contract (SP 800-53 Moderate),Yes
+POL-02,4.6,Quarterly access reviews; disable after 90 days inactive,AC-2,PR.AA-05,N92-R01 (Pub. 1075 sec. 4 AC-2); N92-R02 (CJISSECPOL v6.1 AC-2),Yes
+POL-02,4.7,Lockout after 5 failures in 15 minutes; session locks,AC-7; AC-11,PR.AA-03,N92-R02 (CJISSECPOL v6.1 AC-7; AC-11),No
+POL-02,4.8,Secrets only in the secrets manager; 90-day rotation,IA-5,PR.AA-01,N92-R02 (CJISSECPOL v6.1 IA-5),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-03,4.4,Agency notice on the matrix clocks,IR-6,RS.CO-02,N92-R01 (Pub. 1075 sec. 1.8.4); N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-03,4.5,Fla. Stat. 501.171(6) notice to agencies within 10 days,IR-6,RS.CO-03,Fla. Stat. 501.171(6),Yes
+POL-03,4.8,Annual tabletop with agency contacts,IR-3,ID.IM-02,N92-R01 (Pub. 1075 sec. 1.8.4); Contract (SP 800-53 Moderate IR-3),No
+POL-03,4.1,Incident response plan with CJI and FTI reportable-incident definitions,IR-8,RS.MA-01,N92-R02 (CJISSECPOL v6.1 IR-8),Yes
+POL-04,4.2,FIPS-validated encryption; U.S. only,SC-8; SC-13; SC-28,PR.DS-01; PR.DS-02,N92-R02 (CJISSECPOL v6.1 SC-13; SC-28); N92-R01 (Pub. 1075 sec. 3.3.1),Yes
+POL-04,4.3,FTI only in the AC-01 tenant; FTI labeling,MP-3; CM-12,ID.AM-07,N92-R01 (Pub. 1075 sec. 2.C.5; 2.C.11.2),No
+POL-04,4.4,No production data in non-production,SA-3,PR.DS-01,N92-R01 (Pub. 1075 sec. 2.E.6.4),No
+POL-04,4.6,Deletion and certificate at contract end,MP-6; SI-12,ID.AM-08,N92-R01 (Pub. 1075 Exhibit 7 I(5)),No
+POL-04,4.7,"Immutable, separated backups tested quarterly",CP-9; CP-6,PR.DS-11,N92-R02 (CJISSECPOL v6.1 CP-9); Contract (SP 800-53 Moderate),Yes
+POL-05,4.3,Training before access and annually; CJIS and FTI training; role-based training,AT-2; AT-3,PR.AT-01; PR.AT-02,N92-R02 (CJISSECPOL v6.1 AT-2); N92-R01 (Pub. 1075 sec. 2.D.2.1),Yes
+POL-05,4.4,Agency data stays in the platform (no tickets or email),PL-4,PR.AT-01,N92-R01 (Pub. 1075 Exhibit 7 I(3)),No
+POL-05,4.5,Remote work conditions,PE-17,PR.AA-06,N92-R01 (Pub. 1075 sec. 4 PE-17),No
+POL-05,4.9,Approved generative AI tools only,PL-4,GV.PO-01,N92-R04 (42 CFR 431.306(b)),No

@@ -63,20 +63,20 @@ The group profile follows the five steps in CSF 2.0 section 3.1 and NIST SP 1301
 ### 3.1 CSF 2.0 Group Organizational Profile (70 outcomes)
 | Function | Met | Partially met | Not met |
 |---|---|---|---|
-| Govern (GV) | 0 | 20 | 11 |
+| Govern (GV) | 0 | 21 | 10 |
 | Identify (ID) | 2 | 6 | 4 |
 | Protect (PR) | 1 | 11 | 1 |
 | Detect (DE) | 0 | 4 | 2 |
 | Respond (RS) | 0 | 3 | 2 |
 | Recover (RC) | 0 | 0 | 3 |
-| **Total (70)** | **3** | **44** | **23** |
+| **Total (70)** | **3** | **45** | **22** |
 
 **Govern is the weakest Function.** No Govern outcome is met. The three met outcomes are ID.RA-05 and ID.RA-06 (the 2026 risk assessment and treatment tracking) and PR.DS-02 (encryption in transit). Of the 70 outcomes, 39 are High priority, 22 Medium, and 9 Low.
 
 ### 3.2 Subsidiary profiles (category level, `subsidiary-profiles.csv`)
 | Profile | Categories rated 1 | Rated 2 | Rated 3 | Main difference from the group |
 |---|---|---|---|---|
-| Group (holding company and SCSP) | 6 | 10 | 6 | Baseline |
+| Group (holding company and SCSP) | 5 | 11 | 6 | Baseline |
 | Supply | 15 | 7 | 0 | Shared counter account; single circuit and flat warehouse network |
 | Home Services | 17 | 5 | 0 | SYS-11 outside single sign-on; firewall firmware behind |
 | Finance | 9 | 11 | 2 | Has a Qualified Individual and WISP; customer information raises its target to 4 in 7 categories |
@@ -92,9 +92,9 @@ The subsidiaries score lower than the group because they rely on it: where the s
 | 314.4(c) Safeguards | 0 | 5 | 5 |
 | 314.4(d) Testing and monitoring | 0 | 1 | 1 |
 | 314.4(e) Personnel | 0 | 3 | 1 |
-| 314.4(f) Service providers | 0 | 2 | 1 |
+| 314.4(f) Service providers | 0 | 3 | 0 |
 | 314.4(g)-(j) Adjust, incident plan, board report, FTC notice | 0 | 4 | 0 |
-| **Total (31)** | **4** | **18** | **9** |
+| **Total (31)** | **4** | **19** | **8** |
 
 ### 3.4 Not applicable (7 rows)
 N55-R01 to N55-R07, with reasons in section 1.

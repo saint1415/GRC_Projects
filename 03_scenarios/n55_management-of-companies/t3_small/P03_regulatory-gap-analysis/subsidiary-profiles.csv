@@ -4,7 +4,7 @@ GV.RM,Risk Management Strategy,Group,2,3,1,3,1,3,1,3,Rounded mean of 7 subcatego
 GV.RR,"Roles, Responsibilities, and Authorities",Group and subsidiary,2,3,1,3,1,3,2,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Finance has the Qualified Individual and oversight roles; other Presidents have no cyber duties
 GV.PO,Policy,Group,2,3,1,3,1,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Group policies apply to all; Finance adds a supplement
 GV.OV,Oversight,Group,1,3,1,3,1,3,1,3,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Finance oversight runs through the annual Qualified Individual report
-GV.SC,Cybersecurity Supply Chain Risk Management,Group and subsidiary,1,3,1,3,1,3,2,3,Rounded mean of 10 subcategory ratings in gap-analysis.csv,Subsidiaries buy their own line-of-business SaaS; Finance obtained its servicing vendor's SOC 2
+GV.SC,Cybersecurity Supply Chain Risk Management,Group and subsidiary,2,3,1,3,1,3,2,3,Rounded mean of 10 subcategory ratings in gap-analysis.csv,Subsidiaries buy their own line-of-business SaaS; Finance obtained its servicing vendor's SOC 2
 ID.AM,Asset Management,Group and subsidiary,2,3,2,3,1,3,2,4,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Home Services tablets and SYS-11 not in the SaaS inventory
 ID.RA,Risk Assessment,Group,3,3,2,3,2,3,2,4,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Shared risk assessment and scanning cover all entities
 ID.IM,Improvement,Group,3,3,2,3,2,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Improvement cycle run centrally
