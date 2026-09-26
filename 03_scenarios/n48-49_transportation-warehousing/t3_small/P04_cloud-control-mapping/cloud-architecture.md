@@ -37,7 +37,7 @@ flowchart LR
   NAS[("Weekly TOS export on office storage device<br/>CP-9 (gap: on the domain)")]
   OFF --- FW
   GY --- FW
-  OFF -. "routed without filtering (gap)" .- GY
+  OFF -.-|"routed without filtering (gap)"| GY
   FW -->|IPsec| VPNGW
   VPNGW --> APP
   APP --> DB
@@ -55,8 +55,8 @@ flowchart LR
   OFF -->|SSO| IDP
   IDP --> APP
   IDP --> PROD
-  DB -. weekly export .-> NAS
-  OT -. "planned internal firewall (OT zone)" .- GATE
+  DB -.->|weekly export| NAS
+  OT -.-|"planned internal firewall (OT zone)"| GATE
 ```
 
 ## 2. Layers

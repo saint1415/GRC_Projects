@@ -109,5 +109,6 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-01-12 | Subpart F training deadline for all personnel and key personnel (101.650(d)(4)). **Missed** |
 | 2026-07-20 to 2026-07-31 | Risk assessment and gap analysis fieldwork |
 | 2026-08-10 to 2026-08-14 | Control assessment fieldwork (OT tests on the night of 2026-08-12, with no vessel at berth) |
+| 2026-08-26 to 2026-08-28 | TOS vendor SOC 2 report review (P09 Part B), AI risk assessment of the scheduling pilot (P10) and SOC 2 readiness self-assessment (P09) |
 | 2026-09-04 | Deliverables approved by the General Manager (Moderate and below) and the majority owner (High) |
 | 2027-07-16 | Deadline for the CySO designation (per the rule preamble), the first Cybersecurity Assessment (101.650(e)(1)) and submission of the Cybersecurity Plan to the Captain of the Port (101.655) |

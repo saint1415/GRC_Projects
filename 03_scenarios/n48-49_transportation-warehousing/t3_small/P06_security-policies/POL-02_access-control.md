@@ -30,14 +30,23 @@ All Cris Santos Company workforce members (owners, employees, temporary staff an
 
 ## 4. Policy statements
 4.1 Every user must have a unique named account. Shared or generic accounts are prohibited, including at the gate booths. Users must keep separate credentials on critical IT and OT systems. A documented exception must have compensating controls. (IA-2; AC-2; PR.AA-01; 101.650(a)(6))
+
 4.2 Access must be role-based, least-privilege, and approved by the user's manager before it is granted. Administrators must use a separate administrator account for administrative work. TOS administrator and customs hold override rights must be kept to the minimum number of people. (AC-2; AC-3; AC-6; PR.AA-05; 101.650(a)(5))
+
 4.3 **MFA** is required for all users of the identity provider (TOS, email and SaaS), the staff VPN, cloud administration, and any remote access to OT. Administrators must use phishing-resistant authenticators. Where MFA is not feasible (for example HMIs in crane cabs), the compensating controls must be documented. Gate booth workstations use badge tap plus PIN. (IA-2(1); IA-2(2); PR.AA-03; 101.650(a)(4))
+
 4.4 **Termination.** HR must open a termination ticket on or before the last day. IT must disable the user's accounts the same business day, or immediately for an involuntary termination. The FSO must revoke PACS access on the same day. (PS-4; AC-2; 101.650(a)(7))
+
 4.5 Managers must review their staff's TOS roles and identity provider access every quarter. The Operations Manager must review every use of the customs hold override each month. (AC-2; AC-6)
+
 4.6 Accounts must lock after 10 failed sign-in attempts on every password-protected IT system, including the VPN and gate servers. Office and gate workstations must lock after 10 minutes idle. (AC-7; AC-11; 101.650(a)(1))
+
 4.7 Default passwords must be changed before any IT or OT system or device is used, including during commissioning by a vendor. Passwords must be at least 12 characters and must not appear on the banned-password list. Devices that cannot meet this must use the strongest setting they support, recorded as an exception. (IA-5; 101.650(a)(2)-(3))
+
 4.8 **Emergency access.** Two break-glass administrator accounts must exist, sealed and stored offline in the FSO safe, tested quarterly, and used only when the identity provider is unavailable. The CySO reviews every use. (AC-2)
+
 4.9 **Remote access.** Staff remote access is allowed only through the company VPN with MFA. Vendor and MSP remote access must use named accounts with MFA, be approved per session by the system owner, and be recorded. Remote access to OT is off by default; each remotely accessible OT system needs a documented justification. OT must not be connected to the internet unless explicitly required for operation. (AC-17; MA-4; 101.650(e)(3)(v); 101.650(f)(3))
+
 4.10 Physical access to OT and related IT equipment (the gate server room, crane electrical houses and network cabinets) must be limited to authorized people and logged. Keys and badges must be reviewed quarterly by the FSO. (PE-3; 101.650(i)(1))
 
 ## 5. Compliance and enforcement

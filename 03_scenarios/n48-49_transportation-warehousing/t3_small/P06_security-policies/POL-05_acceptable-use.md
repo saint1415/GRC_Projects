@@ -28,14 +28,23 @@ All Cris Santos Company workforce members (owners, employees, temporary staff an
 
 ## 4. Policy statements
 4.1 Company systems are for company business. Limited personal use of office systems (for example checking personal email on a break) is allowed if it creates no risk. VMTs, HMIs, gate systems and kiosks are for assigned tasks only. (PL-4)
+
 4.2 Every employee must sign this policy before receiving access and again each year. Longshore labor receive the one-page rules card through the hiring hall and the shift briefing before using VMTs or equipment. (PL-4(1))
+
 4.3 **Training.** Everyone with access to IT or OT, including contractors, must complete cybersecurity training within 5 days of gaining system access (and no later than 30 days after hire), and every year after. People who use OT also take the OT module. Key personnel also train on their incident roles and on current threats. (AT-2; AT-3; PR.AT-01; PR.AT-02; 101.650(d)(1)-(2), (d)(4))
+
 4.4 **Accompany or monitor.** Anyone who must use IT or OT before completing training, including longshore labor and vendor technicians, must be accompanied or monitored by a trained person. Shift superintendents are trained first so they can supervise. (AT-2; PS-7; 101.650(d)(3))
+
 4.5 Install only hardware, firmware and software on the approved list. Do not connect personal laptops, phones or USB media to HMIs, gate servers, kiosks or network ports. Vendor technicians may connect only company-scanned laptops, by exception approved by the Maintenance Manager or IT Manager. (CM-11; MP-7; PR.PS-02; 101.650(b)(1); 101.650(i)(2))
+
 4.6 Do not open unexpected attachments or links. Report suspicious messages with the Report Phishing button. (AT-2)
+
 4.7 Lock your screen when you step away. Gate clerks sign in with their own badge and PIN at every shift change. (AC-11)
+
 4.8 Report lost or stolen devices, unusual system or equipment behavior, and anything suspicious immediately (POL-03 4.2).
+
 4.9 **Generative AI:** use only approved tools. Never paste SSI, personal information, customs status, cargo data or TOS exports into a public chatbot (see P10). (PL-4)
+
 4.10 Do not change equipment settings, safety limits or controller programs unless it is your job and the change is approved by the Maintenance Manager. (PL-4)
 
 ## 5. Compliance and enforcement

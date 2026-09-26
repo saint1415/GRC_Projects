@@ -9,7 +9,7 @@
 | Target report | None in 2026 or 2027. This is a readiness self-assessment used to answer ocean carrier security questionnaires. A SOC 2 Type 1 would be considered only if a carrier makes it a contract condition |
 | Part A | Company readiness self-assessment (`soc2-readiness.csv`) |
 | Part B | Review of the TOS vendor's SOC 2 Type 2 report for its hosted portal and remote support (`vendor-soc2-review.csv`) |
-| Prepared | 2026-08-28 by the IT Manager (proposed CySO); approved by the General Manager 2026-09-04 |
+| Prepared | 2026-08-28 by the IT Manager (proposed CySO); updated for the approved policies and runbook and approved by the General Manager, 2026-09-04 |
 
 ## 1. Why SOC 2 for this organization
 A marine terminal operator is **not** a typical SOC 2 subject. It does serve other businesses (ocean carriers), but carriers rarely ask a terminal for a CPA-issued SOC 2 report. The terminal's security is regulated through the Coast Guard: the Facility Security Plan and, from 2027, the Cybersecurity Plan (33 CFR 101.630). SOC 2 appears here for two practical reasons.

@@ -54,6 +54,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **Sub-processors listed in the DPA (6):** the cloud provider (SYS-01, SYS-02), the logging and monitoring SaaS (SYS-06), the email delivery service and the SMS provider (SYS-07), the support SaaS (SYS-05), and the AI model provider (SYS-08).
 
+**Approved AI tools (POL-05 4.8):** one company-licensed generative AI assistant for staff drafting and code assistance (AI-003 in P10), with no training on inputs. Customer data and secrets may not be entered unless the approved tools list allows it.
+
 **SSP system (P02):** the *Workforce Scheduling Platform (WSP)*: the multi-tenant production environment (SYS-01) and the components that build, operate, and support it (SYS-03, SYS-04, the SYS-05 admin console, SYS-06), with interfaces to SYS-07 and SYS-08. The staging environment (SYS-02) is a connected system in scope because it holds copies of production data.
 
 ## 4. Current security posture: partially compliant
@@ -82,7 +84,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 8. Container image scanning runs but is not enforced, and vulnerability findings have no remediation timelines.
 9. Quarterly access reviews cover the identity provider only, not cloud roles, database users, or the source repository.
 10. The incident response plan written for the Type 1 has never been tested, and its customer notice step does not reflect the 72-hour and 48-hour contract terms.
-11. Data of terminated customers is kept indefinitely, although the DPA promises deletion within 90 days (14 former customers' tenants are still present).
+11. Data of terminated customers is kept indefinitely, although the DPA promises deletion within 90 days (14 former customers' tenants are still present). Payroll export files have no lifecycle rule and go back to 2022 (found in P07).
 12. Public security statements are not reviewed against actual practice. The claim that "every access is logged" is not true for the shared break-glass role.
 13. The AI assistant (beta since 2026-07-15 with 40 customers) went live without a documented AI risk assessment, bias testing of shift-swap suggestions, or an update to the public data-use statement.
 14. Engineers receive no secure coding training.
@@ -108,4 +110,6 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-08-31 to 2026-09-04 | Control assessment fieldwork (independent assessor) |
 | 2026-09-08 to 2026-09-11 | SOC 2 Type 2 readiness assessment and AI risk assessment |
 | 2026-09-22 | Deliverables approved by the Chief Executive Officer (High risks) and the CTO (Moderate and below) |
+| 2026-10-31 | SOC 2 Type 2 readiness gates due (P09) |
+| 2026-11-18 | First incident response tabletop exercise (P08 scenario) |
 | 2026-11-01 to 2027-04-30 | Planned SOC 2 Type 2 observation period (report expected by 2027-06-30) |

@@ -89,10 +89,12 @@ The full list, with evidence, is in `gap-analysis.csv`. High and Moderate gaps a
 **Sequence.** The 39 requirements that cannot go on a CMMC POA&M, and the clause gaps that carry legal exposure (G-133, G-136, G-137), come first. The 1-point requirements follow. The target is a self-assessed score of at least 88, with only POA&M-eligible items open, by 2027-01-31, ahead of a C3PAO assessment in 2027-02.
 
 ## 5. Pending regulatory changes
-These are **proposed** and are not treated as current obligations. The `pending_rule_change` column flags the 7 affected rows.
+These are **proposed** and are not treated as current obligations. The `pending_rule_change` column flags the 7 rows affected by the first item.
 
 - **FAR overhaul, parts 1, 2, 4, 33, 39, 40, 52, and 53** (FR Doc. 2026-12559, 91 FR 37550, 2026-06-23; comments closed 2026-07-23). If finalized as proposed:
   - A new FAR 52.240-7 clause for CUI would require **NIST SP 800-171 Rev. 3** with DoD organization-defined parameters. Rev. 3 adds a Supply Chain Risk Management family (03.17), which the C-SCRM plan should anticipate (rows G-081 and G-129).
   - CUI incidents would be reported within **72 hours of discovery** across agencies, not only DoD (G-056, G-134).
   - A new FAR 52.240-3 would consolidate the security prohibitions, including Section 889, and standardize reporting to **72 hours from discovery** with one required report, replacing today's 1-business-day and 10-business-day reports (G-126 to G-128).
-- **No change to DFARS 252.204-7012 or to 32 CFR 170** is pending as of 2026-09-25 that would alter this analysis. CMMC Phase 2 (2026-11-10) is already scheduled in 32 CFR 170.3(e) and is treated as current.
+- **FAR prohibition on certain semiconductor products and services** (proposed rule, 91 FR 7223, 2026-02-17; comments closed 2026-04-20). It would partially implement a FY2023 NDAA section that bars executive agencies from procuring products that include covered semiconductor products or services, effective 2027-12-23. For a hardware distributor this would add a second screening list alongside Section 889. Not tied to a row yet; the C-SCRM plan (SR-2) will track it.
+- **DFARS printed circuit board acquisition restrictions** (advance notice of proposed rulemaking, DFARS Case 2022-D011, 91 FR 40508, 2026-07-02). DoD is gathering information on the prohibition of covered printed circuit boards from a covered nation. No proposed rule text exists yet.
+- A Federal Register search on 2026-09-25 found no proposed rule that would change DFARS 252.204-7012 itself or 32 CFR 170. CMMC Phase 2 (2026-11-10) is already scheduled in 32 CFR 170.3(e) and is treated as current.

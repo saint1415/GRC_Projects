@@ -38,14 +38,23 @@ All Cris Santos Company workforce members (owners, employees, temporary staff an
 | **Public** | Vessel schedule published by the port, website | No restriction |
 
 (RA-2; MP-3; ID.AM-07; 101.630(b))
+
 4.2 SSI must be marked, stored only in the FSO's repository or an SSI-restricted folder, and shared only with covered persons who need it. Documents that will become part of the Cybersecurity Plan, including P01 to P10, are handled as SSI now. (MP-3; AC-3; 101.630(b))
+
 4.3 Restricted and Confidential data must be encrypted in transit. EDI and file transfers with partners must use AS2, SFTP or TLS; plain FTP is prohibited. Traffic to and from OT must be encrypted where technically feasible. Restricted data must be encrypted at rest on laptops, servers and cloud storage. (SC-8; SC-28; PR.DS-01; PR.DS-02; 101.650(c)(2))
+
 4.4 Restricted, Confidential and SSI data may be stored only in approved systems: the TOS, the cloud tenant, the productivity suite and the FSO repository. It must never be kept on personal devices, personal cloud accounts or unapproved USB media. (AC-3)
+
 4.5 The CySO must keep an inventory of network-connected systems, including which are critical IT or OT systems, and of where Restricted and SSI data is stored. (CM-8; ID.AM-07; 101.650(b)(3))
+
 4.6 **Backups.** Critical IT and OT systems (the TOS database, gate server and OCR images, network device configurations, PLC programs and HMI settings) must be backed up, stored apart from production (a separate cloud account or offline), protected from alteration, and restore-tested at least quarterly. (CP-9; PR.DS-11; 101.650(g)(4))
+
 4.7 Logs must be captured centrally, protected so that only privileged users can access them, and kept for at least 1 year. (AU-9; AU-11; 101.650(c)(1))
+
 4.8 Media and devices that held Restricted, Confidential or SSI data must be wiped for reuse, or destroyed by a certified vendor that provides a certificate of destruction. (MP-6; ID.AM-08)
+
 4.9 Restricted, Confidential and SSI data must not be entered into AI tools or other third-party services unless the tool is approved (P10 and POL-05). (AC-3)
+
 4.10 Records are kept according to POL-01 4.10 and the FSP record rules. (SI-12)
 
 ## 5. Compliance and enforcement

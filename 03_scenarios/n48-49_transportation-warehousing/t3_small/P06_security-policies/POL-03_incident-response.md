@@ -30,14 +30,23 @@ All Cris Santos Company workforce members (owners, employees, temporary staff an
 
 ## 4. Policy statements
 4.1 The company must maintain a Cyber Incident Response Plan (33 CFR 101.650(g)(2)) covering all incident types, plus runbooks for its most likely incidents, starting with ransomware (P08). The full plan is due 2026-10-31. (IR-8; RS.MA-01)
+
 4.2 Workforce members, longshore labor and vendors must report any suspected cyber incident **immediately**, and within 1 hour at most, to the CySO line or to the shift superintendent, who calls the CySO line. Examples: a phishing click, a ransom note, a lost device, unusual TOS data, or equipment that behaves unexpectedly. Good-faith reporting is never sanctioned. (IR-6; RS.MA-02; 101.650(d)(1)(iv))
+
 4.3 Every cyber incident must be logged, categorized and tracked to closure. Records of cyber threats and reportable cyber incidents are kept per POL-01 4.10. (IR-5; 101.640)
+
 4.4 **Coast Guard reporting.** Evidence of an actual or threatened cyber incident involving or endangering the terminal must be reported **immediately** to the FBI, CISA and the Captain of the Port, as required by 33 CFR 6.16-1. The CySO makes the report, or the FSO if the CySO cannot be reached. Do not wait for the investigation to finish. A report under 6.16-1 also meets the Subpart F duty to report reportable cyber incidents to the National Response Center (101.620(b)(7)). Breaches of security and TSIs are also reported under the FSP (101.305). (IR-6; RS.CO-02)
+
 4.5 **Personal information.** If employee, truck driver or other personal information may have been acquired, the Finance and Administration Manager and counsel must decide whether notice is required under Fla. Stat. 501.171 (no later than 30 days after the breach is determined) or other state law, using the P08 notification matrix. (IR-6; RS.CO-03)
+
 4.6 No ransom may be paid without approval from the majority owner, legal counsel and the cyber insurer, and an OFAC sanctions check. (IR-4)
+
 4.7 **Safety first.** If the integrity of crane, RTG or yard equipment controllers is in doubt, affected equipment must be stopped in a safe state. It may restart only when the Maintenance Manager and the Operations Manager agree it is safe. (IR-4; RS.MI-01)
+
 4.8 The Cyber Incident Response Plan must be exercised at least annually. A cyber scenario must be part of the annual MTSA exercise, and key personnel must be trained on their incident roles. (IR-2; IR-3; 101.635; 101.650(d)(2))
+
 4.9 Port partners (the port authority, affected carriers, the port community system and the customs data exchange service) must be told promptly when an incident affects shared operations or data exchanged with them. (RS.CO-03)
+
 4.10 Lessons learned must be documented within 30 days of closing an incident and fed into the risk register and the Cybersecurity Plan (101.650(g)(3)). (IR-4; ID.IM-04)
 
 ## 5. Compliance and enforcement
