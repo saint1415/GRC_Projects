@@ -85,6 +85,8 @@ Cyber insurance ($10 million limit, $250,000 retention) transfers part of the fi
 - SOC 2 readiness and Type 2 examination ($220,000 across 2027)
 - Replacement of the 2 legacy modality consoles (2027 capital plan, $300,000)
 
+Smaller items (network closet badge readers, exercise facilitation, lease contract changes) are funded from the operating budget. Each funded item maps to a P07 POA&M entry.
+
 **Accepted (4):** R-022 (Low, CMO), R-030 (Moderate, COO; within appetite because backups are isolated and write-once), R-032 (Low, encrypted devices), R-043 (Low, vendor DDoS protection).
 
 **Contract actions:** BAAs for 30 vendors and amended AI vendor BAAs (R-010, R-020, R-023), due 2026-12-31. EHR vendor recovery terms (R-013) at the 2027 renewal.
