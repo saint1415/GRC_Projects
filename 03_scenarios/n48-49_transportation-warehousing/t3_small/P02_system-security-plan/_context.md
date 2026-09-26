@@ -9,7 +9,7 @@
 | Universal method | [P02_system-security-plan/README.md](../../../../00_universal/projects/P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** Terminal operating system (TOS) and gate automation
+**System to document:** Terminal Operations and Gate Platform (TOGP)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

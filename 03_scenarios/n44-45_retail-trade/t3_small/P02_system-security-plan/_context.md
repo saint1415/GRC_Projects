@@ -9,7 +9,7 @@
 | Universal method | [P02_system-security-plan/README.md](../../../../00_universal/projects/P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** E-commerce and point-of-sale platform
+**System to document:** E-commerce and Loyalty Platform (ELP)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

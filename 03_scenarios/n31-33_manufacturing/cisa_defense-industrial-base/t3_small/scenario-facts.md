@@ -115,3 +115,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-30 | Corrected SPRS Basic Assessment score due (Contracts Manager) |
 | 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2): one calendar year after Phase 1, which began with the DFARS rule effective 2025-11-10, 90 FR 43560) |
 | 2027-02-15 to 2027-02-26 | Target window for the Level 2 certification assessment by a C3PAO |
+
+## 7. Facts added while completing the deliverables (fictional)
+
+| Fact | Used in |
+|---|---|
+| About $272,000 of shipments per production day ($68 million over about 250 production days); about 3 new part numbers start each week | P05 |
+| PLM daily backups have never been restore-tested; MES and DNC back up weekly to a local disk (SSP CP-9) | P05, P07 POAM-019 |
+| One internet circuit at the plant; 2 break-glass accounts with hardware keys kept in the IT safe | P01 R-024, P05 |
+| Remediation budget of $185,000 for 2026 Q4 and 2027 Q1, approved by the President on 2026-08-31 | P01 |
+| P07 test details: 6 disabled enclave accounts older than 1 year not removed; 9 of 31 shop-floor visits in July 2026 not logged; a commercial customer's visitor seen unescorted on 2026-08-05; printed drawings in general recycling in 4 of 6 cells; 4 USB drives with no identifiable owner at the legacy CNC machines | P07 |
+| Customer C accepts a Trust Services Criteria self-assessment (Security only) in place of a SOC 2 report | P09 |
+| The 2026-07 public chatbot pastes were referred to the Contracts Manager and counsel on 2026-07-17 for the DIBNet and export disclosure decisions; the 3 engineers were briefed on CUI handling on 2026-07-24 | P10 |
+| SYS-02 permission audit: 11 of 38 project sites open to all enclave users; AI assistant pre-deployment test 2026-08-17 to 2026-08-21 (44 of 50 correct; 2 wrong numeric values; scanned legacy drawings 60%) | P10 |

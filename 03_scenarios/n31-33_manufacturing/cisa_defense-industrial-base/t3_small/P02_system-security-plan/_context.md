@@ -9,7 +9,7 @@
 | Universal method | [P02_system-security-plan/README.md](../../../../../00_universal/projects/P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** CUI engineering enclave (CAD/PLM)
+**System to document:** CUI Engineering Enclave (CEE)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
