@@ -1,38 +1,26 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Community Federal Credit Union |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | Operations Manager (Information Security Officer and Privacy Officer) |
+| Approved by | Board of Directors, 2026-08-25 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the credit union keeps three core policies: access control (POL-02), incident response (POL-03), and data classification (POL-04). A separate Information Security Policy would add little for a 7-person credit union, so the essential program rules that 12 CFR 748.0 and Appendix A call for live in **POL-02 Part A. Program governance**. Together, POL-02 to POL-04 are the written information security program the board approved on 2026-08-25.
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | NCUA citation |
+|---|---|---|
+| Board designates the Information Security Officer in writing | POL-02 A.1 | App. A III.A.2 |
+| Annual risk assessment with SP 800-30 | POL-02 A.2 | App. A III.B.1-3 |
+| Who may accept risk | POL-02 A.3 | App. A III.C.1 |
+| Sanctions | POL-02 A.4 | App. A III.C.2 |
+| Service provider due diligence, contract terms, and annual SOC review | POL-02 A.5 | App. A III.D.1-3; App. B II |
+| Annual independent testing | POL-02 A.6 | App. A III.C.3 |
+| Annual report to the board; quarterly status | POL-02 A.7 | App. A III.F |
+| Policy review and availability to staff | POL-02 A.8 | App. A III.E |
+| Retention of security records | POL-02 A.9 | 748.1(d)(3) (SAR records, as the benchmark) |
+| Exceptions process | POL-02 A.10 | 748.0(a) |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice if the credit union grows past the Micro tier (10 or more employees) or opens a second office.

@@ -1,0 +1,15 @@
+review_item,what_to_check,provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Confidentiality useful because the service holds customer drawings,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, file storage, sharing, and version history for business plans",All in scope,None
+Subservice organizations,Carve-out or inclusive; which data center providers,Colocation data center providers carved out; the provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,None noted,None
+Complementary user entity controls (CUECs),Controls the shop must run for the provider's controls to work,Customer manages its users and MFA; configures sharing settings; keeps its own backups where retention does not meet its needs; reviews audit logs; reports suspected compromise,"Map to IA-2(1) (POAM-004), AC-3 sharing (POL-01 8.4), CP-9 (POAM-002), AU-6 (POL-01 7.8), IR-6 (P08)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to customers; encryption at rest and in transit tested without exception,MFA is the shop's to turn on (CUEC)
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,Continuous monitoring of the service tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of incidents affecting their data under the service terms,Note the notice channel in the P08 contact list
+Availability and retention vs the BIA,Recovery objectives vs BP-01 RPO 8 h and BP-02 RPO 24 h,Service-side recovery objectives stated; deleted items and versions kept 30 days on this plan,"Meets the BIA for provider failures, not for ransomware on the laptop that syncs encrypted files; a separate backup is needed (POAM-002)"
+Fit for FCI,Does the service suit files that hold FCI under FAR 52.204-21,FAR 52.204-21 sets no cloud authorization requirement for FCI; the report supports approving the suite as the shop's file system under POL-01 8.2,Recheck if CUI ever arrives (DFARS 252.204-7012 would then require more)
+Bridge letter,Coverage from report end date to today,Requested 2026-08-13 through the trust portal,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-machinist 2026-08-13, with the IT technician",Repeat every year (POL-01 6.4)

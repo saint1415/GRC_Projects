@@ -1,2 +1,41 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,CSF 2.0 benchmark (GV.PO),No
+POL-01,4.2,Owner designated security lead and CMMC affirming official in writing,PM-2,GV.RR-02,N31-33-R02 (32 CFR 170.22(a)(1)),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,CSF 2.0 benchmark (ID.RA),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,CSF 2.0 benchmark (GV.RM),No
+POL-01,4.5,Annual self-assessment with periodic outside review,CA-2,ID.IM-02,CSF 2.0 benchmark (ID.IM),No
+POL-01,4.6,No SPRS affirmation unless all 15 requirements are MET; annual repeat,CA-2,ID.IM-01,N31-33-R02 (32 CFR 170.15(a)(1); 170.22),No
+POL-01,4.7,Annual policy review,PL-1,GV.PO-02,CSF 2.0 benchmark (GV.PO),No
+POL-01,5.3,"Written, time-limited exceptions; none for [FAR] rules",PL-1,GV.PO-02,N31-33-R02 (32 CFR 170.15(a)(1)),No
+POL-01,6.1,Supplier list with data received and NDA or flowdown date,SA-9; SR-3,ID.AM-02,C-DIB-R04 (52.204-21(c)),No
+POL-01,6.2,Processors get PO and spec only; flowdown and Level 1 check before any FCI,SA-9,GV.SC-05,C-DIB-R04 (52.204-21(c)); N31-33-R02 (DFARS 252.204-7021(f)),No
+POL-01,6.3,OEM drawings only to OEM-approved parties under NDA,SA-9,GV.SC-05,OEM SQA (NDA),No
+POL-01,6.4,Annual review of the productivity suite SOC 2 report and customer controls,SA-9,GV.SC-07,CSF 2.0 benchmark (GV.SC),No
+POL-01,6.5,"Owner-started, watched remote support; unattended access off",AC-17,PR.AA-05,N31-33-R02 (AC.L1-b.1.i); C-DIB-R04 (52.204-21(b)(1)(i)),Yes
+POL-01,7.1,Unique accounts; no shared credentials,IA-2; AC-2,PR.AA-01,N31-33-R02 (IA.L1-b.1.v); C-DIB-R04 (52.204-21(b)(1)(v)),No
+POL-01,7.2,Standard user account for daily work,AC-6,PR.AA-05,N31-33-R02 (AC.L1-b.1.ii); C-DIB-R04 (52.204-21(b)(1)(ii)),No
+POL-01,7.3,Authenticator-app MFA wherever offered,IA-2(1),PR.AA-03,CSF 2.0 benchmark (PR.AA-03),Yes
+POL-01,7.4,Unique 14-character passphrases; defaults changed before use,IA-5,PR.AA-01,N31-33-R02 (IA.L1-b.1.vi); C-DIB-R04 (52.204-21(b)(1)(vi)),No
+POL-01,7.5,Written account approval; same-day removal; quarterly review,AC-2,PR.AA-05,N31-33-R02 (AC.L1-b.1.i); C-DIB-R04 (52.204-21(b)(1)(i)),No
+POL-01,7.7,Sealed emergency access sheet with the designated emergency contact,AC-2; CP-2,PR.AA-05,OEM SQA (on-time delivery; continuity),No
+POL-01,7.8,Monthly review of sign-in history and router device list,AU-6,DE.CM-01,CSF 2.0 benchmark (DE.CM),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,CSF 2.0 benchmark (ID.AM),No
+POL-01,8.2,Restricted data only in approved locations; never in consumer apps or AI tools,AC-3; AC-20,PR.DS-01,N31-33-R02 (AC.L1-b.1.iii); C-DIB-R04 (52.204-21(b)(1)(iii)),Yes
+POL-01,8.3,"Screen every drawing package for CUI, ITAR, and EAR markings before download",RA-2,ID.AM-05,N31-33-R03 (22 CFR 122.1); N31-33-R04; N31-33-R01,No
+POL-01,8.4,Named-person sharing links with 30-day expiry,AC-3,PR.AA-05,N31-33-R02 (AC.L1-b.1.ii); C-DIB-R04 (52.204-21(b)(1)(ii)),No
+POL-01,8.5,Read-only released programs with hashes; compare before each OEM run,SI-7,PR.DS-01,OEM SQA (released process control),Yes
+POL-01,8.6,Weekly backup the laptop cannot overwrite; quarterly test restore,CP-9,PR.DS-11,OEM SQA (10-year record retention),Yes
+POL-01,8.7,Only the owner posts; photo check before posting; quarterly website review,AC-22,PR.DS-01,N31-33-R02 (AC.L1-b.1.iv); C-DIB-R04 (52.204-21(b)(1)(iv)),Yes
+POL-01,8.8,Shred paper; wipe or certify destruction of devices and sticks; record each disposal,MP-6,ID.AM-08,N31-33-R02 (MP.L1-b.1.vii); C-DIB-R04 (52.204-21(b)(1)(vii)),Yes
+POL-01,8.9,Six-year retention of security and CMMC records; SQA periods for quality records,SI-12,ID.AM-08,N31-33-R02 (32 CFR 170.15(c)(2)); OEM SQA,No
+POL-01,9.2,Updates and antivirus on; monthly CAM and router firmware check,SI-2; SI-3,PR.PS-02,N31-33-R02 (SI.L1-b.1.xii to xv); C-DIB-R04 (52.204-21(b)(1)(xii)-(xv)),Yes
+POL-01,9.3,Laptop and VMC on their own segment; guest Wi-Fi; share password,SC-7,PR.IR-01,"N31-33-R02 (SC.L1-b.1.x; AC.L1-b.1.i); C-DIB-R04 (52.204-21(b)(1)(i), (x))",Yes
+POL-01,9.4,Shop-labeled USB sticks only; service media scanned first,MP-7; SI-3,PR.DS-01,N31-33-R02 (SI.L1-b.1.xv); C-DIB-R04 (52.204-21(b)(1)(xv)),No
+POL-01,9.5,Visitor log kept one year; escort; drawings covered; key list,PE-3; PE-8,PR.AA-06,N31-33-R02 (PE.L1-b.1.viii; PE.L1-b.1.ix); C-DIB-R04 (52.204-21(b)(1)(viii)-(ix)),Yes
+POL-01,9.6,AI tools only after P10 approval; AI G-code simulated and dry-run,PL-4; AC-20,GV.PO-01,N31-33-R02 (AC.L1-b.1.iii); C-DIB-R04 (52.204-21(b)(1)(iii)),Yes
+POL-01,9.7,Annual security course for the owner,AT-2,PR.AT-01,CSF 2.0 benchmark (PR.AT),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,Aerospace PO terms; OEM SQA,No
+POL-01,10.2,Same-day incident log with discovery time,IR-6; IR-4,RS.MA-02,Aerospace PO terms (72-hour notice),No
+POL-01,10.4,Customer notices on time (72 hours aerospace; 5 business days OEM),IR-6,RS.CO-02,Aerospace PO terms; OEM SQA,No
+POL-01,10.5,No ransom without legal advice and an OFAC check,IR-4,RS.MA-01,OFAC advisory (2021-09-21),No
+POL-01,11.2,"Written overflow arrangement with a nearby shop, subject to customer approval",CP-2,RC.RP-01,OEM SQA (continuity),No

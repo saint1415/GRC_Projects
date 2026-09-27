@@ -1,0 +1,16 @@
+review_item,what_to_check,portfolio_platform_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because billing and rebalancing depend on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Portfolio accounting, rebalancing, performance reporting, fee billing, custodian data feeds, adviser logins","All in scope; custodian data feeds are received from the custodians, which are not subservice organizations",None
+Subservice organizations,Carve-out or inclusive; which hosting providers,Cloud hosting provider carved out; the vendor reviews the host's own SOC 2 each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated vendor employees kept access for more than the stated 1 business day; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the adviser must run for the vendor's controls to work,Customer enables MFA for its users; removes users promptly; reviews fee calculations before sending fee files to custodians; notifies the vendor of suspected compromise,"Map to IA-2(1) (gap: MFA was off, POAM-001), AC-2, IR-6 (POAM-007); fee file review already done each quarter"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA offered to all customer users (customer-enabled); encryption at rest and in transit tested without exception,The vendor's control depends on the customer turning MFA on
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,"Customers notified of security incidents affecting their data ""without undue delay""; no fixed time",Ask for a fixed notice time (Fla. Stat. 501.171(6) sets a 10-day outer limit for third-party agents)
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)","Recovery objectives vs the adviser's BIA (BP-01 RTO 8 h, RPO 24 h; BP-04 RTO 72 h)",RTO 24 h; RPO 4 h stated in the system description; annual recovery test performed,"Meets BP-04. BP-01 is met through the custodian portal workaround, not by the platform"
+Bridge letter,Coverage from report end date to today,Requested 2026-07-16,Obtain before 2026-10-31
+Custodian assurance,Custodian SOC report,"Custodian offers a SOC 1 Type 2 on request (financial reporting controls, not security); not requested",Request with the July 2027 vendor review
+Review sign-off,Reviewer and date,"Owner-adviser 2026-07-16, with the IT consultant",Repeat every year (POL-01 6.3)
