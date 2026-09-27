@@ -65,6 +65,7 @@ overrides = {(o["unit_id"], o["tier_id"]): o for o in rows(V / "scenario-industr
 label_rows = rows(V / "sample-folder-labels.csv")
 labels = {(r["unit_id"], r["tier_id"]): r["business_label"] for r in label_rows}
 display = {(r["unit_id"], r["tier_id"]): r["display_name"] for r in label_rows}
+divisions = {r["unit_id"]: r for r in rows(V / "multi-sector-divisions.csv")}
 sba = {s["naics6"]: s for s in rows(V / "sba-size-standards.csv")}
 sector_names = {u["naics_sector"]: u["name"] for u in units if u["level"] == "naics_sector"}
 cross_notify_path = U / "cross-sector" / "notification-baseline.csv"
@@ -259,16 +260,20 @@ def write_scenario(u, tier_id, vd):
     legal = m.group(1).split(" (")[0].strip() if m else legal_default
 
     # ---- meeting brief
-    role = as_role(o["business"] if o else u["business"])
+    # A finished sample names its own business; planned samples use the registry default.
+    done = facts_file.exists()
+    role = as_role(display[(u["unit_id"], tier_id)] if done else (o["business"] if o else u["business"]))
+    div = divisions[u["unit_id"]]
     intro = {
         "t1": f"{COMPANY} is a one-person business: Cris Santos owns and runs it alone as a sole proprietorship, operating as {role}.",
         "t2": f"{legal} is a micro business with {p['employees']} employees, operating as {role}.",
         "t3": f"{legal} is a small business with {p['employees']:,} employees, operating as {role}.",
         "t4": f"{legal} is a privately held mid-market company with {p['employees']:,} employees, operating as {role}.",
         "t5": f"{legal} is a publicly traded enterprise with {p['employees']:,} employees, operating as {role}.",
-        "t6": (f"{legal} is a publicly traded, diversified enterprise with {p['employees']:,} employees. Its "
-               f"{u['name']} division, the focus of this scenario, operates as {role}. The company also runs divisions in "
-               + " and ".join(f"NAICS {c} {sector_names.get(c, '')}" for c in f["_companions"]) + "."),
+        "t6": (f"{legal} is a publicly traded, diversified enterprise with {p['employees']:,} employees in three divisions. "
+               f"The focus of this sample is its {div['focus_division'].lower()} division ({u['name']}). The other divisions are "
+               f"{div['division_2'][0].lower() + div['division_2'][1:]} and {div['division_3'][0].lower() + div['division_3'][1:]}. "
+               f"Why this combination: {div['why_this_combination']}."),
     }[tier_id]
     size_rows = [("Employees", headcount_text(p))]
     if p["receipts"] is not None:

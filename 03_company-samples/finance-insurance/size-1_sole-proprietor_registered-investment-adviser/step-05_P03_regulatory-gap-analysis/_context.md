@@ -27,6 +27,8 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 | N52-R06 | SEC Regulation S-ID (Identity Theft Red Flags) | 17 CFR 248.201 |
 | N52-R07 | NAIC Insurance Data Security Model Law #668 | NAIC Model #668 (2017); enacted state-by-state (e.g., state insurance codes) |
 | N52-R08 | SEC public-company cybersecurity disclosure | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) |
+| N52-R09 | NCUA security program and cyber incident notification | 12 CFR Part 748 (748.0, 748.1(c), Appendices A and B) |
+| N52-R10 | OCC heightened standards for large banks | 12 CFR Part 30, Appendix D |
 
 ## Working files in this folder
 These files were copied from the universal templates with scenario details filled in. Replace every `[FILL]` marker. The build never overwrites them after they exist.

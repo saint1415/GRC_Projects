@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -17,7 +19,7 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | SBA size status | Small (SBA standard for NAICS 523940: $47.0 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 523940 Portfolio Management and Investment Advice |
 | Vertical | Finance and Insurance (NAICS sector 52) |
-| Primary system | Core business SaaS stack (email, files, client and billing records) |
+| Primary system | Advisory Practice Systems Profile |
 | IT footprint | Personal and SaaS tools: email suite, cloud storage, accounting SaaS, one laptop and phone |
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
@@ -40,6 +42,8 @@ OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law 
 | [SEC Regulation S-ID (Identity Theft Red Flags)](https://www.ecfr.gov/current/title-17/section-248.201) | 17 CFR 248.201 | None. |
 | [NAIC Insurance Data Security Model Law #668](https://content.naic.org/sites/default/files/model-law-668.pdf) | NAIC Model #668 (2017); enacted state-by-state (e.g., state insurance codes) | Model sec. 9: licensees with fewer than 10 employees (incl. independent contractors) exempt from Section 4 (information security program); HIPAA-compliant licensees deemed compliant with Section 4. |
 | [SEC public-company cybersecurity disclosure](https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure) | 17 CFR 229.106 (Reg S-K Item 106); Form 8-K Item 1.05 (Release 33-11216, 88 FR 51896) | No exemption by size; smaller reporting companies received a later Item 1.05 compliance date (June 15, 2024 vs. Dec 18, 2023). |
+| [NCUA security program and cyber incident notification](https://www.ecfr.gov/current/title-12/chapter-VII/subchapter-A/part-748) | 12 CFR Part 748 (748.0, 748.1(c), Appendices A and B) | No size threshold |
+| [OCC heightened standards for large banks](https://www.ecfr.gov/current/title-12/chapter-I/part-30/appendix-Appendix%20D%20to%20Part%2030) | 12 CFR Part 30, Appendix D | Average total consolidated assets of $50 billion or more (OCC proposal 90 FR 61084, 2025-12-30, would raise the threshold; not final) |
 
 Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
 
@@ -49,7 +53,7 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. | Company facts only |
-| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Core business SaaS stack (email, files, client and billing records). | P05: which systems matter and how long they can be down |
+| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Advisory Practice Systems Profile. | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). | P02: the system boundary and its controls |
 | 4 | [P01 Risk Register](step-04_P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. | P05 impact levels; P02 and P04 systems and controls |
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: Interagency Guidelines Establishing Information Security Standards. | P01 risks; P02 control statements |

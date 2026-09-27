@@ -1,6 +1,6 @@
 # Plan: Completing the GRC Project List for Cris Santos Company
 
-**Status as of 2026-09-26:** Phases 0 to 4 are complete: 41 finished samples (410 deliverables), each validated. Health Care is finished at all six sizes, and every one of the 36 verticals (NAICS sectors and CISA sectors) is finished at Small. Phase 5 (remaining tier and vertical combinations) is optional.
+**Status as of 2026-09-27:** Phases 0 to 4 are complete and Phase 5 is under way in batches of 10: 51 of 216 sample companies are finished (510 deliverables), each validated. Health Care, Manufacturing, and Finance are finished at all six sizes; every other industry is finished at Small. Folder names are plain English (see the README).
 
 ---
 
@@ -69,7 +69,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 | **2. Scalability ladder** (done) | Health Care across all 6 tiers | 50 more (5 tiers x 10) | Shows the same method scaling from a sole practitioner to a multi-sector enterprise |
 | **3. Named verticals** (done) | Small tier for Manufacturing (31-33), Wholesale (42), Retail (44-45), Transportation and Warehousing (48-49), Information/SaaS (51), Finance (52), Education (61), Defense Industrial Base (CISA) | 80 (8 x 10) | Covers the industries you named, including supply chain and federal/defense |
 | **4. Full sector coverage** (done) | Small tier for every remaining vertical (27) | 270 | Every NAICS and CISA sector has at least one complete sample |
-| **5. Full matrix** (optional) | Remaining tier x vertical combinations | Up to 1,750 more (2,160 total) | Complete library. Prioritize by meeting demand |
+| **5. Full matrix** (in progress) | Remaining size x industry combinations, in batches of 10 | 1,750 (175 x 10) | Complete library. Batch 1 done: Manufacturing and Finance size ladders |
 
 **Recommended sample for your first meeting:** `03_company-samples/health-care/size-3_small_multi-specialty-practice/`. Read its `README.md` first; [docs/meeting-guide.md](docs/meeting-guide.md) explains how to run the meeting from it.
 
@@ -172,6 +172,26 @@ All Small tier, Florida, partially compliant. Each P03 starts with an applicabil
 - CFATS authority still lapsed since 2023-07-28.
 - TSA surface cyber NPRM (89 FR 88488) and CIRCIA still proposed.
 
+### Phase 5 record (in progress)
+Built in batches of 10, reported after each batch. Division choices for Multi-Sector companies are in [`02_industry-rules/multi-sector-divisions.csv`](02_industry-rules/multi-sector-divisions.csv) (proposed rows are open for review).
+
+**Batch 1 (completed 2026-09-27): Manufacturing and Finance size ladders.** With Health Care, three industries now show the same method at all six sizes.
+
+| Industry | Size | Business | P03 finding (primary rule) | Risks (High+) | P07 statements |
+|---|---|---|---|---|---|
+| Manufacturing | Sole Proprietor | CNC machine shop | FAR 52.204-21 and CMMC Level 1 by contract flow-down; FDA 524B and QMSR do not reach a component maker directly | 15 (3) | 46 |
+| Manufacturing | Micro | Medical device startup | FD&C Act 524B premarket duties; QMSR (effective 2026-02-02) as manufacturer of record | 24 (4) | 111 |
+| Manufacturing | Mid-Market | Medical device manufacturer | 524B postmarket, QMSR, 21 CFR 803 and 806, HIPAA business associate; SP 800-82r3 for the plant | 50 (9) | 212 |
+| Manufacturing | Enterprise | Global medical device maker | Same, plus the FTC Health Breach Notification Rule for its consumer app and SEC Item 1.05 and 106 | 65 (11) | 270 |
+| Manufacturing | Multi-Sector | Diversified industrial group | Devices (524B), distribution (FAR 52.204-21, CMMC Level 1), testing (CSF 2.0 benchmark); group SEC rules | 78 (12) | 227 |
+| Finance | Sole Proprietor | Registered investment adviser | State-registered, so the FTC Safeguards Rule (16 CFR 314.1(b)), not SEC Regulation S-P | 15 (3) | 33 |
+| Finance | Micro | Community credit union | NCUA 12 CFR Part 748 and its 72-hour notice; bank and FTC rules do not apply | 23 (4) | 86 |
+| Finance | Mid-Market | Regional bank | 12 CFR 30 App. B and 12 CFR 53; App. D and SEC rules do not apply at this size | 50 (8) | 244 |
+| Finance | Enterprise | Super-regional bank | App. D heightened standards, 12 CFR 252.22, 53.3 and 225.302, SEC rules, Reg S-P for its broker-dealer | 66 (11) | 269 |
+| Finance | Multi-Sector | Diversified financial group | Bank (App. D), bank service provider software division (12 CFR 53.4), real estate under the holding company's GLBA program | 80 (11) | 269 |
+
+**Added to the industry rules:** N52-R09 (NCUA Part 748) and N52-R10 (OCC heightened standards).
+
 ---
 
 ## 5. Keeping it current (the isolated universal layer)
@@ -201,6 +221,9 @@ All Small tier, Florida, partially compliant. Each P03 starts with an applicabil
 | FCC CPNI breach amendments (47 CFR 64.2011) | Upheld 2025-08-13; effective date not yet announced | Communications P03, P08 |
 | CFATS reauthorization | Lapsed since 2023-07-28 | Chemical P03 |
 | TSA surface cyber NPRM (89 FR 88488) | Proposed Nov 2024; not final | Transportation, Energy |
+| OCC heightened standards threshold (12 CFR 30 App. D) | Proposal to raise the $50 billion threshold (90 FR 61084, 2025-12-30); not final | Finance Enterprise and Multi-Sector |
+| Model risk management guidance | Federal Reserve SR 26-2 (2026-04-17) supersedes SR 11-7; generative AI outside its scope | Finance P10 |
+| NCUA Part 748 Appendices A and B | Proposed for removal from the CFR; not final | Finance Micro (credit union) |
 | NSM-22 review (EO 14239) | Under review; still in effect | CISA sector list |
 
 ---
