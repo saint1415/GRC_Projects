@@ -135,9 +135,13 @@ These facts were added while building the deliverables. They do not change secti
 | Vice President, Facilities | Physical security of plants, R&D centers, and monitoring centers |
 | Vice President, Corporate Communications | Media and customer communications during incidents |
 | Vice President, Investor Relations | Investor communications; disclosure committee member |
+| Vice President, Field Service | Field service and technical support; USB updates for legacy devices; update adoption outreach |
+| Vice President, Regulatory Affairs | FDA submissions under the CQRO; backup for FDA reporting decisions |
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Chief Accounting Officer, CISO, VP Product Security, CQRO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. The VP Product Security, the CQRO, and the Chief Risk Officer joined in 2026.
 
 **Service lines offered to business customers (P09).** SL-1: DDC hospital services (remote viewing, secondary alarms, EHR interfaces, drug library and firmware distribution, image archive) for about 2,300 hospitals, with an annual SOC 2 Type 2 report since 2023. SL-2: RCM service for about 5,200 practices and hospitals (no SOC 2 report yet; two large health systems require one by 2027).
+
+**Revenue by segment (fictional, used for BIA values).** Patient monitoring and gateways about $1.7 billion; infusion about $1.2 billion; RCM service about $0.9 billion; ultrasound about $0.4 billion; consumer about $0.25 billion; service contracts and DDC subscriptions about $0.35 billion. About 16,000 patients are on RCM monitoring at any time.
 
 **Acquired infusion business.** Acquired 2024-03. It brought MN-1, the IV-300 product line, about 900 workforce members on a legacy directory, and 5 PHI subcontractors whose contracts are still being replaced. Integration is due 2027-06-30.
