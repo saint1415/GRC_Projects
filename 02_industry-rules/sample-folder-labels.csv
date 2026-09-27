@@ -1,0 +1,217 @@
+unit_id,tier_id,business_label,display_name
+n11,t1,crop-farm,Crop farm
+n11,t2,crop-farm,Crop farm
+n11,t3,diversified-crop-farm,Diversified crop farm
+n11,t4,crop-farm,Crop farm
+n11,t5,crop-farm,Crop farm
+n11,t6,crop-farm-plus-two-divisions,Crop farm plus two divisions
+c-food-ag,t1,meat-processor,Meat processor
+c-food-ag,t2,meat-processor,Meat processor
+c-food-ag,t3,meat-processor,Meat processor
+c-food-ag,t4,meat-processor,Meat processor
+c-food-ag,t5,meat-processor,Meat processor
+c-food-ag,t6,meat-processor-plus-two-divisions,Meat processor plus two divisions
+n21,t1,oilfield-services-contractor,Oilfield services contractor
+n21,t2,crude-oil-producer,Crude oil producer
+n21,t3,crude-oil-producer,Crude oil producer
+n21,t4,crude-oil-producer,Crude oil producer
+n21,t5,crude-oil-producer,Crude oil producer
+n21,t6,crude-oil-producer-plus-two-divisions,Crude oil producer plus two divisions
+n22,t1,utility-engineering-consultant,Utility engineering consultant
+n22,t2,electric-distribution-utility,Electric distribution utility
+n22,t3,electric-distribution-utility,Electric distribution utility
+n22,t4,electric-distribution-utility,Electric distribution utility
+n22,t5,electric-distribution-utility,Electric distribution utility
+n22,t6,electric-distribution-utility-plus-two-divisions,Electric distribution utility plus two divisions
+c-energy,t1,pipeline-integrity-consultant,Pipeline integrity consultant
+c-energy,t2,gas-transmission-pipeline,Gas transmission pipeline
+c-energy,t3,gas-transmission-pipeline,Gas transmission pipeline
+c-energy,t4,gas-transmission-pipeline,Gas transmission pipeline
+c-energy,t5,gas-transmission-pipeline,Gas transmission pipeline
+c-energy,t6,gas-transmission-pipeline-plus-two-divisions,Gas transmission pipeline plus two divisions
+c-dams,t1,dam-safety-consultant,Dam safety consultant
+c-dams,t2,hydroelectric-dam-operator,Hydroelectric dam operator
+c-dams,t3,hydroelectric-dam-operator,Hydroelectric dam operator
+c-dams,t4,hydroelectric-dam-operator,Hydroelectric dam operator
+c-dams,t5,hydroelectric-dam-operator,Hydroelectric dam operator
+c-dams,t6,hydroelectric-dam-operator-plus-two-divisions,Hydroelectric dam operator plus two divisions
+c-nuclear,t1,radiation-safety-consultant,Radiation safety consultant
+c-nuclear,t2,radiation-safety-consulting-practice,Radiation safety consulting practice
+c-nuclear,t3,radioactive-waste-processor,Radioactive waste processor
+c-nuclear,t4,nuclear-power-plant,Nuclear power plant
+c-nuclear,t5,nuclear-power-plant,Nuclear power plant
+c-nuclear,t6,nuclear-power-plant-plus-two-divisions,Nuclear power plant plus two divisions
+c-water,t1,community-water-system,Community water system
+c-water,t2,community-water-system,Community water system
+c-water,t3,community-water-system,Community water system
+c-water,t4,community-water-system,Community water system
+c-water,t5,community-water-system,Community water system
+c-water,t6,community-water-system-plus-two-divisions,Community water system plus two divisions
+n23,t1,commercial-general-contractor,Commercial general contractor
+n23,t2,commercial-general-contractor,Commercial general contractor
+n23,t3,commercial-general-contractor,Commercial general contractor
+n23,t4,commercial-general-contractor,Commercial general contractor
+n23,t5,commercial-general-contractor,Commercial general contractor
+n23,t6,commercial-general-contractor-plus-two-divisions,Commercial general contractor plus two divisions
+n31-33,t1,cnc-machine-shop,CNC machine shop
+n31-33,t2,medical-device-startup,Medical device startup
+n31-33,t3,medical-device-manufacturer,Medical device manufacturer
+n31-33,t4,medical-device-manufacturer,Medical device manufacturer
+n31-33,t5,global-medical-device-maker,Global medical device maker
+n31-33,t6,diversified-industrial-group,Diversified industrial group
+c-chemical,t1,chemical-distributor-broker,Chemical distributor broker
+c-chemical,t2,specialty-chemical-maker,Specialty chemical maker
+c-chemical,t3,specialty-chemical-formulator,Specialty chemical formulator
+c-chemical,t4,specialty-chemical-maker,Specialty chemical maker
+c-chemical,t5,specialty-chemical-maker,Specialty chemical maker
+c-chemical,t6,specialty-chemical-maker-plus-two-divisions,Specialty chemical maker plus two divisions
+c-critical-mfg,t1,industrial-equipment-repair-technician,Industrial equipment repair technician
+c-critical-mfg,t2,power-transformer-manufacturer,Power transformer manufacturer
+c-critical-mfg,t3,power-transformer-manufacturer,Power transformer manufacturer
+c-critical-mfg,t4,power-transformer-manufacturer,Power transformer manufacturer
+c-critical-mfg,t5,power-transformer-manufacturer,Power transformer manufacturer
+c-critical-mfg,t6,power-transformer-manufacturer-plus-two-divisions,Power transformer manufacturer plus two divisions
+c-dib,t1,engineering-subcontractor-with-cui,Engineering subcontractor with CUI
+c-dib,t2,aircraft-parts-manufacturer,Aircraft parts manufacturer
+c-dib,t3,aircraft-parts-manufacturer,Aircraft parts manufacturer
+c-dib,t4,aircraft-parts-manufacturer,Aircraft parts manufacturer
+c-dib,t5,aircraft-parts-manufacturer,Aircraft parts manufacturer
+c-dib,t6,aircraft-parts-manufacturer-plus-two-divisions,Aircraft parts manufacturer plus two divisions
+n42,t1,it-hardware-distributor,IT hardware distributor
+n42,t2,it-hardware-distributor,IT hardware distributor
+n42,t3,it-hardware-distributor,IT hardware distributor
+n42,t4,it-hardware-distributor,IT hardware distributor
+n42,t5,it-hardware-distributor,IT hardware distributor
+n42,t6,it-hardware-distributor-plus-two-divisions,IT hardware distributor plus two divisions
+n44-45,t1,grocery-retailer,Grocery retailer
+n44-45,t2,grocery-retailer,Grocery retailer
+n44-45,t3,independent-grocery-store,Independent grocery store
+n44-45,t4,grocery-retailer,Grocery retailer
+n44-45,t5,grocery-retailer,Grocery retailer
+n44-45,t6,grocery-retailer-plus-two-divisions,Grocery retailer plus two divisions
+n48-49,t1,freight-forwarder-customs-broker,Freight forwarder customs broker
+n48-49,t2,freight-forwarding-office,Freight forwarding office
+n48-49,t3,marine-cargo-terminal,Marine cargo terminal
+n48-49,t4,marine-cargo-terminal,Marine cargo terminal
+n48-49,t5,marine-cargo-terminal,Marine cargo terminal
+n48-49,t6,marine-cargo-terminal-plus-two-divisions,Marine cargo terminal plus two divisions
+c-transportation,t1,rail-and-truck-freight-broker,Rail and truck freight broker
+c-transportation,t2,freight-railroad,Freight railroad
+c-transportation,t3,short-line-railroad,Short line railroad
+c-transportation,t4,freight-railroad,Freight railroad
+c-transportation,t5,freight-railroad,Freight railroad
+c-transportation,t6,freight-railroad-plus-two-divisions,Freight railroad plus two divisions
+n51,t1,b2b-saas-publisher,B2B SaaS publisher
+n51,t2,b2b-saas-publisher,B2B SaaS publisher
+n51,t3,workforce-scheduling-saas,Workforce scheduling SaaS
+n51,t4,b2b-saas-publisher,B2B SaaS publisher
+n51,t5,b2b-saas-publisher,B2B SaaS publisher
+n51,t6,b2b-saas-publisher-plus-two-divisions,B2B SaaS publisher plus two divisions
+c-communications,t1,wireless-internet-provider,Wireless internet provider
+c-communications,t2,telecom-carrier,Telecom carrier
+c-communications,t3,regional-telecom-carrier,Regional telecom carrier
+c-communications,t4,telecom-carrier,Telecom carrier
+c-communications,t5,telecom-carrier,Telecom carrier
+c-communications,t6,telecom-carrier-plus-two-divisions,Telecom carrier plus two divisions
+c-it,t1,cloud-hosting-provider,Cloud hosting provider
+c-it,t2,cloud-hosting-provider,Cloud hosting provider
+c-it,t3,cloud-hosting-provider,Cloud hosting provider
+c-it,t4,cloud-hosting-provider,Cloud hosting provider
+c-it,t5,cloud-hosting-provider,Cloud hosting provider
+c-it,t6,cloud-hosting-provider-plus-two-divisions,Cloud hosting provider plus two divisions
+n52,t1,registered-investment-adviser,Registered investment adviser
+n52,t2,community-credit-union,Community credit union
+n52,t3,community-bank,Community bank
+n52,t4,regional-bank,Regional bank
+n52,t5,super-regional-bank,Super-regional bank
+n52,t6,diversified-financial-group,Diversified financial group
+c-financial,t1,independent-insurance-agency,Independent insurance agency
+c-financial,t2,payment-processor,Payment processor
+c-financial,t3,payment-processor,Payment processor
+c-financial,t4,payment-processor,Payment processor
+c-financial,t5,payment-processor,Payment processor
+c-financial,t6,payment-processor-plus-two-divisions,Payment processor plus two divisions
+n53,t1,real-estate-brokerage,Real estate brokerage
+n53,t2,real-estate-brokerage,Real estate brokerage
+n53,t3,residential-real-estate-brokerage,Residential real estate brokerage
+n53,t4,real-estate-brokerage,Real estate brokerage
+n53,t5,real-estate-brokerage,Real estate brokerage
+n53,t6,real-estate-brokerage-plus-two-divisions,Real estate brokerage plus two divisions
+c-commercial-facilities,t1,commercial-property-owner,Commercial property owner
+c-commercial-facilities,t2,commercial-property-owner,Commercial property owner
+c-commercial-facilities,t3,office-retail-property-owner,Office retail property owner
+c-commercial-facilities,t4,commercial-property-owner,Commercial property owner
+c-commercial-facilities,t5,commercial-property-owner,Commercial property owner
+c-commercial-facilities,t6,commercial-property-owner-plus-two-divisions,Commercial property owner plus two divisions
+n54,t1,cpa-tax-firm,CPA tax firm
+n54,t2,cpa-tax-firm,CPA tax firm
+n54,t3,cpa-tax-firm,CPA tax firm
+n54,t4,cpa-tax-firm,CPA tax firm
+n54,t5,cpa-tax-firm,CPA tax firm
+n54,t6,cpa-tax-firm-plus-two-divisions,CPA tax firm plus two divisions
+n55,t1,holding-company,Holding company
+n55,t2,holding-company,Holding company
+n55,t3,holding-company,Holding company
+n55,t4,holding-company,Holding company
+n55,t5,holding-company,Holding company
+n55,t6,holding-company-plus-two-divisions,Holding company plus two divisions
+n56,t1,staffing-firm,Staffing firm
+n56,t2,staffing-firm,Staffing firm
+n56,t3,staffing-firm,Staffing firm
+n56,t4,staffing-firm,Staffing firm
+n56,t5,staffing-firm,Staffing firm
+n56,t6,staffing-firm-plus-two-divisions,Staffing firm plus two divisions
+n61,t1,tutoring-service,Tutoring service
+n61,t2,tutoring-company,Tutoring company
+n61,t3,career-college,Career college
+n61,t4,private-college,Private college
+n61,t5,private-college,Private college
+n61,t6,private-college-plus-two-divisions,Private college plus two divisions
+n62,t1,solo-physician-practice,Solo physician practice
+n62,t2,two-physician-primary-care-office,Two-physician primary care office
+n62,t3,multi-specialty-practice,Multi-specialty practice
+n62,t4,physician-group-with-surgery-center,Physician group with surgery center
+n62,t5,large-medical-group,Large medical group
+n62,t6,care-delivery-health-plan-and-saas,Care delivery health plan and SaaS
+c-hph,t1,independent-pharmacy,Independent pharmacy
+c-hph,t2,independent-pharmacy,Independent pharmacy
+c-hph,t3,critical-access-hospital,Critical access hospital
+c-hph,t4,hospital,Hospital
+c-hph,t5,hospital,Hospital
+c-hph,t6,hospital-plus-two-divisions,Hospital plus two divisions
+n71,t1,live-event-venue,Live event venue
+n71,t2,live-event-venue,Live event venue
+n71,t3,live-event-venue,Live event venue
+n71,t4,live-event-venue,Live event venue
+n71,t5,live-event-venue,Live event venue
+n71,t6,live-event-venue-plus-two-divisions,Live event venue plus two divisions
+n72,t1,bed-and-breakfast-inn,Bed-and-breakfast inn
+n72,t2,hotel-operator,Hotel operator
+n72,t3,beachfront-hotel,Beachfront hotel
+n72,t4,hotel-operator,Hotel operator
+n72,t5,hotel-operator,Hotel operator
+n72,t6,hotel-operator-plus-two-divisions,Hotel operator plus two divisions
+n81,t1,device-repair-service,Device repair service
+n81,t2,device-repair-service,Device repair service
+n81,t3,device-repair-shop,Device repair shop
+n81,t4,device-repair-service,Device repair service
+n81,t5,device-repair-service,Device repair service
+n81,t6,device-repair-service-plus-two-divisions,Device repair service plus two divisions
+n92,t1,govtech-integrator,GovTech integrator
+n92,t2,govtech-integrator,GovTech integrator
+n92,t3,govtech-integrator,GovTech integrator
+n92,t4,govtech-integrator,GovTech integrator
+n92,t5,govtech-integrator,GovTech integrator
+n92,t6,govtech-integrator-plus-two-divisions,GovTech integrator plus two divisions
+c-government,t1,facilities-support-contractor,Facilities support contractor
+c-government,t2,facilities-support-contractor,Facilities support contractor
+c-government,t3,government-facilities-contractor,Government facilities contractor
+c-government,t4,facilities-support-contractor,Facilities support contractor
+c-government,t5,facilities-support-contractor,Facilities support contractor
+c-government,t6,facilities-support-contractor-plus-two-divisions,Facilities support contractor plus two divisions
+c-emergency,t1,private-security-patrol,Private security patrol
+c-emergency,t2,ambulance-service,Ambulance service
+c-emergency,t3,private-ambulance-service,Private ambulance service
+c-emergency,t4,ambulance-service,Ambulance service
+c-emergency,t5,ambulance-service,Ambulance service
+c-emergency,t6,ambulance-service-plus-two-divisions,Ambulance service plus two divisions

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh 02_verticals/sba-size-standards.csv from the live eCFR text of 13 CFR 121.201.
+"""Refresh 02_industry-rules/sba-size-standards.csv from the live eCFR text of 13 CFR 121.201.
 
 Only NAICS codes referenced by verticals.csv or scenario-industry-overrides.csv are exported.
 Usage: python3 tools/refresh_sba_standards.py
@@ -7,7 +7,7 @@ Usage: python3 tools/refresh_sba_standards.py
 import csv, datetime, gzip, html, pathlib, re, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-V = ROOT / "02_verticals"
+V = ROOT / "02_industry-rules"
 
 
 def fetch_table():

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Rebuild SP 800-53 Rev. 5 control catalog, baselines, and SP 800-53A objectives from NIST OSCAL content.
 
-Outputs (00_universal/frameworks/):
+Outputs (00_universal-framework/frameworks/):
   sp800-53r5_controls.csv     every control and enhancement with family, title, withdrawn flag, and baselines
   sp800-53a_objectives.csv    every leaf assessment objective (determination statement) with its label
 Usage: python3 tools/refresh_sp800_53.py [--cache DIR]
@@ -9,7 +9,7 @@ Usage: python3 tools/refresh_sp800_53.py [--cache DIR]
 import csv, json, pathlib, re, sys, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / "00_universal" / "frameworks"
+OUT = ROOT / "00_universal-framework" / "frameworks"
 BASE = "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/"
 FILES = {
     "catalog": "NIST_SP-800-53_rev5_catalog.json",

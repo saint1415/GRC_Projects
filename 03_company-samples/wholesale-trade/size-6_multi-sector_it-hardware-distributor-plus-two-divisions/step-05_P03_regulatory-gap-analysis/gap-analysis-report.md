@@ -1,0 +1,27 @@
+# Regulatory Gap Analysis: Cris Santos Company | Wholesale Trade | Multi-Sector
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company (IT hardware and software wholesale distributor serving commercial and federal (DoD) customers (one division of a diversified holding company)) |
+| Tier / Vertical | Multi-Sector / Wholesale Trade |
+| Regulation analyzed | NIST SP 800-171 R2 via CMMC Level 2 / DFARS 252.204-7012 |
+| Assessment date | [FILL] |
+
+## 1. Applicability
+[FILL: Does the regulation apply at this size and in this business? Cite the threshold or exemption from the vertical requirements.]
+
+## 2. Method
+Requirements were decomposed to citation level, crosswalked to CSF 2.0 and SP 800-53, and assessed as Met, Partially met, or Not met based on evidence. See `00_universal-framework/projects/step-05_P03_regulatory-gap-analysis/README.md`.
+
+## 3. Results summary
+| Section of regulation | Met | Partially met | Not met | N/A |
+|---|---|---|---|---|
+| [FILL] | | | | |
+
+## 4. Priority gaps and roadmap
+| Gap | Risk level | Action | Owner | Target |
+|---|---|---|---|---|
+| [FILL] | | | | |
+
+## 5. Pending regulatory changes
+[FILL: Proposed rules that would change these results, with citations.]

@@ -6,7 +6,7 @@ Sources (NIST National Online Informative References, final, posted 2024-03-20, 
   HIPAA-Security-Rule-to-Cybersecurity-Framework-v1.1 (OLIR 109)
 These are the online mappings that NIST SP 800-66 Rev. 2 Appendix D points to.
 
-Outputs (02_verticals/n62_health-care/):
+Outputs (02_industry-rules/health-care/):
   hipaa-nist-official-mapping.csv   one row per HIPAA citation: official SP 800-53 controls and CSF 1.1 subcategories
   hipaa-security-rule-crosswalk.csv adds/refreshes the official_sp800_53r5_controls column (author CSF 2.0 mapping kept)
 Usage: python3 tools/refresh_hipaa_official_mapping.py [--cache DIR]
@@ -16,7 +16,7 @@ import collections, csv, hashlib, io, pathlib, re, sys, urllib.request
 import openpyxl
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-V = ROOT / "02_verticals" / "n62_health-care"
+V = ROOT / "02_industry-rules" / "health-care"
 BASE = "https://csrc.nist.gov/csrc/media/Projects/olir/documents/submissions/"
 FILES = {"sp80053": "SP800-53_SecurityRule_Crosswalk_2024.xlsx", "csf11": "CSFv1-1_SecurityRule_Crosswalk_2024.xlsx"}
 

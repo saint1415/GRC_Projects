@@ -12,7 +12,7 @@
 | Projects | The 10 projects on the GRC Project List, framed universally (for example, "HIPAA Gap Analysis" becomes "Regulatory Gap Analysis", with HIPAA as the Health Care instance) | [Notion list](https://nicoleenesse.notion.site/GRC-Project-List-3bf8eef497be8080afc3ee1cbd34bf68) |
 | Universal anchor | NIST CSF 2.0 (macro) and NIST SP 800-53 Rev. 5, Release 5.2.0 (granular) | NIST |
 | Verticals | All 20 NAICS 2022 sectors as parents. All 16 CISA critical infrastructure sectors nested under their primary NAICS parent. 36 in total | Census (NAICS 2022); CISA (NSM-22) |
-| Industry per vertical | One primary 6-digit NAICS industry per vertical, chosen for GRC relevance, stored in one editable CSV. Tier-specific substitutions where the primary industry is implausible at that size | `02_verticals/verticals.csv`, `scenario-industry-overrides.csv` |
+| Industry per vertical | One primary 6-digit NAICS industry per vertical, chosen for GRC relevance, stored in one editable CSV. Tier-specific substitutions where the primary industry is implausible at that size | `02_industry-rules/verticals.csv`, `scenario-industry-overrides.csv` |
 | Size tiers | Six parallel, independent tiers: Sole Proprietorship, Micro, Small, Mid-Market, Enterprise, Multi-Sector | IRS; Census Nonemployer and SUSB; SBA 13 CFR 121.201 |
 | Jurisdiction | United States only | Your choice |
 | Formats | Markdown and CSV. Word and PDF exports can be generated later for meetings | Your choice |
@@ -24,20 +24,20 @@
 
 | Level | What it is | Where | Example |
 |---|---|---|---|
-| L0 Universal | Frameworks, crosswalks, sources, cross-sector law, 10 methods and templates | `00_universal/` | P01 method uses NIST SP 800-30 Tables G-5 and I-2 |
-| L1 Tier | Size definition plus how deep each project goes at that size | `01_tiers/` | Small: 25-40 risks, semi-quantitative scoring |
-| L2 Vertical | Sector regulators, requirements, notification rules, data, systems | `02_verticals/<NAICS>/<CISA>/` | Health Care: HIPAA Security Rule, 60-day breach notice |
-| L3 Scenario | One tier x one vertical: meeting brief plus 10 project folders | `03_scenarios/<NAICS>/[<CISA>/]<tier>/` | Health Care, Small: 60-employee physician practice |
-| L4 Project | What the deliverable means in that scenario (`_context.md`) | `.../P01_risk-register/` | Scope, regulatory drivers, pre-filled notification duties |
+| L0 Universal | Frameworks, crosswalks, sources, cross-sector law, 10 methods and templates | `00_universal-framework/` | P01 method uses NIST SP 800-30 Tables G-5 and I-2 |
+| L1 Company size | Size definition plus how deep each project goes at that size | `01_company-sizes/` | Small: 25-40 risks, semi-quantitative scoring |
+| L2 Industry | Sector regulators, requirements, notification rules, data, systems | `02_industry-rules/<industry>/` (critical infrastructure sectors are named `<industry>_<sector>-critical-infrastructure`) | Health Care: HIPAA Security Rule, 60-day breach notice |
+| L3 Sample company | One size x one industry: meeting brief, company facts, and 10 project folders | `03_company-samples/<industry>/size-<n>_<size>_<business>/` | `health-care/size-3_small_multi-specialty-practice/` |
+| L4 Project | One of the 10 projects, numbered by build step and Notion project number (`_context.md` explains it) | `.../step-04_P01_risk-register/` | Scope, regulatory drivers, pre-filled notification duties |
 | L5 Artifact | The working files you complete | `.../risk-register.csv` | Individual risks, controls, evidence |
 
 Every artifact traces upward. Each row cites a `regulatory_driver` ID (L2), CSF 2.0 and SP 800-53 IDs (L0), and follows the depth set for its tier (L1).
 
 ---
 
-## 3. Order of work inside any scenario
+## 3. Order of work inside any sample company
 
-The Notion list orders projects by career value. Building them in **dependency order** lets each deliverable reuse the last:
+The Notion list orders projects by career value. Building them in **dependency order** lets each deliverable reuse the last, so project folders are named `step-NN_PNN_<project>`. The full teaching guide, including where company size changes the work, is [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md).
 
 | Step | Project | Why here | Feeds |
 |---|---|---|---|
@@ -71,26 +71,26 @@ The Notion list orders projects by career value. Building them in **dependency o
 | **4. Full sector coverage** (done) | Small tier for every remaining vertical (27) | 270 | Every NAICS and CISA sector has at least one complete sample |
 | **5. Full matrix** (optional) | Remaining tier x vertical combinations | Up to 1,750 more (2,160 total) | Complete library. Prioritize by meeting demand |
 
-**Recommended sample for your first meeting:** `03_scenarios/n62_health-care/t3_small/`. Read its `README.md` first; [docs/meeting-guide.md](docs/meeting-guide.md) explains how to run the meeting from it.
+**Recommended sample for your first meeting:** `03_company-samples/health-care/size-3_small_multi-specialty-practice/`. Read its `README.md` first; [docs/meeting-guide.md](docs/meeting-guide.md) explains how to run the meeting from it.
 
 ### Phase 1 record (completed 2026-09-26)
 | Item | Result |
 |---|---|
-| Sample | [`03_scenarios/n62_health-care/t3_small/`](03_scenarios/n62_health-care/t3_small/README.md), with shared facts in `scenario-facts.md` |
+| Sample | [`03_company-samples/health-care/size-3_small_multi-specialty-practice/`](03_company-samples/health-care/size-3_small_multi-specialty-practice/README.md), with shared facts in `00_company-facts.md` |
 | Decisions confirmed with you | Florida location, with state law cited only where unavoidable; vendor-agnostic cloud; partially compliant posture; generic vendor names; role titles only; 2 clinics, 12 providers, ~18,000 patients; 42 CFR Part 2 excluded; SOC 2 as both a customer-assurance self-assessment and an EHR vendor report review |
-| Reusable output for Phase 2 | `02_verticals/n62_health-care/hipaa-security-rule-crosswalk.csv`: 69 HIPAA requirements from NIST SP 800-66r2 data, with an author mapping to CSF 2.0 and SP 800-53 |
+| Reusable output for Phase 2 | `02_industry-rules/health-care/hipaa-security-rule-crosswalk.csv`: 69 HIPAA requirements from NIST SP 800-66r2 data, with an author mapping to CSF 2.0 and SP 800-53 |
 | Headline results | 31 risks (3 High); 69 HIPAA requirements (10 met, 41 partially met, 11 not met, 7 N/A); 70 SSP controls; 164 SP 800-53A determination statements (57 satisfied); 21 POA&M items |
 | Validation | `tools/validate.py` checks completed samples for unfinished markers and invalid CSF or SP 800-53 IDs |
 
 ### Phase 2 record (completed 2026-09-26)
 | Size | Folder | Risks | HIPAA rows (met / partial / not met / N/A) | Controls assessed (statements) |
 |---|---|---|---|---|
-| Sole Proprietorship | `t1_sole-proprietorship` | 15 | 14 / 33 / 15 / 7 | 10 (38) |
-| Micro | `t2_micro` | 23 | 10 / 34 / 18 / 7 | 13 (91) |
-| Small (Phase 1) | `t3_small` | 31 | 10 / 41 / 11 / 7 | 22 (164) |
-| Mid-Market | `t4_mid-market` | 50 | 24 / 57 / 2 / 7 (90 rows incl. breach and ASC) | 34 (242) |
-| Enterprise | `t5_enterprise` | 65 | 63 / 41 / 0 / 9 (113 rows, all regimes) | 44 (263) |
-| Multi-Sector | `t6_multi-sector` | 87 (group + 3 divisions) | Care Delivery 44 / 18 / 0 / 7, plus Health Plan and SaaS tables | 39 (261) |
+| Sole Proprietorship | [`size-1_sole-proprietor_solo-physician-practice`](03_company-samples/health-care/size-1_sole-proprietor_solo-physician-practice/README.md) | 15 | 14 / 33 / 15 / 7 | 10 (38) |
+| Micro | [`size-2_micro_two-physician-primary-care-office`](03_company-samples/health-care/size-2_micro_two-physician-primary-care-office/README.md) | 23 | 10 / 34 / 18 / 7 | 13 (91) |
+| Small (Phase 1) | [`size-3_small_multi-specialty-practice`](03_company-samples/health-care/size-3_small_multi-specialty-practice/README.md) | 31 | 10 / 41 / 11 / 7 | 22 (164) |
+| Mid-Market | [`size-4_mid-market_physician-group-with-surgery-center`](03_company-samples/health-care/size-4_mid-market_physician-group-with-surgery-center/README.md) | 50 | 24 / 57 / 2 / 7 (90 rows incl. breach and ASC) | 34 (242) |
+| Enterprise | [`size-5_enterprise_large-medical-group`](03_company-samples/health-care/size-5_enterprise_large-medical-group/README.md) | 65 | 63 / 41 / 0 / 9 (113 rows, all regimes) | 44 (263) |
+| Multi-Sector | [`size-6_multi-sector_care-delivery-health-plan-and-saas`](03_company-samples/health-care/size-6_multi-sector_care-delivery-health-plan-and-saas/README.md) | 87 (group + 3 divisions) | Care Delivery 44 / 18 / 0 / 7, plus Health Plan and SaaS tables | 39 (261) |
 
 **Decisions confirmed with you:**
 - Maturity realistic by size.
@@ -98,7 +98,7 @@ The Notion list orders projects by career value. Building them in **dependency o
 - Multi-Sector divisions: a health plan and a health-tech SaaS.
 - Specialty mix scaled from the Phase 1 practice.
 
-**Official NIST HIPAA mapping obtained:** OLIR 110 and 109 were added to the Health Care vertical and shown in every P03 gap analysis (see `02_verticals/n62_health-care/hipaa-crosswalk-README.md`).
+**Official NIST HIPAA mapping obtained:** OLIR 110 and 109 were added to the Health Care vertical and shown in every P03 gap analysis (see `02_industry-rules/health-care/hipaa-crosswalk-README.md`).
 
 ### Phase 3 record (completed 2026-09-26)
 All Small tier, Florida, partially compliant.

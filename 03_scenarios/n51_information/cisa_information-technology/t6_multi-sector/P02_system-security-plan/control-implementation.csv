@@ -1,2 +1,0 @@
-control_id,control_name,baseline,implementation_status,inheritance,provider_if_inherited,responsible_role,implementation_statement,evidence,csf2_subcategories,regulatory_driver
-AC-2,Account Management,[Low|Moderate|High],[Implemented|Partially implemented|Planned|Not applicable],[System-specific|Hybrid|Common/Inherited],[FILL],[FILL],[FILL],[FILL],[from 00_universal/crosswalks/csf2_to_sp800-53r5.csv],[requirement_id]

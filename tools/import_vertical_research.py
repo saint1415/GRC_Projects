@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-time bootstrap: convert vertical research JSON into 02_verticals/<sector>/ CSV files.
+"""One-time bootstrap: convert vertical research JSON into 02_industry-rules/<sector>/ CSV files.
 
 After the bootstrap, the CSV files are the source of truth and are edited directly.
 Re-running overwrites profile.csv, requirements.csv, and incident-notification.csv for the units in the JSON.
@@ -14,7 +14,7 @@ Usage: python3 tools/import_vertical_research.py research.json [research2.json .
 import csv, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-V = ROOT / "02_verticals"
+V = ROOT / "02_industry-rules"
 
 # Assurance mechanisms customers or regulators commonly expect instead of, or in addition to, SOC 2.
 ASSURANCE = {
@@ -45,10 +45,7 @@ def unit_dirs():
     by_id = {u["unit_id"]: u for u in units}
     out = {}
     for u in units:
-        if u["level"] == "naics_sector":
-            out[u["unit_id"]] = V / u["slug"]
-        else:
-            out[u["unit_id"]] = V / by_id[u["parent_id"]]["slug"] / u["slug"]
+        out[u["unit_id"]] = V / u["slug"]
     return out
 
 

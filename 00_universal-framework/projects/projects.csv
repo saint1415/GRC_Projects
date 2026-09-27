@@ -1,0 +1,11 @@
+project_id,slug,build_step,builds_on,name,notion_title,primary_sources,template_files
+P01,step-04_P01_risk-register,4,P05 impact levels; P02 and P04 systems and controls,Risk Register,Build a Risk Register,SRC-800-30;SRC-IR-8286;SRC-CSF2,risk-register.csv;risk-register-report.md
+P02,step-02_P02_system-security-plan,2,P05: which systems matter and how long they can be down,System Security Plan (SSP),Write a System Security Plan (SSP),SRC-800-18;SRC-FIPS-199;SRC-800-53;SRC-800-53B,system-security-plan.md;control-implementation.csv
+P03,step-05_P03_regulatory-gap-analysis,5,P01 risks; P02 control statements,Regulatory Gap Analysis,Do a HIPAA Gap Analysis,SRC-HIPAA-SR;SRC-800-66;SRC-CSF2,gap-analysis.csv;gap-analysis-report.md
+P04,step-03_P04_cloud-control-mapping,3,P02: the system boundary and its controls,Control-to-Cloud Architecture Mapping,Map NIST 800-53 Controls to a Cloud Architecture,SRC-800-53;SRC-AWS-SRM;SRC-AZURE-SRM;SRC-GCP-SRM,cloud-architecture.md;cloud-control-map.csv
+P05,step-01_P05_business-impact-analysis,1,Company facts only,Business Impact Analysis (BIA),Run a Business Impact Analysis (BIA),SRC-800-34;SRC-FIPS-199;SRC-IR-8286D,bia.csv;bia-report.md
+P06,step-06_P06_security-policies,6,P03 gaps; P01 risks,Security Policy Set,Draft a Set of Security Policies,SRC-SANS-POL;SRC-800-53;SRC-CSF2,policy-control-map.csv;POL-01_information-security.md;POL-02_access-control.md;POL-03_incident-response.md;POL-04_data-classification.md;POL-05_acceptable-use.md
+P07,step-07_P07_control-assessment,7,P02 control statements; P06 policies,Security Control Assessment,Perform a Mock Security Control Assessment,SRC-800-53A;SRC-800-37,assessment-plan.md;assessment-results.csv;poam.csv
+P08,step-08_P08_incident-response-runbook,8,P05 recovery order; P01 risks; P03 notification duties,Incident Response Runbook,Build an Incident Response Runbook,SRC-800-61;SRC-CSF2,ir-runbook.md;notification-matrix.csv
+P09,step-09_P09_soc2-readiness,9,"Evidence from P02, P06 and P07",SOC 2 Readiness Checklist,Complete a SOC 2 Readiness Checklist,SRC-TSC,soc2-readiness.csv;soc2-readiness-summary.md
+P10,step-10_P10_ai-governance,10,P06 policies; the P01 risk method,AI Governance Risk Assessment,Create an AI Governance / Risk Assessment,SRC-AI-RMF;SRC-AI-600-1;SRC-AI-PLAYBOOK,ai-risk-assessment.md;ai-use-case-inventory.csv

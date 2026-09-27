@@ -6,14 +6,15 @@ Checks:
   - source IDs cited in registries exist in the source register
   - every vertical has profile, requirements, and notification files with required fields
   - every NAICS code used has an SBA size-standard row
-  - every relative markdown link resolves
-  - scenario folder count matches verticals x tiers
+  - every relative markdown link resolves (layers, docs, index, and every completed sample)
+  - completed samples: no template markers, no em dashes, even CSV rows, valid CSF and SP 800-53 IDs
+  - every sample folder matches 02_industry-rules/sample-folder-labels.csv (216 = 36 industries x 6 sizes)
 Usage: python3 tools/validate.py
 """
 import csv, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-U, T, V, S = (ROOT / d for d in ("00_universal", "01_tiers", "02_verticals", "03_scenarios"))
+U, T, V, S = (ROOT / d for d in ("00_universal-framework", "01_company-sizes", "02_industry-rules", "03_company-samples"))
 errors, warnings = [], []
 
 
@@ -64,7 +65,7 @@ for c in sorted(codes - sba):
     errors.append(f"NAICS {c} has no row in sba-size-standards.csv (run tools/refresh_sba_standards.py)")
 unverified = 0
 for u in units:
-    d = V / u["slug"] if u["level"] == "naics_sector" else V / by_id[u["parent_id"]]["slug"] / u["slug"]
+    d = V / u["slug"]
     for fname in ("profile.csv", "requirements.csv", "incident-notification.csv"):
         if not (d / fname).exists():
             errors.append(f"{u['unit_id']}: missing {d.relative_to(ROOT)}/{fname}")
@@ -86,9 +87,9 @@ for u in units:
 if unverified:
     warnings.append(f"{unverified} vertical requirement/notification rows are marked verified=false; review before relying on them")
 
-# ---- links (skip generated scenario tree except a sample for speed)
+# ---- links (all layers, every completed sample, and the index; blank planned samples are skipped for speed)
 md_files = [p for p in ROOT.rglob("*.md") if ".git" not in p.parts and S not in p.parents]
-md_files += list((S / "n62_health-care" / "t3_small").rglob("*.md")) + [S / "INDEX.md"]
+md_files += [p for f in S.rglob("00_company-facts.md") for p in f.parent.rglob("*.md")] + [S / "INDEX.md"]
 LINK_RE = re.compile(r"\]\(([^)\s#]+)(?:#[^)]*)?\)")
 for p in md_files:
     if not p.exists():
@@ -99,27 +100,43 @@ for p in md_files:
         if not (p.parent / target).resolve().exists():
             errors.append(f"{p.relative_to(ROOT)}: broken link {target}")
 
-# ---- completed samples (scenario-facts.md present): definition of done
-for facts in S.rglob("scenario-facts.md"):
+# ---- completed samples (00_company-facts.md present): definition of done
+for facts in S.rglob("00_company-facts.md"):
     sd = facts.parent
     for p in [x for x in sd.rglob("*") if x.suffix in (".md", ".csv") and x.name not in ("README.md", "_context.md")]:
         text = p.read_text()
+        where = p.relative_to(ROOT)
         if "[FILL" in text or "{{" in text:
-            errors.append(f"{p.relative_to(ROOT)}: unfinished template marker in a completed sample")
+            errors.append(f"{where}: unfinished template marker in a completed sample")
+        if "\u2014" in text:
+            errors.append(f"{where}: em dash (house style uses a period or comma)")
+        if p.suffix == ".csv":
+            with open(p, newline="") as fh:
+                widths = {len(r) for r in csv.reader(fh) if r}
+            if len(widths) > 1:
+                errors.append(f"{where}: rows have different column counts {sorted(widths)}")
         for m in CSF_RE.findall(text):
             if m not in csf_ids:
-                errors.append(f"{p.relative_to(ROOT)}: unknown CSF 2.0 ID {m}")
+                errors.append(f"{where}: unknown CSF 2.0 ID {m}")
         for fam, num, _, enh in CTRL_RE.findall(text):
             cid = f"{fam}-{int(num)}" + (f"({int(enh)})" if enh else "")
             if cid not in ctrl_ids:
-                errors.append(f"{p.relative_to(ROOT)}: unknown SP 800-53 control {cid}")
+                errors.append(f"{where}: unknown SP 800-53 control {cid}")
     print(f"Completed sample checked: {sd.relative_to(S)}")
 
-# ---- scenario count
+# ---- sample count and folder names (each folder must match sample-folder-labels.csv)
 tiers = rows(T / "tiers.csv")
-readmes = list(S.rglob("t*_*/README.md"))
-if len(readmes) != len(units) * len(tiers):
-    errors.append(f"expected {len(units) * len(tiers)} scenarios, found {len(readmes)} (run tools/build_scenarios.py)")
+tier_slug = {r["tier_id"]: r["slug"] for r in tiers}
+expected = {S / by_id[r["unit_id"]]["slug"] / f"{tier_slug[r['tier_id']]}_{r['business_label']}"
+            for r in rows(V / "sample-folder-labels.csv")}
+actual = {p for p in S.glob("*/size-*") if p.is_dir()}
+for p in sorted(actual - expected):
+    errors.append(f"{p.relative_to(ROOT)}: folder is not in sample-folder-labels.csv (label changed? move it with git mv)")
+for p in sorted(expected - actual):
+    errors.append(f"{p.relative_to(ROOT)}: expected sample folder is missing (run tools/build_scenarios.py)")
+if len(expected) != len(units) * len(tiers):
+    errors.append(f"sample-folder-labels.csv has {len(expected)} rows; expected {len(units) * len(tiers)}")
+readmes = list(S.glob("*/size-*/README.md"))
 
 for w in warnings:
     print("WARN ", w)

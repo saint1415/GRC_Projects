@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the CSF 2.0 core and official NIST crosswalks in 00_universal/.
+"""Rebuild the CSF 2.0 core and official NIST crosswalks in 00_universal-framework/.
 
 Source: NIST CSF 2.0 Reference Tool download (all informative references).
 Run when NIST publishes new informative references or a new CSF/800-53 release.
@@ -11,7 +11,7 @@ import openpyxl
 
 URL = "https://csrc.nist.gov/extensions/nudp/services/json/csf/download?olirids=all"
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / "00_universal"
+OUT = ROOT / "00_universal-framework"
 
 # Informative-reference prefixes to export, mapped to output file names.
 EXPORTS = {
