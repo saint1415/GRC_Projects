@@ -112,9 +112,9 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| Treasury platform contract RTO 4 h against 2 h BIA RTO; fallback not tested at full-day scale | P01 R-022; P03 G-033; POAM-018 |
-| Legacy commercial platform: 24 h contract RTO, never tested, weak authentication and logging | P01 R-004; P03 G-017; POAM-004 |
-| No logically isolated immutable copy of core data | P01 R-002; P03 G-035; POAM-020 |
-| Card processor single point of failure; SOC report review late | P01 R-023; P03 G-043; POAM-012 |
-| Clearing firm contract lacks the Regulation S-P 72-hour notice term | P01 R-041; P03 G-092; POAM-021 |
+| Treasury platform contract RTO 4 h against 2 h BIA RTO; fallback not tested at full-day scale | P01 R-022; P03 G-022 and G-051; POAM-018 |
+| Legacy commercial platform: 24 h contract RTO, never tested, weak authentication and logging | P01 R-004; P03 G-014; POAM-004 |
+| No logically isolated immutable copy of core data | P01 R-002; P03 G-022; POAM-020 |
+| Card processor single point of failure; SOC report review late | P01 R-023; P03 G-028; POAM-012 |
+| Clearing firm contract lacks the Regulation S-P 72-hour notice term | P01 R-041; P03 G-080; POAM-021 |
 | Manual sanctions screening capacity far below peak volume | P01 R-028; P02 CP-2 |

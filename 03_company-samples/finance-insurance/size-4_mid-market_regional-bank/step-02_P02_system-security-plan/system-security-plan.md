@@ -159,7 +159,7 @@ The diagram is in P04 `cloud-architecture.md`.
 The Partially implemented statements trace to the 12 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
 
 ### 10.2 Control assessment status
-The co-sourced IT audit firm assessed 34 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the Audit Committee.
+The co-sourced IT audit firm assessed 35 controls (244 determination statements) from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the Audit Committee.
 
 ## 11. Digital Identity Acceptance Statement
 - **Workforce.** All workforce users authenticate through the identity provider with a password and app-based MFA with number matching, under conditional access that requires a managed device. Payments workstation users also present a hardware token to the Federal Reserve payment services. This is appropriate for the Moderate categorization.

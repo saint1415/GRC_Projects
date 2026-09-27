@@ -56,7 +56,7 @@ Status: 10 In progress, 11 Open, 2 Closed (R-022 and R-023 accepted).
 - R-010: P07 testing confirmed the MSP's cloud console login accepts a password alone.
 
 ## 4. Treatment summary
-- **Funded (2026 Q4, approved by the President and CEO and reported to the board; about $7,900 one-time and $5,660 a year):**
+- **Funded (2026 Q4, approved by the President and CEO and reported to the board; about $13,900 one-time and $5,660 a year):**
   - MSP-managed EDR with alert monitoring on 11 computers and the imaging server: about $2,100 a year
   - Security awareness training with BEC content and phishing exercises for 7 people: about $500 a year
   - Member MFA and alert features from the digital banking provider: about $1,200 a year
@@ -66,6 +66,7 @@ Status: 10 In progress, 11 Open, 2 Closed (R-022 and R-023 accepted).
   - Desktop encryption, MFA setup, mailbox conversion, and restore tests by the MSP: about $1,500 of MSP time
   - Independent control assessment (P07): about $4,500 one-time
   - Counsel review of vendor contract terms (core side letter, MSP amendment): about $1,500 one-time
+  - Independent review of the AI scoring model's validation and fairness testing (P10): about $6,000 one-time
 - **Accepted:** R-022 (Low; card processor and network rules carry the response), R-023 (Low; laptops encrypted).
 - **Contract actions:** core processor side letter on incident notice by 2026-10-31 and full terms at renewal on 2027-06-30 (R-006); MSP amendment for incident notice, a recovery time commitment, and tenant ownership by 2026-12-31 (R-014); LOS vendor data-use and model documentation terms (R-011, P10).
 

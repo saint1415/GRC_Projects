@@ -1,2 +1,57 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"The company must maintain one security program covering enterprise IT, the CCC, plant OT, and product security",PM-1,GV.PO-01,N62-R01 (164.316(a)),No
+POL-01,4.2,"Written designations: HIPAA security official for the CCC (IT Director), 524B owner (VP QA/RA), PSIRT lead (Product Security Manager)",PM-2,GV.RR-02,N62-R01 (164.308(a)(2)),No
+POL-01,4.3,"Annual SP 800-30 enterprise risk assessment; product cybersecurity risk assessments per release and per new vulnerability, reconciled quarterly",RA-3; PM-9,ID.RA-01,N62-R01 (164.308(a)(1)(ii)(A)-(B)); N31-33-R05 (524B(b)(2)),No
+POL-01,4.4,Risk acceptance authority by level; no patient-safety risk accepted above Low,PM-9,GV.RM-01,N62-R01 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,"SPDF applies to devices and related systems, including production software that loads firmware, sets device state, or issues identities",SA-3; SA-8; SA-15,PR.PS-06,N31-33-R05 (524B(b)(2)); 21 CFR 820.10(c),No
+POL-01,4.6,SBOM for every release; daily monitoring including KEV; triage service levels; justified regular patch cycle and out-of-cycle path,RA-5; SI-2; SI-5; CM-8,ID.RA-01,N31-33-R05 (524B(b)(1)-(3)),Yes
+POL-01,4.7,Published CVD policy; acknowledge within 3 business days; screen as possible complaint; active ISAO membership,RA-5(11); PM-15,ID.RA-08,N31-33-R05 (524B(b)(1)),Yes
+POL-01,4.8,Quarterly vCISO report to the audit committee including product security metrics,CA-5,GV.OV-01,Internal policy (no external driver),No
+POL-01,4.9,Security policies must be reviewed at least annually and after major changes or incidents,PL-1,GV.PO-02,N62-R01 (164.316(b)(2)(iii)),No
+POL-01,4.10,"Written, risk-rated, time-limited exceptions; none may waive a legal requirement",PL-1,GV.PO-01,Internal policy (no external driver),No
+POL-01,4.11,"Sanctions proportionate to intent and harm, documented",PS-8,GV.RR-04,N62-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.12,No PHI without a subcontractor BAA; tiered supplier security review; vulnerability notification terms for critical software suppliers,SA-9; SR-5; SR-6,GV.SC-05,N62-R01 (164.308(b)(1)),Yes
+POL-01,4.13,Security controls must be independently evaluated at least annually (P07) and after major changes,CA-2,ID.IM-01,N62-R01 (164.308(a)(8)),No
+POL-01,4.14,"Retention: security, CVD, and PSIRT records 6 years; 806.20 records 2 years beyond device life",SI-12,PR.DS-11,N62-R01 (164.316(b)(2)(i)),No
+POL-01,4.15,"AI tools, and AI functions in products or quality processes, must be approved through the AI governance process before use (STD-05; P10)",PM-9,GV.RM-01,Internal policy (no external driver),No
+POL-02,4.1,Unique identity for every user; badge-based individual login on plant stations by 2027-03-31,IA-2; AC-2,PR.AA-01,N62-R01 (164.312(a)(2)(i)),Yes
+POL-02,4.2,"Owner-approved, least-privilege, role-based access",AC-2; AC-3; AC-6,PR.AA-05,N62-R01 (164.308(a)(4)(ii)(B)),Yes
+POL-02,4.3,MFA for all workforce; phishing-resistant MFA for administrators,IA-2(1); IA-2(2),PR.AA-03,N62-R01 (164.312(d)),Yes
+POL-02,4.4,"Just-in-time privileged access to CCC production, signing, and identity; no standing all-tenant write access after 2026-12-31",AC-6(5); AC-2,PR.AA-05,N62-R01 (164.308(a)(4)),Yes
+POL-02,4.5,"Quarterly access reviews for CCC, landing zone, repositories, signing service, PLM, eQMS, and MES",AC-2,PR.AA-05,N62-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.6,Same-day termination; prior roles removed within 5 business days of transfer,PS-4; PS-5; AC-2,PR.AA-05,N62-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.7,"Two-person release signing; separation of author, approver, and signer; second reviewer for station software",AC-5; CM-14,PR.AA-05,N31-33-R05 (524B(b)(2)),Yes
+POL-02,4.8,"Vendor and remote admin access only through the broker, approved and recorded; no persistent vendor VPNs into OT",AC-17; MA-4,PR.PS-03,N62-R01 (164.312(e)(1)),Yes
+POL-02,4.9,"No shared, default, or hardcoded device credentials; service and factory modes disabled before shipment and verified at final test",IA-5; IA-3; CM-7,PR.AA-01,N31-33-R05 (524B(b)(2)),Yes
+POL-02,4.10,Unique device certificates; yearly rotation of VM-5 per-hospital keys,IA-3; IA-5(2),PR.AA-04,N31-33-R05 (524B(b)(2)); FDA postmarket guidance (2016),Yes
+POL-02,4.11,Break-glass accounts sealed and tested quarterly,AC-2,PR.AA-05,N62-R01 (164.312(a)(2)(ii)),Yes
+POL-02,4.12,Passwords and other authenticators must meet STD-06,IA-5,PR.AA-03,N62-R01 (164.308(a)(5)(ii)(D)),Yes
+POL-03,4.1,Incident plan and runbooks for an exploited device vulnerability and plant OT ransomware,IR-8,RS.MA-01,N62-R01 (164.308(a)(6)),Yes
+POL-03,4.2,"Report suspected incidents, including unusual device behavior at hospitals, within 1 hour",IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.3,"Log every incident with discovery date and, for products, the date the company learned of the vulnerability",IR-5; IR-4,RS.MA-02,21 CFR 803.3; N62-R03 (164.410(a)(2)),Yes
+POL-03,4.4,One severity scale; SEV-1 activates the crisis management team within 2 hours,IR-4,RC.RP-01,Internal policy (no external driver),Yes
+POL-03,4.5,"Every product security incident screened as a complaint and for MDR and 806 decisions, documented in the eQMS",IR-6,RS.CO-02,21 CFR 820.35(a); 803.50; 803.53; 806.10,Yes
+POL-03,4.6,"Uncontrolled risk: 30-day customer communication, 60-day fix, ISAO share, day-50 checkpoint, 806.10 fallback",IR-4; IR-6,RS.MI-02,N31-33-R05 (524B(b)(2)(B)); 21 CFR 806.10; FDA postmarket guidance (2016) section VII.B,Yes
+POL-03,4.7,"Breach decision with documented assessment; notice to hospitals by the shortest BAA, state, or HIPAA clock",IR-6,RS.CO-03,N62-R03 (164.402; 164.410); state third-party agent notice laws (Fla. Stat. 501.171(6)),Yes
+POL-03,4.8,The cyber insurer must be notified through its hotline before incident response vendors are engaged,IR-7,RS.MA-01,Internal policy (no external driver),No
+POL-03,4.9,"No ransom without CEO, General Counsel, insurer, OFAC check, and law enforcement report",IR-4,RS.MA-01,Internal policy (no external driver),Yes
+POL-03,4.10,Plant Manager decides line shutdown and lot holds; no release until device history records are verified,CP-2; IR-4,RC.RP-01,21 CFR 820.35,Yes
+POL-03,4.11,"Annual exercise per runbook, including a combined product and breach tabletop with counsel",IR-3,ID.IM-02,N62-R01 (164.308(a)(6)),No
+POL-03,4.12,Lessons learned within 30 days; CAPA for product incidents,IR-4,ID.IM-03,21 CFR 820.10 (CAPA under ISO 13485),Yes
+POL-04,4.1,Every information asset must have an owner and a classification recorded in the asset inventory or document system,RA-2,ID.AM-05,Internal policy (no external driver),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit with company-managed keys,SC-28; SC-8; SC-13,PR.DS-01; PR.DS-02,N62-R01 (164.312(a)(2)(iv)); N62-R01 (164.312(e)(2)(ii)),Yes
+POL-04,4.3,Signing and certificate authority keys only in the HSM under dual control; no software-held issuing keys after 2026-12-31,SC-12,PR.DS-01,N31-33-R05 (524B(b)(2)),Yes
+POL-04,4.4,PHI stays in CCC production; not in non-production or with vendors lacking a BAA,AC-4; AC-3,PR.DS-01,N62-R01 (164.308(b)(1)),No
+POL-04,4.5,Unfixed vulnerability details handled only in the PSIRT workspace until the disclosure date,AC-3; AC-6,RS.CO-03,N31-33-R05 (524B(b)(1)),Yes
+POL-04,4.6,"Sanitize and record disposal or reuse of media, endpoints, and returned devices",MP-6,PR.DS-01,N62-R01 (164.310(d)(2)(i)-(ii)),No
+POL-04,4.7,"Keep records per the retention schedule, then dispose securely",SI-12,PR.DS-11,N62-R01 (164.316(b)(2)(i)),No
+POL-04,4.8,Restricted and Confidential data must not be entered into AI tools that are not on the approved list (STD-05),AC-4; PL-4,PR.DS-01,Internal policy (no external driver),No
+POL-05,4.1,Authorized business use; annual acknowledgment,PL-4,GV.RR-04,N62-R01 (164.310(b)),No
+POL-05,4.2,"Report phishing, lost devices, and unusual system or device behavior immediately",AT-2; IR-6,PR.AT-01,N62-R01 (164.308(a)(5)(ii)(A)),Yes
+POL-05,4.3,Plant floor: no personal devices or USB media; individual operator logins,PL-4; CM-7,PR.PS-05,Internal policy (no external driver),Yes
+POL-05,4.4,Approved software only; do not disable security tools,CM-11,PR.PS-05,Internal policy (no external driver),No
+POL-05,4.5,Lock screens; company-managed encrypted laptops only,SC-28; PL-4,PR.DS-01,Internal policy (no external driver),Yes
+POL-05,4.6,"Send PHI and Confidential data only through approved, encrypted channels to approved recipients",SC-8,PR.DS-02,Internal policy (no external driver),No
+POL-05,4.7,Remote access only from company devices with MFA,AC-17,PR.AA-03,Internal policy (no external driver),Yes
+POL-05,4.8,"Approved AI tools only; no code, PHI, keys, or unfixed vulnerability details in public AI; review AI output",PL-4,PR.AT-01,Internal policy (trade secrets; CVD confidentiality),No
+POL-05,4.9,Company systems are monitored for security,PL-4; AU-6,DE.CM-03,Internal policy (no external driver),Yes
