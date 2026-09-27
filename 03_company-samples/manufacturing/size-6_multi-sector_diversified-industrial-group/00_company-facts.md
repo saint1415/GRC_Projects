@@ -117,3 +117,20 @@ These facts add detail to sections 1 to 6. They do not change them.
 | Revenue split (fictional) | Medical Devices about $10.8 billion; Distribution about $6.3 billion; Testing about $0.9 billion. Total about $18.0 billion |
 | Risk acceptance | Low: division security and compliance lead. Moderate: division president. High: Group Chief Risk Officer with the Group CISO, reported to the board risk committee. Very High: board risk committee only. Patient-safety risks rated High must be treated, not accepted |
 | Out of scope by fact | No division makes defense articles (ITAR) or holds covered defense information (DFARS 252.204-7012 obligations not triggered). No division is a HIPAA covered entity. No division distributes prescription drugs. CIRCIA reporting is proposed only (not in effect) |
+
+## 8. Facts added while building the deliverables
+These facts were added so the deliverables could be completed. They do not change sections 1 to 7.
+
+| Topic | Added fact |
+|---|---|
+| PLM guest accounts | 164 contract manufacturer and supplier guest accounts in PLM; 38 have no expiry date (P02, P07 AC-2) |
+| Plant D changes | 12 IX-3 firmware changes were built at Plant D in 2026 outside the group change board (P07 CM-3) |
+| Hospital administrators | About 14% of DCC hospitals have not configured federation, so their administrators can publish drug libraries without MFA (P03, P09) |
+| DCC offboarding | 3 of 11 hospitals offboarded in 2026 have no data destruction certificate (P09) |
+| Distribution subcontractors | 2 regional courier subcontractors receive delivery schedules for federal facilities without a FAR 52.204-21 flowdown clause (P03) |
+| Distribution staffing | The Distribution security and compliance lead role was vacant for 7 months in 2025-2026, which explains the supplement drift (P06) |
+| Testing clients and SOC 2 | 41 Testing clients asked for a SOC 2 report in 2026; the AI drafting pilot covered 31 engagements, 9 with written client consent (P09, P10) |
+| AI-001 data | 48,000 de-identified cardiac ultrasound clips from 11 partner sites; held-out test set of 7,200 clips (P10) |
+| Other AI use cases | Predictive maintenance (DCC), engineering coding assistant (400-engineer pilot), demand forecasting, ordering portal chatbot, AI-assisted fuzzing in the test range, a proposed applicant screening tool, and an enterprise generative AI assistant (3,000-user pilot) (P10) |
+| DCC SOC 2 | Confidentiality added to the current period (2026-07-01 to 2027-06-30) with the service auditor's agreement (P09) |
+| P08 exercise scenario | Illustrative counts: 61 IX-3 pumps altered at 3 hospitals; about 17,600 pumps still on old firmware at about 290 hospitals, including about 1,900 at 31 federal facilities; 1,140 refurbished IX-3 exchange units in Distribution stock, 380 on old firmware |
