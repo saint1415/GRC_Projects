@@ -147,8 +147,8 @@ See `control-implementation.csv` (204 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 184 |
-| Partially implemented | 19 |
+| Implemented | 181 |
+| Partially implemented | 22 |
 | Planned | 1 |
 | **Total** | **204** |
 
@@ -158,7 +158,7 @@ See `control-implementation.csv` (204 controls).
 | Hybrid (shared between a provider and the CBDC team) | 35 |
 | System-specific | 31 |
 
-The Planned control is CP-9(3), the cyber vault. Partially implemented controls: AC-2, AC-6, AT-3, AU-2, AU-6, AU-12, CM-6, CP-2, CP-9, IA-5, IA-8, PS-4, RA-5, SA-9, SA-22, SI-2, SI-4, SR-6, SR-8.
+The Planned control is CP-9(3), the cyber vault. Partially implemented controls: AC-2, AC-2(3), AC-6, AT-3, AU-2, AU-6, CM-6, CP-2, CP-9, IA-5, IA-8, IA-11, IR-4, IR-8, PS-4, RA-5, SA-9, SA-22, SI-2, SI-4, SR-6, SR-8.
 
 ### 10.2 Control assessment status
 Internal Audit assessed 44 of these controls from 2026-06-15 to 2026-08-14 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`.

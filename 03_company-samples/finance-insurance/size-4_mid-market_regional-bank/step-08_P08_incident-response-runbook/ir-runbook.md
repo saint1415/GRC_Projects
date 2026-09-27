@@ -43,8 +43,8 @@ The response runs on three tiers, so fraud, technical, and legal decisions each 
 ## 1. Preparation checks (Identify / Protect)
 - [x] Maker-checker on every outgoing wire and a required callback field in the payments hub (self-approval of a wire was blocked in P07 testing)
 - [x] Workforce MFA with number matching; EDR with 24x7 MSSP (P07 IA-2(1), SI-3 satisfied)
-- [ ] Out-of-band verification and customer alerts for every contact-information change (POL-02 4.6). **Gap until POAM-011 closes (2026-12-31)**; interim rule since 2026-10-15: contact changes only in branch with identification or by callback to the prior number
-- [ ] Out-of-band confirmation of new online banking beneficiaries; phishing-resistant business MFA (POL-02 4.5). **Gap until POAM-010 closes**; daily new-beneficiary review in place since 2026-10-01
+- [ ] Out-of-band verification and customer alerts for every contact-information change (POL-02 4.6). **Gap until POAM-011 closes (2026-12-31)**; interim rule from 2026-10-15: contact changes only in branch with identification or by callback to the prior number
+- [ ] Out-of-band confirmation of new online banking beneficiaries; phishing-resistant business MFA (POL-02 4.5). **Gap until POAM-010 closes**; daily new-beneficiary review from 2026-10-01
 - [ ] Payments hub, portal, and core security events in the SIEM with change-anomaly use cases (STD-02). **Gap until POAM-005 closes**
 - [ ] Role-based fraud training for branch, contact center, and relationship manager staff (POL-05 4.4). **Gap until POAM-004 closes**
 - [x] Incident binder at headquarters and the Georgia regional office: this runbook, contact lists, OCC and Federal Reserve contacts, recall request forms, and the notification matrix

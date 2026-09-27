@@ -11,7 +11,7 @@
 | Companion documents | `ir-runbook.md` (BEC and fraudulent wire); `notification-matrix.csv`; BIA (P05); risk register (P01 R-003, R-004, R-009) |
 | Runbook owner | Chief Operating Officer (business lead and CMT chair) with the ISO (security lead) |
 | Approved | 2026-09-18 by the Chief Operating Officer |
-| Last tested | Not yet. Core outage tabletop with the core processor's client team scheduled 2027-01-20 (POAM-012) |
+| Last tested | Not yet. Core outage tabletop with the core processor's client team scheduled 2027-01-20, after the executive tabletop under POAM-012 (tracked with P01 R-003) |
 
 ## 0. Why this runbook exists
 The core supports 12 of the 17 BIA processes. A 72-hour core outage would cost about $850,000 and delay about $500 million of customer and respondent payments (P05). Unlike a BEC fraud, a multi-day core outage will almost certainly be a **notification incident** for the bank and the holding company, and it disrupts services the bank provides to its 18 respondents. The processor's stated RTO is 4 hours (SOC 2 system description), but a ransomware attack at the processor could exceed it for all its client banks at once (P01 R-003).

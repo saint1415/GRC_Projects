@@ -136,7 +136,7 @@ The bank is mature: its own controls meet the Guidelines. Every gap sits where t
 | 8 | Business payment MFA in client tenants (6) | FS | Client contracts; SOC CUECs | Moderate | Mandatory MFA default | Head of Digital Banking Platform | 2027-03-31 |
 | 9 | Payment gateway resilience | Bank | App. B III.C.1.h | Moderate | Hot standby; failover test | Head of Commercial Payments Operations | 2027-03-31 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07; POAM-012, POAM-015, POAM-019, and POAM-022 to POAM-024 trace directly to this analysis).
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). 15 of the 24 POA&M items cite rows of this analysis in their `source` column; POAM-009, POAM-016, and POAM-022 to POAM-024 come from this analysis alone.
 
 ## 6. Pending changes to watch
 - **Third-party guidance.** The June 2023 Interagency Guidance on Third-Party Relationships (88 FR 37920) is current. On 2026-09-15 the OCC, Federal Reserve, FDIC, and NCUA **proposed** replacement guidance (91 FR 58536; comments due 2026-11-16). The agencies also issued a Joint Statement on Community Banks' Engagement with Core Service Providers (2026-09-11). The Financial Software division is a digital banking provider rather than a core provider, but its community bank clients will apply the same transparency expectations to it. None of this changes the Guidelines' own III.D text; affected rows carry a watch note.
