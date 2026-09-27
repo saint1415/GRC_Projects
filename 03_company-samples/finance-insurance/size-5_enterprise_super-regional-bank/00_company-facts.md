@@ -103,8 +103,8 @@ Third parties: about 2,400, of which 460 have access to customer information and
 | 2026-05-04 to 2026-07-10 | Enterprise cyber risk assessment and regulatory gap analysis (GRC team and Technology and Operational Risk) |
 | 2026-06-15 to 2026-08-14 | Control assessment of the CBDC platform and its common controls (Internal Audit) |
 | 2026-08-19 | AI governance committee portfolio review |
-| 2026-09-15 | Results to the board risk committee and the audit committee; policies approved |
-| 2026-09-18 | Executive risk committee approves treatments, the SSP authorization decision, and AI decisions |
+| 2026-09-15 | Results to the board risk committee and the audit committee; board risk committee approves POL-01 |
+| 2026-09-18 | Executive risk committee approves POL-02 to POL-05, risk treatments, the CBDC authorization decision, and AI decisions |
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1 to 6.
@@ -146,3 +146,16 @@ These facts were added while building the deliverables. They do not change secti
 **Board.** 13 directors, 11 independent. The board risk committee has 5 independent directors, one with experience managing risk at large, complex financial firms (252.22(a)(4)).
 
 **Regulatory contacts.** The OCC's supervisory office for the bank and the Federal Reserve Bank that supervises the parent each gave the group an email and telephone point of contact for 12 CFR 53.3 and 225.302 notices; both are in the incident binder.
+
+**Platform and program facts used in P02, P03, P07, P09, and P10.**
+| Fact | Value |
+|---|---|
+| CBDC users | About 9,800 workforce users with core roles; about 310 privileged administrators on distributed and cloud components; 41 mainframe IDs with standing privileges; 214 service accounts on CBDC components; about 3.9 million deposit accounts |
+| Core middleware | 48 distributed servers in DC-1 and DC-2 (4 on an operating system in vendor extended support until 2027-03-31) |
+| Treasury activity (2026-01 to 2026-06) | 18,400 new wire beneficiaries added; 2,940 branch-originated email or phone wire requests; about 120 corporate clients on host-to-host and API channels |
+| Commercial client service staff | About 640 staff who exchange payment instructions with clients |
+| Consumer authentication | 23% of consumer digital users still use SMS one-time passcodes |
+| Broker-dealer service providers | 31 with customer information (including the clearing firm) |
+| AI-001 volumes (2026-03-02 to 2026-08-14) | 118,400 applications scored (101,300 personal loans; 17,100 credit cards in a pilot at 15% of digital card applications) |
+| Service line SL-2 | Trust, custody, and retirement plan recordkeeping; SOC 1 Type 2 report issued each year; participant portal MFA enrollment 72% |
+
