@@ -23,7 +23,7 @@ Micro tier scope: 10-15 controls. **13 controls, 86 determination statements.** 
 | CP-9, CP-4 | Imaging snapshots in one account; nothing ever tested (R-010, R-015) | Focused | Focused |
 | IR-6, IR-8 | No NCUA 72-hour step or member notice (G-010, G-043; R-007) | Basic | Basic |
 | RA-3 | Risk assessment outdated since 2019 (R-017) | Basic | Basic |
-| SA-9 | Vendor contracts and SOC reports (R-006, R-008, R-014; G-037, G-038, G-041) | Focused | Comprehensive (all 7 vendors that hold or reach member information) |
+| SA-9 | Vendor contracts and SOC reports (R-006, R-008, R-014; G-037, G-038, G-041) | Focused | Comprehensive (all 8 vendors that hold or reach member information) |
 
 ## 2. Methods and objects
 - **Examine:** user lists from the core, admin console, wire portal, LOS, and suite; core role profiles; the wire portal administrator report and token list; the 2019 wire procedure and incident plan; vendor contracts and the SOC report folder; the P01 register and the 2019 questionnaire; training sign-in sheets; the MSP evidence listed below.

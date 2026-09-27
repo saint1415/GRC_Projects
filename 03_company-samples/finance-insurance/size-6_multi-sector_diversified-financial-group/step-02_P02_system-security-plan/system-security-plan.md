@@ -119,8 +119,8 @@ See `control-implementation.csv` (128 controls) and `common-control-catalog.csv`
 
 | Status | Controls |
 |---|---|
-| Implemented | 109 |
-| Partially implemented | 19 |
+| Implemented | 110 |
+| Partially implemented | 18 |
 | Planned | 0 |
 | Not applicable | 0 |
 | **Total** | **128** |
@@ -131,9 +131,9 @@ See `control-implementation.csv` (128 controls) and `common-control-catalog.csv`
 | Hybrid (group provides the mechanism; the CDBP configures or operates part) | 14 |
 | System-specific | 28 |
 
-**The 19 partially implemented controls** cluster in five places:
+**The 18 partially implemented controls** cluster in five places:
 - **Workforce sessions and identity hygiene** (the root of the P08 scenario): AC-2, AC-2(12), AC-12, IA-5, IA-11, SI-4.
-- **Tenant and support console access:** AC-3, AC-6, AU-6, IA-8 (scenario gap 6), AT-3.
+- **Tenant and support console access:** AC-6, AU-6, IA-8 (scenario gap 6), AT-3. (AC-3 itself is implemented: tenant isolation holds; the problem is how broad the support role is.)
 - **Resilience of the payment path:** CP-2, CP-4.
 - **Cross-division incident handling and bank service provider notices** (gaps 3 and 5): IR-3, IR-4, IR-6, IR-8.
 - **Oversight of the affiliate service provider** (gap 3): SA-4, SA-9.
