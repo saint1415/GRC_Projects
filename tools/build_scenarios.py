@@ -402,13 +402,25 @@ def write_accomplishments(ordered, done_count, count):
     for u in ordered:
         for tid, t in tiers.items():
             d = sample_dir(u, tid)
-            if (d / "00_company-facts.md").exists():
+            if is_done(d):
                 L.append(f"| {u['name']} | {t['name']} | {display[(u['unit_id'], tid)]} | "
                          f"[README]({d.relative_to(ROOT)}/README.md) |")
     L.append(end)
     text = path.read_text()
     i, j = text.index(begin), text.index(end) + len(end)
     path.write_text(text[:i] + "\n".join(L) + text[j:])
+
+
+def is_done(d):
+    """Finished = company facts written and no template markers left in any working file."""
+    if not (d / "00_company-facts.md").exists():
+        return False
+    for p in d.rglob("*"):
+        if p.suffix in (".md", ".csv") and p.name not in ("README.md", "_context.md"):
+            text = p.read_text(errors="ignore")
+            if "[FILL" in text or "{{" in text:
+                return False
+    return True
 
 
 def human(label):
@@ -440,7 +452,7 @@ def main():
         for tid in tiers:
             d, _ = write_scenario(u, tid, vd)
             count += 1
-            done = (d / "00_company-facts.md").exists()
+            done = is_done(d)
             done_count += done
             name = display[(u["unit_id"], tid)]
             cells.append(f"[{'**Done**' if done else 'Planned'}: {name}]({d.relative_to(S)}/README.md)")
