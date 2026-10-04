@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy acknowledgments,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; acknowledgment report,P06,Collecting
+Both,CC1.2,Board risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Not started
+Both,CC5.3,"Policy hierarchy, policies, and exception register",Policy portal; GRC platform,CISO,Annual review; monthly exception review,Current versions; 3 monthly exception reviews,P06,Ready
+Both,CC6.1,"SSO, MFA, and PAM configuration exports",Identity platform,Director of Identity and Access Management,Quarterly export,Configuration at 2 points in the period,"P02 IA-2, IA-2(1)",Ready
+Both,CC6.2; CC6.3,"Workforce joiner, mover, and leaver records and quarterly certifications",Identity governance,Director of Identity and Access Management,Event-driven; quarterly,"25 joiners, 25 leavers; 2 certifications","P07 AC-2, PS-4",Collecting
+SL-1,CC6.2,Client administrator attestations,Retail media client console,"Vice President, Retail Media",Quarterly,2 attestation cycles,POL-02 4.12,Not started
+SL-2,CC6.2,Supplier inactivity disable job and administrator attestations,Supplier portal,"Vice President, Supplier Collaboration",Daily job; quarterly attestation,Job logs for 25 days; 2 attestation cycles,P01 R-046,Not started
+SL-1,CC6.3,Tenant isolation test results,Clean room platform,"Vice President, Retail Media",Quarterly,2 tests,P04 SYS-13 rows,Collecting
+SL-1,CC6.7; C1.1,Clean room threshold enforcement and data contract scan results,Clean room platform; data discovery scanner,"Vice President, Retail Media",Weekly scan; per template release,25 weekly scans; all template releases,POAM-020,Not started
+Both,CC6.6; CC7.1,Vulnerability scans and cloud posture reports,Scanner; posture management,Director of Cloud Platform Engineering,Weekly,5 weeks,P04 cloud control map,Collecting
+Both,CC6.8,EDR coverage and container image scan reports,EDR console; pipeline,Director of Endpoint Engineering,Monthly,3 months,P02 SI-3,Ready
+Both,CC7.2; CC7.3,SIEM use cases and SOC case records for the service lines,SIEM; case system,Director of Security Operations,Continuous,25 alerts or cases,"P07 SI-4, IR-4",Collecting
+Both,CC7.4,"Incident response plan, runbooks, and exercise records",GRC platform,Director of Security Operations,Annual exercise,Exercise report (2026-11-12 tabletop),P08,Collecting
+Both,CC8.1,Pipeline change records with peer review and approval,CI/CD pipeline,Service line engineering lead,Per change,25 changes per service line,P07 CM-3 method,Collecting
+SL-1,CC8.1,Clean room report template release reviews,Change system,"Vice President, Retail Media",Per template,All template releases,POAM-020,Not started
+Both,CC9.2,Subservice organization SOC 2 report reviews and vendor assessments,Third-party risk platform,Director of Third-Party Risk Management,Annual,All tier-1 vendors for the service lines,P03 TPSP oversight method,Ready
+Both,A1.1; A1.2,Capacity dashboards and backup job reports,Cloud monitoring; backup service,Director of Cloud Platform Engineering,Daily backups; monthly capacity review,25 backup jobs; 3 monthly reviews,P04,Ready
+Both,A1.3,Recovery test reports for SL-1 and SL-2,DR test records,Service line owners,Annual,1 test per service line,"P05 BP-14, BP-15",Not started
+Both,C1.2,Data deletion records at contract or relationship end,Deletion job logs,Service line owners,Per event,All deletions in the period,POL-04 4.9,Not started
+SL-1,PI1.1,Published measurement methodology,Client portal,"Vice President, Retail Media",Annual review,Current version,None,Not started
+SL-1,PI1.2; PI1.3,Ingest validation and attribution job validation records,Data pipeline,"Vice President, Retail Media",Per job,25 job runs,None,Collecting
+SL-1,PI1.4,Delivery to billing reconciliations,Ad server; billing system,"Vice President, Retail Media",Per client report,25 client reports,None,Not started
+Both,CC2.3,System descriptions and client and supplier agreements with security exhibits,Contract repository,Service line owners,Annual and at renewal,All new or renewed agreements,None,Not started

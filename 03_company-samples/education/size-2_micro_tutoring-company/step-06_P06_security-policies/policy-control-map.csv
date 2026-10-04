@@ -1,2 +1,47 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Information Security Coordinator designated in writing,PM-2,GV.RR-02,N61-R03 (312.8(b)(1)),No
+POL-02,A.2,Written information security program defined (SSP plus three policies),PL-2,GV.PO-01,N61-R03 (312.8(b)),No
+POL-02,A.3,Annual risk assessment with SP 800-30; risks owned and treated,RA-3; PM-9,ID.RA-01,N61-R03 (312.8(b)(2)-(3)),Yes
+POL-02,A.4,Risk acceptance authority; High risks never accepted; child-safety risks not above Low,PM-9,GV.RM-01,N61-R03 (312.8(b)(3)),No
+POL-02,A.5,Sanctions for staff; contract termination for contractor tutors; good-faith reporting protected,PS-8,GV.RR-04,N61-R03 (312.8(a)),No
+POL-02,A.6,"No written assurances, no children's data; yearly platform SOC 2 review",SA-9,GV.SC-05,N61-R03 (312.8(c)); N61-R01 (district DPA),Yes
+POL-02,A.7,Annual independent assessment,CA-2,ID.IM-01,N61-R03 (312.8(b)(4)),No
+POL-02,A.8,Annual program evaluation and policy review; policies available to the workforce,PL-1,GV.PO-02,N61-R03 (312.8(b)(5)),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,N61-R03 (312.8(a)),No
+POL-02,B.1,Unique accounts; no shared staff accounts,IA-2; AC-2,PR.AA-01,N61-R03 (312.8(b)(3)),Yes
+POL-02,B.2,"Least privilege: tutors see assigned students only; restricted ""Student files"" folder; 2 platform administrators",AC-2; AC-3; AC-6,PR.AA-05,N61-R03 (312.8(b)(3)); N61-R01 (99.31(a)(1)(ii) via district DPA),Yes
+POL-02,B.3,"MFA for suite, platform tutors and administrators, scheduling administrator, and MSP-held logins",IA-2(1),PR.AA-03,N61-R03 (312.8(b)(3)),Yes
+POL-02,B.4,Offboarding checklist by the last day or last session; contractor deletion confirmation,PS-4; AC-2,PR.AA-01,N61-R03 (312.8(b)(3)); N61-R01 (district DPA),Yes
+POL-02,B.5,Monthly account reconciliation against the staff and contractor roster; quarterly assignment check,AC-2; AC-6,PR.AA-05,N61-R03 (312.8(b)(3)),Yes
+POL-02,B.6,10-minute device lock; individual sign-in on the front-desk desktop,AC-11,PR.AA-03,N61-R03 (312.8(b)(3)),No
+POL-02,B.7,Named MSP and vendor accounts with MFA; yearly technician list,AC-17; IA-2(1); SA-9,PR.AA-05,N61-R03 (312.8(c)),Yes
+POL-02,B.8,Password length; student and guest network separated; yearly Wi-Fi password change,IA-5; SC-7; AC-18,PR.IR-01,N61-R03 (312.8(b)(3)),Yes
+POL-02,B.9,Contractor tutors' own computers: minimum device rules; no downloads; yearly attestation,AC-20,ID.AM-02,N61-R01 (district DPA; 99.33(a)); N61-R03 (312.8(b)(3)),Yes
+POL-02,C.1,"Access only students you work with, only for tutoring",PL-4,PR.AT-01,N61-R01 (99.33(a)(2) via district DPA),No
+POL-02,C.2,No student information in personal accounts or public AI tools,PL-4,PR.AT-01,N61-R03 (312.5(a)(2); 312.8(b)(3)),No
+POL-02,C.3,Lock screens; never share passwords or MFA codes,AC-11; PL-4,PR.AA-03,N61-R03 (312.8(b)(3)),No
+POL-02,C.4,Training at the start and yearly; phishing simulations,AT-2,PR.AT-01,N61-R03 (312.8(b)(3)),Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,N61-R01 (district DPA 48-hour notice),Yes
+POL-02,C.6,Signed acknowledgment (employees); rules in the contractor agreement (contractor tutors),PL-4; PS-7,GV.RR-04,N61-R03 (312.8(b)(3)); N61-R01 (district DPA),Yes
+POL-02,C.7,Contact students only through the platform or in person,PL-4; PS-7,GV.RR-04,N61-R01 (district contract),Yes
+POL-03,4.1,Ransomware runbook kept and printed,IR-8,RS.MA-01,N61-R03 (312.8(b)(3)),No
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N61-R01 (district DPA 48-hour notice),Yes
+POL-03,4.3,Log every incident,IR-5,RS.MA-02,N61-R03 (312.8(b)(4)),No
+POL-03,4.4,Record determination and discovery dates; decide whether Florida personal information is involved,IR-6,RS.AN-03,"Fla. Stat. 501.171(1)(g), (3)-(4); N61-R01 (district DPA)",Yes
+POL-03,4.5,Meet notification deadlines in the P08 matrix; counsel review; written no-harm determination,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5); N61-R01 (district DPA),Yes
+POL-03,4.6,Insurer hotline first; MSP engaged under contract,IR-4,RS.MA-02,N61-R03 (312.8(b)(3)),No
+POL-03,4.7,Ransom payment only with approvals and an OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.8,Vendor and contractor incident reports logged and handled,IR-6; SA-9,GV.SC-08,Fla. Stat. 501.171(6); N61-R03 (312.8(c)),Yes
+POL-03,4.9,Annual tabletop exercise with the MSP,IR-3,ID.IM-02,N61-R03 (312.8(b)(4)),No
+POL-03,4.10,Lessons learned within 30 days,IR-4,ID.IM-02,N61-R03 (312.8(b)(5)),No
+POL-04,4.1,Three classification levels,RA-2,ID.AM-07,N61-R03 (312.8(b)(2)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit; reports through the parent portal,SC-28; SC-8,PR.DS-01; PR.DS-02,N61-R03 (312.8(b)(3)); Fla. Stat. 501.171(2),No
+POL-04,4.3,Restricted data only in approved systems; district data only in the platform,AC-3,PR.DS-01,N61-R01 (district DPA); N61-R03 (312.8(b)(3)),No
+POL-04,4.4,"Inventory of devices, services, and children's data",CM-8,ID.AM-01,N61-R03 (312.8(b)(2)),No
+POL-04,4.5,New tools approved with written assurances; no non-integral disclosures without separate consent,SA-9,GV.SC-05,N61-R03 (312.5(a)(2); 312.8(c)),Yes
+POL-04,4.6,Approved AI tools only (none today),SA-9; PL-4,GV.SC-05,N61-R03 (312.5(a)(2)),Yes
+POL-04,4.7,90-day immutable backup versions; quarterly restore test; monthly platform export; weekly schedule printout,CP-9; CP-4,PR.DS-11,N61-R03 (312.8(b)(3)-(4)),Yes
+POL-04,4.8,Wipe or certified destruction with records; shred bin,MP-6,ID.AM-08,Fla. Stat. 501.171(8); N61-R03 (312.10),No
+POL-04,4.9,Written retention schedule for children's information; yearly purge,SI-12; SI-12(3),ID.AM-08,N61-R03 (312.10); N61-R01 (district DPA deletion term),Yes
+POL-04,4.10,"Parent requests verified, complete, and logged",AC-3(14); SI-18(4),PR.AA-02,N61-R03 (312.6),No
+POL-04,4.11,Notice and verifiable consent before any child account; new notice for material changes,PT-4; PT-5,GV.OC-03,N61-R03 (312.4; 312.5),No

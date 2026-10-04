@@ -84,3 +84,24 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-13 to 2026-07-17 | Self-assessment with the on-call IT technician (summer, light session load). Tests on 2026-07-16 |
 | 2026-07-31 | Deliverables adopted by the owner-tutor |
 | 2026-08-17 | Fall tutoring term begins |
+
+## 7. Facts added while building the deliverables (Phase 5)
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Former web designer | The designer's collaborator account on the website builder (edit rights over the site and portal) was still active when found in P07 testing on 2026-07-16; the owner removed it that day. The builder's 90-day activity history showed no sign-in by that account | P01, P02, P04, P07 |
+| Portal accounts | 34 active student member accounts (2 of the 36 families with children under 13 declined the portal) and 27 inactive ones, 61 in total. Every password is in the owner's spreadsheet | P01, P07, P08 |
+| Evaluations | About 39 student folders (9 current, about 30 former) hold evaluations or IEP and 504 plans with diagnosis information | P03, P08 |
+| Portal changes and fields | Reading-aloud audio uploads were added in August 2025 with no new notice or consent. The sign-up form built by the designer requires the child's birth date and school name, which the portal does not use | P03, P09 |
+| Found in P04 mapping | The builder's site-wide visitor analytics sets cookies on portal pages; 12 student folders were shared with parents by "anyone with the link" links; the video platform's automatic recording deletion setting was off | P01, P03, P04 |
+| Recordings | 11 families have cloud recordings; 3 of them had not ticked the recording permission checkbox | P03, P04 |
+| Old laptop | The laptop replaced in 2024 is in a drawer at home and still holds student files | P01, P02, P03, P09 |
+| Passwords and lock | Passwords are saved in the browser; two are reused across accounts. The laptop locked after 15 minutes idle | P02, P07 |
+| Restore test | On 2026-07-16 the owner restored one student folder from the email suite's version history in 25 minutes, witnessed by the IT technician | P02, P07, P09 |
+| Client-management SaaS assurance | SOC 2 Type 2 report (Security and Availability, 12-month period ending 2026-03-31, unqualified, one remediated exception) and a data processing addendum with security, use-limitation, and deletion commitments. Stated RTO 12 hours, RPO 1 hour. Reviewed 2026-07-15 | P02, P04, P09 |
+| AI assistant use | Support levels for 31 students (spring term), SAT boot camp starting levels for 12 students (June 2026), and drafts of about 45 progress reports (May 2026). The owner kept 27 of 31 levels and all 12 placements unchanged. Use paused 2026-07-13. In the 2026-07-16 check, 3 of 12 placements differed by one level from the diagnostic rubric, and 2 of 10 drafted reports had a wrong score | P01, P10 |
+| Insurance | The insurance agent confirmed the general liability policy does not cover data breach costs; a cyber insurance quote was requested | P01, P08 |
+| Recovery help | The IT technician can lend a laptop within a day. A designated family member will hold the sealed emergency sheet, and a written backup-tutor arrangement is planned (both due 2026-12-31) | P05, P06, P08 |
+| Enrollment agreement | States that family information is used to teach the child; mentions the portal in one line. One parent asked in 2025 what the portal keeps and got an informal email answer | P03, P10 |
+| Revenue rhythm | About $3,500 billed a week (about $700 per weekday); most families prepay 10-session packages | P05 |
