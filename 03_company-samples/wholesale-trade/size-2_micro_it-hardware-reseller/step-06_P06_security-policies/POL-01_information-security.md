@@ -1,38 +1,29 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | Operations Manager (security and compliance lead) |
+| Approved by | Owner, 2026-08-31 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the company keeps three core policies: access control (POL-02), incident response (POL-03), and data classification (POL-04). A separate Information Security Policy would add little for a 7-person reseller, so its essential rules, including the supplier and Section 889 rules that a larger company would put in a supply chain policy, live in **POL-02 Part A. Program governance and supplier rules**:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Basis |
+|---|---|---|
+| Security lead and CMMC Affirming Official designated in writing | POL-02 A.1 | 32 CFR 170.22(a)(1) |
+| Annual risk assessment with supply chain threats | POL-02 A.2 | NIST SP 800-30 Rev. 1; SP 800-161 Rev. 1 |
+| Who may accept risk | POL-02 A.3 | Internal |
+| Sanctions | POL-02 A.4 | Internal |
+| No SPRS result, affirmation, or SAM representation without documented support | POL-02 A.5 | 32 CFR 170.15, 170.22; FAR 52.204-26 |
+| Annual CMMC Level 1 self-assessment and independent control assessment | POL-02 A.6 | 32 CFR 170.15(a)(1) |
+| Service provider approval and annual review | POL-02 A.7 | FAR 52.204-21(b)(1)(iii); 32 CFR 170.19(b)(3) |
+| Sourcing order: authorized sources first | POL-02 A.8 | DFARS 252.246-7008(b) |
+| Section 889 screening of products and of company-owned equipment | POL-02 A.9 | FAR 52.204-25(b); 52.204-26(c) |
+| Supplier purchase order terms (flowdown and notice) | POL-02 A.10 | FAR 52.204-25(e); DFARS 252.246-7008(e) |
+| Supplier bank-detail changes verified by call-back | POL-02 A.11 | Internal (April 2026 payment diversion) |
+| 6-year retention of security and assessment records | POL-02 A.12 | 32 CFR 170.15(c)(2) |
+| Policy review and exceptions | POL-02 A.13 | Internal |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice if the company grows past the Micro tier (10 or more employees) or accepts CUI.

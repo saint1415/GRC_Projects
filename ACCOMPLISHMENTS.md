@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**61 of 216** sample companies are finished (610 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**62 of 216** sample companies are finished (620 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -56,6 +56,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Defense Industrial Base | Small | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-3_small_aircraft-parts-manufacturer/README.md) |
 | Defense Industrial Base | Mid-Market | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-4_mid-market_aircraft-parts-manufacturer/README.md) |
 | Defense Industrial Base | Enterprise | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-5_enterprise_aircraft-parts-manufacturer/README.md) |
+| Defense Industrial Base | Multi-Sector | Aircraft parts manufacturer plus two divisions | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-6_multi-sector_aircraft-parts-manufacturer-plus-two-divisions/README.md) |
 | Wholesale Trade | Sole Proprietorship | IT hardware reseller | [README](03_company-samples/wholesale-trade/size-1_sole-proprietor_it-hardware-reseller/README.md) |
 | Wholesale Trade | Small | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-3_small_it-hardware-distributor/README.md) |
 | Retail Trade | Small | Independent grocery store | [README](03_company-samples/retail-trade/size-3_small_independent-grocery-store/README.md) |
