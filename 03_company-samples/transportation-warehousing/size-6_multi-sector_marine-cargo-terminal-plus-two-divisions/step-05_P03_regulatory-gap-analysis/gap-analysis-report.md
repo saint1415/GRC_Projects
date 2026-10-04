@@ -139,7 +139,7 @@ Gap risk for the 13 rows: 5 High and 8 Moderate. **Not met:** logging and monito
 | 8 | Port Real Estate inheritance and supplement (6) | RE | 314.4(g) (benchmark) | Moderate | Inheritance matrix; supplement realigned | Port Real Estate security and compliance lead | 2026-12-31 |
 | 9 | AI governance (8) | MT, FT | 101.650(e)(1) (the Assessment must cover the SYS-T5 to ASC path); 29 CFR part 1917; FTC Act Section 5 | High | Group AI program (P10) | Group Chief Risk Officer | 2027-03-31 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07; POAM-008, POAM-011 to POAM-019 trace directly to this analysis).
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-024 to POAM-027 come directly from this analysis; most assessment items also trace to rows here (for example POAM-002, POAM-008, POAM-011 to POAM-016, POAM-018, POAM-019 and POAM-023).
 
 ## 6. Pending regulatory changes
 - **Subpart F:** no change pending for facilities. The final rule asked for comment on delaying implementation for U.S.-flagged vessels only; the Federal Register search on 2026-09-26 found no later rule or proposal, and eCFR shows no version after 2025-07-16.

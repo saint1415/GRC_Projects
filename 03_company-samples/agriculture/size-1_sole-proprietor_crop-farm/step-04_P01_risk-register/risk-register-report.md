@@ -2,27 +2,59 @@
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company (Precision-agriculture crop farm using connected irrigation, drones, and farm-management software) |
-| Size tier | Sole Proprietorship (Owner only (0 employees)) |
+| Organization | Cris Santos Company (precision-agriculture crop farm) |
+| Size tier | Sole Proprietorship (owner-operator only, 0 employees) |
 | Vertical | Agriculture, Forestry, Fishing and Hunting |
-| Method | NIST SP 800-30 Rev. 1 |
-| Prepared | [FILL: date] |
-| Risk owner / approver | [FILL] |
+| Method | NIST SP 800-30 Rev. 1 (qualitative 5-level scales; Tables G-5 and I-2) |
+| Also supports | CSF 2.0 ID.RA (benchmark); "reasonable measures" under Fla. Stat. 501.171(2). This is the farm's first risk assessment |
+| Prepared | 2026-07-17 by the owner-operator, with the on-call IT technician |
+| Risk owner and approver | Owner-operator (owner, security lead, and risk acceptor for every risk) |
+| Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-[FILL: What is in scope, the risk tolerance, and who can accept which level of risk. Use the scope in `_context.md`.]
+**Scope.** The whole farm as one system: SYS-01 to SYS-10, the irrigation equipment at both parcels, paper program documents, and the outside parties (irrigation dealer, FMIS vendor, booking vendor, AI yield vendor, custom harvest operator). Processes come from the BIA (P05).
+
+**What the farm cares about most.** Losing a crop in one night (freeze protection), losing the season's sales, and losing the records that keep the farm out of the full Produce Safety Rule. A breach notice would be small (personal information of 2 individuals is held by the farm itself), but the irrigation and records risks are large.
+
+**Risk tolerance.** The owner-operator owns and accepts every risk. Because the same person proposes and approves, three fixed rules apply:
+- Low and Very Low: may be accepted, with the reason written in the register.
+- Moderate: may be accepted only with a dated treatment plan or a written reason.
+- High and Very High: must be treated with a dated plan, never accepted as they are. Any risk that can cost a crop must be treated before freeze season (2026-11-30).
 
 ## 2. Method
-Threats, vulnerabilities, likelihood, impact, and risk were rated using NIST SP 800-30 Rev. 1 Appendices D-I. See the universal method in `00_universal-framework/projects/step-04_P01_risk-register/README.md`.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the SaaS control map (P04), and a walk through the laptop, router, pump house, and SaaS accounts with the IT technician. SP 800-82 Rev. 3 section 4.1 (Managing OT Security Risk) was used for the irrigation risks.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+3. **Rate impact.** Table H-3 levels, using the BIA impact categories (a lost crop block is Severe cost; P05 section 3).
+4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
+5. **Feedback from testing.** R-005 includes the default password found on the pump controller in P07 testing on 2026-07-16.
 
-## 3. Top risks
+## 3. Results
+| Risk level | Count |
+|---|---|
+| High | 3 |
+| Moderate | 8 |
+| Low | 4 |
+| **Total** | **15** |
 
+### Top risks
 | Risk ID | Risk | Level | Treatment | Owner | Due |
 |---|---|---|---|---|---|
-| [FILL] | | | | | |
+| R-001 | Ransomware on the shared laptop, with theft of saved passwords | High | Separate accounts, password manager, backups, training | Owner-operator | 2026-10-31 |
+| R-002 | Takeover of the SYS-01 irrigation control account | High | MFA, unique passphrase, activity log review | Owner-operator | 2026-09-15 |
+| R-005 | Customer Wi-Fi reaches the pump controller with its default password | High | Change defaults; isolate customer Wi-Fi; separate pump house network | Owner-operator | 2026-11-15 |
+| R-003 | Freeze alarm does not arrive | Moderate | Standalone alarm; written freeze-night procedure | Owner-operator | 2026-11-15 |
+| R-004 | Dealer's always-on technician account misused | Moderate | Viewer role; service windows; contract terms | Owner-operator | 2026-09-30 |
+| R-006 | Owner unavailable (single point of failure) | Moderate | Mutual-aid neighbor; sealed recovery codes | Owner-operator | 2026-11-30 |
+| R-007 | Records lost, so the qualified exemption cannot be shown | Moderate | Monthly exports; annual eligibility review | Owner-operator | 2026-10-31 |
+
+The three High risks share one theme: **anyone who gets one password, or onto the farm-stand Wi-Fi, can reach the irrigation.** The fixes cost almost nothing: MFA on SYS-01 and the booking platform, a password manager, changing two default passwords, and turning on the router's guest isolation. All three must be done before the strawberries go in the ground for the December freeze season.
 
 ## 4. Treatment summary
-[FILL: What is being funded or fixed, and what is accepted and why.]
+- **Free fixes first (by 2026-09-15):** MFA on SYS-01 and the booking platform; unique passphrases in a password manager; change the router and pump controller default passwords (with the dealer).
+- **Before freeze season (by 2026-11-30):** separate networks for customer Wi-Fi and the pump house; standalone cellular freeze alarm (about $300 plus a monthly plan); written freeze-night procedure; mutual-aid arrangement with a neighbor; sealed recovery codes.
+- **Budgeted (about $400 a year):** business-grade file plan with version history, password manager, encrypted backup drive.
+- **Contract actions:** dealer security terms (R-004, at renewal, interim viewer role by 2026-09-30); AI yield vendor data terms or stop (R-011, by 2026-10-31).
+- **Accepted (Low):** R-012 (USB sticks; antivirus scans them), R-013 (lightning or hurricane; manual pumping and insurance), and R-014 (SYS-01 outage; manual operation and exports).
 
 ## 5. Approval
-[FILL: Name, role, date]
+Owner-operator, 2026-08-31: approved all treatment plans and the three acceptances. Next full review July 2027, or sooner after a new system, a new vendor, the first hire, a change in sales mix that affects the qualified exemption, or an incident.
