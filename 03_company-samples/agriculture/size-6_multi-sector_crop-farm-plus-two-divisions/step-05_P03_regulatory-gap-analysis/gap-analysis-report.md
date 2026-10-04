@@ -102,7 +102,7 @@ Of the 80 partially met or not met rows, 22 are rated High, 43 Moderate, and 15 
 | Customer agreements (1) | 0 | 1 | 0 | 0 |
 | **Total (30)** | **9** | **18** | **2** | **1** |
 
-**Not met:** FP-G11 (21 CFR 121.157(b)(2)); FP-G23 (21 CFR 1.1455(c)(3)(ii)). The most important is 121.157(b)(2): the 2026 assessment is new information about vulnerabilities at actionable process steps (control system paths to setpoints and dosing), and it must trigger reanalysis. The vulnerability assessments (121.130(a)-(b)) and the food safety plans (117.126(b)) are written and signed, but they treat process controls as physical equipment (scenario gap 4).
+**Not met:** FP-G11 (21 CFR 121.157(b)(2)); FP-G23 (21 CFR 1.1455(c)(3)(ii)). FP-G23 is a readiness gap for a rule FDA will not enforce before 2028-07-20. The most important is 121.157(b)(2): the 2026 assessment is new information about vulnerabilities at actionable process steps (control system paths to setpoints and dosing), and it must trigger reanalysis. The vulnerability assessments (121.130(a)-(b)) and the food safety plans (117.126(b)) are written and signed, but they treat process controls as physical equipment (scenario gap 4).
 
 ### 4.3 Farm Supply (`gap-analysis-farm-supply.csv`)
 | Obligation group | Met | Partially met | Not met | N/A |

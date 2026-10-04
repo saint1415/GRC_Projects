@@ -60,13 +60,13 @@ flowchart TB
   WAN --> ROC
   WAN --> PLANT
   WAN --> POS
-  ROC -->|"telemetry today: two-way path, gap"| HUBD
-  HUBD <-->|"API sync"| FMIS
-  HUBD -->|"nightly harvest lot file, AC-21"| TRC
-  HUBD -->|"payroll tally export"| ERP
+  ROC -->|telemetry today: two-way path, gap| HUBD
+  HUBD <-->|API sync| FMIS
+  HUBD -->|nightly harvest lot file, AC-21| TRC
+  HUBD -->|payroll tally export| ERP
   IMG --> YM
-  PAM -->|"recorded vendor sessions"| PLANT
-  PAM -.->|"legacy farms only"| ROC
+  PAM -->|recorded vendor sessions| PLANT
+  PAM -.->|legacy farms only| ROC
   CFA --> LOG
   FPA --> LOG
   FSA --> LOG

@@ -144,7 +144,7 @@ See `control-implementation.csv` (219 controls) and `common-control-catalog.csv`
 
 | Inheritance | Controls |
 |---|---|
-| Common/Inherited (SYS-G1 to SYS-G4, group functions, or the FMIS vendor) | 62 |
+| Common/Inherited (SYS-G1 to SYS-G4 and group functions) | 62 |
 | Hybrid (group provides the mechanism; Crop Farming configures or operates part) | 56 |
 | System-specific | 101 |
 
