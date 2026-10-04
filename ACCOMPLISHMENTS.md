@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**73 of 216** sample companies are finished (730 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**74 of 216** sample companies are finished (740 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -67,6 +67,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Retail Trade | Micro | Grocery retailer | [README](03_company-samples/retail-trade/size-2_micro_grocery-retailer/README.md) |
 | Retail Trade | Small | Independent grocery store | [README](03_company-samples/retail-trade/size-3_small_independent-grocery-store/README.md) |
 | Retail Trade | Mid-Market | Grocery retailer | [README](03_company-samples/retail-trade/size-4_mid-market_grocery-retailer/README.md) |
+| Retail Trade | Enterprise | Grocery retailer | [README](03_company-samples/retail-trade/size-5_enterprise_grocery-retailer/README.md) |
 | Retail Trade | Multi-Sector | Grocery retailer plus two divisions | [README](03_company-samples/retail-trade/size-6_multi-sector_grocery-retailer-plus-two-divisions/README.md) |
 | Transportation and Warehousing | Sole Proprietorship | Freight forwarder customs broker | [README](03_company-samples/transportation-warehousing/size-1_sole-proprietor_freight-forwarder-customs-broker/README.md) |
 | Transportation and Warehousing | Micro | Freight forwarding office | [README](03_company-samples/transportation-warehousing/size-2_micro_freight-forwarding-office/README.md) |
