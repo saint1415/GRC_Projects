@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022). Criteria are cited by ID with short topic labels in our own words |
 | Service lines | SL-1 Operations Cloud (about 9,800 customers); SL-2 Data Cloud (about 3,100 customers); SL-3 Conversational AI service (AQ-01, about 1,150 customers) |
 | Categories in scope | SL-1: Security, Availability, Confidentiality. SL-2: Security, Availability, Confidentiality, Processing Integrity (Availability, Confidentiality, and Processing Integrity are new). SL-3: Security, Availability, Confidentiality (first report) |
-| Target reports | SL-1: Type 2, period 2026-10-01 to 2027-09-30 (eighth annual report). SL-2: Type 2 with expanded categories, period 2027-04-01 to 2028-03-31. SL-3: Type 1 as of 2027-06-30, then first Type 2 for 2027-07-01 to 2027-12-31 |
+| Target reports | SL-1: Type 2, period 2026-10-01 to 2027-09-30 (ninth annual report). SL-2: Type 2 with expanded categories, period 2027-04-01 to 2028-03-31. SL-3: Type 1 as of 2027-06-30, then first Type 2 for 2027-07-01 to 2027-12-31 |
 | Files | `soc2-readiness.csv` (every criterion for each service line: 183 rows); `soc2-evidence-map.csv` (25 evidence items) |
 | Prepared | 2026-08-14 to 2026-08-28 by the Director of Trust and Assurance and the GRC team with the service line owners; reviewed by the CISO and the Chief Audit Executive; approved by the CTO 2026-09-08 |
 
