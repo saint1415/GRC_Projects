@@ -160,3 +160,17 @@ These facts were added while building the deliverables. They do not change secti
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Chief Accounting Officer, CISO, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. The Chief Supply Chain Officer joins for product-integrity events (added 2026-09).
 
 **Service lines (P09).** SL-1: the reseller commerce platform, used by about 9,500 reseller accounts; SOC 2 Type 2 (Security, Availability, Confidentiality) since 2024. SL-2: lifecycle services (configuration, imaging, and ITAD sanitization) for about 1,200 enterprise customers at FL-2 and TX-1; about 310,000 devices processed a year; no SOC 2 report yet.
+
+**More roles added during the build.**
+| Role | Duties in the deliverables |
+|---|---|
+| Vice President, Corporate Security and Facilities | Physical security of sites, docks, and server rooms; colocation access lists (common control provider CCP-07 in P02) |
+| Controller | Vendor master and payment controls; owner of segregation-of-duties fixes (P07 POAM-004) |
+
+**Site footprint for state AI laws (P10).** No sites in Illinois or New York City, and no distribution center in California or Colorado. Remote inside sales staff are hired nationwide.
+
+**Federal stream volumes (P03, P07).** About 5,700 drop-ship federal order lines with partner substitutions in 2026 H1; 38 drop-ship partner agreements; 9 subcontractors receive FCI or CUI; 2 field installation subcontractors receive CUI drawings.
+
+**Reseller fraud and APIs (P01, P07).** 14 fraudulent orders ($1.3 million) in 2026 H1, 9 of them first reported by resellers; IP allow lists cover about 40% of API integrations.
+
+**AI-001 facts (P10).** Auto-release since 2026-02 for authorized-source purchase orders up to $250,000 and within 20% of forecast; about 38% of purchase order lines released automatically from 2026-03 to 2026-08; an OEM price change in 2026-06 led to about $3.1 million of excess inventory over 2 weeks.

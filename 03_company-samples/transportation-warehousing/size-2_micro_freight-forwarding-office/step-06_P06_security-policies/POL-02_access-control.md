@@ -8,8 +8,8 @@
 | Approved by | Owner, 2026-08-31 |
 | Effective date | 2026-09-01 |
 | Review cycle | Annually (next review 2027-08-31), and after major changes or incidents |
-| Implements (SP 800-53 Rev. 5) | Part A: PM-2, PM-9, PL-1, RA-3, PS-8, SA-9, CA-2. Part B: AC-1, AC-2, AC-3, AC-5, AC-6, AC-17, AC-19, IA-2, IA-2(1), IA-5, PS-4. Part C: PL-4, AT-2 |
-| CSF 2.0 | GV.RR-02, GV.RR-04, GV.RM-01, GV.PO-01, GV.SC-05, ID.RA-01, PR.AA-01, PR.AA-03, PR.AA-05, PR.AT-01 |
+| Implements (SP 800-53 Rev. 5) | Part A: PM-2, PM-9, PL-1, RA-3, PS-8, SA-9, CA-2, SI-12. Part B: AC-1, AC-2, AC-3, AC-5, AC-6, AC-11, AC-17, AC-19, IA-2, IA-2(1), IA-5, PS-4, AU-6, SI-4, SI-8. Part C: PL-4, AT-2 |
+| CSF 2.0 | GV.RR-02, GV.RR-04, GV.RM-01, GV.PO-01, GV.SC-05, ID.RA-01, PR.AA-01, PR.AA-03, PR.AA-05, PR.AT-01, DE.AE-02 |
 | Customs broker rules | 19 CFR 111.2(a)(2)(ii)(B), 111.24, 111.28(a), 111.28(b)(3), 111.29(a) |
 
 **Why this policy has three parts.** A 7-person office does not need five separate policies. This policy carries the program governance rules that would otherwise be in an Information Security Policy (POL-01), and the workforce use rules that would otherwise be in an Acceptable Use Policy (POL-05). POL-01 and POL-05 are short pointer files to Parts A and C.
@@ -70,6 +70,8 @@ B.8 **Passwords.** Passwords must be at least 14 characters, unique to the compa
 B.9 **Phones.** Company mail and files may be used on a personal phone only through the suite apps with the company's app protection rules (PIN, no copying to personal apps, selective wipe). (AC-19)
 
 B.10 **Payments.** Before any payment to a new beneficiary or to changed bank details, the Accounting Specialist must call the payee at a phone number already on file or from an independent source (never one given in the request) and record the call. Every wire to a new or changed beneficiary needs a second approver in the bank portal (the owner, or the Office and Compliance Manager when the owner is away). Requests to change bank details by email alone are refused. (AC-5; PR.AA-05; 111.29(a))
+
+B.11 **Monthly log review and mail protection.** Each month the Security Coordinator must review, with a checklist, the suite's risky sign-in and new forwarding rule alerts, mass download alerts, and the customs platform's user access and export reports, and report findings to the owner. The suite must tag external email, warn on look-alike domains, and protect the owner's and the Accounting Specialist's names from impersonation. (AU-6; SI-4; SI-8; DE.AE-02)
 
 ### Part C. Workforce use rules (essentials of POL-05)
 C.1 Company systems are for company work. Employees may access only the client records they need for their job. Client records are confidential: they may be shared only with the client, its surety, CBP and other authorized U.S. officials, or as the client has authorized in writing (111.24). (PL-4; PR.AT-01)

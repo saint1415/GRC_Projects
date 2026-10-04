@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**67 of 216** sample companies are finished (670 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**68 of 216** sample companies are finished (680 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -61,6 +61,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Wholesale Trade | Micro | IT hardware reseller | [README](03_company-samples/wholesale-trade/size-2_micro_it-hardware-reseller/README.md) |
 | Wholesale Trade | Small | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-3_small_it-hardware-distributor/README.md) |
 | Wholesale Trade | Mid-Market | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-4_mid-market_it-hardware-distributor/README.md) |
+| Wholesale Trade | Enterprise | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-5_enterprise_it-hardware-distributor/README.md) |
 | Retail Trade | Sole Proprietorship | Corner grocery | [README](03_company-samples/retail-trade/size-1_sole-proprietor_corner-grocery/README.md) |
 | Retail Trade | Micro | Grocery retailer | [README](03_company-samples/retail-trade/size-2_micro_grocery-retailer/README.md) |
 | Retail Trade | Small | Independent grocery store | [README](03_company-samples/retail-trade/size-3_small_independent-grocery-store/README.md) |
