@@ -110,6 +110,6 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 
 ## 8. Key findings
 1. **RTOs for shared services are shorter than any division's, as they must be.** Group identity (RTO 1 hour) met its target in both 2026 failover tests.
-2. **Payroll depends on the WCP more than either division's continuity plan admits.** The payroll engine has its own recovery design, but without the WCP handoff it has no current hours or bank details. The two continuity plans were written separately (POAM item in P07 under CP-2).
+2. **Payroll depends on the WCP more than either division's continuity plan admits.** The payroll engine has its own recovery design, but without the WCP handoff it has no current hours or bank details. The two continuity plans were written separately (P07 CP-2 finding; POAM-024).
 3. **The export service is High for availability and High for confidentiality.** Its recovery is urgent, and so is its protection: the handoff files are the most sensitive data in the WCP (gap 2; P01 SW-003; the P08 scenario).
 4. **Notification capacity is itself a process** (BP-SW05, BP-G02, BP-G06). If the SOC or the support desk is down during an incident, the 48-hour and 72-hour customer clocks keep running. The P08 runbook uses out-of-band channels for this reason.

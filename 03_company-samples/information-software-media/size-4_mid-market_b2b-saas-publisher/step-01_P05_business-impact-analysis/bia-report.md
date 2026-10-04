@@ -124,7 +124,7 @@ These rows are assessed in the gap analysis (P03) and the control assessment (P0
 |---|---|---|---|
 | 1 | SYS-06 identity provider and break-glass accounts | 1 h | Sealed break-glass accounts for the cloud organization and identity provider; out-of-band bridge on personal phones |
 | 2 | SYS-04 network hub, security tooling, and log archive accounts | 1 h | Guardrails and logging run at the organization level and survive a workload account loss |
-| 3 | SYS-01 managed database (all 12 shards) | 1 h in region; 9 h for region loss today (target 2 h) | Point-in-time recovery; promote the cross-region replica |
+| 3 | SYS-01 managed database (all 12 shards) | 1 h (replica promotion took about 3 h in the February 2026 test, within a 9-hour full failover) | Point-in-time recovery; promote the cross-region replica |
 | 4 | SYS-01 container cluster and core services (agent workspace, API, chat) | 1 h | Redeploy from signed images and infrastructure code |
 | 5 | SYS-09 channel ingestion connectors (email, SMS, social) | 2 h | Upstream mail servers queue and retry |
 | 6 | SYS-02 healthcare cell | 2 h | Same procedure as SYS-01 in the healthcare account |

@@ -38,7 +38,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | State law | Breach notification | Each state where affected individuals reside; Florida worked example: Fla. Stat. 501.171 | The division is a third-party agent for its customers under Florida law (notice to the customer within 10 days) (P08) |
 | Internal | Group policies POL-01 to POL-05 and the Cloud Software supplement | P06 | |
 
-Not applicable: FedRAMP (no government edition), COPPA (not directed to children), HIPAA (no PHI in the WCP; the consulting division's health-system integrations pass only staffing counts into WCP tenants), PCI DSS (no account data in the WCP; checkout posts directly to SYS-D4, which is confirmed each six months in the PCI DSS scope review).
+Not applicable: FedRAMP (no government edition), COPPA (not directed to children), HIPAA (no PHI in the WCP; the consulting division's health-system integrations pass only staffing counts into WCP tenants), PCI DSS (no account data in the WCP; checkout posts directly to SYS-D4). The WCP pages that embed checkout are in the payments division's PCI DSS scope reviews; the review after the March 2026 network change is overdue (POAM-021).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval

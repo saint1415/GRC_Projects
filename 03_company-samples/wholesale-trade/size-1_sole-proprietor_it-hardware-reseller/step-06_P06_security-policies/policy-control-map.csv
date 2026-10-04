@@ -1,2 +1,42 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N42-R02 (32 CFR 170.15),No
+POL-01,4.2,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N42-R01,No
+POL-01,4.3,Risk decision rules; DoD-delivery supply chain risks never accepted,PM-9,GV.RM-01,N42-R05,No
+POL-01,4.4,Annual policy review,PL-1,GV.PO-02,N42-R02,No
+POL-01,4.5,Annual CMMC Level 1 self-assessment of all 15 requirements,CA-2,ID.IM-01,N42-R02 (32 CFR 170.15(a)(1)),No
+POL-01,4.6,Affirm in SPRS only when every requirement is MET with evidence,CA-2; PM-9,GV.OV-01,N42-R02 (32 CFR 170.22),No
+POL-01,5.1,"Written, time-limited exceptions; none against FAR 52.204-21 while a Level 1 status is held",PL-1,GV.PO-02,N42-R04,No
+POL-01,5.2,Sanctions for any future employee or helper,PS-8,GV.RR-04,N42-R01,No
+POL-01,6.1,Sourcing rule: authorized sources for DoD orders and network devices,SR-5,GV.SC-06,N42-R05 (52.204-25(b)(1)); N42-R01,No
+POL-01,6.2,Check marketplace sellers and brokers before the first purchase,SR-3; SR-5,GV.SC-07,N42-R01,No
+POL-01,6.3,"Receiving checks: OEM serial lookup, seal inspection, firmware hash; quarantine",SR-11,ID.RA-09,N42-R05; N42-R01,Yes
+POL-01,6.4,Section 889 check of the true manufacturer on every DoD quote; clause substance on DoD-bound purchase orders,SR-5,GV.SC-05,N42-R05 (52.204-25(b)(1); (e)),No
+POL-01,6.5,Call-back before a first payment or bank-detail change,SR-3; AT-2,GV.SC-05,N42-R01,No
+POL-01,6.6,Supplier and service provider list; annual SOC 2 review,SA-9,GV.SC-07,N42-R02 (32 CFR 170.19(b)(3)),No
+POL-01,6.7,"Owner-started, watched remote support",SA-9; AC-17,PR.AA-05,N42-R04 (52.204-21(b)(1)(i)),No
+POL-01,7.1,Unique accounts; no shared credentials,IA-2; AC-2,PR.AA-01,N42-R04 (52.204-21(b)(1)(v)),Yes
+POL-01,7.2,MFA by authenticator app wherever offered,IA-2(1); IA-2(2),PR.AA-03,N42-R04 (52.204-21(b)(1)(vi)); N42-R01,Yes
+POL-01,7.3,Unique passphrases in a password manager; no default passwords,IA-5,PR.AA-01,N42-R04 (52.204-21(b)(1)(vi)),No
+POL-01,7.4,Quarterly account review; same-day removal,AC-2,PR.AA-05,N42-R04 (52.204-21(b)(1)(i)),No
+POL-01,7.5,Standard daily laptop account,AC-6,PR.AA-05,N42-R04 (52.204-21(b)(1)(ii)),No
+POL-01,7.6,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,N42-R01,No
+POL-01,7.7,Sealed emergency access codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,N42-R01,No
+POL-01,7.8,"Monthly sign-in, forwarding rule, and payment-detail review",AU-6,DE.AE-02,N42-R01,No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-08,N42-R04,No
+POL-01,8.2,"Restricted data, including FCI, only in approved locations",AC-20; AC-3,ID.AM-04,N42-R04 (52.204-21(b)(1)(iii)),Yes
+POL-01,8.3,CUI stop rule: do not accept CUI; re-scope first,AC-20,GV.SC-05,N42-R02 (32 CFR 170.23(a)(2)); N42-R03,No
+POL-01,8.4,Named-people sharing; 30-day link expiry,AC-3,PR.DS-01,N42-R04 (52.204-21(b)(1)(i)),No
+POL-01,8.5,Staging spreadsheets in cloud storage; backups with version history,CP-9,PR.DS-11,N42-R01,No
+POL-01,8.6,Six-year retention of security and CMMC evidence,SI-12,ID.AM-08,N42-R02 (32 CFR 170.15(c)(2)),No
+POL-01,8.7,Device and returned-equipment sanitization with a record,MP-6,ID.AM-08,N42-R04 (52.204-21(b)(1)(vii)),Yes
+POL-01,9.2,Business-only Wi-Fi; quarterly router check; current firmware,SC-7; SI-2,PR.IR-01,N42-R04 (52.204-21(b)(1)(x); (xii)),Yes
+POL-01,9.3,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,N42-R04 (52.204-21(b)(1)(xii)-(xv)),Yes
+POL-01,9.4,No posting about DoD work; photo check,AC-22,GV.PO-01,N42-R04 (52.204-21(b)(1)(iv)),No
+POL-01,9.5,"Approved AI tool only, training off, no Restricted data",PL-4; AC-20; SA-9,GV.PO-01,N42-R04 (52.204-21(b)(1)(iii)),Yes
+POL-01,9.6,"Garage and cabinet: lockbox key, yearly code change, escort, entry log",PE-3; PE-8,PR.AA-06,N42-R04 (52.204-21(b)(1)(viii)-(ix)),Yes
+POL-01,9.7,Annual security and anti-counterfeit training,AT-2; SR-11(1),PR.AT-01,N42-R01,No
+POL-01,10.1,Incident runbook with printed contact sheet,IR-8,RS.MA-01,N42-R05 (52.204-25(d)),No
+POL-01,10.2,Same-day incident log with discovery or identification time,IR-6,RS.MA-02,N42-R05 (52.204-25(d)),No
+POL-01,10.3,"Report clocks: 1 business day (Section 889), 3 business days (Kaspersky), 2 business days (BPA)",IR-6,RS.CO-02,N42-R05 (52.204-25(d)); FAR 52.204-23(c),No
+POL-01,10.5,No extortion payment without counsel and an OFAC check,IR-4,RS.MA-01,N42-R01,No
+POL-01,11.2,Emergency sheet and agreement with the prime,CP-2,RC.RP-01,N42-R01,No

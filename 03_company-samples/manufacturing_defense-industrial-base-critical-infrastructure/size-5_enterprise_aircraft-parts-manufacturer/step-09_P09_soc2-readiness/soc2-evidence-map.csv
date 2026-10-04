@@ -1,0 +1,25 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC1.4,Background check and training records,HR system; learning system,Chief Human Resources Officer,At hire; annual,25 new hires,P07 AT-2,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Quarterly,All quarters,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M reviews,GRC platform,Chief Audit Executive,Annual; monthly,Annual report; 3 monthly reviews,P07,Ready
+Both,CC6.1; CC6.3,Quarterly access certifications,Identity governance,Director of Identity and Access Management,Quarterly,All quarters,P07 AC-2,Collecting
+SL-1,CC6.2,Customer user provisioning tickets,Portal administration,"Vice President, Aftermarket Services",Per event,25 events,SOC 2 2025 report,Collecting
+SL-2,CC6.2,Customer user provisioning tickets,Self-service administration (planned),"Vice President, Digital Services",Per event,25 events,None,Not started
+Both,CC6.6; CC6.7,"Firewall, web application firewall, and TLS reviews",Cloud provider A landing zone,Director of Network Engineering,Quarterly,2 quarters,P04,Ready
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports,Security operations platform,Director of Security Operations,Weekly,5 weeks,P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SIEM use cases and incident cases,SIEM,Director of Security Operations,Continuous,25 cases,"P07 SI-4, IR-4",Collecting
+SL-2,CC7.2,SL-2 application log onboarding record,SIEM,Director of Security Operations,"Once, then continuous",Source inventory,None,Not started
+Both,CC7.4,Incident response plan and tabletop reports,GRC platform,Director of Security Operations,Annual,Latest exercise,P08,Ready
+Both,CC8.1,Change records with approvals,Service management tool; pipelines,Director of Cloud Platform Engineering,Per change,25 changes per service line,P07 CM-3,Collecting
+SL-2,CC8.1; PI1.3,Model deployment approvals and validation reports,Model registry (planned),"Vice President, Digital Services",Per deployment,All deployments,P10 AI-006,Not started
+Both,CC9.2,Vendor reviews and subservice organization SOC reports,Vendor register,Director of Third-Party Risk Management,Annual,All tier-1 vendors,P02 SA-9,Collecting
+SL-1,A1.2; A1.3,Second-region failover test report,Cloud provider A,"Vice President, Aftermarket Services",Annual,Latest test,P05 DEP-17,Ready
+SL-2,A1.2; A1.3,Standby build and recovery test report,Cloud provider A,"Vice President, Digital Services",Annual,Latest test,P05 DEP-17,Not started
+Both,A1.1,Capacity dashboards and alerts,Monitoring service,Service line owners,Monthly,3 months,None,Collecting
+Both,C1.1,Data classification and access reviews for customer data,GRC platform,Service line owners,Quarterly,All quarters,P06 POL-04,Ready
+Both,C1.2; CC6.5,Customer data deletion certificates,Deletion jobs,Service line owners,Per contract end,All contract ends,None,Collecting
+SL-2,PI1.2,Feed validation rules and rejection logs,SL-2 platform,"Vice President, Digital Services",Daily,25 days,None,Collecting
+SL-2,PI1.4,Daily output reconciliation report,SL-2 platform (planned),"Vice President, Digital Services",Daily,25 days,None,Not started
+Both,CC2.3,System descriptions and customer agreements,Contract repository,Service line owners,Annual,Current versions,SOC 2 2025 report (SL-1),Ready

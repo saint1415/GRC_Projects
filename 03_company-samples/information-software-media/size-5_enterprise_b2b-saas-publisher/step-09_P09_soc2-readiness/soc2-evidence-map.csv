@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+All,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief People Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+All,CC1.2,Cybersecurity and risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+All,CC3.2; CC3.3; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+All,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+All,CC2.3,"Quarterly public statement review records (trust page, AI pages, answer library)",GRC platform,Director of Trust and Assurance,Quarterly,All quarters,P03 G-032 to G-044; POL-01 4.13,"Not started (first review 2026-12-15, POAM-021)"
+SL-1; SL-2,CC6.1; CC6.2; CC6.3,"Workforce and non-human identity provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,"Collecting (non-human identities from 2027-03-31, POAM-005)"
+SL-1; SL-2,CC6.1,MFA and PAM configuration,Identity platform; PAM,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1),Collecting
+SL-1,CC6.1; C1.1,"Tenant access tool sessions with ticket links, customer approvals, and recordings",Tenant access tool,"Vice President, Customer Support",Per session,60 sessions,P07 AC-3 and AU-10,Collecting (recording gap until POAM-004)
+SL-1,CC6.1; C1.1,Tenant isolation test results,CI/CD test reports,"Vice President, Platform Engineering",Every release,25 releases,P02 SC-4; P07 AC-3 test,Ready
+SL-1; SL-2,CC6.6; CC6.7,"WAF, network policy, export configuration, and TLS scan results",Landing zone; scanner,Director of Cloud Platform Engineering,Quarterly,All quarterly scans,P04,Collecting
+SL-1; SL-2,CC6.8; CC7.1,EDR and runtime detection coverage; vulnerability reports with remediation tickets,EDR console; scanners,Director of Security Operations,Weekly,5 weeks; 25 findings,P07 RA-5 sample,Collecting
+SL-1; SL-2,CC7.2; CC7.3; CC7.4,"SOC cases, use case list, and incident reports",SOC case management,Director of Security Operations,Continuous,25 cases,P08,Collecting
+SL-1; SL-2,CC8.1,"Pull requests, pipeline approvals, and emergency change reviews",Source hosting; CI/CD,"Vice President, Platform Engineering",Per change,25 normal and 25 emergency changes,P07 CM-3 sample,Collecting
+SL-1; SL-2,CC9.2,Sub-processor register with SOC report reviews and DSP screening,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,"P03 G-022, G-073; P07 SA-9",Collecting
+SL-1,A1.1; A1.2,"Capacity reviews, backup reports, and restore tests per cell",Monitoring; backup service,"Vice President, Site Reliability Engineering",Quarterly; daily backups,All quarters; 25 backup days,P05; P07 CP-9,Collecting
+SL-1,A1.3; CC7.5,Cell DR test reports including the Cell 4 retest,DR records,"Vice President, Site Reliability Engineering",Annual (Cell 4 retest 2027-02-28),All cell tests,P07 CP-10,"Collecting (Cell 4 retest pending, POAM-007)"
+SL-1,C1.2,Monthly reconciliation of terminated tenants and deletion certificates,Offboarding job; Privacy Office tracker,Chief Privacy Officer,Monthly,All months in the period,P07 SI-12,"Not started (first reconciliation 2026-11-30, POAM-011)"
+SL-2,CC3.1; CC2.3,Data Cloud system description with new service commitments,Contract repository,"Vice President, Data Cloud",Annual,Document,New,Not started (due 2027-01-31)
+SL-2,C1.2,Snapshot lifecycle configuration and tenant deletion records,Cloud provider B,"Vice President, Data Cloud",Monthly,All months,P03 G-040,Not started (POAM-022)
+SL-2,PI1.1; PI1.2,Pipeline processing specifications and input validation error queues,Data Cloud pipelines,"Vice President, Data Cloud",Per pipeline; daily,25 pipelines; 25 days,New,Collecting
+SL-2,PI1.3; PI1.4; PI1.5,Pipeline reconciliation and output completeness reports,Data Cloud monitoring,"Vice President, Data Cloud",Daily,25 days,New,Not started (due 2027-03-31)
+SL-3,CC6.1; CC6.2; CC6.3,AQ-01 federation records and key inventory,Identity platform; AQ-01 accounts,"Vice President, Integration Management Office",Per event,25 accounts; full key inventory,P07 IA-5,Not started (POAM-002)
+SL-3,CC6.6; CC7.1; CC7.2,"AQ-01 guardrail, posture, and SIEM onboarding records",Landing zone; SIEM,Director of Cloud Platform Engineering,Continuous,Posture reports; 25 SOC cases,P07 CM-6; POAM-003; POAM-019,Not started
+SL-3,C1.1; CC2.3,Model training data register showing no pooled customer transcripts; customer notices,AQ-01 model registry,Chief Data and AI Officer,Per model,All production models,P03 G-034; POAM-020,Not started
+SL-3,A1.3; CC7.5,AQ-01 DR test report,DR records,"General Manager, Conversational AI",Annual,Test report,P01 R-036,Not started (due 2027-05-31)
