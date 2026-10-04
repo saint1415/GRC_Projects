@@ -130,8 +130,8 @@ Deliverables: this plan and report, `assessment-results.csv` (259 rows), and `po
 
 | Risk level | Items |
 |---|---|
-| High | 11 |
-| Moderate | 12 |
+| High | 12 |
+| Moderate | 11 |
 | Low | 1 |
 
 | Status | Items |

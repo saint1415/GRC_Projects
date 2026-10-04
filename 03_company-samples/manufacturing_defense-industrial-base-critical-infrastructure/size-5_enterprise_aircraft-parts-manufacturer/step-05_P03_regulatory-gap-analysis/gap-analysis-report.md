@@ -54,7 +54,7 @@
 | State breach and data security laws | 3 | 1 | 0 | 0 | 4 |
 | **Total** | **133** | **44** | **3** | **0** | **180** |
 
-**Gap risk levels across all regulations:** High 25, Moderate 21, Low 1.
+**Gap risk levels across all regulations:** High 25, Moderate 20, Low 2.
 
 ### SP 800-171 Rev. 2 by family
 | Family | Met | Partially met | Not met | KS-1 legacy not met |
