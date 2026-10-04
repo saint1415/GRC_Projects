@@ -119,3 +119,6 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Federal Prime questionnaire | The Federal Prime sent its annual supplier security questionnaire in July 2026; the response is due 2026-09-30 | P09 |
 | Budget | The Owner approved a 2026 Q4 security budget of about $8,800 one-time and $3,150 a year on 2026-08-31 (itemized in P01) | P01 |
 | Assessor | The P07 assessor is an independent consultant who did not take part in the risk assessment or gap analysis and operates no control | P07 |
+| Carrier account (P07) | The shared carrier shipping password was unchanged after the former technician left; P07 testing on 2026-08-11 confirmed it still worked. The carrier log showed no use after his last day. Changed 2026-08-12 | P07 |
+| DoD broker items | 3 of the 34 DoD orders included broker-sourced docking stations, delivered with no notice to the contracting officer | P03 |
+| AI reorder feature (P10) | Results 2026-05-01 to 2026-08-21: A-class WAPE 27% overall, 38% for networking; 46 orders auto-submitted ($14,900), 7 of them excess ($380 restocking fees); 12 of 410 suggested lines named a broker; fill rate 89% for small commercial accounts vs 95% for large accounts and 94% for DoD orders. Auto-submit turned off on 2026-08-25 | P01, P10 |

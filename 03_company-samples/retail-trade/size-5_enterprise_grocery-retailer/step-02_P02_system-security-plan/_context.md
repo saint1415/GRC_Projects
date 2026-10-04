@@ -9,7 +9,7 @@
 | Universal method | [step-02_P02_system-security-plan/README.md](../../../../00_universal-framework/projects/step-02_P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** E-commerce and point-of-sale platform
+**System to document:** Omnichannel Commerce and Payments Platform (OCPP)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
