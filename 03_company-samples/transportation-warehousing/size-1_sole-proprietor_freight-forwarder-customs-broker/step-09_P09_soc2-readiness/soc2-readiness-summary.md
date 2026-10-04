@@ -11,7 +11,7 @@
 | Prepared | 2026-08-25 (Part B) and 2026-08-28 (Part A) by the owner with the IT consultant; adopted 2026-09-14 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report
-**A one-person brokerage would not obtain a SOC 2 report.** It is a service organization in the plain sense (importers rely on it to file their entries), but its clients are small businesses that do not ask for a CPA examination, and the cost would be close to a quarter of a year's revenue. The vertical has no sector-specific assurance alternative to SOC 2. What clients do ask for is a **completed security questionnaire**: three CTPAT importer clients send a business partner security questionnaire every year (N48-49-R05). This checklist supplies the answers and the evidence behind them.
+**A one-person brokerage would not obtain a SOC 2 report.** It is a service organization in the plain sense (importers rely on it to file their entries), but its clients are small businesses that do not ask for a CPA examination, and an audit would cost a large share of a year's revenue. The vertical has no sector-specific assurance alternative to SOC 2. What clients do ask for is a **completed security questionnaire**: three CTPAT importer clients send a business partner security questionnaire every year (N48-49-R05). This checklist supplies the answers and the evidence behind them.
 
 The Security criteria are useful in two ways:
 - **A. Owner's self-check.** The CC series is a structured list of questions. Many criteria assume a board, staff, or a development team, so they are marked N/A or are satisfied by the owner's direct oversight, with the reason written in the checklist.

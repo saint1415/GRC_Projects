@@ -15,7 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Revenue | About $180,000 a year (fictional): brokerage fees of about $90,000 and forwarding margins of about $90,000. SBA-small (standard $20.0 million for NAICS 488510; 13 CFR 121.201) |
 | Money handled for clients | About two-thirds of importers pay duties through their own accounts on CBP's periodic monthly statement. For the rest, the owner collects duties in advance and pays CBP from the business bank account. The owner pays ocean carriers and overseas agents by wire and invoices clients. About $1.4 million of client and carrier money passes through the business account each year |
 | Payment cards | None. Clients pay by bank transfer or check |
-| Primary regulation for P03 | 19 CFR Part 111 (customs brokers), Subparts A, C and F, with the 19 CFR Part 163 storage standards that 111.21(c) and 111.23(a) bring in. Modernization rule 87 FR 63267 (2022-10-18), effective 2022-12-19; continuing education rule 88 FR 41224 (2023-06-23), effective 2023-07-24 |
+| Primary regulation for P03 | 19 CFR Part 111 (customs brokers): the license and national permit (Subparts A and B), broker duties (Subpart C), and continuing education (Subpart F), with the 19 CFR Part 163 storage standards that 111.21(c) and 111.23(a) bring in. Modernization rule 87 FR 63267 (2022-10-18), effective 2022-12-19; continuing education rule 88 FR 41224 (2023-06-23), effective 2023-07-24 |
 | Not in scope (reasons in P03) | USCG maritime cyber rule, 33 CFR Part 101 Subpart F (N48-49-R01): no vessel or facility security plan. TSA rail, pipeline, and aviation directives (N48-49-R02 to R04). TSA indirect air carrier rules, 49 CFR Part 1548: the business handles ocean freight only and arranges no air transportation of property. CMMC and FAR clauses (N48-49-R07): no federal contracts. SEC rules (N48-49-R08): not a public company. CTPAT (N48-49-R05): voluntary; the owner is not a partner, but three CTPAT importer clients send yearly business partner security questionnaires (see P09) |
 | State law approach | Florida law is cited only where a Florida duty is unavoidable: Fla. Stat. 501.171 (reasonable security, disposal of customer records, and breach notice for the six individual importers' Social Security numbers). Clients outside Florida are handled under the law of each state where affected individuals reside |
 | Regulatory driver labels | The vertical requirement list (N48-49-R01 to R08) has no entry for the customs broker rules, so driver columns cite 19 CFR Part 111 and Part 163 sections directly. N48-49-R05 is cited where a CTPAT client questionnaire drives a control. N48-49-R01 is cited only where its non-applicability is recorded |
@@ -72,14 +72,14 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 11. Documents are exchanged with overseas agents and clients through a consumer messaging app; copies stay in the phone's chats and camera roll and are not filed in the shipment file.
 12. The consumer AI assistant receives client invoice data with training allowed (P10).
 13. Single-person dependency: no backup broker agreement, MFA on one phone, and no stored recovery codes.
-14. No security training beyond customs continuing education.
+14. No security training beyond customs continuing education and a 30-minute bank payment fraud module.
 15. The 2019 laptop has not been wiped.
 16. Continuing broker education: 22 of the 36 credits needed for the triennial period ending 2027-01-31 are complete (19 CFR 111.102(b)).
 
 ## 5. Scenario choices
 | Deliverable | Choice |
 |---|---|
-| P03 primary regulation | 19 CFR Part 111 duties (Subparts A, C, and F) and the 19 CFR 163.5 storage standards, with secondary rows for 46 CFR 515.33, 15 CFR 30.10, and Fla. Stat. 501.171. Applicability rows record why the USCG cyber rule, the TSA indirect air carrier rule, and CTPAT do not bind the business |
+| P03 primary regulation | 19 CFR Part 111 duties (license and permit, Subpart C duties, and Subpart F continuing education) and the 19 CFR 163.5 storage standards, with secondary rows for 46 CFR 515.33, 15 CFR 30.10, and Fla. Stat. 501.171. Applicability rows record why the USCG cyber rule, the TSA indirect air carrier rule, and CTPAT do not bind the business |
 | P08 incident | Ransomware on the owner's laptop that encrypts the synced records archive and steals client files (adapted from the registry default; see section 3). The customs SaaS is not encrypted, but saved browser sessions put it and the bank at risk |
 | P09 SOC 2 | Security criteria only. The owner's self-check, used to answer CTPAT importer clients' business partner security questionnaires, plus a review of the customs software vendor's SOC 2 Type 2 report. A SOC 2 report for the business is not sought |
 | P10 AI | The consumer AI assistant used for tariff classification research (AI-001). The customs software's document capture feature is listed as AI-002 |
@@ -94,3 +94,18 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-14 | Deliverables adopted by the owner |
 | 2027-01-31 | End of the triennial period for continuing broker education (36 credits; 111.102(b)) |
 | 2027-02-01 | Triennial status report due with the continuing education certification (111.30(d); 111.101). License suspended by operation of law if not filed by 2027-03-01 (111.30(d)(4)) |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Router default password | The home router's admin password was still the factory default printed on its label (found in P07 testing on 2026-08-20) | P01, P04, P07 |
+| Accounting password | The accounting SaaS password history shows no change since 2024, so the bookkeeper replaced in 2025 still knows a working password. The current bookkeeper received it by text message. The bookkeeper's engagement letter has a confidentiality clause | P01, P02, P07 |
+| Payment fraud training and near misses | The owner completed the bank's 30-minute payment fraud module in 2026-03. In 2026 two emails asking to change a carrier's or agent's bank details were handled by replying to the email, not by a call-back; neither led to a loss | P02, P07 |
+| Customs software vendor assurance | SOC 2 Type 2 report, Security, Availability, and Confidentiality, period ending 2026-06-30, unqualified, one remediated exception. RTO 4 hours, RPO 1 hour, production and backups in U.S. data centers. Reviewed by the owner on 2026-08-25 | P02, P04, P05, P09 |
+| AI chat history | A review on 2026-08-26 found 152 chats since 2026-03-02; 31 contained whole invoices with client and supplier names and prices; none contained importer of record numbers or Social Security numbers. An accuracy check of 20 past suggestions found 17 right at the 6-digit level and 14 at the 10-digit level | P10 |
+| Client contracts | One CTPAT importer client's business partner security agreement asks for notice within 24 hours of a known incident affecting its data. One of the six individual importers lives outside Florida | P08 |
+| Insurance | No cyber insurance. The broker's professional liability policy may have a cyber or funds transfer fraud endorsement (unconfirmed; owner action in P08) | P08 |
+| Spare device | The 2019 laptop will be encrypted, reset, and kept as the clean spare device rather than given away | P05, P07 |
+| Permit fee | The 2026 national permit user fee was paid in January 2026 | P03 |

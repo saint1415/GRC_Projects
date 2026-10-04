@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M review,Report plus 3 monthly reviews,P07,Ready
+Both,CC6.2; CC6.3,"Access requests, certifications, and separations",Identity governance,Director of Identity and Access Management,Ongoing; quarterly,25 requests; 2 certifications; 25 separations,P07 AC-2; PS-4,Collecting
+Both,CC6.1,MFA and PAM configuration,SSO and PAM consoles,Director of Identity and Access Management,Point in time plus changes,Configuration plus change log,P07 IA-2(1); AC-6,Ready
+Both,CC6.6,WAF and firewall rule reviews,Network and WAF consoles,Director of Network Engineering,Quarterly,2 reviews,P04,Collecting
+Both,CC7.2; CC7.3; CC7.4,SOC case records and incident reports,SOC case management,Director of Security Operations,Ongoing,25 cases,P07 IR-4,Collecting
+Both,CC9.2,Vendor tiering and SOC report reviews for subservice organizations,Vendor register,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P04; P02 SA-9,Collecting
+SL-1,CC6.1,API credential inventory with token lifetimes,API gateway,"Vice President, E-commerce",Monthly,3 months,P07 IA-5,Not started (POAM-011)
+SL-1,CC7.1,Platform vulnerability scans and penetration test,Scanner; pipeline,Director of Security Operations,Weekly; annual test,5 weeks; 2026 test report,P07 RA-5,Collecting
+SL-1,CC7.2; PI1.2,Fraud detection alerts and ship-to holds,Fraud platform,"Vice President, E-commerce",Ongoing,25 alerts,P01 R-011,Not started (POAM-012)
+SL-1,CC8.1,Platform release and emergency change records,Pipeline; change system,"Vice President, E-commerce",Ongoing,25 changes including all emergency changes,P07 CM-3,Collecting
+SL-1,A1.1; A1.2; A1.3,"Capacity reports, backup reports, DR test",Monitoring; backup service,"Vice President, E-commerce",Monthly; annual test,3 months; test report,P05; P07 CP-4,Ready
+SL-1,C1.1,CUI upload detection and quarantine reports,DLP service,"Vice President, E-commerce",Weekly,5 weeks,P03 G-003,Not started (POAM-007)
+SL-1,PI1.3; PI1.4,Platform to ERP order reconciliation,Reconciliation service,"Vice President, Enterprise Applications",Hourly; daily summary,25 days,P02 SI-7,Ready
+SL-1,P5.1; P5.2,Privacy request log,Privacy request portal,Chief Privacy Officer,Ongoing,All requests,P03 CCPA rows,Ready
+SL-1,P6.2; P6.7,Disclosure log to software publishers,Subscription provisioning service,Chief Privacy Officer,Ongoing,25 disclosures,None,Not started
+SL-1,P4.2; P4.3,Registrant retention and deletion job reports,Platform jobs,Chief Privacy Officer,Monthly,3 months,P01 R-028,Not started
+SL-2,CC2.3,SL-2 system description and customer commitments,Document repository,"Vice President, Lifecycle Services",Annual,Final document,None,Not started
+SL-2,CC6.5; C1.2; PI1.3,Sanitization logs and verification results,Sanitization software,"Vice President, Lifecycle Services",Ongoing,40 devices; verification samples,P02 MP-6,Collecting
+SL-2,PI1.4,Certificate to asset list reconciliation,Lifecycle platform,"Vice President, Lifecycle Services",Per customer batch,25 batches,P01 R-042,Not started
+SL-2,CC7.1; CC7.2,Factory system scans and SIEM onboarding,Scanner; SIEM,Director of Security Operations,Weekly,5 weeks,None,Not started
+SL-2,CC8.1,Imaging build change records,Change system,"Vice President, Lifecycle Services",Ongoing,25 changes,None,Not started
+SL-2,CC6.4,Factory cage badge reviews,Badge system,"Vice President, Corporate Security and Facilities",Quarterly,2 reviews,P02 PE-2,Ready
