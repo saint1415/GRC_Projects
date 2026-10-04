@@ -55,7 +55,7 @@
 | Privacy | CCPA risk assessment before any new sharing of personal information or new sensitive personal information use | POL-04 4.1 | Cal. Code Regs. tit. 11, 7150 |
 
 ## 4. Logistics drift: conflicts with 2026 group policy
-The 2024 Logistics standards were written before the 2026 group policies and before DC-8 and DC-9 were acquired. Where they conflict, **group policy governs now** (POL-01 4.5), but DC staff follow the document they know, so the conflicts are real risks (P01 LW-011; P07 finding under PL-1 is planned for the 2027 cycle).
+The 2024 Logistics standards were written before the 2026 group policies and before DC-8 and DC-9 were acquired. Where they conflict, **group policy governs now** (POL-01 4.5), but DC staff follow the document they know, so the conflicts are real risks (P01 LW-011 and GR-07).
 
 | Topic | Logistics standard (2024) | Group policy (2026) | Effect |
 |---|---|---|---|
