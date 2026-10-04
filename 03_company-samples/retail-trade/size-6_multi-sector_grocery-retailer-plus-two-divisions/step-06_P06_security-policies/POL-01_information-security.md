@@ -10,7 +10,7 @@
 | Review cycle | Annually (next review 2027-09-30), and after major changes, acquisitions, or incidents |
 | Implements (SP 800-53 Rev. 5) | PM-1, PM-2, PM-9, PL-1, PL-2, PS-8, RA-3, SA-4, SA-9, CA-2, CA-7, CM-3, SC-18, SI-12 |
 | CSF 2.0 | GV.OC-03, GV.PO-01, GV.PO-02, GV.RR-02, GV.RR-04, GV.RM-01, GV.OV-01, GV.SC-05, ID.RA-01, ID.IM-01, PR.PS-05 |
-| Regulatory drivers | PCI DSS v4.0.1 Req. 12.1, 12.3, 12.4 to 12.8 as they apply to a merchant (N44-45-R01); FTC Safeguards Rule 16 CFR 314.4(a), (b), (f), (g), (i) (N44-45-R03); FTC Act Section 5 (N44-45-R02) |
+| Regulatory drivers | PCI DSS v4.0.1 Req. 12.1, 12.3, 12.5, 12.8 (N44-45-R01); FTC Safeguards Rule 16 CFR 314.4(a), (b), (f), (g), (i) (N44-45-R03); FTC Act Section 5 (N44-45-R02) |
 | Division supplements | Grocery Retail supplement (v2026); Grocery Wholesale supplement (v2026); Financial Services supplement (v2024, re-alignment due 2026-11-30). See `division-supplements.md` |
 
 ## 1. Purpose

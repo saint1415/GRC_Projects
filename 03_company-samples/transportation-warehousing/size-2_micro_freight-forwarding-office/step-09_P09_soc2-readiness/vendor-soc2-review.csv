@@ -1,0 +1,15 @@
+review_item,what_to_check,platform_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Confidentiality needed because the platform holds client customs records; Availability because entries stop without it,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,Customs brokerage and forwarding platform; CBP filing interface; document imaging; support; data centers,"Platform, CBP filing interface, document imaging, and support in scope. The AI document capture and classification feature (released 2026-04) is not described",Ask whether the AI feature and its model provider are in scope of the next report (P10)
+Subservice organizations,Carve-out or inclusive; hosting provider; any AI model provider,Hosting provider carved out (U.S. regions); vendor states it reviews the hosting provider's SOC report yearly. No AI model provider listed,"Ask for the AI model provider's name, location, and data-use terms"
+Data location,Records stored within the United States (19 CFR 111.23(a)),System description states production and backup data stay in U.S. regions,Matches the contract; keep on file for CBP questions
+Exceptions noted,Test exceptions and management responses,1 exception: quarterly access review for vendor support staff completed late in one quarter; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,User provisioning and removal; role assignment; MFA left enabled; review of user access and export reports; control of who receives exported data,"Mapped to AC-2, PS-4, AU-6. Two are open gaps at the company: removal (POAM-001, POAM-002) and review (POAM-010)"
+Availability commitments,Recovery objectives versus the company's BIA (RTO 4 h; RPO 1 h for BP-01 and BP-02),RTO 8 h; RPO 1 h stated in the system description,RPO meets the BIA; RTO does not. Standby broker arrangement (P01 R-007); ask for a 4-hour RTO at renewal
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data,Ask for notice within 24 hours so the company can meet its own 72-hour CBP notice (111.21(b))
+Change notification,Notice to customers before new features that process customer data,Release notes published monthly; no advance notice or opt-in for new features,Ask for opt-in for AI features; review release notes monthly (CC8.1)
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-07-01 to 2026-12-31 by 2027-01-31
+Review sign-off,Reviewer and date,"Office and Compliance Manager with the independent consultant, 2026-08-25",Repeat each year when the new report is issued
