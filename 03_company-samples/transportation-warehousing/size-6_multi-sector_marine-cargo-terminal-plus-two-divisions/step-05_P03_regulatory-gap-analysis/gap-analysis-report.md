@@ -66,7 +66,7 @@ The FTC Safeguards Rule protects "customer information", meaning nonpublic perso
 | N42-R03 DFARS 252.204-7012 | Not applicable | **Applies when CDI is present** | Not applicable | Group IR plan must carry the 72-hour step |
 | N42-R05 FAR 52.204-25 | Not applicable | Applies | Not applicable | Group procurement blocks covered brands |
 | N53-R01 FTC Safeguards Rule | Not applicable | Not applicable | **Benchmark only** (does not apply) | Not applicable |
-| FTC Act Section 5 (N42-R01, N53-R02) | Limited (marine terminal operators are regulated by the Federal Maritime Commission under the Shipping Act) | Applies | Applies | Applies |
+| FTC Act Section 5 (N42-R01, N53-R02) | Applies (general) | Applies | Applies | Applies |
 | N48-49-R08 SEC Item 106 and 8-K Item 1.05 | Via group | Via group | Via group | **Applies** (registrant) |
 | State breach notification laws | Employee, longshore and driver data | Employee and customer contact data | Employee and guarantor data | Coordinates (P08) |
 | OSHA marine terminal standards, 29 CFR part 1917 | Applies (safety; relevant to P10) | Not applicable | Not applicable | Not applicable |
@@ -137,7 +137,7 @@ Gap risk for the 13 rows: 5 High and 8 Moderate. **Not met:** logging and monito
 | 6 | Plans and Assessments for 9 facilities; alternates at T7 to T9 (3) | MT | 101.620(b)(3); 101.630; 101.650(e)(1); 101.655 | Moderate | Alternates 2026-10-31; Assessments 2027-03-31; Plans submitted 2027-04-30 | Division CySO | 2027-04-30 |
 | 7 | Notification matrix not exercised (7) | All | 6.16-1; 101.620(b)(7); 252.204-7012(c); Form 8-K Item 1.05; state laws | Moderate | Complete the matrix; cross-division tabletop | Group General Counsel | 2026-12-15 |
 | 8 | Port Real Estate inheritance and supplement (6) | RE | 314.4(g) (benchmark) | Moderate | Inheritance matrix; supplement realigned | Port Real Estate security and compliance lead | 2026-12-31 |
-| 9 | AI governance (8) | MT, FT | 101.650(e)(1) (impact of changes on critical OT); 29 CFR part 1917; FTC Act Section 5 | High | Group AI program (P10) | Group Chief Risk Officer | 2027-03-31 |
+| 9 | AI governance (8) | MT, FT | 101.650(e)(1) (the Assessment must cover the SYS-T5 to ASC path); 29 CFR part 1917; FTC Act Section 5 | High | Group AI program (P10) | Group Chief Risk Officer | 2027-03-31 |
 
 High and Moderate gaps are carried into the registers (P01) and the POA&M (P07; POAM-008, POAM-011 to POAM-019 trace directly to this analysis).
 
