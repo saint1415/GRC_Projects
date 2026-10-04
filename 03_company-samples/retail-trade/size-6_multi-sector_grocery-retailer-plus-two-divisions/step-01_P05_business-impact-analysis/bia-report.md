@@ -115,7 +115,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 14. to 28. Rewards Card authorization, fulfillment, price files, the wholesale portal, traceability records, store ordering, credit decisioning, payments posting, loyalty and offers, supplier EDI, ERP and SEC reporting, payroll, wholesale invoicing, collections, and installment loan servicing.
 
 ## 8. Key findings
-1. **Shared services set the floor.** Group identity, the cloud hub, and the digital front door have RTOs of 1 to 2 hours, shorter than any division process that depends on them. The identity RTO of 1 hour was met in two tests in 2026; the digital front door has never been tested as a whole (POAM-012).
+1. **Shared services set the floor.** Group identity, the cloud hub, and the digital front door have RTOs of 1 to 2 hours, shorter than any division process that depends on them. The identity RTO of 1 hour was met in two tests in 2026; the digital front door has never been tested as a whole (POAM-013).
 2. **The digital front door is both an availability and an integrity dependency.** Restoring it fast is not enough. A compromised tag must not be restored with it, so the P08 runbook restores a known-good container before re-opening checkout pages.
 3. **Regulatory clocks set some MTDs that revenue would not.** SNAP acceptance, lost or stolen card reporting, and FDA record requests are short because of the rules behind them, not because of the money.
 4. **The acquired stores are the weakest recovery path.** The 46 stores depend on a legacy store gateway with no tested failover (P01 RT-004), until their migration in 2027.
