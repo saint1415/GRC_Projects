@@ -34,7 +34,8 @@ Risks that could leave workers unpaid or expose payroll data (Social Security nu
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators and contract counterparties at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
-5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+5. **Close the loop with P07.** Two Cloud Software risks were added from the control assessment and carry a review date of 2026-08-28: SW-014 (the 2025 handoff delay that was never corrected) and SW-028 (HR case-note text reaching a non-HR manager in a test tenant).
+6. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
 
 ## 3. Results
 

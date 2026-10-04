@@ -94,8 +94,8 @@ Conditional status allows only 1-point requirements on a POA&M (plus 3.13.11 whe
 | G-087 No SSP | 3.12.4 | High | SSP v1.0 approved 2026-08-31 (P02) | Office Manager | Done 2026-08-31 |
 | G-127 Scope, inventory, diagram, and MSP documentation | 32 CFR 170.19(c)(1), (c)(2) | High | Inventory by asset category; diagram; MSP responsibility matrix | Office Manager | 2026-10-31 |
 | G-044 to G-046, G-053 Shared logins, MFA gaps, plain-text DNC password | 3.5.1; 3.5.2; 3.5.3; 3.5.10 | High | Named accounts with MFA on SYS-03 and SYS-04; MSP named accounts; protect the DNC credential | Office Manager; CNC Programmer | 2026-10-31 |
-| G-077 to G-079, G-063 Visitors and service engineers (3 cannot be on a POA&M) | 3.10.3; 3.10.4; 3.10.5; 3.7.6 | Moderate (ITAR release risk) | Log, escort, key register; cover drawings before a foreign person enters | Lead Machinist; Office Manager | 2026-09-30 |
-| G-066, G-070, G-071 Paper in the trash; uncontrolled USB drives | 3.8.3; 3.8.7; 3.8.8 | High | Shred bin and shredder; 2 company-owned encrypted drives | Office Manager; Lead Machinist | 2026-09-30 to 2026-10-31 |
+| G-077 to G-079, G-063 Visitors and service engineers (3 cannot be on a POA&M) | 3.10.3; 3.10.4; 3.10.5; 3.7.6 | Moderate; Low for 3.7.6 (ITAR release risk) | Log, escort, key register; cover drawings before a foreign person enters | Lead Machinist; Office Manager | 2026-09-30 |
+| G-066, G-070, G-071 Paper in the trash; uncontrolled USB drives | 3.8.3; 3.8.7; 3.8.8 | High (3.8.3, 3.8.7); Moderate (3.8.8) | Shred bin and shredder; 2 company-owned encrypted drives | Office Manager; Lead Machinist | 2026-09-30 to 2026-10-31 |
 | G-088, G-093 Flat network; outbound traffic open | 3.13.1; 3.13.6 | High | Enclave VLAN with deny-by-default rules | Office Manager (MSP performs) | 2026-11-30 |
 | G-023, G-024 No training | 3.2.1; 3.2.2 | High | Annual awareness with phishing simulations; role-based modules | Office Manager | 2026-11-30 to 2026-12-31 |
 | G-030, G-026 No log review; short retention | 3.3.5; 3.3.1 | High | Monthly review with the MSP; alerts; monthly export | Office Manager | 2026-10-31 to 2026-12-31 |
