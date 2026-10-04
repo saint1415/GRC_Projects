@@ -37,7 +37,7 @@ POL-01,9.7,Annual security course and one OT security course,AT-2; AT-3,PR.AT-01
 POL-01,10.1,Incident runbook with printed contact sheet,IR-8,RS.MA-01,N21-BM (RS.MA-01; SP 800-82r3 6.4.1),No
 POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,N21-BM (RS.MA-02),Yes
 POL-01,10.3,Customer A notice within 24 hours; same-day notice to other connected customers,IR-6,RS.CO-02,MSA-A (3),Yes
-POL-01,10.4,Florida notices on time,IR-6,RS.CO-02,Fla. Stat. 501.171(4),No
+POL-01,10.4,Florida notices on time,IR-6,RS.CO-02,Fla. Stat. 501.171(4),Yes
 POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,N21-BM (RS.MA-01),No
 POL-01,10.6,Annual walkthrough; lessons learned within 30 days,IR-3,ID.IM-02; ID.IM-03,N21-BM (ID.IM-02),No
 POL-01,11.2,Written mutual coverage agreement and route sheets,CP-2,RC.RP-01,N21-BM (RC.RP-01; SP 800-82r3 6.5.1),No

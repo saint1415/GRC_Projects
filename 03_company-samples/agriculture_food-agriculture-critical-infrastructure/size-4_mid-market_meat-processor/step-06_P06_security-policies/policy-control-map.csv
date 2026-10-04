@@ -1,7 +1,7 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
 POL-01,4.1,"Security program covers IT and OT, documented in policies, standards, and the PPCM SSP",PL-2,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
 POL-01,4.2,Security lead for IT and OT designated in writing,PM-2,GV.RR-02,CSF 2.0 GV.RR-02 (benchmark),No
-POL-01,4.3,"Annual enterprise risk assessment (SP 800-30), and after acquisitions and major changes",RA-3; PM-9,ID.RA-01,CSF 2.0 ID.RA-01 (benchmark),No
+POL-01,4.3,"Annual enterprise risk assessment (SP 800-30), and after acquisitions and major changes",RA-3; PM-9,ID.RA-01,CSF 2.0 ID.RA-01 (benchmark),Yes
 POL-01,4.4,Risk acceptance authority by level; no food safety or ammonia safety risk accepted above Low,PM-9,GV.RM-01,CSF 2.0 GV.RM-01 (benchmark),No
 POL-01,4.5,Quarterly report to the audit committee,CA-5,GV.OV-01,CSF 2.0 GV.OV-01 (benchmark),No
 POL-01,4.6,"One OT change process with HACCP, SSOP, and PSM/RMP review fields",CM-3; CM-4,ID.RA-07; PR.PS-01,9 CFR 417.4(a)(3); 9 CFR 416.14; 29 CFR 1910.119(l); 40 CFR 68.75,Yes
@@ -10,7 +10,7 @@ POL-01,4.8,"Written, risk-rated, time-limited exceptions",PM-9,GV.RM-01,CSF 2.0 
 POL-01,4.9,Vendor security review and contract terms before access; OT vendors through the gateway,SA-4; SA-9; PS-7,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark); 29 CFR 1910.119(h)(2),Yes
 POL-01,4.10,Annual reassessment of Tier 1 vendors with SOC 2 review,SR-6,GV.SC-07,Customer contract; CSF 2.0 GV.SC-07 (benchmark),Yes
 POL-01,4.11,Annual independent assessment,CA-2,ID.IM-01,CSF 2.0 ID.IM-01 (benchmark),No
-POL-01,4.12,Acquired sites connect only after the integration standard,CA-3; RA-3,GV.SC-06,CSF 2.0 GV.SC-06 (benchmark),No
+POL-01,4.12,Acquired sites connect only after the integration standard,CA-3; RA-3,GV.SC-06,CSF 2.0 GV.SC-06 (benchmark),Yes
 POL-01,4.13,Retention of program records (3 years minimum; longer where rules require),SI-12,GV.PO-02,9 CFR 417.5(e); 29 CFR 1910.119(m)(7),No
 POL-01,4.14,AI systems approved through the AI governance process before use,PM-9,GV.RM-01,CSF 2.0 GV.RM-01 (benchmark),No
 POL-02,4.1,"Unique accounts on every system, including HMIs, SCADA, MES, and the records application",IA-2; AC-2,PR.AA-01,9 CFR 417.5(b); 9 CFR 416.16(a),Yes
@@ -37,13 +37,13 @@ POL-03,4.10,"Verified restart: logic, recipes, and setpoints match approved vers
 POL-03,4.11,Annual exercise of each runbook with plant leadership,IR-3,ID.IM-02,CSF 2.0 ID.IM-02 (benchmark),No
 POL-03,4.12,"Lessons learned within 30 days, fed to P01, P07, HACCP, and food defense",IR-4,ID.IM-03,9 CFR 417.3(b)(4),Yes
 POL-04,4.1,Data owners classify their data,RA-2,ID.AM-05,CSF 2.0 ID.AM-05 (benchmark),No
-POL-04,4.2,Restricted data only in approved locations; never on open shares,AC-3,PR.DS-01,Fla. Stat. 501.171(2),Yes
-POL-04,4.3,Encryption at rest and in transit; OT protocols protected by segmentation,SC-8; SC-28,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2),No
+POL-04,4.2,Restricted data only in approved locations; never on open shares,AC-3,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-04,4.3,Encryption at rest and in transit; OT protocols protected by segmentation,SC-8; SC-28,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2),Yes
 POL-04,4.4,"Electronic food safety record controls: protected audit trail, authenticated sign-off, synchronized time, locking, separated administration",AU-9; AU-10; SI-7,PR.DS-10; PR.PS-04,9 CFR 417.5(d); 9 CFR 416.16(b),Yes
 POL-04,4.5,Records retention (2 years food safety; 6 months SSOP); retrievable within 24 hours,AU-11; SI-12,PR.PS-04,9 CFR 417.5(e); 9 CFR 416.16(c),No
 POL-04,4.6,Immutable backups and quarterly restore tests for Restricted and food safety data,CP-9,PR.DS-11,CSF 2.0 PR.DS-11 (benchmark),Yes
 POL-04,4.7,Monthly comparison of MES and blend recipes with signed formulation masters,SI-7,PR.DS-10,9 CFR 430.4(b)(2)(ii),Yes
-POL-04,4.8,No Restricted or Confidential data in unapproved AI tools,AC-3,PR.DS-01,Fla. Stat. 501.171(2),Yes
+POL-04,4.8,No Restricted or Confidential data in unapproved AI tools,AC-3,PR.DS-01,Fla. Stat. 501.171(2),No
 POL-04,4.9,Secure disposal of media and documents,MP-6,PR.DS-01,Fla. Stat. 501.171(8),No
 POL-05,4.1,"Rules of behavior acknowledged at hire and yearly, including temporaries",PL-4,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
 POL-05,4.2,"Security awareness for all workers, including floor workers and temporaries",AT-2,PR.AT-01,C-FOOD-AG-R01 (benchmark: 21 CFR 121.4(b)(2)),Yes
