@@ -28,7 +28,7 @@ Contact numbers are kept on the printed copy only, not in this file.
 
 ## 2. Declare (Detect)
 Declare a ransomware incident when any of these happens: a ransom note or renamed files on the laptop or in the cloud archive; the antivirus reports ransomware; the file suite warns of mass file changes; an email or post claims to have client data. **Write down the date and time.** Two clocks start:
-- **CBP: 72 hours from discovery** of a known breach of customs records (19 CFR 111.21(b)). Data theft or encryption of the archive is a breach of records for this purpose; CBP's rule has no materiality test.
+- **CBP: 72 hours from discovery** of a known breach of customs records (19 CFR 111.21(b)). The owner treats data theft or encryption of the archive as a breach of records: CBP's preamble to the rule describes "a physical or electronic intrusion into the broker's records whereby any information is compromised," and the rule has no materiality test.
 - **Florida: 30 days from determination** of a breach of personal information (Fla. Stat. 501.171(4)).
 
 ## 3. First hour (RS.MA, RS.MI)
