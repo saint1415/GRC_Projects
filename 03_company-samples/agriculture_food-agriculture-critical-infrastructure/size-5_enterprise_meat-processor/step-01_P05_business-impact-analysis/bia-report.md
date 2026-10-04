@@ -107,6 +107,6 @@ The full map is in `dependency-map.csv`. Key findings:
 |---|---|
 | Central MES recovered in 7.5 h against a 4 h RTO | P01 R-008; P02 CP-10; POAM-010 |
 | Plant OT restores demonstrated at 4 of 8 plants | P01 R-008; P07 CP-4; POAM-010 |
-| Cold-chain monitoring vendor concentration; manual log fallback exercised at 3 of 12 sites | P01 R-005; P03 G-099; POAM-008 |
+| Cold-chain monitoring vendor concentration; manual log fallback exercised at 3 of 12 sites | P01 R-005; P03 G-066 and G-112; POAM-008 |
 | PLT-08 actual RPO 24 h and restore 24 h against BIA targets | P01 R-002; POAM-001; POAM-007 |
 | Disclosure playbook lacks a method for product holds and recall costs | P01 R-010; P08 section 6; POAM-014 |

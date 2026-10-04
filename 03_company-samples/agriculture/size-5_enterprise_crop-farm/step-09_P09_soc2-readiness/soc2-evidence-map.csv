@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly status,Report; 3 monthly status reports,P07,Ready
+Both,CC5.3,Policy set with review dates,Policy portal,CISO,Annual,Current versions,P06,Ready
+Both,CC6.1; CC6.3,Quarterly access certifications,Identity governance,Director of Identity and Access Management,Quarterly,All quarters in the period,P07 AC-2,Collecting
+Both,CC6.3,Inactivity disablement job reports,Identity governance,Director of Identity and Access Management,Daily job; monthly report,3 months,P07 AC-2(3),Collecting
+Both,CC6.7,TLS configuration scans,Scanner,Director of Network Engineering,Monthly,3 months,P04,Collecting
+Both,CC7.1,Vulnerability scan and remediation reports,Scanner; ticketing,Director of Security Operations,Weekly scans; monthly report,25 findings traced to closure,P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SOC case records and use case list,SIEM; case system,Director of Security Operations,Continuous,25 cases,P07 IR-4,Collecting
+Both,CC7.4,"Incident response plan, runbook, and tabletop report",GRC platform,Director of Security Operations,Annual,Plan; 2026-11-17 tabletop report,P08,Not started (tabletop 2026-11-17; POAM-012)
+Both,CC9.2,Vendor register and SOC report reviews,TPRM platform,Director of Third-Party Risk Management,Annual per vendor,All tier-1 vendors of each line,P07 SA-9,Collecting
+Both,CC8.1,IT change tickets and pipeline logs,Ticketing; CI/CD,Chief Information Officer,Continuous,25 changes per line,P04,Collecting
+SL-1,CC6.2,Grower account provisioning and administrator attestations,SL-1 admin console,"Vice President, Digital Agronomy",Quarterly,All quarters; 25 new grower accounts,SL-1 2025 report,Collecting (inactivity rule due 2026-12-31)
+SL-1,C1.1,Tenant isolation test results,CI/CD pipeline,"Vice President, Digital Agronomy",Every release,25 releases,P07 AC-3,Ready
+SL-1,A1.1; A1.2,Capacity and replication reports,Cloud monitoring,Director of Cloud Platform Engineering,Monthly,3 months,P04,Ready
+SL-1,A1.3; CC7.5,DR test report (second-region failover),GRC platform,Chief Information Officer,Annual,2026-05-19 test; 2027 test,P05,Ready
+SL-1,CC6.6,WAF and DDoS reports,Edge services,Director of Cloud Platform Engineering,Monthly,3 months,P04,Ready
+SL-2,CC2.3; CC3.1,SL-2 system description and grower commitments,GRC platform,"Vice President, Grower Services",Annual,Approved description,New,Not started (due 2027-03-31)
+SL-2,CC6.6,Gateway session records for packing line vendors,OT remote access gateway,Director of OT Security,Continuous,25 sessions,P07 MA-4,"Not started (POAM-004, due 2026-12-31)"
+SL-2,CC8.1,Packing OT and label template change records,Ticketing,"Vice President, Packing and Cold Chain",Continuous,25 changes,New,Not started (due 2027-03-31)
+SL-2,CC9.2,Cold-chain monitoring vendor questionnaire and terms,TPRM platform,Director of Third-Party Risk Management,Annual,Signed terms; review,P07 SA-9,"Not started (POAM-015, due 2026-12-31)"
+SL-2,PI1.2; PI1.3,Receiving validation and daily lot reconciliation reports,Packing line software; traceability data service,Traceability Program Manager,Daily,25 days per hub,P03,Collecting (Hubs 1 and 2)
+SL-2,PI1.4,EDI output samples with traceability lot code source,EDI platform,Traceability Program Manager,Per shipment,25 shipments,P03 G-131,Not started (due 2027-06-30)
+SL-2,A1.2; A1.3,Hub replication reports and hub restore test,DC-2; GRC platform,Chief Information Officer,Monthly; annual,3 months; 2027 Q1 test,P05,Collecting (restore test due 2027-03-31)

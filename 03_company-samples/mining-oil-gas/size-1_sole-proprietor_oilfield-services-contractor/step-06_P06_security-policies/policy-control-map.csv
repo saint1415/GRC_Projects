@@ -1,2 +1,44 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N21-BM (GV.PO-01),No
+POL-01,4.2,"Owner designated security lead, risk acceptor, and incident commander",PM-2,GV.RR-02,N21-BM (GV.RR-02),No
+POL-01,4.3,"Risk assessment every July, before MSA renewals, and after major change",RA-3; PM-9,ID.RA-01,N21-BM (ID.RA-01; SP 800-82r3 6.1.3),No
+POL-01,4.4,Risk decision rules; no release risk accepted above Low,PM-9,GV.RM-01,N21-BM (GV.RM-01),No
+POL-01,4.5,Annual self-assessment with outside review every second year,CA-2,ID.IM-01,N21-BM (ID.IM-01),No
+POL-01,4.6,Annual policy review and before MSA renewals,PL-1,GV.PO-02,N21-BM (GV.PO-02),No
+POL-01,5.1,No system access for day helpers; sanctions for any future workforce,PS-8,GV.RR-04,N21-BM (GV.RR-04),No
+POL-01,5.2,"Written, time-limited exceptions that never override a contract",PL-1,GV.PO-02,N21-BM (GV.PO-02),No
+POL-01,6.1,Customer data only in approved services,SA-9,GV.SC-05,MSA-A (1); N21-BM (GV.SC-05),No
+POL-01,6.2,Contract requirements register read before each renewal,PM-9,GV.OC-03,MSA-A (1)-(8); N21-BM (GV.OC-03),No
+POL-01,6.3,Terms check and customer consent before any new service or AI tool,SA-9,GV.SC-06,MSA-A (5); N21-BM (GV.SC-06),No
+POL-01,6.4,Annual provider review including SOC 2 reports,SA-9,GV.SC-07,N21-BM (GV.SC-07),No
+POL-01,6.5,Customer-approved remote access only; shared logins reported; session log; no saved passwords,AC-17; CA-3,PR.AA-05,MSA-A (2); N21-BM (PR.AA-05; SP 800-82r3 6.2.10),Yes
+POL-01,6.6,IT technician sessions started and watched by the owner,AC-17,PR.AA-05,N21-BM (PR.AA-05),No
+POL-01,7.1,Own accounts; no shared credentials except customer-imposed ones,IA-2; AC-2,PR.AA-01,N21-BM (PR.AA-01),No
+POL-01,7.2,MFA on every service that offers it; authenticator app preferred,IA-2(1); IA-2(2),PR.AA-03,N21-BM (PR.AA-03; SP 800-82r3 6.2.1),Yes
+POL-01,7.3,Password manager only; no password lists; device defaults changed,IA-5,PR.AA-01,MSA-A (1); N21-BM (PR.AA-01),Yes
+POL-01,7.4,Standard daily laptop account; administrator only for installs,AC-6(2),PR.AA-05,N21-BM (PR.AA-05; SP 800-82r3 6.2.1),Yes
+POL-01,7.5,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,N21-BM (PR.AA-05),No
+POL-01,7.6,Sealed emergency access envelope with recovery codes and backup locations,AC-2; CP-2,RC.RP-03,N21-BM (RC.RP-03),No
+POL-01,7.7,Monthly sign-in review and POA&M check,AU-6,DE.CM-03,N21-BM (DE.CM-03; SP 800-82r3 6.3.2),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,N21-BM (ID.AM-07),No
+POL-01,8.2,No Restricted data in unlisted AI tools or websites,SA-9,GV.SC-05,MSA-A (5),No
+POL-01,8.3,Laptop and program drives encrypted,SC-28,PR.DS-01,MSA-A (1); N21-BM (PR.DS-01),No
+POL-01,8.4,Email approval and change log for every logic or setpoint change; safety shutdowns never bypassed,CM-3,ID.RA-07; PR.PS-01,MSA-A (4); N21-BM (PR.PS-01; SP 800-82r3 6.2.4.2),Yes
+POL-01,8.5,Offline program backup after each change and monthly; customer copy; quarterly restore test,CP-9,PR.DS-11,N21-BM (PR.DS-11; SP 800-82r3 6.2.4.3),Yes
+POL-01,8.6,W-9 scans deleted after entry; paper locked,SC-28,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.7,"Disposal, return, and deletion within 30 days after an MSA ends",MP-6,ID.AM-08; GV.SC-10,MSA-A (6); N21-BM (ID.AM-08),No
+POL-01,8.8,Six-year retention of security records,SI-12,ID.AM-08,N21-BM (ID.AM-08),No
+POL-01,9.1,Business use only; no family use,PL-4,PR.AA-05,N21-BM (PR.AA-05),No
+POL-01,9.3,Updates and antivirus on; trusted software sources; quarterly software check,SI-2; SI-3,PR.PS-02,N21-BM (PR.PS-02; SP 800-82r3 6.2.11),Yes
+POL-01,9.4,"Only labeled program drives on customer equipment, scanned before each use",MP-7,DE.CM-09; PR.PS-01,N21-BM (DE.CM-09; SP 800-82r3 6.2.1.2; 6.2.7),Yes
+POL-01,9.5,No customer connection with an alert; never bridge networks,SC-7,PR.IR-01,N21-BM (PR.IR-01; SP 800-82r3 5.2.3),No
+POL-01,9.6,Approved AI tools only; AI never changes setpoints directly,PL-4; SA-9,GV.SC-05,MSA-A (5),No
+POL-01,9.7,Annual security course and one OT security course,AT-2; AT-3,PR.AT-01; PR.AT-02,N21-BM (PR.AT-01; SP 800-82r3 6.2.2),No
+POL-01,10.1,Incident runbook with printed contact sheet,IR-8,RS.MA-01,N21-BM (RS.MA-01; SP 800-82r3 6.4.1),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,N21-BM (RS.MA-02),Yes
+POL-01,10.3,Customer A notice within 24 hours; same-day notice to other connected customers,IR-6,RS.CO-02,MSA-A (3),Yes
+POL-01,10.4,Florida notices on time,IR-6,RS.CO-02,Fla. Stat. 501.171(4),No
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,N21-BM (RS.MA-01),No
+POL-01,10.6,Annual walkthrough; lessons learned within 30 days,IR-3,ID.IM-02; ID.IM-03,N21-BM (ID.IM-02),No
+POL-01,11.2,Written mutual coverage agreement and route sheets,CP-2,RC.RP-01,N21-BM (RC.RP-01; SP 800-82r3 6.5.1),No
+POL-01,11.3,"Hurricane steps: confirm shut-in order, update backup",CP-2,PR.IR-02,N21-BM (PR.IR-02),No

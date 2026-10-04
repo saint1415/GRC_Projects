@@ -1,2 +1,49 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security Coordinator and OT lead designated in writing,PM-2,GV.RR-02,N21-BM (SP 800-82r3 3.3.1),No
+POL-02,A.2,Annual risk analysis with SP 800-30 and SP 800-82 threat sources,RA-3; PM-9,ID.RA-01,N21-BM (SP 800-82r3 4.1.2),No
+POL-02,A.3,Risk acceptance authority; no High acceptance of safety or environmental risk,PM-9,GV.RM-01,N21-BM (SP 800-82r3 4.1.1),No
+POL-02,A.4,Sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,N21-BM (SP 800-82r3 6.2.8),No
+POL-02,A.5,"No security terms, no vendor access or Restricted data; vendor checklist",SA-9,GV.SC-05,N21-BM (SP 800-82r3 6.1.5),Yes
+POL-02,A.6,Annual independent evaluation,CA-2,ID.IM-01,N21-BM (SP 800-82r3 4.3.5),No
+POL-02,A.7,Five-year retention of security records,SI-12,GV.PO-02,N21-BM (SP 800-82r3 3.3.4),No
+POL-02,A.8,Annual policy review; policies available to staff,PL-1,GV.PO-02,N21-BM (SP 800-82r3 3.3.4),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,N21-BM (SP 800-82r3 3.3.4),No
+POL-02,B.1,Unique accounts; HMI shared login only with compensating controls,IA-2; AC-2,PR.AA-01,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,B.2,Role-based least privilege approved before access,AC-2; AC-3; AC-6,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,B.3,"MFA on SaaS, mobile viewer, backup console, admin, and remote access",IA-2(1),PR.AA-03,N21-BM (SP 800-82r3 6.2.10),Yes
+POL-02,B.4,"Vendor sessions only through the session tool, enabled per session and logged",AC-17; MA-4,PR.AA-05,N21-BM (SP 800-82r3 6.2.10),Yes
+POL-02,B.5,Last-day checklist including shared passwords and gate code,PS-4; AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.8),Yes
+POL-02,B.6,Quarterly account review,AC-2; AC-6,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,B.7,10-minute lock; HMI exempt only while the field office is locked,AC-11,PR.AA-03,N21-BM (SP 800-82r3 6.2.1),No
+POL-02,B.8,Sealed emergency administrator credentials,AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,B.9,Password length; default passwords changed before connection,IA-5,PR.AA-01,N21-BM (SP 800-82r3 6.2.1),No
+POL-02,B.10,IT/OT firewall; nothing on SCADA reachable from the internet; no cloud commands to controllers,SC-7; AC-4,PR.IR-01,N21-BM (SP 800-82r3 5.2.3),Yes
+POL-02,B.11,Physical access; quarterly gate code change,PE-3,PR.AA-06,N21-BM (SP 800-82r3 5.2.2),No
+POL-02,C.1,Need-to-know use of company systems and data,PL-4,PR.AT-01,Fla. Stat. 501.171(2),No
+POL-02,C.2,No Restricted data in personal accounts or public AI tools,PL-4,PR.AT-01,Fla. Stat. 501.171(2),No
+POL-02,C.3,"No personal devices, USB drives, or visiting laptops on the SCADA host",MP-7,PR.PS-05,N21-BM (SP 800-82r3 6.2.7),No
+POL-02,C.4,Lock screens; never share passwords or MFA codes,AC-11; PL-4,PR.AA-03,N21-BM (SP 800-82r3 6.2.1),No
+POL-02,C.5,Training at hire and yearly with a field module; phishing exercises,AT-2,PR.AT-01,N21-BM (SP 800-82r3 6.2.2),Yes
+POL-02,C.6,Report suspected incidents and unexplained HMI behavior at once,IR-6,RS.MA-02,N21-BM (SP 800-82r3 6.4.2),No
+POL-02,C.7,Signed policy acknowledgment,PL-4,PR.AT-01,N21-BM (SP 800-82r3 3.3.4),No
+POL-03,4.1,Ransomware-to-SCADA runbook linked to the emergency response plan; printed copies,IR-8,RS.MA-01,N21-BM (SP 800-82r3 3.3.8),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N21-BM (SP 800-82r3 6.4.2),No
+POL-03,4.3,Log every incident,IR-5,RS.AN-06,N21-BM (SP 800-82r3 6.4.3),No
+POL-03,4.4,Authority to isolate SCADA; never bypass safety shutdowns,IR-4,RS.MI-01,N21-BM (SP 800-82r3 6.4.4),No
+POL-03,4.5,Preserve evidence when it does not delay safety,IR-4,RS.AN-07,N21-BM (SP 800-82r3 6.4.3),No
+POL-03,4.6,Insurer hotline first; MSP and integrator engaged,IR-4,RS.MA-04,N21-BM (SP 800-82r3 6.4.2),No
+POL-03,4.7,Meet notification deadlines; counsel reviews; no-harm determinations documented,IR-6,RS.CO-02,Fla. Stat. 501.171(4); 40 CFR 110.6,No
+POL-03,4.8,Ransom only with approvals and OFAC check; never decrypt the SCADA host,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.9,Vendor breach reports logged and handled,IR-6; SA-9,GV.SC-08,Fla. Stat. 501.171(6),Yes
+POL-03,4.10,"Annual tabletop with the MSP, integrator, and field staff",IR-3,ID.IM-02,N21-BM (SP 800-82r3 6.4.1),No
+POL-03,4.11,Lessons learned within 30 days,IR-4,ID.IM-02,N21-BM (SP 800-82r3 6.4.5),No
+POL-04,4.1,Three classification levels,RA-2,ID.AM-05,N21-BM (SP 800-82r3 6.2.3),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit; OT exceptions recorded,SC-28; SC-8,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2),No
+POL-04,4.3,Restricted data only in approved systems; Geology folder limited to licensed users,AC-3,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-04,4.4,List of where Restricted data is kept,CM-12,ID.AM-07,N21-BM (SP 800-82r3 6.1.1),No
+POL-04,4.5,New vendors and cloud features approved before receiving data or connecting to SCADA,SA-9,GV.SC-05,N21-BM (SP 800-82r3 6.1.5),Yes
+POL-04,4.6,Approved AI tools only; predictive maintenance add-on advisory only,SA-9; PL-4,GV.SC-05,N21-BM (SP 800-82r3 5.3.1),Yes
+POL-04,4.7,Call-back before any bank detail change; monthly change report,SI-7,PR.DS-10,Fla. Stat. 501.171(2),No
+POL-04,4.8,Wipe or certified destruction with records,MP-6,ID.AM-08,N21-BM (SP 800-82r3 6.2.7),No
+POL-04,4.9,90-day immutable office backups; rotated offline SCADA backups; quarterly restore tests,CP-9; CP-4,PR.DS-11,N21-BM (SP 800-82r3 6.2.4),Yes
+POL-04,4.10,Retention per schedule,SI-12,ID.AM-08,N21-BM (SP 800-82r3 6.2.3),No
