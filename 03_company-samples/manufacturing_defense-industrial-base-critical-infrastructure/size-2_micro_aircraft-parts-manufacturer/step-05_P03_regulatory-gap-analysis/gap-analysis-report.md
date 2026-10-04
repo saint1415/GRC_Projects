@@ -107,10 +107,12 @@ The plan fits a 7-person shop: most actions are MSP settings, one-page procedure
 | Phase | Due | Actions | Gaps closed |
 |---|---|---|---|
 | 1. Stop the bleeding | 2026-09-30 | Corrected SPRS score; compliant backup and retirement of the commercial backup; shred bin; visitor log, escort, key register; destroy unowned USB drives; offboarding checklist; Wi-Fi key change; MFA on all RMM logins; incident contacts | G-121, G-072, G-066, G-077 to G-079, G-063, G-071, G-074, G-017, G-062, G-118, G-120 |
-| 2. Shrink the boundary | 2026-10-31 | CUI out of the commercial suite and ERP; external sharing limits; external systems list and public AI block; named accounts and MFA on shop PCs; desktop encryption; remove local admin; company USB drives; phone app protection; DoD certificates; inventory and MSP responsibility matrix; processor purchase orders; monthly log review and scanning start | G-003, G-020, G-111, G-125, G-127, G-044 to G-046, G-053, G-103, G-098, G-005, G-070, G-018, G-115, G-119, G-123, G-030, G-082 |
+| 2. Shrink the boundary | 2026-10-31 | CUI out of the commercial suite and ERP; external sharing limits; external systems list and public AI block; named accounts and MFA on shop PCs; desktop encryption; remove local admin; company USB drives; phone app protection; DoD certificates; inventory and MSP responsibility matrix; processor purchase orders; monthly log review, monthly control checklist, and scanning start | G-086, G-003, G-020, G-111, G-125, G-127, G-044 to G-046, G-053, G-103, G-098, G-005, G-070, G-018, G-115, G-119, G-123, G-030, G-082 |
 | 3. Separate and harden | 2026-11-30 | Enclave VLAN and outbound rules; phones off the enclave; training; tabletop and DIBNet drill | G-088, G-089, G-093, G-095, G-101, G-023, G-025, G-057, G-114 |
-| 4. Prove it | 2026-12-31 to 2027-01-31 | Baselines; role-based training; managed detection; allowlisting; contingency plan; first full self-check against SP 800-171A | G-035, G-036, G-024, G-109, G-042, G-084, G-086 |
+| 4. Prove it | 2026-12-31 to 2027-01-31 | Baselines; role-based training; managed detection; allowlisting; contingency plan (business need, from P05) | G-035, G-036, G-024, G-109, G-042 |
 | 5. Status | 2027-03-15 | Readiness re-check (January 2027), Level 2 self-assessment, score and affirmation in SPRS | G-124 |
+
+Already closed by approval on 2026-08-31, but still Not met in the CSV because status reflects fieldwork: the SSP (G-087), the first independent assessment (G-084, P07), and the first POA&M (G-085).
 
 **Progress check.** The Office Manager reports progress to the President at a monthly 30-minute meeting, using the P07 POA&M as the tracker. Every High and Very High gap is carried into the risk register (P01) and, where the control was assessed, into the POA&M (P07).
 

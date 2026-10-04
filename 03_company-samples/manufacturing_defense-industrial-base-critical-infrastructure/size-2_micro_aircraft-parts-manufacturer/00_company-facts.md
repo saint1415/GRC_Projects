@@ -68,7 +68,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 1. No system security plan (3.12.4). The SPRS score of **110** posted on 2025-12-15 came from the President answering a checklist "yes" to every item, with no SSP or evidence behind it.
 2. CUI outside the enclave: Supplier B emails drawings to the commercial orders mailbox (SYS-02); old job folders with drawings remain in SYS-02; drawing PDFs are attached to 31 ERP job records (SYS-09).
 3. The MSP's commercial cloud backup holds nightly images of the CAM workstation and quality PC, which contain CUI, and is not FedRAMP authorized (252.204-7012(b)(2)(ii)(D)).
-4. Flat network: CNC machines, the CAM workstation, office PCs, the printer, and phones share one subnet (3.13.1, 3.13.5, 3.13.6).
+4. Flat network: CNC machines, the CAM workstation, office PCs, the printer, and phones share one subnet (3.13.1, 3.13.6).
 5. Unencrypted desktops, local administrator rights for the CNC Programmer, and a shared "QC" login on the quality PC (3.13.16, 3.1.5, 3.5.1).
 6. USB drives load programs into the 2 older CNC machines with no media control (3.8.7, 3.8.8).
 7. Printed drawings and setup sheets at the machines are not marked or controlled, and scrap copies go in the general trash (3.8.3, 3.8.4).

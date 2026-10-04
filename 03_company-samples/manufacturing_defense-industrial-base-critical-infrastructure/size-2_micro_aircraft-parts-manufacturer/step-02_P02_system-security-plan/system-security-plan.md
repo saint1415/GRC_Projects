@@ -146,7 +146,7 @@ By responsibility: 28 system-specific (the company, often performed by the MSP u
 **Inherited does not mean done.** The cloud provider's controls protect the job folders only when the company's side is in place: today external sharing is at the default, audit logs are never reviewed, and one phone reads CUI email with no device controls.
 
 ### 10.3 Assessment status and score
-- Gap analysis, fieldwork 2026-07-13 to 2026-07-24: see P03. Recalculated score under 32 CFR 170.24: **-139**. The 2025 SPRS entry of 110 will be corrected by 2026-09-30.
+- Gap analysis, fieldwork 2026-07-13 to 2026-07-24: see P03. Recalculated score under 32 CFR 170.24: **-161**. The 2025 SPRS entry of 110 will be corrected by 2026-09-30.
 - Readiness assessment 2026-08-10 to 2026-08-12: see P07 `assessment-results.csv` and `poam.csv`.
 - Enduring exception: patching and hardening of CNC controllers (Specialized Assets, section 9).
 
