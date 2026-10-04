@@ -73,7 +73,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 |---|---|---|---|
 | Corporate directory (SYS-G1) | Group | Every process; OT at Plants 2 and 5; DC automation | A directory compromise reaches plant OT at two plants and DC automation directly. This is the path the P08 scenario uses |
 | Cold-chain alert integration server (SYS-G6) | Group | Plant cold storage, DC rooms, trailers, store cases | One server routes every alert in all three divisions. Its loss blinds all 6 plants, 5 DCs, 900 trailers, and 120 stores at once |
-| Group ERP (SYS-G4) | Group | MES production orders, WMS, store replenishment | Plants at Plants 1, 3, 4, and 6 keep running on standing schedules for about 24 hours |
+| Group ERP (SYS-G4) | Group | MES production orders, WMS, store replenishment | Plants 1, 3, 4, and 6 keep running on standing schedules for about 24 hours |
 | Plant output to DCs | Meat Processing | Food Distribution | About 30% of Meat Processing volume ships through the group's DCs |
 | DC deliveries to stores | Food Distribution | Grocery Retail | Stores carry 1 to 3 days of perishables; about 40% of store fresh and deli meat comes from the group's plants |
 | Lot data across the chain | All divisions | Traceability and recall (BP-M07) | A recall needs plant lots, DC shipments, and store receiving records together |

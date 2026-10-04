@@ -51,7 +51,7 @@ The company is not a federal agency, so there is no formal authorization. The eq
 
 ### 4.3 System Operational Status
 Operational. Planned changes, all due by 2026-12-31:
-- vendor remote access through an MFA-protected, owner-enabled session tool (P01 R-002), due 2026-10-31
+- vendor remote access through an MFA-protected, company-enabled session tool (P01 R-002), due 2026-10-31
 - a small firewall separating the SCADA host and radio base from the field office PCs and Wi-Fi (R-001), due 2026-11-30
 - an offline, rotated SCADA backup and a copy of controller programs (R-003)
 - a replacement SCADA host on a supported operating system (R-006)

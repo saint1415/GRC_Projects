@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**88 of 216** sample companies are finished (880 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**89 of 216** sample companies are finished (890 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -43,6 +43,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Food and Agriculture | Micro | Meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-2_micro_meat-processor/README.md) |
 | Food and Agriculture | Small | Meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-3_small_meat-processor/README.md) |
 | Mining, Quarrying, and Oil and Gas Extraction | Sole Proprietorship | Oilfield services contractor | [README](03_company-samples/mining-oil-gas/size-1_sole-proprietor_oilfield-services-contractor/README.md) |
+| Mining, Quarrying, and Oil and Gas Extraction | Micro | Crude oil producer | [README](03_company-samples/mining-oil-gas/size-2_micro_crude-oil-producer/README.md) |
 | Mining, Quarrying, and Oil and Gas Extraction | Small | Crude oil producer | [README](03_company-samples/mining-oil-gas/size-3_small_crude-oil-producer/README.md) |
 | Utilities | Small | Electric distribution utility | [README](03_company-samples/utilities/size-3_small_electric-distribution-utility/README.md) |
 | Energy | Small | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-3_small_gas-transmission-pipeline/README.md) |

@@ -62,7 +62,7 @@ Of the 101 unmet or partially met rows, 4 are rated High, 39 Moderate, 57 Low, a
 ## 4. Priority gaps
 | Gap | Benchmark reference | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|
-| Vendor and remote access without MFA; remote desktop exposed until 2026-08-11 | PR.AA-03, PR.IR-01; SP 800-82r3 6.2.10, 5.2.3 | High | Owner-enabled vendor sessions with MFA; MFA on the mobile viewer and backup console; quarterly external scan | Field Superintendent | 2026-10-31 |
+| Vendor and remote access without MFA; remote desktop exposed until 2026-08-11 | PR.AA-03, PR.IR-01; SP 800-82r3 6.2.10, 5.2.3 | High | Company-enabled vendor sessions with MFA; MFA on the mobile viewer and backup console; quarterly external scan | Field Superintendent | 2026-10-31 |
 | Flat field office network | PR.IR-01; SP 800-82r3 5.2.3 | High | Small firewall separating the SCADA host and radio base; remove the remote desktop shortcut | Field Superintendent | 2026-11-30 |
 | SCADA backup not isolated; never restore-tested | PR.DS-11, RC.RP-03; SP 800-82r3 6.2.4, 6.5.1 | High | Rotated encrypted drives, one off site; programs copied off the laptop; quarterly restore tests | Field Technician | 2026-12-31 |
 | No named security role; no policies; no HR security steps | GV.RR-02, GV.PO-01, GV.RR-04 | Moderate | Designations and policies (done 2026-08-31); last-day checklist; acknowledgments | Owner; Office Manager | 2026-09-30 |
@@ -80,7 +80,7 @@ The plan fits a 7-person company. The MSP does the office work under the Office 
 
 | Phase | Due | Actions | Gaps closed |
 |---|---|---|---|
-| 1. Access and accountability | 2026-09-30 to 2026-10-31 | Designations and policies (done 2026-08-31); acknowledgments; last-day checklist; gate code and shared passwords changed; MFA on the mobile viewer and backup console; owner-enabled vendor sessions; reporting cards; call-back rule; Geology folder restricted; first MSP restore test | GV.RR-02, GV.RR-04, GV.PO-01, PR.AA-01 to PR.AA-03, PR.AA-05, PR.AA-06, RS.MA-02, GV.SC-10 |
+| 1. Access and accountability | 2026-09-30 to 2026-10-31 | Designations and policies (done 2026-08-31); acknowledgments; last-day checklist; gate code and shared passwords changed; MFA on the mobile viewer and backup console; company-enabled vendor sessions; reporting cards; call-back rule; Geology folder restricted; first MSP restore test | GV.RR-02, GV.RR-04, GV.PO-01, PR.AA-01 to PR.AA-03, PR.AA-05, PR.AA-06, RS.MA-02, GV.SC-10 |
 | 2. Visibility and the field network | 2026-11-30 | OT inventory and network drawing; IT/OT firewall; OT change log; incident runbook and tabletop; storm checklist update; encryption of the field desktop and engineering laptop | ID.AM-01 to ID.AM-03, ID.AM-07, ID.RA-07, PR.IR-01, PR.IR-02, PR.DS-01, PR.DS-02, ID.IM-02, ID.IM-04, RS.MA-01, RS.MA-04, RS.MI-01, RC.RP-01 |
 | 3. Recovery and detection | 2026-12-31 | Replacement SCADA host; rotated offline backups and immutable cloud copy; quarterly restore tests; EDR with after-hours alerts; training and phishing exercises; rebuild procedure | PR.DS-11, RC.RP-03, RC.RP-05, PR.PS-01, PR.PS-02, PR.PS-05, ID.AM-08, DE.CM-01, DE.CM-09, PR.AT-01, RS.MI-02 |
 | 4. Suppliers | 2027-03-31 | Security schedule and breach notice terms at renewal (integrator, SCADA vendor, MSP, production accounting vendor); annual vendor review | GV.SC-01, GV.SC-02, GV.SC-05, GV.SC-07; Fla. Stat. 501.171(6) |
