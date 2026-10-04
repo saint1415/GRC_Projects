@@ -1,38 +1,26 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | CTO (security and compliance lead) |
+| Approved by | Chief Executive Officer, 2026-09-15 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the company keeps three core policies: access control (POL-02), incident response (POL-03), and data classification (POL-04). A separate Information Security Policy would add little for a 7-person company, so its essential rules live in **POL-02 Part A. Program governance**:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Driver |
+|---|---|---|
+| Designation of the security and compliance lead (CTO) and privacy lead (Operations and Finance Manager) | POL-02 A.1 | SOC 2 CC1.3 |
+| Annual risk assessment with an owner and treatment for each risk | POL-02 A.2 | N51-R01 (reasonable security); SOC 2 CC3.2 |
+| Who may accept risk | POL-02 A.3 | SOC 2 CC3.1 |
+| Every security, privacy, and AI statement checked and approved before use | POL-02 A.4 | N51-R01 (deception) |
+| No contract, no customer data; sub-processor list and 30-day notice | POL-02 A.5 | Customer DPA; SOC 2 CC9.2 |
+| Annual independent assessment and penetration test | POL-02 A.6 | Security exhibit; SOC 2 CC4.1 |
+| Retention of security records | POL-02 A.7 | SOC 2 CC2.1 |
+| Policy review and availability to staff | POL-02 A.8 | SOC 2 CC5.3 |
+| Exceptions process | POL-02 A.9 | SOC 2 CC5.3 |
+| Sanctions | POL-02 A.10 | SOC 2 CC1.5 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice when the company reaches the Small tier (10 or more employees) or prepares for its SOC 2 Type 2, when a separate information security policy is usually expected.

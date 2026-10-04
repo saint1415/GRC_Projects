@@ -1,38 +1,25 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | CTO (security and compliance lead) |
+| Approved by | Chief Executive Officer, 2026-09-15 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the company keeps three core policies. The workforce use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules everyone already reads, so they live in **POL-02 Part C. Workforce use rules**, with the AI tool rule in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Driver |
+|---|---|---|
+| Use company systems for company work; look at customer data only for your job | POL-02 C.1 | Customer DPA (use limits) |
+| No customer data, credentials, or secrets in personal accounts, public repositories, or unapproved AI tools | POL-02 C.2 | N51-R01; Customer DPA |
+| Approved AI tools list | POL-04 4.7 | N51-R01; Customer DPA |
+| Never copy production data to a laptop | POL-02 C.3 and POL-04 4.8 | N51-R01 (FTC guidance: don't use personal information when it's not necessary) |
+| Company work only on MSP-managed company laptops | POL-02 B.10 | N51-R01 (FTC guidance: ensure endpoint security) |
+| Lock laptops; never share passwords, MFA codes, or keys | POL-02 C.4 | SOC 2 CC6.1 |
+| Awareness training yearly; secure coding training for developers | POL-02 C.5 | N51-R01 (FTC guidance: train your engineers in secure coding); SOC 2 CC1.4 |
+| Report suspected incidents at once | POL-02 C.6 and POL-03 4.2 | Customer DPA (72-hour notice) |
+| Signed acknowledgment at hire and after each annual update | POL-02 C.7 | SOC 2 CC1.1 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.
