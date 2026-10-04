@@ -130,9 +130,9 @@ The enterprise multi-cloud diagram is in P04 `cloud-architecture.md`.
 | LMS vendor platform (College tenant) | Bidirectional (API) | Enrollments, rosters, final grades | LMS contract with FERPA school-official and security terms |
 | Admissions CRM (SYS-06) | Inbound (applications to matriculation); outbound (enrollment status) | Applicant and student identifiers, status | Internal; CRM vendor contract |
 | Data and analytics platform (SYS-07) | Outbound nightly | SIS and LMS extracts. **Includes ISIR-derived fields today (POAM-004)** | Internal data use register |
-| Title IV third-party servicer | Bidirectional (secure file transfer and portal) | Verification documents and results; default prevention contact lists | Servicer contract; **notice term 10 days (POAM-021)** |
+| Title IV third-party servicer | Bidirectional (secure file transfer and portal) | Verification documents and results; default prevention contact lists | Servicer contract; **notice term 10 days (POAM-020)** |
 | Bank | Outbound | Refund payment files | Treasury services agreement |
-| SL-1 employer portal | Outbound | Enrollment and progress for consenting sponsored students | SL-1 client agreements; FERPA consent (POAM-022) |
+| SL-1 employer portal | Outbound | Enrollment and progress for consenting sponsored students | SL-1 client agreements; FERPA consent (POAM-021) |
 | SL-2 partner institutions | Inbound | Partner roster feeds to partner LMS tenants (routed through the integration platform; partner data does not enter the SIS) | Partner agreements |
 | Legacy document imaging system (colocation) | Bidirectional | Scanned verification and tax documents linked to SIS records | Internal; **unsupported system (POAM-008)** |
 | SIS software vendor | Remote support (through PAM) | Troubleshooting access | Support agreement with FERPA and security terms |

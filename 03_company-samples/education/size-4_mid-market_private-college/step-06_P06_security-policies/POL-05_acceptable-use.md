@@ -36,7 +36,7 @@ All employees, student workers, contractors, and anyone else given access to col
 4.4 Lock your screen when you step away, and position screens so students and visitors cannot read them. (AC-11)
 4.5 Do not install software or browser extensions, or connect USB storage, unless IT approves it. Students in IT and cybersecurity labs may use administrative tools only on isolated lab networks. (CM-11)
 4.6 Only college-managed devices, or personal phones enrolled under the mobile app protection rules, may access college email and files. SIS and FAMS reports must not be downloaded to personal computers. (AC-19; AC-20)
-4.7 Report lost or stolen devices, misdirected records, suspicious messages, unusual refund or account requests, and anything unusual immediately (POL-03 4.2).
+4.7 Report lost or stolen devices, misdirected records, suspicious messages, unusual refund or account requests, and anything unusual immediately. (IR-6; POL-03 4.2)
 4.8 Look up student records only when your job requires it. SIS, FAMS, and data warehouse activity is logged and reviewed, and inappropriate access leads to sanctions. (AU-6; 34 CFR 99.31(a)(1)(ii))
 4.9 **AI tools.** Use only AI tools on the approved list (STD-05). Never paste or upload student records, aid data, or other Restricted data into a tool that is not approved. Outputs used in decisions about applicants or students, including admissions priorities, early-alert outreach, and proctoring flags, must be reviewed by a qualified person before any action, and a person must make the final decision. (PL-4)
 4.10 Never change a student's refund bank details, contact details, or MFA method on request by phone or email unless the student's identity has been verified under STD-04. (IA-11)

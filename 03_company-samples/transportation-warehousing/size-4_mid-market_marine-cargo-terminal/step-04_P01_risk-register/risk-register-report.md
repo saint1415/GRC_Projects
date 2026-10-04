@@ -90,7 +90,7 @@ Cyber insurance ($15 million aggregate limit, $500,000 retention) transfers part
 
 Smaller items (default password changes, printed dangerous cargo lists, contract amendments, the vulnerability disclosure address) are funded from the operating budget. Each funded item maps to a P07 POA&M entry.
 
-**Accepted (5, all Low):** R-024 (Director of Port Security, until the T2 OT zone separates security systems), R-038 (Security Manager, MSSP SLA tracked monthly), R-044 (Vice President, Terminal Operations, with a misread-rate review), R-047 (Vice President, Terminal Operations), R-051 (Chief Operating Officer).
+**Accepted (5, all Low):** R-024 (Director of Port Security, until the T2 OT zone separates security systems), R-038 (Security Manager, MSSP SLA tracked monthly), R-044 (Vice President, Terminal Operations, with quarterly misread-rate reporting), R-047 (Vice President, Terminal Operations), R-051 (Chief Operating Officer).
 
 **Contract actions:** notification clauses for the 14 vendors with access that lack them (R-041), the T2 crane OEM access terms (R-003) and the AI vendor data terms (R-028, R-045), due 2026-12-31 to 2027-03-31.
 

@@ -66,7 +66,7 @@ The full map is in `dependency-map.csv`. Key findings:
 2. **SIS recovery (DEP-03).** The SIS met its 15-minute RPO but recovered in 11.5 hours against its 8-hour RTO in the 2026-04-25 DR test, mainly because the integration services and the SAIG transmission servers were rebuilt by hand. This is P01 R-010 and POAM-006.
 3. **Legacy document imaging (DEP-16).** About 14 million scanned verification and tax documents sit in a colocation system on an unsupported operating system, outside the immutable backup design, with no tested restore. This is P01 R-007 and POAM-008.
 4. **Telephony and refunds (DEP-11, DEP-14).** The contact-center telephony core and the bank refund file are single points of failure with untested fallbacks. The cloud contact-center failover is configured but has never been tested, and the secondary bank's refund file format has never been tested.
-5. **Title IV third-party servicer (DEP-08).** Its contract allows 10 days for incident notice, which is too slow for the FTC 30-day clock and the FSA "immediately" expectation (P03 G-031; POAM-021).
+5. **Title IV third-party servicer (DEP-08).** Its contract allows 10 days for incident notice, which is too slow for the FTC 30-day clock and the FSA "immediately" expectation (P03 G-031; POAM-020).
 6. **Industry-wide dependency (DEP-06).** The Department of Education's systems are a single point of failure the company cannot remove; the workaround is procedural (queue and catch up).
 
 ## 6. Resource requirements
@@ -116,5 +116,5 @@ The full map is in `dependency-map.csv`. Key findings:
 | SIS recovered in 11.5 h against an 8 h RTO | P01 R-010; P02 CP-10; POAM-006 |
 | Legacy imaging system: unsupported, outside immutable backups, never restore-tested | P01 R-007; POAM-008 |
 | Telephony failover and secondary bank refund file never tested | P01 R-031 |
-| Title IV third-party servicer 10-day incident notice term | P03 G-031; POAM-021 |
+| Title IV third-party servicer 10-day incident notice term | P03 G-031; POAM-020 |
 | Annual emergency notification test does not include an IT outage scenario | P03 G-062; POAM-024 |

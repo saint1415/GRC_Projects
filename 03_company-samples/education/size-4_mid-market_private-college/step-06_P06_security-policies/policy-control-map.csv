@@ -2,60 +2,60 @@ policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,re
 POL-01,4.1,"The college must maintain a written information security program that meets the FTC Safeguards Rule, as applied to Title IV institutions, and...",PM-1,GV.PO-01,N61-R02 (314.3(a)),No
 POL-01,4.2,The college must designate a Qualified Individual in writing and reaffirm the designation each year,PM-2,GV.RR-02,N61-R02 (314.4(a)(1)-(3)),No
 POL-01,4.3,"A written risk assessment must be performed at least annually and whenever a material change occurs, including a new campus, a new system that...",RA-3; PM-9,ID.RA-01,N61-R02 (314.4(b)),Yes
-POL-01,4.4,Risk acceptance authority,PM-9,GV.RM-01,N61-R02 (314.4(b)(1)(iii)),No
+POL-01,4.4,Risk acceptance authority: Risk owners may accept Low and Very Low risks,PM-9,GV.RM-01,N61-R02 (314.4(b)(1)(iii)),No
 POL-01,4.5,The Qualified Individual must report in writing to the board at least annually on the overall status of the program and compliance with 16 CFR...,PM-9,GV.OV-01,N61-R02 (314.4(i)),No
 POL-01,4.6,Security policies must be reviewed at least annually and after material changes or incidents,PL-1,GV.PO-02,N61-R02 (314.4(g)),No
-POL-01,4.7,"Exceptions to any security policy or standard must be requested in writing, risk-rated, approved under 4.4, recorded in the risk register, and...",PL-1,,None,No
-POL-01,4.8,Sanctions,PS-8,GV.RR-04,None,No
-POL-01,4.9,"No contract, no student data",SA-9; SA-4,GV.SC-05,N61-R02 (314.4(f)(1)-(2)); N61-R01 (99.31(a)(1)(i)(B)),Yes
+POL-01,4.7,"Exceptions to any security policy or standard must be requested in writing, risk-rated, approved under 4.4, recorded in the risk register, and...",PL-1,GV.OC-03,N61-R02 (314.3(a)),No
+POL-01,4.8,"Sanctions: Employees who fail to comply with security or FERPA policies must be sanctioned in proportion to intent and harm, from retraining to...",PS-8,GV.RR-04,N61-R02 (314.4(e)),No
+POL-01,4.9,"No contract, no student data: Before any vendor receives, maintains, or processes customer information or education records, it must sign a...",SA-9; SA-4,GV.SC-05,N61-R02 (314.4(f)(1)-(2)); N61-R01 (99.31(a)(1)(i)(B)),Yes
 POL-01,4.10,"Tier 1 vendors (those holding customer information or education records at scale, with privileged access, or supporting a High-criticality...",SR-6,GV.SC-07,N61-R02 (314.4(f)(3)),Yes
-POL-01,4.11,"Security controls must be independently assessed at least annually (P07) and after material changes, and the program adjusted for the results",CA-2; CA-5,,N61-R02 (314.4(d)(1)); N61-R02 (314.4(g)),No
-POL-01,4.12,FAFSA data use,PT-3,,HEA section 483,Yes
-POL-01,4.13,"AI tools that process customer information or education records, or that influence decisions about applicants or students, must be approved...",PM-9,GV.RM-01,None,No
-POL-01,4.14,"Customer information must be disposed of under the retention and disposal standard (STD-11) no later than 2 years after its last use, unless a...",SI-12,,N61-R02 (314.4(c)(6)),No
-POL-02,4.1,Every user must have a unique account in the identity provider,IA-2; AC-2,,N61-R02 (314.4(c)(1)(i)),Yes
+POL-01,4.11,"Security controls must be independently assessed at least annually (P07) and after material changes, and the program adjusted for the results",CA-2; CA-5,ID.RA-01,N61-R02 (314.4(d)(1)); N61-R02 (314.4(g)),No
+POL-01,4.12,"FAFSA data use: FAFSA and ISIR data, and anything derived from them, may be used only for the application, award, and administration of student...",PT-3,GV.PO-01,HEA section 483,Yes
+POL-01,4.13,"AI tools that process customer information or education records, or that influence decisions about applicants or students, must be approved...",PM-9,GV.RM-01,N61-R02 (314.4(b)(1)(iii); (i)),No
+POL-01,4.14,"Customer information must be disposed of under the retention and disposal standard (STD-11) no later than 2 years after its last use, unless a...",SI-12,ID.AM-07,N61-R02 (314.4(c)(6)),No
+POL-02,4.1,Every user must have a unique account in the identity provider,IA-2; AC-2,PR.AA-01,N61-R02 (314.4(c)(1)(i)),Yes
 POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager and the data owner before it is granted",AC-2; AC-3; AC-5; AC-6,PR.AA-05,N61-R02 (314.4(c)(1)(ii)); N61-R01 (99.31(a)(1)(ii)); 34 CFR 668.16(c)(2),Yes
 POL-02,4.3,"MFA is required for every individual who accesses a college information system that holds customer information or education records: employees,...",IA-2(1); IA-2(2); IA-2(8); IA-8,PR.AA-03,N61-R02 (314.4(c)(5)),Yes
-POL-02,4.4,Sensitive changes need step-up authentication,IA-11,,34 CFR 668.164(h); N61-R01 (99.31(c)),Yes
-POL-02,4.5,Account recovery,IA-5; IA-12,,N61-R01 (99.31(c)),Yes
-POL-02,4.6,Applicants,IA-12,,34 CFR 668.16(g)(1),Yes
-POL-02,4.7,Termination,PS-4; AC-2; AC-2(3),,None,Yes
-POL-02,4.8,Transfers,PS-5; AC-2,,None,Yes
-POL-02,4.9,Access reviews,AC-2; AC-6,,N61-R02 (314.4(c)(1)),Yes
-POL-02,4.10,Privileged access,AC-6(2); AC-6(5); AU-2,,None,Yes
-POL-02,4.11,Accounts lock after 10 failed sign-in attempts,AC-7; AC-11; AC-12,,None,No
-POL-02,4.12,Passwords must be at least 14 characters for staff and 12 for students and must not be on the banned-password list,IA-5,,None,Yes
-POL-02,4.13,Vendor remote access (including the access control vendor and integration vendors) must use named accounts with MFA through the college's access...,AC-17; MA-4,,None,Yes
+POL-02,4.4,Sensitive changes need step-up authentication,IA-11,PR.AA-01,34 CFR 668.164(h); N61-R01 (99.31(c)),Yes
+POL-02,4.5,Account recovery: The service desk may reset a student's password or MFA only after identity proofing under STD-04 (for example a video check...,IA-5; IA-12,PR.AA-01,N61-R01 (99.31(c)),Yes
+POL-02,4.6,Applicants: Online applicants must be identity-proofed under STD-04 before aid is packaged,IA-12,PR.AA-02,34 CFR 668.16(g)(1),Yes
+POL-02,4.7,Termination: HR must record each termination and each adjunct contract end date on or before the last day,PS-4; AC-2; AC-2(3),GV.RR-04,N61-R02 (314.4(c)(1)(i)),Yes
+POL-02,4.8,Transfers: Access from the prior role must be removed within 5 business days of a transfer unless the new manager approves keeping it,PS-5; AC-2,GV.RR-04,N61-R02 (314.4(c)(1)(ii)),Yes
+POL-02,4.9,Access reviews: Managers must review their staff's and faculty's access every 6 months,AC-2; AC-6,PR.AA-01,N61-R02 (314.4(c)(1)),Yes
+POL-02,4.10,"Privileged access: Administrators must use a separate privileged account, elevated just in time through the privileged access management service,...",AC-6(2); AC-6(5); AU-2,PR.AA-05,N61-R02 (314.4(c)(1)(ii)),Yes
+POL-02,4.11,Accounts lock after 10 failed sign-in attempts,AC-7; AC-11; AC-12,PR.AA-03,N61-R02 (314.4(c)(1)(i)),No
+POL-02,4.12,Passwords must be at least 14 characters for staff and 12 for students and must not be on the banned-password list,IA-5,PR.AA-01,N61-R02 (314.4(c)(1)(i)),Yes
+POL-02,4.13,Vendor remote access (including the access control vendor and integration vendors) must use named accounts with MFA through the college's access...,AC-17; MA-4,PR.AA-05,N61-R02 (314.4(c)(5)),Yes
 POL-03,4.1,The college must maintain incident runbooks for its most likely and most harmful incidents,IR-8,RS.MA-01,N61-R02 (314.4(h)(2)),Yes
-POL-03,4.2,"Employees must report any suspected incident immediately, and within 1 hour at most, to the IT service desk security line or their manager",IR-6,RS.MA-02,None,Yes
-POL-03,4.3,"Every incident must be logged, categorized by severity, and tracked to closure in the security incident queue",IR-5; IR-4,,N61-R02 (314.4(h)(6)),Yes
-POL-03,4.4,"A major incident (severity 1: any ransomware, confirmed exfiltration of customer information or education records, fraud affecting 10 or more...",IR-4,RC.RP-01,None,Yes
-POL-03,4.5,"The Chief Compliance Officer must decide with counsel whether an event is a notification event under 16 CFR 314.2(m), a breach under each affected...",IR-6,RS.AN-03,None,Yes
+POL-03,4.2,"Employees must report any suspected incident immediately, and within 1 hour at most, to the IT service desk security line or their manager",IR-6,RS.MA-02,N61-R02 (314.4(j)); SAIG Enrollment Agreement; 34 CFR 668.16(g),Yes
+POL-03,4.3,"Every incident must be logged, categorized by severity, and tracked to closure in the security incident queue",IR-5; IR-4,DE.AE-03,N61-R02 (314.4(h)(6)),Yes
+POL-03,4.4,"A major incident (severity 1: any ransomware, confirmed exfiltration of customer information or education records, fraud affecting 10 or more...",IR-4,RC.RP-01,N61-R02 (314.4(h)(2)),Yes
+POL-03,4.5,"The Chief Compliance Officer must decide with counsel whether an event is a notification event under 16 CFR 314.2(m), a breach under each affected...",IR-6,RS.AN-03,N61-R02 (314.4(j)); SAIG Enrollment Agreement; 34 CFR 668.16(g),Yes
 POL-03,4.6,"Notifications to the FTC, FSA, the Office of Inspector General, affected students and parents, state regulators and consumer reporting agencies,...",IR-6,RS.CO-02; RS.CO-03,N61-R02 (314.4(h)(4)); N61-R02 (314.4(j)),Yes
-POL-03,4.7,"The cyber insurer must be notified through its hotline before incident response vendors are engaged, as the policy requires",IR-7,,None,No
-POL-03,4.8,"No ransom may be paid without approval from the President and CEO, outside counsel, and the insurer, a documented OFAC sanctions check, and a...",IR-4,,None,Yes
-POL-03,4.9,Any incident that could affect the emergency notification service or campus security systems must be reported at once to the Director of Campus...,CP-2,,34 CFR 668.46(g),Yes
-POL-03,4.10,Any unauthorized disclosure of PII from education records must be recorded in the affected students' disclosure records under 34 CFR 99.32,AU-6,RS.MA-02,None,Yes
-POL-03,4.11,"Incident response must be exercised at least annually for each runbook, including at least one exercise a year with outside counsel and the...",IR-3,ID.IM-02,None,No
+POL-03,4.7,"The cyber insurer must be notified through its hotline before incident response vendors are engaged, as the policy requires",IR-7,RS.MA-01,N61-R02 (314.4(h)),No
+POL-03,4.8,"No ransom may be paid without approval from the President and CEO, outside counsel, and the insurer, a documented OFAC sanctions check, and a...",IR-4,ID.IM-01,N61-R02 (314.4(h)(2)),Yes
+POL-03,4.9,Any incident that could affect the emergency notification service or campus security systems must be reported at once to the Director of Campus...,CP-2,ID.IM-01,34 CFR 668.46(g),Yes
+POL-03,4.10,Any unauthorized disclosure of PII from education records must be recorded in the affected students' disclosure records under 34 CFR 99.32,AU-6,RS.MA-02,N61-R02 (314.4(c)(8)); N61-R01 (99.31(a)(1)(ii)),Yes
+POL-03,4.11,"Incident response must be exercised at least annually for each runbook, including at least one exercise a year with outside counsel and the...",IR-3,ID.IM-02,N61-R02 (314.4(h)(7)),No
 POL-03,4.12,"Lessons learned must be documented within 30 days of closing a major incident, including the remediation of identified weaknesses, and fed into...",IR-4,ID.IM-04,"N61-R02 (314.4(h)(5), (h)(7))",Yes
-POL-04,4.1,Information must be classified in one of four levels,RA-2,ID.AM-07,None,No
+POL-04,4.1,Information must be classified in one of four levels,RA-2,ID.AM-07,N61-R02 (314.4(b)(1)(ii)),No
 POL-04,4.2,"Restricted data must be encrypted at rest on every device, service, and backup, and in transit over external networks",SC-28; SC-8,PR.DS-01; PR.DS-02,N61-R02 (314.4(c)(3)),Yes
-POL-04,4.3,"Encryption keys for cloud workloads and backups must be managed in the college's key management service, with separate keys for the backup account...",SC-12,,None,No
-POL-04,4.4,"Restricted data may be stored only in approved systems: the SIS, LMS, FAMS, the SAIG workstations, the data warehouse (education records only),...",AC-3; SA-9,,None,Yes
-POL-04,4.5,FAFSA and ISIR data may be used only for aid administration (POL-01 4.12),PT-3,,HEA section 483,Yes
-POL-04,4.6,"Education records may be disclosed outside the college only with written student consent or under a FERPA exception, and the disclosure must be...",AC-21,,N61-R01 (99.30); 99.32; 99.33,No
+POL-04,4.3,"Encryption keys for cloud workloads and backups must be managed in the college's key management service, with separate keys for the backup account...",SC-12,PR.DS-01,N61-R02 (314.4(c)(3)),No
+POL-04,4.4,"Restricted data may be stored only in approved systems: the SIS, LMS, FAMS, the SAIG workstations, the data warehouse (education records only),...",AC-3; SA-9,PR.AA-05,N61-R02 (314.4(c)(1)(ii)); N61-R01 (99.31(a)(1)(ii)),Yes
+POL-04,4.5,FAFSA and ISIR data may be used only for aid administration (POL-01 4.12),PT-3,GV.PO-01,HEA section 483,Yes
+POL-04,4.6,"Education records may be disclosed outside the college only with written student consent or under a FERPA exception, and the disclosure must be...",AC-21,PR.DS-01,N61-R01 (99.30); N61-R01 (99.32); N61-R01 (99.33),No
 POL-04,4.7,"The Chief Information Officer must keep an inventory of where Restricted data is stored and which vendors receive it, reconciled quarterly against...",CM-8,ID.AM-07,N61-R02 (314.4(c)(2)),Yes
 POL-04,4.8,Media and devices holding Restricted data must be sanitized (for reuse) or destroyed by a certified vendor that provides a certificate (for disposal),MP-6,ID.AM-08,N61-R02 (314.4(c)(6)(i)),Yes
-POL-04,4.9,"Backups of Restricted data must be encrypted, stored in the separate backup account in a second region, protected by write-once retention, and...",CP-9,PR.DS-11,None,Yes
-POL-04,4.10,Restricted data must not be entered into AI tools unless the tool is approved under STD-05 and its contract prohibits training on college data and...,SA-9,,None,Yes
-POL-04,4.11,"Records are kept and disposed of under STD-11: Title IV records at least as long as 34 CFR 668.24(e) requires, and other customer information...",SI-12,,None,No
-POL-05,4.1,College systems are for college business and learning,PL-4,,None,No
-POL-05,4.2,Every employee must acknowledge this policy before receiving access and again each year,PL-4,,None,No
+POL-04,4.9,"Backups of Restricted data must be encrypted, stored in the separate backup account in a second region, protected by write-once retention, and...",CP-9,PR.DS-11,N61-R02 (314.4(c)(3); (h)),Yes
+POL-04,4.10,Restricted data must not be entered into AI tools unless the tool is approved under STD-05 and its contract prohibits training on college data and...,SA-9,GV.OC-05,N61-R02 (314.4(f)(2); (f)(3)); N61-R01 (99.31(a)(1)(i)(B)),Yes
+POL-04,4.11,"Records are kept and disposed of under STD-11: Title IV records at least as long as 34 CFR 668.24(e) requires, and other customer information...",SI-12,ID.AM-07,N61-R02 (314.4(c)(6)); 34 CFR 668.24(e),No
+POL-05,4.1,College systems are for college business and learning,PL-4,PR.AT-01,N61-R02 (314.4(e)(1)),No
+POL-05,4.2,Every employee must acknowledge this policy before receiving access and again each year,PL-4,PR.AT-01,N61-R02 (314.4(e)(1)),No
 POL-05,4.3,"FERPA, Safeguards Rule, and security training is required at hire and every year, updated for the top risks in the risk register (refund fraud,...",AT-2; AT-2(3); AT-3,PR.AT-01; PR.AT-02,N61-R02 (314.4(e)(1)),Yes
-POL-05,4.4,"Lock your screen when you step away, and position screens so students and visitors cannot read them",AC-11,,None,No
-POL-05,4.5,"Do not install software or browser extensions, or connect USB storage, unless IT approves it",CM-11,,None,No
-POL-05,4.6,"Only college-managed devices, or personal phones enrolled under the mobile app protection rules, may access college email and files",AC-19; AC-20,,None,No
-POL-05,4.7,"Report lost or stolen devices, misdirected records, suspicious messages, unusual refund or account requests, and anything unusual immediately...",,,None,No
-POL-05,4.8,Look up student records only when your job requires it,AU-6,,N61-R01 (99.31(a)(1)(ii)),Yes
-POL-05,4.9,AI tools,PL-4,,None,No
-POL-05,4.10,"Never change a student's refund bank details, contact details, or MFA method on request by phone or email unless the student's identity has been...",IA-11,,None,Yes
+POL-05,4.4,"Lock your screen when you step away, and position screens so students and visitors cannot read them",AC-11,PR.AA-05,N61-R02 (314.4(c)(1)),No
+POL-05,4.5,"Do not install software or browser extensions, or connect USB storage, unless IT approves it",CM-11,PR.PS-01,N61-R02 (314.4(c)(2)),No
+POL-05,4.6,"Only college-managed devices, or personal phones enrolled under the mobile app protection rules, may access college email and files",AC-19; AC-20,PR.AA-05,N61-R02 (314.4(c)(1)),No
+POL-05,4.7,"Report lost or stolen devices, misdirected records, suspicious messages, unusual refund or account requests, and anything unusual immediately",IR-6,RS.MA-01,N61-R02 (314.4(j)); SAIG Enrollment Agreement; 34 CFR 668.16(g),Yes
+POL-05,4.8,Look up student records only when your job requires it,AU-6,PR.PS-04,N61-R01 (99.31(a)(1)(ii)),Yes
+POL-05,4.9,AI tools: Use only AI tools on the approved list (STD-05),PL-4,PR.AT-01,N61-R02 (314.4(e)(1)),No
+POL-05,4.10,"Never change a student's refund bank details, contact details, or MFA method on request by phone or email unless the student's identity has been...",IA-11,PR.AA-01,34 CFR 668.164(h); N61-R02 (314.4(c)(5)); N61-R01 (99.31(c)),Yes
