@@ -60,7 +60,7 @@ flowchart LR
 ## 2. Layers and who is responsible
 | Layer | Components | Key controls | Customer (company) | MSP (on the company's behalf) | Provider |
 |---|---|---|---|---|---|
-| Identity | SYS-01 accounts and MFA; local Windows accounts; firewall, RMM, and backup logins | AC-2, IA-2, IA-2(1), IA-2(2), AC-7 | Decides who gets access; requests removal; sets MFA and device rules | Creates and disables accounts; holds admin logins (one shared account today) | Runs the sign-in and MFA service |
+| Identity | SYS-01 accounts and MFA; local accounts; firewall, RMM, and backup logins | AC-2, IA-2, IA-2(1), IA-2(2), AC-7 | Decides who gets access; requests removal; sets MFA and device rules | Creates and disables accounts; holds admin logins (one shared account today) | Runs the sign-in and MFA service |
 | Network | Firewall, switch, Wi-Fi, internet line | SC-7, AC-18, SC-8 | Approves rules and the VLAN design | Configures, patches, and monitors | Not applicable |
 | Endpoints | SYS-03, SYS-04, 2 laptops | SC-28, SI-3, SI-2, AC-6, AC-11 | Keeps the inventory; approves exceptions | Encryption, antivirus, patching, screen lock | Not applicable |
 | SaaS application | CUI email and job folders | AC-3, AC-4, AU-2, SC-8 | Users, folder permissions, external sharing, data | Tenant administration on request | Application, platform, data centers |

@@ -74,13 +74,13 @@ From `bia.csv` (7 processes: 3 High, 3 Moderate, 1 Low).
 2. **The CAM workstation's backup is in the wrong place.** The only full backup of SYS-03 and SYS-04 sits in a commercial cloud that is not FedRAMP authorized. Removing it without a replacement would leave the 24-hour RTO for BP-02 unproven. The approved sequence is: compliant SYS-01 backup first, settings folder second, then stop the commercial backup (P01 R-003).
 3. **One programmer.** BP-02 has a key-person dependency that no system fixes. Treatment: a written programming procedure for the 10 highest-volume parts and an arrangement with a contract programmer who is a U.S. person (P01 R-019).
 4. **The MSP contract has no recovery commitment.** The 4-business-hour response is not a recovery time (P01 R-010).
-5. **Internet is a single point of failure for cloud work, not for machining.** Machines and the CMM keep running offline. A cellular backup router is planned (P01 R-015).
+5. **Internet is a single point of failure for cloud work, not for machining.** Machines and the CMM keep running offline, and a laptop can use a phone hotspot for short outages. The President accepted this risk (P01 R-015).
 
 ## 6. Recovery priorities
 | Priority | Resource | Expected recovery time | Alternate strategy |
 |---|---|---|---|
 | 1 | DoD reporting capability (clean laptop, certificate, printed contacts) | 8 h | Certificate on two people's credentials (due 2026-10-31); borrowed clean device |
-| 2 | Shop network and firewall (SYS-07) | 4 h | MSP restores configuration to a spare firewall; cellular router once installed |
+| 2 | Shop network and firewall (SYS-07) | 4 h | MSP restores configuration to a spare firewall; phone hotspot for laptops |
 | 3 | CNC machines (SYS-06) | 8 h | Finish loaded jobs; hand-load proven programs after a revision check |
 | 4 | Quality PC and CMM (SYS-04) | 24 h | Manual inspection for simple parts; re-sync inspection programs from SYS-01 |
 | 5 | CAM workstation (SYS-03) | 24 h | MSP rebuilds from the standard image; re-sync job folders; reactivate CAM license |
