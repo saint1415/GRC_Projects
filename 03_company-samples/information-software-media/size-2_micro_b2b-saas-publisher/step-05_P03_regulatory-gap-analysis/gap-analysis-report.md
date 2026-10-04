@@ -18,7 +18,7 @@ Section 5(a) declares "unfair or deceptive acts or practices in or affecting com
 - **Unfairness:** a practice is unfair if it "causes or is likely to cause substantial injury to consumers which is not reasonably avoidable by consumers themselves and not outweighed by countervailing benefits to consumers or to competition" (15 U.S.C. 45(n)). About 9,800 vendors who are individuals gave their Social Security numbers to customers on W-9s. They cannot protect that data once it is on the platform; only the company can.
 - **Deception:** a material representation, omission, or practice likely to mislead a consumer acting reasonably (FTC Policy Statement on Deception, as summarized on the FTC's enforcement authority page). The website security page, the product page's AI accuracy claim, the security exhibit, and questionnaire answers are all representations.
 
-Section 5 does not list specific controls. The FTC explains what it expects through business guidance drawn from its cases. This analysis uses three FTC guidance documents as the requirement set. The 28 practices of the Start with Security guide were checked against the live page on 2026-10-04.
+Section 5 does not list specific controls. The FTC explains what it expects through business guidance drawn from its cases. This analysis uses three FTC guidance documents as the requirement set. The 28 practice headings of the Start with Security guide were checked against the live FTC page.
 
 | Source | URL | Used for |
 |---|---|---|

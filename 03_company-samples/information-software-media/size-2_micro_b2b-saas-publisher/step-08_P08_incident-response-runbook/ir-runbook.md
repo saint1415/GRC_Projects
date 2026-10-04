@@ -38,7 +38,7 @@ The company has 7 people. The CTO and the Senior Software Engineer do the cloud 
 - [ ] Object read logging on the document bucket, database audit logging, and provider threat detection with alerts (AU-2, SI-4). **Gap until POAM-005 closes (2026-11-30)**
 - [ ] Cloud logs archived 1 year in a separate account (AU-11). **Gap until POAM-005 closes.** Until then, export logs at once in step 3.2: the default history is 90 days
 - [ ] Backups in a separate account with write-once retention (CP-9). **Gap until POAM-007 closes**
-- [ ] Customer security contact list, with the 2 anchor customers flagged (IR-6). **Gap until POAM-009 closes (2026-10-31)**
+- [ ] Customer security contact list, with the 2 anchor customers flagged (IR-6). **Gap until the POAM-009 contact list milestone (2026-10-31)**
 - [ ] Customer notice templates approved by counsel (initial notice, update, final report, Florida third-party-agent notice)
 - [ ] This runbook, the notification matrix, and the contact sheet stored outside the production account and the suite
 

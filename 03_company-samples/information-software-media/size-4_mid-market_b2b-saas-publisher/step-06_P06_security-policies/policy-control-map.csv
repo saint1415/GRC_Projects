@@ -1,2 +1,62 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Program addresses FTC reasonable security and the HIPAA Security Rule; documented,PM-1,GV.PO-01,N51-R01 (FTC Start with Security 1); HIPAA BA (164.316(a)),No
+POL-01,4.2,HIPAA Security Official designated in writing,PM-2,GV.RR-02,HIPAA BA (164.308(a)(2)),No
+POL-01,4.3,Annual SP 800-30 risk assessment including ePHI,RA-3; PM-9,ID.RA-01,HIPAA BA (164.308(a)(1)(ii)(A)-(B)); N51-R01 (FTC Start with Security 1),Yes
+POL-01,4.4,Risk acceptance authority by level; no bulk or cross-tenant exposure risk accepted above Moderate,PM-9,GV.RM-01,HIPAA BA (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5,GV.OV-01,N51-R01 (reasonable security governance),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,HIPAA BA (164.316(b)(2)(iii)),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-02,N51-R01,No
+POL-01,4.8,Sanctions for policy violations,PS-8,GV.RR-04,HIPAA BA (164.308(a)(1)(ii)(C)),No
+POL-01,4.9,"DPA, security review, 30-day notice, and subcontractor BAA before a vendor receives customer data",SA-9; SA-4,GV.SC-05,N51-R01 (FTC Start with Security 8); HIPAA BA (164.308(b)(2); 164.314(a)(2)(iii)); DPA,Yes
+POL-01,4.10,Annual Tier 1 sub-processor reassessment with SOC 2 review,SR-6,GV.SC-07,N51-R01 (FTC Start with Security 8),Yes
+POL-01,4.11,"Statements about security, privacy, and AI approved and reviewed against practice quarterly",PT-2; PL-4,GV.OC-03,"N51-R01 (deception, 15 U.S.C. 45(a))",Yes
+POL-01,4.12,Customer data used only to provide the service; no training; analytics aggregated,PT-2; SI-12,GV.OC-03,N51-R01; N51-R03 (service provider terms); DPA,Yes
+POL-01,4.13,Annual independent assessment and SOC 2 examination,CA-2,ID.IM-01,HIPAA BA (164.308(a)(8)); SOC 2 (contract),No
+POL-01,4.14,6-year retention of security and HIPAA documentation,SI-12,GV.PO-02,HIPAA BA (164.316(b)(2)(i)); 45 CFR 164.414(b),Yes
+POL-01,4.15,AI features and tools approved through AI governance before release or use,PM-9; RA-3,GV.RM-01,"N51-R01; N51-R03 (ADMT, customer-side)",Yes
+POL-01,4.16,Security due diligence and integration plan for acquisitions,RA-3; CA-3,GV.SC-03,N51-R01,Yes
+POL-02,4.1,Unique identity for every user,IA-2; IA-4,PR.AA-01,HIPAA BA (164.312(a)(2)(i)); N51-R01 (FTC Start with Security 3),No
+POL-02,4.2,Least privilege; owner approval; healthcare cell approval,AC-2; AC-6,PR.AA-05,HIPAA BA (164.308(a)(4)(ii)(B)); N51-R01 (FTC Start with Security 2),Yes
+POL-02,4.3,MFA for all; security keys for privileged access,IA-2(1); IA-2(2),PR.AA-03,HIPAA BA (164.312(d)); N51-R01 (FTC Start with Security 3),Yes
+POL-02,4.4,Just-in-time production access; no standing admin roles after 2026-12-31,AC-6(2); AC-2,PR.AA-05,N51-R01 (FTC Start with Security 2),Yes
+POL-02,4.5,Short-lived federated machine credentials; no long-lived cloud keys,IA-5; IA-5(7),PR.AA-01,N51-R01 (FTC Start with Security 3),Yes
+POL-02,4.6,"HR-driven joiner, mover, leaver; removal within 4 hours of termination",PS-4; PS-5; AC-2(1),GV.RR-04,HIPAA BA (164.308(a)(3)(ii)(C)); SOC 2 CC6.2,Yes
+POL-02,4.7,Quarterly access reviews for all systems with customer data,AC-2,PR.AA-05,HIPAA BA (164.308(a)(4)(ii)(C)); SOC 2 CC6.2,Yes
+POL-02,4.8,Customer approval for each support view session; session review,AC-6(9); AU-6,PR.AA-05,N51-R01 (deception: trust center); HIPAA BA (164.308(a)(3)(ii)(A)),Yes
+POL-02,4.9,"Break-glass accounts with hardware keys, tested quarterly",AC-6(5),PR.AA-05,HIPAA BA (164.312(a)(2)(ii)),Yes
+POL-02,4.10,Two layers of tenant isolation with automated cross-tenant tests,AC-3; SC-4,PR.IR-01,N51-R01 (FTC Start with Security 5); HIPAA BA (164.312(a)),Yes
+POL-02,4.11,Remote access through single sign-on from managed devices; contractors without production access,AC-17; AC-20,PR.AA-05,N51-R01 (FTC Start with Security 6),No
+POL-02,4.12,MFA offered and enforced for customer administrators; default for Enterprise and healthcare agents,IA-8,PR.AA-03,N51-R01 (FTC Start with Security 3),No
+POL-02,4.13,Session timeouts,AC-12,PR.AA-05,HIPAA BA (164.312(a)(2)(iii)),No
+POL-03,4.1,Incident plan and runbooks for credential compromise and platform outage,IR-8,RS.MA-01,HIPAA BA (164.308(a)(6)); N51-R01 (FTC Protecting Personal Information 5),Yes
+POL-03,4.2,Immediate reporting by all workforce,IR-6,RS.MA-02,HIPAA BA (164.308(a)(6)(ii)),Yes
+POL-03,4.3,Incident logging with discovery and confirmation times,IR-5; IR-4,RS.MA-02,45 CFR 164.410(a)(2); DPA,Yes
+POL-03,4.4,Crisis management team within 1 hour for severity 1,IR-4,RC.RP-01,N51-R01,Yes
+POL-03,4.5,Four-factor breach assessment and decision log retained 6 years,IR-6,RS.AN-03,45 CFR 164.402; 164.414(b),Yes
+POL-03,4.6,"Notices meet the shortest clock (24 h, 48 h, 4 h bank, 10 business days BAA, 10 days Florida)",IR-6,RS.CO-02,45 CFR 164.410; 12 CFR 53.4; Fla. Stat. 501.171(6)(a); DPA; BAA,Yes
+POL-03,4.7,Insurer notified before engaging vendors,IR-7,RS.MA-01,Cyber insurance policy (contract),No
+POL-03,4.8,"Extortion payment only with approvals, OFAC check, and law enforcement report",IR-4,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.9,Evidence preserved before eradication,IR-4; AU-9,RS.AN-03,45 CFR 164.414(b),Yes
+POL-03,4.10,Annual exercise of each runbook,IR-3,ID.IM-02,N51-R01,No
+POL-03,4.11,Lessons learned within 30 days; statements reviewed after incidents,IR-4,ID.IM-03,N51-R01 (deception),Yes
+POL-04,4.1,Classification at creation; data map reviewed quarterly,RA-2; CM-12,ID.AM-07,N51-R01 (FTC Start with Security 1) and Protecting Personal Information 1,No
+POL-04,4.2,Encryption of Restricted data at rest and in transit; separate healthcare keys,SC-28; SC-8; SC-12,PR.DS-01,HIPAA BA (164.312(a)(2)(iv); 164.312(e)(2)(ii)); N51-R01 (deception: trust center),Yes
+POL-04,4.3,PHI stays in the healthcare cell and BAA subcontractors,AC-4; PT-2,PR.DS-01,HIPAA BA (164.308(b)); 45 CFR 164.410,Yes
+POL-04,4.4,No production data outside production,SA-3(2),PR.DS-01,N51-R01 (FTC Start with Security 1),Yes
+POL-04,4.5,Internal analytics on counts only; no ticket text in the warehouse,PT-2; SI-12,ID.AM-08,N51-R01; N51-R03 (service provider terms),Yes
+POL-04,4.6,AI processing only through approved providers with no-training and zero-retention terms,PT-2; SA-9,GV.SC-05,N51-R01 (deception: trust center); DPA,Yes
+POL-04,4.7,Deletion within 30 days after termination with evidence,SI-12; MP-6,ID.AM-08,N51-R01 (deception: DPA 30-day deletion); N51-R01 (FTC Start with Security 1),Yes
+POL-04,4.8,No Restricted data in logs; redaction library,SI-12; AU-9,PR.DS-01,N51-R01 (FTC Start with Security 4),Yes
+POL-04,4.9,Card number redaction on by default,SI-12,PR.DS-01,Contract (customer PCI DSS duties),Yes
+POL-04,4.10,Laptop encryption; media blocked; wipe certificates,SC-28; MP-6,PR.DS-01,HIPAA BA (164.310(d)(2)(i)); N51-R01 (FTC Start with Security 10),Yes
+POL-05,4.1,Company systems for company business,PL-4,GV.PO-01,HIPAA BA (164.310(b)),No
+POL-05,4.2,Managed devices only; contractors on virtual desktops,AC-20,PR.PS-05,N51-R01 (FTC Start with Security 6),No
+POL-05,4.3,No sharing of passwords or keys,PL-4; IA-5,PR.AA-01,N51-R01 (FTC Start with Security 3),Yes
+POL-05,4.4,Do not disable security tools,SI-3,PR.PS-05,N51-R01 (FTC Start with Security 6),No
+POL-05,4.5,Access customer data only through approved paths; no downloads,PL-4,PR.DS-01,HIPAA BA (164.310(b)); DPA,No
+POL-05,4.6,No company or customer data on social media or public forums,PL-4(1),GV.PO-01,N51-R01,No
+POL-05,4.7,Report suspicious events immediately,AT-2,PR.AT-01,HIPAA BA (164.308(a)(5)),No
+POL-05,4.8,"Approved AI tools only; no customer data, PHI, or secrets unless allowed",PL-4,GV.PO-01,N51-R01; DPA,No
+POL-05,4.9,All-party consent before recording or AI summarizing calls,PL-4,GV.OC-03,Fla. Stat. 934.03(2)(d),No
+POL-05,4.10,Confidentiality agreement; return equipment,PS-6,GV.RR-04,N51-R01,No
+POL-05,4.11,Awareness and role training,AT-2; AT-3,PR.AT-01; PR.AT-02,HIPAA BA (164.308(a)(5)); N51-R01 (FTC Start with Security 7),No

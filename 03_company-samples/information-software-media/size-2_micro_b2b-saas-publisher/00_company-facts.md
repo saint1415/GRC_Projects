@@ -100,3 +100,26 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-15 | Deliverables approved by the Chief Executive Officer |
 | 2026-11-12 | First incident response tabletop exercise (P08 scenario) |
 | 2027-03-31 | Target SOC 2 Type 1 report date ("as of" date); report expected by 2027-05-31 |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Registry defaults | The primary system, P08 incident, and P10 use case are the registry defaults. The AI use case was narrowed to document extraction because that is the generative AI feature this product actually has | All |
+| Customer sign-in | Customer passwords need 8 characters with no breached-password check; accounts lock for 15 minutes after 5 failed attempts; 3 customers sign in through their own single sign-on | P02, P03 |
+| Former Customer Success Manager | Left in March 2026; the suite account was disabled on the last day, but the admin console and support desk accounts stayed active until P07 found them; disabled 2026-08-26. The admin console keeps no sign-in history | P01, P07 |
+| Account Executive | Moved from customer support to sales in 2025 and kept an admin console account until 2026-08-26 | P07 |
+| Root account | The cloud root password is in a team vault entry that all engineers and the contractor can open; its MFA device is the CTO's personal phone; unchanged since 2024 (found in P07) | P01 R-025, P07 |
+| Contractor's laptop | Held the CI key and 3 production extracts with vendor tax IDs, the newest from 2026-07-14; the extracts were deleted 2026-08-28 and the deletion confirmed in writing | P07, P08 |
+| Dependency alerts | 14 High-severity dependency alerts older than 30 days at fieldwork | P01, P03, P07 |
+| Error tracking | 14-day retention; offers data scrubbing that is not turned on | P04, P09 |
+| Model provider terms | Standard API terms say inputs are not used for training but allow retention for up to 30 days for abuse monitoring; its SOC 2 Type 2 report (Security) does not cover the zero-retention option | P03, P09, P10 |
+| AI auto-accept | A customer setting that saves extracted fields without review; turned on by 31 of 45 customers | P10 |
+| AI test results | 400-document test set (2026-09-02): 93.5% field-level accuracy; 7 of 250 certificates with a critical error; phone photos and handwritten forms much worse (13.9% versus 0.9%) | P03 G-034, P10 |
+| AI coding assistant | The company licenses a business AI coding assistant with no training on inputs, used by the CTO, the engineers, and the contractor | P06 POL-04 4.7, P10 AI-002 |
+| Uptime | External monitor: 99.94% over August 2025 to July 2026; lowest month 99.71% | P03 G-041 |
+| Questionnaires | 14 customer and prospect security questionnaires answered in the last 12 months from a 2024 answer document | P03 G-040 |
+| MSP contract | Covers laptops, the productivity suite, and the help desk, with a 4-business-hour response time, no recovery commitment, no security incident notice term, and no notice of technician changes. The MSP holds 2 suite global administrator accounts | P04, P05, P09 V-04 |
+| Finances and payroll | A cash reserve covers about 60 days of expenses; payroll runs biweekly through an outside payroll service | P05 |
+| SOC 2 plan | CPA firm to be engaged by 2026-12-15; a compliance automation tool for evidence collection from 2026-11; readiness check with the CPA firm 2027-02-28 | P01, P09 |

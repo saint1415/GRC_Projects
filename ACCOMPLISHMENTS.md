@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**53 of 216** sample companies are finished (530 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**54 of 216** sample companies are finished (540 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -58,6 +58,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation and Warehousing | Small | Marine cargo terminal | [README](03_company-samples/transportation-warehousing/size-3_small_marine-cargo-terminal/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
+| Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
 | Information | Small | Workforce scheduling SaaS | [README](03_company-samples/information-software-media/size-3_small_workforce-scheduling-saas/README.md) |
 | Communications | Small | Regional telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-3_small_regional-telecom-carrier/README.md) |
 | Information Technology | Small | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-3_small_cloud-hosting-provider/README.md) |
