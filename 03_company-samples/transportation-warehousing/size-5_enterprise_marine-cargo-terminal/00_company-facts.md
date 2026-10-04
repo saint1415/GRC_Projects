@@ -176,3 +176,11 @@ These facts were added while building the deliverables. They do not change secti
 **Recovery figures.** Revenue of about $4.8 billion a year is about $13.2 million per calendar day. The BIA (P05) scales its dollar thresholds to this figure.
 
 **Cybersecurity Plan approach.** One Plan for T-01 to T-07 (similar operations on ETOP; 101.630(d)(2)) with an annex for each terminal, and one Plan for T-08. Both are SSI (101.630(b)) and kept by the CySO. The annual Plan audits will be performed by Internal Audit, whose staff have no cybersecurity duties at the terminals (101.630(f)(4)).
+
+**ETOP details (P02, P07).** About 3,600 workforce ETOP accounts and about 1,150 SL-2 client accounts. Gate booth staff sign in with a badge tap plus PIN; longshore equipment operators sign in to VMTs with a personal PIN tied to their hiring hall registration, issued daily from the labor ordering system. Components: 44 TOS application servers and 11 managed databases in Cloud provider A; 14 gate transaction servers, 22 OCR servers and about 90 driver kiosks at T-01 to T-07; 10 equipment interface servers in an OT DMZ at the 5 container terminals. About 40 T-08 staff hold ETOP accounts for migration testing. ETOP contingency plan v3; tabletop with the disclosure committee, the CySO, the FSOs and two SL-2 clients set for 2026-11-18.
+
+**Personal information under Florida law.** The 2026 text of Fla. Stat. 501.171 defines personal information to include, with a name, government identity numbers such as driver license numbers, biometric data and geolocation information. Gate and appointment records that link a driver's name to a terminal visit are handled as personal information.
+
+**AI portfolio (P10).** 12 use cases (AI-001 to AI-012): High 3, Medium 8, Low 1; 8 reviewed by the AI governance committee, 4 due for review by 2026-11-30 (AI-009 to AI-012). AI-001 is built in-house on the Cloud provider B ML platform. The committee is chaired by the Vice President, Data and Analytics.
+
+**SOC 2 scope for 2027 (P09).** SL-1 adds Confidentiality and Processing Integrity to Security and Availability for its 2027 period; SL-2's first Type 2 period is planned for 2027-04-01 to 2027-09-30.
