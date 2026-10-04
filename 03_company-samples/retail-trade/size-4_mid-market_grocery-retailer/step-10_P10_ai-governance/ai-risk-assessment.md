@@ -143,7 +143,7 @@ Tests ran from 2026-08-24 to 2026-09-04; the AI-001 fairness test ran on 2026-08
 | AI-007 | Valid and reliable (AI 600-1 confabulation) | Claims in generated copy reviewed under POL-01 4.14 before publication; 20 published items sampled | 100% reviewed | 20 of 20 reviewed | Yes |
 | All | Explainable and interpretable | Users can see the basis for each output | Available | AI-001 prices, AI-002, AI-003 (replay), and AI-006 (factor list) yes; AI-001 offers and AI-004 no | Partial |
 
-Results: 24 tests, 4 passed (Yes), 4 partial, 16 failed.
+Results: 24 tests: 3 passed (Yes), 5 partial, 16 failed.
 
 ### 5.1 AI-001 bias and fairness testing plan
 **Groups compared.** The company holds no data on shoppers' race, ethnicity, sex, or age and will not infer it. It compares **geography**, which can act as a proxy for protected groups and for income: members' home ZIP codes in the two counties, grouped into lower, middle, and higher thirds by median household income from public Census data. Payment tender type is not used for grouping, and the EBT flag will be removed from the feed.

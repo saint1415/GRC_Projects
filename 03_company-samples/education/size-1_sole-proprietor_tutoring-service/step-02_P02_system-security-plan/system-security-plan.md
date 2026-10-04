@@ -25,7 +25,7 @@ Not applicable (reasons in P03 section 1): FERPA (N61-R01; no Department of Educ
 ### 4.1 System Security Plan Approval
 Approved by the owner-tutor on 2026-07-31.
 ### 4.2 System Authorization Decision
-No formal authorization applies to a private business. Equivalent decision: the owner-tutor accepted continued operation on 2026-07-31, on condition that the four High risks in P01 (R-001 to R-004) are treated by 2026-08-14, before the fall term starts on 2026-08-17, and that the children's privacy notice is posted by the same date.
+No formal authorization applies to a private business. Equivalent decision: the owner-tutor accepted continued operation on 2026-07-31, on condition that the free fixes for the four High risks in P01 (R-001 to R-004: MFA, disk encryption, a separate family account) are in place by 2026-08-14, before the fall term starts on 2026-08-17, that the children's privacy notice is posted by the same date, and that the independent backup for R-001 is in place by 2026-09-30.
 ### 4.3 System Operational Status
 Operational. Planned changes: password manager and MFA on every account (2026-08-14); separate family device account (2026-08-14); first retention purge (2026-09-30); independent backup of student folders (2026-09-30).
 
