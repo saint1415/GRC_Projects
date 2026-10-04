@@ -171,7 +171,7 @@ These facts were added while building the deliverables. They do not change secti
 
 **SL-2 clients.** C-01 to C-04: three independent terminal operators (Gulf coast and Atlantic coast ports) and one port authority-operated public terminal. Together about 1.6 million container moves a year. Each has its own TOS environment on ETOP, its own users (about 1,150 client user accounts in total), and its own FSP, FSO, CySO and Cybersecurity Plan.
 
-**Personal information held.** About 12,000 employee records (SYS-10); about 38,000 registered truck driver profiles with name, phone, driver license number and state, and TWIC status (SYS-11 and the gate module); gate and PACS records with TWIC card identifiers for drivers and longshore workers (SYS-09; SSI under 105.225). Card data is not held.
+**Personal information held.** About 12,000 employee records (SYS-10); about 38,000 registered truck driver profiles with name, phone, driver license number and state, and TWIC status (SYS-11 and the gate module); gate and PACS records with TWIC card identifiers (FASC-N) for drivers and longshore workers (SYS-09), which the FSO must keep for 2 years and protect from unauthorized access or disclosure (33 CFR 105.225(a), (b)(9), (c)). Card data is not held.
 
 **Recovery figures.** Revenue of about $4.8 billion a year is about $13.2 million per calendar day. The BIA (P05) scales its dollar thresholds to this figure.
 

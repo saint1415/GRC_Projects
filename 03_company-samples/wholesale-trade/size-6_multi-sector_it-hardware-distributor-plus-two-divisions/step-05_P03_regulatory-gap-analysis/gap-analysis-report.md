@@ -151,7 +151,7 @@ Payment page script management and tamper detection (6.4.3, 11.6.1) cover 1 of 3
 | 10 | Cross-division reporting readiness (10) | All | 252.204-7012(c); 52.204-25(d); Form 8-K Item 1.05 | High | Two more certificate holders; cross-division tabletop | Group General Counsel | 2026-12-15 |
 | 11 | CCPA cybersecurity audit and risk assessments (12) | OR, group | Cal. Code Regs. tit. 11, 7120-7121, 7150 | Moderate | Audit plan for the 2027 period; risk assessments | Group Chief Privacy Officer | 2027-06-30 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07; POAM-001, POAM-002, POAM-006 to POAM-012, POAM-015, POAM-017, POAM-018, and POAM-022 to POAM-027 trace to this analysis).
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). The gap rows cite POAM-001 to POAM-012, POAM-014 to POAM-018, POAM-020, and POAM-022 to POAM-027 in their remediation actions. Five items were raised by this analysis itself (POAM-022 to POAM-024, POAM-026, and POAM-027); the others came from the P07 assessment or, for POAM-025, the P10 AI assessment.
 
 ## 6. Pending regulatory changes
 These are **proposed** or scheduled and are not treated as current obligations.

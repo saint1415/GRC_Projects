@@ -73,10 +73,10 @@ The readable drive is the decisive issue. Certificates were issued for that batc
 ## 4. Remediation plan and evidence calendar
 | Quarter | Division | Criteria | Evidence to collect |
 |---|---|---|---|
-| 2026 Q4 | IT Distribution | C1.2, CC5.3, CC6.5 | Re-processed batch and corrected certificates; verification sampling records on all lines |
+| 2026 Q4 | IT Distribution | C1.2, CC5.3, CC6.5, CC4.1, CC7.4 | Re-processed batch and corrected certificates; verification sampling records on all lines; monthly quality sampling; notification matrix rows for ITAD customers |
 | 2026 Q4 | Logistics | CC1.3, CC5.3, CC2.3 | Re-issued supplement; inheritance matrix |
 | 2026 Q4 | Logistics | CC6.1, CC6.6, CC9.2, A1.2 | Client MFA rollout; PAM vendor session records; vendor reviews; PLC backups in the vault |
-| 2027 Q1 | IT Distribution | CC2.3, CC4.1, CC7.4, CC9.2 | System description; monthly quality sampling; matrix rows for ITAD customers; recycler assessments. Type 1 as of 2027-03-31 |
+| 2027 Q1 | IT Distribution | CC2.3, CC9.2 | System description; recycler assessments. Type 1 as of 2027-03-31 |
 | 2027 Q1 | Logistics | CC2.3, A1.3, CC6.2 | System description with carve-ins; ransomware and PLC restore tests; agency account expiry. Type 1 as of 2027-03-31 |
 | 2027 Q2 | Logistics | CC7.2 | OT monitoring at all DCs (due 2027-06-30); an exception in the first Type 2 period is likely if it slips |
 | 2027 Q2 to Q3 | Both | All in-scope criteria | Operating evidence for the first Type 2 period (2027-04-01 to 2027-09-30) |

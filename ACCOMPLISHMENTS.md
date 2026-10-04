@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**68 of 216** sample companies are finished (680 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**70 of 216** sample companies are finished (700 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -62,10 +62,12 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Wholesale Trade | Small | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-3_small_it-hardware-distributor/README.md) |
 | Wholesale Trade | Mid-Market | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-4_mid-market_it-hardware-distributor/README.md) |
 | Wholesale Trade | Enterprise | IT hardware distributor | [README](03_company-samples/wholesale-trade/size-5_enterprise_it-hardware-distributor/README.md) |
+| Wholesale Trade | Multi-Sector | IT hardware distributor plus two divisions | [README](03_company-samples/wholesale-trade/size-6_multi-sector_it-hardware-distributor-plus-two-divisions/README.md) |
 | Retail Trade | Sole Proprietorship | Corner grocery | [README](03_company-samples/retail-trade/size-1_sole-proprietor_corner-grocery/README.md) |
 | Retail Trade | Micro | Grocery retailer | [README](03_company-samples/retail-trade/size-2_micro_grocery-retailer/README.md) |
 | Retail Trade | Small | Independent grocery store | [README](03_company-samples/retail-trade/size-3_small_independent-grocery-store/README.md) |
 | Transportation and Warehousing | Sole Proprietorship | Freight forwarder customs broker | [README](03_company-samples/transportation-warehousing/size-1_sole-proprietor_freight-forwarder-customs-broker/README.md) |
+| Transportation and Warehousing | Micro | Freight forwarding office | [README](03_company-samples/transportation-warehousing/size-2_micro_freight-forwarding-office/README.md) |
 | Transportation and Warehousing | Small | Marine cargo terminal | [README](03_company-samples/transportation-warehousing/size-3_small_marine-cargo-terminal/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |

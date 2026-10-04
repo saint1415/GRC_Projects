@@ -70,12 +70,14 @@ The full list, with evidence, is in `gap-analysis.csv`. High and Moderate gaps a
 ## 5. Remediation plan
 The plan fits a 7-person office: most actions are one-page procedures, CBP submissions, or MSP settings, not new systems.
 
-| Phase | Due | Actions | Rows closed |
+| Phase | Due | Actions | Rows addressed |
 |---|---|---|---|
 | 1. CBP notices and people | 2026-09-30 | Alternative storage notice to CBP Regulatory Audit; scanning procedure; last-day checklist with the CBP employee list and signing authority steps; backup point of contact; wipe confirmations | G-037, G-038, G-024, G-002, G-004, G-047 |
 | 2. Records and breach readiness | 2026-10-31 | 72-hour notice procedure and template; importer number data map; data regions confirmed; retention policy; retrieval procedure and first yearly test; backup restore test and MFA; training; recorded entry review; AI suggestion rule | G-008, G-009, G-010, G-013, G-014, G-017, G-018, G-020, G-021, G-033, G-041, G-043, G-048 |
-| 3. Contracts and continuity | 2026-11-30 to 2026-12-31 | Client terms clause; messaging app replaced by a shared mailbox; new-client check and separation reporting; index of older scans; second licensed officer; continuing education records folder; supervision plan review | G-005, G-006, G-007, G-015, G-016, G-031, G-032, G-036, G-039, G-044, G-046 |
+| 3. Contracts and continuity | 2026-11-30 to 2026-12-31 | Client terms clause; messaging app replaced by a shared mailbox; new-client check and separation reporting; index of older scans; second licensed officer; continuing education records folder; supervision plan review | G-007, G-015, G-016, G-031, G-036, G-039, G-044, G-046 (plus improvements to Met rows G-005, G-006, G-032) |
 | 4. Annual cycle | 2027-01-31 to 2027-02-01 | Continuing education complete; triennial status report filed with certification | G-029, G-035 |
+
+The four phases close all 29 Not met and Partially met rows (6, 13, 8, and 2).
 
 **Progress check.** The Office and Compliance Manager reports progress to the owner at a monthly 30-minute meeting, using the P07 POA&M as the tracker.
 

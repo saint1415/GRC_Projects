@@ -118,7 +118,7 @@ flowchart LR
   SPA -.-> L2
 ```
 
-**Target state (POAM-006, POAM-007, POAM-008, due 2026-11-30 to 2026-12-15):** no CUI in the commercial ERP or collaboration tenant; data loss prevention rules stop CUI-marked files leaving the FFE; the IC-2 label printer moves inside the lab network; the C3PAO scope is the FFE, the two labs, and their security protection assets only.
+**Target state (POAM-006, POAM-007, POAM-008, due 2026-10-31 to 2027-01-31):** no CUI in the commercial ERP or collaboration tenant; data loss prevention rules stop CUI-marked files leaving the FFE; the IC-2 label printer moves inside the lab network; the C3PAO scope is the FFE, the two labs, and their security protection assets only.
 
 ## 3. Common versus division-specific controls
 `cloud-control-map.csv` has 50 rows across 33 components. The `control_scope` column shows who owns each placement:

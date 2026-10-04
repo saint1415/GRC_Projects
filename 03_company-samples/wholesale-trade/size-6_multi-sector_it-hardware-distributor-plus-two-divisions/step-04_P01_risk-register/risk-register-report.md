@@ -49,7 +49,7 @@ Risks that could lead to worker injury (DC automation) or to covered or tampered
 ### Group risks rated High
 | Risk ID | Risk | Rolls up | Treatment | Owner | Due |
 |---|---|---|---|---|---|
-| GR-01 | Tampered or counterfeit products enter distribution through a compromised or dishonest supplier | ID-003, ID-004, LW-005, OR-004, OR-006 | Serial validation at all 9 DCs; broker assessments; firmware checks at receiving; product-integrity playbook (P08) | Group supply chain risk director | 2027-03-31 |
+| GR-01 | Tampered or counterfeit products enter distribution through a compromised or dishonest supplier | ID-003, ID-004, ID-019, LW-005, OR-004, OR-006 | Serial validation at all 9 DCs; broker assessments; firmware checks at receiving; product-integrity playbook (P08) | Group supply chain risk director | 2027-03-31 |
 | GR-02 | Ransomware spreads through shared services and stops fulfillment in every division | LW-004, ID-010 | WMS ransomware recovery test including the replica; segmentation; isolated recovery account | Group CISO | 2027-03-31 |
 | GR-03 | CUI is exposed or mishandled outside the Federal Fulfillment Enclave | ID-001, ID-002, ID-012 | Purge and block CUI outside the FFE; DLP on CUI markings; close the IC-2 route | Group CMMC program director | 2026-12-15 |
 | GR-10 | Consumer payment or personal data is stolen from Online Retail | OR-001, OR-002, OR-015 | Script controls on all brands; stop recording card data; web application testing | Online Retail president | 2026-12-31 |
@@ -77,7 +77,7 @@ There are no Very High risks, and the common controls (identity, SOC, cloud guar
 3. **One WMS and unmonitored DC automation** (GR-02, GR-11) make Logistics the group's operational single point of failure (gaps 6 and 7).
 4. **Online Retail's card and consumer data** (GR-10) is well scoped but leaks at payment page scripts and in call recordings (gap 4).
 
-Governance gaps (Logistics inheritance, supplement drift, AI governance, notification readiness) are Moderate at group level (GR-05, GR-06, GR-07, GR-09). They matter because they hide whether Logistics controls actually operate, which is why the P07 assessment sampled Logistics more heavily.
+Governance gaps (Logistics inheritance, supplement drift, AI governance, notification readiness) are Moderate or Low at group level (GR-05, GR-06, and GR-09 Moderate; GR-07 Low). They matter because they hide whether Logistics controls actually operate, which is why the P07 assessment sampled Logistics more heavily.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** CUI containment and CMMC readiness (GR-03, GR-04); receiving serial validation at 5 DCs and broker assessments (GR-01); WMS ransomware recovery design (GR-02); OT segmentation, monitoring, and vendor access through PAM (GR-11); payment page script controls and contact center recording fix (GR-10).

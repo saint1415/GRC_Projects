@@ -110,10 +110,10 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 2. Cloud landing zones, hubs, and keys
 3. WAN and DC connectivity
 4. Group ERP
-5. Storefront and checkout, then payment authorization (these run in provider A and often recover in parallel)
-6. to 9. Security monitoring, pick-pack-ship, order capture, EDI hub
-10. to 15. DC automation, receiving, transportation, 3PL fulfillment, federal integration, contact center
-16. to 26. Fraud screening, compliance screening, purchasing, marketplace, imports, Lifecycle Services, financial close, returns, payroll, and pricing.
+5. Storefront and checkout, then payment authorization (priorities 5 and 6; both run in provider A and often recover in parallel)
+7. to 10. Pick-pack-ship, order capture, EDI hub, security monitoring
+11. to 15. DC automation, receiving, transportation, 3PL fulfillment, federal integration
+16. to 26. Purchasing, contact center, fraud screening, compliance screening, marketplace, imports, Lifecycle Services, financial close, returns, payroll, and pricing.
 
 Section 889 screening (BP-ID04) is placed after order capture because federal orders are held, not shipped, until it is back.
 
