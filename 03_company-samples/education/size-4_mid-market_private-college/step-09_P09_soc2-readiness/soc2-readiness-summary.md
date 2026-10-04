@@ -72,9 +72,9 @@ Each maps to a P07 POA&M item. Processing Integrity and Privacy are out of scope
 |---|---|---|
 | 2026 Q4 | CC3.4, CC8.1, CC9.1, A1.2, C1.1 | Material-change trigger records; change tickets with second reviewer; IT DR plan; license server backup; automated consent check |
 | 2027 Q1 | CC1.2, CC1.4, CC2.1, CC2.3, CC3.3, CC5.2, CC5.3, CC6.1, CC6.2, CC6.3, CC6.5, CC6.6, CC6.7, CC7.1, CC7.2, CC7.3, CC7.4, CC7.5, CC9.2, A1.3, C1.2 | Quarterly audit committee minutes; role-based training records; SIEM source list and alerts; partner system description; partner MFA settings; semiannual access reviews; encryption rule and interconnection terms; fraud incident records; tabletop reports; restore test records; vendor amendments and reviews; retention schedule |
+| 2027 Q1 (by 2027-03-31) | CC6.4 (badge readers at Campus 3) | Badge system reports |
 | 2027-03-31 | Type 1 (design) report as an interim deliverable to the partners | Management's system description and assertion |
 | 2027-04-01 to 2027-09-30 | Type 2 observation period | All recurring control evidence (access reviews, monthly scans, quarterly restore tests, vendor reviews, change tickets) |
-| 2027 Q1 (by 2027-03-31) | CC6.4 (badge readers at Campus 3) | Badge system reports |
 
 **Status reporting.** The vCISO reports readiness monthly to the CIO and quarterly to the audit committee and the two hospital-system partners.
 

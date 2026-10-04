@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**79 of 216** sample companies are finished (790 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**80 of 216** sample companies are finished (800 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -100,6 +100,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Educational Services | Sole Proprietorship | Tutoring service | [README](03_company-samples/education/size-1_sole-proprietor_tutoring-service/README.md) |
 | Educational Services | Micro | Tutoring company | [README](03_company-samples/education/size-2_micro_tutoring-company/README.md) |
 | Educational Services | Small | Career college | [README](03_company-samples/education/size-3_small_career-college/README.md) |
+| Educational Services | Mid-Market | Private college | [README](03_company-samples/education/size-4_mid-market_private-college/README.md) |
 | Health Care and Social Assistance | Sole Proprietorship | Solo physician practice | [README](03_company-samples/health-care/size-1_sole-proprietor_solo-physician-practice/README.md) |
 | Health Care and Social Assistance | Micro | Two-physician primary care office | [README](03_company-samples/health-care/size-2_micro_two-physician-primary-care-office/README.md) |
 | Health Care and Social Assistance | Small | Multi-specialty practice | [README](03_company-samples/health-care/size-3_small_multi-specialty-practice/README.md) |
