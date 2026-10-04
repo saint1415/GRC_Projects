@@ -150,8 +150,8 @@ See `control-implementation.csv` (142 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 113 |
-| Partially implemented | 25 |
+| Implemented | 112 |
+| Partially implemented | 26 |
 | Planned | 4 |
 | **Total** | **142** |
 
@@ -161,7 +161,7 @@ See `control-implementation.csv` (142 controls).
 | Hybrid (shared between a provider and the OCPP teams) | 29 |
 | System-specific | 31 |
 
-The Planned controls are High-baseline availability supplements: CP-2(2), CP-2(5), CP-8(4), CP-10(4). Partially implemented controls: AC-2, AC-2(3), AC-17, AU-6, CM-3, CM-6, CM-8, CP-2, CP-4, CP-10, IA-5, IR-3, IR-4, IR-8, MA-4, PS-4, RA-5, SA-9, SC-7, SI-2, SI-4, SI-7, SI-7(1), SR-6, CA-8.
+The Planned controls are High-baseline availability supplements: CP-2(2), CP-2(5), CP-8(4), CP-10(4). Partially implemented controls: AC-2, AC-2(3), AC-17, AU-6, CM-3, CM-6, CM-8, CP-2, CP-4, CP-10, IA-5, IR-3, IR-4, IR-8, MA-4, PS-4, RA-3, RA-5, SA-9, SC-7, SI-2, SI-4, SI-7, SI-7(1), SR-6, CA-8.
 
 ### 10.2 Control assessment status
 Internal Audit assessed 44 of these controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`. The QSA's ROC fieldwork follows on 2026-10-19 and reuses the same evidence where the PCI DSS testing procedures allow.

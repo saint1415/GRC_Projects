@@ -116,3 +116,13 @@ These facts were added because the deliverables needed them. They do not change 
 | Finances and payroll | A cash reserve covers about 3 weeks of expenses; payroll runs biweekly through the outside payroll service | P01, P05 |
 | Assessor | The P07 assessor is an independent security consultant (not a QSA) on a fixed fee, not involved in the risk or gap analysis and operating no control | P07 |
 | Hurricane | The store closed for 2 days in 2024 for a hurricane; the Owner moved the laptop and the store phone home | P01, P05 |
+| Provider assurance | The provider's SOC 2 Type 2 report (Security and Availability, 12 months to 2026-03-31) states RTO 4 hours and RPO 1 hour; its service provider AOC is dated 2026-04. The P2PE solution listing covers the countertop terminal model only | P02, P05, P09 |
+| CCTV exposure | The port forwarded to the CCTV recorder was confirmed open in P07 testing on 2026-08-11; the MSP closed it and changed the default password on 2026-08-14 | P01, P02, P07 |
+| Payout settings | P07 testing showed that any administrator login, including the Store Manager's without MFA, could change the payout bank account; the provider emails the Owner only after a change is saved | P01, P07 |
+| Retired tablet | A POS tablet retired in 2025 sits in a back office drawer with a cached manager login; never reset | P02, P07 |
+| Checkout scripts | Browser captures on 2026-07-28 and 2026-08-11 showed the chat widget script had changed version between them without anyone noticing | P07, P08 |
+| Card number in email | A 2026 customer email in the shared orders mailbox contained a full card number (to pay for a phone order); staff had replied without removing it | P03 |
+| Website claims | The checkout footer says "100% safe and secure checkout"; offer emails say "savings picked just for you"; markdown tags say "lowest price" | P03, P10 |
+| Phishing history | In 2025 the Bookkeeper received a fake supplier invoice email asking for a bank change; it was caught by a phone call but never shared with staff | P01, P07 |
+| AI feature settings | The platform built customer segments from payment tender type (including SNAP EBT) and had provider model-improvement data sharing on by default; the Owner turned both off on 2026-08-26. SNAP benefits must be accepted at the same prices and on the same terms as cash purchases (7 CFR 278.2(b)) | P03, P10 |
+| Insurance renewal | The cyber liability endorsement renews on 2026-11-01; the renewal application is due 2026-10-15 | P09 |

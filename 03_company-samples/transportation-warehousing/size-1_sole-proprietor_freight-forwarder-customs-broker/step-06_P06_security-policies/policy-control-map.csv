@@ -1,2 +1,42 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,Fla. Stat. 501.171(2),No
+POL-01,4.2,"Owner designated security officer, recordkeeping contact, and CBP point of contact",PM-2,GV.RR-02,19 CFR 111.21(d); 111.3(b),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Fla. Stat. 501.171(2),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,Fla. Stat. 501.171(2),No
+POL-01,4.5,Annual evaluation with periodic outside review,CA-2,ID.IM-02,19 CFR 111.28(a),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,5.1,Written confidentiality terms for contractors who see client records,SA-9,GV.SC-05,19 CFR 111.24,Yes
+POL-01,5.2,Future employees trained first; CBP employee information within 30 days; sanctions,PS-8,GV.RR-04,19 CFR 111.28(b),No
+POL-01,5.3,"Written, time-limited exceptions",PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,6.1,"Client records shared only as 111.24 allows, including written client authorization for service providers",SA-9,GV.SC-05,19 CFR 111.24,Yes
+POL-01,6.2,"Vendor list with records held, location, and terms",SA-9,GV.SC-05,19 CFR 111.24; 111.23(a),Yes
+POL-01,6.3,Annual review of the customs software vendor SOC 2 report and customer controls,SA-9,GV.SC-07,N48-49-R05 (CTPAT client questionnaire),Yes
+POL-01,6.4,"Owner-started, watched remote support; unattended access off",AC-17,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,6.5,Records stored within the customs territory; storage region recorded,SA-9,GV.SC-05,19 CFR 111.23(a),No
+POL-01,7.1,Own accounts; no shared credentials; owner-only customs software and CBP portals,IA-2; AC-2,PR.AA-01,19 CFR 111.33; 111.37,Yes
+POL-01,7.2,MFA everywhere it is offered; no app passwords or legacy sign-in,IA-2(1); IA-2(2),PR.AA-03,19 CFR 111.24; Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique passphrases in a password manager; change defaults; change after compromise or departure,IA-5,PR.AA-01,Fla. Stat. 501.171(2),Yes
+POL-01,7.4,Bookkeeper named account with least role; quarterly user review,AC-2,PR.AA-05,19 CFR 111.24,Yes
+POL-01,7.5,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.6,Sealed recovery codes and emergency sheet with backup broker and records custodian,AC-2; CP-2,PR.AA-05,19 CFR 111.30(e); 111.3(b),No
+POL-01,7.7,"Monthly review of sign-ins, forwarding rules, and eCBP contact details",AU-6,DE.AE-02,19 CFR 111.21(b); 111.30(a),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,19 CFR 111.24,No
+POL-01,8.2,Restricted data only in approved systems,AC-3; SA-9,PR.DS-01,19 CFR 111.24,No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,Fla. Stat. 501.171(1)(g)2.,Yes
+POL-01,8.4,Keep paper originals until the alternative storage notice; scanning procedure and naming rule,SI-12,ID.AM-07,19 CFR 163.5(b)(1)-(2); 111.25(a),No
+POL-01,8.5,Messaging app documents filed the same day and deleted from the phone,AC-19; SI-12,ID.AM-07,19 CFR 111.21(a); 46 CFR 515.33(b),No
+POL-01,8.6,Call-back on a known number before any new or changed payee,AT-2(3),PR.AT-01,19 CFR 111.29(a),Yes
+POL-01,8.7,"Independent versioned backup of the records archive, restored quarterly",CP-9,PR.DS-11,19 CFR 163.5(b)(2)(vi); 111.25(b),Yes
+POL-01,8.8,Cross-cut shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,Fla. Stat. 501.171(8),Yes
+POL-01,8.9,Retention schedule with yearly purge and holds,SI-12,ID.AM-08,19 CFR 111.23(b); 111.26; 15 CFR 30.10(a),No
+POL-01,9.2,Customs business only within the customs territory,PL-4,GV.PO-01,19 CFR 111.3(a),No
+POL-01,9.3,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,Fla. Stat. 501.171(2),No
+POL-01,9.4,"Business Wi-Fi network, not the household network",SC-7,PR.IR-01,Fla. Stat. 501.171(2),No
+POL-01,9.5,"AI tools only after assessment, no-training terms, and client authorization; owner checks every classification",PL-4; SA-9,GV.PO-01,19 CFR 111.24; 111.28(a); 111.39(b),Yes
+POL-01,9.6,"Annual security course including payment fraud, plus continuing broker education",AT-2; AT-2(3),PR.AT-01,19 CFR 111.102(b),Yes
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,19 CFR 111.21(b),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,19 CFR 111.21(b),Yes
+POL-01,10.3,72-hour notice to the CBP Security Operations Center; 10-business-day update,IR-6,RS.CO-02,19 CFR 111.21(b),Yes
+POL-01,10.4,Meet state and client notice deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(4),Yes
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,Fla. Stat. 501.171(2),No
+POL-01,11.2,Backup broker coverage agreement and standby POAs,CP-2,RC.RP-01,19 CFR 111.3(b); 111.28(a)(11),No

@@ -58,7 +58,7 @@ Not applicable to PCI does not mean unneeded. Network separation, antivirus, and
 | FACTA receipt truncation | 1 | 0 | 0 | 0 | 1 |
 | **Total (74)** | **8** | **14** | **23** | **29** | **74** |
 
-Of the 37 rows with gaps, 6 are rated High, 15 Moderate, and 16 Low.
+Of the 37 rows with gaps, 6 are rated High, 16 Moderate, and 15 Low.
 
 **What the numbers say.** What the provider does is strong: P2PE, the hosted card fields, platform patching, and the web application firewall are all Met or inherited. What the store does is mostly missing: no written policies, no scope document, no terminal checks, no training, and no incident plan. That is typical of a 7-person business that bought a good platform and assumed it covered everything. Most Not met rows need a page of procedure, not new technology.
 
