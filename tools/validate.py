@@ -110,6 +110,10 @@ for facts in S.rglob("00_company-facts.md"):
             errors.append(f"{where}: unfinished template marker in a completed sample")
         if "\u2014" in text:
             errors.append(f"{where}: em dash (house style uses a period or comma)")
+        for line in text.splitlines():  # known clock error found in Phase 5: 52.204-23 is 3 business days
+            if "52.204-23" in line and re.search(r"\b(1|one) business day", line) and not re.search(r"\b(3|three)[ -]business[ -]days?", line):
+                errors.append(f"{where}: FAR 52.204-23 given a 1-business-day clock (it is 3 business days)")
+                break
         if p.suffix == ".csv":
             with open(p, newline="") as fh:
                 widths = {len(r) for r in csv.reader(fh) if r}
