@@ -33,7 +33,7 @@ All workforce members, vendors, partners, and service accounts with access to co
 | Workforce | Protect credentials; never share accounts |
 
 ## 4. Policy statements
-4.1 Every user must have a unique account. Shared or generic accounts are prohibited, including on MES and DNC terminals. **Plant 2 exception until 2027-01-31** (risk accepted by the CEO with compensating controls in SSP section 11). (IA-2; AC-2; 3.5.1; 3.5.2)
+4.1 Every user must have a unique account. Shared or generic accounts are prohibited, including on MES and DNC terminals. **Plant 2 exception until 2027-01-31**, approved by the COO under POL-01 4.7 with the compensating controls in SSP section 11. (IA-2; AC-2; 3.5.1; 3.5.2)
 4.2 Enclave access, and any access to ITAR technical data, requires confirmation of U.S.-person status by the Director of Trade Compliance and Contracts before the account is enabled. Foreign persons may not receive enclave accounts unless an export authorization covers the data. (AC-2; PS-3; 22 CFR 120.56)
 4.3 Access must be role-based, least-privilege, and approved by the user's manager and the system owner before it is granted. Program-edit rights in MES and DNC are limited to NC programmers and manufacturing engineers. (AC-2; AC-3; AC-6; CM-5; PR.AA-05; 3.1.2; 3.1.5)
 4.4 MFA is required for all access to enclave services and for all corporate accounts. Administrators must use hardware security keys. All enclave users must use phishing-resistant authenticators by 2027-01-31. Local administrator access to shop-floor servers must go through the access broker with MFA. (IA-2(1); IA-2(2); PR.AA-03; 3.5.3)

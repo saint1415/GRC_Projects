@@ -115,7 +115,7 @@ Deliverables: this plan and report, `assessment-results.csv` (259 rows), and `po
 **Fully Other than satisfied:** AC-4, CA-8, IA-3, SR-6 (each has a single determination statement).
 
 **Themes:**
-1. **AZ-1 was added faster than its controls.** Baselines (CM-2, CM-6), logging (AU-2, AU-12), segmentation (SC-7), removable media (MP-7), remote maintenance (MA-4), device authentication (IA-3, CM-8(3)), and inventory (CM-8) findings all trace to the new site.
+1. **AZ-1 was added faster than its controls.** Baselines (CM-2, CM-6), logging (AU-2, AU-12), segmentation (SC-7), removable media (MP-7), remote maintenance (MA-4), device authentication (IA-3, CM-8(3)), and inventory (CM-8) findings all trace to the new site (the device authentication and inventory gaps also affect FL-3).
 2. **Operating drift in the certified sites:** contractor separations (AC-2, PS-4), TX-1 visitor escort and records (PE-3, PE-8), emergency change approvals (CM-3), sanitization records (MP-6), vulnerability SLAs (RA-5, SI-2), privileged training (AT-3), and reportability records (IR-4, IR-6).
 3. **Export control inside the enclave:** missing ITAR attributes on migrated PLM folders (AC-4).
 4. **Level 3 readiness:** penetration testing (CA-8), threat hunting (RA-10), and supplier risk (SA-9, SR-6).

@@ -29,45 +29,45 @@ The set has 5 policies, 21 standards, and 14 procedures. Policy statements: 53 (
 | Document | Level | Owner | Approver |
 |---|---|---|---|
 | POL-01 Information Security Policy | Policy | CISO | Risk and technology committee of the board (on the recommendation of the executive risk committee) |
-| STD-01.1 Risk Assessment Standard | Standard | Set by CISO | CISO |
-| STD-01.2 Security Assessment and System Authorization Standard | Standard | Set by CISO | CISO |
-| STD-01.3 Third-Party Security Standard | Standard | Set by CISO | CISO |
-| STD-01.4 Audit Logging Standard | Standard | Set by CISO | CISO |
-| STD-01.5 Configuration and Change Management Standard | Standard | Set by CISO | CISO |
-| STD-01.6 Maintenance Standard | Standard | Set by CISO | CISO |
-| STD-01.7 Physical Security Standard | Standard | Set by CISO | CISO |
-| STD-01.8 CMMC Scope Management Standard | Standard | Set by CISO | CISO |
-| PRC-01.1 Sanctions Procedure | Procedure | CISO | Owning director (under POL-01) |
-| PRC-01.2 Policy Exception Procedure | Procedure | CISO | Owning director (under POL-01) |
-| PRC-01.3 Change Management Procedure | Procedure | CISO | Owning director (under POL-01) |
-| PRC-01.4 CMMC Affirmation Procedure | Procedure | CISO | Owning director (under POL-01) |
+| STD-01.1 Risk Assessment Standard | Standard | CISO | CISO |
+| STD-01.2 Security Assessment and System Authorization Standard | Standard | CISO | CISO |
+| STD-01.3 Third-Party Security Standard | Standard | Director of Third-Party Risk Management | CISO |
+| STD-01.4 Audit Logging Standard | Standard | CISO | CISO |
+| STD-01.5 Configuration and Change Management Standard | Standard | CISO | CISO |
+| STD-01.6 Maintenance Standard | Standard | CISO | CISO |
+| STD-01.7 Physical Security Standard | Standard | Director of Corporate Security | CISO |
+| STD-01.8 CMMC Scope Management Standard | Standard | Director, CMMC Program Office | CISO |
+| PRC-01.1 Sanctions Procedure | Procedure | Chief Human Resources Officer | Owning director or officer (under POL-01) |
+| PRC-01.2 Policy Exception Procedure | Procedure | CISO | Owning director or officer (under POL-01) |
+| PRC-01.3 Change Management Procedure | Procedure | CISO | Owning director or officer (under POL-01) |
+| PRC-01.4 CMMC Affirmation Procedure | Procedure | Director, CMMC Program Office | Owning director or officer (under POL-01) |
 | POL-02 Access Control Policy | Policy | Director of Identity and Access Management | Executive risk committee |
-| STD-02.1 Account Management Standard | Standard | Set by Director of Identity and Access Management | CISO |
-| STD-02.2 Identification and Authentication Standard | Standard | Set by Director of Identity and Access Management | CISO |
-| STD-02.3 Remote and Vendor Access Standard | Standard | Set by Director of Identity and Access Management | CISO |
-| PRC-02.1 Access Provisioning Procedure | Procedure | Director of Identity and Access Management | Owning director (under POL-02) |
-| PRC-02.2 Access Certification Procedure | Procedure | Director of Identity and Access Management | Owning director (under POL-02) |
-| PRC-02.3 Privileged Access Procedure | Procedure | Director of Identity and Access Management | Owning director (under POL-02) |
-| PRC-02.4 Export Attribute Procedure | Procedure | Director of Identity and Access Management | Owning director (under POL-02) |
+| STD-02.1 Account Management Standard | Standard | Director of Identity and Access Management | CISO |
+| STD-02.2 Identification and Authentication Standard | Standard | Director of Identity and Access Management | CISO |
+| STD-02.3 Remote and Vendor Access Standard | Standard | Director of Identity and Access Management | CISO |
+| PRC-02.1 Access Provisioning Procedure | Procedure | Director of Identity and Access Management | Owning director or officer (under POL-02) |
+| PRC-02.2 Access Certification Procedure | Procedure | Director of Identity and Access Management | Owning director or officer (under POL-02) |
+| PRC-02.3 Privileged Access Procedure | Procedure | Director of Identity and Access Management | Owning director or officer (under POL-02) |
+| PRC-02.4 Export Attribute Procedure | Procedure | Vice President, Trade Compliance | Owning director or officer (under POL-02) |
 | POL-03 Incident Response and Resilience Policy | Policy | Director of Security Operations | Executive risk committee |
-| STD-03.1 Incident Classification and Escalation Standard | Standard | Set by Director of Security Operations | CISO |
-| STD-03.2 Breach and Government Reporting Standard | Standard | Set by Director of Security Operations | CISO |
-| STD-03.3 Contingency and Disaster Recovery Standard | Standard | Set by Director of Security Operations | CISO |
-| PRC-03.1 CUI Exfiltration Runbook (P08) | Procedure | Director of Security Operations | Owning director (under POL-03) |
-| PRC-03.2 SEC Materiality Assessment Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
-| PRC-03.3 Multi-State Breach Notification Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
-| PRC-03.4 Threat Hunting Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
+| STD-03.1 Incident Classification and Escalation Standard | Standard | Director of Security Operations | CISO |
+| STD-03.2 Breach and Government Reporting Standard | Standard | Vice President, Contracts | CISO |
+| STD-03.3 Contingency and Disaster Recovery Standard | Standard | Director of Security Operations | CISO |
+| PRC-03.1 CUI Exfiltration Runbook (P08) | Procedure | Director of Security Operations | Owning director or officer (under POL-03) |
+| PRC-03.2 SEC Materiality Assessment Procedure | Procedure | General Counsel | Owning director or officer (under POL-03) |
+| PRC-03.3 Multi-State Breach Notification Procedure | Procedure | General Counsel | Owning director or officer (under POL-03) |
+| PRC-03.4 Threat Hunting Procedure | Procedure | Director of Security Operations | Owning director or officer (under POL-03) |
 | POL-04 Data Classification and Handling Policy | Policy | Vice President, Engineering (CUI data owner), with the Vice President, Trade Compliance | Executive risk committee |
-| STD-04.1 Encryption Standard | Standard | Set by Vice President, Engineering | CISO |
-| STD-04.2 Media Protection and Disposal Standard | Standard | Set by Vice President, Engineering | CISO |
-| STD-04.3 Backup Standard | Standard | Set by Vice President, Engineering | CISO |
-| STD-04.4 CUI Marking Standard | Standard | Set by Vice President, Engineering | CISO |
-| PRC-04.1 Public Release Review Procedure | Procedure | Vice President | Owning director (under POL-04) |
+| STD-04.1 Encryption Standard | Standard | CISO | CISO |
+| STD-04.2 Media Protection and Disposal Standard | Standard | Director of Endpoint Engineering | CISO |
+| STD-04.3 Backup Standard | Standard | Director of Cloud Platform Engineering | CISO |
+| STD-04.4 CUI Marking Standard | Standard | Vice President, Engineering | CISO |
+| PRC-04.1 Public Release Review Procedure | Procedure | Vice President, Trade Compliance | Owning director or officer (under POL-04) |
 | POL-05 Acceptable Use Policy | Policy | Chief Human Resources Officer | Executive risk committee |
-| STD-05.1 Security Awareness and Training Standard | Standard | Set by Chief Human Resources Officer | CISO |
-| STD-05.2 External Systems and Personal Devices Standard | Standard | Set by Chief Human Resources Officer | CISO |
-| STD-05.3 Approved AI Tools List | Standard | Set by Chief Human Resources Officer | CISO |
-| PRC-05.1 Visitor Escort Procedure | Procedure | Chief Human Resources Officer | Owning director (under POL-05) |
+| STD-05.1 Security Awareness and Training Standard | Standard | Chief Human Resources Officer | CISO |
+| STD-05.2 External Systems and Personal Devices Standard | Standard | CISO | CISO |
+| STD-05.3 Approved AI Tools List | Standard | Chief Data and AI Officer | CISO |
+| PRC-05.1 Visitor Escort Procedure | Procedure | Director of Corporate Security | Owning director or officer (under POL-05) |
 
 ## 4. Governance
 **Policy governance committee** (meets monthly): CISO (chair), Director, CMMC Program Office, Chief Information Officer, Vice President, Engineering, Vice President, Trade Compliance, Corporate Facility Security Officer, Chief Human Resources Officer, Vice President, Supply Chain, and a delegate of the General Counsel. The Chief Audit Executive attends as a non-voting observer to keep Internal Audit independent.

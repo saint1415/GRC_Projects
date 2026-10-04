@@ -121,7 +121,7 @@
 | G-152 | 252.204-7021(f)(1) | Same 4 manual purchase orders lacked the clause set | As G-143 | Vice President, Supply Chain | 2026-12-31 |
 | G-154 | 32 CFR 170.18(a) and 170.19(d) | Level 3 scope not decided; Level 2 score today 80 in the certified sites | Scope decision 2026-12-15; Level 2 assessment of the expanded scope 2027-05; DIBCAC request 2027-06 | Director, CMMC Program Office | 2026-12-15 |
 | G-158 | 22 CFR 120.56 (release) with technology control plans | 14 migrated folders lacked the ITAR attribute; an EAR-licensed foreign-person engineer opened 3 ITAR files | Migration attribute check; weekly analytics; foreign-person access recertification | Vice President, Trade Compliance | 2026-11-30 |
-| G-160 | 15 CFR 734.13(a)(2) | The same engineer had access beyond the scope of his EAR license (ITAR folder) | As G-158 | Vice President, Trade Compliance | 2026-11-30 |
+| G-160 | 15 CFR 734.13(a)(2) | The same engineer reached technical data that his EAR license does not cover (an ITAR folder) | As G-158 | Vice President, Trade Compliance | 2026-11-30 |
 | G-169 | Form 8-K Item 1.05; SEC Release 33-11216 | No data-theft scenario; no step to keep CUI, export-controlled, or classified details out of the filing | Update the playbook; tabletop 2026-11-19 with a CUI theft scenario | General Counsel | 2026-11-30 |
 | G-170 | Form 8-K Item 1.05 (materiality determination) | Qualitative factors for loss of program data (customer trust, program eligibility) not in the worksheet | Add defense-specific factors to the worksheet | General Counsel | 2026-11-30 |
 
