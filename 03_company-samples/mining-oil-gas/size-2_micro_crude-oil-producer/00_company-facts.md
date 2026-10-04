@@ -116,4 +116,5 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Partner questionnaire | The larger non-operating partner sent a security questionnaire in June 2026 before a joint drilling program; the response is due 2026-09-30. The seismic data license renews 2026-12-31 and asks for a statement of access controls | P09 |
 | Cyber insurance | The policy has a 24x7 breach hotline and panel vendors (breach counsel, forensics). It requires prompt notice and use of panel vendors | P08 |
 | Assessor | The P07 assessor is an independent consultant with OT experience, not involved in the risk or gap analysis and operating no control | P07 |
+| Radio base link | The 900 MHz base radio connects to the SCADA host by a serial cable, so unplugging the host's network cable keeps the 15 radio sites polling but drops the 3 cellular sites and the alarm call-out | P08 |
 | Finances | A cash reserve covers about 60 days of expenses; payroll runs biweekly through an outside payroll service | P01, P05 |

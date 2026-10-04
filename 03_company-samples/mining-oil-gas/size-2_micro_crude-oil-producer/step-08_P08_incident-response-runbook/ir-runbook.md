@@ -59,7 +59,7 @@ The company has 7 people and no IT staff. The MSP does the office technical work
 ### 3.1 Isolation decision table
 | Situation | Decision | Who decides |
 |---|---|---|
-| Ransomware on an office PC; SCADA host looks normal | **Pull the SCADA host network cable now** (its polling of the radio base keeps working on the direct serial link) and unplug the field office router from the internet. Alarm call-out stops, so start 2-hour patrols | Field Superintendent; Field Technician or on-call Lease Operator if the Field Superintendent cannot be reached in 15 minutes (POL-03 4.4) |
+| Ransomware on an office PC; SCADA host looks normal | **Pull the SCADA host network cable now** (the 15 radio sites keep polling over the radio base's serial link; the 3 cellular sites drop off and go on the manual route) and unplug the field office router from the internet. Alarm call-out stops, so start 2-hour patrols | Field Superintendent; Field Technician or on-call Lease Operator if the Field Superintendent cannot be reached in 15 minutes (POL-03 4.4) |
 | Signs on the shared field desktop or engineering laptop, SCADA host looks normal | Same as above; unplug the affected computer as well. Do not plug the engineering laptop into anything | Same |
 | SCADA host affected, or staff cannot trust what the HMI shows | **Go to manual operations.** Twice-daily routes, hand gauging, local start and stop; SWD facility run from its local PLC panel with a Lease Operator on site. Do not send commands from the affected HMI | Field Superintendent |
 | Any doubt about site safety | Shut in the affected site under the emergency response plan | Field Superintendent |
