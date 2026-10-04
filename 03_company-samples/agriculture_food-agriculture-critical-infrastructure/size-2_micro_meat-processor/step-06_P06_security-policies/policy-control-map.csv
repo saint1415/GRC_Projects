@@ -1,2 +1,48 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security and compliance lead designated in writing,PM-2,GV.RR-02,None (NIST CSF 2.0 benchmark),No
+POL-02,A.2,Annual risk assessment with SP 800-30; risks owned and treated,RA-3; PM-9,ID.RA-01,None (NIST CSF 2.0 benchmark),No
+POL-02,A.3,Risk acceptance authority; unsafe or misbranded food risks never accepted,PM-9,GV.RM-01,9 CFR 418.2,No
+POL-02,A.4,Proportionate sanctions; good-faith reporting protected,PS-8,GV.RR-04,None (NIST CSF 2.0 benchmark),No
+POL-02,A.5,Vendor list and security terms for vendors that reach machines or records,SA-9,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,A.6,Annual independent assessment,CA-2,ID.IM-01,None (NIST CSF 2.0 benchmark),No
+POL-02,A.7,Retention of security documents; FSIS retention for food safety records,SI-12,GV.PO-02,9 CFR 416.16(c); 9 CFR 417.5(e),No
+POL-02,A.8,Annual policy review; policies available to staff,PL-1,GV.PO-02,None (NIST CSF 2.0 benchmark),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,None (NIST CSF 2.0 benchmark),No
+POL-02,B.1,Named accounts; no shared logins; entries under own account,IA-2; AC-2,PR.AA-01,9 CFR 416.16(a); 9 CFR 417.5(b),Yes
+POL-02,B.2,Least privilege; two named administrators; no vendor default accounts,AC-2; AC-3; AC-6,PR.AA-05,9 CFR 417.5(d),Yes
+POL-02,B.3,"MFA for suite, accounting, payroll, portals, and every administrator login including MSP-held logins",IA-2(1),PR.AA-03,None (NIST CSF 2.0 benchmark),Yes
+POL-02,B.4,Leaver checklist including PIN and shared password changes,PS-4; AC-2,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,B.5,Monthly account reconciliation against roster and vendor list,AC-2; AC-6,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,B.6,Office lock after 10 minutes; floor devices locked at shift end,AC-11,PR.AA-03,None (NIST CSF 2.0 benchmark),No
+POL-02,B.7,Sealed emergency administrator credentials,AC-2,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,B.8,Vendor remote access off by default; supervised and logged sessions; no unattended tools,AC-17; MA-4; IA-2(1),PR.AA-05,None (SP 800-82 Rev. 3 OT benchmark),Yes
+POL-02,B.9,Password length; no passwords on equipment; yearly Wi-Fi change,IA-5,PR.AA-01,None (NIST CSF 2.0 benchmark),No
+POL-02,B.10,"Change control for cycles, formulations, line settings, and labels with HACCP reassessment decision",CM-3; CM-2,PR.PS-01,9 CFR 417.4(a)(3); 9 CFR 417.2(d); 9 CFR 416.12(b); 9 CFR 416.14,No
+POL-02,C.1,Use systems for company work; change only approved settings,PL-4,PR.AT-01,None (NIST CSF 2.0 benchmark),No
+POL-02,C.2,No Restricted information in personal accounts or public AI tools,PL-4,PR.AT-01,None (NIST CSF 2.0 benchmark),No
+POL-02,C.3,"Never share passwords, PINs, or MFA codes",IA-5; PL-4,PR.AA-01,None (NIST CSF 2.0 benchmark),No
+POL-02,C.4,Training at hire and yearly; phishing simulations,AT-2,PR.AT-01,None (NIST CSF 2.0 benchmark),Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,None (NIST CSF 2.0 benchmark),No
+POL-02,C.6,Signed policy acknowledgment,PL-4,PR.AT-01,None (NIST CSF 2.0 benchmark),No
+POL-03,4.1,Ransomware runbook kept and printed,IR-8,RS.MA-01,None (NIST CSF 2.0 benchmark),No
+POL-03,4.2,Report within 1 hour; product-affecting issues also to the Production Supervisor,IR-6,RS.MA-02,9 CFR 417.3(b),No
+POL-03,4.3,Log every incident,IR-5,RS.MA-02,None (NIST CSF 2.0 benchmark),No
+POL-03,4.4,Hold and review product affected by an incident; no shipment without reviewed records,IR-4,RS.MI-01,9 CFR 417.3(b); 9 CFR 417.5(c),No
+POL-03,4.5,FSIS District Office notice within 24 hours; recall procedure,IR-6,RS.CO-02,9 CFR 418.2; 9 CFR 418.3,No
+POL-03,4.6,Unexplained setting changes treated as possible tampering,SI-7; IR-4,DE.CM-09,None (NIST CSF 2.0 benchmark),No
+POL-03,4.7,Insurer hotline before outside firms,IR-4,RS.MA-02,None (NIST CSF 2.0 benchmark),No
+POL-03,4.8,Ransom payment only with approvals and OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.9,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-03,Fla. Stat. 501.171,No
+POL-03,4.10,Vendor incident reports logged and handled,IR-6; SA-9,GV.SC-08,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.11,Restart only after settings compared and Production Supervisor sign-off,IR-4; SI-7,RC.RP-01,9 CFR 417.3(b),No
+POL-03,4.12,Annual tabletop; lessons learned within 30 days,IR-3; CP-4,ID.IM-02,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.1,Three classification levels with integrity emphasis,RA-2,ID.AM-07,None (NIST CSF 2.0 benchmark),No
+POL-04,4.2,Encryption in transit; encrypted and locked mobile devices,SC-8,PR.DS-02,None (NIST CSF 2.0 benchmark),No
+POL-04,4.3,"Restricted information only in approved, restricted locations",AC-3,PR.DS-01,None (NIST CSF 2.0 benchmark),No
+POL-04,4.4,"Inventory of devices, controllers, services, remote paths, and Restricted data",CM-8,ID.AM-01,None (SP 800-82 Rev. 3 OT benchmark),Yes
+POL-04,4.5,Integrity of food safety records and settings; offline approved copies; monthly comparison,AU-9; SI-7; CM-2,PR.DS-10,9 CFR 417.5(d); 9 CFR 416.16(b),Yes
+POL-04,4.6,Approved AI tools only,SA-9; PL-4,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.7,90-day immutable backups; quarterly restore tests including cook-log exports,CP-9; CP-4,PR.DS-11,9 CFR 417.5(e),Yes
+POL-04,4.8,"Retention periods for CCP, SSOP, and recall records",AU-11; SI-12,PR.DS-11,9 CFR 417.5(e)(1); 9 CFR 416.16(c); 9 CFR 418.3,No
+POL-04,4.9,New tools and vendors approved before Restricted data or machine access,SA-9,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.10,Wipe or destroy devices and controllers with records,MP-6,ID.AM-08,None (NIST CSF 2.0 benchmark),No

@@ -1,2 +1,41 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-01,4.2,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,CSF 2.0 ID.RA-05 (benchmark),Yes
+POL-01,4.3,Risk decision rules; unsafe-product risks never accepted at High,PM-9,GV.RM-02,CSF 2.0 GV.RM-02 (benchmark),No
+POL-01,4.4,Annual control evaluation with outside review every second year,CA-2,ID.IM-01,CSF 2.0 ID.IM-01 (benchmark),No
+POL-01,4.5,"Requirements register reviewed yearly; P03 rerun before game, sales, or retail",PM-1,GV.OC-03,9 CFR 303.1(a)(2),No
+POL-01,4.6,"Annual policy review; written, time-limited exceptions",PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-01,5.1,Owner's own accounts; no shared credentials,IA-2; AC-2,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark),No
+POL-01,5.2,MFA on every account that offers it,IA-2(1),PR.AA-03,CSF 2.0 PR.AA-03 (benchmark); Fla. Stat. 501.171(2),Yes
+POL-01,5.3,Unique 14-character passphrases in a password manager; no browser storage,IA-5,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark),Yes
+POL-01,5.4,Default passwords and PINs changed before use,IA-5; CM-6,PR.PS-01,CSF 2.0 PR.PS-01 (benchmark),Yes
+POL-01,5.5,Standard user account for daily laptop work,AC-6,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,5.6,View-only role for the second alert contact; vendor support only per session,AC-2; AC-17,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,5.7,Smokehouse remote program editing off; changes at the panel only,AC-17,PR.AA-05,9 CFR 318.6(a) and 424.21 via 303.1(b)(1),No
+POL-01,5.8,"Monthly (weekly in season) review of logs, connected devices, and smokehouse programs",AU-6; SI-7,DE.CM-03,CSF 2.0 DE.CM-03 (benchmark),Yes
+POL-01,5.9,Sealed emergency envelope with recovery codes and cooler sheet,CP-2; AC-2,RC.RP-01,CSF 2.0 RC.RP-01 (benchmark),No
+POL-01,6.1,Vendor list with criticality and security contact,SA-9,GV.SC-04,CSF 2.0 GV.SC-04 (benchmark),Yes
+POL-01,6.2,Shop security contact registered with every vendor,IR-6,GV.SC-08,Fla. Stat. 501.171(6),Yes
+POL-01,6.3,Minimum vendor checks before purchase or renewal; annual SOC 2 review,SA-9,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark),Yes
+POL-01,6.4,"Export, delete, and close when a service is dropped",SA-9,GV.SC-10,CSF 2.0 GV.SC-10 (benchmark),No
+POL-01,7.1,Three-level data classification,RA-2,ID.AM-07,CSF 2.0 ID.AM-07 (benchmark),No
+POL-01,7.2,Restricted data only in approved locations,AC-3,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,7.3,Encryption on every laptop and phone,SC-28,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,7.4,Paper records in a locked box,PE-3,PR.AA-06,9 CFR 320.2(a),No
+POL-01,7.5,"Versioned file plan, monthly encrypted export, quarterly restore test, printed programs and summary",CP-9,PR.DS-11,9 CFR 303.1(b)(3); 9 CFR 320.3(a),Yes
+POL-01,7.6,Retention for the 9 CFR 320.3 period; shredding and wiping with a log entry,SI-12; MP-6,ID.AM-08,9 CFR 320.3(a); Fla. Stat. 501.171(8),No
+POL-01,7.7,Records producible at the shop during business hours,CP-9,PR.DS-11,9 CFR 300.6(b)(2); 9 CFR 320.4,No
+POL-01,8.1,"Updates, antivirus, official software; quarterly firmware check",SI-2; SI-3,PR.PS-02,CSF 2.0 PR.PS-02 (benchmark),Yes
+POL-01,8.2,Guest network for customers; separate device network,SC-7,PR.IR-01,CSF 2.0 PR.IR-01 (benchmark),Yes
+POL-01,8.3,Required device settings listed and checked monthly,CM-6,PR.PS-01,CSF 2.0 PR.PS-01 (benchmark),No
+POL-01,9.3,Payment changes confirmed by phone,PL-4,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-01,9.4,Annual security training,AT-2,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-01,9.5,No customer details in AI tools; cure amounts never from an AI tool; check recorded on the batch sheet,SA-9; SI-7,PR.DS-10,9 CFR 424.21(c) via 303.1(b)(1),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Fla. Stat. 501.171(3)-(4),Yes
+POL-01,10.3,"Hold product first when temperatures, programs, or cure may be affected",IR-4,RS.MI-01,9 CFR 303.1(b)(1),No
+POL-01,10.4,"Notices per the P08 matrix, confirmed by counsel",IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(4),No
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),No
+POL-01,11.2,Hourly manual temperature readings when alerts are down,CP-2,DE.CM-02,9 CFR 303.1(b)(1); 416.4(d) via 303.1(a)(2)(i),No
+POL-01,11.3,Storm procedure,CP-2,PR.IR-02,9 CFR 303.1(b)(1),No
+POL-01,11.4,Battery backup for gateway and router; offline notice on,CP-2,PR.IR-03,9 CFR 416.4(d) via 303.1(a)(2)(i),No

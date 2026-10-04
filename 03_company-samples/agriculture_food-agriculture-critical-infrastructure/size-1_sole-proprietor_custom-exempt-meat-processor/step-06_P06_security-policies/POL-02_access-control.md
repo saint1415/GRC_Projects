@@ -1,38 +1,18 @@
-# Access Control Policy
+# Access Control Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company (custom-exempt meat processing shop) |
 | Policy ID | POL-02 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | AC-1, AC-2, AC-3, AC-6, AC-17, IA-1, IA-2, IA-5 |
-| CSF 2.0 | PR.AA-01, PR.AA-02, PR.AA-03, PR.AA-05 |
+| Status | Merged into POL-01 Information Security Policy (consolidated), effective 2026-09-01 |
+| Owner and approver | Owner-operator |
 
-## 1. Purpose
-Ensure only authorized people and systems can access Cris Santos Company information, with the least privilege needed.
+At the Sole Proprietorship tier the shop keeps **one** consolidated policy, because one person writes, follows, and checks it (`01_company-sizes/tier-project-scaling.csv`, t1 P06). This file is kept so the folder has the standard policy set names. It holds no separate rules.
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+**Where the access control rules are:**
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Sole Proprietorship). For example, at Sole Proprietorship the owner holds every role.]
+- POL-01 section 5 (Accounts and access): own accounts only (5.1), MFA (5.2), unique passphrases in a password manager (5.3), default passwords changed (5.4), standard user account (5.5), view-only second alert contact and vendor support sessions (5.6), smokehouse remote editing off (5.7), monthly review (5.8), sealed emergency access envelope (5.9).
+- POL-01 section 8.2: guest network and separate device network.
+- SP 800-53 AC-1 and IA-1 (policy and procedures) are met by POL-01 as a whole.
 
-## 4. Policy statements
-4.1 Every user must have a unique account. Shared accounts are prohibited unless an exception is approved. (AC-2; IA-2)
-4.2 Access must be granted based on job need and least privilege, and approved by the system owner. (AC-3; AC-6; PR.AA-05)
-4.3 Multi-factor authentication must be used for remote access, administrative access, and access to sensitive data. (IA-2(1); IA-2(2); PR.AA-03)
-4.4 Access must be removed within [FILL: e.g. 24 hours] of termination and reviewed at least [FILL: quarterly/annually]. (AC-2)
-4.5 Privileged accounts must be separate from everyday accounts and logged. (AC-6(2); AU-2)
-4.6 Passwords and other authenticators must meet the Cris Santos Company authenticator standard. (IA-5)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for every statement is in `policy-control-map.csv`.

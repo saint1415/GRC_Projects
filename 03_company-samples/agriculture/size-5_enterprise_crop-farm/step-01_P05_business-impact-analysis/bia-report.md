@@ -110,7 +110,7 @@ The full map is in `dependency-map.csv`. Key findings:
 | Gap | Carried to |
 |---|---|
 | SCADA master recovery 9.5 h against a 6 h RTO | P01 R-012; P02 CP-10 and CP-10(4); POAM-011 |
-| Single carrier APN for about 80% of field OT | P01 R-021; P03 G-102 |
+| Single carrier APN for about 80% of field OT | P01 R-021; P03 G-073; POAM-024 |
 | OT vendors outside the remote access gateway (INT-4, INT-5, AQ-02 pivot cloud, packing line vendors) | P01 R-004, R-005; POAM-002, POAM-004 |
 | AQ-01 nightly backups and untested restore (RPO 24 h against 1 h) | P01 R-019; POAM-017 |
 | Cold-chain monitoring SaaS without a SOC report | P01 R-030; POAM-015 |
