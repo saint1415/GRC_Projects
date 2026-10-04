@@ -105,3 +105,6 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Customer A program changes | In the 12 months before the assessment the owner made 23 logic or setpoint changes for Customer A; 4 had email approval, the rest were approved by phone | P03, P07 |
 | Laptop software | The PLC and flow meter configuration software is licensed per device. Moving it to a replacement laptop takes the IT technician about one working day, including license transfer | P05, P08 |
 | Productivity suite assurance | The productivity suite provider publishes a SOC 2 Type 2 report (Security, Availability, Confidentiality) on its trust portal for business customers. The owner downloaded and reviewed it on 2026-07-22 | P02, P09 |
+| AI chatbot clean-up | On 2026-07-24 the owner turned off chat history in the chatbot account and deleted the earlier chats | P10 |
+| Field device sample | During routine Customer A and B site visits on 2026-07-21 and 2026-07-23, the owner viewed (did not change) the settings of 6 customer field devices, with each customer's permission, to check for default passwords | P07 |
+| Cyber coverage quote | The insurance agent's estimate for cyber liability coverage of $1 million is about $1,300 a year | P01, P03 |
