@@ -25,7 +25,7 @@
 | DFARS 252.246-7007 | **Yes, through Prime A** | The clause's paragraphs (a) to (e) apply to a prime only if it is subject to the Cost Accounting Standards, but paragraph (e) requires the substance of (a) to (e) to be flowed down without that introductory condition. Prime A did so in 2025, so the company must keep a counterfeit electronic part detection and avoidance system meeting the 12 criteria in (c) |
 
 **Not applicable, with reasons:**
-- SP 800-171 3.13.5 and FAR 52.204-21(b)(1)(xi): no publicly accessible components in the scope (G-101, G-121).
+- SP 800-171 3.13.5 and FAR 52.204-21(b)(1)(xi): no publicly accessible components in the scope (G-092, G-121).
 - DFARS 252.204-7012(m): the company shares no covered defense information with subcontractors (G-152).
 - SEC disclosure rules (private company), CCPA/CPRA (no California business today), and CTPAT (voluntary). See `../00_company-facts.md` section 1.
 
@@ -110,11 +110,11 @@ Closing only the 12 non-eligible requirements would raise the score to 98, above
 | FCI to the forecasting vendor without safeguards; DC-2 visitors | 52.204-21(b)(1)(iii), (ix); 252.204-7021 (G-113, G-119, G-154) | High | Filter federal orders from the feed; keep DC-2 check-in; Affirming Official review | Chief Operating Officer | 2026-10-31 |
 | No FASCSA order search or reporting | 52.204-30(b), (c) (G-129, G-130) | High | Logged SAM.gov search; screening list entry; 3-business-day procedure | Director of Federal Programs | 2026-10-31 |
 | Single DIBNet certificate holder | 252.204-7012(c); 52.204-25(d) (G-127, G-149) | High | Second medium assurance certificate; drill | Director of Federal Programs | 2026-10-31 |
-| CUI outside the enclave; CUI in cloud services not approved for it | 3.1.1, 3.1.3, 3.8.1, 3.8.2, 3.10.3; 252.204-7012(b)(2)(ii)(D) (G-001, G-003, G-064, G-065, G-079, G-148) | High | CUI cleanup and blocks; FIL-only printing; Prime C onboarding | Director of Federal Programs; Federal Integration Lab Manager | 2026-11-30 |
+| CUI outside the enclave; CUI in cloud services not approved for it | 3.1.1, 3.1.3, 3.8.1, 3.8.2, 3.10.3; 252.204-7012(b)(2)(ii)(D) (G-001, G-003, G-064, G-065, G-077, G-148) | High | CUI cleanup and blocks; FIL-only printing; Prime C onboarding | Director of Federal Programs; Federal Integration Lab Manager | 2026-11-30 |
 | Inventory and SSP do not match the CUI boundary | 3.4.1, 3.12.4 (no POA&M allowed for 3.12.4) | High | Add FIL network devices and asset categories; update the SSP after cleanup | Director of Information Technology | 2026-11-30 |
 | No inspection at DC-2; counterfeit avoidance system incomplete | 252.246-7007(c)(2), (6), (7); 252.246-7008(b) (G-137, G-141, G-142, G-132) | High | DC-2 inspection and quarantine; test lab; broker reassessments | Director of Quality and Product Compliance; Vice President of Supply Chain | 2026-12-31 |
 | Covered-equipment screening holes | 52.204-25(b)(1) (G-126) | High | Manufacturer of record for all SKUs; drop-ship screening | Director of Federal Programs | 2026-12-15 |
-| FIL firewall logs kept 30 days; enclave log history | 3.3.1; 252.204-7012(e) (G-020, G-151) | High | Forward FIL firewall logs; archive enclave history | Security Manager | 2026-12-31 |
+| FIL firewall logs kept 30 days; enclave log history | 3.3.1; 252.204-7012(e) (G-026, G-151) | High | Forward FIL firewall logs; archive enclave history | Security Manager | 2026-12-31 |
 | Role-based training; insider threat | 3.2.2, 3.2.3 | High | Administrator and Integration Center modules; insider threat content | HR Director | 2026-12-31 |
 | Enclave administration and leaver removal | 3.1.5, 3.9.2, 3.5.6, 3.1.4, 3.3.8, 3.3.9 | Moderate | Access broker for the enclave; automated disable; audit role separation | Security Manager; Director of Information Technology | 2027-01-31 |
 | Removable media on 3 FIL workstations; scanning frequency | 3.8.7, 3.11.2 | Moderate | Restore device control; monthly enclave scans | Security Manager | 2026-10-31 |
@@ -134,7 +134,7 @@ These are **proposed** and are not treated as current obligations. The `pending_
 
 - **FAR overhaul, parts 1, 2, 4, 33, 39, 40, 52, and 53** (FR Doc. 2026-12559, 91 FR 37550, 2026-06-23; comments closed 2026-07-23). If finalized as proposed:
   - A new FAR 52.240-7 clause for CUI would require **NIST SP 800-171 Rev. 3** with DoD organization-defined parameters. Rev. 3 adds a Supply Chain Risk Management family (03.17), which the C-SCRM plan should anticipate (G-081).
-  - CUI incidents would be reported within **72 hours of discovery** across agencies (G-149, G-055).
+  - CUI incidents would be reported within **72 hours of discovery** across agencies (G-149, G-056).
   - A new FAR 52.240-3 would consolidate the security prohibitions, including Section 889 and FASCSA orders, and standardize reporting to **72 hours from discovery** with one required report (G-126, G-127, G-129, G-130).
 - **FAR prohibition on certain semiconductor products and services** (proposed rule, 91 FR 7223, 2026-02-17; comments closed 2026-04-20). For a hardware distributor this would add another screening list alongside Section 889 and FASCSA orders, effective 2027-12-23 if finalized as proposed. Not tied to a row; the C-SCRM plan (SR-2) tracks it.
 - **DFARS printed circuit board acquisition restrictions** (advance notice of proposed rulemaking, DFARS Case 2022-D011, 91 FR 40508, 2026-07-02). No proposed rule text exists yet.

@@ -108,3 +108,9 @@ These facts were added so the deliverables agree with each other. They do not ch
 | AI chatbot use | The owner used the chatbot from 2026-05-04. Four monthly customer exports (about 240 customers each) were pasted into chats. Model training on chats was on (the free plan's default) | P01, P10 |
 | Weekly volumes | About 7 online orders and about 6 phone orders a week | P05, P08 |
 | Cyber insurance | The business owner's policy was checked on 2026-08-14: it has no data breach or card compromise coverage | P01, P08 |
+| Former helper | A neighbor helped at the register on weekends until 2025 and knew the shared POS PIN, which was never changed | P07 |
+| Media and devices | One USB drive with tax files is kept encrypted in the owner's home safe. The owner's previous phone was traded in during 2025 after a factory reset, with no record kept. The previous store tablet was factory reset before family members reused it | P07 |
+| Router location | The router sits in the back room, which customers do not enter | P03, P07 |
+| Card numbers by email or text | A search of the mailbox and phone texts on 2026-08-12 found no card numbers | P03 |
+| Terminal protocol | The processor confirmed by email on 2026-08-12 that the terminal does not use SSL or early TLS | P03 |
+| AI chatbot clean-up | On 2026-08-24 the owner turned chat training off and deleted past chats that contained customer data. In July two price suggestions were below cost after a pasted cost was misread; in June and July three offer emails said "lowest prices in the neighborhood" with no price check | P03, P10 |

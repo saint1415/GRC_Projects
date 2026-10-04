@@ -1,38 +1,25 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | Store Manager (Security and PCI Lead) |
+| Approved by | Owner, 2026-08-31 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the store keeps three core policies: access control (POL-02), incident response (POL-03), and data classification (POL-04). A separate Information Security Policy would add little for a 7-person store, so its essential rules live in **POL-02 Part A. Program governance**:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | PCI DSS v4.0.1 (N44-45-R01) |
+|---|---|---|
+| Designation of the Security and PCI Lead (Store Manager) | POL-02 A.1 | 12.1 |
+| Yearly risk assessment with SP 800-30 | POL-02 A.2 | 12.3 |
+| Who may accept risk | POL-02 A.3 | 12.3 |
+| Written PCI DSS scope before signing any SAQ; P2PE devices only | POL-02 A.4 | 12.5 |
+| Service provider list, agreements, and yearly AOC check | POL-02 A.5 | 12.8 |
+| Approval and change log for online store scripts and custom code | POL-02 A.6 | 6.4.3; 6.5 |
+| Yearly independent assessment | POL-02 A.7 | (FTC Act Section 5 reasonable security, N44-45-R02) |
+| Records kept at least 3 years | POL-02 A.8 | 12.1 |
+| Yearly policy review and written, time-limited exceptions | POL-02 A.9 | 12.1 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+SAQ P2PE for PCI DSS v4.0.1 asks for an information security policy that is published, reviewed yearly, and defines security roles (12.1.1 to 12.1.3). POL-02 Part A, together with POL-03 and POL-04, is that policy for this store. Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice if the company grows past the Micro tier (10 or more employees) or opens a second store.

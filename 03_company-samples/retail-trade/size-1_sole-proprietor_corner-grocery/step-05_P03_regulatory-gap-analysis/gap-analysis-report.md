@@ -58,7 +58,7 @@
 Of the 45 rows with gaps, 5 are rated High, 21 Moderate, and 19 Low. Many of the Low rows are "no written procedure" findings that POL-01 closed on adoption.
 
 ## 4. Action list (half page)
-In order. The first four cost nothing and take under a day.
+In order. The first four are free or nearly free and take under a day.
 
 | # | Action | Rows | Gap risk | Target |
 |---|---|---|---|---|
