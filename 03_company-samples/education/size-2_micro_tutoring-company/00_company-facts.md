@@ -87,3 +87,23 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-08-28 | Deliverables approved by the Owner |
 | 2026-09-08 | District after-school program restarts for the new school year |
 | 2026-09-30 | District vendor security questionnaire due |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Finances and payroll | A cash reserve covers about 45 days of expenses; payroll and contractor payments run every two weeks through an outside payroll service | P01, P05 |
+| Platform vendor report | SOC 2 Type 2 (Security, Availability, Confidentiality), 12 months ending 2026-04-30; states RTO 8 hours, RPO 1 hour, and customer notice within 72 hours of confirming an incident. Reviewed 2026-08-18 by the Center Director with the independent consultant | P02, P05, P09 |
+| Scheduling platform vendor | No SOC 2 report; standard terms state daily backups and no recovery objectives | P05, P09 |
+| AI module | Released by the vendor in May 2026 and on by default; used by the Director of Tutoring from 2026-05-18; about 210 students scored; flags drove 34 of 36 district placement changes; 31 parent progress reports in June and July carried an AI-based session recommendation and 12 families added sessions. Turned off 2026-08-28 | P01, P03, P10 |
+| Former users | Three former contractor tutors kept platform access for 2 to 7 months after their last session (disabled 2026-07-15; no sign-ins after leaving). A former temporary front-desk worker's scheduling account was found and disabled 2026-08-04. A former Enrollment and Billing Coordinator's website login was removed 2026-07-16 | P01, P04, P07 |
+| Consent practices | About 35 trial accounts for prospective students were created in 2026 before consent. About 20 families pay by bank debit with only the check box as consent | P03, P07 |
+| Parent requests | Two parent requests in 2026; one came from an email address not on the family account and was answered | P03 |
+| Network | The firewall management page was reachable from the internet with a password only (found 2026-08-04; turned off 2026-08-06). Firewall logs are kept 7 days. The staff Wi-Fi password has not changed since 2023 | P01, P04, P07, P08 |
+| Front-desk desktop | Uses one shared login whose password has not changed since 2024; no screen lock | P02, P07 |
+| Devices | Two laptops retired in 2025 have no wipe record. Younger children sign in to the student portal on center tablets with a picture password | P02, P09 |
+| Contractor computers | During P07, 2 of the 3 contractor tutors interviewed still had district roster spreadsheets in their downloads folders (deleted on screen) | P07 |
+| Platform settings | Idle tutor sessions end after 30 minutes; the platform shows the top two factors behind each AI flag | P02, P10 |
+| Assessor | The P07 assessor is an independent security consultant, not involved in the risk assessment or gap analysis and operating no control | P07 |
+| Child safety | The company has a child-safety code of conduct and a child-safety reporting procedure, separate from POL-03 | P06, P09 |
