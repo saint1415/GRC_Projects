@@ -142,7 +142,23 @@ These facts were added while building the deliverables. They do not change secti
 | AZ-1 Site Director | AZ-1 operations and its build-prep workstations |
 | Vice President, Corporate Communications; Vice President, Investor Relations | Incident communications; investor messages |
 | Chief Data and AI Officer | Chairs the AI governance committee |
+| Vice President, Quality | Inspection and product acceptance; quality owner for AI-004 |
+| Director of Corporate Security | Badges, visitors, escorts, and site security at all sites (common control provider) |
+| Controller | Financial reporting; Item 106 XBRL tagging; member of the disclosure committee |
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, Vice President, Contracts, and Vice President, Investor Relations, advised by outside securities counsel.
 
 **Why the registry defaults were kept.** The primary system (CUI engineering enclave with CAD/PLM), the incident (exfiltration of CUI), and the AI use case (generative AI assistant with CUI engineering documents) fit an enterprise aerostructures supplier. At this size the enclave spans 7 sites and a government-community cloud, the incident adds an SEC materiality step, and the AI use case sits inside a 12-item portfolio.
+
+**Facts found or set while building the deliverables.**
+| Fact | Used in |
+|---|---|
+| About 310 cleared employees at FL-1; about 412 privileged CEE users; about 1,400 design engineers | P03, P07, P05 |
+| PLM export attribute event: 14 folders migrated in 2026-04 lacked the ITAR attribute; an EAR-licensed foreign-person engineer opened 3 ITAR files (found 2026-08-11; access removed the same day); the Senior Empowered Official filed an initial voluntary disclosure notification with DDTC on 2026-08-19 | P01 R-004; P03 G-003, G-158; P07 POAM-002 |
+| One work order for a contract that includes DFARS 252.204-7021 was routed to KS-1 for a secondary operation in 2026-08 (found in sampling) | P01 R-015; P03 G-148; POAM-020 |
+| Score under 32 CFR 170.24 today: 80 for the six certified sites, 50 including AZ-1, -14 for the KS-1 legacy environment; Level 3: 10 of 24 met | P02, P03 |
+| Remediation funding of about $7.4 million for 2026 Q4 to 2027 Q3, approved by the CEO and CFO on 2026-09-08 | P01 |
+| SL-1 serves about 140 airline, lessor, and repair station customers; SL-2 serves 19 airline operators | P09 |
+| The government-community cloud provider confirmed in writing on 2026-07-30 that the AI-001 assistant is inside its FedRAMP authorization boundary and listed in the CRM; the 300-user pilot started 2026-06-15 | P10 |
+| Penetration test of the CEE contracted for 2026-11 (last CEE test 2025-06-12) | P07 POAM-013 |
+
