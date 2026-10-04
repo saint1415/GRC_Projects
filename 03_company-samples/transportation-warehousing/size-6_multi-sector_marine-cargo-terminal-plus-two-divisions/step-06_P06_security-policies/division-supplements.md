@@ -54,7 +54,7 @@
 |---|---|---|---|
 | Integrator access | All integrator access to building systems through the group jump host; no internet-exposed remote access | POL-02 4.10 | FTC Act Section 5 (N53-R02); Safeguards benchmark 314.4(c)(5) |
 | Integrator contracts | Security terms, vulnerability and incident notification, return of controller configurations | POL-01 4.9 | Benchmark 314.4(f) |
-| Monitoring | Building system remote access and controller logs onboarded to the SIEM | POL-03 4.1 | Benchmark 314.4(c)(8) |
+| Monitoring | Building system remote access and controller logs onboarded to the SIEM | POL-02 4.10; group logging standard | Benchmark 314.4(c)(8) |
 | T3 container freight station | CFS reader maintenance under the T3 FSP vendor rules; changes approved by the T3 FSO | POL-02 4.10 | 33 CFR 105.255; 101.650(i)(1) |
 | Closings and wires | Closing instructions confirmed through a known number and the title agent's portal; never on email alone | POL-05 3.6 | P01 RE-003 |
 | Tenant personal information | Guarantor files restricted to credit staff; listed in the data inventory and the notification matrix | POL-04 5.1 | State breach laws |
@@ -66,7 +66,7 @@ The 2023 Port Real Estate standards were written before the 2025 common control 
 |---|---|---|---|
 | Building system remote access | "Integrator remote access as agreed with the property manager" | Jump host only; no internet-exposed access (POL-02 4.10) | 31 sites exposed (P01 RE-001) |
 | Vendor contracts | Not addressed | Security and notification terms (POL-01 4.9) | 5 integrator contracts without terms (P03 RE-G14) |
-| Monitoring | Integrators monitor their own systems | SIEM onboarding (POL-03 4.1) | No SOC visibility (gap 5) |
+| Monitoring | Integrators monitor their own systems | SIEM onboarding (group logging standard; POL-02 4.10 session recording) | No SOC visibility (gap 5) |
 | Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 6 (POAM-019) |
 | Payment changes | Email confirmation acceptable | Callback and portal (POL-05 3.6) | 2026-03 wire redirection attempt |
 | Incident severity | Property incident categories | One group scale (POL-03 4.2) | Building incidents not escalated to the SOC |

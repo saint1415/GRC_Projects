@@ -25,7 +25,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-2(2), IA-5 | 43 | Every division's access control; GR-02, GR-10 | Focused / Comprehensive (all divisions sampled) |
-| Common control (Group HR) | PS-4, AT-2 | 15 | Terminations; Subpart F training for all personnel including longshore workers | Focused / Focused (4 hiring halls) |
+| Common control (Group HR) | PS-4, AT-2 | 15 | Terminations; Subpart F training for all personnel including longshore workers | Focused / Focused (5 hiring halls) |
 | Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, RA-5, AU-6 | 56 | GR-01, GR-03, GR-11; scenario gaps 2, 5 and 7 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-12, SC-28 | 15 | GR-01; immutable backups and guardrails | Focused / Focused |
 | Common control (SYS-G4 integration hub) | SC-8, CA-3 | 9 | GR-01, GR-16; the hub is the P08 starting point | Focused / Comprehensive (all partner connections) |

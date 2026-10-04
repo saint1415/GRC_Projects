@@ -1,2 +1,42 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-01,4.2,Owner designated security lead in writing,PM-2,GV.RR-02,CSF 2.0 GV.RR-02 (benchmark),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,CSF 2.0 ID.RA-05 (benchmark); SP 800-82r3 4.1.2,Yes
+POL-01,4.4,Risk decision rules; High never accepted as is; crop risks treated before freeze season,PM-9,GV.RM-02,CSF 2.0 GV.RM-02 (benchmark),No
+POL-01,4.5,Annual self-assessment with an outside review every second year,CA-2,ID.IM-01,CSF 2.0 ID.IM-01 (benchmark),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-01,5.1,Family members use their own standard laptop account,AC-6; PL-4,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,6.1,"Check terms and MFA before connecting a new SaaS, device, or AI tool",SA-4; SA-9,GV.SC-06,CSF 2.0 GV.SC-06 (benchmark),Yes
+POL-01,6.2,Vendor list with third-party agents and registered breach contacts,SA-9,GV.SC-04,CSF 2.0 GV.SC-04 (benchmark); Fla. Stat. 501.171(6),Yes
+POL-01,6.3,Dealer viewer role except in owner-opened service windows; contract terms at renewal,AC-6; AC-17; SA-9,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark); SP 800-82r3 6.2.10,Yes
+POL-01,6.4,Annual review of the FMIS vendor SOC 2 report and customer controls,SA-9,GV.SC-07,CSF 2.0 GV.SC-07 (benchmark),Yes
+POL-01,6.5,Remove supplier access the day a relationship ends,AC-2,GV.SC-10,CSF 2.0 GV.SC-10 (benchmark),No
+POL-01,6.6,AI tools only after a P10 assessment; no vendor training on farm data without opt-in; no AI control of irrigation,PL-4; SA-9,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark),No
+POL-01,7.1,Own accounts; no shared credentials,IA-2; AC-2,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark),No
+POL-01,7.2,"Authenticator-app MFA on SYS-01, booking, email, accounting, and banking",IA-2(1),PR.AA-03,CSF 2.0 PR.AA-03 (benchmark); SP 800-82r3 6.2.1; Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager; none saved in a shared browser,IA-5,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark),Yes
+POL-01,7.4,No default passwords on any device,IA-5; CM-6,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark); SP 800-82r3 6.2.1,Yes
+POL-01,7.5,SYS-01 account review each July and November,AC-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,7.6,Sealed recovery codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,7.7,"Monthly activity log review, weekly in freeze season",AU-6,DE.CM-03,CSF 2.0 DE.CM-03 (benchmark); SP 800-82r3 6.3.1,No
+POL-01,7.8,"Change log for irrigation, fertigation, and alarm settings",CM-3,ID.RA-07,CSF 2.0 ID.RA-07 (benchmark); SP 800-82r3 6.2.4,No
+POL-01,7.9,Device lock after 5 minutes (phone and tablet 1 minute),AC-11,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,CSF 2.0 ID.AM-07 (benchmark),No
+POL-01,8.2,Restricted data only in approved systems; delete W-9 scans,SC-28; SI-12,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.3,Encryption on every device,SC-28,PR.DS-01,CSF 2.0 PR.DS-01 (benchmark),No
+POL-01,8.4,"Monthly farm-held exports, versioned storage, encrypted backup drive, quarterly restore test",CP-9,PR.DS-11,CSF 2.0 PR.DS-11 (benchmark); 21 CFR 112.7(b); 21 CFR 112.166(b),Yes
+POL-01,8.5,Written annual qualified exemption review; farm name and complete address at every point of purchase and web page,SI-12; CM-3,ID.AM-07,21 CFR 112.6(b)(2); 21 CFR 112.7(b); 21 CFR 112.161(b),No
+POL-01,8.6,Retention (exemption records at least 4 years) and disposal of customer records and devices,SI-12; MP-6,ID.AM-08,21 CFR 112.164(a); Fla. Stat. 501.171(8),No
+POL-01,9.3,"Updates, antivirus, official software sources, USB sticks scanned",SI-2; SI-3,PR.PS-02,CSF 2.0 PR.PS-05 (benchmark),Yes
+POL-01,9.4,Isolated customer Wi-Fi; separate pump house network; firmware kept current,SC-7; AC-18; SI-2,PR.IR-01,CSF 2.0 PR.IR-01 (benchmark); SP 800-82r3 5.2.3,Yes
+POL-01,9.5,Call-back before changing any payee's bank details,IA-2(1),PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-01,9.6,Annual security course for the owner; family briefing,AT-2,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),Yes
+POL-01,10.3,Crop first: switch irrigation to local and run it by hand,IR-4,RS.MI-01,CSF 2.0 RS.MI-01 (benchmark); SP 800-82r3 6.4.4,No
+POL-01,10.4,Meet Florida notice deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3); Fla. Stat. 501.171(4); Fla. Stat. 501.171(5),Yes
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),No
+POL-01,11.2,Freeze-night procedure posted and rehearsed each November,CP-2,ID.IM-04,CSF 2.0 ID.IM-04 (benchmark); SP 800-82r3 6.5.1,No
+POL-01,11.3,Standalone freeze alarm calling the owner and the neighbor,CP-2,PR.IR-03,CSF 2.0 PR.IR-03 (benchmark); SP 800-82r3 5.3.2,No
+POL-01,11.4,Written mutual-aid arrangement with a neighboring grower,CP-2,RC.RP-01,CSF 2.0 RC.RP-01 (benchmark),No
