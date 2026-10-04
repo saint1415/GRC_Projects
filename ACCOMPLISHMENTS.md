@@ -30,11 +30,12 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**80 of 216** sample companies are finished (800 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**82 of 216** sample companies are finished (820 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
 | Agriculture, Forestry, Fishing and Hunting | Sole Proprietorship | Crop farm | [README](03_company-samples/agriculture/size-1_sole-proprietor_crop-farm/README.md) |
+| Agriculture, Forestry, Fishing and Hunting | Micro | Crop farm | [README](03_company-samples/agriculture/size-2_micro_crop-farm/README.md) |
 | Agriculture, Forestry, Fishing and Hunting | Small | Diversified crop farm | [README](03_company-samples/agriculture/size-3_small_diversified-crop-farm/README.md) |
 | Food and Agriculture | Small | Meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-3_small_meat-processor/README.md) |
 | Mining, Quarrying, and Oil and Gas Extraction | Small | Crude oil producer | [README](03_company-samples/mining-oil-gas/size-3_small_crude-oil-producer/README.md) |
@@ -101,6 +102,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Educational Services | Micro | Tutoring company | [README](03_company-samples/education/size-2_micro_tutoring-company/README.md) |
 | Educational Services | Small | Career college | [README](03_company-samples/education/size-3_small_career-college/README.md) |
 | Educational Services | Mid-Market | Private college | [README](03_company-samples/education/size-4_mid-market_private-college/README.md) |
+| Educational Services | Enterprise | Private college | [README](03_company-samples/education/size-5_enterprise_private-college/README.md) |
 | Health Care and Social Assistance | Sole Proprietorship | Solo physician practice | [README](03_company-samples/health-care/size-1_sole-proprietor_solo-physician-practice/README.md) |
 | Health Care and Social Assistance | Micro | Two-physician primary care office | [README](03_company-samples/health-care/size-2_micro_two-physician-primary-care-office/README.md) |
 | Health Care and Social Assistance | Small | Multi-specialty practice | [README](03_company-samples/health-care/size-3_small_multi-specialty-practice/README.md) |

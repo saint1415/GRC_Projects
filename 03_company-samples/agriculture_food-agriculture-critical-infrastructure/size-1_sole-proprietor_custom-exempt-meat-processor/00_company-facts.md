@@ -1,0 +1,113 @@
+# Scenario facts: Cris Santos Company | Food and Agriculture | Sole Proprietorship
+
+All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a statute or regulation, the citation is given. Federal regulatory text was read on eCFR (point-in-time 2026-09-23) and Florida law from the 2026 Florida Statutes.
+
+## 1. The organization
+| Item | Fact |
+|---|---|
+| Legal name | Cris Santos Company (sole proprietorship; the owner-operator files Schedule C) |
+| Business | Custom-exempt meat processing shop (NAICS 311612, Meat Processed from Carcasses). The shop cuts, grinds, cures, smokes, and packages beef, pork, lamb, and goat carcasses **for the owners of the animals**, under the custom exemption in 9 CFR 303.1(a)(2). Every package goes back to the animal's owner marked "Not for Sale". The shop sells no meat, slaughters nothing on site, and does not accept wild game |
+| How carcasses arrive | A separate mobile custom slaughter business (not owned by the shop) slaughters animals on the livestock owner's farm and delivers the carcasses the same day, each tagged with the owner's name. The slaughter operator texts a photo of its kill sheet (owner, species, carcass number, hot weight) to the shop owner's phone |
+| Location | Florida, rural. A 2,000-square-foot shop building on the owner's homestead: a walk-in carcass cooler (rail space for about 10 beef sides), a cutting and processing room, a one-truck electric smokehouse, a walk-in freezer, and a customer pickup counter. The owner's home office is in the house next door |
+| Equipment | Band saw, grinder and mixer, sausage stuffer, vacuum packaging machine, a scale with a built-in label printer (connected by USB to the shop laptop), and the smokehouse with a Wi-Fi controller. The walk-ins run on two packaged condensing units with commercial refrigerant. **No anhydrous ammonia on site**, so the ammonia process safety thresholds noted for the Small sample do not arise. No standby generator |
+| Workforce | The owner-operator only (0 employees). No family members or volunteers work in the shop |
+| Volume | About 180 beef, 260 hogs, and 40 lambs and goats a year. Many beef are split among several households, and each share owner is a separate customer record. The custom records list about 640 livestock and product owners for 2024 to 2026 |
+| Revenue | About $180,000 a year in processing fees (fictional). The SBA size standard for NAICS 311612 is 1,000 employees (13 CFR 121.201), so the business is SBA-small |
+| Busy season | October to December (holiday orders and fall hog processing). Summer is the slow season |
+| USDA FSIS status | **Custom exempt operation**, not an official establishment. No grant of inspection, no FSIS inspector on site, no HACCP plan (9 CFR 417.2(a) applies to "every official establishment"), and no Sanitation SOPs (9 CFR 416.11-416.17 are not among the conditions for custom operators). The conditions that do apply (9 CFR 303.1(a)(2)(i)-(iv) and (b)(1)-(4)): sanitation performance standards in 416.1-416.6 (except 416.2(g)(2)-(6) and provisions that depend on inspection personnel); ingredient and procedure rules in 318.5, 318.6, and 424.21; "Not for Sale" marking (316.16, 317.16); custom records of livestock, products, and owners' names and addresses (303.1(b)(3)) in addition to the transaction records in Part 320; and access for FSIS representatives to examine and copy records (300.6(b)(2); 320.4). The last FSIS review of the shop was in March 2026; no noncompliance was noted (fictional) |
+| FDA status | **Not registered** as a food facility. The registration rule exempts "Facilities that are regulated exclusively, throughout the entire facility, by the U.S. Department of Agriculture under the Federal Meat Inspection Act" (21 CFR 1.226(g)); the whole shop operates under the FMIA custom exemption. Accepting wild game would raise FDA and state questions that are not analyzed here, which is one reason the owner declines it |
+| Card payments | A processor-managed card reader paired with the owner's phone encrypts card data at the reader. Some customers pay by check. No card numbers are stored on or pass through shop-managed systems. The processor's merchant terms require the shop to protect card data and report suspected compromise |
+| Cybersecurity regulation | **No binding federal cybersecurity rule applies** (P03 section 1). The shop uses **NIST CSF 2.0** as its benchmark. The smokehouse controller and the cold-chain sensor gateway are small connected devices; NIST SP 800-82 Rev. 3 informs the device rules in POL-01 but is not scored |
+| Binding rules that reach shop data | FMIA custom exemption records, labeling, and ingredient rules (9 CFR 303.1, 316.16, 317.16, 320.1-320.4, 424.21); Florida's data security, disposal, and breach notice duties (Fla. Stat. 501.171; "covered entity" expressly includes a sole proprietorship, 501.171(1)(b)) |
+| Personal information held | The custom records and cut sheets hold names, street addresses, phone numbers, and email addresses of about 640 livestock and product owners. No Social Security, driver license, or financial account numbers are collected. The 2026 statute adds "any information regarding an individual's geolocation" to the data elements that make a name personal information (501.171(1)(g)1.a.(VII), added by ch. 2026-52). The statute text read does not say whether a customer's street address in a business record counts. **The owner treats the custom records as personal information until counsel advises otherwise** (P03 open question) |
+| Not in scope | **21 CFR Part 121 (C-FOOD-AG-R01):** applies only to facilities required to register (121.1); the shop is exempt from registration (1.226(g)); it would also be a very small business (121.3, 121.5(a)). **CIRCIA (C-FOOD-AG-R02):** proposed only, and as proposed would not reach a food and agriculture entity below the SBA size standard. **USCG MTS cyber rule (C-FOOD-AG-R03):** no MTSA facility. **Reportable Food Registry (21 U.S.C. 350f):** the duty falls on registered food facilities. **9 CFR 417 (HACCP) and 418.2 (24-hour FSIS notice):** written for official establishments. **SEC, FAR clauses, HIPAA, PCI DSS as law:** not applicable (no securities, no federal contracts, not a covered entity; PCI DSS reaches the shop only through the processor contract) |
+| State law approach | Florida law is cited only where a Florida duty is unavoidable (Fla. Stat. 501.171). State and local permits for the shop building and wastewater are outside this analysis |
+| Regulatory driver labels | None of the vertical requirements (C-FOOD-AG-R01 to R03) applies, so they appear only in the not-applicable rows of P03 and the P08 matrix. `regulatory_driver` columns cite binding rules by their own citation ("9 CFR 303.1(b)(3)", "Fla. Stat. 501.171(2)") and the benchmark as "CSF 2.0 <subcategory> (benchmark)" |
+
+## 2. People and contracted services (role titles only)
+| Role | Duties |
+|---|---|
+| Owner-operator | Every role: owner, security lead, risk acceptor, incident lead, records keeper for the custom exemption, and the responsible person with care of the curing agents (424.21(c)). Also the only person who answers cold-chain alerts |
+| Mobile custom slaughter operator | Separate business. Slaughters on the livestock owner's farm and delivers tagged carcasses with a kill sheet photo. No access to shop systems |
+| Refrigeration service contractor | Maintains the two condensing units; 24-hour emergency line. No access to shop systems or the cold-chain account |
+| On-call IT technician (local computer repair shop) | Hourly help with the laptop, phone, and router. No standing access. Assisted the 2026 self-assessment |
+| Tax preparer (CPA) | Prepares Schedule C from accounting exports shared by link |
+| Service providers | Cold-chain monitoring vendor (sensors, gateway, and SaaS dashboard), smokehouse manufacturer (controller cloud app), online booking form vendor, email and file provider, accounting SaaS vendor, card processor, internet provider, label software vendor (desktop software) |
+
+## 3. Systems
+| ID | System | Hosting | Holds personal or regulated data? | Notes |
+|---|---|---|---|---|
+| SYS-01 | Cold-chain monitoring service: 5 wireless temperature sensors (carcass cooler 2, freezer 2, processing room 1), a gateway, and the vendor's dashboard and mobile app | Sensors and gateway on site; vendor SaaS | Temperature history; no personal information | Alarm set points: carcass cooler 38 F, freezer 10 F (the owner's own set points). Alerts by text and app notification **to the owner's phone only**. Owner account uses a password only (MFA available, off), **the same password as SYS-02**. The gateway is on the shop Wi-Fi and plugged into a wall outlet with no battery backup; the vendor's "gateway offline" notice is turned off. The vendor offers a SOC 2 Type 2 report on request (reviewed in P09) |
+| SYS-02 | Smokehouse controller and cloud app | Controller on the shop Wi-Fi; manufacturer's cloud app | Cook programs (process data) | Stores 10 cook programs (stages, temperatures, times). The app allows remote monitoring, start and stop, and **remote program editing**. App account password only (no MFA offered). The controller panel uses the **factory default PIN** (found in P07 testing on 2026-07-29). Programs are not backed up anywhere else |
+| SYS-03 | Shop laptop | Owner device in the shop | Yes: synced copy of the custom records, cut-sheet PDFs, label templates, the cure calculation sheet | Label software drives the scale and label printer (SYS-04). Full-disk encryption on (enabled by default). Automatic OS updates and built-in antivirus. **The owner works in the administrator account, and the browser stores the password for every shop account.** Not shared with family |
+| SYS-04 | Scale and label printer | Shop, USB to SYS-03 | Customer name and cut on each label | Prints "Not for Sale" labels from a template with lettering at least 3/8 inch (317.16). A roll of preprinted "Not for Sale" labels is kept as a backup |
+| SYS-05 | Email and cloud file storage (consumer-grade personal account, also used for the owner's personal life) | SaaS | Yes: the custom records spreadsheet (2024 to 2026), cut sheets, kill sheet photos, booking form submissions | MFA by text message, turned on in 2024 at the provider's prompt. **No version history or backup.** The tax preparer has a shared link to an accounting export folder |
+| SYS-06 | Phone | Owner's personal device | Yes: kill sheet photos, customer texts, alert history | SYS-01 and SYS-02 apps, card reader app, bank app, email. Passcode and device encryption on. The only device that receives cold-chain alerts |
+| SYS-07 | Online booking form and website | Vendor SaaS (form builder with hosted pages) | Yes: processing date requests and cut sheets (names, addresses, phone numbers, emails) | Customers have no accounts. Submissions are emailed to SYS-05 and kept in the vendor account. Admin account: password only (MFA available, off) |
+| SYS-08 | Accounting SaaS, online banking, and card processing | SaaS; processor-managed reader | Business financial data; customer names on invoices | Bank requires a one-time code before adding a payee. Accounting SaaS has MFA on (vendor default for new accounts) |
+| SYS-09 | Shop network | On premises | In transit | Internet provider's router and Wi-Fi in the shop. **Default router admin password; firmware never updated.** One flat network for the laptop, phone, sensor gateway, and smokehouse controller. Customers waiting at pickup are given the Wi-Fi password when they ask |
+| SYS-10 | Public generative AI chatbot (free consumer account) | Vendor SaaS, used on the laptop and phone | Recipe and cure data; sometimes customer first names in drafted texts | Used since January 2026 to scale cure and brine recipes to batch weights and to draft customer messages (see P10) |
+
+**SSP system (P02):** the *Shop Production and Cold-Chain Monitoring System (SPCM)*: the whole shop system, SYS-01 to SYS-10, as one boundary, centered on the cold-chain monitoring service (SYS-01), the smokehouse controller (SYS-02), and the custom records on SYS-03 and SYS-05.
+
+## 4. Current security posture: early (few formal controls)
+**In place today:**
+- MFA by text message on the email account (SYS-05) and MFA on the accounting SaaS (SYS-08)
+- Full-disk encryption on the laptop; device encryption and passcode on the phone
+- Automatic operating system updates and built-in antivirus on the laptop; automatic updates on the phone
+- Card data kept off shop systems (encrypting card reader)
+- Cold-chain alerts for all 5 sensors to the owner's phone
+- Dial thermometers in both walk-ins, read and written on a paper log at opening and closing
+- Preprinted "Not for Sale" label roll as a backup to the label printer
+- Shop building locked when the owner is away; curing agents kept in a locked cabinet with the nitrite content marked on each container (424.21(c))
+- Refrigeration contractor with a 24-hour emergency line
+- The bank requires a one-time code before adding a payee
+- Custom records kept for 2024 to 2026 and produced at the March 2026 FSIS review
+
+**Missing or weak, found in the 2026 self-assessment:**
+1. No cybersecurity risk assessment ever performed, and no written security policy.
+2. The cold-chain account (SYS-01) and the smokehouse app (SYS-02) share one password, with no MFA. SYS-01 offers MFA; SYS-02 does not. The booking form admin (SYS-07) also has no MFA.
+3. Cold-chain alerts have one path to one person: sensor to gateway to vendor cloud to the owner's phone. The gateway has no battery backup, the "gateway offline" notice is off, and no second contact is set. A night-time power or internet failure would send no alert. There is no written procedure for a monitoring outage.
+4. The custom records required by 9 CFR 303.1(b)(3) exist as one spreadsheet in SYS-05, synced to the laptop. No backup, no version history, and no written retention rule (9 CFR 320.3).
+5. The owner uses the laptop's administrator account every day, and the browser stores every shop password. Label templates and the cure calculation sheet exist only on the laptop.
+6. Flat shop network: the router keeps its default admin password and has never had a firmware update, and customers get the Wi-Fi password on request.
+7. The smokehouse controller panel uses the factory default PIN, and remote program editing is on in the app.
+8. No incident plan or contact list. The owner is a single point of failure, and there is no arrangement for emergency cooler space or standby power.
+9. Cure and brine amounts scaled with the public AI chatbot have been used without a documented independent check, and the cure sheet has no version control.
+10. No security training.
+11. No vendor security review: the cold-chain vendor's SOC 2 report had never been requested, and the smokehouse app terms were never read.
+12. No cyber insurance. Whether the business liability policy covers cyber events is unconfirmed.
+13. Old paper cut sheets and kill sheet printouts sit in open boxes behind the pickup counter, with no disposal rule (Fla. Stat. 501.171(8)).
+
+## 5. Scenario choices
+| Deliverable | Choice |
+|---|---|
+| P02 SSP | Short-form plan for the Shop Production and Cold-Chain Monitoring System (SPCM). The registry name "Plant production and cold-chain monitoring system" is adapted to a one-person shop |
+| P03 | Binding rules checked: the FMIA custom exemption conditions where they touch records, labels, ingredients, and product protection (9 CFR 303.1, 316.16, 317.16, 320.1-320.4, 416.1-416.6, 318.5-318.6, 424.21), and Fla. Stat. 501.171. Benchmark: NIST CSF 2.0 (all 106 subcategories), self-attested. Documented as not applicable: C-FOOD-AG-R01 (21 CFR Part 121), R02 (CIRCIA, proposed), R03 (USCG MTS rule), the Reportable Food Registry, and 9 CFR 417 and 418.2 |
+| P04 cloud | SaaS and vendor device clouds only (cold-chain and smokehouse). No IaaS |
+| P05 BIA | 5 business functions (BP-01 to BP-05). Cold storage of carcasses and customer product: MTD 4 hours |
+| P07 assessment | 9 controls, self-review with the on-call IT technician |
+| P08 incident | Ransomware halting processing and cold-chain monitoring, **adapted to this size**: the shop runs no processing-line network or server, so the incident is ransomware on the shop laptop during the busy season, plus takeover of the cold-chain and smokehouse accounts with passwords stolen from the laptop browser |
+| P09 SOC 2 | Security criteria only. (a) Owner's self-check; (b) review of the cold-chain monitoring vendor's SOC 2 Type 2 report. The shop is not a service organization and no customer asks for a report |
+| P10 AI | AI-001: the public generative AI chatbot used to scale cure and brine recipes and draft customer messages. **Adapted** from the registry default (AI quality inspection on processing lines) because a one-person shop has no camera inspection line; the chatbot is the AI tool the owner actually uses, and its cure calculations bear directly on 9 CFR 424.21. Also inventoried: AI-002, the cold-chain vendor's anomaly alert feature |
+| Cloud | SaaS only. No IaaS |
+
+## 6. Assessment calendar (fictional)
+| Date | Event |
+|---|---|
+| 2026-07-27 to 2026-07-31 | Self-assessment with the on-call IT technician (slow season). Device and account tests on 2026-07-29, a day with no product in the smokehouse |
+| 2026-07-30 | Cold-chain vendor SOC 2 report review |
+| 2026-08-31 | Deliverables adopted by the owner-operator |
+| 2026-10-15 | Busy-season readiness deadline: every cold-chain alerting and backup action must be done before the October to December peak |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Shared password | The SYS-01 and SYS-02 password is an 11-character word and number pair that the owner also used for a personal shopping account | P01, P07 |
+| P07 tests and interim steps | On 2026-07-29 the smokehouse controller accepted the factory default PIN, and a phone on the shop Wi-Fi could reach the router's admin page with the default password. The owner changed both the same day; remote program editing in SYS-02 was turned off on 2026-08-03 | P01, P07 |
+| Cold-chain vendor SOC 2 report | Type 2, Security and Availability, 12 months ending 2026-03-31, unmodified opinion, one remediated exception (late removal of a departed vendor employee's access). The gateway buffers readings for up to 12 hours when it loses internet and uploads them later, but cannot send alerts while offline. Cloud hosting and the text-message delivery service are carved-out subservice organizations. Reviewed by the owner with the IT technician on 2026-07-30 | P02, P04, P05, P09 |
+| AI chatbot use | Since January 2026 the owner has used the chatbot about 30 times, mostly to scale cure and brine amounts for customer batches (bacon, ham, smoked sausage). On 2026-07-30 the owner re-checked 12 saved chatbot answers against the cure supplier's printed chart; 11 matched and 1 (a brine for 40 lb of ham) gave a cure amount about 25% higher than the chart. The owner had noticed at the time that the number looked high and used the chart value instead, so that batch was made correctly; the other checks were never written down | P01, P03, P10 |
+| Cyber insurance | No standalone cyber policy. Whether the business liability policy has a cyber endorsement is unconfirmed (owner action in P08) | P01, P08 |
+| Planned safeguards | A battery backup for the gateway and router, a second alert contact (a neighboring custom processor, by reciprocal agreement), a portable generator transfer switch quote, a password manager, a business-grade file plan with version history, and an encrypted backup drive are planned, not in place (due dates in P01 and P07) | P01, P05, P06, P07, P08 |

@@ -9,7 +9,7 @@
 | Target report | None. The farm is not a service organization and will not seek a SOC 2 report |
 | Part A | Farm readiness self-assessment (`soc2-readiness.csv`), used to answer the packer-shipper's grower security and continuity questionnaire |
 | Part B | Review of the farm management software (FMIS, SYS-01) vendor's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
-| Prepared | 2026-08-20 by the Office Manager (Security Coordinator) with the independent consultant; approved by the Owner and General Manager 2026-08-31 |
+| Prepared | Part B on 2026-08-20; Part A on 2026-08-31, after the policy approvals. Both by the Office Manager (Security Coordinator) with the independent consultant; approved by the Owner and General Manager 2026-08-31 |
 
 ## 1. Why SOC 2 for this organization
 A crop farm is **not** a SOC 2 service organization. It grows and sells watermelons, peanuts, and cotton; it does not run systems or process data for other businesses. The assurance its main buyer has always asked for is food safety: the packer-shipper requires an annual third-party food safety audit, which the farm passed in April 2026. That audit does not cover cybersecurity. The vertical overlay names no assurance alternative to SOC 2 for agriculture.
