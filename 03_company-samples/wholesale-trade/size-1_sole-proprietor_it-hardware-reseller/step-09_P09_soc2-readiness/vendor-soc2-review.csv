@@ -1,0 +1,15 @@
+review_item,what_to_check,vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because orders and invoices depend on SYS-01,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Accounting, invoicing, inventory, payment links, and hosting",All in scope; the payment page provider and the hosting provider are carved-out subservice organizations,Ask the vendor how it monitors the payment page provider
+Subservice organizations,Carve-out or inclusive; which hosting providers,Hosting provider carved out; vendor reviews the host's own SOC 2 each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: one terminated vendor employee's access removed 9 days late; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the customer must run for the vendor's controls to work,Customer manages its users and roles; enables MFA; protects credentials; reviews sign-in history; reviews connected apps and bank feeds,"Map to AC-2 (quarterly review), IA-2(1) (gap: POAM-001), AU-6 (POL-01 7.8), IA-5 (password manager)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA offered to all customers (not enforced); encryption at rest and in transit tested without exception,Turn on MFA (POAM-001)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 platform monitoring tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data under the subscription terms; no fixed time stated,Note the Florida 10-day third-party agent duty (Fla. Stat. 501.171(6)) in the vendor list
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives against the BIA (BP-01 and BP-02: RTO 24 h; RPO 24 h),RTO 8 h; RPO 24 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-08-05,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner 2026-08-05, with the IT consultant",Repeat every year (POL-01 6.6)
