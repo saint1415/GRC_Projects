@@ -32,16 +32,16 @@ All Cris Santos Company employees, contractors, temporary staff and interns at h
 ## 4. Policy statements
 Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 subcategory. `policy-control-map.csv` traces each statement to its regulatory driver and shows whether Internal Audit tested it in 2026 (P07).
 
-4.1 Company systems are for company business; limited personal use is allowed if it involves no Restricted data and creates no risk. (PL-4; GV.PO-01)
+4.1 Company systems must be used for company business; limited personal use is allowed only if it involves no Restricted data and creates no risk. (PL-4; GV.PO-01)
 4.2 Every worker must acknowledge this policy before receiving access and every year after. (PL-4(1); PR.AT-01)
 4.3 Cybersecurity training must be completed within 5 days of gaining system access and no later than 30 days after hire, and every year after. Workers who use OT must also complete OT-specific training, and key personnel must complete role-based training. (AT-2; AT-3; PR.AT-01)
 4.4 Anyone who must use IT or OT before completing training, including longshore workers and contractors, must be accompanied or monitored by a trained person, under the hiring hall arrangement or the contract. (AT-2; PS-7; PR.AT-01)
 4.5 Workers must lock screens when stepping away; gate booth and planner workstations lock automatically. (AC-11; PR.AA-06)
 4.6 Users must not install software or connect unapproved media or hardware to IT or OT systems. Technicians must scan media at the terminal kiosk and connect only by approved exception. (CM-11; MP-7; PR.PS-05)
-4.7 Only AI tools on the approved list (STD-05.3) may be used for company work, and Restricted, Confidential or SSI data may be entered only into tools approved for it. (PL-4; GV.PO-01)
+4.7 Only AI tools on the approved list (STD-05.3) must be used for company work, and Restricted, Confidential or SSI data must be entered only into tools approved for it. (PL-4; GV.PO-01)
 4.8 Workers must report suspected cyber incidents, suspicious equipment behavior and lost devices to the SOC or the CySO line at once. (IR-6; RS.MA-02)
 4.9 Workers with knowledge of a potential material cybersecurity incident must not trade in company securities and must keep the information confidential until it is public. (PL-4; GV.PO-01)
-4.10 Only authorized people may enter crane electrical houses, network rooms and gate server rooms, and they must badge in individually. (PE-3; PR.AA-06)
+4.10 Only authorized people must enter crane electrical houses, network rooms and gate server rooms, and each must badge in individually. (PE-3; PR.AA-06)
 
 ## 5. Standards and procedures under this policy
 Standards set measurable requirements (approved by the CISO); procedures give step-by-step instructions (approved by the owning director). Both sit below this policy in the hierarchy and cannot contradict it.

@@ -42,7 +42,7 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 4.6 If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4 business days of that determination, unless the U.S. Attorney General has authorized a delay. (IR-6; RS.CO-02)
 4.7 For every incident involving personal information, the General Counsel must document whether a breach occurred, and notices must meet the deadlines in the P08 notification matrix for each state where affected individuals reside. (IR-6; RS.CO-03)
 4.8 SL-2 client terminals must be notified without delay, with a 1-hour target, of any incident that affects or may affect their environment, so that they can make their own Coast Guard reports. (IR-6; SR-8; RS.CO-03)
-4.9 No ransom may be paid without approval from the CEO, the General Counsel and the cyber insurer, and an OFAC sanctions check. (IR-4; RS.MI-01)
+4.9 A ransom must not be paid without approval from the CEO, the General Counsel and the cyber insurer, and an OFAC sanctions check. (IR-4; RS.MI-01)
 4.10 If the integrity of crane, automation or equipment control data is in doubt, the equipment must be stopped in a safe state, and it must not return to TOS-directed work until OT Engineering signs off. (IR-4; RS.MI-01)
 4.11 Tier-1 systems and every ETOP environment must have contingency plans with RTO and RPO from the BIA (P05) and must pass a recovery test at least annually. (CP-2; CP-4; CP-10; RC.RP-01)
 4.12 Each facility must hold cyber drills at least twice each calendar year and the company must hold an exercise at least once each calendar year, no more than 18 months apart, with the active participation of the CySO and, once a year, the disclosure committee. (IR-3; IR-8; ID.IM-02)

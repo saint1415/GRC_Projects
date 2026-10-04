@@ -1,0 +1,15 @@
+review_item,what_to_check,fmis_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because irrigation control and records depend on the platform,Security and Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unmodified opinion,None
+System description scope,"Farm records, mobile app, irrigation control module, device connectivity, hosting","Farm records, web and mobile apps, and the irrigation control module in scope; the cellular device connectivity service that carries commands to pivot panels is a carved-out subservice organization",Ask the vendor how it monitors the connectivity provider; this is the path that starts and stops the pivot
+Subservice organizations,Carve-out or inclusive; which providers,"Cloud hosting provider and device connectivity provider, both carved out; the vendor reviews their SOC 2 reports each year",None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled user-access removals at the vendor were late; vendor automated removal in 2026-02,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the farm must run for the vendor's controls to work,Customer enables MFA for its users; assigns roles and removes users promptly; reviews activity and audit reports; protects devices that run the mobile app; secures its field devices and networks,"Mapped to farm controls: IA-2(1) (gap, POAM-001); AC-2 and AC-6 (dealer, POAM-003); AU-6 (gap, POL-01 7.7); SC-7 (gap, POAM-004). Four of five CUECs are open gaps at the farm"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA available to all customers (customer-enabled); encryption at rest and in transit tested without exception,Turn MFA on (the vendor does not force it)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,Continuous monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data without undue delay; no time frame,Ask for a stated notice time at renewal
+"Availability commitments (A1.2, A1.3)",Recovery objectives versus the farm's BIA (BP-01 RTO 1 h; BP-03 RPO 24 h),RTO 8 h and RPO 1 h stated in the system description; annual recovery test performed,RPO meets the BIA. RTO of 8 h does not meet the 1-hour RTO for irrigation; manual operation at the pump house covers the gap (P05)
+Data export and exit,Ability to export all records in a usable format,Full export in spreadsheet and PDF formats; deletion within 90 days of termination on request,Supports the monthly export (POL-01 8.4) and the legible-format rule in 21 CFR 112.166(b)
+Bridge letter,Coverage from report end date to today,Requested 2026-07-15,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-operator 2026-07-15, with the IT technician",Repeat every year (POL-01 6.4)

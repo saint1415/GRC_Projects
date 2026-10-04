@@ -96,3 +96,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-13 to 2026-07-17 | Self-assessment with the on-call IT technician (off-season for strawberries; peanuts under irrigation). OT tests on 2026-07-16, outside pivot run times |
 | 2026-08-31 | Deliverables adopted by the owner-operator |
 | 2026-11-30 | Freeze-season readiness deadline: every irrigation and freeze-alarm action must be done before the strawberry season starts in December |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| SYS-01 roles | SYS-01 has three roles: administrator, irrigation technician, and viewer. The owner holds the administrator account; the dealer's technician account has the irrigation technician role (full irrigation control). The vendor's support access setting has been on since installation | P02, P04, P07 |
+| FMIS vendor SOC 2 report | Type 2, Security and Availability, 12 months ending 2026-03-31, unmodified opinion, one remediated exception. States RTO 8 hours and RPO 1 hour. The cellular device connectivity service that carries commands to the pivot panel is a carved-out subservice organization. Reviewed by the owner with the IT technician on 2026-07-15 | P02, P04, P05, P09 |
+| P07 test and interim step | On 2026-07-16 a phone on the customer Wi-Fi reached the pump controller's web page, and the controller and router accepted their factory passwords. The owner changed the customer Wi-Fi password and took down the posted sign the same day; the dealer changes the controller password at the September 2026 service visit | P01, P07 |
+| Passwords | The shared SYS-01 and booking password is a 10-character word and number pair | P07 |
+| AI yield trial results | 18 weekly flights, December 2025 to April 2026; 16 open weekends compared with farm stand scale totals; mean absolute percentage error 22% (12% in clear weeks; over-forecasts of 30% or more after rain or heavy cloud); refunds on 2 overbooked weekends | P10 |
+| Other AI uses | AI-002: SYS-01 irrigation scheduling recommendations in recommendation mode. AI-003: a public generative AI chatbot used to draft customer emails and website text | P10 |
+| Planned safeguards | Mutual-aid arrangement with a neighboring grower, standalone cellular freeze alarm (about $300 plus a monthly plan), password manager, business-grade file plan, and encrypted backup drive are planned, not in place (due dates in P01 and P07) | P01, P05, P06, P07, P08 |

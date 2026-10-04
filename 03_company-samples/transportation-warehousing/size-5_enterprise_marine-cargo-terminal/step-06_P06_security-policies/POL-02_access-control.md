@@ -36,7 +36,7 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 4.1 Every user, device and service must have a unique identity. Shared accounts are prohibited on IT and OT, including HMIs. Where an OT device cannot support individual accounts, the compensating control must be documented in STD-01.8 and the Cybersecurity Plan. (IA-2; AC-2; PR.AA-01)
 4.2 Access must be role-based, least-privilege and approved by the manager or system owner before it is granted. (AC-2; AC-3; AC-6; PR.AA-05)
 4.3 Duties that could let one person override a customs hold and release the same container at the gate, or create and pay a vendor, must be separated in role design. (AC-5; PR.AA-05)
-4.4 MFA is required for every password-protected IT system, all remote access, all cloud and administrative access and all SL-2 client access. Privileged users must use phishing-resistant authenticators. Remotely accessible OT must use MFA or documented compensating controls. (IA-2(1); IA-2(2); AC-17; PR.AA-03)
+4.4 MFA must be used on every password-protected IT system, all remote access, all cloud and administrative access and all SL-2 client access. Privileged users must use phishing-resistant authenticators. Remotely accessible OT must use MFA or documented compensating controls. (IA-2(1); IA-2(2); AC-17; PR.AA-03)
 4.5 Access must be disabled the same business day as a termination, and immediately for involuntary terminations. (PS-4; AC-2; PR.AA-05)
 4.6 Workforce accounts inactive for 60 days, and SL-2 client accounts inactive for 90 days, must be disabled automatically. (AC-2(3); PR.AA-05)
 4.7 Managers must certify their staff's access every quarter; SL-2 client administrators must attest to their users quarterly. (AC-2; PR.AA-05)
