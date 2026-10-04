@@ -57,7 +57,7 @@ Status: 11 In progress, 12 Open, 2 Closed (R-021 and R-022, both Low, accepted).
 
 **Risks found or changed during the work:**
 - R-025: added on 2026-08-26 after P07 testing found the root account password in a vault entry shared with all engineers and the contractor.
-- R-010: the former Customer Success Manager's support desk and admin console accounts, found active during P07, were disabled on 2026-08-26. Their sign-in history showed no use after the departure date. The process gap remains open.
+- R-010: the former Customer Success Manager's support desk and admin console accounts, found active during P07, were disabled on 2026-08-26. The support desk's sign-in history showed no use after the departure date; the admin console keeps no sign-in history, so use there cannot be ruled out. The process gap remains open.
 - R-015, R-020, and R-023: added on 2026-09-04 from the AI risk assessment (P10) and the SOC 2 readiness self-assessment (P09).
 
 ## 4. Treatment summary

@@ -138,6 +138,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Topic | Fact |
 |---|---|
 | SLA credits | Measured monthly on core service availability (agent workspace, API, and channel ingestion). Standard plan: 10% of the monthly fee below 99.9%, 25% below 99.0%. Enterprise plan: 5% below 99.95%, 10% below 99.5%, 25% below 99.0%. Credits are capped at 25% a month. In a 30-day month, a full outage of 1 hour costs about $583,000 in credits, 4 hours about $833,000, and 8 hours or more about $2.08 million (the cap). Enterprise MSAs also let a customer terminate if monthly availability falls below 99.0% in 2 consecutive months |
+| Revenue forecast | 2026 revenue is forecast at about $112 million (relevant to the CCPA cybersecurity audit schedule, P03) |
+| Own-purpose personal data | About 70,000 California consumers in data the company holds for its own purposes (employees, customer contacts, prospects, website visitors identified by cookies); no sensitive personal information beyond its 600 employees' HR data |
 | Revenue split | Enterprise plan about $5.0 million a month; Standard plan about $3.33 million a month; the healthcare cell about $0.5 million a month (Enterprise plan) |
 | Volumes | About 1.9 million tickets and 650,000 chat conversations a day across all tenants; about 140,000 API calls a minute at peak |
 | Workforce activity | 96 terminations and 58 internal transfers in the 12 months to 2026-06-30 |

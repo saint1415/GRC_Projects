@@ -94,7 +94,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 8. Configuration baselines and change control cover the cloud and endpoints only. OT servers and shop-floor terminals have neither (3.4.1 to 3.4.3).
 9. FIPS-validated cryptography is not confirmed on the Plant 2 SD-WAN appliance, which carries CUI between the plants (3.13.11).
 10. The MSSP is not documented in the SSP as an External Service Provider, and its customer responsibility matrix is incomplete (32 CFR 170.19(c)(2)(ii)).
-11. AI tools were adopted without review: the enclave generative AI assistant pilot (20 users since 2026-05), a predictive maintenance gateway that streams CNC telemetry from the Plant 1 shop-floor VLAN to a vendor's commercial cloud, and an applicant ranking feature turned on by the HR vendor's default settings (P10).
+11. Five AI tools were adopted or enabled without a security review, including the enclave generative AI assistant pilot (20 users since 2026-05), a predictive maintenance gateway that streams CNC telemetry from the Plant 1 shop-floor VLAN to a vendor's commercial cloud, and an applicant ranking feature turned on by the HR vendor's default settings (P10).
 12. Incident response was exercised only for ransomware (2025 tabletop). There has been no CUI exfiltration exercise and no DIBNet drill since 2024, and the image preservation procedure covers cloud systems only (3.6.3; 252.204-7012(e)).
 13. Printed CUI at Plant 2 is not marked, stored, or destroyed as CUI (3.8.1 to 3.8.4).
 14. Enclave access reviews are semiannual, not quarterly. Additive printer vendor remote access uses the vendor's own tool, outside company control (3.1.1, 3.7.5).

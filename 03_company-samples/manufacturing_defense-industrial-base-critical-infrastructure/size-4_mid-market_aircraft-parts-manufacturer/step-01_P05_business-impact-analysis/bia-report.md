@@ -55,7 +55,7 @@ Dollar values are scaled to about $240 million in annual revenue over about 250 
 
 **Enterprise scenarios.**
 - **Plant 2 shop floor down for 5 production days** (the P08 ransomware scenario): about $1.96 million of Plant 2 shipments deferred, about $235,000 not recovered (overtime, expedite freight, interrupted additive builds, late delivery penalties), plus response costs. Plant 1 can absorb only machined work whose programs are already proven there.
-- **Enclave-wide outage for 72 hours** (cloud services and both plants' MES): about $2.88 million of shipments deferred and about $350,000 not recovered. Incident response and legal costs come on top (P01 R-002, R-011).
+- **Enclave-wide outage for 72 hours** (cloud services and both plants' MES): about $2.88 million of shipments deferred and about $350,000 not recovered. Incident response and legal costs come on top (P01 R-004, R-012).
 
 **What drives the values:**
 - **Revenue and prime delivery ratings** drive BP-01, BP-02, and BP-10. Machines keep running loaded jobs for about one shift, so the MTD for production release is one production day.

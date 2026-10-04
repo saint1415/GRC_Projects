@@ -98,3 +98,25 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2): one calendar year after Phase 1, which began when the DFARS rule took effect on 2025-11-10, 90 FR 43560) |
 | 2026-11-30 | CUI migrated to SYS-10; CUI removed from SYS-01 |
 | 2027-01-15 | Target date to post a CMMC Level 2 self-assessment and affirmation in SPRS (32 CFR 170.16(b)) |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Revenue rhythm | About $720 of revenue per working day; Prime A pays invoices on 30-day terms | P05 |
+| CAD licenses | Node-locked to the laptop; moving them to a replacement takes the vendor 1 to 2 business days | P05 |
+| SYS-01 settings | Audit records kept 180 days; 30-day file version history; browser sessions stay signed in for 90 days | P02, P03, P04 |
+| Credentials | Laptop password was 8 characters; passwords for 14 accounts and the laptop disk recovery key were in an unencrypted spreadsheet in SYS-01 | P02, P03, P07 |
+| Laptop contents | Two unused trial programs and a game installed by a family member in 2025; CAD software two releases behind | P03 |
+| Home office | Monitored house alarm; spare office key kept in the kitchen; laptop replaced in 2025 still in a closet, not sanitized; the owner sometimes worked at the public library | P02, P03 |
+| Router and printer | Router firmware not updated since 2024; UPnP on; printer web sharing on and stored jobs never cleared | P03, P04 |
+| Public website | Portfolio website hosted by a web host; checked 2026-07-15 and found to hold no CUI | P03 |
+| Prime A onboarding | Prime A verified the owner's U.S. citizenship at onboarding in 2025 | P03 |
+| P07 tests (2026-08-05) | Router administrator password was the factory default (changed that day); IT consultant's setup account disabled; a household tablet could read the printer's job list; the backup drive opened with no password (last backup 2026-08-02); laptop FIPS policy setting off; DIBNet access attempt failed (no certificate) | P01 R-015, P07 |
+| AI chatbot use | CUI excerpts from two Prime A specifications (one ITAR-marked) pasted on 6 occasions between 2026-03 and 2026-07; no drawings uploaded; chat history deleted and model training turned off 2026-07-17; Prime A's subcontract administrator and counsel informed 2026-07-17 | P01 R-007, P04, P10 |
+| SYS-10 evidence | Offering listed on the FedRAMP Marketplace at the High baseline; U.S. data centers and U.S.-person support; SOC 2 Type 2 (Security and Availability) for the period ending 2026-06-30; reviewed by the owner 2026-08-24 with the CMMC consultant's comments 2026-08-26 | P04, P09 |
+| Budget | About $3,600 in the first year (fictional), including SYS-10 licenses of about $1,800 a year | P01, P07 |
+| Insurance | No standalone cyber insurance; professional liability policy coverage for cyber events unconfirmed | P08 |
+| Commercial questionnaire | A commercial customer sent a security questionnaire in July 2026 | P09 |
+| Forensics | On-call terms with a digital forensics firm to be agreed by 2026-10-31 | P08 |
