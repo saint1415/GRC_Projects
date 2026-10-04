@@ -104,9 +104,9 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| No plan for a processor outage longer than the store-and-forward window | P01 R-005; P03 G-071 (PCI DSS 12.10); POAM-016 |
-| SNAP EBT routing not included in switch failover; manual voucher drills limited | P01 R-017; P03 G-095; POAM-011 |
+| No plan for a processor outage longer than the store-and-forward window | P01 R-005; P03 G-069 (PCI DSS 12.10); POAM-016 |
+| SNAP EBT routing not included in switch failover; manual voucher drills limited | P01 R-017; P03 G-084, G-086; POAM-011; POAM-024 |
 | AB stores: legacy processor link, no store-and-forward, no tested restore, shared admin account | P01 R-003, R-018; POAM-001; POAM-008 |
 | Delivery provider concentration without tested surge | P01 R-016; POAM-022 |
 | Refrigeration monitoring fallback never exercised; vendor remote tools | P01 R-007; POAM-004 |
-| Payment page scripts outside controls on express checkout and cart pages | P01 R-002; P03 G-027, G-063; POAM-002 |
+| Payment page scripts outside controls on express checkout and cart pages | P01 R-002; P03 G-027, G-055; POAM-002 |
