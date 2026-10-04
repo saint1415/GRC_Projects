@@ -109,7 +109,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 | Smokehouse controller and remote service module (SYS-01) | Machine controller | Smokehouse | Maintenance and Sanitation Technician |
 | Stuffer and linker HMI (SYS-02) | Machine controller (unsupported OS) | Raw processing room | Maintenance and Sanitation Technician |
 | Packager PLC, HMI, and label printer-applicator (SYS-02) | Machine controller | Packaging room | Maintenance and Sanitation Technician |
-| Labeling PC (SYS-03) | Windows endpoint | Production office | Production Supervisor (MSP operates) |
+| Labeling PC (SYS-03) | Endpoint (PC) | Production office | Production Supervisor (MSP operates) |
 | Cold-chain sensors, product probe, and gateway (SYS-04) | IoT devices; SaaS | Coolers, freezer, blast chill, rooms, truck; office network | Production Supervisor |
 | Floor tablets (2) and records app tenant (SYS-05) | Tablets; SaaS | Raw room and packaging room | Production Supervisor |
 | Productivity suite tenant (SYS-06) | SaaS | Productivity suite vendor | Office Manager |

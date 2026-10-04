@@ -59,7 +59,7 @@ Status: 8 In progress, 12 Open, 3 Closed (R-023 treated; R-020 and R-021 accepte
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the owner; about $6,000 one-time and $1,800 a year):**
   - Plant network (VLAN) and firewall rules by the MSP: about $1,200 one-time
-  - MSP-managed EDR with after-hours alerting on the three Windows computers: about $600 a year
+  - MSP-managed EDR with after-hours alerting on the three managed PCs: about $600 a year
   - Security awareness training with phishing simulations for 7 people: about $500 a year
   - Immutable 90-day backup retention: about $400 a year
   - Cellular backup for the cold-chain gateway: about $250 one-time and $300 a year

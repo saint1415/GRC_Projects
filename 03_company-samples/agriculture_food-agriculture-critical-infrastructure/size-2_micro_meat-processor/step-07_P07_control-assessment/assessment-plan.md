@@ -46,7 +46,7 @@ The MSP operates the PC and network controls, so evidence came from it. Requeste
 | Record of any restore test | CP-4 | No record exists (confirmed by the MSP on 2026-08-07) |
 | Firewall rule export and log settings | SC-7 | Yes, 2026-08-06 |
 | Device list | CM-8 | Yes, 2026-08-06 (3 PCs only) |
-| Technician list with access, and MFA on the remote management platform | AC-17, SA-9 | Received 2026-08-12 after fieldwork; reviewed in POAM-011 |
+| Technician list with access, and MFA on the remote management platform | AC-17, SA-9 | Received 2026-08-12, the last day of fieldwork; follow-up in POAM-011 |
 
 **Equipment vendor evidence.** The smokehouse manufacturer provided its portal session log for July 2026 on request (6 sessions). The packaging vendor did not answer a request for its remote access practices before fieldwork ended (POAM-002).
 

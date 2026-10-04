@@ -36,7 +36,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 |---|---|---|---|
 | SYS-01 | Smokehouse controller | On premises (plant network) | Programmable controller on the two-truck smokehouse. Stores cook and smoke cycles and logs core-probe and chamber temperatures (90 days on the device). Web interface on the plant network. A remote service module connects outbound to the manufacturer's cloud portal, **always on**, with one shared login and no MFA. Operators use one shared PIN |
 | SYS-02 | Line 1 and Line 2 controls | On premises (plant network) | Vacuum stuffer and linker with a touchscreen HMI (**unsupported embedded operating system, installed 2016**); thermoforming packager (installed June 2026) with PLC, HMI, and an inline label printer-applicator. Recipes and settings live only on the machines |
-| SYS-03 | Labeling PC (production office) | On premises; MSP-managed | Windows PC running label and lot-code software (templates, product and allergen statements) and the smokehouse vendor's desktop software for cycle uploads and cook-log exports. **One shared "production" login.** The packaging vendor installed an **unattended remote desktop tool** with a static password at commissioning |
+| SYS-03 | Labeling PC (production office) | On premises; MSP-managed | PC running label and lot-code software (templates, product and allergen statements) and the smokehouse vendor's desktop software for cycle uploads and cook-log exports. **One shared "production" login.** The packaging vendor installed an **unattended remote desktop tool** with a static password at commissioning |
 | SYS-04 | Cold-chain monitoring service | 8 wireless sensors and 1 wireless product probe, gateway on premises; vendor SaaS dashboard | Sensors in both coolers, the freezer, the blast chill cooler, the raw room, the packaging room, the drying room, and the truck. Alerts by text to the Production Supervisor only. **The gateway sits on the office network with no cellular backup** |
 | SYS-05 | Food safety records app | Vendor SaaS on 2 floor tablets | SSOP pre-operational checks, HACCP monitoring, corrective actions, verification, and pre-shipment review. **One shared tablet login; "signatures" are typed initials.** The app's administrator account is the vendor-issued default, shared by the owner and the Office Manager |
 | SYS-06 | Productivity suite (email, calendar, files) | SaaS | MFA on the four named mailboxes. A shared "plant" mailbox used by floor staff has no MFA. HACCP plans, SSOPs, the recall procedure, and formulations sit in a shared folder open to every suite account |
@@ -46,7 +46,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-10 | Payroll service | SaaS | Employee personal information (Social Security numbers, bank accounts) |
 | SYS-11 | Retail card terminal | Provider-managed, cellular | Outside the company network |
 | SYS-12 | AI label and seal inspection camera (pilot) | Smart camera on Line 2 (plant network); vendor cloud for model updates | Checks each pack's seal and reads the label to confirm product name, allergen statement, and lot code match the job. Rejects go to a bin. Pilot since 2026-06-15 (see P10) |
-| SYS-13 | Remote access paths | Internet | Smokehouse manufacturer cloud portal (always on, shared login); packaging vendor unattended remote desktop on SYS-03; MSP remote management agent on the Windows PCs |
+| SYS-13 | Remote access paths | Internet | Smokehouse manufacturer cloud portal (always on, shared login); packaging vendor unattended remote desktop on SYS-03; MSP remote management agent on the managed PCs |
 
 **SSP system (P02):** the *Plant Production and Cold-Chain Monitoring System (PPCM)*: SYS-01 to SYS-09 and SYS-13, with interfaces to SYS-10 and the SYS-12 pilot.
 
@@ -55,7 +55,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 - Three HACCP plans, Sanitation SOPs, and a written recall procedure under FSIS inspection; annual HACCP reassessment signed in January 2026; Production Supervisor HACCP-trained (9 CFR 417.7)
 - Daily SSOP and HACCP monitoring records in the records app; handheld thermometer verification of each cook cycle
 - Cold-chain alerting for every cooler, the freezer, the blast chill cooler, and the truck
-- MSP patching and antivirus on the three Windows computers; MSP-managed firewall; nightly cloud backup
+- MSP patching and antivirus on the three managed PCs; MSP-managed firewall; nightly cloud backup
 - MFA on the named productivity suite mailboxes and the accounting service
 - Owner laptop encrypted; guest Wi-Fi separated from staff Wi-Fi
 - Card terminal on the provider's own cellular connection
@@ -99,3 +99,26 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-08-20 | SOC 2 readiness self-assessment and cold-chain vendor report review |
 | 2026-08-25 | AI risk assessment |
 | 2026-08-31 | Deliverables approved by the owner |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Security lead designation | The owner designated the Office Manager as security and compliance lead in writing on 2026-07-20 | P02, P06, P09 |
+| MSP contract | Covers the office desktop, owner laptop, labeling PC, firewall, Wi-Fi, suite administration, and backup, with a next-business-day response time, no recovery time commitment, and no incident notice term. Plant machines are excluded | P02, P05, P08 |
+| Refrigeration contractor | Service agreement with a 4-hour emergency response | P05 |
+| Inventory and sales | $25,000 to $40,000 of product and raw material in cold storage at any time; about $16,500 of wholesale deliveries a week; about $1,100 a day at the retail counter | P05 |
+| Accounts | The accounting service has three named users (owner, Office Manager, Production Supervisor), all with MFA. The cold-chain dashboard has two named accounts (owner, Production Supervisor) and one shared login used by the delivery driver | P04, P07 |
+| Personal information held | Records of about 30 current and former employees (payroll exports and HR files); no consumer personal information | P08, P09 |
+| Firewall logging | The firewall keeps 7 days of logs | P02, P07 |
+| Cold-chain gateway | The gateway went offline 3 times between February and July 2026 (vendor dashboard history); nobody was alerted | P03, P05 |
+| 2026 changes | March 2026: SSOP monitoring moved from paper to the records app (SSOP text updated, not re-signed) and a new smoked sausage cycle was added (fully cooked plan modified, not re-signed). June 2026: new packaging machine with the AI camera; the old packaging controller was removed with no disposal record. The smokehouse remote service module was installed in 2025 | P02, P03, P09 |
+| HACCP training and validation | The owner and the Production Supervisor completed a qualifying HACCP course in 2019; initial validation files for all three plans date from 2019 | P03 |
+| Departure | A production worker left in March 2026. His suite account was disabled the same day; shared passwords and the smokehouse PIN were not changed until 2026-08-12, and his cold-chain dashboard login was removed the same day | P01, P07 |
+| Vendor remote access change | On 2026-08-12 the smokehouse portal connection and the packaging vendor's remote desktop tool were set to off by default, enabled only for supervised sessions | P01, P02, P04, P07 |
+| P07 testing results | On 2026-08-11 the assessor found the manufacturer default administrator password on the smokehouse controller web interface (changed the same day), 17 networked devices against 3 in the MSP list, and 6 unrequested manufacturer portal sessions in July 2026 | P01, P07, P09 |
+| Invoice fraud attempt | In 2025 an email asked the Office Manager to change a meat supplier's bank details; she called the supplier and stopped it. It was never shared with staff | P01, P07 |
+| Assessor | The P07 assessor is an independent consultant with food plant OT experience, not involved in the risk assessment, the gap analysis, or operating any control | P07, P09 |
+| Grocery chain questionnaire | Received July 2026; response due 2026-09-30; small suppliers may answer with a self-assessment | P09 |
+| AI camera pilot | Two model updates pushed by the vendor without notice (2026-07-09 and 2026-08-04); packaging film supplier changed on 2026-07-28 | P10 |
