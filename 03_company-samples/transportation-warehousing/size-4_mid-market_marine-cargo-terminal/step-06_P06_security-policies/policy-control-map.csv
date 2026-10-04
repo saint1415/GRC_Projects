@@ -1,2 +1,64 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Program documented; one Plan addressing each terminal,PM-1; PL-2,GV.PO-01,N48-49-R01 (101.620(a); 101.620(b)(1); 101.630(d)(2)),No
+POL-01,4.2,"CySO and alternate designated in writing, 24x7",PM-2,GV.RR-02,N48-49-R01 (101.620(b)(3); 101.625(b)),No
+POL-01,4.3,Annual risk assessment feeding the Cybersecurity Assessment and FSAs,RA-3; PM-9,ID.RA-01; ID.RA-05,N48-49-R01 (101.650(e)(1)); 33 CFR 105.305(c)(1)(v),No
+POL-01,4.4,Risk acceptance authority; no safety risk accepted above Low,PM-9,GV.RM-01; GV.RM-02,N48-49-R01 (101.650(e)(1)),No
+POL-01,4.5,Quarterly report to the audit committee,PM-9; CA-5,GV.OV-01,N48-49-R01 (101.620(a)),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,N48-49-R01 (101.630(e)),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1; RA-7,ID.RA-07,N48-49-R01 (101.665),No
+POL-01,4.8,Sanctions in proportion to intent and harm,PS-8,GV.RR-04,N48-49-R01 (101.650(d)),No
+POL-01,4.9,Security criteria and notification terms for suppliers,SA-4; SA-9; SR-6; SR-8,GV.SC-05; GV.SC-06; GV.SC-07,N48-49-R01 (101.650(f)(1)-(2)); Fla. Stat. 501.171(6),Yes
+POL-01,4.10,Independent annual assessment and audits,CA-2; CA-2(1),ID.IM-01; ID.IM-02,N48-49-R01 (101.630(f)); 33 CFR 105.415(b)(4),No
+POL-01,4.11,Cyber records kept 2 years with the FSO records,SI-12; AU-11,GV.PO-02; PR.PS-04,N48-49-R01 (101.640); 33 CFR 105.225,No
+POL-01,4.12,Register of legal and contractual requirements,PL-1; SA-9,GV.OC-03,N48-49-R01 (101.625(e)(7)),Yes
+POL-01,4.13,AI tools approved before use; advisory only for operations,PM-9; SA-9,GV.RM-01; GV.SC-06,N48-49-R01 (101.650(f)(1)),Yes
+POL-01,4.14,Acquired sites assessed and segmented; ownership change triggers,CA-3; RA-3,ID.RA-07; GV.OC-04,N48-49-R01 (101.650(e)(1); 101.630(e)); 33 CFR 105.415(a)(4),No
+POL-01,4.15,KEVs mitigated without delay; scanning; disclosure channel,RA-5; RA-5(11); SI-2; SA-22,ID.RA-01; ID.RA-08; PR.PS-02,N48-49-R01 (101.625(d)(15); 101.650(e)(3)(i)-(ii); 101.650(e)(3)(vi)),Yes
+POL-01,4.16,Secure development and annual testing of the portal,SA-11; CM-3; CA-8,PR.PS-06,N48-49-R01 (101.650(f)(1); 101.650(e)(2)),Yes
+POL-02,4.1,Unique accounts; no shared accounts without compensating controls,IA-2; AC-2,PR.AA-01; PR.AA-02,N48-49-R01 (101.650(a)(6)),Yes
+POL-02,4.2,Role-based least privilege; separated duties; two-person hold override,AC-2; AC-3; AC-5; AC-6,PR.AA-05,N48-49-R01 (101.650(a)(5)); 33 CFR 105.265(a)(7),Yes
+POL-02,4.3,"MFA for all users, VPN, cloud admin and remote OT",IA-2(1); IA-2(2); IA-2(8),PR.AA-03,N48-49-R01 (101.650(a)(4)),Yes
+POL-02,4.4,No standing privileged access; just-in-time elevation,AC-6; AC-6(2); AC-6(5),PR.AA-05,N48-49-R01 (101.650(a)(5)),Yes
+POL-02,4.5,Same-day removal at termination; transfers within 5 days,PS-4; PS-5; AC-2,PR.AA-05,N48-49-R01 (101.650(a)(7)),Yes
+POL-02,4.6,Quarterly access reviews; monthly override review,AC-2; AC-6; AU-6,PR.AA-05,N48-49-R01 (101.650(a)(5)),Yes
+POL-02,4.7,Lockout after 10 failures; 10-minute idle lock,AC-7; AC-11,PR.AA-03,N48-49-R01 (101.650(a)(1)),No
+POL-02,4.8,No default passwords; 14-character minimum,IA-5; CM-6,PR.AA-01,N48-49-R01 (101.650(a)(2)-(3)),Yes
+POL-02,4.9,Break-glass accounts sealed at T1 and T2,AC-2,PR.AA-05,N48-49-R01 (101.650(g)(4)),Yes
+POL-02,4.10,"All remote access brokered, approved and recorded; OT off by default",AC-17; MA-4,PR.AA-05; DE.CM-06,N48-49-R01 (101.650(e)(3)(v); 101.650(f)(3)),Yes
+POL-02,4.11,Physical access to OT spaces limited and logged,PE-3; PE-6,PR.AA-06,N48-49-R01 (101.650(i)(1)),Yes
+POL-02,4.12,Portal customer account rules,IA-8; AC-2,PR.AA-03,N48-49-R01 (101.650(a)(4)),Yes
+POL-02,4.13,IT/OT segmentation with deny-by-default and logging,SC-7; SC-7(5); AC-4,PR.IR-01,N48-49-R01 (101.650(h)(1)-(2)),Yes
+POL-03,4.1,Cyber Incident Response Plan with IT and OT runbooks,IR-8,RS.MA-01,N48-49-R01 (101.620(b)(6); 101.650(g)(2)),Yes
+POL-03,4.2,Report suspected incidents immediately,IR-6,RS.MA-02,N48-49-R01 (101.650(d)(1)(iv)),Yes
+POL-03,4.3,"Log, categorize and track every incident",IR-5,RS.MA-02,N48-49-R01 (101.640; 101.625(d)(10)),No
+POL-03,4.4,"Immediate 6.16-1 report to the FBI, CISA and the COTP",IR-6,RS.CO-02,N48-49-R01 (101.620(b)(7); 101.650(g)(1)); 33 CFR 6.16-1; 33 CFR 101.305,Yes
+POL-03,4.5,Florida breach determination and notices,IR-6,RS.CO-03,Fla. Stat. 501.171(3)-(5),Yes
+POL-03,4.6,Report unauthorized SSI disclosure,IR-6,RS.CO-02,N48-49-R01 (101.630(b)); 49 CFR 1520.9(c),Yes
+POL-03,4.7,Ransom decision rules,IR-4,RS.MA-03,OFAC ransomware advisory (2021-09-21),Yes
+POL-03,4.8,OT stopped safely; restart only after an integrity check,IR-4,RS.MI-01,N48-49-R01 (101.650(g)(2)),Yes
+POL-03,4.9,Two cyber drills a year; cyber scenario in each annual exercise,IR-2; IR-3,ID.IM-02; PR.AT-02,N48-49-R01 (101.635(b)-(c); 101.650(d)(2)),No
+POL-03,4.10,Crisis management team; counsel-directed investigation,IR-4; IR-7,RS.MA-01,N48-49-R01 (101.620(b)(6)),Yes
+POL-03,4.11,Prompt notice to port partners,IR-4,RS.CO-03,N48-49-R01 (101.645(b)),Yes
+POL-03,4.12,24x7 monitoring; OT alerts to the MSSP,SI-4; AU-6,DE.CM-01; DE.AE-02,N48-49-R01 (101.650(h)(2)),Yes
+POL-03,4.13,Lessons learned within 30 days,IR-4,ID.IM-03; ID.IM-04,N48-49-R01 (101.650(g)(3)),Yes
+POL-04,4.1,Five classification levels,RA-2,ID.AM-05,N48-49-R01 (101.650(b)(3)),No
+POL-04,4.2,"SSI marked, stored, shared and destroyed per 49 CFR 1520",MP-3; MP-4; AC-3; AC-21,PR.DS-01,N48-49-R01 (101.630(b)); 49 CFR 1520.9(a); 33 CFR 105.305(e),No
+POL-04,4.3,Encryption in transit; no FTP; OT feasibility documented,SC-8; SC-13,PR.DS-02,N48-49-R01 (101.650(c)(2)),Yes
+POL-04,4.4,Approved storage; encryption at rest; 90-day driver data limit,SC-28,PR.DS-01,N48-49-R01 (101.650(c)(2)); Fla. Stat. 501.171(2),No
+POL-04,4.5,"Inventory, network map, approved list and baselines",CM-8; CM-2; CM-6; CM-7; CM-11; PL-8,ID.AM-01; ID.AM-02; ID.AM-03; PR.PS-01,N48-49-R01 (101.650(b)(1)-(4)),Yes
+POL-04,4.6,"Protected, tested backups of critical IT and OT",CP-9; CP-4; CP-10; CP-2,PR.DS-11; RC.RP-03,N48-49-R01 (101.650(g)(4)),Yes
+POL-04,4.7,"Central, protected logs for 1 year searchable, 2 years archived",AU-2; AU-9; AU-11; AU-12,PR.PS-04; DE.CM-01,N48-49-R01 (101.650(c)(1); 101.640),Yes
+POL-04,4.8,"Sanitization with certificates, including gate and OT media",MP-6,PR.DS-01,Fla. Stat. 501.171(8); 49 CFR 1520.9(a)(5),No
+POL-04,4.9,No sensitive data in unapproved AI tools,AC-20; SA-9,GV.SC-05; PR.DS-01,N48-49-R01 (101.650(f)(1)); 49 CFR 1520.9(a)(2),Yes
+POL-04,4.10,Records retention,SI-12,PR.PS-04,N48-49-R01 (101.640); 33 CFR 105.225,No
+POL-05,4.1,Business use only; no personal use of OT or gate systems,PL-4,GV.RR-04,N48-49-R01 (101.650(d)(1)),No
+POL-05,4.2,Annual acknowledgment; rules card; vendor briefing,PL-4,PR.AT-01,N48-49-R01 (101.650(d)(1)),No
+POL-05,4.3,Training before access; annual; OT and key personnel training,AT-2; AT-3; AT-4,PR.AT-01; PR.AT-02,N48-49-R01 (101.650(d)(1)-(4)),Yes
+POL-05,4.4,Untrained users accompanied or monitored,AT-2; PS-7,PR.AT-01; DE.CM-03,N48-49-R01 (101.650(d)(3)),Yes
+POL-05,4.5,Approved software only; no personal devices or USB on OT,CM-11; MP-7,PR.PS-01; PR.PS-02,N48-49-R01 (101.650(b)(1); 101.650(i)(2)),Yes
+POL-05,4.6,Phishing awareness and reporting,AT-2,PR.AT-01,N48-49-R01 (101.650(d)(1)(ii)),Yes
+POL-05,4.7,Screen lock; personal gate sign-in,AC-11,PR.AA-03,N48-49-R01 (101.650(a)(6)),No
+POL-05,4.8,Report anything suspicious immediately,IR-6,RS.MA-02,N48-49-R01 (101.650(d)(1)(iv)),Yes
+POL-05,4.9,Approved AI tools only; no sensitive data in public chatbots,PL-4; AC-20,GV.RR-04; PR.DS-01,49 CFR 1520.9(a)(2),No
+POL-05,4.10,No unapproved changes to OT settings or programs,CM-3,PR.PS-01,N48-49-R01 (101.650(b)(4)),No
+POL-05,4.11,No disclosure of incidents or SSI,PL-4,PR.DS-01,49 CFR 1520.9(a)(2),No
