@@ -166,8 +166,8 @@ See `control-implementation.csv` (224 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 199 |
-| Partially implemented | 25 |
+| Implemented | 196 |
+| Partially implemented | 28 |
 | Planned | 0 |
 | **Total** | **224** |
 
@@ -177,7 +177,7 @@ See `control-implementation.csv` (224 controls).
 | Hybrid (shared between a provider and the HFCDMS team) | 25 |
 | System-specific | 63 |
 
-Partially implemented controls (25): AC-3, AC-17, AC-17(1), AU-2, AU-6, AU-12, CA-7, CM-3, CM-8, CP-7, CP-8, CP-9, CP-10, IR-8, MP-7, PS-4, RA-5, SA-4, SA-22, SI-2, SI-4, SI-4(4), SI-7(1), SR-3, SR-5. Each one links to a POA&M item in P07. No control is only Planned: the weaknesses are about coverage across 35 plants and legacy equipment, not missing programs.
+Partially implemented controls (28): AC-3, AC-17, AC-17(1), AU-2, AU-6, AU-12, CA-7, CM-3, CM-8, CP-7, CP-8, CP-9, CP-10, IR-8, MA-4, MP-7, PS-4, RA-5, SA-4, SA-9, SA-22, SC-7, SI-2, SI-4, SI-4(4), SI-7(1), SR-3, SR-5. Each one links to a POA&M item in P07. No control is only Planned: the weaknesses are about coverage across 35 plants and legacy equipment, not missing programs.
 
 ### 10.2 Control assessment status
 Internal Audit, with a co-sourced OT specialist firm, assessed 48 of these controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). SERC's CIP audit (2025-03) covered the CIP-scope controls; both findings were mitigated by 2025-09. Weaknesses are in P07 `poam.csv`.

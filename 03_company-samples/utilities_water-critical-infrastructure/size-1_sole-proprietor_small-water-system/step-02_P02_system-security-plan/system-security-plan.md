@@ -28,7 +28,7 @@ Benchmarks (voluntary): NIST CSF 2.0 and NIST SP 800-82 Rev. 3 for the control p
 ### 4.1 System Security Plan Approval
 Approved by the owner-operator on 2026-08-31.
 ### 4.2 System Authorization Decision
-No formal authorization applies to a private water system. Equivalent decision: the owner-operator accepted continued operation on 2026-08-31, on condition that the High risks in P01 (R-001, R-002) are treated by 2026-09-15 and the plant stays able to run by hand.
+No formal authorization applies to a private water system. Equivalent decision: the owner-operator accepted continued operation on 2026-08-31, on condition that the two High risks in P01 are treated by their due dates (R-001 portal MFA by 2026-09-15; R-002 integrator access by 2026-10-31, with its account disabled between approved sessions from 2026-09-15) and the plant stays able to run by hand.
 ### 4.3 System Operational Status
 Operational. Planned changes: MFA and named accounts on the portal (2026-09-15); router firmware update (2026-09-15); PLC and HMI password change with the integrator (2026-11-30).
 
