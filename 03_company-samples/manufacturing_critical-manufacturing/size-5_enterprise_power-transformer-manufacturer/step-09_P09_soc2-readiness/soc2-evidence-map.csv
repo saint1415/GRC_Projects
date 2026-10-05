@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC1.4,Role-based training and background checks for service line staff,Learning system; HR system,Chief Human Resources Officer,At hire and annual,25 staff,P07 AT-3,Collecting
+Both,CC3.2; CC3.3; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC5.3,"Policy hierarchy, standards, and exception register",Policy portal; GRC platform,CISO,Annual review; monthly exception review,Policy versions; 3 monthly exception reviews,P06,Ready
+Both,CC6.1; CC6.3,Quarterly access certifications and PAM session records,Identity governance; PAM,Director of Identity and Access Management,Quarterly; per session,All quarters; 25 PAM sessions,"P07 AC-2, AC-6",Collecting
+Both,CC6.3,Termination disablement report (HR to identity platform),Identity governance; HR system,Director of Identity and Access Management,Per event,25 terminations,P07 PS-4,Collecting
+Both,CC6.6; CC6.7,"Landing zone network policies, WAF configuration, and TLS scans",Cloud posture management; scanner,Director of Cloud Platform Engineering,Continuous; quarterly scan,Configuration at 2 points in the period; 2 quarterly scans,P04,Ready
+Both,CC6.8; CC7.1,"EDR coverage, vulnerability scans, and image scan results",EDR console; scanner,Director of Security Operations,Weekly,5 weekly reports,"P07 RA-5, SI-3",Collecting
+Both,CC7.2; CC7.3,SIEM use cases and alert tickets for each service line,SIEM; SOAR,Director of Security Operations,Continuous,25 alerts per service line,"P07 AU-6, SI-4",Collecting
+Both,CC7.4,"Incident runbook, notice templates, and exercise reports",GRC platform,Director of Security Operations,Annual exercise,Exercise report (2026-11-18 tabletop),P08,Collecting
+Both,CC9.2,"Vendor reviews of subservice organizations (cloud providers, notification service, EDI provider) with complementary controls mapped",Vendor register,Director of Third-Party Risk Management,Annual,All carved-out subservice organizations,P07 SA-9,Collecting
+SL-1 Fleet Monitoring Service,CC2.3; CC3.1,Subscription agreement commitments register and status page history,Contract system; status page,"Vice President, Digital Services",Per change; continuous,Register; 12 months of status history,2025 SOC 2 report,Ready
+SL-1 Fleet Monitoring Service,CC8.1,FMS pipeline change records with peer review,Code repository; pipeline,"Vice President, Digital Services",Per change,25 changes,2025 SOC 2 report,Ready
+SL-1 Fleet Monitoring Service,A1.1; A1.2; A1.3,"Availability reports, backup reports, and the annual failover test",Monitoring; backup service,Director of Cloud Platform Engineering,Monthly; annual test,12 monthly availability reports; failover test report,P05 BP-12,Ready
+SL-1 Fleet Monitoring Service,PI1.2,Feed-gap alerts and rejected-file reports,FMS ingestion service,"Vice President, Digital Services",Daily,25 days,New,Not started
+SL-1 Fleet Monitoring Service,PI1.3,AI-003 model validation and release records,Model registry; change tickets,"Vice President, Digital Services",Per model release,All releases in the period,P10,Not started
+SL-1 Fleet Monitoring Service,PI1.4,Alert-to-advisory timer report for high-severity alerts,FMS case tool,"Vice President, Digital Services",Monthly,3 monthly reports; 25 high-severity alerts,New,Not started
+SL-2 Spare Transformer Reserve Service,CC2.3; CC3.1,SL-2 system description and commitments register,GRC platform,"Vice President, Spares and Services",Annual,Approved description,New,Not started
+SL-2 Spare Transformer Reserve Service,CC6.2; CC6.3,Member administrator attestations and reservation and allocation role design,STRS portal; ERP,"Vice President, Spares and Services",Annual; per change,All members; role matrix,"P07 AC-2, AC-5",Not started
+SL-2 Spare Transformer Reserve Service,CC6.4,Spare yard CCTV and intrusion detection monitoring records,Physical security systems,"Vice President, Spares and Services",Continuous; monthly review,3 monthly reviews per yard,P03 G-058; POAM-023,Not started
+SL-2 Spare Transformer Reserve Service,CC8.1,ERP change approval workflow records for registry and master data,ERP; change system,"Vice President, Enterprise Applications",Per change,25 changes,P07 CM-3,Collecting
+SL-2 Spare Transformer Reserve Service,CC7.5; A1.2; A1.3,ERP failover retest and STRS manual dispatch test,DR test reports,CIO,Annual,Retest report (2027-01),P05; POAM-006; POAM-024,Not started
+SL-2 Spare Transformer Reserve Service,PI1.2; PI1.3; PI1.4,Dispatch log with 24-hour decision times and monthly yard-to-registry reconciliations,ERP; spares desk log,"Vice President, Spares and Services",Per request; monthly,All emergency requests; 3 monthly reconciliations,P05 BP-13,Collecting
