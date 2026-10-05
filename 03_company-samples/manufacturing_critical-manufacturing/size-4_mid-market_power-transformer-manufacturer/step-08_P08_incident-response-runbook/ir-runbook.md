@@ -128,7 +128,7 @@ The response runs on three tiers, so that technical, plant, and business and leg
 | Within 1 business day | Access-revocation notice to each utility where an exposed field technician credential exists | Director of Field Service |
 | Within 72 hours of confirmation | FMS subscriber notice if D4 is yes | Director of Digital Services |
 | Day 1-3, then daily | Delivery-impact updates to utilities with storm-restoration orders and other affected customers; delivery update to the federal contracting officers | VP Sales; Contracts and Trade Compliance Manager |
-| Within 1 business day / 3 business days | FAR 52.204-25(d) report if covered equipment is identified; FAR 52.204-23(c) or 52.204-30(c)(3) report if a covered article is identified | Contracts and Trade Compliance Manager |
+| Within 1 business day / 3 business days | FAR 52.204-25(d) report if covered equipment is identified; FAR 52.204-23(c) or 52.204-30(c)(3)-(4) report if a covered article is identified | Contracts and Trade Compliance Manager |
 | Within 30 days of determination | Florida notice to affected individuals; Department of Legal Affairs if 500 or more Floridians; consumer reporting agencies if more than 1,000; other states per their laws | HR Director and General Counsel |
 | Within 30 days of knowing | Disclosure to addendum utilities of any vulnerability found in supplied software or firmware | VP Engineering |
 

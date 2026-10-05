@@ -72,7 +72,7 @@ Each maps to a POA&M item (POAM-018, POAM-019). Most Partially ready criteria de
 | Quarter | Criteria addressed | Evidence to start collecting |
 |---|---|---|
 | 2026 Q4 | CC1.5, CC2.3, CC5.2, CC6.5, CC7.2, CC9.1, C1.2 | Approved FMS control matrix; security contact and notice drill records; FMS administrators in the quarterly access review; deletion certificates; SIEM use cases for the FMS; FMS section of the contingency plan |
-| 2027 Q1 | CC1.4, CC2.1, CC2.2, CC3.4, CC4.1, CC5.3, CC6.1, CC6.3, CC6.8, CC7.1, CC7.3, CC7.4, CC7.5, CC8.1, CC9.2, A1.2, A1.3, C1.1 | Training records; SBOMs; operating procedures; change tickets with approvals for releases and model updates; internal audit pre-assessment; certificate revocation settings; portal user confirmations; blocking dependency scans; penetration test report; tabletop report; restore test record; continuous backup settings |
+| 2027 Q1 | CC1.2, CC1.4, CC2.1, CC2.2, CC3.4, CC4.1, CC5.3, CC6.1, CC6.3, CC6.8, CC7.1, CC7.3, CC7.4, CC7.5, CC8.1, CC9.2, A1.2, A1.3, C1.1 | Quarterly audit committee reports with the FMS as a standing item; training records; SBOMs; operating procedures; change tickets with approvals for releases and model updates; internal audit pre-assessment; certificate revocation settings; portal user confirmations; blocking dependency scans; penetration test report; tabletop report; restore test record; continuous backup settings |
 | 2027-03-31 | Type 1 (design) report as an interim deliverable to the two subscribers | Management's system description and assertion |
 | 2027-04-01 to 2027-09-30 | Type 2 observation period | All recurring control evidence (quarterly reviews, monthly scans, change tickets, restore tests, notice drills) |
 
