@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**142 of 216** sample companies are finished (1420 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**144 of 216** sample companies are finished (1440 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -135,6 +135,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Transportation Systems | Mid-Market | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-4_mid-market_freight-railroad/README.md) |
 | Transportation Systems | Enterprise | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-5_enterprise_freight-railroad/README.md) |
+| Transportation Systems | Multi-Sector | Freight railroad plus two divisions | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-6_multi-sector_freight-railroad-plus-two-divisions/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
 | Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
 | Information | Small | Workforce scheduling SaaS | [README](03_company-samples/information-software-media/size-3_small_workforce-scheduling-saas/README.md) |
@@ -144,6 +145,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Communications | Sole Proprietorship | Wireless internet provider | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-1_sole-proprietor_wireless-internet-provider/README.md) |
 | Communications | Micro | Telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-2_micro_telecom-carrier/README.md) |
 | Communications | Small | Regional telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-3_small_regional-telecom-carrier/README.md) |
+| Communications | Mid-Market | Telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-4_mid-market_telecom-carrier/README.md) |
 | Information Technology | Small | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-3_small_cloud-hosting-provider/README.md) |
 | Finance and Insurance | Sole Proprietorship | Registered investment adviser | [README](03_company-samples/finance-insurance/size-1_sole-proprietor_registered-investment-adviser/README.md) |
 | Finance and Insurance | Micro | Community credit union | [README](03_company-samples/finance-insurance/size-2_micro_community-credit-union/README.md) |
