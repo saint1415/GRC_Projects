@@ -23,7 +23,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 |---|---|
 | Board audit committee | Receives the quarterly cyber risk report; approves the risk appetite each year |
 | Chief Executive Officer (CEO) | Accepts High risk; approves POL-01, the risk appetite, and the security budget; decides on any ransom question with the board chair |
-| Chief Operating Officer (COO) | Executive sponsor of the security program; **system owner** of the Pipeline SCADA and Gas Control System; accepts Moderate risk; **approves any precautionary shutdown** for cyber reasons; Accountable Executive for TSA matters |
+| Chief Operating Officer (COO) | Executive sponsor of the security program; **system owner** of the Pipeline SCADA and Gas Control System; accepts Moderate risk; **approves any precautionary shutdown** for cyber reasons; executive contact for TSA inspections |
 | Virtual CISO (vCISO, part-time contractor) | Program strategy, board reporting, and annual review of the TSA plans |
 | Security Manager | Leads security operations and GRC; **primary TSA Cybersecurity Coordinator** (U.S. citizen); incident commander for cyber incidents |
 | OT Security Engineers (2) | OT monitoring, OT access, OT patch mitigations; one is the **alternate Cybersecurity Coordinator** |
@@ -114,7 +114,7 @@ The registry defaults for the primary system, the P08 incident, and the P10 use 
 ## 7. Facts added during the build (fictional; used across P01-P10)
 | Topic | Added fact |
 |---|---|
-| Operations services | Under operations services agreements, the GCC monitors and controls a 60-mile intrastate lateral owned by a municipal gas utility and a 35-mile lateral owned by a power generator. Fees are about $3 million a year. Both owners asked for a SOC 2 Type 2 report by 2027 (P09) |
+| Operations services | Under operations services agreements (OSAs), the GCC monitors and controls a 60-mile intrastate lateral owned by a municipal gas utility and a 35-mile lateral owned by a power generator. Fees are about $3 million a year (about $8,200 a day). Each OSA requires notice to the lateral owner within 30 minutes of losing SCADA monitoring of its lateral, and service credits after 4 hours. Both owners asked for a SOC 2 Type 2 report by 2027 (P09) |
 | Revenue per day | Firm reservation revenue is about $252,000 per day. Under the tariff, an outage that is not force majeure can require reservation charge credits to affected shippers; a force majeure outage can require partial credits |
 | Critical Cyber Systems (TSA) | CCS-1 primary SCADA (SYS-01); CCS-2 Backup Control Center (SYS-02); CCS-3 field devices and SCADA telecommunications (SYS-03, SYS-05); CCS-4 compressor station control systems (SYS-04); CCS-5 IT/OT DMZ and remote access gateway (SYS-06); CCS-6 OT security monitoring (SYS-07); CCS-7 customer activities website and scheduling (SYS-12); CCS-8 identity provider (SYS-09) because it controls remote access to OT |
 | Cyber insurance | $20 million aggregate limit, $500,000 retention. The policy requires notice through the carrier hotline before incident vendors are engaged |
