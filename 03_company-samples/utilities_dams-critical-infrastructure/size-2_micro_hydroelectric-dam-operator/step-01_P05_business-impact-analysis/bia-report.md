@@ -70,7 +70,7 @@ Totals: 3 High, 3 Moderate, 2 Low.
 | Cooperative | Meter reads and settlement (BP-07) | Power purchase agreement | Reads its own meter |
 
 **Key findings:**
-1. **The 4-hour RTO for gate control is unproven.** Recovery of the HMI PC and gate PLC depends entirely on the integrator, whose copies are from May 2023 and have never been restored. The HMI PC runs an unsupported operating system and there is no spare (P01 R-005; P07 POAM-008).
+1. **The 4-hour RTO for gate control is unproven.** Recovery of the HMI PC and gate PLC depends entirely on the integrator, whose copies are from May 2023 and have never been restored. The HMI PC runs an unsupported operating system and there is no spare (P01 R-005; P07 POAM-006 and POAM-008).
 2. **The monitoring service's RTO (12 hours) is longer than the BIA's 8 hours for BP-04.** That is acceptable only because an operator-mechanic can stay in the control room overnight. It is recorded as a known dependency (P09).
 3. **One cellular carrier carries the monitoring gateway, the integrator's router, and staff phones at the dam.** A carrier outage at night removes callouts (P01 R-014).
 4. **People are the real limit.** Every manual workaround needs one of 7 people on site. The MTDs assume nobody is sick or on leave.

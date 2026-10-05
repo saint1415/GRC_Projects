@@ -1,0 +1,15 @@
+review_item,what_to_check,suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality useful because client files and agreements live in the suite,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, calendar, file storage, sharing, version history, and the built-in AI writing assistant","Email, calendar, and file storage in scope; the AI writing assistant was released after the period and is not covered",Ask whether the next report covers the AI assistant (P10 AI-002)
+Subservice organizations,Carve-out or inclusive; which data center providers,Data center colocation providers carved out; provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated provider staff kept access 3 days past termination; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the customer must run for the provider's controls to work,"Customer enables MFA, manages sharing and user access, reviews sign-in activity, and protects its own devices","Map to IA-2(1) (met), AC-3 sharing (met), AU-6 (gap: POAM-009), endpoint controls (POAM-001, POAM-002)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to all customers; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of security incidents affecting their data under the service terms,Note the provider's notice term next to the 24-hour client notices in P08
+C1.1 and C1.2 confidentiality,Retention and deletion of customer data,Deleted items purged from the recycle bin after customer deletion and from backups within a stated period,Matches the owner's deletion of the Client A copies on 2026-07-23
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-01: RTO 4 h; RPO 24 h),Availability commitment and annual recovery test described; stated recovery objectives meet the BIA,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-engineer 2026-07-23, with the IT technician",Repeat every year (POL-01 6.2)

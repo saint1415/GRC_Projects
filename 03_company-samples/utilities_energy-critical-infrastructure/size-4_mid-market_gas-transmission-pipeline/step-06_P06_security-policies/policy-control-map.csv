@@ -1,2 +1,56 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"Program covers IT and OT; documented in policies, SSP, and the TSA plan",PM-1,GV.PO-01,C-ENERGY-R03 (SD 02G II.B),No
+POL-01,4.2,Primary and alternate Cybersecurity Coordinators; U.S. citizen; TSA updates within 7 days,PM-2,GV.RR-02,C-ENERGY-R02 (SD 01G II.B.1),No
+POL-01,4.3,Annual IT and OT risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,C-ENERGY-R02 (SD 01G II.D),Yes
+POL-01,4.4,Risk acceptance authority by level; no control or safety risk accepted above Moderate,PM-9,GV.RM-01,None binding (program control),No
+POL-01,4.5,"Quarterly audit committee reporting, including TSA matters",CA-5,GV.OV-01,C-ENERGY-R03 (SD 02G III.G),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,None binding (program control),No
+POL-01,4.7,"Written, risk-rated, time-limited exceptions; Coordinator review for TSA measures",PL-1,GV.PO-02,C-ENERGY-R03 (SD 02G II.B.2),No
+POL-01,4.8,Security changes to OT go through MOC with Gas Control sign-off,CM-3,PR.PS-01,C-ENERGY-R04 (192.631(f)),Yes
+POL-01,4.9,TSA plan amendment check in every MOC; file within 50 days,CM-4; PL-2,GV.OC-03,C-ENERGY-R03 (SD 02G VI.B-D),No
+POL-01,4.10,Supplier security terms before OT or SSI access; purchasing gate,SA-4; SA-9,GV.SC-05,C-ENERGY-R03 (SD 02G II.A.3-4),Yes
+POL-01,4.11,Annual Tier 1 supplier reassessment with SOC 2 review,SR-6,GV.SC-07,C-ENERGY-R03 (SD 02G II.A.3),Yes
+POL-01,4.12,"Assessments under the TSA assessment plan: one-third per year, architecture review every 2 years",CA-2; CA-8,ID.IM-01,C-ENERGY-R03 (SD 02G III.G),Yes
+POL-01,4.13,Security and TSA records kept 5 years; PHMSA records per rule,SI-12,GV.PO-02,"C-ENERGY-R03 (SD 02G IV.A, IV.C); C-ENERGY-R04 (192.631(j))",No
+POL-01,4.14,AI tools approved through P10 before use,PM-9,GV.RM-01,None binding (P10),No
+POL-02,4.1,Unique accounts on all business and OT systems,IA-2; AC-2,PR.AA-01,C-ENERGY-R03 (SD 02G III.C),Yes
+POL-02,4.2,Shared accounts only where operationally necessary; password changed within 24 hours of departure,AC-2; IA-5,PR.AA-01,C-ENERGY-R03 (SD 02G III.C.4),Yes
+POL-02,4.3,Role-based least privilege; Gas Control approval for OT roles; no self-approval of SCADA changes,AC-3; AC-5; AC-6,PR.AA-05,C-ENERGY-R03 (SD 02G III.C.3),Yes
+POL-02,4.4,Named OT privileged accounts; no more than 4 OT domain administrators; quarterly review,AC-6(5),PR.AA-05,C-ENERGY-R03 (SD 02G III.C.3),No
+POL-02,4.5,MFA for remote and privileged access; documented compensating controls for HMIs,IA-2(1),PR.AA-03,C-ENERGY-R03 (SD 02G III.C.2),Yes
+POL-02,4.6,Remote access to OT only through the gateways with approval and recording; other paths prohibited,AC-17; MA-4,PR.AA-05,C-ENERGY-R03 (SD 02G III.B.1.b; III.C); C-ENERGY-R04 (192.631(b)(5)),Yes
+POL-02,4.7,Access removed within 1 business day of termination; transfers cleaned within 5 days,PS-4; PS-5,PR.AA-01,C-ENERGY-R03 (SD 02G III.C.4.b),Yes
+POL-02,4.8,Quarterly access reviews including OT and field devices,AC-2,PR.AA-05,C-ENERGY-R03 (SD 02G III.C.3),Yes
+POL-02,4.9,Password reset schedule with documented mitigations and timeframes; no defaults,IA-5,PR.AA-01,C-ENERGY-R03 (SD 02G III.C.1),Yes
+POL-02,4.10,No trust between OT and business domains; annual trust review,AC-3; CA-9,PR.AA-05,C-ENERGY-R03 (SD 02G III.C.5),No
+POL-02,4.11,Badge-only physical access; quarterly control room access review,PE-2; PE-3,PR.AA-06,C-ENERGY-R03 (SD 02G III.C.2),Yes
+POL-03,4.1,"TSA incident response plan with runbooks, positions, and resources; integrated with 192.615",IR-8; CP-2,ID.IM-04,C-ENERGY-R03 (SD 02G III.F.1-2),Yes
+POL-03,4.2,Report suspected incidents immediately; OT anomalies to the controller at once,IR-6,RS.MA-02,C-ENERGY-R02 (SD 01G II.C),Yes
+POL-03,4.3,Log every incident with identification time and severity,IR-5,RS.MA-03,C-ENERGY-R02 (SD 01G II.C.3),No
+POL-03,4.4,Controllers act for safety without waiting for IT,IR-4,RS.MA-01,C-ENERGY-R04 (192.631(b)(3)),Yes
+POL-03,4.5,Director of Gas Control may isolate OT at any time; live isolation once a year,IR-4; SC-7,RS.MI-01,C-ENERGY-R03 (SD 02G III.D.4; III.F.1.d),Yes
+POL-03,4.6,Precautionary shutdown only under the P08 criteria with COO approval,IR-4; CP-2,RS.MI-01,C-ENERGY-R03 (SD 02G III.F.1.d),Yes
+POL-03,4.7,"Prompt containment, segregation, memory capture, labeling; backup integrity before restore",IR-4; CP-9,RS.MI-01,C-ENERGY-R03 (SD 02G III.F.1.a-c),Yes
+POL-03,4.8,Report to CISA within 72 hours; supplemental information within 24 hours,IR-6,RS.CO-02,"C-ENERGY-R02 (SD 01G II.C.3, II.C.5)",Yes
+POL-03,4.9,Other notices per the P08 matrix; Part 191 decisions by Pipeline Safety,IR-6,RS.CO-03,C-ENERGY-R04 (192.631(a)(2)),Yes
+POL-03,4.10,"No ransom without OFAC check, counsel, insurer, CEO and board chair",IR-4,RS.MA-01,None binding (OFAC advisory),Yes
+POL-03,4.11,Annual exercise testing at least two objectives with named positions,IR-3,ID.IM-02,C-ENERGY-R03 (SD 02G III.F.1.e),Yes
+POL-03,4.12,"Lessons learned within 30 days into the risk register, POA&M, and controller training",IR-4,ID.IM-02,C-ENERGY-R04 (192.631(g)),Yes
+POL-04,4.1,Five classification levels including SSI,RA-2,ID.AM-07,C-ENERGY-R03 (SD 02G IV.B),No
+POL-04,4.2,Encrypt SSI and Restricted data at rest and in transit where supported,SC-28; SC-8,PR.DS-01; PR.DS-02,C-ENERGY-R03 (SD 02G III.B.2.b; IV.B),No
+POL-04,4.3,SSI and Restricted data only in approved locations,AC-3; MP-4,PR.DS-01,C-ENERGY-R03 (SD 02G IV.B),No
+POL-04,4.4,Inventory of SSI and Restricted locations; quarterly file share scan,CM-8,ID.AM-07,C-ENERGY-R03 (SD 02G IV.B),Yes
+POL-04,4.5,"SCADA and PLC backups, offline copy at the BCC, integrity checks, annual rebuild test",CP-9; CP-4,PR.DS-11,C-ENERGY-R03 (SD 02G III.F.1.c),Yes
+POL-04,4.6,Wipe or destroy media with SSI or Restricted data,MP-6,ID.AM-08,C-ENERGY-R03 (SD 02G IV.B; 49 CFR 1520.19),No
+POL-04,4.7,"SSI marked, need-to-know only, stored securely, destroyed; exposures reported to TSA",MP-3; MP-4; AC-3,PR.DS-01,"C-ENERGY-R03 (SD 02G IV.B; 49 CFR 1520.9, 1520.13)",Yes
+POL-04,4.8,CEII filings follow 18 CFR 388.113(d); company copies Restricted,MP-3,PR.DS-01,None binding (18 CFR 388.113 filing procedure),Yes
+POL-04,4.9,192.631 and TSA compliance records protected from alteration,SI-12,PR.DS-01,C-ENERGY-R04 (192.631(j)); C-ENERGY-R03 (SD 02G IV.C),No
+POL-05,4.1,Business use; no personal use on OT,PL-4,GV.PO-01,None binding,No
+POL-05,4.2,Acknowledgment at hire and annually,PL-4(1),PR.AT-01,None binding,No
+POL-05,4.3,Awareness and role-based training; briefing on TSA directives,AT-2; AT-3,PR.AT-01; PR.AT-02,C-ENERGY-R02 (SD 01G III.A.3); C-ENERGY-R04 (192.631(h)),Yes
+POL-05,4.4,Screen lock for business IT; HMI exemption,AC-11,PR.AA-05,C-ENERGY-R03 (SD 02G III.C.2),No
+POL-05,4.5,"No software, media, or devices on OT without scan and approval",CM-11; MP-7; AC-20,PR.PS-05,C-ENERGY-R03 (SD 02G III.D.1.d),No
+POL-05,4.6,Company-managed devices only; encrypted field tablets,AC-19,PR.AA-05,None binding,No
+POL-05,4.7,Report anything unusual immediately,IR-6,RS.MA-02,C-ENERGY-R02 (SD 01G II.C),Yes
+POL-05,4.8,Approved AI tools only; no SSI or Restricted data in others; model is advisory,PL-4,GV.PO-01,None binding (P10),No
+POL-05,4.9,No photos of control room screens or OT equipment except approved work,PL-4; MP-3,PR.DS-01,C-ENERGY-R03 (SD 02G IV.B),Yes

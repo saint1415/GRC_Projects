@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Risk and reliability committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC5.1; CC5.2,Common control catalog and SOX IT general control results,GRC platform,CISO,Annual,Catalog version; SOX results,P02 section 10.3; P04,Collecting
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,"Director, Identity and Access Management",Per event; quarterly,25 new accounts; 25 terminations; all quarterly certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.1,MFA and PAM configuration,Identity platform; PAM,"Director, Identity and Access Management",Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1),Collecting
+Both,CC6.6; CC6.7,"WAF, network policy, and TLS scan results",Landing zone; scanner,"Director, Cloud Platform Engineering",Quarterly,All quarterly scans,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports with remediation tickets,EDR console; scanner,"Director, Security Operations",Weekly,5 weeks; 25 findings,P07 RA-5 sample,Collecting
+Both,CC7.2; CC7.3; CC7.4,"SOC cases, use case list, and incident reports",SOC case management,"Director, Security Operations",Continuous,25 cases,P08,Collecting
+Both,CC9.2,Vendor register with SOC report reviews and complementary user entity control mapping,GRC platform,"Director, Third-Party Risk Management",Annual per vendor,All subservice organizations,P04 SaaS rows; P07 SA-9,Collecting
+Both,A1.2,Backup reports and restore tests,Backup service,"Director, Cloud Platform Engineering",Daily backups; quarterly restore,25 backup days; all restore tests,P05; P04,Collecting
+SL-1 Utility Services,CC2.3; CC3.1,"SL-1 system description, client agreements, and status page history",Contract repository; status page,"Vice President, Utility Services",Annual; per incident,All incidents; description version,2025 SOC 2 report,Ready
+SL-1 Utility Services,CC8.1; PI1.3,CIS configuration and rate table change records with dual review,Change system,"Vice President, Utility Services",Per change,25 changes,2025 SOC 2 report; P07 CM-3 method,Collecting
+SL-1 Utility Services,C1.1; CC6.1,Cross-partition access test results for the 7 client partitions,CI/CD test reports,"Vice President, Utility Services",Every release,25 releases,P04 Utility Services rows,Not started (automation due 2027-03-31)
+SL-1 Utility Services,A1.3,Client-specific recovery test results,DR records,"Vice President, Utility Services",Annual,Test report per client,P05 BP-14,Not started (due 2027-06-30)
+SL-1 Utility Services,PI1.2; PI1.4,Meter data validation reports and billing exception reconciliations,MDM; CIS,"Vice President, Utility Services",Daily,25 days,P05 BP-10,Ready
+SL-1 Utility Services,P4.2; P4.3,SSN purge job logs for client partitions,CIS,Chief Privacy Officer,Monthly,All runs,P03 G-177; POAM-026,Not started (due 2027-03-31)
+SL-1 Utility Services,P6.2; P6.7,Disclosure log for client-instructed disclosures,CIS,Chief Privacy Officer,Per disclosure,25 disclosures,New,Not started (due 2027-01-31)
+SL-2 Fleet charging services,CC1.3; CC3.1,SL-2 system description and service commitments,Contract repository,"Vice President, eMobility",Annual,Document,New,Not started (due 2027-01-31)
+SL-2 Fleet charging services,CC6.2; CC6.3,Fleet portal client user approvals and quarterly attestations,Fleet portal,"Vice President, eMobility",Per event; quarterly,25 new users; all attestations,New,Not started (due 2027-03-31)
+SL-2 Fleet charging services,CC8.1,Fleet portal pipeline approvals and emergency change approvals,Source control; CI/CD,"Vice President, eMobility",Per change,25 changes,New,Collecting
+SL-2 Fleet charging services,PI1.3; PI1.4,Daily charging session reconciliations and monthly report reconciliations,Charging SaaS; billing system,"Vice President, eMobility",Daily; monthly,25 days; 3 months,New,Not started (due 2027-03-31)
+SL-2 Fleet charging services,A1.2; A1.3,Offline authorization test and SL-2 recovery tabletop,eMobility operations,"Vice President, eMobility",Annual,Test reports,P05 BP-15,Not started (due 2027-03-31)
+SL-2 Fleet charging services,CC9.2,"Charging SaaS SOC 2 review, availability contract terms, and complementary user entity controls",GRC platform,"Director, Third-Party Risk Management",Annual,Report review; contract,P04 charging SaaS rows,Not started (due 2027-03-31)
