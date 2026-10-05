@@ -10,7 +10,7 @@
 | Runbook owner | Director of Security Operations, with the Director of OT Security (OT), the SVP FSQA (food safety), and the General Counsel (sections 7 and 8) |
 | Approved | Executive risk committee, 2026-09-10 |
 | Last tested | Technical OT tabletop 2026-03-19 with PLT-01 and PLT-04 (**the disclosure committee did not take part**). Next: full tabletop with a multi-plant production-halt scenario and the disclosure committee on 2026-11-18 (POAM-014) |
-| Notification matrix | `notification-matrix.csv` (27 obligations: FSIS, FDA, EPA and EPCRA release reporting, 4 SEC, 4 generic state, 5 Florida worked example, OFAC, law enforcement, CIRCIA status, MTSA and FAR (not applicable), insurer, and 3 customer contract rows) |
+| Notification matrix | `notification-matrix.csv` (27 obligations: FSIS, FDA, EPA and EPCRA release reporting, 4 SEC, the insider trading blackout, 4 generic state, 5 Florida worked example, OFAC, law enforcement, CIRCIA status, MTSA and FAR (not applicable), insurer, and 3 customer contract rows) |
 
 ## 0. Roles and contacts (Govern)
 | Role | Primary | Backup | How to reach |

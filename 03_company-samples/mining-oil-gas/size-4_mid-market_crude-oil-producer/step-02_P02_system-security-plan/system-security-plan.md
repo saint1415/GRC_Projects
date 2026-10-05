@@ -163,8 +163,8 @@ The `csf2_subcategories` column uses NIST's official CSF 2.0 informative referen
 **Status of the 115 documented controls:**
 | Status | Count |
 |---|---|
-| Implemented | 42 |
-| Partially implemented | 70 |
+| Implemented | 41 |
+| Partially implemented | 71 |
 | Planned | 3 |
 | Not applicable | 0 |
 

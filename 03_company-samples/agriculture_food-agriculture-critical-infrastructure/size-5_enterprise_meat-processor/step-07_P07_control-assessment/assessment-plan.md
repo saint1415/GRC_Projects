@@ -8,7 +8,7 @@
 | Procedures | NIST SP 800-53A Rev. 5, Release 5.2.0 (determination statements from NIST OSCAL content, `00_universal-framework/frameworks/sp800-53a_objectives.csv`) |
 | Assessor(s) and independence | Internal Audit (third line): an IT audit manager, three IT auditors, and a co-sourced OT security specialist under the Chief Audit Executive, who reports functionally to the audit committee. None of the assessors designs or operates the controls; the co-sourced specialist's firm has no other engagement with the company's OT. The GRC team (second line) supported scoping only |
 | Assessment window | 2026-07-13 to 2026-08-28 (fieldwork); report issued 2026-09-04; presented to the audit committee and the risk committee on 2026-09-10 |
-| Plants tested on site | PLT-03, PLT-05, PLT-07, PLT-08 (see section 2), plus DC-03 for refrigeration controls |
+| Plants tested on site | PLT-03, PLT-05, PLT-07, PLT-08 (see section 2), plus DC-03 for refrigeration controls; PLT-04 inspection systems tested remotely for CM-6 and IA-5 |
 | Also satisfies | Annual assessment for the PPCM authorization (P02 section 4.2); verification evidence for the PLT-07 food defense plan where controls overlap (21 CFR 121.150) |
 
 ## 1. Scope and controls selected
@@ -38,7 +38,7 @@ Depth and coverage follow SP 800-53A (basic, focused, comprehensive). The last c
 | CM-2 | R-007 | Focused | Focused | About 680 HMIs and 64 OT servers | 60 components (random, 4 plants) | 4 / 1 |
 | CM-3 | R-023; 9 CFR 417.4(a)(3) | Comprehensive | Comprehensive | About 610 plant OT changes (2026-01-01 to 2026-06-30) | 40 changes (random, stratified by plant) | 8 / 2 |
 | CM-5 | R-003 | Focused | Focused | n/a (configuration) | MES and HMI configuration at 4 plants | 5 / 1 |
-| CM-6 | R-016 | Focused | Comprehensive | About 120 OT devices with web or network management interfaces at the 4 sampled plants and DC-03 | 100% | 5 / 1 |
+| CM-6 | R-016 | Focused | Comprehensive | About 120 OT devices with web or network management interfaces at the 4 sampled plants, DC-03, and the PLT-04 inspection systems (risk-based extension; PLT-04 tested remotely through the OT remote access gateway on 2026-08-13) | 100% | 5 / 1 |
 | CM-7 | R-022 | Focused | Focused | HMIs and OT servers at 4 plants | 60 components (random) | 5 / 1 |
 | CM-8 | R-063 | Comprehensive | Comprehensive | About 3,300 OT assets in the inventory | 60 physical assets traced to the inventory (random, 4 plants) | 5 / 1 |
 | CP-2 | R-005; R-008 | Comprehensive | Focused | n/a (plan) | PPCM contingency plan v3 examined; 6 interviews | 22 / 2 |
@@ -67,7 +67,7 @@ Depth and coverage follow SP 800-53A (basic, focused, comprehensive). The last c
 
 ## 2. Sampling method
 Internal Audit used **attribute sampling** for controls that operate on a population of transactions, and inspection of the full population where a data analytic or a full walk could test every item.
-- **Plant selection (two-stage sampling).** OT controls run at each plant, so plants were the first-stage sampling unit. Three plants were selected on risk: PLT-08 (not integrated), PLT-05 (no OT DMZ), and PLT-07 (the only Part 121 facility). One more, PLT-03, was selected at random from the remaining five. Transactions at those plants were then sampled. Results are reported for the PPCM as a whole; a finding at a risk-selected plant is not extrapolated to unselected plants, but the related common control is rated on the evidence.
+- **Plant selection (two-stage sampling).** OT controls run at each plant, so plants were the first-stage sampling unit. Three plants were selected on risk: PLT-08 (not integrated), PLT-05 (no OT DMZ), and PLT-07 (the only Part 121 facility). One more, PLT-03, was selected at random from the remaining five. Transactions at those plants were then sampled. One risk-based extension: after a vendor bulletin on default web credentials in X-ray inspection systems, the CM-6 and IA-5 credential tests were extended to the inspection systems at PLT-04 (an SL-2 plant on the gateway standard), tested remotely through the OT remote access gateway. Results are reported for the PPCM as a whole; a finding at a risk-selected plant is not extrapolated to unselected plants, but the related common control is rated on the evidence.
 - **Key manual controls, large populations (over 250 items):** 60 items, random selection, based on 95% confidence, a 5% tolerable deviation rate, and zero expected deviations (the standard attribute sampling table gives 59; rounded to 60). Used for AC-2, PS-4, AT-2, CM-2, CM-7, CM-8, RA-5, and AC-5 releases. Stratified by plant where the population spans plants.
 - **Key manual controls, populations of 50 to 250, or high-risk change populations:** 40 items, random selection, from Internal Audit's methodology table. Used for CM-3.
 - **Automated or configuration-enforced controls, and lower-risk controls:** the configuration is inspected once, then 25 items confirm it operated consistently through the period. Used for AC-3, AC-6, CP-9, IA-2, IR-4, IR-6, MA-4, and SI-2.
