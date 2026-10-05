@@ -42,7 +42,7 @@ POL-04,4.2,"CEII handling; FERC marking; named sharing only, never by open link"
 POL-04,4.3,Restricted data only in approved locations; laptops encrypted,AC-3; SC-28; SC-8,PR.DS-01; PR.DS-02,C-DAMS-R01 (Form 1 Q22),No
 POL-04,4.4,OT inventory and office and SaaS list updated with every change,CM-8,ID.AM-01; ID.AM-02,"C-DAMS-R01 (Table 9.3a general, voluntary)",Yes
 POL-04,4.5,"Five security questions before any new tool, feature, trial, or AI add-on",SA-4; SA-9,GV.SC-05,"C-DAMS-R01 (Table 9.3a acquisition, voluntary)",Yes
-POL-04,4.6,Approved AI tools only; no Restricted data in public chatbots; no AI output to the control system,SA-9; PL-4,GV.SC-05,C-DAMS-R01 (Rev. 3A 3.2 OPSEC),Yes
+POL-04,4.6,Approved AI tools only; public chatbots for Public information only; no AI output to the control system,SA-9; PL-4,GV.SC-05,C-DAMS-R01 (Rev. 3A 3.2 OPSEC),Yes
 POL-04,4.7,"One encrypted, scanned OT USB drive",MP-7,PR.PS-05,"C-DAMS-R01 (Table 9.3a access control, voluntary)",No
 POL-04,4.8,OT copies after every change and quarterly on 2 encrypted drives; yearly restore test,CP-9; CP-4,PR.DS-11,"C-DAMS-R01 (Table 9.3a restoration and recovery, voluntary)",Yes
 POL-04,4.9,Wipe or certified destruction with records,MP-6,ID.AM-08,"C-DAMS-R01 (Table 9.3a disposal, voluntary)",No
