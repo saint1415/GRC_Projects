@@ -75,7 +75,7 @@ In order. The CMMC deadline drives the sequence.
 High and Moderate gaps are in the risk register (P01) and the POA&M (P07).
 
 ## 5. Pending regulatory changes
-- **FAR rewrite.** The proposed Revolutionary FAR Overhaul (FR Doc. 2026-12559, June 23, 2026) would move information-security clauses into a new FAR part 40. It is **proposed, not final**. The shop should check the clause numbers on each new aerospace PO.
+- **FAR rewrite.** The proposed Revolutionary FAR Overhaul (FR Doc. 2026-12559, June 23, 2026) would move information-security clauses into FAR part 40. It is **proposed, not final**. The shop should check the clause numbers on each new aerospace PO.
 - **CMMC phases.** Phase 2 begins on 2026-11-10 (32 CFR 170.3(e)(2)). It adds Level 2 (C3PAO) requirements for CUI and does not change Level 1.
 - **CIRCIA** (proposed 6 CFR part 226) is **not in effect**; no final rule had been published as of 2026-09-25. The proposed critical manufacturing criterion lists NAICS 331, 333, 335, and 336, not 332, and the shop is below its SBA size standard, so it would probably not be covered. Recheck when the final rule is published.
 

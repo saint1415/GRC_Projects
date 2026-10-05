@@ -138,7 +138,7 @@ The full list, with evidence, is in `gap-analysis.csv`. High and Very High gaps 
 
 ## 6. Pending regulatory changes
 - **FAR CUI rule:** proposed (90 FR 4278, 2025-01-15) and not final. Nothing changes until it is final; DFARS 252.204-7012 remains the governing clause (flagged on G-111 and G-118).
-- **Revolutionary FAR Overhaul:** a proposed rule (FR Doc. 2026-12559, 2026-06-23) would reorganize FAR parts, including a new part 40. FAR 52.204-21 numbering may change (flagged on G-128 and G-129). Not final.
+- **Revolutionary FAR Overhaul:** a proposed rule (FR Doc. 2026-12559, 2026-06-23) would reorganize FAR parts, including part 40. FAR 52.204-21 numbering may change (flagged on G-128 and G-129). Not final.
 - **SP 800-171 Rev. 3:** published by NIST, but CMMC Level 2 is fixed to Rev. 2 (32 CFR 170.14(c)(3)). Each requirement row names its Rev. 3 counterpart in `pending_rule_change` for later planning. Rev. 3 is not treated as a current obligation.
 - **CMMC Phase 3 (2027-11-10, 32 CFR 170.3(e)(3)):** DoD intends to require Level 2 (C3PAO) for all applicable solicitations and as a condition to exercise option periods on contracts awarded after the effective date. **Phase 4 (2028-11-10)** reaches option periods on older contracts.
 - **CIRCIA:** the final rule is not published. Proposed reporting deadlines are not treated as current obligations.

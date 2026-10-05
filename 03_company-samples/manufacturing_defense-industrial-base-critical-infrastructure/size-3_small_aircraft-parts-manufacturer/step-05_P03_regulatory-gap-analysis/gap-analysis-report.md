@@ -104,6 +104,6 @@ The full list, with evidence, is in `gap-analysis.csv`. High and Very High gaps 
 
 ## 5. Pending regulatory changes
 - **FAR CUI rule:** proposed (90 FR 4278, 2025-01-15) and not final. It would set Government-wide CUI safeguarding and reporting terms. Nothing changes for this company until it is final; DFARS 252.204-7012 remains the governing clause.
-- **Revolutionary FAR Overhaul:** a proposed rule (91 FR 37550, 2026-06-23) would reorganize FAR parts including new part 40. FAR 52.204-21 numbering may change (flagged on G-128). Not final.
+- **Revolutionary FAR Overhaul:** a proposed rule (91 FR 37550, 2026-06-23) would reorganize FAR parts including part 40. FAR 52.204-21 numbering may change (flagged on G-128). Not final.
 - **SP 800-171 Rev. 3:** published by NIST, but CMMC Level 2 is fixed to Rev. 2 (32 CFR 170.14(c)(3)). Each row names its Rev. 3 counterpart in `pending_rule_change` for later planning. Rev. 3 is not treated as a current obligation.
 - **CIRCIA:** the final rule is not published. Proposed reporting deadlines are not treated as current obligations.

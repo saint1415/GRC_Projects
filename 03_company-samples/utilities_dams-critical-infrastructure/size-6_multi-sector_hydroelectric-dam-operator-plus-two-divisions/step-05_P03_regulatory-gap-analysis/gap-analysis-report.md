@@ -160,7 +160,7 @@ High and Moderate gaps are carried into the registers (P01) and the POA&M (P07).
 - **FERC Security Program:** Revision 3A is the latest version this analysis could confirm on ferc.gov; the program page refused automated access, so a newer revision could not be ruled out. The Director, Hydro Security confirms the current revision with the Regional Engineers before each inspection.
 - **NERC CIP:** the virtualization revisions (CIP-002-8, CIP-003-10, CIP-004-8, CIP-005-8, CIP-006-7.1, CIP-007-7.1, CIP-008-7.1, CIP-009-7.1, CIP-010-5, CIP-011-4.1, CIP-013-3) take effect 2028-07-01; CIP-015-1 (internal network security monitoring for high and medium impact systems) takes effect 2028-10-01 and CIP-015-2 on 2029-10-01; CIP-003-11 on 2029-07-01. HOC sensors already monitor inside both ESPs (G-121).
 - **CMMC:** Phase 3 begins 2027-11-10 and Phase 4 (full implementation) 2028-11-10 (32 CFR 170.3(e)).
-- **FAR:** the proposed FAR overhaul (FR Doc. 2026-12559, 2026-06-23) would move information security clauses into a new Part 40 and require SP 800-171 Rev. 3 for CUI. It is proposed only.
+- **FAR:** the proposed FAR overhaul (FR Doc. 2026-12559, 2026-06-23) would move information security clauses into FAR Part 40 and require SP 800-171 Rev. 3 for CUI. It is proposed only.
 - **CIRCIA** (6 U.S.C. 681b; proposed 6 CFR Part 226): no final rule as of 2026-09-25. If finalized as proposed, the group would likely be covered. Not treated as a current obligation (GG-007).
 
 The `pending_rule_change` column records these per row. None of them is treated as a current obligation.

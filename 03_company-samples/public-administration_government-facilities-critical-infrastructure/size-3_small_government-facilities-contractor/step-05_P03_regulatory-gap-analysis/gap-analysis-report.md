@@ -119,6 +119,6 @@ The **N/A** row is 52.204-21(b)(1)(xi) (subnetworks for publicly accessible comp
 High and Moderate gaps feed the risk register (P01) and the POA&M (P07).
 
 ## 5. Pending changes (not current obligations)
-- **FAR overhaul (RFO).** The proposed rule (FR Doc. 2026-12559, June 23, 2026) would move information security clauses into a new FAR part 40, renumber 52.204-21 as 52.240-5, and add CUI clauses requiring NIST SP 800-171 Rev. 3. **Proposed only**; comments closed 2026-07-23. Flagged in the `pending_rule_change` column of the FAR rows.
+- **FAR overhaul (RFO).** The proposed rule (FR Doc. 2026-12559, June 23, 2026) would move information security clauses into FAR part 40, renumber 52.204-21 as 52.240-5, and add CUI clauses requiring NIST SP 800-171 Rev. 3. **Proposed only**; comments closed 2026-07-23. Flagged in the `pending_rule_change` column of the FAR rows.
 - **NIST SP 800-82 Rev. 4.** Initial public draft published 2026-09-21 (comments due 2026-11-30). It restructures the guide around CSF 2.0 and adds building automation systems. **Draft only.** Rev. 3 remains the OT reference here. Flagged on the OT rows (AC-17, CM-6, CM-8, CP-2, RA-5, SC-7, SI-4).
 - **CIRCIA.** No final rule as of 2026-09-25. Reporting is voluntary.

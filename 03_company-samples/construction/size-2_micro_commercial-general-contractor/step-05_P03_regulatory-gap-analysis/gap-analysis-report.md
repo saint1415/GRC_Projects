@@ -98,6 +98,6 @@ The plan fits a 7-person company: most actions are MSP settings, one-page proced
 
 ## 6. Pending regulatory changes
 None of these is treated as a current obligation.
-- **Revolutionary FAR Overhaul (RFO).** A proposed rule (FR Doc. 2026-12559, published 2026-06-23; comments were due 2026-07-23) would move information security clauses to a new FAR part 40. Its conversion table maps 52.204-21 to a proposed 52.240-5. It would also add CUI clauses (proposed 52.240-6 and 52.240-7). No final rule has been published. The `pending_rule_change` column flags affected rows.
+- **Revolutionary FAR Overhaul (RFO).** A proposed rule (FR Doc. 2026-12559, published 2026-06-23; comments were due 2026-07-23) would move information security clauses to FAR part 40. Its conversion table maps 52.204-21 to a proposed 52.240-5. It would also add CUI clauses (proposed 52.240-6 and 52.240-7). No final rule has been published. The `pending_rule_change` column flags affected rows.
 - **CMMC phase-in.** Phase 2 begins 2026-11-10 (Level 2 (C3PAO) as a condition of award where required); Phase 3 begins 2027-11-10; Phase 4 (full implementation, including option periods) begins 2028-11-10 (32 CFR 170.3(e)). None of these changes Level 1 content. They make it more likely that every future DoD job, and option periods on older ones, will carry the requirement.
 - **Level 2 still uses SP 800-171 R2.** 32 CFR 170.14(c)(3) ties Level 2 to NIST SP 800-171 R2, even though NIST has published Rev. 3. This matters only if the Owner reverses the decision on CUI work.

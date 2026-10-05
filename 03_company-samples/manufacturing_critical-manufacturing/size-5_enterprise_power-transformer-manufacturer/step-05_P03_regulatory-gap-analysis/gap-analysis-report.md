@@ -101,7 +101,7 @@
 - **CIRCIA** (C-CRITICAL-MFG-R01): no final rule in the Federal Register as of 2026-10-05 (the latest CIRCIA documents are the May 2026 town hall notice and the August 2026 Unified Agenda). If the proposed scope survives, the company would owe reports to CISA within 72 hours of a reasonable belief that a covered cyber incident occurred and within 24 hours of a ransom payment. The runbook already includes a voluntary CISA report (P01 R-060).
 - **NIST SP 800-82 Rev. 4** is an initial public draft (published 2026-09-21; comments due 2026-11-30). Rev. 3 remains the final guide used here; update the section references in G-001 to G-106 when Rev. 4 is final.
 - **CIP-013-3** takes effect 2028-07-01 for registered entities. Expect revised addenda from the 88 utilities before then.
-- **FAR overhaul.** The Revolutionary FAR Overhaul proposed rule (FR Doc. 2026-12559, June 23, 2026) would move the information security clauses into a new FAR part 40, with 52.204-21 becoming 52.240-5. It is proposed only; the company follows the clauses in its awarded contracts and checks each new solicitation or modification.
+- **FAR overhaul.** The Revolutionary FAR Overhaul proposed rule (FR Doc. 2026-12559, June 23, 2026) would move the information security clauses into FAR part 40, with 52.204-21 becoming 52.240-5. It is proposed only; the company follows the clauses in its awarded contracts and checks each new solicitation or modification.
 - **SEC:** a 2025 petition asks the SEC to rescind Item 1.05. No SEC proposal to amend or rescind was found as of 2026-10-05, so Item 1.05 and Item 106 remain in force.
 
 ## 7. Regulator-ready package

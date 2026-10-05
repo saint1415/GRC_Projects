@@ -71,5 +71,5 @@ High and Moderate gaps are carried into the risk register (P01) and the POA&M (P
 
 ## 5. Pending regulatory changes
 None of these is treated as a current obligation.
-- **Revolutionary FAR Overhaul (RFO).** A proposed rule (FR Doc. 2026-12559, published 2026-06-23; comments closed 2026-07-23) would move information security clauses into a new FAR part 40 and renumber them, and would add CUI clauses based on NIST SP 800-171 Rev. 3. It is not final. The `pending_rule_change` column flags the affected rows.
+- **Revolutionary FAR Overhaul (RFO).** A proposed rule (FR Doc. 2026-12559, published 2026-06-23; comments closed 2026-07-23) would move information security clauses into FAR part 40 and renumber them, and would add CUI clauses based on NIST SP 800-171 Rev. 3. It is not final. The `pending_rule_change` column flags the affected rows.
 - **CMMC phase-in.** Phase 2 begins 2026-11-10, Phase 3 on 2027-11-10, and Phase 4 (full implementation, including option periods on older contracts) on 2028-11-10 (32 CFR 170.3(e)). None of these changes Level 1 content, but by Phase 4 every DoD contract or subcontract with FCI will carry the requirement.
