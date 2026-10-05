@@ -1,38 +1,25 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Electric Cooperative, Inc. |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Office and Finance Manager (Security Coordinator) |
+| Approved by | General Manager, 2026-08-31; Board of Trustees, 2026-09-17 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the cooperative keeps three core policies. The workforce use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules staff already read, so they live in **POL-02 Part C. Workforce use rules**, with the AI tool rule in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Driver |
+|---|---|---|
+| Use cooperative systems for cooperative work; look up member accounts only for work | POL-02 C.1 | Fla. Stat. 501.171(2) |
+| No member data, SCADA details, or settings in personal accounts or public AI chatbots | POL-02 C.2 | Fla. Stat. 501.171(2) |
+| Approved AI tools only | POL-04 4.6 | Fla. Stat. 501.171(2); Internal |
+| Lock screens; never share passwords or MFA codes, including with callers who say they are a vendor | POL-02 C.3 | 7 CFR 1730.27(c)(5) |
+| Training at hire and yearly, with an OT module for field staff; phishing simulations | POL-02 C.4 | 7 CFR 1730.28(f) |
+| Report suspected incidents at once | POL-02 C.5 and POL-03 4.2 | DOE-417 |
+| Signed acknowledgment at hire and after each yearly update | POL-02 C.6 | Internal |
+| Callback before any change to payee bank details | POL-02 C.7 | Internal (payment controls) |
+| Truck tablets and phones kept with the user or locked in the truck; losses reported at once | POL-02 C.8 | Fla. Stat. 501.171(2) |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.

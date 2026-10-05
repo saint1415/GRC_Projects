@@ -102,3 +102,12 @@ These facts were added so the deliverables agree with each other. They do not ch
 | AI trial dates | Load-forecasting SaaS trial 2026-06-01 to 2026-07-15 (Client C data uploaded 2026-06-03); paused 2026-07-20. Consumer chatbot used 2026-04 to 2026-07; stopped 2026-07-24 | P01, P10 |
 | Email provider assurance | The email and file suite provider publishes a SOC 2 Type 2 report to business customers through its trust portal. The owner reviewed it on 2026-07-23 | P02, P09 |
 | Backup engineer | No arrangement with another engineer exists. Any arrangement must respect Client A's named-authorization rule (SSA-A (2)), so a backup engineer can work on Client A files only after Client A authorizes that person | P05, P01 |
+| BCSI copies in email | Client A staff emailed some drawings and settings files as attachments in 2025, before transfers moved fully to the Client A portal. Those copies were still in the mailbox when the self-assessment started. All deliverables from the owner went through the portal | P03, P08, P09 |
+| Client B link share notice | The owner reported the open "anyone with the link" share on the Client B settings folder to Client B's compliance contact on 2026-07-23, the day it was turned off | P03, P07 |
+| W-9 location | The drafter's W-9 is stored in the accounting SaaS; a copy is also in the drafter's 2025-03 email to the owner | P03, P08 |
+| USB drives and CEII | The USB drives hold no Client A files (checked 2026-07-23). CEII was never in email, the file suite, or an AI tool (checked 2026-07-22) | P03 |
+| Client A access verification | The 2025-11-12 answer listed only the owner while the drafter's share was open; the corrected list went with the 2026-07-22 notice. Next answer due by 2027-02-12 (15 calendar months) | P03, P06 |
+| Chatbot notes | The chatbot notes named Client A substations. The owner deleted the chat history on 2026-07-24 and told Client A the same day under SSA-A (5) | P03, P10 |
+| AI forecast outputs | No forecast from the AI forecasting SaaS was used in any deliverable; the Client C study draft had not started when the trial was paused | P10 |
+| Email suite SOC 2 details | Type 2, unqualified, Security, Availability, and Confidentiality, 12 months ending 2026-03-31; one exception (remediated); SMS code delivery by telecommunications carriers carved out; bridge letter requested 2026-07-23 | P09 |
+| P08 scenario detail | In the P08 scenario the attacker reaches the Client B gateway prompt because the gateway password was one of the two reused passwords found in P07 (IA-05c.) | P08 |

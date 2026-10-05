@@ -39,7 +39,7 @@ Not applicable (P03 records each decision):
 Approved by the General Manager (system owner) on 2026-08-31. Presented to the Board of Trustees on 2026-09-17 with the P06 policies and the High-risk treatment plans.
 
 ### 4.2 System Authorization Decision
-The cooperative is not a federal agency, so there is no formal authorization. The equivalent internal decision: on 2026-08-31 the General Manager accepted continued operation of the DSOMS on two conditions. First, the three High risks in P01 (R-001, R-002, R-004) must be treated by their dates, with the Board approving the plans on 2026-09-17. Second, the P07 POA&M items must be completed by their scheduled dates. Named SCADA accounts with MFA (POAM-001) are the first condition and are due 2026-10-31.
+The cooperative is not a federal agency, so there is no formal authorization. The equivalent internal decision: on 2026-08-31 the General Manager accepted continued operation of the DSOMS on two conditions. First, the three High risks in P01 (R-001, R-002, R-004) must be treated by their dates, with the Board approving the plans on 2026-09-17. Second, the P07 POA&M items must be completed by their scheduled dates. Named SCADA accounts with MFA (POAM-001 and POAM-002) come first and are due 2026-10-31.
 
 ### 4.3 System Operational Status
 Operational. Planned changes: named SCADA accounts with MFA (R-001, 2026-10-31); line recloser modems moved to the private cellular network (R-002, 2026-12-31); operations workstation and tablets enrolled in MSP management (R-016, 2026-10-31); second carrier in the substation gateway (R-011, 2027-03-31). The 2027 RUS loan application (substation transformer replacement and AMI upgrade) will be a major modification and will trigger a plan update.

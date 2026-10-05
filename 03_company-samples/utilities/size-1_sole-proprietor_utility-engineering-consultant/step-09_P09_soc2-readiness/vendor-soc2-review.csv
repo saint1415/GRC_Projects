@@ -1,0 +1,14 @@
+review_item,what_to_check,email_suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability because client notices depend on email; Confidentiality because the suite holds client files,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, file storage, admin console, identity and sign-in services",All in scope; the provider runs its own data centers. Delivery of SMS codes by telecommunications carriers is carved out,Another reason to move from SMS codes to an authenticator app (POL-01 7.2)
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled departing provider staff kept internal access for 3 days; remediated with automated removal,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the customer must run for the provider's controls to work,Customer chooses MFA strength; manages users and sharing settings; reviews sign-in and audit logs; protects credentials; reports suspected compromise to the provider,"Map to IA-2(1) and IA-5 (POAM-001, POAM-003), AC-3 (POAM-004), AU-6 (POAM-006), IR-6 (POAM-007). Sharing settings caused both exposures in P04"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,App-based MFA and security keys available to customers; encryption at rest and in transit tested without exception,None; the owner must turn the stronger MFA on
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,Platform monitoring tested without exception; customers get sign-in alerts if enabled,Turn on new sign-in and forwarding rule alerts (supports P08 detection)
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified without undue delay of incidents affecting their data; no fixed hour count,The owner's 24-hour client clocks start at the owner's own discovery; do not wait for the provider
+C1.2 disposal (Confidentiality),How deleted data is removed,Deleted files purged from trash after 30 days and from backups within a stated period after that,Quote these periods in SSA-A (7) destruction certifications
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-02: RTO 8 h; RPO 24 h),99.9% monthly uptime commitment; data replicated across regions; annual recovery test performed,Meets the BIA. Local laptop data is not covered (P01 R-011)
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-engineer 2026-07-23, with the IT technician",Repeat every year (POL-01 6.5)

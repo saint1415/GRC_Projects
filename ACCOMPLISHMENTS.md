@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**93 of 216** sample companies are finished (930 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**94 of 216** sample companies are finished (940 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -49,6 +49,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Mining, Quarrying, and Oil and Gas Extraction | Sole Proprietorship | Oilfield services contractor | [README](03_company-samples/mining-oil-gas/size-1_sole-proprietor_oilfield-services-contractor/README.md) |
 | Mining, Quarrying, and Oil and Gas Extraction | Micro | Crude oil producer | [README](03_company-samples/mining-oil-gas/size-2_micro_crude-oil-producer/README.md) |
 | Mining, Quarrying, and Oil and Gas Extraction | Small | Crude oil producer | [README](03_company-samples/mining-oil-gas/size-3_small_crude-oil-producer/README.md) |
+| Utilities | Sole Proprietorship | Utility engineering consultant | [README](03_company-samples/utilities/size-1_sole-proprietor_utility-engineering-consultant/README.md) |
 | Utilities | Small | Electric distribution utility | [README](03_company-samples/utilities/size-3_small_electric-distribution-utility/README.md) |
 | Energy | Small | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-3_small_gas-transmission-pipeline/README.md) |
 | Dams | Small | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-3_small_hydroelectric-dam-operator/README.md) |
