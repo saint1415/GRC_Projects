@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit reports and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Reports; 3 monthly POA&M snapshots,P07,Collecting
+Both,CC5.3,Policy set and review records,Policy portal,CISO,Annual,Current versions and approvals,P06,Ready
+Both,CC6.1; CC6.3,"SSO, MFA, and PAM configuration and quarterly access certifications",Identity platform,Director of Identity and Access Management,Quarterly,All quarterly certifications; 25 PAM sessions,"P02 AC-2, AC-6; P07",Collecting
+Both,CC6.2,Access requests and removals for service line staff,Identity governance,Director of Identity and Access Management,Per event,25 new users; 25 removals,P07 AC-2 test design,Collecting
+Both,CC6.4,Data center badge reviews and colocation SOC 2 report,Badge system; vendor register,"Vice President, Facilities",Monthly; annual,3 monthly reviews; report review,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and weekly vulnerability scan reports,EDR console; scanner,Director of Endpoint Engineering,Weekly,5 weeks,"P07 SI-3, RA-5",Collecting
+Both,CC7.2; CC7.3,SOC alert and case records,SIEM; case management,"Director, Security Operations",Continuous,25 cases,P07 IR-4,Collecting
+Both,CC7.4,Incident response plan and the 2026-11-19 tabletop report,GRC platform,"Director, Security Operations",Annual,Plan; exercise report,P08; POAM-013,Not started
+Both,CC9.2,Vendor register and SOC report reviews for subservice organizations,Vendor register,Director of Third-Party Risk Management,Annual,All subservice organizations,"P07 SA-9, SR-6",Collecting
+Both,CC8.1,Change tickets with approvals and test evidence,IT change management,CIO,Per change,25 changes per service line,P07 CM-3 test design,Collecting
+SL-1,CC2.3; C1.1,Client agreements and trust page,Contract repository,"Vice President, Monitoring and Diagnostics Services",Per client,All 6 client agreements,None,Ready
+SL-1,CC9.2; C1.1,M&D analytics vendor security addendum and SOC 2 report,Vendor register,Director of Third-Party Risk Management,Annual,Signed addendum; report review,POAM-016,Not started
+SL-1,CC6.6,Tenant isolation test results for each release,Release pipeline,"Vice President, Monitoring and Diagnostics Services",Per release,All releases,P01 R-053,Ready
+SL-1,A1.1; A1.2; A1.3,"Capacity dashboards, backup reports, and the annual M&D platform DR test",Cloud provider B tooling,Director of Cloud Platform Engineering,Monthly; annual,3 months; test report,P05 BP-15,Ready
+SL-1,C1.2,Client data deletion certificates at contract end,Contract repository,"Vice President, Monitoring and Diagnostics Services",Per event,All terminations,None,Ready
+SL-2,CC3.1; PI1.1,SL-2 system description and processing commitments,GRC platform,"Director, Dosimetry Laboratory",Annual,Approved description,None,Not started
+SL-2,CC6.6,Client portal penetration test report and fix verification,Security testing vendor,"Director, Security Operations",Annual,Report; retest,None,Not started
+SL-2,CC7.5; A1.2; A1.3; PI1.5,Dose record database restore test with record counts and checksums,DC-1 and DC-2 backup tooling,"Director, Dosimetry Laboratory",Annual,Restore test report,POAM-019,Not started
+SL-2,PI1.2; PI1.4,Intake exception queue and release review records,Dosimetry laboratory system,"Director, Dosimetry Laboratory",Per batch,25 batches,None,Ready
+SL-2,PI1.3,"Reader calibration, NVLAP proficiency testing, and dual review of algorithm changes",Laboratory quality system,"Director, Dosimetry Laboratory",Per event; annual proficiency,All algorithm changes; proficiency results,P01 R-054,Ready
+SL-2,CC6.1; C1.1,Client identifier migration records (Social Security numbers replaced),Dosimetry laboratory system,"Director, Dosimetry Laboratory",Per client,All migrated clients,P01 R-027,Not started
+SL-2,CC4.1,Internal Audit readiness assessment of SL-2,GRC platform,Chief Audit Executive,Once (before the period),Report,P07 method,Not started

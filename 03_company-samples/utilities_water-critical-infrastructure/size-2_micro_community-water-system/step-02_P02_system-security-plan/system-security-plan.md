@@ -130,7 +130,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent OT security consultant. See 
 ## 11. Digital Identity Acceptance Statement
 - **Remote access to the HMI** can change treatment, so it needs the strongest assurance the company can support: named accounts and MFA for every operator and integrator technician, with the integrator's sessions approved by the Chief Operator each time (target 2026-09-30).
 - **Operators in the control room** will use named HMI accounts with passwords (target 2026-12-31). The locked, alarmed building is a compensating control, and the HMI stays unlocked for alarm response, as the SP 800-82 Rev. 3 OT overlay allows.
-- **Device credentials** (PLC, modems, gateway) are changed from defaults and kept in a password manager that only the Chief Operator and Owner can open, not in a shared spreadsheet.
+- **Device credentials** (PLC, modems, gateway) are changed from defaults and kept in a password manager that only the Owner, Office Manager, and Chief Operator can open, not in a shared spreadsheet (POL-02 B.9).
 
 ## 12. Referenced Artifacts
 Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10), 2023 emergency plan, 2018 integrator as-builts, 2025 sanitary survey report.

@@ -111,10 +111,10 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| AQ-04 to AQ-06: 168-hour real RPO, no tested rebuild, no manual-mode procedures for each chemical | P01 R-001, R-003, R-022; P03 G-033; POAM-001 |
-| GCR backup control center transfer 3.5 h against 2 h | P01 R-010; P02 CP-7 and CP-10; POAM-010 |
+| AQ-04 to AQ-06: 168-hour real RPO, no tested rebuild, no manual-mode procedures for each chemical | P01 R-001, R-003, R-022; P03 G-014, G-033, G-043; POAM-001 |
+| GCR backup control center transfer 3.5 h against 2 h | P01 R-010; P02 CP-7 and CP-10; P03 G-038; POAM-010 |
 | Single chlorine gas supplier for Florida plants; fallback never tested | P01 R-020 |
 | Single GCR private LTE core; 14 radio RTUs without message authentication | P01 R-012, R-062; POAM-011 |
 | Integrators outside the gateway; retained rebuild capacity not contracted | P01 R-005, R-055; POAM-012 |
-| Mass notification and telephony single points of failure during notices | P01 R-039, R-040; P03 G-050 |
-| AQ-04 to AQ-06 public notice SOPs lack a cyber trigger | P01 R-011; P03 G-049; POAM-021 |
+| Mass notification and telephony single points of failure during notices | P01 R-039, R-040; P03 G-051 |
+| AQ-04 to AQ-06 public notice SOPs lack a cyber trigger | P01 R-011; P03 G-048; POAM-021 |

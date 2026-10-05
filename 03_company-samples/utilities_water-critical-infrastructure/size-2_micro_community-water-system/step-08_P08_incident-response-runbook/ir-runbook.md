@@ -34,7 +34,7 @@ The company has 7 people and no IT staff. The SCADA integrator and the MSP do th
 
 **Notification chain in the first hour:** operator → Chief Operator and Owner (same call) → integrator (asked to come on site) and Office Manager → insurer hotline (Owner) → breach counsel and forensics (through the insurer). The Office Manager calls the MSP if any office computer or account may be involved.
 
-**Out-of-band first.** Assume the attacker can see the HMI computer and may have read email (the SCADA drawings and password spreadsheet sat in the shared folder until 2026-09-30). Coordinate by phone calls and texts on company and personal phones, using the printed contact sheet.
+**Out-of-band first.** Assume the attacker can see the HMI computer and may have read email (the SCADA drawings and password spreadsheet stay in the shared folder until they are moved, due 2026-09-30). Coordinate by phone calls and texts on company and personal phones, using the printed contact sheet.
 
 ## 1. Preparation checks (Identify / Protect)
 - [ ] Printed plant binder in the control room and at the Owner's and Chief Operator's homes: this runbook, the contact sheet, the notification matrix, the Tier 1 notice templates (including a chemical overfeed and treatment interruption template, P03 G-014), the paper grab-sample log, and the customer contact list printed within the last 31 days (P03 G-013)

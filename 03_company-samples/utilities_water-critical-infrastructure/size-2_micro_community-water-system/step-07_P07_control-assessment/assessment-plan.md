@@ -64,7 +64,7 @@ The MSP operates the office firewall, Wi-Fi, and backup, so evidence came from i
 | Other than satisfied | 106 |
 | **Total** | **117** |
 
-Of the 106 statements other than satisfied, 30 are rated High, 42 Moderate, and 34 Low.
+Of the 106 statements other than satisfied, 28 are rated High, 44 Moderate, and 34 Low.
 
 **Fully other than satisfied (6 controls):** AC-17, IA-2(1), IR-8, SI-2, RA-5, AT-2. No documented process or working technology existed for these at fieldwork. POL-02, POL-03, POL-04, and the P08 runbook were approved on 2026-08-31, after fieldwork, so they could not be credited.
 

@@ -1,2 +1,41 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N23-R01 (52.204-21(b)(1)),No
+POL-01,4.2,Owner designated security lead and CMMC Affirming Official; no affirmation without evidence,PM-2,GV.RR-02,N23-R04 (32 CFR 170.22(a)(1)),No
+POL-01,4.3,Yearly risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N23-R04 (supports 32 CFR 170.15 readiness),No
+POL-01,4.4,Risk decision rules; payment-diversion risks always treated,PM-9,GV.RM-01,Business need (P01),No
+POL-01,4.5,Yearly evaluation with an outside reader before each CMMC self-assessment,CA-2,ID.IM-01,N23-R04 (32 CFR 170.15(c)(1)),No
+POL-01,4.6,Yearly policy review,PL-1,GV.PO-02,N23-R01,No
+POL-01,5.1,Sanctions for any future employee,PS-8,GV.RR-04,N23-R01,No
+POL-01,5.3,"Written, time-limited exceptions; never used to claim a CMMC requirement is Met",PL-1,GV.PO-02,N23-R04 (32 CFR 170.24(c)(1)),No
+POL-01,6.1,Vendors holding FCI must bar training on company data and allow deletion,SA-9,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),No
+POL-01,6.3,Yearly review of the project management vendor's SOC 2 report,SA-9,GV.SC-07,N23-R01,No
+POL-01,6.4,Section 889 manufacturer check before purchase and in federal submittals; documented inquiry before SAM renewal,SR-5; CM-8,GV.SC-05; ID.AM-01,N23-R02 (52.204-25(b); 52.204-26),Yes
+POL-01,6.5,Federal subcontract rider with 52.204-21 and 52.204-25 substance,SA-4,GV.SC-05,N23-R01 (52.204-21(c)); N23-R02 (52.204-25(e)),No
+POL-01,6.6,Lower-tier DoD subcontractors get FCI only with a current Level 1 (Self) status,SA-4,GV.SC-05,N23-R04 (32 CFR 170.23(a)(1); DFARS 252.204-7021(f)),No
+POL-01,7.1,Unique accounts; no shared credentials (bookkeeper and family accounts),IA-2; AC-2,PR.AA-01,N23-R01 (52.204-21(b)(1)(i); 52.204-21(b)(1)(v)),No
+POL-01,7.2,MFA on every service that offers it; security key on email,IA-2(1); IA-2(2),PR.AA-03,N23-R01 (supports 52.204-21(b)(1)(vi)),Yes
+POL-01,7.3,Unique passphrases in a password manager; default device passwords changed before first use,IA-5,PR.AA-01,N23-R01 (52.204-21(b)(1)(vi)),Yes
+POL-01,7.4,Remove users at job closeout; quarterly user review; standard account for daily work,AC-2; AC-3,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)-(ii)),No
+POL-01,7.5,Sealed emergency access codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,Business need (P05),No
+POL-01,7.6,"Bank-detail changes confirmed by call-back to the contract number, waiting period, and test deposit",AC-3; AT-2,PR.AA-05,Business need (P01 R-002); FAR 52.232-27(c),No
+POL-01,7.7,Remittance-change notice in every contract and pay app,AT-2,PR.AT-01,Business need (P01 R-001),No
+POL-01,7.8,Monthly and pre-pay-app check of sign-ins and mailbox rules,AU-6,DE.AE-02,Supports N23-R01 (52.204-21(b)(1)(x)),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,N23-R01,No
+POL-01,8.2,"Approved locations for FCI; no personal cloud, file-transfer links, or unapproved AI tools",AC-20; SA-9,ID.AM-02,N23-R01 (52.204-21(b)(1)(iii)); N23-R04 (DFARS 252.204-7021(d)(2)),Yes
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,Supports N23-R01; Fla. Stat. 501.171,Yes
+POL-01,8.4,No CUI accepted; check incoming documents for CUI markings,MP-3,PR.DS-01,N23-R01 (52.204-21(b)(1)); N23-R03,No
+POL-01,8.5,Version history for laptop files; quarterly SYS-01 export,CP-9,PR.DS-11,Business need (P05),Yes
+POL-01,8.6,Device wipe or certified destruction with a disposal log,MP-6,ID.AM-08,N23-R01 (52.204-21(b)(1)(vii)),No
+POL-01,8.7,Six-year retention of security and CMMC evidence,SI-12,ID.AM-08,N23-R04 (32 CFR 170.15(c)(2)),No
+POL-01,9.2,Locked home office; escorted and logged visitors; key and code list,PE-3; PE-8,PR.AA-06,N23-R01 (52.204-21(b)(1)(viii)-(ix)),No
+POL-01,9.3,"Automatic updates, antivirus, and quarterly router firmware check",SI-2; SI-3,PR.PS-02,N23-R01 (52.204-21(b)(1)(xii)-(xv)),Yes
+POL-01,9.4,Check photos from federal jobs before posting,AC-22,PR.DS-01,N23-R01 (52.204-21(b)(1)(iv)),No
+POL-01,9.5,Separate work network; phone tethering at jobsites; family devices on the guest network,SC-7,PR.IR-01,N23-R01 (52.204-21(b)(1)(x)),Yes
+POL-01,9.6,AI tools only after assessment and acceptable terms; owner checks every output,PL-4; SA-9,GV.PO-01,N23-R01 (52.204-21(b)(1)(iii)),No
+POL-01,9.7,Yearly cybersecurity and payment fraud training,AT-2,PR.AT-01,Supports N23-R01,No
+POL-01,10.1,Incident runbook with a printed contact card,IR-8,RS.MA-01,N23-R02 (52.204-25(d)),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Fla. Stat. 501.171(4),Yes
+POL-01,10.3,Bank recall request before any other step,IR-4,RS.MA-01,Business need (P08),No
+POL-01,10.4,Section 889 report within 1 business day; follow-up within 10 business days,IR-6,RS.CO-02,N23-R02 (52.204-25(d)(2)),Yes
+POL-01,10.5,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171,No
+POL-01,11.2,Standby supervision agreement with another small general contractor,CP-2,RC.RP-01,Business need (P05),No
