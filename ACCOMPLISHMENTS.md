@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**118 of 216** sample companies are finished (1180 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**119 of 216** sample companies are finished (1190 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -79,6 +79,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Water and Wastewater Systems | Micro | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-2_micro_community-water-system/README.md) |
 | Water and Wastewater Systems | Small | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-3_small_community-water-system/README.md) |
 | Construction | Sole Proprietorship | Commercial general contractor | [README](03_company-samples/construction/size-1_sole-proprietor_commercial-general-contractor/README.md) |
+| Construction | Micro | Commercial general contractor | [README](03_company-samples/construction/size-2_micro_commercial-general-contractor/README.md) |
 | Construction | Small | Commercial general contractor | [README](03_company-samples/construction/size-3_small_commercial-general-contractor/README.md) |
 | Manufacturing | Sole Proprietorship | CNC machine shop | [README](03_company-samples/manufacturing/size-1_sole-proprietor_cnc-machine-shop/README.md) |
 | Manufacturing | Micro | Medical device startup | [README](03_company-samples/manufacturing/size-2_micro_medical-device-startup/README.md) |

@@ -1,0 +1,14 @@
+review_item,what_to_check,vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality relevant to the company's use,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Project management platform (web and mobile apps), document storage, pay application workflow, subcontractor portal, and supporting infrastructure","All in scope, including the pay application workflow",None
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Cloud hosting provider carved out; the vendor states it reviews the provider's SOC 2 report,Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,None noted,None
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,"Customer enforces MFA for its users; customer adds and removes users, including external collaborators; customer assigns permission templates; customer reviews activity logs; customer keeps its own exports if it needs copies beyond the retention period","Map to company controls IA-2(2); AC-2; AC-3; AU-6; CP-9. Open gaps: MFA not enforced (POAM-007), closed-project users (POAM-001), no log review (POAM-005), no export (POAM-013)"
+Availability commitments,Uptime and recovery objectives vs the company's BIA (BP-03 RTO 8 h; RPO 4 h),RTO 4 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the subscription terms
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Notify affected customers within 72 hours of confirming a security incident (system description); not in the company's click-through subscription terms,Ask for an order form or addendum with the notice term; align with Fla. Stat. 501.171(6) for any personal information
+Government cloud authorization,Relevant only if CUI or covered defense information would be stored (DFARS 252.204-7012(b)(2)(ii)(D)),The vendor does not claim FedRAMP authorization or Moderate-baseline equivalence,No action while the company accepts no CUI (P03 G-034)
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 received,Request annually
+Review sign-off,Reviewer and date,Office Manager 2026-08-24; reviewed with the Project Manager and Estimator,"Annual, each August"

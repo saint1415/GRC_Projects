@@ -8,7 +8,7 @@
 | Method | NIST SP 800-30 Rev. 1 (Tables G-2 to G-5, H-3, I-2) |
 | Also supports | Risk-based decisions for the CMMC Level 1 self-assessment (32 CFR 170.15) and the FAR 52.204-21 gap plan (P03) |
 | Prepared | 2026-07-31 by the Office Manager (security and compliance lead) with the MSP lead technician |
-| Updated | 2026-07-28 (R-008 re-rated after the FC-1 submittal finding); 2026-08-31 (R-021 accepted and closed) |
+| Updated | R-008 re-rated on 2026-07-28 during fieldwork, after the FC-1 submittal finding; R-021 accepted and closed on 2026-08-31 |
 | Approved | 2026-08-31 by the Owner and President |
 
 ## 1. Scope and risk framing

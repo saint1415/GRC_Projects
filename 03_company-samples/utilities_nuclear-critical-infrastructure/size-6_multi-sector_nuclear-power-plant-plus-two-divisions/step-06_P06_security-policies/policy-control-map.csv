@@ -1,2 +1,45 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"One group program aligned to CSF 2.0, consistent with regulator-approved programs",PM-1,GV.PO-01,C-NUCLEAR-R01 (73.54(b)(2)),No
+POL-01,4.2,Group CISO accountable; division security and compliance leads named,PM-2,GV.RR-02,Group policy,No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up; business-side risks to CDAs given to the CSP risk process,RA-3; PM-9,ID.RA-01; GV.RM-01,C-NUCLEAR-R01 (73.54(d)(2)),No
+POL-01,4.4,"Risk acceptance authority by level; CSP, SGI, and Part 37 deficiencies cannot be accepted",PM-9; CA-5,GV.RM-01,C-NUCLEAR-R03 (73.77(b)(1)),No
+POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,Group policy,Yes (PL-1)
+POL-01,4.6,Division inheritance of common controls documented and confirmed annually,PL-2; PM-10; CA-2,GV.RR-02,Group policy,Yes (CA-2)
+POL-01,4.7,"No shared-service path to CDAs, SGI systems, the CIP ESP, or Part 37 security systems",SC-7; AC-4,PR.IR-01,C-NUCLEAR-R01 (73.54(c)(2)); C-NUCLEAR-S06 (37.49(c)),Yes (SC-7)
+POL-01,4.8,"Business-side changes touching CSP controls, maintenance, or security screened by the CST and under 73.58",CM-4; RA-3,ID.RA-07,C-NUCLEAR-S03 (73.58(b)-(c)); C-NUCLEAR-R01 (73.54(d)(3)),No
+POL-01,4.10,Third parties under contract with security terms; access authorization vendor audit rights,SA-9; SA-4,GV.SC-05,C-NUCLEAR-S02 (73.56(n)(3)-(4)),Yes (SA-9)
+POL-01,4.11,Annual common control assessment and division samples,CA-2; CA-7,ID.IM-01,C-NUCLEAR-S03 (73.55(m)),Yes (CA-2)
+POL-01,4.13,Retention for at least 6 years or as regulation requires,SI-12,PR.DS-11,C-NUCLEAR-R01 (73.54(h)),No
+POL-01,4.14,AI systems registered and approved before use,RA-3; PL-2,GV.RM-01,C-NUCLEAR-S04 (50.65(a)(1)); C-NUCLEAR-S03 (73.58(b)),No
+POL-02,4.1,Unique identities; no shared accounts,AC-2; IA-2,PR.AA-01,Group policy,Yes (AC-2)
+POL-02,4.2,Role-based least privilege; CDA work packages limited to approved roles,AC-3; AC-6,PR.AA-05,C-NUCLEAR-R01 (73.54(a)(2)(i)),Yes (AC-3)
+POL-02,4.3,"MFA for all workforce, remote, privileged, and customer administrator access",IA-2(1); IA-2(2); AC-6(5); IA-8,PR.AA-03,C-NUCLEAR-S11; C-NUCLEAR-S08 (20.2106(d)),"Yes (IA-2(1), IA-2(2), AC-6(5), IA-8)"
+POL-02,4.4,Cross-division access bound to dated assignments and ended automatically,AC-2; AC-2(3); PS-5; PS-7,PR.AA-05,C-NUCLEAR-S02 (73.56(b)(1)(ii)),"Yes (AC-2, AC-2(3), PS-5)"
+POL-02,4.5,Device check for station networks; division laptops in a contractor segment,IA-3; AC-20,PR.IR-01,C-NUCLEAR-R01 (73.54(c)(2)),Yes (IA-3)
+POL-02,4.6,Removal within 4 hours of termination and on assignment end,PS-4; AC-2(3),PR.AA-05,C-NUCLEAR-S02 (73.56(b)(1)(ii)),"Yes (PS-4, AC-2(3))"
+POL-02,4.8,"Need-to-know and trustworthiness determinations before access to SGI, access authorization files, and Part 37 information",AC-3; PS-3; PS-6,PR.AA-05; GV.RR-04,"C-NUCLEAR-S01 (73.22(b)); C-NUCLEAR-S02 (73.56(k), (m)); C-NUCLEAR-S06 (37.43(d))","Yes (AC-3, PS-3)"
+POL-02,4.9,Default passwords changed before connection; monthly default credential scans,IA-5; CM-6,PR.AA-01,C-NUCLEAR-S01 (73.22(e)); C-NUCLEAR-S12 (PR.AA-01),"Yes (IA-5, CM-6)"
+POL-02,4.10,"Vendor remote access with named accounts, MFA, tickets, and recording",AC-17; MA-4,PR.AA-03; DE.CM-06,C-NUCLEAR-R04 (CIP-003-9); C-NUCLEAR-S12 (PR.AA-03),Yes (AC-17)
+POL-02,4.11,Annual review of admins bordering CSP networks for the 73.56 critical group,PS-3,GV.RR-04,C-NUCLEAR-S02 (73.56(i)(1)(v)(B)(4)),Yes (PS-3)
+POL-03,4.2,"One severity scale; CSP-adjacent assets, SGI, CIP, and Part 37 events are Severity 1",IR-4,RS.MA-03,Group policy,Yes (IR-4)
+POL-03,4.3,SOC brings in the station CST within 30 minutes for CSP-adjacent activity,IR-4; IR-6,RS.MA-01; RS.CO-02,C-NUCLEAR-R03 (73.77(a)),"Yes (IR-4, IR-6)"
+POL-03,4.4,External reports about protected systems only through the program owner,IR-6,RS.CO-02,C-NUCLEAR-R03 (73.77(a)(2)(iii)); C-NUCLEAR-R04 (CIP-008-6 R4); C-NUCLEAR-S06 (37.57),Yes (IR-6)
+POL-03,4.5,Notification matrix kept and exercised across divisions annually,IR-6; IR-8,RS.CO-03,C-NUCLEAR-S10; C-NUCLEAR-S11,"Yes (IR-6, IR-8)"
+POL-03,4.6,Disclosure committee within 24 hours of a Severity 1 declaration,IR-6,RS.CO-03,C-NUCLEAR-S10 (Form 8-K Item 1.05),Yes (IR-6)
+POL-03,4.7,"No ransom without board decision, counsel, and OFAC check",IR-4,RS.MA-01,Group policy (OFAC advisory),Yes (IR-4)
+POL-03,4.9,Annual tests including a joint SOC and CST exercise,IR-3,ID.IM-02,C-NUCLEAR-R01 (73.54(e)(2)); RG 5.71 C.8.3,Yes (IR-3)
+POL-03,4.10,Lessons learned; CSP weaknesses to the CAP within 24 hours,IR-4; CA-5,ID.IM-03,C-NUCLEAR-R03 (73.77(b)(1)),Yes (IR-4)
+POL-04,4.2,SGI marked; cyber security sensitive label for CDA information,MP-3,PR.DS-01,C-NUCLEAR-S01 (73.22(d)),Yes (MP-3)
+POL-04,4.3,SGI reproduced only on evaluated equipment; never on networked devices,MP-6; CM-6,PR.DS-01,C-NUCLEAR-S01 (73.22(e)),"Yes (MP-6, CM-6)"
+POL-04,4.4,Automated SGI marking scan on uploads; removal and sanitization,SI-4; MP-6,PR.DS-01,"C-NUCLEAR-S01 (73.22(g)(1), (g)(4))","Yes (SI-4, MP-6)"
+POL-04,4.5,External transmittals screened for cyber security sensitive content,AC-21,PR.DS-02,C-NUCLEAR-R01 (73.54(a)(2)(i)),Yes (AC-21)
+POL-04,4.6,Encryption in transit and at rest,SC-8; SC-28,PR.DS-01; PR.DS-02,C-NUCLEAR-S11,"Yes (SC-8, SC-28)"
+POL-04,4.7,Retention by the longest applicable rule; destruction that prevents reconstruction,SI-12; MP-6,PR.DS-11,C-NUCLEAR-S07 (264.73); C-NUCLEAR-S06 (37.43(d)(8)),Yes (MP-6)
+POL-05,4.2,PMMD only after kiosk scanning and as the CSP allows; vendor tools included,MP-7; AC-20,PR.DS-01,C-NUCLEAR-R01 (RG 5.71 B.1.19),No
+POL-05,4.3,Report requests for CDA or security information at once,AT-2; IR-6,PR.AT-01; RS.CO-02,C-NUCLEAR-R03 (73.77(a)(3)),"Yes (AT-2, IR-6)"
+POL-05,4.4,"No SGI, CSP, access authorization, or Part 37 information in email, cloud, or AI tools",PL-4,PR.DS-01,C-NUCLEAR-S01 (73.22(g)),No
+POL-05,4.6,Generative AI not used in safety-related engineering until the QA procedure is issued,PL-4; SA-11,GV.PO-01,"Client QA requirements (10 CFR Part 50, Appendix B, by contract)",No
+SUPP-NG,3.1,Kiosk content released only after signature verification and a CST release step,SI-7; SC-7,PR.DS-01; DE.CM-09,"C-NUCLEAR-R01 (RG 5.71 B.1.19, C.3.7, C.7)","Yes (SI-7, SC-7)"
+SUPP-NG,3.1,No AI output creates a work request on Maintenance Rule equipment without human approval,CM-4; RA-3,GV.RM-01,C-NUCLEAR-S04 (50.65(a)(1)),No
+SUPP-ER,3.2,Access authorization files only in the program repository with write-once retention,AC-3; AU-6; AU-9,PR.AA-05; PR.DS-01,"C-NUCLEAR-S02 (73.56(k), (m), (o)(1))","Yes (AC-3, AU-6)"
+SUPP-WM,3.3,Vault security network separate from the business network with an alternate path,SC-7; CP-8,PR.IR-01; PR.IR-03,"C-NUCLEAR-S06 (37.49(a)(1), (c))",Yes (SC-7)

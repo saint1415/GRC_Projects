@@ -104,3 +104,26 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-08-17 to 2026-08-19 | Control assessment by an independent consultant (on site 2026-08-18) |
 | 2026-08-31 | Deliverables approved by the Owner |
 | 2026-12-15 | Target date for Final Level 1 (Self) status and the SPRS affirmation |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Departed Superintendent | Left in April 2026. The Superintendent's SYS-01 account and suite account (converted to a mailbox the Project Manager used) were found active on 2026-07-21 and disabled that day; sign-in logs showed no use after the last day of work. The office key was not returned | P01, P02, P03, P07 |
+| SYS-01 external users | 31 of the 60 external subcontractor and design-team users belong to closed projects. The Project Manager and both Superintendents hold SYS-01 company administrator rights; the jobsite tablets stay signed in as a Superintendent | P02, P03, P07 |
+| Shared drive | One folder tree readable by all 5 email users, including HR files and a folder of owners' security system drawings. The office desktop also has a shared scan folder | P02, P03, P07, P09 |
+| FC-1 subcontractors | 6 subcontractors on FC-1, all on the 2023 subcontract template with a one-line "comply with the prime contract" clause; all receive drawings through SYS-01 | P03, P07 |
+| Physical security | 6 office keys with no list; one shared alarm code unchanged since 2022; the firewall and internet equipment sit in a locked closet | P02, P03, P07 |
+| Website | A June 2026 post showed an FC-1 clinic corridor with a camera and badge reader in view; removed 2026-07-24 | P02, P03 |
+| Network and devices | Firewall firmware 11 months old; firewall keeps 7 days of logs; the printer and plotter keep the default administrator password; the staff Wi-Fi password has not changed since 2023 | P02, P03, P07 |
+| SAM sign-in | The Owner's government sign-in password is also used for another site (MFA is enforced by the sign-in service) | P01 |
+| Certified payrolls | Subcontractors email full certified payroll records to the Office Manager; about 40 workers' records sit in that mailbox | P01, P08 |
+| Forwarding rule | P07 testing on 2026-08-18 found a 2025 inbox rule in the Project Manager's mailbox forwarding all mail from the FC-1 Contracting Officer to a personal address; removed that day | P07 |
+| Backup restore | A single-file restore requested from the MSP on 2026-08-17 was completed on 2026-08-19; no full restore test has been done | P07 |
+| MSP evidence | The MSP had not supplied its technician list or proof of MFA on its remote management platform by the end of fieldwork | P02, P07 |
+| SYS-01 vendor SOC 2 | Type 2, unqualified, 12 months ending 2026-03-31, no exceptions; bridge letter through 2026-06-30; reviewed by the Office Manager on 2026-08-24. The company is on click-through subscription terms | P02, P05, P09 |
+| AI tool trial | The Project Manager signed up on a company credit card after a trade show. The vendor has a SOC 2 Type 1 report only; local account with MFA off; a "market pricing insights" feature is on by default. FC-1 change-order drawings were uploaded in June and July 2026 | P01, P10 |
+| Owner contract | The medical office owner's contract limits sharing of its drawings to parties working on the project | P10 |
+| P07 assessor | Independent security consultant, fixed fee $3,500, not involved in P01 or P03 and operating no control | P01, P07 |
+| 2026 budget | The Owner approved about $8,900 one-time and $1,630 a year for the P01 treatments | P01 |
