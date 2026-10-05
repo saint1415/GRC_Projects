@@ -117,3 +117,6 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Email suite assurance | The email and file suite provider publishes a SOC 2 Type 2 report on its trust portal for business-plan customers. The owner reviewed it on 2026-09-11 | P02, P09 |
 | Payments | Suppliers are paid by wire or ACH from the bank portal. About half of the customers pay by ACH to the account number printed on the invoice | P01, P05, P08 |
 | Insurance | General and products liability only. No cyber policy | P01, P08 |
+| AI accuracy check | On 2026-09-18 the owner checked the 7 hazmat descriptions the AI assistant drafted from 2026-03 to 2026-08 against the 172.101 table (1 wrong: the ferric chloride packing group) and asked for the UN2014 description in 5 new chats (1 left out the subsidiary class 8) | P10 |
+| AI chat history | The 2026-09-18 review of the chat history found customer names, prices, and SDS text, but no driver license numbers, pickup numbers, schedules, or bank details | P10 |
+| AI decision | Adopted 2026-10-05: hazmat-description use (AI-002) prohibited; office drafting (AI-001) approved with conditions (no-training plan by 2026-10-31; MFA if the plan offers it by 2026-10-15) | P10 |

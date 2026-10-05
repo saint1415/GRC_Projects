@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**123 of 216** sample companies are finished (1230 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**124 of 216** sample companies are finished (1240 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -91,6 +91,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Manufacturing | Mid-Market | Medical device manufacturer | [README](03_company-samples/manufacturing/size-4_mid-market_medical-device-manufacturer/README.md) |
 | Manufacturing | Enterprise | Global medical device maker | [README](03_company-samples/manufacturing/size-5_enterprise_global-medical-device-maker/README.md) |
 | Manufacturing | Multi-Sector | Diversified industrial group | [README](03_company-samples/manufacturing/size-6_multi-sector_diversified-industrial-group/README.md) |
+| Chemical | Sole Proprietorship | Chemical distributor broker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-1_sole-proprietor_chemical-distributor-broker/README.md) |
 | Chemical | Small | Specialty chemical formulator | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-3_small_specialty-chemical-formulator/README.md) |
 | Critical Manufacturing | Small | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-3_small_power-transformer-manufacturer/README.md) |
 | Defense Industrial Base | Sole Proprietorship | Engineering subcontractor with CUI | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-1_sole-proprietor_engineering-subcontractor-with-cui/README.md) |
