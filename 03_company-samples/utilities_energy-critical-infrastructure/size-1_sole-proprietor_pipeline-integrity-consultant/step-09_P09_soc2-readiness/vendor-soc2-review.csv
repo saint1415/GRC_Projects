@@ -1,0 +1,15 @@
+review_item,what_to_check,suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality useful because client data and SSI are stored there,"Security, Availability, and Confidentiality",None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, file storage, sync, and the built-in AI writing assistant",Email and file storage in scope; the AI writing assistant is described as a feature that runs within the same service and does not train on customer content,Keep a copy of the provider's no-training statement with the P10 inventory (AI-002)
+Subservice organizations,Carve-out or inclusive; which hosting providers,Data center colocation providers carved out; provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,None noted,None
+Complementary user entity controls (CUECs),Controls the customer must run for the provider's controls to work,"Customer manages its users and sharing settings, enables MFA, reviews audit logs, protects endpoints, and reports suspected compromise","Map to AC-3 and 7.4 sharing rules (gap closed by 2026-09-30), IA-2(1) (in place), AU-6 (gap: POL-01 7.8), SC-28 on endpoints (USB gap: POAM-003)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to all customers; encryption at rest and in transit tested without exception,None
+CC6.7 data movement (CC series as checklist),Provider controls on sharing,Sharing follows customer settings; administrators can block anonymous links,Turn anonymous links off tenant-wide (POL-01 7.4)
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of incidents affecting their data under the service terms,Record the provider's notice channel in the P08 contact sheet
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-02 and BP-03: RTO 24 h; RPO 24 h),Daily replicated storage; recovery objective of 24 hours stated in the system description; annual recovery test performed,Meets the BIA for files stored in the suite; local files need the encrypted backup (POAM-006)
+Bridge letter,Coverage from report end date to today,Requested 2026-08-12,Obtain before 2026-10-30 so it can support the Client A questionnaire
+Review sign-off,Reviewer and date,"Engineer-owner 2026-08-12, with the IT support contractor",Repeat every year (POL-01 6.3)

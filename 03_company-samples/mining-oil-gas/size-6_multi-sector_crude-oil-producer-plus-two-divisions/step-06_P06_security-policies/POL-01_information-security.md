@@ -36,33 +36,33 @@ All workforce members of Cris Santos Company Holdings, Inc. and its divisions (e
 | All workforce | Follow group policy and their division supplement; report suspected incidents immediately |
 
 ## 4. Policy statements
-4.1 The group must maintain one information security program aligned to NIST CSF 2.0. OT systems must also follow NIST SP 800-82 Rev. 3 as the group's OT benchmark. (PM-1; GV.PO-01)
+4.1 The group must maintain one information security program aligned to NIST CSF 2.0. OT systems must also follow NIST SP 800-82 Rev. 3 as the group's OT benchmark. (PM-1; GV.PO-01; driver: N21-BM (SP 800-82r3 3.3.4))
 
-4.2 The Group CISO is accountable for the program and the Group OT Security Director for OT security across divisions. Each division must name a security and compliance lead in writing. Power Generation must name a CIP Senior Manager and Crude Logistics a senior official for the hazmat security plan. (PM-2; GV.RR-02)
+4.2 The Group CISO is accountable for the program and the Group OT Security Director for OT security across divisions. Each division must name a security and compliance lead in writing. Power Generation must name a CIP Senior Manager and Crude Logistics a senior official for the hazmat security plan. (PM-2; GV.RR-02; driver: N22-R01 (CIP-003-9 R3); HMR 172.802(b)(1))
 
-4.3 Each division and corporate must complete a risk analysis at least annually and after major changes, using NIST SP 800-30 Rev. 1. Risks that cross divisions, sit in shared services, or need a group decision must roll up to the group register. (RA-3; PM-9; ID.RA-01; GV.RM-03)
+4.3 Each division and corporate must complete a risk analysis at least annually and after major changes, using NIST SP 800-30 Rev. 1. Risks that cross divisions, sit in shared services, or need a group decision must roll up to the group register. (RA-3; PM-9; ID.RA-01; GV.RM-03; driver: N21-BM (SP 800-82r3 4.1.2); N48-49-R08 (Reg S-K Item 106(b)))
 
-4.4 **Risk acceptance authority:** Low, the division security and compliance lead; Moderate, the division president; High, the Group Chief Risk Officer with the Group CISO, reported to the board risk committee; Very High, the board risk committee only. Safety and environmental risks rated High must be treated, not accepted. (PM-9; GV.RM-01)
+4.4 **Risk acceptance authority:** Low, the division security and compliance lead; Moderate, the division president; High, the Group Chief Risk Officer with the Group CISO, reported to the board risk committee; Very High, the board risk committee only. Safety and environmental risks rated High must be treated, not accepted. (PM-9; GV.RM-01; driver: N21-BM (SP 800-82r3 4.1.3))
 
-4.5 **Division supplements.** A division may add stricter or regulator-specific requirements in a written supplement. A supplement must not weaken group policy. Each supplement must be re-aligned within 90 days after a group policy changes, and each division security and compliance lead must attest alignment every year. (PL-1; GV.PO-02)
+4.5 **Division supplements.** A division may add stricter or regulator-specific requirements in a written supplement. A supplement must not weaken group policy. Each supplement must be re-aligned within 90 days after a group policy changes, and each division security and compliance lead must attest alignment every year. (PL-1; GV.PO-02; driver: N21-BM (SP 800-82r3 3.3.4))
 
-4.6 **Common controls.** Corporate control providers must maintain the common control catalog. Each division must document, for each of its systems, which controls it inherits and which responsibilities remain with the division, and confirm that documentation every year. (PL-2; PM-10; CA-2; GV.RR-02)
+4.6 **Common controls.** Corporate control providers must maintain the common control catalog. Each division must document, for each of its systems, which controls it inherits and which responsibilities remain with the division, and confirm that documentation every year. (PL-2; PM-10; CA-2; GV.RR-02; driver: N21-BM (SP 800-82r3 3.3.1); HMR 172.802(b)(2))
 
-4.7 **Safety first.** No security control, test, or response action may disable, bypass, or delay a safety instrumented function, hardwired shutdown, relief device, or alarm required by a safety or environmental rule. Security changes that could affect process safety must go through the division's management of change process. (CM-4; SI-17; PR.IR-03)
+4.7 **Safety first.** No security control, test, or response action may disable, bypass, or delay a safety instrumented function, hardwired shutdown, relief device, or alarm required by a safety or environmental rule. Security changes that could affect process safety must go through the division's management of change process. (CM-4; SI-17; PR.IR-03; driver: N21-BM (SP 800-82r3 4.2.2; 5.3.1); 40 CFR 112.9(c)(4)(iv); PHMSA 195.446(f))
 
-4.8 **Suppliers.** No OT supplier, integrator, or service provider may receive access or deliver software to OT until it has been assessed and its contract includes the group OT security schedule (security duties, incident notice, and remote access terms). (SA-4; SR-6; GV.SC-05; GV.SC-07)
+4.8 **Suppliers.** No OT supplier, integrator, or service provider may receive access or deliver software to OT until it has been assessed and its contract includes the group OT security schedule (security duties, incident notice, and remote access terms). (SA-4; SR-6; GV.SC-05; GV.SC-07; driver: N21-BM (SP 800-82r3 4.2.1); N22-R01 (CIP-003-9 R2 Att. 1 Sec. 6))
 
-4.9 **Acquisitions.** An acquired operation must not be connected to group networks until its OT is isolated, logged in the group SIEM, and its remote access is moved to group PAM, unless the Group CISO approves a dated exception. (CA-3; RA-3; ID.RA-01; GV.SC-06)
+4.9 **Acquisitions.** An acquired operation must not be connected to group networks until its OT is isolated, logged in the group SIEM, and its remote access is moved to group PAM, unless the Group CISO approves a dated exception. (CA-3; RA-3; ID.RA-01; GV.SC-06; driver: N21-BM (SP 800-82r3 4.1.2))
 
-4.10 **Evaluation.** Group internal audit must assess common controls at least annually and sample each division's controls. Results feed the POA&M and the risk registers. (CA-2; CA-7; ID.IM-01)
+4.10 **Evaluation.** Group internal audit must assess common controls at least annually and sample each division's controls. Results feed the POA&M and the risk registers. (CA-2; CA-7; ID.IM-01; driver: N21-BM (SP 800-82r3 4.1.4))
 
-4.11 **Exceptions** to any group policy or supplement must be requested in writing, risk-rated, approved under 4.4, recorded in the division register, and limited to 12 months or less. (PL-1; GV.PO-02)
+4.11 **Exceptions** to any group policy or supplement must be requested in writing, risk-rated, approved under 4.4, recorded in the division register, and limited to 12 months or less. (PL-1; GV.PO-02; driver: N21-BM)
 
-4.12 Security policies, procedures, risk analyses, assessments, and compliance evidence must be retained for at least 6 years, or longer where a regulation or audit cycle requires (for example, NERC evidence since the last audit, and Part 195 records for the periods each section sets). (SI-12; GV.PO-02)
+4.12 Security policies, procedures, risk analyses, assessments, and compliance evidence must be retained for at least 6 years, or longer where a regulation or audit cycle requires (for example, NERC evidence since the last audit, and Part 195 records for the periods each section sets). (SI-12; GV.PO-02; driver: N22-R01 (CIP-003-9 evidence retention); PHMSA 195.446(j))
 
-4.13 **AI systems.** No AI system that can change physical operations, or that makes or supports decisions about people, may be deployed or materially changed without registration in the group AI inventory and approval under the Group AI Standard (P10). A model that writes setpoints to field or plant equipment also needs a safety management of change review. (RA-3; CM-4; PL-2; GV.RM-01; ID.RA-07)
+4.13 **AI systems.** No AI system that can change physical operations, or that makes or supports decisions about people, may be deployed or materially changed without registration in the group AI inventory and approval under the Group AI Standard (P10). A model that writes setpoints to field or plant equipment also needs a safety management of change review. (RA-3; CM-4; PL-2; GV.RM-01; ID.RA-07; driver: N21-BM (SP 800-82r3 4.2.2))
 
-4.14 Workforce members who violate security policies must be sanctioned in proportion to intent and harm, and HR must document every sanction. (PS-8; GV.RR-04)
+4.14 Workforce members who violate security policies must be sanctioned in proportion to intent and harm, and HR must document every sanction. (PS-8; GV.RR-04; driver: N21-BM (SP 800-82r3 6.2.8))
 
 ## 5. Compliance and enforcement
 Violations are handled under POL-01 section 4.14. Compliance is checked through the P07 assessment of common controls and division samples, the annual supplement attestations, and division access reviews.

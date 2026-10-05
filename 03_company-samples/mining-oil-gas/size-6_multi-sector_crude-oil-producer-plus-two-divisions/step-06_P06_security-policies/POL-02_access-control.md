@@ -30,31 +30,31 @@ All workforce identities, service accounts, administrator accounts, local OT acc
 | Service account owners | Keep each service account's purpose, permissions, and credentials current |
 
 ## 4. Policy statements
-4.1 Every user must have a unique identity in SYS-G1. Local OT accounts must be named and tied to that identity. Shared accounts are prohibited, except a documented console account where the OT software supports only one, with physical access control and logging as compensating controls. (IA-2; AC-2; PR.AA-01)
+4.1 Every user must have a unique identity in SYS-G1. Local OT accounts must be named and tied to that identity. Shared accounts are prohibited, except a documented console account where the OT software supports only one, with physical access control and logging as compensating controls. (IA-2; AC-2; PR.AA-01; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.2 Access must be role-based and least privilege. OT roles must separate view, operate, and engineer rights. (AC-3; AC-6; PR.AA-05)
+4.2 Access must be role-based and least privilege. OT roles must separate view, operate, and engineer rights. (AC-3; AC-6; PR.AA-05; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.3 MFA is required for all workforce access to business systems. Administrators and all remote access into OT must use phishing-resistant authenticators. (IA-2(1); IA-2(2); PR.AA-03)
+4.3 MFA is required for all workforce access to business systems. Administrators and all remote access into OT must use phishing-resistant authenticators. (IA-2(1); IA-2(2); PR.AA-03; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.4 **No direct IT-to-OT paths.** Access into any OT network must pass through that division's OT DMZ. Jump servers must serve one division only and be reachable only from privileged access workstations, never from general desktops or the virtual desktop pool. (AC-17; SC-7; AC-4; PR.IR-01; PR.AA-05)
+4.4 **No direct IT-to-OT paths.** Access into any OT network must pass through that division's OT DMZ. Jump servers must serve one division only and be reachable only from privileged access workstations, never from general desktops or the virtual desktop pool. (AC-17; SC-7; AC-4; PR.IR-01; PR.AA-05; driver: N21-BM (SP 800-82r3 5.2.3; 6.2.10); N22-R01 (CIP-003-9 R2 Att. 1 Sec. 3.1))
 
-4.5 **Service accounts that cross an OT DMZ** must be read-only, serve one division, and be documented in an interconnection agreement. Data must flow outward from OT; no service may pull from, or write into, an OT DMZ from the corporate or cloud side. (AC-4; AC-6; CA-3; PR.IR-01; PR.AA-05)
+4.5 **Service accounts that cross an OT DMZ** must be read-only, serve one division, and be documented in an interconnection agreement. Data must flow outward from OT; no service may pull from, or write into, an OT DMZ from the corporate or cloud side. (AC-4; AC-6; CA-3; PR.IR-01; PR.AA-05; driver: N21-BM (SP 800-82r3 5.2.3))
 
-4.6 **Termination.** Access must be disabled within 4 hours of the HR termination event, and immediately for involuntary terminations. Local OT accounts must be removed the same day. Contractor accounts must expire at the assignment end date. (PS-4; AC-2; PR.AA-01)
+4.6 **Termination.** Access must be disabled within 4 hours of the HR termination event, and immediately for involuntary terminations. Local OT accounts must be removed the same day. Contractor accounts must expire at the assignment end date. (PS-4; AC-2; PR.AA-01; driver: N21-BM (SP 800-82r3 6.2.8))
 
-4.7 Managers and data owners must certify access every quarter, including privileged, service, and local OT accounts. (AC-2; PR.AA-05)
+4.7 Managers and data owners must certify access every quarter, including privileged, service, and local OT accounts. (AC-2; PR.AA-05; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.8 Privileged access must be granted just in time through PAM, with approval and session recording. (AC-6(5); PR.AA-05)
+4.8 Privileged access must be granted just in time through PAM, with approval and session recording. (AC-6(5); PR.AA-05; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.9 Accounts must lock after 10 failed attempts. Operator consoles in control rooms may be exempt from lockout where lockout could delay a safety response, with physical access control and logging as compensating controls. (AC-7; PR.AA-03)
+4.9 Accounts must lock after 10 failed attempts. Operator consoles in control rooms may be exempt from lockout where lockout could delay a safety response, with physical access control and logging as compensating controls. (AC-7; PR.AA-03; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.10 **Vendor and integrator remote access** must go through group PAM with named accounts, MFA, approval for each session, recording, and OT sensor monitoring, and must be possible to disable at once. Persistent or always-on vendor paths are prohibited. (AC-17; MA-4; SI-4; PR.AA-05; DE.CM-06)
+4.10 **Vendor and integrator remote access** must go through group PAM with named accounts, MFA, approval for each session, recording, and OT sensor monitoring, and must be possible to disable at once. Persistent or always-on vendor paths are prohibited. (AC-17; MA-4; SI-4; PR.AA-05; DE.CM-06; driver: N22-R01 (CIP-003-9 R2 Att. 1 Sec. 6.1-6.3); N21-BM (SP 800-82r3 6.2.10))
 
-4.11 **Device credentials.** Default vendor passwords must be changed before any field or plant device is connected. Device and modem management passwords must be unique per site or device and stored in the group vault. (IA-5; IA-3; PR.AA-03)
+4.11 **Device credentials.** Default vendor passwords must be changed before any field or plant device is connected. Device and modem management passwords must be unique per site or device and stored in the group vault. (IA-5; IA-3; PR.AA-03; driver: N21-BM (SP 800-82r3 6.2.1))
 
-4.12 **Emergency access.** Each control room must keep sealed local break-glass accounts that work without SYS-G1, tested quarterly and reviewed after every use. (AC-2; PR.AA-01)
+4.12 **Emergency access.** Each control room must keep sealed local break-glass accounts that work without SYS-G1, tested quarterly and reviewed after every use. (AC-2; PR.AA-01; driver: N21-BM (SP 800-82r3 5.3.2))
 
-4.13 **External identities.** Shipper portal and owner portal users must use MFA; shipper administrators manage their own users under the platform's terms. (IA-8; IA-2; PR.AA-03)
+4.13 **External identities.** Shipper portal and owner portal users must use MFA; shipper administrators manage their own users under the platform's terms. (IA-8; IA-2; PR.AA-03; driver: N21-BM (PR.AA-03))
 
 ## 5. Compliance and enforcement
 Violations are handled under POL-01 section 4.14. Compliance is checked through the P07 assessment of common controls and division samples, the annual supplement attestations, and division access reviews.

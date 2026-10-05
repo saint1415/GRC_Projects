@@ -27,21 +27,21 @@ All workforce members and all group devices, accounts, networks, and approved to
 | Group CISO | Maintains the approved tools list |
 
 ## 4. Policy statements
-4.1 Every workforce member must acknowledge these rules at hire and every year, and complete annual security awareness training. (PL-4; AT-2; PR.AT-01)
+4.1 Every workforce member must acknowledge these rules at hire and every year, and complete annual security awareness training. (PL-4; AT-2; PR.AT-01; driver: N21-BM (SP 800-82r3 3.3.5); HMR 172.704(a)(4))
 
-4.2 Only group-managed devices may connect to OT networks. Personal devices, personal phones, and personal chargers must never be connected to control room consoles, HMIs, or field devices. (AC-19; PR.PS-05)
+4.2 Only group-managed devices may connect to OT networks. Personal devices, personal phones, and personal chargers must never be connected to control room consoles, HMIs, or field devices. (AC-19; PR.PS-05; driver: N21-BM (SP 800-82r3 6.2.7))
 
-4.3 Removable media may be used with OT only after a scan at a group scanning kiosk. Laptops brought by vendors may connect only after the plant or control room review in the division supplement. (MP-7; SI-3; PR.PS-05)
+4.3 Removable media may be used with OT only after a scan at a group scanning kiosk. Laptops brought by vendors may connect only after the plant or control room review in the division supplement. (MP-7; SI-3; PR.PS-05; driver: N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.2, 5.3))
 
-4.4 Only approved software may be installed. Field tablets and driver phones may run only managed, approved apps. (CM-11; CM-10; PR.PS-05)
+4.4 Only approved software may be installed. Field tablets and driver phones may run only managed, approved apps. (CM-11; CM-10; PR.PS-05; driver: N21-BM (SP 800-82r3 6.2.6))
 
-4.5 Suspected phishing must be reported with the report button; never forward it. (AT-2; PR.AT-01)
+4.5 Suspected phishing must be reported with the report button; never forward it. (AT-2; PR.AT-01; driver: N21-BM (SP 800-82r3 3.3.5))
 
-4.6 Photographs or screenshots of control room displays, OT network diagrams, or security plans must not be shared outside the group or on social media. (AC-3; PR.DS-01)
+4.6 Photographs or screenshots of control room displays, OT network diagrams, or security plans must not be shared outside the group or on social media. (AC-3; PR.DS-01; driver: N21-BM (SP 800-82r3 6.2.3); HMR 172.802(c))
 
-4.7 **Generative AI.** Only tools on the approved list may be used. Restricted data and OT Confidential data must not be entered into any AI tool that is not approved for that class. AI output used in work must be checked by the person using it. (PL-4; CM-10; GV.RM-01)
+4.7 **Generative AI.** Only tools on the approved list may be used. Restricted data and OT Confidential data must not be entered into any AI tool that is not approved for that class. AI output used in work must be checked by the person using it. (PL-4; CM-10; GV.RM-01; driver: N21-BM (GV.PO-01))
 
-4.8 Driver monitoring data (telematics, ELD, and camera data) may be used only for safety, compliance, and security purposes in the division supplement, and never to pressure a driver to break hours-of-service rules. (PL-4; GV.RM-01)
+4.8 Driver monitoring data (telematics, ELD, and camera data) may be used only for safety, compliance, and security purposes in the division supplement, and never to pressure a driver to break hours-of-service rules. (PL-4; GV.RM-01; driver: 49 CFR 390.36)
 
 ## 5. Compliance and enforcement
 Violations are handled under POL-01 section 4.14. Compliance is checked through the P07 assessment of common controls and division samples, the annual supplement attestations, and division access reviews.

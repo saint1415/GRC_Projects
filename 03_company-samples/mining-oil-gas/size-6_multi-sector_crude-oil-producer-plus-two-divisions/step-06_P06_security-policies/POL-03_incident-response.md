@@ -31,29 +31,29 @@ All security incidents affecting any group system or data, including OT, and inc
 | Disclosure committee | Decides materiality for Form 8-K Item 1.05 |
 
 ## 4. Policy statements
-4.1 Every workforce member must report a suspected incident to the group SOC within 1 hour of noticing it. Control room staff report to their shift lead, who calls the SOC OT desk. (IR-6; RS.MA-02)
+4.1 Every workforce member must report a suspected incident to the group SOC within 1 hour of noticing it. Control room staff report to their shift lead, who calls the SOC OT desk. (IR-6; RS.MA-02; driver: N21-BM (SP 800-82r3 6.4.1))
 
-4.2 The SOC must handle incidents using one group severity scale and the group playbooks, including the P08 runbook. Division severity scales are not permitted. (IR-4; IR-8; RS.MA-01)
+4.2 The SOC must handle incidents using one group severity scale and the group playbooks, including the P08 runbook. Division severity scales are not permitted. (IR-4; IR-8; RS.MA-01; driver: N21-BM (SP 800-82r3 3.3.8))
 
-4.3 **Operations decide on operations.** Only the control room shift lead may isolate a control room from corporate networks, switch to manual operation, or shut in or shut down. The SOC advises; it does not direct controllers. Safety and environmental protection come before evidence collection. (IR-4; RS.MI-01)
+4.3 **Operations decide on operations.** Only the control room shift lead may isolate a control room from corporate networks, switch to manual operation, or shut in or shut down. The SOC advises; it does not direct controllers. Safety and environmental protection come before evidence collection. (IR-4; RS.MI-01; driver: PHMSA 195.446(b)(5); N22-R01 (CIP-003-9 R2 Att. 1 Sec. 4.3))
 
-4.4 The incident log must record the time each clock starts: confirmed discovery (PHMSA), knowledge of a discharge (EPA), determination of a Reportable Cyber Security Incident (NERC), the materiality determination (SEC), and determination of a breach (state laws). (IR-5; RS.AN-03)
+4.4 The incident log must record the time each clock starts: confirmed discovery (PHMSA), knowledge of a discharge (EPA), determination of a Reportable Cyber Security Incident (NERC), the materiality determination (SEC), and determination of a breach (state laws). (IR-5; RS.AN-03; driver: PHMSA 195.52; 40 CFR 110.6; N48-49-R08; Fla. Stat. 501.171(3)-(4))
 
-4.5 The Group General Counsel must maintain the multi-regulator notification matrix (P08) and review it every quarter. Each regulator notice has a named owner. Counsel approves every notice except safety and environmental notices that a rule requires within hours, which the named owner makes first and reports to counsel. (IR-6; IR-8; RS.CO-02)
+4.5 The Group General Counsel must maintain the multi-regulator notification matrix (P08) and review it every quarter. Each regulator notice has a named owner. Counsel approves every notice except safety and environmental notices that a rule requires within hours, which the named owner makes first and reports to counsel. (IR-6; IR-8; RS.CO-02; driver: PHMSA 195.52; 40 CFR 110.6; N22-R01 (CIP-003-9 R2 Att. 1 Sec. 4.2))
 
-4.6 Printed copies of the notification matrix, contacts, and forms must be kept at the IOC, BCC, GCC, PCC, and backup PCC, so notices can be made when corporate email and phones are unavailable. (IR-8; CP-2; RS.CO-02)
+4.6 Printed copies of the notification matrix, contacts, and forms must be kept at the IOC, BCC, GCC, PCC, and backup PCC, so notices can be made when corporate email and phones are unavailable. (IR-8; CP-2; RS.CO-02; driver: N21-BM (SP 800-82r3 6.4.2))
 
-4.7 **SEC materiality.** Severity 1 incidents must be escalated to the disclosure committee within 24 hours of declaration. The committee must decide materiality without unreasonable delay. If material, the Form 8-K Item 1.05 filing must be made within 4 business days after the determination. (IR-6; RS.CO-03)
+4.7 **SEC materiality.** Severity 1 incidents must be escalated to the disclosure committee within 24 hours of declaration. The committee must decide materiality without unreasonable delay. If material, the Form 8-K Item 1.05 filing must be made within 4 business days after the determination. (IR-6; RS.CO-03; driver: N48-49-R08 (Form 8-K Item 1.05))
 
-4.8 **Ransom payments** require board risk committee approval, counsel, the cyber insurer, and an OFAC sanctions check before any payment. (IR-4; RS.MA-04)
+4.8 **Ransom payments** require board risk committee approval, counsel, the cyber insurer, and an OFAC sanctions check before any payment. (IR-4; RS.MA-04; driver: OFAC advisory (2021-09-21))
 
-4.9 The group must run at least one cross-division exercise each year that includes OT isolation, the notification matrix, and a materiality decision. Power Generation must also test its CIP-003-9 incident response plan at least once every 36 calendar months and update it within 180 days after a test or reportable incident. (IR-3; ID.IM-02)
+4.9 The group must run at least one cross-division exercise each year that includes OT isolation, the notification matrix, and a materiality decision. Power Generation must also test its CIP-003-9 incident response plan at least once every 36 calendar months and update it within 180 days after a test or reportable incident. (IR-3; ID.IM-02; driver: N22-R01 (CIP-003-9 R2 Att. 1 Sec. 4.5, 4.6))
 
-4.10 **Reconnection.** A control room isolated during an incident may be reconnected to corporate networks only after the incident commander and the Group OT Security Director confirm that the paths it uses are clean and the shift lead agrees. (IR-4; CP-10; RC.RP-05)
+4.10 **Reconnection.** A control room isolated during an incident may be reconnected to corporate networks only after the incident commander and the Group OT Security Director confirm that the paths it uses are clean and the shift lead agrees. (IR-4; CP-10; RC.RP-05; driver: N21-BM (SP 800-82r3 6.5.1))
 
-4.11 Evidence must be preserved with chain of custody, including controller logic and HMI state where it can be captured safely. Logs relevant to an incident must be placed on legal hold. (IR-4; RS.AN-07)
+4.11 Evidence must be preserved with chain of custody, including controller logic and HMI state where it can be captured safely. Logs relevant to an incident must be placed on legal hold. (IR-4; RS.AN-07; driver: N21-BM (SP 800-82r3 6.4.3))
 
-4.12 A lessons-learned review must be completed within 30 days of recovery, and the risk registers, POA&M, and this policy updated. (IR-4; ID.IM-02)
+4.12 A lessons-learned review must be completed within 30 days of recovery, and the risk registers, POA&M, and this policy updated. (IR-4; ID.IM-02; driver: N21-BM (SP 800-82r3 6.4.5))
 
 ## 5. Compliance and enforcement
 Violations are handled under POL-01 section 4.14. Compliance is checked through the P07 assessment of common controls and division samples, the annual supplement attestations, and division access reviews.
