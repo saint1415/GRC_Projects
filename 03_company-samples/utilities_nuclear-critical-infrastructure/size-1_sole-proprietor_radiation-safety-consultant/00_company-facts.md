@@ -125,3 +125,20 @@ The vertical's `requirements.csv` lists power reactor and grid rules (C-NUCLEAR-
 | 2026-08-31 | Deliverables adopted by the owner-consultant |
 | 2026-10-19 to 2026-11-20 | Client A fall 2026 outage (Unit 2), planned |
 | 2026-11-30 | 2026 Client B review report due |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Client A's plan | Client A does not share its cyber security plan with contractors, so the owner knows its requirements only through CSR-A | P03 |
+| Kiosk | Client A's portable media kiosk refuses unregistered media and prints a scan slip; the owner kept the slips from the spring 2026 outage | P03, P07 |
+| Router password | The router administrator password was changed from the label default during the P07 test session on 2026-07-23 | P01, P07 |
+| Calibration-tracking MFA | The calibration-tracking SaaS offers MFA, but it was off (found in P04 mapping) | P02, P04, P07 |
+| Field laptop | Taken off all networks on 2026-08-31, pending replacement | P01, P07 |
+| Old phone | A phone retired in 2023 was traded in with no recorded wipe | P07 |
+| Software checks | The owner checks the dose and shielding software against a reference calculation after each update | P07 |
+| Suite provider assurance | The suite provider supplied a SOC 2 Type 2 report (Security, Availability, Confidentiality; period ending 2026-03-31; no exceptions), reviewed 2026-07-23 | P02, P09 |
+| Bank | The business bank requires its own MFA to approve payments | P01, P09 |
+| Instrument checks | The calibration laboratory calibrates each instrument once a year; the owner runs a pre-use response check on a check source before each job (client check sources on site) | P05, P10 |
+| AI-002 follow-up | The chat history was deleted and a deletion request sent to the AI chat service on 2026-07-22 | P10 |
