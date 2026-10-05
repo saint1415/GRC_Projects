@@ -48,7 +48,7 @@ SUP-TC,3.1,Network element configuration backups with an offline copy in a secon
 SUP-TC,3.1,CALEA SSI policy per operating company; quarterly appendix check; refile within 90 days of a merger,PL-2; PM-2,GV.RR-02,C-COMMUNICATIONS-R03 (1.20003(b)(4); 1.20005),Yes
 SUP-TC,3.1,Chatbot release gate for authentication and account actions,SA-11; CM-4,PR.PS-06,"C-COMMUNICATIONS-R01 (64.2010(c), (e))",No
 SUP-NE,3.2,MNO remote access through brokered PAM sessions; no persistent tunnels,AC-17; IA-5,PR.AA-05,MNO customer contracts,Yes
-SUP-NE,3.2,Covered equipment screening and 1-business-day reporting,SR-3; IR-6,GV.SC-05,FAR 52.204-25(d); 52.204-23(c); 47 CFR 1.50007,Yes
+SUP-NE,3.2,Covered equipment screening; reporting within 1 business day (52.204-25) or 3 business days (52.204-23),SR-3; IR-6,GV.SC-05,FAR 52.204-25(d); 52.204-23(c); 47 CFR 1.50007,Yes
 SUP-NE,3.2,Visitor logs and escorts at project offices,PE-8; PE-3,PR.AA-06,N54-R04 (52.204-21(b)(1)(ix)),Yes
 SUP-TF,3.3,Written fallback to daily observation when lighting monitoring is lost,CP-2,RC.RP-01,47 CFR 17.47(a)(1),Yes
 SUP-TF,3.3,RMU inventory and quarterly inspection tracking,CM-8; MA-2,ID.AM-01,47 CFR 17.47(b),Yes
