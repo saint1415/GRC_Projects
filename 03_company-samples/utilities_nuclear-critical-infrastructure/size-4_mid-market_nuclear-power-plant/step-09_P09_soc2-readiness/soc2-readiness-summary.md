@@ -103,7 +103,7 @@ The company relies on vendor controls for many inherited controls (P02: 16 Commo
 
 **CDA suppliers are not in this program.** Suppliers of CDAs and their services stay under the CSP supply chain procedures run by engineering procurement and the CST. This program covers business IT, cloud, and data vendors.
 
-Of about 210 vendors with network or data access, 24 are Tier 1. The CSV holds the first 9 Tier 1 reviews and 1 Tier 2 example. Four of the 9 Tier 1 vendors reviewed have no current SOC 2 report or equivalent (VEN-04, VEN-06, VEN-07, VEN-08); the other 5 of the 9 without current assurance found in P07 are among the 15 Tier 1 reviews still to do, all due by 2027-03-31 (POAM-016).
+Of about 210 vendors with network or data access, 24 are Tier 1. The CSV holds the first 9 Tier 1 reviews and 1 Tier 2 example. Four of the 9 Tier 1 vendors reviewed have no current SOC 2 Type 2 report or equivalent (VEN-04, VEN-06, VEN-07, VEN-08); the other 5 of the 9 without current assurance found in P07 are among the 15 Tier 1 reviews still to do, all due by 2027-03-31 (POAM-016).
 
 **Key findings:**
 1. **ERO callout service (VEN-06):** its last SOC 2 report ended 2025-03-31, so it is not current. Its 99.9% availability commitment does not show it can support a 1-hour MTD for BP-08 without the printed call tree. This supports the second callout path (POAM-019) and P01 R-007 as High.
