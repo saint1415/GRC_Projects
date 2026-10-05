@@ -107,3 +107,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Assessor | The P07 assessor is an independent consultant with OT experience, not involved in the risk assessment or in operating any control | P07 |
 | Settings backups | The Line Superintendent last copied recloser and RTU settings to the vault in February 2026 | P05, P07 |
 | ERP exercise | 2026-05-14: G&T hurricane tabletop (sign-in sheet kept). After the October 2024 activation, nobody recorded the check of emergency contacts that 1730.20 requires for an actual event to count as the annual exercise | P03 |
+| Regulatory driver IDs | None of the vertical registry IDs (N22-R01 to N22-R04) applies (P03 G-046 to G-050). The `regulatory_driver` columns therefore cite the binding rules directly: 7 CFR 1730 sections, DOE-417 criteria, and Fla. Stat. 501.171 subsections, plus the voluntary benchmark (NIST CSF 2.0 with SP 800-82 Rev. 3) | P01, P02, P04, P06 |
+| Policy adoption | The General Manager approved POL-02 to POL-04 on 2026-08-31; the Board of Trustees adopted them on 2026-09-17; effective 2026-10-01 | P02, P06 |
+| Security budget | 2026-2027 security budget approved by the Board on 2026-09-17: about $9,400 one-time and $6,900 a year | P01, P03 |
+| Field device passwords | P07 testing on 2026-08-11 also found that recloser controls at Substation 1 and LR-2 accept the vendor default password at the local port; the shared SCADA password had been passed among field staff by text message | P01, P07 |
+| Operations workstation | P07 testing found it missing 4 months of operating system updates; one truck tablet was 2 versions behind | P07 |
+| ERP copy | The single paper ERP is kept in a locked cabinet in the General Manager's office | P03, P07 |
+| SCADA vendor SOC 2 report | Type 2, unqualified, 12 months ending 2026-06-30; received 2026-08-06; reviewed 2026-08-20. One exception (late removal of vendor support access to one customer VPN endpoint); field devices out of scope | P02, P09 |
+| Incident readiness dates | DOE-417 filing arrangement with the G&T and the Balancing Authority due 2026-10-31; first tabletop of the P08 runbook with the MSP and SCADA vendor on 2026-11-18 | P08, P09 |
+| Peak-forecast trial results | June to August 2026: the G&T's coincident peak hour fell inside a called 4-hour event window in all 3 months; in August the add-on placed the peak 1 hour early on 2 of 6 flagged days. No medical-needs member is enrolled in load control | P01, P10 |
+| G&T questionnaire | Based on the Trust Services Criteria for security and availability; the G&T's instructions accept a member self-assessment with a remediation plan instead of an audit report | P09 |
