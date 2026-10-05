@@ -1,38 +1,23 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC (community water system, 2,850 population served) |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Office Manager (security and compliance coordinator) |
+| Approved by | Owner and General Manager, 2026-08-31 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the company keeps three core policies. The staff use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules staff already read, so they live in **POL-02 Part C. Workforce use rules**, with the AI tool rule in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Benchmark |
+|---|---|---|
+| Company systems for company work; look up customer information only as the job needs | POL-02 C.1 | CSF PR.AT-01 |
+| No Restricted information in personal email, personal cloud storage, messaging apps, or public AI chatbots | POL-02 C.2 | CSF PR.AT-01 |
+| Approved AI tools only; the anomaly detection feature only as advisory under the P10 conditions | POL-04 4.8 | CSF GV.SC-05 |
+| No personal devices or USB drives on the HMI computer or plant network; no web or email on the HMI computer | POL-02 C.3 | CSF PR.PS-01; SP 800-82 Rev. 3 sec. 6.2.4 |
+| Security training at hire and yearly; phishing simulations; OT training for operators | POL-02 C.4 | CSF PR.AT-01, PR.AT-02 |
+| Report suspected incidents at once | POL-02 C.5 and POL-03 4.2 | CSF RS.MA-02 |
+| Signed acknowledgment at hire and after each annual update | POL-02 C.6 | CSF PR.AT-01 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.

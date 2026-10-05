@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**113 of 216** sample companies are finished (1130 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**115 of 216** sample companies are finished (1150 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -69,9 +69,11 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Dams | Small | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-3_small_hydroelectric-dam-operator/README.md) |
 | Dams | Mid-Market | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-4_mid-market_hydroelectric-dam-operator/README.md) |
 | Dams | Enterprise | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-5_enterprise_hydroelectric-dam-operator/README.md) |
+| Dams | Multi-Sector | Hydroelectric dam operator plus two divisions | [README](03_company-samples/utilities_dams-critical-infrastructure/size-6_multi-sector_hydroelectric-dam-operator-plus-two-divisions/README.md) |
 | Nuclear Reactors, Materials, and Waste | Sole Proprietorship | Radiation safety consultant | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-1_sole-proprietor_radiation-safety-consultant/README.md) |
 | Nuclear Reactors, Materials, and Waste | Micro | Radiation safety consulting practice | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-2_micro_radiation-safety-consulting-practice/README.md) |
 | Nuclear Reactors, Materials, and Waste | Small | Radioactive waste processor | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-3_small_radioactive-waste-processor/README.md) |
+| Nuclear Reactors, Materials, and Waste | Mid-Market | Nuclear power plant | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-4_mid-market_nuclear-power-plant/README.md) |
 | Water and Wastewater Systems | Sole Proprietorship | Small water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-1_sole-proprietor_small-water-system/README.md) |
 | Water and Wastewater Systems | Small | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-3_small_community-water-system/README.md) |
 | Construction | Small | Commercial general contractor | [README](03_company-samples/construction/size-3_small_commercial-general-contractor/README.md) |
