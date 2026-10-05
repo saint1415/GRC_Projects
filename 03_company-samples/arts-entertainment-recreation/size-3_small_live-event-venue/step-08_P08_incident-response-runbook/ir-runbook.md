@@ -108,7 +108,7 @@ The vendor's platform itself is not breached. **The company's own account and se
 | Per each state's law | Notices for patrons in other states | Counsel |
 | After notices are final | Artists and promoters for affected shows told what happened and what patrons were told | General Manager |
 
-**Plan to the shortest clock.** The card brand clocks (24 hours and 3 days) run from suspicion and arrive long before Florida's 30 days. Florida's 30 days can arrive before the forensic report is final. Counsel should decide early whether to ask the Department for the 15 additional days, which requires good cause in writing within the first 30 days.
+**Plan to the shortest clock.** The card brand clocks (24 hours and 3 days) run from suspicion and arrive long before Florida's 30 days. Florida's 30 days can arrive before the forensic report is final. Counsel should decide early whether to ask the Department for 15 additional days to notify individuals (Fla. Stat. 501.171(4)(a)), which requires good cause in writing within the first 30 days; the extension does not move the Department notice itself.
 
 **What not to say.** No public statement blames the ticketing vendor. The entry point was the company's account.
 
