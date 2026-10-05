@@ -20,7 +20,7 @@ The Trust Services Criteria are used here for two practical reasons.
 
 **The railroad will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the railroad's controls were defined in August 2026. An audit would cost a large share of the railroad's yearly security budget (about $4,040 a year, P01) and the Class I did not ask for one.
 
-**B. Relying on the operations SaaS vendor.** SYS-01 carries movement authority, car management, and interchange EDI (P05 BP-01 to BP-03), and the vendor provides several inherited controls in the SSP (P02 section on inherited controls: CP-9, AC-7, AU-11, AC-3). The vendor **is** a service organization for the railroad, so its SOC 2 Type 2 report is the right evidence. Reviewing it every year is part of POL-02 A.5 and CC9.2.
+**B. Relying on the operations SaaS vendor.** SYS-01 carries movement authority, car management, and interchange EDI (P05 BP-01 to BP-03), and the vendor provides several inherited controls in the SSP (P02 section 10.2: CP-9, AC-7, AU-11, AC-3). The vendor **is** a service organization for the railroad, so its SOC 2 Type 2 report is the right evidence. Reviewing it every year is part of POL-02 A.5 and CC9.2.
 
 **Why Availability and not another category.** The Class I needs to know that interchange data and the daily turn will keep flowing, and the railroad cannot issue movement authority from the operations system without the vendor and the internet line (P05). Confidentiality of employee information and SSI is covered under the Security criteria. Processing Integrity and Privacy were not requested.
 
@@ -74,7 +74,7 @@ The questionnaire asks for evidence. What the railroad can send now, and what it
 ## 5. Findings from the operations SaaS vendor report (Part B)
 - **Opinion:** Type 2, unqualified, Security and Availability, 12 months ending 2026-03-31. One exception (late removal of 2 of 20 sampled departed vendor staff), remediated.
 - **Availability:** the vendor's stated RTO of 4 hours and RPO of 1 hour **meet the railroad's BIA** for dispatching (BP-01: RTO 4 h, RPO 1 h). That is why P01 R-011 was accepted at Low.
-- **Controls the railroad must run.** The report lists complementary user entity controls: named user accounts, timely removal, MFA enforcement, role assignment, and review of user and audit reports. Three are open gaps at the railroad: the shared crew login and late removal (POAM-001) and no review of reports (POAM-008). **The vendor's controls protect the railroad only once those gaps close.**
+- **Controls the railroad must run.** The report lists complementary user entity controls: named user accounts, timely removal, MFA enforcement, role assignment, and review of user and audit reports. The open gaps at the railroad are the shared crew login, which breaks named accounts and timely removal (POAM-001), and no review of user and audit reports (POAM-008), as P02 section 10.2 records. **The vendor's controls protect the railroad only once those gaps close.**
 - **Follow-ups:**
   - Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31.
   - Start the weekly export of car inventory and authority history so the railroad holds its own copy (POAM-003).
