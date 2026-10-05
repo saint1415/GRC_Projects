@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**131 of 216** sample companies are finished (1310 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**132 of 216** sample companies are finished (1320 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -98,6 +98,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Chemical | Micro | Specialty chemical maker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-2_micro_specialty-chemical-maker/README.md) |
 | Chemical | Small | Specialty chemical formulator | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-3_small_specialty-chemical-formulator/README.md) |
 | Chemical | Mid-Market | Specialty chemical maker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-4_mid-market_specialty-chemical-maker/README.md) |
+| Chemical | Enterprise | Specialty chemical maker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-5_enterprise_specialty-chemical-maker/README.md) |
 | Critical Manufacturing | Sole Proprietorship | Industrial equipment repair technician | [README](03_company-samples/manufacturing_critical-manufacturing/size-1_sole-proprietor_industrial-equipment-repair-technician/README.md) |
 | Critical Manufacturing | Micro | Transformer repair shop | [README](03_company-samples/manufacturing_critical-manufacturing/size-2_micro_transformer-repair-shop/README.md) |
 | Critical Manufacturing | Small | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-3_small_power-transformer-manufacturer/README.md) |

@@ -192,3 +192,21 @@ These facts were added while building the deliverables. They do not change secti
 **Service lines offered to external customers (P09).** SL-1: tank telemetry and VMI on Cloud provider B, with an annual SOC 2 Type 2 report (Security and Availability) since 2025. SL-2: toll manufacturing and contract formulation at PLT-01, PLT-03, PLT-06, and PLT-09, where customer-owned formulations run in the plant batch systems and customers receive batch records and certificates of analysis through a customer portal. No SOC 2 report yet.
 
 **Recording and monitoring.** Fleet telematics records vehicle location and driving events, not audio or video. No AI use case records conversations.
+
+**Plant identifiers.** Plants are numbered PLT-01 to PLT-14. The "PLT-" prefix is used so plant IDs are never confused with NIST SP 800-53 PL-family control IDs (for example, PL-2 or PL-10).
+
+**More roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Director of Security Operations | Runs the 24x7 SOC (common control provider CCP-04); incident commander for the cyber response (P08) |
+| Vice President, Quality | Quality release, LIMS, and certificates of analysis (P05 BP-08; P10 AI-008) |
+| Senior Vice President, Water Treatment Business | Supply to municipal water utilities (P05 BP-09) |
+| Chief Procurement Officer | Procurement and inbound raw materials (P05 BP-12) |
+| Senior Vice President, Commercial | Customer and technical service, SDS distribution (P05 BP-16) |
+| Operations superintendent (PLT-01) | Backup incident commander for process safety on shift (P08) |
+
+**Workforce by state.** About 4,600 of the 12,000 employees work in Florida (headquarters, PLT-01, PLT-08, and Florida distribution centers). This drives the Florida worked example in P08.
+
+**Events after fieldwork (used in the deliverables).** The 3 shared integrator accounts on the remote access gateway were disabled on 2026-09-15 (POAM-005). AI-012, a closed-loop model inherited at PLT-13, was switched to advisory mode and AI-011 resume ranking was suspended on 2026-08-27 (P10).
+
+**SL-2 contract term.** SL-2 toll agreements require notice to the customer within 72 hours of an incident affecting that customer's recipes (contract, P08).
