@@ -26,13 +26,13 @@ Applicability was decided first, rule by rule, from the company's sites, chemica
 - The Ammonia Unit holds 131,325 lb of anhydrous ammonia (TQ 10,000 lb) and interconnected 29% aqua ammonia (78,300 lb of ammonia; "Ammonia (conc 20% or greater)", TQ 20,000 lb).
 - Program 1 is not available: the worst-case release endpoint reaches public receptors (68.10(j)(2)). The process is subject to OSHA PSM, so it is Program 3 (68.10(l)(2)). The Port plant is a responding stationary source (68.90(a)).
 - The Inland plant is not covered: it buys aqua ammonia below 20% and hydrogen peroxide below 35%.
-- RMP is not a cyber rule. It is included because the PCBMS carries the controls, interlocks, emergency shutdown, and notification paths the RMP relies on (G-047 to G-063).
+- RMP is not a cyber rule. It is included because the PCBMS carries the controls, interlocks, emergency shutdown, and notification paths the RMP relies on (G-048 to G-064).
 
-**3. OSHA PSM (29 CFR 1910.119): applies to two Port plant processes.** Anhydrous ammonia (TQ 10,000 lb) in the Ammonia Unit and 70% hydrogen peroxide (listed at 52% or greater, TQ 7,500 lb; 104,860 lb held) in the Peroxide Unit (G-064 to G-069). PSM rows mirror the RMP rows where the text is parallel.
+**3. OSHA PSM (29 CFR 1910.119): applies to two Port plant processes.** Anhydrous ammonia (TQ 10,000 lb) in the Ammonia Unit and 70% hydrogen peroxide (listed at 52% or greater, TQ 7,500 lb; 104,860 lb held) in the Peroxide Unit (G-065 to G-070). PSM rows mirror the RMP rows where the text is parallel.
 
-**4. DOT hazmat security plan (49 CFR 172.800): applies.** The company offers and transports 50% hydrogen peroxide (UN2014, Division 5.1, Packing Group II) in its own cargo tanks above 3,000 liters, a "large bulk quantity" of a Division 5.1 PG II material (172.800(b)(10)) (G-072 to G-079).
+**4. DOT hazmat security plan (49 CFR 172.800): applies.** The company offers and transports 50% hydrogen peroxide (UN2014, Division 5.1, Packing Group II) in its own cargo tanks above 3,000 liters, a "large bulk quantity" of a Division 5.1 PG II material (172.800(b)(10)) (G-073 to G-080).
 
-**5. CFATS (6 CFR Part 27): would apply, but cannot be enforced.** The Port plant holds 70% and 50% hydrogen peroxide, a chemical of interest for theft and diversion at a minimum concentration of 35% with a 400 lb STQ. The company was tiered and ran a Site Security Plan until the statutory authority expired on 2023-07-28. No reauthorization has been enacted. RBPS 8 is kept as a voluntary benchmark (G-080 to G-085).
+**5. CFATS (6 CFR Part 27): would apply, but cannot be enforced.** The Port plant holds 70% and 50% hydrogen peroxide, a chemical of interest for theft and diversion at a minimum concentration of 35% with a 400 lb STQ. The company was tiered and ran a Site Security Plan until the statutory authority expired on 2023-07-28. No reauthorization has been enacted. RBPS 8 is kept as a voluntary benchmark (G-081 to G-086).
 
 **6. Other candidates:**
 - **CIRCIA** (C-CHEMICAL-R03): proposed only; no final rule in the Federal Register as of 2026-10-05. As proposed, the company would be covered (it exceeds the SBA size standard of 650 employees, and it owns an MTSA facility). Tracked in G-089.
@@ -62,7 +62,7 @@ Applicability was decided first, rule by rule, from the company's sites, chemica
 **Gap risk ratings (69 rows Partially met or Not met):** 16 High, 33 Moderate, 19 Low, 1 Very Low.
 
 **Reading the results.**
-- **Process safety is mature; cyber is behind the USCG clock.** 10 of the 18 Met rows are process safety, release reporting, DOT, and MTSA physical security elements. Only 5 of 45 USCG rows are Met: applicability, CySO designation, IT lockout, MFA, and no internet-exposed OT.
+- **Process safety is mature; cyber is behind the USCG clock.** 13 of the 18 Met rows are outside the USCG rule: process safety, release reporting, DOT, MTSA physical security reporting, the ERP benchmark row, and Florida vendor notice. Only 5 of 45 USCG rows are Met: applicability, CySO designation, IT lockout, MFA, and no internet-exposed OT.
 - **Two USCG dates have already passed.** Training was due 2026-01-12 and is still incomplete (G-021). Cyber incident reporting has applied since the effective date, but the immediate report to the FBI, CISA, and the COTP under 6.16-1 is not in the FSP procedures (G-045, G-046). These are the most urgent compliance items.
 - **The Port plant's 2023-2024 investments show up as Partially met, not Not met.** The DMZ, gateway, allowlisting, and offline backups exist; what is missing is coverage of terminal equipment, monitoring of what is logged, testing of what is backed up, and written evidence.
 - **The RMP and PSM rows treat the control system as trustworthy equipment.** None is Not met, but 17 of 23 are Partially met because cyber-initiated failures are absent from the PHAs, MOC misses terminal and network changes, and SIS logic is verified only once a year.
@@ -97,14 +97,14 @@ The roadmap is built backward from the 2027-07-16 USCG date, with a month of mar
 
 | Phase | Window | Outcomes | Rows closed (examples) |
 |---|---|---|---|
-| **1. Stop the bleeding** | 2026 Q4 | 6.16-1 reporting in procedures and the FSP; default password sweep; employee training complete and contractor training started; SSI share restricted; notification path independent of the business network; full DCS restore test; joint tabletop 2026-11-17 (also the RMP tabletop and the first USCG exercise) | G-010, G-021, G-034, G-040, G-044, G-046, G-062, G-063 |
-| **2. Build the plan's content** | 2027 Q1 | Cybersecurity Assessment; critical systems list; KEV process; OT vendor notice clauses; MSSP OT monitoring; approved hardware and software list; standards STD-01 to STD-06; PHA addendum; DOT plan revision | G-007, G-008, G-016, G-024, G-030, G-036, G-051, G-078 |
-| **3. Write and submit** | 2027 Q2 | Plan sections complete; USCG-scoped penetration test; first cyber drills; unique console accounts; submission by 2027-06-15 | G-002, G-003, G-014, G-025, G-038 |
-| **4. Operate under the plan** | 2027 Q3 onward | Run the plan as approved; quarterly drills and reviews; first annual plan audit within 12 months of approval; Peroxide Unit HAZOP revalidation with cyber scenarios (2027-10) | G-043, G-033, G-065 |
+| **1. Stop the bleeding** | 2026 Q4 | 6.16-1 reporting in procedures and the FSP; default password sweep; employee training complete and contractor training started; SSI share restricted; notification path independent of the business network; full DCS restore test; joint tabletop 2026-11-17 (also the RMP tabletop and the first USCG exercise) | G-010, G-021, G-034, G-040, G-044, G-046, G-062, G-064 |
+| **2. Build the plan's content** | 2027 Q1 | Cybersecurity Assessment; critical systems list; KEV process; OT vendor notice clauses; MSSP OT monitoring; approved hardware and software list; standards STD-01 to STD-06; PHA addendum; DOT plan revision | G-007, G-008, G-016, G-024, G-030, G-036, G-051, G-074, G-079 |
+| **3. Write and submit** | 2027 Q2 | Plan sections complete; USCG-scoped penetration test; first cyber drills; unique console accounts; submission by 2027-06-15 | G-002, G-003, G-014, G-025, G-039 |
+| **4. Operate under the plan** | 2027 Q3 onward | Run the plan as approved; quarterly drills and reviews; first annual plan audit within 12 months of approval; Peroxide Unit HAZOP revalidation with cyber scenarios (2027-10) | G-033, G-043, G-066 |
 
 Progress is reported quarterly to the audit committee as the count of rows moving to Met, with the USCG rows shown separately.
 
 ## 6. Pending regulatory changes
 - **CIRCIA** (proposed 6 CFR Part 226; NPRM 89 FR 23644, 2024-04-04). Not in effect. If finalized as proposed, the company would report covered cyber incidents to CISA within 72 hours and ransom payments within 24 hours. The P08 notification matrix has a placeholder row marked "proposed, not in effect". No action is required until a final rule sets an effective date.
-- **2026 RMP proposal** (91 FR 8970, 2026-02-24). Proposed only. It would revise several 2024 provisions, including power loss, natural hazards, third-party audits, and emergency response exercises. Until a final rule is published, the current text (including the 2027-05-10 standby power date in 68.10(g)(1)) governs, and G-050, G-052, G-053, and G-063 are planned against it.
+- **2026 RMP proposal** (91 FR 8970, 2026-02-24). Proposed only. It would revise several 2024 provisions, including power loss, natural hazards, third-party audits, and emergency response exercises. Until a final rule is published, the current text (including the 2027-05-10 standby power date in 68.10(g)(1)) governs, and G-050, G-052, G-053, and G-064 are planned against it.
 - **CFATS reauthorization.** None enacted as of 2026-10-05. If CFATS returns, the Port plant would likely need a new Top-Screen and Site Security Plan, and the RBPS 8 rows would become binding. The legacy measures and this benchmark keep that transition short.
