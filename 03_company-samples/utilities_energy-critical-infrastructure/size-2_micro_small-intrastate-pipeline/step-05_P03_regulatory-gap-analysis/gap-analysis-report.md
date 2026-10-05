@@ -72,7 +72,7 @@ The 35 unmet or partially met rows break down by gap risk as follows:
 | Gap | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|
 | No criteria for a precautionary shut-in after a cyber event | 192.615(a)(6) (G-019); CSF RS.MI-01 (G-044) | High | Cyber annex with the P08 decision table, agreed with the municipal system | Operations Manager | 2026-11-30 |
-| No cyber incident response plan | CSF ID.IM-04, RS.MA-01 (G-030, G-043) | High | P08 runbook (approved 2026-09-15); tabletop | Office Manager | 2026-11-30 |
+| No cyber incident response plan | CSF ID.IM-04, RS.MA-01 (G-030, G-043) | High | P08 runbook (approved 2026-09-15); cyber annex and tabletop | Office Manager | 2026-09-30 runbook; 2026-11-30 annex |
 | Password-only SCADA access with command rights | CSF PR.AA-03 (G-032) | High | Vendor app-based MFA on every SCADA account | Operations Manager | 2026-10-31 |
 | Gas control desk on the flat office network | CSF PR.IR-01 (G-039) | High | Separate segment and dedicated workstations | Office Manager (MSP performs) | 2026-11-30 |
 | Night callouts not counted toward hours-of-service; deviations not documented | 192.631(d)(1), (d)(4), (j)(2) (G-005, G-008, G-015) | Moderate | Count callouts; rest rule; deviation form | Operations Manager | 2026-10-31 |
@@ -91,11 +91,11 @@ The plan fits a 7-person company: most actions are one-page procedures, vendor s
 |---|---|---|---|
 | 1. Governance and plans | 2026-09-30 | Policies POL-02 to POL-04 approved 2026-09-15; written roles; P08 runbook approved 2026-09-15 | G-022, G-023, G-043 |
 | 2. Access and fatigue | 2026-10-31 | SCADA MFA and named desk accounts; last-day checklist; CRM procedure revision with callout counting, rest rule, and deviation form; fatigue education; rupture identification wording for the leak module; inventory and diagram; configuration export; awareness training starts; monthly log review starts | G-001, G-005 to G-008, G-015, G-021, G-026 to G-028, G-031, G-032, G-034, G-036, G-042 |
-| 3. Separation and response | 2026-11-30 | Separate segment and dedicated desk workstations; cyber annex to the emergency plan; abnormal operation additions; on-call controller actions; tabletop | G-017, G-018 to G-020, G-030, G-037, G-039, G-044, G-045 |
+| 3. Separation and response | 2026-11-30 | Separate segment and dedicated desk workstations; cyber annex to the emergency plan; abnormal operation additions; on-call controller actions; tabletop | G-017, G-019, G-020, G-030, G-037, G-039, G-044, G-045 |
 | 4. Resilience and suppliers | 2026-12-31 | Second-carrier SIMs; office failover router; EDR and sign-in alerts; supplier addendums; supplier reviews; records filing; advisory checks; role reviews | G-014, G-024, G-025, G-029, G-033, G-040, G-041 |
 | 5. Longer items | 2027-03-31 | Firmware review process; cyber scenarios in controller training | G-035, G-038 |
 
-Remaining Low and process items (G-002 and G-016 upkeep, G-027) ride with phase 2. Progress is reviewed at the Owner's monthly meeting, using the P07 POA&M as the tracker.
+The Met rows G-002 and G-016 need only upkeep when the procedures change. Progress is reviewed at the Owner's monthly meeting, using the P07 POA&M as the tracker.
 
 ## 6. Designation readiness and pending changes
 **If TSA designated the pipeline.** SD 02G would require a TSA-approved Cybersecurity Implementation Plan (Sections III.A to III.E), a Cybersecurity Incident Response Plan exercised at least annually (III.F), and a Cybersecurity Assessment Plan (III.G). SD 01G would add a Cybersecurity Coordinator and alternate available 24/7 and reporting of cybersecurity incidents to CISA no later than 72 hours after identification.
