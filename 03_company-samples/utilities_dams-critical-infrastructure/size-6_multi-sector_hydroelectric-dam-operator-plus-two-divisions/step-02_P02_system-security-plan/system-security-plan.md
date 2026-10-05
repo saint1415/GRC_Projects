@@ -136,7 +136,7 @@ Most controls are system-specific because the HPCDMS deliberately does not use c
 The 3 planned controls are application allow-listing on plant HMIs (CM-7(5)), automated real-time analysis at all plants (SI-4(2)), and PLC logic integrity checks (SI-7(1)).
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 107 controls. Inheritance is **documented for Hydro** (2025 inheritance matrix and this SSP). For **Constructors** it is documented only inside the FPE SSP, not for the project platform (SYS-C1) or jobsite technology (SYS-C3). For **Engineering** it is not documented; the DSMS SOC 2 system description in progress (P09) will be the first record (scenario gap 7; POAM-016). 15 common controls were assessed once for all divisions in P07.
+The common control catalog lists 107 controls. Inheritance is **documented for Hydro** (2025 inheritance matrix and this SSP). For **Constructors** it is documented only inside the FPE SSP, not for the project platform (SYS-C1) or jobsite technology (SYS-C3). For **Engineering** it is not documented; the DSMS SOC 2 system description in progress (P09) will be the first record (scenario gap 7; POAM-016). 16 common controls were assessed once for all divisions in P07.
 
 ### 10.3 Mapping to NERC CIP and FERC Section 9
 Every row in `control-implementation.csv` names the CIP requirement or FERC program item it supports in `regulatory_driver`. Where a control serves both (for example AC-17 for CIP-005-7 R2 and Form 3 Q12), the CIP evidence is used for the FERC inspection, as Rev. 3A 9.4 allows, to avoid duplicate effort.

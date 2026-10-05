@@ -104,3 +104,6 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Portal vendor assurance | The portal vendor provided its SOC 2 Type 2 report (Security category) under a nondisclosure agreement. The owner reviewed it on 2026-07-22 | P02, P09 |
 | Customer notice channels | The billing SaaS sends automated emails and texts to the 112 accounts with a phone number or email on file. The other 26 households need posting or hand delivery | P03, P05, P08 |
 | AI chat assistant | In 2025 the owner used a free consumer AI chat assistant to draft a rate-change letter and a reminder about the 2024 boil water notice. No customer list was pasted in | P10 |
+| Previous relief operator | A previous relief operator covered until 2025 and used the same shared portal login. The password was not changed when that operator left | P07 |
+| Router label | The router sits inside the locked panel enclosure, and its default administrator password is printed on its label | P07 |
+| Anomaly alert history | In its first 12 weeks (2026-06-01 to 2026-08-23) the feature sent 9 alerts: 6 normal events, 2 real problems already caught on the daily visit (a weak hypochlorite batch and a sticking check valve), and 1 dropped cellular signal | P10 |

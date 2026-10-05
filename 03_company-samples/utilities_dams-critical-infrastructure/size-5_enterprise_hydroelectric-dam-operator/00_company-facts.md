@@ -47,6 +47,15 @@ All 10 deliverables in this folder use the facts below. The company, its hydroel
 | Vice President, Corporate Security | **FERC primary security contact** for the fleet (Security Program Rev. 3A, 3.2), with each plant manager as alternate contact for that project; physical security, security officers, PACS |
 | Disclosure committee | 8-K materiality decisions (General Counsel chairs) |
 | GRC team (10), NERC compliance team (9), Security Operations Center (24x7, in-house, IT and OT), OT security team (22), Internal Audit | Three lines model |
+| Senior Vice President, Hydro Operations organization: Director, Hydro Operations Center; Director, Hydro Control Systems Engineering; plant managers | HOC operations and local control; SCADA, PLC, and gate logic, baselines, backups, and OT change control (HFCDMS system administrator) |
+| CISO organization: Director of Security Operations; Director, OT Security; Director, OT Network Engineering; Director of Network Engineering | SOC; OT security team, OT identity domain, OT PAM, Intermediate Systems; OT WAN and firewalls; corporate network |
+| Director, NERC Compliance (under the Chief Compliance Officer) | NERC compliance team; CIP evidence; CIP-008, EOP-004, and DOE-417 reporting |
+| CIO organization: Director of Identity and Access Management; Director of Cloud Platform Engineering | Enterprise identity platform; cloud landing zones (P04) |
+| Director of Third-Party Risk Management | Vendor tiering, SOC report reviews, CIP-013-2 plan |
+| Vice President, Integration Management Office | Piedmont integration (owner of the PD gaps until integration) |
+| Vice President, Hydro Services; Vice President, Dam Safety Monitoring Services | SL-1 and SL-2 service line owners (P09) |
+| Chief Human Resources Officer; Vice President, Facilities; Vice President, Lands and Recreation; Vice President, Corporate Communications; Vice President, Investor Relations | Personnel and training; facilities; recreation; public and investor communications |
+| AI council (chaired by the Chief Risk Officer) | AI intake, tiering, and review (P10) |
 
 ## 3. Systems
 
@@ -70,6 +79,8 @@ All 10 deliverables in this folder use the facts below. The company, its hydroel
 | SYS-16 | Third parties with system or data access | Various | About 1,100 vendors; 240 with system or data access; 58 with remote access paths into OT (21 into CIP-scope systems, all through Intermediate Systems). One OEM services 60% of governors and exciters |
 | SYS-17 | AI and analytics portfolio (11 use cases) | Cloud provider B and vendor SaaS | Governed by the AI council formed in 2025 (P10) |
 | SYS-18 | Recreation reservations and public website | Vendor SaaS | 26 campgrounds and 140 boat ramps and day-use areas; vendor-hosted payment page |
+
+**HOC-operated scope (used in P02):** the 35 HOC-operated developments have 125 of the 151 units, 48 of the 63 dams (4 Group 1, 17 Group 2, 27 Group 3), 36 of the 41 gated dams, automated instrumentation at 44 of the 52 instrumented dams, and 112 of the 126 sirens (at 16 of the 18 siren dams). 31 of them are BES plants. The Piedmont developments hold 22 units, 11 dams (PD-04 and PD-06 in Group 2), 4 gated dams, 6 instrumented dams, and 14 sirens at PD-04 and PD-06; the 2 legacy local developments hold 4 units and 4 Group 3 dams.
 
 **SSP system (P02):** the *Hydro Fleet Control and Dam Monitoring System (HFCDMS)*: the fleet SCADA at HOC-A and HOC-B (SYS-01), the plant control systems (SYS-02), spillway and gate control (SYS-03), and dam safety instrumentation and early warning (SYS-04) at the 35 HOC-operated developments, and the OT WAN, DMZs, and Intermediate Systems that connect them (SYS-05), with interfaces to the DSMS (SYS-12), the scheduling platform (SYS-11), security operations (SYS-14), and the Balancing Authority and Transmission Operator control centers.
 
@@ -101,6 +112,9 @@ All 10 deliverables in this folder use the facts below. The company, its hydroel
 8. **Service lines.** SL-2 has no SOC 2 report; alert thresholds and model changes in the DSMS lack formal change control.
 9. **Materiality.** The disclosure committee has 3 new members since 2026 and has never exercised an OT or dam safety scenario.
 10. **AI.** 11 AI use cases; 7 have completed AI council review.
+11. **Undocumented vendor paths (found by Internal Audit in 2026-08).** Three instrumentation vendors reached dataloggers at 5 dams over cellular modems that bypass the Intermediate Systems; the modems were disabled except during approved sessions on 2026-09-02.
+12. **Two more potential CIP issues at the HOC level.** A contractor kept unescorted physical access to the HOC-B PSP for 31 hours after termination (CIP-004-7 R5.1), and the BCSI in item 7 was outside an authorized repository (CIP-011-3 R1.2). Both were self-reported with the Piedmont issues on 2026-09-30.
+13. **Statement to FERC.** The 2025 certification letter reported PD-04 and PD-06 contact verification as complete when it was not; the correction goes to the Regional Engineer in 2026-10.
 
 ## 5. Scenario choices
 
@@ -122,6 +136,7 @@ All 10 deliverables in this folder use the facts below. The company, its hydroel
 | 2025-10-01 | Piedmont portfolio acquisition closes |
 | 2025-12-15 | 2025 Annual Security Compliance Certification Letters filed for 23 Group 1 and 2 dams |
 | 2026-01-15 | PD-02, PD-04, and PD-06 added to the CIP-002 low impact list |
+| 2026-02-24 | CIP-008-6 plan tabletop (HOC scenario) |
 | 2026-04-01 | CIP-003-9 takes effect (low impact vendor electronic remote access, Attachment 1 Section 6) |
 | 2026-05-16 | Annual HOC failover exercise (HOC-A to HOC-B): 3.4 hours against a 2-hour RTO |
 | 2026-06-01 to 2026-07-31 | Enterprise BIA, risk analysis, and regulatory gap analysis; Section 9 determinations refreshed 2026-07-08 |
@@ -129,10 +144,13 @@ All 10 deliverables in this folder use the facts below. The company, its hydroel
 | 2026-07-13 to 2026-08-28 | Control assessment by Internal Audit with the co-sourced OT specialist firm |
 | 2026-08-14 | BIA approved |
 | 2026-08-21 | Gap analysis approved |
+| 2026-08-31 | Internal Audit reports the cellular datalogger paths to the CISO and the Vice President, Dam Safety |
+| 2026-09-02 | Cellular datalogger modems disabled except during approved sessions |
 | 2026-09-04 | Internal Audit report issued |
 | 2026-09-08 | Executive risk committee approves the risk register and treatments |
-| 2026-09-10 | Board safety, risk, and reliability committee and audit committee review; policies approved |
+| 2026-09-10 | Board safety, risk, and reliability committee and audit committee review; policies approved (effective 2026-10-01) |
 | 2026-09-14 | SSP approved; conditional authorization by the COO |
-| 2026-09-30 | Self-reports to SERC; plan and schedule letters for PD-04 and PD-06 to the FERC Regional Engineer |
+| 2026-09-18 | Piedmont vendor connections disabled outside approved windows (interim) |
+| 2026-09-30 | Self-reports to SERC (PD CIP-003-9 Sections 3.1 and 6; CIP-004-7 R5.1; CIP-011-3 R1.2); plan and schedule letters for PD-04 and PD-06 to the FERC Regional Engineer |
 | 2026-11-18 | Disclosure committee tabletop with an OT and dam safety scenario |
 | 2026-12-31 | 2026 Annual Security Compliance Certification Letters due (Security Program Rev. 3A, 8.0) |

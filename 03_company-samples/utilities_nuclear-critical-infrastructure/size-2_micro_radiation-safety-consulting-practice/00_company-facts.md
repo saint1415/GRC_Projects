@@ -69,7 +69,7 @@ The vertical's `requirements.csv` lists power reactor and grid rules (C-NUCLEAR-
 | SYS-07 | Calibration laboratory instruments: beam calibrator controller, reference electrometer, gamma spectroscopy system | On-premises | No personal data; measurement results | Connected to the lab workstations by USB and serial cables; results entered into SYS-02 the same day |
 | SYS-08 | Dosimetry processor web portal | Vendor SaaS | Yes: staff occupational dose records | NVLAP-accredited processor (10 CFR 20.1501(d)); password only |
 
-**SSP system (P02):** the *Practice Business Platform (PBP)*: SYS-01 to SYS-07 (the dosimetry portal, SYS-08, is an external service outside the boundary).
+**SSP system (P02):** the *Practice Business Platform*: SYS-01 to SYS-07 (the dosimetry portal, SYS-08, is an external service outside the boundary).
 
 ## 4. Current security posture: early to partial
 
@@ -118,3 +118,26 @@ The vertical's `requirements.csv` lists power reactor and grid rules (C-NUCLEAR-
 | 2026-08-03 to 2026-08-14 | Business impact analysis, risk assessment, and gap analysis (Office Manager and Part 37 services lead, with the MSP lead technician) |
 | 2026-08-24 to 2026-08-26 | Control assessment by an independent cybersecurity consultant (on site 2026-08-25) |
 | 2026-09-15 | Deliverables approved by the Principal Health Physicist (owner) |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Finances | A cash reserve covers about 45 days of expenses; payroll runs biweekly through the payroll service | P05 |
+| Calibration laboratory | The lab promises a 5-business-day turnaround and keeps 12 loaner survey meters. Readings are typed into SYS-02 the same day. In 2025 it performed 1,580 calibrations, and 118 instruments were found out of tolerance as received | P05, P10 |
+| Reactor outage rates | Outage support is billed at about $3,000 a day for the practice's crew | P05 |
+| MSP contract | Help desk, patching, antivirus, firewall, Wi-Fi, laptop encryption, and backup administration, with a 4-business-hour response time, no recovery time commitment, and no security or incident notice terms. The backup console uses one shared MSP login with MFA; the firewall uses one shared MSP login without MFA | P02, P04, P05, P07 |
+| Suite audit logs | The current suite plan keeps audit records for 180 days | P01, P02, P08 |
+| Public links | Of the 14 links removed on 2026-08-05, the 2 Part 37 links had been shared in 2025 with one client's contractor and never expired; the client was told on 2026-08-06 | P01, P03 |
+| Chatbot event | A consultant pasted part of one client's implementing procedure into a public chatbot in June 2026 to reformat it. The client was told on 2026-08-07; its RSO assessed the event under its own procedures and recorded it as not suspicious activity | P01, P03, P10 |
+| Project Coordinator access | The suite audit log shows the Project Coordinator opened 11 Part 37 files in July 2026 while formatting review reports | P03, P07 |
+| Former Health Physicist | The SYS-02 account was disabled on 2026-08-04, the day it was found; SYS-02 sign-in history showed no use after his last day (2026-02-13) | P01, P07 |
+| Client procedures | The practice holds copies of 3 of the 6 clients' information protection procedures; 2 clients approved staff by email only (no approval letter) | P03 |
+| Former Part 37 clients | Copies of security documents from 2 former Part 37 clients, whose engagements ended in 2024, are still in the library | P03, P09 |
+| USB drive check | On 2026-08-07, one Part 37 review report draft was found on a personal USB drive | P03 |
+| P07 new findings | (1) An inbound remote desktop port forward to lab workstation 2, opened in 2024 for the gamma spectroscopy vendor, was still active; the MSP removed it on 2026-08-25. (2) Two unlabeled USB drives with no identifiable owner sat in the shared field kit; one held outage survey templates; they were withdrawn on 2026-08-26 | P01 (R-023), P07 |
+| Office security | Keyed suite entry with an after-hours alarm; the calibration room and source cabinet are locked; keys are held by the owner and the Calibration Laboratory Technician; the network equipment is in a locked closet | P02 |
+| SYS-02 vendor SOC 2 | Type 2, 12 months ending 2026-03-31, Security, Availability, and Confidentiality; unqualified; hosting provider carved out; one exception (change approvals); RTO 8 h and RPO 1 h; 72-hour customer incident notice; analytics features outside the tested scope; reviewed 2026-08-20 | P05, P09, P10 |
+| Client questionnaire | A Part 37 client (a hospital with a blood irradiator) sent a vendor security questionnaire in August 2026; the response is due 2026-10-30 | P09 |
+| Assessor | The P07 assessor is an independent cybersecurity consultant under a fixed fee, not involved in the risk assessment or gap analysis and operating no control | P07 |

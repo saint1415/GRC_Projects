@@ -4,14 +4,14 @@ POL-01,4.2,Group CISO accountable; CIP Senior Manager and delegations; FERC secu
 POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,"C-DAMS-R01 (Form 3 Q23, Q29-31); N23-R04 (SP 800-171 Rev. 2 3.11.1)",No
 POL-01,4.4,Risk acceptance authority by level; public safety and NERC risks must be treated,PM-9,GV.RM-01,C-DAMS-R01 (Form 3 Q29),No
 POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,C-DAMS-R03 (CIP-003-9 R1),Yes
-POL-01,4.6,Common control inheritance documented by each division and confirmed yearly,PL-2; PM-10; CA-2,GV.RR-02,N23-R04 (SP 800-171 Rev. 2 3.12.4),Yes
+POL-01,4.6,Common control inheritance documented by each division and confirmed yearly,PL-2; PM-10; CA-2,GV.RR-02,N23-R04 (SP 800-171 Rev. 2 3.12.4),No
 POL-01,4.7,Sanctions for policy violations,PS-8,GV.RR-04,C-DAMS-R01 (Rev. 3A 7.2 employee duties),No
 POL-01,4.8,Affiliates are vendors: intercompany agreements; full Hydro vendor controls for affiliates in OT,SA-9; PS-7; CA-3,GV.SC-05,"C-DAMS-R03 (CIP-003-9 Att. 1 Sec. 5.2, 6); C-DAMS-R01 (Table 9.3a roles incl. outsourcers)",Yes
 POL-01,4.9,Third-party tiering and assessment; CIP-013 terms; DFARS flow-down,SA-4; SA-9; SR-6,GV.SC-05,"C-DAMS-R03 (CIP-013-2 R1, R2); N23-R03 (252.204-7012(m))",Yes
 POL-01,4.10,Annual assessment of common controls and division samples; two-person review of regulator-facing statements,CA-2; CA-7,ID.IM-01,C-DAMS-R01 (Sec. 8.0); N23-R04 (32 CFR 170.22),No
 POL-01,4.11,"Exceptions in writing, risk-rated, time-limited; never waive a regulatory requirement",PL-1,GV.PO-02,C-DAMS-R03 (CIP-003-9 R1),Yes
 POL-01,4.12,Retain security documentation at least 6 years or longer where required,SI-12,GV.PO-01,C-DAMS-R03 (evidence retention); C-DAMS-R02 (18 CFR 12.12),No
-POL-01,4.13,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,C-DAMS-R01 (Sec. 3.2 bullet 2),Yes
+POL-01,4.13,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,C-DAMS-R01 (Sec. 3.2 bullet 2),No
 POL-02,4.1,Unique identities; controlled OT generic accounts only where devices require them,IA-2; AC-2,PR.AA-01,C-DAMS-R03 (CIP-007-6 R5 Parts 5.2-5.3),Yes
 POL-02,4.2,"Role-based least privilege; owner approval for BCSI, CEII, and CUI",AC-3; AC-6,PR.AA-05,C-DAMS-R03 (CIP-004-7 R6 Part 6.1); N23-R04 (SP 800-171 Rev. 2 3.1.1),Yes
 POL-02,4.3,"MFA for all workforce IT access, OT remote access, and privileged access",IA-2(1); IA-2(2),PR.AA-03,C-DAMS-R03 (CIP-005-7 R2 Part 2.3); N23-R04 (SP 800-171 Rev. 2 3.5.3),Yes
@@ -31,7 +31,7 @@ POL-03,4.4,"Record each regulator's and client's clock start (discovery, determi
 POL-03,4.5,Multi-regulator notification matrix maintained by counsel; safety reports never wait,IR-6; IR-8,RS.CO-02,C-DAMS-R02 (18 CFR 12.10(a)); C-DAMS-R03 (CIP-008-6 R4),Yes
 POL-03,4.6,Escalate Severity 1 to the disclosure committee within 24 hours; Form 8-K within 4 business days of a materiality determination,IR-6,RS.CO-03,SEC Form 8-K Item 1.05,Yes
 POL-03,4.7,"Ransom payments need board committee approval, counsel, insurer, and an OFAC check",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
-POL-03,4.8,Annual cross-division exercise; CIP-008 test every 15 months; low impact plan every 36 months,IR-3,ID.IM-02,C-DAMS-R03 (CIP-008-6 R2; CIP-003-9 Att. 1 Sec. 4.5); C-DAMS-R01 (Form 3 Q26),No
+POL-03,4.8,Annual cross-division exercise; CIP-008 test every 15 months; low impact plan every 36 months,IR-3,ID.IM-02,C-DAMS-R03 (CIP-008-6 R2; CIP-003-9 Att. 1 Sec. 4.5); C-DAMS-R01 (Form 3 Q26),Yes
 POL-03,4.9,Chain of custody; 90-day preservation for DFARS incidents; OT evidence stored as BCSI or CEII,IR-4,RS.AN-03,N23-R03 (252.204-7012(e)),Yes
 POL-03,4.10,Lessons learned within 30 days; CIP plan updates within CIP-008 and CIP-009 deadlines,IR-4; CP-2,ID.IM-02,C-DAMS-R03 (CIP-008-6 R3; CIP-009-6 R3),Yes
 POL-04,4.1,"Four classification levels; BCSI, CEII, CUI, and personal information are Restricted",RA-2,ID.AM-07,C-DAMS-R03 (CIP-011-3 R1 Part 1.1),No
@@ -46,7 +46,7 @@ POL-04,4.9,"No Restricted information in unapproved AI tools; never CUI, BCSI, o
 POL-05,4.1,Use group systems only for the job,PL-4; AC-8,GV.PO-01,C-DAMS-R01 (Table 9.3a approved use),No
 POL-05,4.2,Annual acknowledgment of policy and supplement,PL-4,PR.AT-01,C-DAMS-R01 (Rev. 3A 3.2 bullet 4),No
 POL-05,4.3,Annual awareness training; quarterly awareness for CIP access,AT-2,PR.AT-01,C-DAMS-R03 (CIP-004-7 R1); N23-R04 (SP 800-171 Rev. 2 3.2.1),Yes
-POL-05,4.4,"OT role-based training before access and every 15 months, including affiliates' staff",AT-3,PR.AT-02,C-DAMS-R03 (CIP-004-7 R2); C-DAMS-R01 (Table 9.3a training),No
+POL-05,4.4,"OT role-based training before access and every 15 months, including affiliates' staff",AT-3,PR.AT-02,C-DAMS-R03 (CIP-004-7 R2); C-DAMS-R01 (Table 9.3a training),Yes
 POL-05,4.5,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-DAMS-R01 (Rev. 3A 3.2 bullet 11),Yes
 POL-05,4.6,Control system computers used only for approved control tasks,PL-4; CM-7,PR.PS-05,C-DAMS-R01 (Table 9.3a approved use),No
 POL-05,4.7,Removable media scanned before OT use; not on FPE systems unless approved,MP-7,PR.PS-01,C-DAMS-R03 (CIP-003-9 Att. 1 Sec. 5.3); C-DAMS-R01 (Form 3 Q17); N23-R04 (SP 800-171 Rev. 2 3.8.7),No
