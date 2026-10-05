@@ -14,7 +14,7 @@
 Enterprise tier scope: 40 or more controls. **44 controls (AC 8, AT 2, AU 4, CA 1, CM 3, CP 4, IA 5, IR 4, PS 1, RA 2, SA 1, SC 3, SI 5, SR 1), 263 determination statements.** Controls were selected because they:
 - address the Very High and High risks in P01 for payments and the PDPP (R-001, R-002, R-003, R-006, R-009, R-042, R-051);
 - cover the FAR 52.204-21 requirements behind the enterprise Level 1 affirmation (P03 G-111 to G-125), because Level 1 allows no POA&M;
-- protect payment integrity (the High-baseline supplements in P02 section 6: AU-10, SI-7(1), SI-10, AC-2(12));
+- protect payment integrity: the High-baseline supplements documented in P02 (AU-10, AC-2(12)) and the Moderate controls that carry payment integrity (SI-7, SI-7(1), SI-10, AC-5, IA-12);
 - are common controls the PDPP inherits that no other assessment covered this year (identity, SOC, cloud landing zone, HR).
 
 The FPCE (CMMC Level 2) was not in this assessment. Its 110 requirements were checked in the P03 internal readiness check and will be assessed by a C3PAO on 2027-01-25.
@@ -71,7 +71,7 @@ Depth and coverage follow SP 800-53A (basic, focused, comprehensive). The last c
 ## 2. Sampling method
 Internal Audit used **attribute sampling** for controls that operate on a population of transactions, and inspection of the full population where a data analytic could test every item.
 - **Key manual controls, large populations (over 250 items):** 60 items, random selection, based on 95% confidence, a 5% tolerable deviation rate, and zero expected deviations (the standard attribute sampling table gives 59; rounded to 60). Used for AC-2, PS-4, AT-3, AU-10, SI-10, IA-12, CM-8, and RA-5.
-- **Key manual controls, populations of 50 to 250:** 40 items, random selection, from Internal Audit's methodology table for smaller populations. Used for CM-3 and for the project manager stratum of AT-3.
+- **Key manual controls, populations of 50 to 250:** 40 items, random selection, from Internal Audit's methodology table for smaller populations. Used for CM-3.
 - **Automated or configuration-enforced controls, and lower-risk controls:** the configuration is inspected once, then 25 items confirm it operated consistently through the period. Used for AC-3, AC-6, AC-6(9), CP-9, IA-2, IR-4, IR-6, SI-2, and the closed-project sample for AC-2.
 - **Recurring controls:** weekly, 5 occurrences; monthly, 3 occurrences; annual, the single occurrence.
 - **Configuration and data-analytic tests:** 100% of the population (for example, all external SYS-01 accounts for inactivity, all users with vendor master or release rights for separation of duties, all appliance consoles for default passwords).

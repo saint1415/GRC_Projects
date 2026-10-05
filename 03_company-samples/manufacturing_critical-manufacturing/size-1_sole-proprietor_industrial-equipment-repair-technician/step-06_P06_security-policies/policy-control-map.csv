@@ -1,2 +1,51 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,None binding; CSF 2.0 benchmark (P03 G-004),No
+POL-01,4.2,Keep the contract obligations list current,PM-9,GV.OC-03,"Customer A exhibit S1 to S8 (P03 G-036 to G-043); Customer B and C NDAs (P03 G-044, G-045)",No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,None binding; CSF 2.0 benchmark (P03 G-013),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-02,None binding; CSF 2.0 benchmark (P03 G-003),No
+POL-01,4.5,Annual evaluation with an outside review every second year,CA-2,ID.IM-02,None binding; CSF 2.0 benchmark (P03 G-013),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,None binding; CSF 2.0 benchmark (P03 G-004),No
+POL-01,5.1,"Written, time-limited exceptions",PL-1,GV.PO-02,None binding; CSF 2.0 benchmark (P03 G-004),No
+POL-01,5.2,No helper or subcontractor without an NDA and this policy,PS-8; SA-9,GV.RR-04,Customer A exhibit S6 (P03 G-041),Yes
+POL-01,6.1,"No customer data to third parties, cloud, or AI without consent",SA-9,GV.SC-05,Customer A exhibit S1 (P03 G-036); Customer B and C NDAs (P03 G-044),Yes
+POL-01,6.2,Supplier list with data held and terms,SA-9,ID.AM-02,"None binding; CSF 2.0 benchmark (P03 G-005, G-008)",Yes
+POL-01,6.3,Annual supplier review including the suite SOC 2 report,SA-9,GV.SC-07,None binding; CSF 2.0 benchmark (P03 G-006),Yes
+POL-01,6.4,"Owner-started, watched remote support; unattended access off",MA-4,DE.CM-06,None binding; CSF 2.0 benchmark (P03 G-029),No
+POL-01,7.1,Connect only to the machine needed; standard account; Wi-Fi off; host-only VM,AC-20; SC-7; CM-7,PR.IR-01,"None binding; CSF 2.0 benchmark (P03 G-024, G-027)",Yes
+POL-01,7.2,Customer A scanning station every time; scan every stick elsewhere,MP-7; SI-3,DE.CM-09,Customer A exhibit S3 (P03 G-038); CSF 2.0 benchmark (P03 G-030),Yes
+POL-01,7.3,"Remote access only through Customer A's gateway or an approved, MFA-protected device",AC-17,PR.AA-05,Customer A exhibit S2 (P03 G-037); CSF 2.0 benchmark (P03 G-018),Yes
+POL-01,7.4,Hash check before loading firmware or software,SI-7,ID.RA-09,Customer A exhibit S5 (CIP-013-2 R1.2.5 flow-down; P03 G-040); CSF 2.0 benchmark (P03 G-014),Yes
+POL-01,7.5,Save programs with date and hash; customer-held encrypted copy,CM-8; CP-9,ID.AM-07,"None binding; CSF 2.0 benchmark (P03 G-009, G-002)",Yes
+POL-01,7.6,Utility access rules; 1-business-day access notice,AC-17,PR.AA-06,Customer A exhibit S6 (CIP-013-2 R1.2.6 and R1.2.3 flow-down; P03 G-041),Yes
+POL-01,7.7,Compare reloaded program with the library copy,CP-10,RC.RP-05,None binding; CSF 2.0 benchmark (P03 G-035),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,None binding; CSF 2.0 benchmark (P03 G-009),No
+POL-01,8.2,"Restricted data only in approved, encrypted locations",AC-3; SC-28,PR.DS-01,Customer A exhibit S1 (P03 G-036); Customer B and C NDAs (P03 G-044),No
+POL-01,8.3,"Encryption on every laptop, phone, stick, and backup drive",SC-28,PR.DS-01,Customer B and C NDAs (P03 G-044); CSF 2.0 benchmark (P03 G-021),No
+POL-01,8.4,"Machine passwords only in the password manager, one vault per customer",IA-5,PR.AA-01,Customer A exhibit S1 (P03 G-036); CSF 2.0 benchmark (P03 G-016),Yes
+POL-01,8.5,"Named-recipient, expiring sharing links only",AC-3,PR.DS-02,None binding; CSF 2.0 benchmark (P03 G-022),No
+POL-01,8.6,OEM support only with consent; export check for desks outside the United States,SA-9,GV.OC-03,Customer A exhibit S1 (P03 G-036); EAR trigger (C-CRITICAL-MFG-R03; P03 G-049),Yes
+POL-01,8.7,Weekly offline encrypted backup; quarterly test restore,CP-9,PR.DS-11,"None binding; CSF 2.0 benchmark (P03 G-023, G-034)",Yes
+POL-01,8.8,Wipe sticks between customers; wipe or destroy drives; return or delete,MP-6,ID.AM-08,Customer A exhibit S7 (P03 G-042); CSF 2.0 benchmark (P03 G-010),No
+POL-01,8.9,Keep security records at least 3 years,SI-12,ID.AM-08,None binding; CSF 2.0 benchmark (P03 G-010),No
+POL-01,9.1,Own accounts; no shared credentials,IA-2; AC-2,PR.AA-01,None binding; CSF 2.0 benchmark (P03 G-016),No
+POL-01,9.2,MFA on every service that offers it,IA-2(1),PR.AA-03,None binding; CSF 2.0 benchmark (P03 G-017),Yes
+POL-01,9.3,Unique 14-character passphrases; change default passwords,IA-5,PR.AA-01,"None binding; CSF 2.0 benchmark (P03 G-016, G-017)",Yes
+POL-01,9.4,Standard daily account; administrator only to install,AC-6,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-018),No
+POL-01,9.5,Quarterly account review,AC-2,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-016),No
+POL-01,9.6,Sealed emergency access codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-002),No
+POL-01,9.7,Monthly sign-in history review,AU-6,DE.AE-02,None binding; CSF 2.0 benchmark (P03 G-028),No
+POL-01,9.8,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-018),No
+POL-01,9.9,"Van, laptop, and home office physical rules",PE-3,PR.AA-06,None binding; CSF 2.0 benchmark (P03 G-019),No
+POL-01,9.10,Separate business Wi-Fi at home,SC-7,PR.IR-01,None binding; CSF 2.0 benchmark (P03 G-027),Yes
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,"None binding; CSF 2.0 benchmark (P03 G-015, G-032)",No
+POL-01,10.2,Incident criteria,IR-4,DE.AE-08,None binding; CSF 2.0 benchmark (P03 G-031),No
+POL-01,10.3,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Customer A exhibit S4 (P03 G-039),Yes
+POL-01,10.4,Customer A notice within 24 hours; NDA notices; P08 matrix,IR-6,RS.CO-02,Customer A exhibit S4 (CIP-013-2 R1.2.1 and R1.2.2 flow-down; P03 G-039); Customer B and C NDAs (P03 G-045),Yes
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,None binding; CSF 2.0 benchmark (P03 G-032),No
+POL-01,10.6,Annual walkthrough; lessons learned within 30 days,IR-8,ID.IM-04,None binding; CSF 2.0 benchmark (P03 G-015),No
+POL-01,11.2,Referral arrangement with another controls technician,CP-2,ID.IM-04,"None binding; CSF 2.0 benchmark (P03 G-002, G-015)",No
+POL-01,11.4,"Software, license, and installer list for a one-day rebuild",CM-8,ID.AM-02,None binding; CSF 2.0 benchmark (P03 G-008),No
+POL-01,12.2,Official software sources; updates and antivirus on,SI-2; SI-3,PR.PS-02,None binding; CSF 2.0 benchmark (P03 G-025),Yes
+POL-01,12.3,Subscribe to and act on ICS and maker advisories,SI-5; RA-5,ID.RA-02,"None binding; CSF 2.0 benchmark (P03 G-011, G-012)",No
+POL-01,12.4,"AI tools: assessment, no-training terms, consent; human review",PL-4; SA-9,GV.SC-05,Customer A exhibit S1 (P03 G-036); CSF 2.0 benchmark (P03 G-005),Yes
+POL-01,12.5,Annual awareness course; ICS security course,AT-2,PR.AT-01,None binding; CSF 2.0 benchmark (P03 G-020),No

@@ -101,3 +101,22 @@ All 10 deliverables in this folder use the facts below. The company, its custome
 | 2026-08-24 to 2026-08-28 | Self-assessment with the IT consultant (tests on 2026-08-26 at the home office and 2026-08-27 at Customer B, with its maintenance supervisor present) |
 | 2026-09-02 | AI use assessment |
 | 2026-09-11 | Deliverables adopted by the owner-technician |
+
+## 7. Facts added while building the deliverables (Phase 5)
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Sharing links | Three "anyone with the link" sharing links to customer program folders, made for OEM support desks in 2025 and 2026, were still active. Found in the P04 mapping on 2026-08-25 and removed that day; default sharing set to named people only. Program files had also been emailed to OEM support desks without recording customer consent | P03, P04, P09 |
+| Router at Customer B | The router's local admin page accepted the factory default password (P07 test on 2026-08-27, with Customer B's maintenance supervisor present; changed that day). On 2026-09-03 Customer B agreed that the router stays powered off except for sessions it approves by phone, until its plant management decides between a Customer B owned gateway and removal | P01, P02, P04, P07 |
+| Test restore | Restoring one machine folder (40 files) from version history on 2026-08-26 worked only one file at a time; a full-library restore would take days | P02, P04, P07, P09 |
+| Virtual machine | In the 2026-08-26 test the legacy engineering virtual machine reached the home network and the internet through its bridged adapter | P07 |
+| Antivirus test | The built-in antivirus detected and quarantined a standard test file within seconds (2026-08-26) | P07 |
+| Phone photos | Equipment photos taken on the phone sync to the owner's personal photo cloud | P02, P04 |
+| USB sticks | All 8 sticks are the owner's; the owner does not use sticks handed over by plant staff | P07 |
+| Equipment list | An equipment list exists for insurance (laptop, phone, instruments), but it leaves out the USB sticks, the router, and the old laptop | P02, P03 |
+| Suite provider assurance | The productivity suite provider's SOC 2 Type 2 report (Security, Availability, Confidentiality; period ending 2026-06-30; unqualified; one remediated exception) was reviewed on 2026-08-26 | P02, P09 |
+| Exhibit lapses | Customer A has not raised the S1, S3, or S5 lapses. The owner will tell Customer A about the 4 unverified firmware loads by 2026-09-30 | P03, P07 |
+| AI-001 trial | Sensors on 6 motors at Customer A (winding line and drying oven vacuum pumps) and 4 motors at one local plant. 3 alerts in the trial: 2 confirmed by handheld readings, 1 false positive. The vendor's paid business plan offers a data addendum that bars training on customer data and deletes data within 30 days of a request. Customer A uploads were stopped (sensors paused) on 2026-09-02 | P04, P10 |
+| AI-002 | The owner uses a consumer generative AI assistant on the phone to draft emails and quotes and to look up published fault code meanings; no customer files pasted (self-review) | P10 |
+| Cost estimates | Encrypted backup drives about $250; 10 encrypted USB sticks about $150; password manager about $40 a year; business Wi-Fi on the existing router at no cost | P01, P07 |

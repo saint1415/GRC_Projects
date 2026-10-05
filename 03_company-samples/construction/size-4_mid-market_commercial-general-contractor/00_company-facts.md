@@ -41,6 +41,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Director of Technology and Security Systems | Leads the installation group and the MBSS service line; Section 889 screening of installed equipment; custodian of client system credentials; business owner of AI-005 |
 | Director of Safety | Safety program; business owner of AI-002 |
 | HR Director | Screening, onboarding, terminations, training records; business owner of AI-006 |
+| Equipment and Fleet Manager | Equipment telematics, time-clock kiosks, and yard systems (SYS-11); owner of the related vendor risks |
 | Director of VDC | BIM and CAD standards; model servers; business owner of AI-003 |
 | Internal audit (co-sourced firm) | Annual IT audit; performed the P07 control assessment. Reports to the audit committee and operates no control |
 | Managed security service provider (MSSP) | 24x7 managed detection and response (MDR) and SIEM for the corporate environment. Not authorized for the CUI Project Enclave |

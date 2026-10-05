@@ -1,0 +1,13 @@
+review_item,what_to_check,suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability and Confidentiality useful because the library and customer drawings live there,"Security, Availability, Confidentiality",None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, calendar, file storage and sync, admin console",All in scope; data center hosting is a carved-out subservice organization,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated provider employees kept access for more than the stated period; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the owner must run for the provider's controls to work,"Customer enables MFA, manages user access and sharing permissions, protects its devices, and keeps its own backups where the retention features do not meet its needs","Map to IA-2(1) (in place for the suite), AC-3 (sharing links fixed 2026-08-25), CP-9 (gap: POAM-003)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to customers; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,24x7 platform monitoring tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of incidents affecting their data under the service terms,Note the notice route in the P08 contacts
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-02: RTO 4 h; RPO 24 h),"Platform recovery is tested; deleted files and versions kept 30 days. The report covers the provider's platform, not restoring a customer's encrypted files",Does not meet the BIA on its own: offline backups needed (POAM-003)
+Bridge letter,Coverage from report end date to today,Requested 2026-08-26,Obtain before 2026-12-31
+Review sign-off,Reviewer and date,"Owner-technician 2026-08-26, with the IT consultant",Repeat every August (POL-01 6.3)

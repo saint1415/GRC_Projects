@@ -46,7 +46,7 @@ The three High risks share one cause: **the laptop and USB sticks that carry cus
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-09-30):** MFA on the accounting SaaS and router portal (R-003, R-006); hash checks before every firmware load (R-004); never skipping Customer A's scanning station (R-002); stopping Customer A uploads to the AI trial (R-007); adopting the P08 runbook.
-- **Low-cost fixes (about $450 once and $80 a year, by 2026-10-31):** two encrypted external drives, 10 encrypted USB sticks, a password manager, and a business Wi-Fi network at home (R-001, R-002, R-005, R-010, R-012).
+- **Low-cost fixes (about $400 once and $40 a year, by 2026-10-31):** two encrypted external drives, 10 encrypted USB sticks, a password manager, and a business Wi-Fi network at home (R-001, R-002, R-005, R-010, R-012).
 - **Contract and customer actions (by 2026-12-31):** Customer B decides between its own gateway and removal of the router (R-003); customer-held program copies and a referral arrangement (R-008).
 - **Transfer:** cyber liability insurance of at least $1 million before the Customer A renewal on 2027-09-30 (R-014; exhibit S8).
 - **Accepted (Low):** R-015 (hurricane; the library is in cloud storage and the laptop travels with the owner).

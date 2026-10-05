@@ -36,7 +36,7 @@ The 35 CSF 2.0 subcategories (G-001 to G-035) were selected for a one-person bus
 
 ## 2. Method
 1. **Requirements.** CSF rows use the subcategory text from `00_universal-framework/frameworks/csf2_core.csv` plus the SP 800-82 Rev. 3 section. Contract rows follow the exhibit term numbers and the NDA clauses, summarized in plain words.
-2. **Crosswalk.** CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`); "subset" means only part of a long mapping is listed. Four controls were added by the author from SP 800-82 Rev. 3 OT guidance (IA-2(1) and MA-4 on PR.AA-03; SI-3 and MP-7 on DE.CM-09) and are labeled. Contract and applicability rows are **author mappings**.
+2. **Crosswalk.** CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`); "subset" means only part of a long mapping is listed. Six controls were added by the author and are labeled with the reason: MP-6 on ID.AM-08; IA-2(1) and MA-4 on PR.AA-03 and SI-3 and MP-7 on DE.CM-09 (SP 800-82 Rev. 3 OT guidance); SI-7 on RC.RP-05. Contract and applicability rows are **author mappings**.
 3. **Evidence.** Self-attested by the owner and checked on screen with the IT consultant: SaaS account and sharing settings, laptop and phone settings, the field kit, the router at Customer B (2026-08-27, with its maintenance supervisor present), firmware load records, and the contract file.
 4. **Status.** Met, Partially met, Not met, or Not applicable, as of the end of fieldwork (2026-08-28). Gaps were rated with the P01 risk scale.
 

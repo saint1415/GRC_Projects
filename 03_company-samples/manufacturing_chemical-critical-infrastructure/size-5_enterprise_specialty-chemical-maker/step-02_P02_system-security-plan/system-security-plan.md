@@ -46,7 +46,7 @@ Prepared by the PLT-01 Cybersecurity Officer (CySO) and the PLT-01 Controls Engi
 ### 4.2 System Authorization Decision
 The company is not a federal agency, so there is no formal ATO. The equivalent internal decision:
 - **Authorizing official equivalent:** Chief Operating Officer, with the CISO's recommendation and the Vice President, Process Safety and EHS's concurrence on safety-related conditions.
-- **Decision (2026-09-08):** continue operation with conditions, based on the Internal Audit assessment (P07) and the enterprise risk register (P01). The CEO and CFO accepted the treatment plans for the Very High risks on the same date (P01).
+- **Decision (2026-09-08):** continue operation with conditions, based on the Internal Audit assessment (P07) and the enterprise risk register (P01). The CEO and CFO approved the treatment plan for the one Very High risk (R-002) on the same date (P01).
 - **Conditions:**
   1. Integrator access to PLT-01 uses named accounts only; the 3 shared integrator accounts are disabled and replaced (POAM-005, by 2026-10-31).
   2. Documented compensating controls for every open KEV on PLT-01 critical OT systems (POAM-002, by 2026-10-31).

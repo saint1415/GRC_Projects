@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC5.3,Policy set and review records,Policy portal,CISO,Annual,Current versions and approvals,P06,Ready
+Both,CC6.1; CC6.2; CC6.3,Identity governance provisioning and quarterly certification reports,Identity platform (SYS-04),Director of Identity and Access Management,Event-driven and quarterly,25 joiners and 25 leavers; all quarterly certifications,"P07 AC-2, PS-4",Collecting
+Both,CC6.1,PAM session records for administrators,PAM,Director of Identity and Access Management,Continuous,25 sessions,P07 AC-6,Collecting
+Both,CC6.4,"Badge access reviews (offices, colocation) and provider SOC 2 reports",Facilities system; vendor register,"Vice President, Corporate Facilities and Security",Quarterly,All quarterly reviews,P02 PE-3,Ready
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports,EDR console; scanner,Director of Security Operations,Weekly,5 weeks,P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SOC tickets and SIEM use case reviews,SIEM; case management,Director of Security Operations,Continuous,25 tickets,"P07 SI-4, IR-4",Collecting
+Both,CC7.4; CC7.5,"Incident response plan, tabletop report, and lessons learned",GRC platform,Director of Security Operations,Annual plus per incident,Tabletop 2026-11-19; all incidents affecting the service,P08,Not started
+Both,CC9.2,Vendor register and SOC report reviews for subservice organizations,GRC platform,Director of Third-Party Risk Management,Annual,All subservice organizations,P02 SA-9,Collecting
+Both,A1.2; PI1.5,Backup job reports and immutability settings,Backup service,Director of Cloud Platform Engineering,Daily,25 jobs,P07 CP-9,Collecting
+SL-1,A1.3,Failover test report (2-hour RTO),Cloud provider B,"Vice President, Building Technology Services",Annual,The test in the period,P05 BP-11,Ready
+SL-1,CC6.1,Client credential vault rotation report,BTS vault,"Vice President, Building Technology Services",Monthly,3 months,P01 R-047,Not started
+SL-1,CC6.6,Remote access gateway session logs and approvals,Remote access gateway,"Vice President, Building Technology Services",Continuous,25 sessions,P01 R-046,Collecting
+SL-1,C1.1; C1.2,DLP reports for client credential patterns; contract exit deletion certificates,DLP; BTS vault,"Vice President, Building Technology Services",Monthly; per contract exit,3 months; all exits,P06 POL-04 4.7,Not started
+SL-1,CC9.2,Section 889 screening log and distributor attestations,Procurement system,"Vice President, Building Technology Services",Per federal job,All federal jobs in the period,P03 G-127,Not started
+SL-2,A1.3,Failover test report (12-hour RTO),Cloud provider A,"Vice President, Program Management Services",Annual,The test in the period,P05 BP-12,Ready
+SL-2,C1.1,Tenant isolation test results,Pipeline,"Vice President, Program Management Services",Per release,25 releases,P04,Ready
+SL-2,CC6.2; CC6.3,Owner administrator attestations and inactivity disable reports,Capital Program Portal,"Vice President, Program Management Services",Quarterly,All quarters,None (new),Not started
+SL-2,CC8.1,Pipeline approvals linked to change tickets,Pipeline; change system,"Vice President, Program Management Services",Per release,25 releases,P07 CM-3 pattern,Not started
+SL-2,PI1.3,Daily pay app reconciliation reports and exception queue,Capital Program Portal; ERP,"Vice President, Program Management Services",Daily,25 days,None (new),Not started
+SL-2,CC7.2,Application audit events in the SIEM,SIEM,Director of Security Operations,Continuous,25 approval events,None (new),Not started
+SL-2,CC2.3,System description and client security addendum,Client portal,"Vice President, Program Management Services",Annual,Current version,None (new),Not started
