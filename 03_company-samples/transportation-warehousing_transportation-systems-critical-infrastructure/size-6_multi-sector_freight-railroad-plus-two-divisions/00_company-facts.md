@@ -147,3 +147,28 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-06 to 2026-08-28 | Common control assessment by group internal audit, plus division samples (NOC walkthrough 2026-07-15; DC-2 and backup NOC 2026-07-22; CR-13 PTC wayside visit 2026-07-29; two terminals 2026-08-05 and 2026-08-06; two buildings 2026-08-12) |
 | 2026-09-04 | Assessment report issued |
 | 2026-09-10 | Results to the board safety, security, and risk committee and the audit committee; group register, High treatments, and policies approved |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables could be completed. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Revenue per day | Freight Railroad about $13.4 million; Transload and Wholesale about $33 million in sales (low margin); Real Estate about $2.5 million | P05 |
+| Business processes | 27 processes: BP-G01 to BP-G07 (group), BP-R01 to BP-R10 (railroad), BP-W01 to BP-W06 (terminals and wholesale), BP-E01 to BP-E04 (real estate) | P05, P01, P08 |
+| Rail scale details | 1,480 CTC route miles on 12 railroads; manual CTC dispatch exercised at 7 of the 12; about 9,000 train and engine employees; 980 remotely monitored crossings; 560 wayside detectors; 8 machine vision portals; 24 camera-equipped hi-rail vehicles; about 210 radio tower sites | P05, P01, P07, P10 |
+| TDPB users | About 640 users on 156 consoles; 6 consoles are the CDS dispatch desk | P02, P09 |
+| Integration platform change | Terminals began sending car placement data through SYS-G5 into the TMS interface server on 2025-09-15; no CIP amendment request was filed, so the 50-day window (SD 1580/82-2022-01E VI.D) passed in 2025-11. 14 partner credentials on SYS-G5 are older than 1 year; HR export files are never purged | P02, P03, P07, P08 |
+| DR test 2026-04-18 | CAD failed over to DC-2 in 1.4 hours (RTO 2 hours); PTC back office 7.5 hours (RTO 4 hours) because the standby was not at the production patch and configuration level | P02, P05, P07 |
+| OT access and logging | 3 shared administrator accounts on CTC code servers; 2 administrators who knew the passwords left in 2026. SIEM collects 58% of rail OT log sources; CTC code servers and the PTC back office keep 30 days of local logs | P02, P03, P07 |
+| CIP milestones | OT log forwarding for CTC and PTC servers was due 2026-06-30 and was missed; CAP annual report and update due 2026-11-14 | P03 |
+| SSI exposure | The CIP, a CAP report, the CIRP, and the railroad hazmat security plan were readable by 340 users in a corporate share; access log review in progress | P03, P07 |
+| Acquired terminals | 21 terminals acquired in 2024 and 2025; 6 of them use local internet service; 23 hazmat terminals give the loading rack vendor always-on remote access; rack configurations are backed up at 37 of 58 terminals; terminal network equipment budget of $1.9 million approved 2026-09-10 | P03, P05, P07 |
+| Federal contracts | FCI in a workspace limited to 23 users; 2 contract haulers on older agreements without the FAR 52.204-21 flow-down; the contracts office shares a building with a tenant | P03, P04 |
+| Building OT | 5 building OT vendors, 2 with SOC 2 reports; building networks at 64 sites on SYS-G3 and 88 vendor-managed; 11 temperature-controlled warehouses; 9 BAS controllers reachable from the internet, 7 fixed on 2026-08-20 | P03, P05, P07 |
+| Third parties | 17 of about 160 tier-1 vendor reviews overdue; PTC vendor certifies operating system patches about 6 months after release | P01, P07 |
+| TSA contacts | TSOC telephone 1-866-655-7023; IC Surface-2025-01 recommends notice to the TSOC no more than 12 hours after discovery of a significant cybersecurity incident (TSA information collection notice, FR Doc. 2026-17894, 2026-09-01). CISA Central: www.cisa.gov/report or (844) 729-2472 (SD 1580-21-01E II.C.3) | P03, P08 |
+| CDS service | 11 unaffiliated short lines (2 with CTC); agreements commit to 99.9% availability, 4-hour recovery, and incident notice within 24 hours; 2 customers asked for a SOC 2 Type 2 report by the end of 2027 | P02, P05, P09 |
+| Terminal inventory services | Customer-owned product stored at 14 terminals; 3 large customers asked for a SOC report on inventory controls | P09 |
+| State footprint for AI laws | The group has employees in Colorado and Illinois (railroads and terminals) | P10 |
+| AI | 11 use cases (AI-001 to AI-011); Group AI Standard and council adopted 2026-02; AI-001 runs on 9 railroads; a 2026-06 field comparison on 2 short lines found 71% recall for broken joint bars against 93% in the vendor report | P01, P10 |
+| Risk acceptance | Low: division security and compliance lead. Moderate: division president. High: Group Chief Risk Officer with the Group CISO, reported to the board safety, security, and risk committee. Very High: the board committee only | P01, P06 |

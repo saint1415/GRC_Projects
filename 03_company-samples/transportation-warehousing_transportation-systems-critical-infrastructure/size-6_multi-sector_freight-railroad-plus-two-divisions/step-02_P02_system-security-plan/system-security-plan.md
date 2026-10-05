@@ -131,7 +131,7 @@ See `control-implementation.csv` (187 controls) and `common-control-catalog.csv`
 - **Group-level response and SSI handling** (gaps 8 and 12): IR-3, IR-6, AC-21.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 134 controls provided by corporate (19 of them assessed in P07 this year). Inheritance is **documented for the Freight Railroad division** (the CIP inheritance annex, 2025) and for TDPB (this plan). It is **not documented for Transload and Wholesale or Real Estate** (scenario gap 10). Until POAM-016 closes, those divisions cannot show which of their FAR 52.204-21 safeguards, terminal OT controls, or building controls are met by group controls, and P07 found CA-2 statements other than satisfied for this reason.
+The common control catalog lists 134 controls provided by corporate (19 of them assessed in P07 this year as common controls). Inheritance is **documented for the Freight Railroad division** (the CIP inheritance annex, 2025) and for TDPB (this plan). It is **not documented for Transload and Wholesale or Real Estate** (scenario gap 10). Until POAM-016 closes, those divisions cannot show which of their FAR 52.204-21 safeguards, terminal OT controls, or building controls are met by group controls, and P07 found CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and TDPB and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. The assessment covered the one-third of CIP measures due in 2026 under the CAP schedule (SD 1580/82-2022-01E III.F.2.d). See P07 `assessment-results.csv` and `poam.csv`.

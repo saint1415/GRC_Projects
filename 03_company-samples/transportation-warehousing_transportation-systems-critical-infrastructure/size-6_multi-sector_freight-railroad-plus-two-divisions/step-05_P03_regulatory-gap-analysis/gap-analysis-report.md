@@ -23,7 +23,7 @@ Both directives apply to "each freight railroad carrier identified in 49 CFR 158
 | Other railroads carrying RSSM outside any HTUA | 17 | None | Do not apply (no TSA designation notice received; confirmed 2026-05-08) | Part 1580 subpart C; 1570.201; 1570.203 |
 | Other railroads | 41 | None | Do not apply | 1570.201; 1570.203 |
 
-No group railroad is Class I. Each is classified on its own revenue because the railroads are not operated as a single, integrated rail system (49 CFR part 1201, General Instructions 1-1). **One CIP covers all 14 Covered Railroads**, because they share the NOC, the dispatch and PTC platform, and the corporate network; TSA approved it on 2023-07-26. Group policy applies the same controls to every railroad on the shared platform, so the other 58 railroads benefit from them without being covered.
+No group railroad is Class I. Each is classified on its own revenue because the railroads are not operated as a single, integrated rail system (49 CFR part 1201, General Instructions 1-1(b)(1)). **One CIP covers all 14 Covered Railroads**, because they share the NOC, the dispatch and PTC platform, and the corporate network; TSA approved it on 2023-07-26. Group policy applies the same controls to every railroad on the shared platform, so the other 58 railroads benefit from them without being covered.
 
 **PTC systems are Critical Cyber Systems** for CR-11 to CR-14, which must operate PTC under 49 CFR part 236 subpart I (SD 1580/82-2022-01E III.A.2.a). For the locomotives' onboard PTC components, the CIP relies on the physical measures the directive allows in III.C.6 (locked, sealed housings).
 
@@ -96,20 +96,20 @@ SEC Reg S-K Item 106 and Form 8-K Item 1.05 (the group is an SEC registrant); st
 ### 4.1 Freight Railroad (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
-| SD 1580/82-2022-01E II (CIP, scope, service providers) (4) | 2 | 2 | 0 | 0 |
-| SD 1580/82-2022-01E III.A (Critical Cyber Systems, PTC) (2) | 1 | 1 | 0 | 0 |
-| SD 1580/82-2022-01E III.B (segmentation) (6) | 4 | 2 | 0 | 0 |
-| SD 1580/82-2022-01E III.C (access control) (8) | 3 | 3 | 2 | 0 |
-| SD 1580/82-2022-01E III.D (monitoring and detection) (12) | 9 | 3 | 0 | 0 |
-| SD 1580/82-2022-01E III.E (patching) (4) | 2 | 1 | 1 | 0 |
-| SD 1580/82-2022-01E III.F (assessment plan) (7) | 7 | 0 | 0 | 0 |
-| SD 1580/82-2022-01E IV to VI (records, procedures, amendments) (7) | 4 | 1 | 2 | 0 |
-| SD 1580-21-01E (coordinator, reporting, response plan, assessment) (13) | 11 | 2 | 0 | 0 |
-| 49 CFR parts 1570 and 1580 (9) | 7 | 2 | 0 | 0 |
-| 49 CFR part 1520 (SSI) (2) | 0 | 1 | 1 | 0 |
-| 49 CFR part 236 subpart I (PTC) (8) | 7 | 1 | 0 | 0 |
-| 49 CFR parts 172 and 174 (hazmat security) (3) | 2 | 1 | 0 | 0 |
-| **Total Freight Railroad (85)** | **59** | **20** | **6** | **0** |
+| SD 1580/82-2022-01E II (CIP, scope, service providers), 4 rows | 2 | 2 | 0 | 0 |
+| SD 1580/82-2022-01E III.A (Critical Cyber Systems, PTC), 2 rows | 1 | 1 | 0 | 0 |
+| SD 1580/82-2022-01E III.B (segmentation), 6 rows | 4 | 2 | 0 | 0 |
+| SD 1580/82-2022-01E III.C (access control), 8 rows | 3 | 3 | 2 | 0 |
+| SD 1580/82-2022-01E III.D (monitoring and detection), 12 rows | 9 | 3 | 0 | 0 |
+| SD 1580/82-2022-01E III.E (patching), 4 rows | 2 | 1 | 1 | 0 |
+| SD 1580/82-2022-01E III.F (assessment plan), 7 rows | 7 | 0 | 0 | 0 |
+| SD 1580/82-2022-01E IV to VI (records, procedures, amendments), 7 rows | 4 | 1 | 2 | 0 |
+| SD 1580-21-01E (coordinator, reporting, response plan, assessment), 13 rows | 11 | 2 | 0 | 0 |
+| 49 CFR parts 1570 and 1580, 9 rows | 7 | 2 | 0 | 0 |
+| 49 CFR part 1520 (SSI), 2 rows | 0 | 1 | 1 | 0 |
+| 49 CFR part 236 subpart I (PTC), 8 rows | 7 | 1 | 0 | 0 |
+| 49 CFR parts 172 and 174 (hazmat security), 3 rows | 2 | 1 | 0 | 0 |
+| **Total Freight Railroad, 85 rows** | **59** | **20** | **6** | **0** |
 
 **Not met:** G-018 (III.C.4.b), G-019 (III.C.5), G-036 (III.E.3), G-045 (IV.B), G-050 (VI.B.2; VI.C; VI.D), G-073 (49 CFR 1520.9(a)(1)-(2)).
 
@@ -118,36 +118,36 @@ The railroads meet most of the directive. Segmentation (III.B.1.c to III.B.2), m
 ### 4.2 Transload and Wholesale (`gap-analysis-transload-wholesale.csv`)
 | Regulation | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
-| FAR 52.204-21 (16) | 13 | 3 | 0 | 0 |
-| FAR 52.204-25 and 52.204-23 (4) | 1 | 3 | 0 | 0 |
-| 49 CFR part 172 (hazmat security plan) (5) | 3 | 2 | 0 | 0 |
-| FTC Act Section 5 and state breach law (3) | 1 | 2 | 0 | 0 |
-| CTPAT, DFARS, and CMMC (2) | 0 | 0 | 0 | 2 |
-| NIST CSF 2.0 with SP 800-82 Rev. 3 (benchmark) (6) | 0 | 3 | 3 | 0 |
-| **Total Transload and Wholesale (36)** | **18** | **13** | **3** | **2** |
+| FAR 52.204-21, 16 rows | 13 | 3 | 0 | 0 |
+| FAR 52.204-25 and 52.204-23, 4 rows | 1 | 3 | 0 | 0 |
+| 49 CFR part 172 (hazmat security plan), 5 rows | 3 | 2 | 0 | 0 |
+| FTC Act Section 5 and state breach law, 3 rows | 1 | 2 | 0 | 0 |
+| CTPAT, DFARS, and CMMC, 2 rows | 0 | 0 | 0 | 2 |
+| NIST CSF 2.0 with SP 800-82 Rev. 3 (benchmark), 6 rows | 0 | 3 | 3 | 0 |
+| **Total Transload and Wholesale, 36 rows** | **18** | **13** | **3** | **2** |
 
 The FAR safeguards are largely met because FCI was kept in a small enclave on group systems (P04). The division's real exposure is outside the FAR scope: 21 acquired terminals on flat networks without EDR, and always-on vendor access to loading rack controllers at hazmat terminals, which the hazmat security plan never assessed (TW-G24, TW-G33, TW-G34).
 
 ### 4.3 Real Estate (`gap-analysis-real-estate.csv`)
 | Regulation | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
-| FTC Safeguards Rule (applicability) (1) | 0 | 0 | 0 | 1 |
-| FTC Safeguards Rule elements (voluntary reference) (10) | 5 | 3 | 2 | 0 |
-| FTC Act Section 5, state breach law, SSI (3) | 0 | 3 | 0 | 0 |
-| NIST CSF 2.0 with SP 800-82 Rev. 3 (benchmark) (5) | 0 | 1 | 4 | 0 |
-| PCI DSS and CCPA (2) | 0 | 0 | 0 | 2 |
-| **Total Real Estate (21)** | **5** | **7** | **6** | **3** |
+| FTC Safeguards Rule (applicability), 1 rows | 0 | 0 | 0 | 1 |
+| FTC Safeguards Rule elements (voluntary reference), 10 rows | 5 | 3 | 2 | 0 |
+| FTC Act Section 5, state breach law, SSI, 3 rows | 0 | 3 | 0 | 0 |
+| NIST CSF 2.0 with SP 800-82 Rev. 3 (benchmark), 5 rows | 0 | 1 | 4 | 0 |
+| PCI DSS and CCPA, 2 rows | 0 | 0 | 0 | 2 |
+| **Total Real Estate, 21 rows** | **5** | **7** | **6** | **3** |
 
 The division's systems that matter most are run by vendors: building automation and access control. 9 controllers were reachable from the internet (RE-G08, RE-G16), consoles use shared vendor logins (RE-G17), and the vendor contracts carry no security terms (RE-G09, RE-G18).
 
 ### 4.4 Group (`gap-analysis-group.csv`)
 | Obligation | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
-| SEC Item 106 and Form 8-K Item 1.05 (4) | 2 | 2 | 0 | 0 |
-| State breach notification (generic; Florida worked example) (4) | 1 | 3 | 0 | 0 |
-| OFAC (1) | 1 | 0 | 0 | 0 |
-| Proposed rules (tracked only) (2) | 0 | 0 | 0 | 2 |
-| **Total group (11)** | **4** | **5** | **0** | **2** |
+| SEC Item 106 and Form 8-K Item 1.05, 4 rows | 2 | 2 | 0 | 0 |
+| State breach notification (generic; Florida worked example), 4 rows | 1 | 3 | 0 | 0 |
+| OFAC, 1 rows | 1 | 0 | 0 | 0 |
+| Proposed rules (tracked only), 2 rows | 0 | 0 | 0 | 2 |
+| **Total group, 11 rows** | **4** | **5** | **0** | **2** |
 
 Of the 60 unmet or partially met rows across all four tables, 15 are rated High, 37 Moderate, and 8 Low.
 

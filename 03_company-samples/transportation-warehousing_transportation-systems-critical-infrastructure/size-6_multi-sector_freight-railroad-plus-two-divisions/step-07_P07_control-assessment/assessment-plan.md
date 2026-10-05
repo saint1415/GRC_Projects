@@ -50,7 +50,7 @@ Governance controls (PL-1, CA-2) were sampled on Transload and Wholesale and Rea
 ## 4. Rules of engagement
 - No testing that could affect train movement, PTC, signals, hazmat loading, or building life safety. OT tests were passive or run in maintenance windows with the NOC and terminal managers present.
 - The CIP, CIRP, and CAP were reviewed as SSI: in a restricted room, by assessors who are covered persons with a need to know.
-- The assessor would stop and notify the Group CISO on any critical exposure. Two were found and escalated the same day: the internet-exposed BAS controllers (2026-08-12) and the CTC shared passwords known to former administrators (2026-07-15).
+- The assessor would stop and notify the Group CISO on any critical exposure. Two were escalated the same day they were found: the CTC shared passwords known to former administrators (2026-07-15), whose rotation needs CTC vendor support because the accounts are embedded in code unit configurations (POAM-002, 2026-10-15), and the internet-exposed BAS controllers (2026-08-12), 7 of which were taken off the internet by 2026-08-20 (POAM-012).
 
 ## 5. Results summary
 | Scope | Satisfied | Other than satisfied | Total |
@@ -71,7 +71,7 @@ Governance controls (PL-1, CA-2) were sampled on Transload and Wholesale and Rea
 - *Transload and Wholesale:* acquired terminals are flat, unmonitored, and without EDR (SC-7, SI-3), the rack vendor has always-on access (AC-17), and there is no terminal OT inventory (CM-8).
 - *Real Estate:* internet-exposed BAS controllers (SC-7), shared vendor logins (AC-2), and vendors not bound or monitored (SA-9).
 
-**Controls fully other than satisfied** (every statement failed): IR-3 (Common control), AC-4 (SSP system (TDPB)), AU-11 (SSP system (TDPB)), AC-21 (SSP system (TDPB)). Each has only one or two determination statements.
+**Controls fully other than satisfied** (every statement failed): IR-3 (SOC), AC-4 (TDPB), AU-11 (TDPB), AC-21 (TDPB). Each has only one or two determination statements.
 
 28 of the 35 control assessments had at least one statement other than satisfied. All are in `poam.csv`.
 
