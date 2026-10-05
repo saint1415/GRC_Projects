@@ -32,14 +32,14 @@ All Cris Santos Company workforce members (employees, seasonal staff, contractor
 ## 4. Policy statements
 Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 subcategories. `policy-control-map.csv` traces each statement to its regulatory driver and shows whether Internal Audit tested it in 2026 (P07).
 
-4.1 Rules of behavior must be acknowledged at hire and annually. (PL-4; )
+4.1 Rules of behavior must be acknowledged at hire and annually. (PL-4; GV.PO-01)
 4.2 Annual security awareness is required for all staff; staff with CIP access must receive security awareness each calendar quarter and complete role-based CIP training before access and at least every 15 calendar months. (AT-2; AT-3; PR.AT-01; PR.AT-02)
-4.3 OT consoles, servers, and engineering workstations must be used only for control functions: no email, web browsing, personal media, or unapproved software. (CM-7; PL-4; PR.PS-01)
+4.3 OT consoles, servers, and engineering workstations must be used only for control functions: no email, web browsing, personal media, or unapproved software. (CM-7; PL-4; PR.PS-01; GV.PO-01)
 4.4 Removable media and laptops, including contractor devices, must be scanned at a company kiosk before connecting to any OT asset, and the scan must be logged. (MP-7; SI-3; PR.DS-01; PR.DS-02)
 4.5 Personal devices must not connect to OT networks; company phones are used for out-of-band coordination only. (AC-19; AC-20; PR.AA-05; ID.AM-02; ID.AM-04)
-4.6 Only AI tools on the approved list (STD-05.3) may be used for company work, and every new AI use must be registered with the AI council before use. (PL-4; SA-9; GV.SC-04; GV.SC-05)
+4.6 Only AI tools on the approved list (STD-05.3) may be used for company work, and every new AI use must be registered with the AI council before use. (PL-4; SA-9; GV.PO-01; GV.SC-04; GV.SC-05)
 4.7 Staff must report suspicious activity at projects, including drones, photography of security features, and unknown devices, to security dispatch at once. (IR-6; PE-6; RS.MA-01; RS.MA-02; PR.AA-06)
-4.8 A personnel risk assessment, including identity confirmation and a seven-year criminal history check, must be completed before CIP access and repeated at least every 7 years. (PS-3; )
+4.8 A personnel risk assessment, including identity confirmation and a seven-year criminal history check, must be completed before CIP access and repeated at least every 7 years. (PS-3; GV.RR-04)
 
 ## 5. Standards and procedures under this policy
 Standards set measurable requirements (approved by the CISO); procedures give step-by-step instructions (approved by the owning director). Both sit below this policy in the hierarchy and cannot contradict it.

@@ -35,12 +35,12 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 
 4.1 Information must be classified as Restricted (CEII, BCSI, and FERC security documents), Confidential (personal information, client data including client CEII, financial data), Internal, or Public. (RA-2; ID.RA-04; ID.RA-05)
 4.2 Restricted information must be stored only in approved repositories with named access. Access to BCSI must be authorized under CIP-004-7 R6 and verified at least every 15 calendar months. (AC-3; AC-6; PR.AA-05; PR.IR-01)
-4.3 Restricted information may be shared outside the company only with the information owner's authorization and a signed handling agreement, and never through general file shares or folders shared with contractors. (AC-21; )
-4.4 FERC security documents and certification letters must be marked "Privileged - Security Sensitive Material"; filings with FERC that contain CEII must include a CEII request and justification. (MP-3; )
+4.3 Restricted information may be shared outside the company only with the information owner's authorization and a signed handling agreement, and never through general file shares or folders shared with contractors. (AC-21; PR.AA-05)
+4.4 FERC security documents and certification letters must be marked "Privileged - Security Sensitive Material"; filings with FERC that contain CEII must include a CEII request and justification. (MP-3; PR.DS-01)
 4.5 Restricted and Confidential information must be encrypted at rest and in transit; real-time data between Control Centers must be protected under CIP-012-2. (SC-28; SC-8; PR.DS-01; PR.DS-02)
-4.6 Storage media must be sanitized or destroyed before reuse or disposal, with records kept. (MP-6; )
+4.6 Storage media must be sanitized or destroyed before reuse or disposal, with records kept. (MP-6; PR.DS-01)
 4.7 Client data from SL-1 and SL-2 must be kept separate per client and used only for that client's service. (AC-3; PR.AA-05; PR.IR-01)
-4.8 Restricted or Confidential information must not be entered into any AI tool unless the AI council has approved that tool for that class. (PL-4; SA-9; GV.SC-04; GV.SC-05)
+4.8 Restricted or Confidential information must not be entered into any AI tool unless the AI council has approved that tool for that class. (PL-4; SA-9; GV.PO-01; GV.SC-04; GV.SC-05)
 4.9 Data loss prevention scans for BCSI and CEII must run monthly across file shares and collaboration sites, and findings must be fixed within 10 business days. (AU-6; SI-4; PR.PS-04; DE.AE-02; DE.CM-01)
 
 ## 5. Standards and procedures under this policy
