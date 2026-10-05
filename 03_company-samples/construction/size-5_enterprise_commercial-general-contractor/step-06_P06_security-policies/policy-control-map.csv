@@ -22,7 +22,7 @@ POL-02,4.7,Managers must certify their staff's access every quarter; project man
 POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,Internal (STD-02.1),Yes
 POL-02,4.9,Vendor and BTS technician remote access must go through the remote access gateway with approval and session recording...,AC-17; MA-4,PR.AA-05,Contract (client security terms),Yes
 POL-02,4.10,"Default passwords must be changed before any device or system is connected, including devices installed for clients b...",IA-5,PR.AA-01,N23-R01 (52.204-21(b)(1)(vi)),Yes
-POL-02,4.11,"FPCE identities must be separate from commercial identities, with no federation, password synchronization, or shared...",IA-2; AC-4,PR.AA-01,N23-R03 (252.204-7012(b)(2)),Yes
+POL-02,4.11,"FPCE identities must be separate from commercial identities, with no federation, password synchronization, or shared...",IA-2; AC-4,PR.AA-01,N23-R03 (252.204-7012(b)(2)),No
 POL-02,4.12,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by...",AC-2,PR.AA-05,Internal (STD-02.1),Yes
 POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, starting with...",IR-8,RS.MA-01,N23-R03 (SP 800-171 R2 3.6.1),Yes
 POL-03,4.2,"Workforce, acquired businesses, and vendors must report suspected incidents and suspicious payment requests to the SO...",IR-6,RS.MA-02,N23-R03 (SP 800-171 R2 3.6.2),Yes
@@ -36,15 +36,15 @@ POL-03,4.9,"No ransom may be paid without approval from the CEO, the General Cou
 POL-03,4.10,Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05) and must pass a recovery test at least...,CP-2; CP-4; CP-10,RC.RP-01,Internal (STD-03.3),Yes
 POL-03,4.11,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure com...",IR-3; IR-8,ID.IM-02,N23-R03 (SP 800-171 R2 3.6.3),Yes
 POL-04,4.1,"Information must be classified as CUI; Restricted (FCI, bank and payment data, Social Security numbers, client facili...",RA-2,ID.AM-07,N23-R01 (52.204-21(a)); N23-R03 (252.204-7012(a)),No
-POL-04,4.2,"CUI may be stored, processed, or sent only in the FPCE and controlled plan rooms. CUI must never be placed in the com...",AC-4; SC-7,PR.DS-01,N23-R04 (252.204-7021(d)(2)); N23-R03 (252.204-7012(b)(2)(ii)(D)),Yes
+POL-04,4.2,"CUI may be stored, processed, or sent only in the FPCE and controlled plan rooms. CUI must never be placed in the com...",AC-4; SC-7,PR.DS-01,N23-R04 (252.204-7021(d)(2)); N23-R03 (252.204-7012(b)(2)(ii)(D)),No
 POL-04,4.3,"Printed CUI must carry CUI markings, be stored in locked cabinets when not in use, be checked out and returned throug...",MP-2; MP-4; MP-6,PR.DS-01,"N23-R03 (SP 800-171 R2 3.8.1, 3.8.4)",No
 POL-04,4.4,Restricted and CUI data must be encrypted at rest and in transit using STD-04.1; CUI with FIPS-validated cryptography.,SC-28; SC-8,PR.DS-01,N23-R03 (SP 800-171 R2 3.13.11),Yes
 POL-04,4.5,"Bank account details must never be accepted, changed, or confirmed on the strength of an email, text, or inbound phon...",SI-10,PR.DS-01,FAR 52.232-33(b),Yes
 POL-04,4.6,"Social Security numbers on certified payrolls must be truncated where the contracting officer allows, and certified p...",AC-3,PR.DS-01,Fla. Stat. 501.171(2),Yes
-POL-04,4.7,"Client facility security details (layouts, camera locations, credentials) must be kept only in the BTS vault and in p...",AC-3,PR.DS-01,Contract (client security terms),Yes
+POL-04,4.7,"Client facility security details (layouts, camera locations, credentials) must be kept only in the BTS vault and in p...",AC-3,PR.DS-01,Contract (client security terms),No
 POL-04,4.8,"Media holding Restricted, Confidential, or CUI data must be sanitized before reuse and destroyed by a certified vendo...",MP-6,PR.DS-01,N23-R01 (52.204-21(b)(1)(vii)),No
 POL-04,4.9,"Backups of Restricted data must be encrypted, immutable, stored in a separate account or location, and restore-tested...",CP-9,PR.DS-11,Internal (STD-04.3),Yes
-POL-04,4.10,"FCI, Restricted, and Confidential data must not be entered into any AI tool unless the AI governance committee has ap...",SA-9; PL-4,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-04,4.10,"FCI, Restricted, and Confidential data must not be entered into any AI tool unless the AI governance committee has ap...",SA-9; PL-4,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),No
 POL-04,4.11,"Records must be kept per the records schedule, including 6 years for security and CMMC records and the retention peri...",SI-12,PR.DS-11,N23-R04 (32 CFR 170.16(c)(4)),No
 POL-05,4.1,Company systems are for company business; limited personal use is allowed if it creates no risk and involves no compa...,PL-4,GV.PO-01,Internal (POL-05),No
 POL-05,4.2,Every workforce member must acknowledge this policy before receiving access and every year after.,PL-4(1),PR.AT-01,Internal (POL-05),No

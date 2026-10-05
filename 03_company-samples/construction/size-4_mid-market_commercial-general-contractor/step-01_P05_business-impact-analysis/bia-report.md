@@ -113,7 +113,7 @@ Dollar values are scaled to about $94 million of construction revenue over about
 
 **After any suspected business email compromise, "recovered" means "verified".** No payment instruction received or changed during the incident window may be used until it is confirmed by phone to a number already on file (P08 `ir-runbook.md`).
 
-**After any suspected CUI incident, "recovered" means "preserved first".** Images of affected CPE systems and endpoints must be preserved for at least 90 days before rebuild (DFARS 252.204-7012(e); P08 `ir-runbook-cui-incident.md`).
+**After any suspected CUI incident, "recovered" means "preserved first".** Images of affected CPE systems and endpoints must be taken before any rebuild and kept for at least 90 days from the DoD report (DFARS 252.204-7012(e); P08 `ir-runbook-cui-incident.md`).
 
 ## 8. Contract and regulatory linkage
 | Source | What it asks of recovery | Where the BIA answers it |
