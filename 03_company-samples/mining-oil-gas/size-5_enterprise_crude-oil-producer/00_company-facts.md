@@ -110,6 +110,8 @@ These facts were added while building the deliverables. They do not change secti
 | Pipeline Compliance Manager | PHMSA gathering line program (195.11, 195.15, Subpart B reports) |
 | Vice President, Health, Safety, and Environment (HSE) | Spill and release reporting, emergency response plans, SPCC plans |
 | Vice President, Production and Revenue Accounting | Hydrocarbon accounting (SYS-03) data owner; owner of SL-1 |
+| Vice President, Exploration and Reservoir Engineering | Seismic and reservoir data platform (SYS-09); production forecasting (AI-002, AI-003) |
+| Vice President, Drilling and Completions | Drilling real-time operations (BP-06); rig data aggregation SaaS; drilling optimization advisory (AI-004) |
 | Director, Owner Relations | Royalty owner and partner portal operations (SL-1) |
 | Controller | SOX program owner for financial reporting controls |
 | Chief Audit Executive | Heads Internal Audit; reports to the audit committee; leads the P07 assessment |
@@ -139,3 +141,15 @@ These facts were added while building the deliverables. They do not change secti
 **SPCC high-level alarm option.** 31 tank batteries (Mid-Continent and Florida) meet the overfill prevention requirement of 40 CFR 112.9(c)(4) by the high-level alarm option in (c)(4)(iv); the rest rely on container capacity or overflow equalizing lines.
 
 **Personal information held.** Royalty owners: names, addresses, taxpayer identification numbers (most are Social Security numbers), bank account numbers for direct deposit. Employees: Social Security numbers, driver license and commercial driver license numbers, health plan identifiers, vehicle geolocation from telematics.
+
+**Risk program and funding (P01).** Eight enterprise risks (ER-01 to ER-08) with board-approved tolerance thresholds. Treatment funding approved for 2026 Q4 to 2027 Q2: about $14.6 million.
+
+**Policy set (P06).** 5 policies, 21 standards, and 15 procedures, including STD-01.8 OT Security Standard (the SP 800-82 Rev. 3 overlay and tailoring register), PRC-01.4 Acquisition Security Integration Procedure, PRC-02.5 SCADA Account Management, PRC-02.6 OT Vendor Sessions, and PRC-03.4 Regulatory Release Reporting (PHMSA and EPA).
+
+**Internal Audit team for P07.** An IT audit manager, three IT auditors, and a contracted OT security specialist under the Chief Audit Executive.
+
+**Recent operating history used as samples (P03).** 2025-01-01 to 2026-06-30: 3 severity-1 security incidents (none material), 7 gathering line accidents reported under 49 CFR 195.50, 1 immediate notice under 195.52, and 4 reportable oil discharges under 40 CFR 110.6. None was caused by a cyber event.
+
+**SOC 2 plans (P09).** SL-1 adds Processing Integrity and Privacy for its 2027 report (period 2027-01-01 to 2027-12-31). SL-2's first Type 2 report covers Security, Availability, Confidentiality, and Processing Integrity (period 2027-04-01 to 2027-09-30). SL-2 customer agreements require notice within 24 hours of a service outage and 72 hours of a security incident affecting customer data.
+
+**AI portfolio (P10).** 11 use cases: AI-001 predictive maintenance (Medium), AI-002 production forecasting, AI-003 seismic interpretation assistant, AI-004 drilling optimization advisory, AI-005 production optimization (High; advisory pilot, closed loop refused), AI-006 methane and leak detection analytics, AI-007 invoice coding, AI-008 owner chatbot on the SL-1 portal, AI-009 telematics driver scoring (High; suspended), AI-010 enterprise generative AI assistant, AI-011 SOC triage assistant. Not yet reviewed by the council: AI-006, AI-008, AI-009, AI-011.

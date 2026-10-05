@@ -59,7 +59,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-G1 | Group identity platform (SSO, MFA, PAM, identity governance) | Corporate | IT identities for all divisions. Not used inside the CIP Electronic Security Perimeters |
 | SYS-G2 | Group SOC, SIEM, and EDR, with an OT monitoring console | Corporate | 24x7. OT network sensors at the TCC and backup TCC since 2024 |
 | SYS-G3 | Group cloud platform (two providers, vendor-agnostic) and data platform | Corporate | Provider A: corporate landing zone, data platform, load-forecasting workload, outage map. Provider B: Engineering Services client project platform, backup vault |
-| SYS-G4 | Group OT secure remote access platform | Corporate (Group OT security director) | Central access gateway with MFA and session recording, plus one jump host cluster per OT environment: the DOP OT DMZ, the 74 transmission substations (vendor access for CIP-003-9 Attachment 1 Section 6), and the Gas Production POC. The TCC uses its own CIP-005 Intermediate System, not SYS-G4 |
+| SYS-G4 | Group OT secure remote access platform | Corporate (Group OT security director) | Central access gateway and policy engine (hosted in provider A) with MFA and session recording, plus one jump host cluster per OT environment: the DOP OT DMZ, the 74 transmission substations (vendor access for CIP-003-9 Attachment 1 Section 6), and the Gas Production POC. The TCC uses its own CIP-005 Intermediate System, not SYS-G4 |
 | SYS-G5 | Group ERP, HR, and financial reporting | Corporate | SEC reporting and payroll |
 | SYS-E1 | Distribution Operations Platform (ADMS: distribution SCADA, distribution management applications, and OMS) | Electric Utility | DCC and backup DCC. See section 3.1 |
 | SYS-E2 | Transmission EMS/SCADA at the TCC and backup TCC | Electric Utility | Medium impact BES Cyber Systems with their EACMS (firewalls, Intermediate System, log collectors) and PACS |
@@ -68,7 +68,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-E5 | Customer information system (CIS), billing, portal, IVR | Electric Utility (vendor SaaS) | Customer names, addresses, Social Security numbers for credit and deposit decisions, and bank account numbers for automatic payment. Card payments go through the processor's hosted page |
 | SYS-E6 | Electric load-forecasting model | Electric Utility (built in-house on SYS-G3) | Day-ahead and 7-day hourly forecasts (P10) |
 | SYS-N1 | Gas field SCADA and the Production Operations Center (POC) | Gas Production | RTUs and flow computers at well pads and compressor stations; licensed radio and cellular. Separate OT domain |
-| SYS-N2 | Production accounting, royalty, and land systems | Gas Production | About 48,000 royalty owners with names, Social Security or taxpayer numbers, and bank account numbers |
+| SYS-N2 | Production accounting, royalty, and land systems | Gas Production (vendor SaaS) | About 48,000 royalty owners with names, Social Security or taxpayer numbers, and bank account numbers |
 | SYS-S1 | Engineering client project platform | Engineering Services (on SYS-G3 provider B) | Document management and collaboration for about 4,800 active projects. Holds client CEII and BES Cyber System Information (BCSI) |
 | SYS-S2 | Engineering design environment and field commissioning laptops | Engineering Services | CAD/CAE workstations, protection settings tools, about 900 commissioning laptops that connect to client substations, and a generative AI design assistant pilot |
 
