@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**107 of 216** sample companies are finished (1070 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**108 of 216** sample companies are finished (1080 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -63,6 +63,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Energy | Small | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-3_small_gas-transmission-pipeline/README.md) |
 | Energy | Mid-Market | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-4_mid-market_gas-transmission-pipeline/README.md) |
 | Energy | Enterprise | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-5_enterprise_gas-transmission-pipeline/README.md) |
+| Energy | Multi-Sector | Gas transmission pipeline plus two divisions | [README](03_company-samples/utilities_energy-critical-infrastructure/size-6_multi-sector_gas-transmission-pipeline-plus-two-divisions/README.md) |
 | Dams | Sole Proprietorship | Dam safety consultant | [README](03_company-samples/utilities_dams-critical-infrastructure/size-1_sole-proprietor_dam-safety-consultant/README.md) |
 | Dams | Micro | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-2_micro_hydroelectric-dam-operator/README.md) |
 | Dams | Small | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-3_small_hydroelectric-dam-operator/README.md) |

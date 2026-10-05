@@ -1,0 +1,15 @@
+review_item,what_to_check,suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Confidentiality wanted because client report drafts sit in the suite,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, calendar, file storage, sharing, and administration console",All in scope,None
+Subservice organizations,Carve-out or inclusive; which hosting providers,Data center and infrastructure providers carved out; the provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,None noted,None
+Complementary user entity controls (CUECs),Controls the business must run for the provider's controls to work,Customer configures MFA and sharing settings; reviews sign-in and sharing activity; removes users; protects devices that access the service,"Map to IA-2(2) (POAM-001), AC-3 and the monthly sharing review (POAM-002), AU-6 (POL-01 7.7), SC-28 on devices (POAM-004)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to all customers (customer-enabled); encryption at rest and in transit tested without exception,Customer must choose the stronger MFA method (authenticator app)
+CC6.7 data movement (CC series as checklist),Controls over external sharing,Sharing controls available to the customer; default sharing setting is the customer's choice,"The open-link finding is a CUEC failure, not a provider failure"
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,Continuous monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of security incidents affecting their data under the service terms,Note the notice channel (the owner's email) in the P08 contact list
+Availability and recovery,Recovery objectives versus the BIA (BP-02 RTO 48 h; BP-03 RTO 8 h),Recovery objectives in the system description are shorter than the BIA values; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-consultant 2026-07-23, with the IT technician",Repeat every year (POL-01 6.3)

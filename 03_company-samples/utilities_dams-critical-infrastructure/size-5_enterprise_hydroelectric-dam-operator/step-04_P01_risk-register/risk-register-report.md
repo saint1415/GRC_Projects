@@ -64,22 +64,22 @@ Public safety risks (ER-01) at High or above cannot be accepted without a dated 
 |---|---|
 | Very High | 1 |
 | High | 17 |
-| Moderate | 33 |
-| Low | 14 |
+| Moderate | 34 |
+| Low | 13 |
 | Very Low | 0 |
 | **Total** | **65** |
 
 By threat source type: Adversarial 25, Structural 25, Accidental 13, Environmental 2.
 By treatment: Mitigate 55, Accept 8, Avoid 2.
-By status: In progress 34, Open 22, Closed (accepted) 8, Closed (avoided) 1.
-**29 risks are outside tolerance** and each has a dated treatment plan.
+By status: In progress 35, Open 21, Closed (accepted) 8, Closed (avoided) 1.
+**30 risks are outside tolerance** and each has a dated treatment plan.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Very Low | Exposure (highest) | Tolerance | Outside tolerance |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | ER-01 | Public safety from loss of control of water-retaining features | Safety | 14 | 0 | 5 | 8 | 1 | 0 | **High** | Low | 13 |
 | ER-02 | Generation and grid reliability disruption | Operational | 13 | 0 | 4 | 7 | 2 | 0 | **High** | Moderate | 4 |
-| ER-03 | Regulatory compliance (NERC CIP, FERC dam safety and security) | Compliance | 6 | 0 | 1 | 2 | 3 | 0 | **High** | Low | 3 |
+| ER-03 | Regulatory compliance (NERC CIP, FERC dam safety and security) | Compliance | 6 | 0 | 1 | 3 | 2 | 0 | **High** | Low | 4 |
 | ER-04 | Third-party and supply chain concentration | Operational | 7 | 0 | 1 | 4 | 2 | 0 | **High** | Moderate | 1 |
 | ER-05 | Integration of acquired assets (Piedmont) | Strategic | 5 | 1 | 2 | 2 | 0 | 0 | **Very High** | Moderate | 3 |
 | ER-06 | Protection of sensitive information (CEII, BCSI, personal data) | Compliance and reputational | 5 | 0 | 1 | 2 | 2 | 0 | **High** | Moderate | 1 |
