@@ -27,7 +27,7 @@ No group railroad is Class I. Each is classified on its own revenue because the 
 
 **PTC systems are Critical Cyber Systems** for CR-11 to CR-14, which must operate PTC under 49 CFR part 236 subpart I (SD 1580/82-2022-01E III.A.2.a). For the locomotives' onboard PTC components, the CIP relies on the physical measures the directive allows in III.C.6 (locked, sealed housings).
 
-**Reporting.** SD 1580-21-01E requires reports to CISA "as soon as practicable, but no later than 72 hours" after identifying a cybersecurity incident (II.C.2). The vertical registry lists 24 hours for this duty; the current E version says 72 hours, and this analysis uses the directive text. A CISA report that states it is made under the directive also satisfies 49 CFR 1570.203 for the same incident (II.C.5). Because 1570.203 itself requires a report within 24 hours, the group files the CISA report within 24 hours by default.
+**Reporting.** SD 1580-21-01E requires reports to CISA "as soon as practicable, but no later than 72 hours" after identifying a cybersecurity incident (II.C.2). The vertical registry listed 24 hours for this duty until it was corrected on 2026-10-05; the current E version says 72 hours, and this analysis uses the directive text. A CISA report that states it is made under the directive also satisfies 49 CFR 1570.203 for the same incident (II.C.5). Because 1570.203 itself requires a report within 24 hours, the group files the CISA report within 24 hours by default.
 
 ### 1.2 TSA rules that reach all 72 railroads
 49 CFR 1580.1(a)(1) covers "each freight railroad carrier that operates rolling equipment on track that is part of the general railroad system of transportation," with no size test. Through it:

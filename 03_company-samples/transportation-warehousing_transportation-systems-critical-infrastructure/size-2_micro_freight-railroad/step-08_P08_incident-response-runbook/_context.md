@@ -15,7 +15,7 @@
 
 | Obligation | Citation | Deadline | Notify | Applies when |
 |---|---|---|---|---|
-| TSA SD cybersecurity incident reporting (rail, passenger rail/transit, pipeline) | SD 1580-21-01 / 1582-21-01 / Pipeline-2021-01 series | Within 24 hours of identification | CISA (central reporting) | Verify applicability |
+| TSA SD cybersecurity incident reporting (rail, passenger rail/transit, pipeline) | SD 1580-21-01 / 1582-21-01 / Pipeline-2021-01 series | No later than 72 hours after identification (SD Sec. II.C; verified for SD 1580-21-01E and SD Pipeline-2021-01G 2026-10-05); supplemental information within 24 hours of it becoming available | CISA (central reporting) | Verify applicability |
 | Report actual or threatened cyber incident involving vessel, harbor, port or waterfront facility | 33 CFR 6.16-1 (as amended by E.O. 14116); 33 CFR 101.620(b)(7) (reportable cyber incidents to National Response Center) | Immediately | FBI, CISA and the Captain of the Port; National Response Center (1-800-424-8802) for reportable cyber incidents if not already reported under 6.16-1 | Verify applicability |
 | Aviation significant cybersecurity incident reporting | TSA security programs (SSI) | Per security program (SSI) | CISA | Verify applicability |
 | CIRCIA covered cyber incident / ransom payment reports (pending final rule) | 6 U.S.C. 681b(a) | 72 hours (covered incident); 24 hours (ransom payment) - not yet effective | CISA | Verify applicability |
