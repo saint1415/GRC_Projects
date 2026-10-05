@@ -147,6 +147,7 @@ These facts were added while building the deliverables. They do not change secti
 | Chief Human Resources Officer | Onboarding, terminations, training records |
 | Controller | SOX program owner for financial reporting controls |
 | Director of Data Science | AI model development and monitoring; secretary of the AI governance committee |
+| Vice President, Engineering | Engineering, GIS, hydraulic models, and capital projects |
 | Director of Environmental Health and Safety | RMP programs, release reporting, LEPC liaison |
 | Regional water quality managers | Tier 1 public notice decisions with the state utility president for each system |
 
