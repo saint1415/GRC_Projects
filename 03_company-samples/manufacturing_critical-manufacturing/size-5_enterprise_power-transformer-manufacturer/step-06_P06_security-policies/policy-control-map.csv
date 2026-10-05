@@ -1,2 +1,57 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"The company must maintain an information security program aligned to NIST CSF 2.0, using NIST SP 800-82 Rev. 3 for OT...",PM-1; PL-2,GV.PO-01,None binding; CSF 2.0 benchmark (P03 G-017),No
+POL-01,4.2,The CISO must be accountable for the program; the Director of OT Security must be designated in writing for OT securi...,PM-2,GV.RR-02,None binding; CSF 2.0 benchmark (P03 G-014); SEC Reg S-K Item 106(c)(2) (P03 G-140),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST S...",RA-3; PM-9,GV.RM-03,None binding; CSF 2.0 benchmark (P03 G-008); SEC Reg S-K Item 106(b)(1) (P03 G-137),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-04,None binding; CSF 2.0 benchmark (P03 G-009),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they des...,PL-1,GV.PO-02,None binding; CSF 2.0 benchmark (P03 G-018),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5,ID.RA-07,None binding; CSF 2.0 benchmark (P03 G-045),No
+POL-01,4.7,"Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and harm, a...",PS-8,GV.RR-04,None binding; CSF 2.0 benchmark (P03 G-016),No
+POL-01,4.8,No supplier may receive system access or company data until it is tiered and assessed under STD-01.3 and its contract...,SA-9; SR-6,GV.SC-05,None binding; CSF 2.0 benchmark (P03 G-026); State breach laws (Fla. Stat. 501.171(6); P03 G-153),Yes
+POL-01,4.9,Tier-1 systems and common control providers must be assessed at least annually by an assessor independent of their op...,CA-2; CA-2(1),ID.IM-01,None binding; CSF 2.0 benchmark (P03 G-049); SEC Reg S-K Item 106(b)(1)(ii) (P03 G-137),No
+POL-01,4.10,"Every acquisition must include security due diligence, including OT, before closing and a funded integration plan tha...",RA-3; SA-9,GV.SC-06,None binding; CSF 2.0 benchmark (P03 G-027),Yes
+POL-01,4.11,"Every contractual or regulatory cybersecurity obligation (utility addenda, federal contract clauses, SEC, EAR, DOE re...",SA-4; PM-9,GV.OC-03,Utility addenda (CIP-013-2 R1.2 flow-down; P03 G-128 to G-133); FAR 52.204-30(c)(1) (P03 G-126),No
+POL-01,4.12,"Security documentation, including risk analyses, assessments, and decisions, must be retained for at least 7 years fr...",SI-12,GV.PO-02,None binding; CSF 2.0 benchmark (P03 G-018),No
+POL-01,4.13,"The CISO must report cybersecurity risk to the board risk committee at least quarterly, including Very High and High...",PM-9,GV.OV-01,SEC Reg S-K Item 106(c)(1) (P03 G-139),No
+POL-01,4.14,"Firmware and software supplied to customers must be built under STD-01.9, signed with a key held in a hardware securi...",SA-10; SA-11; SR-4,PR.PS-06,"Utility addendum secs. 4, 5 (CIP-013-2 R1.2.4, R1.2.5 flow-down; P03 G-131, G-132)",No
+POL-02,4.1,Every user and service must have a unique identity. Shared accounts are prohibited for workforce and supplier users....,IA-2; AC-2,PR.AA-01,FAR 52.204-21(b)(1)(v) (P03 G-112),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted.",AC-2; AC-3; AC-6,PR.AA-05,"FAR 52.204-21(b)(1)(i)-(ii) (P03 G-108, G-109)",Yes
+POL-02,4.3,"Duties that would let one person both change and release production master data or schedules, both create and pay a s...",AC-5,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-02,4.4,"MFA is required for all remote access, all privileged and cloud access, all ERP access, and all supplier portal acces...",IA-2(1); IA-2(2); IA-8,PR.AA-03,FAR 52.204-21(b)(1)(vi) (P03 G-113),Yes
+POL-02,4.5,"Access must be disabled the same business day as a termination, and immediately for involuntary terminations. For fie...",PS-4; AC-2,PR.AA-05,Utility addendum sec. 3 (CIP-013-2 R1.2.3 flow-down; P03 G-130),Yes
+POL-02,4.6,"Workforce accounts inactive for 60 days, and supplier portal accounts inactive for 90 days, must be disabled automati...",AC-2(3),PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-02,4.7,Managers must certify their staff's access to tier-1 systems every quarter; supplier administrators must attest to th...,AC-2,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-02,4.9,OEM and vendor remote access to plant systems must go only through the OT remote access gateway with per-session appr...,AC-17; MA-4,PR.AA-03,None binding; CSF 2.0 benchmark (P03 G-055); Utility addendum sec. 6 (CIP-013-2 R1.2.6 flow-down; P03 G-133),Yes
+POL-02,4.10,"Default passwords must be changed before any device or system is connected to a network, including the web configurat...",IA-5,PR.AA-01,None binding; CSF 2.0 benchmark (P03 G-053),Yes
+POL-02,4.11,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by...",AC-2,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-02,4.12,"At customer sites, company representatives must use only the utility's own access methods and must not save utility c...",AC-17; AC-20,PR.AA-05,Utility addendum sec. 6 (CIP-013-2 R1.2.6 flow-down; P03 G-133),Yes
+POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, starting with...",IR-8,RS.MA-01,None binding; CSF 2.0 benchmark (P03 G-086),Yes
+POL-03,4.2,"Workforce, plants, and suppliers must report suspected incidents to the SOC within 1 hour. Plant staff must report un...",IR-6,RS.MA-02,None binding; CSF 2.0 benchmark (P03 G-087),Yes
+POL-03,4.3,"Every incident must be logged, classified by severity under STD-03.1, and tracked to closure in SOC case management.",IR-5; IR-4,RS.MA-03,None binding; CSF 2.0 benchmark (P03 G-088),Yes
+POL-03,4.4,During a cyber incident the plant manager decides safe states for plant equipment; responders must not override proce...,IR-4; CP-10,RC.RP-05,None binding; CSF 2.0 benchmark (P03 G-103),Yes
+POL-03,4.5,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours, and the disclosure committee must...",IR-6; IR-8,RS.MA-04,SEC Form 8-K Item 1.05 (P03 G-135),Yes
+POL-03,4.6,"If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4 busines...",IR-6,RS.CO-02,"SEC Form 8-K Item 1.05 (P03 G-134, G-136)",Yes
+POL-03,4.7,"Contract and regulatory notices must meet the deadlines in the P08 notification matrix, including each utility's own...",IR-6; SR-8,RS.CO-02,"Utility addendum secs. 1, 3, 4 (P03 G-128, G-130, G-131); FAR 52.204-25(d) (P03 G-124); State breach laws (P03 G-151)",Yes
+POL-03,4.8,"No ransom may be paid without approval from the CEO, the General Counsel, and the cyber insurer, and an OFAC sanction...",IR-4,RS.MI-01,None binding; CSF 2.0 benchmark (P03 G-097),Yes
+POL-03,4.9,Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05) and must pass a recovery test at least...,CP-2; CP-4; CP-10,RC.RP-01,None binding; CSF 2.0 benchmark (P03 G-099),Yes
+POL-03,4.10,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure com...",IR-3; IR-8,ID.IM-02,None binding; CSF 2.0 benchmark (P03 G-050),Yes
+POL-03,4.11,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the ris...,IR-4,ID.IM-03,None binding; CSF 2.0 benchmark (P03 G-051),Yes
+POL-03,4.12,Evidence must be preserved with chain of custody before systems are rebuilt.,IR-4; AU-9,RS.AN-07,None binding; CSF 2.0 benchmark (P03 G-093),Yes
+POL-04,4.1,"Information must be classified as Restricted (transformer designs and winding specifications, customer substation dra...",RA-2,ID.AM-07,None binding; CSF 2.0 benchmark (P03 G-037),No
+POL-04,4.2,Restricted data must be encrypted at rest and in transit using STD-04.1.,SC-28; SC-8,PR.DS-01,None binding; CSF 2.0 benchmark (P03 G-061),Yes
+POL-04,4.3,"FCI must be stored only in the ERP and labeled federal project sites, and must not be entered into unapproved systems...",AC-3,PR.DS-01,"FAR 52.204-21(b)(1)(i), (iii) (P03 G-108, G-110)",Yes
+POL-04,4.4,"Test data must be protected from unauthorized or undetected change from capture to certified report, locked at Qualit...",SI-7; AU-10; SI-12,PR.DS-01,"10 CFR 429.71 (P03 G-143, G-144)",Yes
+POL-04,4.5,"Export records must be kept at least 5 years, and no export may be released without a screening record, including dur...",SI-12; AC-3,GV.OC-03,"C-CRITICAL-MFG-R03 (15 CFR 762.6(a); 15 CFR Part 744; P03 G-145, G-146)",Yes
+POL-04,4.6,Customer drawings must be exchanged only through the PLM customer portal or another approved encrypted channel.,SC-8,PR.DS-02,None binding; CSF 2.0 benchmark (P03 G-062),Yes
+POL-04,4.7,Media holding Restricted or Confidential data must be sanitized before reuse and destroyed by a certified vendor with...,MP-6,PR.DS-01,FAR 52.204-21(b)(1)(vii) (P03 G-114); State breach laws (Fla. Stat. 501.171(8); P03 G-154),No
+POL-04,4.8,"Backups of tier-1 data must be encrypted, immutable, stored in a separate account, and restore-tested at least quarte...",CP-9,PR.DS-11,None binding; CSF 2.0 benchmark (P03 G-064),Yes
+POL-04,4.9,Restricted or Confidential data must not be entered into any AI tool unless the AI governance committee has approved...,SA-9; PL-4,GV.SC-05,None binding; CSF 2.0 benchmark (P03 G-026),Yes
+POL-04,4.10,"Records must be kept per the records schedule, including 7 years for financial and security records.",SI-12,PR.DS-11,None binding; CSF 2.0 benchmark (P03 G-064); SEC Reg S-K Item 106 support records,No
+POL-05,4.1,Workforce members must use company systems only for authorized purposes and must acknowledge this policy at hire and...,PL-4,GV.PO-01,None binding; CSF 2.0 benchmark (P03 G-017),No
+POL-05,4.2,"All workforce members must complete security awareness training annually (shift briefings for production workers), an...",AT-2; AT-3,PR.AT-02,None binding; CSF 2.0 benchmark (P03 G-060),Yes
+POL-05,4.3,Personal devices may reach only company email and files through managed apps and must never connect to plant networks.,AC-20,PR.AA-05,FAR 52.204-21(b)(1)(iii) (P03 G-110),No
+POL-05,4.4,"USB storage must not be used on HMIs, engineering workstations, or kiosks; OEM media must be scanned at a plant media...",MP-7,PR.PS-05,None binding; CSF 2.0 benchmark (P03 G-069),No
+POL-05,4.5,Workforce members must not install software; only software from the approved catalog may be installed by IT or contro...,CM-11,PR.PS-05,None binding; CSF 2.0 benchmark (P03 G-069),No
+POL-05,4.6,"Only AI tools on the approved list (STD-05.3) may be used; any new AI use, including AI features in existing products...",PL-4; SA-9,GV.PO-01,None binding; AI RMF benchmark (P10),Yes
+POL-05,4.7,Workforce members must report phishing and suspicious events through the report button or the SOC hotline.,IR-6,RS.MA-02,None binding; CSF 2.0 benchmark (P03 G-087),Yes
+POL-05,4.8,"Workforce members must not post company, customer, or federal contract information on public websites or social media.",AC-22,PR.DS-01,FAR 52.204-21(b)(1)(iv) (P03 G-111),No
