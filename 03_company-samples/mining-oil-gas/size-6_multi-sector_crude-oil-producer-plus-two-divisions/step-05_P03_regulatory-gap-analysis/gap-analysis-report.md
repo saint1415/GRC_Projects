@@ -123,7 +123,7 @@ All 6 unmet group rows are partially met: 3 Moderate and 3 Low. The SEC disclosu
 | 9 | Crude Logistics supplement drift (9) | Crude Logistics | CSF GV.PO-02 | Moderate | Re-issue supplement | Crude Logistics security and compliance lead | 2026-11-30 |
 | 10 | Royalty owner exports on file shares | Production; group | Fla. Stat. 501.171(2); state laws | Moderate | Stop exports; state-of-residence report | Production Accounting Vice President | 2026-12-31 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-013 to POAM-018 and POAM-021 to POAM-023 trace directly to this analysis.
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). The P07 assessment confirmed several of them (POAM-013 to POAM-018 and POAM-021 cite both sources); POAM-022, POAM-023, and POAM-025 come from this analysis alone.
 
 ## 5. Pending regulatory changes
 None of these is a current obligation. The `pending_rule_change` column flags affected rows.

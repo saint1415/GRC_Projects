@@ -33,7 +33,7 @@ There is **no size threshold** in Part 1520. Violations are grounds for a civil 
 ### 1.4 Florida
 Fla. Stat. 501.171(1)(b) defines "covered entity" to include "a sole proprietorship ... that acquires, maintains, stores, or uses personal information." The business holds names and Social Security numbers of 5 subcontractors (W-9s), which is personal information under 501.171(1)(g)1.a.(I). So 501.171(2) (reasonable security measures) and the breach notice duties in (3) to (6) apply. The disposal duty in 501.171(8) covers "customer records," which the statute limits to records an individual provides to buy or lease a product or obtain a service. W-9s from subcontractors are not customer records, so (8) is recorded as not applicable (G-031); POL-01 applies the same disposal method anyway.
 
-**Open question for counsel (not assumed either way).** The 2026 statute adds "any information regarding an individual's geolocation" as a data element. Client GIS data sometimes includes landowner names next to parcel locations along the right-of-way. Whether that combination is personal information under 501.171 has not been decided here.
+**Open question for counsel (not assumed either way).** The current (2026) statute lists "any information regarding an individual's geolocation" as a data element. Client GIS data sometimes includes landowner names next to parcel locations along the right-of-way. Whether that combination is personal information under 501.171 has not been decided here.
 
 ### 1.5 Not applicable, with reasons (rows G-032 to G-037)
 - **NERC CIP (C-ENERGY-R01):** not a NERC-registered entity; no BES assets.
