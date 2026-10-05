@@ -74,7 +74,7 @@ The brief for this sample asked whether the TSA rail cyber directives apply. The
 | G-019 | SD-2022 Sec. III.C.1.b | Default credentials; no mitigations for field device classes | POAM-012 | Director of OT Security | 2026-10-31 |
 | G-021 | SD-2022 Sec. III.C.3 | Corporate groups hold OT permissions through the directory trust | POAM-005 | Director of OT Security | 2026-12-31 |
 | G-022 | SD-2022 Sec. III.C.4 | 3 shared CTC administrator accounts | POAM-004 | Director of OT Security | 2026-11-30 |
-| G-023 | SD-2022 Sec. III.C.4.b | Former employees know shared passwords (Not met) | Rotated 2026-09-02; retire (POAM-004) | Director of OT Security | 2026-11-30 |
+| G-023 | SD-2022 Sec. III.C.4.b | Former employees know shared passwords (Not met) | Rotated 2026-08-20; retire (POAM-004) | Director of OT Security | 2026-11-30 |
 | G-024 | SD-2022 Sec. III.C.5 | No trust review schedule (Not met) | STD-02.4; POAM-005 | Director of Identity and Access Management | 2026-12-31 |
 | G-035 | SD-2022 Sec. III.D.3.a | 39% of OT log sources not collected | POAM-007 | Director of Security Operations | 2027-03-31 |
 | G-038 | SD-2022 Sec. III.E.1 | PTC critical patches not current | POAM-003 | PTC Back Office Manager | 2026-12-31 |

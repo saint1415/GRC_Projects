@@ -102,7 +102,7 @@ Counts: 5 policies; 23 standards (STD-01.1 to 01.8, STD-02.1 to 02.4, STD-03.1 t
 **Examples from the current register:**
 | Exception | Statement | Compensating controls | Residual risk | Approver | Expires | Link |
 |---|---|---|---|---|---|---|
-| EXC-2026-011 | STD-02.4 shared accounts, for 3 CTC code server administrator accounts (CIP measure: yes) | Passwords rotated 2026-09-02; use only from the OT enclave through PAM-monitored sessions; vital field logic | High | Executive risk committee | 2026-11-30 | R-006; POAM-004 |
+| EXC-2026-011 | STD-02.4 shared accounts, for 3 CTC code server administrator accounts (CIP measure: yes) | Passwords rotated 2026-08-20; use only from the OT enclave through PAM-monitored sessions; vital field logic | High | Executive risk committee | 2026-11-30 | R-006; POAM-004 |
 | EXC-2026-017 | STD-01.5 patch timelines, for PTC back office servers awaiting vendor certification (CIP measure: yes) | Enclave isolation; allowlisting; no internet path; heightened monitoring while compensating measures are documented | High | Executive risk committee | 2026-12-31 | R-005; POAM-003 |
 | EXC-2026-022 | POL-02 4.5 same-day disablement, at AQ-04 to AQ-06 | Daily HR report reconciliation by the service desk | Moderate | CISO with the Vice President, Integration Management Office | 2027-05-31 | R-063; POAM-001 |
 | EXC-2026-026 | STD-01.4 SIEM onboarding, for CTC code servers and PTC message brokers (CIP measure: yes) | Local retention extended to 90 days; weekly manual log review by the OT security team | Moderate | CISO with the Director of Train Control Systems | 2027-03-31 | R-008; POAM-007 |

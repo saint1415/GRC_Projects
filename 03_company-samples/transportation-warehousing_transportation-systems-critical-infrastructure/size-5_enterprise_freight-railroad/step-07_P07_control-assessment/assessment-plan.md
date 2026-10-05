@@ -88,7 +88,7 @@ Random selections used the audit software's seeded random number generator; seed
 - Tests at the NOCs ran on non-production consoles or in the CAD and PTC labs; production consoles were inspected read-only.
 - The rogue connection test used an audit-owned laptop with no company data, pre-approved by the CISO and the Director, Network Operations Center.
 - SSI collected as evidence stayed in the SSI library. Screenshots and exports in workpapers are redacted.
-- Critical exposures were reported to the CISO within 24 hours. Two were: default credentials on 6 field devices (reported 2026-08-11) and vendor modems reaching a CTC field network (reported 2026-08-05; modems disconnected 2026-09-15).
+- Critical exposures were reported to the CISO within 24 hours. Two were: default credentials on 6 field devices (reported 2026-08-11) and vendor modems reaching a CTC field network (reported 2026-08-05; disconnection scheduled with the vendor under POAM-008).
 - Findings were validated with control owners before the report was issued.
 
 ## 5. Schedule and deliverables
