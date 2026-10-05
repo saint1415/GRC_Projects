@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Transaction fraud-detection model
+**AI use case:** Transaction fraud-detection model scoring every authorization
 **Sector AI rules and guidance:** NYDFS Industry Letter (Oct 16, 2024) AI-specific cyber risk guidance under Part 500.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

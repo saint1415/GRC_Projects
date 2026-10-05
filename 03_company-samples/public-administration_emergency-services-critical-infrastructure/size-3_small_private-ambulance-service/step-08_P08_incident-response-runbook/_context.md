@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Computer-aided dispatch outage from ransomware
+**Incident type:** CAD Outage from Ransomware
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 

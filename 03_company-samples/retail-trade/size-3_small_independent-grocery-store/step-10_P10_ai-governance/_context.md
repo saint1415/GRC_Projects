@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Dynamic pricing and personalized offers
+**AI use case:** Pricing and personalized offers engine
 **Sector AI rules and guidance:** FTC Docket 2023190 (Dec 2023 press release) 5-year ban on facial recognition for surveillance; requires notice, deletion, information security program and independent assessments; signals FTC Act Section 5 expectations for AI biometric use in stores.; Cal. Code Regs. tit. 11, Art. 11 (ADMT) Businesses using automated decisionmaking technology for significant decisions must provide pre-use notice, opt-out/access rights; compliance by Jan 1, 2027 for existing uses.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

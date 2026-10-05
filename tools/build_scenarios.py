@@ -197,6 +197,29 @@ def write_overlay(u, vd):
 
 
 # ---------------------------------------------------------------- scenarios
+def completed_incident(d):
+    """Incident named in a finished sample's P08 runbook title, if any."""
+    rb = d / "step-08_P08_incident-response-runbook" / "ir-runbook.md"
+    if rb.exists():
+        for line in rb.read_text().splitlines():
+            if line.startswith("# "):
+                return re.sub(r"^Incident Response Runbook( \d+)?:\s*", "", line[2:]).strip() or None
+    return None
+
+
+def completed_ai_use_case(d):
+    """Short name of a finished sample's first P10 use case (AI-001), if any."""
+    inv = d / "step-10_P10_ai-governance" / "ai-use-case-inventory.csv"
+    if inv.exists():
+        rows = list(csv.DictReader(inv.open()))
+        if rows and rows[0].get("use_case"):
+            name = rows[0]["use_case"].split(":")[0].strip()
+            if len(name) > 90 and " (" in name:
+                name = name.split(" (")[0].strip()
+            return name
+    return None
+
+
 def scenario_facts(u, tier_id, vd):
     o = overrides.get((u["unit_id"], tier_id))
     naics6 = o["naics6"] if o else u["primary_naics"]
@@ -208,15 +231,18 @@ def scenario_facts(u, tier_id, vd):
     title = f"{COMPANY} | {u['name']} | {t['name']}: {display[(u['unit_id'], tier_id)]}"
     if tier_id == "t6":
         business = f"{business} (one division of a diversified holding company)"
+    ir_scenario, ai_use_case = u["ir_scenario"], u["ai_use_case"]
     facts = sample_dir(u, tier_id) / "00_company-facts.md"
-    if facts.exists():  # a completed sample names its own SSP system
+    if facts.exists():  # a completed sample names its own SSP system, incident and AI use case
         m = re.search(r"\*\*SSP system \(P02\):\*\* the \*([^*]+)\*", facts.read_text())
         if m:
             system = m.group(1)
+        ir_scenario = completed_incident(facts.parent) or ir_scenario
+        ai_use_case = completed_ai_use_case(facts.parent) or ai_use_case
     return {
         "company": COMPANY, "scenario_title": title, "tier_name": t["name"], "vertical_name": u["name"],
         "naics": naics6, "business": business, "headcount": headcount_text(p), "system_name": system,
-        "ir_scenario": u["ir_scenario"], "ai_use_case": u["ai_use_case"],
+        "ir_scenario": ir_scenario, "ai_use_case": ai_use_case,
         "primary_regulation": vd["profile"].get("primary_regulation", "[see vertical overlay]"),
         "date": TODAY, "_override": o, "_size": p, "_tier": t, "_companions": companions,
     }

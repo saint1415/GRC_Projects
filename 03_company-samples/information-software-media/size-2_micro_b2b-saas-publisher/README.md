@@ -55,9 +55,9 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Primary regulation. Requirement-level; documentary evidence collected. Regulation: SOC 2 Trust Services Criteria with FTC Act Section 5 data security expectations. | P01 risks; P02 control statements |
 | 6 | [P06 Security Policy Set](step-06_P06_security-policies/_context.md) | 3 core policies. Access control; incident response; data classification. | P03 gaps; P01 risks |
 | 7 | [P07 Security Control Assessment](step-07_P07_control-assessment/_context.md) | 10-15 controls. Examine/interview/test; MSP evidence requested. | P02 control statements; P06 policies |
-| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Full lifecycle; MSP and insurer in the notification chain. Incident: Cloud credential compromise exposing customer data. | P05 recovery order; P01 risks; P03 notification duties |
+| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Full lifecycle; MSP and insurer in the notification chain. Incident: Cloud Credential Compromise Exposing Customer Data. | P05 recovery order; P01 risks; P03 notification duties |
 | 9 | [P09 SOC 2 Readiness Checklist](step-09_P09_soc2-readiness/_context.md) | Security plus one other relevant category. Readiness self-assessment; evidence inventory. | Evidence from P02, P06 and P07 |
-| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One AI use case. Risk tier; data protection; human-in-the-loop decisions. AI use case: Generative AI feature embedded in the SaaS product. | P06 policies; the P01 risk method |
+| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One AI use case. Risk tier; data protection; human-in-the-loop decisions. AI use case: Generative AI document extraction in the VCP. | P06 policies; the P01 risk method |
 
 ## How to use this page in a meeting
 1. Read **At a glance** aloud. It sets who the company is and how big it is.

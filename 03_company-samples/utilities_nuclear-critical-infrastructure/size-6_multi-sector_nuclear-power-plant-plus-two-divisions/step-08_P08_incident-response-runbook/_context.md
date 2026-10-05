@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Cyber attack on plant business network with attempted pivot to digital assets
+**Incident type:** Cyber Attack on a Station Business Network with an Attempted Pivot to Digital Assets
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 

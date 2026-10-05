@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Facial recognition for facility access
+**AI use case:** Face verification (1
 **Sector AI rules and guidance:** Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT in decisions on essential government services/public benefits.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

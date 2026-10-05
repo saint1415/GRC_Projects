@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Ransomware halting processing lines and cold-chain monitoring
+**Incident type:** Ransomware on the Shop Laptop with Takeover of the Cold-Chain and Smokehouse Accounts
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 

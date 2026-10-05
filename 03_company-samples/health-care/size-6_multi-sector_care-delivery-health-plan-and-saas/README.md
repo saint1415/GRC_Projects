@@ -56,9 +56,9 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: HIPAA Security Rule. | P01 risks; P02 control statements |
 | 6 | [P06 Security Policy Set](step-06_P06_security-policies/_context.md) | Group policies with division supplements. Group policy plus division-specific standards. | P03 gaps; P01 risks |
 | 7 | [P07 Security Control Assessment](step-07_P07_control-assessment/_context.md) | Common controls plus division samples. Assess common controls once; sample division controls. | P02 control statements; P06 policies |
-| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | Incident spanning divisions. Notification matrix across all division regulators. Incident: Ransomware with protected health information (PHI) exfiltration. | P05 recovery order; P01 risks; P03 notification duties |
+| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | Incident spanning divisions. Notification matrix across all division regulators. Incident: Ransomware with PHI Exfiltration in the Group Data Platform. | P05 recovery order; P01 risks; P03 notification duties |
 | 9 | [P09 SOC 2 Readiness Checklist](step-09_P09_soc2-readiness/_context.md) | Service lines per division. Scoping decisions per division. | Evidence from P02, P06 and P07 |
-| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | Group AI governance program. Group standards; division use cases; regulator-specific rules. AI use case: Ambient clinical documentation (AI scribe). | P06 policies; the P01 risk method |
+| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | Group AI governance program. Group standards; division use cases; regulator-specific rules. AI use case: Ambient clinical documentation. | P06 policies; the P01 risk method |
 
 ## How to use this page in a meeting
 1. Read **At a glance** aloud. It sets who the company is and how big it is.

@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Payroll and HR system breach exposing worker PII
+**Incident type:** Payroll and HR System Breach Exposing Worker PII
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 

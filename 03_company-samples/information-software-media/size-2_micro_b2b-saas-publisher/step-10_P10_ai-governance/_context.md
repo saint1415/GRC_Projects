@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Generative AI feature embedded in the SaaS product
+**AI use case:** Generative AI document extraction in the VCP
 **Sector AI rules and guidance:** Cal. Code Regs. tit. 11 (ADMT article) Pre-use notice, opt-out and access rights for ADMT used for significant decisions; compliance by Jan 1, 2027.; Colo. SB26-189 (signed May 14, 2026; repeals/reenacts SB24-205) Developer documentation duties to deployers, 3-year recordkeeping, consumer rights to human review/correction for consequential decisions; effective Jan 1, 2027.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

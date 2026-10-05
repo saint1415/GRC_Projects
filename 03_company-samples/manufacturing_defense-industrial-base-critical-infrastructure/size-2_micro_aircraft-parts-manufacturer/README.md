@@ -56,7 +56,7 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | 7 | [P07 Security Control Assessment](step-07_P07_control-assessment/_context.md) | 10-15 controls. Examine/interview/test; MSP evidence requested. | P02 control statements; P06 policies |
 | 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Full lifecycle; MSP and insurer in the notification chain. Incident: Exfiltration of Controlled Unclassified Information (CUI). | P05 recovery order; P01 risks; P03 notification duties |
 | 9 | [P09 SOC 2 Readiness Checklist](step-09_P09_soc2-readiness/_context.md) | Security plus one other relevant category. Readiness self-assessment; evidence inventory. | Evidence from P02, P06 and P07 |
-| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One AI use case. Risk tier; data protection; human-in-the-loop decisions. AI use case: Generative AI assistant used with CUI engineering documents. | P06 policies; the P01 risk method |
+| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One AI use case. Risk tier; data protection; human-in-the-loop decisions. AI use case: Generative AI assistant integrated in the CUI suite (SYS-01). | P06 policies; the P01 risk method |
 
 ## How to use this page in a meeting
 1. Read **At a glance** aloud. It sets who the company is and how big it is.

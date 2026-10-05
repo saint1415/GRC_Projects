@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Ransomware on business IT forcing precautionary pipeline shutdown
+**Incident type:** Ransomware on Office IT Forcing a Precautionary Pipeline Shut-in
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 

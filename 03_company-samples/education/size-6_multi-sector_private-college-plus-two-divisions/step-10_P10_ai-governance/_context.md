@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI admissions and student-success risk scoring
+**AI use case:** Admissions applicant scoring
 **Sector AI rules and guidance:** ED Secretary's Supplemental Priority on Advancing AI in Education 91 FR 18774 (FR Doc 2026-07087) Final priority and definitions ED may use in discretionary grant competitions to advance AI in education.; ED Dear Colleague Letter on use of federal grant funds for AI ED OPEPD DCL, July 22, 2025 Says AI uses are allowable under existing formula and discretionary grants when aligned with statutory and regulatory requirements; sets principles for responsible use.; Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT used in consequential decisions on education access or eligibility (e.g., admissions).
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

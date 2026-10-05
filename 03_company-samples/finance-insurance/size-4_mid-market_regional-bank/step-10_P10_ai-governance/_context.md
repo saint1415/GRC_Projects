@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI credit underwriting model
+**AI use case:** Small business credit underwriting model
 **Sector AI rules and guidance:** NYDFS CL 2024-07 (July 11, 2024) Insurers using AI systems/external consumer data in underwriting and pricing must show no unfair/proxy discrimination, test, govern (board oversight), oversee vendors, and give specific adverse-decision reasons.; NAIC Model Bulletin (adopted Dec 4, 2023); adopted by individual states Insurers should maintain a written AIS Program with governance, risk management, third-party oversight and documentation; binding only as issued by each state DOI.; NYDFS Industry Letter (Oct 16, 2024) Guidance on AI-related cyber risks (social engineering/deepfakes, AI-enhanced attacks, third-party AI) and mitigations within Part 500.; NYDFS Industry Letter (May 21, 2026) Listed on DFS Cybersecurity Resource Center; content not reviewed in detail.; 12 CFR 1002.9 Creditors must give specific principal reasons for adverse action. NOTE: CFPB Circulars 2022-03 (complex algorithms) and 2023-03 were WITHDRAWN May 12, 2025 (90 FR 20084); the underlying Reg B duty remains.; Colo. SB26-189 (signed May 14, 2026) Covers financial/lending services and insurance decisions; effective Jan 1, 2027; replaces SB24-205.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 
