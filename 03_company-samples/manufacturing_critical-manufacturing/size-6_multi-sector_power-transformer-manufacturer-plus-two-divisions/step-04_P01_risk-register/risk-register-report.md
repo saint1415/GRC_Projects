@@ -19,7 +19,7 @@
 - **Division registers** hold risks a division owns and can treat itself. Each division security and compliance lead maintains one. Transformer Manufacturing, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact. They are not simply the highest division rating.
 
-**Risk tolerance and who can accept risk** (recorded in `../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (set in POL-01 4.4, P06):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -79,7 +79,7 @@ Notification consistency (GR-03), AI governance (GR-06), and Grid Engineering in
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** P8 integration (OT DMZ, domain trust removal, EDR, OEM gateway: GR-01, GR-07); GEPS hub least privilege and full restore test (GR-02); hardware security module signing and isolated build environment (GR-04); intercompany security schedules and BCSI relocation (GR-05); AI validation and storm allocation rule (GR-06).
-- **Accepted (all Low):** GR-16 (loss of key OT security and NERC compliance staff), MF-027 (theft of an encrypted laptop), EU-013 (single-source dependency on the affiliate for large power transformer spares), ES-008 (fCI exposed on federal contract projects).
+- **Accepted (all Low):** GR-16 (loss of key OT security and NERC compliance staff), MF-027 (theft of an encrypted laptop), EU-013 (single-source dependency on the affiliate for large power transformer spares), ES-008 (FCI exposed on federal contract projects).
 - **Regulatory actions:** the Electric Utility's self-reports to SERC by 2026-09-30 for the CIP-003-9 and CIP-012-2 gaps and the BCSI handling issue (GR-08, EU-001, EU-002, EU-003; P03).
 - **Treatment status:** 48 risks are In progress, 18 are Open (treatment approved, work not started), and 4 are Closed (the accepted risks).
 

@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**138 of 216** sample companies are finished (1380 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**140 of 216** sample companies are finished (1400 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -105,6 +105,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Critical Manufacturing | Small | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-3_small_power-transformer-manufacturer/README.md) |
 | Critical Manufacturing | Mid-Market | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-4_mid-market_power-transformer-manufacturer/README.md) |
 | Critical Manufacturing | Enterprise | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-5_enterprise_power-transformer-manufacturer/README.md) |
+| Critical Manufacturing | Multi-Sector | Power transformer manufacturer plus two divisions | [README](03_company-samples/manufacturing_critical-manufacturing/size-6_multi-sector_power-transformer-manufacturer-plus-two-divisions/README.md) |
 | Defense Industrial Base | Sole Proprietorship | Engineering subcontractor with CUI | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-1_sole-proprietor_engineering-subcontractor-with-cui/README.md) |
 | Defense Industrial Base | Micro | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-2_micro_aircraft-parts-manufacturer/README.md) |
 | Defense Industrial Base | Small | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-3_small_aircraft-parts-manufacturer/README.md) |
@@ -132,6 +133,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation Systems | Sole Proprietorship | Rail and truck freight broker | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-1_sole-proprietor_rail-and-truck-freight-broker/README.md) |
 | Transportation Systems | Micro | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-2_micro_freight-railroad/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
+| Transportation Systems | Mid-Market | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-4_mid-market_freight-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
 | Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
 | Information | Small | Workforce scheduling SaaS | [README](03_company-samples/information-software-media/size-3_small_workforce-scheduling-saas/README.md) |

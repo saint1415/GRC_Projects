@@ -37,7 +37,7 @@ Users: about 700 workforce members (care agents, retail, billing, NOC, engineeri
 | Supply chain | Secure Networks Act reporting | 47 CFR 1.50007 | CM-8 and SR-3 support the no-covered-equipment certification |
 | C-COMMUNICATIONS-R05 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 | Tracked only. No final rule as of 2026-10-05 |
 | State | Florida Information Protection Act | Fla. Stat. 501.171 | Breach notice for personal information in SYS-01, SYS-04, and SYS-18 (P08); other states' laws for seasonal residents |
-| Benchmark | NIST CSF 2.0 and CISA Cross-Sector CPGs (voluntary) | P03 rows G-060 to G-073 | Measure of "reasonable measures" under 64.2010(a) |
+| Benchmark | NIST CSF 2.0 and CISA Cross-Sector CPGs (voluntary) | P03 rows G-059 to G-072 | Measure of "reasonable measures" under 64.2010(a) |
 | Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-10 | P06 | Policy basis for every control |
 
 **Not applicable** (reasons in P03 section 1): SEC cybersecurity disclosure (C-COMMUNICATIONS-R06; privately held); submarine cable rules (C-COMMUNICATIONS-R04; no cable landing); CMRS-only CPNI rules (64.2010(h)); EAS rules (no video or broadcast service). Broadband usage data is not CPNI after *Ohio Telecom Ass'n v. FCC* (6th Cir. 2025), but POL-04 protects the whole customer account record to the CPNI standard.

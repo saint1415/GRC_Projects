@@ -105,7 +105,7 @@ System-level registers are filtered views of this file, kept by each system owne
 | System-level register | Owner | Risks in scope |
 |---|---|---|
 | Train Dispatch and PTC Operations Platform (TDPO; SSP in P02) | Chief Operating Officer, maintained by the Cybersecurity Manager | 35 risks whose affected assets include SYS-01, SYS-02, SYS-03, SYS-04, SYS-05, SYS-07, or SYS-09 (filter the `affected_asset_or_process` column) |
-| TSA compliance view (CIP, CAP, part 1570, 1580, and 1520 duties) | Cybersecurity Manager with the Director of Safety, Security, and Hazmat | 43 risks with a C-TRANSPORTATION-R01, S01, S02, or S03 driver (filter the `regulatory_driver` column); reported to TSA only as required in the CAP annual report |
+| TSA compliance view (CIP, CAP, part 1570, 1580, and 1520 duties) | Cybersecurity Manager with the Director of Safety, Security, and Hazmat | 42 risks with a C-TRANSPORTATION-R01, S01, S02, or S03 driver (filter the `regulatory_driver` column); reported to TSA only as required in the CAP annual report |
 | AI portfolio (P10) | Chief Engineer, with the vCISO | R-041, R-042, R-043, R-044, R-045, R-046 |
 
 When a system-level review changes a rating, the owner updates this file, and the change flows to the enterprise roll-up.
