@@ -97,7 +97,7 @@ Of the 35 gaps, **5 are High**, 22 Moderate, and 8 Low. The 10 Not met rows spli
 | Source | Met | Partially met | Not met | N/A | Rows |
 |---|---|---|---|---|---|
 | DOT HMR as carrier: security plan, training, incident reports, emergency number | 9 | 4 | 0 | 0 | 13 |
-| FMCSA ELD, driver qualification, and drug and alcohol records | 4 | 2 | 1 | 0 | 7 |
+| FMCSA ELD, driver qualification, and drug and alcohol records | 3 | 2 | 1 | 0 | 6 |
 | Screened out (FMCSA safety permit, TSA Security Directives, CMMC) | 0 | 0 | 0 | 3 | 3 |
 | **Total** | **12** | **6** | **1** | **3** | **22** |
 
