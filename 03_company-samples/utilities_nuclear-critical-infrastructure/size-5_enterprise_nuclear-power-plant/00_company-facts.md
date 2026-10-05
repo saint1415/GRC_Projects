@@ -18,7 +18,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Not in scope | **10 CFR 73.110** (Part 53 plants; the company holds Part 50 licenses and has not elected it); **HIPAA** (the dosimetry laboratory processes occupational dose records that client employers keep as employment records; PHI excludes employment records held by a covered entity in its role as employer, 45 CFR 160.103, and the lab performs no covered function); **CIRCIA** (proposed only; final rule not published as of 2026-09-25) |
 
 ### Regulatory driver IDs used in this sample
-The vertical's `requirements.csv` provides C-NUCLEAR-R01 to R05. This sample adds **scenario-level driver IDs (C-NUCLEAR-S01 to S09)** for other binding rules that touch information security. They are defined here and nowhere else.
+The vertical's `requirements.csv` provides C-NUCLEAR-R01 to R05. This sample adds **scenario-level driver IDs (C-NUCLEAR-S01 to S10)** for other binding rules that touch information security. They are defined here and nowhere else.
 
 | ID | Requirement | Citation | Status for this company |
 |---|---|---|---|
@@ -36,6 +36,7 @@ The vertical's `requirements.csv` provides C-NUCLEAR-R01 to R05. This sample add
 | C-NUCLEAR-S07 | State breach notification and data security | Each state where affected individuals reside; Fla. Stat. 501.171 worked example | Applies |
 | C-NUCLEAR-S08 | Dosimetry processing and dose records | 10 CFR 20.1501(d) (NVLAP accreditation); 10 CFR 20.2106 (records of individual monitoring results) | Applies (SL-2 and the fleet's own dose records) |
 | C-NUCLEAR-S09 | Export control of nuclear technology | 10 CFR Part 810 (scope in 810.2); 10 CFR Part 110 | Applies to technology transfer, including access by foreign nationals |
+| C-NUCLEAR-S10 | Technical Specification surveillance requirements | 10 CFR 50.36(c)(3) | Applies (context: surveillance schedules and clearance records in the WMS must stay accurate) |
 
 ## 2. People (role titles only)
 
@@ -166,3 +167,13 @@ These facts were added while building the deliverables. They do not change secti
 **Service lines (P09).** SL-1 monitoring and diagnostics: the fleet M&D center monitors about 9,600 non-safety equipment points for the company's seven units and for 6 external generation owners (14 plants, including 2 nuclear plants owned by others). Clients send data outbound from their plants; the company never connects to client control systems. SL-2 dosimetry: an NVLAP-accredited dosimetry processor (20.1501(d)) that processes about 46,000 dosimeters a quarter, about 70% for about 140 external licensees (hospitals, universities, industrial radiography firms, and other nuclear plants).
 
 **Station 4 legacy systems.** The prior owner's directory, work management system, and vendor VPN remain in service under a transition services agreement that ends 2027-06-30. WMS migration is planned for 2027-05, after Station 4's spring 2027 refueling outage.
+
+**Policy set (P06).** Five policies, 20 standards, and 11 procedures in one hierarchy (`policy-hierarchy.md`), with 52 policy statements. The CIP Senior Manager also approves POL-01 to POL-05 as the CIP-003-9 R1 cyber security policies. Current exceptions include EXC-2026-031 (Station 4 identity), EXC-2026-033 (Station 4 SIEM and EDR), EXC-2026-036 (edge server patching during outage freezes), and EXC-2026-038 (Station 4 vendor VPN).
+
+**Internal Audit team for P07.** An IT audit manager and four IT auditors from the six-person IT audit group. Default administrator passwords on 3 Station 4 sensor gateways were found during testing and reported 2026-08-06.
+
+**Incident response (P08).** The technical tabletop on 2026-04-22 did not include the disclosure committee or the SOC-to-station notification step. The P08 worked example (fictional, 2027-03) uses a Station 2 refueling outage of Unit 2 and an outage contractor roster of 1,350 people in 23 states (230 Florida residents).
+
+**SOC 2 (P09).** SL-1 has 6 client agreements. SL-2 uses client worker Social Security numbers as identifiers for about 40 older clients and about 30 older client agreements predate the standard security terms.
+
+**AI portfolio (P10).** 12 use cases: AI-001 predictive maintenance (High); AI-002 enterprise generative AI assistant; AI-003 SOC alert triage; AI-004 condition report screening (High, pilot); AI-005 outage schedule optimization (pilot); AI-006 dosimetry reading anomaly flagging; AI-007 energy price and load forecasting; AI-008 generative AI drafting assistant for work packages; AI-009 spare parts forecasting; AI-010 engineering document search; AI-011 resume screening (High, suspended); AI-012 employee help desk agent. AI-005, AI-009, AI-011, and AI-012 lack committee review. AI governance committee chaired by the Senior Vice President, Nuclear Engineering. The registry default AI use case (predictive maintenance for non-safety plant equipment) is kept as AI-001 and tiered High at this size because its scope includes balance-of-plant equipment in Maintenance Rule scope under 10 CFR 50.65(b)(2)(iii).

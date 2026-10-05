@@ -103,3 +103,16 @@ Paper: current plan sets ride in the truck; signed subcontracts, lien waivers, a
 | 2026-08-24 | AI use assessment (P10) |
 | 2026-08-31 | Deliverables adopted by the owner |
 | 2026-11-30 | Target date for Final Level 1 (Self) and the SPRS affirmation, ahead of the DoD subcontract award |
+
+## 7. Facts added while building the deliverables
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Accounting password history | The shared accounting password dates from 2023. A previous bookkeeper, whose engagement ended in 2024, also knew it; it was never changed | P07, P09 |
+| Company website | The website runs on a website-builder SaaS, holds no FCI, and has no connection to the home network or the SaaS tenants, so FAR 52.204-21(b)(1)(xi) is not applicable | P02, P03, P07 |
+| Household devices | A game console, a smart TV, and a doorbell camera share the home network. The doorbell camera is household equipment and is not used for company work | P03, P07 |
+| Keys and codes | A spare storage-unit padlock key lent to a subcontractor in 2025 was never returned. Jobsite lockbox codes were reused across jobs | P03 |
+| Project management vendor assurance | The vendor's SOC 2 Type 2 report (Security and Availability, 12 months ending 2026-03-31, unqualified, no exceptions) and a bridge letter through 2026-06-30 were reviewed by the owner on 2026-07-16 | P02, P04, P09 |
+| AI tool use | The AI bid assistant has been used for about 20 bids and change orders since March 2026. FC-1 change-order drawings were uploaded in June 2026. A back-test on 3 completed jobs was run for P10 | P10 |
+| FC-1 submittals | FC-1 submittals (exhaust fans, lighting, door hardware, finishes) include no telecommunications, camera, or network equipment. The DoD subcontract scope includes a wireless door-access upgrade | P03 |
