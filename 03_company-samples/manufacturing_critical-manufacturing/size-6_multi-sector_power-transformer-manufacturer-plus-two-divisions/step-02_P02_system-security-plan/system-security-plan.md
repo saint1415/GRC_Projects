@@ -83,7 +83,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a type f
 - 141 from the High baseline;
 - 1 program management control not in any baseline (PM-9), added because risk acceptance for the GEPS sits at group level.
 
-Other High-baseline controls are fully inherited from the cloud providers (most PE and MP controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the group does not run for this system). CSF 2.0 subcategories in the CSV come from NIST's official CSF 2.0 to SP 800-53 mapping; for 17 controls the official mapping has no entry, and the author mapped them (for example AU-8 to PR.PS-04 and MA-4 to PR.AA-03).
+Other High-baseline controls are fully inherited from the cloud providers (most PE and MP controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the group does not run for this system). CSF 2.0 subcategories in the CSV come from NIST's official CSF 2.0 to SP 800-53 mapping (control enhancements take their base control's entries); for 17 controls neither the control nor its base control has an entry, and the author mapped them (for example AU-8 to PR.PS-04 and MA-4 to PR.AA-03).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the GEPS accounts in provider A (web, application, database, APS, integration hub, supplier portal) and the disaster recovery copy, reporting copy, and backups in provider B.
