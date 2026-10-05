@@ -6,7 +6,7 @@
 | Policy ID | POL-04 |
 | Owner | Group Chief Privacy Officer, with the Group CISO |
 | Approved by | Group CISO and Group General Counsel, under authority of POL-01 |
-| Effective date | 2026-10-01 |
+| Effective date | 2026-10-01 (v2026 revision 2, approved 2026-09-15 after the 2026 assessments; v2026 was first approved 2026-03-18) |
 | Review cycle | Annually (next review 2027-09-30) |
 | Implements (SP 800-53 Rev. 5) | RA-2, AC-3, AC-4, AC-21, MP-3, MP-4, MP-6, SC-8, SC-28, SI-12 |
 | CSF 2.0 | ID.AM-07, PR.DS-01, PR.DS-02, PR.DS-10 |

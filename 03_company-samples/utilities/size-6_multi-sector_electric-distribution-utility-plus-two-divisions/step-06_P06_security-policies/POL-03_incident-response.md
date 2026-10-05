@@ -6,7 +6,7 @@
 | Policy ID | POL-03 |
 | Owner | Group CISO, with the Group General Counsel for notifications |
 | Approved by | Board risk committee |
-| Effective date | 2026-10-01 |
+| Effective date | 2026-10-01 (v2026 revision 2, approved 2026-09-15 after the 2026 assessments; v2026 was first approved 2026-03-18) |
 | Review cycle | Annually (next review 2027-09-30), after every Severity 1 incident, and after each cross-division exercise |
 | Implements (SP 800-53 Rev. 5) | IR-1, IR-2, IR-3, IR-4, IR-5, IR-6, IR-8, CP-2, CP-10 |
 | CSF 2.0 | RS.MA-01, RS.MA-02, RS.AN-03, RS.CO-02, RS.CO-03, RS.MI-01, RC.RP-01, ID.IM-02 |

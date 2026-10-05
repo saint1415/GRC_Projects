@@ -6,7 +6,7 @@
 | Policy ID | POL-02 |
 | Owner | Group CISO (operated by the group identity director and the Group OT security director) |
 | Approved by | Group CISO, under authority of POL-01 |
-| Effective date | 2026-10-01 |
+| Effective date | 2026-10-01 (v2026 revision 2, approved 2026-09-15 after the 2026 assessments; v2026 was first approved 2026-03-18) |
 | Review cycle | Annually (next review 2027-09-30), and after major changes or incidents |
 | Implements (SP 800-53 Rev. 5) | AC-1, AC-2, AC-2(3), AC-3, AC-5, AC-6, AC-6(5), AC-6(7), AC-7, AC-11, AC-17, AC-17(1), IA-2, IA-2(1), IA-2(2), IA-5, IA-8, MA-4, PS-4, PS-7 |
 | CSF 2.0 | PR.AA-01, PR.AA-03, PR.AA-05, PR.AA-06 |

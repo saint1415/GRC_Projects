@@ -5,7 +5,7 @@
 | Organization | Cris Santos Company Holdings, Inc. |
 | Authority | POL-01 section 4.5: a supplement may add stricter or division-specific requirements, never weaker ones; it must be re-aligned within 90 days after a group policy changes and attested every year |
 | Owner | Each division security and compliance lead; alignment reviewed by the Group CISO |
-| Status date | 2026-09-15 (group policies v2026 approved; effective 2026-10-01) |
+| Status date | 2026-09-15 (group policies v2026 revision 2 approved; effective 2026-10-01. v2026 was first approved 2026-03-18) |
 
 ## 1. How group policy, supplements, and regulator documents fit together
 | Layer | Examples | Who approves |
@@ -21,7 +21,7 @@
 ## 2. Supplement status
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
-| Electric Utility | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Confirm alignment; review CIP documents for the POL-02 4.4 and 4.5 changes |
+| Electric Utility | v2026 | 2026-06-30 (to the v2026 group policies of 2026-03-18) | Aligned; minor update for revision 2 due by 2026-12-30 (90 days after its effective date) | Confirm alignment; review CIP documents for the POL-02 4.4 and 4.5 changes |
 | Gas Production | v2023 | 2023-05 | **Drifted** (scenario gap 6); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-016) |
 | Engineering Services | v2025 | 2025-10 | Aligned to the 2025 policies, but missing the client notice register, client CEII and BCSI folder rules, and AI rules required by POL-03 4.5, POL-04 4.4, and POL-05 4.5 | Add them by 2026-12-31 (POAM-020, POAM-021, POAM-022) |
 

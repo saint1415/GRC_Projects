@@ -1,38 +1,26 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | Office and Compliance Administrator (security program coordinator) |
+| Approved by | Owner and General Manager, 2026-08-31 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the company keeps three core policies: access control (POL-02), incident response (POL-03), and data classification and handling (POL-04). A separate Information Security Policy would add little for a 7-person company with one plant, so its essential rules live in **POL-02 Part A. Program governance**:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | FERC or Part 12 basis |
+|---|---|---|
+| Security roles: FERC primary and alternate security contacts, security program coordinator, OT security lead | POL-02 A.1 | Rev. 3A 3.2 (bullets 5 to 8) |
+| Annual risk assessment, which also serves as the Security Assessment | POL-02 A.2 | Rev. 3A 3.2 (bullet 1); 3.3.3 |
+| Who may accept risk; gate risks never accepted at High | POL-02 A.3 | Rev. 3A 3.2 (bullet 1) |
+| Discipline; good-faith reporting protected | POL-02 A.4 | Rev. 3A 3.2 |
+| Vendor security terms and annual vendor review | POL-02 A.5 | Rev. 3A Table 9.3a coordination (voluntary benchmark) |
+| Annual independent assessment | POL-02 A.6 | Rev. 3A 3.2 (bullet 1); results available for FERC review (bullet 12) |
+| Retention of security records; 12.10 reports as permanent project records | POL-02 A.7 | 18 CFR 12.12(a)(1)(iii)(B) |
+| Annual review of policies and the Section 9 screen each July | POL-02 A.8 | Rev. 3A Table 9.3a general measures (voluntary benchmark) |
+| Exceptions process | POL-02 A.9 | Rev. 3A 3.2 |
+| Security review of every change to the control system | POL-02 A.10 | Rev. 3A Table 9.3a system lifecycle (voluntary benchmark) |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice if the company grows past the Micro tier (10 or more employees), acquires a second project, or if FERC moves the dam to Security Group 1 or 2, which would require a Security Plan with its own policy content (Rev. 3A 3.3.1, 3.3.2).

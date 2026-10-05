@@ -6,7 +6,7 @@
 | Policy ID | POL-01 |
 | Owner | Group CISO |
 | Approved by | Board risk committee |
-| Effective date | 2026-10-01 |
+| Effective date | 2026-10-01 (v2026 revision 2, approved 2026-09-15 after the 2026 assessments; v2026 was first approved 2026-03-18) |
 | Review cycle | Annually (next review 2027-09-30), and after major changes, acquisitions, regulatory changes, or Severity 1 incidents |
 | Implements (SP 800-53 Rev. 5) | PM-1, PM-2, PM-9, PL-1, PL-2, PS-8, RA-3, SA-4, SA-9, SR-6, CA-2, CA-5, CA-7, SI-12 |
 | CSF 2.0 | GV.OC-03, GV.PO-01, GV.PO-02, GV.RR-02, GV.RR-04, GV.RM-01, GV.OV-01, GV.SC-05, ID.RA-01, ID.IM-01 |

@@ -37,7 +37,7 @@
 - [ ] Offline ADMS and EMS backups at OCN verified this month; golden images for consoles and servers current (CP-9)
 - [ ] Manual-mode procedures, paper switching order books, and radio checks current at the DCC and backup DCC (P05 BP-02)
 - [ ] OT sensors at the DCC, backup DCC, TCC, and medium impact substations feeding the SOC; **distribution substation coverage 41% (POAM-004)**
-- [ ] DCC and TCC checklists list DOE-417 criteria 1 to 26, **including criterion 14 (due 2026-10-31)**, and the CIP-008 determination steps
+- [ ] DCC and TCC checklists list DOE-417 criteria 1 to 27, **including criterion 14 (due 2026-10-31)**, and the CIP-008 determination steps
 - [ ] Materiality worksheet includes BIA outage costs (**due 2026-10-31, POAM-011**); disclosure committee roster current
 - [ ] Insurer, OT forensics, and outside counsel contacts confirmed this quarter
 

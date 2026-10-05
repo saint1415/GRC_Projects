@@ -6,7 +6,7 @@
 | Policy ID | POL-05 |
 | Owner | Group CISO |
 | Approved by | Group CISO and Group HR director, under authority of POL-01 |
-| Effective date | 2026-10-01 |
+| Effective date | 2026-10-01 (v2026 revision 2, approved 2026-09-15 after the 2026 assessments; v2026 was first approved 2026-03-18) |
 | Review cycle | Annually (next review 2027-09-30) |
 | Implements (SP 800-53 Rev. 5) | PL-4, PL-4(1), AC-20, MP-7, AT-2, CM-10, CM-11 |
 | CSF 2.0 | PR.AT-01, PR.AT-02, PR.PS-05 |
