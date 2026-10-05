@@ -9,7 +9,7 @@ This enterprise-wide BIA identifies the business processes the company depends o
 - the Internal Emergency Response and Rapid Recovery sub-elements of the Security Plans (Rapid Recovery is required for the 4 Group 1 dams, Rev. 3A 3.3.1 and 7.4.2), which must hand off cleanly to the EAPs;
 - the availability rating and recovery objectives in the HFCDMS System Security Plan (P02);
 - impact ratings in the enterprise risk register (P01), per NIST IR 8286D;
-- the recovery order in the incident runbook (P08) and the quantified inputs to the SEC materiality worksheet (P08 section 6);
+- the recovery order in the incident runbook (P08) and the quantified inputs to the SEC materiality worksheet (P08 section 7);
 - the Availability criteria for the two SOC 2 service lines (P09).
 
 **Results in one line:** 18 processes were analyzed; 10 are High criticality, 7 Moderate, and 1 Low. 10 processes need recovery within 4 hours. The dependency map (`dependency-map.csv`) lists 26 dependencies, 14 of them single points of failure (fully or partly) and 6 never tested.
@@ -20,7 +20,7 @@ Cris Santos Company owns 31 FERC licenses covering 46 hydroelectric developments
 **What is different about a dam operator.** For most processes the question is "how long until we lose money." For BP-01, BP-02, BP-09, BP-10, and BP-11 it is also "how long until someone downstream could be hurt." The company can always fall back to **local manual control**: operators at gate and unit panels, and technicians reading instruments by hand. At fleet scale the limit is people and travel time: 35 developments are normally unattended, so the MTDs below measure how long the company can run on dispatched crews safely, not how long a dam can go uncontrolled. No dam is ever left uncontrolled.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day (about $10.0 million from generation) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day (about $10.0 million from generation) and to the company's materiality framework (P08 section 7). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

@@ -111,5 +111,5 @@ The full map is in `dependency-map.csv`. Key findings:
 | Station 4 legacy systems with a 48 h agreement RTO | P01 R-034, R-035; POAM-022 |
 | Outage contractor notice clause missing | P01 R-004; POAM-006 |
 | M&D analytics vendor without a SOC report | P01 R-020; POAM-016 |
-| Dosimetry dose record database never restore-tested | P01 R-026; P03; POAM-019 |
+| Dosimetry dose record database never restore-tested | P01 R-026; P03 G-110; POAM-019 |
 | Station 4 single carrier | P01 R-033; POAM-021 |

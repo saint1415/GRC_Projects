@@ -65,7 +65,7 @@ The vertical's primary regulation applies in full at this size: the company is a
 
 **Gap risk levels across all regulations:** High 7, Moderate 18, Low 5.
 
-**Pattern.** The station programs are mature: NRC inspections since 2022 found no issues above very low safety significance, and the CSP control areas at Stations 1 to 3 are met. **Of the 30 Partially met rows, 18 trace to Station 4**, which still runs the prior owner's procedures, forms, and business systems 15 months after the acquisition. The rest are coordination gaps between the corporate SOC and the stations (73.77(a)(2)(iii), (a)(3), (b)(1)), information handling outside approved systems (73.56(m)(4)), and the untested materiality process.
+**Pattern.** The station programs are mature: NRC inspections since 2022 found no issues above very low safety significance, and the CSP control areas at Stations 1 to 3 are met. **Of the 30 Partially met rows, 15 trace to Station 4**, which still runs the prior owner's procedures, forms, and business systems 15 months after the acquisition. The rest are coordination gaps between the corporate SOC and the stations (73.77(a)(2)(iii), (a)(3), (b)(1)), information handling outside approved systems (73.56(m)(4)), and the untested materiality process.
 
 ## 4. Priority gaps (High)
 | Row | Citation | Gap | Action | Owner | Target |
