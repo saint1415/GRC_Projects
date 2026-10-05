@@ -22,7 +22,7 @@ Micro tier scope: 10 to 15 controls. **13 controls, 108 determination statements
 | AC-2 | Shared desk login; departed technician's account (R-006; P03 G-031) | Focused | Comprehensive (all 5 active SCADA accounts; suite and accounting users) |
 | IA-2(1), IA-5 | Password-only SCADA access; field device passwords (R-002; G-032) | Focused | Focused (SCADA administrator; 3 gateways) |
 | AC-17, MA-4 | Remote command rights; vendor support access (R-002, R-003) | Focused | Focused |
-| SC-7 | Flat office network; private telemetry network (R-001; G-039) | Focused | Focused (all 7 SIMs examined; 3 gateways tested) |
+| SC-7 | Flat office network; private telemetry network (R-001; G-039) | Focused | Focused (3 of 7 gateways tested; carrier SIM report requested for all 7) |
 | CM-8 | No PSGCS inventory (G-026) | Basic | Focused (3 field sites) |
 | CP-9, CP-4 | Configuration copies, backups, and exercises (R-009, R-016, R-019) | Focused | Basic |
 | IR-8 | No incident response plan (R-005; G-030, G-043) | Basic | Basic |
@@ -31,7 +31,7 @@ Micro tier scope: 10 to 15 controls. **13 controls, 108 determination statements
 | AT-2 | No awareness training (R-001, R-012; G-034) | Basic | Focused (5 of 7 staff interviewed) |
 
 ## 2. Methods and objects
-- **Examine:** SCADA user list, role matrix, and access settings; suite and accounting user lists; the SCADA vendor's SOC 2 report (received 2026-08-14); contracts with the SCADA vendor, the MSP, and the carrier; carrier APN settings for all 7 SIMs; the MSP device list, patch report, and backup job report; the O&M manual, emergency plan, and November 2025 drill report; training records; the draft P08 runbook; the P01 risk register.
+- **Examine:** SCADA user list, role matrix, and access settings; suite and accounting user lists; the SCADA vendor's SOC 2 report (received 2026-08-14); contracts with the SCADA vendor, the MSP, and the carrier; the office firewall rule export; the MSP device list, patch report, and backup job report; the O&M manual, emergency plan, and November 2025 drill report; training records; the draft P08 runbook; the P01 risk register.
 - **Interview:** the Owner, the Operations Manager, the Office Manager, 5 of 7 staff (training and reporting), and the MSP lead technician.
 - **Test (read-only, never on a live control path):**
   - a sign-in to the SCADA web client from an outside network with a controller account, observed by the Operations Manager, stopping at the first display (no command sent);
@@ -50,6 +50,7 @@ The SCADA vendor and the MSP operate many controls, so evidence came from them. 
 | Monthly patch report and antivirus console export | MSP | Context for SC-7 | Yes, 2026-08-12 |
 | Suite backup job report and retention settings | MSP | CP-9 | Yes, 2026-08-12 |
 | Firewall rule export | MSP | SC-7 | Yes, 2026-08-12 |
+| SIM report showing private-network status for all 7 SIMs | Cellular carrier | SC-7, CM-8 | Not received by fieldwork end; follow-up in POAM-004 |
 | Technician list and MFA on the RMM tool | MSP | AC-17, SA-9 | Not received by fieldwork end; follow-up in POAM-011 |
 
 ## 3. Rules of engagement

@@ -86,7 +86,7 @@ Of the 41 partially met rows, 10 are rated High, 24 Moderate, and 7 Low. Governa
 | DOE-417 (1) | 0 | 0 | 0 | 1 |
 | **Total (30)** | **20** | **5** | **1** | **4** |
 
-Of the 6 unmet rows, 1 is High (EG-21, Plant P3 vendor access), 3 are Moderate, and 2 are Low. The program is mature and was audited without findings in 2024; the gaps are the new CIP-003-9 Section 5.2 and 6 obligations, the shared IT/OT paths that Section 3.1 rules now permit (EG-10), and two documentation items (EG-24, EG-27).
+Of the 6 unmet rows, 1 is High (EG-21, Plant P3 vendor access), 3 are Moderate, and 2 are Low. The program is mature and was audited without findings in 2024; the gaps are the vendor remote access controls that are new in CIP-003-9 (Section 6), missing evidence for third-party transient cyber asset reviews (Section 5.2), the shared IT/OT paths that Section 3.1 rules now permit (EG-10), and two documentation items (EG-24, EG-27).
 
 ### 3.3 Crude Logistics (`gap-analysis-crude-logistics.csv`)
 | Rule set | Met | Partially met | Not met | N/A |

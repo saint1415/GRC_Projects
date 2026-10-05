@@ -1,2 +1,61 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"The company must maintain an information security program for IT and OT aligned to NIST CSF 2.0, with NIST SP 800-82...",PM-1; PL-2,GV.PO-01,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3); SEC Reg S-K Item 106(b),No
+POL-01,4.2,The CIP Senior Manager must be identified by name and any change documented within 30 calendar days; delegations...,PM-2,GV.RR-02,"N22-R01 (CIP-003-9 R3, R4)",No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes, using NIST SP 800-30 Rev....",RA-3; PM-9,GV.RM-01,SEC Reg S-K Item 106(b)(1)(i); N22-R01 (supports CIP-013-2 R1.1 prioritization),No
+POL-01,4.4,"Every capital project that adds or changes transmission Facilities, control center systems, or substation automation...",RA-2; SA-3,GV.OC-03,N22-R01 (CIP-002-5.1a R1; CIP-014-3 R1),No
+POL-01,4.5,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-06,N22-R01 (NERC Rules of Procedure Appendix 4C self-reporting),No
+POL-01,4.6,Policies must be reviewed at least annually; the CIP Cyber Security Policy at least once every 15 calendar months;...,PL-1,GV.PO-02,N22-R01 (CIP-003-9 R1),No
+POL-01,4.7,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,N22-R01 (Technical Feasibility Exceptions under Rules of Procedure Appendix 4D),No
+POL-01,4.8,"Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and harm,...",PS-8,GV.RR-04,Voluntary benchmark (NIST CSF 2.0),No
+POL-01,4.9,"No vendor may receive access to OT, customer personal information, or BES Cyber System Information until it has been...",SA-9; SR-6,GV.SC-05,N22-R01 (CIP-013-2 R1.2); 16 CFR 681.1(e)(4); Fla. Stat. 501.171(6) worked example,Yes
+POL-01,4.10,Every procurement of products or services for high or medium impact BES Cyber Systems and their EACMS and PACS must...,SR-3; SR-6,GV.SC-06,"N22-R01 (CIP-013-2 R1.1, R2)",Yes
+POL-01,4.11,"Security controls for tier-1 systems, common control providers, and the CIP program must be assessed at least...",CA-2; CA-2(1),ID.IM-01,SEC Reg S-K Item 106(b)(1)(ii); N22-R01 (internal controls),Yes
+POL-01,4.12,"Security documentation, including risk analyses, assessments, and CIP evidence, must be retained for at least 7...",SI-12,GV.PO-02,N22-R01 (CIP standards evidence retention),No
+POL-01,4.13,The CISO must report cybersecurity risk and CIP compliance status to the risk and reliability committee at least...,PM-9,GV.OV-01,SEC Reg S-K Item 106(c),No
+POL-02,4.1,Every user and service must have a unique identity. Shared operator and vendor accounts are prohibited; where a...,IA-2; AC-2,PR.AA-01,"N22-R01 (CIP-007-6 R5.2, R5.3)",Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted; access...",AC-2; AC-3; AC-6,PR.AA-05,"N22-R01 (CIP-004-7 R2.2, R3, R4.1)",Yes
+POL-02,4.3,"Duties that would let one person both change and release switching orders, or both administer and audit a control...",AC-5,PR.AA-05,Voluntary benchmark (OT-STD-01),Yes
+POL-02,4.4,"MFA is required for all remote access, all privileged access, all cloud and SaaS administration, and all access to...",IA-2(1); IA-2(2),PR.AA-03,N22-R01 (CIP-005-7 R2.3); Fla. Stat. 501.171(2) worked example,Yes
+POL-02,4.5,All Interactive Remote Access to OT must pass through an Intermediate System (EMS and medium impact substations) or...,AC-17; MA-4,PR.AA-05,N22-R01 (CIP-005-7 R2.1-R2.3); Voluntary benchmark (OT-STD-01),Yes
+POL-02,4.6,"Vendor remote access to OT must be off by default, enabled per approved window by the control center, and able to be...",AC-17; AC-2(11),PR.AA-05,N22-R01 (CIP-005-7 R2.4-R2.5; CIP-003-9 Att. 1 Sec. 6),Yes
+POL-02,4.7,"For individuals with CIP access, unescorted physical access and Interactive Remote Access must be removed within 24...",PS-4; AC-2,PR.AA-05,N22-R01 (CIP-004-7 R5.1),Yes
+POL-02,4.8,"For other workforce members, access must be disabled the same business day as a termination, and immediately for...",PS-4; AC-2,PR.AA-05,Voluntary benchmark (NIST CSF 2.0),Yes
+POL-02,4.9,"For reassignments and transfers, access no longer needed must be removed by the end of the next calendar day.",PS-5; AC-2,PR.AA-05,N22-R01 (CIP-004-7 R5.2),Yes
+POL-02,4.10,"Authorization records for CIP electronic and unescorted physical access must be verified each calendar quarter, and...",AC-2; AC-6(7),PR.AA-05,"N22-R01 (CIP-004-7 R4.2, R4.3)",Yes
+POL-02,4.11,Provisioned access to BES Cyber System Information must be authorized before it is granted and verified at least...,AC-3; AC-2,PR.DS-01,"N22-R01 (CIP-004-7 R6.1, R6.2; CIP-011-3 R1.2)",Yes
+POL-02,4.12,"Accounts inactive for 45 days must be disabled automatically, in the enterprise and OT domains.",AC-2(3),PR.AA-05,Voluntary benchmark (NIST CSF 2.0),No
+POL-02,4.13,"Bulk or high-impact commands in business systems (for example, AMI bulk remote disconnect, full customer data...",AC-5; AC-6,PR.AA-05,Voluntary benchmark (NIST CSF 2.0); 16 CFR 681.1(d),Yes
+POL-03,4.1,"The company must maintain an incident response plan covering IT and OT, with an OT annex, the CIP-008-6 plan...",IR-8; IR-3,RS.MA-01,"N22-R01 (CIP-008-6 R1, R2.1); SEC Form 8-K Item 1.05",Yes
+POL-03,4.2,Any workforce member or vendor who sees a suspected cyber or physical security incident must report it immediately...,IR-6,RS.MA-02,N22-R01 (CIP-008-6 R1.1),Yes
+POL-03,4.3,"Incidents involving the EMS, its EACMS, or medium impact substations must be evaluated against the documented...",IR-4; IR-6,RS.MA-02,N22-R01 (CIP-008-6 R1.2),Yes
+POL-03,4.4,Notifications must meet the clocks in the P08 notification matrix: E-ISAC and CISA within 1 hour of a Reportable...,IR-6,RS.CO-02,N22-R01 (CIP-008-6 R4); NERC EOP-004-4 R2; Form DOE-417; Fla. Stat. 501.171(3)-(5) worked example,Yes
+POL-03,4.5,The CISO must brief the General Counsel on every severity-1 incident within 24 hours of declaration so the...,IR-6; IR-8,RS.CO-02,SEC Form 8-K Item 1.05,Yes
+POL-03,4.6,"The materiality worksheet must use the BIA outage costs and safety factors, and the materiality step must be...",IR-3; IR-8,RS.MA-03,SEC Form 8-K Item 1.05,Yes
+POL-03,4.7,"Grid safety comes first: control center operators may move to manual operation, isolate OT networks, or disable...",IR-4,RS.MI-01,Voluntary benchmark (OT-STD-01),Yes
+POL-03,4.8,"Evidence must be preserved before rebuilding or restoring systems, per Cyber Asset capability, without delaying grid...",IR-4; AU-9,RS.AN-03,N22-R01 (CIP-009-6 R1.5),Yes
+POL-03,4.9,"No ransom may be paid without approval by the CEO and the General Counsel, notice to the insurer, and an OFAC...",IR-4,RS.MA-01,OFAC ransomware advisory (2021-09-21),Yes
+POL-03,4.10,Recovery plans must exist for every tier-1 system and every high and medium impact BES Cyber System; recovery must...,CP-2; CP-4; CP-10,RC.RP-01,"N22-R01 (CIP-009-6 R1, R2.1, R2.3)",Yes
+POL-03,4.11,"Backups of OT systems must include an offline copy at a separate site, and restores must be verified on a sample at...",CP-9; CP-9(1),PR.DS-11,"N22-R01 (CIP-009-6 R1.3, R2.2)",Yes
+POL-03,4.12,"Lessons learned must be documented within 90 days after an exercise or a Reportable incident, and plans updated and...",IR-4,ID.IM-04,N22-R01 (CIP-008-6 R3.1; CIP-009-6 R3.1),Yes
+POL-04,4.1,Every system owner must record the highest classification of data in the system and the information location in the...,RA-2; CM-12,ID.AM-07,N22-R01 (CIP-011-3 R1.1); Voluntary benchmark (NIST CSF 2.0),No
+POL-04,4.2,"BES Cyber System Information must be identified using the BCSI guide (STD-04.3), labeled, and stored only in...",MP-3; AC-3,PR.DS-01,"N22-R01 (CIP-011-3 R1.1, R1.2)",Yes
+POL-04,4.3,"Restricted and Confidential data must be encrypted in transit and at rest using approved algorithms (STD-04.1),...",SC-8; SC-28,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2) worked example; Voluntary benchmark (OT-STD-01),Yes
+POL-04,4.4,"SSNs, driver license numbers, and bank account numbers must be collected only where needed for credit, identity...",SI-12; PM-5(1),PR.DS-01,Fla. Stat. 501.171(8) worked example; 16 CFR 681.1,No
+POL-04,4.5,"Bulk extracts of customer data must be registered (PRC-04.1), masked where possible, and stored only in the...",AC-3; SI-12,PR.DS-01,Fla. Stat. 501.171(2) worked example,Yes
+POL-04,4.6,"Media and devices holding Restricted or Confidential data, including consumer information, must be sanitized or...",MP-6,PR.DS-01,16 CFR 682.3; N22-R01 (CIP-011-3 R2),No
+POL-04,4.7,Records must be kept for the period in the records retention schedule and disposed of securely when no longer to be...,SI-12; MP-6,PR.DS-01,Fla. Stat. 501.171(8) worked example,No
+POL-04,4.8,Restricted or Confidential data must not be entered into AI tools unless the tool is on the approved AI tools list...,AC-20; SA-9,PR.DS-01,N22-R01 (CIP-011-3 R1.2),Yes
+POL-04,4.9,Client utilities' data (SL-1) and fleet clients' data (SL-2) must be kept logically separate from company data and...,AC-3; AC-4,PR.DS-01,Contract (SL-1 and SL-2 client agreements),Yes
+POL-04,4.10,"Data loss prevention must scan email, collaboration sites, and cloud storage at least quarterly for BCSI and...",SI-4; CM-12(1),DE.CM-01,N22-R01 (CIP-011-3 R1.2),Yes
+POL-05,4.1,Every workforce member must acknowledge this policy and the code of conduct at hire and every year.,PL-4,GV.RR-04,Voluntary benchmark (NIST CSF 2.0),No
+POL-05,4.2,Every workforce member must complete security awareness training at hire and every year; staff with CIP access must...,AT-2; AT-3,PR.AT-01; PR.AT-02,"N22-R01 (CIP-004-7 R1.1, R2.2, R2.3; CIP-003-9 Att. 1 Sec. 1)",Yes
+POL-05,4.3,"Phishing simulations must include control room and field staff, with vishing scenarios for the TCC and DCC.",AT-2(3),PR.AT-01,Voluntary benchmark (NIST CSF 2.0),No
+POL-05,4.4,"Only company-managed laptops, tablets, and phones may connect to company networks or access Restricted or...",AC-19; AC-20,PR.PS-01,Voluntary benchmark (NIST CSF 2.0),No
+POL-05,4.5,"Only company-issued, scanned removable media may connect to OT systems; every device (laptop, test set, or media)...",MP-7; SI-3,PR.PS-01,N22-R01 (CIP-010-4 R4; CIP-003-9 Att. 1 Sec. 5),Yes
+POL-05,4.6,Workforce members must not install software or change security settings on company devices unless their role permits it.,CM-11,PR.PS-01,Voluntary benchmark (NIST CSF 2.0),No
+POL-05,4.7,"Only AI tools on the approved AI tools list may be used for company work, within the data classes approved for each...",AC-20; SA-9,GV.RM-06,Voluntary benchmark (NIST AI RMF 1.0),Yes
+POL-05,4.8,"Workforce members must not post photographs or descriptions of control rooms, substations, OT screens, or security...",PL-4(1),PR.AT-01,N22-R01 (CIP-011-3 R1.2),No
+POL-05,4.9,"In the TCC and DCC, personal phones must stay outside operator positions, and only approved devices may be connected...",AC-19; PE-5,PR.AA-06,N22-R01 (CIP-006-6 R1),No
+POL-05,4.10,"Workforce members must report lost or stolen devices, suspected phishing, and suspicious activity at facilities...",IR-6,RS.MA-02,N22-R01 (CIP-008-6 R1.1),Yes
+POL-05,4.11,Workforce members must not share passwords or authenticators or let others use their badges.,IA-5; PE-3,PR.AA-01,N22-R01 (CIP-004-7 R4),Yes
+POL-05,4.12,"Use of company systems may be monitored; there is no expectation of privacy in company systems, except as the law...",PL-4; AC-8,GV.PO-01,Voluntary benchmark (NIST CSF 2.0),No

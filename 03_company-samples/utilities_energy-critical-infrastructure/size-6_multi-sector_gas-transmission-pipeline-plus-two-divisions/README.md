@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -17,7 +19,7 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | SBA size status | Not small (SBA standard for NAICS 486210: $41.5 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 486210 Pipeline Transportation of Natural Gas |
 | Vertical | Energy (CISA critical infrastructure sector) |
-| Primary system | Pipeline SCADA and gas control system |
+| Primary system | Pipeline SCADA and Gas Control System (PSGCS) |
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
@@ -44,7 +46,7 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. | Company facts only |
-| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Pipeline SCADA and gas control system. | P05: which systems matter and how long they can be down |
+| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Pipeline SCADA and Gas Control System (PSGCS). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. | P02: the system boundary and its controls |
 | 4 | [P01 Risk Register](step-04_P01_risk-register/_context.md) | Group and division registers. Division registers roll up to group ERM. | P05 impact levels; P02 and P04 systems and controls |
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Each division's primary regulation plus group-wide obligations. Regulation-by-division matrix. Regulation: TSA Security Directive Pipeline-2021-02G. | P01 risks; P02 control statements |

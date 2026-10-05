@@ -156,7 +156,7 @@ Of the 15 unmet or partially met rows, 3 are rated High, 9 Moderate, and 3 Low. 
 | 8 | Affiliate vendor treated less rigorously (4) | EU, ES | CIP-013-2 R2; intercompany agreement | Moderate | OT security schedule in the intercompany agreement; full vendor assessment of Engineering Services | Group procurement director | 2027-03-31 |
 | 9 | AI design assistant used with client documents (5) | ES | Client confidentiality terms | Moderate | Block CEII and BCSI uploads; client consent clause | Engineering Services chief operating officer | 2026-12-31 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-012 to POAM-015 trace directly to the Electric Utility rows above; POAM-011 traces to G-079 and ES-G13.
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-012 to POAM-015 trace directly to the Electric Utility rows above; POAM-011 traces to G-076 and ES-G13.
 
 ## 6. Pending regulatory changes
 None of these is treated as a current obligation. Dates are from the NERC CIP standards page (retrieved 2026-09-26) and the vertical research files. The `pending_rule_change` column flags affected rows.
