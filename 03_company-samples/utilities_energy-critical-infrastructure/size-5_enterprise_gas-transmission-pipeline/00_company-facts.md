@@ -37,6 +37,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Vice President, Pipeline Safety and Compliance | PHMSA compliance: O&M manual (192.605), emergency plans (192.615), incident notices (Part 191), operator qualification |
 | GRC team (10), SOC (24x7, in-house with managed security service provider overflow), Internal Audit (in-house, co-sourced with an independent OT assessment firm) | Three lines model |
 | Disclosure committee | 8-K materiality decisions (General Counsel chairs) |
+| AI governance committee | Chaired by the Vice President, Digital and Analytics; reviews and tiers every AI use case; High-tier decisions go to the executive risk committee (P10) |
+| Policy governance committee | Chaired by the CISO; maintains the policy hierarchy and exception register (P06) |
 
 ## 3. Systems
 | ID | System | Hosting | Notes |

@@ -1,0 +1,23 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC5.1,Enterprise risk analysis and treatment status,GRC platform,Chief Risk Officer,Annual; quarterly KRI refresh,Annual report; 1 quarter,P01,Ready
+Both,CC4.1; CC4.2,Internal Audit assessment and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Report; 3 monthly POA&M snapshots,P07,Ready
+Both,CC5.3,Policy hierarchy and exception register,GRC platform,CISO,Monthly register review,3 monthly reviews,P06,Collecting
+Both,CC6.2; CC6.3,"Access requests, certifications, and leaver records (IT)",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new users; 25 leavers; 2 quarterly certifications,P07 AC-2,Collecting
+SL-2,CC6.1; CC6.3,"OT access workflow, shared account register, and transfer reviews",OT access workflow,Director of SCADA Engineering,Per event; quarterly,25 OT account changes; 25 departures; 2 quarterly certifications,"P07 AC-2, IA-5",Not started
+Both,CC6.4,Badge access reviews and provider SOC 2 reports for clouds and colocation,Badge system; supplier register,"Vice President, Corporate Security",Quarterly; annual,2 quarterly reviews; provider reports,P04,Collecting
+SL-2,CC6.6,OT remote access gateway session records (and modem removal evidence),OT remote access gateway,Director of OT Security,Per session,25 vendor sessions,P07 AC-17,Not started
+SL-1,CC6.1; CC6.6,Shipper MFA enrollment and WAF and DDoS configuration,Identity platform; cloud provider A,"Vice President, Commercial Operations",Monthly,3 monthly enrollment reports; configuration export,P04,Collecting
+Both,CC6.8; CC7.1,"EDR coverage, vulnerability scan and patch reports with KEV aging",EDR; vulnerability management,Director of Security Operations,Monthly,3 months,"P07 RA-5, SI-2",Collecting
+Both,CC7.2; CC7.3,SOC alert triage and case records,SIEM; case system,Director of Security Operations,Continuous,25 cases,P07 IR-4,Collecting
+SL-2,CC7.2,OT monitoring coverage report for JV stations,OT network monitoring platform,Director of Security Operations,Monthly,3 monthly coverage reports,P07 SI-4,Not started
+Both,CC7.4; CC7.5,Incident response exercises and after-action reports,GRC platform,Director of Security Operations,Annual; per exercise,All exercises in the period,P08,Collecting
+SL-1,CC8.1,Platform change records from the deployment pipeline,CI/CD pipeline,Director of Commercial Applications,Per change,25 changes,P04,Ready
+SL-2,CC8.1,Management of change records with point-to-point verification,Change workflow,"Vice President, Gas Control",Per change,25 changes,P07 CM-3,Collecting
+Both,CC9.2,"Supplier tiering, contract terms, and subservice SOC 2 report reviews",Supplier register,Director of Third-Party Risk Management,Annual per supplier,All critical suppliers,P07 SA-9,Collecting
+SL-1,A1.1; A1.2; A1.3,"Capacity reports, backup logs, and regional failover test",Cloud provider A,"Vice President, Commercial Operations",Monthly; annual test,3 months; failover test 2026-06-09,P05 DEP-14,Ready
+SL-2,A1.2; A1.3,"GCC-2 failover test, isolation exercise, and offline SCADA backup logs",SCADA; GRC platform,"Vice President, Gas Control",Annual test; weekly backups,Failover and isolation tests; 25 backup jobs,"P07 CP-4, CP-9",Not started
+Both,C1.1; C1.2,"Classification labels, owner-group access reviews, and disposal certificates",Data platform; JV owner portal; destruction vendor,General Counsel,Quarterly,2 quarterly reviews; certificates,P06 POL-04,Collecting
+SL-2,PI1.1; PI1.2,Measurement validation reports and meter test records,Measurement system,Director of Measurement,Monthly,3 months; 25 meter tests,P05 BP-06,Ready
+SL-2,PI1.3; PI1.4; PI1.5,"Allocation runs, reconciliations, and statement release approvals",Measurement and accounting system,"Vice President, Contract Operations",Monthly,3 monthly statement cycles per JV,P05 BP-08,Not started

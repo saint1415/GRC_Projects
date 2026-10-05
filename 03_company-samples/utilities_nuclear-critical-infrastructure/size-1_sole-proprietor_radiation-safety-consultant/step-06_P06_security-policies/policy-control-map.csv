@@ -1,2 +1,43 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,C-NUCLEAR-S01 (CSR-A),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-NUCLEAR-S01 (CSR-A); C-NUCLEAR-S04 (CSIA-B),No
+POL-01,4.4,Risk decision rules; client security risks never accepted above Low,PM-9,GV.RM-01,C-NUCLEAR-S04 (37.43(d)(1)),No
+POL-01,4.5,Annual evaluation with an outside reviewer every second year,CA-2,ID.IM-02,C-NUCLEAR-S01 (CSR-A),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,C-NUCLEAR-S01 (CSR-A),No
+POL-01,5.4,"Written, time-limited exceptions; never relax a client term",PL-1,GV.PO-02,C-NUCLEAR-S01 (CSR-A); C-NUCLEAR-S04 (CSIA-B),No
+POL-01,6.1,Client terms come first; summary of each client's terms,PL-4,GV.PO-01,C-NUCLEAR-S01 (CSR-A); C-NUCLEAR-S04 (CSIA-B),No
+POL-01,6.2,"Vendor list with data held, MFA status, and terms review date",SA-9,GV.SC-05,C-NUCLEAR-S04 (CSIA-B (3)); C-NUCLEAR-S05 (501.171(2)),Yes
+POL-01,6.3,Annual review of the suite provider's SOC 2 report and customer controls,SA-9,GV.SC-07,C-NUCLEAR-S01 (CSR-A (6)),Yes
+POL-01,6.5,Subcontractors only with written flow-down terms and Client A approval,PS-6,GV.SC-05,C-NUCLEAR-S01 (CSR-A (10)),No
+POL-01,6.6,End of engagement: return or destroy with certificate; tell Client B access is no longer needed,MP-6; SI-12,ID.AM-08,C-NUCLEAR-S01 (CSR-A (8)); C-NUCLEAR-S04 (37.43(d)(6); CSIA-B (5)-(6)),Yes
+POL-01,7.2,MFA on every service that offers it; authenticator app for the suite,IA-2(1); IA-2(2),PR.AA-03,C-NUCLEAR-S01 (CSR-A (4)); C-NUCLEAR-S05 (501.171(2)),Yes
+POL-01,7.3,Password manager; no browser-saved passwords; carrier PIN,IA-5,PR.AA-01,C-NUCLEAR-S01 (CSR-A (4)),No
+POL-01,7.4,Standard account for daily work and client portals,AC-6(5),PR.AA-05,C-NUCLEAR-S01 (CSR-A (4)),Yes
+POL-01,7.6,Sealed emergency access envelope with the owner's attorney,AC-2; CP-2,PR.AA-05,C-NUCLEAR-S01 (CSR-A (5)),No
+POL-01,7.7,Monthly review of suite sign-ins and external sharing,AU-6,DE.AE-02,C-NUCLEAR-S04 (CSIA-B (1)); C-NUCLEAR-S01 (CSR-A (5)),No
+POL-01,8.1,Four-level classification including Client Security,RA-2,ID.AM-07,C-NUCLEAR-S04 (37.43(d)(1)),No
+POL-01,8.2,Client Security information stays with the client; unsynced encrypted notes container,AC-3; AC-21; SC-28,PR.DS-01,C-NUCLEAR-S04 (37.43(d)(7); CSIA-B (1)-(2)); C-NUCLEAR-S01 (CSR-A (6)),Yes
+POL-01,8.3,Client information sent only through client portals,SC-8,PR.DS-02,C-NUCLEAR-S04 (CSIA-B (1)),No
+POL-01,8.4,Safeguards Information is not accepted; inadvertent receipt steps,PL-4; IR-6,GV.PO-01,C-NUCLEAR-S03 (73.21(a)(1)); C-NUCLEAR-S01 (CSR-A (6)),No
+POL-01,8.5,Named-person sharing only; no open links,AC-3; AC-21,PR.AA-05,C-NUCLEAR-S04 (37.43(d)(1); CSIA-B (1)),Yes
+POL-01,8.6,Register of client information with return dates,CM-8,ID.AM-07,C-NUCLEAR-S01 (CSR-A (8)); C-NUCLEAR-S04 (CSIA-B (5)),No
+POL-01,8.7,Same-day copy of field data; monthly encrypted export; quarterly restore test,CP-9,PR.DS-11,C-NUCLEAR-S01 (CSR-A (6)),Yes
+POL-01,8.8,Shredding; electronic deletion; drive wiping; destruction records,MP-6,ID.AM-08,C-NUCLEAR-S05 (501.171(8)); C-NUCLEAR-S01 (CSR-A (8)),Yes
+POL-01,8.9,Six-year retention of security records,SI-12,ID.AM-08,C-NUCLEAR-S01 (CSR-A),No
+POL-01,9.2,No business device or media connected to plant systems; guest network only,AC-20; SC-7,PR.IR-01,C-NUCLEAR-S01 (CSR-A (1)); C-NUCLEAR-R01 (73.54 program terms in CSR-A),No
+POL-01,9.3,One encrypted Client A drive; kiosk scan before each use; wiped after each outage,MP-7; SI-3,PR.DS-01,C-NUCLEAR-S01 (CSR-A (2)); C-NUCLEAR-R01 (73.54 program terms in CSR-A),Yes
+POL-01,9.4,Field laptop kept offline until replaced,SI-2; SC-7,PR.PS-02,C-NUCLEAR-S01 (CSR-A (4)),Yes
+POL-01,9.5,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,C-NUCLEAR-S01 (CSR-A (4)),Yes
+POL-01,9.6,Separate business wireless network; unique router password,SC-7,PR.IR-01,C-NUCLEAR-S01 (CSR-A (4)),No
+POL-01,9.7,Photo permits; separate album with sync off; photos to the client portal,AC-19,PR.AA-05,C-NUCLEAR-S01 (CSR-A (7)),No
+POL-01,9.8,No client information in AI tools without client consent and a P10 assessment; predictions never delay checks,PL-4; SA-9,GV.SC-05,C-NUCLEAR-S04 (CSIA-B (3)); C-NUCLEAR-S01 (CSR-A (6)),Yes
+POL-01,9.9,Client A training before each access renewal; annual general course,AT-2,PR.AT-01,C-NUCLEAR-R01 (73.54(d)(1) via CSR-A (3)); C-NUCLEAR-S02 (73.56(f)(2)(iv)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-NUCLEAR-S01 (CSR-A (5)),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,C-NUCLEAR-S01 (CSR-A (5)),Yes
+POL-01,10.3,Client A report within 8 hours; Client B report within 24 hours,IR-6,RS.CO-02,C-NUCLEAR-S01 (CSR-A (5)); C-NUCLEAR-S04 (CSIA-B (4)); C-NUCLEAR-R03 (feeds Client A's 73.77 clocks),Yes
+POL-01,10.4,Personal information notices per the P08 matrix,IR-6,RS.CO-02,C-NUCLEAR-S05 (501.171(3)-(4)),No
+POL-01,10.5,No ransom without legal advice and an OFAC check,IR-4,RS.MA-01,C-NUCLEAR-S01 (CSR-A (5)),No
+POL-01,10.6,Runbook walkthrough before each outage,IR-3,ID.IM-02,C-NUCLEAR-S01 (CSR-A (5)),No
+POL-01,11.2,Peer coverage agreement with Client A's consent,CP-2,RC.RP-01,C-NUCLEAR-S01 (CSR-A (10)),No
+POL-01,12.1,Self-report legal actions to Client A's reviewing official,PS-3,GV.RR-04,C-NUCLEAR-S02 (73.56(g)(1)),No
+POL-01,12.2,Report behavioral observation concerns,PS-3; IR-6,GV.RR-04,C-NUCLEAR-S02 (73.56(f)(3)),No

@@ -151,8 +151,8 @@ See `control-implementation.csv` (216 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 177 |
-| Partially implemented | 33 |
+| Implemented | 173 |
+| Partially implemented | 37 |
 | Planned | 4 |
 | Not applicable | 2 |
 | **Total** | **216** |
@@ -163,7 +163,7 @@ See `control-implementation.csv` (216 controls).
 | Hybrid (shared between a provider and the PSGCS team) | 7 |
 | System-specific | 111 |
 
-Partially implemented controls: AC-2, AC-2(1), AC-17, AT-3, AU-6, AU-11, AU-12, CM-2, CM-3, CM-6, CM-8, CP-2, CP-4, CP-7, CP-8, CP-10, IA-2, IA-2(2), IA-5, IR-3, IR-8, MA-4, MP-3, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, SI-7, SR-3, SR-6. Planned: CM-7(5), SI-7(15), SR-9, SR-10 (all tied to the station replacement program). Not applicable: AC-22 and SC-15, with reasons in the CSV.
+Partially implemented controls: AC-2, AC-2(1), AC-17, AT-3, AU-6, AU-11, AU-12, CM-2, CM-3, CM-6, CM-8, CP-2, CP-4, CP-7, CP-8, CP-9, CP-10, IA-2, IA-2(2), IA-5, IR-3, IR-4, IR-8, MA-4, MP-3, PE-3, PS-4, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, SI-7, SR-3, SR-6. Planned: CM-7(5), SI-7(15), SR-9, SR-10 (all tied to the station replacement program). Not applicable: AC-22 and SC-15, with reasons in the CSV.
 
 Most partial controls trace to three causes: the PS-3 subsystem (not yet migrated), the 22 legacy compressor stations, and third-party remote access.
 
