@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**135 of 216** sample companies are finished (1350 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**136 of 216** sample companies are finished (1360 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -129,6 +129,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation and Warehousing | Enterprise | Marine cargo terminal | [README](03_company-samples/transportation-warehousing/size-5_enterprise_marine-cargo-terminal/README.md) |
 | Transportation and Warehousing | Multi-Sector | Marine cargo terminal plus two divisions | [README](03_company-samples/transportation-warehousing/size-6_multi-sector_marine-cargo-terminal-plus-two-divisions/README.md) |
 | Transportation Systems | Sole Proprietorship | Rail and truck freight broker | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-1_sole-proprietor_rail-and-truck-freight-broker/README.md) |
+| Transportation Systems | Micro | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-2_micro_freight-railroad/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
 | Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
