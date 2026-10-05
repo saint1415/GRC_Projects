@@ -157,7 +157,7 @@ Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_un
 
 ## 6. Findings from the mapping
 1. **The integration hub is the GEPS's weak point, not the cloud.** Encryption, keys, guardrails, and backups are sound (SC-28, SC-12, CM-6, CP-9). The gap is that one hub with 6 over-privileged service accounts with static keys can write work orders to every plant (AC-6, IA-5; P01 GR-02; POAM-002).
-2. **The cloud boundary stops at the OT DMZ, except at P8.** At P1 to P7 nothing in the cloud can reach a controller directly. At P8 the hub reaches a dual-homed MES and a vendor connector sends historian data straight to the internet (SC-7, AC-4; P01 MF-003; POAM-007).
+2. **The cloud boundary stops at the OT DMZ, except at P8.** At P1 to P7 nothing in the cloud can reach a controller directly. At P8 the hub reaches a dual-homed MES and a vendor connector sends historian data straight to the internet (SC-7, AC-4; P01 MF-001; POAM-007).
 3. **Recovery is designed but unproven** (CP-7, CP-10). Database replication to provider B works, but APS and the hub have never been restored in a test (POAM-004).
 4. **Common controls are strong and reused.** One identity platform, one SIEM, one backup design. This is what lets group internal audit assess them once (P07). The weak link is documentation of inheritance for Grid Engineering (P02, POAM-014), and its project platform's 90-day log retention (POAM-022).
 5. **Two critical systems are deliberately outside the cloud.** The Electric Utility's TCC (NERC CIP medium impact) and the plant controllers. Neither depends on SYS-G1 or the GEPS to run, which limits how far a cloud or identity incident can spread (P08).
