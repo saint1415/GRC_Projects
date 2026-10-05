@@ -74,7 +74,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 p
 2. **The SCADA vendor's stated RTO (4 hours) misses the 2-hour target for gas control.** Manual operation must cover hours 2 to 4 of any vendor outage. The company accepts this only with a tested manual operation call list (P01 R-019).
 3. **One cellular carrier serves all 7 field sites.** A carrier outage removes all telemetry at once (P01 R-008). Second-carrier SIMs at the receipt station and the municipal gate station are planned.
 4. **RTU programs exist only on one laptop.** If that laptop is lost or encrypted, a failed RTU cannot be restored quickly (P01 R-009).
-5. **The MSP contract has no recovery time.** Its 4-business-hour response time is not a recovery commitment (P01 R-004).
+5. **The MSP contract has no recovery time.** Its 4-business-hour response time is not a recovery commitment. The MSP contract amendment in P01 R-004 adds a recovery time for the gas control desk.
 
 ## 6. Recovery priorities
 | Priority | Resource | Expected recovery time | Alternate strategy |

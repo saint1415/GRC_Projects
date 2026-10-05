@@ -5,7 +5,7 @@
 | Organization | Cris Santos Company, LLC (small intrastate natural gas transmission pipeline operator) |
 | Tier / Vertical | Micro / Energy |
 | Primary regulation named for this vertical | TSA Security Directive Pipeline-2021-02G (C-ENERGY-R03): **not applicable**, kept as a readiness reference |
-| Binding rules analyzed | PHMSA control room management, 49 CFR 192.631 (C-ENERGY-R04), at its reduced scope; and the SCADA-related duties in 49 CFR 192.605 and 192.615. Text read from eCFR, current through 2026-09-23 |
+| Binding rules analyzed | PHMSA control room management, 49 CFR 192.631 (C-ENERGY-R04), at its reduced scope; and the SCADA-related duties in 49 CFR 192.605 and 192.615. Text read from eCFR during fieldwork (July 2026) |
 | Cyber benchmark analyzed | NIST CSF 2.0 outcomes, with NIST SP 800-82 Rev. 3 (Guide to OT Security, September 2023) as the OT implementation guide |
 | Assessment dates | 2026-07-20 to 2026-07-31 (TSA status confirmed 2026-07-22) |
 | Assessor | Office Manager (security program coordinator) and Operations Manager, with the MSP lead technician |

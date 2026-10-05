@@ -99,3 +99,21 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-20 to 2026-07-31 | Risk assessment and gap analysis with the MSP lead technician (TSA status confirmed 2026-07-22) |
 | 2026-08-17 to 2026-08-19 | Control assessment by an independent OT security consultant (field sites visited 2026-08-18) |
 | 2026-09-15 | Deliverables approved by the Owner |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| SCADA accounts | At fieldwork the tenant had 5 active accounts: the shared desk login, 3 named controller accounts (the Operations Manager and the 2 Pipeline Technicians), and 1 administrator account held by the Operations Manager. The departed technician's account was disabled and the shared desk password changed on 2026-07-23 | P01, P02, P07 |
+| Pipeline segments and polling | The 3 RCVs divide the line into 4 segments. RTUs poll every minute, except RCV site 2, whose older RTU polls every 5 minutes. SCADA door-open alarms are fitted at 4 of the 7 sites | P01, P10 |
+| Controller laptops | Browser-saved SCADA passwords were found on 2 of 3 controller laptops during P07 and removed on 2026-08-19. All laptops use full-disk encryption | P01, P04, P07 |
+| Gateway exposure | The SIM in the municipal gate station gateway was replaced in May 2026 and provisioned with a public address; the carrier moved it back to the private network on 2026-08-19 and the default password was changed the same day | P01, P04, P07 |
+| Leak module trial | The SCADA vendor announced the trial by email on 2026-05-20, switched it on 2026-06-01 at no charge for 6 months (ends 2026-11-30), and updated the model twice in July without notice. The module is outside the vendor's SOC 2 report | P09, P10 |
+| SCADA vendor SOC 2 | Type 2, 12 months ending 2026-06-30, received 2026-08-14 and reviewed 2026-09-04; states RTO 4 hours and RPO 15 minutes | P02, P05, P07, P09 |
+| Municipal questionnaire | The municipal gas system sent a supplier cybersecurity and reliability questionnaire in July 2026; the response is due 2026-10-15 | P09 |
+| Fatigue records | Fatigue education was last given in 2023; the on-call log shows 2 weekends in 2026 when callout time took a controller past the 16-hour limit, with no deviation record | P01, P03 |
+| Procedures on file | The FPSC's 2025 standard inspection reviewed the CRM procedures. No Part 191 incident since 2015 (a 2025 third-party damage leak was below the reporting thresholds). The Owner authorized after-hours laptop access to SCADA in a 2019 memo. Rupture identification procedure (2023); loss-of-communications procedure in O&M manual section 7; annual emergency drill with the city fire department (November 2025) included 1 hour of manual operation at the municipal gate station | P03, P07, P10 |
+| Cyber insurance | The company holds a cyber liability policy with a 24x7 breach hotline and panel counsel and forensics; the policy requires prompt notice and use of panel vendors | P08 |
+| Finances | A cash reserve covers about 60 days of expenses; payroll runs biweekly through an outside payroll service | P05 |
+| Assessor | The P07 assessor is an independent OT security consultant, not involved in P01 or P03 and operating no control | P07 |
