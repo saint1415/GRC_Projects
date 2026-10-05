@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**145 of 216** sample companies are finished (1450 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**146 of 216** sample companies are finished (1460 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -147,6 +147,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Communications | Small | Regional telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-3_small_regional-telecom-carrier/README.md) |
 | Communications | Mid-Market | Telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-4_mid-market_telecom-carrier/README.md) |
 | Communications | Enterprise | Telecom carrier | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-5_enterprise_telecom-carrier/README.md) |
+| Communications | Multi-Sector | Telecom carrier plus two divisions | [README](03_company-samples/information-software-media_communications-critical-infrastructure/size-6_multi-sector_telecom-carrier-plus-two-divisions/README.md) |
 | Information Technology | Small | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-3_small_cloud-hosting-provider/README.md) |
 | Finance and Insurance | Sole Proprietorship | Registered investment adviser | [README](03_company-samples/finance-insurance/size-1_sole-proprietor_registered-investment-adviser/README.md) |
 | Finance and Insurance | Micro | Community credit union | [README](03_company-samples/finance-insurance/size-2_micro_community-credit-union/README.md) |

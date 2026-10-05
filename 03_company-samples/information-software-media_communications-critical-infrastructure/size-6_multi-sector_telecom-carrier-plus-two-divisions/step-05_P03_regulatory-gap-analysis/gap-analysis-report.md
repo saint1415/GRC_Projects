@@ -70,7 +70,7 @@ Submarine cable landing license rules (C-COMMUNICATIONS-R04; no cable or SLTE); 
 | C-COMMUNICATIONS-R04 Submarine cable rules | Not applicable | Not applicable | Not applicable | Not applicable |
 | C-COMMUNICATIONS-R05 CIRCIA | Tracked only (not in effect) | Tracked only | Tracked only | Tracked only |
 | C-COMMUNICATIONS-R06 / N53-R05 SEC | Via group | Via group | Via group | **Applies** (SEC registrant) |
-| N54-R04 FAR 52.204-21 | Not applicable (transport contracts hold no FCI in Carrier systems) | **Applies** (12 contracts) | Not applicable | Not applicable |
+| N54-R04 FAR 52.204-21 | Where a federal transport contract includes the clause; covered by group common controls and not analyzed in this sample | **Applies** (12 contracts) | Not applicable | Not applicable |
 | FAR 52.204-25 and 52.204-23 | **Applies** (federal transport contracts) | **Applies** (12 contracts) | Not applicable | Procurement screening |
 | N54-R01 / N53-R01 FTC Safeguards Rule | Not applicable | Not applicable (not a financial institution) | Not applicable (not a financial institution) | Not applicable |
 | FTC Act Section 5 (N53-R02) | Limited: excludes common carrier activities (15 U.S.C. 45(a)(2)); applies to broadband practices per counsel | **Applies** | **Applies** | Applies |
