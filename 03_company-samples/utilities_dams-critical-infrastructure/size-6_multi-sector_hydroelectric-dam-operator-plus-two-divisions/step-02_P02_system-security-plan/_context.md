@@ -9,7 +9,7 @@
 | Universal method | [step-02_P02_system-security-plan/README.md](../../../../00_universal-framework/projects/step-02_P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** Hydro plant control and dam monitoring system
+**System to document:** Hydro Plant Control and Dam Monitoring System (HPCDMS)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

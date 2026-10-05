@@ -32,7 +32,7 @@
 
 **Not applicable, with reasons:**
 - **NERC CIP (C-ENERGY-R01):** the company is not a NERC-registered entity and owns no Bulk Electric System assets. Its 5 power plant customers are registered; gas supply coordination with them is contractual.
-- **DOE Form OE-417:** electric emergency incidents and disturbances only.
+- **Form DOE-417 (formerly OE-417):** electric emergency incidents and disturbances only.
 - **CIRCIA (C-ENERGY-R05):** proposed only and not in effect (final rule not published as of 2026-09-25). If finalized as proposed, the company would be covered twice over: under proposed 226.2(b)(14)(iv), as corrected by FR Doc. 2024-12084, as "a pipeline facility or system owner or operator required to report cyber incidents by the Transportation Security Administration," and under the size-based criterion, because it exceeds the SBA size standard. Section 6 covers what that would add.
 
 ## 2. Method

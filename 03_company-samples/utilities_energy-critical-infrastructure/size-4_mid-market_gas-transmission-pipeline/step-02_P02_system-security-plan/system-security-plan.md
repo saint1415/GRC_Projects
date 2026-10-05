@@ -42,7 +42,7 @@ It is the SCADA system that 49 CFR 192.631 regulates, and it contains Critical C
 
 Not applicable:
 - **C-ENERGY-R01, NERC CIP.** The company is not a NERC-registered entity and owns no Bulk Electric System assets.
-- **DOE Form OE-417.** Electric operations only.
+- **Form DOE-417 (formerly OE-417).** Electric operations only.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -153,7 +153,7 @@ The inventory is about 85% complete for field devices, with firmware unknown for
 - **Inherited without separate statements:** physical and environmental controls for the cloud and SaaS providers' facilities, evidenced by their SOC 2 reports (P09).
 - **Deferred:** other High-baseline controls with no TSA, 192.631, or High-risk link (for example SA-11 developer testing and SA-15 development process, because the company does not develop SCADA software). They are recorded as tailoring decisions and reviewed yearly.
 
-**CSF 2.0 mapping.** The `csf2_subcategories` column uses the official NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`) wherever it maps the control. For 35 controls the official mapping has no entry, and the column gives an author mapping.
+**CSF 2.0 mapping.** The `csf2_subcategories` column uses the official NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`) wherever it maps the control. For 42 controls (mostly control enhancements, plus the MA, MP, and PS controls listed in the file) the official mapping has no entry, and the column gives an author mapping.
 
 **Status of the 140 documented controls:**
 | Status | Count |
