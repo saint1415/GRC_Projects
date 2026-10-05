@@ -110,7 +110,7 @@ The full map is in `dependency-map.csv`. Key findings:
 |---|---|
 | PTC back office failover 9.5 h against 4 h RTO; 2 key custodians | P01 R-004; P02 CP-10; POAM-006 |
 | Acquired railroads on single legacy dispatch servers (RPO 24 h) | P01 R-003 and R-015; POAM-001 |
-| Manual dispatch fallback for CTC territory exercised at 2 of 11 signaled railroads | P01 R-013; P03 G-021; POAM-020 |
-| No tested fallback for the TSA 30-minute RSSM location duty | P01 R-014; P03 G-038; POAM-019 |
+| Manual dispatch fallback for CTC territory exercised at 2 of 11 signaled railroads | P01 R-013; P03 G-066; POAM-020 |
+| No tested fallback for the TSA 30-minute RSSM location duty | P01 R-014; P03 G-080; POAM-019 |
 | Crew calling telephony provider untested fallback | P01 R-022; POAM-021 |
 | Crossing monitor vendor modems outside PAM and inventory | P01 R-010; POAM-008 |

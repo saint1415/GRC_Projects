@@ -1,0 +1,16 @@
+review_item,what_to_check,billing_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,"Security required; Availability needed because billing, the portal, and the text line run on it",Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Billing, customer portal, text-message support line, payment processing integration, AI support assistant add-on","Billing, portal, and text line in scope. The AI support assistant add-on is not in the system description (launched after the period); the payment processor is a carved-out subservice organization",Ask the vendor when the assistant will be in scope and for its model provider's terms (P10)
+Subservice organizations,Carve-out or inclusive; which hosting and messaging providers,Cloud hosting provider and text-messaging provider carved out; vendor reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 sampled terminated vendor employees kept access for more than 3 days; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Customer enables MFA for admin users; assigns roles and removes users promptly; configures customer authentication and notification settings; reviews admin audit logs; reports suspected compromise,"Map to IA-2(1) (in place), AC-2 (quarterly review), IA-8 (POAM-004: notifications and assistant settings), AU-6 (POAM-007), IR-6 (POAM-008)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA available for all customer admin users; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data within 72 hours under the service terms,Meets the Florida third-party agent 10-day duty (501.171(6)); keep the term at renewal
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its subservice providers,Annual review of the hosting and messaging providers' reports,None
+"Availability commitments (A1.2, A1.3)","Recovery objectives vs the company's BIA (BP-03 RTO 8 h; BP-04 RTO 72 h, RPO 24 h)",RTO 8 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Other key vendor: wholesale VoIP provider,Assurance for the vendor holding the most CPNI,"No SOC 2 report. Security questionnaire answered 2026-08-12: MFA available for reseller accounts, encryption in transit, 24x7 fraud monitoring, CDRs kept 18 months; no contractual breach notice period",Ask for a breach notice term and a SOC 2 report at renewal (POAM-009); repeat the questionnaire each year
+Review sign-off,Reviewer and date,"Owner-operator 2026-07-23, with the network consultant; VoIP questionnaire reviewed 2026-08-12",Repeat every year (POL-01 6.3)

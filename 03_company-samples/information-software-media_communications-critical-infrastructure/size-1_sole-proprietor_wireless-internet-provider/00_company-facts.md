@@ -99,3 +99,10 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Vendor assurance | The billing platform vendor provided its SOC 2 Type 2 report (Security and Availability). The owner reviewed it on 2026-07-23. The wholesale VoIP provider has no SOC 2 report; it answered a security questionnaire on 2026-08-12 | P09 |
 | Cyber insurance | No cyber insurance. The owner's general liability policy has no cyber coverage | P01, P08 |
 | Power | SITE-1 batteries carry the core for about 2 hours; the generator is started by hand. Access points at SITE-2 to SITE-4 have about 4 hours of battery | P05, P01 |
+| Network inventory | 32 access points across the 4 sites. A spare edge router is kept in the SITE-1 shed. The core switch runs firmware about 3 years old | P05, P07 |
+| Credentials history | The shared access point password and the radio controller installer login have not changed since 2021, although a former installer stopped working for the company in 2024 | P01, P07 |
+| Restore test | On 2026-07-23 loading the last saved configuration onto the spare router failed on the first attempt because the switch configuration had not been saved with it | P05, P07 |
+| Counsel review | Counsel agreed on 2026-07-24 that the company provides interconnected VoIP service for CPNI purposes, and searched the FCC's CPNI certification docket (EB Docket No. 06-36) and CEFS: no filings by the company were found | P03 |
+| AI assistant use | About 620 sessions from 2026-05-04 to 2026-08-14 (380 portal chat, 240 text line). The add-on terms say customer data is not used for model training and the model provider keeps transcripts 30 days; written confirmation requested. The add-on was launched after the period of the billing vendor's SOC 2 report, which ends 2026-04-30 | P09, P10 |
+| Billing vendor terms | Customer incident notice within 72 hours under the service terms | P08, P09 |
+| Second AI tool | The owner uses a paid individual plan of a general-purpose AI chat service to draft customer notices and configuration snippets (AI-002), with no customer data | P10 |

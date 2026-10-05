@@ -28,7 +28,7 @@ Not applicable: SEC rules (C-COMMUNICATIONS-R06), submarine cable rules (C-COMMU
 ### 4.1 System Security Plan Approval
 Approved by the owner-operator on 2026-08-31.
 ### 4.2 System Authorization Decision
-No formal authorization applies to a private business. Equivalent decision: the owner-operator accepted continued operation on 2026-08-31, on condition that the High risks in P01 (R-001, R-002) are treated by their due dates.
+No formal authorization applies to a private business. Equivalent decision: the owner-operator accepted continued operation on 2026-08-31, on condition that the High risks in P01 (R-001, R-002, R-009) are treated by their due dates.
 ### 4.3 System Operational Status
 Operational. Planned changes: router firmware update and management filter rework (2026-09-15); encrypted VoIP signaling on all ATAs (2026-12-31); second upstream circuit under evaluation (2027).
 
