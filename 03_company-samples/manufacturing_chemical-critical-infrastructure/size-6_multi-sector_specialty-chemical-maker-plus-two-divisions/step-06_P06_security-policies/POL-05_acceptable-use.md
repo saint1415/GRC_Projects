@@ -1,38 +1,48 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (Group)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company Holdings, Inc. and all divisions |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Owner | Group CISO |
+| Approved by | Group CISO, after board risk committee review |
+| Effective date | 2026-10-01 |
+| Review cycle | Annually (next review 2027-09-30) |
+| Implements (SP 800-53 Rev. 5) | PL-4, AT-2, AT-3, MP-7, AC-19, AC-20, CM-11 |
+| CSF 2.0 | PR.AT-01, PR.AT-02, PR.PS-05, GV.PO-01 |
+| Regulatory basis | 33 CFR 101.650(d) and (i)(2) (Terminal T1); 49 CFR 172.704(a)(4) |
 
 ## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+Set the rules every workforce member follows when using group systems, including control rooms, terminals, trucks, and AI tools.
 
 ## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+All employees, contractors, and integrator and vendor personnel who use any group IT or OT system, including driver tablets and ELDs.
 
 ## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Multi-Sector). For example, at Sole Proprietorship the owner holds every role.]
+All users acknowledge this policy before access and every year. Supervisors make sure their teams complete training. The Group CISO keeps the approved tools list.
 
 ## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
+4.1 Use group systems for authorized business purposes. Do not try to bypass security controls. (PL-4)
+
+4.2 Complete security awareness training every year, and role-based OT training before using OT. At Terminal T1, contractors with IT or OT access must be trained before access or be accompanied or monitored by trained personnel (33 CFR 101.650(d)(3)). (AT-2; AT-3)
+
+4.3 **Control rooms and terminals.** Do not connect personal devices, phones, or removable media to any OT system or network. Use the media scanning kiosk for any approved file transfer. (MP-7; AC-19; 33 CFR 101.650(i)(2))
+
+4.4 Report immediately any process behavior you cannot explain, any unexpected remote session, or any message asking you to change a setpoint, alarm limit, or recipe outside MOC. (IR-6; RS.MA-02)
+
+4.5 Never share your account, badge, or MFA device. (IA-2)
+
+4.6 Driver tablets and ELDs are for driving, dispatch, and shipping paper duties only. Report a lost tablet to dispatch within 1 hour. (AC-19)
+
+4.7 **Generative AI.** Use only tools on the approved list. Do not enter Restricted data into any AI tool unless the project is approved under the Group AI Standard. Check AI output before you rely on it; you are responsible for anything you send or sign. (AC-21; CM-11)
+
+4.8 Install software only through approved channels. (CM-11)
 
 ## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
+Violations are handled under POL-01 section 4.7.
 
 ## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
+Exceptions follow POL-01 section 4.10.
 
 ## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+POL-01 to POL-04; group OT security standard; Group AI Standard (P10); division supplements.

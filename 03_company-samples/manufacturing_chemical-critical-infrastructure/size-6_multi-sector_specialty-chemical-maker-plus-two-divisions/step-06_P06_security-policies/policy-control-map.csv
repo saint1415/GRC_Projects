@@ -1,2 +1,47 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,One IT and OT program aligned to CSF 2.0; OT standard on SP 800-82 Rev. 3,PM-1,GV.PO-01,C-CHEMICAL-R01 (27.230(a)(8)),No
+POL-01,4.2,Group CISO and Group OT Security Director accountable; facility roles named by divisions,PM-2,GV.RR-02,C-CHEMICAL-R01 (27.230(a)(8)) (27.230(a)(17)),No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,C-CHEMICAL-R02 (101.650(e)(1)); HMR 172.802(a),Yes
+POL-01,4.4,Risk acceptance authority by level; process safety High risks must be treated,PM-9,GV.RM-01,RMP 68.67(e),No
+POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,HMR 172.802(c),Yes
+POL-01,4.6,Common control catalog and documented inheritance per division,PL-2; PM-10; CA-2,GV.RR-02,HMR 172.802(b)(2),Yes
+POL-01,4.7,Sanctions in proportion to intent and harm,PS-8,GV.RR-04,None specific,No
+POL-01,4.8,"Security addendum for integrators, OEMs, and service providers with OT or Restricted access",SA-4; SA-9; SR-8,GV.SC-05,C-CHEMICAL-R02 (101.650(f)(2)); RMP 68.87,Yes
+POL-01,4.9,Annual independent assessment; independent audits of the Terminal T1 Plan,CA-2; CA-2(1); CA-7,ID.IM-01,C-CHEMICAL-R02 (101.630(f)(4)); RMP 68.79,Yes
+POL-01,4.10,"Written, risk-rated, time-limited exceptions; never extend a legal deadline or remove a safety function",PL-1,GV.PO-02,None specific,Yes
+POL-01,4.11,Retention: longest of group and regulatory periods,SI-12,GV.PO-02,RMP 68.200; 33 CFR 105.225; HMR 172.704(d),No
+POL-01,4.12,AI inventory and approval; no AI writes to control systems without council approval and MOC,RA-3; CM-3,GV.RM-01,RMP 68.75,Yes
+POL-01,4.13,"MOC with OT security reviewer for control system, recipe, conduit, and AI changes; cyber causes in PHAs; inventory limits",CM-3; CM-4; RA-3,ID.RA-07,RMP 68.75; RMP 68.67(c)(4); 29 CFR 1910.119,Yes
+POL-01,4.14,Regulator-facing roles named in writing; changes reported as required,PM-2,GV.RR-02,C-CHEMICAL-R02 (101.620(b)(3); 101.630(e)(4)); RMP 68.15(b); HMR 172.802(b)(1),No
+POL-02,4.1,No shared accounts; sealed emergency accounts only,AC-2; IA-2; IA-2(5),PR.AA-01,FMCSA 395.22(b)(2)(ii); C-CHEMICAL-R01 (27.230(a)(8)),Yes
+POL-02,4.2,Least privilege; OT engineering rights per site,AC-3; AC-6,PR.AA-05,C-CHEMICAL-R02 (101.650(a)(5)),Yes
+POL-02,4.3,MFA for all workforce and remote access; phishing-resistant for administrators and OT engineering sessions,IA-2(1); IA-2(2),PR.AA-03,C-CHEMICAL-R02 (101.650(a)(4)),Yes
+POL-02,4.4,PAM for privileged credentials; separate privileged accounts,AC-6(5); AC-6(2),PR.AA-05,OT-BM (PR.AA-05),Yes
+POL-02,4.5,Removal within 4 hours (SYS-G1) and 24 hours (local OT); quarterly certification,AC-2(3); PS-4,PR.AA-05,C-CHEMICAL-R02 (101.650(a)(7)),Yes
+POL-02,4.6,"OT remote access only through the gateway: named, site-approved, recorded; no standing connections or third-party tools",AC-17; AC-17(1); MA-4,PR.AA-05,C-CHEMICAL-R02 (101.650(f)(3)); RMP 68.69(d); C-CHEMICAL-R01 (27.230(a)(8)),Yes
+POL-02,4.7,"Integrator accounts sponsored, expiring after 90 days, named",AC-2; IA-8,PR.AA-01,RMP 68.87(b)(4),Yes
+POL-02,4.8,Safety exception: no lockout or timeout on operator HMIs,AC-7; AC-11; AC-2(5),PR.AA-03,OT-BM (PR.AA-03),No
+POL-02,4.9,"SIS changes need named accounts, keyswitch, and two-person verification",AC-3; CM-5; SC-7(21),PR.PS-01,RMP 68.65(d)(1)(viii),Yes
+POL-02,4.10,Default passwords changed before use; authenticator standard,IA-5; IA-5(1),PR.AA-01,C-CHEMICAL-R02 (101.650(a)(2)-(3)),Yes
+POL-02,4.11,"Physical access to OT equipment limited, monitored, and logged",PE-3; PE-6,PR.AA-06,C-CHEMICAL-R02 (101.650(i)(1)),No
+POL-03,4.1,Report incidents and unexplained process behavior immediately,IR-6,RS.MA-02,C-CHEMICAL-R02 (101.650(d)(1)(iv)),Yes
+POL-03,4.2,One severity scale and group playbooks with the OT annex,IR-4; IR-8,RS.MA-01,C-CHEMICAL-R02 (101.650(g)(2)),Yes
+POL-03,4.3,Safe state first; incident commander approves containment that could upset a process,IR-4; CP-12,RS.MI-01,RMP 68.69(a)(1)(iv),Yes
+POL-03,4.4,Release notices never wait for the cyber investigation,IR-6,RS.CO-02,40 CFR 302.6; 40 CFR 355.43; RMP 68.95(a)(1)(i),Yes
+POL-03,4.5,Notification matrix with named owners; Coast Guard and DOT reports by facility owners,IR-6; IR-8,RS.CO-02,33 CFR 6.16-1; HMR 171.15,Yes
+POL-03,4.6,Disclosure committee within 24 hours; OT and safety factors in materiality; 8-K within 4 business days,IR-6,RS.CO-03,N42-R07 (Form 8-K Item 1.05),Yes
+POL-03,4.7,"Ransom decision with board, counsel, insurer, and OFAC check; restore, never decrypt, control systems",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.8,"Export and hold DCS journals, SIS logs, gateway recordings, and firewall logs",IR-4; AU-9,RS.AN-03,RMP 68.81(d),Yes
+POL-03,4.9,Annual cross-division exercise combined with RMP and Terminal T1 exercises; two drills a year at Terminal T1,IR-3; CP-4,ID.IM-02,RMP 68.96; C-CHEMICAL-R02 (101.635),Yes
+POL-03,4.10,Restore from verified offline copies; pre-startup review and MOC before restart,CP-9; CP-10,RC.RP-03,RMP 68.77; RMP 68.75; C-CHEMICAL-R02 (101.650(g)(4)),Yes
+POL-03,4.11,RMP incident investigation for cyber incidents that could affect a covered process; lessons learned,IR-4,ID.IM-02,RMP 68.81,Yes
+POL-04,4.1,Owner and class for every dataset and system,RA-2,ID.AM-05,C-CHEMICAL-R02 (101.650(b)(3)),No
+POL-04,4.2,SSI protected under 49 CFR Part 1520,AC-3; MP-4,PR.DS-01,C-CHEMICAL-R02 (101.630(b)); 33 CFR 105.225(c),Yes
+POL-04,4.3,Legacy CVI handled as Restricted-Security,AC-3; MP-4,PR.DS-01,C-CHEMICAL-R01 (27.400),Yes
+POL-04,4.4,Encrypt Restricted data where feasible; segment and monitor where not,SC-28; SC-8,PR.DS-01,C-CHEMICAL-R02 (101.650(c)(2)),No
+POL-04,4.5,"Offline, integrity-checked copies of OT configurations and recipes",CP-9; SI-7,PR.DS-11,OT-BM (PR.DS-11),Yes
+POL-04,4.6,No Restricted data in AI tools except approved projects,AC-21,PR.DS-10,OT-BM (PR.DS-10),No
+POL-04,4.7,Sanitize media before reuse or disposal,MP-6,PR.DS-01,OT-BM (PR.DS-01),No
+POL-05,4.2,Annual awareness; OT training before OT use; contractor training gate at Terminal T1,AT-2; AT-3,PR.AT-01,C-CHEMICAL-R02 (101.650(d)); HMR 172.704(a)(4),Yes
+POL-05,4.3,No personal devices or removable media on OT; scanning kiosk only,MP-7; AC-19,PR.PS-05,C-CHEMICAL-R02 (101.650(i)(2)),No
+POL-05,4.7,Approved generative AI tools only; check AI output,AC-21; CM-11,PR.DS-10,None specific,No

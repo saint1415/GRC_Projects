@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly status,Report; 3 monthly status packs,P07,Collecting
+Both,CC5.3,Policy set and standards with review dates,Policy portal,CISO,Annual,Current versions,P06,Ready
+Both,CC6.1; CC6.2,"SSO, MFA, and PAM configuration and provisioning records",Identity platform,Director of Identity and Access Management,Continuous,25 new accounts per service line,P02 CCP-02,Collecting
+Both,CC6.3,Quarterly access certifications and leaver reconciliation,Identity governance; OT directory,Director of Identity and Access Management,Quarterly,All quarters; 25 leavers per service line,"P07 AC-2, PS-4",Collecting
+Both,CC6.4,Badge reviews and cloud and colocation provider SOC 2 reports,Badge system; vendor register,"Vice President, Corporate Security",Quarterly; annual,All quarters; current reports,P02 CCP-07,Ready
+Both,CC6.6; CC6.7,"Firewall, WAF, DLP, and TLS configuration reviews",Network and cloud consoles,Director of Network Engineering,Quarterly,All quarterly reviews,P04,Collecting
+Both,CC7.1,Vulnerability and KEV reports with remediation tracking,Scanner; KEV report,Director of Security Operations,Weekly,5 weeks (random),"P07 RA-5, SI-2",Collecting
+Both,CC7.2; CC7.3,"SIEM use case list, SOC metrics, and sampled cases",SIEM; case system,Director of Security Operations,Continuous,25 cases per service line,"P07 AU-6, SI-4, IR-4",Collecting
+Both,CC7.4,"Incident response plan, runbook, and tabletop reports",GRC platform,Director of Security Operations,Annual,Plan and the 2026-11-12 tabletop report,P08,Ready
+Both,CC9.2,"Vendor register, contract clauses, and SOC report reviews",Vendor register,Director of Third-Party Risk Management,Annual,All tier-1 vendors for each service line,P02 CCP-09,Collecting
+SL-1,CC8.1,Pipeline change records with approvals and tests,CI/CD system,"Vice President, Digital Services",Per change,25 changes,P04,Ready
+SL-1,A1.1,Capacity dashboards and scaling events,Cloud provider B monitoring,"Vice President, Digital Services",Monthly,3 months,P04,Ready
+SL-1,A1.2; A1.3; CC7.5,Backup reports and the annual second-region failover test,Backup service; DR report,Director of Cloud Platform Engineering,Daily; annual,25 backup jobs; the annual test,P05 DEP-09,Ready
+SL-1,CC9.1,Carrier concentration plan and dual-SIM rollout records,Device registry,"Vice President, Digital Services",Quarterly,Rollout status,P01 R-047,Not started
+SL-2,CC2.3; CC3.1; PI1.1,"SL-2 system description, commitments register, and standard processing exhibit",GRC platform,"Vice President, Toll Manufacturing",Annual,Current versions,New,Not started
+SL-2,CC8.1; PI1.3,MOC records reconciled to DCS change logs and executed batch recipe versions,MOC system; DCS; batch system,"Vice President, Process Safety and EHS",Weekly,40 changes; 25 batches per SL-2 plant,P07 CM-3 (POAM-001),Not started
+SL-2,PI1.2,Recipe intake approvals (two-person),Batch system,"Vice President, Toll Manufacturing",Per recipe,25 new or changed recipes,P02 AC-5,Collecting
+SL-2,PI1.4,LIMS release records and certificates of analysis delivered to the portal,LIMS; SL-2 portal,"Vice President, Quality",Per batch,25 toll batches,P04,Collecting
+SL-2,PI1.5; C1.1,Recipe vault hash verification and access logs,Recipe vault,"Vice President, Toll Manufacturing",Daily,25 days,POAM-016,Not started
+SL-2,C1.2,Contract-end deletion certificates for customer recipes,GRC platform,"Vice President, Toll Manufacturing",Per contract end,All contract ends in the period,New,Not started
+SL-2,CC7.5,Batch system restore test reports at the 4 SL-2 plants,OT backup vault,Director of OT Security,Annual per plant,All tests,P07 CP-4 (POAM-003),Not started
+SL-2,CC6.1,Gateway account list with named integrator accounts and monthly sponsor reviews,Remote access gateway,Director of OT Security,Monthly,3 months,P07 AC-2 (POAM-005),Collecting

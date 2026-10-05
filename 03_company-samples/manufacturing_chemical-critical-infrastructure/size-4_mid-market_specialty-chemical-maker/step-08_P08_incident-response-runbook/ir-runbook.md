@@ -115,7 +115,7 @@ Restore in BIA priority order (P05 section 8). **Safety gates come before speed.
 1. Emergency notification and response (BP-10): cellular path, already in use
 2. SIS verified: logic compare passes, keyswitches in run, proof test if logic was reloaded (BP-06)
 3. Tank farm levels (BP-02): manual gauging until tank gauging is rebuilt and checked against dips
-4. Ammonia Unit on a verified DCS (BP-03). The Port Plant Manager approves restart after a pre-startup safety review (68.77) that confirms setpoints, alarm limits, and interlocks match the process safety information, credentials are rotated, vendor access is restricted, and an MOC records the restoration
+4. Ammonia Unit on a verified DCS (BP-03). The Port Plant Manager approves restart after a pre-startup review modeled on 68.77 (required by 68.77 if the restoration changes the process safety information) that confirms setpoints, alarm limits, and interlocks match the process safety information, credentials are rotated, vendor access is restricted, and an MOC records the restoration
 5. Clean DCS configuration and recipes (BP-16), then Blend Hall 1 (BP-05)
 6. Loading bays (BP-08) in local mode with two-person verification until bay controllers are verified
 7. Peroxide Unit (BP-04), dock transfer PLC (BP-01), packaging (BP-07)

@@ -7,7 +7,7 @@
 Process Control and Batch Management System (**PCBMS**), identifier CSC-PCBMS-01. The PCBMS is the Port plant's process control system: SYS-01 to SYS-07 and the 52 Port plant OT workstations in SYS-15 (`../00_company-facts.md` section 3).
 
 ## 2. System Overview
-The PCBMS runs every production unit at the Port plant: the bulk tank farm and marine terminal, the Ammonia Unit, the Peroxide Unit, Blend Hall 1 (12 blend reactors), packaging, and the 6 truck loading bays. It executes about 55 batches a day from about 600 master recipes. It supports 8 of the 10 High-criticality processes in the BIA (P05: BP-02 to BP-06, BP-08, BP-10 support, BP-16) and about 70% of company revenue.
+The PCBMS runs every production unit at the Port plant: the bulk tank farm and marine terminal, the Ammonia Unit, the Peroxide Unit, Blend Hall 1 (12 blend reactors), packaging, and the 6 truck loading bays. It executes about 55 batches a day from about 600 master recipes. It supports 7 of the 10 High-criticality processes in the BIA (P05: BP-02 to BP-06, BP-08, and BP-10 in support), the Moderate recipe process BP-16, and about 70% of company revenue.
 
 **Users:** about 150 operators on 4 shifts and their shift supervisors (operator stations and local HMIs); 30 terminal and tank farm staff; 3 Port controls engineers and the Controls Engineering Manager; 55 maintenance and I&E staff (read-only and maintenance screens); technical services chemists (recipe authoring); the OT Security Engineer; and three contracted vendors through the remote access gateway (DCS integrator, SIS vendor, tank gauging vendor).
 

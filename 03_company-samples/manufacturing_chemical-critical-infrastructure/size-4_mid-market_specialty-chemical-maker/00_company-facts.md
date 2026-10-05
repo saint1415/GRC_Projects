@@ -158,3 +158,25 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-04 | SOC 2 readiness assessment completed |
 | 2026-09-11 | AI risk assessment completed |
 | 2026-09-22 | Results to the audit committee; deliverables approved by the COO (Moderate and below) and the CEO (High) |
+
+## 7. Facts added during the build (fictional; used across P01-P10)
+These details were added so the deliverables could be specific. They do not change sections 1-6.
+
+| Topic | Added fact |
+|---|---|
+| Additional role titles | VP Sales and Customer Service (order management, BP-15); Maintenance Manager (Port plant); Procurement Manager; Shift Supervisors (4 crews at the Port plant); Logistics Manager (Port plant); Director of Corporate Communications; Controller; 3 regulatory specialists (SDS authoring) in technical services; a 5-person TTRS engineering team under the Director of Customer Solutions; 4 cloud engineers in the IT team |
+| Terminology | "Process Control and Batch Management System (PCBMS)" is the SSP system in P02, identifier CSC-PCBMS-01 |
+| Port OT workstations (52) | 8 operator stations, 2 DCS EWS, 1 SIS EWS, 12 Blend Hall 1 local HMIs, 5 packaging line HMIs, 3 terminal HMIs, 6 loading bay terminals, 9 historian clients, 2 recipe workstations, 2 operator training stations, 2 I&E maintenance laptops |
+| End-of-support workstations (9) | 5 at the Port plant (4 packaging line HMIs and the dock HMI) and the 4 Inland SCADA HMIs |
+| OT inventory and access data | The OT sensor found 412 Port OT assets; 340 reconciled into the register by 2026-08-01. 214 IT/OT firewall rules. 186 DCS user accounts. 41 gateway and OT administrator accounts. 312 gateway sessions from 2026-05 to 2026-07. 40 contractors with OT access |
+| Workforce activity | 96 terminations and 41 internal transfers in the 12 months to 2026-06-30. USCG training: 371 of 430 Port employees by 2026-01-12; 412 of 430 by 2026-08-31 |
+| Actions after P07 | Tank gauging server password changed 2026-08-20 (web interface restriction due 2026-10-15); integrator gateway accounts narrowed to their zones 2026-09-15; gateway session approvals recorded in the gateway from 2026-10-01 |
+| Backups | Nightly online exports of DCS, batch, and SIS configurations to the OT backup server in the OT DMZ; weekly offline copies in the Port plant fire safe; a monthly second copy to the Inland plant safe (about 90 miles away). LIMS was restore-tested in the cloud in 2026-04 (6 hours) |
+| Process safety program dates | RMP and PSM compliance audit 2025-04-15 (2 of 14 findings open); annual coordination with county fire rescue and the LEPC (2026-03); last notification exercise 2025-11-06; joint cyber and process tabletop set for 2026-11-17 (also the RMP tabletop due before 2026-12-21); Peroxide Unit HAZOP revalidation due 2027-10 |
+| Community notification | Shelter-in-place and evacuation messages are launched from a SaaS community notification service (web console); a phone launch path is being added |
+| Vendors | 11 key cloud and SaaS vendors: cloud provider, ERP, identity provider, MSSP, productivity suite, HR and payroll, fleet management, TTRS gateway maker's device service, cellular carrier, community notification service, AI-005 vendor. SOC 2 reports reviewed for the first 3. OT service providers: DCS integrator, SIS vendor, tank gauging vendor, Inland integrator |
+| Contract terms | TTRS master services agreement: 99.5% monthly availability, replenishment orders within 4 hours, security incident notice within 72 hours (missing from 40 older agreements). HR and payroll vendor: breach notice within 72 hours. MSSP: call within 30 minutes on high severity |
+| FY2027 security plan | $1.5 million one-time and $610,000 a year, approved by the CEO 2026-09-22. The DCS upgrade and replacement of the 9 end-of-support workstations are in the 2027 turnaround capital plan ($1.4 million, turnaround 2027-10) |
+| SOC 2 timeline | Type 1 report as of 2027-03-31; Type 2 observation period 2027-04-01 to 2027-09-30; report expected by 2027-11-30; examined by a CPA firm independent of the co-sourced internal audit firm |
+| AI dates | AI-004 in production since 2025-06; AI-003 since 2025-10; AI-002 since 2026-01; AI-001 since 2026-03 (4 reactors and the dilution skid); AI-005 pilot since 2026-05 |
+| Employees by state | About 800 of 850 employees live in Florida; the rest live in Georgia or Alabama |

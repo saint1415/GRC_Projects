@@ -120,7 +120,7 @@ The design is independent of the provider. This table gives each provider's name
 | Cloud identity federation | IAM Identity Center | Microsoft Entra ID with Azure RBAC | Cloud Identity with IAM |
 | Network hub and cloud firewall | Transit Gateway, AWS Network Firewall | Virtual WAN hub, Azure Firewall | Network Connectivity Center, Cloud NGFW |
 | Site-to-cloud VPN | Site-to-Site VPN | VPN Gateway | Cloud VPN |
-| Device messaging for telemetry | AWS IoT Core | Azure IoT Hub | Pub/Sub with a device gateway (Google retired its IoT Core service) |
+| Device messaging for telemetry | AWS IoT Core | Azure IoT Hub | Pub/Sub with a partner device gateway |
 | Managed database | Amazon RDS or Aurora | Azure SQL or Azure Database for PostgreSQL | Cloud SQL |
 | Object storage with write-once retention | S3 with Object Lock | Blob Storage with immutability policies | Cloud Storage with bucket lock |
 | Managed file shares | Amazon FSx | Azure Files | Filestore |
