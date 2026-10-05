@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**119 of 216** sample companies are finished (1190 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**122 of 216** sample companies are finished (1220 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -75,9 +75,12 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Nuclear Reactors, Materials, and Waste | Small | Radioactive waste processor | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-3_small_radioactive-waste-processor/README.md) |
 | Nuclear Reactors, Materials, and Waste | Mid-Market | Nuclear power plant | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-4_mid-market_nuclear-power-plant/README.md) |
 | Nuclear Reactors, Materials, and Waste | Enterprise | Nuclear power plant | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-5_enterprise_nuclear-power-plant/README.md) |
+| Nuclear Reactors, Materials, and Waste | Multi-Sector | Nuclear power plant plus two divisions | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-6_multi-sector_nuclear-power-plant-plus-two-divisions/README.md) |
 | Water and Wastewater Systems | Sole Proprietorship | Small water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-1_sole-proprietor_small-water-system/README.md) |
 | Water and Wastewater Systems | Micro | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-2_micro_community-water-system/README.md) |
 | Water and Wastewater Systems | Small | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-3_small_community-water-system/README.md) |
+| Water and Wastewater Systems | Mid-Market | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-4_mid-market_community-water-system/README.md) |
+| Water and Wastewater Systems | Enterprise | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-5_enterprise_community-water-system/README.md) |
 | Construction | Sole Proprietorship | Commercial general contractor | [README](03_company-samples/construction/size-1_sole-proprietor_commercial-general-contractor/README.md) |
 | Construction | Micro | Commercial general contractor | [README](03_company-samples/construction/size-2_micro_commercial-general-contractor/README.md) |
 | Construction | Small | Commercial general contractor | [README](03_company-samples/construction/size-3_small_commercial-general-contractor/README.md) |

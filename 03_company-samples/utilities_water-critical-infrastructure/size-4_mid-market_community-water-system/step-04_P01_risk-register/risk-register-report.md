@@ -106,9 +106,9 @@ System-level registers are filtered views of this file, kept by each owner, so t
 | System-level register | Owner | Risks in scope |
 |---|---|---|
 | IWOS (SSP in P02) | Director of Water Operations, with the SCADA and Controls Engineering Manager | 29 risks whose affected assets include SYS-01 to SYS-06 (filter `affected_asset_or_process`) |
-| Regional System RRA cyber addendum (PWSID 1) | Emergency Management and Resilience Manager | R-003, R-005, R-012, R-019 to R-021, R-023 to R-029, R-043, R-044, R-049, R-053 |
-| Lakes System RRA cyber addendum (PWSID 2) | Emergency Management and Resilience Manager | R-002, R-003, R-007 to R-012, R-013, R-015, R-017 to R-020, R-022, R-024 to R-028 |
-| Ridge System RRA cyber addendum (PWSID 3) | Emergency Management and Resilience Manager | R-001, R-003, R-008 to R-013, R-016 to R-020, R-022, R-024 to R-028 |
+| Regional System RRA cyber addendum | Emergency Management and Resilience Manager | R-003, R-005, R-012, R-019 to R-021, R-023 to R-029, R-043, R-044, R-049, R-053 |
+| Lakes System RRA cyber addendum | Emergency Management and Resilience Manager | R-002, R-003, R-007 to R-012, R-013, R-015, R-017 to R-020, R-022, R-024 to R-028 |
+| Ridge System RRA cyber addendum | Emergency Management and Resilience Manager | R-001, R-003, R-008 to R-013, R-016 to R-020, R-022, R-024 to R-028 |
 | Small systems (not required to certify; same method applied) | Director of Water Operations | R-004, R-009 to R-012, R-018, R-020, R-022, R-051, R-052 |
 | Utility Services (feeds SOC 2 readiness, P09) | Director of Utility Services | R-005, R-006, R-021, R-035 to R-038 |
 | AI portfolio (P10) | Water Quality and Compliance Manager (program lead) | R-043 to R-048 |

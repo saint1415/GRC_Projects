@@ -10,7 +10,7 @@ POL-01,4.8,"Supplier security terms, including for sister divisions acting as su
 POL-01,4.9,Annual common control assessment and division samples; review before any government self-assessment or affirmation,CA-2; CA-7,ID.IM-01,N23-R04 (32 CFR 170.16; 170.22),Yes
 POL-01,4.10,"Written, time-limited exceptions; OT remote access exceptions need the Group OT Security Director",PL-1,GV.PO-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)),No
 POL-01,4.11,Retention: 6 years for security records; RRAs and ERPs 5 years after certification,SI-12,GV.PO-02,C-WATER-R01 (300i-2(d)),No
-POL-01,4.12,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,C-WATER-R01 (300i-2(a)(1)(A)(iii)),Yes
+POL-01,4.12,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,C-WATER-R01 (300i-2(a)(1)(A)(iii)),No
 POL-02,4.1,Named accounts; no shared accounts except staffed control-room shift sessions with named sign-in,AC-2; IA-2,PR.AA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii)); N23-R03 (NIST SP 800-171 3.5.1),Yes
 POL-02,4.2,Least privilege with HMI roles,AC-3; AC-6,PR.AA-05,N56-R07 (52.204-21(b)(1)(ii)),Yes
 POL-02,4.3,"MFA for remote, privileged, and cloud access; phishing-resistant for administrators",IA-2(1); IA-2(2),PR.AA-03,N23-R03 (NIST SP 800-171 3.5.3),Yes
