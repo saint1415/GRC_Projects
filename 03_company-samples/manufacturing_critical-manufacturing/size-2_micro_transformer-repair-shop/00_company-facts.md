@@ -122,3 +122,9 @@ These facts were added because the deliverables needed them. They do not change 
 | Payroll and cash | Payroll runs biweekly through an outside payroll service. A cash reserve covers about 45 days of expenses | P01, P05 |
 | Cooperative questionnaire | The G&T cooperative sent a vendor security questionnaire in 2026-07 asking for a SOC 2 report or an equivalent self-assessment; the response is due 2026-09-30 | P09 |
 | Assessor | The P07 assessor is an independent consultant engaged for a fixed fee, not involved in the risk or gap analysis and operating no control | P07 |
+| Shared drive sharing | A sharing report on 2026-07-15 found 14 anyone-with-the-link shares, two of them to the federal order folder | P03, P04 |
+| Cooperative corrective plan | After notifying the cooperative on 2026-07-16, the Office Manager sent a written corrective plan (leaver checklist with a 1-business-day notice step) on 2026-07-20 | P01, P09 |
+| Oven safeguards | The drying oven's over-temperature trip and pressure relief are hard-wired and work independently of the PLC (OEM manual). An operator is present during every cycle | P01, P08 |
+| P07 test results | From a laptop on the staff Wi-Fi the assessor reached the oven HMI status page and the test PC's file share (used to copy test reports). Two disabled 2024 accounts were found in the suite and removed on 2026-08-12 | P07 |
+| AI-001 back-test | On 2026-08-20 the shop compared portal scores with teardown findings for 40 customer units. The vendor's documentation says its model was built mainly on mineral oil data from larger power transformers. Of the 25 units found sound at teardown, 6 were filled with natural ester fluid (mostly from solar farms) | P10 |
+| Test PC replacement | The test set vendor will quote a replacement PC with a supported operating system and current software (expected about $2,500) by 2026-10-31 | P01, P07 |

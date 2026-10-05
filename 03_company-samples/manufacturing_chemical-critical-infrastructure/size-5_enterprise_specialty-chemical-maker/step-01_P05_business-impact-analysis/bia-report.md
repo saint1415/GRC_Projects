@@ -118,8 +118,8 @@ The full map is in `dependency-map.csv`. Key findings:
 |---|---|
 | OT restore tested for 1 of 3 PLT-01 DCS areas | P01 R-007; P02 CP-4; POAM-003 |
 | SIS program comparison manual and irregular | P01 R-003; P02 SI-7; POAM-009 |
-| Acquired plants with flat networks, outside remote access, and untested local backups | P01 R-010 and R-011; P03 G-062; POAM-014 and POAM-015 |
-| Emergency notification depends on business VoIP at 9 plants | P01 R-021; P03 G-052; POAM-017 |
+| Acquired plants with flat networks, outside remote access, and untested local backups | P01 R-010 and R-011; P03 G-097 and G-098; POAM-014 and POAM-015 |
+| Emergency notification depends on business VoIP at 9 plants | P01 R-021; P03 G-061 and G-074; POAM-017 |
 | DCS vendor and 2 integrators without security clauses; shared integrator accounts | P01 R-013; P02 SR-6 and AC-2; POAM-005 and POAM-010 |
-| TMS and telematics not in the DOT security plan risk assessment | P01 R-024; P03 G-071; POAM-018 |
+| TMS and telematics not in the DOT security plan risk assessment | P01 R-024; P03 G-077; POAM-018 |
 | Single cellular carrier for 80% of telemetry sensors | P01 R-047 |

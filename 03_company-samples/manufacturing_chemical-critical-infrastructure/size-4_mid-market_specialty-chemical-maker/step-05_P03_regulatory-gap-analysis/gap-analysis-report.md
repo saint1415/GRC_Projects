@@ -98,7 +98,7 @@ The roadmap is built backward from the 2027-07-16 USCG date, with a month of mar
 | Phase | Window | Outcomes | Rows closed (examples) |
 |---|---|---|---|
 | **1. Stop the bleeding** | 2026 Q4 | 6.16-1 reporting in procedures and the FSP; default password sweep; employee training complete and contractor training started; SSI share restricted; notification path independent of the business network; full DCS restore test; joint tabletop 2026-11-17 (also the RMP tabletop and the first USCG exercise) | G-010, G-021, G-034, G-040, G-044, G-046, G-062, G-064 |
-| **2. Build the plan's content** | 2027 Q1 | Cybersecurity Assessment; critical systems list; KEV process; OT vendor notice clauses; MSSP OT monitoring; approved hardware and software list; standards STD-01 to STD-06; PHA addendum; DOT plan revision | G-007, G-008, G-016, G-024, G-030, G-036, G-051, G-074, G-079 |
+| **2. Build the plan's content** | 2027 Q1 | Cybersecurity Assessment; critical systems list; KEV process; OT vendor notice clauses; MSSP OT monitoring; approved hardware and software list; standards STD-01 to STD-08 in force (most issued by 2026-12-31); PHA addendum; DOT plan revision | G-007, G-008, G-016, G-024, G-030, G-036, G-051, G-074, G-079 |
 | **3. Write and submit** | 2027 Q2 | Plan sections complete; USCG-scoped penetration test; first cyber drills; unique console accounts; submission by 2027-06-15 | G-002, G-003, G-014, G-025, G-039 |
 | **4. Operate under the plan** | 2027 Q3 onward | Run the plan as approved; quarterly drills and reviews; first annual plan audit within 12 months of approval; Peroxide Unit HAZOP revalidation with cyber scenarios (2027-10) | G-033, G-043, G-066 |
 

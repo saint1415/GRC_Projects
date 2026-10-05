@@ -38,7 +38,7 @@ The PCBMS runs every production unit at the Port plant: the bulk tank farm and m
 | (none) | OT benchmark | NIST CSF 2.0 with NIST SP 800-82 Rev. 3 | **Voluntary.** Zones, tailoring, and safety-first decisions in this plan follow SP 800-82 Rev. 3 |
 | C-CHEMICAL-R03 | CIRCIA (proposed 6 CFR Part 226) | 89 FR 23644 (2024-04-04) | **Not in effect.** Tracked in P03 only |
 | (none) | Sensitive Security Information | 49 CFR Part 1520 | **Binding.** The FSP, the Facility Security Assessment, and the future Cybersecurity Plan (101.630(b)) are SSI. PCBMS network maps and critical system lists will be part of the Cybersecurity Plan and are handled as SSI |
-| Internal | Policies POL-01 to POL-05 and standards STD-01 to STD-06 | P06 | All apply to OT |
+| Internal | Policies POL-01 to POL-05 and standards STD-01 to STD-08 | P06 | All apply to OT |
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -228,7 +228,7 @@ See `control-implementation.csv`. Summary of the 110 documented controls:
 Most controls are Partially implemented because the 2023-2024 investments (OT DMZ, gateway, named engineering accounts, allowlisting, offline backups) cover the core of the PCBMS but not the terminal equipment, the operators, or the evidence the USCG rule expects (documented lists, logs reviewed, tests done). The gaps trace to `../00_company-facts.md` section 4 (gaps 1 to 9, 14, 15).
 
 ### 10.2 Control assessment status
-The co-sourced internal audit firm, with an OT specialist subcontractor, assessed 36 controls (32 PCBMS controls and 4 inherited common controls) from 2026-08-10 to 2026-08-28, with OT testing on 2026-08-19 during a planned Blend Hall 1 outage. See P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`. Weaknesses are tracked in the POA&M and reported to the audit committee each quarter.
+The co-sourced internal audit firm, with an OT specialist subcontractor, assessed 36 controls (32 PCBMS controls and 4 inherited common controls) from 2026-08-10 to 2026-08-28, with OT testing on 2026-08-19 during a planned Blend Hall 1 outage. See P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`. Weaknesses are tracked in the POA&M (22 items, 15 High) and reported to the audit committee each quarter.
 
 ## 11. Digital Identity Acceptance Statement
 - **Remote access (vendors and engineers):** authenticator assurance level 2 (AAL2) in NIST SP 800-63B terms through the identity provider today (push with number matching). Phishing-resistant authenticators (FIDO2 security keys) are required for any session that can change DCS, SIS, or terminal configuration by 2027-03-31 (P01 R-001). Remote access is the most likely path to the toxic release scenario, so the bar is higher than for office systems.
