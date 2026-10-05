@@ -163,3 +163,12 @@ FERC assigned the Security Groups (letters to the company in 2019 after the acqu
 | P07 sample details and new findings (see P07 `assessment-plan.md`) | P07 |
 | Cyber insurance: $15 million limit, $500,000 retention; carrier panel supplies breach counsel and forensics; notice through the carrier hotline before engaging vendors | P08 |
 | AI pilot measures for AI-001 and AI-002 (see P10) | P10 |
+| Operations detail: 86 critical instruments read manually every 4 hours when automation is lost; 22 qualified call-out gate operators for the 20 panels; 105 cameras (64 at BWB and CDS, 41 at PNH, SGR, and the ROC); satellite phones at the ROC and BWB only; the ICCP link runs on one leased circuit | P05, P01, P03 |
+| Cedar Shoals raw-water contract: about $1.2 million a year; the county water plant serves about 21,000 customers with 1 day of treated storage; undetected full flows could draw the reservoir below the intake in about 30 hours | P05, P01 |
+| RMOS commitments (draft): 99.5% monthly availability, alarm relay within 5 minutes, monthly reports by the 10th; service credits of 10% of the monthly fee per day of outage, capped at 30%; 2 of 4 operating orders lack handback times | P05, P09 |
+| Compliance records: CIP-002 identifications approved 2025-01-14 and 2026-02-10; CIP Senior Manager designated 2024-05-02; CIP-003 policy updated for topic 1.2.6 on 2026-03-20; CIP-003 IR plan updated 2025-01-30; EOP-004 Operating Plan rev. 2025-02 with one report (2025-11 trespass at the BWB switchyard); Security Assessments CDS 2019 and PNH 2020; the 2024 and 2025 certification letters stated Section 9 compliance; Form 3 completed 2026-07-16 with 19 negative answers | P03 |
+| OT detail: 612 inventoried assets at the ROC and BWB; 47 controllers and HMIs, with complete backups for 19; BWB restore test 2025-11 (unit PLC and HMI rebuilt in 6 hours); interim controls from 2026-09-15 (OEM VPNs disabled except during approved sessions); SGR modem disconnected 2026-08-13; RMOS client tunnel rules narrowed by 2026-10-15 | P02, P07, P08 |
+| FY2027 budget allocation and staffing additions (1 OT security engineer, 1 GRC analyst) | P01 |
+| Vendor reviews (8) for the MSSP, SCADA vendor, 3 OEMs, cloud provider, identity provider, and HR/payroll SaaS | P09 |
+| AI-005 enterprise assistant rolled out to 300 users in 2026-05; AI-003 in production since 2024; AI-004 pilot at BWB since 2026-03 | P10 |
+| Executive ransomware tabletop scheduled 2026-12-08 | P08, P07 |

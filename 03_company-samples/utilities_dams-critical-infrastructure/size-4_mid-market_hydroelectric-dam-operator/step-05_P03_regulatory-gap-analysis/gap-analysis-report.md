@@ -72,7 +72,7 @@ Of the 60 unmet or partially met rows, 1 is rated Very High, 25 High, 24 Moderat
 **Reading the results.** This is a defined program with gaps in scale:
 - **Physical security and the paperwork FERC inspects are largely sound.** Key control, law enforcement relations, Security Plan updates, VA and SA cycles, Part 12 reporting of physical conditions, and gate testing are met.
 - **Section 9 is where the gaps cluster:** 25 of the 33 Section 9 and Form 3 rows are unmet or partially met. The jump hosts, ROC monitoring, and BWB recovery show the program works where it was applied; it was not extended to CDS, PNH, SGR, the OEMs, or the RMOS clients.
-- **NERC low impact compliance is mostly met, with 6 gaps:** CIP-003-9 Section 3.1 at the ROC (client tunnel rules), Section 6.3 at CDS (new in 2026), and CIP-012-2 Parts 1.2 to 1.5 (new in 2026). The General Counsel decides on self-reporting the possible noncompliance by 2026-10-15.
+- **NERC compliance is mostly met, with 6 gaps:** CIP-003-9 Section 3.1 at the ROC (client tunnel rules), Section 6.3 at CDS (new in 2026), and CIP-012-2 Parts 1.2 to 1.5 (new in 2026). The General Counsel decides on self-reporting the possible noncompliance by 2026-10-15.
 - **The most sensitive finding concerns statements to FERC.** The 2024 and 2025 certification letters stated Section 9 compliance although the determinations had not been re-evaluated (G-035). The plan and schedule sent on 2026-09-30 includes a clarifying statement.
 
 ## 4. Priority gaps (Very High and High)

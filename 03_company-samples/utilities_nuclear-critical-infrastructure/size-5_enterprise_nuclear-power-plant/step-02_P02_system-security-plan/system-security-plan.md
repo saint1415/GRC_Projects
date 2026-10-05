@@ -111,7 +111,8 @@ flowchart LR
   WMS --> EDGE
   HR --> WMS
   WMS --> SIEM
-  ST --> SIEM
+  WCC --> SIEM
+  HR --> SIEM
   WMS <--> ERP["ERP (SYS-09)"]
   WMS -->|work history| MD["M&D platform (SYS-12)"]
   S4["Station 4 legacy WMS (prior owner)"] -. weekly file .-> WMS
