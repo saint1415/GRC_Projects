@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**128 of 216** sample companies are finished (1280 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**129 of 216** sample companies are finished (1290 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -87,6 +87,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Construction | Small | Commercial general contractor | [README](03_company-samples/construction/size-3_small_commercial-general-contractor/README.md) |
 | Construction | Mid-Market | Commercial general contractor | [README](03_company-samples/construction/size-4_mid-market_commercial-general-contractor/README.md) |
 | Construction | Enterprise | Commercial general contractor | [README](03_company-samples/construction/size-5_enterprise_commercial-general-contractor/README.md) |
+| Construction | Multi-Sector | Commercial general contractor plus two divisions | [README](03_company-samples/construction/size-6_multi-sector_commercial-general-contractor-plus-two-divisions/README.md) |
 | Manufacturing | Sole Proprietorship | CNC machine shop | [README](03_company-samples/manufacturing/size-1_sole-proprietor_cnc-machine-shop/README.md) |
 | Manufacturing | Micro | Medical device startup | [README](03_company-samples/manufacturing/size-2_micro_medical-device-startup/README.md) |
 | Manufacturing | Small | Medical device manufacturer | [README](03_company-samples/manufacturing/size-3_small_medical-device-manufacturer/README.md) |
