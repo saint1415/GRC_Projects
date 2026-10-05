@@ -1,2 +1,38 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security lead and CMMC Affirming Official designated in writing,PM-2,GV.RR-02,N23-R04 (32 CFR 170.22(a)(1)),No
+POL-02,A.2,Annual risk assessment with SP 800-30; every risk owned and treated,RA-3,ID.RA-01,N23-R04 (supports 32 CFR 170.15 readiness),No
+POL-02,A.3,Risk acceptance authority; federal representation risks never accepted,PM-9,GV.RM-01,N23-R04 (32 CFR 170.22),No
+POL-02,A.4,Sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,Business need,No
+POL-02,A.5,Security review and contract terms before a vendor holds FCI or Restricted data,SA-9,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),No
+POL-02,A.6,"Call-back, Owner approval, log, and 5-day hold for every bank change; monthly change report",AC-5,PR.AA-05,N23-R01 (52.204-21(b)(1)(ii)); FAR 52.232-33(e)(2),Yes
+POL-02,A.7,Annual assessment; affirmations and representations only after evidence and counsel review,CA-2,GV.OV-01,N23-R04 (32 CFR 170.15(a)(1); 170.22); N23-R02 (52.204-26),No
+POL-02,A.8,No Section 889 covered equipment; actual manufacturer confirmed in writing,SR-5,GV.SC-05,N23-R02 (52.204-25(b)),Yes
+POL-02,A.9,"Flow down FAR 52.204-21, 52.204-25, and the CMMC level; check subcontractor status",SA-4,GV.SC-05,N23-R01 (52.204-21(c)); N23-R02 (52.204-25(e)); N23-R04 (32 CFR 170.23),No
+POL-02,A.10,"Annual policy review; written, time-limited exceptions",PL-1,GV.PO-02,Business need,No
+POL-02,B.1,Unique accounts; no shared mailbox password or shared tablet sign-in,IA-2; AC-2,PR.AA-01,N23-R01 (52.204-21(b)(1)(i)); N23-R01 (52.204-21(b)(1)(v)),Yes
+POL-02,B.2,"Least privilege; limited SYS-01, SYS-02, and bank portal rights; restricted folders",AC-3; AC-6,PR.AA-05,N23-R01 (52.204-21(b)(1)(ii)),No
+POL-02,B.3,"MFA everywhere, including MSP-held administrator logins; security keys for payment roles",IA-2(1); IA-2(2); IA-2(8),PR.AA-03,N23-R01 (52.204-21(b)(1)(vi)),Yes
+POL-02,B.4,Termination checklist completed on or before the last day,PS-4; AC-2,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)),Yes
+POL-02,B.5,External users removed at closeout; quarterly user review,AC-2,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)),Yes
+POL-02,B.6,12-character passwords in a password manager; default passwords changed,IA-5,PR.AA-01,N23-R01 (52.204-21(b)(1)(vi)),No
+POL-02,B.7,"Only enrolled devices reach FCI; passcode, encryption, remote wipe, 10-minute lock",AC-19; AC-11,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)),No
+POL-02,B.8,Visitors on a separate guest Wi-Fi; staff Wi-Fi password changed yearly and at departures,SC-7; AC-18,PR.IR-01,N23-R01 (52.204-21(b)(1)(x)),Yes
+POL-02,B.9,Key and alarm code list; visitor sheet and escort; containers locked; nothing left in vehicles,PE-3; PE-8,PR.AA-06,N23-R01 (52.204-21(b)(1)(viii)); N23-R01 (52.204-21(b)(1)(ix)),Yes
+POL-02,B.10,Pre-posting check for federal project content,AC-22,PR.DS-01,N23-R01 (52.204-21(b)(1)(iv)),No
+POL-02,B.11,MSP and vendor staff use named accounts with MFA; annual technician list,AC-17; IA-2(1),PR.AA-05,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-02,C.2,"Never act on a bank change received by email, text, or inbound call",AT-2,PR.AT-01,"Business need (P01 R-001, R-002)",Yes
+POL-02,C.3,No company data in personal accounts or public AI chatbots; print through SYS-01,PL-4; AC-20,PR.AT-01,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-02,C.5,Training at hire and yearly with payment-fraud module and phishing simulations,AT-2,PR.AT-01,Business need (P01 R-015),Yes
+POL-03,4.2,Report suspected incidents within 1 hour by phone or in person,IR-6,RS.MA-02,Fla. Stat. 501.171,No
+POL-03,4.4,"Bank recall within the hour, bank-change freeze, and IC3 complaint for suspected payment diversion",IR-4,RS.MI-01,FAR 52.232-33(e)(2),No
+POL-03,4.5,Record the breach determination date; state notices on the P08 matrix deadlines,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5),No
+POL-03,4.7,Section 889 reports within 1 and 10 business days,IR-6,RS.CO-02,N23-R02 (52.204-25(d)),No
+POL-03,4.8,Export logs at incident start; covered defense information check in every incident,IR-4; AU-11,RS.AN-03,N23-R03 (252.204-7012(c)-(e) if CDI is ever held),No
+POL-03,4.10,Annual tabletop with the MSP; lessons learned within 30 days,IR-3,ID.IM-02,Business need,No
+POL-04,4.2,CUI not accepted; quarantine and notify the Contracting Officer,MP-3,ID.AM-07,N23-R01 (52.204-21(b)(2)); N23-R03,No
+POL-04,4.3,FCI only on approved systems; automatic forwarding blocked,AC-20; CM-8,ID.AM-01,N23-R01 (52.204-21(b)(1)(iii)); N23-R04 (252.204-7021(d)(2)),Yes
+POL-04,4.4,Encryption at rest on every device and in transit,SC-28; SC-8,PR.DS-01,Fla. Stat. 501.171(1)(g)2.,No
+POL-04,4.6,Approved AI tools only; no FCI in the AI tool before enterprise terms,AC-20; SA-9,GV.SC-05,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-04,4.7,"Daily backup, 90-day immutable retention, MFA on the console, quarterly restore tests",CP-9; CP-4,PR.DS-11,Business need (P05),Yes
+POL-04,4.8,"Wipe or destroy media with records, including leased printer and plotter storage",MP-6,ID.AM-08,N23-R01 (52.204-21(b)(1)(vii)),Yes
+POL-04,4.9,6-year retention of security records and CMMC evidence; 3 years for certified payrolls,SI-12,GV.PO-02,N23-R04 (32 CFR 170.15(c)(2)); FAR 52.222-8(a),No
