@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Report; 3 monthly POA&M snapshots,P07,Collecting
+Both,CC5.1; CC5.2,Common control catalog and SSP inheritance,GRC platform,CISO,Annual,Catalog version in effect,P02 section 10.3,Ready
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, certification, and termination records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 2 quarterly certifications; 25 terminations,"P07 AC-2, PS-4",Collecting
+Both,CC6.1,Privileged access sessions and MFA policy,PAM,Director of Identity and Access Management,Continuous,25 sessions,"P07 IA-2(1), SI-4(20)",Ready
+Both,CC6.4,Data center badge reviews; provider SOC 2 reports,Badge system; vendor register,"Vice President, Facilities and Real Estate",Quarterly; annual,2 quarterly reviews; current provider reports,"P02 PE-2, PE-3",Collecting
+Both,CC6.6; CC6.7,"Firewall, WAF, and TLS configurations",Cloud consoles; scanners,Director of Cloud Platform Engineering,Continuous,Configuration snapshots at 2 dates,P04,Ready
+Both,CC7.1,Vulnerability scan and remediation records,Scanner; ticketing,Director of Security Operations,Weekly and monthly,25 critical findings with remediation dates,P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SIEM coverage and SOC case records,SIEM; case management,Director of Security Operations,Continuous,25 cases,"P07 SI-4, IR-4",Collecting
+Both,CC7.4; CC7.5,"Incident response plan, exercise reports, and lessons learned",GRC platform,Director of Security Operations,Annual; per incident,1 exercise; all severity-1 and severity-2 incidents,"P08; P07 IR-3, IR-8",Not started
+Both,CC8.1,Change records with approval and testing,Change management tool,CIO,Per change,25 changes per service line,P07 CM-3,Collecting
+Both,CC9.2,"Vendor register, SOC report reviews, and contract terms",Vendor register,Director of Third-Party Risk Management,Annual,All subservice organizations,P07 SA-9,Collecting
+SL-1,A1.2; A1.3,SD-WAN controller redundancy and annual failover test,Vendor controllers; test report,"Vice President, Managed Services",Annual,Test report,SL-1 2025 report,Ready
+SL-1,CC6.8,Threat signature subscription status for managed firewalls,Vendor controllers,"Vice President, Managed Services",Monthly,3 monthly reports,New,Not started
+SL-1,C1.1; C1.2,Customer configuration data classification and deletion at exit,Managed services portal,"Vice President, Managed Services",Per event,All customer exits in the period,SL-1 2025 report,Ready
+SL-2,CC6.1; CC6.2,Customer administrator MFA and quarterly attestation,SL-2 service portal,"Vice President, Unified Communications",Quarterly,2 attestation cycles; MFA enforcement report,New,Not started
+SL-2,CC5.3,"SL-2 operating procedures (tenant provisioning, administrator onboarding, recording deletion)",Procedure library,"Vice President, Unified Communications",Annual,Approved procedures,New,Not started
+SL-2,A1.1; A1.2,Capacity reports and two-region architecture for SL-2,Cloud B monitoring,"Vice President, Unified Communications",Monthly,3 monthly reports,P04,Collecting
+SL-2,A1.3,Regional failover test including recording restore,Test report,"Vice President, Unified Communications",Annual,Test report,P05 BP-09,Not started
+SL-2,C1.2,Recording deletion certificates at contract end,SL-2 platform,Chief Privacy Officer,Per event,All terminated customers,New,Not started
+SL-2,PI1.2; PI1.3,Call routing validation rules and processing monitors,SL-2 platform,"Vice President, Unified Communications",Continuous,Rule configuration at 2 dates; 25 alerts,New,Collecting
+SL-2,PI1.4,Daily call detail completeness reconciliation,SL-2 platform; data platform,"Vice President, Unified Communications",Daily,25 daily reconciliations,New,Not started
+SL-2,PI1.5,"Recording integrity controls (write-once storage, per-tenant keys)",SL-2 platform,"Vice President, Unified Communications",Continuous,Configuration snapshots at 2 dates,P04,Ready
