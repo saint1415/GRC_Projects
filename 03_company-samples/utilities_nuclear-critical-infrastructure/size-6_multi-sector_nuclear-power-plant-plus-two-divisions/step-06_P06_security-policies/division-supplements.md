@@ -73,7 +73,7 @@ The 2024 supplement was written before the 2026 group policies and before the se
 | Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 9 (POAM-016) |
 | Default credentials | Not addressed | Changed before connection (POL-02 4.9) | 2 HMIs still on defaults (WM-007) |
 
-**Why the drift happened.** The division was acquired into the group structure in 2023 and its security lead sat in operations until 2025. The supplement had no review date. **Fix:** the Group CISO's policy office now tracks every supplement version and review date, and POL-01 4.5 requires re-alignment within 90 days of any group change.
+**Why the drift happened.** The division was brought into the group structure in 2023 and its security lead reported to operations until 2025. The supplement had no review date. **Fix:** the Group CISO's policy office now tracks every supplement version and review date, and POL-01 4.5 requires re-alignment within 90 days of any group change.
 
 ## 5. Attestation
 Each division security and compliance lead signs an annual statement: "The division supplement does not weaken any group policy or any regulator-approved program, and reflects all group policy changes made in the last 12 months." The first attestations are due 2026-12-31 (Nuclear Generation, Engineering and Radiation Services) and on re-issue (Radioactive Waste Management).

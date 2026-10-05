@@ -116,8 +116,8 @@ See `control-implementation.csv` (203 controls) and `common-control-catalog.csv`
 
 | Status | Controls |
 |---|---|
-| Implemented | 175 |
-| Partially implemented | 28 |
+| Implemented | 174 |
+| Partially implemented | 29 |
 | Planned | 0 |
 | Not applicable | 0 |
 | **Total** | **203** |
@@ -128,9 +128,9 @@ See `control-implementation.csv` (203 controls) and `common-control-catalog.csv`
 | Hybrid (group provides the mechanism; RS-1 configures or operates part) | 16 |
 | System-specific | 95 |
 
-**The 28 partially implemented controls** cluster in four places:
+**The 29 partially implemented controls** cluster in four places:
 - **The commissioning path** (scenario gap 1): AC-2, AC-2(12), AC-6, AC-17, AC-20(1), CA-3, CM-3, CM-8, CM-8(1), MA-4, PS-7, RA-3(1), SA-4, SA-9, SR-6.
-- **WTP-C coverage:** CA-7, CP-4, RA-5, SA-22, SI-2, SI-4(4), AU-6.
+- **WTP-C coverage:** CA-7, CP-4, RA-5, SA-22, SI-2, SI-4, SI-4(4), AU-6.
 - **Cross-division incident response** (gap 6): IR-3, IR-6, IR-8.
 - **Field and people:** AT-3 (OT role training at 71%), IA-5 (12 RTUs with default device credentials), PE-3 (9 booster stations without intrusion alarms).
 
