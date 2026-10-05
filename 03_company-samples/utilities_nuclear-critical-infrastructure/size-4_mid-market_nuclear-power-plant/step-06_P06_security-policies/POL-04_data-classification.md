@@ -11,7 +11,7 @@
 | Review cycle | Annually (next review 2027-09-30), and after major changes or significant incidents |
 | Implements (SP 800-53 Rev. 5) | RA-2, MP-4, MP-6, SC-7, AC-3, MP-2, SC-8, SC-28, CP-9, SI-12, MP-7, AC-19, AC-2 |
 | CSF 2.0 | ID.AM-05, PR.AA-05, PR.DS-01, PR.DS-02, PR.DS-11, PR.PS-01 |
-| Regulatory drivers | C-NUCLEAR-S01, 73.22), C-NUCLEAR-S02, C-NUCLEAR-S04, C-NUCLEAR-R01, C-NUCLEAR-R04, C-NUCLEAR-S06 |
+| Regulatory drivers | C-NUCLEAR-S01, C-NUCLEAR-S02, C-NUCLEAR-S04, C-NUCLEAR-R01, C-NUCLEAR-R04, C-NUCLEAR-S06 |
 | Supporting standards | STD-08 Encryption and key management; STD-10 Security-Related Information handling (see `standards-index.md`) |
 
 ## 1. Purpose
