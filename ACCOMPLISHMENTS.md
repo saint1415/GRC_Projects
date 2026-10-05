@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**101 of 216** sample companies are finished (1010 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**104 of 216** sample companies are finished (1040 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -56,9 +56,12 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Utilities | Micro | Small electric cooperative | [README](03_company-samples/utilities/size-2_micro_small-electric-cooperative/README.md) |
 | Utilities | Small | Electric distribution utility | [README](03_company-samples/utilities/size-3_small_electric-distribution-utility/README.md) |
 | Utilities | Mid-Market | Electric distribution utility | [README](03_company-samples/utilities/size-4_mid-market_electric-distribution-utility/README.md) |
+| Utilities | Enterprise | Electric distribution utility | [README](03_company-samples/utilities/size-5_enterprise_electric-distribution-utility/README.md) |
+| Utilities | Multi-Sector | Electric distribution utility plus two divisions | [README](03_company-samples/utilities/size-6_multi-sector_electric-distribution-utility-plus-two-divisions/README.md) |
 | Energy | Sole Proprietorship | Pipeline integrity consultant | [README](03_company-samples/utilities_energy-critical-infrastructure/size-1_sole-proprietor_pipeline-integrity-consultant/README.md) |
 | Energy | Micro | Small intrastate pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-2_micro_small-intrastate-pipeline/README.md) |
 | Energy | Small | Gas transmission pipeline | [README](03_company-samples/utilities_energy-critical-infrastructure/size-3_small_gas-transmission-pipeline/README.md) |
+| Dams | Sole Proprietorship | Dam safety consultant | [README](03_company-samples/utilities_dams-critical-infrastructure/size-1_sole-proprietor_dam-safety-consultant/README.md) |
 | Dams | Small | Hydroelectric dam operator | [README](03_company-samples/utilities_dams-critical-infrastructure/size-3_small_hydroelectric-dam-operator/README.md) |
 | Nuclear Reactors, Materials, and Waste | Small | Radioactive waste processor | [README](03_company-samples/utilities_nuclear-critical-infrastructure/size-3_small_radioactive-waste-processor/README.md) |
 | Water and Wastewater Systems | Small | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-3_small_community-water-system/README.md) |

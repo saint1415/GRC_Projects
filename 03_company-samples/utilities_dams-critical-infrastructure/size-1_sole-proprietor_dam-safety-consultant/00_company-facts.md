@@ -95,12 +95,16 @@ All 10 deliverables in this folder use the facts below. The company, its clients
 | 2026-03-10 | FERC grants the upstream project CEII request under a non-disclosure agreement |
 | 2026-04-21 | Client B field inspection (owner and field assistant) |
 | 2026-04-30 | Client A submits its Part 12D inspection plan naming the owner as its independent consultant (more than 180 days before the field inspection, 18 CFR 12.34(b)) |
+| 2026-05-19 | Client B instrument readings uploaded to the AI anomaly detection SaaS trial (AI-001), without Client B's consent |
 | 2026-06-01 | CSCA-A signed with Client A |
 | 2026-06-15 | Director of the Division of Dam Safety and Inspections approves the owner as Client A's independent consultant (18 CFR 12.34(a)) |
+| 2026-07-20 | AI-001 trial use stopped |
 | 2026-07-20 to 2026-07-24 | Self-assessment with the on-call IT technician (under NDA since 2026-07-14). SaaS mapping 2026-07-22; tests 2026-07-23 |
 | 2026-07-21 | Downloaded Client A security-sensitive documents found and deleted |
 | 2026-07-22 | Client A told under CSCA-A (7) |
-| 2026-07-24 | Client B told about the AI upload under GRS-B (1) and (3) |
+| 2026-07-24 | Client B told about the AI upload under GRS-B (1) and (3); deletion requested from the AI vendor |
+| 2026-08-12 | AI vendor confirms deletion of the Client B readings in writing |
+| 2026-08-25 | P10 AI use assessment completed by the owner-engineer |
 | 2026-08-31 | Deliverables adopted by the owner-engineer |
 | 2026-11-16 to 2026-11-18 | Client A Part 12D field inspection (planned) |
 | 2026-12-31 | Upstream project CEII requester verification ends (a new request is needed for 2027 work) |

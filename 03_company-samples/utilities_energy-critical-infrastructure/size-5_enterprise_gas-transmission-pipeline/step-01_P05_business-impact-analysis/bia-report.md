@@ -104,9 +104,9 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| One SCADA platform at both control centers; platform-wide failure not exercised | P01 R-002; P03 G-034; POAM-011 |
-| PS-3 without hot standby, single carrier, manual operation not drilled | P01 R-005 and R-024; P03 G-032; POAM-016 |
-| GCC-2 and PS3-CR IT/OT isolation not exercised | P01 R-012; P03 G-030 and G-031; POAM-012 |
+| One SCADA platform at both control centers; platform-wide failure not exercised | P01 R-002; POAM-011 |
+| PS-3 without hot standby, single carrier, manual operation not drilled | P01 R-005 and R-024; P03 G-046 and G-088; POAM-016 |
+| GCC-2 and PS3-CR IT/OT isolation not exercised | P01 R-012; P03 G-034 and G-047; POAM-012 |
 | 140 cellular-only sites without a second path | P01 R-024; POAM-021 |
-| Always-on vendor modems at compressor stations | P01 R-008; P03 G-012; POAM-004 |
+| Always-on vendor modems at compressor stations | P01 R-008; P03 G-009; POAM-004 |
 | Leak model vendor updates outside change control | P01 R-040; P10; POAM-019 |

@@ -41,7 +41,7 @@ Approved by the Electric Utility distribution operations director (system owner)
 
 ### 4.2 System Authorization Decision
 The group is not a federal agency, so there is no formal authorization. The equivalent internal decision:
-- **Decision:** authorized to operate with conditions, 2026-09-15, by the Electric Utility president and the Group CISO. High risks GR-01 and GR-02 are temporarily accepted by the Group Chief Risk Officer with the Group CISO, as group policy allows, with dated plans.
+- **Decision:** authorized to operate with conditions, 2026-09-15, by the Electric Utility president and the Group CISO. High risks GR-01 and GR-02 are not accepted, because they can affect public and crew safety; they are under treatment with dated plans (P01), and the conditions below limit the exposure until treatment is complete.
 - **Conditions:** (1) per-session approval by the DCC for every SYS-G4 session into the DOP by 2026-11-30, and no standing Engineering Services access by 2027-03-31 (POAM-001); (2) offline, immutable DOP backups and a full restore test at the backup DCC by 2026-12-31 (POAM-009); (3) no new interface between the DOP and the corporate network except through the OT DMZ (POAM-005).
 - **Reauthorization:** annually, or when the DCC network sensors and firewall rebuild are complete.
 

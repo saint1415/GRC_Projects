@@ -34,7 +34,7 @@ The company has 7 employees and no IT staff. An outside controls integrator buil
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 |
 
 Not applicable:
-- C-DAMS-R03 NERC CIP: the plant is not a BES facility (4.4 MW at 12.47 kV) and the company is not NERC-registered (P03 row G-057).
+- C-DAMS-R03 NERC CIP: the plant is not a BES facility (4.4 MW at 12.47 kV) and the company is not NERC-registered (P03 row G-056).
 - Part 12 Subpart D and 12.65: not a High hazard dam, and the dam is under the 12.30 size triggers.
 - CIRCIA reporting: the rule is proposed only.
 

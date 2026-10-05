@@ -93,6 +93,6 @@ Per NIST IR 8286 Rev. 1, the group register feeds the enterprise risk profile th
 
 ## 6. Approval
 - Board risk committee: approved the group register, the six High group treatment plans, and the funding request, 2026-09-15.
-- Group Chief Risk Officer and Group CISO: approved treatment plans for the ten High division risks and the temporary acceptance of GR-01 and GR-02 pending treatment (P02 authorization conditions), 2026-09-15.
+- Group Chief Risk Officer and Group CISO: approved treatment plans for the ten High division risks, and continued operation of SYS-G4 and the DOP under the P02 authorization conditions while GR-01 and GR-02 are treated (these risks are not accepted), 2026-09-15.
 - Division presidents: approved Moderate and Low treatments and acceptances for their divisions, 2026-09-14 to 2026-09-16.
 - Next full review: May to July 2027, or sooner after a major change, acquisition, or incident.
