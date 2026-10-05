@@ -92,3 +92,26 @@ Outside the systems list: the CALEA trusted third party (TTP) that handles broad
 | 2026-08-10 to 2026-08-12 | Control assessment (independent consultant; on site 2026-08-11) |
 | 2026-08-25 | AI risk assessment and SOC 2 readiness self-assessment completed |
 | 2026-08-31 | Deliverables approved by the Owner and General Manager |
+
+## 7. Facts added while building the deliverables
+These facts were added because the deliverables needed them. They do not change sections 1-6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Shared network password | A Field Technician who left in March 2026 still knew the shared OLT and EMS password. The walkthrough found this on 2026-07-22 and the password was changed on 2026-07-23. Device logs go back only about 14 days, so earlier use cannot be ruled out; no changed configurations were found | P01, P02, P07 |
+| EMS exposure | The Network Operations Lead removed internet access to the EMS web page on 2026-08-03. The router firmware upgrade is scheduled for the 2026-09-20 maintenance window | P01, P02, P04, P07 |
+| Hut server secrets | The hut server holds a text file of shared network passwords and the BSS API key used by the provisioning link. The key has full administrator rights | P01, P02, P04, P07, P08 |
+| Network management protocols | OLT administration uses Telnet and SNMP version 2c. P07 testing found the vendor default read-write SNMP string active on the aggregation switch; removal scheduled 2026-09-15 | P01 (R-024), P02, P07 |
+| Hut servers | No malware protection; patched only when the consultant visits; disks not encrypted | P02, P04 |
+| Office details | The front counter desktop is excluded from the screen lock so it can show the outage map; tablets use a 4-digit passcode; exported customer reports were found in the general shared-drive folder; the cloud backup console has one MSP administrator account with a password only | P02, P04, P07 |
+| Equipment disposal | Returned ONTs and replaced OLT cards are reused or scrapped without a factory reset or disposal record | P02, P06 |
+| Voice platform logs | The provider keeps admin portal sign-in and export logs 90 days | P02, P04 |
+| Call detail sample | In 10 BSS tickets where customers asked for call detail (reviewed 2026-07-27), 7 releases were made without a PIN | P03, P07 |
+| Outage history | The NORS login was set up in 2018 and has never been used. A 2025 middle-mile cut lasted 2 hours 40 minutes and was not assessed against the 667 OC3-minute threshold; counsel is reviewing it | P01, P03 |
+| Capacity and power | Middle-mile peak use about 40% of 10 Gbps; OLT ports about 60% used; generator fuel for about 72 hours at full load | P05, P09 |
+| Vendor terms | Middle-mile contract: 4-hour repair target. Voice platform contract: 99.99% availability, no CPNI terms. MSP contract: 4-business-hour response, no recovery commitment. Consultant: retainer letter, best effort. TTP: collection within 24 hours of a valid order | P05, P02 |
+| Finances and operations | About $92,000 billed a month; cash reserve about 45 days; about 15 installs a month; office phones run on the company's own voice service, with the answering service as fallback | P05 |
+| AI assistant | Offered free for six months by the BSS vendor; about 1,150 sessions from 2026-05-04 to 2026-08-14; guest verification used in 210 sessions; guest verification and personalized offers turned off 2026-08-14; chat can change the account email address; transcripts kept 180 days; Spanish chats about 5% of sessions | P01, P03, P10 |
+| Driver license numbers | The company stops recording them on 2026-10-01 and purges stored numbers by 2026-11-30 | P01, P06, P08 |
+| Bank questionnaire | The community bank branch sent a vendor security questionnaire in July 2026; the response is due 2026-09-30 | P09 |
+| Assessor | The P07 assessor is an independent security consultant with telecom experience, not involved in P01 or P03 and operating no control | P07 |
