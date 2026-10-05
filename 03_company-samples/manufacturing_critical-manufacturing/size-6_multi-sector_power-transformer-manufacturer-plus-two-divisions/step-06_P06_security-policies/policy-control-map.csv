@@ -1,2 +1,66 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,One group program on CSF 2.0 with SP 800-82 Rev. 3 that meets every binding duty in the P03 matrix,PM-1,GV.PO-01; GV.OC-03,None binding; CSF 2.0 benchmark (P03 G-010); N22-R01 (CIP-003-9 R1),No
+POL-01,4.2,Group CISO accountable; CIP Senior Manager designated and changes documented within 30 days,PM-2,GV.RR-02,N22-R01 (CIP-003-9 R3),No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,None binding; CSF 2.0 benchmark (P03 G-024),No
+POL-01,4.4,Risk acceptance authority by level; safety risks rated High must be treated,PM-9,GV.RM-01,None binding; CSF 2.0 benchmark (P03 G-063); Reg S-K Item 106,No
+POL-01,4.5,Supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,None binding; CSF 2.0 benchmark (P03 G-064); SOC 2 CC5.3 (P03 ES-G22),Yes
+POL-01,4.6,Divisions document common control inheritance and confirm it each year,PL-2; PM-10; CA-2,GV.RR-02,SOC 2 CC2.3 (P03 ES-G21); N22-R01 (CIP evidence outside ESPs only),No
+POL-01,4.7,Sanctions documented by HR,PS-8,GV.RR-04,None binding; CSF 2.0 benchmark,No
+POL-01,4.8,Supplier review and security terms; intercompany security schedules; customer security terms register,SR-5; SA-4; SA-9; SR-1,GV.SC-05; GV.SC-02; GV.OC-03,N22-R01 (CIP-013-2 R1 Part 1.2); Utility addendum secs. 1-6 (P03 G-091 to G-096); client CIP terms (P03 ES-G01 to ES-G12),No
+POL-01,4.9,Annual common control assessment and division samples; co-sourced where the assessor helped design the control,CA-2; CA-7,ID.IM-01,None binding; CSF 2.0 benchmark (P03 G-066),No
+POL-01,4.10,"Exceptions written, risk-rated, time-limited; never waive CIP, contract, or legal duties",PL-1,GV.PO-02,N22-R01 (CIP exceptions approved by the CIP Senior Manager),Yes
+POL-01,4.11,"Security documentation retained at least 3 years, longer where required",SI-12,GV.PO-02,C-CRITICAL-MFG-R03 (15 CFR 762.6(a)),No
+POL-01,4.12,"AI models that steer production, allocation, maintenance, or grid operations registered and approved",RA-3; PL-2; CM-3,GV.RM-01,None binding; Group AI Standard (P10),No
+POL-01,4.13,OT security changes may not reduce safety; management of change with engineering approval,CM-3,PR.PS-01,None binding; CSF 2.0 benchmark (SP 800-82 Rev. 3 sec. 6.2.4),No
+POL-01,4.14,"Acquired sites isolated until a security integration review, including a covered equipment check",CA-3; SA-9,GV.SC-04,"N54-R04 / FAR 52.204-25(b)(2), (d) (P03 G-088)",Yes
+POL-02,4.1,Unique identities; documented OT shared-account exceptions with compensating controls,IA-2; AC-2,PR.AA-01,FAR 52.204-21(b)(1)(v) (P03 G-076),Yes
+POL-02,4.2,Least privilege; cross-division company code approval; separation of duties,AC-3; AC-5; AC-6,PR.AA-05,"FAR 52.204-21(b)(1)(i)-(ii) (P03 G-072, G-073)",Yes
+POL-02,4.3,MFA for all workforce; phishing-resistant for administrators,IA-2(1); IA-2(2),PR.AA-03,FAR 52.204-21(b)(1)(vi) (P03 G-077),Yes
+POL-02,4.4,"Service accounts owned, governed, scoped to one target, 90-day rotation",AC-2; AC-6; IA-5,PR.AA-01,None binding; CSF 2.0 benchmark (P03 G-035),Yes
+POL-02,4.5,Disable within 4 hours of termination; customer notices from the HR event; CIP removal within 24 hours,PS-4; PS-7; AC-2,GV.RR-04; PR.AA-05,Utility addendum sec. 3 (P03 G-093); client CIP-004-7 R5 terms (P03 ES-G04); N22-R01 (CIP-004-7 R5 Part 5.1),Yes
+POL-02,4.6,Quarterly certification; disable accounts inactive for 90 days,AC-2; AC-2(3); AC-6(7),PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-035),Yes
+POL-02,4.7,Just-in-time privileged access through PAM,AC-6(5),PR.AA-05,None binding; CSF 2.0 benchmark,Yes
+POL-02,4.10,OEM and vendor remote access only through the gateway or Intermediate Systems; no always-on connections,AC-17; MA-4,PR.AA-03,Utility addendum sec. 6 (P03 G-096); N22-R01 (CIP-005-7 R2; CIP-003-9 Att. 1 Sec. 6),Yes
+POL-02,4.11,Separate identities for OT zones and ESPs; no trust with plant or acquired domains,AC-2; AC-3,PR.AA-05,None binding; CSF 2.0 benchmark (P03 G-033); N22-R01 (CIP-005-7 R1),Yes
+POL-02,4.12,Customer systems accessed only through customer means and terms,AC-20; AC-17,PR.AA-03,Client CIP-013-2 R1 Part 1.2.6 terms (P03 ES-G11),Yes
+POL-03,4.1,Report suspected incidents to the SOC within 1 hour,IR-6,RS.MA-02,None binding; CSF 2.0 benchmark (P03 G-069),Yes
+POL-03,4.2,One severity scale; division plans use it and define handoffs,IR-4; IR-8,RS.MA-01,N22-R01 (CIP-008-6 R1) (P03 EU-G25),Yes
+POL-03,4.3,Notification matrix owned by Group General Counsel; quarterly review; named senders and backups,IR-6; IR-8,RS.CO-02,None binding; CSF 2.0 benchmark (P03 G-057),Yes
+POL-03,4.4,SOC hands off to the PSIRT and contracts director within 4 hours; notices within contract deadlines,IR-6; IR-6(3); SR-8,RS.CO-02; GV.SC-08,"Utility addendum secs. 1-2 (P03 G-091, G-092); client CIP-013-2 R1 Parts 1.2.1-1.2.2 terms (P03 ES-G07, ES-G08)",Yes
+POL-03,4.5,"Utility reporting desk files CIP-008-6, EOP-004-4, and DOE-417 reports without waiting for legal review",IR-6,RS.CO-02,N22-R01 (CIP-008-6 R4; EOP-004-4 R2); Form DOE-417 (P03 EU-G46 to EU-G49),Yes
+POL-03,4.6,Severity 1 to the disclosure committee within 24 hours; Form 8-K within 4 business days of materiality,IR-6,RS.CO-03,SEC Form 8-K Item 1.05 (P03 G-103),Yes
+POL-03,4.7,Ransom payment needs board approval and an OFAC check,IR-4,RS.MA-01,OFAC ransomware advisory (2021-09-21),Yes
+POL-03,4.8,Plant managers may stop production; SOC may operate pre-approved isolation points,IR-4; CP-2,RS.MI-01,None binding; CSF 2.0 benchmark (P03 G-058),Yes
+POL-03,4.9,"FAR reports within 1 business day (52.204-25) or 3 business days (52.204-23, 52.204-30)",IR-6,RS.CO-02,"N54-R04 / FAR 52.204-25(d), 52.204-23(c), 52.204-30 (P03 G-088 to G-090)",Yes
+POL-03,4.10,"Annual cross-division exercise with the matrix, reporting desk, and materiality decision",IR-3,ID.IM-02,None binding; CSF 2.0 benchmark (P03 G-031); N22-R01 (CIP-008-6 R2),Yes
+POL-03,4.12,Lessons learned within 30 days,IR-4,ID.IM-02,None binding; CSF 2.0 benchmark (P03 G-031),Yes
+POL-04,4.1,"Four classes; BCSI, CEII, SSNs, bank accounts, and keys are Restricted",RA-2,ID.AM-07,None binding; CSF 2.0 benchmark (P03 G-022),No
+POL-04,4.2,Encrypt Restricted and Confidential information at rest and in transit,SC-8; SC-28,PR.DS-01; PR.DS-02,"None binding; CSF 2.0 benchmark (P03 G-039, G-040)",Yes
+POL-04,4.3,BCSI only in CIP-designated locations with R6 authorization; client BCSI in client-approved folders,AC-3; AC-21,PR.DS-10,"N22-R01 (CIP-011-3 R1; CIP-004-7 R6) (P03 EU-G16, EU-G33); client CIP-011-3 terms (P03 ES-G05)",Yes
+POL-04,4.4,CEII requested only with client authorization or a FERC NDA,AC-21,PR.DS-10,"18 CFR 388.113(g)(1), (h) (P03 ES-G13)",No
+POL-04,4.5,FCI labeled and limited to contract teams,AC-3,PR.AA-05,"N54-R04 / FAR 52.204-21(b)(1)(i) (P03 G-072, ES-G15)",Yes
+POL-04,4.6,Export records kept at least 5 years; technology checked before export,SI-12,ID.AM-07,C-CRITICAL-MFG-R03 (15 CFR 762.6(a)) (P03 G-100),No
+POL-04,4.7,Supplied firmware signed in an HSM under split control; hashes for firmware and settings files,SC-12; SI-7,ID.RA-09,Utility addendum sec. 5 (P03 G-095); client CIP-013-2 R1 Part 1.2.5 terms (P03 ES-G10),Yes
+POL-04,4.8,Immutable separate-provider backups; quarterly restore tests; controller and MES backups to the vault,CP-9,PR.DS-11,None binding; CSF 2.0 benchmark (P03 G-041),Yes
+POL-04,4.9,Media sanitized or destroyed with a certificate,MP-6,ID.AM-08,N54-R04 / FAR 52.204-21(b)(1)(vii) (P03 G-078),No
+POL-04,4.10,Customer and client information returned or destroyed at contract end,SI-12,PR.DS-01,Client CIP-011-3 terms (P03 ES-G06),No
+POL-04,4.11,No Restricted or Confidential data in unapproved AI tools,SA-9; PL-4,GV.SC-05,None binding; CSF 2.0 benchmark (P03 G-067),No
+POL-05,4.3,"Annual training, monthly reminders, quarterly phishing",AT-2,PR.AT-01,None binding; CSF 2.0 benchmark (P03 G-037),Yes
+POL-05,4.4,"Role-based training for OT, GEPS, PSIRT, and CIP roles; CIP training within 15 calendar months",AT-3,PR.AT-02,N22-R01 (CIP-004-7 R2); client CIP-004-7 terms (P03 ES-G02),No
+POL-05,4.6,Restricted and Confidential data only on managed devices; no personal cloud storage,AC-19; AC-20,PR.DS-01,N54-R04 / FAR 52.204-21(b)(1)(iii); client CIP-011-3 terms (P03 ES-G05),No
+POL-05,4.7,"Company-issued, kiosk-scanned removable media only on OT, control center, and commissioning laptops",MP-7,PR.PS-01,Client Transient Cyber Asset terms (P03 ES-G12),Yes
+POL-05,4.8,Approved generative AI tools only; no designs or BCSI in public AI tools,PL-4; PL-4(1),GV.PO-01,None binding; CSF 2.0 benchmark (P03 G-067),No
+POL-05,4.9,"Only hardened commissioning or service laptops on plant and customer equipment, with approval",CM-6; MP-7,PR.PS-01,Client CIP-010-4 R4 Att. 1 Sec. 2 terms (P03 ES-G12),Yes
+SUP-MF,3.1,"P8 integration milestones: isolation switch, routers removed, trust removed, OT DMZ, HMIs",SC-7; AC-17; SA-22,PR.IR-01; PR.AA-03,"None binding; CSF 2.0 benchmark (P03 G-034, G-046, G-023)",Yes
+SUP-MF,3.1,Controller programs and MES backed up after every change and weekly; quarterly restore per plant,CP-9,PR.DS-11,None binding; CSF 2.0 benchmark (P03 G-041),Yes
+SUP-MF,3.1,Vulnerability advisories to utilities within 20 days (addenda allow 30),IR-6(3),ID.RA-08,Utility addendum sec. 4 (P03 G-094),Yes
+SUP-MF,3.1,SBOM for every firmware line and release,SR-4,PR.PS-06,"Utility addendum sec. 4 (P03 G-068, G-094)",Yes
+SUP-MF,3.1,AI-001 and AI-002 under model change control; written storm allocation rule,CM-3; RA-3,GV.RM-01,None binding; Group AI Standard (P10),No
+SUP-EU,3.2,"Affiliates treated as CIP-013-2 vendors with the same assessment, terms, and PRA attestation",SR-6; SA-4; PS-3,GV.SC-05; GV.SC-06,"N22-R01 (CIP-013-2 R1, R2; CIP-004-7 R3) (P03 EU-G14, EU-G39, EU-G41)",Yes
+SUP-EU,3.2,Detection of malicious communications on vendor remote access to all 58 low impact substations,SI-4(4),DE.CM-06,N22-R01 (CIP-003-9 Att. 1 Sec. 6.3) (P03 EU-G10),Yes
+SUP-EU,3.2,CIP-012-2 plan covers availability and recovery of data links,CP-8; SC-8,PR.IR-03,"N22-R01 (CIP-012-2 R1 Parts 1.2-1.3) (P03 EU-G35, EU-G36)",Yes
+SUP-EU,3.2,DCC procedures include DOE-417 cyber criteria,IR-6,RS.CO-02,"Form DOE-417 criteria 2, 3, 11, 12, 14 (P03 EU-G46, EU-G47)",Yes
+SUP-ES,3.3,Client terms register and client notices within each client deadline,IR-6,RS.CO-02,Client CIP-013-2 R1 Part 1.2.1 terms (P03 ES-G07),Yes
+SUP-ES,3.3,Hardened commissioning image at all offices; patch exceptions within 35 days,CM-6,PR.PS-02,Client CIP-010-4 R4 Att. 1 Sec. 2 terms (P03 ES-G12),Yes
+SUP-ES,3.3,Project platform logs kept 1 year,AU-11,PR.PS-04,SOC 2 CC7.2 commitment (P03 ES-G20),Yes
+SUP-ES,3.3,Restricted client BCSI and CEII folders with client-approved membership,AC-3,PR.AA-05,Client CIP-011-3 terms (P03 ES-G05),Yes

@@ -131,7 +131,7 @@ Grid Engineering's gaps are about **knowing what it promised**. It has no regist
 | 7 | Grid Engineering inheritance, standards drift, log retention (6) | ES | TSC CC2.3, CC5.3, CC7.2 | Moderate | Inheritance matrix; replace 2023 standards; 1-year log retention | Grid Engineering security and compliance lead | 2026-12-31 |
 | 8 | Commissioning laptops as Transient Cyber Assets | ES (affects EU and 41 clients) | CIP-010-4 R4 Att. 1 Sec. 2; CIP-003-9 Att. 1 Sec. 5.2 (client terms) | High | One hardened image; patch exceptions under 35 days; pre-connection record | Grid Engineering chief operating officer | 2026-12-31 |
 
-High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-005, POAM-006, POAM-008, POAM-010 to POAM-018, POAM-020, POAM-023, and POAM-024 trace directly to this analysis.
+High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). 23 of the 27 POA&M items name a row of this analysis in their `source` column; POAM-016 (CIP-012-2) comes from this analysis alone. Moderate gaps without a POA&M item are tracked through the division registers.
 
 ## 6. Pending regulatory changes
 None of the items below is treated as a current obligation. The `pending_rule_change` column flags affected rows.
