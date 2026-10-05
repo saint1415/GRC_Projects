@@ -113,6 +113,8 @@ for facts in S.rglob("00_company-facts.md"):
         for line in text.splitlines():  # known clock error found in Phase 5: 52.204-23 is 3 business days
             if "52.204-23" in line and re.search(r"\b(1|one) business day", line) and not re.search(r"\b(3|three)[ -]business[ -]days?", line):
                 errors.append(f"{where}: FAR 52.204-23 given a 1-business-day clock (it is 3 business days)")
+            if "Kaspersky" in line and "52.204-23" in line and line.count("52.204-25") and line.count("52.204-25") == len(re.findall(r"(section-|/far/)52\.204-25", line)):
+                errors.append(f"{where}: FAR 52.204-23 (Kaspersky) row links to the 52.204-25 page")
                 break
         if p.suffix == ".csv":
             with open(p, newline="") as fh:

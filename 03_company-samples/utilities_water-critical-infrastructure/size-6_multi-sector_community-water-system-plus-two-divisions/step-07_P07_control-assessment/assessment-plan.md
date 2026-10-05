@@ -53,7 +53,7 @@ The Water Utility sample focused on the 19 acquired systems (scenario gap 2). Th
 - **No active scanning or writes to live OT.** PLC comparisons were read-only and scheduled with operations; the RS-1 Director of Operations could stop any test. Water safety overrode every test plan.
 - No CUI left the enclave during testing; discovery scan results listed file locations, not contents.
 - No client data left SYS-E1; gateway audits used the platform's management interface.
-- The assessor would stop and notify the Group CISO on any critical exposure. One was found: internet-reachable modem administration at 3 acquired systems. It was reported on 2026-08-11 and the modems were placed behind a private APN by 2026-08-21, before the assessment closed; the underlying segmentation finding remains (POAM-017).
+- The assessor would stop and notify the Group CISO on any critical exposure. One was found: internet-reachable modem administration at 3 acquired systems. It was reported to the Group CISO on the day it was found (2026-08-11), the default passwords on those modems were changed that week as an interim step, and the move to a private APN and the segmentation work are tracked in POAM-017.
 
 ## 5. Results summary
 | Scope | Satisfied | Other than satisfied | Total |
