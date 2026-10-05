@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**132 of 216** sample companies are finished (1320 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**135 of 216** sample companies are finished (1350 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -99,9 +99,11 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Chemical | Small | Specialty chemical formulator | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-3_small_specialty-chemical-formulator/README.md) |
 | Chemical | Mid-Market | Specialty chemical maker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-4_mid-market_specialty-chemical-maker/README.md) |
 | Chemical | Enterprise | Specialty chemical maker | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-5_enterprise_specialty-chemical-maker/README.md) |
+| Chemical | Multi-Sector | Specialty chemical maker plus two divisions | [README](03_company-samples/manufacturing_chemical-critical-infrastructure/size-6_multi-sector_specialty-chemical-maker-plus-two-divisions/README.md) |
 | Critical Manufacturing | Sole Proprietorship | Industrial equipment repair technician | [README](03_company-samples/manufacturing_critical-manufacturing/size-1_sole-proprietor_industrial-equipment-repair-technician/README.md) |
 | Critical Manufacturing | Micro | Transformer repair shop | [README](03_company-samples/manufacturing_critical-manufacturing/size-2_micro_transformer-repair-shop/README.md) |
 | Critical Manufacturing | Small | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-3_small_power-transformer-manufacturer/README.md) |
+| Critical Manufacturing | Mid-Market | Power transformer manufacturer | [README](03_company-samples/manufacturing_critical-manufacturing/size-4_mid-market_power-transformer-manufacturer/README.md) |
 | Defense Industrial Base | Sole Proprietorship | Engineering subcontractor with CUI | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-1_sole-proprietor_engineering-subcontractor-with-cui/README.md) |
 | Defense Industrial Base | Micro | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-2_micro_aircraft-parts-manufacturer/README.md) |
 | Defense Industrial Base | Small | Aircraft parts manufacturer | [README](03_company-samples/manufacturing_defense-industrial-base-critical-infrastructure/size-3_small_aircraft-parts-manufacturer/README.md) |
@@ -126,6 +128,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation and Warehousing | Mid-Market | Marine cargo terminal | [README](03_company-samples/transportation-warehousing/size-4_mid-market_marine-cargo-terminal/README.md) |
 | Transportation and Warehousing | Enterprise | Marine cargo terminal | [README](03_company-samples/transportation-warehousing/size-5_enterprise_marine-cargo-terminal/README.md) |
 | Transportation and Warehousing | Multi-Sector | Marine cargo terminal plus two divisions | [README](03_company-samples/transportation-warehousing/size-6_multi-sector_marine-cargo-terminal-plus-two-divisions/README.md) |
+| Transportation Systems | Sole Proprietorship | Rail and truck freight broker | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-1_sole-proprietor_rail-and-truck-freight-broker/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
 | Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
