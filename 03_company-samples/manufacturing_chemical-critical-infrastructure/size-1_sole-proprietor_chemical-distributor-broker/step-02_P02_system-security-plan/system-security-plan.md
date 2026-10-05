@@ -26,7 +26,7 @@ Not applicable: C-CHEMICAL-R02 (USCG MTSA rule; no MTSA facility), EPA RMP and O
 ### 4.1 System Security Plan Approval
 Approved by the owner on 2026-10-05.
 ### 4.2 System Authorization Decision
-No formal authorization applies to a private business. Equivalent decision: the owner accepted continued operation on 2026-10-05 on two conditions: no bulk hydrogen peroxide load is released until HSP-01 call-back verification is in use (in force from 2026-10-05), and the High risks in P01 (R-001, R-002, R-004) are treated by their due dates.
+No formal authorization applies to a private business. Equivalent decision: the owner accepted continued operation on 2026-10-05 on two conditions: no bulk hydrogen peroxide load is released until HSP-01 call-back verification is in use (in force from 2026-10-05), and the Very High and High risks in P01 (R-001, R-002, R-004) are treated by their due dates.
 ### 4.3 System Operational Status
 Operational. Planned changes: email MFA and password manager (2026-10-15); email and file backup (2026-11-30); new router and work network (2026-11-30).
 

@@ -128,7 +128,7 @@ Asset categories under 32 CFR 170.19(c)(1), Table 3:
 | Specialized Assets | None. The company holds no Government-furnished equipment or OT on FC-4 | |
 | Out-of-Scope Assets | Corporate PDPP (logically separated tenants); managed tablets configured as virtual desktop clients that allow only keyboard, video, and mouse traffic | Justification recorded; tablets qualify under the Table 3 virtual desktop client note |
 
-**External Service Providers (32 CFR 170.19(c)(2)).** The government-community cloud provider stores and processes CUI and must meet FedRAMP requirements under DFARS 252.204-7012; its CRM is on file and mapped in P04. The MSSP does not handle CUI or Security Protection Data for the CPE today. If the planned monitoring service for the CPE is operated by the MSSP, its services enter the scope as Security Protection Assets and its CRM must be documented here first (P03 G-126).
+**External Service Providers (32 CFR 170.19(c)(2)).** The government-community cloud provider stores and processes CUI and must meet FedRAMP requirements under DFARS 252.204-7012; its CRM is on file and mapped in P04. The MSSP does not handle CUI or Security Protection Data for the CPE today. If the planned monitoring service for the CPE is operated by the MSSP, its services enter the scope as Security Protection Assets and its CRM must be documented here first (P03 G-127).
 
 **Known exceptions to fix before any CMMC assessment.** Today CUI is also in SYS-01 (1,140 items), on 26 FC-4 tablets, and in printed form in the FC-4 trailer. Those locations are CUI Assets in fact and fail several requirements (P03 G-003, G-019, G-064 to G-068, G-111). The target state above is valid only after the remediation in P03 section 4 is complete and verified.
 

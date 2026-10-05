@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**122 of 216** sample companies are finished (1220 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**123 of 216** sample companies are finished (1230 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -81,6 +81,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Water and Wastewater Systems | Small | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-3_small_community-water-system/README.md) |
 | Water and Wastewater Systems | Mid-Market | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-4_mid-market_community-water-system/README.md) |
 | Water and Wastewater Systems | Enterprise | Community water system | [README](03_company-samples/utilities_water-critical-infrastructure/size-5_enterprise_community-water-system/README.md) |
+| Water and Wastewater Systems | Multi-Sector | Community water system plus two divisions | [README](03_company-samples/utilities_water-critical-infrastructure/size-6_multi-sector_community-water-system-plus-two-divisions/README.md) |
 | Construction | Sole Proprietorship | Commercial general contractor | [README](03_company-samples/construction/size-1_sole-proprietor_commercial-general-contractor/README.md) |
 | Construction | Micro | Commercial general contractor | [README](03_company-samples/construction/size-2_micro_commercial-general-contractor/README.md) |
 | Construction | Small | Commercial general contractor | [README](03_company-samples/construction/size-3_small_commercial-general-contractor/README.md) |

@@ -1,2 +1,45 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"Documented security program (POL-01, HSP-01, P01, P02)",PM-1,GV.PO-01,49 CFR 172.802(c),No
+POL-01,4.2,Owner designated security officer and HSP-01 senior management official,PM-2,GV.RR-02,49 CFR 172.802(b)(1),No
+POL-01,4.3,"Annual SP 800-30 risk assessment, also the information part of the HSP-01 assessment",RA-3; PM-9,ID.RA-01,49 CFR 172.802(a),Yes
+POL-01,4.4,Risk decision rules; diversion risks always treated,PM-9,GV.RM-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,4.5,Annual evaluation with outside review every second year,CA-2,ID.IM-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,49 CFR 172.802(c),No
+POL-01,5.1,"Written, time-limited exceptions; none for bulk hydrogen peroxide verification",PL-1,GV.PO-02,49 CFR 172.800(b)(10),No
+POL-01,6.1,"Vendor list with data held, MFA, and review date",SA-9,GV.SC-07,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-01,6.2,Annual review of the email suite provider's SOC 2 report,SA-9,GV.SC-07,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-01,6.3,New product: HMT check and ERI provider confirmation before first shipment,SA-9,GV.SC-05,49 CFR 172.604(b)(2); 172.202,Yes
+POL-01,6.4,"Owner-started, watched remote support; no unattended access",AC-17; AC-2,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,7.1,Own accounts; no shared credentials; no family use of the laptop,IA-2; AC-2,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,7.2,MFA on every service that offers it; app-based for email,IA-2(1); IA-2(2),PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 49 CFR 172.802(a)(2)",Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager,IA-5,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,7.4,Standard account for daily laptop work,AC-6(2),PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-01,7.5,Phone carrier PIN; sealed recovery codes with the attorney,AC-19; CP-2,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,7.6,"Monthly review of email sign-ins, forwarding rules, and bank payees",AU-6,DE.AE-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-01,7.7,Quarterly accounting user review,AC-2,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,8.1,Three-level classification,RA-2,ID.AM-07,Fla. Stat. 501.171(2),No
+POL-01,8.2,BOLs only from the product description sheet,SI-12,PR.DS-10,49 CFR 172.202,No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.4,Monthly backup outside the suite; quarterly restore test,CP-9,PR.DS-11,49 CFR 172.201(e); 107.620(a),Yes
+POL-01,8.5,Retention schedule (BOLs 2 years; registration 3 years; training records; driver data 90 days),SI-12,ID.AM-08,49 CFR 172.201(e); 107.620(a); 172.704(d),No
+POL-01,8.6,"Deletion, shredding, and device wipe with a record",MP-6,ID.AM-08,Fla. Stat. 501.171(8),No
+POL-01,8.7,No collection of full driver license numbers,SI-12,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,9.2,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,9.3,Separate work network with non-default router password,SC-7,PR.IR-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,9.4,AI tools only after P10 assessment; no Restricted data; no AI-drafted hazmat descriptions,PL-4; SA-9,GV.PO-01,49 CFR 172.202,No
+POL-01,9.5,"HMR training every 3 years, in-depth HSP-01 training, yearly social engineering module",AT-2; AT-2(3); AT-3,PR.AT-01; PR.AT-02,"49 CFR 172.704(a)(4)-(5), (c)(2)",Yes
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,10.2,Same-day incident and suspicious-order log,IR-5; IR-6,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(16), voluntary benchmark)",Yes
+POL-01,10.3,Report suspicious hydrogen peroxide orders to the producer and local law enforcement,IR-6,RS.CO-02,"C-CHEMICAL-R01 (27.230(a)(15), voluntary benchmark)",Yes
+POL-01,10.4,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(6),Yes
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-01,11.2,Supplier hold-release instruction when the owner cannot be reached,CP-2,RC.RP-01,49 CFR 172.802(b)(2),No
+POL-01,11.3,Reciprocal coverage arrangement with another distributor,CP-2,RC.RP-01,49 CFR 172.604(a)(1),No
+HSP-01,3,Transportation security risk assessment,RA-3,ID.RA-01,49 CFR 172.802(a),Yes
+HSP-01,4.1,Personnel security check before any hire with release authority,PS-3,GV.RR-04,49 CFR 172.802(a)(1),No
+HSP-01,4.2,Single-use pickup number via portal or phone; call-back on changes,IA-2; AC-3,PR.AA-05,"49 CFR 172.802(a)(2); C-CHEMICAL-R01 (27.230(a)(6), voluntary benchmark)",No
+HSP-01,4.3,MFA and monthly review on accounts that carry pickup authorizations,IA-2(1); AU-6,PR.AA-03,"49 CFR 172.802(a)(2); C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+HSP-01,4.4,Know-your-customer checks for hydrogen peroxide,AT-2(3); SA-9,GV.SC-04,"C-CHEMICAL-R01 (27.230(a)(6), voluntary benchmark)",Yes
+HSP-01,4.5,Approved bulk carriers; direct delivery; delivery confirmation; overdue escalation,SA-9; IR-8,DE.CM-01,"49 CFR 172.802(a)(3); C-CHEMICAL-R01 (27.230(a)(5), voluntary benchmark)",No
+HSP-01,8,Security awareness and in-depth security training plan,AT-3,PR.AT-02,49 CFR 172.802(b)(3); 172.704(a)(4)-(5),Yes
+HSP-01,9,"Written plan, annual review, notice of revisions, copy available to DOT or DHS",PL-1; PL-2,GV.PO-02,49 CFR 172.802(c)-(d),No
