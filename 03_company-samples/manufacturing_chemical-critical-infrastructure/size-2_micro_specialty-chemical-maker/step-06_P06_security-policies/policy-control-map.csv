@@ -1,2 +1,50 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security Coordinator and batch control system owner named in writing,PM-2,GV.RR-02,"C-CHEMICAL-R01 (27.230(a)(17), voluntary benchmark)",No
+POL-02,A.2,Yearly risk assessment with SP 800-30; Owner's monthly oversight,RA-3; PM-9,ID.RA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,A.3,Risk acceptance authority; injury risks never accepted at High,PM-9,GV.RM-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,A.4,Sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,A.5,Vendor security terms before plant access or Restricted data,SA-9,GV.SC-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (remote access)",Yes
+POL-02,A.6,Yearly independent assessment,CA-2,ID.IM-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (audits)",No
+POL-02,A.7,Security records kept 3 years; incident records 5 years,SI-12,GV.PO-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,A.8,Yearly policy review; policies available to everyone,PL-1,GV.PO-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (policies)",No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,A.10,"New raw materials screened against RMP, PSM, CFATS, and DOT lists; peroxide limits",RA-3,GV.OC-03,40 CFR 68.130; 29 CFR 1910.119(a)(1); 6 CFR Part 27 Appendix A; 49 CFR 172.800(b),No
+POL-02,A.11,"Owner approves recipe, setpoint, and alarm changes; integrator change notes",CM-3,PR.PS-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (change management)",Yes
+POL-02,B.1,Unique accounts; shared accounts only as recorded exceptions,IA-2; AC-2,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,B.2,Role-based least privilege on the HMI and SaaS services,AC-2; AC-3; AC-6,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,B.3,MFA everywhere including the portal and MSP-held administrator logins,IA-2(1),PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (password management)",Yes
+POL-02,B.4,Onboarding and termination checklist; door code and shared OT passwords changed at departures; DOT training within 60 days,PS-4; AC-2; IA-5; AT-2,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 49 CFR 172.704(c)(1)",Yes
+POL-02,B.5,Monthly reconciliation of all account lists,AC-2; AC-6,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,B.6,10-minute device lock; HMI exempt with staffed blend room,AC-11,PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,B.7,Sealed OT administrator passwords in the Owner's safe,AC-2; IA-5,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-02,B.8,"Gateway off by default; watched, logged, named, MFA-protected integrator sessions",AC-17; MA-4; IA-2(1); SA-9,PR.AA-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (remote access)",Yes
+POL-02,B.9,Password length; yearly and departure changes of shared secrets,IA-5,PR.AA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,B.10,Only the scanned company USB stick on the HMI PC,MP-7,PR.PS-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (physical access to media)",No
+POL-02,C.1,Company systems for company work,PL-4,PR.AT-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,C.2,No Restricted information in personal accounts or public AI tools,PL-4,PR.AT-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,C.3,Lock screens; never share passwords or MFA codes,AC-11; PL-4,PR.AA-03,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,C.4,Security awareness training yearly; DOT hazmat training on schedule,AT-2,PR.AT-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); 49 CFR 172.704(a)(4)",Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(16), voluntary benchmark)",Yes
+POL-02,C.6,Signed policy acknowledgment,PL-4,PR.AT-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-02,C.7,HMI PC used for batches only,PL-4; CM-7,PR.PS-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (disable unnecessary system elements)",No
+POL-03,4.1,"Runbook for intrusion into the batch control system, printed at three locations",IR-8,RS.MA-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (incident response)",No
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(16), voluntary benchmark)",Yes
+POL-03,4.3,Log every incident and suspicious activity,IR-5,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(16), voluntary benchmark)",No
+POL-03,4.4,Safety first: emergency stop and hold dosing on any suspicion,IR-4,RS.MI-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-03,4.5,"Immediate release notice to 911, NRC, LEPC, and SERC whatever the cause",IR-6,RS.CO-02,40 CFR 302.6; 40 CFR 355.40-355.43,Yes
+POL-03,4.6,Insurer hotline first; liability carriers if people or property are harmed,IR-4,RS.MA-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-03,4.7,Ransom only with approvals and an OFAC check; recovery never depends on paying,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.8,Voluntary CISA and FBI report within 24 hours (target),IR-6,RS.CO-03,"C-CHEMICAL-R01 (27.230(a)(15), voluntary benchmark)",Yes
+POL-03,4.9,Florida notice decision for employee personal information,IR-6,RS.CO-02,Fla. Stat. 501.171,Yes
+POL-03,4.10,Vendor incident reports logged and handled,IR-6; SA-9,GV.SC-08,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-03,4.11,Yearly tabletop with the MSP and integrator,IR-3,ID.IM-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-03,4.12,Lessons learned within 30 days,IR-4,ID.IM-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-04,4.1,"Three classification levels; published SDSs are Public, formulations Restricted",RA-2,ID.AM-07,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-04,4.2,Encrypt Restricted information at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-04,4.3,Restricted information only in approved places; CVI on paper only,AC-3,PR.DS-01,"C-CHEMICAL-R01 (27.400(d), voluntary benchmark)",No
+POL-04,4.4,"Inventory of devices, services, connections, and data locations",CM-8; CA-9,ID.AM-01,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (network architecture)",No
+POL-04,4.5,Named guest accounts only; no open share links,AC-3,GV.SC-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-04,4.6,Approved AI tools only; AI write-back off,SA-9; PL-4,GV.SC-05,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-04,4.7,Immutable 90-day office backups; weekly offline OT backups; restore tests,CP-9; CP-4,PR.DS-11,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark); CISA RBPS 8 measure (continuity and recovery plans)",Yes
+POL-04,4.8,Wipe or certified destruction with records,MP-6,ID.AM-08,"C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",No
+POL-04,4.9,"Retention of shipping papers, DOT training records, and security records",SI-12,GV.PO-02,49 CFR 172.201(e); 49 CFR 172.704(d),No
