@@ -153,8 +153,8 @@ See `control-implementation.csv` (142 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 115 |
-| Partially implemented | 25 |
+| Implemented | 113 |
+| Partially implemented | 27 |
 | Planned | 2 |
 | **Total** | **142** |
 
@@ -164,7 +164,7 @@ See `control-implementation.csv` (142 controls).
 | Hybrid (shared between a provider and the OSS/BSS team) | 22 |
 | System-specific | 31 |
 
-The Planned controls are High-baseline supplements: AC-2(12) (POAM-016) and AU-6(5) (POAM-004). Partially implemented controls: AC-2, AC-6, AC-17, AT-3, AU-6, AU-12, CM-6, CM-8, CP-2, CP-10, IA-5, IA-8, IR-3, IR-8, PS-4, PT-4, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, SC-7(21), SI-4(12).
+The Planned controls are High-baseline supplements: AC-2(12) (POAM-016) and AU-6(5) (POAM-004). Partially implemented controls: AC-2, AC-6, AC-17, AT-3, AU-6, AU-12, CM-6, CM-8, CP-2, CP-10, IA-5, IA-8, IR-3, IR-4, IR-8, PS-4, PT-4, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, AC-6(3), SC-7(21), SI-4(12).
 
 ### 10.2 Control assessment status
 Internal Audit assessed 42 of these controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`.

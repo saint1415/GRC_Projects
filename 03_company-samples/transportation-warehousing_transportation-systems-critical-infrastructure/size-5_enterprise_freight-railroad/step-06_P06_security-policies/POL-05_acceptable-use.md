@@ -46,6 +46,9 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 - STD-05.1 Security Awareness and Training Standard (including the TSA security training program)
 - STD-05.2 External Systems, Mobile Devices, and Personal Devices Standard
 - STD-05.3 Approved AI Tools List
+- STD-05.4 Collective Bargaining Notice Standard for Monitoring Technology
+- PRC-05.1 Training Assignment and Grace Period Procedure
+- PRC-05.2 Lost Device Reporting Procedure
 
 ## 6. Compliance and enforcement
 Compliance is monitored through training records, acknowledgment reports, device management reports, and the annual Internal Audit assessment (P07). Violations are handled under PRC-01.1 (POL-01 statement 4.7) and collective bargaining agreement procedures.

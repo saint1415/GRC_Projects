@@ -55,6 +55,7 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 - PRC-03.2 SEC Materiality Assessment Procedure
 - PRC-03.3 Multi-State Breach Notification Procedure
 - PRC-03.4 RSSM Location Request Fallback Procedure (draft; test due 2026-11-30, POAM-019)
+- PRC-03.5 Manual Dispatch and CTC Local Control Procedure
 
 ## 6. Compliance and enforcement
 Compliance is monitored through exercise results, DR test reports, report timeliness metrics, and the annual Internal Audit assessment (P07). Violations are handled under PRC-01.1 (POL-01 statement 4.7).

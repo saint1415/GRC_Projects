@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,"Board safety, security, and risk committee and audit committee minutes",Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3,Enterprise risk register and treatment status,GRC platform,Chief Risk Officer,Annual; quarterly KRIs,Annual analysis; 2 quarterly KRI packages,P01,Ready
+Both,CC4.1; CC4.2,Internal Audit assessment report and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Report; 3 monthly POA&M reports,P07,Ready
+Both,CC5.2; CC5.3,Common control catalog and policy set,GRC platform; policy portal,CISO,Annual,Current versions,P02 section 10.3; P06,Ready
+Both,CC6.1; CC6.3,Quarterly access certifications for platform roles,Identity governance,Director of Identity and Access Management,Quarterly,All quarters in the period,P07 AC-2,Collecting
+Both,CC6.1,Directory trust removal record,OT directory,Director of OT Security,One-time,Change record and verification,POAM-005,Not started
+Both,CC6.2; CC6.3,"Joiner, mover, leaver tickets and termination timeliness",Identity governance; HR system,Director of Identity and Access Management,Per event,"25 joiners, 25 leavers",P07 AC-2; PS-4,Collecting
+Both,CC6.4,Badge access reviews for NOCs and data halls,Badge system,"Assistant Vice President, Rail Security",Quarterly,All quarters,P07 PE-3,Collecting
+Both,CC6.6; CC6.7,Firewall rule reviews and TLS scans,Firewall manager; scanner,Director of Network Engineering,Semiannual; monthly scans,2 reviews; 3 monthly scans,P04; P07 SC-7,Collecting
+Both,CC6.8; CC7.1,"EDR coverage, allowlisting, vulnerability and patch reports",EDR console; scanner,Director of Security Operations,Weekly,5 weekly reports,P07 SI-2; SI-3; RA-5,Collecting
+Both,CC7.2; CC7.3; CC7.4,SOC case records and incident response exercise reports,SOC case management,Director of Security Operations,Per event; annual exercise,25 cases; exercise report,P07 IR-4; IR-3; P08,Collecting
+Both,CC8.1,Change tickets with approvals and lab test results,Change management system,CIO,Per change,25 standard and all emergency changes,P07 CM-3,Collecting
+Both,CC9.2,Vendor register and SOC report reviews for subservice organizations,Vendor management system,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P07 SA-9,Collecting
+Both,A1.2,Backup job reports and restore tests,Backup console,Director of Data Center Operations,Daily; quarterly restore,25 days; all quarterly restores,P07 CP-9,Ready
+SL-1,A1.3,DR test report showing PTC back office recovery within 4 hours,DR test records,Director of Train Control Systems,Annual,The 2027 retest,POAM-006,Not started
+SL-1,CC6.7,PTC key management ceremony records,HSM logs; key procedure,Director of Train Control Systems,Per rotation,All rotations in the period,P07 SC-12,Ready
+SL-1,CC7.1,PTC compensating measures and vendor patch certification records,Patch records; CIP file,PTC Back Office Manager,Monthly,3 months,POAM-003,Not started
+SL-1,C1.1,SL-1 tenant isolation test results,Penetration test report,"Vice President, Technology Services",Annual,Annual test,P04,Ready
+SL-2,CC2.3; CC3.1; PI1.1,SL-2 system description and commitments register,GRC platform,"Vice President, Technology Services",Annual,Approved version,P09,Not started
+SL-2,CC6.2,Customer administrator attestations,Customer portal,"Vice President, Technology Services",Quarterly,"All quarters, all 18 customers",P04 IA-8,Collecting
+SL-2,CC6.6,AQ VPN restriction and SD-WAN migration records,Network configuration,"Vice President, Integration Management Office",One-time; quarterly verification,Change records; reachability retest,POAM-018,Not started
+SL-2,A1.3,TMS tenant restore test in the standby region,DR test records,Director of Cloud Platform Engineering,Annual,2027 test,P05; P04,Not started
+SL-2,PI1.2; PI1.3,Input validation logs and daily EDI reconciliation exception reports,TMS,"Vice President, Technology Services",Daily,25 days,P09,Not started
+SL-2,C1.2,Customer exit and data destruction certificates,Contract records,"Vice President, Technology Services",Per exit,All exits in the period,P09,Not started

@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**141 of 216** sample companies are finished (1410 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**142 of 216** sample companies are finished (1420 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -134,6 +134,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Transportation Systems | Micro | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-2_micro_freight-railroad/README.md) |
 | Transportation Systems | Small | Short line railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-3_small_short-line-railroad/README.md) |
 | Transportation Systems | Mid-Market | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-4_mid-market_freight-railroad/README.md) |
+| Transportation Systems | Enterprise | Freight railroad | [README](03_company-samples/transportation-warehousing_transportation-systems-critical-infrastructure/size-5_enterprise_freight-railroad/README.md) |
 | Information | Sole Proprietorship | Independent SaaS developer | [README](03_company-samples/information-software-media/size-1_sole-proprietor_independent-saas-developer/README.md) |
 | Information | Micro | B2B SaaS publisher | [README](03_company-samples/information-software-media/size-2_micro_b2b-saas-publisher/README.md) |
 | Information | Small | Workforce scheduling SaaS | [README](03_company-samples/information-software-media/size-3_small_workforce-scheduling-saas/README.md) |
