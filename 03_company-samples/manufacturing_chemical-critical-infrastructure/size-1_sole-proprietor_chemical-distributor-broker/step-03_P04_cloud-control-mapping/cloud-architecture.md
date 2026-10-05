@@ -58,4 +58,4 @@ One point is specific to this business: **SaaS shared responsibility stops at th
 2. **No copy of the records the HMR requires.** BOL copies (two years, 172.201(e)) and registration records (three years, 107.620(a)) exist only inside the email and file suite. Provider resilience does not protect against account takeover or deletion (R-007).
 3. **The ERI provider is a SaaS dependency with a data feed.** It can meet 172.604 only for products the owner has registered. Ferric chloride was missing until 2026-09-14 (R-006).
 4. **Most partner portals offer no MFA.** Unique passwords are the only control, so they must not hold payment authority or pickup release authority without a phone confirmation.
-5. **The AI assistant's model-improvement setting was on** until 2026-09-18 (P10, R-012). It was found during this mapping and the P10 assessment.
+5. **The AI assistant's data settings were never checked.** This mapping flagged them on 2026-09-09; the P10 assessment found the model-improvement setting on and the owner turned it off on 2026-09-18 (R-012).
