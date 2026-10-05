@@ -7,7 +7,7 @@
 | Primary benchmark | NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29, February 26, 2024) with NIST SP 800-82 Rev. 3, *Guide to Operational Technology (OT) Security* (September 2023), as the OT guide. **Voluntary**: no binding sector cyber rule applies |
 | Binding obligations (by contract) | Customer A's Contractor Cyber Security Exhibit, terms S1 to S8 (S4, S5, and S6 flow down NERC CIP-013-2 R1.2 topics); the mutual NDAs with Customers B and C |
 | Also checked | NERC CIP-013-2 direct applicability; the four vertical requirements C-CRITICAL-MFG-R01 to R04; FAR 52.204-21, -23, -25 |
-| Sources read | CIRCIA NPRM regulatory text (89 FR 23644, proposed 6 CFR 226.2); CIP-013-2 and CIP-013-3 standard PDFs from NERC; 13 CFR 121.201 (eCFR version 2026-09-23); the SP 800-82 Rev. 3 PDF |
+| Sources read | CIRCIA NPRM regulatory text (89 FR 23644, proposed 6 CFR 226.2); CIP-013-2 and CIP-013-3 standard PDFs from NERC; FERC Order No. 919 (FR Doc. 2026-05716, via govinfo); 13 CFR 121.201 (eCFR version 2026-09-23); the SP 800-82 Rev. 3 PDF |
 | Assessment dates | 2026-08-24 to 2026-08-28 (self-assessment) |
 | Assessor | Owner-technician, with the on-call IT consultant (under NDA since 2026-08-20). Evidence is self-attested, checked on screen where possible |
 | Adopted | 2026-09-11 |
@@ -27,7 +27,7 @@ The most useful finding for a one-person business is what does **not** bind it, 
 ### 1.2 NERC CIP-013-2 binds the utilities, and reaches the owner through Customer A
 CIP-013-2 applies to the Responsible Entities in its section 4.1 (Balancing Authorities, certain Distribution Providers, Generator Operators and Owners, Reliability Coordinators, Transmission Operators and Owners). The owner is none of these and is not NERC-registered (G-046, Not applicable).
 
-Requirement R1 Part 1.2 makes each Responsible Entity's procurement process address six topics, including vendor notification of incidents (1.2.1), coordination of responses (1.2.2), notification when access should no longer be granted (1.2.3), verification of software integrity and authenticity (1.2.5), and coordination of vendor-initiated remote access (1.2.6). Customer A's utility contracts carry those topics, and Customer A flows them down through exhibit terms S4, S5, and S6. **The deadlines (24 hours, 1 business day) are Customer A's contract terms, not NERC requirements.** CIP-013-3 is approved and listed on nerc.com as effective 2028-07-01; its R1.2 keeps the same six topics, so the exhibit is unlikely to change in substance.
+Requirement R1 Part 1.2 makes each Responsible Entity's procurement process address six topics, including vendor notification of incidents (1.2.1), coordination of responses (1.2.2), notification when access should no longer be granted (1.2.3), verification of software integrity and authenticity (1.2.5), and coordination of vendor-initiated remote access (1.2.6). Customer A's utility contracts carry those topics, and Customer A flows them down through exhibit terms S4, S5, and S6. **The deadlines (24 hours, 1 business day) are Customer A's contract terms, not NERC requirements.** CIP-013-3 was approved by FERC Order No. 919 (FR Doc. 2026-05716, published 2026-03-24, effective 2026-05-26). Under NERC's implementation plan it takes effect on the first day of the first calendar quarter 24 months after the order's effective date, which is 2028-07-01. Its R1.2 keeps the same six topics, so the exhibit is unlikely to change in substance.
 
 ### 1.3 Why CSF 2.0 with SP 800-82 Rev. 3 is the benchmark
 With no binding rule, the owner needs a yardstick that covers both a SaaS office and the moment a laptop is cabled into a PLC. CSF 2.0 is sector-neutral and is the language customers use in supplier questionnaires; SP 800-82 Rev. 3 adds the OT guidance (removable media, remote access, integrity of programs). SP 800-82 Rev. 3 Section 6 is organized by CSF 1.1 categories, so it is cited by section number only, with CSF 2.0 IDs for the outcomes.
@@ -87,4 +87,4 @@ High and Moderate gaps are carried into the risk register (P01) and the POA&M (P
 ## 5. Pending and proposed changes (none treated as current obligations)
 - **CIRCIA final rule** (C-CRITICAL-MFG-R01). Not published as of 2026-09-25. Recheck scope on publication; the P08 matrix keeps a voluntary CISA report.
 - **NIST SP 800-82 Rev. 4 initial public draft** (2026-09-21; comments due 2026-11-30). Update section references in G-001 to G-035 when Rev. 4 is final.
-- **CIP-013-3** (effective 2028-07-01 per nerc.com). Same six R1.2 topics; watch for a revised Customer A exhibit.
+- **CIP-013-3** (FERC Order No. 919; effective 2028-07-01). Same six R1.2 topics; watch for a revised Customer A exhibit.
