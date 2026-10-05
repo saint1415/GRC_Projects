@@ -18,13 +18,13 @@
 - **10 CFR 73.56** (access authorization), including people whose duties let them act by electronic means against safety, security, or emergency preparedness (73.56(b)(1)(ii)).
 - **10 CFR 73.58** (safety/security interface) and **73.55(m)** (security program reviews, which must include an audit of the cyber security program).
 - **10 CFR 50.65** (Maintenance Rule) and **50.72** (immediate notifications) are not cyber rules, but the predictive maintenance pilot (P10) and the incident runbook (P08) depend on them.
-- **10 CFR 73.110** does not apply: no unit is licensed under Part 53 (G-077).
+- **10 CFR 73.110** does not apply: no unit is licensed under Part 53 (G-072).
 
 **What this analysis does and does not test.** The CSPs are inspected by the NRC and reviewed every 24 months by Nuclear Oversight. This group analysis does not re-perform those reviews. It checks each 73.54 paragraph at program level against inspection and review evidence, and it looks closely at the places where the **business side of the group touches the CSP**: the kiosk update path, CDA information in the work management system, cross-division staff, and notification triggers that start in the group SOC. That is where the gaps are.
 
 **The NRC-NERC boundary.** CIP-002-5.1a section 4.2.3.3 exempts "systems, structures, and components that are regulated by the Nuclear Regulatory Commission under a cyber security plan pursuant to 10 C.F.R. Section 73.54." Since the Commission's 2010 balance-of-plant decision (cited in RG 5.71 Rev. 1), balance-of-plant digital assets with a nexus to radiological health and safety are in the CSPs. The division's NERC CIP scope is therefore limited to the fleet operations center (medium impact under criterion 2.11, a Generator Operator control center for more than 1,500 MW in one Interconnection) and low impact BES Cyber Systems at each station's generator interconnection that the boundary analysis left outside the CSPs. The current enforceable versions used here are CIP-002-5.1a, CIP-003-9 (effective 2026-04-01), CIP-004-7, CIP-005-7, CIP-007-6, CIP-008-6, CIP-009-6, CIP-010-4, CIP-011-3, and CIP-013-2.
 
-**DOE-417 does not apply.** The DOE-417 instructions exclude commercial power reactors regulated by the NRC and subject to the Part 73 event notification rules from "Generating Entities," and no division is a Balancing Authority, Reliability Coordinator, or electric utility (G-078).
+**DOE-417 does not apply.** The DOE-417 instructions exclude commercial power reactors regulated by the NRC and subject to the Part 73 event notification rules from "Generating Entities," and no division is a Balancing Authority, Reliability Coordinator, or electric utility (G-073).
 
 ### 1.2 Engineering and Radiation Services: reactor rules reach it as an SGI holder and a contractor/vendor
 The division is not a licensee under Part 50, but three power reactor rules reach it directly:

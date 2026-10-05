@@ -80,7 +80,7 @@ Cyber insurance ($15 million aggregate limit, $500,000 retention) transfers part
 - **AI adopted without governance (R-043 to R-048).** Six tools went live or into pilot without review. P10 sets conditions.
 
 ## 4. Treatment summary
-**Funded in the FY2027 security plan (approved by the CEO 2026-09-15, $2.1 million one-time and $610,000 a year):**
+**Funded in the FY2027 security plan (approved by the CEO 2026-09-15: $2.1 million one-time, $350,000 a year, and $240,000 for SOC 2 across 2027):**
 - Remote access consolidation at Lakes and Ridge, MFA, and vendor gateway licensing ($90,000 one-time, $25,000 a year)
 - OT DMZ and segmentation at WTP-L1 and WTP-G1, tunnel restrictions, Ridge isolation firewall ($420,000)
 - Passive OT monitoring sensors at WTP-L1 and WTP-G1, MSSP OT playbooks and log onboarding ($160,000 one-time, $140,000 a year)
