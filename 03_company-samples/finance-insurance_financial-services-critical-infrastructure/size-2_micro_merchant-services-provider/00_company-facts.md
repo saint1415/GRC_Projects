@@ -126,3 +126,14 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Finances | A cash reserve covers about 45 days of expenses. Residuals arrive monthly from the processor partner. Payroll runs biweekly through an outside payroll service | P05 |
 | Assessor | The P07 assessor is an independent security consultant with PCI DSS experience, not involved in the risk assessment or the gap analysis and operating no control | P07 |
 | Merchant association questionnaire | A regional restaurant association that refers members to the company sent a vendor security questionnaire in July 2026, due 2026-09-30 | P09 |
+| Business volumes | The help desk takes about 15 merchant calls a day; about 160 keyed sales a month; about 25 new merchants and 40 disputes a month. Each merchant is worth about $1,300 a year in residuals | P05 |
+| Processor partner assurance | The processor partner provides a PCI DSS AOC as a Level 1 service provider (dated 2026-03) and no SOC 2 report. Console audit logs are kept 13 months | P02, P05, P09 |
+| Remote support | The Terminal and Integration Technician helps merchants set up gateway plugins through a remote support tool that uses a one-time code the merchant generates for each session | P03 |
+| Cardholder count | The deleted recordings held card data for about 1,700 distinct cardholders; this count supports the 314.6 exception | P03 |
+| Sponsor bank question | On 2026-08-24 the Owner asked the sponsor bank in writing to confirm that no company service is a covered service under 12 CFR 53 | P03, P08 |
+| Recordings notice analysis | Completed by the Operations Manager with the insurer's panel counsel on 2026-08-12: not a notification event (P08 section 6.5) | P08 |
+| Assessment findings | P07 found a spare terminal count of 41 against 44 on the spreadsheet (3 units shipped in 2025 swaps without an update), 2 spare laptops unpatched since March 2026, 212 emails with merchant owner Social Security numbers in attachments, and a backup console administered with one MSP account without MFA. The 2 unapproved payment page scripts were removed on 2026-08-12 with the merchants' agreement | P01, P07 |
+| Fraud filter | Defaults set by the company in 2024: automatic decline at score 80 and above, merchant review 60 to 79. 104 of 120 merchants use the defaults. A sales brochure claimed the filter "stops 99% of fraud"; withdrawn 2026-08-25 | P10 |
+| CRM AI assistant | The CRM vendor switched on a generative AI writing assistant by default in June 2026; the company switched it off on 2026-08-25 pending the vendor's data use terms | P10 |
+| CRM vendor report | SOC 2 Type 2 (Security, Availability, Confidentiality), period ending 2026-03-31, reviewed 2026-08-21; states RTO 8 h and RPO 1 h | P05, P09 |
+| 2026 budget | About $3,900 one-time and $5,700 a year approved by the Owner on 2026-08-31 (P01 section 4) | P01 |

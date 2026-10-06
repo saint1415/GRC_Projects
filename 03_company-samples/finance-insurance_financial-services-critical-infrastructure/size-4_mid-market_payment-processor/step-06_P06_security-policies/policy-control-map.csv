@@ -1,2 +1,49 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Written program meets PCI DSS for service providers and the Safeguards Rule,PM-1,GV.PO-01,16 CFR 314.4; PCI DSS 12.1.1,No
+POL-01,4.2,Qualified Individual designated in writing and reaffirmed yearly,PM-2,GV.RR-02,16 CFR 314.4(a),No
+POL-01,4.3,PCI DSS executive charter; responsible role per requirement per platform,PM-2,GV.RR-01,PCI DSS 12.4.1; PCI DSS 12.1.3,No
+POL-01,4.4,Annual risk assessment and targeted risk analyses on every platform,RA-3; PM-9,ID.RA-05; GV.RM-01,16 CFR 314.4(b); PCI DSS 12.3.1,Yes
+POL-01,4.5,Risk acceptance authority by level; no acceptance of a requirement not in place at the ROC,PM-9,GV.RM-01,PCI DSS 12.3.1,No
+POL-01,4.6,PCI DSS scope confirmed every six months and after significant change; organizational change review,CM-8; PL-2,ID.AM-01; ID.AM-03,PCI DSS 12.5.2.1; PCI DSS 12.5.3; 16 CFR 314.4(g),Yes
+POL-01,4.7,Quarterly reviews that staff on every platform perform security tasks,CA-7,GV.OV-01,PCI DSS 12.4.2; PCI DSS 12.4.2.1,No
+POL-01,4.8,"Service provider due diligence, agreements, AOCs, responsibility matrices, annual Tier 1 review",SA-9; SR-6,GV.SC-05; GV.SC-07,PCI DSS 12.8; 16 CFR 314.4(f),Yes
+POL-01,4.9,AOC and responsibility matrix provided to merchants and ISVs on request,PL-2,GV.OC-02,PCI DSS 12.9.1; PCI DSS 12.9.2,No
+POL-01,4.10,Annual written Qualified Individual report to the board audit committee; quarterly vCISO reports,PM-9,GV.OV-01,16 CFR 314.4(i),No
+POL-01,4.11,Annual independent testing (internal audit and QSA); program adjusted after tests,CA-2,ID.IM-01,16 CFR 314.4(d); 16 CFR 314.4(g),No
+POL-01,4.16,"Acquired environments on the SIEM, identity provider, PAM, and in scope within 90 days of closing",CM-8; CA-7,ID.AM-01; GV.OV-02,PCI DSS 12.5.3,Yes
+POL-01,4.17,AI tools and models approved through the AI and model risk process,PM-9,GV.RM-01,16 CFR 314.4(b),No
+POL-02,4.1,Unique identities; no shared accounts; sealed and tested break-glass accounts,IA-2; IA-4,PR.AA-01,PCI DSS 8.2.1; PCI DSS 8.2.2,No
+POL-02,4.2,Access by job need and least privilege from a role catalog,AC-2; AC-6,PR.AA-05,PCI DSS 7.2.1; PCI DSS 7.2.2; 16 CFR 314.4(c)(1),Yes
+POL-02,4.3,Workforce MFA; phishing-resistant MFA and PAM for administrators and CDE access,IA-2(1); IA-2(2); AC-17,PR.AA-03,PCI DSS 8.4.2; 16 CFR 314.4(c)(5),Yes
+POL-02,4.4,MFA for high-risk customer roles on every portal; approved dynamic analysis for others,IA-8; IA-5,PR.AA-03,PCI DSS 8.3.10.1; 16 CFR 314.4(c)(5),Yes
+POL-02,4.5,All access including cloud keys and tokens removed by the end of the last day,PS-4; AC-2,PR.AA-05,PCI DSS 8.2.5,Yes
+POL-02,4.6,Prior roles removed within 5 business days of a transfer,PS-5; AC-2,PR.AA-05,PCI DSS 7.2.4,Yes
+POL-02,4.7,Six-month access reviews on every platform; quarterly reconciliation to HR,AC-2; AC-6,PR.AA-05,PCI DSS 7.2.4; 16 CFR 314.4(c)(1),Yes
+POL-02,4.8,"Service accounts scoped, vaulted, never hard-coded, reviewed every six months",AC-6(5); IA-5,PR.AA-05,PCI DSS 7.2.5.1; PCI DSS 8.6.2,Yes
+POL-02,4.9,No standing administrator roles; just-in-time elevation through PAM,AC-6(2); AC-6(5),PR.AA-05,PCI DSS 7.2.2,No
+POL-02,4.11,"Vendor remote access through PAM, approved per session, recorded",MA-4; AC-17,PR.AA-05,PCI DSS 8.2.7,Yes
+POL-02,4.12,"Step-up MFA, 3-business-day hold, and call-back for funding account changes",AC-3; IA-2,PR.AA-03,16 CFR 314.4(c)(1),No
+POL-02,4.13,Cage access list reviewed quarterly; visitor escorts recorded,PE-2; PE-3,PR.AA-06,PCI DSS 9.2.1; PCI DSS 9.3.2,Yes
+POL-03,4.1,Written plan covering 314.4(h) and PCI DSS 12.10.1; card data and settlement runbooks,IR-8,RS.MA-01,PCI DSS 12.10.1; 16 CFR 314.4(h),Yes
+POL-03,4.3,Security alerts on every platform monitored and answered 24x7,SI-4; AU-6,DE.AE-02,PCI DSS 10.4.1; PCI DSS 12.10.5,Yes
+POL-03,4.4,Severity 1 escalation to the COO within 1 hour; crisis management team; counsel-directed forensics,IR-4,RS.MA-01,PCI DSS 12.10.1,Yes
+POL-03,4.6,Card data compromise: evidence; sponsor bank within 24 hours; Visa within 3 calendar days; PFI,IR-6; IR-4,RS.CO-02,PCI DSS 12.10.1,Yes
+POL-03,4.7,Four-hour covered services determination and notice to both banks; contacts confirmed quarterly,IR-6,RS.CO-02,C-FINANCIAL-R01 (12 CFR 53.4; 12 CFR 304.24),Yes
+POL-03,4.8,FTC notice decision within 30 days of discovery for 500 or more consumers,IR-6,RS.CO-02,16 CFR 314.4(j),Yes
+POL-03,4.10,Card data found outside a CDE handled as a potential incident,IR-4; SI-12,RS.AN-03,PCI DSS 12.10.7,Yes
+POL-03,4.12,Annual executive and technical exercises; settlement exercise with both banks every two years,IR-3; CP-4,ID.IM-02,PCI DSS 12.10.2,Yes
+POL-03,4.13,Annual training for responders and crisis management team,IR-2,PR.AT-02,PCI DSS 12.10.4,No
+POL-04,4.1,Data classified and inventoried; reviewed with PCI DSS scope,RA-2,ID.AM-07,PCI DSS 12.5.2; 16 CFR 314.4(c)(2),No
+POL-04,4.2,Restricted data only in a CDE; tokens or masked PAN elsewhere,SC-28,PR.DS-01,PCI DSS 3.4.1; PCI DSS 3.5.1,Yes
+POL-04,4.3,"No sensitive authentication data after authorization, including call recordings",SI-12; SC-28,PR.DS-01,PCI DSS 3.3.1,Yes
+POL-04,4.4,HSM-protected keys with dual control on every platform; DR replication after rotation,SC-12; SC-28; AC-5,PR.DS-01,PCI DSS 3.6.1; PCI DSS 3.7.6; 16 CFR 314.4(c)(3),Yes
+POL-04,4.5,TLS 1.2 or higher or private encrypted links for external transmission,SC-8,PR.DS-02,PCI DSS 4.2.1; 16 CFR 314.4(c)(3),No
+POL-04,4.6,PAN retention limits (18 months in the archive); quarterly deletion process,SI-12,PR.DS-01,PCI DSS 3.2.1; 16 CFR 314.4(c)(6),No
+POL-04,4.8,Training data tokenized and minimized; PAN block on load; monthly scans,RA-2,PR.DS-01,PCI DSS 3.2.1,No
+POL-04,4.9,Monthly PAN discovery on non-CDE stores,RA-2; SI-12,ID.AM-07,PCI DSS 12.5.2; PCI DSS 12.10.7,No
+POL-04,4.10,"Funding files released under dual control, validated, and signed",SI-7; AC-5,PR.DS-01,C-FINANCIAL-R01 (12 CFR 53.4; 12 CFR 304.24),Yes
+POL-05,4.2,"No card data in email, chat, tickets, or shared drives",PL-4,GV.PO-01,PCI DSS 3.2.1; PCI DSS 12.2.1,No
+POL-05,4.3,Annual awareness training; annual secure coding for developers,AT-2; AT-3,PR.AT-01; PR.AT-02,PCI DSS 12.6.1; PCI DSS 6.2.2; 16 CFR 314.4(e),Yes
+POL-05,4.6,Card data only through the secure payment flow with automatic recording pause,PL-4,GV.PO-01,PCI DSS 3.3.1,No
+POL-05,4.7,Approved AI tools only; no Restricted data; human review of outputs,PL-4,GV.PO-01,PCI DSS 12.2.1; 16 CFR 314.4(f),No
+POL-05,4.8,AI-assisted code labeled and reviewed; security review for CDE repositories,SA-11; CM-3,PR.PS-06,PCI DSS 6.2.3; PCI DSS 6.2.4,Yes

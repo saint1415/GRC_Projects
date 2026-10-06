@@ -42,7 +42,7 @@ Applicability was decided first, one rule at a time, before any gap was rated. F
 ### 1.3 Bank service provider notice, 12 CFR 53.4 (C-FINANCIAL-R01): does not apply
 - **The test.** Part 53 reaches "bank service providers": a bank service company or other person "that performs covered services," meaning services "subject to the Bank Service Company Act (12 U.S.C. 1861-1867)" (53.2(b)(2), (b)(5)).
 - **The company's analysis.** The company performs no service for the sponsor bank of the kind the Bank Service Company Act covers. Its services go to merchants (sales, support, keyed entry) and to the processor partner (boarding packets). The processor partner, not the company, performs the processing and settlement services for the bank. The ISO agreement names no company service as subject to the Act.
-- **What the company does instead.** The ISO agreement's own clause requires notice of a suspected compromise to the processor partner and sponsor bank immediately and within 24 hours. That is the operative bank notice (P08). The Compliance question was sent to the sponsor bank in writing on 2026-08-24; if the bank designates any company service as a covered service, rows G-102 to G-104 are reopened.
+- **What the company does instead.** The ISO agreement's own clause requires notice of a suspected compromise to the processor partner and sponsor bank immediately and within 24 hours. That is the operative bank notice (P08). The Owner asked the sponsor bank in writing on 2026-08-24 to confirm this; if the bank designates any company service as a covered service, rows G-102 to G-104 are reopened.
 
 ### 1.4 Considered and not applicable
 | Requirement | Decision |
