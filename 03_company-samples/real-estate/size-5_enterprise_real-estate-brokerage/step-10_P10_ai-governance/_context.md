@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Automated tenant and buyer screening
+**AI use case:** Automated tenant screening
 **Sector AI rules and guidance:** HUD No. 24-098 (May 2, 2024) Now on archives.hud.gov; HUD FHEO memo of Sept 16, 2025 de-prioritized related theories and removed tenant-screening-algorithm materials from the FHEO guidance repository. Treat as non-current federal guidance.; Colo. SB26-189 Covers housing decisions (e.g., tenant screening tools); effective Jan 1, 2027.; Cal. Code Regs. tit. 11 (ADMT article) Applies to significant decisions including housing; compliance by Jan 1, 2027.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

@@ -92,7 +92,7 @@ Random selections used the audit software's seeded random number generator; seed
 - Mailbox tests used audit-owned test mailboxes created for the assessment and deleted afterward.
 - The token replay test used an audit-owned agent test account with no client data, pre-approved by the CISO.
 - No customer information left the company's systems. Screenshots and exports in workpapers are redacted.
-- Critical exposures were reported to the CISO within 24 hours. One was: bank API client secrets in pipeline variables (reported 2026-08-06; rotated 2026-09-12).
+- Critical exposures were reported to the CISO within 24 hours. One was: bank API client secrets in pipeline variables (reported 2026-08-06; management scheduled rotation for 2026-09-12).
 - Findings were validated with control owners before the report was issued.
 
 ## 5. Schedule and deliverables

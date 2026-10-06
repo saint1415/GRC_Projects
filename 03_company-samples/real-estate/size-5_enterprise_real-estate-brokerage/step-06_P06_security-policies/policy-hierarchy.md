@@ -35,7 +35,7 @@ The set has 5 policies, 20 standards, and 14 procedures. Policy statements: 49 (
 | STD-01.4 Audit Logging and Monitoring Standard | Standard | Set by CISO | CISO |
 | STD-01.5 Secure Development, Configuration, and Change Standard | Standard | Set by CISO | CISO |
 | STD-01.6 Physical Security Standard | Standard | Set by CISO | CISO |
-| STD-01.7 Acquisition Security Integration Standard | Standard | Set by CISO | CISO |
+| STD-01.7 Acquisition Security Integration Standard | Standard | Set by Chief Risk Officer | CISO |
 | PRC-01.1 Sanctions Procedure | Procedure | CISO | Owning director (under POL-01) |
 | PRC-01.2 Policy Exception Procedure | Procedure | CISO | Owning director (under POL-01) |
 | PRC-01.3 Change Management Procedure | Procedure | CISO | Owning director (under POL-01) |
@@ -52,21 +52,21 @@ The set has 5 policies, 20 standards, and 14 procedures. Policy statements: 49 (
 | STD-03.2 Breach and Regulatory Notification Standard | Standard | Set by Director of Security Operations | CISO |
 | STD-03.3 Contingency and Disaster Recovery Standard | Standard | Set by Director of Security Operations | CISO |
 | PRC-03.1 BEC and Funds Diversion Runbook (P08) | Procedure | Director of Security Operations | Owning director (under POL-03) |
-| PRC-03.2 SEC Materiality Assessment Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
+| PRC-03.2 SEC Materiality Assessment Procedure | Procedure | General Counsel | Owning director (under POL-03) |
 | PRC-03.3 Multi-State Breach Notification Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
-| PRC-03.4 Funds Recall Procedure | Procedure | Director of Security Operations | Owning director (under POL-03) |
+| PRC-03.4 Funds Recall Procedure | Procedure | President, Title and Escrow | Owning director (under POL-03) |
 | POL-04 Data Classification and Handling Policy | Policy | Chief Privacy Officer | Executive risk committee |
 | STD-04.1 Encryption and Key Management Standard | Standard | Set by Chief Privacy Officer | CISO |
 | STD-04.2 Records Retention and Disposal Standard | Standard | Set by Chief Privacy Officer | CISO |
 | STD-04.3 Backup Standard | Standard | Set by Chief Privacy Officer | CISO |
-| STD-04.4 Funds Instruction Integrity Standard | Standard | Set by Chief Privacy Officer | CISO |
+| STD-04.4 Funds Instruction Integrity Standard | Standard | Set by President, Title and Escrow | CISO |
 | PRC-04.1 Data Extract Registration Procedure | Procedure | Chief Privacy Officer | Owning director (under POL-04) |
-| PRC-04.2 Earnest Money Deposit Handling Procedure | Procedure | Chief Privacy Officer | Owning director (under POL-04) |
-| PRC-04.3 Payee Verification and Callback Procedure | Procedure | Chief Privacy Officer | Owning director (under POL-04) |
+| PRC-04.2 Earnest Money Deposit Handling Procedure | Procedure | Florida Broker of Record (with each state's broker of record) | Owning director (under POL-04) |
+| PRC-04.3 Payee Verification and Callback Procedure | Procedure | President, Title and Escrow | Owning director (under POL-04) |
 | POL-05 Acceptable Use Policy | Policy | Chief Human Resources Officer (with the Executive Vice President, Brokerage Operations for contractor agents) | Executive risk committee |
 | STD-05.1 Security Awareness and Training Standard | Standard | Set by Chief Human Resources Officer | CISO |
-| STD-05.2 Personal Devices Standard (contractor agents) | Standard | Set by Chief Human Resources Officer | CISO |
-| STD-05.3 Approved AI Tools List | Standard | Set by Chief Human Resources Officer | CISO |
+| STD-05.2 Personal Devices Standard (contractor agents) | Standard | Set by Executive Vice President, Brokerage Operations | CISO |
+| STD-05.3 Approved AI Tools List | Standard | Set by Chief Data Officer | CISO |
 
 ## 4. Governance
 **Policy governance committee** (meets monthly): CISO (chair), Chief Privacy Officer, Chief Compliance Officer, CIO, Chief Data Officer, Chief Human Resources Officer, Executive Vice President of Brokerage Operations, President of Title and Escrow, and the General Counsel's delegate. The Chief Audit Executive attends as a non-voting observer to keep Internal Audit independent.
