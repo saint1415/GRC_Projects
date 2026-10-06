@@ -44,6 +44,9 @@ for p in layer_files:
             cid = f"{fam}-{int(num)}" + (f"({int(enh)})" if enh else "")
             if cid not in ctrl_ids:
                 errors.append(f"{p.relative_to(ROOT)}: unknown SP 800-53 control {cid}")
+    for line in text.splitlines():  # same 52.204-23 clock check the completed samples get
+        if "52.204-23" in line and re.search(r"\b(1|one) business day", line) and not re.search(r"\b(3|three)[ -]business[ -]days?", line):
+            errors.append(f"{p.relative_to(ROOT)}: FAR 52.204-23 given a 1-business-day clock (it is 3 business days)")
 
 # ---- sources
 src_ids = {r["source_id"] for r in rows(U / "sources" / "source-register.csv")}
