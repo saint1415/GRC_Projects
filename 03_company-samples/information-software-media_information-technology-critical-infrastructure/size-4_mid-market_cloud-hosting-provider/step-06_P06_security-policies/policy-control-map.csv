@@ -1,2 +1,69 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"Program: the company must maintain an information security program documented in this policy set, the supporting standards, and the System...",PM-1; PL-10,GV.PO-01,C-IT-R01 (Rev5 Class C PL-10),No
+POL-01,4.2,Senior security official: the Director of Security is the senior security official and must receive FedRAMP Emergency messages,PM-2,GV.RR-02,C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-01,4.3,One standard for both partitions: a control that is required in the government partition must also be applied in the commercial partition and at...,PL-2,GV.PO-01,C-IT-R01 (Rev5 Class C PL-2),No
+POL-01,4.4,"Risk assessment: an enterprise and system risk assessment must be performed at least annually and after major changes, using NIST SP 800-30 Rev",RA-3; PM-9,ID.RA-01,C-IT-R01 (Rev5 Class C RA-3),No
+POL-01,4.5,Risk acceptance authority: risk owners may accept Low and Very Low risks,PM-9,GV.RM-01,C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-01,4.6,"FedRAMP rules: the GRC Manager must track every FedRAMP ruleset that applies to the Government Cloud, plan to meet each by its maintaining date,...",CA-7; PL-2,GV.OC-03,"C-IT-R01 (Rev5 Class C CA-7, PL-2)",No
+POL-01,4.7,"Reporting: the Director of Security must report to the audit committee each quarter on the top risks, POA&M status, incidents, FedRAMP transition...",CA-5,GV.OV-01,C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-01,4.8,"Exceptions: exceptions to any policy or standard must be requested in writing, risk-rated, approved under section 4.5, recorded in the risk...",PL-1,GV.PO-02,C-IT-R01 (Rev5 Class C PL-1),No
+POL-01,4.9,Policy review: policies must be reviewed at least annually and after major changes or incidents,PL-1,GV.PO-02,C-IT-R01 (Rev5 Class C PL-1),No
+POL-01,4.10,"Independent assessment: controls must be independently assessed at least annually (P07), and the Government Cloud must complete its FedRAMP...",,,IVV-CSF-AIA),No
+POL-01,4.11,"Vendors: before a vendor receives access to customer data or production systems, it must be tiered, reviewed, and approved by the GRC Manager, and...",,,MAS-CSO-TPR),No
+POL-01,4.12,"Tier 1 vendors: tier 1 vendors must be reviewed each year, including their SOC 2 report or FedRAMP package, with exceptions followed up in writing...",SR-6,GV.SC-07,C-IT-R01 (Rev5 Class C SR-6),No
+POL-01,4.13,"Data security program check: no vendor, employment, or investment agreement may give a country of concern or covered person access to customer...",SA-9; PS-7,GV.SC-04,C-IT-R04,Yes
+POL-01,4.14,"Contract flow-downs: security duties that customers flow down (DFARS 252.204-7012 for defense customers, the bank addendum, agency terms) must be...",PL-2,GV.OC-03,C-IT-R03; C-IT-R05,No
+POL-01,4.15,"Sanctions: workforce members who break security policies must be sanctioned in proportion to intent and harm, from retraining to termination",PS-8,GV.RR-04,C-IT-R01 (Rev5 Class C PS-8),No
+POL-01,4.16,"Records: policies, risk assessments, assessments, FedRAMP deliverables, and incident records must be kept for at least 6 years, or longer where a...",SI-12,GV.PO-01,C-IT-R01 (Rev5 Class C SI-12),No
+POL-01,4.17,"AI: aI tools that process customer data, act on security alerts, write production code, or support employment decisions must be approved through...",PM-9; SA-9,GV.RM-01,C-IT-R01 (Rev5 Class C SA-9),Yes
+POL-02,4.1,"Unique identities: every person must use a unique, named account",AC-2; IA-2; IA-4,PR.AA-01,"C-IT-R01 (Rev5 Class C AC-2, IA-2, IA-4)",Yes
+POL-02,4.2,Phishing-resistant MFA: all workforce sign-ins must use the identity provider with a phishing-resistant hardware authenticator,,PR.AA-03,2); C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-02,4.3,"Privileged access through PAM: administrative access to hypervisor managers, BMCs, management networks, and cloud production accounts must go...",AC-6; AC-17; AU-12,PR.AA-05,"C-IT-R01 (Rev5 Class C AC-6, AC-17, AU-12)",Yes
+POL-02,4.4,Least privilege: access must be limited to what the role needs,AC-5; CM-5,PR.AA-05,"2); C-IT-R01 (Rev5 Class C AC-5, CM-5)",Yes
+POL-02,4.5,Access reviews: managers must review privileged access in both partitions every quarter and all other access every 6 months,,PR.AA-05,7); C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-02,4.6,Leavers and movers: the identity provider must disable a leaver's access the same day HR records the departure,PS-4; PS-5; AC-2,PR.AA-05,"C-IT-R01 (Rev5 Class C PS-4, PS-5, AC-2)",Yes
+POL-02,4.7,Inactive accounts: workforce accounts inactive for 35 days must be disabled automatically,,PR.AA-01,3); C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-02,4.8,"Machine credentials: every service account, API key, and deploy token must be in the secrets inventory with an owner and must expire within 90...",IA-5; AC-6; CM-5,PR.AA-01,"C-IT-R01 (Rev5 Class C IA-5, AC-6, CM-5)",Yes
+POL-02,4.9,"Remote management tools: the RMM tool must use named accounts only, restricted to company devices",,,12 CFR 53.4),No
+POL-02,4.10,Government partition access: only U.S,PS-3; AC-3,PR.AA-02,"C-IT-R01 (Rev5 Class C PS-3, AC-3)",Yes
+POL-02,4.11,Vendor access: vendor maintenance and support sessions must go through PAM with approval for each session and recording,MA-4; AC-17,PR.AA-05,"C-IT-R01 (Rev5 Class C MA-4, AC-17)",No
+POL-02,4.12,Customer administrator MFA: customer administrator accounts in the government partition must use MFA,,,SCG-CSO-SDF),No
+POL-02,4.13,Customer account recovery: the NOC must not reset a customer's MFA or password on a call alone,IA-12; IA-5,PR.AA-02,"C-IT-R01 (Rev5 Class C IA-12, IA-5)",Yes
+POL-02,4.14,"Lockout and sessions: accounts must lock after repeated failed sign-ins (10 in the identity provider, 5 in PAM), and sessions must end after the...",AC-7; AC-12,PR.AA-03,"C-IT-R01 (Rev5 Class C AC-7, AC-12)",No
+POL-03,4.1,"Plan and runbooks: the company must keep an incident response plan made up of this policy and the P08 runbooks, approved by the CTO and tested...",IR-8,RS.MA-01,C-IT-R01 (Rev5 Class C IR-8),No
+POL-03,4.2,Reporting by staff: anyone who suspects an incident must report it to the NOC or the SOC at once,IR-6,RS.MA-01,C-IT-R01 (Rev5 Class C IR-6),No
+POL-03,4.3,Severity and command: every incident must be given a severity and an incident commander within 30 minutes of declaration,IR-4,RS.MA-02,C-IT-R01 (Rev5 Class C IR-4),Yes
+POL-03,4.4,"FedRAMP reportability: for every incident, the federal incident response coordinator must promptly decide whether it affects, or is likely to...",,,"IEC-CSO-EFR, IEC-CSO-DPR, IEC-CSO-IIR)",No
+POL-03,4.5,"Notice clocks: each incident must be checked against the notification matrix (P08) within 1 hour of declaration, and every clock that starts must...",,,6),No
+POL-03,4.6,"Evidence preservation: images of affected systems and relevant monitoring data must be preserved with chain of custody, and kept at least 90 days...",,,e)),No
+POL-03,4.7,"Tooling compromise: if the RMM tool, the control plane, the pipeline, or a signing key may be compromised, it must be isolated first and validated...",IR-4,RS.MI-01,C-IT-R01 (Rev5 Class C IR-4),Yes
+POL-03,4.8,Insurance and payments: the cyber insurer's hotline must be notified before incident vendors are engaged,IR-4,RS.MA-01,C-IT-R01 (Rev5 Class C IR-4),Yes
+POL-03,4.9,"Spillage: cUI or federal data found in the commercial partition or a managed services server must be handled under the spillage procedure,...",IR-9,RS.MA-02,C-IT-R01 (Rev5 Class C IR-9); C-IT-R03,No
+POL-03,4.10,"Exercises and training: both P08 runbooks must be exercised at least once a year, including their notice steps",IR-2; IR-3,PR.AT-02,"C-IT-R01 (Rev5 Class C IR-2, IR-3)",Yes
+POL-03,4.11,"Logging: the event types in STD-04 must be logged from every system in both partitions and the RMM tool, sent to the SIEM, kept at least 1 year...",AU-2; AU-6; AU-11; SI-4,DE.CM-01,"C-IT-R01 (Rev5 Class C AU-2, AU-6, AU-11)",Yes
+POL-03,4.12,"AI-assisted triage: aI triage must not close alerts on privileged access, the RMM tool, the pipeline, or signing keys without human review, and a...",AU-6; SI-4,DE.AE-02,"C-IT-R01 (Rev5 Class C AU-6, SI-4)",Yes
+POL-03,4.13,"Contingency plans: one contingency plan must cover both partitions, all three data centers, and the BIA recovery objectives (P05), including the...",,,a)),No
+POL-03,4.14,Recovery testing: control plane restores must be tested quarterly in both partitions,CP-4; CP-10,PR.DS-11,"C-IT-R01 (Rev5 Class C CP-4, CP-10)",Yes
+POL-03,4.15,"Backups: control plane backups must be immutable, held in a separate account and region, and deletable only with two-person approval",CP-9; CP-6,PR.DS-11,"C-IT-R01 (Rev5 Class C CP-9, CP-6)",No
+POL-04,4.1,Classify and label: every system in the CMDB must record the highest classification it handles and its partition,,,"MAS-CSO-IIR, MAS-CSO-TPR)",No
+POL-04,4.2,Partition separation: federal data must stay in the government partition,AC-4; CM-12,PR.DS-01,"C-IT-R01 (Rev5 Class C AC-4, CM-12); C-IT-R03",No
+POL-04,4.3,"Data locations: the locations of Federal and Customer Confidential data, including metadata in shared systems such as ticketing and billing, must...",,,MAS-CSO-MDI),No
+POL-04,4.4,Encryption: federal and Customer Confidential data must be encrypted in transit (TLS 1.2 or higher) and at rest,,,CMU-CSO-CMD); C-IT-R03,No
+POL-04,4.5,"Secure configuration: every platform component must follow a documented baseline (STD-03), deployed as code where possible",CM-2; CM-6,PR.PS-01,"C-IT-R01 (Rev5 Class C CM-2, CM-6)",Yes
+POL-04,4.6,Change control: production changes must go through the change process with a security impact analysis and a FedRAMP significant change evaluation...,,,SCN-CSO-EVA),No
+POL-04,4.7,Vulnerability response: all in-scope components must be scanned with credentials at least monthly,,,VDR and VER rules),No
+POL-04,4.8,"Software integrity: vM templates and control plane releases must be built by the pipeline, signed with a key in the HSM, and verified at...",SI-7; SA-10; SA-15,PR.PS-02,"C-IT-R01 (Rev5 Class C SI-7, SA-10, SA-15)",Yes
+POL-04,4.9,"Media and drives: drives must be cryptographically erased before they leave a cage and destroyed by a certified vendor, with a certificate that...",MP-6; MP-5,PR.DS-01,"C-IT-R01 (Rev5 Class C MP-6, MP-5)",No
+POL-04,4.10,Maintenance: hardware maintenance must be scheduled and recorded,MA-2; MA-3,PR.PS-03,"C-IT-R01 (Rev5 Class C MA-2, MA-3)",No
+POL-04,4.11,"Facilities: the company must keep an approved access list for each cage, review it quarterly, and rely on the colocation providers for facility...",PE-2; PE-3,PR.AA-06,"C-IT-R01 (Rev5 Class C PE-2, PE-3)",Yes
+POL-04,4.12,Retention and deletion: customer data must be deleted within 30 days after contract end unless the customer or law requires otherwise,SI-12,PR.DS-01,C-IT-R01 (Rev5 Class C SI-12),No
+POL-05,4.1,Rules of behavior: every workforce member must sign the rules of behavior and the confidentiality agreement at hire and every year before keeping...,PL-4; PS-6,GV.RR-04,"C-IT-R01 (Rev5 Class C PL-4, PS-6)",No
+POL-05,4.2,"Customer data: customer data may be accessed only to deliver the contracted service, through approved tools, and never copied to personal devices,...",PL-4; AC-21,PR.DS-01,"C-IT-R01 (Rev5 Class C PL-4, AC-21)",No
+POL-05,4.3,"Company devices only for administration: only company-managed laptops may reach PAM, cloud consoles, the RMM tool, or the code repository",AC-20; AC-19,PR.AA-05,"C-IT-R01 (Rev5 Class C AC-20, AC-19)",No
+POL-05,4.4,Software and media: staff must not install unapproved software on company devices,CM-11; MP-7,PR.PS-05,"C-IT-R01 (Rev5 Class C CM-11, MP-7)",No
+POL-05,4.5,"Device protection: company laptops must keep full-disk encryption, EDR, and screen lock on",SC-28; AC-11,PR.DS-01,"C-IT-R01 (Rev5 Class C SC-28, AC-11)",Yes
+POL-05,4.6,AI tools: staff may use only AI tools approved under STD-10,PL-4; SA-9,GV.RR-04,"C-IT-R01 (Rev5 Class C PL-4, SA-9)",Yes
+POL-05,4.7,"Communications: staff must not discuss incidents, customers, or agency relationships on social media or with the press",AC-22,GV.RR-04,1); C-IT-R01 (Rev5 Class C AC-22),No
+POL-05,4.8,"Security awareness: all workforce must complete security awareness training at hire and yearly, including phishing, social engineering of support...",,PR.AT-01,3); C-IT-R01 (program governance supporting the FedRAMP certification),No
+POL-05,4.9,"Role-based training: every engineer with a privileged role (all 214) and every NOC agent must complete role-based training yearly, covering PAM,...",AT-3,PR.AT-02,C-IT-R01 (Rev5 Class C AT-3),No
+POL-05,4.10,Training records: training completion must be recorded and kept for 5 years,AT-4,PR.AT-01,C-IT-R01 (Rev5 Class C AT-4),No

@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI-driven security operations (alert triage)
+**AI use case:** AI-driven alert triage and automated containment in the MDR provider's platform
 **Sector AI rules and guidance:** None identified; see cross-sector obligations
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

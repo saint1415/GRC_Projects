@@ -36,7 +36,7 @@ HCP-G is the set of services that lets government customers order, run, secure, 
 | SEC | Cybersecurity disclosure | Form 8-K Item 1.05; 17 CFR 229.106 | A material G1 incident goes through the P08 materiality step |
 | State | State breach notification laws | Each state where affected individuals reside (Florida worked example: Fla. Stat. 501.171(6), third-party agent notice to the covered entity within 10 days) | State and local agency customers are the data owners; the company notifies them as their agent (P08) |
 | Contract | Agency agreements; customer agreement | 72-hour incident notice; FedRAMP incident communication; DFARS addendum | Applies to every G1 customer |
-| Internal | POL-01 to POL-05, standards, procedures | P06 | Approved 2026-09-08 |
+| Internal | POL-01 to POL-05, standards, procedures | P06 | POL-02 to POL-05 approved 2026-09-08; POL-01 approved by the board committee 2026-09-10 |
 
 **Not applicable, with reasons:**
 - **C-IT-R05 (bank service provider notification):** the 210 banking organizations use SL-1 and SL-3, not SL-2. The rule applies to those service lines (P03, P08).

@@ -45,7 +45,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-08 | Managed DNS | SaaS DNS provider (resold) | Yes (customer DNS zones) | About 190 customer zones under one company account with MFA. No zone export is kept outside the provider |
 | SYS-09 | Ticketing and documentation (professional services automation, PSA) | SaaS | Yes (customer server passwords in its documentation vault) | Readable by all 7 staff |
 | SYS-10 | Endpoints | Company-managed | Cached | 9 laptops (7 in use, 2 spares) with full-disk encryption and the MDR's EDR agent |
-| SYS-11 | MDR platform with AI alert triage | SaaS (MDR provider) | Logs | Collects EDR, identity provider, and firewall logs. **Not** hypervisor manager, BMC, RMM, cloud tenant, or DNS logs. The AI triage scores and auto-closes low-risk alerts and can isolate a laptop or suspend an identity provider account on its own (P10) |
+| SYS-11 | MDR platform with AI alert triage | SaaS (MDR provider) | Logs | Collects EDR, identity provider, and firewall logs. **Not** hypervisor manager, BMC, RMM, cloud tenant, or DNS logs. The AI triage scores and auto-closes low-risk alerts (about 91% of about 2,140 alerts in July 2026) and can isolate a laptop or suspend an identity provider account on its own (P10). On 2026-06-27 it suspended the on-call Systems Engineer's account during a host failure, locking him out of the VPN for about 50 minutes |
 
 **SSP system (P02):** the *Hosting Control Plane and Customer Portal (HCP)*: the customer portal (SYS-01), cluster and out-of-band management (SYS-02), the management interfaces of the hosting platform (SYS-03), the cloud tenant (SYS-04), the backup service (SYS-05), the RMM tool (SYS-06), the identity provider (SYS-07), DNS administration (SYS-08), the PSA vault (SYS-09), and the administrator laptops (SYS-10), monitored through the MDR service (SYS-11).
 
@@ -91,7 +91,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
+| 2026-06-27 | MDR AI triage automatically suspends the on-call Systems Engineer's account during a host failure (P10) |
 | 2026-07-20 to 2026-07-31 | BIA, risk assessment, and gap analysis (Lead Systems Engineer and Operations Manager) |
+| 2026-07-28 | Independent consultant engaged for the P07 assessment |
 | 2026-08-17 to 2026-08-19 | Control assessment by the independent consultant (DC-1 walkthrough 2026-08-18) |
 | 2026-08-24 to 2026-08-28 | SOC 2 readiness self-assessment, colocation report review, and AI risk assessment |
 | 2026-09-15 | Deliverables approved by the Owner |
+| 2026-10-01 | POL-02, POL-03, and POL-04 take effect |
+| 2026-10-15 | Shared RMM support accounts removed (POAM-001 first milestone; R-001 tolerance limit in the SSP) |
+| 2026-10-28 | First incident response tabletop with the MDR provider and a bank scenario (POAM-011) |
+| 2026-10-30 | Both banks' 2026 vendor due diligence questionnaires due (answered with P09, P07, and the SSP) |
