@@ -12,7 +12,7 @@ DEP-10,BAS Integrator C (Platform C),Third party (OT integrator),BP-06,19 acquir
 DEP-11,Access control and video integrators (3 regional),Third party (OT integrators),BP-01; BP-02,Device installation and service at 121 properties,No,Second integrator in each region under master agreements,n/a,n/a,Remote access through the OT gateway
 DEP-12,Legacy PACS servers at the acquired properties (2),Acquired system,BP-06,19 properties; about 640 door controllers,Yes,Cached credential lists in door controllers,Never tested,n/a,Nightly backup to a storage device on the same flat network; migration to the enterprise platform due 2027-03-31
 DEP-13,Visitor management vendor (SYS-11),Third party (SaaS),BP-07,64 properties,No (two regions),Paper logs,2026-04 (vendor report),8,Met
-DEP-14,Legacy visitor kiosk vendor (6 acquired towers),Third party (SaaS),BP-07; BP-06,6 towers,No,Paper logs,Never tested,None stated,Keeps ID images beyond the 30-day standard (POAM-016)
+DEP-14,Legacy visitor kiosk vendor (6 acquired towers),Third party (SaaS),BP-07; BP-06,6 towers,No,Paper logs,Never tested,None stated,Keeps ID images beyond the 30-day standard (POAM-019)
 DEP-15,"Property management, lease accounting, and ERP SaaS (SYS-07)",Third party (SaaS),BP-09 to BP-14; BP-19,All properties,Yes,Prior month registers; bank portals,2026-06 (vendor SOC 1 and SOC 2 reviewed),24,SOX IT general controls tested annually
 DEP-16,HR and payroll SaaS (SYS-12),Third party (SaaS),BP-15; BP-13,"12,000 employees",Yes,Repeat the prior payroll,2026-06 (vendor SOC 1 and SOC 2 reviewed),24,Met
 DEP-17,Productivity suite (SYS-06),Third party (SaaS),BP-03; BP-20,All workforce,No (vendor multi-region),Out-of-band conferencing; company phones,2026-03-19 (tabletop),4,Met

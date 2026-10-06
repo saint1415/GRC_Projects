@@ -2,7 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. | **Tier:** Mid-Market | **Provider:** Vendor-agnostic public cloud (see section 4), plus SaaS
 **System:** Building Automation and Access Control System (BAACS), as defined in the SSP (P02), with the rest of the landing zone it shares | **Prepared:** 2026-07-31 by the IT Director and the Security Manager; updated 2026-09-15 with P07 results
-**Control map:** `cloud-control-map.csv` (49 rows, 22 components)
+**Control map:** `cloud-control-map.csv` (50 rows, 22 components)
 
 ## 1. Diagram
 The diagram shows today's design. Items marked "gap" or "planned" are POA&M items (P07).
@@ -47,11 +47,11 @@ flowchart LR
       KMS["Key management<br/>SC-12"]
     end
     subgraph BKA["Backup account (second region)"]
-      BK[("Backup vault, write-once 35 days<br/>CP-9, CP-6 (gap: no restore test)")]
+      BK[("Backup vault, write-once 35 days<br/>CP-9, CP-6, SC-28 (gap: no restore test)")]
     end
   end
   INTA["BAS Integrator A; access control integrator"] -->|MFA, approval, recording| RAG
-  INTB["BAS Integrator B"] -.->|today: always-on tool, shared account (gap)| BASB
+  INTB["BAS Integrator B"] -.->|today: always-on tool, shared account, gap| BASB
   INTB -->|planned 2026-11-30| RAG
   RAG --> BASA
   RAG -.->|planned| BASB
@@ -103,7 +103,7 @@ The landing zone separates duties across 4 accounts (subscriptions or projects, 
 | SaaS applications | Identity provider, access control and video platform, tenant app, visitor management | AC-3, AC-6, AU-2, CP-9, SI-12, AC-2 | SaaS | Provider runs the application; customer keeps users, roles, retention settings, and audit review |
 | Physical | Provider data centers | PE-3, PE-13 | All | Provider (inherited, evidenced by SOC 2 reports) |
 
-**Responsibility counts in `cloud-control-map.csv`:** 28 Customer, 15 Shared, 6 Provider. By service model: 16 IaaS, 22 PaaS, 11 SaaS rows. The customer side is always identity, data protection, retention, and logging, which is what the three major providers' shared responsibility models say.
+**Responsibility counts in `cloud-control-map.csv`:** 28 Customer, 16 Shared, 6 Provider. By service model: 16 IaaS, 23 PaaS, 11 SaaS rows. The customer side is always identity, data protection, retention, and logging, which is what the three major providers' shared responsibility models say.
 
 ## 4. Service categories and provider equivalents
 The design is independent of the provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation (SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`).

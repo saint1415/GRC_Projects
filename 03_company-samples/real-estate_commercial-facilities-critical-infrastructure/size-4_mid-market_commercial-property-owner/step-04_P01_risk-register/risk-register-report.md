@@ -63,7 +63,7 @@ Cyber insurance ($10 million limit, $250,000 retention) transfers part of the fi
 | R-004 | Platform B server lost with no backup | High | Nightly images; controller program exports; restore tests | IT Director | 2027-03-31 |
 | R-005 | Cloud access control platform compromise exposes 14,500 credential holders | High | Vendor review; platform audit events to the SIEM; access platform runbook | Director of Security Operations | 2027-03-31 |
 | R-008 | Internet-exposed NVRs and Park 2 BAS web interface | High | Remove remaining forwarding; monthly external scans | IT Director | 2026-10-15 |
-| R-012 | Face verification pilot keeps templates without notice or limits | High | **Avoid:** suspend and delete unless P10 conditions are met | Vice President of Property Management | 2026-10-31 |
+| R-012 | Face verification pilot keeps templates without notice or limits | High | **Avoid:** pilot suspended 2026-09-30; templates deleted by 2026-10-31 (P10) | Vice President of Property Management | 2026-10-31 |
 | R-016 | Breach of the visitor ID archive (about 610,000 records) | High | Purge to 30 days; keep minimal fields; breach notice terms | Director of Security Operations | 2026-12-31 |
 | R-029 | Attacks on OT or the platform go undetected | High | OT and platform logs to the SIEM; passive OT monitoring | Security Manager | 2027-03-31 |
 | R-047 | Integrator links a life-safety system to the BAS network | High | Contract design rule; annual walkdown; change review | Vice President of Engineering | 2027-03-31 |
@@ -88,9 +88,9 @@ Cyber insurance ($10 million limit, $250,000 retention) transfers part of the fi
 - Cellular backup at the 8 single-ISP properties and SCC failover drills ($120,000 one-time, $30,000 a year)
 - OT security training for engineering and SCC staff ($150,000 a year including backfill)
 
-Smaller items (contract addenda, retention changes, inspection checklists) are funded from the operating budget. Each funded item maps to a P07 POA&M entry.
+Smaller items (contract addenda, retention changes, inspection checklists, spare engineering laptops, exercise facilitation, and badge readers for Platform B engineering rooms) are funded from the operating budget. Each funded item maps to a P07 POA&M entry.
 
-**Accepted (3):** R-033 (Low, IT Director; guardrails prevent public storage), R-035 (Low, IT Director; backups are isolated and write-once), R-043 (Low, IT Director; vendor DDoS protection). **Avoided (1):** R-012, by suspending the face verification pilot unless the P10 conditions are met.
+**Accepted (3):** R-033 (Low, IT Director; guardrails prevent public storage), R-035 (Low, IT Director; backups are isolated and write-once), R-043 (Low, IT Director; vendor DDoS protection). **Avoided (1):** R-012, by suspending the face verification pilot and deleting its templates (P10 decision).
 
 **Contract actions:** security addenda for Integrator B, the guard contractor, the parking operator, and the visitor management vendor (R-002, R-014, R-016, R-022, R-023), due 2027-03-31; recovery and 24-hour notice terms with the access control and video platform vendor at its 2027 renewal (R-005, R-006).
 

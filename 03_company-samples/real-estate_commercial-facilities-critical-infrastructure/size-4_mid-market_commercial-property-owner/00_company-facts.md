@@ -135,4 +135,8 @@ These details make the deliverables specific. They do not change sections 1-6.
 | JV | The JV with an institutional investor owns Tower 3, Tower 4, Retail 5, and Mixed-Use 2. The management agreement (amended 2026-05) requires a SOC 2 Type 2 report on the company's property management and building operations services by 2027-12-31, and a SOC 1 report on rent billing and accounting (handled by the CFO outside P09) |
 | Platform vendor recovery commitments | The access control and video platform vendor's SOC 2 system description states RTO 8 hours and RPO 1 hour for the cloud service. Door controllers cache credentials for up to 72 hours |
 | Acquisitions | Two retail centers are under contract for purchase in 2027 (P01 R-045) |
+| Federal contracts | The company holds no federal contracts and leases no space to federal agencies (confirmed by the General Counsel), so the FAR reporting clauses do not apply |
+| Vendors | Of the 41 vendors with system access or data, 12 are Tier 1 and 17 are Tier 2 under the P09 tiering approach |
+| AI details | AI-001 tailgating detection in production at Towers 1-4 since 2025-11; AI-002 face verification pilot at 2 Tower 2 turnstile lanes for one anchor tenant since 2026-04 (about 240 enrolled); AI-003 license plate recognition run by the parking operator at 6 garages (about 3,100 monthly permit holders); AI-004 energy optimization writing setpoints at Towers 1-2 since 2025-10; AI-005 generative AI lease abstraction in Legal since 2026-05 (about 180 leases abstracted) |
+| Terminology | "Building Automation and Access Control System (BAACS)" is the SSP system in P02, identifier CSC-BAACS-01 |
 | Additional role titles | Vice President of Leasing; HR Director; Director of Marketing and Communications |

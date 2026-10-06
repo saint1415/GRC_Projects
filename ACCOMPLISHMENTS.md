@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**163 of 216** sample companies are finished (1630 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**164 of 216** sample companies are finished (1640 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -175,6 +175,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Commercial Facilities | Sole Proprietorship | Commercial property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-1_sole-proprietor_commercial-property-owner/README.md) |
 | Commercial Facilities | Micro | Commercial property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-2_micro_commercial-property-owner/README.md) |
 | Commercial Facilities | Small | Office retail property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-3_small_office-retail-property-owner/README.md) |
+| Commercial Facilities | Mid-Market | Commercial property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-4_mid-market_commercial-property-owner/README.md) |
 | Professional, Scientific, and Technical Services | Small | CPA tax firm | [README](03_company-samples/professional-services/size-3_small_cpa-tax-firm/README.md) |
 | Management of Companies and Enterprises | Small | Holding company | [README](03_company-samples/holding-companies/size-3_small_holding-company/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Small | Staffing firm | [README](03_company-samples/admin-support-services/size-3_small_staffing-firm/README.md) |
