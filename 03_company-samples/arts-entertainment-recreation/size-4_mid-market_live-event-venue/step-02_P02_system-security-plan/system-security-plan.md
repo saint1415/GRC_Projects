@@ -111,7 +111,7 @@ Information types are the closest analogs in NIST SP 800-60 Vol. 2 Rev. 1 (writt
 - the productivity suite (SYS-07), physical security systems (SYS-10), premium seating CRM (SYS-11), marketing platform (SYS-12), finance and HR (SYS-13), and chatbot (SYS-15);
 - the cloud provider's infrastructure and the MSSP's platform.
 
-**PCI DSS scope relationship.** The cardholder data environment today includes the virtual terminal laptops and the corporate segment they share, plus the website systems that serve pages embedding the payment form (they can affect the security of the payment page). The planned move of the virtual terminal channel to validated P2PE devices removes the laptops and the corporate segment from the cardholder data environment. The scope document required by PCI DSS 12.5.2 is owned by the Security Manager (P03 row G-071).
+**PCI DSS scope relationship.** The cardholder data environment today includes the virtual terminal laptops and the corporate segment they share, plus the website systems that serve pages embedding the payment form (they can affect the security of the payment page). The planned move of the virtual terminal channel to validated P2PE devices removes the laptops and the corporate segment from the cardholder data environment. The scope document required by PCI DSS 12.5.2 is owned by the Security Manager (P03 row G-064).
 
 The diagram is in P04 `cloud-architecture.md`.
 

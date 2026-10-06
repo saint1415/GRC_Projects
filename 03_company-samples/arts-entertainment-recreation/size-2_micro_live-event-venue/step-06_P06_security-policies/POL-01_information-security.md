@@ -12,7 +12,7 @@ At the Micro tier the company keeps three core policies: access control (POL-02)
 
 | Essential rule | Where it lives | PCI DSS v4.0.1 or law |
 |---|---|---|
-| Designation of the Security and Privacy Lead (Venue Manager) | POL-02 A.1 | Program ownership |
+| Designation of the Security and Privacy Lead (Venue Manager) | POL-02 A.1 | PCI 12.1.4 |
 | Annual risk assessment and targeted risk analyses | POL-02 A.2 | PCI 12.3 |
 | Who may accept risk | POL-02 A.3 | Program governance |
 | Sanctions | POL-02 A.4 | Program governance |
