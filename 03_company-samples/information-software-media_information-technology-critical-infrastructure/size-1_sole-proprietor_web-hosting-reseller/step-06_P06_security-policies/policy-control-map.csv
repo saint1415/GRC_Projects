@@ -1,2 +1,40 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,Fla. Stat. 501.171(2),No
+POL-01,4.2,Owner designated security and privacy lead and incident commander,PM-2,GV.RR-02,Fla. Stat. 501.171(2),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Fla. Stat. 501.171(2),No
+POL-01,4.4,Risk decision rules; multi-customer risks never accepted above Moderate,PM-9,GV.RM-01,Fla. Stat. 501.171(2),No
+POL-01,4.5,Annual control evaluation with outside testing at least every second year,CA-2,ID.IM-02,Fla. Stat. 501.171(2),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,5.1,Contractor security addendum before any access,PS-7,GV.RR-04,FTC Act Sec. 5 (45(n); Start with Security 8),No
+POL-01,5.3,"Written, time-limited exceptions",PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,6.1,"Vendor list with data, location, security and notice terms",SA-9,GV.SC-05,FTC Act Sec. 5 (45(n); Start with Security 8); FTC Act Sec. 5 deception (45(a)),Yes
+POL-01,6.2,Annual review of the upstream SOC 2 report and other vendors' assurance,SA-9,GV.SC-07,FTC Act Sec. 5 (45(n); Start with Security 8),Yes
+POL-01,6.3,New vendors touching customer data only after review,SA-9,GV.SC-05,FTC Act Sec. 5 (45(n); Start with Security 8),No
+POL-01,7.1,Unique accounts; no shared credentials,AC-2; IA-2,PR.AA-01,FTC Act Sec. 5 (45(n); Start with Security 2),No
+POL-01,7.2,MFA on every control plane tool; security keys by 2027-03-31,IA-2(1),PR.AA-03,FTC Act Sec. 5 (45(n); Start with Security 3),Yes
+POL-01,7.3,Only the owner holds system-wide rights or pushes to many sites; contractors limited to assigned sites,AC-6,PR.AA-05,FTC Act Sec. 5 (45(n); Start with Security 2),Yes
+POL-01,7.4,Monthly account review; contractor accounts disabled the day the engagement ends,AC-2,PR.AA-05,FTC Act Sec. 5 (45(n); Start with Security 2),Yes
+POL-01,7.5,"Generated passwords; customer credentials only in the shared vault, never by email",IA-5,PR.AA-01,FTC Act Sec. 5 (45(n); Start with Security 3); Fla. Stat. 501.171(2),Yes
+POL-01,7.6,Emergency access envelope held by the owner's attorney,CP-2; AC-2,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.7,Weekly log review and review of AI-dismissed findings in protected categories,AU-6; SI-4,DE.AE-02,FTC Act Sec. 5 (45(n); Start with Security 5),Yes
+POL-01,7.8,Customer MFA required for stores and sensitive mailboxes,IA-8,PR.AA-03,FTC Act Sec. 5 (45(n); Start with Security 3),No
+POL-01,8.1,Three-level classification; collect only what services need,RA-2,ID.AM-07,FTC Act Sec. 5 (45(n); Start with Security 1),No
+POL-01,8.2,Restricted data only in approved systems; same-day deletion of laptop copies,AC-3; SA-9,PR.DS-01,FTC Act Sec. 5 (45(n); Start with Security 1),No
+POL-01,8.3,Full-disk encryption and remote wipe on every device,SC-28,PR.DS-01,FTC Act Sec. 5 (45(n); Start with Security 10),No
+POL-01,8.4,Transfers only through the vault or expiring links,SC-8,PR.DS-02,FTC Act Sec. 5 (45(n); Start with Security 10),No
+POL-01,8.5,Independent 30-day backups for every site; quarterly restore tests,CP-9,PR.DS-11,FTC Act Sec. 5 (45(n); Start with Security 4); FTC Act Sec. 5 deception (45(a)),Yes
+POL-01,8.6,Terminate closed customers' accounts 30 days after closure,SI-12,ID.AM-08,Fla. Stat. 501.171(8); FTC Act Sec. 5 (45(n); Start with Security 1),No
+POL-01,8.7,Disposal of devices with a record,MP-6,ID.AM-08,Fla. Stat. 501.171(8),No
+POL-01,8.8,Five-year retention of security records and breach determinations,SI-12,ID.AM-08,Fla. Stat. 501.171(4)(c),No
+POL-01,9.2,"Automatic updates, antivirus, and host firewall stay on",SI-2; SI-3,PR.PS-02,FTC Act Sec. 5 (45(n); Start with Security 6),No
+POL-01,9.3,Weekly care-plan updates; 72 hours for critical; monthly notices to hosting-only customers,SI-2; RA-5,PR.PS-02,FTC Act Sec. 5 (45(n); Start with Security 9),Yes
+POL-01,9.4,No customer data in unapproved AI tools; no AI dismissal in protected categories without review,PL-4; SA-9,GV.PO-01,FTC Act Sec. 5 (45(n); Start with Security 1); FTC Act Sec. 5 deception (45(a)),No
+POL-01,9.5,Annual security training for the owner and contractors,AT-2,PR.AT-01,FTC Act Sec. 5 (45(n); Start with Security 7),No
+POL-01,10.1,"Runbook, printed contacts, and offline customer contact export",IR-8,RS.MA-01,Fla. Stat. 501.171(6)(a),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Fla. Stat. 501.171(6)(a),Yes
+POL-01,10.3,Written breach determination with its date,IR-4; IR-6,RS.MA-02,Fla. Stat. 501.171(6)(a),No
+POL-01,10.4,"Customer notice no later than 10 days after determination, with all needed information",IR-6,RS.CO-02,Fla. Stat. 501.171(6)(a),Yes
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,OFAC advisory (2021-09-21),No
+POL-01,11.2,Backup-operator arrangement,CP-2,RC.RP-01,Fla. Stat. 501.171(2),No
+POL-01,12.1,Public security claims true and substantiated,PL-4,GV.OC-03,FTC Act Sec. 5 deception (45(a)),No
+POL-01,12.3,"Terms of Service state patching, backups, and incident notice",SA-9,GV.OC-03,FTC Act Sec. 5 deception (45(a)),No
