@@ -1,7 +1,7 @@
 # Business Impact Analysis: Cris Santos Company | Administrative and Support and Waste Management and Remediation Services | Micro
 
 **Organization:** Cris Santos Company, LLC (temporary staffing firm) | **Tier:** Micro (7 internal staff) | **Method:** NIST SP 800-34 Rev. 1 BIA template
-**Prepared by:** Operations Manager (Security and Privacy Lead) with the Account Manager, the Onboarding and Payroll Coordinator, the Senior Recruiter, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** Owner, 2026-08-31
+**Prepared by:** Operations Manager (Security and Privacy Lead) with the Account Manager, the Onboarding and Payroll Coordinator, the Senior Recruiter, and the MSP lead technician, 2026-07-20 to 2026-07-31; vendor recovery figures added 2026-08-20 from the payroll vendor SOC 2 review (P09) | **Approved:** Owner, 2026-08-31
 
 ## 1. Overview and purpose
 This BIA lists every business function of the firm, how long each can be down, and how much data each can lose. No law requires a staffing firm to have a contingency plan. The firm did this BIA because its two core duties are time-bound: associates must be at client sites the next morning, and they must be paid every Friday. The BIA feeds:
