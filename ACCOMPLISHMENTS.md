@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**182 of 216** sample companies are finished (1820 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**183 of 216** sample companies are finished (1830 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -209,6 +209,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Health Care and Social Assistance | Enterprise | Large medical group | [README](03_company-samples/health-care/size-5_enterprise_large-medical-group/README.md) |
 | Health Care and Social Assistance | Multi-Sector | Care delivery health plan and SaaS | [README](03_company-samples/health-care/size-6_multi-sector_care-delivery-health-plan-and-saas/README.md) |
 | Healthcare and Public Health | Sole Proprietorship | Independent pharmacy | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-1_sole-proprietor_independent-pharmacy/README.md) |
+| Healthcare and Public Health | Micro | Independent pharmacy | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-2_micro_independent-pharmacy/README.md) |
 | Healthcare and Public Health | Small | Critical access hospital | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-3_small_critical-access-hospital/README.md) |
 | Arts, Entertainment, and Recreation | Small | Live event venue | [README](03_company-samples/arts-entertainment-recreation/size-3_small_live-event-venue/README.md) |
 | Accommodation and Food Services | Small | Beachfront hotel | [README](03_company-samples/hotels-restaurants/size-3_small_beachfront-hotel/README.md) |

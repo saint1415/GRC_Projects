@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Clinical decision support (sepsis prediction) model
+**AI use case:** Controlled substance risk score (SYS-09)
 **Sector AI rules and guidance:** Section 1557 patient care decision support tools 45 CFR 92.210 Non-discrimination duty to identify and mitigate discrimination risk from clinical algorithms/AI tools.; ONC HTI-1 DSI transparency 45 CFR 170.315(b)(11) Transparency/source attributes and risk management for predictive DSIs in certified health IT.; FDA AI-Enabled Device Software Functions guidance FDA draft guidance (FR Doc 2024-31543, Jan 7, 2025) Lifecycle management and marketing submission recommendations for AI-enabled device software functions.; FDA PCCP guidance for AI-enabled devices FDA final guidance (FR Doc 2024-28361, Dec 4, 2024) Marketing submission recommendations for Predetermined Change Control Plans for AI-enabled device software functions.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 
