@@ -30,7 +30,7 @@ Other brands' level definitions were not verified; the acquirer applies them. Th
 |---|---|---|
 | SEC Form 8-K Item 1.05 and Reg S-K Item 106 | **Yes** | Publicly traded SEC registrant, not a smaller reporting company |
 | FTC Act Section 5, 15 U.S.C. 45(a), (n) (N71-R05) | **Yes** | For-profit corporation; no size threshold |
-| FTC Rule on Unfair or Deceptive Fees, 16 CFR Part 464 (N71-R05) | **Yes** | "Covered good or service" includes live-event tickets (464.1); effective 2025-05-12 (90 FR 2166). Applies to every display the company makes, including client templates it renders |
+| FTC Rule on Unfair or Deceptive Fees, 16 CFR Part 464 (N71-R05) | **Yes** | "Covered good or service" includes live-event tickets (464.1); effective 2025-05-12 (90 FR 2066, rule text at 2166). Applies to every display the company makes, including client templates it renders |
 | ADA Title III ticketing, 28 CFR 36.302(f) | **Yes** | Concert halls, stadiums, and other places of exhibition or entertainment are places of public accommodation (28 CFR 36.104); the rules reach pricing, sale stages, and purchase limits that AI-001 and AI-002 enforce |
 | BOTS Act, 15 U.S.C. 45c | **No compliance duty** | The company is a ticket issuer the Act protects; its bot defense records are evidence for FTC or state attorney general cases |
 | State breach notification laws | **Yes** | Patrons in all 50 states. The company is a covered entity for its own patrons and a third-party agent for client venues (Florida worked example: Fla. Stat. 501.171(6)) |
