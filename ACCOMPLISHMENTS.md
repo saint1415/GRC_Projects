@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**148 of 216** sample companies are finished (1480 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**150 of 216** sample companies are finished (1500 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -151,6 +151,8 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Information Technology | Sole Proprietorship | Web hosting reseller | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-1_sole-proprietor_web-hosting-reseller/README.md) |
 | Information Technology | Micro | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-2_micro_cloud-hosting-provider/README.md) |
 | Information Technology | Small | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-3_small_cloud-hosting-provider/README.md) |
+| Information Technology | Mid-Market | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-4_mid-market_cloud-hosting-provider/README.md) |
+| Information Technology | Enterprise | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-5_enterprise_cloud-hosting-provider/README.md) |
 | Finance and Insurance | Sole Proprietorship | Registered investment adviser | [README](03_company-samples/finance-insurance/size-1_sole-proprietor_registered-investment-adviser/README.md) |
 | Finance and Insurance | Micro | Community credit union | [README](03_company-samples/finance-insurance/size-2_micro_community-credit-union/README.md) |
 | Finance and Insurance | Small | Community bank | [README](03_company-samples/finance-insurance/size-3_small_community-bank/README.md) |
