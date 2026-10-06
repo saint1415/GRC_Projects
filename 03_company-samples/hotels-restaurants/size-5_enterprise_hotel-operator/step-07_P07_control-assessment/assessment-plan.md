@@ -35,7 +35,7 @@ Depth and coverage follow SP 800-53A (basic, focused, comprehensive). The last c
 | CA-2(1) | R-055; P03 G-102 | Focused | Comprehensive | 6 assurance engagements in 2025-2026 (Internal Audit, co-source firm, two QSA firms, segmentation tester) | 100% | 0 / 1 |
 | CA-8 | R-051; P03 G-055; PCI DSS 11.4.6 | Focused | Focused | 3 required tests (2025 annual, 2025 H2 service provider segmentation, 2026 H1 annual and segmentation) | 100% | 0 / 1 |
 | CM-2 | R-048; PCI DSS 2.2 | Focused | Comprehensive | 6 component types; 25 components compared to baseline | 100% of types; 25 components (random) | 3 / 2 |
-| CM-3 | R-030; PCI DSS 6.5 | Comprehensive | Comprehensive | 214 PPP change records (2026-01-01 to 2026-06-30) | 40 changes (random) | 10 / 0 |
+| CM-3 | R-030; PCI DSS 6.5 | Comprehensive | Comprehensive | 212 changes to PPP components (2026-01-01 to 2026-06-30) | 40 changes (random) | 10 / 0 |
 | CM-6 | R-009; R-048; PCI DSS 2.2 | Focused | Comprehensive | 1,150 front desk PCs; 110 hotel firewall pairs; 41 legacy POS servers; 31 lock servers | 100% (configuration compliance scans) | 4 / 2 |
 | CM-8 | R-036; PCI DSS 9.5.1; 12.5.1 | Comprehensive | Comprehensive | About 1,900 P2PE devices, 640 front desk terminals, 470 legacy POS workstations | 60 physical devices traced to the inventory (random, 8 hotels); terminal lists compared for all 41 legacy hotels | 5 / 1 |
 | CM-12 | R-011; PCI DSS 12.5.2 | Focused | Comprehensive | Data discovery results for 1,180 sales, events, and reservation mailboxes (about 61 million emails), file shares, chat transcripts, and the warehouse | 100% of scan results; scan re-performed on 10 mailboxes | 5 / 2 |

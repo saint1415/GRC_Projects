@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI-assisted diagnostics and customer chatbot
+**AI use case:** General-purpose generative AI assistant used at the bench to suggest likely faults from symptoms, error logs, and screen photos, and to draft customer text messages and quote explanations
 **Sector AI rules and guidance:** None identified; see cross-sector obligations
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

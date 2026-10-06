@@ -106,3 +106,46 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-10 | Results to the audit committee and the risk committee |
 | 2026-10-19 to 2026-11-13 | QSA fieldwork for the 2026 merchant ROC (planned) |
 | 2026-11-30 | 2026 merchant ROC and AOC due to the acquirer |
+
+## 7. Facts added while building the deliverables
+These facts were added while building P01 to P10. They do not change sections 1-6. All are fictional unless a source is cited.
+
+**Registry defaults.** The registry's primary system ("property management and point-of-sale system") is kept and widened into the *Property and Payment Platform* (section 3), because at this size the PMS tenant, the card vault, the POS estate, and the payment network segments share one boundary and one owner. The registry's P08 incident ("point-of-sale and reservation system compromise") is kept, with the entry path set to a vendor remote access tool because that is the company's largest open exposure (section 4, gap 5). The registry's P10 use case is kept (section 5).
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Operating Officer | Authorizing official equivalent for the PPP (P02); chairs the crisis management team (P08); co-approves the BIA (P05) |
+| Chief Information Officer (CIO) | IT operations and the enterprise platform; executive risk committee member |
+| Chief Audit Executive | Heads Internal Audit; reports functionally to the audit committee; leads P07 |
+| General Counsel; Deputy General Counsel | Disclosure committee chair and backup; outside counsel engagement |
+| Controller | Disclosure committee member; SOX program |
+| Chief Human Resources Officer | Workforce screening, terminations, training; owner of AI-006 |
+| Executive Vice President, Hotel Operations | Company-operated hotels; owner relations for managed hotels |
+| Executive Vice President, Franchise Operations and Development | Brand technology standards enforcement with franchisees |
+| Vice President, Hotel Technology | PPP system owner; property systems and vendor support |
+| Vice President, Distribution and Reservations | CRS, channels, contact center; SL-2 service line owner |
+| Vice President, Digital and Loyalty | Website, app, chatbot operation, loyalty platform, AI-005 |
+| Vice President, Revenue Strategy | Operates AI-001 and the franchise pricing service |
+| Vice President, Franchise Technology Services | SL-1 service line owner |
+| Vice President, Integration Management Office | Integration of the acquired resorts |
+| Vice President, Corporate Security and Facilities | Physical security, colocation oversight, media destruction |
+| Vice President, Food and Beverage | Outlet operations and fallback during POS incidents |
+| Vice President, Corporate Communications; Vice President, Investor Relations | Incident communications; investor relations is a disclosure committee member |
+| Directors of Security Operations, Identity and Access Management, Network Engineering, Cloud Platform Engineering, Endpoint Engineering, Third-Party Risk Management, and Franchise Technology Compliance | Common control providers and program owners (P02 section 10.3) |
+| PMS Tenant Administration Manager; Payments Platform Engineering Manager; POS Operations Manager | PPP system administrators |
+| Data science lead | AI governance committee member |
+
+**Committees.** Executive risk committee: Chief Risk Officer (chair), CIO, Chief Operating Officer, CISO, General Counsel; meets monthly. Disclosure committee: General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, Vice President, Investor Relations; outside securities counsel advises; 3 members changed in 2026. AI governance committee (formed 2025): Chief Risk Officer (chair), Chief Commercial Officer (recuses on AI-001 and AI-002), Chief Privacy Officer, CISO, General Counsel's delegate with antitrust counsel, Chief Human Resources Officer, Executive Vice President, Hotel Operations, Vice President, Digital and Loyalty, Director of Franchise Technology Compliance, data science lead; Internal Audit observes. Board-approved risk appetite dated 2026-02.
+
+**Operations and volumes.** Revenue of about $4.8 billion is about $13.2 million per calendar day. Colocation DC-1 is in Florida and DC-2 in Texas. The CRS runs active-passive across two regions; franchise agreements commit it to 99.9% monthly availability. About 92% of card volume runs through one payment gateway. Enterprise DR test 2026-04-25: CRS failover 1.6 hours, card vault restore 1.8 hours. The contact center handles about 1.1 million booking calls a year. 212 franchised hotels subscribe to the franchise pricing service (AI-001); separately, 212 franchise agreements signed before 2022 lack incident notice and PCI DSS acknowledgment terms.
+
+**PPP (P02).** Identifier CSC-SYS-PPP-001; SSP version 3.0 approved by the Chief Operating Officer on 2026-09-14; the board risk committee approved the Moderate baseline with 10 High-baseline supplements on 2026-09-10. About 36,500 PMS tenant accounts (about 8,900 company-operated hotel staff, 26,400 franchisee staff, 1,200 corporate and support), 46 vault and tokenization administrators and engineers, 64 privileged accounts, about 5,600 POS users. Components: about 1,900 P2PE devices, 41 legacy POS servers and about 470 workstations, about 1,150 front desk PCs, about 640 front desk terminals, 110 hotel firewall pairs. Brand technology standards BS-TECH-01 to BS-TECH-06; exception register entries EXC-2026-011, -017, -022, and -026 (P06).
+
+**Contract terms used in P08 (fictional).** Acquirer agreement: notice within 24 hours of suspicion. Management agreements: owner notice within 24 hours. Franchise agreements since 2022 and SL-2 client agreements: notice within 72 hours. BS-TECH-06: franchisees report to the brand within 24 hours. Vendor contracts: 72-hour breach notice (PMS vendor: 24 hours). Last enterprise IR tabletop: 2026-03-24 (no disclosure committee).
+
+**Internal Audit assessment (P07).** An IT audit manager and four IT auditors; the co-source firm performed only the reachability test and packet captures; PAM tests were done in house. Report issued 2026-09-04. Testing found vendor default credentials on legacy POS servers at 3 hotels (reported 2026-08-12, changed 2026-08-14); vendor remote tools enabled outside approved windows at 11 of the 37 hotels; 14 terminals missing from device lists at 5 hotels; 4 of 25 sampled patches installed after 30 days. Populations: 2,210 account events, 1,318 terminations (96 at the resorts), 1,640 PAM vault sessions, 1,420 PAM vendor sessions, 212 PPP changes, 286 security incidents, 238 patches, 181 backup jobs (2026-01-01 to 2026-06-30). Segmentation retest scheduled 2026-10-23.
+
+**Service lines (P09).** SL-1 franchise technology services (PMS tenant administration, CRS access, managed property network, help desk for 640 franchised hotels): SOC 2 Type 2 (Security, Availability, Confidentiality) every year since 2023; the 2025 report had 2 exceptions (late removal of franchisee accounts, one missed quarterly hub rule review); Processing Integrity added for the 2027 period. SL-2 independent hotel distribution services (CRS and booking engine for about 180 unbranded independent hotels): first Type 2 planned for 2027-04-01 to 2027-09-30 (Security, Availability, Confidentiality, Processing Integrity, Privacy), report expected 2027-11; two hotel management companies among its clients require it; 41 client booking pages lack a link to the client's own privacy notice.
+
+**AI portfolio (P10).** 12 use cases AI-001 to AI-012 as listed in the P10 inventory; 8 reviewed, 4 not reviewed (AI-006, AI-008, AI-010, AI-011; due 2026-11-30). AI-002 is company-built on Cloud provider B's managed generative AI service and handles about 1.9 million conversations a year. AI-006 was switched on by a hotel group in 2026-04 at 22 hotels (including 2 in Illinois and 3 in California; none in Colorado or New York City); ranking disabled 2026-08-20. AI-005 is disabled at Illinois hotels. Procurement block on AI features without an inventory ID from 2026-10-31.

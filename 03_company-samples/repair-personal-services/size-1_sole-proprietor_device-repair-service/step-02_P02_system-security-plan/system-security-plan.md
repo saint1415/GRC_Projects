@@ -103,7 +103,7 @@ Inheritance: 2 fully inherited from the ticketing vendor (AC-3, AU-2), 10 hybrid
 | Recover | Vendor backups (CP-9, inherited); device-return procedure (CP-2) |
 
 ### 10.2 Control assessment status
-Self-assessed 2026-07-20 to 2026-07-27 with the independent security consultant. See P07 (9 controls tested).
+Self-assessed 2026-07-20 to 2026-07-27 with the independent security consultant. See P07 (10 controls tested, 41 determination statements).
 
 ## 11. Digital Identity Acceptance Statement
 Every account that can export customer records, change payment settings, or move money must use a unique account, a password manager passphrase, and MFA from the authenticator app on the owner's phone. Today that is true for the productivity suite, accounting SaaS, bank, and processor portal, but **not for SYS-01**, the account with the most customer data (MFA on by 2026-09-15). The fill-in technician will get a named SYS-01 account with MFA and no export rights. Customers do not sign in to anything; they receive status links that show one ticket only.
