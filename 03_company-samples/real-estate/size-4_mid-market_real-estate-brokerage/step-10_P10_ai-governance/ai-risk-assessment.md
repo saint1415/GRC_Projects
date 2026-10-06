@@ -75,7 +75,7 @@ A mid-market company needs a short, reliable gate and a monthly rhythm, not a st
 
 **Laws considered and not applicable:**
 - **State AI laws such as Colorado SB26-189 and the California ADMT regulations:** the company operates only in Florida and is not doing business in California (P03 section 1.2). This assessment did not identify a Florida AI-specific statute that applies to these uses.
-- **HUD's 2024 guidance on tenant screening and on advertising through digital platforms:** moved to HUD's archive, and tenant screening algorithm materials were removed from FHEO's guidance repository in 2025. Treated as background on good practice only, not as requirements.
+- **HUD's tenant screening guidance (No. 24-098, May 2, 2024):** moved to HUD's archive site, and a Sept. 16, 2025 FHEO memo removed tenant screening algorithm materials from its guidance repository. Treated as background on good practice only, not as a requirement.
 
 ## 4. MEASURE
 ### 4.1 AI-001 tenant screening (main assessment)

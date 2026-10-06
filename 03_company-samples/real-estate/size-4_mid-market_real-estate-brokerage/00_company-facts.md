@@ -135,4 +135,6 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Intercompany agreement | 2022 intercompany services agreement; no security, confidentiality, or audit terms |
 | Mortgage joint venture | Leads go from SYS-11 to the joint venture by API only after the buyer consents; Affiliated Business Arrangement Disclosure Statements are given at referral (12 CFR 1024.15(b)(1)) |
 | SOC 2 driver | Two regional mortgage lenders and a national homebuilder (new-home closings in 2 Florida communities, about 900 closings a year) require a SOC 2 Type 2 report from Title and Closing by 2027 |
+| AI tool volumes | About 15,500 rental applications screened a year (AI-001); about 6,500 buyer leads a month (AI-002); about 3,100 remote identity checks a year for closings (AI-005). In 2026-06 a forged driver license passed AI-005 on a vacant-lot sale; the closer stopped the impostor by calling the owner at the tax-roll mailing address (P10) |
+| Mailboxes | About 2,250 mailboxes for employees and contractor agents; in P07 (2026-08-27) 6 agent mailboxes had rules forwarding mail to outside accounts (P01 R-052) |
 | Terminology | "Transaction Management and Closing Communications System (TMCC)" is the SSP system in P02, identifier CSC-TMCC-01 |
