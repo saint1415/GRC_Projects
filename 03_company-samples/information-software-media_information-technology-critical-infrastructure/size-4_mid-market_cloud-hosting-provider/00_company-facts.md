@@ -141,3 +141,14 @@ These details were added during the build and are used consistently across P01 t
 | SOC 2 exceptions (2025-2026 report) | 2 of 25 sampled terminations removed late; 1 of 40 sampled changes lacked documented approval; 1 quarterly restore test for a backup service region was skipped |
 | P07 scope | 40 controls (the 34 base controls FedRAMP requires in each year's independent assessment for Rev5 Class C under IVV-CSF-AIA, plus 6 enhancements tied to top risks), 185 determination statements |
 | Additional role titles | VP Sales; Financial Services Account Director (relationship owner for the 38 banks); Data Center Operations Managers for DC-1, DC-2, DC-3; Director of Communications |
+| DC-1 legacy clusters | The 2 older DC-1 clusters (64 hosts, about 4,000 commercial VMs) are called clusters A and B in P02 to P10. 9 DC-1 storage controllers are past end of support |
+| Commercial volume encryption | Default since 2025-01; about 9,000 older commercial volumes are not encrypted at rest (P02 SC-28; P07) |
+| 2027 FedRAMP assessment | The next annual FedRAMP independent assessment is planned to start 2027-02-15, which ends the grace periods for the FRC, IVV, and MAS rulesets (P03) |
+| FY2027 security plan | Approved by the CEO 2026-09-22: $2.6 million one-time and $1.05 million a year, including two GRC analysts and one vendor risk analyst (P01) |
+| P07 populations | 118 new workforce accounts and 27 security incidents in the 12 months to 2026-06-30; 312 machine credentials found by secret scanning and cloud APIs; 6 of 22 software engineers' production deploy rights were no longer needed (removed 2026-09-15) |
+| Deploy token (gap 15) | Reported by the assessors 2026-08-14 and revoked 2026-08-15; evaluated as not FedRAMP reportable because its audit history showed no use since 2024 |
+| FedRAMP Security Inbox routing | Read only by the Director of Security until on-call routing goes live (POAM-024) |
+| Defense reporting | The company holds no DoD-approved medium assurance certificate yet (POAM-021) |
+| Tier 1 vendors | 14 Tier 1 vendors listed as VEN-01 to VEN-14 in P09; the 4 contracts without incident notice terms are the RMM, ITSM, backup software, and hardware maintenance vendors |
+| AI governance | AI-005 (resume screening) paused 2026-09-22; about 1,900 applicants a year; the AI review group first meets 2026-10-13 (P10) |
+| Standards | STD-01 to STD-10 (P06 `standards-index.md`) |
