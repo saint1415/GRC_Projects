@@ -145,7 +145,7 @@ These details were added during the build and are used consistently across P01 t
 | Commercial volume encryption | Default since 2025-01; about 9,000 older commercial volumes are not encrypted at rest (P02 SC-28; P07) |
 | 2027 FedRAMP assessment | The next annual FedRAMP independent assessment is planned to start 2027-02-15, which ends the grace periods for the FRC, IVV, and MAS rulesets (P03) |
 | FY2027 security plan | Approved by the CEO 2026-09-22: $2.6 million one-time and $1.05 million a year, including two GRC analysts and one vendor risk analyst (P01) |
-| P07 populations | 118 new workforce accounts and 27 security incidents in the 12 months to 2026-06-30; 312 machine credentials found by secret scanning and cloud APIs; 6 of 22 software engineers' production deploy rights were no longer needed (removed 2026-09-15) |
+| P07 populations | 118 new workforce accounts in the 12 months to 2026-06-30; 27 security incidents in 2025-2026; 312 machine credentials found by secret scanning and cloud APIs; 6 of 22 software engineers' production deploy rights were no longer needed (removed 2026-09-15) |
 | Deploy token (gap 15) | Reported by the assessors 2026-08-14 and revoked 2026-08-15; evaluated as not FedRAMP reportable because its audit history showed no use since 2024 |
 | FedRAMP Security Inbox routing | Read only by the Director of Security until on-call routing goes live (POAM-024) |
 | Defense reporting | The company holds no DoD-approved medium assurance certificate yet (POAM-021) |
