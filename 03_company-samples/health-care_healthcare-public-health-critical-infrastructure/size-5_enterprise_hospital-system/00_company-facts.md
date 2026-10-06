@@ -104,3 +104,51 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-07-20 to 2026-08-14 | AI portfolio review and sepsis model local validation (P10) |
 | 2026-08-24 | Executive risk committee approves the register, policies, and treatment plans |
 | 2026-09-15 | Results to the board risk committee and audit committee |
+
+## 7. Facts added for the Phase 5 deliverables
+These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Registry defaults.** All three registry defaults fit a hospital system and are kept: the primary system (hospital EHR and clinical systems, documented as the ECIS), the P08 incident (ransomware forcing EHR downtime and ambulance diversion), and the P10 use case (the sepsis prediction model).
+
+**Sites and beds.** 61 sites plus DC-1, DC-2, and corporate headquarters: 8 hospitals, 3 freestanding EDs, 46 clinics, 4 imaging centers. Licensed beds: H-01 640, H-02 310, H-03 280, H-04 220, H-05 120 (Florida); H-06 190, H-07 110 (Georgia); H-08 100 (Alabama). No hospital has a transplant program (42 CFR 482.15(g) does not apply). The system owns no ambulances; its EDs receive EMS traffic from 9 counties.
+
+**Volumes.** About 1,600 occupied beds on a typical day, 1,530 ED visits and 310 ambulance arrivals a day, about 290 surgical and interventional cases a day, about 21,000 laboratory results a day, about 6,800 imaging studies a day, about 260 inbound transfers a day through the System Transfer and Command Center, and about 5,200 clinic visits a day. About 1.1 million active patient portal users. Revenue of about $13.2 million per calendar day.
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Nursing Officer; Chief Medical Officer | Clinical downtime leads; owners of inpatient (BP-02) and emergency (BP-01) processes |
+| Chief Compliance Officer; Director of Civil Rights Compliance | Regulatory compliance; the Director is the Section 1557 Coordinator (45 CFR 92.7) |
+| Chief Human Resources Officer; Controller | Workforce lifecycle and training; SOX and disclosure committee member |
+| Vice President, Emergency Management | Unified emergency preparedness program (482.15(f)); System Transfer and Command Center |
+| Hospital presidents (8) | Hospital incident commanders; decide IT-outage diversion with the ED medical director and house supervisor |
+| Vice President, Clinical Applications | ECIS system owner |
+| EHR Technical Director; Integration Services Manager | ECIS administration and recovery; integration engine |
+| Directors of Identity and Access Management, Third-Party Risk Management, Cloud Platform Engineering, Network Engineering, Data Center Operations, Endpoint Engineering, Clinical Engineering, and Facilities Engineering | Common control providers and device and OT owners |
+| Vice President, Facilities | Physical security of hospitals |
+| Vice Presidents of Revenue Cycle, Laboratory Services, Pharmacy Services, Supply Chain, and Digital Health; President, Physician Group | Process owners in the BIA |
+| Vice President, Behavioral Health | Part 2 program director for H-03 |
+| Vice President, Integration Management Office | H-08 integration and conversion |
+| Vice President, Affiliate Services; Vice President, Virtual Care | SL-1 and SL-2 owners |
+| Chief Data and Analytics Officer | Analytics platform and in-house models |
+| Director of Health Information Management | Medical records, release of information, downtime back-entry |
+| Vice President, Corporate Communications; Vice President, Investor Relations | Media and investor communications |
+| Patient safety officer | Patient safety events, including AI-related harm |
+
+**Disclosure committee (P08).** General Counsel (chair), CFO, Controller, COO (joined 2026), CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. The materiality playbook was exercised in a 2025 tabletop.
+
+**HIPAA designations.** The affiliated covered entity designation and the Security Officer designation were updated to include H-08 on 2025-11-14.
+
+**ECIS details (P02, P07).** About 60 application and presentation servers, a 4-node integration engine cluster per data center with about 640 interfaces, 16 clinical device integration gateways, and about 900 BCA downtime computers. About 19,000 workforce users. Failover to DC-2 took 2.6 hours on 2026-03-21; a full restore from the immutable vault took 41 hours on 2026-04-18 against a 24-hour cyber recovery target set in the BIA. A 5-hour network outage at H-06 on 2026-01-22 stopped EHR access there. About 1,150 service accounts, about 265 (23%) unvaulted, and 31 integration engine passwords older than 2 years. Testing found default vendor passwords on 2 of the 16 device integration gateways (reported 2026-07-29, changed 2026-08-05). The HL7 MLLP segment inside the data center runs under exception EXC-2026-031.
+
+**H-08.** Acquired 2025-10-01; about 640 workforce and about 1,100 endpoints, about 330 without EDR and about 160 unencrypted. Joined the unified emergency program in 2026-01. The legacy EHR vendor backs up every 4 hours and its contract states a 24-hour RTO.
+
+**Claims routing.** Primary clearinghouse about 80% of claims (about $74 million a week, about $10.5 million a day); secondary clearinghouse about 12%; direct payer connections about 8%.
+
+**Service lines (P09).** SL-1: about 70 practices and 1,450 users; contract value about $31 million a year; 99.9% monthly availability and 10-day breach notice in hosting agreements; SOC 2 Type 1 (Security, Availability, Confidentiality) as of 2025-12-31. SL-2: 14 partner hospitals including 6 critical access hospitals, about 210 monitored ICU beds, a virtual care center at H-01 with no alternate site, 15-minute service interruption notice; clinicians at 4 partner hospitals sign in with local application accounts without MFA.
+
+**Program facts used in the gap analysis.** 1,500 vendors (430 with PHI; 41 tier-1 and tier-2 reassessments overdue; 42 staffing agency contracts); 388 security incidents and 41 privacy incidents in the first half of 2026; 37 sanctions in 2025; 6 notified breaches from 2024 to 2026; 1,140 Part 2 encounters at H-03 in the first half of 2026; 312 analytics users (71 with identified-data access not recertified); outside counsel's state breach matrix updated 2026-03 (Alabama added). Exercises: mass-casualty tabletop 2026-02-10, enterprise ransomware tabletop 2026-02-26 (H-01 and H-02), community hurricane exercise 2026-05-12; a multi-hospital downtime, diversion, and disclosure committee exercise is planned for 2026-11-18. Current policy exceptions: EXC-2026-027, -029, -031, -034, -036.
+
+**Not applicable, confirmed.** The Florida Digital Bill of Rights does not apply: the system exceeds $1 billion in revenue but does not meet any of the three additional tests in Fla. Stat. 501.702. Recording consent for the AI scribe uses all-party prior consent in all three states (Florida worked example: Fla. Stat. 934.03(2)(d)).
+
+**AI portfolio (P10).** 12 use cases (AI-001 to AI-012); 8 reviewed by the AI governance committee. Sepsis model version 2 went live 2026-04-14. Local validation on 41,200 adult inpatient encounters at H-01 to H-07 (2026-04-14 to 2026-07-31): 2,480 sepsis cases, 71% sensitivity (version 1: 76%), 25% PPV, alert response within 1 hour 64%; flags for adults 18-64 (63%) and Black patients (64%). Universal nurse sepsis screening runs at H-01 to H-05. Treatment funding for 2026 Q4 to 2027 Q2 is about $7.4 million.
