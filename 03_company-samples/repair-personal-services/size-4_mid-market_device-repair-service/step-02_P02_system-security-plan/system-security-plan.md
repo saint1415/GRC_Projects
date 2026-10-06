@@ -36,7 +36,7 @@ The payment processor's P2PE terminals and payment gateway (SYS-02), the manufac
 | N81-BM | NIST CSF 2.0 (voluntary benchmark); NIST SP 800-88 Rev. 2 for sanitization | NIST CSWP 29; SP 800-88r2 (September 2025) | Benchmark for the gap analysis (P03); sanitization method |
 | Contract | Manufacturer A and B program agreements | Program agreements (fictional terms) | Named MFA accounts, consent-limited access, 24-hour incident notice |
 | Contract | Partner P1 and P2 agreements | Partner agreements (fictional terms) | Claim data use limits, 48-hour breach notice, SOC 2 Type 2 from 2027 (P09) |
-| Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-10 | P06 | Policy basis for every control |
+| Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-11 | P06 | Policy basis for every control |
 
 Not applicable: the FTC Safeguards Rule (no consumer credit), COPPA (not directed to children), HIPAA (not a covered entity; policy declines business associate work), and the Florida Digital Bill of Rights (revenue threshold). Reasons are in P03 section 1.
 
