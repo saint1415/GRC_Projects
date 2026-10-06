@@ -1,2 +1,42 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N81-BM (CSF GV.PO-01),No
+POL-01,4.2,Owner designated security and privacy lead in writing,PM-2,GV.RR-02,N81-BM (CSF GV.RR-02); N81-R03 (PCI DSS 12.1.3),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,N81-BM (CSF ID.RA-05); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,N81-BM (CSF GV.RM-01),No
+POL-01,4.5,Annual self-assessment with periodic outside review,CA-2,ID.IM-01,N81-BM (CSF ID.IM-01),No
+POL-01,4.6,Policy reviewed at least every 12 months,PL-1,GV.PO-02,N81-BM (CSF GV.PO-02); N81-R03 (PCI DSS 12.1.2),No
+POL-01,5.1,Policy acknowledgment and confidentiality agreement before contractor access,PS-6,GV.RR-04,N81-BM (CSF GV.RR-04); N81-R03 (PCI DSS 12.1.3),No
+POL-01,5.4,Exceptions and changes logged and time-limited,PL-1; CM-3,ID.RA-07,N81-BM (CSF ID.RA-07),No
+POL-01,6.1,"No terms, no customer data (confidentiality, no training, deletion, breach notice)",SA-9,GV.SC-05,N81-R02 (Fla. Stat. 501.171(6)); N81-R01 (15 U.S.C. 45(n)),Yes
+POL-01,6.2,Vendor list with data held and notice terms; processor marked as the account data provider,SA-9,GV.SC-04,N81-BM (CSF GV.SC-04); N81-R03 (PCI DSS 12.8.1; 12.8.5),Yes
+POL-01,6.3,Terms check before new services; annual SOC 2 and P2PE listing review,SA-9,GV.SC-06,N81-BM (CSF GV.SC-06; GV.SC-07); N81-R03 (PCI DSS 12.8.3; 12.8.4),No
+POL-01,6.4,Remove access and request deletion when a relationship ends,SA-9,GV.SC-10,N81-BM (CSF GV.SC-10),No
+POL-01,7.1,Named accounts; no shared logins; fill-in account disabled between cover periods,IA-2; AC-2,PR.AA-01,N81-BM (CSF PR.AA-01); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,7.2,MFA on every service holding customer data or money,IA-2(1),PR.AA-03,N81-BM (CSF PR.AA-03); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,7.3,Unique passphrases; default passwords changed before use,IA-5,PR.AA-01,N81-BM (CSF PR.AA-01),No
+POL-01,7.4,Fill-in account without export rights; quarterly user and session review,AC-2; AC-6,PR.AA-05,N81-BM (CSF PR.AA-05); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,7.5,Device lock times,AC-11,PR.AA-05,N81-BM,No
+POL-01,7.6,Sealed emergency access codes and device-return procedure,AC-2; CP-2,RC.RP-01,N81-BM (CSF RC.RP-01),No
+POL-01,7.7,"Monthly review of sign-ins, exports, and connected devices",AU-6,DE.AE-02,N81-BM (CSF DE.AE-02; DE.CM-03),No
+POL-01,8.1,Three-level classification,RA-2,ID.AM-07,N81-BM (CSF ID.AM-07),No
+POL-01,8.3,Passcodes only in the restricted field cleared at release; no account passwords collected,SI-12,PR.DS-01,N81-R02 (Fla. Stat. 501.171(2)); N81-R01 (15 U.S.C. 45(n)),Yes
+POL-01,8.4,Customer device access rules (good-faith access only),AC-3,PR.DS-10,N81-R02 (Fla. Stat. 501.171(1)(a)); N81-R01 (15 U.S.C. 45(n)),No
+POL-01,8.5,Encrypted storage and 14-day deletion of transfer and recovery copies,SI-12; SC-28,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)); N81-R01 (15 U.S.C. 45(n)),Yes
+POL-01,8.6,SP 800-88 Rev. 2 sanitization methods with verification,MP-6,ID.AM-08,N81-BM (SP 800-88 Rev. 2); N81-R02 (Fla. Stat. 501.171(8)),Yes
+POL-01,8.7,Per-device sanitization record for recycling drop-offs,MP-6,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)); N81-R01 (15 U.S.C. 45(a)(1)),Yes
+POL-01,8.8,Card numbers only in the P2PE terminal; never written down or typed elsewhere,SI-12; MP-6,PR.DS-01,N81-R03 (PCI DSS 3.2.1; 3.3.1.2; 9.4.6; SAQ P2PE eligibility),No
+POL-01,8.9,Paper intake forms shredded after one year; security records kept 5 years,SI-12,ID.AM-08,N81-R02 (Fla. Stat. 501.171(4)(c); 501.171(8)),No
+POL-01,9.2,Bench rules: screen and camera placement; scan customer drives; standard account,PL-4,PR.DS-10,N81-BM (CSF PR.DS-10),No
+POL-01,9.3,"Updates, antivirus, and approved software sources only",SI-2; SI-3; CM-7,PR.PS-05,N81-BM (CSF PR.PS-05; ID.RA-09),No
+POL-01,9.4,"Terminal list, weekly inspection, and service visitor checks",PE-3,PR.AA-06,N81-R03 (PCI DSS 9.5.1; 9.5.1.1; 9.5.1.2; 9.5.1.3),No
+POL-01,9.5,Guest and bench networks separated from shop devices,SC-7; AC-18,PR.IR-01,N81-BM (CSF PR.IR-01); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,9.6,Annual training; PIM read; payment change call-back,AT-2,PR.AT-01,N81-BM (CSF PR.AT-01); N81-R03 (PCI DSS 12.6.1),No
+POL-01,9.7,"AI tools only after assessment, on no-training terms, with no customer personal data",PL-4; SA-9,GV.SC-05,N81-R01 (15 U.S.C. 45(n)); N81-R02 (Fla. Stat. 501.171(2)),No
+POL-01,9.8,"Customer-facing privacy, wiping, and AI statements must be true",PT-5,GV.OC-03,N81-R01 (15 U.S.C. 45(a)(1)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,N81-R03 (PCI DSS 12.10.1); N81-BM (CSF ID.IM-04),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,N81-BM (CSF RS.MA-02),No
+POL-01,10.3,Processor told within 24 hours of a suspected card data compromise,IR-6,RS.CO-02,N81-R03 (merchant agreement; PCI DSS 12.10.1),No
+POL-01,10.4,Meet Florida and other states' notice deadlines,IR-6,RS.CO-02,N81-R02 (Fla. Stat. 501.171(3)-(5); other states),No
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,N81-BM (CSF RS.MA-01),No
+POL-01,11.3,Storm procedure,CP-2,PR.IR-02,N81-BM (CSF PR.IR-02),No
+POL-01,11.4,Monthly SYS-01 export and second copy of open recovery jobs,CP-9,PR.DS-11,N81-BM (CSF PR.DS-11),No

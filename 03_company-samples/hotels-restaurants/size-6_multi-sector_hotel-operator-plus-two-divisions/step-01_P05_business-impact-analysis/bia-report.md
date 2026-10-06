@@ -90,7 +90,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 - SYS-G1 (mitigated by break-glass accounts, tested quarterly).
 - SYS-G4, the one tokenization and vault service for all divisions (mitigated by an active standby region; P2PE terminals authorize without it).
 - The legacy POS vendor's remote support path into both divisions (P01 GR-01; POAM-001).
-- One ACH bank for loan and maintenance-fee autopay (P01 VO-012, accepted until the 2027 bank review).
+- One ACH bank for loan and maintenance-fee autopay (P01 VO-12, accepted until the 2027 bank review).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -123,6 +123,6 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 ## 8. Key findings
 1. **Shared services set the floor.** Group payment services (BP-G05) and identity (BP-G01) have shorter RTOs than any division process, as they must. Both met their RTOs in the 2026 failover tests.
 2. **The legacy POS vendor is a shared single point of failure for two divisions.** It is also the top group risk for confidentiality (P01 GR-01).
-3. **Vacation Ownership recovery is unproven.** SYS-V3 and the loan origination database sit in the legacy data center with one restore test in 2025 and none in 2026 (P01 VO-010; POAM-019).
+3. **Vacation Ownership recovery is unproven.** SYS-V3 and the loan origination database sit in the legacy data center with one restore test in 2025 and none in 2026 (P01 VO-10; POAM-019).
 4. **Ride control recovery is an engineering process, not an IT restore.** The offline image library works, but gap 9 means a park business network compromise could reach ride control at 2 parks. That is a safety risk, not only an availability risk (P01 ATT-02).
 5. **Notification capacity is itself a process** (BP-G02, BP-H07, BP-G07). If the SOC, owner relations, or finance cannot work during an incident, card brand, owner, FTC, and SEC clocks keep running. The P08 runbook uses out-of-band channels for this reason.
