@@ -1,2 +1,59 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Program meets the SP 800-53 Moderate baseline and stricter agency values,PM-1,GV.PO-01,Contract (SP 800-53 Moderate); N92-R02 (Appendix H 3.01),No
+POL-01,4.2,Information Security Officer designated in writing,PM-2,GV.RR-02,Contract (SP 800-53 Moderate),No
+POL-01,4.3,"Annual risk assessment using SP 800-30, and after acquisitions, new states, new CJISSECPOL versions",RA-3; PM-9,ID.RA-01; GV.RM-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 RA-3),No
+POL-01,4.4,"Risk acceptance authority; no acceptance of risks that breach Addendum, Exhibit 7, or DPPA terms",PM-9,GV.RM-01,N92-R02 (Appendix H 3.01); N92-R01 (Exhibit 7); N92-R05 (18 U.S.C. 2721),No
+POL-01,4.5,"Screening, signed certifications, and training before CJI, FTI, or motor vehicle access",PS-2; PS-3; PS-6,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-3; Appendix H); N92-R01 (Pub. 1075 sec. 2.C.3; Exhibit 7 I(2)),Yes
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,Contract (SP 800-53 Moderate),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-01,Contract (SP 800-53 Moderate),No
+POL-01,4.8,"Sanctions, with misuse of regulated data reported to the agency",PS-8,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-8); N92-R01 (Pub. 1075 sec. 4 PS-8),No
+POL-01,4.9,No agency data or access for vendors without review and terms; FTI and CJI vendor rules,SA-9; SR-6,GV.SC-05,N92-R01 (Exhibit 7 I(8)); N92-R02 (CJISSECPOL v6.1 SA-9); N92-R04 (42 CFR 431.306(b)),Yes
+POL-01,4.10,Annual reassessment of Tier 1 vendors,SR-6; SA-9,GV.SC-07,Contract (SP 800-53 Moderate),Yes
+POL-01,4.11,Quarterly reporting to the audit committee; monthly metrics,CA-7; PM-9,GV.OV-01,Contract (SP 800-53 Moderate),No
+POL-01,4.12,Annual independent assessment,CA-2,ID.IM-02,Contract (SP 800-53 Moderate); N92-R08 (GovRAMP),No
+POL-01,4.13,Security records kept 7 years,SI-12,PR.DS-11,N92-R01 (Pub. 1075 sec. 4 AU-11),No
+POL-01,4.14,AI approved through governance; no AI replacing decisions law gives to agency staff,PM-9; SA-9,GV.RM-01,N92-R04 (42 CFR 431.10(b)(3)); Colorado SB26-189,Yes
+POL-01,4.15,New states mapped by counsel; acquisitions assessed before connection,RA-3; CA-2,GV.OC-03,Contract (SP 800-53 Moderate),No
+POL-02,4.1,Unique accounts from the HR system; vaulted agency-required shared accounts,AC-2; IA-5,PR.AA-01,N92-R02 (CJISSECPOL v6.1 AC-2),Yes
+POL-02,4.2,Access removed at project close and within 24 hours of transfer or termination; inactive accounts disabled within 1 week,AC-2; AC-2(3); AC-6; PS-4; PS-5,PR.AA-05,"N92-R02 (CJISSECPOL v6.1 AC-2(3), PS-4, PS-5); N92-R01 (Pub. 1075 sec. 4 AC-2)",Yes
+POL-02,4.3,MFA for all; phishing-resistant for administrators and regulated access by 2027-01-31,IA-2(1); IA-2(2),PR.AA-03,N92-R02 (CJISSECPOL v6.1 IA-2),Yes
+POL-02,4.4,No standing administrator rights; agency credentials vaulted and rotated,AC-6; AC-6(5); IA-5,PR.AA-05,"N92-R02 (CJISSECPOL v6.1 AC-6, IA-5)",Yes
+POL-02,4.5,Quarterly reviews of regulated-tenant and agency system access,AC-2,PR.AA-05,N92-R01 (Pub. 1075 sec. 4 AC-2); N92-R04 (42 CFR 431.306(b)),Yes
+POL-02,4.6,Lockout values for CJI and FTI enclave access,AC-7,PR.AA-03,N92-R02 (CJISSECPOL v6.1 AC-7); N92-R01 (Pub. 1075 sec. 4 AC-7),Yes
+POL-02,4.7,Remote administration only through the gateway or the vaulted managed services path,AC-17; MA-4,PR.IR-01,N92-R02 (CJISSECPOL v6.1 MA-4),Yes
+POL-02,4.8,Secrets only in the secrets manager or vault; 90-day rotation,IA-5,PR.AA-01,N92-R02 (CJISSECPOL v6.1 IA-5),Yes
+POL-02,4.9,Break-glass accounts sealed and tested quarterly,AC-2,PR.AA-05,Contract (SP 800-53 Moderate),Yes
+POL-02,4.10,Agency users through agency IdPs with MFA; municipal local accounts with MFA,IA-8,PR.AA-03,Contract (SP 800-53 Moderate),No
+POL-02,4.11,FTI enclave administration by the screened group; regulated access blocked outside the U.S.,AC-3; AC-6,PR.AA-05,N92-R01 (Pub. 1075 sec. 3.3.1),Yes
+POL-03,4.1,"Incident response plan and runbooks for ransomware and insider misuse, with metrics",IR-8,RS.MA-01,Contract (SP 800-53 Moderate),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-03,4.3,Incidents tracked without regulated data in the record,IR-5,RS.MA-02,Contract (SP 800-53 Moderate),No
+POL-03,4.4,Agency notice first on the matrix clocks,IR-6,RS.CO-02,N92-R02 (CJISSECPOL v6.1 IR-6); N92-R01 (Pub. 1075 sec. 1.8.4),Yes
+POL-03,4.5,Breach notice to agencies within 10 days with counts by state,IR-6,RS.CO-03,Fla. Stat. 501.171(6)(a),Yes
+POL-03,4.6,Evidence preserved and kept 7 years,IR-4; AU-11,RS.AN-03,N92-R01 (Pub. 1075 sec. 4 AU-11),Yes
+POL-03,4.7,"Ransom decision rules, OFAC check, agency consultation",IR-4,RS.MA-01,Fla. Stat. 282.3186,Yes
+POL-03,4.8,Annual tabletop with agencies; annual insider exercise,IR-3,ID.IM-04,Contract (SP 800-53 Moderate),No
+POL-03,4.9,Refresher training within 30 days for staff involved,AT-2; IR-2,PR.AT-01,N92-R02 (CJISSECPOL v6.1 AT-2),Yes
+POL-03,4.10,Lessons learned within 30 days,IR-4,ID.IM-02,Contract (SP 800-53 Moderate),Yes
+POL-03,4.11,Incidents in agency-hosted systems follow agency procedures too,IR-4,RS.MA-01,N92-R02 (Appendix H 4.01),Yes
+POL-03,4.12,Crisis management team for severity 1,IR-4,RC.RP-01,Contract (SP 800-53 Moderate),Yes
+POL-04,4.1,Five classification levels,RA-2,ID.AM-07,Contract (SP 800-53 Moderate),No
+POL-04,4.2,FIPS-validated encryption; FIPS 140-3 for CJI in transit; U.S. only,SC-8; SC-13; SC-28,PR.DS-01; PR.DS-02,N92-R02 (CJISSECPOL v6.1 SC-13); N92-R01 (Pub. 1075 sec. 3.3.1),Yes
+POL-04,4.3,FTI stays in the FTI enclave; commingled fields tagged and excluded,AC-4; MP-3; CM-12,PR.DS-01,N92-R01 (Pub. 1075 sec. 1.8.2; 2.C.5),No
+POL-04,4.4,No production data in non-production,SA-3,PR.DS-01,N92-R01 (Pub. 1075 sec. 2.E.6.4); N92-R05 (18 U.S.C. 2721(a)),No
+POL-04,4.5,"Data inventory including analytics, archives, and vendors",CM-12,ID.AM-07,Contract (SP 800-53 Moderate),No
+POL-04,4.6,"Deletion at contract end with certificate, including archives",MP-6; SI-12,PR.DS-11,Fla. Stat. 501.171(8); N92-R01 (Exhibit 7 I(5)),Yes
+POL-04,4.7,"Encrypted, write-once backups in a separate account and region",CP-9,PR.DS-11,Contract (SP 800-53 Moderate),Yes
+POL-04,4.8,AI services only with signed data-use terms; no FTI or CJI,SA-9,GV.SC-05,N92-R04 (42 CFR 431.306(b)),Yes
+POL-04,4.9,Retention per contract; security records 7 years,SI-12,PR.DS-11,Contract (SP 800-53 Moderate),No
+POL-04,4.10,Motor vehicle records used only for AG-04; no redisclosure,AC-3,PR.AA-05,"N92-R05 (18 U.S.C. 2721(b)(1), (c))",No
+POL-05,4.1,Annual acknowledgment; designated-position certifications,PL-4; PS-6,GV.RR-04,N92-R02 (Appendix H),Yes
+POL-05,4.2,Company devices only for agency data and systems,AC-20,PR.AA-05,Contract (SP 800-53 Moderate),No
+POL-05,4.3,"No agency data in email, chat, or personal storage",AC-21,PR.DS-02,Contract (SP 800-53 Moderate),No
+POL-05,4.4,Report incidents within 1 hour,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-05,4.5,Remote work rules; Pub. 1075 alternate work site; no access from outside the U.S.,PE-17; AC-17,PR.AA-06,N92-R01 (Pub. 1075 sec. 2.B.7),Yes
+POL-05,4.6,No viewing of records without a work reason; access is logged and reviewed,AU-6; PS-8,DE.CM-03,N92-R01 (Pub. 1075 sec. 2.C.1); N92-R05 (18 U.S.C. 2722),Yes
+POL-05,4.7,No unapproved software,CM-11,PR.PS-02,Contract (SP 800-53 Moderate),No
+POL-05,4.8,No sharing of credentials or secrets,IA-5,PR.AA-01,Contract (SP 800-53 Moderate),Yes
+POL-05,4.9,Approved AI tools only,PL-4,GV.RR-04,Contract (SP 800-53 Moderate),No
+POL-05,4.10,Training on time; access suspended at expiry,AT-2,PR.AT-01,N92-R01 (Pub. 1075 sec. 2.D.2.1),Yes

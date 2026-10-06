@@ -49,7 +49,7 @@ Status: 12 In progress, 10 Open, 3 Closed (R-024 treated the day it was found; R
 | R-004 | Records cannot be restored within the 24-hour and 4-hour contract terms | High | 4-hourly write-once exports; quarterly record-level restore tests; contingency plan | Lead Platform Engineer | 2026-11-30 |
 | R-005 | Agencies told too late for their CJIS, IRS, or Florida 12-hour clocks | High | POL-03 and the P08 runbook; staff briefing on the 1-hour rule; tabletop | Operations Manager | 2026-11-30 |
 | R-012 | MSP remote tool compromise reaches every laptop, cached CJI, and the SSH keys | High | MSP contract amendment; SSH keys off laptops; no CJI on laptops | Owner | 2026-12-31 |
-| R-015 | Caseworkers adopt wrong AI pre-screening suggestions | High | Suggestions off from 2026-09-08 until the P10 conditions are met | Owner | 2026-12-31 |
+| R-015 | Caseworkers adopt wrong AI pre-screening suggestions | High | Add-on switched off from 2026-09-01 until the P10 conditions are met | Owner | 2026-12-31 |
 
 **Two themes run through the top risks:**
 - **An attacker who gets one administrator laptop gets everything** (R-001, R-002, R-004, R-012). The same people read email and administer the tenant and the server on one laptop, the server's SSH keys sit on those laptops, the backup copy sits next to the server, and nobody watches after hours. Fixing these four also lowers R-008, R-009, R-020, and R-025.

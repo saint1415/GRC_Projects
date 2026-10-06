@@ -7,7 +7,7 @@
 Hosted Case Management Service (**HCMS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The HCMS is the set of case management applications that the company configures, hosts, and supports for 4 Florida local agencies: pretrial supervision for a sheriff's office (AC-01), the county-funded Emergency Assistance Program for a county human services department (AC-02), and code enforcement and constituent requests for two cities (AC-03, AC-04). About 38,000 people have records in it, and about 50 agency staff use it.
+The HCMS is the set of case management applications that the company configures, hosts, and supports for 4 Florida local agencies: pretrial supervision for a sheriff's office (AC-01), the county-funded Emergency Assistance Program for a county human services department (AC-02), and code enforcement and constituent requests for two cities (AC-03, AC-04). About 38,000 people have records in it, and about 75 agency staff use it (about 30 at AC-01, 9 at AC-02, 20 at AC-03, and 15 at AC-04).
 
 The company owns almost no infrastructure. The applications run in the company's tenant on a licensed low-code case management platform (SaaS/PaaS), and the only server the company runs is one integration virtual machine in a government-community IaaS region. A managed service provider (MSP) runs the laptops and the productivity suite. This plan therefore says, for each control, what the company does itself, what the MSP does for it, and what it inherits from the platform vendor or the IaaS provider.
 

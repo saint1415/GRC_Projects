@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI eligibility determination for public benefits
+**AI use case:** AI eligibility pre-screening (SYS-09)
 **Sector AI rules and guidance:** Colorado SB26-189 (ADMT) Colo. SB26-189 Covers ADMT used in consequential decisions about essential government services and public benefits.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 
