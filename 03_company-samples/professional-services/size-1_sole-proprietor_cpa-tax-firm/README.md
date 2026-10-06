@@ -56,9 +56,9 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: FTC Safeguards Rule. | P01 risks; P02 control statements |
 | 6 | [P06 Security Policy Set](step-06_P06_security-policies/_context.md) | One consolidated information security policy. Plain-language rules covering access; incident response; data handling; acceptable use. | P03 gaps; P01 risks |
 | 7 | [P07 Security Control Assessment](step-07_P07_control-assessment/_context.md) | 6-10 controls. Examine and test methods; interview is self-review. | P02 control statements; P06 policies |
-| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Who to call and what to do in the first 24 hours; outside help contacts. Incident: Business email compromise and taxpayer data theft. | P05 recovery order; P01 risks; P03 notification duties |
+| 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Who to call and what to do in the first 24 hours; outside help contacts. Incident: Business Email Compromise and Taxpayer Data Theft. | P05 recovery order; P01 risks; P03 notification duties |
 | 9 | [P09 SOC 2 Readiness Checklist](step-09_P09_soc2-readiness/_context.md) | Security criteria (CC series) only. Readiness self-check; many criteria marked not applicable with rationale. | Evidence from P02, P06 and P07 |
-| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One third-party AI tool the owner uses. Use-case risk screen; data-sharing rules; human review of outputs. AI use case: Generative AI for tax and document preparation. | P06 policies; the P01 risk method |
+| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One third-party AI tool the owner uses. Use-case risk screen; data-sharing rules; human review of outputs. AI use case: General-purpose generative AI assistant used to summarize client tax documents. | P06 policies; the P01 risk method |
 
 ## How to use this page in a meeting
 1. Read **At a glance** aloud. It sets who the company is and how big it is.

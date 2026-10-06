@@ -1,38 +1,18 @@
-# Data Classification and Handling Policy
+# Data Classification and Handling Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company (CPA and tax preparation practice) |
 | Policy ID | POL-04 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | RA-2, MP-3, MP-6, SC-8, SC-28, SI-12 |
-| CSF 2.0 | ID.AM-07, PR.DS-01, PR.DS-02, PR.DS-10 |
+| Status | Merged into POL-01 Information Security Policy (consolidated), effective 2026-09-01 |
+| Owner and approver | CPA-owner |
 
-## 1. Purpose
-Classify Cris Santos Company information by sensitivity and set handling rules so protection matches risk and regulatory obligations.
+At the Sole Proprietorship tier the practice keeps **one** consolidated policy, because one person writes, follows, and checks it (`01_company-sizes/tier-project-scaling.csv`, t1 P06). This file is kept so the folder has the standard policy set names. It holds no separate rules.
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+**Where the data classification and handling rules are:**
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Sole Proprietorship). For example, at Sole Proprietorship the owner holds every role.]
+- POL-01 section 8 (Data handling): three classification levels (8.1), approved locations (8.2), device encryption (8.3), portal-only exchange (8.4), the call-back rule for bank, address, and email changes (8.5), paper (8.6), suite backup (8.7), disposal and device wipe (8.8), retention schedule and withdrawal of old IRS authorizations (8.9), IRC 7216 disclosure and consent rules (8.10).
+- POL-01 Appendix A: WISP index, devices, and data locations.
+- SP 800-53 MP-1 and SC-1 are met by POL-01 as a whole.
 
-## 4. Policy statements
-4.1 All information must be classified as Public, Internal, Confidential, or Restricted. Regulated data (see `_context.md`) is Restricted. (RA-2)
-4.2 Restricted and Confidential data must be encrypted in transit and at rest. (SC-8; SC-28; PR.DS-01; PR.DS-02)
-4.3 An inventory of Restricted data locations must be maintained. (ID.AM-07)
-4.4 Media containing Confidential or Restricted data must be sanitized before disposal or reuse. (MP-6)
-4.5 Data must be retained and destroyed per the retention schedule and legal holds. (SI-12)
-4.6 Restricted data must not be entered into unapproved third-party tools, including AI tools (see P10).
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for every statement is in `policy-control-map.csv`.

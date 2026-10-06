@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Generative AI for tax and document preparation
+**AI use case:** General-purpose generative AI assistant used to summarize client tax documents
 **Sector AI rules and guidance:** Colorado SB26-189 (Automated Decision-Making Technology) Colo. SB26-189 (repeals and reenacts SB24-205) Duties for developers and deployers of ADMT used in consequential decisions on employment, education, financial/lending, housing, insurance, health care and government services. Relevant to consulting firms that build or deploy such tools.; ABA Formal Opinion 512 (Generative AI tools) ABA Standing Committee on Ethics and Professional Responsibility, Formal Op. 512 (July 2024) Ethics guidance applying competence, confidentiality, communication and fee rules to lawyers' use of generative AI. Not law.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

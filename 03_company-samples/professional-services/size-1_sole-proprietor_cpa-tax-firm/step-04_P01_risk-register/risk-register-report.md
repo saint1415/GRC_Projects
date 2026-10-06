@@ -49,7 +49,7 @@
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-09-15, before the extension deadline):** scan-to-folder and mailbox MFA, practice management MFA, password manager, printed P08 contacts.
-- **Budgeted (about $400 a year):** password manager, backup service for the email and file suite, and a security course for the owner.
+- **Budgeted (about $250 a year, plus about $300 of attorney time and a few hours of the IT consultant):** password manager, backup service for the email and file suite, and a security course for the owner.
 - **Contract and counsel actions by 2026-12-31:** counsel's IRC 7216 advice on the AI uploads and on sharing client data with a backup CPA (R-006, R-009); continuation agreement (R-009); vendor list and the IT consultant's MFA confirmation (R-008).
 - **Before the 2027 filing season (2027-01-15):** portal-only exchange with required client MFA (R-004); call-back rule announced to clients (R-002); runbook walkthrough (R-013).
 - **Accepted (Low):** R-014 (lost or stolen device; both devices are encrypted) and R-015 (hurricane; the SaaS tools work from anywhere and extensions are available).

@@ -100,7 +100,7 @@ Inheritance: 1 fully inherited (AU-2, from the tax software vendor and the email
 Self-assessed 2026-07-27 to 2026-07-31 with the IT consultant (tests on 2026-07-29). See P07.
 
 ## 11. Digital Identity Acceptance Statement
-The tax software requires a password and an authenticator app on the owner's phone, which fits a Moderate categorization and remote access to taxpayer data. The email suite and practice management SaaS use a password only until MFA goes on (2026-09-15); the email account is also the suite's administrator account, so it is the most exposed identity in the practice. Clients sign Forms 8879 through the portal's e-signature with identity verification provided by the vendor (Pub. 1345 sets the requirements; P03 G-047); portal MFA for clients becomes mandatory on 2027-01-15.
+The tax software requires a password and an authenticator app on the owner's phone, which fits a Moderate categorization and remote access to taxpayer data. The email suite and practice management SaaS use a password only until MFA goes on (2026-09-15); the email account is also the suite's administrator account, so it is the most exposed identity in the practice. Clients sign Forms 8879 through the portal's e-signature with identity verification provided by the vendor (Pub. 1345 sets the requirements; P03 G-045); portal MFA for clients becomes mandatory on 2027-01-15.
 
 ## 12. Referenced Artifacts
 Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
