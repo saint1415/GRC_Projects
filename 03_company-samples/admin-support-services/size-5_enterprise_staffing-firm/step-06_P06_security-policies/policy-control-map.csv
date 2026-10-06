@@ -34,7 +34,7 @@ POL-03,4.7,"No ransom may be paid without approval from the CEO, the General Cou
 POL-03,4.8,"Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05), including the prior-week advance proc...",CP-2; CP-4; CP-10,RC.RP-01,N56-BM (RC.RP-01),Yes
 POL-03,4.9,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure com...",IR-3; IR-8,ID.IM-02,SEC 8-K 1.05; N56-BM (ID.IM-02),Yes
 POL-03,4.10,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the ris...,IR-4,ID.IM-03,N56-BM (ID.IM-03),Yes
-POL-03,4.11,"When E-Verify is unavailable, the onboarding team must document the outage for each day it lasts and create the cases...",CP-2,RC.RP-04,Fla. Stat. 448.095(2)(c); E-Verify MOU Art. II.A.8,Yes
+POL-03,4.11,"When E-Verify is unavailable, the onboarding team must document the outage for each day it lasts and create the cases...",CP-2,RC.RP-04,Fla. Stat. 448.095(2)(c); E-Verify MOU Art. II.A.9,Yes
 POL-04,4.1,"Information must be classified as Restricted (SSNs, bank accounts, Form I-9 documents, E-Verify data, consumer report...",RA-2,ID.AM-05,N56-BM (ID.AM-05),No
 POL-04,4.2,"Restricted data must be encrypted at rest and in transit; outside the payroll engine, SSNs and bank account numbers m...",SC-28; SC-8,PR.DS-01,Fla. Stat. 501.171(2); N56-BM (PR.DS-01),Yes
 POL-04,4.3,"Every recurring extract of Restricted data must be registered (PRC-04.1) with its purpose, owner, recipients, and ret...",AC-4,ID.AM-07,N56-BM (ID.AM-07),No

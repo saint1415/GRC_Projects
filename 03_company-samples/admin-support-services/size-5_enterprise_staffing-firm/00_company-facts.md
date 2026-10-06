@@ -153,3 +153,20 @@ These facts were added while building the deliverables. They do not change secti
 **Recruiting texts.** Recruiters send job alerts and shift reminders by automated text message to candidates and associates who opt in through SYS-01. The firm does not telemarket goods or services.
 
 **Biometric time clocks.** The time clocks support a face-match feature; it is disabled at every site pending legal review of state biometric laws (not analyzed here).
+
+**Operational facts used in the deliverables.**
+| Topic | Fact | Used in |
+|---|---|---|
+| Payroll rhythm | Associates are paid every Friday. Approved time is due Monday 12:00; payroll runs Monday 06:00 to Thursday 12:00 (Eastern); ACH files must reach the banks by Thursday 14:00. Three payroll centers (about 420 staff), one of them in Florida | P05; P08 section 3 |
+| Pay delivery | Bank A carries 80% of ACH files and Bank B 20%; Bank B passed a full-volume test on 2025-11-14. About 9,400 associates a week are paid by paycard | P05; P08 |
+| Associate Service Center | Two centers, about 380 agents, about 21,000 calls and chats a day; caller verification today uses knowledge questions | P05; P07; P08 |
+| ALPP users and volumes | About 9,800 workforce users; about 310,000 associate self-service accounts active in 2025; about 21,000 client approvers; about 140 integration routes and 900 interface jobs a day; 6 payroll engine servers | P02; P07 |
+| Disaster recovery | The 2026-05-16 tier-1 DR test recovered the payroll engine in 9.5 hours against an 8-hour RTO; the WMP met its 4-hour RTO | P02; P05; P07 |
+| Client integrations | About 400 client VMS integrations; 63 API keys older than 2 years | P02; P04; P07 |
+| Data platform | 41 analytics users can query clear-text SSNs and bank numbers in the nightly extract | P01; P04; P07 |
+| Records past retention | About 1.9 million applications and 410,000 consumer reports past the retention schedule; about 410,000 scanned Forms I-9 from 2009-2012 lack a searchable index; about 38,000 ACQ-1 Forms I-9 sit in ACQ-1's legacy system | P03; P07 |
+| Internal Audit | IT audit manager and four IT auditors under the Chief Audit Executive | P07 |
+| Workforce Management Platform | SOC 2 Type 2 (Security, Availability, Confidentiality) issued every year since 2024; the 2025 report had no exceptions | P09 |
+| AI-001 | In production since 2024-09 in sort-only mode (auto-advance and automatic rejection never enabled); independent NYC bias audit completed 2026-02-09; NYC applicants are those for jobs at 9 NYC branches | P03; P10 |
+| Treatment funding | About $4.9 million of security treatment funded for 2026 Q4 to 2027 Q2 | P01 section 7 |
+| Disclosure playbook | Version 2, with a PII breach cost model due 2026-10-31 (POAM-013) | P07; P08 section 6 |

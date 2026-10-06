@@ -12,7 +12,7 @@
 | Review cycle | Annually (next review by 2027-09-30), and after major changes, incidents, or acquisitions |
 | Implements (SP 800-53 Rev. 5) | IR-8, IR-6, IR-4, IR-5, CP-2, CP-4, CP-10, IR-3 |
 | CSF 2.0 | RS.MA-01, RS.MA-02, RS.MA-03, RS.CO-02, RS.MI-01, RC.RP-01, ID.IM-02, ID.IM-03, RC.RP-04 |
-| Binding rules served | SEC 8-K 1.05; State breach laws (Fla. Stat. 501.171(3)-(5)); E-Verify MOU Art. II.A.16; Fla. Stat. 448.095(2)(c); E-Verify MOU Art. II.A.8 |
+| Binding rules served | SEC 8-K 1.05; State breach laws (Fla. Stat. 501.171(3)-(5)); E-Verify MOU Art. II.A.16; Fla. Stat. 448.095(2)(c); E-Verify MOU Art. II.A.9 |
 
 ## 1. Purpose
 Make sure the firm detects, contains, recovers from, and reports security incidents quickly and lawfully, meets breach notification, E-Verify, client, agency, and SEC disclosure deadlines, and keeps associates paid during outages.
