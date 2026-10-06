@@ -14,8 +14,8 @@
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.
 - **Entry (Day -1, Friday evening):** an attacker calls the Insurance division help desk posing as an SCSP integration engineer who has lost a phone while traveling. Using the engineer's employee ID and manager's name from public sources, the caller passes the current checks (P07 IA-05a.) and the agent, who holds group-wide reset rights (P07 AC-06), issues a temporary access pass.
-- **Privilege use (Day -1 to Day 1):** the engineer's identity can request PAM elevation for integration services. The attacker:
-  - changes the beneficiary mapping for 38 repair-shop payees in the claims disbursement route; 3 payments totaling $610,000 are released Monday before positive pay review flags them, and the banks recover 2 of them ($425,000), leaving $185,000 lost;
+- **Privilege use (Day -1 to Day 0):** the engineer's identity can request PAM elevation for integration services. The attacker:
+  - changes the beneficiary mapping for 38 repair-shop payees in the claims disbursement route. The change is not found on Day 0; on Monday (Day 1) 3 payments totaling $610,000 are released through the altered mapping before positive pay review flags them, and the banks recover 2 of them ($425,000), leaving $185,000 lost;
   - pulls an HCM report through an integration service account: about 105,000 current and former employees (names, SSNs, bank accounts) and, from the linked plan administration site, appeal files of about 2,300 group health plan members;
   - uses single sign-on to export about 410,000 personal lines claim records from SYS-I2 (claimants' names, contact details, policy numbers, injury descriptions);
   - adds the identity to the clinic EHR adjuster group in SYS-G1 and views about 1,900 patient charts.

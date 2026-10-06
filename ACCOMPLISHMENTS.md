@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**176 of 216** sample companies are finished (1760 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**177 of 216** sample companies are finished (1770 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -189,6 +189,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Management of Companies and Enterprises | Small | Holding company | [README](03_company-samples/holding-companies/size-3_small_holding-company/README.md) |
 | Management of Companies and Enterprises | Mid-Market | Holding company | [README](03_company-samples/holding-companies/size-4_mid-market_holding-company/README.md) |
 | Management of Companies and Enterprises | Enterprise | Holding company | [README](03_company-samples/holding-companies/size-5_enterprise_holding-company/README.md) |
+| Management of Companies and Enterprises | Multi-Sector | Holding company plus two divisions | [README](03_company-samples/holding-companies/size-6_multi-sector_holding-company-plus-two-divisions/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Sole Proprietorship | Independent recruiter | [README](03_company-samples/admin-support-services/size-1_sole-proprietor_independent-recruiter/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Small | Staffing firm | [README](03_company-samples/admin-support-services/size-3_small_staffing-firm/README.md) |
 | Educational Services | Sole Proprietorship | Tutoring service | [README](03_company-samples/education/size-1_sole-proprietor_tutoring-service/README.md) |
