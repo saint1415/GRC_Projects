@@ -1,2 +1,50 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,The company must maintain one information security program aligned to NIST CSF 2.0 that covers all entities and meets...,PM-1; PL-2,GV.PO-01,N53-R01 (314.3(a)),No
+POL-01,4.2,"The CISO must be designated in writing as the Qualified Individual for Title and Escrow, and the President of Title a...",PM-2,GV.RR-02,N53-R01 (314.4(a); 314.4(a)(1)-(3)),No
+POL-01,4.3,"An enterprise risk assessment must be performed and documented at least annually and after major changes, incidents,...",RA-3; PM-9,GV.RM-01,N53-R01 (314.4(b); 314.4(b)(2)); N53-R05 (229.106(b)(1)),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-06,N53-R01 (314.4(b)(1)(iii)),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they des...,PL-1,GV.PO-02,N53-R01 (314.4(g)),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5,GV.PO-02,N53-R01 (314.4(g)),No
+POL-01,4.7,Employees and contractor agents who violate security policies must be sanctioned under PRC-01.1 in proportion to inte...,PS-8,GV.RR-04,N53-R01 (314.4(e)(1)),No
+POL-01,4.8,"No vendor may receive, maintain, or process customer information or other personal data until it has been tiered, ass...",SA-9; SA-4; SR-6,GV.SC-05,N53-R01 (314.4(f)(1)-(3)); Fla. Stat. 501.171(6) (Florida worked example),Yes
+POL-01,4.9,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor i...,CA-2; CA-2(1); CA-8,ID.IM-01,"N53-R01 (314.4(d)(1); 314.4(d)(2)); N53-R03 (Cal. Code Regs. tit. 11, 7122)",Yes
+POL-01,4.10,Every acquisition must have security due diligence and a risk assessment before closing and an integration plan under...,RA-3; SA-9,GV.OC-01,N53-R01 (314.4(b)(2)),Yes
+POL-01,4.11,"Changes to production systems that hold or connect to customer information must follow PRC-01.3, including two approv...",CM-3; CM-5,PR.PS-01,N53-R01 (314.4(c)(7)),Yes
+POL-01,4.12,"The CISO must report cybersecurity risk to the board risk committee at least quarterly, and in writing to the Title a...",PM-9,GV.OV-01,N53-R01 (314.4(i)); N53-R05 (229.106(c)),No
+POL-02,4.1,"Access must be granted only through identity governance using role templates approved by the system owner, and only t...",AC-2; AC-6,PR.AA-05,N53-R01 (314.4(c)(1)(i); 314.4(c)(1)(ii)),Yes
+POL-02,4.2,"Employee access must be disabled the same business day as termination, and contractor agent access within 1 business...",AC-2; PS-4; PS-7,PR.AA-01,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.3,Workforce accounts inactive for 45 days and external Hub accounts inactive for 90 days must be disabled automatically.,AC-2(3),PR.AA-01,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.4,"Every person who accesses a company information system must use MFA. Privileged users, Title and Escrow staff who han...",IA-2(1); IA-2(2); IA-8,PR.AA-03,N53-R01 (314.4(c)(5)),Yes
+POL-02,4.5,"Privileged access must be granted just in time through PAM with a ticket reference, and standing administrator rights...",AC-6(1); AC-6(5),PR.AA-05,N53-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.6,Access to sensitive systems must be certified quarterly by managers for employees and monthly by managing brokers for...,AC-2,PR.AA-05,N53-R01 (314.4(c)(1)),Yes
+POL-02,4.7,"Contractor agents may use their own devices only through the browser under conditional access, with no download of cl...",AC-20; AC-17,PR.AA-05,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.8,The person who enters or changes a payee must not approve the disbursement; every trust account wire must have a seco...,AC-5,PR.AA-05,N53-R01 (314.4(c)(1)(ii)); Fla. Stat. 626.8473(4) (Florida worked example),Yes
+POL-02,4.9,"Service, API, and bank channel credentials must be stored only in the enterprise secrets vault and rotated at least e...",IA-5,PR.AA-01,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.10,Shared logins are not allowed. Agents' assistants must have their own accounts in the assistant role.,AC-2; IA-2,PR.AA-01,N53-R01 (314.4(c)(1)(i)),Yes
+POL-03,4.1,"Every employee and contractor agent must report a suspected incident, including any changed wire instructions or susp...",IR-6; AT-2,DE.AE-02,N53-R01 (314.4(j)(2)),Yes
+POL-03,4.2,Incidents must be classified and escalated under STD-03.1; any suspected diversion of funds is severity 1 and starts...,IR-4; IR-8,RS.MA-02,N53-R01 (314.4(h)(2); 314.4(h)(3)),Yes
+POL-03,4.3,"Every incident must be handled in the SOC case system, including incidents at acquired firms, and closed only with a...",IR-4; IR-5,RS.AN-03,N53-R01 (314.4(h)(6); 314.4(h)(7)),Yes
+POL-03,4.4,"The CISO must brief the General Counsel within 24 hours of a severity-1 incident, and the disclosure committee must a...",IR-6; IR-8,RS.CO-02,N53-R05 (Form 8-K Item 1.05; 229.106(a)),Yes
+POL-03,4.5,"Notifications to the FTC, state regulators, individuals, and business clients must follow STD-03.2 and the P08 notifi...",IR-6,RS.CO-02,N53-R01 (314.4(j)); Fla. Stat. 501.171 (Florida worked example),Yes
+POL-03,4.6,"No ransom or extortion payment may be made without CEO approval, legal review, and an OFAC sanctions check.",IR-4,RS.MA-01,N53-R05 (Form 8-K Item 1.05),Yes
+POL-03,4.7,"Tier-1 systems must have contingency plans that meet the BIA RTO and RPO, tested at least annually, with results fed...",CP-2; CP-4,RC.RP-01,N53-R01 (314.4(h)),Yes
+POL-03,4.8,"Backups of tier-1 data must be immutable, kept in a separate account, copied weekly to an offline location, and resto...",CP-9; CP-9(3),PR.DS-11,N53-R01 (314.4(h)),Yes
+POL-03,4.9,"The incident response plan must be exercised at least annually, including a funds-diversion scenario with the disclos...",IR-3,ID.IM-04,N53-R01 (314.4(h)(7)); N53-R05 (Form 8-K Item 1.05),No
+POL-03,4.10,Weaknesses found in incidents must be entered in the POA&M with an owner and date.,CA-5; IR-4,ID.IM-03,N53-R01 (314.4(h)(5)),Yes
+POL-04,4.1,"Information must be classified as Restricted (customer information, Social Security and account numbers, identity doc...",RA-2,ID.AM-07,N53-R01 (314.4(c)(2)),No
+POL-04,4.2,Restricted data must be encrypted at rest and in transit under STD-04.1. Where the Qualified Individual finds encrypt...,SC-28; SC-8,PR.DS-01,N53-R01 (314.4(c)(3)),Yes
+POL-04,4.3,"Restricted data must be shared with outside parties only through approved channels (the Closing Communications Hub, S...",AC-21; SC-8,PR.DS-02,N53-R01 (314.4(c)(1)(ii)),Yes
+POL-04,4.4,"Restricted data extracts must be registered, minimized, and deleted within 90 days unless renewed.",SI-12; AC-6,PR.DS-01,N53-R01 (314.4(c)(6)),Yes
+POL-04,4.5,Records must be kept per STD-04.2 and disposed of no later than two years after last use unless a business or legal n...,SI-12,PR.DS-11,N53-R01 (314.4(c)(6)(i); 314.4(c)(6)(ii)),Yes
+POL-04,4.6,Media and paper holding Restricted or Confidential data must be sanitized or destroyed by a certified vendor with a c...,MP-6,PR.DS-01,Fla. Stat. 501.171(8) (Florida worked example); 16 CFR 682.3(a),No
+POL-04,4.7,"Payee bank details must be verified under PRC-04.3 before first use and after any change, and approved instructions m...",SI-7; SI-10,PR.DS-01,N53-R01 (314.4(c)(8)); Fla. Stat. 626.8473(4) (Florida worked example),Yes
+POL-04,4.8,Every payee change and disbursement approval must be attributable to a named approver through a signed approval record.,AU-10,PR.DS-01,N53-R01 (314.4(c)(8)),Yes
+POL-04,4.9,Wire instructions must be delivered only inside the Closing Communications Hub or the brokerage escrow page. No emplo...,SI-7; AT-2,PR.DS-02,N53-R01 (314.4(c)(1)(ii)); r. 61J2-14.009 (Florida worked example),Yes
+POL-04,4.10,Earnest money deposits must be placed in escrow within each state's deadline and reconciled monthly under PRC-04.2.,AU-6,PR.DS-10,Fla. Stat. 475.25(1)(k); r. 61J2-14.008(3); r. 61J2-14.012(2) (Florida worked example),Yes
+POL-05,4.1,"Company systems and data may be used only for authorized business purposes, consistent with this policy and the agent...",PL-4,GV.PO-01,N53-R02 (45(a)),No
+POL-05,4.2,Every employee and contractor agent must accept this policy before access is granted and again every year.,PL-4,PR.AT-01,N53-R01 (314.4(e)(1)),No
+POL-05,4.3,"Every employee and contractor agent must complete security awareness training at onboarding and annually, and employe...",AT-2; AT-3,PR.AT-01,N53-R01 (314.4(e)(1)),Yes
+POL-05,4.4,"Contractor agents' own devices must have a supported operating system, screen lock, and current security updates, and...",AC-20,PR.PS-02,N53-R01 (314.4(c)(1)(i)),Yes
+POL-05,4.5,Customer and client information must not be entered into any AI tool that is not on the approved AI tools list (STD-0...,PL-4; SA-9,GV.PO-01,N53-R01 (314.4(c)(1)(ii)); N53-R03 (Civ. Code 1798.100(e)),Yes
+POL-05,4.6,Email auto-forwarding to external addresses and inbox rules that move or delete messages from closing parties are pro...,SI-8; AC-4,PR.DS-02,N53-R01 (314.4(c)(8)),Yes
+POL-05,4.7,Users must not install software that bypasses security controls or disable endpoint protection on company devices.,CM-7; SI-3,PR.PS-05,N53-R01 (314.4(c)(1)(i)),No

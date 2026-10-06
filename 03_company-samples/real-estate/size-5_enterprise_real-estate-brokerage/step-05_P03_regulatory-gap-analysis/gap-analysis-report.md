@@ -50,6 +50,7 @@ The company is an SEC registrant and not a smaller reporting company. Form 8-K I
 | Fair Housing Act (42 U.S.C. 3604) | Yes | P10 |
 | FinCEN residential real estate rule (31 CFR 1031.320) | **Not in effect.** Vacated by the U.S. District Court for the Eastern District of Texas on 2026-03-19; FinCEN, with the Department of Justice, has appealed. FinCEN states that reporting persons are not required to file and are not liable while the order remains in force (FinCEN website checked 2026-10-06). It would reach Title and Escrow as settlement agent, not the brokerage | G-062 (watch) |
 | PCI DSS (N53-R04) | Contractual only; no company system stores, processes, or transmits cardholder data | G-090; P04 |
+| Florida Digital Bill of Rights (Fla. Stat. 501.701 et seq.) | No: revenue exceeds $1 billion, but the company meets none of the other criteria in the controller definition in Fla. Stat. 501.702 (50% or more of revenue from online advertising, a consumer smart speaker service, or an app store) | None |
 | SOX Section 404 | Separate program; IT general controls over SYS-12 are tested by the SOX program | P01 R-052 |
 | CIRCIA | Not in force: final rule not published as of 2026-09-25; reporting to CISA is voluntary | P08 |
 
