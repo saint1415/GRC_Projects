@@ -49,7 +49,7 @@ All information the group creates, receives, maintains, or transmits, in any for
 |---|---|---|
 | Florida guest register (PMS) | At least 2 years | Fla. Stat. 509.101(2) |
 | Identity document numbers captured at check-in | 30 days after checkout | Business need |
-| Inactive guest and loyalty profiles | Delete after 7 years without activity | Business need; Fla. Stat. 501.171(8) |
+| Inactive guest and loyalty profiles | Delete after 5 years without activity | Business need; Fla. Stat. 501.171(8) |
 | Finger-scan gate templates | 30 days after the pass or ticket expires | Business need; Fla. Stat. 501.171(8) |
 | Kids' club child profiles | 12 months after last activity, or on a parent's request | 16 CFR 312.10 |
 | Inventory reservation decision records (Florida plans) | 5 years from each determination | Fla. Stat. 721.13(12)(c) |

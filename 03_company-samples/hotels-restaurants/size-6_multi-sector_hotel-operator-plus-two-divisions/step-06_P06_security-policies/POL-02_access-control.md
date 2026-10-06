@@ -50,7 +50,7 @@ All workforce identities (about 38,500), contractor and vendor identities (about
 
 4.10 **Vendor and remote maintenance access** must go through group PAM with named accounts, per-session approval, group MFA, and recording, and must be disabled when not in use. Vendor-operated always-on remote tools are prohibited. Ride and show control maintenance requires ride engineering approval for each session. (AC-17; MA-4; Req 8.2.7, 8.4.3)
 
-4.11 **External identities.** Loyalty, passholder, and owner accounts must offer MFA. MFA must be required for owner portal actions that change payment details or redeem points from 2027-03-31, and step-up verification must be required for loyalty point redemptions above the threshold in the Hotels supplement. Parents' kids' club accounts must be verified as the parent's (16 CFR 312.6(a)(3)). (IA-8; IA-2; PR.AA-03)
+4.11 **External identities.** Loyalty, passholder, and owner accounts must offer MFA. MFA must be required for all owner portal accounts from 2027-03-31, and step-up verification must be required for loyalty point redemptions and for any change of payment details. Parents' kids' club accounts must be verified as the parent's (16 CFR 312.6(a)(3)). (IA-8; IA-2; PR.AA-03)
 
 4.12 **Guest identity at the front desk and contact center.** Staff must verify a guest's identity under the Hotels supplement before issuing a room key or disclosing reservation details. (IA-8; PR.AA-03)
 

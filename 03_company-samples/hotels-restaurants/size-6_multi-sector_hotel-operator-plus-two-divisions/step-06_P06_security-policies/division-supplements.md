@@ -32,7 +32,7 @@
 | Legacy POS | Local accounts listed and certified; vendor access only through PAM; segment monitoring until replacement | POL-02 4.1, 4.10 | PCI DSS 8.2, 8.4 |
 | Building systems | Lock servers, IPTV, and building controllers in the hardening scan; vendor defaults changed before go-live | POL-02 4.10 | PCI DSS 2.2; *FTC v. Wyndham* practices |
 | Key issuance | Photo ID or verified mobile key before issuing a room key; never by phone | POL-02 4.12 | N72-R02 |
-| Terminal inspections | Daily at front desks and outlets; device list from the terminal management service only | POL-05 4.5 | PCI DSS 9.5 |
+| Terminal inspections | At least weekly at front desks and outlets, as the targeted risk analysis sets; device list from the terminal management service only | POL-05 4.5 | PCI DSS 9.5 |
 | Guest register | PMS register kept at least 2 years at Florida hotels; identity document numbers removed 30 days after checkout | POL-04 4.6 | Fla. Stat. 509.101(2) |
 | Pricing | Total price first in all channels, including the chatbot; emergency-declaration price cap in the revenue-management system | POL-05 4.6; POL-01 4.13 | 16 CFR 464.2; Fla. Stat. 501.160 |
 

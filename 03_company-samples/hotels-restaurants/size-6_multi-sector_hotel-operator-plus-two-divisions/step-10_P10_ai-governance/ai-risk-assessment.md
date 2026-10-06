@@ -59,8 +59,8 @@
 ### 2.2 Vacation Ownership: credit model (AI-006)
 | Rule | What it requires | What it means here |
 |---|---|---|
-| 12 CFR 1002.9(a)(1) | Notify the applicant of action taken within 30 days after a completed application | Met: 0 late in a sample of 60 |
-| 12 CFR 1002.9(b)(2) | A statement of specific principal reasons; saying the applicant failed to achieve a qualifying score is insufficient | **Gap:** 9 of 60 sampled notices gave a reason that described the score band, not the underlying factor (P03 V-030) |
+| 12 CFR 1002.9(a)(1) | Notify the applicant of action taken within 30 days after a completed application | Met: 0 late in a sample of 50 |
+| 12 CFR 1002.9(b)(2) | A statement of specific principal reasons; saying the applicant failed to achieve a qualifying score is insufficient | **Gap:** 9 of 50 sampled notices cited an internal score threshold, not the underlying factor (P03 V-030) |
 | ECOA and Regulation B (general) | No discrimination on a prohibited basis | Fair lending analysis of approval rates and pricing is required for a model this consequential |
 | 16 CFR 314.4 (N53-R01) | Customer information protected; access limited | Training data stays in the finance subsidiary's environment; no export to the guest profile hub |
 | CFPB Circular 2022-03 | Withdrawn on 2025-05-12 | The Regulation B duty to give specific reasons is unchanged |
@@ -115,9 +115,9 @@ Results are from tests and monitoring between 2026-05 and 2026-08.
 | Characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Default-rate calibration by score band (2025 originations) | Within tolerance in all bands | Yes |
-| Explainable and interpretable | Adverse action notices with specific principal reasons (target 100%, 12 CFR 1002.9(b)(2)) | 51 of 60 (85%) | **No** |
-| Fair, harmful bias managed | Approval-rate and pricing differences across demographic estimates and age bands; flag differences above 5 points without a documented business justification | Two flags (applicants aged 62 and over; one geographic cluster) | **Flagged.** Fair lending counsel review due 2026-11-30 |
-| Accountable and transparent | Independent model validation within 24 months | Last validated 2024-05, before the acquisition | **Due.** Validation by 2027-01-31 |
+| Explainable and interpretable | Adverse action notices with specific principal reasons (target 100%, 12 CFR 1002.9(b)(2)) | 41 of 50 (82%) | **No** |
+| Fair, harmful bias managed | Approval-rate and pricing differences across demographic estimates and age bands; flag differences above 5 points without a documented business justification | First analysis since the 2025-02 launch: two flags (applicants aged 62 and over; one geographic cluster) | **Flagged.** Fair lending counsel review due 2026-11-30 |
+| Accountable and transparent | Independent model validation at launch and at least every 24 months, plus fair lending analysis every year | Validated at launch (2025-02); no fairness testing until this review | **Partial.** Annual fair lending analysis and independent revalidation by 2027-01-31 |
 | Secure and privacy-enhanced | Training data access limited to the model team; MFA | Legacy directory without MFA (POAM-020) | Partial |
 
 ### 4.4 Inventory forecasting model (AI-007)
