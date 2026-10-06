@@ -35,7 +35,7 @@ All security events affecting any group system or data, including events at serv
 
 4.2 The group SOC must handle incidents using one group severity scale and the group playbooks, including the P08 runbook. Division scales are not permitted. (IR-4; IR-8; RS.MA-01; 314.4(h)(2))
 
-4.3 **Discovery dates.** The incident record must state, for each financial institution and each affected division, the first day the event was known to any employee, officer, or other agent, including contractor agents and the parent's SOC staff (16 CFR 314.4(j)(2)), and the date each state law clock started. (IR-5; RS.AN-03; 314.4(h)(6))
+4.3 **Discovery dates.** The incident record must state, for each financial institution and each affected division, the first day the event was known to any employee, officer, or other agent, counting, conservatively, knowledge by contractor agents handling the institution's customer files and by the parent's SOC staff (16 CFR 314.4(j)(2)), and the date each state law clock started. (IR-5; RS.AN-03; 314.4(h)(6))
 
 4.4 **FTC notice per institution.** Affected consumers must be counted separately for Home Loans and for Title. Each institution with a notification event involving at least 500 of its consumers must notify the FTC as soon as possible and no later than 30 days after discovery. (IR-6; RS.CO-02; 314.4(j))
 

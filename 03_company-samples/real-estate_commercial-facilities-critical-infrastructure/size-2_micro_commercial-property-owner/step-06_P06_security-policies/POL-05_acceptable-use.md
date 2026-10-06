@@ -1,38 +1,25 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Property Manager (security and privacy lead) |
+| Approved by | Managing Member, 2026-08-31 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the company keeps three core policies. The workforce use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules staff already read, so they live in **POL-02 Part C. Workforce use rules**, with the BAS workstation rule in POL-02 B.10 and the AI and analytics rule in POL-04 4.6:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Benchmark or obligation |
+|---|---|---|
+| Use systems for company work; look only at the tenant, applicant, and video information your job needs | POL-02 C.1 | Fla. Stat. 501.171(2) |
+| No company information in personal accounts, messaging apps, or public AI chatbots | POL-02 C.2 | 15 U.S.C. 45(a) |
+| Approved AI and analytics features only; face match not approved until the P10 conditions are met | POL-04 4.6 | CPG 3.P; 15 U.S.C. 45(a) |
+| BAS workstation only for the BAS: no email, browsing, or unscanned USB drives | POL-02 B.10 | CPG 3.M, 3.R |
+| Lock screens; never share passwords or MFA codes, including with the MSP or contractors | POL-02 C.3 | CPG 3.C |
+| Security training at hire and yearly; phishing simulations; OT module for engineering staff | POL-02 C.4 | CPG 3.J; PCI DSS 12.6.1 |
+| Never write down card numbers | POL-04 4.9 | PCI DSS 3.2.1, 3.3.1.2 |
+| Report suspected incidents at once | POL-02 C.5 and POL-03 4.2 | CPG 4.B |
+| Signed acknowledgment at hire and after each annual update | POL-02 C.6 | PCI DSS 12.1.3 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.

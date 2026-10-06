@@ -66,7 +66,7 @@ Risks to customer funds rated High may not be accepted. They must be treated.
 | Risk ID | Division | Risk | Owner | Due |
 |---|---|---|---|---|
 | MT-001 | Mortgage and Title | A title disbursement is diverted by a spoofed payoff letter or changed proceeds instructions | President, Title | 2027-01-31 |
-| MT-004 | Mortgage and Title | AVM estimates used in credit decisions lack the quality control 12 CFR 1026.42(i) requires | President, Mortgage | 2026-12-31 |
+| MT-004 | Mortgage and Title | AVM estimates used in credit decisions lack the quality control 12 CFR 1026.42(i) requires | President, Mortgage | 2027-01-31 |
 | HB-001 | Homebuilding | Spoofed trade partner email changes bank details and payments are diverted | Homebuilding chief financial officer | 2026-11-30 |
 | HB-003 | Homebuilding | Builder administrator access kept on about 3,100 closed homes is misused | Homebuilding chief operating officer | 2026-11-30 |
 | HB-004 | Homebuilding | A shared installer passcode lets someone take over hubs installed in 2023 and 2024 | Homebuilding chief operating officer | 2026-12-31 |

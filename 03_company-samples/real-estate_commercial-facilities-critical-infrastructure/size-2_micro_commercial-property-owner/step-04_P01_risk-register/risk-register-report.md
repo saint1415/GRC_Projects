@@ -36,7 +36,7 @@ This is the company's first risk assessment. Before July 2026 there was no writt
 | Low | 5 |
 | **Total** | **24** |
 
-Status: 9 In progress, 13 Open, 2 Closed (R-019 and R-020 accepted).
+Status: 10 In progress, 12 Open, 2 Closed (R-019 and R-020 accepted).
 
 ### Top risks
 | Risk ID | Risk | Level | Treatment | Owner | Due |
@@ -53,10 +53,10 @@ Status: 9 In progress, 13 Open, 2 Closed (R-019 and R-020 accepted).
 **Risks fixed or found during the work:**
 - R-016: the face match trial was paused on 2026-07-24, two days after the walkthrough found it. The P10 assessment decides its future.
 - R-006: the 51 unused credentials were sent to tenant contacts for confirmation on 2026-07-28; 38 were disabled by 2026-08-07. The process gap remains.
-- R-022 and R-024: added on 2026-08-12 after P07 testing found the supervisory controller and the Property B router accepting factory default passwords.
+- R-022 and R-024: added on 2026-08-12 after P07 testing found the supervisory controller and the Property B router accepting factory default passwords. The Property B router password was changed the same day.
 
 ## 4. Treatment summary
-- **Funded (2026 Q4, approved by the Managing Member; about $8,100 one-time and $3,400 a year):**
+- **Funded (2026 Q4, approved by the Managing Member; about $8,600 one-time and $3,700 a year):**
   - Remote access service for the controls contractor, run by the MSP: about $600 a year
   - Property A building-device segment (managed switch and firewall rules): about $1,800 one-time
   - MSP-managed business router for Property B: about $400 one-time and $300 a year
@@ -66,6 +66,8 @@ Status: 9 In progress, 13 Open, 2 Closed (R-019 and R-020 accepted).
   - Controls contractor time for controller program copies, password changes, a rebuild checklist, and manual procedures: about $1,500 one-time
   - A spare laptop pre-imaged by the MSP: about $900 one-time
   - Independent assessment and policy work in 2026 (P07, P06): about $3,500 one-time
+  - Password manager for staff: about $300 a year
+  - Attorney review of the contractor security addendum: about $500 one-time
 - **Accepted:** R-019 (Low; phone hotspot covers platform administration) and R-020 (Low; doors keep working for 72 hours on cached credentials).
 - **Contract actions:** security addendum with 24-hour incident notice for the MSP, the controls contractor, and the security integrator (R-010, R-011) by 2026-12-31.
 

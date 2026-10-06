@@ -60,7 +60,7 @@ An exercise scenario, not a real event. Counts are illustrative.
 
 **Severity 1** (group scale, POL-03 4.2): any diverted funds, or customer information of a financial institution in an account controlled by an attacker.
 
-**Record discovery dates per institution and per state clock** (POL-03 4.3). Under the Safeguards Rule a notification event is discovered on the first day it is known to any employee, officer, or other agent of the institution (314.4(j)(2)). The parent's SOC staff and the contractor agent act for Home Loans and Title in this context, so **this runbook treats Day 0, the day the SOC knew, as the discovery date for both institutions.** State clocks run from the determination of a breach (Fla. Stat. 501.171(4)(a), worked example), which counsel records separately; the plan never uses a later date than Day 0 for planning.
+**Record discovery dates per institution and per state clock** (POL-03 4.3). Under the Safeguards Rule a notification event is discovered on the first day it is known to any employee, officer, or other agent of the institution (314.4(j)(2)). The parent's SOC runs security monitoring for Home Loans and Title as their service provider, and group policy (POL-03 4.3) conservatively counts knowledge by the SOC or by a contractor agent handling their customers' files. **This runbook therefore treats Day 0, the day the SOC knew, as the discovery date for both institutions;** counsel may refine this, but no clock is planned from a later date. State clocks run from the determination of a breach (Fla. Stat. 501.171(4)(a), worked example), which counsel records separately; for planning, these clocks also start on Day 0.
 
 ## 4. First hours (RS.MA, RS.MI)
 | Step | Who | Done when |
