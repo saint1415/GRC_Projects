@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**197 of 216** sample companies are finished (1970 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**198 of 216** sample companies are finished (1980 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -227,6 +227,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Accommodation and Food Services | Enterprise | Hotel operator | [README](03_company-samples/hotels-restaurants/size-5_enterprise_hotel-operator/README.md) |
 | Accommodation and Food Services | Multi-Sector | Hotel operator plus two divisions | [README](03_company-samples/hotels-restaurants/size-6_multi-sector_hotel-operator-plus-two-divisions/README.md) |
 | Other Services (except Public Administration) | Sole Proprietorship | Device repair service | [README](03_company-samples/repair-personal-services/size-1_sole-proprietor_device-repair-service/README.md) |
+| Other Services (except Public Administration) | Micro | Device repair service | [README](03_company-samples/repair-personal-services/size-2_micro_device-repair-service/README.md) |
 | Other Services (except Public Administration) | Small | Device repair shop | [README](03_company-samples/repair-personal-services/size-3_small_device-repair-shop/README.md) |
 | Public Administration | Small | GovTech integrator | [README](03_company-samples/public-administration/size-3_small_govtech-integrator/README.md) |
 | Government Services and Facilities | Small | Government facilities contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-3_small_government-facilities-contractor/README.md) |

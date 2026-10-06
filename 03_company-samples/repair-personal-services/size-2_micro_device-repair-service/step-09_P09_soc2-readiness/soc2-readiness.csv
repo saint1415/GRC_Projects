@@ -1,62 +1,62 @@
 criterion_id,category,criteria_group,topic_label,in_scope,control_description,control_owner,evidence,related_sp800_53,readiness_status,gap,remediation,target_date
-CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.2,Security,Control environment,Board independence and oversight,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.4,Security,Control environment,Commitment to competence,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.5,Security,Control environment,Accountability for internal control,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.1,Security,Information and communication,Quality information to support controls,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.3,Security,Information and communication,Communication with external parties,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.3,Security,Risk assessment,Fraud risk considered,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.2,Security,Control activities,General controls over technology,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.2,Security,Logical and physical access,User registration and authorization,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.3,Security,System operations,Evaluation of security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.4,Security,System operations,Incident response,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.5,Security,System operations,Recovery from incidents,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.1,Availability,Availability,Capacity management,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.3,Availability,Availability,Recovery plan testing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.2,Confidentiality,Confidentiality,Disposal of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.2,Processing Integrity,Processing integrity,System inputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.3,Processing Integrity,Processing integrity,System processing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.4,Processing Integrity,Processing integrity,System outputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.5,Processing Integrity,Processing integrity,Stored data,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P1.1,Privacy,Notice,Privacy notice,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P2.1,Privacy,Choice and consent,Choice and consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.1,Privacy,Collection,Collection consistent with objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.2,Privacy,Collection,Explicit consent where required,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.2,Privacy,"Use, retention, disposal",Retention,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.3,Privacy,"Use, retention, disposal",Disposal,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.1,Privacy,Access,Data subject access,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.2,Privacy,Access,Correction,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.4,Privacy,Disclosure and notification,Third-party commitments,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
+CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,Staff use rules in POL-02 Part C; sanctions rule A.4; customer device access standard POL-04 4.4,Owner,POL-02; POL-04 (approved 2026-08-31),PL-4; PS-8,Partially ready,No signed acknowledgments or confidentiality agreements yet,Signed acknowledgments and confidentiality agreements from all 7 staff (POAM-013),2026-09-30
+CC1.2,Security,Control environment,Board independence and oversight,Yes,Owner reviews security monthly with the Shop Manager (POA&M progress) from 2026-09,Owner,Check-in notes (from 2026-09),PM-9,Partially ready,Oversight just started; no record yet,Keep monthly check-in notes,2026-12-31
+CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,Shop Manager designated Security and Privacy Lead in writing; roles in POL-02 section 3; MSP duties in contract,Owner,Designation letter; POL-02; MSP contract,PM-2,Ready,,,
+CC1.4,Security,Control environment,Commitment to competence,Yes,Informal walkthrough at hire; background checks for technicians since 2025,Shop Manager,Onboarding notes; screening reports,AT-2; PS-3,Not ready,No training; no background checks for staff hired before 2025,Training at hire and yearly (POAM-004); background check rule (POL-02 A.10),2026-10-31
+CC1.5,Security,Control environment,Accountability for internal control,Yes,Sanctions rule (POL-02 A.4); monthly reconciliation reviewed by the Owner,Owner,POL-02,PS-8,Partially ready,Rules new; not yet enforced in practice,Record the first monthly reviews and any sanctions,2026-12-31
+CC2.1,Security,Information and communication,Quality information to support controls,Yes,Inventory of devices and customer data locations planned,Shop Manager,None yet,CM-8,Not ready,"No inventory of devices, terminals, or customer data locations",One-page inventory (POL-04 4.2),2026-10-31
+CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,Policies on the suite for all staff; contact card at the counter,Shop Manager,"POL-02, POL-03, POL-04",PL-4; IR-6,Partially ready,Not yet communicated in training,Staff briefing and acknowledgments,2026-09-30
+CC2.3,Security,Information and communication,Communication with external parties,Yes,Intake form notice; business account questionnaire answers; processor and vendor contacts,Shop Manager,Intake form; this summary,PT-5,Not ready,The intake form promise about technician access is not true in practice,Rewrite the intake notice (P03 G-107),2026-09-30
+CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,Risk objectives and tolerance set in POL-02 A.2 and A.3,Owner,POL-02; P01 section 1,PM-9,Ready,,,
+CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,2026 risk assessment with SP 800-30 (24 risks),Shop Manager,P01 risk register,RA-3,Ready,,,
+CC3.3,Security,Risk assessment,Fraud risk considered,Yes,Fraud risk considered only for business email compromise (R-019),Owner,P01 R-019,RA-3,Partially ready,Insider theft of devices and parts not assessed as fraud,"Add fraud scenarios (parts theft, refund abuse) in the July 2027 assessment",2027-07-31
+CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,Changes such as new AI features now need approval (POL-02 A.9),Shop Manager,POL-02,CM-4,Not ready,The AI assistant was turned on with no review,Apply POL-02 A.9 to every new feature,2026-10-31
+CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,Independent control assessment 2026-08 (P07),Owner,P07 assessment plan and results,CA-2,Ready,,,
+CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,POA&M with owners and dates; monthly review,Shop Manager,P07 poam.csv,CA-5,Ready,,,
+CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,Control activities chosen from P01 and P03,Shop Manager,P01; P03,PL-2,Partially ready,Many controls still planned,Complete the Q4 treatments,2026-12-31
+CC5.2,Security,Control activities,General controls over technology,Yes,MSP technology controls on office endpoints,Shop Manager (MSP performs),MSP monthly report,SI-2; SI-3,Partially ready,Bench equipment outside MSP management,Bring bench equipment under the MSP contract (POAM-006),2026-12-31
+CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,"Policies POL-02, POL-03, POL-04 approved 2026-08-31",Shop Manager,Policies,PL-1,Partially ready,"Procedures (checklists, test checklists, sanitization records) still being written",Finish the procedures,2026-10-31
+CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,Named SaaS accounts with MFA; P2PE for card data,Shop Manager,SYS-01 and suite settings,AC-3; IA-2(1),Partially ready,Shared Counter login; passcodes in open notes; bench storage default account,"Named counter accounts; restricted passcode field; bench storage fix (POAM-001, POAM-003, POAM-011)",2026-10-31
+CC6.2,Security,Logical and physical access,User registration and authorization,Yes,Accounts created on the Shop Manager's request,Shop Manager,SYS-01 user list,AC-2,Not ready,No approval or joiner checklist,Joiner checklist (POAM-001),2026-09-30
+CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,Accounts removed when remembered,Shop Manager,SYS-01 user list,AC-2; AC-6,Not ready,Former technician's account active 9 months; technicians hold export rights,"Leaver checklist; role clean-up; monthly reconciliation (POAM-001, POAM-002)",2026-10-31
+CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,Keypad on the back room; alarm; cameras; locked parts cabinet and recycling cage,Owner,Walkthrough 2026-07-22,PE-3,Partially ready,Keypad code unchanged since 2023; finished devices and the spare terminal not locked away,Code change at each leaver; locked cabinet,2026-10-31
+CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,Recycled devices factory-reset; recycler certificates per pickup,Senior Technician,Recycler certificates,MP-6,Not ready,No sanitization standard or per-device record; one unreset device found (P07),SP 800-88 Rev. 2 procedure with records (POAM-010),2026-10-31
+CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,Firewall; separate guest Wi-Fi; MFA on named SaaS accounts,Shop Manager (MSP performs),Firewall export,SC-7,Partially ready,Customer devices share the staff network,Separate network (POAM-006),2026-12-31
+CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,TLS for SaaS; P2PE for card data; laptops encrypted,Shop Manager (MSP performs),Vendor documentation; MSP encryption report,SC-8; SC-28; MP-7,Partially ready,USB storage open on bench PCs; counter PCs and bench storage unencrypted,Encrypted company USB drives only; encryption (POAM-012),2026-11-30
+CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,MSP antivirus and patching on office endpoints,Shop Manager (MSP performs),MSP monthly report,SI-3; CM-7,Partially ready,Bench PCs run any tool with antivirus often off,EDR and approved tool list (POAM-006),2026-12-31
+CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,No vulnerability scanning or configuration monitoring,Shop Manager (MSP performs),None,RA-5,Not ready,No scanning,Quarterly MSP scan,2026-12-31
+CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,SYS-01 and suite generate logs,Shop Manager,SYS-01 audit log,AU-6; SI-4,Not ready,Nobody reviews logs or alerts,Monthly review; EDR monitoring (POAM-005),2026-10-31
+CC7.3,Security,System operations,Evaluation of security events,Yes,Incident criteria in P08,Shop Manager,P08,IR-4,Not ready,No incident record before 2026-08,Incident log in use (POAM-009),2026-09-30
+CC7.4,Security,System operations,Incident response,Yes,POL-03 and P08 approved 2026-08-31,Shop Manager,POL-03; P08,IR-8,Partially ready,Untested,Tabletop with the MSP (POAM-007),2026-11-30
+CC7.5,Security,System operations,Recovery from incidents,Yes,Vendor recovery for SYS-01; nightly backup of suite and bench storage,Shop Manager (MSP performs),MSP backup job report,CP-9; CP-4,Not ready,Backup never restore-tested,Restore tests (POAM-007),2026-09-30
+CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,None: changes made by staff and the MSP without approval,Shop Manager,None,CM-3,Not ready,No change approval (the AI assistant; a remote desktop tool),Change approval in POL-02 A.9,2026-10-31
+CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,BIA completed; cyber liability endorsement with breach hotline,Owner,P05; insurance policy,CP-2,Partially ready,No contingency plan or hurricane checklist,Contingency plan and hurricane checklist,2026-11-30
+CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,"Contracts with the ticketing vendor, processor, MSP, and suite vendor",Shop Manager,Contract folder; vendor SOC 2 review,SA-9,Partially ready,"No terms with the data recovery lab, courier, recycler, or AI model provider",Vendor list and terms (POAM-014),2026-12-31
+A1.1,Availability,Availability,Capacity management,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+A1.3,Availability,Availability,Recovery plan testing,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,Yes,"Customer device content, passcodes, and card data classified Restricted (POL-04 4.1); access standard 4.4",Shop Manager,POL-04,AC-3; AC-6; SI-12,Not ready,At fieldwork passcodes sat in open notes and technicians had no access rule,"Restricted passcode field; access standard in use; monthly review (POAM-002, POAM-011)",2026-10-31
+C1.2,Confidentiality,Confidentiality,Disposal of confidential information,Yes,Retention table (POL-04 4.6) and sanitization (POL-04 4.7),Senior Technician,POL-04,SI-12; MP-6,Not ready,Customer data kept indefinitely; no verified wiping,"Purge backlog; 30-day retention; SP 800-88 Rev. 2 records (POAM-010, POAM-011)",2026-11-30
+PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+PI1.2,Processing Integrity,Processing integrity,System inputs,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+PI1.3,Processing Integrity,Processing integrity,System processing,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+PI1.4,Processing Integrity,Processing integrity,System outputs,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+PI1.5,Processing Integrity,Processing integrity,Stored data,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P1.1,Privacy,Notice,Privacy notice,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P2.1,Privacy,Choice and consent,Choice and consent,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P3.1,Privacy,Collection,Collection consistent with objectives,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P3.2,Privacy,Collection,Explicit consent where required,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P4.2,Privacy,"Use, retention, disposal",Retention,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P4.3,Privacy,"Use, retention, disposal",Disposal,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P5.1,Privacy,Access,Data subject access,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P5.2,Privacy,Access,Correction,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.4,Privacy,Disclosure and notification,Third-party commitments,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,
+P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",No,Out of scope: the property management account asked about security and confidentiality only,,,,N/A,,,

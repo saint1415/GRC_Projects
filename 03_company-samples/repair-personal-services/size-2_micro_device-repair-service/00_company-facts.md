@@ -104,3 +104,24 @@ These facts were added because the deliverables needed them. They do not change 
 
 | Topic | Added fact | Used in |
 |---|---|---|
+| SYS-01 roles and settings | Three roles (administrator, technician, counter). All 3 technicians held the "manager" role with export rights (change due 2026-09-15). A restricted passcode field exists but was unused. The audit log is kept 12 months; export alerts exist but were off | P02, P03, P04, P07 |
+| SYS-01 vendor report and recovery | SOC 2 Type 2, Security only, 12 months ending 2026-05-31, one remediated exception; reviewed 2026-08-18. Hourly backups (RPO 1 h) and an 8-hour recovery time target; customers notified within 72 hours of a confirmed incident. The AI assistant, launched by the vendor in April 2026, is outside the report | P05, P09, P10 |
+| Devices in custody | About 60 customer devices are in the shop's custody at any time; finished devices sit on open shelves behind the counter | P01, P05 |
+| Finances | A cash reserve covers about 45 days of expenses; Q4 2026 security treatments funded at about $5,250 one-time and $3,960 a year | P01, P05 |
+| Recycling cage | Recycling drop-offs wait in a locked cage for the quarterly pickup; 41 devices were in it on 2026-08-11 | P05, P07 |
+| Counter password | Changed on 2026-07-22 after the risk assessment found it unchanged since 2024. The sign-in log showed no Counter sign-ins outside shop hours after the 2026-05-08 departure | P01, P02 |
+| Former technician account | A Repair Technician who left in November 2025 still had an active named SYS-01 account; no sign-ins after departure; disabled 2026-08-11 during P07 | P07, P09 |
+| Card numbers in notes | The 2026-07-22 search found 11 ticket notes with full card numbers, 3 of them with the security code; purged 2026-08-14 | P01, P03, P07 |
+| Bench storage | 6.1 TB of 8 TB used. P07 found the default administrator account in use with its password on a label on the device, and the console reachable from the staff Wi-Fi; label removed and password changed 2026-08-12 | P01, P03, P04, P07 |
+| Bench software | A free remote desktop tool was installed on one bench PC (removed 2026-08-12); flashing tools come from online forums | P02, P03, P07 |
+| Physical security | The back room keypad code had not changed since 2023; the spare payment terminal was kept in an unlocked drawer | P02, P03 |
+| Other P07 test results | 1 of 3 devices marked as wiped in the recycling cage had not been reset (all 41 re-checked that day; the device never left the shop). 3 unlabeled USB drives in the bench drawer, one with a customer's June 2026 photo library (wiped 2026-08-12 after the job was confirmed closed). A technician account could export the full customer list | P07, P09 |
+| Assessor | The P07 assessor is an independent security consultant, not involved in P01 or P03 and operating no control | P07 |
+| Background reports | The 2 printed reports were in an unlocked desk drawer; moved to the locked HR folder on 2026-08-05 | P01, P03 |
+| Contract terms (fictional) | Processor: notice within 24 hours of suspecting a card data compromise. Business accounts: notice within 72 hours of confirming an incident affecting their devices or data. Insurer: prompt notice through the breach hotline before hiring any outside firm | P06, P08 |
+| MSP contract | 4-business-hour response time; no recovery commitment; no incident notice term; bench workstations and bench storage excluded | P02, P05, P07 |
+| 2026-03-14 complaint | Looked into informally by the Owner; no written record; the customer's email is the only evidence | P03, P07 |
+| AI assistant | Add-on terms accepted in the SYS-01 admin screen on 2026-05-04; they allow use of conversations and ticket content "to improve the service" and do not name the model provider. Diagnostic suggestions send the whole ticket, including notes (about 1 in 3 tickets since May 2026 held a passcode). About 900 customers a month chat or text. Ticket status is released only when the ticket number and phone number on file match. Diagnostic suggestions turned off 2026-08-31 | P01, P02, P09, P10 |
+| Website claim | The website says "AI diagnosis in minutes, right every time" (removal due 2026-09-30) | P01, P03, P10 |
+| Questionnaire sender | The property management account sends its staff laptops and phones for repair; its questionnaire arrived in July 2026 | P09 |
+| Retention decisions | POL-04: customer data copies 30 days after collection; intake forms 2 years; SYS-01 customer records at most 5 years after the last repair; passcode field cleared at release | P06 |
