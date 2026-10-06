@@ -107,6 +107,17 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Office security | Keyed suite entry with an after-hours alarm. Keys held by the Broker-owner, Office Manager, and Property Manager. The storage closet with paper files has no lock. A cleaning crew enters after hours | P01, P03 |
 | Hurricane exposure | The office is in a coastal county; it closed for 3 days in 2024 for a storm. Staff worked from home on laptops | P01, P05 |
 | Relocation questionnaire | A relocation management company sent its broker network security questionnaire in July 2026; the response is due 2026-10-15 | P09 |
-| Platform vendor assurance | The transaction platform vendor provided its SOC 2 Type 2 report (Security, Availability, Confidentiality) under a nondisclosure agreement; reviewed 2026-08-19 | P02, P09 |
+| Platform vendor assurance | The transaction platform vendor provided its SOC 2 Type 2 report (Security, Availability, Confidentiality; 12 months ending 2026-05-31) under a nondisclosure agreement; reviewed 2026-08-19. It states RTO 4 hours and RPO 1 hour | P02, P05, P09 |
 | Screening volumes | In the 12 months to 2026-07-31: 276 applications screened; 171 accepted, 58 accepted with conditions (higher deposit), 47 declined. Leasing staff changed 4 recommendations | P10 |
 | Assessor | The P07 assessor is an independent security consultant on a fixed fee, not involved in the risk assessment or the gap analysis and operating no control | P07 |
+| Finances and payroll | A cash reserve covers about 45 days of expenses; payroll runs biweekly through an outside payroll service fed from the accounting SaaS | P05 |
+| BP-03 owner | One of the two Transaction Coordinators is the senior coordinator and owns contract-to-close workflows and deposit verification requests | P03, P05 |
+| MSP operations | Monthly operating system and browser updates, critical updates within 14 days, quarterly firewall firmware updates; firewall alerts go to the MSP | P02, P04, P07 |
+| Retired devices | Two laptops were replaced in 2025 and returned to the reseller with no wipe record | P02, P03 |
+| Website statement | The brokerage website's privacy page says client documents are "kept secure and confidential" | P03 |
+| P03 samples | 15 sales escrow deposits (all placed within 3 business days; 1 reached the broker on the second business day); 20 transaction files with title-held deposits (4 without a written verification request); 12 months of reconciliations for both escrow accounts (2 small differences, both explained) | P03 |
+| Agent departures | Of the last 4 agents who left, 2 were disabled more than 5 business days after leaving | P07 |
+| Scanning workstation | Held 340 scanned IDs and bank statements in a local folder when tested on 2026-08-18 | P07 |
+| Generative AI use | Between March and August 2026, client names, budgets, and one buyer's pre-approval amount were pasted into consumer AI tools in about 9 email drafts | P01, P10 |
+| Screening criteria and results | Thresholds set in 2023: income at least 3 times rent, a minimum score band, any eviction filing in 7 years, any criminal record in 10 years. Of 47 declines, 19 were driven by eviction filings (7 dismissed), 9 by criminal records more than 7 years old, 14 by credit score, and 5 by income. A 20-file accuracy check found 2 name-only mismatches and 3 dismissed filings counted | P10 |
+| Relocation network data | The relocation company would send transferees' names, contact details, and relocation budgets | P09 |
