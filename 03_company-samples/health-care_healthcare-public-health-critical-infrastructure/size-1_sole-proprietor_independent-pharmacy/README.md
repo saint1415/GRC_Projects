@@ -62,7 +62,7 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | 7 | [P07 Security Control Assessment](step-07_P07_control-assessment/_context.md) | 6-10 controls. Examine and test methods; interview is self-review. | P02 control statements; P06 policies |
 | 8 | [P08 Incident Response Runbook](step-08_P08_incident-response-runbook/_context.md) | One incident type. Who to call and what to do in the first 24 hours; outside help contacts. Incident: Ransomware at the Pharmacy Management System Vendor. | P05 recovery order; P01 risks; P03 notification duties |
 | 9 | [P09 SOC 2 Readiness Checklist](step-09_P09_soc2-readiness/_context.md) | Security criteria (CC series) only. Readiness self-check; many criteria marked not applicable with rationale. | Evidence from P02, P06 and P07 |
-| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One third-party AI tool the owner uses. Use-case risk screen; data-sharing rules; human review of outputs. AI use case: Clinical decision support (sepsis prediction) model. | P06 policies; the P01 risk method |
+| 10 | [P10 AI Governance Risk Assessment](step-10_P10_ai-governance/_context.md) | One third-party AI tool the owner uses. Use-case risk screen; data-sharing rules; human review of outputs. AI use case: Consumer generative AI chatbot. | P06 policies; the P01 risk method |
 
 ## How to use this page in a meeting
 1. Read **At a glance** aloud. It sets who the company is and how big it is.
