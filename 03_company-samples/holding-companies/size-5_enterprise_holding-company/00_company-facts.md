@@ -108,3 +108,49 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 7. Facts added while building the deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Sites and volumes.** Building Products: 72 branches and 4 distribution centers, about $8.2 million of sales per business day, about 18,000 contractor accounts online. Home Services: 48 branches, about 9,500 service calls a day. Manufacturing: Plant 1 (Florida), Plant 2 (Georgia), Plant 3 (Tennessee), about $5.5 million of shipments per business day, about 900 EDI trading partners. Finance: about 1,900 applications a day (about $4.3 million of loans a day). Contact centers: about 41,000 calls a day, about 700 agents. GBS accounts payable: about 38,000 invoices a week. Payroll: weekly for about 8,900 hourly employees, biweekly for salaried staff. About 140 sites on SD-WAN. DC-1 is on the Florida headquarters campus; DC-2 is a colocation site in Georgia. About 420 virtual machines from every subsidiary run on the shared virtualization layer.
+
+**Acquired businesses.** AQ-01: regional HVAC service company acquired 2025-10, about 640 workforce members, 7 branches in North Carolina and Tennessee, part of Home Services; its payroll stays on its own provider until 2027-01; ERP migration planned 2027-06. AQ-02: building materials distributor acquired 2026-03, about 520 workforce members, 9 branches in Alabama and Georgia, part of Building Products; hosted ERP with a 48-hour contract RTO; ERP migration planned 2027-04. Both are included in the 12,000 employees. Both keep nightly backups only, and their results reach consolidation by manual upload.
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Accounting Officer | SOX program and consolidation owner; disclosure committee member |
+| Treasurer | Treasury management and payment hub owner; payment fraud lead |
+| Vice President, Global Business Services | SCSP system owner; GBS accounts payable |
+| Chief Compliance Officer | Regulatory compliance program; second line with the GRC team |
+| Chief Privacy Officer | Data classification; breach assessments; privacy official support for the group health plan |
+| Chief Human Resources Officer | HRIS, terminations, training records, benefits and plan administration |
+| Chief Data and Analytics Officer | Chairs the AI governance committee; owns the data warehouse |
+| Finance Chief Credit Officer | Credit policy and the credit, collections, and fraud models |
+| Vice President, Integration Management Office | Integration of AQ-01 and AQ-02 |
+| Vice President, Corporate Development | Acquisition diligence and data rooms |
+| Vice President, Customer Operations | Contact centers and the Home Services chat assistant |
+| Vice President, Investor Relations | Investor communications (Regulation FD); disclosure committee member |
+| Vice President, Corporate Communications | Media and employee communications during incidents |
+| Vice President, Facilities | DC-1 physical security and the colocation relationship |
+| Director of ERP Platform | ERP, consolidation, and integration platform administration |
+| Director of Enterprise Integration | Integration platform and bank connectivity |
+| Director of Identity and Access Management | Group identity platform, PAM, identity governance, account recovery |
+| Director of Security Operations | SOC, SIEM, vulnerability management, incident command |
+| Director of Cloud Platform Engineering | Landing zones in both clouds; backups |
+| Director of Network Engineering | SD-WAN, data center and hub firewalls |
+| Director of Endpoint Engineering | Endpoint and server baselines, EDR agents, mobile devices |
+| Director of OT Security | Plant OT security (reports to the CISO, works with the President, Manufacturing) |
+| Director of Third-Party Risk Management | Vendor tiering, contracts, SOC report reviews |
+| Finance platform engineering lead; Connected services engineering lead | Engineering owners of SL-1 and SL-2 |
+
+**Committees.** Executive risk committee: Chief Risk Officer (chair), CFO, CIO, CISO, General Counsel; meets monthly. Disclosure committee: General Counsel (chair), CFO, Chief Accounting Officer, CISO, Chief Risk Officer, Vice President, Investor Relations; outside securities counsel advises. AI governance committee: formed 2025, chaired by the Chief Data and Analytics Officer; the intake gate for new AI features went live 2026-06-01. Policy governance committee: chaired by the CISO.
+
+**Shared Corporate Services Platform details.** About 2,900 named ERP, consolidation, and treasury users; about 1,180 privileged accounts, of which 448 (38%) were still on push MFA in 2026-08; 23 domain administrator accounts against a tiering design of 6; 410 service accounts with non-expiring passwords, 96 with no named owner; 8 domain controllers (4 at DC-1, 4 at DC-2); 6 ERP application servers, 2 payment hub servers, 4 middleware servers. Six banks; the primary bank carries 64% of payment value; 3 local bank portals outside the hub (Home Services and AQ-02) carry about 6% of payment value. The outsourced service desk performs about 61% of password and MFA resets (21,880 resets in 2026 H1). The 2026-04-25 tier-1 DR test recovered the ERP in 9.5 hours against an 8-hour RTO. 212 security incidents were logged from 2025-07 to 2026-06.
+
+**Finance.** The Qualified Individual was designated in writing in 2024-01; WISP v4 dated 2026-02; the Qualified Individual's annual report was delivered to Finance's board on 2026-03-12. 27 service providers hold Finance customer information. About 9,800 dealer portal user accounts (1,120 inactive more than 90 days at assessment). About 310,000 declined applications from 2022-2023 exist in the data warehouse population sampled in P03.
+
+**Group health plan.** Plan documents were amended in 2019 for 164.504(f) but not for the 164.314(b) security provisions; they name the 8-person benefits team and 2 HRIS administrators. Plan files sat on a shared HR site open to 140 HR staff until the restricted site goes live (POAM-023).
+
+**Service lines (P09).** SL-1 dealer financing platform: SOC 2 Type 2 every year since 2024 (Security, Availability, Confidentiality, Processing Integrity); Privacy added for the 2027 period; 99.9% monthly availability commitment; dealer agreements require incident notice within 72 hours of confirming dealer data is affected. SL-2 connected equipment monitoring: about 650 commercial customers and about 38,000 units; 99.5% monthly availability commitment; 72-hour notice in customer agreements; Type 1 as of 2027-06-30, then a first Type 2 for 2027-07-01 to 2027-12-31. Units shipped before 2024 share device certificates per model.
+
+**AI (P10).** 14 use cases (AI-001 to AI-014): High 3, Medium 8, Low 3; 8 reviewed. The AI assistant (AI-001) has about 4,000 users (GBS 1,500, Building Products 900, Home Services 700, Manufacturing 600, Finance 300). The tenant has about 9,800 collaboration sites; 212 were shared with all employees and 1,240 sites holding Restricted data had no sensitivity label (labels covered 62% of such sites). Expansion was paused for Finance, HR, benefits, and deal sites on 2026-08-14. The credit model (AI-002) was retrained in 2025-11. The resume ranking feature (AI-005) was disabled on 2026-07-20. Recording consent: all-party prior consent for any transcribed meeting in all six states (Florida worked example, Fla. Stat. 934.03(2)(d)).
+
+**Other dates and figures.** OT security review of the plants: 2026-06 (source of the 72% OT inventory figure). Group tabletop with a payment fraud scenario: 2026-03-19. Full tabletop of the P08 runbook with the disclosure committee: scheduled 2026-11-19. Approval dates: BIA 2026-07-24; P03 2026-08-21; P01, P06 (except POL-01), and P10 decisions by the executive risk committee 2026-09-14; SSP 2026-09-18 (CFO); POL-01 by the board risk committee 2026-09-17. Awareness training completion 97%; phishing simulation click rate 2.9% (2026 H1). Treatment funding 2026 Q4 to 2027 Q2: about $7.4 million. The intercompany services agreement requires GBS to tell an affected subsidiary of a breach within 10 days (POL-03 requires the same day).
