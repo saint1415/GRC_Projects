@@ -111,4 +111,27 @@ These facts were added because the deliverables needed them. They do not change 
 
 | Topic | Added fact | Used in |
 |---|---|---|
-| Placeholder row | Replaced as the deliverables are built | All |
+| Front desk volumes | About 16 arrivals a day, mostly between 3 p.m. and midnight; about 27 occupied rooms cleaned or serviced a day; about 38 card transactions a day (about $2,800). A walked guest costs about $150 in another motel's rate and goodwill | P05 |
+| Door locks and keys | The locks keep working with existing cards if the lock system fails; staff hold mechanical override keys; the lock vendor needs 1 to 2 days to rebuild the lock software. POL-02 adds a sealed set of emergency key cards in the Owner-Manager's safe | P01, P05, P06, P08 |
+| Lock database backup | P07 testing on 2026-08-04 found the lock database folder excluded from the MSP's backup job. The MSP added it on 2026-08-12; it has never been restore-tested | P01, P02, P04, P05, P07 |
+| Lock vendor remote tool | In the P07 test the tool accepted a connection request with no prompt at the motel. The MSP set it to start only when the motel accepts a session on 2026-08-05; per-session codes and written terms are still open | P01, P02, P03, P04, P07, P08 |
+| Former employees | 2 former employees (left 2026-03 and 2026-05) still had active PMS accounts on 2026-08-04; their activity logs showed no sign-ins after their last day; disabled that day. The Owner-Manager handles departures and did not tell the Assistant Manager | P01, P02, P04, P07 |
+| Shared secrets | The shared front desk mailbox password has not changed since 2024 despite 3 departures. The staff Wi-Fi passphrase has not changed since 2023 | P02, P03, P04, P07 |
+| Crew billing binder | A count on 2026-08-04 found 410 forms, about 160 with security codes. The binder was moved to a locked drawer in the back office on 2026-08-05 | P01, P02, P07 |
+| PMS findings | 41 full card number displays in July 2026, never reviewed; minimum password length below the PCI DSS requirement; a feature to charge virtual cards without display (not used); purge settings for profiles, ID images, and folios (off); PMS-to-lock and PMS-to-pricing-tool interface credentials never changed | P03, P04, P07, P09, P10 |
+| Staff awareness | 2 of 5 staff interviewed said they would give a password to a caller from "PMS support"; staff named three different people they would tell about an incident | P07, P09 |
+| MSP details | MSP device policy blocks USB storage on the 3 PCs; an after-hours antivirus test alert (21:40 on 2026-08-04) was not seen until 08:15 the next day; the MSP keeps the firewall configuration backed up; evidence was requested on 2026-07-27, and the technician list and security questionnaire were not received by fieldwork end | P05, P07 |
+| Administrator logins | The firewall management login uses a password only. The gateway merchant portal has MFA for the Owner-Manager but not the Assistant Manager. The website-builder account has no MFA | P03, P04, P07 |
+| CCTV recorder | Still uses its installer's default administrator password (since 2022); firmware never updated; clock 9 minutes off | P02, P03, P04 |
+| Website and phone quotes | The website runs on a website-builder SaaS with standard templates and links to the booking engine. Its privacy statement says card details are "processed securely by our payment partner and never stored by the motel." The phone script quotes the base rate and mentions the fee only if asked (3 test calls on 2026-07-21) | P03, P09 |
+| Laptop | The Owner-Manager's laptop is used at home and elsewhere and then joins the office network; its host firewall is on by default but not enforced | P03 |
+| Pay-by-link | The gateway's pay-by-link is included in the motel's gateway plan at no added fee (fictional) | P01, P03 |
+| Security budget | Approved 2026-08-31: about $5,200 one-time and $2,260 a year (itemized in P01 section 4) | P01 |
+| 2025 hurricane evacuation | While the county was under a declared state of emergency in 2025, the pricing tool raised rates 61% above the 30-day average for 2 nights. No complaint was received | P01, P10 |
+| Dynamic pricing tool | Break-even rate $62 (used as the floor); 9 nights below it since 2025-03; 14-day forecast error 10.4%; no SOC 2 report (short security questionnaire only); MFA available but off; subscription terms allow no pooling of the motel's non-public data; one of the 3 OTAs showed the base rate because the $6 fee is not mapped as mandatory in its feed | P01, P10 |
+| AI guest messaging add-on | The PMS vendor offered a free trial in July 2026; the Owner-Manager did not start it | P10 |
+| Crew client questionnaire | The largest crew client is a regional utility line contractor (about 18% of room-nights). It sent a vendor security questionnaire in July 2026, due 2026-09-30, about its corporate card data and crew rosters (names, phone numbers, employee ID numbers) and accepts a self-assessment | P09 |
+| PMS vendor SOC 2 report | One exception (a missed quarterly access review for vendor support staff), remediated; hosting provider carved out; five complementary user entity controls; customers notified within 72 hours of a confirmed incident; no bridge letter provided | P02, P09 |
+| Hurricane checklist | The building hurricane checklist covers shutters and a generator for the office and lobby, not IT | P01, P02 |
+| Background-check reports | Printed and filed in an office drawer; shredded under the new POL-04 rule | P01, P03, P06 |
+| Assessor | The P07 assessor is an independent security consultant with payment card experience, not a QSA, who took no part in P01 or P03 and operates no control | P07 |

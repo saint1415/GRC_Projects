@@ -126,7 +126,7 @@ By responsibility: 19 system-specific (the motel), 23 hybrid (the motel with a v
 | MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve changes, review reports monthly, yearly MSP security review (P01 R-020) |
 | Door lock vendor | Lock software support | None | Written remote access and incident notice terms (P01 R-001) |
 
-**Inherited does not mean done.** Four of the PMS vendor's complementary user entity controls are open gaps at the motel: account removal (AC-2, PS-4), least privilege (AC-6), MFA for all users (IA-2(1)), and activity review (AU-6).
+**Inherited does not mean done.** All five of the PMS vendor's complementary user entity controls are open gaps at the motel: account removal (AC-2, PS-4), least privilege (AC-6), MFA for all users (IA-2(1)), activity review (AU-6), and protection of the workstations that reach the PMS (SI-3, SC-7).
 
 ### 10.3 Control assessment status
 Assessed 2026-08-03 to 2026-08-05 by an independent consultant. See P07 `assessment-results.csv` and `poam.csv`.

@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**192 of 216** sample companies are finished (1920 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**193 of 216** sample companies are finished (1930 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -221,6 +221,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Arts, Entertainment, and Recreation | Enterprise | Live event venue | [README](03_company-samples/arts-entertainment-recreation/size-5_enterprise_live-event-venue/README.md) |
 | Arts, Entertainment, and Recreation | Multi-Sector | Live event venue plus two divisions | [README](03_company-samples/arts-entertainment-recreation/size-6_multi-sector_live-event-venue-plus-two-divisions/README.md) |
 | Accommodation and Food Services | Sole Proprietorship | Bed-and-breakfast inn | [README](03_company-samples/hotels-restaurants/size-1_sole-proprietor_bed-and-breakfast-inn/README.md) |
+| Accommodation and Food Services | Micro | Small motel | [README](03_company-samples/hotels-restaurants/size-2_micro_small-motel/README.md) |
 | Accommodation and Food Services | Small | Beachfront hotel | [README](03_company-samples/hotels-restaurants/size-3_small_beachfront-hotel/README.md) |
 | Other Services (except Public Administration) | Small | Device repair shop | [README](03_company-samples/repair-personal-services/size-3_small_device-repair-shop/README.md) |
 | Public Administration | Small | GovTech integrator | [README](03_company-samples/public-administration/size-3_small_govtech-integrator/README.md) |

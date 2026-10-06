@@ -51,7 +51,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a
 | SYS-03 Endpoints | Front desk PC, back office PC, laptop, 2 tablets | No local business data by design, except the lock database on the back office PC | All |
 | SYS-04 Motel network and internet | Firewall, office network, staff and guest Wi-Fi, one internet line | Firewall configuration backed up by the MSP | All |
 | SYS-05 Productivity suite (SaaS) | Email, shared front desk mailbox, files | Vendor resilience; nightly copy to SYS-09 | BP-06, BP-08 |
-| SYS-06 Door lock system | Lock software and database on the back office PC; USB encoder at the front desk | **Not in the nightly backup** (P07 test 2026-08-04). Rebuilding from the lock vendor takes 1 to 2 days | BP-01 |
+| SYS-06 Door lock system | Lock software and database on the back office PC; USB encoder at the front desk | **Excluded from the nightly backup until 2026-08-12** (found in P07 testing on 2026-08-04); never restore-tested. Rebuilding from the lock vendor takes 1 to 2 days | BP-01 |
 | SYS-07 CCTV | 10 cameras and a recorder | 21 days on the recorder; not backed up | Property security |
 | SYS-08 Accounting SaaS and payroll service | Books, payroll, PIN time clock | Vendor-hosted | BP-08 |
 | SYS-09 Cloud backup (MSP-operated) | Nightly copy of the back office PC and the suite, 30 days of versions | **No restore test since setup in 2024** | BP-06, BP-08 |
@@ -69,7 +69,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a
 | 3 OTAs | About half of transient bookings | OTA extranets reachable from any phone |
 
 **Key findings:**
-1. **Check-in depends on the door lock database, and it is not backed up.** The lock software runs on the back office PC. P07 testing on 2026-08-04 found that the MSP's backup job excludes its database. If the PC fails, the motel cannot encode new keys until the lock vendor rebuilds it (risk R-009).
+1. **Check-in depends on the door lock database, and its backup is unproven.** The lock software runs on the back office PC. P07 testing on 2026-08-04 found that the MSP's backup job excluded its database; the MSP added it on 2026-08-12, but it has never been restored. Until a restore test with the lock vendor succeeds, a failed PC means no new keys until the vendor rebuilds the system (risk R-009).
 2. **The PMS vendor meets the BIA except for check-in.** Its RTO of 4 hours exceeds BP-01's 2 hours. The fallback is the printed arrivals list from each night audit plus offline key encoding. That fallback only works if the lock system survives.
 3. **The internet line is a single point of failure** for the PMS, the terminals, and the OTAs (risk R-011).
 4. **The MSP contract has no recovery commitment.** A 4-business-hour response time on a Saturday night is not a recovery time. The P01 treatment for R-020 adds one at renewal.
