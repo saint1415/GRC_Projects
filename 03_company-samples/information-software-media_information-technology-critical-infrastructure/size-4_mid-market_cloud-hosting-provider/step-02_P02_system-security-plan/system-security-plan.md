@@ -158,8 +158,8 @@ The CMDB holds the full inventory (CM-8). Summary by component class:
 **Status of the 180 documented controls:**
 | Status | Count |
 |---|---|
-| Implemented | 123 |
-| Partially implemented | 53 |
+| Implemented | 121 |
+| Partially implemented | 55 |
 | Planned | 1 (SR-10) |
 | Not applicable | 3 |
 
@@ -172,7 +172,7 @@ The CMDB holds the full inventory (CM-8). Summary by component class:
 
 Inherited controls are evidenced by each provider's FedRAMP package or SOC 2 Type 2 report, reviewed each year (P09 `vendor-soc2-review.csv`).
 
-**Where the 53 Partially implemented controls cluster:** contingency planning (5 of 9 CP controls), incident response (5 of 9 IR), supply chain (5 of 9 SR), and access, audit, and identification in the commercial partition. They trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+**Where the 55 Partially implemented controls cluster:** contingency planning (5 of 9 CP controls), incident response (5 of 9 IR), supply chain (5 of 9 SR), and access, audit, and identification in the commercial partition. They trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
 
 ### 10.2 Control assessment status
 - **Co-sourced internal audit firm:** assessed 40 controls (the 34 base controls in the Rev5 Class C annual independent assessment list, IVV-CSF-AIA, plus 6 enhancements tied to top risks) and 185 determination statements from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, `poam.csv`).

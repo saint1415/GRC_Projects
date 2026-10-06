@@ -93,3 +93,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-08 | Executive risk committee approvals |
 | 2026-09-10 | Results to the risk and technology committee and the audit committee of the board |
 | 2026-10-05 | FedRAMP rule sources re-checked (Consolidated Rules for 2026, version 2026.10.05.01) |
+
+## 7. Facts added while building the deliverables
+| Fact | Used in |
+|---|---|
+| G1 has about 26,000 customer console identities, about 260 U.S.-person operations staff, and about 40 engineers outside G1 operations who hold G1 roles | P02 |
+| FR-1 and FR-2 annual FedRAMP independent assessment last completed 2026-03, with no open High findings | P02, P03 |
+| Class D schedule: sponsoring agency letter 2026-08-20; independent assessment 2027-04; agency ATO target 2027-05-21; application by 2027-05-28 | P02, P03, P07 |
+| Two FedRAMP Reportable Incidents and three drills since the IEC rules were adopted early (2026-08-03); incident response plan v7 approved 2026-09-08 | P03, P07 |
+| About 180 AQ-1 technicians still use the legacy directory | P06 |
+| Bank addendum signed by 196 of 210 banking organizations | P03 |
+| SOC 2 Type 2 reports issued for SL-1 since 2021 and SL-2 since 2023; ISO/IEC 27001 certification held for SL-1 and SL-2; first SL-3 Type 2 period 2027-04-01 to 2027-09-30 | P09 |
+| Disclosure committee tabletop on the provider tooling scenario set for 2026-11-18 | P01, P07, P08 |
+| Funded treatment for 2026 Q4 to 2027 Q2: about $38 million (Class D program about $14.5 million) | P01, P07 |

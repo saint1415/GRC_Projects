@@ -64,7 +64,7 @@ Prepared by the Director of Government Cloud Engineering and the FedRAMP complia
 - Rerun the G1 tenant database recovery test and meet the 2-hour RTO by 2027-01-31 (POAM-009).
 - Report Class D progress monthly to the executive risk committee and quarterly to the risk and technology committee of the board.
 
-Very High risks in P01 that touch HCP-G (R-001) were accepted by the Chief Executive Officer for the treatment period only.
+The Very High risk in P01 that touches HCP-G (R-001) was not accepted as is: the Chief Executive Officer and Chief Financial Officer approved its treatment plan and a residual target of Moderate on 2026-09-08.
 
 ### 4.3 System Operational Status
 **Operational.** Major modification under way: the Class D upgrade. Each upgrade change (for example, the cryptographic library change and the new guest-agent approval workflow) is evaluated under the Significant Change Notification rules (SCN-CSO-EVA) and notified to agencies where the rules require it.
