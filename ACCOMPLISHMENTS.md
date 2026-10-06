@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**151 of 216** sample companies are finished (1510 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**152 of 216** sample companies are finished (1520 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -153,6 +153,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Information Technology | Small | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-3_small_cloud-hosting-provider/README.md) |
 | Information Technology | Mid-Market | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-4_mid-market_cloud-hosting-provider/README.md) |
 | Information Technology | Enterprise | Cloud hosting provider | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-5_enterprise_cloud-hosting-provider/README.md) |
+| Information Technology | Multi-Sector | Cloud hosting provider plus two divisions | [README](03_company-samples/information-software-media_information-technology-critical-infrastructure/size-6_multi-sector_cloud-hosting-provider-plus-two-divisions/README.md) |
 | Finance and Insurance | Sole Proprietorship | Registered investment adviser | [README](03_company-samples/finance-insurance/size-1_sole-proprietor_registered-investment-adviser/README.md) |
 | Finance and Insurance | Micro | Community credit union | [README](03_company-samples/finance-insurance/size-2_micro_community-credit-union/README.md) |
 | Finance and Insurance | Small | Community bank | [README](03_company-samples/finance-insurance/size-3_small_community-bank/README.md) |

@@ -1,38 +1,23 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Operations Manager (Qualified Individual and security lead) |
+| Approved by | Owner, 2026-08-31 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the company keeps three core policies. The use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules that employees and agents already read, so they live in **POL-02 Part C. Workforce and agent use rules**, with the AI tool rule in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Driver |
+|---|---|---|
+| Use systems for company work; look only at the merchant records your job needs | POL-02 C.1 | PCI DSS 12.2.1 |
+| No card data in email, chat, tickets, notes, paper, or recorded lines; merchant owner data only through the CRM upload link; nothing Restricted in AI tools | POL-02 C.2 | PCI DSS 3.2.1; 16 CFR 314.4(c)(3) |
+| Approved AI tools only | POL-02 C.3 and POL-04 4.6 | 16 CFR 314.4(c)(1) |
+| Lock screens; never share passwords or MFA codes, even with callers claiming to be the MSP or processor partner | POL-02 C.4 | PCI DSS 8.2.1 |
+| Training at start and yearly; phishing simulations and call-back drills; terminal tamper course | POL-02 C.5 | PCI DSS 12.6; PCI DSS 9.5.1.3 |
+| Report suspected incidents at once | POL-02 C.6 and POL-03 4.2 | PCI DSS 12.10 |
+| Signed acknowledgment at start and after each annual update, for employees and agents | POL-02 C.7 | PCI DSS 12.6.3 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.
