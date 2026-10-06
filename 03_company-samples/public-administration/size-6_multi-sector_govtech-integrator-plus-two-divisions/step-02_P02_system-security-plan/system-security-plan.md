@@ -132,8 +132,8 @@ See `control-implementation.csv` (177 base controls) and `common-control-catalog
 
 | Status | Controls |
 |---|---|
-| Implemented | 156 |
-| Partially implemented | 17 |
+| Implemented | 154 |
+| Partially implemented | 19 |
 | Planned | 0 |
 | Not applicable | 4 |
 | **Total** | **177** |
@@ -144,11 +144,11 @@ See `control-implementation.csv` (177 base controls) and `common-control-catalog
 | Hybrid (corporate provides the mechanism; the ACMP configures or operates part) | 33 |
 | System-specific | 47 |
 
-**The 17 partially implemented controls** cluster in four places:
-- **People with access to agency data** (scenario gaps 1 and 10): PS-3, PS-7, AT-2.
+**The 19 partially implemented controls** cluster in four places:
+- **People with access to agency data** (scenario gaps 1 and 10): PS-3, PS-6, PS-7, AT-2.
 - **Incident notification across divisions** (gap 5): IR-3, IR-4, IR-6, IR-8.
 - **Recovery and retention at scale** (gaps 2 and 8): CP-4, CP-10, AU-11.
-- **Operational hygiene:** AC-2, AC-8, CM-3, IA-5, RA-5, SA-9, SI-4.
+- **Operational hygiene:** AC-2, AC-8, CM-3, CM-6, IA-5, RA-5, SA-9, SI-4.
 
 ### 10.2 Common control inheritance by division
 The common control catalog lists 99 controls provided by corporate: 26 by the group security governance office, 19 by SYS-G3, 19 by SYS-G2, 15 by SYS-G1, 13 by group HR and personnel security, and 7 by group procurement and legal. Controls inherited only from the cloud providers (for example the PE family) are not in the catalog; they are evidenced by each provider's FedRAMP package and SOC 2 report.

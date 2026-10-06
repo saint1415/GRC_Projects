@@ -83,7 +83,7 @@ The program is defined and mostly effective. The one Very High risk and most of 
 3. **Notification across divisions** (GR-03) has never been exercised, and its shortest clock is 1 hour.
 4. **AI is ahead of governance** in two divisions (GR-04; scenario gap 6).
 
-Scenario gaps 2, 3, and 9 (log retention, enclave inheritance, and the RMS FIPS deadline) are Moderate at group level (GR-09, GR-10, GR-11) because each has a dated fix in progress, but SW-001 is High in its division because the CJIS date has passed.
+Scenario gaps 2, 3, and 9 (log retention, enclave inheritance, and the RMS FIPS deadline) are Moderate at group level (GR-09, GR-10, GR-11) because each has a dated fix in progress, but SW-001 is High in its division because the 41 connectors cannot be upgraded before the CJIS date of 2026-09-21.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** acquired firm security uplift and migration (GR-05); group screening register and checks (GR-02); full-scale restore automation and exercise (GR-07); notification matrix and tabletop (GR-03); group AI program (GR-04); 7-year log retention (GR-09); CMMC Level 2 assessment (GR-06).
