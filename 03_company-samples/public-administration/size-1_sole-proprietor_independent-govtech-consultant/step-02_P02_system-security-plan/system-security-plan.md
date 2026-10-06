@@ -101,7 +101,7 @@ Inheritance: 13 hybrid (a provider or agency runs the mechanism and the owner co
 Self-assessed 2026-08-24 to 2026-08-26 with the on-call IT technician. See P07.
 
 ## 11. Digital Identity Acceptance Statement
-The productivity suite, password manager, accounting service, and county single sign-on use a password plus an authenticator app; the sheriff's virtual desktop uses a sheriff-issued hardware token. That fits a Moderate categorization. Exceptions: the city 311 system offers contractors a password only (the city's decision; MFA requested 2026-08-24), and the website builder's MFA was off until 2026-09-30 (POAM-002).
+The productivity suite, password manager, accounting service, and county single sign-on use a password plus an authenticator app; the sheriff's virtual desktop uses a sheriff-issued hardware token. That fits a Moderate categorization. Exceptions: the city 311 system offers contractors a password only (the city's decision; MFA requested 2026-08-24), and the website builder's MFA is off until the owner turns it on by 2026-09-30 (POAM-002).
 
 ## 12. Referenced Artifacts
 Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
