@@ -123,7 +123,7 @@ By responsibility: 17 system-specific (the company), 24 hybrid (the company with
 Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessment-results.csv` and `poam.csv`.
 
 ## 11. Digital Identity Acceptance Statement
-Staff sign in to the productivity suite and the property management system with a password and an authenticator app. Platform administrators will use the same once MFA is enabled (POAM-002, due 2026-09-30); until then, platform administrator access is single-factor, which is below what this Moderate system needs. Credential holders authenticate to doors with something they have (a fob or a phone credential); after-hours PIN entry at the Property A front entrance is being considered as a second factor (P10).
+Staff sign in to the productivity suite and the property management system with a password and an authenticator app. Platform administrators will use the same once MFA is enabled (POAM-002, due 2026-09-30); until then, platform administrator access is single-factor, which is below what this Moderate system needs. Credential holders authenticate to doors with something they have (a fob or a phone credential); from 2026-10-15, after-hours entry at the Property A front entrance also requires a PIN, the non-biometric alternative chosen in P10.
 
 ## 12. Referenced Artifacts
 Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and platform vendor report review (P09), AI assessment (P10).

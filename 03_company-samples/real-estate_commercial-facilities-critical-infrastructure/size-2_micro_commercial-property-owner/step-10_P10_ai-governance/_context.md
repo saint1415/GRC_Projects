@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Video analytics for building access
+**AI use case:** Face match alerts at the Property A front entrance after hours
 **Sector AI rules and guidance:** None identified; see cross-sector obligations
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

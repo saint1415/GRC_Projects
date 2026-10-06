@@ -1,0 +1,13 @@
+review_item,what_to_check,platform_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because doors and cameras depend on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"Cloud access control and video management service, mobile credentials, device management and firmware delivery, data centers","Cloud service, mobile credential service, and firmware delivery in scope; analytics features (including face match) are not described",Ask whether analytics features will be in the next report; until then they are outside the assurance (P10)
+Subservice organizations,Carve-out or inclusive; which hosting provider,Cloud hosting provider carved out; vendor states it reviews the provider's SOC reports each year,Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,1 exception: 1 of 40 sampled production changes deployed without a documented approval; remediated with an approval gate in the deployment tool,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Administrator account management including MFA; timely removal of credentials and users; review of administrator activity; protection of the customer network that devices connect to; approval of feature settings,"Mapped to AC-2, IA-2(1), PE-2, AU-6, SC-7, CM-7. All five are open gaps at the company (POAM-001, POAM-002, POAM-004, POAM-010, POAM-013)"
+Availability commitments,Uptime and offline behavior versus the BIA (BP-01 MTD 24 h),99.9% monthly availability target; door controllers cache credentials and schedules for up to 72 hours offline,Meets the BIA; offline caching outlasts the MTD
+Encryption,At rest and in transit,"Encryption at rest for credential data, photos, and video; TLS 1.2 or higher between devices, apps, and the cloud",None
+Incident notification,Vendor commitment to notify customers,Subscription terms: customers notified within 72 hours of confirming a security incident affecting their data,Ask for 24 hours at renewal; as a Florida third-party agent the vendor must notify within 10 days at most (501.171(6)(a))
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Property Manager with the independent consultant, 2026-08-20",Repeat each year when the new report is issued

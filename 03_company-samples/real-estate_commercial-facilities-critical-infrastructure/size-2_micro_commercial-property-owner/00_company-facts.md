@@ -98,3 +98,28 @@ Outside the boundary: the fire alarm panels and their monitoring communicators, 
 | 2026-07-20 to 2026-07-31 | Risk assessment and gap analysis with the MSP (walkthroughs of both properties 2026-07-22) |
 | 2026-08-10 to 2026-08-12 | Control assessment (independent consultant; on site 2026-08-11) |
 | 2026-08-31 | Deliverables approved by the Managing Member |
+
+## 7. Facts added while building the deliverables (Phase 5)
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Benchmark adoption | The Managing Member adopted CISA CPG 2.0 as the security benchmark on 2026-07-15, the same day the Property Manager was designated security and privacy lead | P02, P03 |
+| Leases | All leases require notice of building service interruptions. Leases signed since 2024 also require notice within 72 hours of learning of unauthorized access to the tenant's employees' data in the access control system. Leases allow rent abatement after 5 consecutive business days of untenantable premises | P05, P08 |
+| Finances | A cash reserve covers about 45 days of expenses. An on-call guard from a local guard company costs about $40 an hour | P05 |
+| Vendor terms | Property management system: RPO 1 hour and 99.5% availability in its service terms. Controls contractor: next-business-day on-site response. Platform vendor: 72-hour customer incident notice in its subscription terms | P05, P09 |
+| Logs | Platform administrator and door logs kept 1 year by the vendor; Property A firewall logs 7 days; the remote-desktop service keeps 30 days of connection history; nothing is reviewed | P02, P07, P08 |
+| Network details | The MSP runs a quarterly external port scan of the Property A address (last 2026-07-14: no open ports). The engineering room and network closet need a credential. The Property B router also provides Wi-Fi for seasonal kiosk vendors | P02, P03, P07 |
+| Email | The MSP set up SPF and DKIM; the DMARC record is set to monitor only | P03 |
+| BAS workstation use | The workstation is also used to read email, and contractor technicians load programs from their own USB drives | P02, P03 |
+| Past events | A Maintenance Technician left in April 2026 (since replaced); the fob and platform account were disabled 9 days after the last day. An engineering tablet was lost in 2025 and never reported to the Property Manager. A desktop replaced in 2025 went to the MSP with no wipe record | P02, P03, P07, P09 |
+| Credential review | 51 of 342 active credentials had not been used in 90 days or more. They were sent to tenant contacts on 2026-07-28; 38 were disabled by 2026-08-07. A sample of 25 credentials found 6 (imported at the 2023 installation) with no request form | P01, P02, P07 |
+| Leasing files | The guarantor and applicant folder is open to all 7 staff and synced to the desktops; applicant files go back to 2019, including applicants who never signed a lease. Applications arrive by plain email | P01, P03, P06 |
+| Assessor | The P07 assessor is an independent security consultant with building systems experience, not involved in the risk assessment or the gap analysis | P07 |
+| P07 test findings | The supervisory controller accepted the manufacturer default administrator password. The Property B router accepted its factory default password and had UPnP on; the password was changed and UPnP turned off on 2026-08-12. One of the 4 contractor technicians who know the shared remote-desktop password left the contractor in 2025 | P01, P07 |
+| Backup jobs | July 2026: 31 of 31 nightly shared drive copies and 29 of 31 nightly workstation images succeeded | P07 |
+| Platform vendor report | SOC 2 Type 2, Security and Availability, 12 months ending 2026-03-31, unqualified, one remediated exception; 99.9% monthly availability target. Analytics features are not in the report. Reviewed 2026-08-20 | P02, P09 |
+| Tenant questionnaire | The largest Property A tenant sent a security questionnaire in July 2026 with its lease renewal; response due 2026-09-30; renewal decision due 2027-01-31 | P09 |
+| Face match trial | Turned on 2026-06-08 by the vendor at the security integrator's request after a tenant complained in May about unfamiliar people at night. Templates were created from about 190 badge photos. 1,240 after-hours entries, 87 alerts, 3 real. Paused 2026-07-24; template deletion and training opt-out requested 2026-08-26. Fob plus PIN after hours at the Property A front entrance from 2026-10-15 | P01, P04, P10 |
+| Person detection | After-hours person detection alerts on the Property B rear corridor and parking cameras have been in use since 2024; 41 of the last 60 alerts showed a real person | P10 |
+| Monthly security meeting | The Managing Member and the Property Manager meet monthly from September 2026 to review the POA&M and the platform administrator change report | P02, P03, P09 |
