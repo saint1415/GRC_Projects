@@ -47,7 +47,7 @@ The three High risks share one cause: **the inn's most valuable accounts are pro
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-09-15):** MFA on the innkeeping software, email, and OTA-2; password manager; disk encryption; new house master code; shred the pad pages and purge the email forms.
-- **Small budget (about $300 a year):** a password manager, a business-grade email and file plan with version history, and the pay-by-link feature (included in the facilitator's fees).
+- **Small budget (about $150 a year):** a password manager (about $40), a business-grade email and file plan with version history (about $100), and the pay-by-link feature (included in the facilitator's fees).
 - **Design and contract actions by 2026-12-31:** SAQ A plus SAQ P2PE validation (R-003), relief innkeeper account and sealed recovery codes (R-010), AI add-on conditions (R-013, by 2026-10-15).
 - **Accepted (Low):** R-011 (innkeeping outage; vendor recovery objectives meet the BIA) and R-012 (hurricane; the SaaS systems are reachable from anywhere).
 

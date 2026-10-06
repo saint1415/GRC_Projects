@@ -1,62 +1,62 @@
 criterion_id,category,criteria_group,topic_label,in_scope,control_description,control_owner,evidence,related_sp800_53,readiness_status,gap,remediation,target_date
-CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.2,Security,Control environment,Board independence and oversight,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.4,Security,Control environment,Commitment to competence,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.5,Security,Control environment,Accountability for internal control,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.1,Security,Information and communication,Quality information to support controls,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.3,Security,Information and communication,Communication with external parties,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.3,Security,Risk assessment,Fraud risk considered,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.2,Security,Control activities,General controls over technology,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.2,Security,Logical and physical access,User registration and authorization,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.3,Security,System operations,Evaluation of security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.4,Security,System operations,Incident response,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.5,Security,System operations,Recovery from incidents,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.1,Availability,Availability,Capacity management,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.3,Availability,Availability,Recovery plan testing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.2,Confidentiality,Confidentiality,Disposal of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.2,Processing Integrity,Processing integrity,System inputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.3,Processing Integrity,Processing integrity,System processing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.4,Processing Integrity,Processing integrity,System outputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.5,Processing Integrity,Processing integrity,Stored data,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P1.1,Privacy,Notice,Privacy notice,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P2.1,Privacy,Choice and consent,Choice and consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.1,Privacy,Collection,Collection consistent with objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.2,Privacy,Collection,Explicit consent where required,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.2,Privacy,"Use, retention, disposal",Retention,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.3,Privacy,"Use, retention, disposal",Disposal,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.1,Privacy,Access,Data subject access,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.2,Privacy,Access,Correction,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.4,Privacy,Disclosure and notification,Third-party commitments,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
+CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,Owner's direct oversight: the owner is the only decision-maker; POL-01 states the security commitments to guests and the payment facilitator,Owner-innkeeper,POL-01,PL-1,Ready,,,
+CC1.2,Security,Control environment,Board independence and oversight,Yes,"Not applicable: a sole proprietorship has no board of directors. Oversight is the owner's own annual review (POL-01 4.5), with an outside reviewer at least every second year",Owner-innkeeper,,PM-9,N/A,,,
+CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,"Owner's direct oversight: the owner holds every role, designated in writing in POL-01 4.2",Owner-innkeeper,POL-01,PM-2,Ready,,,
+CC1.4,Security,Control environment,Commitment to competence,Yes,Owner has had no security training; the relief innkeeper has had no briefing,Owner-innkeeper,Training record (planned),AT-2,Partially ready,No security training,Annual course and relief innkeeper briefing (POL-01 9.6),2026-11-30
+CC1.5,Security,Control environment,Accountability for internal control,Yes,Owner's direct oversight: the owner is personally accountable for every control; the relief innkeeper falls under POL-01 section 5,Owner-innkeeper,POL-01 sections 3 and 5,PL-4,Ready,,,
+CC2.1,Security,Information and communication,Quality information to support controls,Yes,"The innkeeping software, email, OTAs, and lock app record activity, but nobody reviews it",Owner-innkeeper,SYS-01 activity log,AU-6,Partially ready,Logs never reviewed,Monthly review (POAM-008),2026-10-31
+CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,The relief innkeeper learns the routine informally and uses the owner's logins,Owner-innkeeper,,AT-2,Partially ready,No written briefing for the only other person who uses the systems,One-page briefing before each covering period (POL-01 9.6),2026-11-30
+CC2.3,Security,Information and communication,Communication with external parties,Yes,"Facilitator, vendor, and OTA contacts defined in the P08 runbook, not yet printed; the website privacy statement is inaccurate",Owner-innkeeper,P08 runbook; website,IR-6,Partially ready,Contacts not printed; external statement wrong,Print contacts (POAM-009); correct the privacy statement (P03 G-069),2026-09-30
+CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,Objectives set in POL-01 and the BIA (P05),Owner-innkeeper,POL-01; P05,PM-9,Ready,,,
+CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,Risk assessment completed 2026-07-24,Owner-innkeeper,P01,RA-3,Ready,,,
+CC3.3,Security,Risk assessment,Fraud risk considered,Yes,Payment fraud against guests (fake payment links) is in the register (R-004); refund and chargeback fraud are not,Owner-innkeeper,P01,RA-3,Partially ready,Refund fraud not assessed,Add refund and chargeback fraud at the next risk review; owner reviews refunds in the facilitator portal monthly,2027-07-31
+CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,Change triggers set in POL-01 4.3 and 4.6; not yet exercised,Owner-innkeeper,POL-01,RA-3,Partially ready,No change assessed yet,Assess the pay-by-link redesign as the first significant change,2026-10-31
+CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,Annual self-assessment (P07); limited independence,Owner-innkeeper,P07,CA-2,Partially ready,Self-review only,Outside review at least every second year (POL-01 4.5),2027-07-31
+CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,Owner's direct oversight: the owner finds and fixes deficiencies; tracked in the POA&M,Owner-innkeeper,P07 POA&M,CA-5,Ready,,,
+CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,Controls selected from the risk assessment (P02 control set),Owner-innkeeper,P02,PL-2,Ready,,,
+CC5.2,Security,Control activities,General controls over technology,Yes,"Technology controls partly in place: antivirus and vendor MFA on two services yes; MFA on the innkeeping software, email, and OTA-2 and laptop encryption no",Owner-innkeeper,P07,SC-28,Partially ready,MFA and encryption gaps,POAM-001; POAM-003,2026-09-15
+CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,POL-01 adopted 2026-08-31; the P08 runbook is the main procedure,Owner-innkeeper,POL-01; P08,PL-1,Ready,,,
+CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,"Innkeeping software, email, and OTA-2 protected by passwords saved in a family laptop's browser; laptop unencrypted",Owner-innkeeper,"P07 IA-2(1), IA-5, and SC-28 results",IA-2(1); IA-5; SC-28,Not ready,Three High POA&M items,POAM-001; POAM-002; POAM-003,2026-10-31
+CC6.2,Security,Logical and physical access,User registration and authorization,Yes,Relief innkeeper uses the owner's accounts instead of a registered user,Owner-innkeeper,SYS-01 and OTA-2 user lists,AC-2,Partially ready,No named account,Named relief account (POL-01 7.1),2026-10-31
+CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,Vendors enforce roles; the administrator role is used for daily work; the lock installer's account was left active,Owner-innkeeper,SYS-01 role settings; P07 SA-9 results,AC-2; AC-3,Partially ready,No least privilege or periodic review,Front desk role; quarterly user review (POL-01 7.4),2026-10-31
+CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,Per-reservation door codes; owner's office unlocked during the day; master code unchanged since 2022,Owner-innkeeper,Walkthrough 2026-07-21,PE-3,Partially ready,Office open; old master code,"Lock the office; change the master code quarterly (POL-01 7.9, 8.5)",2026-09-15
+CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,Pad pages with card numbers never destroyed; ID photos never deleted; no device disposal procedure,Owner-innkeeper,P07 SI-12 results,MP-6; SI-12,Not ready,Data kept past any need,POAM-004,2026-10-31
+CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,Router blocks inbound traffic; guests and the owner share one network,Owner-innkeeper,Router settings,SC-7,Partially ready,No guest network separation,POAM-005,2026-09-30
+CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,Card numbers arrive by email and in chat; card forms kept in a consumer email account,Owner-innkeeper,Mailbox search; P10 chat review,SC-8,Not ready,Card data moved and stored outside approved services,Pay-by-link; card masking in chat (POAM-004; P10),2026-10-31
+CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,Built-in antivirus detected and quarantined the test file,Owner-innkeeper,P07 SI-3 results,SI-3,Ready,,,
+CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,Automatic updates on the laptop and phone; router firmware never updated and its settings never checked,Owner-innkeeper,Update history; P07 CM-6 results,CM-6; SI-2,Partially ready,Router not maintained,POAM-005,2026-09-30
+CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,"No review of innkeeping, email, OTA, or lock activity",Owner-innkeeper,P07 AU-6 results,AU-6,Not ready,No monitoring,Monthly review (POAM-008),2026-10-31
+CC7.3,Security,System operations,Evaluation of security events,Yes,Breach assessment steps defined in POL-01 section 10 and P08; not yet used,Owner-innkeeper,POL-01; P08,IR-6,Partially ready,Untested,Walkthrough (POAM-009),2026-09-30
+CC7.4,Security,System operations,Incident response,Yes,P08 runbook adopted 2026-08-31; not tested,Owner-innkeeper,P08,IR-8,Partially ready,Untested,Walkthrough (POAM-009),2026-09-30
+CC7.5,Security,System operations,Recovery from incidents,Yes,Innkeeping vendor recovery inherited; laptop files have no backup,Owner-innkeeper,Vendor SOC 2 report; P07 CP-9 results,CP-9,Partially ready,Laptop files not recoverable,POAM-007,2026-10-31
+CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,"Not applicable: the inn develops no software and runs no infrastructure. Application changes are the vendors', covered by the innkeeping vendor's SOC 2 change management controls; the owner's own setting changes are recorded in the security log",Owner-innkeeper,Vendor SOC 2 report,CM-3,N/A,,,
+CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,Single-person dependency; no relocation arrangement; no cyber insurance confirmed,Owner-innkeeper,P05,CP-2,Partially ready,Owner is a single point of failure,"Named relief account, sealed recovery codes, relocation arrangement (P01 R-010)",2026-12-31
+CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,AOCs from the innkeeping vendor and the facilitator obtained 2026-07-22; innkeeping SOC 2 reviewed; no provider list; AI add-on terms unread,Owner-innkeeper,Vendor folder; vendor-soc2-review.csv,SA-9,Partially ready,No ongoing provider oversight,POAM-006,2026-10-31
+A1.1,Availability,Availability,Capacity management,No,Not in scope at this tier (Security criteria only). Availability needs are covered by the BIA (P05) and the innkeeping vendor's Availability criteria (vendor-soc2-review.csv),,,,N/A,,,
+A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",No,Not in scope at this tier (Security criteria only). Availability needs are covered by the BIA (P05) and the innkeeping vendor's Availability criteria (vendor-soc2-review.csv),,,,N/A,,,
+A1.3,Availability,Availability,Recovery plan testing,No,Not in scope at this tier (Security criteria only). Availability needs are covered by the BIA (P05) and the innkeeping vendor's Availability criteria (vendor-soc2-review.csv),,,,N/A,,,
+C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,No,Not in scope at this tier (Security criteria only). Confidential data handling is covered by POL-01 section 8,,,,N/A,,,
+C1.2,Confidentiality,Confidentiality,Disposal of confidential information,No,Not in scope at this tier (Security criteria only). Confidential data handling is covered by POL-01 section 8,,,,N/A,,,
+PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,No,Not in scope: the inn processes no transactions for other businesses,,,,N/A,,,
+PI1.2,Processing Integrity,Processing integrity,System inputs,No,Not in scope: the inn processes no transactions for other businesses,,,,N/A,,,
+PI1.3,Processing Integrity,Processing integrity,System processing,No,Not in scope: the inn processes no transactions for other businesses,,,,N/A,,,
+PI1.4,Processing Integrity,Processing integrity,System outputs,No,Not in scope: the inn processes no transactions for other businesses,,,,N/A,,,
+PI1.5,Processing Integrity,Processing integrity,Stored data,No,Not in scope: the inn processes no transactions for other businesses,,,,N/A,,,
+P1.1,Privacy,Notice,Privacy notice,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P2.1,Privacy,Choice and consent,Choice and consent,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P3.1,Privacy,Collection,Collection consistent with objectives,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P3.2,Privacy,Collection,Explicit consent where required,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P4.2,Privacy,"Use, retention, disposal",Retention,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P4.3,Privacy,"Use, retention, disposal",Disposal,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P5.1,Privacy,Access,Data subject access,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P5.2,Privacy,Access,Correction,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.4,Privacy,Disclosure and notification,Third-party commitments,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
+P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",No,"Not in scope: guest privacy is governed by the FTC Act and state law, not by SOC 2 privacy criteria; the inn is not a service organization",,,,N/A,,,
