@@ -49,7 +49,7 @@
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-09-30):** bench PC password and lock, phone-payment rule and shredding the old notes (R-006), AI training setting off (R-009), camera MFA (R-013), rewritten intake notice (R-008), the fill-in agreement and named account (R-004), and the P08 runbook (R-012).
-- **Budgeted (about $450 one-time and $60 a year):** two hardware-encrypted transfer drives, a business AI plan or none, and an hour of the consultant's time to set up separate Wi-Fi networks.
+- **Budgeted (about $450 one-time):** two hardware-encrypted transfer drives (about $350) and an hour of the consultant's time to set up separate Wi-Fi networks (about $100). Recurring: an AI business plan (about $25 a month) if it is kept, and a SYS-01 user fee for the fill-in account in cover months (about $20 a month).
 - **Data clean-up by 2026-10-31:** purge passcodes, account passwords, and card numbers from SYS-01 notes, and delete or sanitize the 1.6 TB bench backlog (R-001, R-002, R-005).
 - **Accepted (Low):** R-011 (ticketing outage; the vendor's commitments meet the BIA) and R-014 (hurricane; storm procedure in the register).
 
