@@ -94,3 +94,59 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-09-10 | Results to the audit committee and the risk committee of the board |
 | 2026-10-19 to 2026-11-25 | QSA fieldwork for the 2026 merchant and service provider Reports on Compliance (planned) |
 | 2026-12-31 | 2026 Reports on Compliance and AOCs due to the acquirer and Visa (fictional dates) |
+
+## 7. Facts added for the deliverables
+These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Registry defaults.** The registry's primary system (ticketing and venue operations platform), P08 incident (ticketing platform breach exposing customer and card data), and P10 use case (dynamic ticket pricing and bot detection) fit this company and were kept. At this size the P10 use case is split into two inventory rows (AI-001 pricing and AI-002 bot detection) because they have different owners, data, and failure modes, and both sit inside a 13-use-case portfolio. The P08 incident combines e-skimming on client checkout templates with a data warehouse export because those are the two Very High and High card and patron data risks in P01 (R-001, R-003).
+
+**Volumes and money.** Gross ticket sales through the platform are about $4.6 billion a year ($2.0 billion own events, $2.6 billion client events), about $12.6 million on an average day ($5.5 million own, $7.1 million client) and 3 to 4 times that on peak on-sale days. Revenue of about $4.8 billion a year is about $13.2 million per calendar day. About 140 high-demand on-sales, about 3,500 event days, and about 5,400 show settlements a year. A major tour on-sale grosses about $18 million in its first 4 hours. Client agreements commit 99.9% monthly availability with service credits.
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Operating Officer | Authorizing official for the TVOP (P02); chairs the crisis management team |
+| Chief Information Officer | Corporate IT and general IT controls |
+| Chief Audit Executive | Heads Internal Audit; reports to the audit committee; leads P07 |
+| Chief Compliance Officer | Second-line compliance; approves P03 with the CISO |
+| General Counsel; Deputy General Counsel | Disclosure committee chair and alternate; outside counsel engagement |
+| Controller | SOX program; disclosure committee member |
+| Chief Marketing Officer | Marketing technology, tags, fee display in campaigns |
+| Chief Human Resources Officer | Workforce lifecycle, training, acceptable use |
+| President, Venue Operations | Venues, box offices, stands, gate entry |
+| President, Concerts | Booking and promotion planning (delegate of the CEO for BP-17) |
+| Senior Vice President, Venue Management Services | SL-2 owner |
+| Vice President, Integration Management Office | Integration of AV-01 to AV-06 |
+| Vice President, Ticketing Operations | Checkout templates, contact centers, support assistant |
+| Vice President, Client Success | Client communications backup during incidents |
+| Vice President, Pricing and Revenue Management | AI-001 owner |
+| Vice President, Data and AI | Chairs the AI governance committee |
+| Vice President, Venue Security and Safety | Physical security, venue OT, crowd safety |
+| Vice President, Corporate Communications; Vice President, Investor Relations | Incident communications; investor messages |
+| Director of Fraud and Bot Defense | AI-002 owner |
+| Director of Accessibility Compliance | ADA ticketing compliance; AI committee member |
+| Directors of Platform Engineering, Payments Engineering, Data Engineering, Security Operations, Identity and Access Management, Cloud Platform Engineering, Network Engineering, Endpoint Engineering, and Third-Party Risk Management | System administration and common control providers (P02 section 10.3) |
+
+**Disclosure committee (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Last tabletop 2025-10-21 (ransomware).
+
+**Acquired venues.** AV-01 to AV-06 are 4 theaters and 2 clubs in Georgia, Tennessee, and North Carolina, acquired 2026-02-02 (about 640 employees). They sell online through the platform since 2026-04 but keep about 150 legacy POS terminals and card readers (31 readers were missing from any inventory), local POS servers backed up nightly to local disks, single internet carriers, legacy site VPNs, and a legacy directory managed by a local IT support firm. AV employees move to enterprise payroll on 2026-12-31. A reachability test at AV-03 reached POS terminals from an office PC. 7 of 10 AV terminations in a 60-item sample were disabled late; 23 stale AV accounts were found.
+
+**Platform and payments.** About 140 microservices; about 3,900 open-source dependencies; about 1,100 engineers; about 2,900 workforce TVOP accounts; 312 privileged and CDE accounts; about 2,900 P2PE devices (about 430 at box offices); about 7,500 scanners; about 900 turnstile controllers and access control devices. About 340 client templates, 212 with sales in the last 30 days; 61 scripts on client checkout templates, 14 unauthorized on 37 templates; 41 templates show face value before the total price. Client users: about 9,400, 38% with MFA, 1,130 inactive over 90 days, 14 client organizations sharing logins; 127 client API keys older than 12 months. The tokenization provider's AOC is dated 2026-03. The acquirer letter of 2026-02-15 confirms the company is not a designated entity. The 2025 ROCs (merchant and service provider) were Compliant. Service provider scope was last confirmed in 2025-10.
+
+**Contact centers.** About 6.5 million contacts a year; the outsourced overflow center handles about 35% with about 220 agents (40 without training records). Data discovery on 2026-07-08 found about 41,000 full card numbers in about 6.5 million case notes; 22 of 60 sampled overflow recordings (from about 1.1 million in 12 months) captured spoken card numbers and security codes. The overflow center's PCI DSS AOC expired on 2026-05-31.
+
+**Data warehouse.** Holds about 41 million patron records with 10 years of order history against a 7-year schedule (about 6.3 million records past retention) and approximate app check-in locations for about 2.3 million patrons. 14 service accounts use passwords without key-pair authentication or network policies.
+
+**Tests and operations (2025-2026).** Regional failover test 2026-04-25 (3.2 hours against a 2-hour RTO); processor routing failover 2026-03-11; tier-1 DR test 2026-05-16; Cloud B test 2026-06-20; offline scanning drills at 21 of 36 venues (2026-05); penetration test 2026-03; segmentation tests 2025-11 and 2026-05. In 2026 H1: 241 security incidents (9 at AV venues and festivals), 1,940 PAM elevations to CDE accounts, 212 payment service changes (31 emergency), 1,904 critical and high findings, 248 security patches, 1,236 terminations with TVOP access (88 at AV venues), and 1,240 privacy rights requests. 58 of 230 data-handling vendors are overdue for reassessment; 31 service providers have PCI DSS impact; 9 marketing tag vendors run scripts on checkout templates.
+
+**Venue OT.** OT shares segments with corporate networks at 14 venues (3 of them SL-2 managed venues); 4 building management integrators have remote access outside PAM at 9 venues. P07 testing (reported 2026-08-12) found vendor default credentials on 14 turnstile controllers at 2 venues and a building management interface at a third venue.
+
+**Contract terms (fictional).** Acquirer notice within 24 hours of a suspected card compromise; notice to SL-1 clients within 72 hours of suspicion; clients notify the company within 24 hours; notice to SL-2 owners within 72 hours.
+
+**Risk program.** Board risk appetite approved 2026-02; 8 enterprise risks (ER-01 to ER-08) with tolerance thresholds (P01 section 1); about $7.2 million of treatment funded for 2026 Q4 to 2027 Q2. Policy exceptions EXC-2026-011, -017, -020, and -023 (P06).
+
+**AI portfolio.** 13 use cases; AI governance committee formed 2025 and chaired by the Vice President, Data and AI. AI-001 prices reserved-seat events at 11 own venues (about 1,900 events in 2026 H1) and for 52 SL-1 clients that opted in. AI-002 protected 12 on-sales in the 2026 H1 sample (about 2.4 million queue entrants, about 610,000 sessions blocked and 380,000 challenged). AI-005 (facial recognition entry pilot at 2 venues) paused 2026-07-31; AI-006 crowd analytics pilot at 3 arenas; AI-010 applicant ranking disabled 2026-06-30. The support assistant (AI-007) gave 3 incorrect answers in a 200-answer sample.
+
+**SOC 2.** SL-1 reports for 2025 (no exceptions) and 2026; the 2027 period adds Processing Integrity and Privacy. SL-2's first Type 2 period is 2027-04-01 to 2027-09-30, with the report expected 2027-11. The 8 managed venues have an owner portal and a settlement application on Cloud provider B.
+
+**Worked incident example (P08, fictional future dates).** Tamper alert on 37 client templates on 2027-03-02; warehouse export of 9.2 million patron records on 2027-02-20 found on 2027-03-03; materiality determined 2027-03-04.

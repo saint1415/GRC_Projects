@@ -66,7 +66,7 @@ Dollar values are scaled to $100.0 million in annual revenue. The worst single l
 3. **Offline card acceptance is unconfirmed.** Whether the POS vendor's P2PE solution allows offline acceptance is governed by its P2PE Instruction Manual. The Director of Food and Beverage must confirm with the POS vendor before relying on it for BP-03 (P01 R-019).
 4. **Company-managed recovery is unproven.** The settlement application (BP-07, BP-15) and the patron data platform (BP-10) are backed up to the separate backup account, but neither has ever been restored (gap 9). Their RTOs are targets, not demonstrated capabilities (P01 R-022; P07 CP-4).
 5. **The Club has one internet connection.** The Amphitheater and the Music Hall have two internet providers; the Club has one plus a cellular backup that has never carried the scanners and POS together (P01 R-020).
-6. **Urgent notices depend on two vendors.** Weather holds at the Amphitheater go out through the marketing platform and the ticketing platform. Neither vendor's contract states a notice delivery commitment (P09 vendor reviews).
+6. **Urgent notices depend on two vendors.** Weather holds at the Amphitheater go out through the marketing platform and the ticketing platform. Neither vendor's contract states a delivery commitment for these messages; the ticketing vendor renewal (P09 VEN-01) and the next marketing platform review will add one.
 
 ## 6. Resource requirements
 | Resource | Description | Supports |

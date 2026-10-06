@@ -31,7 +31,7 @@ The 2024 policies stated intent but had no supporting standards for configuratio
 | STD-08 | **Card data handling standard** | POL-04, POL-05 | Chief Financial Officer | Draft (gap 4) | 2026-10-30 | Card entry only on validated P2PE devices or provider forms; no card data in CRM, email, chat, files, or paper; quarterly discovery scans; POI device inventory reconciled quarterly and inspected before each event (frequency per targeted risk analysis); card handling training for payment staff | SI-12, MP-6, CM-8, PE-3, AT-3 |
 | STD-09 | Vulnerability, patch, and testing standard | POL-01 | Security Manager | Existing (2024); update due | 2026-10-30 | Quarterly authenticated internal scans of all in-scope components; quarterly ASV scans of all public addresses; critical patches within one month (14 days for internet-facing); annual internal, external, and segmentation penetration tests; quarterly wireless checks at venues | RA-5, SI-2, CA-8, SI-5 |
 
-**Summary:** 9 standards. Seven are new and in draft (STD-01, STD-02, STD-03, STD-04, STD-05, STD-07, STD-08). STD-06 and STD-09 exist from 2024 and need updates. Five standards (STD-02, STD-04, STD-06, STD-08, STD-09) must be issued before QSA fieldwork starts on 2026-11-02, because the ROC tests them.
+**Summary:** 9 standards. Seven are new and in draft (STD-01, STD-02, STD-03, STD-04, STD-05, STD-07, STD-08). STD-06 and STD-09 exist from 2024 and need updates. Six standards (STD-02, STD-03, STD-04, STD-06, STD-08, STD-09) must be issued before QSA fieldwork starts on 2026-11-02, because the ROC tests them.
 
 ## 4. Issue schedule
 | Quarter | Standards |

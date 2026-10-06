@@ -115,7 +115,7 @@ flowchart LR
   VLT --> DR
 ```
 
-**Target state (POAM-006 to POAM-009, due 2026-11-30 to 2027-01-31):** tenant tags are allowed on event pages only and blocked in every checkout step by the content security policy; the payment step loads only the 14 inventoried platform scripts; change-and-tamper detection alerts the SOC on any new or changed script on any tenant's payment page; script vendors are assessed and contracted; tenant tag changes are logged and alerted.
+**Target state (POAM-006 to POAM-009, due 2026-11-30 to 2026-12-31):** tenant tags are allowed on event pages only and blocked in every checkout step by the content security policy; the payment step loads only the 14 inventoried platform scripts; change-and-tamper detection alerts the SOC on any new or changed script on any tenant's payment page; script vendors are assessed and contracted; tenant tag changes are logged and alerted.
 
 ## 3. Common versus division-specific controls
 `cloud-control-map.csv` has 55 rows across 32 components. The `control_scope` column shows who owns each placement:
