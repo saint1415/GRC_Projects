@@ -22,7 +22,7 @@ POL-01,7.6,Sealed emergency access codes held by the owner's attorney,AC-2,PR.AA
 POL-01,7.7,Daily EPCS audit report review; monthly PMS and email sign-in review,AU-6,DE.AE-02,C-HPH-R01 (164.308(a)(1)(ii)(D); 164.308(a)(5)(ii)(C)); 21 CFR 1311.215(c),Yes
 POL-01,7.8,"Only the owner uses the CSOS key, kept under the owner's own account and never copied",SC-12,PR.DS-01,21 CFR 1311.30(a)-(d),No
 POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,C-HPH-R01 (164.308(a)(1)(ii)(A)),No
-POL-01,8.2,Restricted data only in approved systems with a BAA,AC-3; SA-9,PR.DS-01,C-HPH-R01 (164.308(b)(1)),No
+POL-01,8.2,Restricted data only in approved systems with a BAA,AC-3; SA-9,PR.DS-01,C-HPH-R01 (164.308(b)(1)),Yes
 POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,C-HPH-R01 (164.312(a)(2)(iv)),Yes
 POL-01,8.4,No PHI by ordinary text or email; reminders say only that a prescription is ready,SC-8,PR.DS-02,C-HPH-R01 (164.312(e)(1); 164.312(e)(2)(ii)),No
 POL-01,8.5,Delete downloaded reports; no patient list exports on devices,SC-28; MP-6,PR.DS-01,C-HPH-R01 (164.310(d)(1)),No
@@ -32,7 +32,7 @@ POL-01,8.8,Six-year retention of security documentation; controlled substance re
 POL-01,9.1,Pharmacy devices for pharmacy work only,PL-4,GV.PO-01,C-HPH-R01 (164.310(b)),No
 POL-01,9.3,Updates and antivirus on; standard desktop accounts,SI-2; SI-3; AC-6,PR.PS-02,C-HPH-R01 (164.308(a)(5)(ii)(B)),No
 POL-01,9.4,Pharmacy network separate from customer Wi-Fi and the camera recorder,SC-7,PR.IR-01,C-HPH-R01 (164.312(e)(1)); C-HPH-R08 (CPG: network segmentation),Yes
-POL-01,9.5,"No PHI in AI tools without assessment, BAA, and approval; no AI for compounding calculations",PL-4; SA-9,GV.PO-01,"C-HPH-R01 (164.308(b)(1)); N62-R07 (45 CFR 92.210, parent vertical ID)",No
+POL-01,9.5,"No PHI in AI tools without assessment, BAA, and approval; no AI for compounding calculations",PL-4; SA-9,GV.PO-01,"C-HPH-R01 (164.308(b)(1)); N62-R07 (45 CFR 92.210, parent vertical ID)",Yes
 POL-01,9.6,Annual security training for both pharmacists,AT-2,PR.AT-01,C-HPH-R01 (164.308(a)(5)(i)),No
 POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-HPH-R01 (164.308(a)(6)(i)),No
 POL-01,10.2,Same-day incident log with discovery time; relief pharmacist reports the same day,IR-5; IR-6,RS.MA-02,C-HPH-R01 (164.308(a)(6)(ii)); C-HPH-R02,Yes

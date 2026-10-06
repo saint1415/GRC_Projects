@@ -85,7 +85,7 @@ Dollar values are scaled to about $1.1 million in annual sales, about $3,600 per
 | 2 | Clean intake, verification, and pickup stations (SYS-03) | 4 h | Laptops if clean; MSP reimages desktops from its standard image |
 | 3 | PMS access (SYS-01) | 4 h | Vendor-hosted; paper downtime log, emergency refills, and transfers to the partner pharmacy until restored |
 | 4 | Cloud fax (SYS-06) | 8 h | Vendor web portal from any clean device |
-| 5 | Phones and email (SYS-04 VoIP, SYS-02) | 8 h | Main line forwarded to the store cell phone |
+| 5 | Phones and email (SYS-04 VoIP, SYS-02) | 8 h | Main line forwarded to the pharmacist-owner's cell phone |
 | 6 | Delivery phone and app (SYS-08) | 8 h | Printed route sheet and paper signature slips |
 | 7 | Packaging workstation (SYS-05) | 24 h | Hand-filled blister cards; equipment vendor rebuilds from the SYS-07 image |
 | 8 | Purchasing (wholesaler portal, CSOS on the owner laptop) | 24 h | Phone orders; paper DEA order forms for Schedule II |
