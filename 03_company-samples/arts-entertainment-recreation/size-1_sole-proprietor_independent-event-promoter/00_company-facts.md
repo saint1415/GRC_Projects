@@ -53,7 +53,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 - MFA on email (SYS-04), the processor portal (SYS-02, enforced by the processor), and accounting (SYS-06)
 - Built-in full-disk encryption, automatic updates, and built-in antivirus on the laptop; passcode and automatic updates on the phones
 - The ticketing vendor's platform backups, and version history in cloud file storage
-- The ticketing platform's bot protection (vendor default settings) and a posted limit of 6 tickets per order
+- The ticketing platform's bot protection (vendor default settings) and a limit of 6 tickets per order enforced by SYS-01
 - General liability insurance for events
 
 **Missing:**
@@ -111,3 +111,13 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Cyber insurance | No cyber policy. The general liability policy excludes data breach costs (read on 2026-07-30) | P01, P08 |
 | Recovery codes | The owner saved recovery codes for email, the processor portal, and accounting on 2026-07-31 and keeps them, with an emergency access sheet, in a sealed envelope held by the owner's attorney (POL-01 7.6) | P01, P05, P06 |
 | Router | The ISP router's administrator password was changed from the default on 2026-07-29 during testing. A separate guest network for crews and artists is planned | P01, P07 |
+| Credential handling | The owner sent the shared SYS-01 and website password to the marketing assistant by text message, and sent the door login (a short password set in 2024) by text to the door contractor's lead. Door contractor staff have changed several times since 2024 | P07 |
+| Connected apps | SYS-01 had two connected apps: the email marketing sync (in use) and a 2024 survey tool (unused, removed 2026-07-29) | P03 |
+| Router logging | The ISP router keeps no logs the owner can read | P07 |
+| Notice to fans | From 2026-08-31 the website and order confirmation emails say never to send card details by email, text, or social message | P02, P03, P06 |
+| Privacy notice and posted limit | The website privacy notice (a 2022 template) says patron information is never shared with third parties for marketing, although the social pixel sends event page visits and checkout starts to the social platform. Event pages say "limit 6 tickets per customer" while SYS-01 enforces 6 per order | P03, P10 |
+| Fee pages | Flyers print the face price in large type and "plus fees" in small type. The checkout itemizes the service fee before payment, and the refund page says the service fee is not refunded unless the show is cancelled | P03 |
+| Website builder | The website builder runs a web application firewall in front of all customer sites and patches its platform; plugins update automatically (vendor documentation) | P02, P03 |
+| Ticketing vendor SOC 2 details | Unqualified opinion; payment processor and hosting provider carved out; 1 exception (2 of 40 sampled vendor employee departures removed late; remediated); RTO 4 hours and near-zero RPO stated; MFA offered but not enforced by default; no fixed customer incident notice time; bridge letter requested 2026-08-11 | P09 |
+| AI follow-ups | Smart pricing moves to suggest-only mode on 2026-09-01. The chatbot conversation containing the complaint email was deleted on 2026-08-12 and the assistant was briefed | P10 |
+| Budget items (fictional) | Password manager about $40 a year; guest network router about $120; attorney review of one-page contractor terms about $300 | P01, P07 |

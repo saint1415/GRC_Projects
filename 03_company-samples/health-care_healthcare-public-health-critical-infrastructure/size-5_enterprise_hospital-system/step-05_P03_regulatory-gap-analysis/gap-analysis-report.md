@@ -16,7 +16,7 @@
 |---|---|---|
 | HIPAA Security Rule (C-HPH-R01) | **Yes** | Health care providers that transmit health information electronically in standard transactions are covered entities (45 CFR 160.103). The hospitals, freestanding EDs, and physician group are designated as one affiliated covered entity (164.105(b)). No size exemption; 164.306(b) affects how, not whether. The system is also a business associate for the SL-1 affiliate practices |
 | HIPAA Breach Notification Rule (C-HPH-R02) | **Yes** | Covered entity (164.404-164.408) and business associate (164.410) |
-| HIPAA Privacy Rule | **Yes** | Only safeguard, minimum necessary, and affiliated covered entity provisions are analyzed here |
+| HIPAA Privacy Rule and general provisions | **Yes** | Only the safeguard and minimum necessary provisions, and the affiliated covered entity designation (164.105(b)), are analyzed here |
 | SEC Item 1.05 and Item 106 | **Yes** | Publicly traded SEC registrant, not a smaller reporting company |
 | CMS emergency preparedness, 42 CFR 482.15 (C-HPH-R07) | **Yes** | Every hospital is Medicare-participating. The system elected a unified and integrated program under 482.15(f), so the (f) elements are analyzed too. Elements with no cyber or information dimension (subsistence, evacuation, sheltering, volunteers, 1135 waivers) stay with the Vice President, Emergency Management. 482.15(g) (transplant hospitals) does not apply: no hospital has a transplant program |
 | CMS medical record services, 42 CFR 482.24 | **Yes** | Hospital condition of participation; the record integrity, confidentiality, retention, and authentication elements depend on the ECIS |
@@ -28,7 +28,7 @@
 | FTC Health Breach Notification Rule (C-HPH-R05) | **No** | 16 CFR 318.1 excludes HIPAA covered entities and business associates acting as such |
 | State breach and data security laws | **Yes** | The law of each state where affected individuals reside; Florida (Fla. Stat. 501.171) is the worked example. The Florida Digital Bill of Rights does not apply: a "controller" under Fla. Stat. 501.702 must have more than $1 billion in global gross annual revenue **and** meet one of three tests (50% or more of revenue from online advertising, a consumer smart speaker and voice command service, or an app store with at least 250,000 applications). The system meets the revenue test but none of the three others |
 | FDA FD&C Act sec. 524B (C-HPH-R04) | **Not directly** | Duties fall on device manufacturers; the system uses SBOMs, MDS2 forms, and patch support terms in device procurement |
-| HPH CPGs (C-HPH-R08) and 405(d) HICP (C-HPH-R09) | **Voluntary** | Benchmarked in `cpg-benchmark.csv`. HICP's large-organization volume applies to a system of this size |
+| HPH CPGs (C-HPH-R08) and 405(d) HICP (C-HPH-R09) | **Voluntary** | Benchmarked in `cpg-benchmark.csv`. HICP is tailored by organization size; a system of this size uses its guidance for large organizations |
 | HITECH recognized security practices (C-HPH-R10) | **Applies as a mitigating factor** | HHS must consider recognized security practices in place for the previous 12 months (42 U.S.C. 17941). The CSF 2.0-aligned program and the CPG benchmark build that record |
 | HIPAA Security Rule NPRM (C-HPH-R03) | **Not in force** | Proposed rule only; tracked in `pending_rule_change` |
 | CIRCIA (C-HPH-R11) | **Not in force** | No final rule in the Federal Register as of 2026-10-06. If finalized as proposed, it would cover these hospitals (100 or more beds) |
@@ -53,7 +53,7 @@ HIPAA exclusions (Not applicable): 164.308(a)(4)(ii)(A), because the system perf
 | HIPAA Security Rule 164.314 | 4 | 0 | 0 | 6 | 10 |
 | HIPAA Security Rule 164.316 | 4 | 1 | 0 | 0 | 5 |
 | HIPAA Breach Notification Rule (C-HPH-R02) | 9 | 2 | 0 | 0 | 11 |
-| HIPAA Privacy Rule | 2 | 1 | 0 | 0 | 3 |
+| HIPAA Privacy Rule and general provisions | 2 | 1 | 0 | 0 | 3 |
 | SEC Form 8-K Item 1.05 | 1 | 2 | 0 | 0 | 3 |
 | SEC Regulation S-K Item 106 | 5 | 0 | 0 | 0 | 5 |
 | CMS emergency preparedness CoP for hospitals (C-HPH-R07) | 10 | 12 | 0 | 0 | 22 |

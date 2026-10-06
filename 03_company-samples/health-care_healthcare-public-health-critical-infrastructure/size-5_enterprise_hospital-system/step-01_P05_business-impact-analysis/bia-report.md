@@ -18,7 +18,7 @@ This enterprise-wide BIA identifies the business processes the hospital system d
 Cris Santos Company operates 8 acute-care hospitals with 1,970 licensed beds in Florida, Georgia, and Alabama, 3 freestanding emergency departments, 4 outpatient imaging centers, and 46 physician group clinics. It has 12,000 employees, about 102,000 admissions and 560,000 emergency visits a year, and about $4.8 billion in annual revenue. The technology estate is described in `../00_company-facts.md` section 3: a customer-managed enterprise EHR in two data centers (SYS-01, SYS-03), an identity platform (SYS-02), two public clouds (SYS-04), an SD-WAN (SYS-05), about 26,000 endpoints and 41,000 networked medical devices (SYS-06), building and clinical OT (SYS-07), enterprise imaging (SYS-08), ERP and payroll (SYS-09), about 1,500 vendors (SYS-10), and unified communications (SYS-12). H-08, acquired on 2025-10-01, still runs its own EHR (SYS-13) until 2027-03-01.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the materiality worksheet in P08 section 6. Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the materiality worksheet in P08 section 7. Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

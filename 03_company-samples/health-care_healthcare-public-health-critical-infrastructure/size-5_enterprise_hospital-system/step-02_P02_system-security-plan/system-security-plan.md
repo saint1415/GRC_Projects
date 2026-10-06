@@ -155,8 +155,8 @@ See `control-implementation.csv` (212 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 184 |
-| Partially implemented | 26 |
+| Implemented | 183 |
+| Partially implemented | 27 |
 | Planned | 2 |
 | **Total** | **212** |
 
@@ -166,7 +166,7 @@ See `control-implementation.csv` (212 controls).
 | Hybrid (shared between a provider and the ECIS team) | 21 |
 | System-specific | 61 |
 
-Partially implemented controls: AC-2, AC-2(3), AC-17, AT-3, AU-6, CM-3, CM-8, CP-2, CP-4, CP-10, IA-5, IA-8, IR-8, MA-4, PS-4, PS-7, RA-5, SA-9, SA-17, SA-22, SC-4, SC-7, SI-2, SI-4, SI-7, SR-6. Planned controls: SR-9, SR-10.
+Partially implemented controls: AC-2, AC-2(3), AC-17, AT-3, AU-6, CM-3, CM-6, CM-8, CP-2, CP-4, CP-10, IA-5, IA-8, IR-8, MA-4, PS-4, PS-7, RA-5, SA-9, SA-17, SA-22, SC-4, SC-7, SI-2, SI-4, SI-7, SR-6. Planned controls: SR-9, SR-10.
 
 ### 10.2 Control assessment status
 Internal Audit assessed 46 of these controls from 2026-06-22 to 2026-08-07 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`.
