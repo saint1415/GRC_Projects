@@ -1,2 +1,64 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,One group program; Finance supplement; plan security procedures,PM-1,GV.PO-01,16 CFR 314.3(a) (Finance); N55-R06 (45 CFR 164.316(a)),No
+POL-01,4.2,"Security Manager designated as group lead, Qualified Individual, and plan Security Official",PM-2,GV.RR-02,16 CFR 314.4(a)(1)-(2) (Finance); N55-R06 (45 CFR 164.308(a)(2)),No
+POL-01,4.3,Annual group risk assessment covering Finance and plan data,RA-3; PM-9,ID.RA-05,16 CFR 314.4(b) (Finance); N55-R06 (45 CFR 164.308(a)(1)(ii)(A)-(B)),Yes
+POL-01,4.4,Risk acceptance authority; Presidents cannot accept shared-platform risks,PM-9,GV.RM-02,CSF 2.0 group profile GV.RM-02,Yes
+POL-01,4.5,Quarterly audit committee report; annual Qualified Individual report,PM-9,GV.OV-01,16 CFR 314.4(i) (Finance),Yes
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,N55-R06 (45 CFR 164.316(b)(2)(iii)),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-02,CSF 2.0 group profile GV.PO-01,No
+POL-01,4.8,Sanctions,PS-8,GV.RR-04,N55-R06 (45 CFR 164.308(a)(1)(ii)(C)),No
+POL-01,4.9,"Supplier security review before purchase, including subsidiary purchases",SA-4; SA-9,GV.SC-05; GV.SC-06,16 CFR 314.4(f) (Finance); N55-R06 (45 CFR 164.308(b)(1)),Yes
+POL-01,4.10,Annual reassessment of critical suppliers,SR-6,GV.SC-07,16 CFR 314.4(f)(3) (Finance),Yes
+POL-01,4.11,Annual independent control assessment,CA-2; CA-5,ID.IM-01,"16 CFR 314.4(d)(1), (g) (Finance); N55-R06 (45 CFR 164.308(a)(8))",No
+POL-01,4.12,"Change triggers for new systems, AI features, and acquisitions",RA-3,GV.RM-06,16 CFR 314.4(g) (Finance),Yes
+POL-01,4.13,Acquisition due diligence and day-1 control set,SA-9; RA-3,GV.SC-06,CSF 2.0 group profile GV.SC-06,Yes
+POL-01,4.14,Holding company protects Finance and plan data by agreement,SA-9,GV.OC-05,16 CFR 314.4(a)(3) (Finance); N55-R06 (45 CFR 164.314(b)),Yes
+POL-01,4.15,Monthly cyber risk forum with subsidiary Presidents,PM-9,GV.RM-05,CSF 2.0 group profile GV.RM-05,Yes
+POL-01,4.16,Six-year retention of security records,SI-12,ID.AM-08,N55-R06 (45 CFR 164.316(b)(2)(i)),No
+POL-01,4.17,AI approval before use for Restricted data or decisions about people,PM-9,GV.RM-01,CSF 2.0 group profile GV.RM-01,Yes
+POL-02,4.1,Unique accounts; no shared accounts,IA-2; AC-2,PR.AA-01,16 CFR 314.4(c)(1)(i) (Finance); N55-R06 (45 CFR 164.312(a)(2)(i)),Yes
+POL-02,4.2,Group single sign-on for every system that supports it,AC-2; IA-2,PR.AA-01,CSF 2.0 group profile PR.AA-01,Yes
+POL-02,4.3,Least privilege; data-owner approval; plan PHI limited to named staff,AC-3; AC-6,PR.AA-05,16 CFR 314.4(c)(1)(ii) (Finance); N55-R06 (45 CFR 164.308(a)(4)),Yes
+POL-02,4.4,MFA everywhere; phishing-resistant keys for high-risk users,IA-2(1); IA-2(2); IA-2(8),PR.AA-03,16 CFR 314.4(c)(5) (Finance); N55-R06 (45 CFR 164.312(d)),Yes
+POL-02,4.5,Privileged access tiers; 2 standing global administrators; break-glass,AC-6(2); AC-6(5); AC-2,PR.AA-05,CSF 2.0 group profile PR.AA-05,Yes
+POL-02,4.6,Service account secrets vaulted and rotated,IA-5; AC-6,PR.AA-01,CSF 2.0 group profile GV.PO-01,Yes
+POL-02,4.7,Same-day termination,PS-4; AC-2,PR.AA-01,16 CFR 314.4(c)(1) (Finance); N55-R06 (45 CFR 164.308(a)(3)(ii)(C)),Yes
+POL-02,4.8,Transfers: old access removed within 5 business days,PS-5; AC-2,PR.AA-01,CSF 2.0 group profile GV.PO-01,Yes
+POL-02,4.9,Quarterly access reviews,AC-2; AC-6,PR.AA-05,N55-R06 (45 CFR 164.308(a)(4)(ii)(C)),Yes
+POL-02,4.10,Remote access only from managed devices,AC-17,PR.AA-05,CSF 2.0 group profile PR.AA-05,Yes
+POL-02,4.11,Vendor remote access only through the broker,MA-4; AC-17,DE.CM-06,CSF 2.0 group profile DE.CM-06,Yes
+POL-02,4.12,Password rules and MFA reset verification,IA-5,PR.AA-02,N55-R06 (45 CFR 164.308(a)(5)(ii)(D)),Yes
+POL-02,4.13,Lockout and screen lock,AC-7; AC-11,PR.AA-03,N55-R06 (45 CFR 164.312(a)(2)(iii)),No
+POL-02,4.14,Segregation of duties in ERP and treasury,AC-5,PR.AA-05,CSF 2.0 group profile PR.AA-05,No
+POL-03,4.1,Report suspected incidents immediately,IR-6,DE.AE-08,CSF 2.0 group profile DE.AE-08,Yes
+POL-03,4.2,Severity classification and escalation within 1 hour,IR-4,RS.MA-04,CSF 2.0 group profile RS.MA-04,Yes
+POL-03,4.3,Record discovery and determination dates,IR-5,RS.AN-06,CSF 2.0 group profile RS.AN-06,No
+POL-03,4.4,General Counsel told same day; counsel through the insurer,IR-4,RS.MA-01,CSF 2.0 group profile RS.MA-01,Yes
+POL-03,4.5,Decision log for severity 1 and 2,IR-6,RS.CO-02,16 CFR 314.4(h)(6) (Finance),Yes
+POL-03,4.6,Notices per the matrix; same-day notice to affected subsidiary,IR-6,RS.CO-02,16 CFR 314.4(j) (Finance),Yes
+POL-03,4.7,Evidence preservation,AU-11,RS.AN-07,CSF 2.0 group profile RS.AN-07,Yes
+POL-03,4.8,Extortion payment decision with OFAC check,IR-4,RS.MA-01,CSF 2.0 group profile GV.PO-01,Yes
+POL-03,4.9,Payment fraud reported to the bank first,IR-4,RS.MI-01,CSF 2.0 group profile RS.MI-01,Yes
+POL-03,4.10,Recovery in BIA order,CP-10,RC.RP-01,CSF 2.0 group profile RC.RP-01,Yes
+POL-03,4.11,Lessons learned within 14 days,IR-4,ID.IM-03,CSF 2.0 group profile ID.IM-03,Yes
+POL-03,4.12,Exercises twice a year with subsidiaries,IR-3,ID.IM-02,CSF 2.0 group profile ID.IM-02,No
+POL-03,4.13,Annual role training,IR-2,PR.AT-02,CSF 2.0 group profile PR.AT-02,No
+POL-04,4.1,Every data store has an owner and classification,RA-2; AC-3,ID.AM-05,CSF 2.0 group profile ID.AM-05,No
+POL-04,4.2,Data map of Restricted data,CM-12,ID.AM-07,16 CFR 314.4(c)(2) (Finance); N55-R06 (45 CFR 164.308(a)(1)(ii)(A)),No
+POL-04,4.3,Restricted data stays with its company; Restricted labels,AC-3; AC-21,PR.DS-10,16 CFR 314.4(c)(1)(ii) (Finance),No
+POL-04,4.4,Plan PHI only in approved locations; never for employment decisions,AC-3; SC-28,PR.AA-05,N55-R06 (45 CFR 164.504(f)(2)(iii)); N55-R06 (45 CFR 164.310(d)),Yes
+POL-04,4.5,Encryption of Restricted data,SC-8; SC-28,PR.DS-01; PR.DS-02,"16 CFR 314.4(c)(3) (Finance); N55-R06 (45 CFR 164.312(a)(2)(iv), (e)(1))",Yes
+POL-04,4.6,Restricted data only in approved AI tools,AC-21,PR.DS-10,CSF 2.0 group profile PR.DS-10,No
+POL-04,4.7,Retention and disposal schedule,SI-12,ID.AM-07,16 CFR 314.4(c)(6) (Finance); N55-R06 (45 CFR 164.316(b)(2)(i)); Fla. Stat. 501.171(8),No
+POL-04,4.8,Media sanitization with certificates,MP-6,ID.AM-08,N55-R06 (45 CFR 164.310(d)(2)(i)-(ii)),Yes
+POL-04,4.9,Deal information only in the data room,AC-21,PR.DS-01,CSF 2.0 group profile PR.DS-01,No
+POL-05,4.1,Business use and annual acknowledgment,PL-4,GV.RR-04,N55-R06 (45 CFR 164.310(b)),No
+POL-05,4.2,"Annual training, including non-email staff and role modules",AT-2; AT-2(3),PR.AT-01; PR.AT-02,16 CFR 314.4(e)(1) (Finance); N55-R06 (45 CFR 164.308(a)(5)),Yes
+POL-05,4.3,Restricted data only on managed devices,AC-19; AC-20,PR.AA-05,CSF 2.0 group profile GV.PO-01,No
+POL-05,4.4,Callback verification of payment instruction changes,AT-2(3),PR.AT-02,CSF 2.0 group profile PR.AT-02,No
+POL-05,4.5,No unapproved software or devices,CM-11,PR.PS-05,CSF 2.0 group profile PR.PS-05,No
+POL-05,4.6,No forwarding to personal accounts,AC-20,PR.DS-01,CSF 2.0 group profile GV.PO-01,No
+POL-05,4.7,Report suspicious messages,AT-2,PR.AT-01,CSF 2.0 group profile GV.PO-01,Yes
+POL-05,4.8,Approved AI tools only; check outputs,PL-4,PR.AT-01,CSF 2.0 group profile PR.AT-01,No
+POL-05,4.9,No AI-based decisions about people unless approved as High tier,PL-4,GV.PO-01,CSF 2.0 group profile GV.PO-01,No
+POL-05,4.10,Recording only with all-party notice,PL-4,GV.PO-01,CSF 2.0 group profile GV.PO-01,No

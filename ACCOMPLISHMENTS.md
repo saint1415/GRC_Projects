@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**173 of 216** sample companies are finished (1730 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**174 of 216** sample companies are finished (1740 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -187,6 +187,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Management of Companies and Enterprises | Sole Proprietorship | Owner of several small businesses | [README](03_company-samples/holding-companies/size-1_sole-proprietor_owner-of-several-small-businesses/README.md) |
 | Management of Companies and Enterprises | Micro | Family holding office | [README](03_company-samples/holding-companies/size-2_micro_family-holding-office/README.md) |
 | Management of Companies and Enterprises | Small | Holding company | [README](03_company-samples/holding-companies/size-3_small_holding-company/README.md) |
+| Management of Companies and Enterprises | Mid-Market | Holding company | [README](03_company-samples/holding-companies/size-4_mid-market_holding-company/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Small | Staffing firm | [README](03_company-samples/admin-support-services/size-3_small_staffing-firm/README.md) |
 | Educational Services | Sole Proprietorship | Tutoring service | [README](03_company-samples/education/size-1_sole-proprietor_tutoring-service/README.md) |
 | Educational Services | Micro | Tutoring company | [README](03_company-samples/education/size-2_micro_tutoring-company/README.md) |
