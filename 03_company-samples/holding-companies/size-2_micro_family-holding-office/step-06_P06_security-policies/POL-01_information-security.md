@@ -1,38 +1,26 @@
-# Information Security Policy
+# Information Security Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-01 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PM-1, PM-2, PL-1, PL-2 |
-| CSF 2.0 | GV.PO-01, GV.PO-02, GV.RR-01, GV.RR-02, GV.OV-01 |
+| Status | Merged into POL-02 Part A |
+| Owner | Family Office Director (Qualified Individual) |
+| Approved by | Principal, 2026-09-18 |
 
-## 1. Purpose
-Establish the Cris Santos Company information security program, assign accountability, and set the authority for all security policies.
+At the Micro tier the office keeps three core policies: access control (POL-02), incident response (POL-03), and data classification (POL-04). A separate Information Security Policy would add little for a 7-person office, so its essential rules live in **POL-02 Part A. Program governance**:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Regulation |
+|---|---|---|
+| Qualified Individual designated in writing | POL-02 A.1 | 16 CFR 314.4(a) |
+| Annual written risk assessment | POL-02 A.2 | 16 CFR 314.4(b), (b)(2) |
+| Who may accept risk; appetite statements | POL-02 A.3 | CSF 2.0 GV.RM-02 |
+| Sanctions | POL-02 A.4 | CSF 2.0 GV.RR-04 |
+| Service provider selection, contracts, and review | POL-02 A.5 | 16 CFR 314.4(f) |
+| Annual independent evaluation and program adjustment | POL-02 A.6 | 16 CFR 314.4(d)(1), (g) |
+| Annual written report to the Board of Managers (voluntary) | POL-02 A.7 | 16 CFR 314.4(i) (excepted by 314.6) |
+| Policy review and availability to staff | POL-02 A.8 | CSF 2.0 GV.PO-02 |
+| Exceptions process | POL-02 A.9 | 16 CFR 314.4(c)(3), (c)(5) |
+| Family clients only | POL-02 A.10 | 17 CFR 275.202(a)(11)(G)-1(b)(1) |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an information security program that protects the confidentiality, integrity, and availability of its information and systems. (PM-1)
-4.2 A named individual must be accountable for the security program. (PM-2; GV.RR-02)
-4.3 Leadership must approve this policy and review security risk at least annually. (GV.OV-01)
-4.4 Security policies must be reviewed at least annually and updated after significant changes. (PL-1; GV.PO-02)
-4.5 Legal, regulatory, and contractual security requirements must be identified and tracked. (GV.OC-03)
-4.6 Exceptions to any security policy must be documented, risk-assessed, approved by the policy owner, and time-limited. (PL-1; GV.RM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Together, POL-02, POL-03, POL-04, and the SSP (P02) form the written information security program required by 16 CFR 314.3(a). Traceability for these rules is in `policy-control-map.csv` under POL-02. Revisit this choice if the office grows past the Micro tier (10 or more employees) or takes on shared services for the subsidiaries.

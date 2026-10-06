@@ -103,4 +103,22 @@ These facts were added because the deliverables needed them. They do not change 
 
 | Topic | Added fact | Used in |
 |---|---|---|
-| Placeholder | Updated at the end of the build | All |
+| Payment thresholds | Banks: dual approval on every wire and ACH batch. Callback required for every new payee, bank-detail change, and wire over $10,000 (POL-02 B.10). Bill pay platform dual approval for payee changes and payments over $5,000, turned on 2026-09-04 after P07 found it off | P01, P06, P07, P08 |
+| Business calendar | Subsidiary monthly packages are due on business day 10; the subsidiaries' lender requires a quarterly covenant certificate 45 days after quarter end; private fund capital calls give about 10 business days' notice; household and office payroll is biweekly | P05 |
+| Records held by others | Outside counsel holds the originals of estate plans and health care directives. The office safe holds bank tokens and original documents. Paper goes to a locked shredding bin emptied monthly by a shredding service | P02, P05, P09 |
+| Office security | Keyed suite with an after-hours alarm; keys held by the Office Manager, Family Office Director, and Controller; locked file room; safe. Staff Wi-Fi password unchanged since 2023 | P02 |
+| SYS-11 details | Daily snapshots kept 14 days in the same cloud account; remote desktop limited to the office IP address; local administrator signs in with a password only (P07 test 2026-09-01); port to be closed by 2026-10-15 | P02, P04, P05, P07 |
+| MSP contract | Covers help desk, device management, patching, antivirus, firewall and Wi-Fi, and SYS-11 administration, with a 4-business-hour response time, no recovery time commitment, and no security terms. Evidence requested 2026-08-24; technician and subcontractor lists not received by fieldwork end | P05, P07 |
+| Cyber insurance | Policy with a breach hotline and panel vendors (breach counsel, forensics); prompt notice through the hotline before hiring outside firms. Social engineering fraud coverage requires documented verification of payment changes | P01, P08 |
+| Departures and transfers | One employee left in 2025 (replaced): SYS-02 disabled 2 days later, bank token returned 3 weeks later, exit interview held, laptop and keys collected. In 2025 the Executive Assistant moved off bill pay duties and SYS-03 access was removed the same day | P07 |
+| Guests | 9 subsidiary guest accounts against 8 current subsidiary contacts. The former Marine Supply controller's guest account was removed 2026-08-14; the sign-in log showed no use after February 2026 | P01, P07 |
+| Fixes during the work | Staff profile describing advisory services corrected 2026-08-13; separate vault account for the Principal's spouse 2026-08-20; printer firmware updated and conference PC set to a kiosk account 2026-08-21; 37 non-expiring vault share links (oldest from 2023) disabled 2026-09-02 | P01, P03, P07 |
+| AI pilot | Paused by the Family Office Director on 2026-07-23, the day after the trust memo surfaced. In July one AI-drafted letter went to a family member without review. Test of 24 prompts run 2026-09-04. On restart, 3 users only (the Executive Assistant's license is not renewed) | P02, P10 |
+| Draft runbook | The P08 runbook existed as draft version 0.9 dated 2026-08-28 when P07 fieldwork began; approved 2026-09-18 | P07, P08 |
+| Assessor | The P07 assessor is an independent security consultant on a fixed fee, not involved in the risk or gap analysis and operating no control | P07 |
+| Custodian questionnaire | One custodian sent a due diligence questionnaire in August 2026 about the office's delegated account access; response due 2026-10-30 | P09 |
+| Investment platform report | SOC 2 Type 2, Security, Availability, and Confidentiality, 12 months ending 2026-06-30, unqualified, one exception; hosting provider carved out; reviewed 2026-09-10 | P09 |
+| Governance documents | Family governance charter (2024) states the office's purpose. The Qualified Individual is a finance professional with no security training. The Board of Managers received the first written security report on 2026-09-18 | P03, P06, P09 |
+| Budget | 2026 Q4 security budget approved 2026-09-18: about $7,900 one-time and $6,700 a year | P01 |
+| People whose data the office holds | Fewer than 100 individuals in all: 11 family members, 12 current office and household employees, former employees, and contacts in family records | P08 |
+| Storm plan | One-page storm checklist: laptops and tokens go home, contact card, Principal as backup bank approver | P01 |
