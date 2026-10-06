@@ -1,62 +1,62 @@
 criterion_id,category,criteria_group,topic_label,in_scope,control_description,control_owner,evidence,related_sp800_53,readiness_status,gap,remediation,target_date
-CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.2,Security,Control environment,Board independence and oversight,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.4,Security,Control environment,Commitment to competence,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC1.5,Security,Control environment,Accountability for internal control,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.1,Security,Information and communication,Quality information to support controls,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC2.3,Security,Information and communication,Communication with external parties,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.3,Security,Risk assessment,Fraud risk considered,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.2,Security,Control activities,General controls over technology,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.2,Security,Logical and physical access,User registration and authorization,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.3,Security,System operations,Evaluation of security events,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.4,Security,System operations,Incident response,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC7.5,Security,System operations,Recovery from incidents,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.1,Availability,Availability,Capacity management,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-A1.3,Availability,Availability,Recovery plan testing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-C1.2,Confidentiality,Confidentiality,Disposal of confidential information,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.2,Processing Integrity,Processing integrity,System inputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.3,Processing Integrity,Processing integrity,System processing,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.4,Processing Integrity,Processing integrity,System outputs,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-PI1.5,Processing Integrity,Processing integrity,Stored data,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P1.1,Privacy,Notice,Privacy notice,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P2.1,Privacy,Choice and consent,Choice and consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.1,Privacy,Collection,Collection consistent with objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P3.2,Privacy,Collection,Explicit consent where required,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.2,Privacy,"Use, retention, disposal",Retention,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P4.3,Privacy,"Use, retention, disposal",Disposal,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.1,Privacy,Access,Data subject access,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P5.2,Privacy,Access,Correction,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.4,Privacy,Disclosure and notification,Third-party commitments,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
-P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",[Yes|No],[FILL],[FILL],[FILL],[optional],[Ready|Partially ready|Not ready|N/A],,,
+CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,Workforce use rules in POL-02 Part C; sanctions rule in A.5; confidentiality agreement at hire,Owner CPA,POL-02 (approved 2026-08-31); signed agreements,PL-4; PS-8; PS-6,Partially ready,No signed policy acknowledgments; agreement does not describe IRC 7216 and 6713,Collect acknowledgments from all staff; update the agreement (POAM-015),2026-09-30
+CC1.2,Security,Control environment,Board independence and oversight,Yes,Owner CPA reviews the program monthly with the Qualified Individual (POL-02 A.10),Owner CPA,Meeting notes (from 2026-09),CA-5; PM-9,Partially ready,Oversight just started; no record yet,Keep monthly notes,2026-12-31
+CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,Office Manager designated Qualified Individual in writing; roles in POL-02 section 3; MSP duties in contract,Owner CPA,Designation memo 2026-07-06; POL-02; MSP contract,PM-2,Ready,,,
+CC1.4,Security,Control environment,Commitment to competence,Yes,CPE for the CPAs and the enrolled agent; security training planned before each season,Office Manager,2024 video sign-in sheet,AT-2,Not ready,Security training was a single 2024 video; seasonal staff untrained,Annual training and phishing simulations (POAM-006),2027-01-15
+CC1.5,Security,Control environment,Accountability for internal control,Yes,Sanctions rule; control owners named in the SSP and POA&M,Owner CPA,POL-02 A.5; P02; P07 POA&M,PS-8,Partially ready,No accountability record yet,Record POA&M progress and any sanctions,2026-12-31
+CC2.1,Security,Information and communication,Quality information to support controls,Yes,Asset and data inventory planned (POL-04 4.4),Office Manager,MSP device list,CM-8,Not ready,"No inventory of SaaS services, the MFP, phones, or data locations",One-page inventory,2026-10-31
+CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,Policies published in the shared policy folder; reporting card at each desk,Office Manager,"POL-02, POL-03, POL-04",PL-4; IR-6,Partially ready,Staff not yet trained on the new policies or the reporting rule,"Cards posted; training (POAM-006, POAM-007)",2026-12-15
+CC2.3,Security,Information and communication,Communication with external parties,Yes,Engagement letters; portal notices to clients; questionnaire response with a named security contact,Owner CPA,Engagement letter template; this summary,SA-9; IR-6,Partially ready,No security contact or incident commitment given to clients before now,Name the Office Manager as security contact in the questionnaire response and engagement letters,2026-09-30
+CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,Business objectives and downtime limits set in the BIA; risk tolerance in POL-02 A.4,Owner CPA,P05; POL-02,RA-2; PM-9,Ready,,,
+CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,2026 risk assessment with SP 800-30 Tables G-5 and I-2,Office Manager,P01 risk register and report,RA-3,Ready,,,
+CC3.3,Security,Risk assessment,Fraud risk considered,Yes,"Refund diversion, payroll diversion, and EFIN misuse rated in P01 (R-002, R-003, R-004)",Office Manager,P01,RA-3,Partially ready,Insider misuse of client data by staff not yet assessed,Add insider fraud scenarios in the July 2027 assessment,2027-07-31
+CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,Pre-adoption checklist for new tools and features (POL-04 4.5),Office Manager,POL-04,SA-4; CM-3,Not ready,The AI assistant was adopted in March 2026 with no assessment,Run the checklist for every new tool; P10 conditions for AI-001,2026-10-31
+CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,Independent control assessment (P07),Owner CPA,P07 plan and results,CA-2,Ready,,,
+CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,Weaknesses tracked in the POA&M and reviewed monthly,Office Manager,P07 POA&M,CA-5,Ready,,,
+CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,Controls chosen against P01 risks,Office Manager,P01 treatment plans; P02,PL-2,Partially ready,Many treatments not yet in place,Execute Q4 treatments,2027-01-15
+CC5.2,Security,Control activities,General controls over technology,Yes,"MSP technology controls (patching, antivirus, firewall)",MSP,MSP monthly report,SI-2; SI-3,Partially ready,No EDR; MSP changes not approved,EDR; change log (P01 R-005; G-018),2026-12-31
+CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,"Controls set out in POL-02, POL-03, POL-04",Office Manager,Approved policies,PL-1,Partially ready,Policies are new; checklists not yet in use,"Termination checklist, change log, review checklist",2026-10-31
+CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,MFA on the tax software and suite; unique accounts,Office Manager,MFA settings; user lists,IA-2; IA-2(2),Partially ready,Push MFA without number matching; MFP mailbox on legacy authentication,POAM-002,2026-09-30
+CC6.2,Security,Logical and physical access,User registration and authorization,Yes,Accounts requested by the Office Manager,Office Manager,User lists,AC-2,Not ready,No written approval; portal account of the seasonal assistant left active,Onboarding and termination checklist (POAM-001),2026-10-31
+CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,Tax software roles,Office Manager,Role lists,AC-2; AC-6; PS-4,Not ready,Everyday global administrator accounts; all client folders open to all staff; late removal,"POAM-001, POAM-004, POAM-010",2026-10-31
+CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,Keyed suite with alarm; locked closet and cabinets; vendor data centers under SOC 2,Office Manager,Walkthrough 2026-07-09; vendor SOC 2 report,PE-3,Ready,,,
+CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,Shred bin with certificates,Office Manager,Shredding certificates,MP-6; SI-12,Not ready,No electronic disposal; 2024 desktops not recorded; MFP drive not planned,Retention schedule; MFP wipe (POAM-014),2027-03-31
+CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,Firewall blocks inbound traffic; guest Wi-Fi separated,MSP,Firewall rule export,SC-7; IA-2(1),Partially ready,MSP-held logins without MFA,POAM-003,2026-09-30
+CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,Portal and TLS for transfers,Client Services Coordinator,Portal settings; email sample,SC-8; AC-19,Not ready,Returns emailed as plain attachments; firm email on unmanaged phones,POAM-013; phone app protection,2026-12-31
+CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,Antivirus on all computers,MSP,Antivirus console export,SI-3,Partially ready,No behavior-based detection; alerts in business hours only,MSP-managed EDR (P01 R-005),2026-12-31
+CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,Quarterly external scan planned,MSP,None,RA-5; CM-3,Not ready,No vulnerability scanning; changes not tracked,Quarterly scan; change log,2026-12-31
+CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,Suite alerts planned,Office Manager,None,SI-4; AU-6,Not ready,No monitoring or alerts,POAM-005,2026-10-31
+CC7.3,Security,System operations,Evaluation of security events,Yes,Monthly review planned,Office Manager,None,AU-6; IR-5,Not ready,No evaluation of events; past events not recorded,Monthly review; incident log,2026-10-31
+CC7.4,Security,System operations,Incident response,Yes,BEC runbook and notification matrix (P08),Office Manager,P08,IR-4; IR-8,Partially ready,Not tested,Tabletop before the season (POAM-007),2026-12-15
+CC7.5,Security,System operations,Recovery from incidents,Yes,Daily backup; restore steps in P08,MSP,SYS-08 job report,CP-9; CP-4,Not ready,No full restore test,POAM-009,2026-12-31
+CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,Change approval rule in POL-02 B.10,Office Manager,POL-02,CM-3,Not ready,MSP changes without approval or record,Change log in use,2026-10-31
+CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,BIA; cyber insurance; extensions as the deadline fallback,Owner CPA,P05; insurance policy,CP-2,Partially ready,No contingency plan; single internet line,Contingency plan; failover router,2026-12-31
+CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,Tax software vendor SOC 2 reviewed (Part B),Office Manager,vendor-soc2-review.csv,SA-9,Partially ready,No vendor inventory; MSP contract without security terms; portal and payroll vendors not assessed,POAM-012,2026-12-31
+A1.1,Availability,Availability,Capacity management,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+A1.3,Availability,Availability,Recovery plan testing,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,Yes,Restricted data defined in POL-04; IRC 7216 disclosure rules (POL-04 4.6); consent before lender releases,Owner CPA,POL-04; 12 of 12 consents signed first,RA-2; AC-3; PT-4,Partially ready,All staff can open all client folders; AI uploads without a 7216 basis; MSP without the written notice,POAM-004; P10 conditions; POAM-015,2026-10-31
+C1.2,Confidentiality,Confidentiality,Disposal of confidential information,Yes,Shred bin for paper; disposal rules in POL-04 4.9 and 4.10,Owner CPA,Shredding certificates; POL-04,SI-12; MP-6,Not ready,Electronic client records kept since 2016; no disposal schedule,Retention schedule and first purge,2027-06-30
+PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+PI1.2,Processing Integrity,Processing integrity,System inputs,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+PI1.3,Processing Integrity,Processing integrity,System processing,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+PI1.4,Processing Integrity,Processing integrity,System outputs,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+PI1.5,Processing Integrity,Processing integrity,Stored data,No,Not in scope: the questionnaire did not ask about it,,,,N/A,,,
+P1.1,Privacy,Notice,Privacy notice,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P2.1,Privacy,Choice and consent,Choice and consent,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P3.1,Privacy,Collection,Collection consistent with objectives,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P3.2,Privacy,Collection,Explicit consent where required,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P4.2,Privacy,"Use, retention, disposal",Retention,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P4.3,Privacy,"Use, retention, disposal",Disposal,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P5.1,Privacy,Access,Data subject access,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P5.2,Privacy,Access,Correction,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.4,Privacy,Disclosure and notification,Third-party commitments,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
+P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",No,Not in scope: the questionnaire did not ask about it; privacy duties are covered by IRC 7216 and Florida law (P03),,,,N/A,,,
