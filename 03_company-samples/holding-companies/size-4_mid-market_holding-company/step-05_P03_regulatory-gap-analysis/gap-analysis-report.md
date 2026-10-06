@@ -142,17 +142,17 @@ Of the 162 rows that are Partially met or Not met, 5 are rated High risk, 93 Mod
 | Gap | Reference | Risk level | Action | Owner | Target |
 |---|---|---|---|---|---|
 | No due diligence before suppliers or acquisitions; Home Services North outside controls | G-027 GV.SC-06 | High | M&A cyber checklist; day-1 control set; purchasing gate; North integration | VP of Corporate Development | 2026-12-31 |
-| Phishable MFA for high-risk users; no MFA for directory administration | G-055 PR.AA-03; G-123 314.4(c)(5) | High | FIDO2 keys for about 70 users; MFA for directory administration through the broker | Security Manager | 2027-03-31 |
+| Phishable MFA for high-risk users; no MFA for directory administration | G-055 PR.AA-03; G-120 314.4(c)(5) | High | FIDO2 keys for about 70 users; MFA for directory administration through the broker | Security Manager | 2027-03-31 |
 | Over-privilege across the group (14 Domain Admins members, 6 global administrators, HR site) | G-057 PR.AA-05 | High | Directory tiering; 2 standing global administrators; quarterly reviews | Security Manager | 2027-03-31 |
 | On-premises backups exposed and untested | G-064 PR.DS-11 | High | Off-site immutable backups for HQ and plant; forest recovery test | VP of Information Technology | 2027-01-31 |
 | Excess access to Finance customer information (export rights, site sharing) | G-116 314.4(c)(1)(ii) | High | Export rights to 4 roles; Restricted labels | Finance President | 2026-12-31 |
 | Plan documents lack the 164.314(b) security terms | G-197 to G-201 | Moderate | Amend the plan documents; Benefits Committee approval | General Counsel | 2026-12-31 |
-| Plan PHI reachable by 11 HR staff; no activity review | G-149 164.308(a)(3); G-145 164.308(a)(1)(ii)(D); G-207 164.504(f)(2)(iii) | Moderate | Restricted benefits site; monthly access review | VP of Human Resources | 2026-12-31 |
+| Plan PHI reachable by 11 HR staff; no activity review | G-144 164.308(a)(3); G-142 164.308(a)(1)(ii)(D); G-207 164.504(f)(2)(iii) | Moderate | Restricted benefits site; monthly access review | VP of Human Resources | 2026-12-31 |
 | Benefits consultant receives plan PHI without a BAA | G-166 164.308(b)(1) | Moderate | BAA or de-identified reports | General Counsel | 2026-11-30 |
-| No disposal of Finance customer information | G-122 314.4(c)(6)(i); G-214 501.171(8) | Moderate | Retention schedule and purge | Finance President | 2026-12-31 |
+| No disposal of Finance customer information | G-121 314.4(c)(6)(i); G-214 501.171(8) | Moderate | Retention schedule and purge | Finance President | 2026-12-31 |
 | No lines of communication with subsidiaries | G-010 GV.RM-05; G-014 GV.RR-02 | Moderate | Monthly cyber risk forum; written duties for Presidents | CFO | 2026-11-30 |
-| No data map for regulated data | G-037 ID.AM-07; G-118 314.4(c)(2) | Moderate | Data map | GRC Analyst | 2026-12-31 |
-| Customer information activity not monitored | G-125 314.4(c)(8); G-089 DE.CM-03 | Moderate | Servicing and warehouse logs to the SIEM; export alerts | Security Manager | 2027-03-31 |
+| No data map for regulated data | G-037 ID.AM-07; G-117 314.4(c)(2) | Moderate | Data map | GRC Analyst | 2026-12-31 |
+| Customer information activity not monitored | G-124 314.4(c)(8); G-077 DE.CM-03 | Moderate | Servicing and warehouse logs to the SIEM; export alerts | Security Manager | 2027-03-31 |
 
 The full list, with evidence, is in `gap-analysis.csv`. High and Moderate gaps are carried into the risk register (P01) and the POA&M (P07).
 
