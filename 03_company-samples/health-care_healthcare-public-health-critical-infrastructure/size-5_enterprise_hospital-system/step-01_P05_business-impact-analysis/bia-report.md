@@ -129,6 +129,6 @@ Restore order for a system-wide event. Each item restores in a clean environment
 | Cyber restore 41 h against a 24 h target; isolated recovery environment not finished | P01 R-004; P02 CP-10; POAM-003 |
 | IT-outage diversion criteria only at H-01; no multi-hospital downtime exercise | P01 R-009; P03 (42 CFR 482.15(a)(1)-(2)); POAM-018; P08 section 4 |
 | Clearinghouse concentration and untested fallback | P01 R-005; P03 164.308(a)(7)(ii)(B); POAM-019 |
-| H-08 legacy EHR RTO 24 h against 8 h | P01 R-061; POAM-006 |
+| H-08 legacy EHR RTO 24 h against 8 h | P01 R-061 (closed by the 2027-03-01 conversion); interim vendor recovery commitment |
 | Medical devices on unsupported operating systems; vendor remote tools outside PAM | P01 R-006, R-011; POAM-009; POAM-011 |
 | Communications fallback not tested at several hospitals at once | P01 R-018; P08 section 1 |

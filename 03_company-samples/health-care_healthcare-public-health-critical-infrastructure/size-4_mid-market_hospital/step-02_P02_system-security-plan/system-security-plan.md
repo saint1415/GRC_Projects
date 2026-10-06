@@ -166,24 +166,24 @@ The diagram is in P04 `cloud-architecture.md`.
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
 **Baseline and tailoring.** HECS uses the NIST SP 800-53B **Moderate** baseline (287 controls and enhancements), tailored as follows:
-- **Documented here: 132 controls** in `control-implementation.csv`. They cover every SP 800-53 control mapped to a HIPAA Security Rule standard or implementation specification in the Health Care crosswalk (an author mapping), plus the Moderate controls that address the risks in P01 (segmentation, privileged access, vendor access, monitoring, recovery, unsupported devices) and the controls that support 42 CFR 482.15 (CP-2, CP-2(1), CP-2(3), CP-3, CP-4, CP-8, IR-3, PE-11).
-- **Selected by tailoring (added):** PM-1, PM-2, and PM-9. They are not in the Moderate baseline but are needed for HIPAA 164.308(a)(1)-(2).
+- **Documented here: 133 controls** in `control-implementation.csv`. They cover every SP 800-53 control mapped to a HIPAA Security Rule standard or implementation specification in the Health Care crosswalk (an author mapping), plus the Moderate controls that address the risks in P01 (segmentation, privileged access, vendor access, monitoring, recovery, unsupported devices) and the controls that support 42 CFR 482.15 (CP-2, CP-2(1), CP-2(3), CP-3, CP-4, CP-8, IR-3, PE-11).
+- **Selected by tailoring (added):** PM-1, PM-2, and PM-9, which are not in the Moderate baseline but are needed for HIPAA 164.308(a)(1)-(2), and SA-3(2), added because production PHI sits in the interface engine test environment (gap 11).
 - **Integrity tailoring:** CM-3 and CM-4 statements cover EHR build changes and vendor feature activations; SI-7 covers the drug library and interface mappings; SI-10 covers interface validation.
 - **Inherited without separate statements:** the remaining Moderate-baseline physical and environmental controls for cloud and SaaS data centers (for example PE-9, PE-10, PE-12, PE-13, PE-15) and platform-level SA and SC controls. They are inherited from the EHR vendor, the identity vendor, the cloud provider, and the MSSP, and are evidenced by their SOC 2 Type 2 reports, which are reviewed each year (P09 `vendor-soc2-review.csv`). The PACS vendor has no SOC 2 report, so the PACS application controls are rated as hybrid and assessed directly.
 - **Deferred:** the other Moderate controls with no HIPAA mapping and no Moderate-or-higher risk in P01 (for example SA-11 developer testing and SA-15 development process, because the hospital does not develop software). They are recorded as tailoring decisions and reviewed each year.
 
-**Status of the 132 documented controls:**
+**Status of the 133 documented controls:**
 | Status | Count |
 |---|---|
 | Implemented | 36 |
-| Partially implemented | 96 |
+| Partially implemented | 97 |
 | Planned | 0 |
 | Not applicable | 0 |
 
-**Inheritance of the 132 documented controls:**
+**Inheritance of the 133 documented controls:**
 | Inheritance | Count | Main providers |
 |---|---|---|
-| System-specific | 87 | Hospital |
+| System-specific | 88 | Hospital |
 | Hybrid | 38 | EHR vendor, identity vendor, cloud provider, MSSP, medical device manufacturers, vendor access platform provider, email security vendor |
 | Common/Inherited | 7 | Identity vendor (AC-7, IA-2(8)), EHR vendor (AC-12), cloud provider (CP-6, SC-12), carriers and cloud provider (SC-5), MSSP and insurer panel (IR-7) |
 

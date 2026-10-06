@@ -9,7 +9,7 @@
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**Incident type:** Ransomware forcing EHR downtime and ambulance diversion
+**Incident type:** Ransomware Forcing EHR Downtime and Ambulance Diversion (Cross-Division)
 
 **Pre-filled notification obligations** (also written to `notification-matrix.csv` when first created):
 
