@@ -115,7 +115,7 @@ The diagrams are in P04 `cloud-architecture.md` (the PPP subgraph).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv` (170 controls) and `common-control-catalog.csv` (130 group common and hybrid controls).
+See `control-implementation.csv` (170 controls) and `common-control-catalog.csv` (130 group common and hybrid controls). The `csf2_subcategories` column comes from the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/` (an enhancement takes its base control's mapping); for the 19 controls the crosswalk does not list (for example AU-4, MA-4, PS-3), it is an author mapping. The `regulatory_driver` column cites PCI DSS v4.0.1 requirement numbers and 16 CFR 314.4 paragraphs as author mappings.
 
 | Status | Controls |
 |---|---|

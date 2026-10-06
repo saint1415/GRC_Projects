@@ -62,9 +62,9 @@ The template's safety column is N/A for most processes. Property maintenance dis
 - **Cash timing** drives BP-12. Rent concentrates in the first 5 days of the month, so the same outage costs far more on the 2nd than on the 20th.
 
 ## 5. Key findings
-1. **The title production vendor's recovery objective does not meet the BIA.** Its SOC 2 system description states RTO 24 hours and RPO 1 hour. BP-01 needs RTO 4 hours and RPO 15 minutes. The printed disbursement worksheet makes the MTD achievable for funded files, but new closings cannot be balanced (P01 R-012; P09 vendor review VEN-02).
+1. **The title production vendor's recovery objective does not meet the BIA.** Its SOC 2 system description states RTO 24 hours and RPO 1 hour. BP-01 needs RTO 4 hours and RPO 15 minutes. The printed disbursement worksheet makes the MTD achievable for funded files, but new closings cannot be balanced (P01 R-010; P09 vendor review VEN-02).
 2. **A portal outage is a fraud event waiting to happen.** If the Closing Communications Portal is down, parties fall back to email. The phone-only fallback in BP-02 is written here for the first time and goes into the P08 runbook.
-3. **Email and transaction data have no independent backup** (gap 5). The 1-hour RPO for BP-04 rests entirely on the transaction platform vendor and the productivity suite's retention (P01 R-014).
+3. **Email and transaction data have no independent backup** (gap 5). The 1-hour RPO for BP-04 rests entirely on the transaction platform vendor and the productivity suite's retention (P01 R-013).
 4. **Payee changes outside Title and Closing are unprotected** (gap 2). Owner payout accounts (BP-12), agent payout accounts (BP-11), and sales escrow refunds (BP-05) can be redirected without an out-of-band check. The 2025-11 loss of $186,000 ($65,000 unrecovered) came from this path (P01 R-003).
 5. **Offboarding is a recovery dependency.** During an outage of the identity provider, departing agents cannot be disabled; the printed disable list in BP-10 is the only fallback.
 
