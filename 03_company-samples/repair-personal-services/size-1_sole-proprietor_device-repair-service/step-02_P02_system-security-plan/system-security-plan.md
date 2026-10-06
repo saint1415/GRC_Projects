@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026), all headings kept with short answers | **Version:** 1.0, 2026-08-31
 
 ## 1. System Name and Identifier
-Service Ticketing and Point-of-Sale System (**STPS**), identifier CSC-SYS-001.
+Service Ticketing and Point-of-Sale System (**STPS**), identifier CSC-STPS-001.
 
 ## 2. System Overview
 The STPS is everything the shop uses to take in, repair, and return about 1,400 customer devices a year: the ticketing and POS platform (SYS-01, vendor SaaS), the P2PE card terminal and processor portal, the productivity suite, the accounting SaaS and bank portal, the owner laptop, the repair bench PC and transfer drives, the counter tablet, the owner phone, the shop Wi-Fi, two cloud security cameras, the website and booking form, and a consumer generative AI assistant (SYS-01 to SYS-12 in `../00_company-facts.md` section 3). One person, the owner-technician, uses and runs it; a fill-in technician uses it about 12 days a year. There is no server and no IaaS. Most application safeguards are **inherited from the SaaS vendors and the payment processor**; the owner is responsible for accounts, devices, the shop network, customer data on the bench, and vendor terms (P04).

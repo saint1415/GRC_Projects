@@ -1,7 +1,7 @@
 # Business Impact Analysis: Cris Santos Company | Other Services (except Public Administration) | Sole Proprietorship
 
 **Organization:** Cris Santos Company (electronics and device repair service) | **Tier:** Sole Proprietorship (owner-technician only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
-**Prepared by:** Owner-technician, 2026-07-21, with the independent security consultant | **Adopted:** Owner-technician, 2026-08-31
+**Prepared by:** Owner-technician, 2026-07-20, with the independent security consultant | **Adopted:** Owner-technician, 2026-08-31
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the shop depends on, how long each can be down, and how much data each can lose. It supports:
