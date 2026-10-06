@@ -118,3 +118,59 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Sites and volumes.** 1,120 stores (960 core, 160 AC), Depot East (Florida, with the national data recovery lab), Depot Central (Texas, with the parts warehouse), Depot West (Nevada), the contact center (Florida), COLO-1 (Florida), COLO-2 (Texas), and headquarters (Florida). States with large operations: Florida (142 stores; worked example), Texas (118, including 32 AC), California (128), New York (52, including 38 in New York City), Illinois (46), and Colorado (41, including 14 AC). Revenue of about $4.8 billion a year is about $13.2 million per calendar day: consumer repair about $5.8 million, warranty reimbursements about $2.8 million, SL-1 about $2.4 million, SL-2 about $1.3 million, parts and wholesale about $0.5 million, data recovery about $0.4 million. Average revenue per ticket about $355. About 5,800 mail-in parcels a day; the primary national courier carries 81% of shipments; the primary parts distributor supplies 64% of parts.
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Operating Officer (COO) | Store and depot operations; crisis management team chair; authorizing official equivalent for the STPP (P02); co-approves the BIA |
+| Chief Information Officer (CIO) | Technology operations; owns the enterprise platform (common control providers) |
+| Chief Compliance Officer | Regulatory compliance program; second line with the GRC team; co-approves P03 |
+| Controller | SOX program owner; disclosure committee member |
+| Chief Digital Officer | System owner of the STPP, the website, and the app |
+| Chief Marketing Officer | Marketing claims, including AI claims; business owner of AI-010 |
+| Chief Data and Analytics Officer | Data platform; AI governance committee chair |
+| Chief Human Resources Officer | Onboarding, terminations, training, background checks; business owner of AI-004 and AI-011 |
+| Senior Vice President, Store Operations | Store processes, technician access standard (STD-04.2), PIN pad custody and inspections; business owner of AI-001 and AI-008 |
+| Senior Vice President, Depot and Lab Operations | Depots, mail-in, data recovery lab, sanitization |
+| Senior Vice President, Supply Chain | Parts distribution and courier contracts |
+| Vice President, Payments | Merchant agreement, acquirer and processor relationships, P2PE solution, ROC sponsor |
+| PCI Program Manager (GRC team) | Day-to-day PCI DSS program: scope, evidence, QSA coordination, TPSP list |
+| Vice President, Integration Management Office | Conversion of the AC stores |
+| Vice President, Claims Fulfillment | SL-1 service line owner |
+| Vice President, Enterprise Services | SL-2 service line owner; BAA inventory |
+| Vice President, Manufacturer Programs | Manufacturer A, B, and C program agreements and audits |
+| Vice President, Contact Center | Contact center, phone payments, AI-003 |
+| Vice President, Customer Experience | Chatbot (AI-002) and customer notifications |
+| Vice President, Asset Protection | Physical security, CCTV, loss prevention, insider investigations; AI-005 |
+| Vice President, Corporate Communications; Vice President, Investor Relations | Media, customer, and investor communications during incidents; Investor Relations sits on the disclosure committee |
+| Director of Identity and Access Management | Identity platform (SYS-03), CCP-02 |
+| Director of Cloud Platform Engineering | Landing zones in both clouds, CCP-03 |
+| Director of Network Engineering | SD-WAN, store networks, NAC, CCP-05 |
+| Director of Endpoint Engineering; Director of Store Technology | Endpoints, bench images, counter tablets, CCP-06 |
+| Director of Digital Engineering | Website and app front end; payment page script program |
+| Director of Third-Party Risk Management | Vendor tiering, TPSP AOCs, SOC report reviews, CCP-09 |
+| Director of Sanitization and Asset Recovery | STD-04.3 sanitization standard, sanitization stations and records, ITAD |
+| Director of Data Recovery | Data recovery lab and recovered data custody |
+| STPP Engineering Manager | Day-to-day STPP administration (reports to the Chief Digital Officer) |
+
+**Acquired chain (AC).** About 1,450 employees (included in the 12,000), about 720 bench PCs, about 410 legacy PIN pads, and about $310 million of revenue a year. Store IT is supported by a legacy managed service provider until wave 2. AC intake forms still promise "no access to your data". A shared Manufacturer C portal account is used at 14 AC stores. On 2026-09-02 the Vice President, Payments agreed with the acquirer that AC stores not converted by QSA fieldwork are assessed against the conversion plan and interim controls.
+
+**STPP details.** About 9,800 workforce accounts, about 4,300 counter tablets in a kiosk profile, about 60 application containers, and 6 SL-1 client API integrations. The restricted passcode field went live 2025-04; card-number patterns have been blocked in new notes since 2026-08. STPP contingency plan v3 (2026-05); the 2026-05-09 failover test recovered in 3.4 hours with 5 minutes of data loss. A development partner contributes code (no production data access). The 2026-06 penetration test found an object-level authorization flaw in the SL-1 claims API; an interim WAF rule has blocked it since 2026-07-02.
+
+**Contract notice terms (fictional).** Acquirer: within 24 hours of suspecting a card data compromise, and follow acquirer and card brand instructions, including a PCI Forensic Investigator if required. Manufacturers A, B, and C: within 24 hours of a suspected customer data incident. SL-1 clients: within 48 hours of confirmation, with updates every 72 hours. SL-2 clients: within 72 hours of confirmation. SL-2 BAAs: most set terms shorter than the 60-day outer limit of 45 CFR 164.410.
+
+**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel.
+
+**Sanitization and lab.** 14 sanitization stations across the three depots (6 at Depot West). STD-04.3 requires verification of every SL-2 device and a 5% sample of recycling devices. Records go to a write-once record store on Cloud provider B, kept 7 years. The data recovery lab storage is about 1.1 PB, backed up to an immutable vault on Cloud provider B.
+
+**Third parties.** 58 TPSPs (7 AOCs expired, 11 without a responsibility matrix at fieldwork); 26 downstream recyclers and refurbishers (two take 70% of recycling volume; 9 without data protection terms; 4 receive SL-2 lots without subcontractor BAAs). The 2025 SL-1 SOC 2 report had 2 exceptions, since remediated. 14 SL-2 asset portal client accounts were shared by several people in 2026-07.
+
+**Contact center.** About 650 staff and about 31,000 calls a day, including about 1,900 phone payments. All-party consent is applied to recorded calls in every state (Florida worked example: Fla. Stat. 934.03(2)(d)).
+
+**AI portfolio (P10).** 11 use cases AI-001 to AI-011 as listed in the P10 inventory; 6 reviewed, 5 not reviewed (due 2026-11-30). AI-001 has run at all 960 core stores since 2026-02 (about 420,000 devices a month); AI-002 handles about 310,000 chats a month. Store signage and the website described AI diagnosis as "near perfect" until 2026-08-21. AI-004 ranks about 38,000 applicants a year; ranking paused for New York City roles since 2026-07. AI-011 was disabled on 2026-08-27.
+
+**Treatment funding.** About $9.1 million approved for 2026 Q4 to 2027 Q2 (P01 section 7).
+
+**Policy exceptions (P06).** EXC-2026-031, EXC-2026-033, EXC-2026-036, EXC-2026-040, and EXC-2026-042, as listed in `step-06_P06_security-policies/policy-hierarchy.md`.

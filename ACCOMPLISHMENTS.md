@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**199 of 216** sample companies are finished (1990 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**200 of 216** sample companies are finished (2000 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -230,6 +230,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Other Services (except Public Administration) | Micro | Device repair service | [README](03_company-samples/repair-personal-services/size-2_micro_device-repair-service/README.md) |
 | Other Services (except Public Administration) | Small | Device repair shop | [README](03_company-samples/repair-personal-services/size-3_small_device-repair-shop/README.md) |
 | Other Services (except Public Administration) | Mid-Market | Device repair service | [README](03_company-samples/repair-personal-services/size-4_mid-market_device-repair-service/README.md) |
+| Other Services (except Public Administration) | Enterprise | Device repair service | [README](03_company-samples/repair-personal-services/size-5_enterprise_device-repair-service/README.md) |
 | Public Administration | Small | GovTech integrator | [README](03_company-samples/public-administration/size-3_small_govtech-integrator/README.md) |
 | Government Services and Facilities | Small | Government facilities contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-3_small_government-facilities-contractor/README.md) |
 | Emergency Services | Small | Private ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-3_small_private-ambulance-service/README.md) |
