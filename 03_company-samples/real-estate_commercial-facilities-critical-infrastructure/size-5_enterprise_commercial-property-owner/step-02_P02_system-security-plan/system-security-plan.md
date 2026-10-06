@@ -46,7 +46,7 @@ Prepared by the Director of OT Security and the GRC team. Reviewed by the CISO, 
 ### 4.2 System Authorization Decision
 The company is not a federal agency, so there is no formal authorization to operate. The equivalent internal decision:
 - **Authorizing official equivalent:** Chief Operating Officer, on the CISO's recommendation. The Executive Vice President, Property Operations is the system owner.
-- **Decision (2026-09-10):** continued operation with conditions, based on the Internal Audit assessment (P07) and the enterprise risk register (P01). The Very High risk R-001 was accepted for treatment by the CEO and CFO the same day (P01 section 7).
+- **Decision (2026-09-10):** continued operation with conditions, based on the Internal Audit assessment (P07) and the enterprise risk register (P01). The CEO and CFO approved the treatment plan for the Very High risk R-001 on 2026-09-08 (P01 section 7).
 - **Conditions:**
   1. Integrator C's always-on remote-support tool is removed and its access moved to the OT gateway by 2026-11-30 (POAM-003).
   2. Interim access lists between the acquired properties and the shared services hub by 2026-10-31; full OT zones at the acquired properties by 2027-03-31 (POAM-004).

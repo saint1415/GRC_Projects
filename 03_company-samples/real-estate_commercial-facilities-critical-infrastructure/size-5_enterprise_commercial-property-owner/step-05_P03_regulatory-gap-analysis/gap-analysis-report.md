@@ -94,7 +94,7 @@ The 54 unmet or partially met rows break down by gap risk as **7 High, 34 Modera
 | 2027 Q2 | Platform C replaced (POAM-007); OT log onboarding and passive monitoring at all properties (POAM-005); Internal Audit test of Item 106 statements | CPG 2.B, 3.Q, 4.A, 4.B; Item 106; 11 CCR 7123(c) | Replacement records; SIEM source list; audit memo |
 | 2027 Q3 | Annual risk analysis and gap reassessment; CPPA audit fieldwork planning for the 2027 period; review CIRCIA status | All | Updated P01 and P03 |
 
-## 6. Pending regulatory changes
+## 6. Pending regulatory changes (status checked 2026-09-25, after approval)
 - **CIRCIA:** the final rule had not been published as of 2026-09-25. As proposed (6 CFR 226.2(a)), the company would be covered because it exceeds the SBA size standard for NAICS 531120. The statute sets 72 hours for a covered cyber incident and 24 hours after a ransom payment; these are not current obligations. CPG 5.B already points reporting toward CISA voluntarily.
 - **SEC:** no SEC proposal to amend or rescind Item 1.05 or Item 106 was found as of 2026-09-25, so both remain in force.
 - **PCI DSS:** the June-July 2026 request for comments starts work on the next version. No publication date was found. v4.0.1 remains in force.
