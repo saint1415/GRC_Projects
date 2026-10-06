@@ -39,12 +39,12 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 4.4 MFA is required for all remote access, all administrative and cloud access, the OT remote access gateway, and the access control platform console. Privileged users must use phishing-resistant authenticators. (IA-2(1); IA-2(2); PR.AA-03)
 4.5 Access must be disabled the same business day as a termination, and immediately for involuntary terminations, including local OT accounts and security console accounts. (PS-4; AC-2; PR.AA-05)
 4.6 Workforce accounts inactive for 60 days must be disabled automatically, and tenant credentials unused for 90 days must be suspended automatically. (AC-2(3); PR.AA-05)
-4.7 Managers must certify their staff access every quarter, including OT and access control platform administrator roles; tenant administrators must attest to their credential holders every quarter. (AC-2; PR.AA-05)
+4.7 Managers must certify their staff's access every quarter, including OT and access control platform administrator roles; tenant administrators must attest to their credential holders every quarter. (AC-2; PR.AA-05)
 4.8 Privileged access must be granted just in time through PAM, recorded, and limited to the approved window. Full administrator roles on the access control platform must not exceed the number approved in STD-02.1. (AC-6; AC-6(9); PR.AA-05)
 4.9 All vendor and remote access to OT systems must go through the OT remote access gateway with named accounts, MFA, per-session approval by the chief engineer on duty, and session recording. Always-on vendor remote-support tools are prohibited. (AC-17; MA-4; PR.AA-05)
 4.10 Default passwords must be changed before any device or system is connected to any network. (IA-5; PR.AA-01)
 4.11 Two sealed break-glass accounts per critical administration plane must exist, be tested quarterly, and have every use reviewed by the Director of Security Operations. (AC-2; PR.AA-05)
-4.12 Tenant credentials must be issued only at the request of the tenant designated administrator, and phone requests to issue credentials or unlock doors must be verified by call-back to a number on file. (PE-2; IA-4; PR.AA-02)
+4.12 Tenant credentials must be issued only at the request of the tenant's designated administrator, and phone requests to issue credentials or unlock doors must be verified by call-back to a number on file. (PE-2; IA-4; PR.AA-02)
 
 ## 5. Standards and procedures under this policy
 Standards set measurable requirements (approved by the CISO); procedures give step-by-step instructions (approved by the owning director). Both sit below this policy in the hierarchy and cannot contradict it.

@@ -18,12 +18,12 @@ POL-02,4.3,"Duties that could let one person both approve and issue a credential
 POL-02,4.4,"MFA is required for all remote access, all administrative and cloud access, the OT remote access gateway, and the a...",IA-2(1); IA-2(2),PR.AA-03,C-COMMERCIAL-FACILITIES-R05 (CPG 3.F); C-COMMERCIAL-FACILITIES-R03 (11 CCR 7123(c)(1)(A)),Yes
 POL-02,4.5,"Access must be disabled the same business day as a termination, and immediately for involuntary terminations, inclu...",PS-4; AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),Yes
 POL-02,4.6,"Workforce accounts inactive for 60 days must be disabled automatically, and tenant credentials unused for 90 days m...",AC-2(3),PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),Yes
-POL-02,4.7,"Managers must certify their staff access every quarter, including OT and access control platform administrator role...",AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.H),Yes
+POL-02,4.7,"Managers must certify their staff's access every quarter, including OT and access control platform administrator role...",AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.H),Yes
 POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window. Full admi...",AC-6; AC-6(9),PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.G; 3.H); C-COMMERCIAL-FACILITIES-R03 (11 CCR 7123(c)(3)(B)),Yes
 POL-02,4.9,"All vendor and remote access to OT systems must go through the OT remote access gateway with named accounts, MFA, p...",AC-17; MA-4,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 1.E; 3.F),Yes
 POL-02,4.10,Default passwords must be changed before any device or system is connected to any network.,IA-5,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.A),Yes
 POL-02,4.11,"Two sealed break-glass accounts per critical administration plane must exist, be tested quarterly, and have every u...",AC-2,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.G),Yes
-POL-02,4.12,"Tenant credentials must be issued only at the request of the tenant designated administrator, and phone requests to...",PE-2; IA-4,PR.AA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),No
+POL-02,4.12,"Tenant credentials must be issued only at the request of the tenant's designated administrator, and phone requests to...",PE-2; IA-4,PR.AA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),No
 POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, starting wit...",IR-8,RS.MA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.C); C-COMMERCIAL-FACILITIES-R01 (Req. 12.10.1),Yes
 POL-03,4.2,"Workforce members, property staff, integrators, and vendors must report suspected incidents to the Cyber Defense Ce...",IR-6,RS.MA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 4.B),Yes
 POL-03,4.3,"Every incident must be logged, classified by severity under STD-03.1, and tracked to closure in the case management...",IR-5; IR-4,RS.MA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 4.B),Yes
@@ -41,7 +41,7 @@ POL-04,4.2,Restricted and Confidential data must be encrypted in transit and at 
 POL-04,4.3,"Data must not be kept longer than the retention schedule in STD-04.4: visitor ID images 30 days, visit logs 1 year,...",SI-12,PR.DS-01,C-COMMERCIAL-FACILITIES-R03 (Cal. Civ. Code 1798.100(a)(3)); state disposal laws (Fla. Stat. 501.171(8) worked example),No
 POL-04,4.4,"Media and records with Restricted or Confidential data must be disposed of using NIST SP 800-88 Rev. 2 methods, wit...",MP-6,ID.AM-08,State disposal laws (Fla. Stat. 501.171(8) worked example),No
 POL-04,4.5,"Card data must be taken only on validated P2PE terminals and must never be written on paper, typed into any company...",SI-12; MP-6,PR.DS-01,C-COMMERCIAL-FACILITIES-R01 (Req. 3.2.1; 3.3.1.2; 9.4.6),No
-POL-04,4.6,"No new processing of California consumers sensitive personal information, no systematic observation of employees to...",RA-8,GV.OC-03,C-COMMERCIAL-FACILITIES-R03 (11 CCR 7150; 7200),No
+POL-04,4.6,"No new processing of California consumers' sensitive personal information, no systematic observation of employees to...",RA-8,GV.OC-03,C-COMMERCIAL-FACILITIES-R03 (11 CCR 7150; 7200),No
 POL-04,4.7,"Backups of tier-1 systems, including OT controller programs and configurations, must be immutable, kept in accounts...",CP-9,PR.DS-11,C-COMMERCIAL-FACILITIES-R05 (CPG 3.O),Yes
 POL-04,4.8,"Video exports and bulk exports of credential or visitor data must have a case number or approved business purpose,...",AU-6; AC-6,DE.CM-03,C-COMMERCIAL-FACILITIES-R03 (11 CCR 7123(c)(3)),Yes
 POL-04,4.9,"Vendors that process Restricted or Confidential data must have contracts that limit use to company purposes, prohib...",SA-9,GV.SC-05,C-COMMERCIAL-FACILITIES-R03 (11 CCR 7150(b)(6)); C-COMMERCIAL-FACILITIES-R02,Yes

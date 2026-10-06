@@ -39,7 +39,7 @@ Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 
 4.6 Only AI tools on the approved AI tools list (STD-05.3) may be used for company work, and Restricted or Confidential data must not be entered into any other AI tool. (PL-4; AC-20; PR.AT-01)
 4.7 Audio recording in lobbies and common areas is prohibited; cameras record video only. Recording consent laws differ by state, so any audio use needs counsel approval (Fla. Stat. 934.03 worked example). (PL-4; GV.PO-01)
 4.8 Staff at offices with payment terminals must inspect terminals as scheduled for tampering and substitution and complete the tampering training. (AT-3; PE-3; PR.AT-02)
-4.9 Employees must be told what workplace monitoring takes place (badges, video, company devices), and monitoring data must not be used to evaluate an individual performance unless the use is approved under POL-01 4.13. (PL-4; PT-5; GV.PO-01)
+4.9 Employees must be told what workplace monitoring takes place (badges, video, company devices), and monitoring data must not be used to evaluate an individual's performance unless the use is approved under POL-01 4.13. (PL-4; PT-5; GV.PO-01)
 
 ## 5. Standards and procedures under this policy
 Standards set measurable requirements (approved by the CISO); procedures give step-by-step instructions (approved by the owning director). Both sit below this policy in the hierarchy and cannot contradict it.
