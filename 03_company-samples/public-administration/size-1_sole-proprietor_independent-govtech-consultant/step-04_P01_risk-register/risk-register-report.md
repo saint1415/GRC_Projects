@@ -40,7 +40,7 @@
 |---|---|---|---|---|---|
 | R-001 | Ransomware on the laptop with theft of county extracts and city exports | High | Standard daily account, delete old extracts, encrypted backup, training, runbook | Owner-consultant | 2026-10-31 |
 | R-002 | Stolen credentials or session used to reach the sheriff's or county's system | High | Standard daily account, sign out of agency systems, phishing training | Owner-consultant | 2026-10-31 |
-| R-015 | CJI copied out of the sheriff's virtual desktop (found in P07) | High | Data location rule, quarterly search, CJIS refresher | Owner-consultant | 2026-11-18 |
+| R-015 | CJI copied out of the sheriff's virtual desktop (found in P07) | High | CJIS refresher by 2026-09-24, data location rule, quarterly search | Owner-consultant | 2026-11-30 |
 | R-003 | County extracts kept past the contract deletion date | Moderate | Delete everywhere and certify to the county | Owner-consultant | 2026-09-30 |
 | R-004 | Unencrypted USB drive with driver license numbers | Moderate | Encrypt the drive and remove county data | Owner-consultant | 2026-09-30 |
 | R-005 | City applicant data put into a consumer-grade AI assistant | Moderate | Avoid: no agency data in AI tools; support the city's notice decision (P10) | Owner-consultant | 2026-09-30 |
