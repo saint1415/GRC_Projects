@@ -34,6 +34,7 @@ Users: about 9,800 workforce users (recruiters, onboarding specialists, payroll 
 | State | State breach notification and data security laws | Each state where affected individuals reside (Florida worked example: Fla. Stat. 501.171) | Reasonable security and notice (P08) |
 | State | State E-Verify laws | Florida worked example: Fla. Stat. 448.095 | E-Verify use and outage documentation |
 | N56-R08 | NYC Local Law 144 | NYC Admin. Code 20-870 et seq. | AI-001 ranking for NYC candidates (P10) |
+| State AI | State AI employment rules | Illinois P.A. 103-0804; California 2 CCR 11008 et seq. and 11 CCR 7200 et seq.; Colorado SB26-189 (from 2027-01-01) | AI-001 notices, bias testing, and records in SYS-01 (P03; P10) |
 | Contract | Client agreements; SOC 2 | P09 | SL-2 payrolling runs on the ALPP payroll engine |
 | Internal | POL-01 to POL-05 and standards | P06 | Enterprise policy hierarchy |
 

@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** AI resume screening and candidate ranking
+**AI use case:** AI resume screening and candidate ranking (sort-only add-on to the ATS)
 **Sector AI rules and guidance:** NYC Local Law 144 (AEDT bias audits) NYC Local Law 144 of 2021 Bias audit, public summary and candidate notice before using automated employment decision tools.; Colorado SB26-189 (ADMT in consequential decisions) Colo. SB26-189 Covers employment decisions; applies to staffing/PEO deployers of ADMT affecting Colorado consumers.
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 

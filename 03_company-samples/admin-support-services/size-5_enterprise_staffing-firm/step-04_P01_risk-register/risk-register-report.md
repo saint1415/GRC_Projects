@@ -115,7 +115,7 @@ By status: In progress 33, Open 21, Closed (accepted) 8, Closed (avoided) 2.
 2. **One approver, one file (ER-03).** Pay rules can be changed and released by the same person (R-018), and pay files are not hash-verified after approval (R-019). Both are cheap to fix and are due by 2026-12-31.
 3. **Copies of the crown jewels (ER-02).** The payroll engine tokenizes SSNs and bank numbers, but the nightly extract to the data platform does not (R-003, R-048), and nothing is purged (R-020).
 4. **Acquisitions (ER-05).** ACQ-1 is the least controlled environment connected to the firm (R-004, R-057, R-058) and the source of the stale credential risk (R-034). Future deals need security due diligence and integration funding before signing (R-061).
-5. **AI in hiring (ER-08).** Federal disparate impact enforcement has receded (see P10), but NYC Local Law 144 is in force, Colorado's ADMT law applies to decisions from 2027-01-01, and private Title VII claims remain. Treatment centers on firm-data bias monitoring and the council reviews (R-009, R-041, R-043).
+5. **AI in hiring (ER-08).** Federal disparate impact enforcement has receded (see P10), but NYC Local Law 144, Illinois Public Act 103-0804, and California's Civil Rights Council ADS regulations are in force, Colorado's ADMT law and California's CPPA ADMT rules apply from 2027-01-01, and private Title VII claims remain. Treatment centers on firm-data bias monitoring and the council reviews (R-009, R-041, R-043).
 6. **New finding from the control assessment.** Internal Audit found the vendor default administrator PIN on 9 of 25 sampled on-site time clocks (P07). It is now R-060 and POAM-024.
 
 ## 7. Treatment summary

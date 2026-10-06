@@ -1,2 +1,45 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,C-HPH-R01 (164.316(a)),No
+POL-01,4.2,Owner designated Security Officer and Privacy Officer in writing,PM-2,GV.RR-02,C-HPH-R01 (164.308(a)(2)),No
+POL-01,4.3,"Annual risk analysis using SP 800-30, and after a new PMS or vendor",RA-3; PM-9,ID.RA-01,C-HPH-R01 (164.308(a)(1)(ii)(A)),Yes
+POL-01,4.4,Risk decision rules; High risks and patient safety risks above Low never accepted as they are,PM-9,GV.RM-01,C-HPH-R01 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,Annual evaluation with an outside review at least every second year,CA-2,ID.IM-02,C-HPH-R01 (164.308(a)(8)),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,C-HPH-R01 (164.316(b)(2)(iii)),No
+POL-01,5.1,Sanctions for the relief pharmacist and any future workforce,PS-8,GV.RR-04,C-HPH-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,5.2,Confidentiality and security clause in the relief pharmacist's contract,PS-6,GV.RR-04,C-HPH-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,5.4,"Written, time-limited exceptions",PL-1,GV.PO-02,C-HPH-R01 (164.316(a)),No
+POL-01,6.1,"No BAA, no PHI",SA-9,GV.SC-05,C-HPH-R01 (164.308(b)(1); 164.314(a)),Yes
+POL-01,6.3,Annual review of the PMS vendor's SOC 2 report and its customer controls,SA-9,GV.SC-07,C-HPH-R01 (164.308(b)(1)),Yes
+POL-01,6.4,Keep and read each EPCS certification report before relying on it,SA-4; SA-9,GV.SC-07,21 CFR 1311.200(a)-(b),Yes
+POL-01,6.5,Stop EPCS processing when the vendor reports non-compliance,SA-9; IR-8,GV.SC-07,21 CFR 1311.200(c)-(d),No
+POL-01,6.6,Attended vendor remote support only; sessions logged,AC-17,PR.AA-05,C-HPH-R01 (164.308(a)(3)(ii)(A)),Yes
+POL-01,7.1,Own accounts on every system; no shared or written passwords,IA-2; AC-2,PR.AA-01,C-HPH-R01 (164.312(a)(2)(i)); 21 CFR 1311.205(b)(10),Yes
+POL-01,7.2,"MFA on every PHI service, including the PMS administrator role in the store",IA-2(1); IA-2(2),PR.AA-03,C-HPH-R01 (164.312(d)),Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager,IA-5,PR.AA-01,C-HPH-R01 (164.308(a)(5)(ii)(D)),No
+POL-01,7.4,"Named people and roles for controlled substance dispensing; license check, same-day removal, quarterly review",AC-2; AC-6; PS-3; PS-4,PR.AA-05,C-HPH-R01 (164.308(a)(3)(ii)(B)-(C); 164.308(a)(4)(ii)(B)-(C)); 21 CFR 1311.200(e),No
+POL-01,7.5,Device lock (desktop 3 minutes) and 15-minute PMS timeout,AC-11,PR.AA-05,C-HPH-R01 (164.312(a)(2)(iii)),No
+POL-01,7.6,Sealed emergency access codes held by the owner's attorney,AC-2,PR.AA-05,C-HPH-R01 (164.312(a)(2)(ii)),No
+POL-01,7.7,Daily EPCS audit report review; monthly PMS and email sign-in review,AU-6,DE.AE-02,C-HPH-R01 (164.308(a)(1)(ii)(D); 164.308(a)(5)(ii)(C)); 21 CFR 1311.215(c),Yes
+POL-01,7.8,"Only the owner uses the CSOS key, kept under the owner's own account and never copied",SC-12,PR.DS-01,21 CFR 1311.30(a)-(d),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,C-HPH-R01 (164.308(a)(1)(ii)(A)),No
+POL-01,8.2,Restricted data only in approved systems with a BAA,AC-3; SA-9,PR.DS-01,C-HPH-R01 (164.308(b)(1)),No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,C-HPH-R01 (164.312(a)(2)(iv)),Yes
+POL-01,8.4,No PHI by ordinary text or email; reminders say only that a prescription is ready,SC-8,PR.DS-02,C-HPH-R01 (164.312(e)(1); 164.312(e)(2)(ii)),No
+POL-01,8.5,Delete downloaded reports; no patient list exports on devices,SC-28; MP-6,PR.DS-01,C-HPH-R01 (164.310(d)(1)),No
+POL-01,8.6,Copy local data before device changes; printed master formulation binder,CP-9,PR.DS-11,C-HPH-R01 (164.310(d)(2)(iv); 164.308(a)(7)(ii)(A)),Yes
+POL-01,8.7,Shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,C-HPH-R01 (164.310(d)(2)(i)-(ii)),No
+POL-01,8.8,Six-year retention of security documentation; controlled substance records at least 2 years,SI-12,ID.AM-08,C-HPH-R01 (164.316(b)(2)(i)); 21 CFR 1311.305(b); Fla. Stat. 893.07,No
+POL-01,9.1,Pharmacy devices for pharmacy work only,PL-4,GV.PO-01,C-HPH-R01 (164.310(b)),No
+POL-01,9.3,Updates and antivirus on; standard desktop accounts,SI-2; SI-3; AC-6,PR.PS-02,C-HPH-R01 (164.308(a)(5)(ii)(B)),No
+POL-01,9.4,Pharmacy network separate from customer Wi-Fi and the camera recorder,SC-7,PR.IR-01,C-HPH-R01 (164.312(e)(1)); C-HPH-R08 (CPG: network segmentation),Yes
+POL-01,9.5,"No PHI in AI tools without assessment, BAA, and approval; no AI for compounding calculations",PL-4; SA-9,GV.PO-01,"C-HPH-R01 (164.308(b)(1)); N62-R07 (45 CFR 92.210, parent vertical ID)",No
+POL-01,9.6,Annual security training for both pharmacists,AT-2,PR.AT-01,C-HPH-R01 (164.308(a)(5)(i)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-HPH-R01 (164.308(a)(6)(i)),No
+POL-01,10.2,Same-day incident log with discovery time; relief pharmacist reports the same day,IR-5; IR-6,RS.MA-02,C-HPH-R01 (164.308(a)(6)(ii)); C-HPH-R02,Yes
+POL-01,10.4,DEA EPCS report within one business day,IR-6,RS.CO-02,21 CFR 1311.215(c),Yes
+POL-01,10.5,CSOS key compromise reported within 24 hours,IR-6; SC-12,RS.CO-02,21 CFR 1311.30(e),No
+POL-01,10.6,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,C-HPH-R02 (164.404-164.408); Fla. Stat. 501.171,No
+POL-01,10.7,No ransom without counsel and an OFAC check; annual walkthrough,IR-3; IR-4,RS.MA-01,C-HPH-R02,No
+POL-01,11.2,Paper downtime kit with a weekly printed medication list,CP-2,RC.RP-01,C-HPH-R01 (164.308(a)(7)(ii)(C)),No
+POL-01,11.3,Transfer arrangement with a nearby pharmacy; relief coverage plan,CP-2,RC.RP-01,C-HPH-R01 (164.308(a)(7)(ii)(C)),No
+POL-01,11.4,"Controlled substance dispensing, PDMP reporting, and duplicate checks during a PMS outage",CP-2,RC.RP-03,21 CFR 1311.200(g); Fla. Stat. 893.055(3)(a),No

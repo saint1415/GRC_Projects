@@ -99,6 +99,10 @@ These facts were added while building the deliverables. They do not change secti
 
 **Registry defaults kept.** The registry's primary system (payroll and applicant tracking system), incident (payroll and HR system breach exposing worker PII), and AI use case (AI resume screening and candidate ranking) all fit a staffing firm at this size and were kept. At this size the "payroll and applicant tracking system" is a platform of several components (SYS-01 to SYS-04), so P02 documents it as one system, the ALPP.
 
+**States with large operations.** The 38 states include Florida (headquarters and worked example), California, Illinois, New York (including 9 branches in New York City), Colorado, Connecticut, Texas, and Georgia. In 2025 the firm had about 41,000 associates and about 330,000 applicants in California, so it holds sensitive personal information (SSNs) of more than 50,000 California consumers. These facts drive the state AI and privacy rows in P03 and P10.
+
+**Cyber insurance.** A $50 million cyber insurance tower (P01 R-064; P08 section 6).
+
 **Sites and volumes.** About 520 sites: 380 branch offices and 140 on-site offices at client facilities, in 38 states and the District of Columbia. Florida has 61 branches and about 9,800 associates on assignment in an average week. About 46,000 timesheets and 3,900 client invoices a business day at the weekly peak. About $13.2 million of revenue per calendar day (about $18.5 million per business day).
 
 **Segments and acquired firms.**
