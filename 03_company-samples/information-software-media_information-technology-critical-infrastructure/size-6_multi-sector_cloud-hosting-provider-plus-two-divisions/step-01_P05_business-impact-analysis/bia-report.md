@@ -8,7 +8,7 @@ This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on (identity, the SOC, the group landing zone and backup vault, notification coordination, finance, HR, and collaboration).
 - **Division BIAs:** Cloud Hosting (focus), Managed IT and Consulting, and Payment Processing. They are kept as rows in one workbook (`bia.csv`, `division` column) so cross-division dependencies are visible in one place.
 
-This group has an unusual shape: **the focus division is also the group's platform.** The Payment Processing cardholder data environment, the Managed IT RMM platform, and the DoD CUI enclave all run on the Cloud Hosting division's commercial cloud (SL-1). An SL-1 regional outage is therefore a group event, not a division event.
+This group has an unusual shape: **the focus division is also the group's platform.** The Payment Processing cardholder data environment, the Managed IT ticketing and privileged access broker, and the corporate landing zone run on the Cloud Hosting division's commercial cloud (SL-1), and the Managed IT DoD CUI enclave runs in its Government Cloud (G1). An SL-1 regional outage is therefore a group event, not a division event. The RMM itself is a vendor SaaS product outside SL-1.
 
 The BIA supports:
 - the contingency planning controls of the HCP SSP (P02: CP-2, CP-4, CP-7, CP-9, CP-10) and the availability rating of the HCP;
@@ -75,7 +75,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Dependency | From | To | Why it matters |
 |---|---|---|---|
 | Sign-in (SYS-G1) | Group | Every process | A group identity outage stops all administration in all three divisions. Customer workloads keep running. Break-glass accounts per critical system are the fallback |
-| SL-1 regions R1 and R3 | Cloud Hosting | Payment Processing (CDE active-active), Managed IT (RMM, SYS-M2), corporate workloads | A two-region failure would stop card authorization. The CDE was designed for one-region loss only |
+| SL-1 regions R1 and R3; G1 | Cloud Hosting | Payment Processing (CDE active-active in R1 and R3), Managed IT (ticketing and access broker on SL-1; SYS-M2 enclave in G1), corporate workloads | A two-region failure would stop card authorization. The CDE was designed for one-region loss only |
 | HCP partner-operator path | Cloud Hosting | Managed IT managed hosting (BP-M02) | About 1,900 engineers operate about 4,100 tenants through it; the same path is the top cross-division risk (P01 GR-01) |
 | Edge services (SYS-H4) | Cloud Hosting | Payment gateways, merchant and biller portals, Managed IT client portals | DNS failure looks like a full outage for every division |
 | RMM agents on division servers | Managed IT | Payment Processing settlement support (BP-P02); SYS-M2 enclave (BP-M04) | A malicious script through the RMM reaches the CDE connected-to segment and the CUI enclave (scenario gap 2) |
@@ -115,7 +115,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 Edge and DNS come before the data plane because a healthy data plane that customers cannot resolve is still an outage. The SOC comes after card authorization because the SOC has its own fallback (native consoles and the retainer's tools), while merchants have none.
 
 ## 8. Key findings
-1. **The focus division's availability is the group's availability.** Payment Processing and Managed IT inherit SL-1 availability. Their BIAs did not, until this year, list SL-1 as a dependency. Both now do.
+1. **The focus division's availability is the group's availability.** Payment Processing and Managed IT inherit SL-1 and G1 availability. Their BIAs did not, until this year, list SL-1 as a dependency. Both now do.
 2. **The CDE's 2-hour MTD relies on two SL-1 regions never failing together.** No test has ever simulated a shared failure mode such as a fleet-wide bad update (P01 CH-011; POAM-012).
 3. **The fastest notice clock in the group is FedRAMP's.** A G1 incident rated PAIN-3 to PAIN-5 needs an Initial Incident Report within 1 hour. The SOC and G1 support teams must be able to reach FedRAMP and agency contacts without corporate email (P08).
 4. **Tooling that can reach everything has the longest real RTO.** The RMM and the fleet automation service have 8-hour RTOs for a clean restore, but after a compromise they stay down until integrity is proven. The P08 runbook plans for days, not hours, and BP-M01's workaround (clients' own remote access) has never been tested at scale.

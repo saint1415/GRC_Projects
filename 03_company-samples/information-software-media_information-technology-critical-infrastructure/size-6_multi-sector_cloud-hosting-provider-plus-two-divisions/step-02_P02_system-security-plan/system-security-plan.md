@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 **Control baseline:** NIST SP 800-53B High baseline, tailored. The G1 partition is also the control plane of the FedRAMP Rev5 Class C Government Cloud offering; every Class C control in scope is covered here.
 
-> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **HCP**, the registry default, because it is both: it is the focus division's primary system, and it is the platform the other two divisions run on. The Payment Processing cardholder data environment, the Managed IT RMM platform, and the DoD CUI enclave all sit in SL-1 accounts that the HCP controls, and about 1,900 Managed IT engineers act on customer servers through the HCP partner-operator path. The HCP carries the group's top risk (P01 GR-01). Each other division keeps its own security documentation (the Payment Processing PCI DSS documentation for SYS-P1; the Managed IT system documentation for SYS-M1 and the SYS-M2 enclave SSP required by NIST SP 800-171 Rev. 2, 3.12.4), all inheriting from the same common control catalog.
+> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **HCP**, the registry default, because it is both: it is the focus division's primary system, and it is the platform the other two divisions run on. The Payment Processing cardholder data environment and the corporate landing zone sit in SL-1 accounts, and the Managed IT DoD CUI enclave sits in a G1 tenant, all controlled through the HCP, and about 1,900 Managed IT engineers act on customer servers through the HCP partner-operator path. The HCP carries the group's top risk (P01 GR-01). Each other division keeps its own security documentation (the Payment Processing PCI DSS documentation for SYS-P1; the Managed IT system documentation for SYS-M1 and the SYS-M2 enclave SSP required by NIST SP 800-171 Rev. 2, 3.12.4), all inheriting from the same common control catalog.
 
 ## 1. System Name and Identifier
 Hosting Control Plane and Customer Portal (**HCP**), identifier CSCH-SYS-H1. It corresponds to SYS-H1 in `../00_company-facts.md`, in two partitions: commercial (HCP-C, serving regions R1 to R5) and Government (HCP-G, serving region G1).
@@ -14,7 +14,7 @@ The HCP is the set of services through which customers and operators create, cha
 - **SL-1 Commercial Cloud:** about 38,000 business customers and about 290,000 customer console identities, including about 260 banking organizations and about 900 health care customers under business associate agreements.
 - **SL-2 Government Cloud (G1):** 27 federal agencies and about 140 defense industrial base (DIB) companies that store controlled unclassified information (CUI).
 - **SL-3 Managed Hosting:** about 4,100 tenants operated by the Managed IT division through the partner-operator path.
-- **The group itself:** the Payment Processing CDE (dedicated accounts in R1 and R3), the Managed IT RMM integration and the SYS-M2 enclave, and corporate landing-zone accounts.
+- **The group itself:** the Payment Processing CDE (dedicated accounts in R1 and R3), the Managed IT ticketing and access broker, the SYS-M2 CUI enclave (a G1 tenant), and corporate landing-zone accounts.
 
 **Users:**
 - Customer users (through the console, the public API, and customer IAM).

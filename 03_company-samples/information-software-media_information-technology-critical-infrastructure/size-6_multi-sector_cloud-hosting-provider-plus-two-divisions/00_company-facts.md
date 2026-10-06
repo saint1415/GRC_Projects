@@ -48,8 +48,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-H2 | Data center and virtualization fleet: hypervisor hosts, baseboard management controllers (BMCs), storage clusters, and region networks in R1 to R5 and G1 | Cloud Hosting |
 | SYS-H3 | Software supply chain: source hosting, CI/CD, artifact signing with hardware security modules (HSMs), and the fleet automation and guest-agent update service | Cloud Hosting |
 | SYS-H4 | Edge services: authoritative DNS, content delivery, and DDoS protection | Cloud Hosting |
-| SYS-M1 | Managed operations platform: RMM (one tenant for all clients and internal uses), professional services automation and ticketing, and the client privileged access broker | Managed IT |
-| SYS-M2 | Consulting delivery workspace and the DoD CUI enclave (a separate tenant on SL-1 for the division's own DoD subcontracts) | Managed IT |
+| SYS-M1 | Managed operations platform: the RMM (a SaaS product from an RMM vendor; one tenant for all clients and internal uses), plus professional services automation and ticketing and the client privileged access broker (company-run on SL-1) | Managed IT |
+| SYS-M2 | Consulting delivery workspace (on SL-1) and the DoD CUI enclave (a separate tenant in G1, the FedRAMP-certified Government Cloud, for the division's own DoD subcontracts) | Managed IT |
 | SYS-P1 | Payment processing platform: authorization switch, tokenization vault, payment HSMs, clearing and settlement. This is the cardholder data environment (CDE), in dedicated SL-1 accounts in R1 and R3 | Payment Processing |
 | SYS-P2 | Merchant and biller portals, consumer bill-pay service, ACH origination, merchant onboarding and risk scoring | Payment Processing |
 

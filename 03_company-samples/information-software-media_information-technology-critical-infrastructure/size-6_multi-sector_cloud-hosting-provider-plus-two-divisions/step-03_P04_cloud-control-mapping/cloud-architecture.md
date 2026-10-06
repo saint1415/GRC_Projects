@@ -4,7 +4,7 @@
 **Scope:** the shared group platform (the landing zone on SL-1, the SOC, identity, and the backup vault) plus the division workloads that run on it. The SSP system (P02) is the HCP, the control plane of SL-1 and G1.
 
 ## 1. Design in one paragraph
-Most groups rent a public cloud. This group **is** one. The Cloud Hosting division operates SL-1 (five commercial regions) and G1 (the Government Cloud region), and the rest of the group runs on SL-1 as an internal customer. Corporate runs a **landing zone** on SL-1: identity federation from SYS-G1, a hub network, guardrail policies, a central log archive, and key management. Divisions get their own **accounts** inside it: Payment Processing's cardholder data environment (CDE) in dedicated accounts in R1 and R3, and Managed IT's DoD CUI enclave (SYS-M2). Two things sit outside SL-1 on purpose: the **immutable backup vault** with external provider X, so a provider-wide compromise of SL-1 cannot reach the last copy; and the **Managed IT RMM platform**, a SaaS product from an RMM vendor. Two paths cross the division lines: the **HCP partner-operator path**, through which Managed IT engineers act inside managed-hosting tenants, and **RMM agents** on Payment Processing and enclave servers.
+Most groups rent a public cloud. This group **is** one. The Cloud Hosting division operates SL-1 (five commercial regions) and G1 (the Government Cloud region), and the rest of the group runs on SL-1 as an internal customer. Corporate runs a **landing zone** on SL-1: identity federation from SYS-G1, a hub network, guardrail policies, a central log archive, and key management. Divisions get their own **accounts** inside it: Payment Processing's cardholder data environment (CDE) in dedicated accounts in R1 and R3, and Managed IT's ticketing and client access broker. Managed IT's DoD CUI enclave (SYS-M2) is a tenant in G1, because covered defense information may be stored only with a cloud provider that meets the FedRAMP Moderate baseline or its equivalent (48 CFR 252.204-7012(b)(2)(ii)(D)). Two things sit outside SL-1 on purpose: the **immutable backup vault** with external provider X, so a provider-wide compromise of SL-1 cannot reach the last copy; and the **Managed IT RMM platform**, a SaaS product from an RMM vendor. Two paths cross the division lines: the **HCP partner-operator path**, through which Managed IT engineers act inside managed-hosting tenants, and **RMM agents** on Payment Processing and enclave servers.
 
 ## 2. Diagrams
 ### 2.1 Group platform and division workloads
@@ -32,7 +32,7 @@ flowchart TB
       POR["SYS-P2 portals, bill pay, ACH<br/>SC-5"]
     end
     subgraph MI["Managed IT accounts"]
-      ENC["SYS-M2 DoD CUI enclave<br/>SC-7, SC-13"]
+      PSA["SYS-M1 ticketing and client access broker"]
     end
     MHT["About 4,100 managed-hosting tenants"]
     CUST["About 38,000 customer tenants"]
@@ -40,6 +40,7 @@ flowchart TB
   subgraph G1R["SL-2 Government Cloud region G1 (FedRAMP Rev5 Class C)"]
     HCPG["HCP Government partition<br/>IA-2(12), SC-13, RA-5"]
     AGY["27 agencies; about 140 DIB companies"]
+    ENC["SYS-M2 DoD CUI enclave (Managed IT tenant)<br/>SC-7, SC-13"]
   end
   RMM["SYS-M1 RMM platform (SaaS)<br/>AC-2, CM-5, AU-11, AC-17"]
   LEG["Managed IT legacy identity tenant"]
