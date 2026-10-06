@@ -1,38 +1,24 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Operations Manager (Security and Compliance Officer) |
+| Approved by | Owner, 2026-08-31 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the company keeps three core policies. The workforce use rules that an Acceptable Use Policy would hold are short enough to sit with the access rules staff already read, so they live in **POL-02 Part C. Workforce use rules**, with the FTI and AI tool rules in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Driver |
+|---|---|---|
+| Use company systems for company work; look only at the agency records your task needs | POL-02 C.1 | PL-4 |
+| Agency data only in approved locations and on company laptops; never on personal devices, personal accounts, or public AI tools | POL-02 C.2; POL-04 4.3 | PL-4; AC-20; Fla. Stat. 501.171(2) |
+| FTI never leaves the revenue agency's virtual desktop | POL-04 4.5 | Pub. 1075 Exhibit 7 I(3); sec. 1.8.2 |
+| Approved AI tools only; the AI add-on only for AC-02 after the P10 conditions | POL-04 4.6 | SA-9 |
+| Lock screens; home work rules (screen privacy, no printing, no shared laptops) | POL-02 C.3 | AC-11; PE-17; Pub. 1075 sec. 2.B.7 |
+| Training at hire and yearly, phishing exercises, and every agency-required course on time | POL-02 C.4 | AT-2; CJISSECPOL v6.1 AT-2; Pub. 1075 Exhibit 7 II(4) |
+| Report suspected incidents at once, within 1 hour at most | POL-02 C.5; POL-03 4.2 | CJISSECPOL v6.1 IR-6 |
+| Signed acknowledgment at hire and after each annual update | POL-02 C.6 | PL-4 |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.

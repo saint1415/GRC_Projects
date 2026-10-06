@@ -1,2 +1,48 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-02,A.1,Security and Compliance Officer designated in writing,PL-1,GV.RR-02,Contract (SP 800-53 Moderate),No
+POL-02,A.2,Annual risk assessment with SP 800-30; risks owned and treated,RA-3,ID.RA-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 RA-3),No
+POL-02,A.3,Risk acceptance authority; no acceptance of Addendum or Exhibit 7 breaches,RA-3,GV.RM-01,N92-R02 (CJISSECPOL v6.1 Security Addendum sec. 3.01); N92-R01 (Pub. 1075 Exhibit 7 I(13)),No
+POL-02,A.4,Sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 PS-8),No
+POL-02,A.5,"No review, no contract, no agency data for vendors, pilots, and add-ons",SA-9; SR-6,GV.SC-05,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 SA-9),Yes
+POL-02,A.6,Annual independent assessment,CA-2,ID.IM-01,Contract (SP 800-53 Moderate),No
+POL-02,A.7,Security records kept at least 3 years after superseded,SI-12,GV.PO-02,Contract (SP 800-53 Moderate),No
+POL-02,A.8,Policy review yearly and within 60 days of a new CJIS Security Policy version,PL-1,GV.PO-02,N92-R02 (CJISSECPOL v6.1 Security Addendum sec. 3.01),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,Contract (SP 800-53 Moderate),No
+POL-02,A.10,Register of each contract's security terms checked quarterly,PL-2,GV.OC-03,Contract (SP 800-53 Moderate),No
+POL-02,B.1,Named accounts; separate administrator accounts used only for administration,IA-2; AC-2; AC-6,PR.AA-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 IA-2),Yes
+POL-02,B.2,Least privilege and the screening gate before CJI or FTI access,AC-2; AC-6; PS-3; PS-6,PR.AA-05,N92-R02 (CJISSECPOL v6.1 PS-3; SA-9); N92-R01 (Pub. 1075 Exhibit 7 I(2); sec. 2.C.3),Yes
+POL-02,B.3,"MFA for every account, SSH, and every agency user",IA-2(1); IA-2(2),PR.AA-03,"Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 IA-2(1), IA-2(2))",Yes
+POL-02,B.4,"Termination checklist, with same-day notice to AC-01 and the prime",PS-4; AC-2,PR.AA-05,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 PS-4),Yes
+POL-02,B.5,Quarterly account reviews with each agency; 90-day inactivity disable,AC-2,PR.AA-05,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 AC-2),Yes
+POL-02,B.6,5 failed sign-ins in 15 minutes; 15-minute laptop lock; 30-minute idle session,AC-7; AC-11; AC-12,PR.AA-03,"N92-R02 (CJISSECPOL v6.1 AC-7, AC-11)",No
+POL-02,B.7,"Change tickets for promotions, roles, and network rules; restricted promotion rights",CM-3; CM-5,PR.PS-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 CM-3),No
+POL-02,B.8,No secrets in code; keys with passphrases; yearly rotation,IA-5; SC-12,PR.AA-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 IA-5),Yes
+POL-02,B.9,Named MSP and vendor accounts with MFA; SC-01 only from approved laptops,AC-17; AC-20; MA-4,PR.AA-05,Contract (SP 800-53 Moderate); N92-R01 (Pub. 1075 sec. 4 AC-20),No
+POL-02,B.10,Monthly log review by the Operations Manager,AU-6,PR.PS-04,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 AU-6),No
+POL-02,C.1,Company systems for company work; minimum necessary,PL-4,PR.AT-01,Contract (SP 800-53 Moderate),No
+POL-02,C.2,Agency data only in approved locations on company laptops,PL-4; AC-20,PR.AT-01,Contract (SP 800-53 Moderate); Fla. Stat. 501.171(2),No
+POL-02,C.3,Screen lock and home work rules,AC-11; PE-17,PR.AA-06,N92-R01 (Pub. 1075 sec. 2.B.7),No
+POL-02,C.4,Training at hire and yearly; phishing exercises; agency courses on time,AT-2,PR.AT-01,N92-R02 (CJISSECPOL v6.1 AT-2); N92-R01 (Pub. 1075 Exhibit 7 II(4)),Yes
+POL-02,C.5,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-02,C.6,Signed acknowledgment,PL-4,PR.AT-01,Contract (SP 800-53 Moderate),No
+POL-03,4.1,Runbook with notification matrix and printed contact card,IR-8,RS.MA-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 IR-8),No
+POL-03,4.2,"Staff report suspected incidents at once, within 1 hour",IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6),Yes
+POL-03,4.3,"Incident log; never CJI or FTI in logs, email, or tickets",IR-5,RS.MA-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 IR-5),No
+POL-03,4.4,Notices: AC-01 within 1 hour; prime and revenue agency at once; other agencies within 4 hours (1 hour for ransomware),IR-6,RS.CO-02,N92-R02 (CJISSECPOL v6.1 IR-6); N92-R01 (Pub. 1075 sec. 1.8.2-1.8.4); Fla. Stat. 282.3185(5),Yes
+POL-03,4.5,Breach determination with counsel; 10-day third-party agent notice,IR-6,RS.AN-03,Fla. Stat. 501.171(6)(a),Yes
+POL-03,4.6,Insurer hotline before outside firms; MSP engaged,IR-4; IR-7,RS.MA-02,Contract (SP 800-53 Moderate),No
+POL-03,4.7,"Ransom only with owner, counsel, insurer, agencies, and OFAC check",IR-4,RS.MA-02,Fla. Stat. 282.3186; OFAC advisory (2021-09-21),No
+POL-03,4.8,Vendors report incidents within 24 hours,SR-8; IR-6,GV.SC-05,Contract (SP 800-53 Moderate),Yes
+POL-03,4.9,Yearly briefing and tabletop with the MSP and an agency,IR-2; IR-3,ID.IM-02,Contract (SP 800-53 Moderate); N92-R01 (Pub. 1075 sec. 1.8.4),No
+POL-03,4.10,Lessons learned within 30 days; CJIS refresher training within 30 days,IR-4; AT-2,ID.IM-02,N92-R02 (CJISSECPOL v6.1 AT-2),Yes
+POL-03,4.11,Incident records kept at least 3 years,IR-5,RS.MA-01,Contract (SP 800-53 Moderate),No
+POL-04,4.1,"Four classification levels; when unsure, Regulated",RA-2,ID.AM-07,Contract (SP 800-53 Moderate),No
+POL-04,4.2,Encryption at rest (256-bit on laptops) and in transit (FIPS 140-3 for CJI); USB blocked,SC-8; SC-13; SC-28; MP-2,PR.DS-01,"N92-R02 (CJISSECPOL v6.1 SC-13, SC-28)",Yes
+POL-04,4.3,Approved locations; working CHRI files deleted after load; none in the helpdesk,AC-3; CM-12,PR.DS-01,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 SA-9),No
+POL-04,4.4,Inventory and quarterly suite scan,CM-8; CM-12,ID.AM-01,Contract (SP 800-53 Moderate),No
+POL-04,4.5,FTI stays in the agency virtual desktop,SI-12; AC-21,PR.DS-01,N92-R01 (Pub. 1075 Exhibit 7 I(3); sec. 1.8.2),No
+POL-04,4.6,Approved AI services only,SA-9; PL-4,GV.SC-05,Contract (SP 800-53 Moderate); Fla. Stat. 501.171(2),Yes
+POL-04,4.7,4-hourly write-once exports; quarterly restore tests; 1-year log archive,CP-9; CP-4; AU-11,PR.DS-11,Contract (SP 800-53 Moderate); N92-R02 (CJISSECPOL v6.1 AU-11),Yes
+POL-04,4.8,Wipe and disposal records; contract-end transfer and deletion certificate; SC-01 purge certification,MP-6; SI-12,ID.AM-08,Fla. Stat. 119.0701(2)(b); N92-R01 (Pub. 1075 Exhibit 7 I(5)),No
+POL-04,4.9,Public records requests go to the agency custodian,SI-12,GV.OC-03,"Fla. Stat. 119.0701(2)(b), (3)",No
+POL-04,4.10,No agency data stored or printed in the office,PE-17; MP-4,PR.AA-06,Contract (SP 800-53 Moderate),No
