@@ -51,7 +51,7 @@ The three High risks share one cause: **the inn's most valuable accounts are pro
 - **Design and contract actions by 2026-12-31:** SAQ A plus SAQ P2PE validation (R-003), relief innkeeper account and sealed recovery codes (R-010), AI add-on conditions (R-013, by 2026-10-15).
 - **Accepted (Low):** R-011 (innkeeping outage; vendor recovery objectives meet the BIA) and R-012 (hurricane; the SaaS systems are reachable from anywhere).
 
-**Loop from the control assessment (P07).** Testing on 2026-07-23 found the lock installer's administrator account still active in the lock app. It was disabled the same day and added to R-005.
+**Loop from the control assessment (P07).** Testing on 2026-07-23 found two things the walkthrough had missed: the lock installer's administrator account was still active in the lock app (disabled the same day; added to R-005), and the router's internet-side remote management was on (turned off the same day; added to R-006).
 
 ## 5. Approval
 Owner-innkeeper, 2026-08-31: approved all treatment plans and the two acceptances. Next full review July 2027, or sooner after a new system or vendor, a change in how payments are taken, or an incident.

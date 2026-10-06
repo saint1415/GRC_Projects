@@ -1,2 +1,42 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N72-R01 (Req 12.1),No
+POL-01,4.2,Owner designated security and privacy lead and PCI DSS contact,PM-2,GV.RR-02,N72-R01 (Req 12.1),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N72-R01 (Req 12.3); N72-R04 (Fla. Stat. 501.171(2)),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,N72-R01 (Req 12.3),No
+POL-01,4.5,Annual evaluation with an outside review every second year,CA-2,ID.IM-02,None (good practice),No
+POL-01,4.6,Annual PCI DSS scope confirmation and truthful SAQ validation,CM-8,ID.AM-01,N72-R01 (Req 12.5),No
+POL-01,4.7,Annual policy review,PL-1,GV.PO-02,N72-R01 (Req 12.1),No
+POL-01,5.3,"Written, time-limited exceptions",PL-1,GV.PO-02,N72-R01 (Req 12.1),No
+POL-01,6.1,Provider list with each provider's PCI DSS role,SA-9,GV.SC-05,N72-R01 (Req 12.8),Yes
+POL-01,6.2,Annual AOC and SOC 2 review; operate customer controls,SA-9,GV.SC-07,N72-R01 (Req 12.8),Yes
+POL-01,6.3,No new vendor or feature gets data before its terms are read,SA-9,GV.SC-05,N72-R01 (Req 12.8); N72-R02,Yes
+POL-01,6.5,Quarterly review of lock and router app accounts,AC-2,PR.AA-05,N72-R01 (Req 8.2),Yes
+POL-01,7.1,Own account for every person; no shared credentials,IA-2; AC-2,PR.AA-01,N72-R01 (Req 8.2),No
+POL-01,7.2,MFA on every service that offers it,IA-2(1),PR.AA-03,N72-R01 (Req 8.4),Yes
+POL-01,7.3,Password manager; no browser-saved or default passwords,IA-5,PR.AA-01,N72-R01 (Req 8.3; 2.2),Yes
+POL-01,7.4,Front desk role without card display; quarterly user review,AC-2; AC-3,PR.AA-05,N72-R01 (Req 7.2; 3.4),No
+POL-01,7.5,"Device lock: laptop 5 minutes, phone 30 seconds",AC-11,PR.AA-05,N72-R01 (Req 8.2),No
+POL-01,7.6,Sealed emergency access codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,N72-R01 (Req 12.10),No
+POL-01,7.7,"Monthly review of innkeeping, email, OTA, and lock logs",AU-6,DE.AE-02,N72-R01 (Req 10.4),Yes
+POL-01,7.8,Monthly check of the booking link and total price display,SA-9,GV.OC-03,N72-R01 (Req 6.4); N72-R02 (16 CFR 464.2),No
+POL-01,7.9,Master door code changed quarterly and when a helper leaves,IA-5; PE-3,PR.AA-06,None (guest safety),Yes
+POL-01,8.1,Three-level data classification,SI-12,ID.AM-07,N72-R01 (Req 3.1); N72-R04,No
+POL-01,8.2,"No card numbers on paper or in email, text, or chat; no security codes; pay-by-link; token charging",SI-12; SC-8,PR.DS-01,N72-R01 (Req 3.2; 3.3.1; 4.2),Yes
+POL-01,8.3,Restricted and Confidential data only in approved systems,AC-3; SA-9,PR.DS-01,N72-R04 (Fla. Stat. 501.171(2)),No
+POL-01,8.4,Full-disk encryption on the laptop; phone encryption,SC-28,PR.DS-01,N72-R01 (Req 3.5); N72-R04,Yes
+POL-01,8.5,Owner-only locked office; weekly P2PE reader tamper check,PE-3; CM-8,PR.AA-06,N72-R01 (Req 9.2; 9.5),No
+POL-01,8.6,Retention schedule; no ID images; register kept at least 2 years,SI-12,ID.AM-08,N72-R04 (Fla. Stat. 501.171(8)); Fla. Stat. 509.101(2),Yes
+POL-01,8.7,Cross-cut shredding and recorded device disposal,MP-6,ID.AM-08,N72-R01 (Req 9.4); N72-R04 (Fla. Stat. 501.171(8)),No
+POL-01,8.8,Versioned file plan and monthly reservation export,CP-9,PR.DS-11,N72-R04 (Fla. Stat. 501.171(2)),Yes
+POL-01,9.1,No family use of the laptop,PL-4,GV.PO-01,N72-R01 (Req 12.2),No
+POL-01,9.3,"Updates, antivirus, and router firmware kept current",SI-2; SI-3,PR.PS-02,N72-R01 (Req 5.2; 6.3),Yes
+POL-01,9.4,Guests on the guest network only; owner network password private,SC-7; CM-6,PR.IR-01,N72-R01 (Req 1.3),Yes
+POL-01,9.5,No Restricted data in AI tools; AI add-on only under P10 conditions,PL-4; SA-9,GV.PO-01,N72-R02 (16 CFR 464.2); Fla. Stat. 501.160,No
+POL-01,9.6,Annual security training; relief innkeeper briefing,AT-2,PR.AT-01,N72-R01 (Req 12.6; 5.4),No
+POL-01,9.7,Total price first in every price; accurate privacy statement,PM-9,GV.OC-03,N72-R02 (16 CFR 464.2; 15 U.S.C. 45(a)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,N72-R01 (Req 12.10),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,N72-R01 (Req 12.10); N72-R04,Yes
+POL-01,10.3,Payment facilitator notified within 24 hours of a suspected compromise,IR-6,RS.CO-02,N72-R01 (Req 12.10),Yes
+POL-01,10.4,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,N72-R04 (Fla. Stat. 501.171(3)-(6)),No
+POL-01,10.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,N72-R04,No
+POL-01,11.2,Named relief account and relocation arrangement,CP-2,RC.RP-01,N72-R01 (Req 12.10),No
