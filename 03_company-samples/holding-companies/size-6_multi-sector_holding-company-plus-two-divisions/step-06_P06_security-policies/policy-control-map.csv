@@ -1,2 +1,44 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,One group program aligned to CSF 2.0 that meets HIPAA and the insurance data security laws,PM-1,GV.PO-01,N52-R07 (Model #668 sec. 4A); N62-R01 (164.316(a)),No
+POL-01,4.2,Group CISO accountable; each regulated entity designates its own officials,PM-2,GV.RR-02,N52-R07 (Model #668 sec. 4C(1)); N62-R01 (164.308(a)(2)),No
+POL-01,4.3,Annual SP 800-30 risk assessment per division with roll-up and enterprise risk report,RA-3; PM-9,ID.RA-01; GV.RM-03,N55-R01 (229.106(b)(1)(i)); Fla. Stat. 628.801(2); N62-R01 (164.308(a)(1)(ii)(A)),No
+POL-01,4.4,Risk acceptance authority by level,PM-9,GV.RM-01,N55-R01 (229.106(c)),No
+POL-01,4.5,Supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,N62-R01 (164.316(b)(2)(iii)),Yes
+POL-01,4.6,Common control catalog; inheritance documented within 90 days of an acquisition,PL-2; CA-2,GV.RR-02,N62-R01 (164.308(a)(8)),Yes
+POL-01,4.7,Sanctions for violations,PS-8,GV.RR-04,N62-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.8,"Intercompany services treated as third-party services: security schedule, due diligence, BAA review",SA-9; SA-4; PM-30,GV.SC-05; GV.SC-06,N52-R07 (Model #668 sec. 4F); N62-R01 (164.308(b)(1)),Yes
+POL-01,4.9,Vendor security review; annual review of tier 1 vendors with complementary controls mapped,SA-9; SR-6,GV.SC-07,N55-R01 (229.106(b)(1)(iii)),Yes
+POL-01,4.10,Annual independent assessment of common controls and division samples,CA-2; CA-7,ID.IM-01,N52-R07 (Model #668 sec. 4C(5)); N62-R01 (164.308(a)(8)),Yes
+POL-01,4.11,Quarterly board reporting; annual written report to each insurer board including Third-Party Service Provider arrangements,PM-9,GV.OV-01,N52-R07 (Model #668 sec. 4E(2)); N55-R01 (229.106(c)),No
+POL-01,4.13,Retention of security documentation and event records,SI-12,GV.PO-01,N62-R01 (164.316(b)(2)(i)); N52-R07 (Model #668 sec. 5D),No
+POL-01,4.14,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,Group AI Standard; N62-R07 (92.210),No
+POL-02,4.1,Unique identities; no shared accounts,IA-2; AC-2,PR.AA-01,N62-R01 (164.312(a)(2)(i)); N55-R03 (ITGC: logical access),Yes
+POL-02,4.2,Least privilege; cross-division access approved by the owning data owner; minimum necessary,AC-3; AC-6,PR.AA-05,N62-R02 (164.514(d)(2); 164.512(l)),Yes
+POL-02,4.3,MFA for all; phishing-resistant for administrators and payment roles; step-up for payment release,IA-2(1); IA-2(2); IA-11,PR.AA-03,N52-R07 (Model #668 sec. 4D(2)(g)); N55-R03,Yes
+POL-02,4.4,Identity recovery verified to the strength of the authenticator replaced; help desk limits,IA-5; IA-12,PR.AA-02,N52-R07 (Model #668 sec. 4D(2)(a)); N62-R01 (164.308(a)(5)(ii)(D)),Yes
+POL-02,4.5,Division-scoped administration; no more than 12 standing group-wide identity administrators,AC-6; AC-6(5),PR.AA-05,N55-R03 (ITGC: logical access),Yes
+POL-02,4.6,All privileged access through PAM including ERP superusers; emergency access reviewed in 2 business days,AC-6(5); AC-6(7); MA-4,PR.AA-05,N55-R03 (ITGC: logical access),Yes
+POL-02,4.7,"Separation of duties for vendor master, invoices, payment proposal, and release",AC-5,PR.AA-05,N55-R03 (ICFR),Yes
+POL-02,4.8,"Service accounts owned, governed, and certified",AC-2; IA-5,PR.AA-01,N55-R03 (ITGC: logical access),Yes
+POL-02,4.9,Termination within 4 hours; automatic expiry for contractors and surge adjusters,PS-4; AC-2(2),PR.AA-01,N62-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.10,Quarterly access certification,AC-2; AC-6(7),PR.AA-05,N55-R03; N62-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.12,Directory trusts and interconnections require agreement and approval,CA-3,PR.AA-05,N62-R01 (164.308(b)),Yes
+POL-02,4.13,External identities: MFA for agents and employer clients; verified bank-detail changes,IA-8,PR.AA-03,"N52-R07 (Model #668 sec. 4D(2)(a), (g))",Yes
+POL-02,4.14,Plan PHI only for the plan administration unit,AC-3,PR.AA-05,N55-R06 (164.504(f)(2)(iii)),Yes
+POL-03,4.1,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.2,One group severity scale and playbooks,IR-4; IR-8,RS.MA-01,N52-R07 (Model #668 sec. 4H),Yes
+POL-03,4.3,Clocks start from the group SOC's knowledge for every affected entity,IR-5; IR-6,RS.AN-03,N62-R03 (164.404(a)(2); 164.410(a)(2)); N52-R07 (Model #668 sec. 6D(2)),Yes
+POL-03,4.5,"Notification matrix with commissioner, producer, and plan rows; counsel approves notices",IR-6; IR-8,RS.CO-02,"N52-R07 (Model #668 sec. 6A, 6F); N55-R02",Yes
+POL-03,4.6,Affected individuals counted by entity and state within 5 days,IR-4,RS.AN-08,N52-R07 (Model #668 sec. 6B(9)); N62-R03 (164.406; 164.408),Yes
+POL-03,4.7,Severity 1 to the disclosure committee within 24 hours; Form 8-K within 4 business days of a materiality determination,IR-6,RS.MA-04,N55-R02 (Form 8-K Item 1.05),Yes
+POL-03,4.9,Annual cross-division exercise with the matrix and a materiality decision,IR-3,ID.IM-02,N55-R02; N52-R07 (Model #668 sec. 4H(2)(g)),Yes
+POL-04,4.1,Restricted labels on all sites with Restricted data; no all-employee Restricted sites,RA-2,ID.AM-07,N52-R07 (Model #668 sec. 4D(2)(b)),No
+POL-04,4.2,Entity boundaries; routine-disclosure protocols; minimum necessary,AC-21; PT-3,PR.DS-10,N62-R02 (164.502(b); 164.514(d)(3)),Yes
+POL-04,4.3,Plan PHI stays in the plan workspace; no HCM exports elsewhere,AC-4; PT-3,PR.DS-10,N55-R06 (164.504(f)(2)(iii)); N62-R01 (164.314(b)(2)(ii)),Yes
+POL-04,4.5,Encryption in transit and at rest,SC-8; SC-28,PR.DS-01; PR.DS-02,N52-R07 (Model #668 sec. 4D(2)(d)); N62-R01 (164.312(a)(2)(iv); 164.312(e)(1)),Yes
+POL-04,4.6,AI assistants do not retrieve Restricted content except approved uses,AC-21,PR.DS-10,Group AI Standard,No
+POL-04,4.7,Retention schedules enforced; secure disposal,SI-12; MP-6,PR.DS-01,"N52-R07 (Model #668 sec. 4B(4), 4D(2)(k)); Fla. Stat. 501.171(8)",No
+POL-05,4.2,"Annual awareness training; role training for help desk, call center, treasury, payables, payroll",AT-2; AT-2(3),PR.AT-01; PR.AT-02,N52-R07 (Model #668 sec. 4D(5)); N62-R01 (164.308(a)(5)(i)),Yes
+POL-05,4.3,Verify payment and bank-detail requests through contact data on file,AC-5,PR.AT-01,N55-R03 (ICFR),Yes
+POL-05,4.6,Approved AI tools only; no Restricted data except approved uses; no AI-based decisions about people,PL-4,PR.AT-01,Group AI Standard,No
+POL-05,4.7,Recording only with consent where state law requires,PL-4,PR.AT-01,Fla. Stat. 934.03(2)(d),No
