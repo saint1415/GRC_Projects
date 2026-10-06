@@ -9,7 +9,7 @@ POL-01,4.7,IRC 7216: no disclosure or use without a permission or prior written 
 POL-01,4.8,Sanctions for policy violations and misuse of tax return information,PS-8,GV.RR-04,N54-R02 (301.7216-1(a)),No
 POL-01,4.9,"Service provider review, contract terms, and periodic assessment; 7216 contractor notices; Practice Cloud sub-processor gate",SA-9; SA-4,GV.SC-05; GV.SC-07,N54-R01 (314.4(f)); N54-R02 (301.7216-2(d)(2)); N52-R05 (248.30(a)(5)),Yes
 POL-01,4.10,Annual assessment by internal audit; Qualified Individual's annual written report,CA-2; CA-7,ID.IM-01; GV.OV-01,N54-R01 (314.4(d)(1); 314.4(i)),Yes
-POL-01,4.11,Exceptions risk-rated and time-limited; MFA exceptions need Qualified Individual approval,PL-1,GV.PO-02,N54-R01 (314.4(c)(5)),No
+POL-01,4.11,Exceptions risk-rated and time-limited; MFA exceptions need Qualified Individual approval,PL-1,GV.PO-02,N54-R01 (314.4(c)(5)),Yes
 POL-01,4.13,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,N54-R02 (301.7216-2(d)(1)); 31 CFR 10.22,No
 POL-02,4.1,Unique identities; shared mailboxes by delegation only,IA-2; AC-2,PR.AA-01,N54-R01 (314.4(c)(1)(i)),Yes
 POL-02,4.2,Role-based least privilege; office-scoped access in SYS-T1,AC-3; AC-6,PR.AA-05,N54-R01 (314.4(c)(1)(ii)); N54-R02 (301.7216-2(c)(2)),Yes
@@ -27,7 +27,7 @@ POL-03,4.4,Each regulated entity makes its own notice decision and documents it,
 POL-03,4.5,Combined notification matrix owned by Group General Counsel; reviewed quarterly,IR-6; IR-8,RS.CO-02,N54-R01 (314.4(h)(4)),Yes
 POL-03,4.6,Affiliate notices on the bridge and within the shortest contract or regulatory period,IR-6,RS.CO-02,N52-R05 (248.30(a)(5)(i)(B)),Yes
 POL-03,4.7,Severity 1 to disclosure committee within 24 hours; Form 8-K Item 1.05 within 4 business days of materiality,IR-6,RS.CO-03,N52-R08 (Form 8-K Item 1.05),No
-POL-03,4.8,"Hold refunds, payroll changes, and transfers until verified",IR-4,RS.MI-01,N54-R01 (314.3(b)(3)); N52-R06 (248.201),No
+POL-03,4.8,"Hold refunds, payroll changes, and transfers until verified",IR-4,RS.MI-01,N54-R01 (314.3(b)(3)); N52-R06 (248.201),Yes
 POL-03,4.10,Annual cross-division exercise with the matrix and a materiality decision,IR-3,ID.IM-02,N54-R01 (314.4(h)(7)),Yes
 POL-04,4.2,Encrypt Restricted information; deliver returns through the portal,SC-28; SC-8,PR.DS-01; PR.DS-02,N54-R01 (314.4(c)(3)),Yes
 POL-04,4.4,"Tax return information leaves Tax and Advisory only through interfaces that check a recorded, specific consent",AC-4; AC-21; PT-4,PR.DS-10,"N54-R02 (301.7216-3(a)(3), (b)(1)-(3))",Yes

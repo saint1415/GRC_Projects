@@ -111,7 +111,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 Recovery order changes by season: from May to December, Wealth trading and Practice Cloud move ahead of tax preparation.
 
 ## 8. Key findings
-1. **Shared services must recover first, as they must.** The group identity RTO of 1 hour was met in two tests in 2026.
+1. **Shared services must recover first.** The group identity RTO of 1 hour was met in two tests in 2026.
 2. **Practice Cloud is both a division and a dependency.** Its 2-hour RTO protects outside customers and Tax and Advisory together; a Practice Cloud outage in season stops tax document intake and e-signature.
 3. **Email is Moderate for availability but central to the top risk.** Its recovery can wait a day; its protection against business email compromise cannot (P01 GR-02; P08).
 4. **The referral interface is Low for availability and High for confidentiality.** It can stop for days with little effect, but every transfer must follow an IRC 7216 consent (P03).
