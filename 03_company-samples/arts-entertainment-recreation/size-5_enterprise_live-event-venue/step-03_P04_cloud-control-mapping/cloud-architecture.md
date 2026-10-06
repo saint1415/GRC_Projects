@@ -132,6 +132,6 @@ Every TVOP component in the SSP boundary appears here with controls from each re
 1. **Client templates are the weak edge of the payment page.** The CDE pattern protects the payment service, but the checkout page shell on client templates can load client tag containers. Script authorization (CM-7(5)) and tamper detection (SI-7) are workload duties no platform service can cover (POAM-002).
 2. **Edge provider concentration.** All public traffic depends on one edge provider; the cloud WAF fallback exists on paper only (POAM-014).
 3. **Two clouds, one control set.** Guardrails, logging, and key policies are written once as code and applied to both clouds. Differences are limited to service names (section 4).
-4. **Data warehouse identities.** Platform identity federation covers people, but 14 warehouse service accounts still use passwords without network policies, which is the pattern behind several 2024 cloud data warehouse breaches in the industry (POAM-005).
+4. **Data warehouse identities.** Platform identity federation covers people, but 14 warehouse service accounts still use passwords without network policies, so one stolen password can export patron data at scale (POAM-005).
 5. **Venue connectivity.** AV-01 to AV-06 reach the hub over legacy site VPNs, not the SD-WAN, and their POS terminals sit on flat networks (POAM-001).
 6. **AI services** run under provider terms with no training on company data; the AI governance committee reviews each new deployment (P10).

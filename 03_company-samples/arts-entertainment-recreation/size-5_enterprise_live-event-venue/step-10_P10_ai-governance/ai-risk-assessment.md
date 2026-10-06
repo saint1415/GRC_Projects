@@ -73,7 +73,7 @@ Rubric: `00_universal-framework/projects/step-10_P10_ai-governance/README.md` (r
 | AI-012 | Code assistant for engineers | Low | In production | Not reviewed (due 2026-11-30) |
 | AI-013 | SOC alert triage assistant | Low | In production | Not reviewed (due 2026-11-30) |
 
-**Tiering notes:** AI-006 is High because a missed crowding alert can affect physical safety, even though staff decide every action. AI-005 is High because it processes biometric data at the gate, where a false non-match delays entry and a breach exposes data that cannot be changed. AI-001 and AI-002 stay Medium because a price per price level and a session decision for one sale are not consequential decisions about a person; the escalation triggers in sections 7.3 and 8.3 would re-tier them.
+**Tiering notes:** AI-006 is High because a missed crowding alert can affect physical safety, even though staff decide every action. AI-005 is High because it processes face templates at the gate, which the company treats as biometric data (section 3), and a false non-match delays entry and a breach exposes data that cannot be changed. AI-001 and AI-002 stay Medium because a price per price level and a session decision for one sale are not consequential decisions about a person; the escalation triggers in sections 7.3 and 8.3 would re-tier them.
 
 ## 5. Portfolio findings that need action
 1. **Unreviewed High-tier tools.** AI-005, AI-006, and AI-010 started through vendor pilots or releases. AI-005 was paused on 2026-07-31 and AI-010's ranking was disabled on 2026-06-30 (P01 R-042 avoided; R-045). AI-006 may continue only in its 3-arena pilot until review.
