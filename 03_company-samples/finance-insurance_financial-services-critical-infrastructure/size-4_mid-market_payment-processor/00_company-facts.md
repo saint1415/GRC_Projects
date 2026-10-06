@@ -156,3 +156,8 @@ These details were added so the deliverables could be specific. They do not chan
 | Service providers | 182 vendors in total; 34 are PCI DSS service providers (can affect account data or the CDE); 41 vendors came with the acquisition |
 | Data science | The in-house fraud model (AI-001) replaced a licensed vendor model on 2025-06-30. 8 data scientists; the Head of Data Science reports to the CTO |
 | Additional role titles | Controller; Director of Sales and Partner Management; Contact Center Manager; Director of Corporate Communications; PCI Program Manager |
+| Vendor tiers (P09) | The 34 PCI DSS service providers are Tier 1; about 50 vendors are Tier 2; the rest are Tier 3. The contact center SaaS has no PCI DSS AOC |
+| AI and model governance (P10) | An AI and model risk committee chaired by the Chief Risk and Compliance Officer was formed on 2026-09-15. An outside model risk firm is engaged for independent validation of AI-001 and AI-002 |
+| Merchant contacts | Integrated Payments merchants are often reachable only through their ISV: 31 of 50 sampled had no direct security contact on file |
+| Sponsor bank requests | Bank A's internal audit has asked whether a SOC 1 report on the settlement services will be available for 2028 |
+| Cloud B log retention | Cloud B audit logs are kept 30 days inside Cloud B |

@@ -126,7 +126,7 @@ Every CPPP component in the SSP boundary appears here with controls from each re
 | Portals and hosted payment pages | AC-17 (inherited) | AU-6 (inherited) | CM-3 (inherited) | IA-8 | SC-5 (inherited) | SI-7 |
 | Mainframe and midrange settlement servers | AC-6(9) (inherited) | AU-6 | CM-6 (inherited baseline) | IA-2(1) (inherited) | SC-7(4) (inherited) | SI-2 |
 | MFT appliances | AC-4 (inherited) | AU-9 (inherited) | CM-8 (inherited) | IA-2(1) (inherited) | SC-8 | SI-4 |
-| Payment HSMs | AC-6(9) (inherited) | AU-9 (inherited) | CM-2 (inherited) | IA-3 (network processors) | SC-12 | SI-4 (inherited) |
+| Payment HSMs | AC-6(9) (inherited) | AU-9 (inherited) | CM-2 (inherited) | IA-7 (custodian smart cards, in the SSP) | SC-12 | SI-4 (inherited) |
 
 ## 7. Findings from the mapping
 1. **The interconnect is where the clouds and the data centers meet, and where segmentation broke.** The 2026-05-16 re-architecture of the DC-1 to Cloud A interconnect left one unintended path from a DC-1 management subnet to a Cloud A CDE subnet (P07 SC-7; POAM-003). Fix: correct the route policy, add the interconnect to the guardrail code so drift is detected, and retest segmentation before ROC fieldwork.

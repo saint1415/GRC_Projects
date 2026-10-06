@@ -186,7 +186,7 @@ CSF 2.0 subcategories in the CSV come from `00_universal-framework/crosswalks/cs
 | Hybrid | 54 | Cloud A and Cloud B providers, colocation providers, identity provider, MSSP, content delivery service, source code SaaS |
 | Common/Inherited | 5 | Identity provider (AC-7, IA-2(8)), cloud and colocation time and visitor controls (AU-8, PE-8), content delivery service (SC-5) |
 
-The Partially implemented statements trace to the 16 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. About half of them name the Integrated Payments gateway (Cloud B) as the reason, which is why its integration is the first condition in section 4.2.
+The Partially implemented statements trace to the 16 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. 49 of the 69 name the Integrated Payments gateway (Cloud B) or the acquisition as a reason, which is why its integration leads the planned modifications in section 4.3.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee. Independent PCI DSS validation is the QSA's combined 2026 ROC.

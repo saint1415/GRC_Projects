@@ -9,7 +9,7 @@
 | Universal method | [step-02_P02_system-security-plan/README.md](../../../../00_universal-framework/projects/step-02_P02_system-security-plan/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**System to document:** Payment processing platform (cardholder data environment)
+**System to document:** Payment Processing Platform (PPP)
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.

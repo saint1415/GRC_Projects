@@ -114,11 +114,11 @@ The full map is in `dependency-map.csv`. Key findings:
 ## 8. Gaps carried to other deliverables
 | Gap | Carried to |
 |---|---|
-| Settlement recovery 9.5 h against a 6 h RTO | P01 R-004; P02 CP-10; P03 G-133 (500.16(d)(2)); POAM-006 |
+| Settlement recovery 9.5 h against a 6 h RTO | P01 R-004; P02 CP-10; P03 G-176 (500.16(a)(2)); POAM-006 |
 | Sponsor banks never in a recovery test; no joint cutoff procedure rehearsed | P01 R-014; P02 CP-2(1); POAM-016 |
-| Bank C designated contacts not loaded for 225.303 notices | P01 R-013; P03 G-104; POAM-007 |
+| Bank C designated contacts not loaded for 225.303 notices | P01 R-013; P03 G-136; POAM-007 |
 | MFT single-vendor dependency without EDR; manual fallback drilled with one bank | P01 R-003; POAM-009 |
 | Cloud A provider-wide failure not covered | P01 R-008 |
-| Hosted fields tamper-detection at 64% of ISV integrations | P01 R-010; P03 G-034 and G-073; POAM-021 |
-| Asset records missing support dates or RTOs for about 18% of assets | P03 G-127 (500.13(a)); POAM-018 |
+| Hosted fields tamper-detection at 64% of ISV integrations | P01 R-010; P03 G-039 and G-086; POAM-021 |
+| Asset records missing support dates or RTOs for about 18% of assets | P03 G-170 (500.13(a)); POAM-018 |
 | Mainframe skills concentration | P01 R-024 |
