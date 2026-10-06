@@ -1,2 +1,55 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"The firm must maintain an information security program aligned to NIST CSF 2.0, documented in this policy hierarchy a...",PM-1; PL-2,GV.PO-01,N56-BM (GV.PO-01),No
+POL-01,4.2,"The CISO is accountable for the security program, the Chief Privacy Officer for the privacy program, and the Vice Pre...",PM-2,GV.RR-02,N56-R03 (8 CFR 274a.2(g)(1)),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST S...",RA-3; PM-9,GV.RM-01,N56-BM (GV.RM-01); Fla. Stat. 501.171(2),Yes
+POL-01,4.4,"Risk may be accepted only at these authority levels: risk owner (Low), CISO with the accountable executive (Moderate)...",PM-9,GV.RM-04,N56-BM (GV.RM-04),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they des...,PL-1,GV.PO-02,N56-BM (GV.PO-02),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5,GV.PO-02,N56-BM (GV.PO-02),No
+POL-01,4.7,"Workforce members who misuse associate or candidate data, E-Verify, or consumer reports, or otherwise violate securit...",PS-8,GV.RR-04,E-Verify MOU Art. II.A.15; N56-R02 (15 U.S.C. 1681b(b)),No
+POL-01,4.8,"No vendor may receive associate, candidate, or client personal information until it has been tiered and assessed unde...",SA-9; SR-6,GV.SC-05,Fla. Stat. 501.171(6); N56-BM (GV.SC-05),Yes
+POL-01,4.9,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor i...,CA-2; CA-2(1),ID.IM-01,N56-BM (ID.IM-01),Yes
+POL-01,4.10,"Every acquisition must include security due diligence before signing, funded integration, and a plan that brings iden...",RA-3; SA-9,GV.SC-06,N56-BM (GV.SC-06); N56-R03 (8 CFR 274a.2(e)(4)),Yes
+POL-01,4.11,"Security documentation, including risk analyses, assessments, and POA&Ms, must be retained for at least 7 years under...",SI-12,GV.PO-02,N56-BM (GV.PO-02),Yes
+POL-01,4.12,"The CISO must report cybersecurity risk to the risk and technology committee of the board at least quarterly, includi...",PM-9,GV.OV-01,SEC S-K 106(c),No
+POL-01,4.13,"Changes to payroll rules, tax tables, bank file settings, Form I-9 and E-Verify configuration, and AI tool settings m...",CM-3; CM-5,ID.RA-07,N56-BM (ID.RA-07),Yes
+POL-02,4.1,Access must be granted on least privilege through identity governance role templates approved by the system owner.,AC-2; AC-6,PR.AA-05,N56-BM (PR.AA-05); FAR 52.204-21(b)(1)(i)-(ii),Yes
+POL-02,4.2,Workforce access to company systems must go through SSO with MFA; privileged users must use phishing-resistant keys t...,IA-2; IA-2(1),PR.AA-03,N56-BM (PR.AA-03); FAR 52.204-21(b)(1)(v)-(vi),Yes
+POL-02,4.3,"Associates and other non-organizational users must sign in with app-based or phishing-resistant authentication, and e...",IA-8; AC-2(12),PR.AA-03,N56-BM (PR.AA-03); Fla. Stat. 501.171(2),Yes
+POL-02,4.4,"Bank account, address, and MFA changes must not be made by phone on the strength of knowledge questions; callers must...",IA-8; AT-3,PR.AA-02,N56-BM (PR.AA-02),Yes
+POL-02,4.5,"Access must be disabled within 4 hours of a termination, including E-Verify and every system outside SSO.",AC-2; PS-4,PR.AA-01,E-Verify MOU Art. II.A.3; N56-BM (PR.AA-01),Yes
+POL-02,4.6,"Access to tier-1 and SOX applications must be certified quarterly by the system owner, and other access semiannually.",AC-2; AC-6,PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-02,4.7,"No person may both change pay rules and release payroll, or both approve and transmit bank or paycard files.",AC-5,PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-02,4.8,"Service accounts and API keys must be unique to each integration and client, stored in the secrets vault, and rotated...",IA-5; AC-2,PR.AA-01,N56-BM (PR.AA-01),Yes
+POL-02,4.9,Remote and vendor access must use the zero-trust access service or the PAM vendor gateway with approval and session r...,AC-17; MA-4,PR.AA-05,N56-BM (PR.AA-05); FAR 52.204-21(b)(1)(iii),Yes
+POL-02,4.10,MFA resets for privileged and payroll users must be verified by live video with the user's manager confirming identity.,IA-5; IA-12,PR.AA-02,N56-BM (PR.AA-02),Yes
+POL-02,4.11,"Form I-9 document images, E-Verify data, and consumer reports must be accessible only to onboarding, compliance, and...",AC-3; AC-6,PR.AA-05,N56-R03 (8 CFR 274a.2(g)(1)(i)); N56-R02 (15 U.S.C. 1681b(b)),Yes
+POL-02,4.12,"Default passwords and PINs must be changed before any system or device, including time clocks and kiosks, goes into s...",IA-5; CM-6,PR.AA-01,N56-BM (PR.AA-01),Yes
+POL-03,4.1,"The firm must maintain an incident response plan and runbooks for its most likely severe incidents, starting with a p...",IR-8,RS.MA-01,N56-BM (RS.MA-01),Yes
+POL-03,4.2,"Workforce, acquired firms, and vendors must report suspected incidents to the SOC within 1 hour, including suspected...",IR-6,RS.MA-02,N56-BM (RS.MA-02),Yes
+POL-03,4.3,"Every incident must be logged, classified by severity under STD-03.1 (raised one level inside the weekly payroll wind...",IR-4; IR-5,RS.MA-03,N56-BM (RS.MA-03),Yes
+POL-03,4.4,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours, and the disclosure committee must...",IR-6; IR-8,RS.CO-02,SEC 8-K 1.05,Yes
+POL-03,4.5,"If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4 busines...",IR-6,RS.CO-02,SEC 8-K 1.05,Yes
+POL-03,4.6,The Chief Privacy Officer must decide breach notifications under the law of each state where affected individuals res...,IR-6,RS.CO-02,State breach laws (Fla. Stat. 501.171(3)-(5)); E-Verify MOU Art. II.A.16,Yes
+POL-03,4.7,"No ransom may be paid without approval from the CEO, the General Counsel, and the cyber insurer, and an OFAC sanction...",IR-4,RS.MI-01,N56-BM (RS.MI-01),Yes
+POL-03,4.8,"Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05), including the prior-week advance proc...",CP-2; CP-4; CP-10,RC.RP-01,N56-BM (RC.RP-01),Yes
+POL-03,4.9,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure com...",IR-3; IR-8,ID.IM-02,SEC 8-K 1.05; N56-BM (ID.IM-02),Yes
+POL-03,4.10,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the ris...,IR-4,ID.IM-03,N56-BM (ID.IM-03),Yes
+POL-03,4.11,"When E-Verify is unavailable, the onboarding team must document the outage for each day it lasts and create the cases...",CP-2,RC.RP-04,Fla. Stat. 448.095(2)(c); E-Verify MOU Art. II.A.8,Yes
+POL-04,4.1,"Information must be classified as Restricted (SSNs, bank accounts, Form I-9 documents, E-Verify data, consumer report...",RA-2,ID.AM-05,N56-BM (ID.AM-05),No
+POL-04,4.2,"Restricted data must be encrypted at rest and in transit; outside the payroll engine, SSNs and bank account numbers m...",SC-28; SC-8,PR.DS-01,Fla. Stat. 501.171(2); N56-BM (PR.DS-01),Yes
+POL-04,4.3,"Every recurring extract of Restricted data must be registered (PRC-04.1) with its purpose, owner, recipients, and ret...",AC-4,ID.AM-07,N56-BM (ID.AM-07),No
+POL-04,4.4,Records must be kept and then destroyed under the retention schedule in STD-04.2; each Form I-9 must be kept until 3...,SI-12,ID.AM-08,N56-R03 (8 CFR 274a.2(b)(2)(i)(A)); N56-R01 (16 CFR 682.3),Yes
+POL-04,4.5,Paper must be shredded and media destroyed or wiped by a certified vendor with certificates of destruction; electroni...,MP-6,ID.AM-08,N56-R01 (16 CFR 682.3(b)); Fla. Stat. 501.171(8); FAR 52.204-21(b)(1)(vii),Yes
+POL-04,4.6,"Form I-9 information must be used only for employment eligibility purposes, and every creation, change, or access of...",AU-12; AC-3,PR.PS-04,N56-R03 (8 CFR 274a.2(b)(4); (g)(1)(iv)),Yes
+POL-04,4.7,"Backups of tier-1 data, including Form I-9 records, must be immutable, kept in a separate account, and restore-tested...",CP-9,PR.DS-11,N56-R03 (8 CFR 274a.2(g)(1)(ii)),Yes
+POL-04,4.8,"Bank, paycard, and tax files must be hashed when generated and verified before transmission; a mismatch must stop the...",SI-7,PR.DS-02,N56-BM (PR.DS-02),Yes
+POL-04,4.9,Client data received for SL-1 and SL-2 must be used only for that client's service and validated on intake.,SI-10; AC-3,PR.DS-10,N56-BM (PR.DS-10),Yes
+POL-04,4.10,Federal contract information must be handled only in approved systems and must not be received or sent through person...,AC-20,PR.DS-01,N56-R07 (48 CFR 52.204-21(b)(1)(iii)),No
+POL-05,4.1,"Company systems must be used only for authorized business; Restricted data must not be stored in personal email, pers...",PL-4; AC-20,PR.AA-05,N56-BM (PR.AA-05),No
+POL-05,4.2,"All workforce members must complete security training at hire and annually and attest to this policy; payroll, I-9, E...",AT-2; AT-3,PR.AT-01,N56-R03 (8 CFR 274a.2(g)(1)(iii)); E-Verify MOU Art. II.A.5,Yes
+POL-05,4.3,"Only AI tools on the approved list (STD-05.4) may be used; candidate, associate, or client data must not be entered i...",PL-4; SA-9,GV.SC-05,N56-R08 (NYC Admin. Code 20-870 et seq.); Colo. SB26-189; Title VII 703(k),Yes
+POL-05,4.4,"Workforce members must report phishing, suspicious calls, and unexpected MFA prompts, and must never approve an MFA p...",AT-2; IR-6,PR.AT-01,N56-BM (PR.AT-01),Yes
+POL-05,4.5,"Devices must lock after 10 minutes of inactivity, and laptops must use full-disk encryption.",AC-11; SC-28,PR.DS-01,N56-BM (PR.DS-01),Yes
+POL-05,4.6,"Workforce members must be told that company systems are monitored, through sign-in banners and this policy.",AC-8; PL-4,DE.CM-03,N56-BM (DE.CM-03),No
+POL-05,4.7,"Recruiters and branch staff must not request or accept identity documents, SSNs, or bank details by email, text, or c...",AC-20,PR.DS-01,N56-R03 (8 CFR 274a.2(b)(4)); Fla. Stat. 501.171(2),No
+POL-05,4.8,"Internal staff with payroll, Treasury, Form I-9, or E-Verify access must pass a background check before access, condu...",PS-3,GV.RR-04,N56-R02 (15 U.S.C. 1681b(b)(2)),No

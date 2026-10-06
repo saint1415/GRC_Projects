@@ -33,7 +33,7 @@
 
 **Binding rules assessed at requirement level.** At Mid-Market every binding rule for the primary business line is analyzed, with evidence sampling:
 - **Form I-9, 8 CFR 274a.2 (N56-R03).** The firm is employer of record for about 13,800 new associates a year and keeps I-9s electronically, so the electronic system standards in (e), documentation in (f), the records security program in (g), and electronic signatures in (h)-(i) apply, along with retention, inspection, copies, and use limits in (b).
-- **E-Verify MOU.** Access (Art. II.A.3), tutorial (II.A.5), timing and use (II.A.7-11), safeguarding (II.A.15), and **immediate** breach notice to DHS (II.A.16).
+- **E-Verify MOU.** Access (Art. II.A.3), tutorial (II.A.5), case numbers on the I-9 (II.A.7), the 3-business-day case timing, no pre-screening, and verifying all new employees (II.A.9-11), safeguarding (II.A.15), and **immediate** breach notice to DHS (II.A.16).
 - **Fla. Stat. 448.095.** E-Verify for private employers with 25 or more employees ((2)(b)2.), the annual certification ((2)(b)3.), outage documentation ((2)(c)), and 3-year retention ((2)(d)).
 - **FCRA, 15 U.S.C. 1681b(b) and 1681m(a) (N56-R02).** About 10,900 consumer reports a year.
 - **FACTA Disposal Rule, 16 CFR 682.3 (N56-R01).**
