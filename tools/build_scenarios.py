@@ -274,6 +274,15 @@ def notification_rows(f, vd):
     return out
 
 
+def tier_scaling(tier_id, project_id, private):
+    """The tier's scope for a project; a private Enterprise sample has no SEC filing step."""
+    sc = scaling[(tier_id, project_id)]
+    if not private:
+        return sc
+    return {k: v.replace("SEC materiality assessment step", "materiality assessment step (privately owned, so no SEC filing)")
+            for k, v in sc.items()}
+
+
 def write_scenario(u, tier_id, vd):
     f = scenario_facts(u, tier_id, vd)
     t, p, o = f["_tier"], f["_size"], f["_override"]
@@ -284,6 +293,12 @@ def write_scenario(u, tier_id, vd):
     facts_file = d / "00_company-facts.md"
     m = re.search(r"^\| Legal name \| ([^|]+?) \|", facts_file.read_text(), re.M) if facts_file.exists() else None
     legal = m.group(1).split(" (")[0].strip() if m else legal_default
+    # A finished sample can override the tier's default public ownership (an Enterprise CPA firm is a private partnership).
+    private = bool(m) and "not publicly traded" in m.group(1).lower()
+    legal_form, ownership = t["legal_form"], t["ownership"]
+    if private:
+        form = m.group(1).split(" (", 1)[1].rstrip(")").split(";")[0].strip().removeprefix("a ")
+        legal_form, ownership = form[:1].upper() + form[1:], "Privately owned; not publicly traded"
 
     # ---- meeting brief
     # A finished sample names its own business; planned samples use the registry default.
@@ -295,7 +310,7 @@ def write_scenario(u, tier_id, vd):
         "t2": f"{legal} is a micro business with {p['employees']} employees, operating as {role}.",
         "t3": f"{legal} is a small business with {p['employees']:,} employees, operating as {role}.",
         "t4": f"{legal} is a privately held mid-market company with {p['employees']:,} employees, operating as {role}.",
-        "t5": f"{legal} is a publicly traded enterprise with {p['employees']:,} employees, operating as {role}.",
+        "t5": f"{legal} is a {'privately held' if private else 'publicly traded'} enterprise with {p['employees']:,} employees, operating as {role}.",
         "t6": (f"{legal} is a publicly traded, diversified enterprise with {p['employees']:,} employees in three divisions. "
                f"The focus of this sample is its {div['focus_division'].lower()} division ({u['name']}). The other divisions are "
                f"{div['division_2'][0].lower() + div['division_2'][1:]} and {div['division_3'][0].lower() + div['division_3'][1:]}. "
@@ -314,7 +329,7 @@ def write_scenario(u, tier_id, vd):
         L += ["> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share "
               "(locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.", ""]
     L += ["## At a glance", "| | |", "|---|---|",
-         f"| Legal name | {legal} |", f"| Legal form | {t['legal_form']} |", f"| Ownership | {t['ownership']} |"]
+         f"| Legal name | {legal} |", f"| Legal form | {legal_form} |", f"| Ownership | {ownership} |"]
     L += [f"| {k} | {v} |" for k, v in size_rows]
     L += [f"| Size tier | {t['name']}: {t['definition']} |",
           f"| SBA size status | {p['sba_status']} |",
@@ -344,7 +359,7 @@ def write_scenario(u, tier_id, vd):
           f"[how-to-build-the-10-projects.md]({rel(d, ROOT / 'docs' / 'how-to-build-the-10-projects.md')}).", "",
           "| Step | Project | What it covers here | Builds on |", "|---|---|---|---|"]
     for pj in projects:
-        sc = scaling[(tier_id, pj["project_id"])]
+        sc = tier_scaling(tier_id, pj["project_id"], private)
         extra = {"P02": f" System: {f['system_name']}.", "P03": f" Regulation: {f['primary_regulation']}.",
                  "P08": f" Incident: {f['ir_scenario']}.", "P10": f" AI use case: {f['ai_use_case']}."}.get(pj["project_id"], "")
         L.append(f"| {pj['build_step']} | [{pj['project_id']} {pj['name']}]({pj['slug']}/_context.md) | "
@@ -365,7 +380,7 @@ def write_scenario(u, tier_id, vd):
         pd = d / pj["slug"]
         pd.mkdir(exist_ok=True)
         src = U / "projects" / pj["slug"]
-        sc = scaling[(tier_id, pj["project_id"])]
+        sc = tier_scaling(tier_id, pj["project_id"], private)
         C = [GENERATED, f"# {pj['project_id']} {pj['name']}: {f['scenario_title']}", "",
              "| | |", "|---|---|",
              f"| Scope at this tier | {sc['scope']} |", f"| Expected depth | {sc['expected_depth']} |",

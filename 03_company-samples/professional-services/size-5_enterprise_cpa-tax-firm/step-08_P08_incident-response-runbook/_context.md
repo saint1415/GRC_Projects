@@ -3,7 +3,7 @@
 
 | | |
 |---|---|
-| Scope at this tier | Incident type with SEC materiality assessment step |
+| Scope at this tier | Incident type with materiality assessment step (privately owned, so no SEC filing) |
 | Expected depth | Runbooks integrated with crisis; legal; disclosure committee |
 | Deliverable form | Runbooks plus notification and disclosure matrix |
 | Universal method | [step-08_P08_incident-response-runbook/README.md](../../../../00_universal-framework/projects/step-08_P08_incident-response-runbook/README.md) |
