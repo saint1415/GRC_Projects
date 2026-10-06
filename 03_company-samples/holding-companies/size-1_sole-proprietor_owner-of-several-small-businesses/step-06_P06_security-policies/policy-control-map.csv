@@ -1,2 +1,44 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,Documented security program covering all four entities,PM-1,GV.PO-01,CSF 2.0 portfolio profile GV.PO-01 (voluntary),No
+POL-01,4.2,Owner designated in writing as security lead for each entity,PM-2,GV.RR-02,CSF 2.0 portfolio profile GV.RR-02 (voluntary),No
+POL-01,4.3,"Annual SP 800-30 risk assessment plus change triggers (new business, system, AI feature, hire)",RA-3; PM-9,ID.RA-07,CSF 2.0 portfolio profile ID.RA-07 (voluntary),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-02,CSF 2.0 portfolio profile GV.RM-02 (voluntary),No
+POL-01,4.5,Annual evaluation with outside review every second year,CA-2,ID.IM-01,CSF 2.0 portfolio profile ID.IM-01 (voluntary),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,CSF 2.0 portfolio profile GV.PO-02 (voluntary),No
+POL-01,5.1,Sanctions for LLC employees,PS-8,GV.RR-04,CSF 2.0 portfolio profile GV.RR-04 (voluntary),No
+POL-01,5.4,"Written, time-limited exceptions",PL-1,GV.PO-02,CSF 2.0 portfolio profile GV.PO-02 (voluntary),No
+POL-01,6.1,"No written terms, no Restricted data; 10-day breach notice in contractor terms",SA-9,GV.SC-05,Fla. Stat. 501.171(2); 501.171(6)(a),Yes
+POL-01,6.2,Vendor list with data held and security notice contact,SA-9; CM-8,GV.SC-04,CSF 2.0 portfolio profile GV.SC-04 (voluntary),Yes
+POL-01,6.3,Vendor checklist before buying a tool that holds Restricted data,SA-4,GV.SC-06,CSF 2.0 portfolio profile GV.SC-06 (voluntary),No
+POL-01,6.4,Exit step when a vendor relationship ends,SA-9,GV.SC-10,CSF 2.0 portfolio profile GV.SC-10 (voluntary),No
+POL-01,6.5,Annual review of the accounting service SOC 2 report and customer controls,SA-9,GV.SC-07,CSF 2.0 portfolio profile GV.SC-07 (voluntary),Yes
+POL-01,6.6,"Owner-started, watched remote support",AC-17,PR.AA-05,CSF 2.0 portfolio profile PR.AA-05 (voluntary),No
+POL-01,7.1,Own accounts and PINs; no shared passwords,IA-2; AC-2,PR.AA-01,Fla. Stat. 501.171(2),Yes
+POL-01,7.2,App-based MFA everywhere; hardware key for email and banking,IA-2(1); IA-2(2),PR.AA-03,Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique passphrases in a password manager; default passwords changed,IA-5,PR.AA-01,Fla. Stat. 501.171(2),Yes
+POL-01,7.4,Hire and departure checklist; quarterly account review,AC-2; PS-4; PS-7,GV.RR-04,Fla. Stat. 501.171(2),Yes
+POL-01,7.5,Least privilege: bookkeeper role; separate administrator account,AC-6,PR.AA-05,CSF 2.0 portfolio profile PR.AA-05 (voluntary),No
+POL-01,7.6,Device lock after 5 minutes (phones and tablets 1 minute),AC-11,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.7,"Monthly review of sign-ins, forwarding rules, users, gate entries, payee changes, and bank alerts",AU-6,DE.CM-03,CSF 2.0 portfolio profile DE.CM-03 (voluntary),Yes
+POL-01,7.8,"Sealed emergency access sheet, recovery codes, and spare key with the business attorney",AC-2; CP-2,ID.IM-04,CSF 2.0 portfolio profile ID.IM-04 (voluntary),No
+POL-01,8.1,Three-level classification,RA-2,ID.AM-07,CSF 2.0 portfolio profile ID.AM-07 (voluntary),No
+POL-01,8.2,Restricted data only in approved locations; each LLC's data kept separate,AC-3,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.3,Full-disk encryption and individual sign-in on every computer,SC-28,PR.DS-01,Fla. Stat. 501.171(2),Yes
+POL-01,8.4,Restricted data sent only through its system or encrypted links,SC-8,PR.DS-02,Fla. Stat. 501.171(2),No
+POL-01,8.5,Rental applications and screening reports stay in the platform,SI-12,ID.AM-08,16 CFR 682.3(a) (Rentals); 15 U.S.C. 1681b(f),No
+POL-01,8.6,Backup service for suite; monthly exports; annual restore test,CP-9,PR.DS-11,CSF 2.0 portfolio profile PR.DS-11 (voluntary),Yes
+POL-01,8.7,Retention and disposal schedule with a deletion record,MP-6; SI-12,ID.AM-08,Fla. Stat. 501.171(8); 16 CFR 682.3(a) (Rentals),No
+POL-01,8.8,Security records kept at least 5 years,SI-12,ID.AM-08,Fla. Stat. 501.171(4)(c),No
+POL-01,9.2,"Automatic updates, antivirus, standard accounts for staff",SI-2; SI-3,PR.PS-02,CSF 2.0 portfolio profile PR.PS-02 (voluntary),No
+POL-01,9.3,Customer Wi-Fi on a separate guest network,SC-7,PR.IR-01,CSF 2.0 portfolio profile PR.IR-01 (voluntary); card processor terms (contract),No
+POL-01,9.4,Callback before any new or changed payee; only the owner changes payees,AC-6; AT-3,PR.AT-02,CSF 2.0 portfolio profile PR.AT-02 (voluntary),No
+POL-01,9.5,AI tools: approved tool only; no Restricted data; no decisions about people,PL-4; SA-9,GV.PO-01,42 U.S.C. 3604 (Rentals); Fla. Stat. 501.171(2),No
+POL-01,9.6,Written tenant selection criteria; adverse action notices,PL-4,GV.OC-03,15 U.S.C. 1681m(a); 42 U.S.C. 3604 (Rentals),No
+POL-01,9.7,Annual training for the owner and staff; payment fraud briefing,AT-2; AT-3,PR.AT-01,CSF 2.0 portfolio profile PR.AT-01 (voluntary),No
+POL-01,10.1,Runbook with printed contacts; call-the-owner notice at each site,IR-8,RS.MA-01,CSF 2.0 portfolio profile RS.MA-01 (voluntary),No
+POL-01,10.2,Anyone reports a suspected incident the same day; incident log with discovery time,IR-5; IR-6,RS.MA-04,CSF 2.0 portfolio profile RS.MA-04 (voluntary),Yes
+POL-01,10.3,Record which LLC's data was involved and the same-day agent notice to that LLC,IR-6,RS.CO-02,Fla. Stat. 501.171(6)(a),Yes
+POL-01,10.4,Per-LLC notice deadlines; written no-harm determinations,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(4),No
+POL-01,10.5,No ransom or extortion payment without counsel and an OFAC check,IR-4,RS.MA-01,CSF 2.0 portfolio profile RS.MA-01 (voluntary),No
+POL-01,10.6,Annual walkthrough; lessons learned within 30 days,IR-3,ID.IM-02,CSF 2.0 portfolio profile ID.IM-02 (voluntary),No
+POL-01,11.2,Storage manager's written authority for up to two weeks,CP-2,RC.RP-01,CSF 2.0 portfolio profile RC.RP-01 (voluntary),No

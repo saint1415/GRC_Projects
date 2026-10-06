@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**168 of 216** sample companies are finished (1680 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**169 of 216** sample companies are finished (1690 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -181,6 +181,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Professional, Scientific, and Technical Services | Sole Proprietorship | CPA tax firm | [README](03_company-samples/professional-services/size-1_sole-proprietor_cpa-tax-firm/README.md) |
 | Professional, Scientific, and Technical Services | Micro | CPA tax firm | [README](03_company-samples/professional-services/size-2_micro_cpa-tax-firm/README.md) |
 | Professional, Scientific, and Technical Services | Small | CPA tax firm | [README](03_company-samples/professional-services/size-3_small_cpa-tax-firm/README.md) |
+| Professional, Scientific, and Technical Services | Mid-Market | CPA tax firm | [README](03_company-samples/professional-services/size-4_mid-market_cpa-tax-firm/README.md) |
 | Management of Companies and Enterprises | Small | Holding company | [README](03_company-samples/holding-companies/size-3_small_holding-company/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Small | Staffing firm | [README](03_company-samples/admin-support-services/size-3_small_staffing-firm/README.md) |
 | Educational Services | Sole Proprietorship | Tutoring service | [README](03_company-samples/education/size-1_sole-proprietor_tutoring-service/README.md) |

@@ -1,2 +1,57 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,"The firm must maintain a written information security program aligned to NIST CSF 2.0, documented in this policy hier...",PM-1; PL-2,GV.PO-01,N54-R01 (314.3(a)),No
+POL-01,4.2,"The CISO must be designated in writing as the Qualified Individual, and the Director of Security Operations as the HI...",PM-2,GV.RR-02,N54-R01 (314.4(a)); N54-R06 (164.308(a)(2)),No
+POL-01,4.3,"A written enterprise risk assessment must be performed at least annually and after material changes or acquisitions,...",RA-3; PM-9,GV.RM-01,N54-R01 (314.4(b)(1); 314.4(b)(2)),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-06,N54-R01 (314.4(b)(1)(iii)),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they des...,PL-1,GV.PO-02,N54-R01 (314.4(g)),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5,GV.PO-02,N54-R01 (314.4(g)),No
+POL-01,4.7,"Workforce members who violate security, privacy, or confidentiality policies, including improper use or disclosure of...",PS-8,GV.RR-04,N54-R02 (301.7216-1(a)),No
+POL-01,4.8,"No service provider may access customer information, tax return information, or PHI until it has been tiered and asse...",SA-9; SR-6,GV.SC-05,N54-R01 (314.4(f)(1)-(3)); N54-R06 (164.308(b)(2)),Yes
+POL-01,4.9,"Every individual at a contractor who receives tax return information to program, maintain, repair, or test tax softwa...",SA-9; PS-7,GV.SC-05,N54-R02 (301.7216-2(d)(2)),Yes
+POL-01,4.10,"Every acquisition must include security due diligence before closing, a risk assessment within 90 days of closing, an...",RA-3; SA-9,GV.OC-01,N54-R01 (314.4(b)(2); 314.4(g)),Yes
+POL-01,4.11,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor i...,CA-2; CA-2(1),ID.IM-01,N54-R01 (314.4(d)(1)),No
+POL-01,4.12,The Qualified Individual must report in writing to the Partnership Board at least annually on the overall status of t...,PM-9,GV.OV-01,N54-R01 (314.4(i)),No
+POL-01,4.13,"Security documentation, including risk assessments, assessments, incident records, and Qualified Individual reports,...",SI-12,GV.PO-02,N54-R06 (164.316(b)(2)(i)); N54-R01 (314.4(h)(6)),Yes
+POL-02,4.1,Every user and service must have a unique identity. Shared accounts are prohibited for workforce and client users; se...,IA-2; AC-2,PR.AA-01,N54-R01 (314.4(c)(1)(i)); N54-R04 (52.204-21(b)(1)(v)),Yes
+POL-02,4.2,"Access to client data must be granted by engagement or role, on least privilege, and approved by the engagement partn...",AC-2; AC-3; AC-6,PR.AA-05,N54-R01 (314.4(c)(1)(ii)); N54-R04 (52.204-21(b)(1)(ii)),Yes
+POL-02,4.3,"Duties that could let one person prepare, approve, and release a return for e-file, or create and pay a vendor, must...",AC-5,PR.AA-05,N54-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.4,"MFA is required for every individual accessing any firm information system, including client portal users. Workforce...",IA-2(1); IA-2(2); IA-8,PR.AA-03,N54-R01 (314.4(c)(5)),Yes
+POL-02,4.5,"Access must be disabled the same business day as a termination, immediately for involuntary terminations, and automat...",PS-4; AC-2,PR.AA-05,N54-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.6,"Workforce accounts inactive for 45 days, and client portal accounts inactive for 24 months, must be disabled automati...",AC-2(3),PR.AA-05,N54-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.7,Engagement partners and system owners must certify access quarterly; privileged access and service accounts must be c...,AC-2,PR.AA-05,N54-R01 (314.4(c)(1)),Yes
+POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,N54-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.9,Remote access must go through the zero-trust access broker with device posture checks. Email and firm applications ma...,AC-17; AC-20,PR.AA-05,N54-R01 (314.4(c)(1)(i)); N54-R04 (52.204-21(b)(1)(iii)),Yes
+POL-02,4.10,Access to tax return information from outside the United States requires prior approval under the travel procedure; i...,AC-3; CM-2(7),PR.AA-05,N54-R02 (301.7216-2(c)(2)),Yes
+POL-02,4.11,"Default passwords must be changed before any device or system is connected to a firm network, including printer-scann...",IA-5,PR.AA-01,N54-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.12,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by...",AC-2,PR.AA-05,N54-R01 (314.4(h)),Yes
+POL-03,4.1,"The incident response plan must state its goals, internal processes, roles and decision authority, communications, re...",IR-8,RS.MA-01,N54-R01 (314.4(h)),Yes
+POL-03,4.2,Every workforce member must report a suspected incident (including an MFA prompt they did not start or a request to c...,IR-6,RS.MA-02,N54-R01 (314.4(h)(2)),Yes
+POL-03,4.3,Incidents must be classified and escalated under STD-03.1; every severity-1 incident must be briefed to the General C...,IR-4; IR-8,RS.MA-02,N54-R01 (314.4(h)(3)),Yes
+POL-03,4.4,"The incident log must record three dates separately: discovery (FTC clock, 314.4(j)(2)), confirmation (IRS clock, Pub...",IR-5; IR-6,RS.MA-02,N54-R01 (314.4(j)); N54-R03 (Pub. 1345),Yes
+POL-03,4.5,Security incidents affecting taxpayer information must be reported to the IRS as soon as possible and no later than t...,IR-6,RS.CO-02,N54-R03 (Pub. 1345),Yes
+POL-03,4.6,"Notification decisions (FTC, states, individuals, health care clients, contracting officers, and clients) must be mad...",IR-6; IR-8,RS.CO-02,N54-R01 (314.4(j)); N54-R06 (164.410); Fla. Stat. 501.171(3)-(5),Yes
+POL-03,4.7,"Clients whose data is affected, including SEC-registrant clients that must assess incidents on third-party systems th...",IR-6(3); SA-4,RS.CO-03,Client contracts; SEC Release 33-11216,No
+POL-03,4.8,No ransom or extortion payment may be made without the approval of the CEO and Managing Partner and the General Couns...,IR-4,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.9,"The incident response plan and each runbook must be exercised at least annually, including the Incident Disclosure Co...",IR-3,ID.IM-02,N54-R01 (314.4(h)(7)),Yes
+POL-03,4.10,Recovery must follow the BIA priority order (P05). Tier-1 systems must be restore-tested at least annually and must m...,CP-4; CP-10,RC.RP-01,N54-R01 (314.4(h)); N54-R06 (164.308(a)(7)),Yes
+POL-03,4.11,"Lessons learned must be documented within 30 days after an incident is closed, and the resulting weaknesses added to...",IR-4; CA-5,ID.IM-04,N54-R01 (314.4(h)(5); 314.4(h)(7)),Yes
+POL-04,4.1,"Information must be classified as Restricted (tax return information, customer information, PHI, SSNs, bank and ident...",RA-2,ID.AM-05,N54-R01 (314.4(c)(2)),No
+POL-04,4.2,"A data map must record where Restricted information is stored, including AI services and offshore workspaces, and be...",CM-12,ID.AM-07,N54-R01 (314.4(c)(2)),No
+POL-04,4.3,Restricted information must be encrypted at rest and in transit over external networks. Any exception requires compen...,SC-8; SC-28,PR.DS-01,N54-R01 (314.4(c)(3)); N54-R06 (164.312(a)(2)(iv); 164.312(e)(2)(ii)),Yes
+POL-04,4.4,Returns and source documents must be exchanged with clients through the client portal or another approved encrypted c...,SC-8,PR.DS-02,N54-R01 (314.4(c)(3)),Yes
+POL-04,4.5,Tax return information may leave the firm only under a documented IRC 7216 permission or with the taxpayer's prior wr...,AC-21; PT-4,PR.DS-01,N54-R02 (301.7216-2; 301.7216-3(a)(1); 301.7216-3(b)(1)),Yes
+POL-04,4.6,Form 1040 series filers' SSNs must not be released to any preparer outside the United States; packages for the offsho...,AC-21; SA-9,PR.DS-01,N54-R02 (301.7216-3(b)(4)),Yes
+POL-04,4.7,"PHI held as a business associate may be used and disclosed only as the business associate agreement permits, and PHI...",AC-21; PT-2,PR.DS-01,N54-R06 (164.502(a)(3)),Yes
+POL-04,4.8,"Restricted information may be used in an AI tool only if the tool is on the approved list (STD-05.3), the IRC 7216 ba...",SA-9; PT-4,GV.SC-05,N54-R02 (301.7216-2(d)(1)),Yes
+POL-04,4.9,Records must be kept according to the records schedule (tax files 7 years; Forms 8878 and 8879 at least 3 years under...,SI-12; MP-6,ID.AM-08,N54-R01 (314.4(c)(6)(i)); N54-R03 (Pub. 1345); Fla. Stat. 501.171(8),Yes
+POL-04,4.10,"Paper and media containing Restricted information must be shredded or sanitized before disposal or reuse, with certif...",MP-6,PR.DS-01,N54-R04 (52.204-21(b)(1)(vii)); Fla. Stat. 501.171(8),Yes
+POL-04,4.11,The records schedule must be reviewed annually to minimize unnecessary retention.,SI-12,ID.AM-08,N54-R01 (314.4(c)(6)(ii)),Yes
+POL-05,4.1,Every workforce member must accept this policy and the confidentiality agreement (which explains IRC 7216 and 6713) b...,PL-4,PR.AT-01,N54-R02 (301.7216-1(a)),No
+POL-05,4.2,"Security awareness training must be completed before access is granted, including for seasonal staff, and annually af...",AT-2; AT-3,PR.AT-01,N54-R01 (314.4(e)(1)),Yes
+POL-05,4.3,"Any request to change a client's refund bank account, address, email, or payment details, or a vendor's bank details,...",AT-2(3); IA-11,PR.AT-01,N54-R01 (314.4(e)(1)),No
+POL-05,4.4,Firm and client data may be used only on firm-managed devices and approved applications; personal email and personal...,AC-20,PR.AA-05,N54-R01 (314.4(c)(1)),Yes
+POL-05,4.5,Only AI tools on the approved list (STD-05.3) may be used for firm work. Client data must never be entered into publi...,PL-4; CM-7(2),GV.PO-01,N54-R02 (301.7216-1(a)),No
+POL-05,4.6,Client information must not be posted or discussed on social media or external sites.,PL-4(1),PR.AT-01,N54-R02 (301.7216-1(a)),No
+POL-05,4.7,Users must not install software or disable security tools; software requests go through the catalog.,CM-11,PR.PS-02,N54-R01 (314.4(c)(1)),No
+POL-05,4.8,Meetings with clients may be recorded or transcribed only with the prior consent of all parties.,PL-4,GV.PO-01,Fla. Stat. 934.03(2)(d) (worked example),No
+POL-05,4.9,Workforce members must complete monthly phishing simulations and report suspicious messages with the report-phish but...,AT-2,PR.AT-01,N54-R01 (314.4(e)(1)),Yes
