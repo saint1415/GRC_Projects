@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**152 of 216** sample companies are finished (1520 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**153 of 216** sample companies are finished (1530 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -161,6 +161,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Finance and Insurance | Enterprise | Super-regional bank | [README](03_company-samples/finance-insurance/size-5_enterprise_super-regional-bank/README.md) |
 | Finance and Insurance | Multi-Sector | Diversified financial group | [README](03_company-samples/finance-insurance/size-6_multi-sector_diversified-financial-group/README.md) |
 | Financial Services | Sole Proprietorship | Independent insurance agency | [README](03_company-samples/finance-insurance_financial-services-critical-infrastructure/size-1_sole-proprietor_independent-insurance-agency/README.md) |
+| Financial Services | Micro | Merchant services provider | [README](03_company-samples/finance-insurance_financial-services-critical-infrastructure/size-2_micro_merchant-services-provider/README.md) |
 | Financial Services | Small | Payment processor | [README](03_company-samples/finance-insurance_financial-services-critical-infrastructure/size-3_small_payment-processor/README.md) |
 | Real Estate and Rental and Leasing | Small | Residential real estate brokerage | [README](03_company-samples/real-estate/size-3_small_residential-real-estate-brokerage/README.md) |
 | Commercial Facilities | Small | Office retail property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-3_small_office-retail-property-owner/README.md) |
