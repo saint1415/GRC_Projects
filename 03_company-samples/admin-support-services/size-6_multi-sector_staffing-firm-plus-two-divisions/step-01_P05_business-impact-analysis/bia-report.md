@@ -62,7 +62,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 **What drives the values:**
 - **Patient safety** drives Home Health's 8-hour MTDs. Visits carry medication, wound care, and physician orders, and the clinical record must stay available (42 CFR 484.110). Healthcare Staffing (BP-ST04) and credentialing (BP-G06) are High for a related reason: an unconfirmed or unverified clinician leaves a hospital unit or a home visit uncovered.
 - **Pay timing** drives payroll (BP-G04). Associates are paid every Friday, state wage-payment laws set pay timing, and an associate who is not paid often does not come back on Monday. The 48-hour MTD is the gap between the Wednesday payroll run and the Friday pay date; repeating the prior week's payroll is the workaround.
-- **Employment eligibility deadlines** drive onboarding (BP-G05). Form I-9 Section 2 is due within 3 business days of hire (8 CFR 274a.2(b)(1)(ii)) and the E-Verify case within 3 employer business days (MOU Art. II.A.7). At about 2,500 hires a business day, a multi-day outage creates a compliance backlog, not just lost starts.
+- **Employment eligibility deadlines** drive onboarding (BP-G05). Form I-9 Section 2 is due within 3 business days of hire (8 CFR 274a.2(b)(1)(ii)) and the E-Verify case within 3 employer business days (MOU Art. II.A.9). At about 2,500 hires a business day, a multi-day outage creates a compliance backlog, not just lost starts.
 - **Contract commitments** drive Consulting (BP-CN01, BP-CN02) and Managed Workforce Solutions (BP-ST05): hospital go-lives and federal service levels are fixed in advance.
 - **Revenue more than time** drives billing (BP-ST03, BP-HH04): invoices and claims can wait a few days.
 

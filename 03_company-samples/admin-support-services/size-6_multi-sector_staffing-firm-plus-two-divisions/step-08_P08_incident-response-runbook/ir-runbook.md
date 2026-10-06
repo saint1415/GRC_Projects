@@ -124,7 +124,7 @@ The GWP payroll engine has an RTO of 12 hours and an RPO of 1 hour (P05 BP-G04).
 1. Identity and landing-zone controls confirmed clean (BP-G01, BP-G03)
 2. Payroll engine with integration accounts on workload identity and no detokenizing export rights; bank changes re-enabled only with out-of-band confirmation and a 3-day hold for first-time changes
 3. Integration feeds one by one: Staffing time, Consulting timesheets, then Home Health visit records **without patient identifiers**
-4. Onboarding and E-Verify work resumes with a backlog plan so Form I-9 and E-Verify deadlines for new hires are met (8 CFR 274a.2(b)(1)(ii); MOU Art. II.A.7)
+4. Onboarding and E-Verify work resumes with a backlog plan so Form I-9 and E-Verify deadlines for new hires are met (8 CFR 274a.2(b)(1)(ii); MOU Art. II.A.9)
 5. Data hub restored last, after the visit-pay purge
 
 Tell associates, divisions, and clients when pay and services are back to normal (RC.CO).
