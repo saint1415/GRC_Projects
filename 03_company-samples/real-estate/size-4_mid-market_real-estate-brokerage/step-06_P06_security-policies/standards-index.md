@@ -32,7 +32,7 @@ The 2024 policies stated intent but set few measurable rules for the places wher
 | STD-10 | **Records retention and disposal standard** | POL-04 | General Counsel | Draft in progress (gap 7) | 2027-03-31 | Retention periods for closing files, escrow records, consumer reports, rental applications, transaction files, and email, each with its legal, regulatory, or underwriter basis; two-year disposal default for customer information under 314.4(c)(6); annual purge with certificates; annual schedule review | SI-12, MP-6 |
 | STD-11 | **AI use standard** | POL-01, POL-05 | Chief Operating Officer with the vCISO and General Counsel | Draft in progress (gap 9) | 2026-12-31 | AI inventory; risk tiering per P10; security, privacy, and fair housing review before use; no-training contract terms; human review of every adverse housing decision; disparity testing for High-tier tools; fair housing review of AI-drafted advertising; monitoring and decommissioning criteria | PM-9, SA-9, PL-4, RA-3 |
 
-**Summary:** 11 standards. Seven are new and in draft (STD-01, STD-02, STD-03, STD-04, STD-05, STD-07, STD-10, and STD-11 count as eight drafts, of which STD-01 replaces informal practice). Three exist from 2024 and need updates (STD-06, STD-08, STD-09).
+**Summary:** 11 standards. Eight are new and in draft (STD-01, STD-02, STD-03, STD-04, STD-05, STD-07, STD-10, and STD-11); STD-01 replaces informal practice. Three exist from 2024 and need updates (STD-06, STD-08, and STD-09).
 
 ## 4. Issue schedule
 | Quarter | Standards |

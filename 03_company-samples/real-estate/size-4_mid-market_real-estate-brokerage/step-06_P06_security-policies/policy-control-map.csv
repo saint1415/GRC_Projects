@@ -1,2 +1,60 @@
 policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
-POL-02,4.3,MFA for remote/admin/sensitive access,IA-2(1); IA-2(2),PR.AA-03,[requirement_id],[Yes|No]
+POL-01,4.1,One written program for both entities that meets the Safeguards Rule,PM-1,GV.PO-01,N53-R01 (314.3(a)),No
+POL-01,4.2,Qualified Individual designated in writing; President of Title and Closing oversees quarterly,PM-2,GV.RR-02,"N53-R01 (314.4(a), (a)(1)-(2))",No
+POL-01,4.3,"Intercompany agreement requires the parent to keep a compliant program, report, notify, and allow audit",SA-9,GV.SC-05,N53-R01 (314.4(a)(3)),Yes
+POL-01,4.4,Risk acceptance authority by level; no funds-diversion risk accepted above Moderate,PM-9,GV.RM-01,N53-R01 (314.4(b)(1)(iii)),No
+POL-01,4.5,Annual written risk assessment with SP 800-30 and after major changes,RA-3; PM-9,ID.RA-01,"N53-R01 (314.4(b), (b)(2), (g))",Yes
+POL-01,4.6,Annual written report to the board of managers and the audit committee; quarterly reporting,PM-9,GV.OV-01,"N53-R01 (314.4(i), (i)(1)-(2))",No
+POL-01,4.7,"Annual policy review; written, risk-rated, time-limited exceptions",PL-1,GV.PO-02,N53-R01 (314.4(g)),No
+POL-01,4.8,Sanctions for employees (HR) and contractor agents (Broker of Record),PS-8,GV.RR-04,N53-R01 (314.4(e)(1)),No
+POL-01,4.9,No customer information to a service provider without a tiered review and security terms; Tier 1 reassessed yearly,SA-9; SR-6,GV.SC-05; GV.SC-07,N53-R01 (314.4(f)(1)-(3)),Yes
+POL-01,4.10,Annual training for employees and agents; phishing simulations; role-based payment fraud training,AT-2; AT-3,PR.AT-01; PR.AT-02,N53-R01 (314.4(e)(1)),Yes
+POL-01,4.11,Independent annual assessment; annual penetration test and six-monthly vulnerability assessments,CA-2; CA-8; RA-5,ID.IM-02,N53-R01 (314.4(d)(1)-(2)),Yes
+POL-01,4.12,Five-year retention of security records,SI-12,GV.PO-02,N53-R01 (314.4(h)(6)),No
+POL-01,4.13,Secure development standard for the portal; change management for production and SaaS settings,SA-15; CM-3,PR.PS-06; PR.PS-01,"N53-R01 (314.4(c)(4), (c)(7))",Yes
+POL-01,4.14,AI tools approved through AI governance before use,PM-9; SA-9,GV.RM-01,N53-R02 (15 U.S.C. 45(a)); Fair Housing Act (42 U.S.C. 3604),Yes
+POL-02,4.1,Unique accounts; approved kiosk logins only,IA-2; AC-2,PR.AA-01,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.2,Role-based least privilege; transaction-level visibility in SYS-01; export rights for named roles,AC-2; AC-3; AC-6,PR.AA-05,N53-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.3,MFA for every individual including contractor agents; security keys for administrators and payment staff,IA-2(1); IA-2(2),PR.AA-03,N53-R01 (314.4(c)(5)),Yes
+POL-02,4.4,Same-day disable at employee termination; bank tokens revoked the same day,PS-4; AC-2,PR.AA-05,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.5,Agent departures disabled within 1 business day; weekly license roster match; 90-day inactivity rule,PS-7; AC-2(3),PR.AA-01,N53-R01 (314.4(c)(1)(i)),No
+POL-02,4.6,Prior-role access removed within 5 business days of transfer,PS-5; AC-2,PR.AA-05,N53-R01 (314.4(c)(1)(ii)),Yes
+POL-02,4.7,"Quarterly access reviews by managers, managing brokers, and system owners",AC-2; AC-6,PR.AA-05,N53-R01 (314.4(c)(1)),Yes
+POL-02,4.8,Separate privileged accounts; just-in-time elevation; no more than 4 standing global administrators,AC-6(2); AC-6(5),PR.AA-05,N53-R01 (314.4(c)(1)(ii)),No
+POL-02,4.9,Sign-in lockout and device screen lock,AC-7; AC-11,PR.AA-03,N53-R01 (314.4(c)(1)(i)),No
+POL-02,4.10,"Break-glass accounts for the identity provider, cloud, and SYS-02, tested quarterly",AC-2,PR.AA-05,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.11,14-character passwords; banned list; service secrets in the key vault rotated yearly,IA-5,PR.AA-03,N53-R01 (314.4(c)(1)(i)),Yes
+POL-02,4.12,"Personal devices: browser-only on laptops, managed apps on phones",AC-17; AC-19; AC-20,PR.AA-05,N53-R01 (314.4(c)(1)(i)),No
+POL-02,4.13,Named vendor and developer accounts with MFA; company approver for portal deployments,MA-4; AC-6,PR.AA-05,"N53-R01 (314.4(c)(1)(i), (c)(5))",Yes
+POL-02,4.14,Portal users authenticated by one-time code; callback before any phone number change,IA-8,PR.AA-03,N53-R01 (314.4(c)(1)(i)),Yes
+POL-03,4.1,Every employee and agent reports suspected incidents and suspicious payment instructions the same day,IR-6,RS.MA-01,N53-R01 (314.4(j)(2)),Yes
+POL-03,4.2,Incident commander declares and sets severity; possible funds diversion or data acquisition is Severity 1,IR-4,RS.MA-02,N53-R01 (314.4(h)(2)-(3)),Yes
+POL-03,4.3,Incident log records time of discovery and date of determination,IR-5; IR-4,RS.MA-02,"N53-R01 (314.4(h)(6), (j)(2)); Fla. Stat. 501.171(4)(a)",Yes
+POL-03,4.4,Bank recall requested within 1 hour; pending payments to the affected payee held,IR-4,RS.MI-01,N53-R01 (314.4(h)(2)); Fla. Stat. 626.8473(4),Yes
+POL-03,4.5,"Decision log for every Severity 1 incident (acquisition presumption, counts, states, decisions)",IR-6,RS.CO-02,N53-R01 (314.2(m); 314.4(j)(1)),Yes
+POL-03,4.6,All notices follow the P08 matrix and are approved by General Counsel,IR-6,RS.CO-02; RS.CO-03,"N53-R01 (314.4(h)(4), (j)); Fla. Stat. 501.171(3)-(5); r. 61J2-10.032(1)",Yes
+POL-03,4.7,Out-of-band communication during email compromise or ransomware,IR-4,RS.CO-03,N53-R01 (314.4(h)(4)),Yes
+POL-03,4.8,"Ransom decision needs CEO, counsel, insurer, and an OFAC sanctions check",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.9,"Monitoring of identity, email, cloud, endpoint, and SaaS application events per STD-02",SI-4; AU-6,DE.CM-01,N53-R01 (314.4(c)(8)),Yes
+POL-03,4.10,Annual tabletop for each P08 runbook; quarterly verification of bank and insurer contacts,IR-3,ID.IM-04,N53-R01 (314.4(h)(7)),No
+POL-03,4.11,"Lessons learned within 14 days, documented within 30 days",IR-4,ID.IM-04,"N53-R01 (314.4(h)(5), (h)(7))",Yes
+POL-03,4.12,Restore in BIA order and validate before reconnection,CP-2; CP-4,RC.RP-01,N53-R01 (314.4(h)(2)),Yes
+POL-04,4.1,Highest data class recorded per system; Restricted data inventories kept current,RA-2; CM-8,ID.AM-07,N53-R01 (314.4(c)(2)),Yes
+POL-04,4.2,Encrypt Restricted data in transit and at rest; compensating controls only with Qualified Individual approval,SC-8; SC-28,PR.DS-01; PR.DS-02,N53-R01 (314.4(c)(3)),Yes
+POL-04,4.3,Wire instructions only through the Closing Communications Portal,SI-7,PR.DS-10,Fla. Stat. 626.8473(4),Yes
+POL-04,4.4,Callback and two-person rule for every payee or bank account change in any system,AC-5; SI-7,PR.AA-05,N53-R01 (314.4(c)(1)(ii)); Fla. Stat. 626.8473(4); r. 61J2-14.012,Yes
+POL-04,4.5,Payoffs only from the lender portal or confirmed by callback to a published number,SI-7,PR.DS-10,Fla. Stat. 626.8473(4),Yes
+POL-04,4.6,Retention schedule; customer information disposed of within two years of last use unless a documented reason applies,SI-12; MP-6,ID.AM-08,N53-R01 (314.4(c)(6)(i)-(ii)),Yes
+POL-04,4.7,Disposal makes information unreadable; certificates kept; consumer reports included,MP-6,ID.AM-08,Fla. Stat. 501.171(8); 16 CFR 682.3(a),Yes
+POL-04,4.8,Paper with Restricted data locked and moved to headquarters within 30 days of closing,MP-4,PR.AA-06,N53-R01 (314.4(c)(1)(i)),No
+POL-04,4.9,No Restricted data in unapproved AI tools; no-training terms,SA-9,PR.DS-01,N53-R01 (314.4(f)(2)),Yes
+POL-05,4.1,Company systems for company business; limited personal use,PL-4,GV.PO-01,N53-R01 (314.4(e)(1)),No
+POL-05,4.2,No account or MFA sharing; no approving unexpected MFA prompts,PL-4; IA-2,PR.AA-03,N53-R01 (314.4(c)(5)),No
+POL-05,4.3,No forwarding rules to outside accounts; external auto-forwarding blocked,PL-4; AC-20,PR.DS-10,N53-R01 (314.4(c)(1)),No
+POL-05,4.4,"Never send, forward, or confirm wire instructions by email, text, or chat",PL-4; AT-2,PR.AT-01,Fla. Stat. 626.8473(4),Yes
+POL-05,4.5,Personal device rules for agents and employees,AC-19; AC-20,PR.AA-05,N53-R01 (314.4(c)(1)(i)),No
+POL-05,4.6,"Report suspicious messages, prompts, lost devices, and payment change requests at once",IR-6,RS.MA-01,N53-R01 (314.4(j)(2)),Yes
+POL-05,4.7,Clean desk for Restricted paper,PL-4; MP-4,PR.AA-06,N53-R01 (314.4(c)(1)(i)),No
+POL-05,4.8,Approved AI tools only; fair housing review of AI-drafted ads; no unapproved scoring features,PL-4,PR.AT-01,Fair Housing Act (42 U.S.C. 3604(c)); N53-R02 (15 U.S.C. 45(a)),No
+POL-05,4.9,Annual security training and phishing simulations,AT-2,PR.AT-01,N53-R01 (314.4(e)(1)),Yes
+POL-05,4.10,Confidentiality agreement (employees) or agent agreement with security duties,PS-6,GV.RR-04,N53-R01 (314.4(e)(1)),No

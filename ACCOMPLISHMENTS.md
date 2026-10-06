@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**158 of 216** sample companies are finished (1580 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**160 of 216** sample companies are finished (1600 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -169,6 +169,8 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Real Estate and Rental and Leasing | Sole Proprietorship | Real estate brokerage | [README](03_company-samples/real-estate/size-1_sole-proprietor_real-estate-brokerage/README.md) |
 | Real Estate and Rental and Leasing | Micro | Real estate brokerage | [README](03_company-samples/real-estate/size-2_micro_real-estate-brokerage/README.md) |
 | Real Estate and Rental and Leasing | Small | Residential real estate brokerage | [README](03_company-samples/real-estate/size-3_small_residential-real-estate-brokerage/README.md) |
+| Real Estate and Rental and Leasing | Mid-Market | Real estate brokerage | [README](03_company-samples/real-estate/size-4_mid-market_real-estate-brokerage/README.md) |
+| Commercial Facilities | Sole Proprietorship | Commercial property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-1_sole-proprietor_commercial-property-owner/README.md) |
 | Commercial Facilities | Small | Office retail property owner | [README](03_company-samples/real-estate_commercial-facilities-critical-infrastructure/size-3_small_office-retail-property-owner/README.md) |
 | Professional, Scientific, and Technical Services | Small | CPA tax firm | [README](03_company-samples/professional-services/size-3_small_cpa-tax-firm/README.md) |
 | Management of Companies and Enterprises | Small | Holding company | [README](03_company-samples/holding-companies/size-3_small_holding-company/README.md) |

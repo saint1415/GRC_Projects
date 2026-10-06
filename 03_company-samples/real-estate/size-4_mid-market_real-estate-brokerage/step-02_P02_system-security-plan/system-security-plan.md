@@ -38,7 +38,7 @@ Users: 600 employees (including 112 Title and Closing staff, 88 transaction coor
 | State | Florida Information Protection Act | Fla. Stat. 501.171(2), (4), (8) | Reasonable security, breach notice, and disposal (P08) |
 | Federal | RESPA affiliated business arrangements | 12 CFR 1024.15 | Referral data shared with the mortgage joint venture (section 8); compliance owned by General Counsel |
 | Contract | Lender clients and the national homebuilder | Closing services agreements | SOC 2 Type 2 report on Title and Closing's services (P09) |
-| Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-10 | P06 | Policy basis for every control |
+| Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-11 | P06 | Policy basis for every control |
 
 Not applicable to this system (reasoning in P03 section 1):
 - **CCPA/CPRA (N53-R03):** not doing business in California under General Counsel's 2025 position; settlement data is GLBA data in any case.

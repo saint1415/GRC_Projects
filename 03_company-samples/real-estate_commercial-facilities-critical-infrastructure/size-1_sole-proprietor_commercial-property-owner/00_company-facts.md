@@ -88,3 +88,22 @@ Outside the boundary: the fire alarm panel (monitored by the fire alarm monitori
 |---|---|
 | 2026-07-20 to 2026-07-24 | Self-assessment with the on-call IT consultant (building walkthrough 2026-07-21; tests 2026-07-23) |
 | 2026-08-31 | Deliverables adopted by the owner |
+
+## 7. Facts added while building the deliverables (Phase 5)
+These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.
+
+| Topic | Added fact | Used in |
+|---|---|---|
+| Benchmark adoption | The owner adopted CISA CPG 2.0 as the security benchmark on 2026-07-17, before the self-assessment | P02, P03 |
+| Door hardware | Entrance locks fail secure on power loss; egress is always free through mechanical exit hardware | P01, P08 |
+| Building device management | Door controllers, cameras, and thermostats have no local login; they are managed only through their cloud accounts. Automatic firmware updates are on in all three platforms. All three platforms offer app-based MFA, and the thermostat platform supports invited users with limited rights | P03, P04 |
+| Installer accounts | The installer has two administrator accounts, one in the access control portal and one in the video portal, both with full rights and no MFA | P01, P07 |
+| Credential review | Tenants and contractors were asked to confirm their credential lists on 2026-07-22. By 2026-07-24, 7 of the 58 active credentials were found to belong to people who had left; the owner disabled them on 2026-07-24. Some holders have both a fob and a phone credential, so the credential count is higher than the number of people | P01, P02, P03, P07 |
+| Public folder link | The "anyone with the link" share of the lease application folder opened from a signed-out browser in testing on 2026-07-23. The owner removed it on 2026-08-05, after setting up a named share for the CPA | P01, P03, P07, P09 |
+| Network tests (2026-07-23) | An external port check found no open ports on the building's public address. A network scan from a phone on the free lobby Wi-Fi listed the cameras, door controllers, and thermostats. The router accepted its factory password | P03, P07 |
+| Email domain | The email provider published an SPF record at setup; DKIM signing is off and there is no DMARC record | P03 |
+| Laptop | The owner uses the laptop's administrator account for daily work. The office suite blocks macros in files from the internet by default, and autorun is off | P03 |
+| Camera AI and audio | The owner turned on the video vendor's "familiar faces" feature during a free trial on 2026-05-04 and named 9 recurring people (2 janitorial staff, the HVAC technician, 6 tenant employees). Face recognition and entrance audio were turned off on 2026-07-21. The owner opted out of vendor model training and asked for deletion of face data on 2026-07-24; the vendor confirmed deletion on 2026-08-12 | P04, P10 |
+| Person and vehicle alerts | After-hours (19:00 to 7:00) alerts on the rear service area and parking lot cameras, in use since 2024. 41 alerts from 2026-06-22 to 2026-07-21, 33 showing a real person | P10 |
+| Access control vendor report | SOC 2 Type 2, Security and Availability, 12-month period ending 2026-04-30, unqualified, one remediated exception; 99.9% monthly availability target. Reviewed 2026-07-23. The camera and thermostat vendors offered no assurance report for their small-business plans | P02, P09 |
+| Contracts | Leases have no data incident clause. The tenant screening service's terms include an end-user certification under the Fair Credit Reporting Act | P02, P08 |
