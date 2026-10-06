@@ -48,7 +48,7 @@ The company is not a federal agency, so there is no formal ATO. The equivalent i
 - **Conditions:**
   - close the segmentation path before ROC fieldwork (POAM-003 by 2026-10-15);
   - vault and rotate all batch scheduler credentials (POAM-002 by 2026-12-15);
-  - restore MFA for mainframe operators, with written CISO approval of interim compensating controls (POAM-004 by 2026-12-31);
+  - restore MFA for mainframe operators; interim compensating controls were approved in writing by the CISO on 2026-09-04 (EXC-2026-017; POAM-004 by 2026-12-31);
   - prove the 6-hour settlement RTO in a retest that includes at least one sponsor bank (POAM-006 by 2027-03-31);
   - replace the unsupported midrange servers (POAM-001 by 2027-06-30).
 - **Reauthorization:** annually, or after a major change (for example, the settlement platform modernization planned for 2028).
@@ -117,7 +117,7 @@ flowchart LR
     DR["Mainframe and batch standby<br/>CP-7, CP-6, CP-9"]
   end
   subgraph CCP["Common control providers"]
-    IDP["Identity platform CCP-02<br/>IA-2(1), AC-2, AC-6(9)"]
+    IDP["Identity platform CCP-02<br/>IA-2(1), IA-2(2), AC-2, AC-6(9)"]
     CFC["Cyber Fusion Center CCP-04<br/>SI-4, AU-6, IR-4"]
   end
   MER["Merchants and terminals"] -->|TLS| SW
@@ -171,18 +171,18 @@ See `control-implementation.csv` (229 controls).
 
 | Status | Count |
 |---|---|
-| Implemented | 199 |
-| Partially implemented | 26 |
+| Implemented | 200 |
+| Partially implemented | 25 |
 | Planned | 4 |
 | **Total** | **229** |
 
 | Inheritance | Count |
 |---|---|
-| Common (fully inherited from a common control provider) | 150 |
-| Hybrid (shared between a provider and the CPPP team) | 41 |
+| Common (fully inherited from a common control provider) | 149 |
+| Hybrid (shared between a provider and the CPPP team) | 42 |
 | System-specific | 38 |
 
-The Planned controls are High-baseline items scheduled in section 4.3: AU-10, CM-5(1), SI-4(22), SI-7(15). Partially implemented controls: AC-2, AC-17, AU-6, CM-3, CM-6, CM-8, CP-2, CP-2(1), CP-2(3), CP-4, CP-10, IA-2(1), IA-5, IR-3, IR-6, IR-8, MA-4, PS-7, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, SI-12. Each is linked to a POA&M item in P07 `poam.csv`.
+The Planned controls are High-baseline items scheduled in section 4.3: AU-10, CM-5(1), SI-4(22), SI-7(15). Partially implemented controls: AC-2, AC-17, AU-6, CM-3, CM-6, CM-8, CP-2, CP-2(1), CP-2(3), CP-10, IA-2(2), IA-5, IR-3, IR-6, IR-8, MA-4, PS-7, RA-5, SA-9, SA-22, SC-7, SC-8, SI-2, SI-4, SI-12. Each is linked to a POA&M item in P07 `poam.csv`.
 
 ### 10.2 Control assessment status
 Internal Audit assessed 44 of these controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`. The QSA's 2026 ROC (fieldwork 2026-10-19 to 2026-11-13) assesses the same environment against PCI DSS.
@@ -210,7 +210,7 @@ Row counts include Hybrid rows that name the provider. The other 38 rows are Sys
 - If a provider's assessment finds a weakness, the finding is linked to every inheriting system's POA&M. Example: POAM-011 (late contractor terminations) is a CCP-02/CCP-08 weakness that affects the CPPP because contractors hold settlement application access.
 
 ## 11. Digital Identity Acceptance Statement
-- **Workforce users:** SSO with MFA (number-matching push with device binding, or a FIDO2 security key). Privileged users use phishing-resistant FIDO2 keys through PAM. This is comparable to NIST SP 800-63 AAL2 for users and AAL3-like protection for privileged users. **Exception:** mainframe settlement operators have signed in with a password only since 2026-02-09 (POAM-004); this is not accepted as a permanent state.
+- **Workforce users:** SSO with MFA (number-matching push with device binding, or a FIDO2 security key). Privileged users use phishing-resistant FIDO2 keys through PAM. This is comparable to NIST SP 800-63 AAL2 for users and AAL3-like protection for privileged users. **Exception:** mainframe settlement operators (non-privileged users) have signed in with a password only since 2026-02-09 (IA-2(2); POAM-004), under compensating controls approved in writing by the CISO on 2026-09-04 (EXC-2026-017); this is not accepted as a permanent state.
 - **Merchant users (portals):** identity is established at merchant onboarding (KYC) and by the merchant administrator for additional users. MFA is required for administrator, refund, funding account change, and virtual terminal roles; all other users get dynamic risk analysis of each sign-in, which meets the PCI DSS 8.3.10.1 option for customer users of a service provider.
 - **Cardholders** do not authenticate to the CPPP. Card authentication (3-D Secure, PIN) is handled under network rules and the PCI PIN program.
 

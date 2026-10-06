@@ -98,4 +98,8 @@ These facts were added so the deliverables agree with each other. They do not ch
 | Platform vendor assurance | The transaction platform vendor provided its SOC 2 Type 2 report (Security and Availability) under a nondisclosure agreement; reviewed 2026-08-19 | P02, P09 |
 | Old phone | The owner traded in the previous phone in 2025 without a documented wipe | P03, P07 |
 | Website statement | The brokerage website's privacy page says client information is protected with "bank-level security" | P03 |
+| Record counts | The 260 client files name about 350 individuals (co-buyers and household members included), about 260 of them Florida residents. Florida's 500-person Department notice and 1,000-person consumer reporting agency thresholds cannot be reached today | P03, P08 |
+| Escrow samples | Fieldwork reviewed all 6 deposits of the last 12 months (all placed the day received), 8 outgoing escrow payments (none with a verification record), and 10 buyer files where a title company held the deposit (2 had no written verification request) | P03 |
+| Screening results | In the last 12 months about 35 applications were screened: 22 approved, 3 approved with a higher deposit, 10 declined. Of 10 recent reports checked, 1 counted a dismissed eviction filing and 1 matched a criminal record on name only | P10 |
+| Platform report details | SOC 2 Type 2 period ending 2026-05-31; stated RTO 8 hours and RPO 1 hour | P04, P05, P09 |
 | Generative AI use | Between March and August 2026 the owner pasted parts of about 6 client emails (names, budgets, and one buyer's pre-approval amount) into the consumer writing assistant to draft replies | P01, P10 |
