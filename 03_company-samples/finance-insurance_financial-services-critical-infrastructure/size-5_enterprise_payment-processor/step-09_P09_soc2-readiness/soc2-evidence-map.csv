@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2; CC4.2,Board risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1,Internal Audit report and QSA ROC,GRC platform,Chief Audit Executive,Annual,Annual reports,P07; ROC,Ready
+Both,CC5.3,Policy hierarchy and exception register,Policy portal; GRC platform,CISO,Annual review; monthly register review,Exception register for 3 months,P06,Collecting
+Both,CC6.2; CC6.3,Access provisioning and quarterly certifications,Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; all quarterly certifications,P07 AC-2,Collecting
+SL-1,CC6.1,Cloud B phishing-resistant MFA and PAM coverage reports,Identity platform; PAM,Director of Identity and Access Management,Monthly,3 monthly reports,POAM-019,Not started
+SL-2,CC6.1,Settlement operator MFA enrollment report,Mainframe access gateway,Director of Identity and Access Management,Monthly,3 monthly reports,POAM-004,Not started
+Both,CC6.6,Segmentation test reports,Penetration testing records,Director of Data Center and Network Engineering,Every six months,Both tests in the period,P07 SC-7; PCI DSS 11.4.6,Collecting
+Both,CC6.8; CC7.1,"EDR coverage, vulnerability scans, and patch reports",Cyber Fusion Center tooling,Director of Security Operations,Weekly and monthly,5 weeks; 3 months,"P07 RA-5, SI-2, SI-3",Collecting
+SL-1,CC6.8,Hosted field tamper-detection coverage report,Tamper-detection service,"Executive Vice President, Integrated Payments",Monthly,3 monthly reports,POAM-021,Not started
+Both,CC7.2; CC7.3,Cyber Fusion Center case records and daily review evidence,SIEM; case management,Director of Security Operations,Daily,25 days; 25 cases,"P07 AU-6, IR-4",Collecting
+Both,CC7.4,Incident response plan and executive tabletop report,GRC platform,Director of Security Operations,Annual,2026-11-12 tabletop report,P08; POAM-005,Not started
+Both,CC8.1,Change records and pipeline approvals,Change system; pipelines,Director of Developer Platform,Per change,40 changes per service line,"P07 CM-3, CM-5",Collecting
+SL-2,CC8.1; PI1.3,Emergency change reviews for the settlement platform,Change system,Director of Settlement Systems,Weekly,5 weeks,POAM-013,Not started
+Both,CC9.2,Vendor AOC and SOC report reviews,Vendor register,Director of Third-Party Risk Management,Annual per vendor,All tier-1 vendors,P07 SA-9,Collecting
+SL-2,CC9.1; A1.3,Settlement DR retest report with Bank A,DR test records,"Senior Vice President, Settlement and Treasury Operations",Annual,2027 Q1 retest,POAM-006; POAM-016,Not started
+SL-1,A1.3,Cloud B failover test report,DR test records,"Executive Vice President, Integrated Payments",Annual,2026-03-14 test,P05,Ready
+Both,A1.1,Capacity reviews before peak seasons,Monitoring platform,CTO,Quarterly,All quarters,P05,Collecting
+Both,A1.2,Backup job reports and restore tests,Backup service; virtual tape,Director of Infrastructure Engineering,Daily; monthly restores,25 days; 3 restores,P07 CP-9,Collecting
+Both,C1.1; C1.2,PAN discovery and retention reports,PAN discovery tooling,Chief Data and Analytics Officer,Monthly,3 monthly reports,POAM-014,Collecting
+SL-2,PI1.2; PI1.4,Funding and clearing file control total and hash verification records,Scheduler; MFT,Director of Settlement Systems,Daily,25 days,SOC 1 controls,Ready
+SL-2,PI1.3,Daily settlement reconciliations,Settlement platform,"Senior Vice President, Settlement and Treasury Operations",Daily,25 days,SOC 1 controls,Ready
+SL-1,PI1.2; PI1.4,API validation reject reports and partner settlement reconciliations,Integrated Payments platform,"Executive Vice President, Integrated Payments",Daily,25 days,New for SL-1,Not started
+Both,CC2.3,"Merchant, partner, and bank notices and status page history",Status page; notice log,Chief Compliance Officer,Per event,All notices in the period,P08 matrix,Ready

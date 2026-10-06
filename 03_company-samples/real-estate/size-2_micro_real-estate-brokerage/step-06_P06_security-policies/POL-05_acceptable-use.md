@@ -1,38 +1,25 @@
-# Acceptable Use Policy
+# Acceptable Use Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company, LLC |
 | Policy ID | POL-05 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | PL-4, AC-8, AT-2 |
-| CSF 2.0 | PR.AT-01, GV.PO-01 |
+| Status | Merged into POL-02 Part C and POL-04 |
+| Owner | Office Manager (security and compliance lead) |
+| Approved by | Broker-owner, 2026-09-14 |
 
-## 1. Purpose
-Set clear rules for how the Cris Santos Company workforce may use company systems, data, and devices.
+At the Micro tier the brokerage keeps three core policies. The use rules an Acceptable Use Policy would hold are short enough to sit with the access rules that employees and agents already read, so they live in **POL-02 Part C**, with the AI tool rule in POL-04:
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+| Essential rule | Where it lives | Rule served |
+|---|---|---|
+| Use systems for brokerage work; open only the files your work needs | POL-02 C.1 | Benchmark 16 CFR 314.4(c)(1)(ii) |
+| No client information in personal accounts or texts; no forwarding to personal mail | POL-02 C.2 | Fla. Stat. 501.171(2) |
+| Minimum rules for personal devices; report loss within 1 hour | POL-02 C.3 | Fla. Stat. 501.171(2) |
+| Never share passwords or MFA codes; never approve an unexpected prompt | POL-02 C.4 | Benchmark 314.4(c)(5) |
+| Never send wire instructions by email; follow the verification rule | POL-02 C.5 and POL-03 4.9 | Fla. Stat. 475.25(1)(k) |
+| No Restricted information in AI tools; check AI-drafted listings | POL-04 4.6 | N53-R02 (15 U.S.C. 45(a)); 42 U.S.C. 3604(c) |
+| Training at onboarding and yearly, with phishing simulations | POL-02 C.6 | Benchmark 314.4(e)(1) |
+| Report suspected incidents at once | POL-02 C.7 and POL-03 4.2 | Fla. Stat. 501.171(3)-(4) |
+| Signed acknowledgment at onboarding and after each update | POL-02 C.8 | Benchmark 314.4(e)(1) |
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Micro). For example, at Sole Proprietorship the owner holds every role.]
-
-## 4. Policy statements
-4.1 Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create risk. (PL-4)
-4.2 Users must acknowledge this policy before receiving access and annually thereafter. (PL-4(1))
-4.3 Users must complete security awareness training at onboarding and annually. (AT-2; PR.AT-01)
-4.4 Users must not install unapproved software or connect unapproved devices. (CM-11)
-4.5 Users must lock unattended devices and report lost or stolen devices immediately. (AC-11; IR-6)
-4.6 Use of generative AI tools must follow the approved tools list and POL-04 data rules. (PL-4)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for these rules is in `policy-control-map.csv` under POL-02 and POL-04.

@@ -131,3 +131,20 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-10-19 to 2026-11-13 | QSA ROC fieldwork for the 2026 PCI DSS assessment |
 | 2026-12-15 | 2026 AOC due to the three sponsor banks |
 | 2027-04-15 | NYDFS certification or acknowledgment for calendar year 2026 due (500.17(b)) |
+
+## 7. Facts added during the build (fictional; used across P01-P10)
+These details were added so the deliverables could be specific. They do not change sections 1-6.
+
+| Topic | Added fact |
+|---|---|
+| Settlement timing | Clearing files go to each card network before its daily cutoff. Funding files are due at Bank A by 03:00, Bank B by 04:00, and Bank C by 05:00 Eastern. Each sponsor agreement lets the bank hold its ACH window open for up to 2 hours by agreement |
+| CPPP components | About 1,900 authorization containers in two Cloud A regions; one mainframe in each data center; 46 midrange batch servers (12 unsupported); 16 company-owned payment HSMs plus the Cloud A payment HSM service; 4 MFT appliances; 6 card network interface processors; 24 treasury workstations |
+| CPPP users | About 2,300 workforce accounts (212 privileged; about 340 settlement operators) and about 1.1 million merchant user accounts. 618 administrators hold CDE administrative access across all platforms |
+| Workforce activity | 1,412 terminations of workforce with CDE access (1,180 employees, 232 contractors) and 1,830 hires in 2026-01-01 to 2026-06-30 |
+| Data lake PAN event | A settlement extract wrote about 410,000 full PANs (no names, no security codes) to a data lake table from 2026-05-21; found 2026-07-27; purged 2026-07-29; notice analysis completed 2026-08-04; banks' compliance contacts told 2026-08-05 |
+| Written approvals after fieldwork | On 2026-09-04 the CISO signed EXC-2026-017 (interim compensating controls for password-only settlement operators, as the written approval under 23 NYCRR 500.12(b) and, as Qualified Individual, under 16 CFR 314.4(c)(5)) and EXC-2026-019 (network detection in place of EDR on the MFT appliances, under 500.14(b)) |
+| Key exchange | 41 enterprise merchants manage their own terminal keys and receive key exchange guidance (PCI DSS 3.7.9) |
+| AI | The in-house fraud model (AI-001) has been built and run by the data science team since 2024 and is retrained monthly; it also scores instant payouts for the subsidiary |
+| Insurance | Cyber insurance tower of $150 million with a $25 million retention; the carrier panel supplies breach counsel, forensics, and PFI options |
+
+**Additional role titles used in the deliverables:** Executive Vice President, Merchant Acquiring (SL-2 owner); Executive Vice President, Integrated Payments (SL-1 owner); Senior Vice President, Core Payment Platforms (CPPP system owner); Senior Vice President, Settlement and Treasury Operations; Senior Vice President, Fraud and Risk Management (AI-001 business owner); Senior Vice President, Merchant Services; Senior Vice President, Partner Management; President, Cris Santos Payouts, LLC (senior member overseeing the CISO's work for the subsidiary under 500.4(a)(2)); Director of Security Operations (Cyber Fusion Center); Director of Identity and Access Management; Director of Cloud Platform Engineering; Director of Data Center and Network Engineering; Director of Infrastructure Engineering; Director of Developer Platform; Director of Settlement Systems; Director of Authorization Platform Engineering; Director of Cryptographic Services; Director of Third-Party Risk Management; PCI Program Director; Head of Model Risk Management; Controller; Chief Human Resources Officer; Vice President, Corporate Communications; Vice President, Investor Relations; Deputy General Counsel (securities).
