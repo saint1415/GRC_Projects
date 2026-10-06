@@ -25,7 +25,7 @@ POL-02,4.8,"Lockout, idle lock, and kiosk session reset",AC-7; AC-11; AC-12,PR.A
 POL-02,4.9,Break-glass accounts tested quarterly,AC-2,PR.AA-05,N56-BM (PR.AA-05),Yes
 POL-02,4.10,"API keys and service accounts in the secrets service, scoped, rotated",IA-5; AC-6,PR.AA-01,Fla. Stat. 501.171(2),Yes
 POL-02,4.11,Separate administrator accounts and just-in-time elevation,AC-6(2); AC-6(5),PR.AA-05,N56-BM (PR.AA-05),No
-POL-02,4.12,Remote and vendor access with MFA and session approval,AC-17; MA-4,PR.AA-05,N56-BM (PR.MA-02),Yes
+POL-02,4.12,Remote and vendor access with MFA and session approval,AC-17; MA-4,PR.AA-05,N56-BM (PR.AA-05),Yes
 POL-02,4.13,"Client and supplier users owned, with MFA",IA-8,PR.AA-03,MSP client contracts,No
 POL-03,4.1,Incident plan and runbooks for payroll breach and payroll outage,IR-8,RS.MA-01,N56-BM (RS.MA-01),Yes
 POL-03,4.2,Immediate reporting within 1 hour,IR-6,RS.MA-02,N56-BM (RS.MA-02),Yes

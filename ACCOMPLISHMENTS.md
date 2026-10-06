@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**178 of 216** sample companies are finished (1780 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**179 of 216** sample companies are finished (1790 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -193,6 +193,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Administrative and Support and Waste Management and Remediation Services | Sole Proprietorship | Independent recruiter | [README](03_company-samples/admin-support-services/size-1_sole-proprietor_independent-recruiter/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Micro | Staffing firm | [README](03_company-samples/admin-support-services/size-2_micro_staffing-firm/README.md) |
 | Administrative and Support and Waste Management and Remediation Services | Small | Staffing firm | [README](03_company-samples/admin-support-services/size-3_small_staffing-firm/README.md) |
+| Administrative and Support and Waste Management and Remediation Services | Mid-Market | Staffing firm | [README](03_company-samples/admin-support-services/size-4_mid-market_staffing-firm/README.md) |
 | Educational Services | Sole Proprietorship | Tutoring service | [README](03_company-samples/education/size-1_sole-proprietor_tutoring-service/README.md) |
 | Educational Services | Micro | Tutoring company | [README](03_company-samples/education/size-2_micro_tutoring-company/README.md) |
 | Educational Services | Small | Career college | [README](03_company-samples/education/size-3_small_career-college/README.md) |

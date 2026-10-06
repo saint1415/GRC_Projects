@@ -5,6 +5,8 @@
 
 This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
+> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+
 ## At a glance
 | | |
 |---|---|
@@ -17,7 +19,7 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | SBA size status | Small (SBA standard for NAICS 456110: $37.5 million in average annual receipts; 13 CFR 121.201) |
 | Primary industry | NAICS 456110 Pharmacies and Drug Retailers |
 | Vertical | Healthcare and Public Health (CISA critical infrastructure sector) |
-| Primary system | Core business SaaS stack (email, files, client and billing records) |
+| Primary system | Pharmacy Core SaaS Stack |
 | IT footprint | Personal and SaaS tools: email suite, cloud storage, accounting SaaS, one laptop and phone |
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
@@ -52,7 +54,7 @@ Each step reuses what the earlier steps produced. Why this order works, and how 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. | Company facts only |
-| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Core business SaaS stack (email, files, client and billing records). | P05: which systems matter and how long they can be down |
+| 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Pharmacy Core SaaS Stack. | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). | P02: the system boundary and its controls |
 | 4 | [P01 Risk Register](step-04_P01_risk-register/_context.md) | Whole business as one system. 10-15 risks; qualitative 5-level scales; owner is every risk owner. | P05 impact levels; P02 and P04 systems and controls |
 | 5 | [P03 Regulatory Gap Analysis](step-05_P03_regulatory-gap-analysis/_context.md) | Primary regulation that applies to the owner. Requirement-level checklist; self-attested evidence. Regulation: HIPAA Security Rule. | P01 risks; P02 control statements |

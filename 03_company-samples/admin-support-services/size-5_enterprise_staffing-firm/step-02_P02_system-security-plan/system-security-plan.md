@@ -168,11 +168,11 @@ See `control-implementation.csv` (141 controls).
 
 | Inheritance | Count |
 |---|---|
-| Common (fully inherited from a common control provider) | 87 |
-| Hybrid (shared between a provider and the ALPP team) | 35 |
+| Common (fully inherited from a common control provider) | 86 |
+| Hybrid (shared between a provider and the ALPP team) | 36 |
 | System-specific | 19 |
 
-The Planned controls are High-baseline supplements: CM-3(1), CM-5(1), SI-7(2), SI-7(5). Partially implemented controls: AC-2, AC-2(12), AC-4, AC-5, AT-3, AU-6, AU-12, CM-3, CM-8, CP-2, CP-4, CP-10, IA-2, IA-5, IA-8, IR-4, IR-8, PS-4, RA-5, SA-9, SA-22, SC-7, SI-4, SI-7, SI-10, SI-12, SR-6.
+The Planned controls are High-baseline supplements: CM-3(1), CM-5(1), SI-7(2), SI-7(5). Partially implemented controls: AC-2, AC-2(12), AC-4, AC-5, AT-3, AU-6, AU-12, CM-3, CM-6, CM-8, CP-2, CP-10, IA-2, IA-5, IA-8, IR-4, IR-8, PS-4, RA-5, SA-9, SA-22, SC-7, SI-4, SI-7, SI-10, SI-12, SR-6.
 
 ### 10.2 Control assessment status
 Internal Audit assessed 44 of these controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`.
@@ -184,9 +184,9 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 |---|---|---|---|---|---|
 | CCP-01 | Enterprise GRC program | CISO (with the Chief Risk Officer and Chief Audit Executive for assessment) | Policies and standards (P06), risk methodology, assessment, POA&M, continuous monitoring, contingency planning program | 26 | Annual Internal Audit assessment (P07); GRC platform |
 | CCP-02 | Identity platform (SYS-05) | Director of Identity and Access Management | SSO, MFA, PAM, identity governance, account lifecycle | 20 | SOX IT general control testing; P07 AC-2, IA-2, IA-5 results |
-| CCP-03 | Cloud landing zone (Cloud provider A) | Director of Cloud Platform Engineering | Account guardrails, network policies, key management, encryption, backups, log archive, standby region | 24 | Posture management reports; provider SOC 2 Type 2 (physical and hypervisor) |
+| CCP-03 | Cloud landing zone (Cloud provider A) | Director of Cloud Platform Engineering | Account guardrails, network policies, key management, encryption, backups, log archive, standby region | 23 | Posture management reports; provider SOC 2 Type 2 (physical and hypervisor) |
 | CCP-04 | Security operations | Director of Security Operations | 24x7 SOC, SIEM, EDR, vulnerability management, penetration testing, incident response, threat intelligence | 18 | SOC metrics; P07 SI-4, RA-5, IR results |
-| CCP-05 | Network and endpoint engineering (SYS-08) | Director of Network and Endpoint Engineering | SD-WAN, segmentation, endpoint baselines, media sanitization, unsupported component tracking | 5 | Network configuration reviews; certificates of destruction |
+| CCP-05 | Network and endpoint engineering (SYS-08) | Director of Network and Endpoint Engineering | SD-WAN, segmentation, endpoint and time clock baselines, media sanitization, unsupported component tracking | 6 | Network configuration reviews; certificates of destruction |
 | CCP-06 | Facilities and colocation | Vice President, Facilities | Physical access to payroll centers and colocation cages | 3 | Badge reviews; colocation SOC 2 reports |
 | CCP-07 | Human resources and workforce training | Chief Human Resources Officer | Personnel screening, terminations, sanctions, training, acknowledgments | 11 | HCM and learning system reports |
 | CCP-08 | Third-party risk management | Director of Third-Party Risk Management | Vendor tiering, contract terms, SOC report reviews, supply chain risk management | 11 | Vendor register; SOC report reviews |
