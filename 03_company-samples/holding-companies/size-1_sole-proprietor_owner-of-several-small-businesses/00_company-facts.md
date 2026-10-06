@@ -97,3 +97,20 @@ These facts were added so the deliverables agree with each other. They do not ch
 
 | Topic | Added fact | Used in |
 |---|---|---|
+| IT technician terms | The on-call IT technician signed a written confidentiality and security agreement on 2026-07-24, before the self-assessment began | P01, P02, P03, P07, P08 |
+| Former storage assistant | The former storage assistant left on 2026-01-16. The account stayed enabled in the storage system until the owner disabled it during the P07 test on 2026-07-30 | P01, P02, P04, P07 |
+| Bookkeeper access | Since 2025 the owner releases every payment; the bookkeeper prepares a payables list and enters payroll hours. The bookkeeper's accountant user also held the company administrator role in all four company files (found 2026-07-29, removed 2026-08-12); reducing the accountant role is still open | P05, P07, P09 |
+| Accounting service assurance | The accounting service's SOC 2 Type 2 report (Security, Availability, Confidentiality; period ending 2026-03-31; unqualified; one deprovisioning exception at the vendor) was reviewed on 2026-07-29. Stated RTO 12 hours, RPO 1 hour | P02, P04, P09 |
+| Operating figures | Storage rent about $850 a day, with autopay on the 1st. Laundry revenue about $660 a day, about 60% by card or app; coin acceptors keep machines running. Rentals rent about $16,700 a month, due on the 1st. LLC payroll every second Friday. The gate controller keeps existing codes working when the storage system is down | P05, P08 |
+| People with Florida personal information | About 670: Storage about 610 tenant records (the about 230 license scans are of tenants in that group), Rentals 47 applicants, LLC employees 8 (3 current, 5 former) | P02, P03, P08 |
+| Former payroll provider | The LLCs used a different payroll provider until 2024. That account was never closed and still holds former employees' records | P03, P07 |
+| Missed alert | An unfamiliar sign-in alert for the owner's email in May 2026 was deleted unread | P03, P07, P09 |
+| Site details | The Storage desktop is 7 years old. The gate logs each code entry in the storage system. According to the installer, the gate controller is reachable only from the Storage office network. Site equipment at the Storage office sits on the floor | P01, P03 |
+| Device disposal | One laptop was traded in during 2025 with no wipe record | P03, P09 |
+| Unit 4B decision | The owner chose the unit 4B applicant on 2026-07-16; the two declined applicants each failed the screening criterion and received the platform's adverse action notice that day. The owner wrote tenant selection criteria (income, rental history, screening result) on 2026-07-30 and re-checked the decision against them | P01, P03, P10 |
+| AI assistant use | Before the assessment the owner used the assistant to draft Storage delinquency reminders, laundromat signs, and rental listings and to summarize leases and contracts. The vendor's business terms exclude training on customer prompts and files | P10 |
+| Screening recommendation (AI-002) | The screening partner shows an accept, decline, or conditional recommendation with each report; its basis has not been disclosed to the owner | P10 |
+| Retention rules | Set by the owner in POL-01 8.7: declined and withdrawn applications 2 years after the decision; signed tenants' applications for the lease term plus 2 years; former Storage tenant records 3 years after move-out; license scans not kept once the number is in the storage system; new-hire forms only in the payroll service | P06, P10 |
+| Costs | Password manager about $40 a year; backup service about $150 a year; two hardware keys about $100 once; two extra suite licenses about $150 a year; encrypted drive about $80 once; gate installer visit about $120; business attorney about $300 for the bookkeeper terms | P01, P07 |
+| Staff interviews | On 2026-07-30 the Storage manager and the Laundry attendants were each asked whom they would call about a suspicious email and whether they share a PIN | P07, P09 |
+| Cyber insurance | None today. The owner will get quotes for one policy covering all four entities by 2026-12-31 | P01, P08, P09 |

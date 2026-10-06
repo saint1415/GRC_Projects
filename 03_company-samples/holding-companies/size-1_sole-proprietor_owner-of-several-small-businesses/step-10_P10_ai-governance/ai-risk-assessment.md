@@ -28,7 +28,7 @@ The assistant drafts and summarizes email and documents, and answers questions a
 **As it was used on 2026-07-14: High.** Choosing a tenant is a housing decision, a consequential decision under the rubric, and the assistant was asked to be a factor in it.
 **As it will be used under the conditions below: Medium.** It drafts messages that reach tenants and customers, but makes and influences no decision about a person, and every output is read before use.
 
-**Unit 4B check (2026-07-30).** The owner wrote tenant selection criteria (income, rental history, screening result) and re-checked the 4B decision against them. The chosen applicant met all three; the two declined applicants each failed the screening criterion and received the platform's adverse action notice on 2026-07-16. The owner kept the assistant's answer with the application file for 2 years (POL-01 8.7). **No evidence of a prohibited basis was found, but the practice stops now.**
+**Unit 4B check (2026-07-30).** The owner wrote tenant selection criteria (income, rental history, screening result) and re-checked the 4B decision against them. The chosen applicant met all three; the two declined applicants each failed the screening criterion and received the platform's adverse action notice on 2026-07-16. The owner saved the assistant's answer to the unit 4B file in the property management platform, to be kept with the declined applications for 2 years (POL-01 8.7). **No evidence of a prohibited basis was found, but the practice stops now.**
 
 ### Generative AI risks (NIST AI 600-1) that apply
 | Risk | How it shows up here | Control |

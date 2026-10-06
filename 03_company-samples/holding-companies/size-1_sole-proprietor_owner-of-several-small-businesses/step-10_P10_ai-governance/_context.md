@@ -9,7 +9,7 @@
 | Universal method | [step-10_P10_ai-governance/README.md](../../../../00_universal-framework/projects/step-10_P10_ai-governance/README.md) |
 | Scenario brief | [README.md](../README.md) |
 
-**AI use case:** Enterprise generative AI assistant across subsidiaries
+**AI use case:** Generative AI assistant add-on to the productivity suite
 **Sector AI rules and guidance:** None identified; see cross-sector obligations
 **Cross-sector AI obligations:** [`00_universal-framework/cross-sector/`](../../../../00_universal-framework/cross-sector)
 
