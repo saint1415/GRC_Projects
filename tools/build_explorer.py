@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Build docs/explorer.html, a single-page reader for all 216 sample companies.
+"""Build the sample company explorer site in docs/ from the finished samples.
 
-It reads the finished sample folders in 03_company-samples/ and writes one self-contained
-HTML file (data, styles and script inline). Nothing is fetched at run time except the
-Google Fonts stylesheet, which falls back to system fonts when offline.
+It reads the finished sample folders in 03_company-samples/ and writes:
+  docs/assets/grc-data.js  every company's data, shared by all pages
+  docs/index.html          landing page: choose a look (from tools/landing_template.html)
+  docs/app.html            the explorer in two looks, Case Files and Threat Board (tools/app_template.html)
+  docs/explorer.html       the plain reading mode (tools/explorer_template.html)
+Every page has a switch to move between the three modes without losing your place.
+Only Google Fonts and the data file are fetched; fonts fall back to system fonts when offline.
 
 Each company is retold as a plain-English story: who it is, what it runs on, where it
 stands, which rules apply and why, what could go wrong, what the checks found, what it
@@ -17,7 +21,9 @@ import csv, html, json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 S = ROOT / "03_company-samples"
-OUT = ROOT / "docs" / "explorer.html"
+DATA = ROOT / "docs" / "assets" / "grc-data.js"
+# (template in tools/, page in docs/): the landing page, the two-look app, and the plain reading mode.
+PAGES = [("landing_template.html", "index.html"), ("app_template.html", "app.html"), ("explorer_template.html", "explorer.html")]
 REPO = "https://github.com/saint1415/GRC_Projects/blob/main/"
 
 TIERS = {1: "Sole proprietor", 2: "Micro", 3: "Small", 4: "Mid-market", 5: "Enterprise", 6: "Multi-sector"}
@@ -409,11 +415,19 @@ def main():
     payload = json.dumps({"units": units, "samples": data, "tiers": TIERS, "projects": projects,
                           "tagList": [t for t, _ in TAGS], "repo": REPO},
                          ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    template = (ROOT / "tools" / "explorer_template.html").read_text(encoding="utf-8")
-    OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(template.replace("/*__DATA__*/null", payload), encoding="utf-8")
-    print(f"Wrote {OUT.relative_to(ROOT)}: {len(data)} companies, {OUT.stat().st_size / 1e6:.2f} MB")
-
+    # One shared data file feeds all three reading modes.
+    DATA.parent.mkdir(parents=True, exist_ok=True)
+    DATA.write_text("window.GRC_DATA=" + payload + ";\n", encoding="utf-8")
+    risks = sum(d["risk"]["total"] for d in data)
+    stats = {"__COMPANIES__": f"{len(data)}", "__INDUSTRIES__": f"{len(units)}", "__RISKS__": f"{risks:,}",
+             "__DELIVERABLES__": f"{len(data) * 10:,}"}
+    for template, out in PAGES:
+        text = (ROOT / "tools" / template).read_text(encoding="utf-8")
+        for k, v in stats.items():
+            text = text.replace(k, v)
+        (ROOT / "docs" / out).write_text(text, encoding="utf-8")
+    print(f"Wrote docs/assets/grc-data.js ({DATA.stat().st_size / 1e6:.2f} MB, {len(data)} companies) and "
+          + ", ".join(f"docs/{o}" for _, o in PAGES))
 
 if __name__ == "__main__":
     main()

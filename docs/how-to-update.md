@@ -21,7 +21,7 @@ Always finish with `python3 tools/validate.py`.
 
 ## What the rebuild changes
 
-- **Always regenerated:** `02_industry-rules/**/overlay.md`, every scenario `README.md`, every `_context.md`, and `03_company-samples/INDEX.md`. `tools/build_explorer.py` separately regenerates `docs/explorer.html` from the finished samples; edit its layout in `tools/explorer_template.html`.
+- **Always regenerated:** `02_industry-rules/**/overlay.md`, every scenario `README.md`, every `_context.md`, and `03_company-samples/INDEX.md`. `tools/build_explorer.py` separately regenerates the explorer site from the finished samples: `docs/assets/grc-data.js` (the data), `docs/index.html` (landing page), `docs/app.html` (the Case Files and Threat Board looks) and `docs/explorer.html` (plain reading mode). Edit their layouts in `tools/landing_template.html`, `tools/app_template.html` and `tools/explorer_template.html`.
 - **Never overwritten:** the working files in each project folder (for example `risk-register.csv`). Your completed work is safe.
 - **Template changes and existing work:** a new template reaches scenarios that have not started that project. To push a new template into a scenario you have not started, delete its working files and rebuild. `--force-templates` overwrites **all** working files; use it only on a fresh library.
 
