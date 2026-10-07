@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Cardholder data (PAN) and sensitive authentication data; Customer PII and loyalty/purchase history; Consumer credit applications/NPI (store cards, auto financing and leasing); Biometric data (facial recognition, loss prevention); Precise geolocation (mobile apps); Children's personal information
 - **Critical systems:** POS terminals and payment gateways/tokenization; E-commerce platform and mobile apps; Loyalty/CRM and customer data platforms; Inventory and supply chain/ERP; Store networks, Wi-Fi and CCTV/biometric systems; Auto dealer management systems (DMS) and F&I systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Trade Commission (FTC Act, Safeguards Rule for retailers extending credit/auto dealers, Red Flags, COPPA, INFORM); California Privacy Protection Agency and state attorneys general; PCI Security Standards Council (standard setter, not a regulator) and payment brands (enforcement via acquirers); Securities and Exchange Commission (public retailers)

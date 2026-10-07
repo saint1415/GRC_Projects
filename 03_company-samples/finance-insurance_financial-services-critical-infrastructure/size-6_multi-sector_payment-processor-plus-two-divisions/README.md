@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** NPI and account data; Payment messages (SWIFT, Fedwire, ACH files); Market and trading data; Authentication credentials and HSM keys
 - **Critical systems:** Payment, clearing and settlement systems; Core banking processors; Trading and market-data systems (SCI systems); Authentication/fraud platforms; Backup and data vaulting (e.g., immutable backups)
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of the Treasury; Federal banking agencies (OCC, FRB, FDIC), NCUA, SEC, CFTC via FFIEC/FBIIC coordination

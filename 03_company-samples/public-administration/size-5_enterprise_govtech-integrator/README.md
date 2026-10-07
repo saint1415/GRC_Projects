@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Large hybrid estate: multiple clouds, data centers, OT where relevant, hundreds of applications |
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Federal Tax Information (FTI); Criminal Justice Information (CJI) / CHRI; Medicaid, SNAP, TANF applicant/beneficiary data; Motor vehicle records (DPPA); Voter registration data; Court records (sealed/juvenile); PHI (public health, public hospitals, employee health plans); Employee and pension data
 - **Critical systems:** Tax / revenue administration systems; Eligibility and enrollment systems (Medicaid/SNAP/TANF); DMV/licensing systems; Voter registration databases and election management systems; CAD/911 and records management (see c-emergency); ERP/financial and payroll; Utility SCADA owned by municipalities; Court case management systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 IRS Office of Safeguards FTI safeguards (IRC 6103(p)(4); Pub 1075); FBI CJIS Division / state CJIS Systems Agencies (CSA) CJIS Security Policy compliance and audits; CMS Medicaid/CHIP and state exchange data safeguards; HHS OCR HIPAA for government health plans and providers (hybrid entities); CISA and FEMA (DHS) SLCGP administration; voluntary cyber services; CIRCIA rulemaking; U.S. Election Assistance Commission (EAC) VVSG and voting system certification (voluntary)

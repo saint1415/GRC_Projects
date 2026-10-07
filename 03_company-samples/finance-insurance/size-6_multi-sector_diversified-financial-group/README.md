@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Nonpublic personal information (NPI) under GLBA; Account numbers, credentials and cardholder data; Consumer report/credit data (FCRA); Insurance underwriting/claims data incl. health information; Trading and market data; material nonpublic information; KYC/AML identity documents and SAR data
 - **Critical systems:** Core banking and payments (wire, ACH, card processing); Online/mobile banking and authentication; Trading, order management and clearing systems; Policy administration and claims systems; General ledger and treasury; Third-party core processors and cloud service providers
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law incl. ECOA/Reg B); FTC (non-bank financial institutions: Safeguards Rule); State insurance regulators (NAIC coordinates) and NYDFS; FFIEC (interagency examination standards)

@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Seismic and reservoir data (trade secret); Facility security plans and assessments (SSI under 49 CFR 1520 for MTSA/TSA); Well control and process safety data; Employee PII / miner records; EAR-controlled technology (e.g., certain drilling/sensor tech)
 - **Critical systems:** SCADA for well pads, gathering and compression; DCS/SIS on offshore platforms; PLCs and RTUs; Mine ventilation, hoist and dewatering controls; Fleet/autonomous haulage systems; ERP and production accounting
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Mine Safety and Health Administration (MSHA, DOL) - mining safety (no cyber rules); Bureau of Safety and Environmental Enforcement (BSEE, DOI) - offshore oil & gas; U.S. Coast Guard - MTSA/OCS facility security incl. cybersecurity; Transportation Security Administration (TSA) - pipeline/LNG security directives (where applicable); Pipeline and Hazardous Materials Safety Administration (PHMSA, DOT); Department of Energy (DOE) - Energy Sector SRMA (oil & natural gas)

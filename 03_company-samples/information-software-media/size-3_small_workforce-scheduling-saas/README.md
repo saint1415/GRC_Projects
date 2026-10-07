@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Consumer PII and behavioral/advertising data; Customer Proprietary Network Information (CPNI) and call detail records; Children's personal information; Bulk sensitive personal data (geolocation, biometric, health, financial) under 28 CFR 202; Customer-hosted data (processor/service-provider data); Federal data (FedRAMP), CUI
 - **Critical systems:** Multi-tenant cloud/SaaS platforms and identity (IAM/SSO); CI/CD and software build/signing pipelines; Data centers and hosting infrastructure; Telecom core networks, OSS/BSS, lawful-intercept systems; CDN/DNS and content delivery; Customer data platforms and data warehouses
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Communications Commission (telecom/VoIP/cable/satellite); Federal Trade Commission (non-common-carrier tech, COPPA, PADFA data brokers); DOJ National Security Division (Data Security Program, 28 CFR 202); GSA FedRAMP PMO (cloud services to federal agencies); California Privacy Protection Agency / state AGs; Securities and Exchange Commission (public companies)

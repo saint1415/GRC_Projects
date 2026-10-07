@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Controlled Unclassified Information (CUI) / Covered Defense Information; Controlled Technical Information; Federal Contract Information (FCI); ITAR technical data; EAR-controlled technology; Classified information (NISPOM)
 - **Critical systems:** CUI enclaves / GCC-High or FedRAMP Moderate cloud; PLM/CAD and engineering data repositories; MES and CNC/additive manufacturing; ERP (e.g., DCAA-compliant accounting); Classified information systems; Test and evaluation systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Defense (DoD); DoD CIO - CMMC Program Management Office; Defense Counterintelligence and Security Agency (DCSA) - NISPOM; State Department DDTC (ITAR); Commerce BIS (EAR)

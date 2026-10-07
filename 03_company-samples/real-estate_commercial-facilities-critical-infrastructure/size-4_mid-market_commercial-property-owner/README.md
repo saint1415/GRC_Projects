@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Multi-cloud or hybrid with on-premises systems, several business applications, dedicated security tooling |
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Guest/visitor PII and loyalty data; Payment card data; Video surveillance and biometric data; Ticketing and event attendee data
 - **Critical systems:** Building management/HVAC and physical access control (OT); Property management systems (hotels); POS and ticketing; Gaming systems (casinos); Mass notification and life-safety systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of Homeland Security (CISA)

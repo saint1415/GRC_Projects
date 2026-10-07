@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Personal and SaaS tools: email suite, cloud storage, accounting SaaS, one laptop and phone |
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Tenant/applicant PII and consumer reports (screening); Bank account and wire instructions (closing/escrow funds); NPI in settlement and mortgage files; Payment card/ACH rent data; Building access/badge and CCTV data
 - **Critical systems:** Property management and tenant portals; Escrow/settlement and wire transfer workflows (BEC target); Building automation/BMS and access control; Leasing CRM and screening integrations; Accounting/ERP
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Trade Commission (Safeguards Rule for appraisers and settlement service providers; FTC Act); HUD (Fair Housing Act); State real estate commissions, AGs and California Privacy Protection Agency; SEC (public REITs and real estate companies)

@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Finance and Insurance vertical as a registered investment adviser (NAICS 523940) instead of the vertical's primary industry (NAICS 522110). Reason: A sole proprietor cannot hold a bank charter. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Nonpublic personal information (NPI) under GLBA; Account numbers, credentials and cardholder data; Consumer report/credit data (FCRA); Insurance underwriting/claims data incl. health information; Trading and market data; material nonpublic information; KYC/AML identity documents and SAR data
 - **Critical systems:** Core banking and payments (wire, ACH, card processing); Online/mobile banking and authentication; Trading, order management and clearing systems; Policy administration and claims systems; General ledger and treasury; Third-party core processors and cloud service providers
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law incl. ECOA/Reg B); FTC (non-bank financial institutions: Safeguards Rule); State insurance regulators (NAIC coordinates) and NYDFS; FFIEC (interagency examination standards)

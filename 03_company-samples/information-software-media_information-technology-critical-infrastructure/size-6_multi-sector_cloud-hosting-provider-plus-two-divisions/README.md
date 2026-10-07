@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Customer/tenant data in cloud services; Source code, signing keys and build artifacts; Federal data and CUI; Credentials/identity data; Bulk sensitive personal data (28 CFR 202)
 - **Critical systems:** Cloud control planes and hypervisors; Identity providers and PKI; Software supply chain/CI-CD; Managed service provider RMM tools; DNS, CDN and internet routing
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of Homeland Security (CISA); GSA FedRAMP PMO; Department of Defense (CMMC/DFARS); DOJ National Security Division (28 CFR 202)

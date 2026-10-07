@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Controlled Unclassified Information (CUI) and Federal Contract Information (FCI); Covered defense information / export-controlled technical data; Customer and supplier commercial data, pricing, EDI transaction data; B2B payment card and bank account data; Employee PII; Import/export filings and trade data
 - **Critical systems:** ERP (order-to-cash, procure-to-pay); Warehouse management systems (WMS); EDI/VAN and supplier/customer portals; Transportation management systems (TMS); Distribution-center OT (conveyors, sortation, automated storage); Customs filing integrations (ACE)
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Trade Commission (general data security/privacy enforcement); Department of Defense (CMMC/DFARS for defense-supply-chain distributors); U.S. Customs and Border Protection (CTPAT supply chain security, voluntary); Securities and Exchange Commission (public wholesalers); State attorneys general / California Privacy Protection Agency

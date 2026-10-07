@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Protected Health Information / ePHI (HIPAA); SUD treatment records (42 CFR Part 2); PHR / consumer health app data (FTC HBNR); Payment card and patient financial/billing data; Medicaid applicant/beneficiary data (42 CFR 431.300); Genomic, reproductive and behavioral health data (heightened state protections); Medical device telemetry; Child care and family services case files (state law / program rules)
 - **Critical systems:** Electronic Health Record (EHR) / clinical systems; PACS/imaging and laboratory information systems (LIS); Networked medical devices / IoMT (infusion pumps, monitors); Revenue cycle, claims clearinghouse connections; Pharmacy systems and e-prescribing (EPCS); Patient portals and telehealth; HIE / interoperability interfaces (FHIR APIs); Building/clinical OT (HVAC, medical gas, nurse call); Case management systems (social assistance); Child care management/attendance and subsidy billing systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 HHS Office for Civil Rights (OCR) HIPAA Privacy, Security and Breach Notification enforcement; Section 1557; HHS SAMHSA / OCR 42 CFR Part 2 (SUD records); CMS Conditions of Participation (incl. Emergency Preparedness); Medicaid safeguarding; HHS ASTP/ONC Health IT certification (HTI-1 DSI), information blocking; FTC Health Breach Notification Rule for non-HIPAA health apps/PHRs; HHS ACF / state human services agencies Safeguarding of public-assistance applicant data (e.g., 45 CFR 205.50 for TANF) in social assistance

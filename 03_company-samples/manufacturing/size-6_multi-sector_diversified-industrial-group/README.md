@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Device design files and source code; SBOMs and vulnerability data; export-controlled technical data (EAR/ITAR where applicable); patient data received from devices in service (may be PHI when handled for a covered entity)
 - **Critical systems:** MES; ERP / PLM; DCS / PLCs / robotics; SCADA and historians; Quality/LIMS; CAD/CAM and CNC networks
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Department of Defense (DFARS/CMMC, DCSA); Department of State DDTC (ITAR); Department of Commerce BIS (EAR, ICTS); FDA (medical device cybersecurity, food facilities); CISA (Chemical & Critical Manufacturing SRMA)

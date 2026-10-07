@@ -6,7 +6,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Item | Fact |
 |---|---|
 | Legal name | Cris Santos Electric Cooperative, Inc. (member-owned, not-for-profit electric cooperative; the README tier defaults "Cris Santos Company, LLC" and "privately held by Cris Santos" do not fit a cooperative and are replaced here) |
-| Legal form and ownership | Cooperative, nonprofit, membership corporation organized under Florida's Rural Electric Cooperative Law (Fla. Stat. chapter 425; purpose in 425.02). Owned by its members, one member, one vote. A Board of Trustees of 7 member-elected volunteers governs it. There are no shareholders |
+| Legal form | Cooperative, nonprofit, membership corporation organized under Florida's Rural Electric Cooperative Law (Fla. Stat. chapter 425; purpose in 425.02) |
+| Ownership | Owned by its members, one member, one vote. A Board of Trustees of 7 member-elected volunteers governs it. There are no shareholders |
 | Business | Electric power distribution (NAICS 221122). Buys all of its power from a generation and transmission cooperative (the **G&T**, of which it is a member) under a full-requirements wholesale power contract, and delivers it over its own 12.47 kV distribution system to residential and commercial members |
 | Location | Florida (one rural county). Headquarters on one site: office, warehouse, truck yard, and standby generator. One distribution substation (**Substation 1**) about 3 miles away |
 | Members and load | About 820 meters: 742 residential and 78 commercial, including the county water treatment plant, a K-8 school, a medical clinic, and a county fire station. 26 residential members are on the medical-needs list (they depend on electric medical equipment). 128 miles of overhead line on 3 feeders. 2025 peak load 2.6 MW |

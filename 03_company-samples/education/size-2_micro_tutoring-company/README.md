@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Educational Services vertical as an educational support and tutoring company (NAICS 611710) instead of the vertical's primary industry (NAICS 611310). Reason: A college requires more than 9 employees. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Education records / student PII (FERPA); Student financial aid data, FAFSA/ISIR and FTI-derived data (GLBA, SAIG); Children's personal information (under 13, COPPA); Student health and counseling records (FERPA or HIPAA); Special education (IDEA) records; Research data incl. CUI, export-controlled and human-subjects data; Employee HR/payroll
 - **Critical systems:** Student Information System (SIS); Learning Management System (LMS); Financial aid / ERP (e.g., bursar, SAIG/EDConnect); Identity and SSO for students/staff; Assessment and proctoring platforms; Campus safety: access control, emergency notification, CCTV; Research computing / HPC and CUI enclaves
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 U.S. Department of Education - Student Privacy Policy Office (SPPO) FERPA / PPRA administration and enforcement; U.S. Department of Education - Federal Student Aid (FSA) Enforces GLBA Safeguards compliance for Title IV institutions via the PPA, SAIG agreement and annual compliance audits; FTC GLBA Safeguards Rule (16 CFR 314) and COPPA (16 CFR 312); FCC / USAC CIPA certifications for E-Rate schools and libraries; CISA / DHS Education Facilities Subsector of the Government Services and Facilities Sector

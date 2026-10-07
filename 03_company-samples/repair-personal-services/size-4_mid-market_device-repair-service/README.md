@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Multi-cloud or hybrid with on-premises systems, several business applications, dedicated security tooling |
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Donor and member PII, giving history; Payment card and ACH/bank data for donations and services; Congregant/pastoral care and counseling notes; Children's and youth program participant data; Vehicle owner / VIN data (repair shops); Client appointment and personal care records
 - **Critical systems:** Donor/member management (ChMS/CRM); Online giving and payment platforms; POS and appointment-booking systems; Shop management and diagnostic systems (auto repair); Email/productivity tenants and website/CMS; Volunteer background check portals
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 FTC FTC Act Section 5, Disposal Rule, COPPA. Jurisdiction generally does NOT reach non-profit organizations (15 U.S.C. 44).; State Attorneys General State breach notification, charitable solicitation and consumer privacy laws; IRS (Exempt Organizations) Tax-exempt status. No cyber rules, but donor data sits on Form 990 Schedule B

@@ -11,8 +11,8 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | | |
 |---|---|
 | Legal name | Cris Santos Community Federal Credit Union |
-| Legal form | Limited liability company (LLC) |
-| Ownership | Privately held by Cris Santos |
+| Legal form | Federal credit union chartered under the Federal Credit Union Act; a not-for-profit cooperative |
+| Ownership | Owned by its members (one member, one vote). A volunteer board of directors (7 members elected by the membership) governs it. A volunteer supervisory committee (3 members appointed by the board) obtains the annual audit (12 CFR Part 715). There are no shareholders |
 | Employees | 7 employees |
 | Annual receipts (fictional) | $1.1 million |
 | Total assets (fictional) | $60.0 million |
@@ -26,9 +26,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Finance and Insurance vertical as a community credit union (NAICS 522130) instead of the vertical's primary industry (NAICS 522110). Reason: Banks with fewer than 10 employees are rare; small credit unions commonly have under 10 staff and follow NCUA security program rules (12 CFR 748) modeled on the same interagency guidelines as banks. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Nonpublic personal information (NPI) under GLBA; Account numbers, credentials and cardholder data; Consumer report/credit data (FCRA); Insurance underwriting/claims data incl. health information; Trading and market data; material nonpublic information; KYC/AML identity documents and SAR data
 - **Critical systems:** Core banking and payments (wire, ACH, card processing); Online/mobile banking and authentication; Trading, order management and clearing systems; Policy administration and claims systems; General ledger and treasury; Third-party core processors and cloud service providers
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law incl. ECOA/Reg B); FTC (non-bank financial institutions: Safeguards Rule); State insurance regulators (NAIC coordinates) and NYDFS; FFIEC (interagency examination standards)

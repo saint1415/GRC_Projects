@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Guest/visitor PII and loyalty data; Payment card data; Video surveillance and biometric data; Ticketing and event attendee data
 - **Critical systems:** Building management/HVAC and physical access control (OT); Property management systems (hotels); POS and ticketing; Gaming systems (casinos); Mass notification and life-safety systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of Homeland Security (CISA)

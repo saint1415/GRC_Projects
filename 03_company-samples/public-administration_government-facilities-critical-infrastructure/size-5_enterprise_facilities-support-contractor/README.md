@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Large hybrid estate: multiple clouds, data centers, OT where relevant, hundreds of applications |
 | Who owns security and compliance | CISO, dedicated GRC team, internal audit, three lines model |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Voter registration and election results data; FTI, CJI, benefits data; Education records (Education Facilities subsector); Facility security plans and physical access data; Classified/CUI (federal facilities)
 - **Critical systems:** Election management systems, e-pollbooks, voter registration databases, tabulators; Building automation / physical access control and video surveillance; Government ERP, email and identity platforms; SIS/LMS (education facilities); Public-facing service portals
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 DHS (CISA; also Federal Protective Service) and GSA - Co-Sector Risk Management Agencies NSM-22 (Apr 30, 2024) designates 'Government Services and Facilities: Co-Sector Risk Management Agencies: DHS and GSA'; CISA Sector page; Education Facilities and National Monuments and Icons subsectors; Election Infrastructure (designated Jan 2017 as a subset of the government facilities sector); U.S. Election Assistance Commission Voting system guidelines/certification; U.S. Department of Education FERPA and FSA GLBA enforcement for Education Facilities subsector entities

@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Material non-public information (MNPI), M&A and financial reporting data; Consolidated employee HR/payroll data, SSNs; Group health plan PHI; Customer financial information (if financial subsidiaries); Intercompany treasury and banking credentials
 - **Critical systems:** Consolidation / ERP and financial close systems (ICFR scope); Treasury management and payment systems; Shared-services identity (AD/Entra ID) spanning subsidiaries; Board portals; HRIS / benefits platforms
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Securities and Exchange Commission (SEC) Cyber disclosure for public registrants (Reg S-K Item 106; Form 8-K Item 1.05); ICFR under SOX 404; Board of Governors of the Federal Reserve System Bank and savings & loan holding companies (Reg Y incident notification; Interagency Information Security Guidelines); FTC Section 5 and the Safeguards Rule for non-bank financial subsidiaries
