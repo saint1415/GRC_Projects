@@ -9,7 +9,7 @@ The design demonstrates **scalability**. One universal method produces each deli
 | If you want to... | Open |
 |---|---|
 | See what has been accomplished | [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md) |
-| Read any sample company as a plain-English story: browse, search by rule, compare sizes, or take a guided tour | [docs/explorer.html](docs/explorer.html). Download it and open it in a browser, or turn on GitHub Pages (Settings, Pages, branch `main`, folder `/docs`) and open `explorer.html` there |
+| Read any sample company as a plain-English story: browse, search by rule, compare sizes, or take a guided tour | [Sample Company Explorer](https://saint1415.github.io/GRC_Projects/explorer.html) (live site). Source: [docs/explorer.html](docs/explorer.html), rebuilt by `tools/build_explorer.py` |
 | Pick a sample company for a meeting | [03_company-samples/INDEX.md](03_company-samples/INDEX.md), then that company's `README.md` |
 | Learn the best order to build the 10 projects, and how size changes them | [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md) |
 | Run a meeting from a sample | [docs/meeting-guide.md](docs/meeting-guide.md) |
