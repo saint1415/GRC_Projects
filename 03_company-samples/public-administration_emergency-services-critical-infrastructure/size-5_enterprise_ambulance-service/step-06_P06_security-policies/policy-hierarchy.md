@@ -24,7 +24,7 @@ Define how the company's security documents fit together, who approves each leve
 **Rules:** a lower level may add detail but may not weaken a higher level. Every standard and procedure names its parent policy and statement. Where a regulation is stricter than a standard (for example, a state EMS records rule or a county agreement), the stricter rule applies.
 
 ## 3. Document inventory
-The set has 5 policies, 21 standards, and 12 procedures. Policy statements: 56 (28 tested by Internal Audit in 2026; see `policy-control-map.csv`).
+The set has 5 policies, 23 standards, and 12 procedures. Policy statements: 56 (28 tested by Internal Audit in 2026; see `policy-control-map.csv`).
 
 | Document | Level | Owner | Approver |
 |---|---|---|---|

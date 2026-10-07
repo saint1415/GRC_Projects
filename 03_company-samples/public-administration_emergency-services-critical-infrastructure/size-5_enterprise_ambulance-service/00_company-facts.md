@@ -89,3 +89,46 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis |
 | 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line) |
 | 2026-09-10 | Results to the risk committee of the board |
+
+## 7. Facts added for the Phase 5 deliverables
+These facts were added while building the deliverables. They do not change sections 1-6.
+
+**Registry defaults kept.** The registry defaults fit an enterprise ambulance provider, so all three were kept: the primary system is the CAD and ePCR, named the Enterprise Dispatch and Patient Care Platform (EDPCP) for P02; the P08 incident is a CAD outage from ransomware, widened to several counties and given an SEC materiality step; the P10 use case is AI-assisted emergency call triage, assessed inside a 9-use-case portfolio.
+
+**Volumes and money.** About 4,300 911 responses a day at RCC-1 to RCC-3 (23 counties) and about 550 at RCC-4 (4 Tennessee counties); about 2,200 interfacility trips a day; about 19,700 managed transportation trips a day. Revenue of about $4.8 billion is about $13.2 million per calendar day; ground transport revenue is about $5.75 million a day, about 45% of it interfacility. Primary clearinghouse: about 75% of claims (about $30 million a week); secondary clearinghouse: about 25%.
+
+**Additional roles (titles only).**
+| Role | Duties in the deliverables |
+|---|---|
+| Chief Operating Officer (COO) | Authorizing official equivalent for the EDPCP (P02); chairs the crisis management team; disclosure committee member |
+| Chief Information Officer (CIO) | IT operations; telephony; change management |
+| Chief Audit Executive | Heads Internal Audit; reports to the audit committee; leads the P07 assessment |
+| Chief Compliance Officer; General Counsel; Controller | Second-line compliance; disclosure committee chair (General Counsel); SOX program (Controller) |
+| Vice President, Communications Centers | EDPCP system owner; manual dispatch and center failover |
+| Director of CAD and Dispatch Systems | EDPCP system administrator; CAD change control |
+| Medical Director for Communications (physician) | Dispatch protocols, response plan clinical content, AI-001 clinical oversight; chairs clinical review of the dispatch change board |
+| ePCR Application Manager | ePCR tenant configuration and hospital portal accounts (reports to the Chief Medical Officer) |
+| Vice President, Field Operations; Vice President, Fleet and Logistics | Field crews and interfacility operations; fleet, routers, MDCs, and medical supply |
+| Vice President, Revenue Cycle; Vice President, EMS Billing Services | Own claims; SL-1 service line owner |
+| President, Managed Transportation | SL-2 service line owner |
+| Vice President, Integration Management Office | AQ-01 and AQ-02 integration |
+| Vice President, Government Relations and County Contracts | County agreements and county notices |
+| Directors of Identity and Access Management, Cloud Platform Engineering, Network Engineering, Endpoint and Mobile Engineering, Third-Party Risk Management | Common control providers CCP-02, CCP-03, CCP-05, CCP-06, CCP-09 |
+| Chief Human Resources Officer; Vice President, Facilities | Workforce screening, training, terminations (CCP-08); physical security of communications centers (CCP-07) |
+| Vice President, Corporate Communications; Vice President, Investor Relations | Media and investor communications during incidents |
+
+**Acquired operations.** AQ-01: Tennessee ambulance provider acquired 2025-11 (about 1,150 employees, 160 ambulances, 14 sites, RCC-4 with 30 positions, about 210 office workstations). It moved onto the enterprise ePCR in 2026-05 and crew scheduling in 2026-07; identity federation is due 2027-01-31 and CAD migration 2027-03-31. AQ-02: billing services firm acquired 2026-03; its 9 public agency clients moved onto the SL-1 platform in 2026-08, and 14 of its vendor contracts involve PHI.
+
+**EDPCP details (P02, P07).** 6 CAD application servers; 230 dispatch positions and 12 radio console gateways at RCC-1 to RCC-3; about 1,900 CAD accounts, 9,800 ePCR accounts, and 2,600 hospital portal accounts; 22 CAD administrators; 34 privileged CAD and cloud accounts; about 1,290 enterprise vehicle routers and MDCs and 3,500 enterprise tablets; 20 offline spare consoles at each of RCC-1 to RCC-3. Contingency plan v5. Regional failover test 2026-05-14 (1 h 25 min); enterprise tabletop 2026-03-24 (data breach scenario, without the disclosure committee). Managed transportation platform DR test 2026-04-22 (met its 4 h RTO). The 3 counties that share premise hazard notes confirmed in writing in 2026 that the notes contain no criminal justice information.
+
+**Service lines (P09).** SL-1: 46 public EMS agencies, about 610,000 claims a year, about 180 billing services staff; SOC 2 Type 2 (Security and Confidentiality) issued for 2025. SL-2: 3 state Medicaid programs and 6 managed care plans; about 1,050 contact center and network operations staff; about 1,400 network providers with about 6,800 provider portal accounts.
+
+**Contract notice terms (fictional standard terms, P08).** County agreements: verbal notice to the county contract manager within 1 hour and written notice within 24 hours of a service disruption. SL-1 agreements: 24 hours for a service outage and 10 days for a breach. SL-2 contracts: several require security incident notice within 24 hours. Company BAAs with its own vendors require 10-day breach notice.
+
+**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, COO, and Vice President, Investor Relations, advised by outside securities counsel. Two members are new since 2026. Full tabletop using the P08 scenario: 2026-11-18.
+
+**Call recording.** Counsel's 2026-03 memo maps which Florida dispatch lines fall within Fla. Stat. 934.03(2)(g); a recorded notice plays on request and contact center lines. Review of Tennessee lines and out-of-state callers is open.
+
+**AI governance (P10).** The AI governance committee (formed 2025) is chaired by the Chief Medical Officer. AI-001 has run in shadow mode at RCC-1 and RCC-2 since 2026-04-06; the CAD vendor's BAA was amended on 2026-07-30 (no training, no secondary use, 7-day audio deletion); the vendor stated in 2026-06 that the module is not a device in its advisory configuration. Since 2026-03, procurement blocks AI features without an inventory ID.
+
+**Funding (P01).** About $7.0 million for 2026 Q4 to 2027 Q2: AQ-01 CAD migration ($3.2M), router replacement ($1.9M), AQ-01 identity federation ($600K), AQ-01 SD-WAN ($520K), automated CAD failover ($420K), network provider portal MFA ($180K), dispatch change board tooling ($150K), disclosure tabletop counsel ($40K).
