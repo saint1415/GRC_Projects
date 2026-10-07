@@ -1,38 +1,19 @@
-# Incident Response Policy
+# Incident Response Policy (pointer)
 
 | Field | Value |
 |---|---|
-| Organization | Cris Santos Company |
+| Organization | Cris Santos Company (unarmed private security patrol, licensed Class "B" agency) |
 | Policy ID | POL-03 |
-| Owner | [FILL] |
-| Approved by | [FILL] |
-| Effective date | [FILL] |
-| Review cycle | Annually, and after major changes |
-| Implements | IR-1, IR-4, IR-5, IR-6, IR-8 |
-| CSF 2.0 | RS.MA-01, RS.MA-02, RS.CO-02, RS.CO-03, RC.RP-01 |
+| Status | Merged into POL-01 Information Security Policy (consolidated), effective 2026-09-01 |
+| Owner and approver | Owner |
 
-## 1. Purpose
-Ensure Cris Santos Company detects, responds to, reports, and recovers from security incidents in a consistent and lawful way.
+At the Sole Proprietorship tier the business keeps **one** consolidated policy, because one person writes, follows, and checks it (`01_company-sizes/tier-project-scaling.csv`, t1 P06). This file is kept so the folder has the standard policy set names. It holds no separate rules.
 
-## 2. Scope
-All Cris Santos Company workforce members (owners, employees, contractors), systems, and data, including systems operated by service providers on behalf of Cris Santos Company.
+**Where the incident response rules are:**
 
-## 3. Roles and responsibilities
-[FILL: Roles scaled to tier (Sole Proprietorship). For example, at Sole Proprietorship the owner holds every role.]
+- POL-01 section 10 (Incident response): runbook and printed contacts (10.1), incident log (10.2), 2-hour and 24-hour client notice (10.3), Fla. Stat. 501.171 breach decisions and notices (10.4), ransom decisions (10.5), department notice of an insurance claim (10.6), annual walkthrough and lessons learned (10.7).
+- POL-01 section 11 (Contingency): recovery order, backup patrol agency, spare phone and paper logs.
+- The procedure itself is the P08 runbook (`../step-08_P08_incident-response-runbook/ir-runbook.md`) and its notification matrix.
+- SP 800-53 IR-1 and CP-1 are met by POL-01 as a whole.
 
-## 4. Policy statements
-4.1 Cris Santos Company must maintain an incident response plan and runbooks for its most likely incident types (see P08). (IR-8; RS.MA-01)
-4.2 Workforce members must report suspected incidents immediately to [FILL: contact]. (IR-6; RS.MA-02)
-4.3 Incidents must be triaged, categorized, and tracked to closure. (IR-4; IR-5)
-4.4 Regulatory, contractual, and law enforcement notifications must meet the deadlines in the notification matrix. (IR-6; RS.CO-02; RS.CO-03)
-4.5 The plan must be tested at least annually and after major incidents. (IR-3)
-4.6 Lessons learned must be recorded and fed into the risk register (P01). (ID.IM)
-
-## 5. Compliance and enforcement
-Violations may result in disciplinary action up to and including termination of employment or contract. Compliance is verified through control assessments (P07).
-
-## 6. Exceptions
-Exceptions follow the process in POL-01, section 4.6.
-
-## 7. Related documents
-[FILL: Standards, procedures, and regulatory requirements from `_context.md`]
+Traceability for every statement is in `policy-control-map.csv`.
