@@ -119,3 +119,27 @@ The cloud providers are described by service category only (vendor-agnostic). Th
 ## 7. Facts added for the Phase 5 deliverables
 
 These facts were added while building the deliverables. They do not change sections 1-6.
+
+**People and committees (P08, P09, P10)**
+- **Crisis management team:** chaired by the President, State and Local Platforms (backup: President, Systems Integration), with the four segment presidents, CIO, CISO, General Counsel, Chief Privacy Officer, Chief Human Resources Officer, Director of Regulated Data Compliance, Vice President, Corporate Communications, and Vice President, Investor Relations.
+- **Disclosure committee (seven members):** General Counsel (chair), CFO, Chief Accounting Officer, CISO, Chief Risk Officer, Chief Privacy Officer, and Vice President, Investor Relations; outside securities counsel advises. The General Counsel records materiality determinations.
+- **AI governance committee members:** Chief Data and AI Officer (chair), CISO, Chief Privacy Officer, Chief Compliance Officer, the General Counsel's delegate, Chief Human Resources Officer, the presidents of Eligibility and Enrollment Operations and of State and Local Platforms (or delegates), Director of Regulated Data Compliance, and a civil rights and accessibility lead; Internal Audit observes. High-tier AI use cases also need executive risk committee approval (POL-01 4.4).
+- **Other role titles used:** Deputy CISO; Deputy General Counsel; Federal Programs security lead; regulated data compliance managers (one per program); Director of Eligibility Operations (contact centers and document processing).
+
+**Incident readiness (P08)**
+- Last ransomware exercise: a technical exercise on 2026-05-21 with the SOC, cloud platform, and data center teams; no disclosure committee or agency contacts took part.
+- Printed incident binders are kept at headquarters, both SOC sites, and each delivery center.
+- Legacy hosting has a weekly offline vault copy in DC-2 (the "offline backup vault copies" in SYS-09); until POAM-008 closes it is the only legacy backup an attacker cannot reach.
+
+**SOC 2 (P09)**
+- ACMC SOC 2 Type 2 reports cover calendar years; the 2026 report is due in 2027-02. P09 prepares the 2027 period (2027-01-01 to 2027-12-31). Readiness summary prepared 2026-09-25.
+- IES contracts require an independent assurance report for the operation; the 2027 renewals of the two out-of-state IES agencies name a SOC 2 Type 2 report with Processing Integrity. SL-2's first Type 2 period is 2027-04-01 to 2027-09-30, with the report expected in 2027-11.
+- IES document processing: second-person verification of 5% of indexed pages each day; intake error queues reviewed each shift. A daily reconciliation of notices generated against notices mailed runs for AG-03 only.
+
+**AI portfolio (P10)**
+- The 12 use cases are AI-001 to AI-012 in P10 `ai-use-case-inventory.csv`; 8 reviewed by the committee; AI-005, AI-009, AI-010, and AI-012 unreviewed (due 2026-12-31). Tiers: 4 High, 5 Medium, 3 Low.
+- AI-001 pilot: committee intake approval 2026-02-18 without a risk assessment; live since 2026-03-02 for 120 AG-03 caseworkers in one region; about 31,000 applications March to July 2026. Validation: AG-03 quality control re-worked 600 cases blind (54 wrong suggestions; caseworkers caught 22). P10 fieldwork 2026-07-06 to 2026-08-14; committee review 2026-08-19; executive risk committee decision 2026-09-10.
+- AI-005 (call analytics) was switched on in a 2026-05 vendor release; AI-010 (redaction suggestions) came with AQ-1; AI-012 ranking was disabled on 2026-08-24. New intake gates for vendor AI features and acquisitions take effect 2026-10-01.
+- AI-003 serves 41 local government tenants; AI-004 runs in 2 states; AI-007 is used by about 3,900 engineers.
+
+**Corrections made while finishing the deliverables:** the SSP (P02 section 10.2) now states 46 assessed controls, matching P07; STD-05.3 Approved AI Tools List is owned by the Chief Data and AI Officer (P06 `policy-hierarchy.md`).

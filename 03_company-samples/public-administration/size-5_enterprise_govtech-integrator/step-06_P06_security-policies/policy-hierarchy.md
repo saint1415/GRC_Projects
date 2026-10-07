@@ -66,7 +66,7 @@ The set has 5 policies, 21 standards, and 13 procedures. Policy statements: 52 (
 | POL-05 Acceptable Use Policy | Policy | Chief Human Resources Officer | Executive risk committee |
 | STD-05.1 Security Awareness and Training Standard | Standard | Set by Chief Human Resources Officer | CISO |
 | STD-05.2 Devices and Alternate Work Site Standard | Standard | Set by Chief Human Resources Officer | CISO |
-| STD-05.3 Approved AI Tools List | Standard | Set by Chief Human Resources Officer | CISO |
+| STD-05.3 Approved AI Tools List | Standard | Set by Chief Data and AI Officer (with the AI governance committee) | CISO |
 
 ## 4. Governance
 **Policy governance committee** (meets monthly): CISO (chair), Chief Privacy Officer, Chief Compliance Officer, Director of Regulated Data Compliance, CIO, Chief Technology Officer, Chief Human Resources Officer, Chief Data and AI Officer, and the General Counsel's delegate. The Chief Audit Executive attends as a non-voting observer to keep Internal Audit independent.

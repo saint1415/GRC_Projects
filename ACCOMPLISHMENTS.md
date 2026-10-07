@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**204 of 216** sample companies are finished (2040 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**205 of 216** sample companies are finished (2050 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -236,6 +236,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Public Administration | Micro | GovTech integrator | [README](03_company-samples/public-administration/size-2_micro_govtech-integrator/README.md) |
 | Public Administration | Small | GovTech integrator | [README](03_company-samples/public-administration/size-3_small_govtech-integrator/README.md) |
 | Public Administration | Mid-Market | GovTech integrator | [README](03_company-samples/public-administration/size-4_mid-market_govtech-integrator/README.md) |
+| Public Administration | Enterprise | GovTech integrator | [README](03_company-samples/public-administration/size-5_enterprise_govtech-integrator/README.md) |
 | Government Services and Facilities | Small | Government facilities contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-3_small_government-facilities-contractor/README.md) |
 | Emergency Services | Small | Private ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-3_small_private-ambulance-service/README.md) |
 <!-- END GENERATED -->

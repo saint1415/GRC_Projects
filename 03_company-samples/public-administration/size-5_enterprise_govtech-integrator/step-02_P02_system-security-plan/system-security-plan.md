@@ -173,7 +173,7 @@ See `control-implementation.csv` (177 base controls).
 Partially implemented controls: AC-2, AC-4, AC-6, AC-21, AT-3, AU-6, CA-2, CM-3, IA-5, IR-3, IR-6, IR-8, MP-6, PS-3, PS-7, RA-5, SA-9, SC-7, SC-8, SC-13, SI-12, SR-6. Each names its gap and POA&M item in the statement.
 
 ### 10.2 Control assessment status
-Internal Audit, with a co-sourced firm, assessed 44 controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`. The P03 gap analysis rated all 177 controls across the enterprise's hosted environments, plus the CJIS, Pub. 1075, and other overlays.
+Internal Audit, with a co-sourced firm, assessed 46 controls from 2026-07-13 to 2026-08-28 using SP 800-53A Rev. 5 procedures and statistical sampling (P07 `assessment-plan.md`, `assessment-results.csv`). Weaknesses are in P07 `poam.csv`. The P03 gap analysis rated all 177 controls across the enterprise's hosted environments, plus the CJIS, Pub. 1075, and other overlays.
 
 ### 10.3 Common control providers and inheritance
 Common and hybrid controls are inherited from the enterprise platform. Each provider publishes its controls in the enterprise **common control catalog** in the GRC platform and is assessed on its own cycle; ACMC inherits the results.
