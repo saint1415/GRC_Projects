@@ -9,7 +9,7 @@ The design demonstrates **scalability**. One universal method produces each deli
 | If you want to... | Open |
 |---|---|
 | See what has been accomplished | [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md) |
-| Read any sample company as a plain-English story: browse, search by rule, compare sizes, or take a guided tour | [Sample Company Explorer](https://saint1415.github.io/GRC_Projects/explorer.html) (live site). Source: [docs/explorer.html](docs/explorer.html), rebuilt by `tools/build_explorer.py` |
+| Read any sample company as a plain-English story: browse, search by rule, compare sizes, take a guided tour, or run its incident clock | [Sample company explorer](https://saint1415.github.io/GRC_Projects/) (live site). Pick a look, Case Files or Threat Board, and switch at any time; a plain reading mode is also there. Source: `docs/`, rebuilt by `tools/build_explorer.py` |
 | Pick a sample company for a meeting | [03_company-samples/INDEX.md](03_company-samples/INDEX.md), then that company's `README.md` |
 | Learn the best order to build the 10 projects, and how size changes them | [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md) |
 | Run a meeting from a sample | [docs/meeting-guide.md](docs/meeting-guide.md) |
@@ -62,7 +62,7 @@ flowchart TD
 python3 tools/refresh_sba_standards.py    # pull current SBA size standards from eCFR
 python3 tools/refresh_csf_crosswalks.py   # pull CSF 2.0 core and official NIST mappings
 python3 tools/build_scenarios.py          # regenerate industry overlays, company briefs, and project context
-python3 tools/build_explorer.py           # regenerate docs/explorer.html from the finished samples
+python3 tools/build_explorer.py           # regenerate the explorer site in docs/ from the finished samples
 python3 tools/validate.py                 # check IDs, links, folder names, and finished samples
 ```
 
