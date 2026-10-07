@@ -437,8 +437,9 @@ def write_accomplishments(ordered, done_count, count):
     if not path.exists():
         return
     begin, end = "<!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->", "<!-- END GENERATED -->"
-    L = [begin, f"**{done_count} of {count}** sample companies are finished ({done_count * 10} deliverables). "
-         "Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).", "",
+    where = ("The full industry by size grid is in" if done_count == count else "Planned folders are listed in")
+    L = [begin, f"**{done_count} of {count}** sample companies are finished ({done_count * 10:,} deliverables). "
+         f"{where} [03_company-samples/INDEX.md](03_company-samples/INDEX.md).", "",
          "| Industry | Size | Company | Brief |", "|---|---|---|---|"]
     for u in ordered:
         for tid, t in tiers.items():

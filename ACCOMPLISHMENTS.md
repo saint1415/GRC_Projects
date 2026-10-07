@@ -15,7 +15,7 @@ One universal method for each of the 10 GRC projects was built once, then applie
 | 2. Size ladder | Health Care at all 6 sizes, from a solo physician to a multi-sector health group | Done |
 | 3. Named industries | Small samples for Manufacturing, Defense, Wholesale, Retail, Transportation, SaaS, Finance, Education | Done |
 | 4. Every industry | Small samples for the remaining 27 industries, so every sector has one finished company | Done |
-| 5. Full matrix | The other sizes for each industry, in batches of 10 | In progress: batch 1 done (Manufacturing and Finance at all six sizes) |
+| 5. Full matrix | The other five sizes for each of the other 35 industries (175 companies) | Done: all 216 companies finished and validated |
 
 Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 
@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**216 of 216** sample companies are finished (2160 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**216 of 216** sample companies are finished (2,160 deliverables). The full industry by size grid is in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
