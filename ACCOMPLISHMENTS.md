@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**211 of 216** sample companies are finished (2110 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**213 of 216** sample companies are finished (2130 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -243,6 +243,8 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Government Services and Facilities | Small | Government facilities contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-3_small_government-facilities-contractor/README.md) |
 | Government Services and Facilities | Mid-Market | Facilities support contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-4_mid-market_facilities-support-contractor/README.md) |
 | Government Services and Facilities | Enterprise | Facilities support contractor | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-5_enterprise_facilities-support-contractor/README.md) |
+| Government Services and Facilities | Multi-Sector | Facilities support contractor plus two divisions | [README](03_company-samples/public-administration_government-facilities-critical-infrastructure/size-6_multi-sector_facilities-support-contractor-plus-two-divisions/README.md) |
 | Emergency Services | Sole Proprietorship | Private security patrol | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-1_sole-proprietor_private-security-patrol/README.md) |
+| Emergency Services | Micro | Non-emergency ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-2_micro_non-emergency-ambulance-service/README.md) |
 | Emergency Services | Small | Private ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-3_small_private-ambulance-service/README.md) |
 <!-- END GENERATED -->
