@@ -1,0 +1,16 @@
+review_item,what_to_check,suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality wanted because the suite holds city records and CUI and carries alarm emails,"Security, Availability, Confidentiality",None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Email, calendar, file storage and sync, administration console",All in scope for the business plan the owner uses,Confirm each year that the owner's plan stays in the described scope
+Subservice organizations,Carve-out or inclusive; which hosting providers,Data center colocation providers carved out; the provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,2 exceptions: 1 of 40 sampled terminated provider staff kept access 3 days past the deadline; 1 of 25 sampled changes lacked a documented test; both remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the owner must run for the provider's controls to work,Customer manages its users and MFA; customer configures sharing settings; customer reviews sign-in and audit logs; customer protects its own devices and recovery codes; customer reports suspected compromise,"Map to IA-2(1) (on), AC-3 sharing default (fixed 2026-08-12), AU-6 (gap: POAM-006), IA-5 recovery codes (gap: POAM-002), IR-6 (POAM-007)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to all customer users; encryption at rest and in transit tested without exception,None
+CC6.7 data movement (CC series as checklist),Sharing controls available to the customer,Administrator can restrict external sharing and default link type,Owner set the default to named people (2026-08-12)
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of security incidents affecting their data under the service terms,Record the notice terms on the provider list (POL-01 6.2)
+"Availability commitments (A1.2, A1.3)","Recovery objectives against the BIA (BP-05: RTO 8 h, RPO 24 h)",Stated recovery objectives in the system description are shorter than the BIA needs; annual recovery test performed,Meets the BIA
+Data location and government data,Whether the business plan suits city records and CUI,Data stored in U.S. regions for the owner's plan; the plan is not a government cloud offering and holds no FedRAMP authorization,Acceptable for CUI held incidentally on a non-federal system (32 CFR 2002.14(h)(2)); recheck if a future contract adds a CUI clause requiring NIST SP 800-171
+Bridge letter,Coverage from report end date to today,Requested 2026-08-13,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner 2026-08-13, with the IT technician",Repeat every year (POL-01 6.3)
