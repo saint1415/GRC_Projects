@@ -9,6 +9,7 @@ The design demonstrates **scalability**. One universal method produces each deli
 | If you want to... | Open |
 |---|---|
 | See what has been accomplished | [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md) |
+| Read any sample company as a plain-English story: browse, search by rule, compare sizes, or take a guided tour | [docs/explorer.html](docs/explorer.html). Download it and open it in a browser, or turn on GitHub Pages (Settings, Pages, branch `main`, folder `/docs`) and open `explorer.html` there |
 | Pick a sample company for a meeting | [03_company-samples/INDEX.md](03_company-samples/INDEX.md), then that company's `README.md` |
 | Learn the best order to build the 10 projects, and how size changes them | [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md) |
 | Run a meeting from a sample | [docs/meeting-guide.md](docs/meeting-guide.md) |
@@ -61,6 +62,7 @@ flowchart TD
 python3 tools/refresh_sba_standards.py    # pull current SBA size standards from eCFR
 python3 tools/refresh_csf_crosswalks.py   # pull CSF 2.0 core and official NIST mappings
 python3 tools/build_scenarios.py          # regenerate industry overlays, company briefs, and project context
+python3 tools/build_explorer.py           # regenerate docs/explorer.html from the finished samples
 python3 tools/validate.py                 # check IDs, links, folder names, and finished samples
 ```
 

@@ -15,12 +15,13 @@ The library is layered so that a change is made **once** and reaches every scena
 | How deep a project goes at a size | `01_company-sizes/tier-project-scaling.csv` | `build_scenarios.py` |
 | A sector regulation | `02_industry-rules/<sector>/requirements.csv`, `incident-notification.csv`, or `profile.csv` | `build_scenarios.py` |
 | The industry used for a vertical or tier | `02_industry-rules/verticals.csv` or `scenario-industry-overrides.csv` | `refresh_sba_standards.py`, then `build_scenarios.py` |
+| A finished sample (any working file in `03_company-samples/`) | That file | `build_explorer.py` |
 
 Always finish with `python3 tools/validate.py`.
 
 ## What the rebuild changes
 
-- **Always regenerated:** `02_industry-rules/**/overlay.md`, every scenario `README.md`, every `_context.md`, and `03_company-samples/INDEX.md`.
+- **Always regenerated:** `02_industry-rules/**/overlay.md`, every scenario `README.md`, every `_context.md`, and `03_company-samples/INDEX.md`. `tools/build_explorer.py` separately regenerates `docs/explorer.html` from the finished samples; edit its layout in `tools/explorer_template.html`.
 - **Never overwritten:** the working files in each project folder (for example `risk-register.csv`). Your completed work is safe.
 - **Template changes and existing work:** a new template reaches scenarios that have not started that project. To push a new template into a scenario you have not started, delete its working files and rebuild. `--force-templates` overwrites **all** working files; use it only on a fresh library.
 
