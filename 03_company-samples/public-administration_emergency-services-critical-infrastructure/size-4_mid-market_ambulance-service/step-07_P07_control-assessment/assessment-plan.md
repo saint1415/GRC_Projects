@@ -47,7 +47,7 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
 | Privileged accounts (cloud, identity provider, CAD) | 31 | 25 for MFA test; all 31 for rights review | IA-2(1), AC-6 |
 | Station alerting controllers | 13 | 13 (default-credential test) | IA-5 |
 | Vehicle routers | 106 | 10 (configuration and credential test) | CM-7, IA-5 |
-| Mobile devices | 642 | 30 (encryption) | SC-28 |
+| Managed endpoints (workstations, laptops, tablets, MDCs) | 642 | 30 (encryption) | SC-28 |
 | Endpoints and servers for EDR test | 358 | 6 (3 office, 2 consoles, 1 cloud server) | SI-3 |
 | Backup job days (July 2026) | 30 | 30 | CP-9 |
 | BAAs on file / vendors in accounts payable | 52 / about 700 | 15 / 20 | SA-9 |
