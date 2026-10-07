@@ -30,7 +30,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**215 of 216** sample companies are finished (2150 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**216 of 216** sample companies are finished (2160 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -249,4 +249,5 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Emergency Services | Small | Private ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-3_small_private-ambulance-service/README.md) |
 | Emergency Services | Mid-Market | Ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-4_mid-market_ambulance-service/README.md) |
 | Emergency Services | Enterprise | Ambulance service | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-5_enterprise_ambulance-service/README.md) |
+| Emergency Services | Multi-Sector | Ambulance service plus two divisions | [README](03_company-samples/public-administration_emergency-services-critical-infrastructure/size-6_multi-sector_ambulance-service-plus-two-divisions/README.md) |
 <!-- END GENERATED -->
