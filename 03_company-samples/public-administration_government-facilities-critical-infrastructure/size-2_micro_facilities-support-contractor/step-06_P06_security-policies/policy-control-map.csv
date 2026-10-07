@@ -29,7 +29,7 @@ POL-03,4.4,Log every incident,IR-5,RS.MA-02,CT-C security exhibit (SP 800-53 Rev
 POL-03,4.5,Customer notices: county and city 24 hours; prime immediately,IR-6,RS.CO-02,CT-C and CT-M 24-hour notice; C-GOVERNMENT-R01 (CT-F: BTTRG 1.6.1 via the prime); Fla. Stat. 282.3185(5) (customer duty),Yes
 POL-03,4.6,Breach determination with counsel; third-party agent notice within 10 days,IR-6,RS.AN-03; RS.CO-03,Fla. Stat. 501.171(6)(a),Yes
 POL-03,4.7,Insurer hotline first; MSP engaged under contract,IR-4; IR-7,RS.MA-02,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),No
-POL-03,4.8,"FAR reports: 1 business day (52.204-25(d)); 3 business days (52.204-23(c), 52.204-30(c))",IR-6,GV.SC-05,FAR 52.204-23(c); 52.204-25(d); 52.204-30(c) (CT-F),No
+POL-03,4.8,"FAR reports: 1 business day (52.204-25(d)); 3 business days (52.204-23(c), 52.204-30(c))",IR-6,GV.SC-05,FAR 52.204-23(c); 52.204-25(d); 52.204-30(c) (CT-F),Yes
 POL-03,4.9,No ransom on a county or city behalf; OFAC check for any company payment,IR-4,RS.MI-01,Fla. Stat. 282.3186; OFAC advisory (2021-09-21),No
 POL-03,4.10,Vendor and MSP incident reports logged and handled,IR-6; SA-9,GV.SC-08,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),Yes
 POL-03,4.11,Annual tabletop with the county and MSP; yearly staff walk-through,IR-2; IR-3,ID.IM-02,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),No
@@ -37,10 +37,10 @@ POL-03,4.12,Lessons learned within 30 days,IR-4,ID.IM-02,CT-C security exhibit (
 POL-04,4.1,Three classification levels,RA-2,ID.AM-07,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),No
 POL-04,4.2,CUI in a restricted folder; markings kept; named-recipient sharing; CUI training,AC-3; AC-21; MP-3; MP-4; SC-8,PR.DS-01; PR.DS-02,C-GOVERNMENT-R01 (CT-F: 32 CFR 2002 and GSA Order PBS 3490.3),Yes
 POL-04,4.3,Exempt security records labeled and stored as Restricted; requests to the custodian,MP-3,PR.DS-01,Fla. Stat. 119.071(3); 119.0701(2)(b),No
-POL-04,4.4,Restricted data only in approved locations; encrypted USB drives,AC-3; SC-28,PR.DS-01,CT-C security exhibit (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(2),Yes
+POL-04,4.4,Restricted data only in approved locations; encrypted USB drives,AC-3; SC-28; MP-4,PR.DS-01,CT-C security exhibit (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(2),Yes
 POL-04,4.5,"Inventory of devices, gateways, tenants, data, and reachable customer devices; quarterly reconciliation",CM-8; CM-12,ID.AM-01; ID.AM-07,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),Yes
 POL-04,4.6,"New vendors, apps, and features approved before receiving Restricted data",SA-9,GV.SC-05,CT-C security exhibit (SP 800-53 Rev. 5 Moderate),Yes
-POL-04,4.7,Approved AI tools only; no AI or biometric feature without a P10 assessment; 30-day template deletion,SA-9; PL-4; SI-12,GV.SC-05,Fla. Stat. 501.171(2) (face templates treated as biometric data),No
+POL-04,4.7,Approved AI tools only; no AI or biometric feature without a P10 assessment; 30-day template deletion,SA-9; PL-4; SI-12,GV.SC-05,Fla. Stat. 501.171(2) (face templates treated as biometric data),Yes
 POL-04,4.8,Engineering repository within one business day; quarterly restore tests,CP-9; CP-4,PR.DS-11,CT-C security exhibit (SP 800-53 Rev. 5 Moderate) (county service levels),Yes
 POL-04,4.9,Wipe or certified destruction; monthly deletion of old exports; disposal log,MP-6,ID.AM-08,FAR 52.204-21(b)(1)(vii); Fla. Stat. 501.171(8),No
 POL-04,4.10,Return or destroy customer data at contract end,SI-12,GV.PO-02,Fla. Stat. 119.0701(2)(b); CT-C security exhibit (SP 800-53 Rev. 5 Moderate),No

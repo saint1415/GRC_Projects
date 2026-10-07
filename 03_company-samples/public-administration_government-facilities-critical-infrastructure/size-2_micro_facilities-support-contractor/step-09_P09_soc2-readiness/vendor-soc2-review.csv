@@ -1,0 +1,13 @@
+review_item,what_to_check,access_control_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Confidentiality needed because the platform holds county cardholder data and face templates,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"Cloud access control and video platform, door controller connectivity, mobile administrator app, data centers","Platform, video storage, and administrator apps in scope. The face verification module was released after the period and is not covered","Ask for a vendor letter describing face template encryption, retention, and access, and for the module to be in the next report (P10 condition)"
+Subservice organizations,Carve-out or inclusive; which hosting provider,Cloud hosting provider carved out; vendor states it reviews the provider's SOC reports yearly,Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,1 exception: 3 of 40 sampled production changes lacked documented approval; remediated with a new deployment gate,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Customer administrator provisioning and removal; MFA enforcement for customer users; review of customer administrator activity; prompt notice to the vendor of suspected credential compromise,"Mapped to AC-2, IA-2(1), AU-6, IR-6. Two are open gaps at the company: removal (POAM-001, POAM-006) and review (POAM-008)"
+Availability commitments,"Recovery objectives versus the BIA (BP-02 RTO 2 h, RPO 1 h)",Disaster recovery time 4 h; recovery point 1 h,RPO meets the BIA; RTO misses it. Compensated by offline door controllers and manual lockdown steps (P01 R-011)
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit and to door controllers,None
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data,Ask for 24 hours at renewal so the company can meet the county's 24-hour clock
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office and Compliance Manager with the independent consultant, 2026-08-20",Repeat each year when the new report is issued
