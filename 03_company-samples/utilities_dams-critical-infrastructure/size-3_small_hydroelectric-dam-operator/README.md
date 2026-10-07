@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** CEII (dam inundation maps, design data; 18 CFR 388.113); Vulnerability/Security Assessments and Security Plans; PCII; BES Cyber System Information (for BES hydro)
 - **Critical systems:** Spillway and gate control PLCs; Hydro unit control/governor systems; SCADA and remote control centers for multiple projects; Dam safety instrumentation and early-warning systems; Levee pump station controls
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Homeland Security (CISA); FERC Division of Dam Safety and Inspections (non-federal hydropower licensees); U.S. Army Corps of Engineers (federal dams/levees); Bureau of Reclamation (federal dams); NERC (hydro generators meeting BES criteria)

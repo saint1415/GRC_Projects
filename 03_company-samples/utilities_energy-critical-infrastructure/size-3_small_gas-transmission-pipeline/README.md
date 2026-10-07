@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** CEII (18 CFR 388.113); BES Cyber System Information (CIP-011); SSI (49 CFR Part 1520) - TSA SD content and pipeline security info; Customer PII/usage data
 - **Critical systems:** EMS/SCADA; ICCP links; Substation automation and protective relays; Generation DCS; Pipeline SCADA, compressor/pump station PLCs; LNG terminal DCS/SIS; Physical access control systems (PACS) and EACMS
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Energy (DOE); FERC; NERC and Regional Entities; TSA (pipeline/LNG security); PHMSA (pipeline safety incl. SCADA control room management)

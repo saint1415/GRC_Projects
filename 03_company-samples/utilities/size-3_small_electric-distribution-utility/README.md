@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** CEII - Critical Energy/Electric Infrastructure Information (18 CFR 388.113); BES Cyber System Information (CIP-011); Safeguards Information (10 CFR 73.21-73.22); SSI (49 CFR Part 1520) for TSA-regulated pipelines; Water RRA/ERP content; Customer PII, usage/smart-meter data and payment card data
 - **Critical systems:** SCADA/EMS; DCS in generating plants; Distribution management systems (ADMS/OMS); AMI/smart meters; Protective relays and substation automation (IEC 61850); Water treatment PLC/HMI; Customer information and billing systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Energy Regulatory Commission (FERC); North American Electric Reliability Corporation (NERC) - ERO; Department of Energy (DOE CESER) - Energy SRMA; Nuclear Regulatory Commission (NRC); Environmental Protection Agency (EPA) - Water SRMA; Transportation Security Administration (TSA) - gas pipelines/LNG

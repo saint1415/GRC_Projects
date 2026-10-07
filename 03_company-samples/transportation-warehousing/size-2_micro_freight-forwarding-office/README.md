@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Transportation and Warehousing vertical as a freight forwarding and customs brokerage office (NAICS 488510) instead of the vertical's primary industry (NAICS 488320). Reason: A marine cargo terminal requires more than 9 employees. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Passenger PII/PNR and travel itineraries; Shipment manifests, bills of lading, customs data; Security Sensitive Information (SSI, 49 CFR 1520); Driver/crew records and credentials (e.g., TWIC-related data); Payment card data (ticketing); Precise vehicle/asset geolocation and telematics
 - **Critical systems:** Rail signaling/PTC, SCADA and dispatch; Pipeline SCADA/ICS; Port terminal operating systems, cranes and access control; Airline reservation, departure control and crew scheduling; Fleet telematics/ELD and TMS; Warehouse automation and WMS
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 DHS / Transportation Security Administration (surface and aviation security directives); DHS / U.S. Coast Guard (maritime cyber rule); Department of Transportation (FAA, FRA, FTA, FMCSA, PHMSA, MARAD); DOT OST enforces airline privacy/UDAP under 49 U.S.C. 41712; U.S. Customs and Border Protection (CTPAT); Federal Trade Commission (non-carrier firms: warehousing, logistics brokers)

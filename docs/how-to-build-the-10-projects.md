@@ -47,11 +47,12 @@ flowchart LR
 ### Why this order works
 
 - **Start with impact, not threats.** The BIA (step 1) tells you what the business cannot live without. Everything after it is scoped to that. Doing the risk register first usually produces a generic list of threats; doing it fourth produces risks tied to real systems, real downtime limits, and real control gaps.
-- **Describe the system before judging it.** The SSP (step 2) and cloud mapping (step 3) say what is in place. The risk register (step 4) and gap analysis (step 5) then judge it. Judging first means rewriting later.
+- **Describe the system before judging it.** Every sample is an operating business. The SSP (step 2) and cloud mapping (step 3) record the system as found, the RMF task of documenting the system's characteristics (NIST SP 800-37 Rev. 2, Task C-1). For a new system, the RMF Prepare step would do the risk assessment (Task P-14) and set requirements (Task P-15) before controls are selected. Here, steps 4 to 7 add risks, gaps, policies, and test results, and the SSP is then updated to the as-implemented state (Tasks S-4 and I-2). That is why every sample's SSP cites P01, P03, P06, and P07. The BIA stays first because SP 800-37 lists it as an input to the system risk assessment (Task P-14).
 - **Check applicability before analyzing a regulation.** Step 5 always opens with "does this rule actually bind this company at this size?" In Phase 4 this check changed the answer for many industries: the TSA pipeline and rail directives only reach designated operators, the NRC reactor cyber rule does not reach a waste processor, FedRAMP does not apply without a federal customer, and the FDA food defense rule exempts farms. Record the finding with its citation, then analyze the rule that does bind.
 - **Write policies from gaps, then test against them.** Policies (step 6) answer the gaps found in step 5. The control assessment (step 7) tests against those policies and the SSP. Testing earlier leaves you without criteria.
 - **Close the loop.** The control assessment always finds something new (in these samples, often a default password). That finding goes back into the risk register as a new risk and into the POA&M.
 - **Build the runbook from the BIA and the notification list.** The recovery order comes from step 1 and the deadlines come from step 5, so the runbook (step 8) is mostly assembly.
+- **Check fit before SOC 2 and AI work.** Step 9 opens by asking whether the company is a service organization. If it is not, the step is a questionnaire self-check plus a review of a key vendor's SOC 2 report, and it says no report will be sought. Every Sole Proprietor and Micro sample states this. Step 10 opens by listing the AI tools actually in use. If there are none, record an empty inventory with the date and stop. All 10 folders stay in every sample so sizes compare side by side.
 - **Reuse evidence for SOC 2.** Step 9 reuses the SSP statements, policies, and test results. Done first, it would repeat all three.
 - **Govern AI last, with the tools already built.** AI governance (step 10) applies the acceptable-use policy and the risk scoring method that already exist.
 
@@ -73,6 +74,15 @@ The method is the same at every size. What changes is **how deep each project go
 | **6. Multi-sector** | Group CISO and Chief Risk Officer, plus division leads | Group sets standards once; each division keeps its own regulator-facing roles | Each covered division names its own HIPAA officers; risk acceptance rises from division lead to board |
 
 **Teaching point:** at small sizes the same person does and checks the work, so the samples say so openly and use outside help (an MSP, an assessor, a vendor's SOC 2 report) as the independent check. At larger sizes the samples separate those roles on purpose.
+
+**Compensating controls when one person does everything (Sole Proprietor and Micro).** Some SP 800-53 controls assume a second person. These are the substitutes the samples use. Baselines are from `00_universal-framework/frameworks/sp800-53r5_controls.csv`.
+
+| Control | Why it is hard with one person | Compensating control |
+|---|---|---|
+| AC-5 Separation of duties (Moderate baseline) | The owner both starts and approves payments and changes | The platform enforces a second approval where it can (bank dual approval, payment holds), and an outside bookkeeper or CPA reviews statements each month |
+| AU-9 Protection of audit information | The only administrator could delete the logs | Logs stay where the owner cannot delete them: the SaaS provider's retained audit log or write-once storage |
+| CM-3 Configuration change control (Moderate baseline) | There is no change board | CM-3(g) lets the organization name its own change control element: a change log, a backup before each change, and an MSP or vendor check for high-risk changes |
+| CA-2(1) and CA-7(1) Independent assessors and independent assessment (Moderate baseline) | Nobody independent works there | P07 states the limited independence openly, an outside reviewer checks at a set interval, and vendor SOC 2 reports cover inherited controls. Base CA-2 still applies as a self-assessment |
 
 ### 2.2 How deep each project goes
 

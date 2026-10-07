@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Transportation Systems vertical as a freight broker arranging rail and truck shipments (NAICS 488510) instead of the vertical's primary industry (NAICS 482112). Reason: A sole proprietor cannot operate a railroad. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Security Sensitive Information (SSI); OT/ICS network diagrams and configurations; Passenger PII; Cargo and hazmat shipment data
 - **Critical systems:** Positive Train Control and signaling; Pipeline SCADA/ICS; Air traffic and airport operational systems; Port/terminal OT (cranes, gates); Transit fare collection and dispatch
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Co-Sector Risk Management Agencies: Department of Homeland Security (TSA, USCG) and Department of Transportation; Transportation Security Administration; U.S. Coast Guard

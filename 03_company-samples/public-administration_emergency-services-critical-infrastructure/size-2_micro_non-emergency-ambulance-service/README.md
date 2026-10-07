@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Criminal Justice Information (CJI), CHRI, NCIC data; Criminal intelligence (28 CFR 23); EMS patient care records (PHI); 911 call recordings and caller location (ALI/ANI); Body-worn camera / evidence video; Officer and responder personnel data
 - **Critical systems:** Computer-Aided Dispatch (CAD); 911 call handling equipment / NG911 ESInet; Records Management Systems (RMS) and jail management; Land Mobile Radio (LMR/P25) and FirstNet devices; Mobile data terminals and AVL; ePCR systems; Mass notification / IPAWS alert origination; Evidence management and BWC platforms
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 CISA (Sector Risk Management Agency) 'CISA ... serves as the Emergency Services Sector Risk Management Agency.' Disciplines: Emergency Management, EMS, Fire and Rescue, Law Enforcement, Public Works.; FBI CJIS Division / state CSAs CJIS Security Policy for law enforcement and PSAPs with CJI access; HHS OCR HIPAA for EMS agencies that bill electronically; FCC 911/EAS rules; EAS cybersecurity rule (47 CFR Part 11) for EAS participants

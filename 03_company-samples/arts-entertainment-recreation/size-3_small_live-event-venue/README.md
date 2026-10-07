@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Patron PII and player-loyalty data; Payment card data and cage/credit (marker) records; BSA/AML records (SARs are confidential), CTRs, KYC documents; Surveillance video; Online/sports wagering account data, geolocation; Children's data (family entertainment apps); Employee licensing/background data
 - **Critical systems:** Casino management system (CMS) / slot accounting; Table games and sports-betting/iGaming platforms; Surveillance and access control; Cage, credit and kiosk/TITO systems; Ticketing and point-of-sale; Loyalty/CRM platforms; Hotel PMS integration (integrated resorts)
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 State gaming regulators (e.g., Nevada Gaming Control Board / Nevada Gaming Commission) Casino cybersecurity, internal controls, licensing; National Indian Gaming Commission (NIGC) Minimum internal control standards for tribal gaming (25 CFR 543); FinCEN (Treasury) Bank Secrecy Act AML program, SAR/CTR for casinos and card clubs; FTC FTC Act Section 5 and COPPA for consumer-facing entertainment; CISA / DHS SRMA, Commercial Facilities Sector (Gaming, Entertainment and Media, Sports Leagues, Public Assembly, Outdoor Events subsectors)

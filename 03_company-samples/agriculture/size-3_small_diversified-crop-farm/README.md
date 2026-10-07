@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Farm operational and yield data; Employee PII / H-2A worker records; Food defense plans and vulnerability assessments; USDA program participant data; Payment card data (PCI DSS) for direct sales
 - **Critical systems:** Precision-agriculture platforms and GPS/GNSS guidance; Connected tractors/equipment telematics; Irrigation and grain-handling PLC/SCADA; Livestock/dairy automation and environmental controls; Cold-chain monitoring; Farm ERP/accounting
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 U.S. Department of Agriculture (USDA) - co-SRMA for Food and Agriculture; Food and Drug Administration (FDA/HHS) - co-SRMA; FSMA food defense; Environmental Protection Agency (EPA) - pesticides, agricultural environmental rules

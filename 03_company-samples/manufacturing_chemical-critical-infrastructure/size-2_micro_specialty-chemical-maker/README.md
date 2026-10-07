@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Chemical-terrorism Vulnerability Information (CVI, 6 CFR 27.400) - legacy; SSI for MTSA facilities (49 CFR Part 1520); Process safety information and formulations; EAR-controlled chemical technology (e.g., CWC/Australia Group items); Employee PII
 - **Critical systems:** DCS; Safety instrumented systems (SIS); PLCs/SCADA for tank farms and terminals; Laboratory information management systems; MES/ERP; Loading rack automation
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Homeland Security (CISA); CISA Chemical Security (CFATS - authority lapsed; ChemLock voluntary program); U.S. Coast Guard (MTSA waterfront chemical facilities); EPA (Risk Management Program, 40 CFR Part 68 - process safety, not cyber-specific)

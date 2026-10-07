@@ -7,10 +7,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Item | Fact |
 |---|---|
 | Legal name | Cris Santos Bank, N.A. (a national bank wholly owned by Cris Santos Company, its bank holding company) |
+| Legal form | National banking association, a body corporate (12 U.S.C. 24), wholly owned by a privately held bank holding company |
 | Business | Community commercial bank (NAICS 522110): consumer and business deposits, commercial real estate and small business lending, consumer and residential mortgage lending, and treasury management services (wires, ACH origination, business online banking) |
 | Location | Florida. Six branches, including the main office (Branch 1), which also houses the operations center and the wire room |
 | Charter and supervision | National bank. Primary federal regulator: the Office of the Comptroller of the Currency (OCC). Deposits insured by the FDIC. The holding company, Cris Santos Company, is a bank holding company supervised by the Federal Reserve; it has no operations other than owning the bank |
 | Ownership | Privately held. Cris Santos is the majority shareholder of the holding company and chairs both boards |
+| Change of control approvals | Background fact, not scored in P03. Becoming a bank holding company and owning the bank needed prior Federal Reserve approval (12 U.S.C. 1842(a)(1)-(2); 12 CFR 225.11(a)-(b)). Anyone who later acquires control of the holding company gives the Federal Reserve 60 days' prior written notice (12 U.S.C. 1817(j)(1); 12 CFR 225.41(a)). Because the holding company acquisition needed Bank Holding Company Act section 3 approval, no separate OCC change-in-control notice was required (12 CFR 5.50(c)(2)(iii)) |
 | Workforce | 120 employees: 48 in the branches (tellers, universal bankers, branch managers), 22 in lending, 18 in deposit and loan operations (including the wire room), 14 in finance, compliance, BSA and risk, 8 in IT and security, 10 in executive and administrative roles |
 | Size | $510 million in total assets (fictional). Under the SBA size standard of $850 million in total assets for NAICS 522110, so SBA-small |
 | Revenue | About $20 million a year in net revenue (fictional), about $80,000 per business day; used to scale BIA impact values (P05) |

@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Personal and SaaS tools: email suite, cloud storage, accounting SaaS, one laptop and phone |
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Federal Tax Information / tax return information (IRC 7216); SSNs, bank and account numbers (GLBA customer information); Attorney-client privileged and confidential client information; PHI held as a HIPAA business associate; Federal Contract Information (FCI) and Controlled Unclassified Information (CUI); Client IP and trade secrets, M&A material non-public information
 - **Critical systems:** Tax preparation and e-file software; Document/practice management systems (DMS, e-discovery); Client portals and secure file transfer; Email and M365/Google Workspace tenants; Accounting/ERP and time & billing; RMM/PSA tools (MSPs and IT consultants); GCC-High / CUI enclaves for defense contractors
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Trade Commission (FTC) Enforces the GLBA Safeguards Rule for tax preparers/accountants and FTC Act Section 5 data security; Internal Revenue Service (IRS) Tax-preparer data protection (IRC 7216; Pub 4557 guidance; e-file provider rules); DoD (CMMC Program) / FAR Council / GSA Federal contractor safeguarding (FAR 52.204-21, DFARS 252.204-7012, CMMC); HHS Office for Civil Rights HIPAA enforcement for firms acting as business associates; State bars / state boards of accountancy Professional conduct and confidentiality rules (state-adopted; not federal)

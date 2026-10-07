@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Financial Services vertical as an independent insurance agency (NAICS 524210) instead of the vertical's primary industry (NAICS 522320). Reason: A sole proprietor does not typically operate a payment processor. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** NPI and account data; Payment messages (SWIFT, Fedwire, ACH files); Market and trading data; Authentication credentials and HSM keys
 - **Critical systems:** Payment, clearing and settlement systems; Core banking processors; Trading and market-data systems (SCI systems); Authentication/fraud platforms; Backup and data vaulting (e.g., immutable backups)
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of the Treasury; Federal banking agencies (OCC, FRB, FDIC), NCUA, SEC, CFTC via FFIEC/FBIIC coordination

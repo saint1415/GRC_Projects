@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Protected Health Information / ePHI (HIPAA); SUD treatment records (42 CFR Part 2); PHR / consumer health app data (FTC HBNR); Payment card and patient financial/billing data; Medicaid applicant/beneficiary data (42 CFR 431.300); Genomic, reproductive and behavioral health data (heightened state protections); Medical device telemetry; Public health surveillance and immunization registry data; Pharmaceutical supply chain and clinical trial data
 - **Critical systems:** Electronic Health Record (EHR) / clinical systems; PACS/imaging and laboratory information systems (LIS); Networked medical devices / IoMT (infusion pumps, monitors); Revenue cycle, claims clearinghouse connections; Pharmacy systems and e-prescribing (EPCS); Patient portals and telehealth; HIE / interoperability interfaces (FHIR APIs); Building/clinical OT (HVAC, medical gas, nurse call); Public health surveillance/reporting systems (eCR, ELR); Pharma manufacturing OT and cold chain monitoring; Blood/organ/tissue tracking systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 HHS (Sector Risk Management Agency) SRMA for HPH per CISA and NSM-22 (cyber coordination led by ASPR); HHS OCR HIPAA enforcement; FDA CDRH Medical device cybersecurity (FD&C 524B); CMS CoPs incl. Emergency Preparedness; CISA CIRCIA rulemaking; cross-sector cyber services

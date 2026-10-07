@@ -20,6 +20,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | CMMC requirement | DoD program offices and Primes A to D have told the group that solicitations issued from 2026-11-10 (Phase 2, 32 CFR 170.3(e)(2)) will require **CMMC Level 2 (C3PAO)** for CUI work. One Aircraft Parts program (**Program H**, a high-priority military aircraft program) has told the group to expect **Level 3 (DIBCAC)** from Phase 3 (2027-11-10, 32 CFR 170.3(e)(3)) |
 | Export controls | Aircraft Parts and Engineering Services are registered with the State Department's Directorate of Defense Trade Controls (22 CFR 122.1). Each holds technical assistance agreements and licenses managed by the group export compliance office |
 | Classified work | Engineering Services holds facility clearances at 2 engineering centers. Classified systems there are authorized by DCSA and are **outside the scope of these samples**, except for reporting duties and the insider threat program (32 CFR Part 117) |
+| FOCI status | Background fact, not scored in P03. DCSA has not found the group to be under foreign ownership, control, or influence (the test is in 32 CFR 117.11(a)(1)). The holding company files one consolidated SF 328 for the corporate family, as 32 CFR 117.11(c) allows based on CSA guidance, and updates it when significant changes occur. Investor relations watches public filings for foreign holdings that could change this |
 
 ## 2. People (role titles only)
 | Role | Duties |

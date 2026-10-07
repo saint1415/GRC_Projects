@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** RRA and ERP contents; Customer PII, billing and payment card data; SCADA network diagrams and asset inventories; PCII (if submitted)
 - **Critical systems:** SCADA/HMI; PLCs and RTUs at treatment plants, pump stations and lift stations; Chemical dosing controls; Remote access / telemetry (cellular/radio); Laboratory information systems; Customer billing / AMI
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Environmental Protection Agency (EPA); State drinking water primacy agencies

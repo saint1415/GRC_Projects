@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** CPNI and call detail records; Lawful intercept (CALEA) data and court orders; Subscriber PII; Network topology and outage data (NORS filings presumptively confidential)
 - **Critical systems:** Core/IMS and signaling (SS7/Diameter/5GC); Lawful-intercept platforms; OSS/BSS and customer portals; 911/NG911 routing; Submarine cable landing stations/SLTE; Satellite ground segments
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Sector Risk Management Agency: Department of Homeland Security (CISA); Federal Communications Commission

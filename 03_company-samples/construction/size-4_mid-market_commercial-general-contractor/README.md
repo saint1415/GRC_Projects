@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Multi-cloud or hybrid with on-premises systems, several business applications, dedicated security tooling |
 | Who owns security and compliance | Security manager or vCISO, a small GRC function, internal audit co-sourced |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Federal Contract Information (FCI); CUI incl. controlled building/facility drawings; Employee PII and payroll (certified payroll/Davis-Bacon); Bid and pricing data; Client facility security details
 - **Critical systems:** Project management and BIM/CAD platforms; ERP/accounting and payroll; Building automation/BAS installed for clients; Telematics for heavy equipment; Video surveillance and access control installs
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 General Services Administration / federal contracting agencies (FAR); Department of Defense (DFARS/CMMC) for defense construction contractors; OSHA (safety; no cyber rules)

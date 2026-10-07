@@ -6,6 +6,7 @@
 
 The assessment is organized around the four **NIST AI RMF 1.0** Functions. The Playbook provides the suggested actions (SRC-AI-PLAYBOOK). For generative AI use cases, add **NIST AI 600-1**.
 
+0. **Decide whether AI governance fits.** List the AI tools actually in use, including AI features inside SaaS the company already pays for. If there are none, record an empty inventory with the date and stop. Sole Proprietor and Micro keep to the one-page screen set in `01_company-sizes/tier-project-scaling.csv`.
 1. **GOVERN (macro).** Accountability, policies, the approved-tools list, and AI inventory ownership. Link to POL-04 and POL-05.
 2. **MAP.** Describe the use case from the scenario `_context.md`: its purpose, users, the people affected, the data used, whether the model was built or bought, and deployment context. Identify the applicable US laws and sector rules (see `00_universal-framework/cross-sector/us-cross-sector-obligations.md` and the vertical requirements).
 3. **Risk tier.** Assign a tier using the rubric below. The rubric is defined by this repository, not by any regulation. It flags where US laws treat consequential decisions as high risk.

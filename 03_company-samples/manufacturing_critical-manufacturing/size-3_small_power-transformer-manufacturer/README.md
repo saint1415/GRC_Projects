@@ -22,9 +22,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Hybrid: SaaS plus one cloud tenant (IaaS/PaaS), identity provider, 50-500 endpoints |
 | Who owns security and compliance | IT manager with part-time security/compliance duties; external auditors as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Product designs / trade secrets; EAR-controlled technology; CUI (defense suppliers); Vehicle and telematics data; Supplier/BOM data
 - **Critical systems:** PLCs, robotics and CNC; MES and SCADA; PLM/CAD; ERP and supply-chain planning; Industrial IoT/historians; Vehicle telematics/OTA update infrastructure
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Homeland Security (CISA); Department of Commerce BIS (EAR; ICTS connected-vehicle rule); Department of Defense (for defense supply chain)

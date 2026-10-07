@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Accommodation and Food Services vertical as a bed-and-breakfast inn (NAICS 721191) instead of the vertical's primary industry (NAICS 721110). Reason: Owner-operated lodging is typically a B&B rather than a hotel. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Payment card data (PAN, track data) at POS and PMS; Guest PII: passports/IDs, loyalty profiles, stay history; Employee PII and biometric time-clock data; Reservation and online-ordering account credentials; Guest Wi-Fi usage data
 - **Critical systems:** Property Management System (PMS); Point-of-sale (POS) and payment terminals; Central reservation system / channel manager; Online ordering and delivery integrations; Guest Wi-Fi and IPTV networks; Electronic door locks / key card systems; Loyalty/CRM platforms
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 FTC FTC Act Section 5 data security/privacy enforcement; State Attorneys General State breach notification and consumer privacy laws; PCI Security Standards Council / card brands (private) PCI DSS via acquirer contracts, not a government regulator; CISA / DHS SRMA, Commercial Facilities Sector (Lodging subsector)

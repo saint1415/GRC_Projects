@@ -4,7 +4,7 @@
 
 ## Universal approach (macro to granular)
 
-1. **Choose the provider and service models (macro).** The tier sets what is realistic. Sole Proprietorship and Micro are mostly SaaS. Small adds one IaaS/PaaS tenant. Mid-Market and above run multiple accounts or subscriptions, and often multiple clouds.
+1. **Choose the provider and service models (macro).** The tier sets what is realistic. Sole Proprietorship and Micro are mostly SaaS. Small adds one IaaS/PaaS tenant. Mid-Market and above run multiple accounts or subscriptions, and often multiple clouds. Multi-Sector: record the tenancy and identity decision. Say whether divisions share the group identity provider with separate accounts, or get a separate tenant with their own identity. Use a separate tenant where a rule or contract requires its own boundary (for example, covered defense information in an external cloud must meet FedRAMP Moderate equivalency, DFARS 252.204-7012(b)(2)(ii)(D)). Name what limits blast radius: division-scoped administrator roles, privileged access management, conditional access, OT identities kept off the corporate directory, and one-way OT data paths.
 2. **Draw the architecture in layers.** Identity, network, compute, data, management/logging, SaaS, and the connections to on-premises systems or OT.
 3. **Assign responsibility per service.** Use the provider's official shared responsibility model (SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM). Label each control Provider, Customer, or Shared for each service model (SaaS, PaaS, IaaS).
 4. **Place controls on components (granular).** Map SP 800-53 controls to the component that implements them. Include the controls that satisfy the vertical's regulatory requirements, and name the evidence source for each.

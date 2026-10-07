@@ -299,6 +299,13 @@ def write_scenario(u, tier_id, vd):
     if private:
         form = m.group(1).split(" (", 1)[1].rstrip(")").split(";")[0].strip().removeprefix("a ")
         legal_form, ownership = form[:1].upper() + form[1:], "Privately owned; not publicly traded"
+    # A facts file can state its own legal form (a national bank, a credit union, a cooperative); its Ownership row then follows.
+    facts_text = facts_file.read_text() if facts_file.exists() else ""
+    lf = re.search(r"^\| Legal form \| ([^|]+?) \|", facts_text, re.M)
+    if lf:
+        legal_form = lf.group(1).strip()
+        ow = re.search(r"^\| Ownership \| ([^|]+?) \|", facts_text, re.M)
+        ownership = ow.group(1).strip() if ow else ownership
 
     # ---- meeting brief
     # A finished sample names its own business; planned samples use the registry default.
@@ -345,9 +352,13 @@ def write_scenario(u, tier_id, vd):
               f"{as_role(o['business'])} (NAICS {o['naics6']}) instead of the vertical's primary industry "
               f"(NAICS {u['primary_naics']}). Reason: {o['rationale']}. Some sector rules may reach it only through "
               "customer contracts (flow-down). Confirming that is part of P03.", ""]
-    L += ["## What the business handles",
+    L += ["## What the business handles (typical for this industry)",
           f"- **Sensitive data:** {pr.get('sensitive_data', '[see vertical overlay]')}",
-          f"- **Critical systems:** {pr.get('critical_systems', '[see vertical overlay]')}", "",
+          f"- **Critical systems:** {pr.get('critical_systems', '[see vertical overlay]')}", ""]
+    if done:
+        L += ["This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). "
+              "Items above that the company does not have are out of scope.", ""]
+    L += [
           "## Who regulates it",
           pr.get("regulators", "[see vertical overlay]"), "",
           "| Requirement | Citation | Size thresholds / exemptions |", "|---|---|---|"]

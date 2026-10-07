@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Personal and SaaS tools: email suite, cloud storage, accounting SaaS, one laptop and phone |
 | Who owns security and compliance | Owner, with outside IT help as needed |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Food defense plans / vulnerability assessments; Recipes, formulations and trade secrets; Supplier and traceability records (FSMA 204); Consumer PII and payment card data; Protected Critical Infrastructure Information (PCII) if submitted to DHS
 - **Critical systems:** Batch/recipe control systems (DCS/PLC); Cold-chain and refrigeration controls (ammonia systems); MES and ERP; Warehouse management systems; Traceability/lot-coding systems; Packaging line automation
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Agriculture (USDA) and Department of Health and Human Services (HHS/FDA); FDA Food Defense program; USDA Food Safety and Inspection Service (meat, poultry, egg products)

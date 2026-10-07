@@ -11,8 +11,8 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | | |
 |---|---|
 | Legal name | Cris Santos Electric Cooperative, Inc. |
-| Legal form | Limited liability company (LLC) |
-| Ownership | Privately held by Cris Santos |
+| Legal form | Cooperative, nonprofit, membership corporation organized under Florida's Rural Electric Cooperative Law (Fla. Stat. chapter 425; purpose in 425.02) |
+| Ownership | Owned by its members, one member, one vote. A Board of Trustees of 7 member-elected volunteers governs it. There are no shareholders |
 | Employees | 7 employees |
 | Annual receipts (fictional) | $1.1 million |
 | Size tier | Micro: Employer business with 1 to 9 employees |
@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | SaaS-first: business email suite, line-of-business SaaS, 5-15 endpoints, managed service provider (MSP) |
 | Who owns security and compliance | Owner or office manager, supported by an MSP |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** CEII - Critical Energy/Electric Infrastructure Information (18 CFR 388.113); BES Cyber System Information (CIP-011); Safeguards Information (10 CFR 73.21-73.22); SSI (49 CFR Part 1520) for TSA-regulated pipelines; Water RRA/ERP content; Customer PII, usage/smart-meter data and payment card data
 - **Critical systems:** SCADA/EMS; DCS in generating plants; Distribution management systems (ADMS/OMS); AMI/smart meters; Protective relays and substation automation (IEC 61850); Water treatment PLC/HMI; Customer information and billing systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 Federal Energy Regulatory Commission (FERC); North American Electric Reliability Corporation (NERC) - ERO; Department of Energy (DOE CESER) - Energy SRMA; Nuclear Regulatory Commission (NRC); Environmental Protection Agency (EPA) - Water SRMA; Transportation Security Administration (TSA) - gas pipelines/LNG

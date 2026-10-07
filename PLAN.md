@@ -436,3 +436,4 @@ Phase 5 filled every remaining cell of the matrix: the Sole Proprietorship, Micr
 2. **Industry picks.** The 36 primary industries and 22 tier substitutions are proposals in two CSVs. Change any pick and rebuild.
 3. **Multi-Sector pairings.** 33 of the 36 Multi-Sector division pairings were proposed for this project and are now built. Review them in `02_industry-rules/multi-sector-divisions.csv`; changing one means rebuilding that sample.
 4. **Office formats.** If you want Word or PDF versions of a finished sample for a meeting, that is a later export step.
+5. **External review backlog.** The October 2026 architecture review and our response are in `docs/reviews/2026-10-gemini-architecture-review-response.md`. Fixes A to G are applied. Its backlog (size-1 tailoring rows, size-6 tenancy paragraphs, nuclear size 5-6 license-transfer rows, two source checks) is open.

@@ -25,9 +25,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 
 > **Industry note:** At this size, Cris Santos Company works in the Nuclear Reactors, Materials, and Waste vertical as a radiation safety consultant (NAICS 541690) instead of the vertical's primary industry (NAICS 221113). Reason: Nuclear generating stations require large licensed staff. Some sector rules may reach it only through customer contracts (flow-down). Confirming that is part of P03.
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** Safeguards Information (SGI, 10 CFR 73.21-73.22); Cyber security plans and critical digital asset inventories; Export-controlled nuclear technology (10 CFR Part 810 / Part 110); CEII; Personnel access authorization data (10 CFR 73.56)
 - **Critical systems:** Reactor protection and safety-related I&C; Plant process computers; Emergency preparedness communication systems; Security systems (PACS, alarm stations); Balance-of-plant DCS; Radiation monitoring systems
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 SRMA: Department of Homeland Security (CISA); Nuclear Regulatory Commission (NRC); Department of Energy (DOE) - government-owned facilities

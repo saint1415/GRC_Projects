@@ -23,9 +23,11 @@ This folder is a self-contained scenario. Read this page first, then open the pr
 | IT footprint | Federated estate: shared corporate services plus division-specific systems and regulators |
 | Who owns security and compliance | Group CISO and Chief Risk Officer, divisional security and compliance leads, group internal audit |
 
-## What the business handles
+## What the business handles (typical for this industry)
 - **Sensitive data:** SSNs, I-9 identity documents, work authorization data; Background check / consumer reports (FCRA); Payroll, bank account and tax withholding data (PEOs); Benefits enrollment and group health plan PHI; Payment card data captured by call centers; Call recordings and biometric time-clock data; Customer site access credentials (security guard/janitorial firms)
 - **Critical systems:** Applicant tracking systems (ATS) and VMS; Payroll / HCM / PEO platforms; Contact-center (CCaaS), IVR and call-recording platforms; Workforce management and time & attendance (incl. biometric clocks); Guard tour / access control and CCTV systems; Fleet routing/telematics and scale-house systems (waste)
+
+This sample's own systems and data are in [00_company-facts.md](00_company-facts.md). Items above that the company does not have are out of scope.
 
 ## Who regulates it
 FTC FCRA Disposal Rule, Telemarketing Sales Rule, FTC Act Section 5; Federal Communications Commission (FCC) TCPA calling restrictions for call centers (47 CFR 64.1200); Consumer Financial Protection Bureau / FTC FCRA employment background-check rules; DHS / USCIS Form I-9 retention for employers and recruiters/referrers for a fee; PHMSA (DOT) Hazmat security plans for waste haulers transporting listed hazardous materials; HHS OCR HIPAA for call centers and staffing firms acting as business associates
