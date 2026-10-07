@@ -1,0 +1,13 @@
+review_item,what_to_check,crm_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Confidentiality needed because the CRM holds merchant owner Social Security numbers and bank details,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"CRM application, document storage, secure upload link, and the hosting environment","Application, document storage, and upload portal in scope",None
+Subservice organizations,Carve-out or inclusive; which hosting provider,Cloud hosting provider carved out; vendor states it reviews the provider's SOC 2 report each year,Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,1 exception: quarterly access review for vendor support staff completed late in one quarter; remediated,Accept; check the next report
+Complementary user entity controls,Controls the company must run for the vendor's controls to work,User provisioning and removal; MFA enforcement; role and sharing settings; customer-side data retention,"Mapped to AC-2, IA-2(1), AC-6, SI-12. Two are open gaps at the company: removal (POAM-001, POAM-003) and retention (P03 G-091)"
+Availability commitments,"Recovery objectives against the BIA (BP-04 RTO 48 h, RPO 24 h)",RTO 8 h; RPO 1 h stated in the system description,Meets the BIA
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data,Within Florida's 10-day outer limit for third-party agents (Fla. Stat. 501.171(6)(a)); ask for 24 hours at renewal
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Operations Manager, 2026-08-21",Repeat each year when the new report is issued

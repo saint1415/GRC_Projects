@@ -1,0 +1,36 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Security program covers every CUI and FCI system,PM-1,GV.PO-01,C-DIB-R01 (252.204-7012(b)(2)(i)); C-DIB-R02 (SP 800-171 3.12.4),No
+POL-01,4.3,CUI only on SSP-listed systems; SSP updated before changes,PL-2; CM-2,ID.AM-08,C-DIB-R02 (SP 800-171 3.12.4; 3.4.1),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9; RA-3,GV.RM-01,C-DIB-R02 (SP 800-171 3.11.1),No
+POL-01,4.5,Annual SP 800-171A self-assessment with outside review before each SPRS entry,CA-2,ID.IM-02,C-DIB-R02 (SP 800-171 3.12.1; 32 CFR 170.16(c)(1)),No
+POL-01,4.6,Every unmet requirement on the POA&M; monthly review,CA-5,ID.IM-01,C-DIB-R02 (SP 800-171 3.12.2; 3.12.3),No
+POL-01,4.7,No SPRS score or affirmation without supporting evidence,CA-2,GV.PO-01,C-DIB-R03 (252.204-7019(b); 252.204-7020(d)); C-DIB-R02 (32 CFR 170.22),No
+POL-01,4.8,Separation of duties recorded as an enduring exception with outside review,PL-1,GV.PO-02,C-DIB-R02 (SP 800-171 3.1.4),No
+POL-01,6.1,Only approved external systems; cloud for CUI must be FedRAMP Moderate or equivalent,SA-9; AC-20,GV.SC-05,C-DIB-R01 (252.204-7012(b)(2)(ii)(D)); C-DIB-R02 (SP 800-171 3.1.20),Yes
+POL-01,6.3,No CUI to anyone but Prime A without flowdown and approval,SA-9,GV.SC-05,C-DIB-R01 (252.204-7012(m)(1)),No
+POL-01,6.4,Helpers on site only; no remote-support tool; helper accounts removed the day work ends,AC-2; MA-2; PS-4,PR.AA-05,C-DIB-R02 (SP 800-171 3.7.2; 3.9.2),No
+POL-01,6.5,Check public posts against CUI markings and Prime A approval,AC-22,GV.PO-01,C-DIB-R02 (SP 800-171 3.1.22),No
+POL-01,7.2,Standard user account for daily work,AC-6(2),PR.AA-05,C-DIB-R02 (SP 800-171 3.1.5; 3.1.6),Yes
+POL-01,7.3,MFA on every CUI and FCI service and laptop admin sign-in; hardware keys in SYS-10,IA-2(1); IA-2(2),PR.AA-03,C-DIB-R02 (SP 800-171 3.5.3),No
+POL-01,7.4,Password manager; no passwords in files; default passwords changed,IA-5,PR.AA-01,C-DIB-R02 (SP 800-171 3.5.7; 3.5.10),Yes
+POL-01,7.5,"Lockout, CUI notice, and screen lock",AC-7; AC-8; AC-11,PR.AA-05,C-DIB-R02 (SP 800-171 3.1.8; 3.1.9; 3.1.10),No
+POL-01,7.6,CUI only on the laptop; phone for MFA and non-CUI email,AC-19,PR.AA-05,C-DIB-R02 (SP 800-171 3.1.18),No
+POL-01,7.7,"Monthly review of sign-ins, downloads, laptop and router logs",AU-6,DE.AE-02,C-DIB-R02 (SP 800-171 3.3.5; 3.14.7),Yes
+POL-01,8.3,FIPS-validated encryption on every CUI device and medium; keys kept apart,SC-13; SC-28(1),PR.DS-01,C-DIB-R02 (SP 800-171 3.13.11; 3.13.16; 3.13.10),Yes
+POL-01,8.4,CUI only through the portal or SYS-10,SC-8,PR.DS-02,C-DIB-R02 (SP 800-171 3.13.8; 3.1.3),No
+POL-01,8.5,Only the encrypted backup drive; kept in the home safe,MP-4; MP-7,PR.DS-01,C-DIB-R02 (SP 800-171 3.8.7; 3.8.9),Yes
+POL-01,8.6,Weekly backup; quarterly restore test; version history,CP-9,PR.DS-11,C-DIB-R02 (SP 800-171 3.8.9),Yes
+POL-01,8.7,Locked cabinet; shredding; SP 800-88 Rev. 2 sanitization with a record,MP-6,ID.AM-08,C-DIB-R02 (SP 800-171 3.8.3); C-DIB-R04 (52.204-21(b)(1)(vii)),No
+POL-01,8.8,No export-controlled data to foreign persons; carve-out conditions for storage,AC-3; SC-13,PR.DS-01,C-DIB-R05 (22 CFR 120.50; 120.54(a)(5); 120.56); C-DIB-R06 (15 CFR 734.18(a)(5)),No
+POL-01,9.3,Office locked when others are home; key control,PE-3,PR.AA-06,C-DIB-R02 (SP 800-171 3.10.1; 3.10.5),No
+POL-01,9.4,Visitor escort and visitor log kept one year,PE-8,PR.AA-06,C-DIB-R02 (SP 800-171 3.10.3; 3.10.4); C-DIB-R04 (52.204-21(b)(1)(ix)),Yes
+POL-01,9.5,Business network separate from household devices; UPnP and remote admin off,SC-7; CM-7,PR.IR-01,C-DIB-R02 (SP 800-171 3.13.1; 3.1.16); C-DIB-R04 (52.204-21(b)(1)(x)),Yes
+POL-01,9.6,"No CUI, FCI, or NDA data in commercial AI tools",PL-4; AC-20; SA-9,GV.PO-01,C-DIB-R02 (SP 800-171 3.1.20); C-DIB-R01 (252.204-7012(b)(2)(ii)(D)),No
+POL-01,9.7,Updates within 30 days; alerts subscription; monthly vulnerability scan,SI-2; SI-5; RA-5,PR.PS-02,C-DIB-R02 (SP 800-171 3.14.1; 3.14.3; 3.11.2),No
+POL-01,9.8,"Annual awareness, CUI handling, and insider threat training",AT-2; AT-3,PR.AT-01,C-DIB-R02 (SP 800-171 3.2.1; 3.2.2; 3.2.3),No
+POL-01,10.2,Same-day incident log with discovery time,IR-6,RS.MA-02,C-DIB-R02 (SP 800-171 3.6.2),No
+POL-01,10.3,DoD report within 72 hours; incident number to Prime A,IR-6,RS.CO-02,C-DIB-R01 (252.204-7012(c)(1)(ii); (c)(3); (m)(2)(ii)),Yes
+POL-01,10.4,Preserve images 90 days; malware only to DC3,IR-4,RS.AN-07,C-DIB-R01 (252.204-7012(d); (e)),No
+POL-01,10.5,Export counsel decides on voluntary disclosure,IR-6,RS.CO-03,C-DIB-R05 (22 CFR 127.12); C-DIB-R06 (15 CFR 764.5),No
+POL-01,10.6,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,C-DIB-R01 (252.204-7012(c)),No
+POL-01,11.2,Continuity arrangement with Prime A; sealed recovery codes,CP-2,RC.RP-01,C-DIB-R02 (SP 800-171 3.6.1),No

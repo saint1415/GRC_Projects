@@ -1,0 +1,12 @@
+field,value
+regulators,"CISA (Sector Risk Management Agency) 'CISA ... serves as the Emergency Services Sector Risk Management Agency.' Disciplines: Emergency Management, EMS, Fire and Rescue, Law Enforcement, Public Works.; FBI CJIS Division / state CSAs CJIS Security Policy for law enforcement and PSAPs with CJI access; HHS OCR HIPAA for EMS agencies that bill electronically; FCC 911/EAS rules; EAS cybersecurity rule (47 CFR Part 11) for EAS participants"
+primary_regulation,HIPAA Security Rule
+primary_regulation_citation,"45 CFR Part 164, Subpart C (164.302-164.318)"
+primary_regulation_url,https://www.ecfr.gov/current/title-45/part-164/subpart-C
+primary_regulation_rationale,"Cris Santos Company is a private ambulance provider here, a HIPAA covered entity when it bills electronically, so the Security Rule binds it directly. Research note: the sector research chose the FBI CJIS Security Policy v6.1, which applies when the provider accesses criminal justice information (for example, through a shared CAD with law enforcement); treat it as secondary."
+sensitive_data,"Criminal Justice Information (CJI), CHRI, NCIC data; Criminal intelligence (28 CFR 23); EMS patient care records (PHI); 911 call recordings and caller location (ALI/ANI); Body-worn camera / evidence video; Officer and responder personnel data"
+critical_systems,Computer-Aided Dispatch (CAD); 911 call handling equipment / NG911 ESInet; Records Management Systems (RMS) and jail management; Land Mobile Radio (LMR/P25) and FirstNet devices; Mobile data terminals and AVL; ePCR systems; Mass notification / IPAWS alert origination; Evidence management and BWC platforms
+ai_specific,
+assurance_alternatives,
+notes,"Sector name and SRMA verified on the CISA sector page. The FCC 2026 EAS cybersecurity rule binds EAS participants, not emergency management agencies, and is included for context. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

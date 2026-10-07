@@ -1,0 +1,12 @@
+field,value
+regulators,SRMA: Department of Homeland Security (CISA); Nuclear Regulatory Commission (NRC); Department of Energy (DOE) - government-owned facilities
+primary_regulation,10 CFR 73.54 (with RG 5.71 Rev. 1 controls)
+primary_regulation_citation,10 CFR 73.54
+primary_regulation_url,https://www.ecfr.gov/current/title-10/section-73.54
+primary_regulation_rationale,"Binding, inspected (IP 71130.10) cyber rule for power reactors; RG 5.71 Rev. 1 supplies a NIST SP 800-53/800-82-derived control catalog suited to control-by-control gap analysis. Use 73.110/RG 5.96 for Part 53 plants."
+sensitive_data,"Safeguards Information (SGI, 10 CFR 73.21-73.22); Cyber security plans and critical digital asset inventories; Export-controlled nuclear technology (10 CFR Part 810 / Part 110); CEII; Personnel access authorization data (10 CFR 73.56)"
+critical_systems,"Reactor protection and safety-related I&C; Plant process computers; Emergency preparedness communication systems; Security systems (PACS, alarm stations); Balance-of-plant DCS; Radiation monitoring systems"
+ai_specific,; 
+assurance_alternatives,
+notes,Fuel cycle and materials licensees currently have no NRC cyber rule equivalent to 73.54 (not re-verified); CIRCIA would cover fuel cycle facilities once final.
+last_verified,2026-09-25

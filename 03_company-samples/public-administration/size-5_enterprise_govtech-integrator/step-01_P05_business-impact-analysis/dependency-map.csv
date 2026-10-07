@@ -1,0 +1,25 @@
+dependency_id,dependency,type,supports_processes,concentration_or_share,single_point_of_failure,alternate_or_fallback,last_tested,contract_rto_hours,gap_or_note
+DEP-01,Cloud provider A: ACMC primary and standby regions (SYS-01),Third party (IaaS/PaaS),BP-01; BP-02; BP-03; BP-04,All 132 ACMC tenants,No (standby region),Warm standby in a second U.S. region,2026-05-09 (regional failover test: 3.2 h),4,Met
+DEP-02,Cloud provider B: IES environments (SYS-03),Third party (IaaS/PaaS),BP-06; BP-07; BP-08,All 4 IES states,No (standby region),Warm standby per state,2026-04-25 (AG-04 recovered in 14 h),8,AG-04 missed its 8-hour RTO (POAM-015)
+DEP-03,Enterprise identity platform (SYS-04),Internal platform,All,All workforce except AQ-1,Yes,Sealed break-glass accounts; secondary region,2026-05-09,1,Met
+DEP-04,Integration hub on-premises edge in DC-1 (31 site-to-site VPN tunnels),Internal platform,BP-01; BP-05; BP-09,All agency VPN tunnels,Yes,None for VPN tunnels; agencies fall back to their message switch terminals,2025-11-14 (partial: 12 of 31 tunnels re-established),4,7 appliances use FIPS 140-2 modules on CJI paths (POAM-006); 2 had default vendor passwords (POAM-007)
+DEP-05,State message switches (CJIS interfaces),External (agency-owned),BP-01; BP-05,15 ACMC criminal justice tenants,Yes,Agency terminals,n/a (agency-owned),n/a,Outside company control; contract notice terms only
+DEP-06,Revenue agency file transfer endpoints,External (agency-owned),BP-02; BP-05,6 revenue agencies,No,Agencies resend files,n/a,n/a,None
+DEP-07,Colocation DC-1 (Florida),Third party (colocation),BP-05; BP-09,6 of 9 legacy customers hosted only here; integration hub edge,Yes,DC-2 hosts the other 3 legacy customers; no alternate for the 6,2025-10-18 (failover of 3 customers only),8,RTO unproven for 6 customers
+DEP-08,Colocation DC-2 (out of state),Third party (colocation),BP-09,3 legacy customers; offline backup vault,No (DC-1),Restore to DC-1,2025-10-18,8,Met for 3 customers
+DEP-09,Legacy backup system (disk plus weekly tape vault),Internal,BP-09,All 9 legacy customers,Yes,Weekly tape copy at DC-2,2025-12-06 (partial restore of 2 systems),8,"Not immutable; nightly only, so real RPO is 24 h (POAM-008)"
+DEP-10,AQ-1 cloud account and identity directory (SYS-15),Internal (acquired),BP-10,9 courts,Yes,Paper filing,Never,12,No DR test since acquisition; daily snapshots only
+DEP-11,Ticketing SaaS and telephony carrier,Third party (SaaS),BP-08; BP-11,All agency support,No (backup carrier),Backup carrier; printed contact list,2026-03-12,2,Met
+DEP-12,Tier-1 help desk vendor (municipal customers),Third party (subcontractor),BP-04; BP-11,About 110 local government customers,No,In-house tier-2 overflow,2026-02-20,4,Overnight tier outside the United States could view FTI tenant tickets (POAM-009)
+DEP-13,Managed large language model service (AI-001),Third party (SaaS),BP-06,AG-03 pilot region only,No,Caseworkers process without AI assistance,n/a,n/a,Optional to the process
+DEP-14,Document imaging and mail vendor (IES notices and scanning),Third party,BP-06; BP-08,3 of 4 IES states,Yes,Alternate vendor contracted only for AG-03,Never,24,Fallback for 3 states untested
+DEP-15,Identity verification service (IES applicant identity proofing),Third party (SaaS),BP-06,All 4 IES states,Yes,Manual document verification by caseworkers,2026-01-22 (manual fallback drill),n/a,Manual fallback slows processing about 40%
+DEP-16,Software delivery platform (SYS-06),Third party (SaaS),BP-13,All engineering,No,Local repository mirror; break-glass deployment,2026-02-11,24,Met
+DEP-17,SIEM and EDR services (SYS-07),Third party (SaaS),BP-12,All monitored environments except AQ-1,No,Second SOC site; cloud-native logs,2026-05-09,1,Met
+DEP-18,Payroll processor,Third party (SaaS),BP-16,All employees,Yes,Repeat prior payroll,2026-06-03,48,Met
+DEP-19,ERP and financials (SaaS),Third party (SaaS),BP-17; BP-18,Finance,No,Manual workpapers; filing agent,2026-06-03,72,Met
+DEP-20,Subcontractors with FTI or CJI access (41),Third party (subcontractors),BP-01; BP-02; BP-15,One firm supplies 35% of ACMC tier-2 support staff,No,In-house staff,n/a,n/a,2 subcontractors not covered by the agencies' IRS notifications (POAM-010)
+DEP-21,CUI enclave environment (SYS-10),Third party (IaaS/PaaS),BP-14,DoD subcontract,Yes,Work pauses; agency-furnished systems for civilian work,2026-03-26,24,Met
+DEP-22,Agency identity providers (federation for ACMC users),External (agency-owned),BP-01; BP-02; BP-03,About 40 federated agencies,Yes (per agency),Agency break-glass local accounts in ACMC,2026-05-09,n/a,Agency-owned
+DEP-23,Key management service and customer-managed keys for FTI tenants,Third party (cloud service),BP-02,6 FTI tenants,Yes (per tenant),Key replicas in the standby region,2026-05-09,4,An agency key action can block recovery; coordinate with each agency
+DEP-24,Immutable backup accounts for ACMC and IES,Internal (on cloud),All cloud processes,ACMC and IES,No (two copies),Copy in a second region,2026-06-27 (quarterly restore test),n/a,Met

@@ -1,0 +1,12 @@
+field,value
+regulators,"State gaming regulators (e.g., Nevada Gaming Control Board / Nevada Gaming Commission) Casino cybersecurity, internal controls, licensing; National Indian Gaming Commission (NIGC) Minimum internal control standards for tribal gaming (25 CFR 543); FinCEN (Treasury) Bank Secrecy Act AML program, SAR/CTR for casinos and card clubs; FTC FTC Act Section 5 and COPPA for consumer-facing entertainment; CISA / DHS SRMA, Commercial Facilities Sector (Gaming, Entertainment and Media, Sports Leagues, Public Assembly, Outdoor Events subsectors)"
+primary_regulation,PCI DSS v4.0.1
+primary_regulation_citation,"PCI Security Standards Council standard (contractual, not law)"
+primary_regulation_url,https://www.pcisecuritystandards.org/standards/pci-dss/
+primary_regulation_rationale,"Cris Santos Company operates a live event venue with ticketing here, so card payments are its most binding security obligation (PCI DSS is a contractual standard enforced through card brands, not law). Research note: the sector research chose Nevada Gaming Commission Regulation 5.260, which applies only to licensed gaming operators; use it instead if the venue includes a casino."
+sensitive_data,"Patron PII and player-loyalty data; Payment card data and cage/credit (marker) records; BSA/AML records (SARs are confidential), CTRs, KYC documents; Surveillance video; Online/sports wagering account data, geolocation; Children's data (family entertainment apps); Employee licensing/background data"
+critical_systems,"Casino management system (CMS) / slot accounting; Table games and sports-betting/iGaming platforms; Surveillance and access control; Cage, credit and kiosk/TITO systems; Ticketing and point-of-sale; Loyalty/CRM platforms; Hotel PMS integration (integrated resorts)"
+ai_specific,
+assurance_alternatives,PCI DSS validation for card payments
+notes,"CISA Commercial Facilities Sector SRMA is DHS; subsectors include Gaming, Entertainment and Media, Public Assembly, Sports Leagues and Outdoor Events. Other states (e.g., New Jersey DGE) have their own gaming technical standards; they were not verified here. No sector-specific AI rules were verified. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

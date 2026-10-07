@@ -1,0 +1,63 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,The company must maintain an information security program aligned to NIST CSF 2.0 that meets PCI DSS v4.0.1 and other...,PM-1; PL-2,GV.PO-01,N44-45-R01 (PCI DSS 12.1.1),No
+POL-01,4.2,"The CISO is accountable for the security program, the Chief Privacy Officer for the privacy program, and the CFO is t...",PM-2,GV.RR-02,N44-45-R01 (PCI DSS 12.1.3; 12.1.4),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST S...",RA-3; PM-9,GV.RM-01,N44-45-R01 (PCI DSS 12.3.1),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9; RA-7,GV.RM-04,Other: board risk appetite (P01 section 1),No
+POL-01,4.5,Policies must be reviewed at least every 12 months; standards and procedures at least every 12 months or when the con...,PL-1,GV.PO-02,N44-45-R01 (PCI DSS 12.1.2),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5,GV.PO-02,Other: company policy governance,No
+POL-01,4.7,Workforce members who violate security or privacy policies must be sanctioned under PRC-01.1 in proportion to intent...,PS-8,GV.RR-04,Other: company code of conduct,No
+POL-01,4.8,"PCI DSS scope must be documented, with data flows and an inventory of in-scope components, and confirmed at least eve...",CM-8; PL-2,ID.AM-01,N44-45-R01 (PCI DSS 12.5.1; 12.5.2),Yes
+POL-01,4.9,Every third party that can affect card data or customer data must be tiered and assessed under STD-01.3 before engage...,SA-9; SR-6,GV.SC-05,N44-45-R01 (PCI DSS 12.8.1 to 12.8.5),Yes
+POL-01,4.10,"Changes to the CDE, payment pages, and tier-1 systems must go through change management with a security and scope imp...",CM-3; CM-4,PR.PS-01,N44-45-R01 (PCI DSS 6.5.1; 6.5.2),Yes
+POL-01,4.11,"System components must be built from approved hardening baselines, with vendor default accounts and passwords changed...",CM-2; CM-6; IA-5,PR.PS-01,N44-45-R01 (PCI DSS 2.2.1; 2.2.2),Yes
+POL-01,4.12,Critical and high-risk vulnerabilities must be fixed within 30 days; internal and external vulnerability scans must r...,RA-5; SI-2; CA-8,ID.RA-01,N44-45-R01 (PCI DSS 6.3.3; 11.3; 11.4),Yes
+POL-01,4.13,"Security events on CDE and tier-1 systems must be logged, reviewed daily through automated means, and kept at least 1...",AU-2; AU-6; AU-11,DE.CM-01,N44-45-R01 (PCI DSS 10.2; 10.4; 10.5),Yes
+POL-01,4.14,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor i...,CA-2; CA-2(1),ID.IM-01,N44-45-R01 (annual ROC under the merchant agreement); 17 CFR 229.106(b)(1),No
+POL-01,4.15,"Security documentation, including risk analyses, assessments, and PCI DSS evidence, must be kept at least 3 years, an...",SI-12,GV.PO-02,Fla. Stat. 501.171(4)(c) (Florida worked example); Other: company retention schedule,No
+POL-01,4.16,"Every acquisition must include security due diligence before signing and an integration plan, funded in the deal appr...",PM-9; SA-4,GV.OC-01,Other: board risk appetite (growth and innovation); P01 R-061,No
+POL-01,4.17,"The CISO must report cybersecurity risk to the board risk and technology committee at least quarterly, including Very...",PM-9,GV.OV-01,17 CFR 229.106(c),No
+POL-01,4.18,"Security, privacy, and savings claims made to customers must be reviewed by Legal and, for security claims, by the CI...",PL-4,GV.OC-03,N44-45-R02 (15 U.S.C. 45(a)(1)),No
+POL-02,4.1,"Every user and service must have a unique identity. Shared or group accounts are prohibited, including local administ...",IA-2; AC-2,PR.AA-01,N44-45-R01 (PCI DSS 8.2.1; 8.2.2),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted. CDE acc...",AC-2; AC-6,PR.AA-05,N44-45-R01 (PCI DSS 7.2.1; 7.2.4),Yes
+POL-02,4.3,"Duties that would let one person both change and approve payment switch routing, publish and approve payment page cha...",AC-5,PR.AA-05,N44-45-R01 (PCI DSS 6.5.4),Yes
+POL-02,4.4,"MFA is required for all remote network access, all non-console access into the CDE, and all cloud and administrative...",IA-2(1); IA-2(2),PR.AA-03,N44-45-R01 (PCI DSS 8.4.1 to 8.4.3),Yes
+POL-02,4.5,"Access must be disabled the same business day as a termination, and immediately for involuntary terminations, includi...",PS-4; AC-2,PR.AA-05,N44-45-R01 (PCI DSS 8.2.5),Yes
+POL-02,4.6,"Accounts inactive for 90 days must be disabled automatically (60 days for SSO accounts), including POS operator IDs a...",AC-2(3),PR.AA-05,N44-45-R01 (PCI DSS 8.2.6),Yes
+POL-02,4.7,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,N44-45-R01 (PCI DSS 7.2.2; 10.2.1.2),Yes
+POL-02,4.8,"Vendor and remote maintenance access, including refrigeration, building controls, and POS vendors, must go through th...",AC-17; MA-4,PR.AA-05,N44-45-R01 (PCI DSS 8.2.7; 8.4.3),Yes
+POL-02,4.9,"Customer accounts must be protected with breached-password checks, bot defenses, and a one-time code before saved car...",IA-8,PR.AA-03,N44-45-R02 (15 U.S.C. 45(n)),Yes
+POL-02,4.10,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by...",AC-2,PR.AA-05,N44-45-R01 (PCI DSS 8.2.2),Yes
+POL-02,4.11,"Cashiers and leads must use their own POS operator ID; manager overrides must be performed with the manager's own ID,...",IA-2; AC-2,PR.AA-01,N44-45-R01 (PCI DSS 8.2.1),Yes
+POL-02,4.12,"SL-1 client and SL-2 supplier users must authenticate with MFA, and each client or supplier administrator must attest...",IA-8; AC-2,PR.AA-03,Other: SL-1 and SL-2 client agreements (P09),Yes
+POL-03,4.1,"The company must keep an incident response plan that meets PCI DSS 12.10.1 and follows NIST SP 800-61 Rev. 3, with ru...",IR-8,RS.MA-01,N44-45-R01 (PCI DSS 12.10.1; 12.10.3),Yes
+POL-03,4.2,Every workforce member must report a suspected incident immediately to the service desk or the SOC. Cashiers and stor...,IR-6,DE.AE-02,N44-45-R01 (PCI DSS 9.5.1.3; 12.10.1),Yes
+POL-03,4.3,"A suspected compromise of card data must be reported to the acquirer within 24 hours of suspicion, as the merchant ag...",IR-6,RS.CO-02,N44-45-R01 (PCI DSS 12.10.1); Visa Core Rules 10.3.1.2 (contractual),Yes
+POL-03,4.4,"The CISO must brief the General Counsel within 24 hours of declaring a severity-1 incident, and the disclosure commit...",IR-8,GV.OV-01,SEC Form 8-K Item 1.05,Yes
+POL-03,4.5,"The incident response plan must be tested at least every 12 months, alternating scenarios so that a card data comprom...",IR-3,ID.IM-04,N44-45-R01 (PCI DSS 12.10.2),No
+POL-03,4.6,Breach notifications must be decided by the Chief Privacy Officer with counsel under the law of each state where affe...,IR-6,RS.CO-03,State breach laws (Florida worked example: Fla. Stat. 501.171),Yes
+POL-03,4.7,"No ransom or extortion payment may be made without approval by the CEO, the General Counsel, and the insurer, and an...",IR-4,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.8,"Tier-1 processes must have contingency plans with RTO and RPO from the BIA (P05), tested at least every 12 months, in...",CP-2; CP-4,RC.RP-01,7 CFR 274.3(c)(4); N44-45-R01 (PCI DSS 12.10.1),Yes
+POL-03,4.9,"Backups of tier-1 data and configurations must be immutable, kept in separate accounts, and restore-tested at least q...",CP-9,PR.DS-11,N44-45-R01 (PCI DSS 12.10.1),Yes
+POL-03,4.10,A lessons-learned review must be held within 14 days of closing a severity-1 or severity-2 incident and documented wi...,IR-4,ID.IM-03,N44-45-R01 (PCI DSS 12.10.6),Yes
+POL-03,4.11,"Forensic investigations must be run through counsel, with chain of custody for every artifact.",IR-4,RS.AN-03,N44-45-R01 (PCI DSS 12.10.1),Yes
+POL-03,4.12,Contracts with TPSPs and with vendors that hold customer personal information must require notice to the company of a...,SR-8; SA-9,GV.SC-08,Fla. Stat. 501.171(6)(a) (Florida worked example); N44-45-R01 (PCI DSS 12.8.2),Yes
+POL-04,4.1,"Every data set must have an owner and a class (Restricted, Confidential, Internal, Public) recorded in the data inven...",RA-2,ID.AM-05,Other: company data governance,No
+POL-04,4.2,"Full card numbers must not be stored after authorization, sensitive authentication data must never be stored, and car...",SI-12; AC-3,PR.DS-01,N44-45-R01 (PCI DSS 3.2.1; 3.3.1; 3.4.1),Yes
+POL-04,4.3,"Card numbers must never be sent or accepted through end-user messaging (email, chat, text); data loss prevention must...",SC-8; SI-12,PR.DS-02,N44-45-R01 (PCI DSS 4.2.2),Yes
+POL-04,4.4,Restricted and Confidential data must be encrypted in transit over open networks with TLS 1.2 or higher.,SC-8; SC-13,PR.DS-02,N44-45-R01 (PCI DSS 4.2.1),Yes
+POL-04,4.5,Restricted and Confidential data must be encrypted at rest with customer-managed keys under STD-04.1.,SC-28; SC-12,PR.DS-01,N44-45-R02 (15 U.S.C. 45(n)),Yes
+POL-04,4.6,"Payment fields (card numbers, tokens, and card brand transaction data) must be kept out of loyalty, CDP, retail media...",AC-4,PR.DS-01,Visa Core Rules 1.9.4.2 (contractual); N44-45-R01 (PCI DSS 12.5.2),No
+POL-04,4.7,"Customer data may be used only for purposes described in the privacy notice. A new use needs a privacy review and, wh...",RA-8; PT-2,GV.OC-03,Tennessee Act 47-18-3204(a)(2); 47-18-3206,No
+POL-04,4.8,"Sensitive data, including precise geolocation, may be processed only with recorded consent. Facial recognition and ot...",PT-4,GV.OC-03,Tennessee Act 47-18-3204(a)(6); N44-45-R02 (15 U.S.C. 45(n)),No
+POL-04,4.9,Data must be kept only as long as the retention schedule allows and then destroyed so it cannot be read or reconstruc...,SI-12; MP-6,PR.DS-01,Fla. Stat. 501.171(8) (Florida worked example); N44-45-R01 (PCI DSS 9.4.6),No
+POL-04,4.10,"Clean room outputs to clients must be aggregated with minimum audience thresholds enforced by the platform, and clien...",AC-4; AC-3,PR.DS-10,N44-45-R02 (15 U.S.C. 45(a)(1)),Yes
+POL-04,4.11,Restricted or Confidential data may be entered into an AI tool only if the AI governance committee has approved the t...,SA-9,GV.SC-05,N44-45-R02 (15 U.S.C. 45(n)),Yes
+POL-05,4.1,"Company systems must be used only for authorized business purposes, and every workforce member must acknowledge this...",PL-4,GV.RR-04,N44-45-R01 (PCI DSS 12.2.1; 12.6.3),No
+POL-05,4.2,Every workforce member must complete security awareness training at hire and annually; cashiers and front-end leads m...,AT-2,PR.AT-01,N44-45-R01 (PCI DSS 12.6.1; 12.6.3; 12.6.3.1; 9.5.1.3),Yes
+POL-05,4.3,"POS operator IDs, PINs, and passwords must never be shared or written down.",IA-5,PR.AA-01,N44-45-R01 (PCI DSS 8.2.2; 8.3.1),Yes
+POL-05,4.4,"Workforce must never ask customers to send card numbers by email, chat, or text, and must never key card numbers anyw...",SI-12,PR.DS-01,N44-45-R01 (PCI DSS 3.2; 4.2.2),No
+POL-05,4.5,Personal devices must not be used to access the CDE or administrative consoles.,AC-20,PR.AA-05,N44-45-R01 (PCI DSS 12.2.1),No
+POL-05,4.6,"Only AI tools on the approved list (STD-05.3) may be used for company work; any new AI use, including an AI feature s...",CM-7; SA-9,GV.OC-04,N44-45-R02 (15 U.S.C. 45(a)(1); 45(n)),Yes
+POL-05,4.7,"Lost or stolen devices, handhelds, and badges, and any suspicious activity, must be reported immediately.",IR-6,DE.AE-02,N44-45-R01 (PCI DSS 12.10.1),Yes
+POL-05,4.8,Unapproved software and browser extensions must not be installed on administrator endpoints.,CM-7,PR.PS-02,N44-45-R01 (PCI DSS 12.2.1),Yes
+POL-05,4.9,Store leads must inspect PIN pads for tampering and substitution on the schedule set by the targeted risk analysis an...,CM-8; PE-3,PR.PS-01,N44-45-R01 (PCI DSS 9.5.1.2; 9.5.1.2.1),Yes

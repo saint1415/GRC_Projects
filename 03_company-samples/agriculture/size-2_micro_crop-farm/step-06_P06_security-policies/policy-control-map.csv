@@ -1,0 +1,48 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-02,A.1,Security Coordinator designated in writing,PM-2,GV.RR-02,CSF 2.0 GV.RR-02 (benchmark),No
+POL-02,A.2,Annual risk assessment each July with SP 800-30; risks owned and treated,RA-3; PM-9,ID.RA-01,CSF 2.0 ID.RA-01 (benchmark),No
+POL-02,A.3,Risk acceptance authority; High risks never accepted,PM-9,GV.RM-01,CSF 2.0 GV.RM-01 (benchmark),No
+POL-02,A.4,Sanctions recorded; good-faith reporting protected,PS-8,GV.RR-04,CSF 2.0 GV.RR-04 (benchmark),No
+POL-02,A.5,Supplier checklist and security terms before access; annual FMIS SOC 2 and MSP review,SA-9; SR-6,GV.SC-05; GV.SC-06,CSF 2.0 GV.SC-05 (benchmark); Fla. Stat. 501.171(6),Yes
+POL-02,A.6,Annual independent assessment,CA-2,ID.IM-01,CSF 2.0 ID.IM-01 (benchmark),No
+POL-02,A.7,Retention of security records (3 years; no-harm determination 5 years),SI-12,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark); Fla. Stat. 501.171(4)(c),No
+POL-02,A.8,Annual policy review; policies and Spanish summary available to staff,PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-02,B.1,Named accounts only; shared field crew login retired,IA-2; AC-2,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark); 21 CFR 112.161(a)(4); 20 CFR 655.122(j)(1),Yes
+POL-02,B.2,Role-based least privilege; irrigation control and Office folder limited,AC-2; AC-3; AC-6,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark); Fla. Stat. 501.171(2),Yes
+POL-02,B.3,"MFA for every SYS-01 user, mailbox, backup console, portal, and remote path",IA-2(1),PR.AA-03,CSF 2.0 PR.AA-03 (benchmark),Yes
+POL-02,B.4,Departure checklist by the last day; season-end account and PIN changes,PS-4; AC-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,B.5,Monthly account reconciliation and forwarding rule check,AC-2; AC-6,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,B.6,15-minute computer lock; 5-minute tablet and phone lock with PIN,AC-11,PR.AA-03,CSF 2.0 PR.AA-03 (benchmark),No
+POL-02,B.7,Sealed emergency SYS-01 administrator credential,AC-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,B.8,"Dealer access on request, approved, named with MFA, and logged; MSP technician list",AC-17; MA-4; IA-2(1); SA-9,PR.AA-05; PR.PS-03,CSF 2.0 PR.AA-05 (benchmark); SP 800-82r3,Yes
+POL-02,B.9,Password length; change defaults before use; Wi-Fi password yearly; guest Wi-Fi,IA-5; AC-18,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark); SP 800-82r3,Yes
+POL-02,B.10,Irrigation program and setting changes approved and logged,CM-3,ID.RA-07,CSF 2.0 ID.RA-07 (benchmark); SP 800-82r3,No
+POL-02,C.1,Farm systems for farm work; need-to-know look-ups only,PL-4,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-02,C.2,No Restricted data in personal accounts or public AI tools,PL-4,PR.AT-01,Fla. Stat. 501.171(2),No
+POL-02,C.3,"Lock screens; never share passwords, PINs, or MFA codes",AC-11; PL-4,PR.AA-03,CSF 2.0 PR.AA-03 (benchmark),No
+POL-02,C.4,Training at hire and yearly in English or Spanish; verify payment changes by phone,AT-2,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),Yes
+POL-02,C.6,Signed acknowledgment in English or Spanish,PL-4,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),No
+POL-03,4.1,Ransomware runbook kept and printed in the office and pump station,IR-8,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),No
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),Yes
+POL-03,4.3,Safety first: hand control and fertigation off before anything else,IR-4,RS.MI-01,CSF 2.0 RS.MI-01 (benchmark); SP 800-82r3,No
+POL-03,4.4,Log every incident,IR-5,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),No
+POL-03,4.5,Breach determination under Fla. Stat. 501.171 with its date recorded; no-harm determinations documented,IR-6,RS.AN-03,Fla. Stat. 501.171(4)(a); 501.171(4)(c),Yes
+POL-03,4.6,Meet notice deadlines in the P08 matrix; worker notices in English and Spanish,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5),Yes
+POL-03,4.7,Insurer hotline first; MSP engaged; dealer only on site or by approved session,IR-4,RS.MA-01; GV.SC-08,CSF 2.0 GV.SC-08 (benchmark),No
+POL-03,4.8,Ransom payment only with approvals and an OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.9,Supplier incident reports logged and handled,IR-6; SA-9,GV.SC-08,Fla. Stat. 501.171(6),Yes
+POL-03,4.10,Paper records and on-time H-2A earnings statements during an outage,IR-4,RC.RP-02,20 CFR 655.122(k); 21 CFR 112.161(a),No
+POL-03,4.11,Annual tabletop with the MSP and dealer; pre-season hand-operation drill,IR-3; CP-4,ID.IM-02,CSF 2.0 ID.IM-02 (benchmark),Yes
+POL-03,4.12,Lessons learned within 30 days,IR-4,ID.IM-03,CSF 2.0 ID.IM-03 (benchmark),No
+POL-04,4.1,Three classification levels,RA-2,ID.AM-07,CSF 2.0 ID.AM-07 (benchmark),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit; portals for payroll and H-2A documents,SC-28; SC-8,PR.DS-01; PR.DS-02,Fla. Stat. 501.171(2),No
+POL-04,4.3,Restricted data only in approved locations; Office folder not synced,AC-3,PR.DS-01; ID.AM-07,20 CFR 655.122(j)(2),No
+POL-04,4.4,"Inventory of IT, OT, services, and Restricted data locations",CM-8,ID.AM-01; ID.AM-02,CSF 2.0 ID.AM-01 (benchmark),No
+POL-04,4.5,New suppliers and tools approved before receiving data or connecting to irrigation,SA-9,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark),Yes
+POL-04,4.6,Approved AI tools only; no farm data to tools that reuse it for others,SA-9; PL-4,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark),Yes
+POL-04,4.7,Wipe or certified destruction with records,MP-6,ID.AM-08,Fla. Stat. 501.171(8),No
+POL-04,4.8,Retention schedule (Produce Safety 2 years; H-2A 3 years),SI-12,ID.AM-08,21 CFR 112.164(a)(1); 20 CFR 655.122(j)(4),No
+POL-04,4.9,90-day immutable backup with MFA; monthly SYS-01 export; controller program copy; quarterly restore test,CP-9; CP-4,PR.DS-11,CSF 2.0 PR.DS-11 (benchmark); 21 CFR 112.166(a),Yes
+POL-04,4.10,Drone images for crops only; images of people deleted within 30 days,PL-4,PR.DS-01,CSF 2.0 PR.DS-01 (benchmark),No

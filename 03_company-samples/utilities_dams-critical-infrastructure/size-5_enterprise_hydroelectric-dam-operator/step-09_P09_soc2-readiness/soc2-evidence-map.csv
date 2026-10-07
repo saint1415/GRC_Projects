@@ -1,0 +1,22 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC6.1; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.6; CC6.7,"WAF, firewall rule reviews, and TLS scan results",Landing zone; scanner,Director of Cloud Platform Engineering,Quarterly,All quarterly scans,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports with remediation tickets,EDR console; scanner,Director of Security Operations,Weekly,5 weeks; 25 findings,P07 RA-5 and SI-3 samples,Collecting
+Both,CC7.2; CC7.3; CC7.4,"SOC cases, use case list, and incident reports",SOC case management,Director of Security Operations,Continuous,25 cases,P08; P07 IR-4,Collecting
+Both,CC9.2,Vendor register with SOC report reviews for subservice organizations,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P04; P07 SA-9,Collecting
+SL-1 Contract remote operations,CC2.3; CC3.1,"SL-1 system description, client agreements, and owner instruction procedures",Contract repository,"Vice President, Hydro Services",Annual,All changes in the period,2025 SOC 2 report,Ready
+SL-1 Contract remote operations,CC6.1; CC6.2,Client endpoint credential register showing named credentials and MFA,COC endpoint register,"Vice President, Hydro Services",Quarterly,All 27 endpoints each quarter,P05 DEP-20,Not started (POAM-021)
+SL-1 Contract remote operations,CC7.2,COC operating logs and owner instruction log,COC consoles,"Vice President, Hydro Services",Continuous,25 days,2025 SOC 2 report,Ready
+SL-1 Contract remote operations,CC8.1,COC console and portal change records,Change system,"Vice President, Hydro Services",Per change,25 changes,2025 SOC 2 report,Ready
+SL-1 Contract remote operations,A1.2; A1.3,COC recovery test including the HOC-B backup position,DR records,"Vice President, Hydro Services",Annual,Test report,P05 BP-10,Not started (test due 2027-02-28)
+SL-2 Dam safety monitoring,CC2.3; CC3.1,"SL-2 system description and service commitments, including AI-001 limits",Contract repository,"Vice President, Dam Safety Monitoring Services",Annual,Document,New,Not started (due 2027-01-31)
+SL-2 Dam safety monitoring,CC8.1; PI1.3,Threshold and model change records with dual approval and client notice,DSMS change workflow,"Vice President, Dam Safety Monitoring Services",Per change,40 threshold and model changes,P01 R-042,Not started (POAM-019)
+SL-2 Dam safety monitoring,PI1.2,Ingestion rejection queue reviews,DSMS,"Vice President, Dam Safety Monitoring Services",Daily,25 days,P04 SI-10 row,Ready
+SL-2 Dam safety monitoring,PI1.4,Alert delivery logs with reconciliation,DSMS alerting,"Vice President, Dam Safety Monitoring Services",Daily,25 days; 60 alerts,New,Not started (due 2027-01-31)
+SL-2 Dam safety monitoring,C1.1,Tenant isolation test results for 46 client tenants and per-client key inventory,CI/CD test reports; key management,"Vice President, Dam Safety Monitoring Services",Every release; quarterly,25 releases,P04 AC-3 and SC-28 rows,Ready
+SL-2 Dam safety monitoring,A1.2; A1.3,Cross-region replication reports and DR retest meeting the 4-hour RTO,Cloud provider B monitoring; DR records,"Vice President, Dam Safety Monitoring Services",Daily; annual,25 days; retest report,P05 BP-11; POAM-020,Not started (retest due 2027-01-31)
+SL-2 Dam safety monitoring,PI1.1; PI1.3,"AI-001 model registry, back-test results, and disparity tests",AI platform model registry,"Vice President, Dam Safety",Per model version; quarterly,All versions; 2 quarterly tests,P10,Collecting

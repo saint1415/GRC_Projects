@@ -1,0 +1,16 @@
+review_item,what_to_check,accounting_service_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because payroll and payments depend on the service,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Multi-company accounting; bank feeds; user roles; audit trail; hosting,All in scope; the bank-feed aggregation provider is a carved-out subservice organization,Ask how the vendor monitors the bank-feed provider
+Subservice organizations,Carve-out or inclusive; which hosting and data providers,Hosting provider and bank-feed provider carved out; the vendor reviews their SOC reports each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled departing vendor employees lost access 3 and 5 days late; remediated with automated deprovisioning,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the owner must run for the vendor's controls to work,Customer grants roles and removes users promptly; reviews user access periodically; protects credentials and MFA devices; reviews the audit trail for unexpected changes; confirms bank-feed connections; tells the vendor of suspected compromise,"Map to AC-2 and AC-6 (POAM-004: bookkeeper role and quarterly review), IA-2(1) (vendor-enforced MFA: met), AU-6 (POAM-008: payee change review), IR-6 (POAM-009)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA enforced for all customer users; encryption at rest and in transit tested without exception,None
+CC6.3 role-based access (CC series as checklist),Roles available to limit customer users,"Role options include view-only, reports, reconciliation, and full accountant; payee and bank-detail changes can be restricted to the company administrator",Use these roles to reduce the bookkeeper's access (POAM-004)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring and customer-visible audit trail,24x7 platform monitoring tested without exception; audit trail of every change available to the customer for the life of the company file,Owner reviews payee and bank-detail changes monthly (POL-01 7.7)
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of incidents affecting their data under the terms of service; no stated time limit,Register a phone security contact; ask for a stated notice period (Fla. Stat. 501.171(6)(a) sets 10 days for third-party agents)
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting and bank-feed providers' reports,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-03: RTO 24 h; RPO 24 h),RTO 12 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-29,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-manager 2026-07-29, with the IT technician",Repeat every year (POL-01 6.5)

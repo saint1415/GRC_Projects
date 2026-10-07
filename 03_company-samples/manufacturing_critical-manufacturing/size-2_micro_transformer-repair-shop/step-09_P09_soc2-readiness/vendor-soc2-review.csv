@@ -1,0 +1,13 @@
+review_item,what_to_check,erp_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,"Security required; Availability needed because scheduling, quoting, and shipping stop without the ERP",Security; Availability,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"ERP application, scheduling board, customer portal, hosting, backups","Application, portal, and backups in scope; the cloud hosting provider and the payment processor are carved-out subservice organizations",Accept; ask how the vendor monitors its hosting provider
+Exceptions noted,Test exceptions and management responses,No exceptions,None
+Complementary user entity controls (CUECs),Controls the shop must run for the vendor's controls to work,User provisioning and removal; role assignment; enabling MFA; review of user access and audit reports; protecting customer-held exports,"Mapped to AC-2, IA-2(1), AU-6, CP-9. Open gaps at the shop: MFA (POAM-002), removal and review (POAM-001, POAM-013), export (POAM-007)"
+Availability commitments,Recovery objectives versus the shop's BIA (RTO 8 h; RPO 4 h for BP-01 and BP-05),RTO 8 h; RPO 1 h stated in the system description,Meets the BIA; ask for the same figures in the subscription terms at renewal
+Data export and exit,Can the shop get a full copy of its data on a schedule and at contract end,Scheduled full export available in the admin console; data returned within 30 days of termination on request,Enable the weekly export by 2026-09-30 (POAM-007)
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,System description: customers notified within 72 hours of confirming a security incident affecting their data,Ask for 24-hour notice at renewal so the shop can meet the cooperative's 72-hour clock
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager with the independent consultant, 2026-08-20",Repeat each year when the new report is issued

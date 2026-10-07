@@ -1,0 +1,13 @@
+review_item,what_to_check,msp_report_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,Bridge letter needed (below)
+Trust services categories,Security required; Availability relevant because the MSP monitors backups and patches servers,Security only,Availability of backup monitoring is not attested; rely on the company's own restore tests (POAM-007)
+Service auditor and opinion,Independent CPA firm; opinion type,Independent CPA firm; unqualified opinion,None
+System description scope,"Help desk, patching, firewall management, backup monitoring, and the RMM platform in scope",Managed IT services and the MSP's internal RMM and ticketing platforms in scope,None
+Subservice organizations,Carve-out vs inclusive; which vendors support the services,RMM software vendor and the MSP's cloud hosting provider are carved out,"The RMM vendor's own controls, the main risk in P01 R-014, are not covered. Ask the MSP how it monitors the RMM vendor"
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 sampled technician access changes lacked documented approval; remediated in 2026-01,Accept; check in next report
+Complementary user entity controls (CUECs),Controls the company must operate for the MSP's controls to work,Approve MSP technician access; review MSP activity reports; notify the MSP of personnel and system changes; restrict the RMM agent to authorized systems; own backup restore testing,"Map to company controls AC-2, SA-9, CM-8, CP-4. Gaps: MSP activity not reviewed (P03 G-051), restore tests never done (POAM-007), RMM scope not restricted (P01 R-014)"
+Logical access to customer environments,MFA and named accounts for MSP technicians,Named technician accounts with MFA to the RMM platform; access reviewed quarterly,Meets POL-02 4.8 expectations
+Incident notification,MSP commitment to notify customers,System description states notice to affected customers within 72 hours of confirmation; the company's contract has no deadline,Add a 24-hour notice term at renewal (P01 R-014; P08 matrix)
+Change management,Changes to customer systems authorized and tested,Customer-approved change windows for server patching; emergency changes documented,Align with the company's OT change procedure; RMM must never be installed on plant systems
+Bridge letter,Coverage from report end date to today,Requested 2026-08-21,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-08-21,Annual; next review after the 2027 report

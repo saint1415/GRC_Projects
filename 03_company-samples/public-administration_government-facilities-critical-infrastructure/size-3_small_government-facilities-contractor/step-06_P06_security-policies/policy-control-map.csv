@@ -1,0 +1,27 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.3,Annual and new-contract risk assessment using SP 800-30,RA-3,ID.RA-01,CT-S exhibit (SP 800-53 Moderate),No
+POL-01,4.7,Security sanctions,PS-8,GV.RR-04,CT-S exhibit (SP 800-53 Moderate),No
+POL-01,4.8,Vendor and subcontractor security addendum and review before access,SA-9,GV.SC-05,CT-S exhibit (SP 800-53 Moderate); FAR 52.204-21(c),Yes
+POL-01,4.9,"Section 889, Kaspersky, and FASCSA screening; quarterly SAM.gov check",SR-3,GV.SC-05,FAR 52.204-23; 52.204-25; 52.204-30,Yes
+POL-01,4.11,Record retention and transfer at contract end,SI-12,GV.PO-02,Fla. Stat. 119.0701(2)(b),No
+POL-01,4.12,Contingency plan with manual-mode procedures; quarterly restore tests,CP-2; CP-4,RC.RP-01,CT-S exhibit (SP 800-53 Moderate); C-GOVERNMENT-R01 (BTTRG 1.6.2 model),Yes
+POL-01,4.13,Ticketed changes; OT hardening baseline; no default credentials,CM-3; CM-6,PR.PS-01,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-01,4.14,Patch within 30 days (14 for critical internet-facing); endpoint protection,SI-2; SI-3,PR.PS-02,CT-S exhibit (SP 800-53 Moderate); FAR 52.204-21(b)(1)(xii)-(xiii),Yes
+POL-02,4.1,Named accounts; shared device passwords in the vault,IA-2; AC-2,PR.AA-01,CT-S exhibit (SP 800-53 Moderate); FAR 52.204-21(b)(1)(v),Yes
+POL-02,4.3,"MFA for email, CMMS, cloud, admin portals, and remote access",IA-2(1),PR.AA-03,CT-S exhibit (SP 800-53 Moderate); FAR 52.204-21(b)(1)(vi),Yes
+POL-02,4.4,Remote access to OT only through the jump host with approval and recording,AC-17; MA-4,PR.AA-05,CT-S exhibit (SP 800-53 Moderate); CT-C addendum,Yes
+POL-02,4.5,Same-day access removal; PIV card return on the last day,PS-4; AC-2,PR.AA-05,FAR 52.204-9(b); GSAR 552.204-9,Yes
+POL-02,4.6,Monthly administrator and quarterly access reviews,AC-2; AC-6,PR.AA-05,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-02,4.8,Change default passwords before connecting any device,IA-5; CM-6,PR.AA-03,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-02,4.10,"Log and weekly review of sign-ins, admin actions, and remote sessions",AU-2; AU-6,DE.CM-03,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-03,4.3,Put buildings in a safe state first,IR-4,RS.MI-01,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-03,4.5,"Customer notice within 24 hours (state, county) or immediately (GSA)",IR-6,RS.CO-02,CT-S; CT-C; C-GOVERNMENT-R01 (BTTRG 1.6.1),Yes
+POL-03,4.8,Annual tabletop with each customer,IR-3,ID.IM-02,CT-S exhibit (SP 800-53 Moderate),No
+POL-04,4.2,"CUI marking, restricted storage, encrypted transfer",MP-3; MP-4; SC-8,PR.DS-01,32 CFR 2002; GSA Order PBS 3490.3,Yes
+POL-04,4.3,Security system plans handled as Restricted (exempt records),AC-21,PR.DS-01,Fla. Stat. 119.071(3)(a),No
+POL-04,4.7,Wipe or destroy media; shred at site offices,MP-6,ID.AM-08,FAR 52.204-21(b)(1)(vii); Fla. Stat. 501.171(8),No
+POL-04,4.8,Isolated immutable backups; central controller program repository,CP-9,PR.DS-11,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-05,4.4,"Role-based OT, administrator, and CUI training",AT-3,PR.AT-02,CT-S exhibit (SP 800-53 Moderate),Yes
+POL-05,4.8,Call-back verification before granting remote access,AT-2,PR.AT-01,CT-S exhibit (SP 800-53 Moderate),No
+POL-05,4.10,Approved AI tools only; no AI or biometric features without P10 approval,PL-4,GV.PO-01,Fla. Stat. 501.171 (biometric data),No

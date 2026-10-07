@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Risk register entries and change risk reviews for each service line,GRC platform,CISO,Annual and on change,All changes flagged as significant,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Ready
+Both,CC5.2; CC8.1,Change tickets with approvals and test evidence,IT service management,CIO,Per change,25 changes per service line,P02 CM-3,Collecting
+Both,CC6.1; CC6.3,Quarterly access certifications,Identity governance,Director of Identity and Access Management,Quarterly,All quarters,P02 AC-2,Collecting
+Both,CC6.2,Credential reset tickets showing verified identity proofing,IT service management; identity proofing service,Director of Identity and Access Management,Per reset,40 resets per quarter,POAM-001,Not started
+Both,CC6.2,Joiner and leaver reports reconciled to HRIS,Identity governance; HRIS,Director of Identity and Access Management,Per event,40 terminations,P07 PS-4,Collecting
+Both,CC6.6; CC6.7,"WAF, network policy, and TLS configuration exports",Landing zone (Cloud provider B),Director of Cloud Platform Engineering,Quarterly,Configuration at 2 points in the period,P04,Ready
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports,EDR console; scanner,Director of Security Operations,Weekly,5 weeks (random),P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SOC alert and case records for the service line,SIEM; case management,Director of Security Operations,Continuous,25 alerts per service line,P07 AU-6,Collecting
+Both,CC7.4; CC7.5,"Incident tickets, tabletop and lessons-learned reports",Case management,Director of Security Operations,Per incident; annual tabletop,All incidents; 2026-11-19 tabletop,P08,Collecting
+Both,CC9.2,Vendor reviews of subservice organizations and key vendors,GRC platform,Director of Third-Party Risk Management,Annual,All tier-1 vendors for the service line,P07 SR-6,Collecting
+Both,A1.2; A1.3,Backup reports and failover test records,Backup service; test records,Director of Cloud Platform Engineering,Daily backups; quarterly failover,25 backup days; all failover tests,P05 DEP-03; DEP-23,Ready
+Both,C1.1,Data inventory and tenant isolation tests,Data catalog; test records,Chief Privacy Officer,Annual,Inventory and 1 test,P06 POL-04,Ready
+SL-1 Dealer financing platform,C1.2; P4.2; P4.3,Purge job reports including the data warehouse,Data platform,Chief Privacy Officer,Monthly,3 months (random),POAM-022,Not started
+SL-1 Dealer financing platform,PI1.2; PI1.3,Decision rule change records and daily funding reconciliations,Loan platform,Finance Chief Credit Officer,Per change; daily,25 rule changes; 25 reconciliation days,Existing SL-1 report,Ready
+SL-1 Dealer financing platform,PI1.4; PI1.5,Decision-to-document and funding file reconciliations,Loan platform,"President, Finance",Daily,25 days,Existing SL-1 report,Ready
+SL-1 Dealer financing platform,P1.1; P2.1; P3.2,Notice versions and consent records,Loan platform,Chief Privacy Officer,Per application,40 applications,New for 2027,Collecting
+SL-1 Dealer financing platform,P6.1; P6.2; P6.7,Disclosure log including vendor disclosures,Loan platform; GRC platform,Chief Privacy Officer,Continuous,25 disclosures,New for 2027,Not started
+SL-1 Dealer financing platform,CC6.2,Dealer administrator attestations and inactivity disable reports,Dealer portal,"President, Finance",Quarterly,All quarters,P03 G-030,Not started
+SL-2 Connected equipment monitoring,CC2.3,System description and customer commitments,Document repository,"President, Manufacturing",Annual,Current version,New,Not started
+SL-2 Connected equipment monitoring,CC8.1,Firmware release records through the change advisory board,IT service management; release pipeline,Connected services engineering lead,Per release,All releases in the period,New,Not started
+SL-2 Connected equipment monitoring,CC6.1,Device certificate inventory and rotation reports,Device management platform,Connected services engineering lead,Monthly,3 months,P01 R-037,Collecting
+SL-2 Connected equipment monitoring,A1.2,Cellular carrier fallback design and test,Test records,Connected services engineering lead,Annual,1 test,P05 BP-13,Not started

@@ -1,0 +1,43 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Written information security program (WISP) made of POL-01, P01, P02, P08",PM-1,GV.PO-01,N54-R01 (314.3(a)); N54-R03 (Form W-12 line 11),No
+POL-01,4.2,Owner designated Qualified Individual in writing,PM-2,GV.RR-02,N54-R01 (314.4(a)),No
+POL-01,4.3,Annual written risk assessment with SP 800-30,RA-3; PM-9,ID.RA-01,N54-R01 (314.4(b); 314.4(b)(2)),Yes
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,N54-R01 (314.4(b)),No
+POL-01,4.5,Annual evaluation with outside review every second year,CA-2,ID.IM-02,N54-R01 (314.4(d)(1); 314.4(g)),No
+POL-01,4.6,Policy review each July and before PTIN renewal,PL-1,GV.PO-02,N54-R03 (Form W-12 line 11),No
+POL-01,4.7,Annual consumer count against the 314.6 threshold,PM-9,GV.RM-01,N54-R01 (314.6),No
+POL-01,5.1,Helpers and contract preparers bound by agreement to this policy and IRC 7216,PL-4; PS-7,GV.RR-04,N54-R02 (301.7216-1(a)),No
+POL-01,5.4,"Written, time-limited exceptions",PL-1,GV.PO-02,N54-R01 (314.3(a)),No
+POL-01,6.1,"No contract terms, no client data",SA-9,GV.SC-05,N54-R01 (314.4(f)(2)),Yes
+POL-01,6.2,Vendor list,SA-9,ID.AM-01,N54-R01 (314.4(f)(1)),Yes
+POL-01,6.3,Pre-adoption checklist for new applications and features,SA-4,GV.SC-06,N54-R01 (314.4(c)(4)); N54-R02,No
+POL-01,6.4,Annual review of the tax software vendor's SOC 2 report and other providers,SA-9,GV.SC-07,N54-R01 (314.4(f)(3)),Yes
+POL-01,6.5,Written IRC 6713 and 7216 notice to contractor individuals before access,PS-7,GV.SC-05,N54-R02 (301.7216-2(d)(2)),No
+POL-01,6.6,"Owner-started, watched remote support; contractor account with MFA",AC-17,PR.AA-05,N54-R01 (314.4(f)),No
+POL-01,7.1,Named accounts; no shared credentials,IA-2; AC-2,PR.AA-01,N54-R01 (314.4(c)(1)(i)),No
+POL-01,7.2,"MFA on every system that offers it, including clients on the portal",IA-2(1); IA-2(2),PR.AA-03,N54-R01 (314.4(c)(5)),Yes
+POL-01,7.3,Password manager; no passwords stored in browsers or devices,IA-5,PR.AA-01,N54-R01 (314.4(c)(1)(i)),No
+POL-01,7.4,Helper accounts approved and disabled on the last day; quarterly user review,AC-2,PR.AA-05,N54-R01 (314.4(c)(1)(i); 314.4(c)(1)(ii)),Yes
+POL-01,7.5,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,N54-R01 (314.4(c)(1)(i)),No
+POL-01,7.6,Sealed emergency access codes held by the owner's attorney,AC-2; CP-2,RC.RP-01,N54-R01 (314.3(b)(2)),No
+POL-01,7.7,Monthly and filing-season log review; weekly EFIN and PTIN counts,AU-6,DE.AE-02,N54-R01 (314.4(c)(8)); N54-R03 (Pub. 4557),Yes
+POL-01,7.8,Security change log,CM-3,PR.PS-01,N54-R01 (314.4(c)(7)),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,N54-R01 (314.4(c)(2)),No
+POL-01,8.2,Restricted data only in approved locations,AC-3; CM-8,ID.AM-07,N54-R01 (314.4(c)(2)),No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,N54-R01 (314.4(c)(3)),No
+POL-01,8.4,"Portal-only exchange of returns, documents, and Forms 8879",SC-8,PR.DS-02,N54-R01 (314.4(c)(3)),Yes
+POL-01,8.5,"Call-back rule for bank account, address, and email changes",IA-2,PR.AA-03,N54-R01 (314.3(b)(3)),No
+POL-01,8.7,Encrypted backup of the email and file suite with one-year retention,CP-9,PR.DS-11,N54-R01 (314.3(b)(2)),Yes
+POL-01,8.8,Shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,N54-R01 (314.4(c)(6)(i)); Fla. Stat. 501.171(8),No
+POL-01,8.9,Written retention schedule; Forms 8879 kept at least 3 years; old IRS authorizations withdrawn,SI-12,ID.AM-08,N54-R01 (314.4(c)(6)); N54-R03 (Pub. 1345; Pub. 4557),No
+POL-01,8.10,IRC 7216 disclosure and consent rules; no SSNs outside the United States,PL-4,GV.PO-01,N54-R02 (301.7216-2; 301.7216-3),No
+POL-01,9.3,Automatic updates and antivirus stay on; approved software sources,SI-2; SI-3,PR.PS-02,N54-R01 (314.4(c)),Yes
+POL-01,9.4,Router password changed; family devices on the guest network,SC-7,PR.IR-01,N54-R01 (314.4(c)(1)),No
+POL-01,9.5,AI tools only after assessment; no client data without a confirmed IRC 7216 basis; owner checks AI output,PL-4; SA-9,GV.PO-01,N54-R02 (301.7216-3(a)(1)); N54-R01 (314.4(c)(4)),No
+POL-01,9.6,Annual security training before filing season; security alerts,AT-2; AT-3,PR.AT-01,N54-R01 (314.4(e)(1); 314.4(e)(3)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,"N54-R01 (314.4(h), exempt; kept voluntarily)",No
+POL-01,10.2,Same-day incident log with discovery and confirmation times,IR-5; IR-6,RS.MA-02,N54-R01 (314.4(j)(2)),Yes
+POL-01,10.3,IRS report through the Stakeholder Liaison by the next business day after confirmation,IR-6,RS.CO-02,N54-R03 (Pub. 1345),Yes
+POL-01,10.4,"FTC, Florida, and other notices per the P08 matrix",IR-6,RS.CO-02,N54-R01 (314.4(j)); Fla. Stat. 501.171(3)-(5),No
+POL-01,10.5,No payment without counsel and an OFAC check,IR-4,RS.MA-01,OFAC advisory (2021-09-21),No
+POL-01,11.2,Practice continuation agreement with another CPA,CP-2,RC.RP-01,N54-R01 (314.3(b)(2)); N54-R02,No

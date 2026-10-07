@@ -1,0 +1,13 @@
+review_item,what_to_check,erp_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because shipping and orders run on the ERP (P05 BP-07),Security; Availability,Confidentiality not in scope; rely on contract terms for bills of materials and customer data
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"ERP application, hosting, backup, and support in scope",Application and support in scope; hosting provider is a carved-out subservice organization,Confirm the vendor reviews the hosting provider's own SOC 2 report
+Subservice organizations,Carve-out vs inclusive; which providers,Public cloud hosting provider carved out,Request the vendor's subservice monitoring summary
+Exceptions noted,Test exceptions and management responses,2 exceptions: 1 of 40 changes deployed without documented approval; quarterly access review late in one quarter. Both remediated per management response,Accept; check that both are closed in the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,User provisioning and removal; MFA through the customer's identity provider; role assignment and review; review of the vendor's audit log for administrator actions; protection of API credentials used by the order interface,"Map to AC-2, IA-2(1), AC-6, AU-6, and IA-5. Gaps: no ERP role review and no separation of duties for peroxide adjustments (R-011); no review of ERP administrator logs (POAM-017); order interface credential stored in the cloud tenant without rotation"
+Availability commitments,"Recovery objectives vs the BIA (BP-07 RTO 8 h, RPO 1 h)",RTO 8 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,Encrypted at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Notice of confirmed security incidents affecting customer data within 72 hours per the system description; contract is silent,Add 24-hour security incident notice to the contract (POL-01 4.8)
+Bridge letter,Coverage from the report end date to today,Requested for 2026-04-01 to 2026-09-30,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Controller with the IT Manager, 2026-08-24",Annual; next review on receipt of the 2027 report

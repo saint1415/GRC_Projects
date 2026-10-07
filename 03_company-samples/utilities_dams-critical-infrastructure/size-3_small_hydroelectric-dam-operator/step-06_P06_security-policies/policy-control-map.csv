@@ -1,0 +1,27 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.3,Annual update of the Security Assessment and Security Plan including the Cyber/SCADA annex,PL-2,GV.PO-02,C-DAMS-R01 (Rev. 3A 6.4; 7.5),Yes
+POL-01,4.4,Every certification letter statement checked against dated evidence,CA-5,GV.OV-01,C-DAMS-R01 (Rev. 3A 8.0),No
+POL-01,4.5,Annual risk assessment with the Rev. 3A threat scenarios; annual Section 9 criticality review,RA-3; PM-9,ID.RA-04,C-DAMS-R01 (Rev. 3A 5.3; Table 9.3a general),No
+POL-01,4.6,Risk acceptance authority; no High acceptance for uncontrolled-release risks,PM-9,GV.RM-02,C-DAMS-R01 (Rev. 3A Form 3 Q29),No
+POL-01,4.9,Security impact review and approval for every OT change,CM-3,ID.RA-07,C-DAMS-R01 (Rev. 3A Table 9.3a system lifecycle),Yes
+POL-01,4.10,Written security terms and annual review for OT vendors,SA-4; SA-9; SR-6,GV.SC-05,C-DAMS-R01 (Rev. 3A Table 9.3a coordination; Form 3 Q32a),No
+POL-02,4.1,Unique accounts on HMIs; no shared operator account,IA-2; AC-2,PR.AA-01,C-DAMS-R01 (Rev. 3A Table 9.3b access control; Form 3 Q21),Yes
+POL-02,4.3,OT remote access only through the jump host with MFA; view-only until MFA is live,AC-17; IA-2(1),PR.AA-03,C-DAMS-R01 (Rev. 3A Table 9.3b access control),Yes
+POL-02,4.4,"Vendor sessions on demand, approved, recorded, reviewed weekly",MA-4; AU-6,DE.CM-06,C-DAMS-R01 (Rev. 3A Form 3 Q12a-12c),Yes
+POL-02,4.6,Same-day removal of IT and OT access; change passwords the person knew,PS-4; AC-2,PR.AA-05,C-DAMS-R01 (Rev. 3A Form 3 Q32b),Yes
+POL-02,4.8,Default passwords changed before connection,IA-5,PR.AA-01,C-DAMS-R01 (Rev. 3A Form 1 Q6; Q9),Yes
+POL-02,4.10,Physical access limited to the card list; key register,PE-2; PE-3,PR.AA-06,C-DAMS-R01 (Rev. 3A 7.2 key control),Yes
+POL-03,4.2,Local control of gates and units first in any OT incident,IR-4; CP-2,RS.MA-01,C-DAMS-R01 (Rev. 3A 7.4.1),Yes
+POL-03,4.4,Security incidents reported to the Regional Engineer under 18 CFR 12.10(a),IR-6,RS.CO-02,C-DAMS-R02 (12.10(a)(1); 12.3(b)(4)(xi)),Yes
+POL-03,4.5,Suspicious activity to the FERC Regional Office usually within one working day; HSIN report,IR-6,RS.CO-03,C-DAMS-R01 (Rev. 3A 3.2; 4.2),Yes
+POL-03,4.10,Annual exercise with law enforcement and emergency management,IR-3,ID.IM-02,C-DAMS-R01 (Rev. 3A Form 3 Q26a-26b),No
+POL-04,4.2,CEII and security-sensitive marking,MP-3,PR.DS-01,C-DAMS-R01 (Rev. 3A 3.4.3.4; 8.0),No
+POL-04,4.3,CEII only in the restricted library; no general shares,AC-3,PR.DS-01,C-DAMS-R01 (Rev. 3A Form 1 Q22; 3.2 OPSEC),Yes
+POL-04,4.7,OT devices wiped and destroyed with certificates,MP-6,ID.AM-08,C-DAMS-R01 (Rev. 3A Table 9.3a system lifecycle; Form 3 Q19b),No
+POL-04,4.8,"PLC and HMI backups after every change, offline and in the vault, restore-tested yearly",CP-9; CP-4,PR.DS-11,C-DAMS-R01 (Rev. 3A Table 9.3a restoration and recovery; Form 3 Q16),Yes
+POL-04,4.9,Permanent project records per 18 CFR 12.12,SI-12,PR.DS-11,C-DAMS-R02 (12.12),No
+POL-05,4.1,Control system computers for approved control work only,CM-7; PL-4,PR.PS-05,C-DAMS-R01 (Rev. 3A Table 9.3a access control),No
+POL-05,4.3,Annual awareness training; role-based OT training before OT access,AT-2; AT-3,PR.AT-02,C-DAMS-R01 (Rev. 3A Table 9.3a training; 3.2),Yes
+POL-05,4.4,Removable media scanned and logged before any OT use,MP-7,PR.PS-05,C-DAMS-R01 (Rev. 3A Form 3 Q17),Yes
+POL-05,4.8,Approved generative AI tools only; no CEII,PL-4,GV.PO-01,C-DAMS-R01 (Rev. 3A 3.2 OPSEC),No
+POL-05,4.9,No photos or public discussion of security measures,PL-4,PR.AT-01,C-DAMS-R01 (Rev. 3A 3.2 OPSEC),No

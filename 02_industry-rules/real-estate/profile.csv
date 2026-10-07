@@ -1,0 +1,12 @@
+field,value
+regulators,"Federal Trade Commission (Safeguards Rule for appraisers and settlement service providers; FTC Act); HUD (Fair Housing Act); State real estate commissions, AGs and California Privacy Protection Agency; SEC (public REITs and real estate companies)"
+primary_regulation,FTC Safeguards Rule
+primary_regulation_citation,16 CFR Part 314
+primary_regulation_url,https://www.ecfr.gov/current/title-16/part-314
+primary_regulation_rationale,"Settlement/title, appraisal and lease-finance operations are directly covered, and the rule's enumerated elements (qualified individual, risk assessment, MFA, encryption, testing, IR plan, board report) give a concrete, legally grounded gap-analysis checklist; FTC also treats it as a benchmark of 'reasonable security' under Section 5 for brokerages and property managers not strictly covered."
+sensitive_data,Tenant/applicant PII and consumer reports (screening); Bank account and wire instructions (closing/escrow funds); NPI in settlement and mortgage files; Payment card/ACH rent data; Building access/badge and CCTV data
+critical_systems,Property management and tenant portals; Escrow/settlement and wire transfer workflows (BEC target); Building automation/BMS and access control; Leasing CRM and screening integrations; Accounting/ERP
+ai_specific,"HUD No. 24-098 (May 2, 2024) Now on archives.hud.gov; HUD FHEO memo of Sept 16, 2025 de-prioritized related theories and removed tenant-screening-algorithm materials from the FHEO guidance repository. Treat as non-current federal guidance.; Colo. SB26-189 Covers housing decisions (e.g., tenant screening tools); effective Jan 1, 2027.; Cal. Code Regs. tit. 11 (ADMT article) Applies to significant decisions including housing; compliance by Jan 1, 2027."
+assurance_alternatives,
+notes,"FinCEN residential real estate AML rule and HUD/FHFA items were not researched as they are not primarily cyber (FHFA cyber requirements apply to Fannie Mae/Freddie Mac/FHLBanks, i.e., finance). Verified 2026-09-25."
+last_verified,2026-09-25

@@ -1,0 +1,23 @@
+csf2_category,category,delivered_by,group_current,group_target,building_products_current,home_services_current,manufacturing_current,finance_current,subsidiary_target,basis_for_group_current,subsidiary_notes
+GV.OC,Organizational Context,Group,4,4,4,4,4,4,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (3.6),Subsidiaries follow the group context; shared-service dependencies not communicated before 2026
+GV.RM,Risk Management Strategy,Group,4,4,4,4,3,4,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (3.7),Manufacturing reports OT risks to plant management first (GV.RM-05)
+GV.RR,"Roles, Responsibilities, and Authorities",Group,4,4,4,4,4,4,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (3.8),Each subsidiary has a BISO; Finance has its own Qualified Individual
+GV.PO,Policy,Group,4,4,4,4,4,4,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (4.0),Group policies apply to every subsidiary; Finance adds its WISP annex
+GV.OV,Oversight,Group,4,4,4,4,4,4,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (3.7),Subsidiary Presidents sub-certify quarterly
+GV.SC,Cybersecurity Supply Chain Risk Management,Group,3,4,3,3,3,3,4,Rounded mean of the Govern subcategory ratings in gap-analysis.csv (3.3),Overdue tier-1 reassessments affect all subsidiaries; Finance has 5 of them
+ID.AM,Asset Management,Shared,3,4,3,3,2,4,4,P02 CM-8; P04 findings,Manufacturing OT inventory 72%; AQ-02 assets outside the CMDB (Building Products)
+ID.RA,Risk Assessment,Group,4,4,4,4,3,4,4,P01 method; P07 RA-3,Plant OT vulnerabilities not scanned at Plant 3
+ID.IM,Improvement,Group,4,4,4,4,4,4,4,P07; POA&M process,Common improvement process
+PR.AA,"Identity Management, Authentication, and Access Control",Shared,3,4,3,2,3,3,4,"P07 IA-5, IA-2(1), AC-6 results",Home Services branch payables conflicts (AC-5); dealer accounts at Finance; AQ-01 manual terminations
+PR.AT,Awareness and Training,Group,4,4,4,3,4,4,4,P07 AT-2 results,Home Services branch AP staff missing payment-fraud training
+PR.DS,Data Security,Shared,3,4,4,3,4,3,4,"P02 SC-28, SI-7; P03 G-031",Finance warehouse SSN copies; Home Services local bank portals
+PR.PS,Platform Security,Shared,3,4,3,3,2,4,4,"P07 RA-5, SI-2, CM-3 results",Unsupported OT components at Manufacturing
+PR.IR,Technology Infrastructure Resilience,Shared,3,4,3,3,2,4,4,P07 SC-7 test; P04 finding 1,Plant 3 flat network; AQ site VPNs
+DE.CM,Continuous Monitoring,Group,3,4,3,3,2,4,4,P07 AU-6 results,OT and AQ businesses not in the SIEM
+DE.AE,Adverse Event Analysis,Group,4,4,4,4,3,4,4,SOC metrics,OT events reviewed by plant staff only
+RS.MA,Incident Management,Group,4,4,4,4,4,4,4,P08; P07 IR-4,Common SOC process
+RS.AN,Incident Analysis,Group,3,4,3,3,3,3,4,P01 R-065,No correlation of related incidents across subsidiaries
+RS.CO,Incident Response Reporting and Communication,Group,3,4,3,3,3,4,4,P03 G-011; P07 IR-8,Materiality playbook gaps; Finance has a tested FTC notice procedure
+RS.MI,Incident Mitigation,Group,4,4,4,4,3,4,4,P07 IR-4,OT containment depends on plant staff
+RC.RP,Incident Recovery Plan Execution,Shared,3,4,4,3,3,4,4,P05; P07 CP-10 results,ERP RTO missed; field-service vendor RTO; Plants 2 and 3 untested
+RC.CO,Incident Recovery Communication,Group,4,4,4,4,4,4,4,P08 section 8,Common communication process

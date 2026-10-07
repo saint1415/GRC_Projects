@@ -1,0 +1,13 @@
+review_item,what_to_check,platform_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-05-31,None
+Trust services categories,Security required; Availability needed because dispatch cannot run from the board without the platform,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"Dispatch and scheduling, facility request portal, ePCR, hospital delivery, state export, mobile apps, data centers","Platform, portal, mobile apps, and interfaces in scope; the AI intake feature was released after the period and is not covered; hosting provider carved out",Ask the vendor when the AI feature will be in scope and what controls cover its subprocessor (P10)
+Subservice organizations,Carve-out or inclusive; which hosting provider,Hosting provider carved out; the vendor states it reviews the hosting provider's SOC 2 report yearly,Accept; confirm in the next report
+Exceptions noted,Test exceptions and management responses,1 exception: change approval missing for 1 of 25 sampled production changes; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,User provisioning and removal; enabling MFA; role assignment; review of access and export reports; protecting devices that run the mobile apps,"Mapped to AC-2, IA-2(1), AU-6, SC-28. Three are open gaps at the company: MFA (POAM-003), removal (POAM-001, POAM-004), and review (POAM-007)"
+Availability commitments,"Recovery objectives versus the company's BIA (dispatch RTO 2 h, RPO 1 h)",RTO 4 h; RPO 15 min stated in the system description,RPO meets the BIA; RTO does not meet the 2-hour dispatch RTO. The nightly printed run sheet and manual dispatch cover the gap (P05 finding 1); ask for the figures in the contract at renewal
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data; BAA requires breach notice per 164.410,Ask for 24-hour security incident notice and Florida third-party agent notice within 10 days at renewal
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-06-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager with the independent consultant, 2026-08-26",Repeat each year when the new report is issued

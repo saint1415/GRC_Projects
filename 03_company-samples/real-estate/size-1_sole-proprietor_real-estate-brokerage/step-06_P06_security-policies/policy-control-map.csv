@@ -1,0 +1,37 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,Fla. Stat. 501.171(2); N53-R01 benchmark (314.3(a)),No
+POL-01,4.2,Owner designated security lead and privacy contact in writing,PM-2,GV.RR-02,N53-R01 benchmark (314.4(a)),No
+POL-01,4.3,Annual risk assessment using SP 800-30 and change triggers,RA-3; PM-9,ID.RA-01,N53-R01 benchmark (314.4(b)),No
+POL-01,4.4,Risk decision rules; High risks to client funds never accepted,PM-9,GV.RM-01,Fla. Stat. 501.171(2),No
+POL-01,4.5,Annual evaluation with an independent settings check every second year,CA-2,ID.IM-02,N53-R01 benchmark (314.4(d)(1)),No
+POL-01,4.6,Annual policy review including the website security statement,PL-1,GV.PO-02,N53-R02 (45(a)); N53-R01 benchmark (314.4(g)),No
+POL-01,5.3,"Written, time-limited exceptions; none to rule 8.4",PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,6.1,No client data to a contractor or vendor without written terms,SA-9,GV.SC-05,Fla. Stat. 501.171(6)(a); N53-R01 benchmark (314.4(f)(2)),Yes
+POL-01,6.2,Coordinator and bookkeeper terms: own MFA logins; 10-day breach notice; return of data,SA-9,GV.SC-05,Fla. Stat. 501.171(6)(a),Yes
+POL-01,6.3,Five-question check for new tools; annual platform SOC 2 review,SA-9,GV.SC-07,N53-R01 benchmark (314.4(c)(4); 314.4(f)(3)),Yes
+POL-01,7.1,One login per person; no shared credentials or codes,IA-2; AC-2,PR.AA-01,N53-R01 benchmark (314.4(c)(1)(i)),Yes
+POL-01,7.2,Security key or authenticator app on email; platform; and banking; MFA everywhere offered,IA-2(1); IA-2(2),PR.AA-03,N53-R01 benchmark (314.4(c)(5)),Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager,IA-5,PR.AA-01,N53-R01 benchmark (314.4(c)(1)(i)),No
+POL-01,7.4,Contractor access limited to their files; same-day removal; quarterly review,AC-2,PR.AA-05,N53-R01 benchmark (314.4(c)(1)(ii)),No
+POL-01,7.5,Device lock after 5 minutes (phone 30 seconds),AC-11,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.6,Sealed recovery codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,Fla. Stat. 475.25(1)(d)1.,No
+POL-01,7.7,Weekly sign-in and mailbox rule review; same-day alert response; external forwarding blocked,AU-6,DE.AE-02,N53-R01 benchmark (314.4(c)(8)),Yes
+POL-01,7.8,Security log of setting changes,CM-3,PR.PS-01,N53-R01 benchmark (314.4(c)(7)),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,Fla. Stat. 501.171(2),No
+POL-01,8.2,Restricted data only in approved systems,AC-3; SA-9,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.3,Full-disk encryption on the laptop and phone,SC-28,PR.DS-01,Fla. Stat. 501.171(1)(g)2.; N53-R01 benchmark (314.4(c)(3)),Yes
+POL-01,8.4,No money moves on an emailed instruction alone; recorded callback; secure delivery of escrow instructions; client wire safety notice,IA-8; AT-2(3),PR.DS-10,Fla. Stat. 475.25(1)(k); Fla. Stat. 475.25(1)(d)1.,No
+POL-01,8.5,Identity documents collected through secure sharing; texted copies deleted the same day,SC-8,PR.DS-02,N53-R01 benchmark (314.4(c)(3)),No
+POL-01,8.6,Independent backup of mail and files,CP-9,PR.DS-11,Fla. Admin. Code r. 61J2-14.012(1); Fla. Stat. 475.5015,Yes
+POL-01,8.7,Five-year file retention; deletion of extra copies within 30 days; recorded device wipe,SI-12; MP-6,ID.AM-08,Fla. Stat. 475.5015; Fla. Stat. 501.171(8); 16 CFR 682.3,Yes
+POL-01,8.8,Five-year retention of security documentation,SI-12,ID.AM-08,Fla. Stat. 501.171(4)(c),No
+POL-01,9.1,Family uses only a separate standard account,PL-4,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,9.3,Automatic updates; antivirus; current router firmware,SI-2; SI-3,PR.PS-02,Fla. Stat. 501.171(2),No
+POL-01,9.4,Separate home network for work devices,SC-7,PR.IR-01,Fla. Stat. 501.171(2),No
+POL-01,9.5,No client data in AI tools; fair housing check on AI-drafted listings; screening use per P10,PL-4; SA-9,GV.PO-01,N53-R02 (45(a)); 42 U.S.C. 3604(c),No
+POL-01,9.6,Annual security course with a BEC module for the owner and the coordinator,AT-2; AT-2(3),PR.AT-01,N53-R01 benchmark (314.4(e)(1)),Yes
+POL-01,10.1,Incident runbook with printed contacts including the bank fraud desk,IR-8,RS.MA-01,N53-R01 benchmark (314.4(h)),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Fla. Stat. 501.171(4),No
+POL-01,10.3,Call the sending bank first when money may be misdirected,IR-4,RS.MA-01,Fla. Stat. 475.25(1)(d)1.,No
+POL-01,10.4,Meet notice deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(4); Fla. Admin. Code r. 61J2-10.032(1),No
+POL-01,11.2,Backup broker arrangement,CP-2,RC.RP-01,Fla. Stat. 475.25(1)(d)1.,No

@@ -1,0 +1,12 @@
+field,value
+regulators,"Sector Risk Management Agency: Department of the Treasury; Federal banking agencies (OCC, FRB, FDIC), NCUA, SEC, CFTC via FFIEC/FBIIC coordination"
+primary_regulation,PCI DSS v4.0.1 (as a service provider)
+primary_regulation_citation,"PCI DSS v4.0.1 (PCI SSC, June 2024)"
+primary_regulation_url,https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1
+primary_regulation_rationale,"Decision 2026-09-26: keep the payment processor national rather than state-specific. As a payment processor it stores, processes, and transmits cardholder data for merchants, so PCI DSS applies to it as a service provider through card-brand and acquirer contracts. It is also a bank service provider to its sponsor and client banks, so the federal notice duty in 12 CFR 53.4 applies (verify text). NYDFS Part 500 is kept only as an applicability check if the company holds a New York license."
+sensitive_data,"NPI and account data; Payment messages (SWIFT, Fedwire, ACH files); Market and trading data; Authentication credentials and HSM keys"
+critical_systems,"Payment, clearing and settlement systems; Core banking processors; Trading and market-data systems (SCI systems); Authentication/fraud platforms; Backup and data vaulting (e.g., immutable backups)"
+ai_specific,"NYDFS Industry Letter (Oct 16, 2024) AI-specific cyber risk guidance under Part 500."
+assurance_alternatives,PCI DSS validation as a service provider; SOC 1 for financial reporting controls
+notes,"Treasury is the SRMA (CISA sector page). FFIEC CAT sunset Aug 31, 2025. Verified 2026-09-25."
+last_verified,2026-09-25

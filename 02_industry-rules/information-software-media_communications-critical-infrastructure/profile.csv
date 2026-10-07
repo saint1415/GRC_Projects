@@ -1,0 +1,12 @@
+field,value
+regulators,Sector Risk Management Agency: Department of Homeland Security (CISA); Federal Communications Commission
+primary_regulation,FCC CPNI Rules
+primary_regulation_citation,47 CFR 64.2001-64.2011 (47 U.S.C. 222)
+primary_regulation_url,https://www.ecfr.gov/current/title-47/part-64/subpart-U
+primary_regulation_rationale,"The only codified, sector-specific privacy/security safeguard rule for carriers, with annual officer certification and FCC enforcement; pair with NIST CSF 2.0 / CISA CPGs 2.0 for broader network security because the FCC rescinded its 2025 CALEA-based cybersecurity ruling and no general carrier cybersecurity rule exists."
+sensitive_data,CPNI and call detail records; Lawful intercept (CALEA) data and court orders; Subscriber PII; Network topology and outage data (NORS filings presumptively confidential)
+critical_systems,Core/IMS and signaling (SS7/Diameter/5GC); Lawful-intercept platforms; OSS/BSS and customer portals; 911/NG911 routing; Submarine cable landing stations/SLTE; Satellite ground segments
+ai_specific,
+assurance_alternatives,
+notes,"CISA describes the sector as terrestrial, satellite, wireless and wireline. FCC Jan 2025 CALEA cybersecurity declaratory ruling and NPRM were rescinded Nov 20, 2025. Verified 2026-09-25."
+last_verified,2026-09-25

@@ -1,0 +1,23 @@
+csf2_category,category,group_current,group_target,supply_current,supply_target,home_services_current,home_services_target,home_services_north_current,home_services_north_target,fabrication_current,fabrication_target,finance_current,finance_target,basis_for_group_current,subsidiary_notes
+GV.OC,Organizational Context,3,3,2,3,2,3,1,3,2,3,3,3,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Finance knows its Safeguards Rule and Regulation B duties; the other subsidiaries rely on the group
+GV.RM,Risk Management Strategy,3,3,1,3,1,3,1,3,1,3,2,3,Rounded mean of 7 subcategory ratings in gap-analysis.csv,No subsidiary has a local risk process; all follow the group appetite once briefed
+GV.RR,"Roles, Responsibilities, and Authorities",3,3,1,3,1,3,1,3,1,3,3,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Finance has the Qualified Individual oversight role; the other Presidents have no written cyber duties
+GV.PO,Policy,3,3,2,3,2,3,1,3,2,3,3,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Group policies apply to all; Finance adds a supplement; North has not adopted them
+GV.OV,Oversight,3,3,1,3,1,3,1,3,1,3,3,3,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Finance oversight runs through the annual Qualified Individual report
+GV.SC,Cybersecurity Supply Chain Risk Management,2,3,2,3,1,3,1,3,1,3,2,3,Rounded mean of 10 subcategory ratings in gap-analysis.csv,Home Services bought the voice agent and Fabrication relies on machine vendors without review
+ID.AM,Asset Management,2,3,2,3,2,3,1,3,1,3,3,4,Rounded mean of 7 subcategory ratings in gap-analysis.csv,Scanners and plant floor devices are not inventoried; North is unknown
+ID.RA,Risk Assessment,3,3,2,3,2,3,1,3,1,3,3,4,Rounded mean of 10 subcategory ratings in gap-analysis.csv,Shared risk assessment covers all; scanning only reaches HQ and the cloud
+ID.IM,Improvement,3,3,2,3,2,3,1,3,2,3,2,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Improvement cycle runs centrally
+PR.AA,"Identity Management, Authentication, and Access Control",3,3,2,3,3,3,1,3,2,3,3,4,Rounded mean of 6 subcategory ratings in gap-analysis.csv,Supply shares counter accounts at Branch 2; North uses local accounts
+PR.AT,Awareness and Training,3,3,2,3,2,3,1,3,2,3,3,4,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Non-email staff at Supply and Fabrication get no simulations; Finance staff also take lender training
+PR.DS,Data Security,3,3,2,3,3,3,1,3,1,3,3,4,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Supply legacy shares on unencrypted HQ servers; plant backup is a weekly drive
+PR.PS,Platform Security,3,3,3,3,3,3,1,3,1,3,3,3,Rounded mean of 6 subcategory ratings in gap-analysis.csv,Plant controllers unsupported; North unmanaged
+PR.IR,Technology Infrastructure Resilience,3,3,3,3,3,3,1,3,1,3,3,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Supply distribution center has dual ISPs; the plant is flat with a single ISP
+DE.CM,Continuous Monitoring,3,3,2,3,3,3,1,3,1,3,2,4,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Finance servicing activity is not monitored; plant and North not monitored
+DE.AE,Adverse Event Analysis,3,3,3,3,3,3,1,3,2,3,3,3,Rounded mean of 6 subcategory ratings in gap-analysis.csv,Analysis done centrally by the MSSP
+RS.MA,Incident Management,2,3,1,3,1,3,1,3,1,3,2,3,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Presidents need a local escalation role in the runbooks
+RS.AN,Incident Analysis,2,3,2,3,2,3,1,3,2,3,2,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Analysis done centrally; data map missing slows Finance scoping
+RS.CO,Incident Response Reporting and Communication,3,3,2,3,2,3,1,3,2,3,2,4,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Finance has FTC and borrower notice duties; Home Services has customer safety messaging needs
+RS.MI,Incident Mitigation,3,3,3,3,3,3,1,3,2,3,3,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Containment done centrally; North outside EDR
+RC.RP,Incident Recovery Plan Execution,2,3,2,3,2,3,1,3,1,3,3,3,Rounded mean of 6 subcategory ratings in gap-analysis.csv,Each subsidiary needs its BIA workarounds; plant recovery untested
+RC.CO,Incident Recovery Communication,2,3,2,3,2,3,1,3,2,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Recovery communications run centrally

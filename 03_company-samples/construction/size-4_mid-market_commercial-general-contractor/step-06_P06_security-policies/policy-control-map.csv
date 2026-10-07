@@ -1,0 +1,69 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program meets FAR 52.204-21 for FCI systems and SP 800-171 Rev. 2 for CUI systems,PM-1,GV.PO-01,N23-R01 (52.204-21(b)(1)); N23-R03 (252.204-7012(b)(2)(i)),No
+POL-01,4.2,Security program lead and CMMC Affirming Official designated in writing,PM-2,GV.RR-02,N23-R04 (32 CFR 170.22),No
+POL-01,4.3,Annual enterprise risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N23-R03 (SP 800-171 Rev. 2 3.11.1),No
+POL-01,4.4,Risk acceptance authority by level; no risk accepted that makes a federal representation inaccurate,PM-9,GV.RM-01,N23-R04 (32 CFR 170.22),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5,GV.OV-01,N23-R03 (SP 800-171 Rev. 2 3.12.2),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,N23-R01 (52.204-21(b)(1)),No
+POL-01,4.7,"Written, risk-rated, time-limited exceptions; none against SP 800-171 or FAR requirements",PL-1,GV.PO-01,N23-R03 (SP 800-171 Rev. 2),No
+POL-01,4.8,"Bank and EFT changes verified by call-back, second approver, and log; no override; first-payment hold",AC-5; SI-7,PR.AA-05,"Company risk (P01 R-001, R-002); FAR 52.232-33(e)(2)",Yes
+POL-01,4.9,Owners told that remittance changes are never made by email alone,AC-5,PR.AA-05,Company risk (P01 R-001),Yes
+POL-01,4.10,Vendor security review and terms before holding sensitive data; FedRAMP Moderate or equivalent for CUI cloud,SA-9; SA-4,GV.SC-05,N23-R03 (252.204-7012(b)(2)(ii)(D)),Yes
+POL-01,4.11,Tier 1 vendors reassessed annually,SR-6,GV.SC-07,N23-R01 (52.204-21(b)(1)(iii)),No
+POL-01,4.12,"Flowdown of FAR, DFARS 252.204-7012, and CMMC requirements; SPRS verification before award; no CUI before the steps",SA-4; SR-6,GV.SC-05,N23-R03 (252.204-7012(m); 252.204-7020(g)(2)); N23-R04 (252.204-7021(f)),Yes
+POL-01,4.13,"No covered Section 889 equipment provided, installed, rented, or used; manufacturer confirmed in writing",SR-2; SR-5; SR-3,GV.SC-05,N23-R02 (52.204-25(b)),Yes
+POL-01,4.14,"Federal representations only with evidence binder, independent reperformance, and counsel review",CA-2,GV.OV-01,N23-R03 (252.204-7019(b)); N23-R04 (32 CFR 170.22),Yes
+POL-01,4.15,Annual independent assessment and SP 800-171A self-assessment,CA-2,ID.IM-01,N23-R03 (SP 800-171 Rev. 2 3.12.1),Yes
+POL-01,4.16,Security records kept 6 years; certified payroll records 3 years after the work,SI-12,GV.PO-02,FAR 52.222-8(a),No
+POL-01,4.17,AI tools approved before use; no CUI; no AI changes to payment data,PM-9,GV.RM-01,N23-R03 (SP 800-171 Rev. 2 3.1.20),No
+POL-01,4.18,Sanctions in proportion to intent and harm,PS-8,GV.RR-04,N23-R01 (52.204-21(b)(1)),No
+POL-02,4.1,Unique accounts; no shared accounts,IA-2; AC-2,PR.AA-01,N23-R01 (52.204-21(b)(1)(v)); N23-R03 (SP 800-171 Rev. 2 3.5.1),Yes
+POL-02,4.2,Role-based least privilege; SaaS company-administrator rights limited to IT,AC-2; AC-3; AC-6,PR.AA-05,"N23-R01 (52.204-21(b)(1)(i)-(ii)); N23-R03 (SP 800-171 Rev. 2 3.1.1, 3.1.2, 3.1.5)",Yes
+POL-02,4.3,Separation of duties for payments and SAM EFT data,AC-5,PR.AA-05,N23-R03 (SP 800-171 Rev. 2 3.1.4); company risk (P01 R-002),Yes
+POL-02,4.4,"MFA everywhere; phishing-resistant MFA for CPE, administrators, executives, and payment roles; verified help desk resets",IA-2(1); IA-2(2); IA-2(8); IA-5,PR.AA-03,"N23-R03 (SP 800-171 Rev. 2 3.5.3, 3.5.4); company risk (P01 R-001, R-040)",Yes
+POL-02,4.5,Same-day disable at termination; transfer removal; same-day CPE removal off FC-4,PS-4; PS-5; AC-2,PR.AA-05,N23-R03 (SP 800-171 Rev. 2 3.9.2),Yes
+POL-02,4.6,External users removed at closeout; A&E guests expire after 30 days,AC-2; PS-7,PR.AA-05,N23-R01 (52.204-21(b)(1)(i)); N23-R03 (SP 800-171 Rev. 2 3.1.1),Yes
+POL-02,4.7,Quarterly access reviews; monthly CPE review; quarterly payment role review,AC-2; AC-6,PR.AA-05,N23-R03 (SP 800-171 Rev. 2 3.1.1),Yes
+POL-02,4.8,Separate admin accounts with FIDO2; privileged access broker; break-glass tested quarterly,AC-6(2); AC-2,PR.AA-05,N23-R03 (SP 800-171 Rev. 2 3.1.6),Yes
+POL-02,4.9,14-character passwords; default passwords changed before use,IA-5,PR.AA-03,N23-R01 (52.204-21(b)(1)(vi)); N23-R03 (SP 800-171 Rev. 2 3.5.7),Yes
+POL-02,4.10,Managed devices only; CUI only from enclave laptops or virtual desktop clients; tablets enrolled,AC-19; IA-3,PR.PS-01,"N23-R03 (SP 800-171 Rev. 2 3.1.18, 3.1.19)",Yes
+POL-02,4.11,Remote access with MFA through managed points; no internet-facing router administration,AC-17; SC-7,PR.IR-01,"N23-R01 (52.204-21(b)(1)(x)); N23-R03 (SP 800-171 Rev. 2 3.1.12, 3.1.14)",Yes
+POL-02,4.12,"Physical access: badges, trailer locks, CUI room, escorts, logs, key inventory",PE-2; PE-3; PE-8,PR.AA-06,"N23-R01 (52.204-21(b)(1)(viii)-(ix)); N23-R03 (SP 800-171 Rev. 2 3.10.1, 3.10.3 to 3.10.5)",Yes
+POL-02,4.13,"Vendor and MBSS remote access through the company gateway with named, recorded sessions",AC-17; AC-20(1),PR.AA-05,Contract (MBSS agreements; P09 CC6.1),Yes
+POL-03,4.1,Incident response plan with BEC and CUI runbooks integrated with crisis management and legal,IR-8,RS.MA-01,N23-R03 (SP 800-171 Rev. 2 3.6.1),No
+POL-03,4.2,"Immediate reporting by workforce, within 1 hour",IR-6,RS.MA-02,N23-R03 (SP 800-171 Rev. 2 3.6.2),Yes
+POL-03,4.3,Every incident logged and tracked,IR-5,RS.MA-02,N23-R03 (SP 800-171 Rev. 2 3.6.2),No
+POL-03,4.4,Bank recall and IC3 complaint the same day for payment diversion,IR-4,RS.MI-01,"Company risk (P01 R-001, R-002)",Yes
+POL-03,4.5,Possible CUI incidents reviewed for compromise at once; discovery time recorded,IR-4,RS.AN-03,N23-R03 (252.204-7012(c)(1)(i)),Yes
+POL-03,4.6,DoD report within 72 hours; two medium assurance certificates; malware to DC3,IR-6,RS.CO-02,"N23-R03 (252.204-7012(c)(1)(ii), (c)(3), (d))",Yes
+POL-03,4.7,Log export at incident start; images preserved 90 days; DoD access honored,IR-4; AU-11,RS.AN-07,N23-R03 (252.204-7012(e)-(g)),Yes
+POL-03,4.8,Section 889 reports within 1 business day and 10 business days,IR-6,RS.CO-02,N23-R02 (52.204-25(d)(2)),Yes
+POL-03,4.9,Subcontractor incident numbers collected and assessed,IR-6,RS.CO-03,N23-R03 (252.204-7012(m)(2)(ii)),Yes
+POL-03,4.10,Breach determinations for personal information and client systems; notices on time,IR-6,RS.CO-02,Fla. Stat. 501.171,Yes
+POL-03,4.11,Insurer notified through the carrier hotline before vendors are engaged,IR-7,RS.CO-03,Cyber insurance policy terms,No
+POL-03,4.12,"Annual exercise per runbook, including a DIBNet drill; annual role training",IR-2; IR-3,ID.IM-02,N23-R03 (SP 800-171 Rev. 2 3.6.3),No
+POL-03,4.13,Lessons learned within 30 days,IR-4,ID.IM-03,N23-R03 (SP 800-171 Rev. 2 3.6.1),Yes
+POL-04,4.1,Six classification levels including CUI,RA-2,ID.AM-07,N23-R03 (SP 800-171 Rev. 2 3.8.4),No
+POL-04,4.2,CUI accepted only into the CPE; CUI found elsewhere treated as a possible incident,MP-3; AC-4,PR.DS-01,N23-R01 (52.204-21(b)(2)); N23-R03 (252.204-7012(c)(1)(i)),Yes
+POL-04,4.3,CUI flow limited to the distribution list; download and clipboard blocked; CUI RFIs in the CPE,AC-4,PR.DS-01,N23-R03 (SP 800-171 Rev. 2 3.1.3),Yes
+POL-04,4.4,Approved external systems list by data level; personal accounts prohibited,AC-20,PR.DS-01,N23-R01 (52.204-21(b)(1)(iii)); N23-R03 (SP 800-171 Rev. 2 3.1.20); N23-R04 (252.204-7021(d)(2)),Yes
+POL-04,4.5,FIPS-validated cryptography for CUI; encryption for Restricted and FCI,SC-8; SC-13; SC-28; SC-8(1),PR.DS-02,"N23-R03 (SP 800-171 Rev. 2 3.13.8, 3.13.11, 3.13.16)",Yes
+POL-04,4.6,"Printed CUI: approved printers, numbered sets, CUI room, sealed transport, certified shredding",MP-2; MP-4; MP-5; MP-6,PR.DS-01,N23-R03 (SP 800-171 Rev. 2 3.8.1 to 3.8.5),Yes
+POL-04,4.7,Marking check on every A&E CUI package,MP-3,PR.DS-01,N23-R03 (SP 800-171 Rev. 2 3.8.4),No
+POL-04,4.8,Sanitization with certificates before disposal or reuse,MP-6,ID.AM-08,N23-R01 (52.204-21(b)(1)(vii)); N23-R03 (SP 800-171 Rev. 2 3.8.3),Yes
+POL-04,4.9,"Encrypted, separated, immutable backups; quarterly restore tests",CP-9; CP-4,PR.DS-11,N23-R03 (SP 800-171 Rev. 2 3.8.9),Yes
+POL-04,4.10,No CUI in any AI tool; other data only in approved AI tools,AC-20; SA-9,GV.SC-05,N23-R03 (SP 800-171 Rev. 2 3.1.20),Yes
+POL-04,4.11,Client facility security details in the credential vault; deleted after handover,AC-3,PR.DS-01,Contract (MBSS agreements; P09 C1.1),Yes
+POL-04,4.12,Retention schedule,SI-12,GV.PO-02,FAR 52.222-8(a),No
+POL-05,4.1,Business use; limited personal use,PL-4,GV.PO-01,N23-R01 (52.204-21(b)(1)),No
+POL-05,4.2,Signed acknowledgment at hire and annually; CUI acknowledgment for CPE users,PL-4,GV.PO-01,N23-R03 (SP 800-171 Rev. 2 3.1.9),No
+POL-05,4.3,"Awareness, payment-fraud, CUI role-based, and insider threat training; quarterly phishing exercises",AT-2; AT-2(2); AT-2(3); AT-3,PR.AT-01,N23-R03 (SP 800-171 Rev. 2 3.2.1 to 3.2.3),Yes
+POL-05,4.4,"Never act on a bank change received by email, text, or phone",AT-2,PR.AT-01,"Company risk (P01 R-001, R-002)",Yes
+POL-05,4.5,CUI stays in the enclave; report CUI found elsewhere,AT-2,PR.AT-01,N23-R03 (SP 800-171 Rev. 2 3.1.3),Yes
+POL-05,4.6,No forwarding to personal accounts; no company data on personal devices,AC-20,PR.DS-01,N23-R01 (52.204-21(b)(1)(iii)),Yes
+POL-05,4.7,"Lock screens, trailers, and the CUI room",AC-11; PE-3,PR.AA-06,N23-R01 (52.204-21(b)(1)(viii)),Yes
+POL-05,4.8,"No unapproved software, extensions, or USB storage",CM-11,PR.PS-05,N23-R03 (SP 800-171 Rev. 2 3.4.9),No
+POL-05,4.9,"Report phishing, MFA prompts, and lost devices immediately",IR-6,RS.MA-02,N23-R03 (SP 800-171 Rev. 2 3.6.2),Yes
+POL-05,4.10,Approved AI tools only; never CUI,PL-4,GV.PO-01,N23-R03 (SP 800-171 Rev. 2 3.1.20),No
+POL-05,4.11,"No posting of facility interiors, trailers, client security systems, or drawings",AC-22,PR.DS-01,N23-R01 (52.204-21(b)(1)(iv)); N23-R03 (SP 800-171 Rev. 2 3.1.22),No
+POL-05,4.12,Approved commissioning laptops and gateway only in client buildings,PL-4,GV.PO-01,Contract (installation and MBSS agreements),No

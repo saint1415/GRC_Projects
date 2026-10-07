@@ -1,0 +1,27 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.1,MFA and PAM configuration,Identity platform; PAM,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1),Ready
+Both,CC6.6; CC6.7,"Gateway, WAF, firewall, and TLS scan results",Gateways; scanner,Director of Network Engineering,Quarterly,All quarterly scans,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports with remediation tickets,EDR console; scanner,Director of Security Operations,Weekly,5 weeks; 25 findings,P07 RA-5 sample,Collecting
+Both,CC7.2; CC7.3; CC7.4,"SOC cases, use case list, and incident reports",SOC case management,Director of Security Operations,Continuous,25 cases,P08,Collecting
+Both,CC9.2,Vendor register with SOC report reviews and BAAs,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P03 (164.308(b)(1)); P07 SA-9,Collecting
+Both,CC6.4; CC6.5,"Data center access reviews, colocation SOC 2 report, destruction certificates",Facilities; GRC platform,Director of Data Center Operations,Quarterly; per disposal,All quarterly reviews; 25 certificates,"P02 PE-2, MP-6",Ready
+SL-1 Affiliate EHR hosting,CC1.3; CC2.3; CC3.1,"SL-1 system description (Type 1 version updated), hosting agreements, monthly service reports",Contract repository,"Vice President, Affiliate Services",Annual; monthly,Document; all monthly reports,2025 Type 1 report,Ready
+SL-1 Affiliate EHR hosting,CC6.2; CC6.3,Affiliate inactivity reports and quarterly practice attestations,EHR; identity governance,"Vice President, Affiliate Services",Quarterly,All quarterly attestations,P07 AC-2(3) analytic,Not started (POAM-015)
+SL-1 Affiliate EHR hosting,CC8.1,"Change records with approvals, tests, and migration logs",Change system; EHR,EHR Technical Director,Per change,25 standard and 25 emergency changes,P07 CM-3 sample,Collecting
+SL-1 Affiliate EHR hosting,C1.1,Department security test showing each practice sees only its own patients,EHR test environment,EHR Technical Director,Every upgrade,All upgrades in the period,P07 AC-3 test,Ready
+SL-1 Affiliate EHR hosting,A1.1; A1.2,Capacity dashboards and DC-2 failover test,Monitoring; DR records,EHR Technical Director,Monthly; annual,All months; failover report,P05 DEP-01,Collecting
+SL-1 Affiliate EHR hosting,CC7.5; A1.3,Vault restore retest within 24 hours,DR records,EHR Technical Director,Annual,Retest report,P07 CP-10,Not started (POAM-003)
+SL-1 Affiliate EHR hosting,PI1.2; PI1.4,Interface error queue reviews and delivery reports,Integration engine,Integration Services Manager,Each shift; daily,25 shifts; 25 days,P07 SI-10,Ready
+SL-1 Affiliate EHR hosting,PI1.3,Result reconciliation reports,Integration engine,Integration Services Manager,Daily,25 days,P02 SI-7,Not started (POAM-013)
+SL-2 Tele-critical care,CC1.3; CC2.3; CC3.1,"SL-2 system description, responsibility matrix, and partner contracts",Contract repository,"Vice President, Virtual Care",Annual,Document,New,Not started (due 2027-01-31)
+SL-2 Tele-critical care,CC6.1,Partner clinician identity federation or MFA configuration,Tele-ICU application; identity platform,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 partner sign-ins,New,Not started (due 2027-03-31)
+SL-2 Tele-critical care,CC7.4; CC2.3,Service interruption notices to partners (15-minute log) and joint incident playbook,Virtual care center log,"Vice President, Virtual Care",Per event,All interruptions in the period,P08 matrix,Collecting
+SL-2 Tele-critical care,A1.2; A1.3; CC7.5,Platform failover test and alternate virtual care workstation test,Cloud provider B monitoring; DR records,Director of Cloud Platform Engineering,Annual,Test reports,P04 SYS-14 rows,Collecting
+SL-2 Tele-critical care,CC9.1; A1.2,Alternate virtual care center at H-02,Facilities; DR records,"Vice President, Virtual Care",Annual test,Test report,P01 R-029,Not started (due 2027-06-30)
+SL-2 Tele-critical care,C1.2; P4.2; P4.3,Retention schedule and deletion records for monitoring data and video,Platform storage,Chief Privacy Officer,Monthly deletion job,3 months of deletion logs,New,Not started (due 2027-03-31)
+SL-2 Tele-critical care,P1.1 to P8.1,"Notice language, consent records, access and amendment logs, disclosure log, complaint log",Privacy Office tracker; HIM systems,Chief Privacy Officer,Per event,25 of each request type,P03 Privacy Rule rows,Collecting

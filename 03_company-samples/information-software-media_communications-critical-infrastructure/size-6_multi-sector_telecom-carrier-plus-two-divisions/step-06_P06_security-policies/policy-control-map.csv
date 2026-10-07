@@ -1,0 +1,55 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.2,Group CISO accountable; Carrier CPNI officer and CALEA senior officer per operating company; Tower lighting owner,PM-2,GV.RR-02,C-COMMUNICATIONS-R03 (1.20003(a)); 47 CFR 17.6(a),No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.4,"Risk acceptance authority by level; 911, lighting, and lawful-intercept High risks must be treated",PM-9,GV.RM-01,C-COMMUNICATIONS-R06 (Item 106(b)),No
+POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,Group policy,Yes
+POL-01,4.6,Divisions document common control inheritance annually; tenant agreements on shared platforms,PL-2; CA-2; CA-3,GV.RR-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,4.7,Sanctions expressly cover CPNI misuse,PS-8,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-01,4.8,No agreement no data for vendors and affiliates; 24-hour incident notice; FAR flowdown,SA-9; SA-4,GV.SC-05,C-COMMUNICATIONS-R01 (64.2007(b)); N54-R04 (52.204-21(c)),Yes
+POL-01,4.9,Annual common control assessment and division samples,CA-2; CA-7,ID.IM-01,C-COMMUNICATIONS-R06 (Item 106(b)),Yes
+POL-01,4.11,Retention of security documentation and regulatory records,SI-12,GV.PO-02,C-COMMUNICATIONS-R01 (64.2007(a)(3); 64.2009(c); 64.2011(d)); 47 CFR 17.49,No
+POL-01,4.12,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,C-COMMUNICATIONS-R01 (64.2010(c)); FCRA 15 U.S.C. 1681m(a),Yes
+POL-01,4.13,Regulatory certifications backed by an evidence pack the signer reviews,CA-2; PM-1,GV.OV-01,C-COMMUNICATIONS-R01 (64.2009(e)); C-COMMUNICATIONS-R03 (1.20005); 47 CFR 1.50007,Yes
+POL-02,4.1,Unique identities; no shared accounts on any system including network elements and gateways,IA-2; AC-2; IA-5,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)); N54-R04 (52.204-21(b)(1)(v)),Yes
+POL-02,4.2,Role-based least privilege; purpose-approved affiliate access to CPNI; no standing cross-tenant access,AC-3; AC-6; AC-21,PR.AA-05,C-COMMUNICATIONS-R01 (64.2005(a)(2); 64.2007(b)),Yes
+POL-02,4.3,"MFA for all; phishing-resistant for IT, network, and NOC administrators",IA-2(1); IA-2(2),PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)); N54-R04 (52.204-21(b)(1)(vi)),Yes
+POL-02,4.4,Network elements administered through central AAA with named accounts and MFA from jump hosts,AC-2; AC-17(3); IA-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.5,Access disabled within 4 hours of termination; vendor leavers same business day,PS-4; AC-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.6,"Quarterly certification including privileged, service, and tenant roles",AC-2; AC-6(7),PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.7,Just-in-time privileged access through PAM,AC-6(5),PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.9,Remote access into group or customer networks only through brokered recorded sessions; no persistent tunnels,AC-17; CA-3; MA-4,PR.IR-01,MNO customer contracts; C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.10,Customer authentication for CPNI in every channel including AI; change notices,IA-8; IA-5,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(b)-(f)),Yes
+POL-02,4.11,No default passwords on devices; certificates where supported,IA-5; IA-3; CM-6,PR.AA-01,47 CFR 17.47(a)(2),Yes
+POL-03,4.1,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.2,One group severity scale and playbooks,IR-4; IR-8,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.3,Service-impact gate before containment; Part 4 and FAA steps start at once,IR-4; CP-2,RS.MI-01,C-COMMUNICATIONS-R02 (4.9); 47 CFR 17.47(a); 17.48,Yes
+POL-03,4.4,Record discovery and the CPNI reasonable determination; do not wait for forensics,IR-5,RS.AN-03,C-COMMUNICATIONS-R01 (64.2011(b)),No
+POL-03,4.5,CPNI law enforcement notice within 7 business days; no customer or public disclosure during the hold,IR-6,RS.CO-02,C-COMMUNICATIONS-R01 (64.2011(a)-(c)),Yes
+POL-03,4.6,Notification matrix owned by the Group General Counsel; quarterly review,IR-6; IR-8,RS.CO-02,C-COMMUNICATIONS-R01; C-COMMUNICATIONS-R02; C-COMMUNICATIONS-R06,Yes
+POL-03,4.7,Severity 1 to disclosure committee within 24 hours; Form 8-K within 4 business days or the Item 1.05(d) delay,IR-6,RS.CO-03,C-COMMUNICATIONS-R06 (Form 8-K Item 1.05),Yes
+POL-03,4.8,Lawful-intercept compromise escalated to the CALEA senior officer and reported to law enforcement,IR-6,RS.CO-02,C-COMMUNICATIONS-R03 (1.20003(c)),Yes
+POL-03,4.9,Engineering customer notices within contract terms,IR-6,RS.CO-02,MNO customer contracts; Fla. Stat. 501.171(6),Yes
+POL-03,4.11,"Annual cross-division exercise with matrix, service-impact gate, and materiality",IR-3,ID.IM-02,C-COMMUNICATIONS-R06 (Item 106(b)),No
+POL-04,4.1,"Classes defined; CPNI, call detail, lawful-intercept data, landowner data, configurations, and route maps are Restricted",RA-2,ID.AM-07,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.2,Encrypt Restricted and Confidential information at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-04,4.4,CPNI use only for permitted purposes or with approval; affiliate disclosure only under agreement; campaign register,PT-2; PT-3; AC-21,PR.DS-10,"C-COMMUNICATIONS-R01 (64.2007(b); 64.2009(a), (c))",Yes
+POL-04,4.5,Lawful-intercept information only on SYS-C8 by authorized employees,AC-3; AC-4,PR.DS-01,C-COMMUNICATIONS-R03 (1.20003; 1.20004),Yes
+POL-04,4.6,FCI only in the SYS-E2 enclave,AC-4; AC-22,PR.DS-01,N54-R04 (52.204-21(b)(1)(i)-(iv)),No
+POL-04,4.7,Immutable separate-provider backups; offline copy of network configurations,CP-9,PR.DS-11,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-04,4.8,Sanitize media with a certificate,MP-6,ID.AM-08,N54-R04 (52.204-21(b)(1)(vii)),Yes
+POL-04,4.9,Retention schedule; CDRs online at most 24 months; light outage records 2 years,SI-12,GV.PO-02,47 CFR 17.49,No
+POL-04,4.10,No Restricted data in AI tools without approval and no-training terms,SA-9; PL-4,GV.SC-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-05,4.3,Annual awareness including pretexting; quarterly phishing,AT-2; AT-2(3),PR.AT-01,C-COMMUNICATIONS-R01 (64.2009(b)),Yes
+POL-05,4.4,"Role-based CPNI training before access, including outsourced and affiliate staff",AT-3,PR.AT-02,C-COMMUNICATIONS-R01 (64.2009(b)),Yes
+POL-05,4.7,Approved generative AI tools only,PL-4,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-05,4.8,Record calls only with the notice or consent state law requires,PT-4; PL-4,GV.PO-01,Fla. Stat. 934.03(2)(d) (worked example),No
+POL-05,4.9,No call detail by telephone without the password,AT-3; PL-4,PR.AT-02,C-COMMUNICATIONS-R01 (64.2010(b)),Yes
+SUP-TC,3.1,Network element configuration backups with an offline copy in a second region,CP-9,PR.DS-11,C-COMMUNICATIONS-R02 (4.9),Yes
+SUP-TC,3.1,CALEA SSI policy per operating company; quarterly appendix check; refile within 90 days of a merger,PL-2; PM-2,GV.RR-02,C-COMMUNICATIONS-R03 (1.20003(b)(4); 1.20005),Yes
+SUP-TC,3.1,Chatbot release gate for authentication and account actions,SA-11; CM-4,PR.PS-06,"C-COMMUNICATIONS-R01 (64.2010(c), (e))",No
+SUP-NE,3.2,MNO remote access through brokered PAM sessions; no persistent tunnels,AC-17; IA-5,PR.AA-05,MNO customer contracts,Yes
+SUP-NE,3.2,Covered equipment screening; reporting within 1 business day (52.204-25) or 3 business days (52.204-23),SR-3; IR-6,GV.SC-05,FAR 52.204-25(d); 52.204-23(c); 47 CFR 1.50007,Yes
+SUP-NE,3.2,Visitor logs and escorts at project offices,PE-8; PE-3,PR.AA-06,N54-R04 (52.204-21(b)(1)(ix)),Yes
+SUP-TF,3.3,Written fallback to daily observation when lighting monitoring is lost,CP-2,RC.RP-01,47 CFR 17.47(a)(1),Yes
+SUP-TF,3.3,RMU inventory and quarterly inspection tracking,CM-8; MA-2,ID.AM-01,47 CFR 17.47(b),Yes
+SUP-TF,3.3,No default RMU passwords; private APN or certificates,IA-5; IA-3,PR.AA-01,47 CFR 17.47(a)(2),Yes

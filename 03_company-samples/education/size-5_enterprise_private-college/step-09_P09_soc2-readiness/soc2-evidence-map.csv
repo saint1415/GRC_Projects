@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes; Qualified Individual's annual report,Board portal,General Counsel,Quarterly; annual,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.1,MFA and PAM configuration,Identity platform; PAM,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1),Collecting
+Both,CC6.6; CC6.7,"WAF, network policy, and TLS scan results",Landing zone; scanner,Director of Cloud Platform Engineering,Quarterly,All quarterly scans,P04,Collecting
+Both,CC6.8; CC7.1,"EDR coverage, vulnerability scans, and penetration test",EDR console; scanner,Director of Security Operations,Weekly scans; annual test,Quarterly samples; annual report,P07 RA-5 and CA-8,Collecting
+Both,CC7.2; CC7.3,SOC alert triage and case records,SIEM; case management,Director of Security Operations,Continuous,25 cases,P07 IR-4 and SI-4,Collecting
+Both,CC7.4,"Incident response plan, runbook, and tabletop report",GRC platform,Director of Security Operations,Annual,Plan plus tabletop 2026-11-12,P08,Not started (tabletop 2026-11-12)
+Both,CC8.1,Change tickets with approvals and test evidence,Change management,"Vice President, Enterprise Applications",Per change,25 changes per line,P07 CM-3,Collecting
+Both,CC9.2,"Subservice organization SOC report reviews (cloud providers, LMS vendor, proctoring vendor)",Vendor register,Director of Third-Party Risk Management,Annual,All reviews in the period,P03 G-032,Collecting
+Both,A1.2; C1.1,Backup and encryption configuration,Backup service; key management,Director of Cloud Platform Engineering,Daily backups; configuration,25 backup jobs; configuration once,P02 CP-9 and SC-28,Ready
+SL-1,CC2.3; CC3.1,SL-1 system description and client agreement commitments,Document repository,"Vice President, Workforce Education Services",Annual,Current description,2025 SOC 2 report,Ready
+SL-1,CC6.2,Employer administrator quarterly attestations,SL-1 portal,"Vice President, Workforce Education Services",Quarterly,All attestations,POL-02 4.8,Ready
+SL-1,A1.1; A1.3,SL-1 portal availability reports and DR test,Monitoring; DR test report,"Vice President, Enterprise Applications",Monthly; annual,12 monthly reports; annual test,P05 BP-11,Ready
+SL-1,P2.1; P3.2; P6.1,Student consent records for employer sharing,SIS,University Registrar,Per student,60 sponsored students,P03 G-050,"Not started (after cleanup, POAM-021)"
+SL-1,P6.2; P6.3; P6.7,SIS disclosure records for employer sharing and unauthorized disclosures,SIS,University Registrar,Per disclosure,25 disclosures,P03 G-054,Collecting
+SL-1,P4.2; P4.3,Retention schedule and deletion certificates,Records repository,Chief Privacy Officer,Annual,All deletions in the period,POL-04 4.6,"Not started (schedule approval, POAM-010)"
+SL-2,CC1.3; CC3.1,SL-2 system description and commitments register,Document repository,"Vice President, Online Program Services",Annual,Current description,New for SL-2,Not started (due 2027-01-31)
+SL-2,CC6.2; CC6.3,Partner attestations and partner tenant inactivity reports,LMS partner tenants,"Vice President, Online Program Services",Quarterly,All attestations; 14 tenant reports,POAM-022,Not started (due 2027-01-31)
+SL-2,CC7.5; A1.3; CC9.1,LMS vendor contract RTO and observed failover,Contract; vendor test report,Provost and Chief Academic Officer,Annual,Contract plus failover report,POAM-007,Not started (due 2027-03-31)
+SL-2,PI1.2; PI1.3; PI1.4,"Roster sync validation, reconciliation, and grade passback acknowledgments",Integration platform; LMS,"Vice President, Online Program Services",Daily; per term,25 daily reconciliations; all term passbacks,P02 SI-10,Collecting
+SL-2,CC7.2,LMS admin and grade change event review for partner tenants,SIEM,Director of Academic Technology,Monthly,3 monthly reviews per tenant,P04 LMS AU-6 row,Not started (due 2027-03-31)
+SL-2,C1.2,Partner data return and deletion addenda,Contract repository,"Vice President, Online Program Services",Per agreement,All 14 agreements,New for SL-2,Collecting

@@ -1,0 +1,42 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Maintain a written security program (POL-01 with P01, P02, P08)",PM-1,GV.PO-01,Fla. Stat. 501.171(2); Carrier DSA (16 CFR 314.3(a) benchmark),No
+POL-01,4.2,Owner designated information security coordinator in writing,PM-2,GV.RR-02,Carrier DSA (16 CFR 314.4(a) benchmark),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Fla. Stat. 501.171(2); Carrier DSA (16 CFR 314.4(b) benchmark),Yes
+POL-01,4.4,Risk decision rules; High risks and money-movement risks always treated,PM-9,GV.RM-01,Fla. Stat. 501.171(2),No
+POL-01,4.5,Annual evaluation with outside review every second year,CA-2,ID.IM-02,Carrier DSA (16 CFR 314.4(d)(1) benchmark),No
+POL-01,4.6,Annual policy review; questionnaires answered from the program,PL-1,GV.PO-02,Carrier DSA (questionnaire clause),No
+POL-01,5.1,Sanctions for any future employee,PS-8,GV.RR-04,Fla. Stat. 501.171(2),No
+POL-01,5.3,"Written, time-limited exceptions",PL-1,GV.PO-02,Fla. Stat. 501.171(2),No
+POL-01,6.1,"No client data to a vendor without written terms, including 10-day breach notice",SA-9,GV.SC-05,Fla. Stat. 501.171(6)(a); Carrier DSA (16 CFR 314.4(f)(2) benchmark),Yes
+POL-01,6.2,"Vendor list with data held, terms, and review date",SA-9,ID.AM-07,Carrier DSA (16 CFR 314.4(f) benchmark),Yes
+POL-01,6.3,Vendor checklist before adopting a new service,SA-4,GV.SC-06,Carrier DSA (16 CFR 314.4(c)(4) benchmark),No
+POL-01,6.4,Annual AMS SOC 2 review and customer controls; other vendors each August,SA-9,GV.SC-07,Carrier DSA (16 CFR 314.4(f)(3) benchmark),Yes
+POL-01,6.5,Insurer addenda contacts and deadlines kept in the P08 matrix,IR-6,RS.CO-02,Carrier DSA (72-hour notice),No
+POL-01,6.6,"Owner-started, watched remote support; unattended access off",AC-17,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.1,Own accounts; no shared credentials or one-time codes,IA-2; AC-2,PR.AA-01,Fla. Stat. 501.171(2); Fla. Stat. 626.561(1),Yes
+POL-01,7.2,MFA everywhere offered; authenticator app or security key for email and banking,IA-2(1); IA-2(2),PR.AA-03,Carrier DSA (MFA; 16 CFR 314.4(c)(5) benchmark),Yes
+POL-01,7.3,"Unique 14-character passphrases in a password manager, not the browser",IA-5,PR.AA-01,Carrier DSA (16 CFR 314.4(c)(1)(i) benchmark),Yes
+POL-01,7.4,Bookkeeper banking access view-only; owner alone moves money,AC-6; AC-2,PR.AA-05,Fla. Stat. 626.561(1),Yes
+POL-01,7.5,Device lock after 5 minutes (phone 30 seconds),AC-11,PR.AA-05,Fla. Stat. 501.171(2),No
+POL-01,7.6,Sealed recovery codes held by the owner's attorney,AC-2; CP-2,PR.AA-05,Fla. Stat. 626.748,No
+POL-01,7.7,"Monthly review of sign-ins, mailbox rules, connected apps, and AMS log; outside forwarding blocked",AU-6,DE.AE-02,Carrier DSA (16 CFR 314.4(c)(8) benchmark),Yes
+POL-01,8.1,Trust account details only on the invoice template and client letter,SI-8,PR.AT-01,Fla. Stat. 626.561(1),No
+POL-01,8.2,Callback to a number on file before any payment detail change,IA-2; AT-2,PR.AT-01,Fla. Stat. 626.561(1),No
+POL-01,8.3,Bank alerts on transfers and new payees; bookkeeper reports anomalies same day,AU-6,DE.AE-02,Fla. Stat. 626.561(1),No
+POL-01,9.1,Three-level data classification,RA-2,ID.AM-07,Fla. Stat. 501.171(2); Rule 69O-128,No
+POL-01,9.2,Restricted and Confidential data only in approved systems,AC-3; SA-9,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,9.3,Documents through the AMS portal or secure links; texted ID photos uploaded and deleted,SC-8; AC-19,PR.DS-02,Carrier DSA (16 CFR 314.4(c)(3) benchmark); Fla. Stat. 501.171(2),Yes
+POL-01,9.4,Full-disk encryption on every device,SC-28,PR.DS-01,Fla. Stat. 501.171(1)(g)2.,No
+POL-01,9.5,Email and file backup with 1-year retention; quarterly AMS export,CP-9,PR.DS-11,Fla. Stat. 626.748,Yes
+POL-01,9.6,"Retention schedule tied to 626.748, 626.561(2), and 501.171(4)(c)",SI-12,ID.AM-08,Fla. Stat. 626.748; Fla. Stat. 626.561(2),No
+POL-01,9.7,Shred paper; wipe or destroy devices and printer storage; disposal log,MP-6,ID.AM-08,Fla. Stat. 501.171(8),Yes
+POL-01,10.2,Agency network separate from family devices; router password and firmware,SC-7; SI-2,PR.IR-01,Fla. Stat. 501.171(2),No
+POL-01,10.3,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,Fla. Stat. 501.171(2),No
+POL-01,10.4,"AI tools only after assessment, no-training terms, and approval; agent checks AI drafts",PL-4; SA-9,GV.PO-01,Rule 69O-128; Fla. Stat. 501.171(2),No
+POL-01,10.5,Annual security training with business email compromise,AT-2,PR.AT-01,Carrier DSA (16 CFR 314.4(e)(1) benchmark),No
+POL-01,11.1,Incident runbook with printed contacts,IR-8,RS.MA-01,Carrier DSA (16 CFR 314.4(h) benchmark),No
+POL-01,11.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,Fla. Stat. 501.171(3)(c),No
+POL-01,11.3,Breach determination with counsel; no-notice determinations kept 5 years and sent to the Department,IR-4,RS.MA-02,Fla. Stat. 501.171(4)(c),No
+POL-01,11.4,Meet the notice deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(6); Carrier DSA (72-hour notice),No
+POL-01,11.5,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,OFAC advisory (2021-09-21),No
+POL-01,12.2,Emergency servicing arrangement with another licensed agent,CP-2,RC.RP-01,Fla. Stat. 626.748,No

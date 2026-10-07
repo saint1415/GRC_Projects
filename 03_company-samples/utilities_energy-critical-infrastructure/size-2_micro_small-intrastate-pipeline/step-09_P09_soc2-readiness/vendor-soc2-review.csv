@@ -1,0 +1,14 @@
+review_item,what_to_check,scada_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability needed because controllers cannot see the pipeline without the platform,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"Hosted SCADA host, historian, alarm callout, web client, telemetry tunnel endpoints, data centers, support access","All in scope except the leak-detection anomaly module, released in 2026 after the period began",Ask whether the module will be in the next report; until then treat it as unassured (P10)
+Subservice organizations,Carve-out or inclusive; which providers,Colocation data center providers and the voice and text callout provider carved out; vendor states it reviews their SOC reports yearly,"Ask how a callout provider outage is detected, because callouts reach the on-call controller"
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 sampled platform releases deployed without documented change board approval; remediated,Relevant to P01 R-014; ask for customer release notice in the addendum
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,"Customer manages users and roles, enables MFA, removes users promptly, reviews audit logs, approves its own configuration changes, and protects its endpoints","Mapped to AC-2, IA-2(1), AU-6, CM-3, SC-7. All were open gaps at the company at fieldwork (POAM-001, POAM-002, POAM-004, POAM-010)"
+Availability commitments,Recovery objectives versus the BIA (RTO 2 h and RPO 1 h for BP-01),RTO 4 h; RPO 15 min; failover between two data centers tested twice in the period,RPO meets the BIA; RTO does not. Manual operation covers hours 2 to 4 (P05 finding 2); raise RTO at renewal
+Encryption,"At rest and in transit, including telemetry",Encryption at rest; TLS 1.2 or higher for the web client; encrypted tunnels from gateways,None
+Support access,How vendor staff reach customer tenants,Named support accounts with MFA; sessions logged by the vendor; customers not notified,Ask for notice of support sessions (POL-02 B.7; POAM-013)
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data,Negotiate 24-hour security incident notice in the addendum (POAM-011)
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-07-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager and Operations Manager with the independent consultant, 2026-09-04",Repeat each year when the new report is issued

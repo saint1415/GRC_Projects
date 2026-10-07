@@ -1,0 +1,44 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Maintain a written information security program (POL-01, P02, P01)",PM-1,GV.PO-01,N61-R03 (312.8(b)),No
+POL-01,4.2,Owner designated in writing as program coordinator and privacy contact,PM-2,GV.RR-02,N61-R03 (312.8(b)(1)),No
+POL-01,4.3,Annual risk assessment using SP 800-30 and after major changes,RA-3; PM-9,ID.RA-01,N61-R03 (312.8(b)(2)-(3)),Yes
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,N61-R03 (312.8(b)(3)),No
+POL-01,4.5,"Annual testing, monthly monitoring, outside review every second year",CA-2; CA-7,ID.IM-02,N61-R03 (312.8(b)(4)),No
+POL-01,4.6,Annual evaluation and update of the program,PL-1,GV.PO-02,N61-R03 (312.8(b)(5)),No
+POL-01,5.1,"Online children's privacy notice linked from home page, sign-in page, and each collection form",PT-5,GV.OC-03,N61-R03 (312.4(d); 312.10),Yes
+POL-01,5.2,Direct notice and verifiable parental consent before an account or recording,PT-4,GV.OC-03,N61-R03 (312.4(b)-(c); 312.5(a)-(b)),No
+POL-01,5.3,New notice and consent before any material change,PT-4,GV.OC-03,N61-R03 (312.4(b); 312.5(a)(1)),No
+POL-01,5.4,No disclosure of children's information to third parties,PT-4; SA-9,GV.SC-05,N61-R03 (312.5(a)(2)),No
+POL-01,5.5,Collect only what the activity needs; analytics off in the members area,SI-12(1),ID.AM-07,N61-R03 (312.7; 312.5(c)(7)),No
+POL-01,5.6,"Parent review, deletion, and refusal requests answered within 10 business days",SI-18(4),GV.OC-03,N61-R03 (312.6),No
+POL-01,5.7,Record sessions only with consent on file; 30-day deletion,PT-4; SI-12,GV.OC-03,N61-R03 (312.10); State: Fla. Stat. 934.03(2)(d),No
+POL-01,6.1,"No written assurances, no children's data",SA-9,GV.SC-05,N61-R03 (312.8(c)),Yes
+POL-01,6.2,Vendor list with data held and assurances,SA-9,ID.AM-07,N61-R03 (312.8(c)),Yes
+POL-01,6.3,Annual review of the client-management SaaS SOC 2 report and customer controls,SA-9,GV.SC-07,N61-R03 (312.8(c)),Yes
+POL-01,6.4,"Owner-started, watched remote support; unattended access off",AC-17,PR.AA-05,N61-R03 (312.8(b)(3)),No
+POL-01,7.1,Named accounts; no shared credentials; no family use of the owner's account,IA-2; AC-2,PR.AA-01,N61-R03 (312.8(b)(3)),Yes
+POL-01,7.2,MFA on every service that offers it,IA-2(1); IA-2(2),PR.AA-03,N61-R03 (312.8(b)(3)),Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager,IA-5,PR.AA-01,N61-R03 (312.8(b)(3)),No
+POL-01,7.4,Parents set portal passwords; no list kept,IA-5,PR.AA-01,State: Fla. Stat. 501.171(2),No
+POL-01,7.5,Close portal accounts within 30 days; remove contractor collaborators; term review,AC-2,PR.AA-05,N61-R03 (312.8(b)(3); 312.10),Yes
+POL-01,7.6,Named-parent file sharing only,AC-3,PR.AA-05,N61-R03 (312.8(b)(3)),No
+POL-01,7.7,Monthly sign-in history review,AU-6,DE.AE-02,N61-R03 (312.8(b)(4)),No
+POL-01,7.8,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,N61-R03 (312.8(b)(3)),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,N61-R03 (312.8(b)(3)),No
+POL-01,8.2,Restricted data only in approved systems,AC-3; SA-9,PR.DS-01,N61-R03 (312.8(b)(3)),No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,N61-R03 (312.8(b)(3)); State: Fla. Stat. 501.171(2),Yes
+POL-01,8.4,No progress information by ordinary text,SC-8,PR.DS-02,N61-R03 (312.8(b)(3)),No
+POL-01,8.5,Backup of student folders that sync cannot overwrite,CP-9,PR.DS-11,N61-R03 (312.8(b)(3)),Yes
+POL-01,8.6,Retention schedule; nothing kept indefinitely; term-end deletion log,SI-12,ID.AM-08,N61-R03 (312.10),Yes
+POL-01,8.7,Shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,State: Fla. Stat. 501.171(8); N61-R03 (312.10),No
+POL-01,9.1,Business devices for business work; separate family account,PL-4,PR.AA-05,N61-R03 (312.8(b)(3)),No
+POL-01,9.3,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,N61-R03 (312.8(b)(3)),No
+POL-01,9.4,Unique router password; guest network; hotspot away from home,SC-7,PR.IR-01,N61-R03 (312.8(b)(3)),No
+POL-01,9.5,No student information in AI tools; owner makes every decision about a student,PL-4; SA-9,GV.PO-01,N61-R03 (312.5(a)(2); 312.8(c)),No
+POL-01,9.6,Annual security training for the owner,AT-2,PR.AT-01,N61-R03 (312.8(b)(3)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,State: Fla. Stat. 501.171(3)-(4),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,State: Fla. Stat. 501.171(4),No
+POL-01,10.3,Meet the notice deadlines in the P08 matrix,IR-6,RS.CO-02,State: Fla. Stat. 501.171(3)-(5),No
+POL-01,10.4,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,OFAC ransomware advisory (2021-09-21); State: Fla. Stat. 501.171 (notice duties still apply),No
+POL-01,11.2,Sealed emergency sheet with a designated family member,CP-2; AC-2,RC.RP-01,N61-R03 (312.8(b)(3)),No
+POL-01,11.3,Backup-tutor arrangement for urgent students,CP-2,RC.RP-01,N61-R03 (312.8(b)(3)),No

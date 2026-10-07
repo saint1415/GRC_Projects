@@ -1,0 +1,54 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The group must maintain an information security program aligned to NIST CSF 2.0 that covers the holding company, GBS,...",PM-1; PL-2; PO-01,GV.PO-01,16 CFR 314.3(a) (Finance),No
+POL-01,4.2,The CISO is accountable for the group program. Each subsidiary must designate a business information security officer...,PM-2; RR-02,GV.RR-02,16 CFR 314.4(a) (Finance); N55-R01 (229.106(c)(2)(i)),No
+POL-01,4.3,"An enterprise risk assessment must be performed at least annually and after major changes or acquisitions, using NIST...",RA-3; PM-9; RM-01,GV.RM-01,N55-R01 (229.106(b)(1)(i)); 16 CFR 314.4(b) (Finance),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9; RM-06,GV.RM-06,N55-R01 (229.106(b)(1)),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they des...,PL-1; PO-02,GV.PO-02,16 CFR 314.4(g) (Finance),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes ef...,PL-1; CA-5; PO-02,GV.PO-02,16 CFR 314.4(c)(5) (Finance),No
+POL-01,4.7,"Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and harm, a...",PS-8; RR-04,GV.RR-04,N55-R03 (15 U.S.C. 7262),No
+POL-01,4.8,"Vendors must be tiered by criticality, including whether they can change identities, release payments, or reach custo...",SA-9; SR-6; SC-04; SC-05,GV.SC-04; GV.SC-05,N55-R01 (229.106(b)(1)(iii)); 16 CFR 314.4(f) (Finance),Yes
+POL-01,4.9,"Controls for tier-1 systems must be assessed at least annually by an assessor independent of their operation, and eve...",IM-01,ID.IM-01,N55-R01 (229.106(b)(1)(ii)); N55-R03 (15 U.S.C. 7262),No
+POL-01,4.10,"Every acquisition must include technical cyber due diligence before signing and an integration plan, funded in the de...",RA-3; SA-9; SC-06,GV.SC-06,N55-R01 (229.106(b)(2)),Yes
+POL-01,4.11,"Security documentation, including risk assessments, assessments, and exception records, must be retained for at least...",SI-12; PO-02,GV.PO-02,N55-R03 (15 U.S.C. 7262),No
+POL-01,4.12,"The CISO must report cybersecurity risk to the board risk committee at least quarterly, and quarterly sub-certificati...",PM-9; OV-01,GV.OV-01,N55-R01 (229.106(c)); Rule 13a-15(b),No
+POL-01,4.13,"A new AI use, including an AI feature turned on in an existing product, must be registered and assessed by the AI gov...",RA-3; RA-04,ID.RA-04,16 CFR 314.4(g) (Finance),Yes
+POL-02,4.1,Every user and service must have a unique identity. Shared accounts are prohibited. Every service account must have a...,IA-2; AC-2; AA-01,PR.AA-01,16 CFR 314.4(c)(1)(i) (Finance),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted.",AC-2; AC-3; AC-6; AA-05,PR.AA-05,16 CFR 314.4(c)(1)(ii) (Finance),Yes
+POL-02,4.3,"No one may hold roles that allow them both to change vendor bank details and release payments, to prepare and approve...",AC-5; AA-05,PR.AA-05,N55-R03 (15 U.S.C. 7262),Yes
+POL-02,4.4,"MFA is required for all access. Privileged users, treasury users, and payment approvers must use phishing-resistant a...",AA-03,PR.AA-03,16 CFR 314.4(c)(5) (Finance),No
+POL-02,4.5,A password or MFA reset may be performed only after verified identity proofing under PRC-02.5 (live video check again...,IA-5; AA-02,PR.AA-02,16 CFR 314.4(c)(5) (Finance); N55-R01 (229.106(b)(1)(iii)),Yes
+POL-02,4.6,"Access must be disabled the same business day as a termination, and immediately for involuntary terminations. Contrac...",PS-4; AC-2; AA-05,PR.AA-05,16 CFR 314.4(c)(1)(i) (Finance); N55-R03 (15 U.S.C. 7262),Yes
+POL-02,4.7,"Workforce accounts inactive for 60 days, and dealer and customer accounts inactive for 90 days, must be disabled auto...",AA-05,PR.AA-05,16 CFR 314.4(c)(1)(i) (Finance),No
+POL-02,4.8,Access to SOX systems and to systems with Finance customer information must be certified quarterly; other access semi...,AC-2; AA-05,PR.AA-05,N55-R03 (15 U.S.C. 7262); 16 CFR 314.4(c)(1)(i) (Finance),Yes
+POL-02,4.9,Privileged access must be granted just in time through PAM and recorded. Directory administration must follow the tie...,AA-05,PR.AA-05,16 CFR 314.4(c)(1)(ii) (Finance),No
+POL-02,4.10,"Remote and vendor access, including integrator access to plant OT, must go through the zero-trust or PAM gateway with...",AC-17; MA-4; AA-05,PR.AA-05,N55-R01 (229.106(b)(1)(iii)),Yes
+POL-02,4.11,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by...",AC-2; AA-05,PR.AA-05,N55-R03 (15 U.S.C. 7262),Yes
+POL-03,4.1,The group must maintain an incident response plan and runbooks for its most likely incident types (P08) that cover th...,IR-8; MA-01,RS.MA-01,16 CFR 314.4(h) (Finance),Yes
+POL-03,4.2,"Workforce members must report suspected incidents immediately. Subsidiaries, plants, and contract owners who receive...",IR-6; MA-02,RS.MA-02,N55-R01 (229.106(c)(2)(ii)),Yes
+POL-03,4.3,"Incidents must be triaged, classified under STD-03.1, and tracked to closure in case management, recording the entity...",IR-4; IR-5; MA-02,RS.MA-02,16 CFR 314.4(h) (Finance),Yes
+POL-03,4.4,The CISO must brief the General Counsel within 24 hours of declaring any severity-1 incident or any incident that cou...,IR-6; CO-02,RS.CO-02,"N55-R02 (Form 8-K Item 1.05, Instruction 1)",Yes
+POL-03,4.5,The SOC must review open and recent incidents across all subsidiaries at least monthly to identify related occurrence...,IR-5; AN-03,RS.AN-03,"N55-R02 (Item 1.05, Instruction 3); N55-R01 (229.106(a))",No
+POL-03,4.6,"Regulatory, contractual, and law enforcement notices must meet the deadlines in the notification matrix. GBS must tel...",IR-6; CO-02; CO-03,RS.CO-02; RS.CO-03,16 CFR 314.4(j) (Finance); Fla. Stat. 501.171(6) (worked example); N55-R06 (164.314(b)(2)(iv)),Yes
+POL-03,4.7,"A ransom or extortion payment may be made only with approval of the CEO and the General Counsel, after notice to the...",IR-4; MI-01,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.8,"The plan must be tested at least annually, including the disclosure committee, and tier-1 recovery must be tested ann...",IR-3; CP-4; IM-02,ID.IM-02,N55-R02 (Form 8-K Item 1.05),Yes
+POL-03,4.9,Systems must be recovered in the BIA priority order (P05) from known-good sources.,CP-10; RP-01,RC.RP-01,16 CFR 314.4(h) (Finance),Yes
+POL-03,4.10,"A lessons-learned review must be held within 14 days of recovery, with a written report within 30 days that updates t...",IR-4; IM-03,ID.IM-03,16 CFR 314.4(h)(7) (Finance),Yes
+POL-04,4.1,"All information must be classified as Public, Internal, Confidential, or Restricted. Restricted includes MNPI, Financ...",RA-2; AM-05,ID.AM-05,16 CFR 314.4(c)(2) (Finance),No
+POL-04,4.2,Confidential and Restricted data must be encrypted in transit over external networks and at rest.,SC-8; SC-28; DS-01; DS-02,PR.DS-01; PR.DS-02,16 CFR 314.4(c)(3) (Finance); Fla. Stat. 501.171(2) (worked example),Yes
+POL-04,4.3,Any collaboration site or library holding Restricted data must carry a Restricted sensitivity label. Labeled location...,AC-16; AC-3; DS-01,PR.DS-01,16 CFR 314.4(c)(1)(ii) (Finance),Yes
+POL-04,4.4,"An inventory of Restricted data locations, including copies in the data warehouse and file shares, must be maintained.",CM-12; AM-07,ID.AM-07,16 CFR 314.4(c)(2) (Finance),No
+POL-04,4.5,Data must be retained and destroyed per the retention schedule and legal holds. Finance customer information must be...,SI-12; MP-6; DS-01,PR.DS-01,16 CFR 314.4(c)(6) (Finance); Fla. Stat. 501.171(8) (worked example),No
+POL-04,4.6,Group health plan PHI may be kept only in the restricted benefits site and used only by the staff named in the plan d...,AC-3; AA-05,PR.AA-05,N55-R06 (164.504(f)(2)(iii); 164.314(b)(2)(ii)),Yes
+POL-04,4.7,"Payment files must be created, approved, and sent only through the payment hub, which hashes and verifies them. Manua...",SI-7; DS-01,PR.DS-01,N55-R03 (15 U.S.C. 7262),Yes
+POL-04,4.8,"Backups of tier-1 data must be immutable and stored in a separate account, with an offline copy.",CP-9; DS-11,PR.DS-11,16 CFR 314.4(h) (Finance),Yes
+POL-04,4.9,"MNPI must be handled under PRC-04.1: deal rooms and earnings drafts in access-listed locations, insiders listed, and...",AC-3; DS-01,PR.DS-01,Rule 13a-15(b); Regulation FD (17 CFR 243.100),Yes
+POL-04,4.10,Restricted data may be entered only into AI tools on the approved list (STD-05.3) and only for approved purposes.,AC-20; DS-10,PR.DS-10,16 CFR 314.4(c)(1)(ii) (Finance),No
+POL-05,4.1,Company systems must be used for authorized business purposes. Limited personal use is allowed if it does not create...,PL-4; PO-01,GV.PO-01,N55-R03 (15 U.S.C. 7262),No
+POL-05,4.2,Users must acknowledge this policy before receiving access and annually after that. (PL-4,AT-01,PR.AT-01,16 CFR 314.4(e)(1) (Finance),No
+POL-05,4.3,"Users must complete security awareness training at onboarding and annually. Payment, treasury, administrator, and pla...",AT-2; AT-3; AT-01; AT-02,PR.AT-01; PR.AT-02,16 CFR 314.4(e)(1) (Finance),Yes
+POL-05,4.4,"Users must not install unapproved software or connect unapproved devices, including to plant networks.",CM-11; PS-05,PR.PS-05,N55-R01 (229.106(b)(1)),No
+POL-05,4.5,Users must lock unattended devices and report lost or stolen devices immediately.,AC-11; IR-6; AA-05,PR.AA-05,Fla. Stat. 501.171(2) (worked example),Yes
+POL-05,4.6,"Users may use only AI tools on the approved list (STD-05.3), must check AI output before relying on it, and must not...",PL-4; PO-01,GV.PO-01,16 CFR 314.4(c)(1)(ii) (Finance); Rule 13a-15(b),No
+POL-05,4.7,"No one may change vendor bank details, release a payment, or change direct deposit details on the strength of an emai...",PL-4; AT-3; AT-02,PR.AT-02,N55-R03 (15 U.S.C. 7262),Yes
+POL-05,4.8,"Users must report suspected phishing, fraud attempts, and incidents through the report button or the service desk.",IR-6; MA-02,RS.MA-02,16 CFR 314.4(h) (Finance),Yes
+POL-05,4.9,External systems and personal devices may be used for company data only as allowed by STD-05.2.,AC-20; PO-01,GV.PO-01,16 CFR 314.4(c)(1)(ii) (Finance),No

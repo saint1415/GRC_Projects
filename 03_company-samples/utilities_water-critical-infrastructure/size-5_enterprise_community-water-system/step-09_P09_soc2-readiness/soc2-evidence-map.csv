@@ -1,0 +1,24 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Independent assessment report and POA&M status,GRC platform,Chief Audit Executive,Annual; monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Ready
+Both,CC6.2; CC6.3,"Access provisioning, certification, and termination records",Identity governance,Director of Identity and Access Management,Event-driven; quarterly certification,25 new users; 25 terminations; 2 quarterly certifications,"P07 AC-2, PS-4",Collecting
+Both,CC6.1,"SSO, MFA, and PAM configuration",Identity platform,Director of Identity and Access Management,Point in time plus changes,Configuration plus change log,P02; P04,Ready
+Both,CC6.4,"Badge access reports for ROCCs, contact centers, and colocation",Badge system; colocation SOC 2,"Vice President, Corporate Security",Quarterly review,2 quarterly reviews,P07 PE-3,Collecting
+Both,CC7.1,Vulnerability scan and patch reports,Scanners; patch tools,Director of Security Operations,Monthly,3 months,"P07 RA-5, SI-2",Collecting
+Both,CC7.2; CC7.3,SOC alert tickets and triage records,SIEM; case platform,Director of Security Operations,Continuous,25 alerts,"P07 SI-4, IR-4",Collecting
+Both,CC7.4; CC7.5,"Incident records, client notices, and lessons learned",Case platform,Director of Security Operations,Event-driven,All severity-1 and severity-2 incidents,P08,Collecting
+Both,CC9.2,Vendor register and SOC report reviews for subservice organizations,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P04; P07 SA-9,Collecting
+SL-1,CC6.6,Gateway session approvals and recordings for client control sessions,OT remote access gateway,Director of OT Security,Per session,25 sessions,"P07 AC-17, MA-4",Collecting
+SL-1,CC6.6,Client connection register (read-only or control),Contract-services monitoring platform,"Vice President, Contract Services",Quarterly,2 quarterly reviews,P01 R-054,Not started
+SL-1,CC2.3; CC3.1,Monthly operating reports and alarm response metrics,Monitoring platform,"Vice President, Contract Services",Monthly,3 months per sampled client,None,Collecting
+SL-1,A1.2; A1.3,Monitoring platform failover test reports,Monitoring platform,"Vice President, Contract Services",Semiannual,Both tests in the period,P05 DEP-26,Ready
+SL-1,C1.1; C1.2,Client confidential information inventory and destruction certificates,GRC platform,"Vice President, Contract Services",Annual; at contract end,Inventory plus all contract exits,None,Not started
+SL-2,CC2.3; CC3.1,SL-2 system description and commitments register,GRC platform,"Vice President, Utility Billing Services",Annual,Final documents,None,Not started
+SL-2,CC6.3,Tenant-scoped role certifications,Identity governance,"Vice President, Utility Billing Services",Quarterly,2 quarterly certifications,None,Not started
+SL-2,CC8.1,Release pipeline records with tenant isolation test results,CI/CD pipeline,"Vice President, Utility Billing Services",Per release,25 releases,P04,Not started
+SL-2,PI1.3,Rate table change records with second-person verification and test bills,CIS,"Vice President, Utility Billing Services",Per change,25 rate changes,None,Not started
+SL-2,PI1.2; PI1.4,Meter read validation and bill print and payment posting reconciliations,CIS,"Vice President, Utility Billing Services",Per bill cycle,25 bill cycles,None,Collecting
+SL-2,A1.2; A1.3,CIS DR test report,Cloud provider A; CIS,CIO,Annual,The test in the period,P05 DEP-04,Ready
+SL-2,CC6.1; CC7.2,Tokenization and egress detection configuration,CIS; SIEM,Chief Privacy Officer,Point in time plus changes,Configuration plus alerts,P01 R-026,Not started

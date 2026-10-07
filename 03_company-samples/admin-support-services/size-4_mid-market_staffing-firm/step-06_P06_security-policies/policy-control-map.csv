@@ -1,0 +1,64 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Documented program benchmarked against NIST CSF 2.0,PM-1,GV.PO-01,N56-BM (GV.PO-01),No
+POL-01,4.2,Information Security Officer designated in writing,PM-2,GV.RR-02,N56-BM (GV.RR-02),No
+POL-01,4.3,Annual enterprise risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Fla. Stat. 501.171(2); N56-BM (ID.RA-05),Yes
+POL-01,4.4,Risk acceptance authority; payday and credential risks capped,PM-9,GV.RM-01,N56-BM (GV.RM-02),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5; PM-9,GV.OV-01,N56-BM (GV.OV-01),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,N56-BM (GV.PO-02),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-01,N56-BM (GV.PO-01),No
+POL-01,4.8,"Sanctions, including credential sharing",PS-8,GV.RR-04,E-Verify MOU Art. II.A.15,No
+POL-01,4.9,Vendor gate: security review and terms before Restricted data,SA-4; SA-9,GV.SC-05,Fla. Stat. 501.171(6); N56-BM (GV.SC-05),Yes
+POL-01,4.10,Annual reassessment of Tier 1 vendors,SR-6,GV.SC-07,N56-BM (GV.SC-07),Yes
+POL-01,4.11,Annual independent assessment,CA-2,ID.IM-01,N56-R03 (8 CFR 274a.2(e)(1)(iii)),No
+POL-01,4.12,Six-year retention of security records,SI-12,GV.PO-02,N56-BM (GV.PO-02),Yes
+POL-01,4.13,AI tools approved before use; hiring AI is High tier,PM-9; SA-9,GV.RM-01,Title VII 703(k) (42 U.S.C. 2000e-2(k)),Yes
+POL-01,4.14,Secure development for firm-written code,SA-11; SA-15,PR.PS-06,N56-BM (PR.PS-06),No
+POL-01,4.15,"Change control for pay, I-9, credential, and AI settings",CM-3,ID.RA-07,N56-BM (ID.RA-07),Yes
+POL-02,4.1,Unique accounts; no shared logins including E-Verify and kiosks,IA-2; AC-2,PR.AA-01,E-Verify MOU Art. II.A.15,Yes
+POL-02,4.2,"Restricted access groups for I-9, consumer reports, medical information, SSNs",AC-3; AC-6,PR.AA-05,N56-R03 (8 CFR 274a.2(g)(1)(i)); N56-R02 (15 U.S.C. 1681b(b)(1)(A)(ii)); ADA 29 CFR 1630.14(b)(1),Yes
+POL-02,4.3,SSO and MFA; phishing-resistant for payroll and admins; no SMS where pay can change,IA-2(1); IA-2(2); IA-2(8),PR.AA-03,Fla. Stat. 501.171(2),Yes
+POL-02,4.4,Same-day removal in every system at termination,PS-4; AC-2,PR.AA-01,E-Verify MOU Art. II.A.3,Yes
+POL-02,4.5,Prior-role access removed within 5 business days of transfer,PS-5; AC-2,PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-02,4.6,Quarterly access reviews; monthly E-Verify reconciliation; client user reviews,AC-2; IA-8,PR.AA-05,E-Verify MOU Art. II.A.3,Yes
+POL-02,4.7,Payroll separation of duties and bank-change verification,AC-5,PR.AA-02,N56-BM (PR.AA-05),Yes
+POL-02,4.8,"Lockout, idle lock, and kiosk session reset",AC-7; AC-11; AC-12,PR.AA-03,N56-BM (PR.AA-03),No
+POL-02,4.9,Break-glass accounts tested quarterly,AC-2,PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-02,4.10,"API keys and service accounts in the secrets service, scoped, rotated",IA-5; AC-6,PR.AA-01,Fla. Stat. 501.171(2),Yes
+POL-02,4.11,Separate administrator accounts and just-in-time elevation,AC-6(2); AC-6(5),PR.AA-05,N56-BM (PR.AA-05),No
+POL-02,4.12,Remote and vendor access with MFA and session approval,AC-17; MA-4,PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-02,4.13,"Client and supplier users owned, with MFA",IA-8,PR.AA-03,MSP client contracts,No
+POL-03,4.1,Incident plan and runbooks for payroll breach and payroll outage,IR-8,RS.MA-01,N56-BM (RS.MA-01),Yes
+POL-03,4.2,Immediate reporting within 1 hour,IR-6,RS.MA-02,N56-BM (RS.MA-02),Yes
+POL-03,4.3,"Log, categorize, and track incidents; pay diversion is an incident",IR-5; IR-4,DE.AE-08,N56-BM (DE.AE-08),Yes
+POL-03,4.4,MSSP 30-minute escalation; severity 1 to the COO within 1 hour,IR-4,RS.MA-04,N56-BM (RS.MA-04),Yes
+POL-03,4.5,Breach determination and decision log,IR-6,RS.AN-08,Fla. Stat. 501.171(1)(a); (4)(c),Yes
+POL-03,4.6,"Notices per the matrix (DHS immediately, MSP clients 48 hours, 30 days Florida)",IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5); E-Verify MOU Art. II.A.16,Yes
+POL-03,4.7,Pay continuity within 1 business day; manual payroll,IR-4; CP-2,RC.RP-04,29 CFR 778.106; N56-BM (RC.RP-04),Yes
+POL-03,4.8,"Extortion payment requires CEO, counsel, insurer, OFAC check",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.9,Annual tabletop per runbook; annual role training,IR-2; IR-3,ID.IM-02,N56-BM (ID.IM-02),No
+POL-03,4.10,Lessons learned within 30 days,IR-4,ID.IM-03,N56-BM (ID.IM-03),Yes
+POL-03,4.11,Contingency plan from the BIA; quarterly restores; annual exercise,CP-2; CP-4; CP-10,RC.RP-01,N56-R03 (8 CFR 274a.2(g)(1)(ii)),Yes
+POL-03,4.12,Logs to the SIEM with payroll and download alerts,AU-2; AU-6; AU-11,DE.CM-03,N56-R03 (8 CFR 274a.2(g)(1)(iv)),Yes
+POL-04,4.1,Four-level classification,RA-2,ID.AM-07,N56-BM (ID.AM-07),No
+POL-04,4.2,Encryption at rest and in transit,SC-28; SC-8,PR.DS-01,Fla. Stat. 501.171(1)(g)2.,Yes
+POL-04,4.3,Approved locations only; no email or file shares for Restricted data,AC-3,PR.DS-01,N56-R03 (8 CFR 274a.2(b)(3)),Yes
+POL-04,4.4,Minimization: last 4 digits; SSNs by IVR keypad,SI-12(1),PR.DS-01,Fla. Stat. 501.171(2),No
+POL-04,4.5,Data inventory reviewed quarterly,CM-12,ID.AM-07,N56-BM (ID.AM-07),No
+POL-04,4.6,Retention schedule with quarterly purges,SI-12,ID.AM-08,N56-R03 (8 CFR 274a.2(b)(2)(i)(A)); Fla. Stat. 448.095(2)(d); N56-R01 (16 CFR 682.3(a)),Yes
+POL-04,4.7,Certified disposal of paper and devices,MP-6,ID.AM-08,N56-R01 (16 CFR 682.3(b)); Fla. Stat. 501.171(8),Yes
+POL-04,4.8,"Encrypted, separate, write-once backups including the archive; quarterly restores",CP-9,PR.DS-11,N56-R03 (8 CFR 274a.2(g)(1)(ii)),Yes
+POL-04,4.9,Medical information in separate confidential files,AC-3,PR.AA-05,ADA 29 CFR 1630.14(b)(1); (c)(1),Yes
+POL-04,4.10,"Biometric notice, consent, and alternative before enrollment",PT-5,GV.OC-03,Fla. Stat. 501.171(1)(g)1.a.(VI); 501.702(4),Yes
+POL-04,4.11,No Restricted data in unapproved AI tools,SA-9,GV.PO-01,Fla. Stat. 501.171(2),Yes
+POL-05,4.1,Business use of firm systems,PL-4,GV.PO-01,N56-BM (GV.PO-01),No
+POL-05,4.2,Signed acknowledgment at hire and yearly,PL-4,GV.PO-01,N56-BM (GV.PO-01),No
+POL-05,4.3,Annual awareness training; quarterly phishing including push relay,AT-2; AT-2(3),PR.AT-01,N56-BM (PR.AT-01),Yes
+POL-05,4.4,"Annual role training for payroll, onboarding, credentialing, recruiters, MSP",AT-3,PR.AT-02,N56-R03 (8 CFR 274a.2(g)(1)(iii)); E-Verify MOU Art. II.A.5,Yes
+POL-05,4.5,SSO-only payroll sign-in; report unexpected MFA prompts,AT-2,PR.AT-01,N56-BM (PR.AT-01),Yes
+POL-05,4.6,"Never share passwords, approvals, or E-Verify credentials",IA-5,PR.AA-01,E-Verify MOU Art. II.A.15,Yes
+POL-05,4.7,Lock screens; no records left on kiosks,AC-11,PR.AA-05,N56-BM (PR.DS-10),No
+POL-05,4.8,No unapproved software or USB storage,CM-11,PR.PS-05,N56-BM (PR.PS-05),No
+POL-05,4.9,Report lost devices and suspicious requests,IR-6,RS.MA-02,N56-BM (RS.MA-02),Yes
+POL-05,4.10,"Approved AI tools only; AI is a sort aid, never sole rejection",PL-4,GV.PO-01,Title VII 703(k) (42 U.S.C. 2000e-2(k)); ADA 42 U.S.C. 12112(b)(6),No
+POL-05,4.11,Recording announcement on every recorded call,PT-5,GV.OC-03,Fla. Stat. 934.03(2)(d),Yes
+POL-05,4.12,Follow client site rules; return badges,PE-2,PR.AA-06,Client agreements,No

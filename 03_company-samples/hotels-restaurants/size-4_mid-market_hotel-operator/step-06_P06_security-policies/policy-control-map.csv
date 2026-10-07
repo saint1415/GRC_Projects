@@ -1,0 +1,61 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program meets PCI DSS v4.0.1 and reasonable-security duties; documented,PM-1,GV.PO-01,N72-R01 (Req 12.1.1); N72-R02 (15 U.S.C. 45(n)); N72-R04 (Fla. Stat. 501.171(2)),No
+POL-01,4.2,"vCISO, PCI technical lead, and PCI compliance owner designated in writing",PM-2,GV.RR-02,N72-R01 (Req 12.1.3; 12.1.4),No
+POL-01,4.3,Annual risk assessment with SP 800-30; targeted risk analyses,RA-3; PM-9,ID.RA-05,N72-R01 (Req 12.3.1),Yes
+POL-01,4.4,Risk acceptance authority by level; guest-safety risks not accepted above Low,PM-9,GV.RM-01,N72-R02 (15 U.S.C. 45(n)),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5,GV.OV-01,N72-R01 (Req 12.4),No
+POL-01,4.6,Policies reviewed annually; standards reviewed by owners,PL-1,GV.PO-02,N72-R01 (Req 12.1.2),No
+POL-01,4.7,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,N72-R01 (Req 12.1),No
+POL-01,4.8,PCI DSS scope documented and confirmed every 12 months; no SAQ answer without evidence,CM-8; PL-2,ID.AM-03,N72-R01 (Req 12.5.2),Yes
+POL-01,4.9,"Card and guest-data vendors under contract, reviewed, with current AOCs and annual status checks",SA-9; SR-6,GV.SC-05,N72-R01 (Req 12.8.1-12.8.5),Yes
+POL-01,4.10,Written PCI DSS responsibility allocation and annual evidence from the franchisor,SA-9; CA-3,GV.SC-07,N72-R01 (Req 12.8.5); N72-R02 (15 U.S.C. 45(n)),Yes
+POL-01,4.11,Independent assessment at least annually,CA-2,ID.IM-02,N72-R01,No
+POL-01,4.12,Accurate privacy and security statements; total price in every price display,PM-9,GV.OC-03,N72-R02 (15 U.S.C. 45(a)(1); 16 CFR 464.2),No
+POL-01,4.13,AI tools approved through the AI governance process before use,PM-9,GV.RM-01,N72-R02,No
+POL-01,4.14,Security records kept per the retention schedule,SI-12,ID.AM-08,N72-R01 (Req 10.5.1); N72-R04 (Fla. Stat. 501.171(4)(c)),No
+POL-01,4.15,Proportionate sanctions for violations,PS-8,GV.RR-04,N72-R01 (Req 12.1),No
+POL-02,4.1,Unique IDs; no shared accounts without accountability,IA-2; AC-2,PR.AA-01,N72-R01 (Req 8.2.1; 8.2.2),Yes
+POL-02,4.2,Least privilege; full card display only for approved roles,AC-6; AC-3,PR.AA-05,N72-R01 (Req 7.2; 3.4.1),Yes
+POL-02,4.3,"MFA for CDE, remote, administrator, email, and cloud access",IA-2(1); IA-2(2),PR.AA-03,N72-R01 (Req 8.4.1; 8.4.2; 8.4.3),Yes
+POL-02,4.4,Access reviews every 6 months; privileged quarterly,AC-2,PR.AA-05,N72-R01 (Req 7.2.4),Yes
+POL-02,4.5,Removal on termination date; franchisor systems within 1 business day,PS-4; AC-2,PR.AA-05,N72-R01 (Req 8.2.5),Yes
+POL-02,4.6,Accounts inactive 90 days disabled,AC-2(3),PR.AA-01,N72-R01 (Req 8.2.6),No
+POL-02,4.7,Just-in-time administrator rights through the broker; sealed break-glass accounts,AC-6(5),PR.AA-05,N72-R01 (Req 7.2.2),No
+POL-02,4.8,"Vendor access only when needed, through the broker, with MFA and recording",AC-17; MA-4,PR.AA-05,N72-R01 (Req 8.2.7; 8.4.3),Yes
+POL-02,4.9,Authenticator rules; no vendor default passwords,IA-5,PR.AA-03,N72-R01 (Req 2.2.2; 8.3.6),Yes
+POL-02,4.10,"System and interface accounts vaulted, rotated, non-interactive",IA-5; CA-9,PR.AA-01,N72-R01 (Req 8.6),Yes
+POL-02,4.11,Server rooms and closets locked with badge access or key log,PE-2; PE-3,PR.AA-06,N72-R01 (Req 9.2),No
+POL-03,4.1,Immediate reporting of suspected incidents,IR-6,RS.MA-01,N72-R01 (Req 12.10.1),Yes
+POL-03,4.2,"Runbooks maintained and tested annually, including a card compromise exercise",IR-8; IR-3,RS.MA-01,N72-R01 (Req 12.10.1; 12.10.2),Yes
+POL-03,4.3,"Incident log records discovery, decision, and determination times",IR-5; IR-4,RS.MA-01,N72-R04 (Fla. Stat. 501.171(4)(a)),Yes
+POL-03,4.4,Acquirer notified within 24 hours of suspected card compromise; card brand rules followed,IR-6,RS.CO-02,N72-R01 (Req 12.10.1),Yes
+POL-03,4.5,Decision log for every potential breach,IR-4; IR-6,RS.CO-02,N72-R04 (Fla. Stat. 501.171(3)-(5)),Yes
+POL-03,4.6,Franchisor notified within 24 hours; hotel owner within 48 hours (from 2027),IR-6(3),RS.CO-02,N72-R04 (Fla. Stat. 501.171(6)(a)),No
+POL-03,4.7,Evidence preserved; forensics through the insurer and counsel,IR-4,RS.AN-03,N72-R01 (Req 12.10.1),Yes
+POL-03,4.8,"Ransom only with CEO approval, counsel, insurer, OFAC check, and law enforcement report",IR-4,RS.MA-01,N72-R04,Yes
+POL-03,4.9,"Central logging, 12-month retention, daily review of card data system events",AU-2; AU-6; AU-11; SI-4,DE.AE-02,N72-R01 (Req 10.2; 10.4.1; 10.5.1),Yes
+POL-03,4.10,Recovery objectives from the BIA; annual tests; quarterly restores,CP-2; CP-4; CP-9,RC.RP-01,N72-R01 (Req 12.10.1),Yes
+POL-03,4.11,Card numbers found in unexpected places handled as an incident,IR-4,RS.MA-01,N72-R01 (Req 12.10.7),Yes
+POL-03,4.12,Lessons learned within 14 days; report within 30 days,IR-4,ID.IM-04,N72-R01 (Req 12.10.6),Yes
+POL-04,4.1,Systems and data stores classified and inventoried,RA-2,ID.AM-05,N72-R01 (Req 12.5.1),No
+POL-04,4.2,Card data only in approved vaults; no sensitive authentication data after authorization,SI-12; MP-4,PR.DS-01,N72-R01 (Req 3.2; 3.3.1),No
+POL-04,4.3,Card numbers masked on display and receipts,AC-3,PR.DS-01,N72-R01 (Req 3.4.1); 15 U.S.C. 1681c(g),No
+POL-04,4.4,Card numbers received through other channels deleted and reported,IR-4; SI-12,PR.DS-01,N72-R01 (Req 12.10.7),Yes
+POL-04,4.5,Encryption in transit and at rest per STD-08,SC-8; SC-28,PR.DS-02,N72-R01 (Req 4.2),Yes
+POL-04,4.6,Retention schedule (register 2 years minimum; ID scans 30 days after check-out; recordings 90 days),SI-12,ID.AM-08,Fla. Stat. 509.101(2); N72-R04 (Fla. Stat. 501.171(8)),No
+POL-04,4.7,"Certified destruction of paper and media, including background-check reports",MP-6,PR.DS-01,N72-R01 (Req 9.4.6; 9.4.7); N72-R03 (16 CFR 682.3),Yes
+POL-04,4.8,No Restricted or Confidential data in unapproved AI tools,SA-9; PL-4,GV.SC-05,N72-R02 (15 U.S.C. 45(a)),Yes
+POL-04,4.9,Minimum guest data shared with vendors and the franchisor under contract,SA-9,GV.SC-05,N72-R02 (15 U.S.C. 45(a)); N72-R04,Yes
+POL-04,4.10,Payment device list and weekly inspections,CM-8; SR-10,ID.AM-01,N72-R01 (Req 9.5.1),Yes
+POL-05,4.1,Acknowledgment and training at hire and annually,PL-4; AT-2,PR.AT-01,N72-R01 (Req 12.2.1; 12.6.1),Yes
+POL-05,4.2,Only company devices for card data and operations systems,AC-19; AC-20,PR.AA-05,N72-R01 (Req 1.5),No
+POL-05,4.3,"No card numbers by email, chat, text, or paper",PL-4,PR.AT-01,N72-R01 (Req 3.2),No
+POL-05,4.4,Verify identity before giving guest information; watch for social engineering,AT-2(3),PR.AT-01,N72-R01 (Req 12.6.3.1),No
+POL-05,4.5,Report phishing; no self-installed software,SI-8; CM-11,PR.AT-01,N72-R01 (Req 5.4.1),No
+POL-05,4.6,Lock screens,AC-11,PR.AA-05,N72-R01 (Req 8.2.8),No
+POL-05,4.7,Check payment devices each shift and report tampering,SR-10,PR.AT-02,N72-R01 (Req 9.5.1.3),Yes
+POL-05,4.8,Remote access only through approved tools,AC-17,PR.AA-05,N72-R01 (Req 8.4.3),Yes
+POL-05,4.9,No sharing of passwords or MFA approvals,IA-2,PR.AA-03,N72-R01 (Req 8.3),Yes
+POL-05,4.10,Approved AI tools only; no Restricted data in others; review output,PL-4,PR.AT-01,N72-R02,No
+POL-05,4.11,Recording announcement on every recorded call; pause before card details,PL-4,PR.AT-02,Fla. Stat. 934.03(2)(d); N72-R01 (Req 3.3.1),No
+POL-05,4.12,Monitoring notice,PL-4,GV.PO-01,N72-R01 (Req 12.2),No

@@ -1,0 +1,14 @@
+review_item,what_to_check,ami_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,SOC 2 Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability relevant to BIA commitments (P05 BP-EU06),Security and Availability,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Independent CPA firm; unqualified opinion,None
+System description scope,"Head-end, meter data collection, remote connect and disconnect, and outage event services used by the Electric Utility",All services in use are described,None
+Subservice organizations,Method (carve-out or inclusive) and whether their reports are needed,Cloud hosting provider carved out; its SOC 2 report available on request,"Obtain and review the hosting provider report summary (Electric Utility metering director, 2026-12-31)"
+Exceptions noted,Any test exceptions and management responses,Two exceptions: quarterly review of vendor support accounts missed once; one production change without documented approval,Ask the vendor for remediation evidence; bulk command changes are the Electric Utility's highest concern (P01 EU-015)
+Complementary user entity controls (CUECs),Controls the Electric Utility must operate,Customer manages its user access and roles; reviews administrator activity; configures command thresholds; protects its integration credentials,Map each CUEC to an Electric Utility owner; the command threshold CUEC is not configured today (POL-02 4.11)
+Remote disconnect controls,"Rate limits, approvals, and logging for bulk commands",Vendor offers rate limits and dual approval as configurable features; logging tested by the auditor,Enable rate limits and dual approval for bulk disconnects above 500 meters per hour (P01 EU-015; 2027-03-31)
+Bridge letter,Coverage from period end to today,Bridge letter dated 2026-07-15 states no material changes,Request an updated bridge letter at contract renewal
+Incident notification commitments,Contract and description commit to notify of incidents affecting the Electric Utility,"Description commits to notice ""without undue delay""; contract has no fixed time",Add a fixed notice time (for example 72 hours) and Fla. Stat. 501.171(6) third-party agent duties at renewal (2027)
+Vendor remote access to the Electric Utility,Whether vendor staff can reach Electric Utility networks,No vendor access into the DOP; integration through the OT DMZ,None
+Usage data and customer data protections,"Encryption, access, and retention of interval data",Encryption in transit and at rest; retention configurable,Set retention to the Electric Utility schedule
+Overall conclusion,Can the Electric Utility rely on the report?,"Yes, with the two exceptions followed up and the CUECs implemented",Review annually; next report expected 2027-06

@@ -1,0 +1,14 @@
+review_item,what_to_check,production_accounting_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Confidentiality for owner data; Availability for the royalty run,Security; Availability; Confidentiality; Processing Integrity,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Production accounting, allocation, revenue distribution, owner portal, and the upload function the company uses",All in scope; the check printing and ACH file service is a carved-out subservice organization,Ask how the vendor monitors the carved-out provider
+Subservice organizations,Carve-out vs inclusive; hosting provider,Cloud hosting provider carved out,Confirm the vendor reviews its hosting provider's SOC 2 (listed as a vendor control)
+Exceptions noted,Test exceptions and management responses,1 exception: one quarterly access review of vendor support staff completed late; remediated,Accept; watch in the next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and removal; MFA enforcement; role assignment; review of owner bank detail changes; protection of export files,"Map to company controls: AC-2 removal (gap: POAM-005, POAM-006); MFA (in place); bank detail call-back (gap: P01 R-004, POL-04 4.7); exports (gap: P01 R-005)"
+Availability commitments,Uptime and recovery objectives vs the BIA (BP-05: RTO 120 h; RPO 24 h),99.5% monthly uptime; RTO 24 h; RPO 1 h in the system description,Meets the BIA
+Encryption,At rest and in transit per the system description,Encryption at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers; Fla. Stat. 501.171(6) requires notice within 10 days of determining a breach,System description commits to notify within 72 hours of confirming a security incident affecting customer data,Add the 72-hour commitment and breach cooperation to the contract at renewal (P01 R-014)
+Bridge letter,Coverage from report end date to today,Requested through 2026-09-30,Obtain before 2026-10-31
+Other critical vendors,"Assurance for the SCADA vendor, SCADA integrator, and MSP","SCADA vendor: security whitepaper only, no SOC 2; integrator and MSP: no report",Questionnaire to all three by 2026-12-31 (POAM-013)
+Review sign-off,Reviewer and date,"Office Manager with the Production Accountant and the independent consultant, 2026-08-20",Annual

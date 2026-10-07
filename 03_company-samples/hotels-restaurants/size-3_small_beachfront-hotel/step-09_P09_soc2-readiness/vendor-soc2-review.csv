@@ -1,0 +1,14 @@
+review_item,what_to_check,pms_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because the hotel depends on the PMS for check-in (P05),Security; Availability,Confidentiality not included; rely on the PCI DSS AOC for card data
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"PMS application, card vault, interfaces, and hosting in scope","PMS application, interfaces, and support in scope; card vault described but covered by the vendor's PCI DSS AOC; hosting carved out","Read the card vault responsibilities in the AOC (dated 2026-03), not the SOC 2 report"
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Public cloud hosting provider carved out,Confirm the vendor reviews its hosting provider's own report (listed as a vendor control)
+Exceptions noted,Any test exceptions and management responses,1 exception: quarterly access review for vendor support staff missed in one quarter; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the hotel must operate for the vendor's controls to work,User provisioning and timely removal; role assignment by least privilege; enabling MFA or single sign-on; reviewing user activity reports; protecting workstations used to access the PMS,"Map to hotel controls AC-2, AC-6, IA-2(1), AU-6, SI-3. Open gaps: POAM-001, POAM-002, POAM-003, POAM-015, POAM-009"
+Availability commitments,"Recovery objectives vs the hotel's BIA (BP-01 RTO 2 h; BP-03 and BP-04 RTO 4 h, RPO 1 h)",RTO 4 h; RPO 15 min stated in the system description,"Meets BP-03 and BP-04, not BP-01. Keep paper arrivals and emergency key cards; add RTO and RPO to the contract (P01 R-014)"
+Encryption,At rest and in transit per the system description,Encryption at rest for databases and the card vault; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Notify affected customers within 72 hours of confirming a security incident (system description),"Contract should also require notice fast enough for the hotel's Visa 3-day clock, and at most 10 days for personal information (Fla. Stat. 501.171(6)(a))"
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 requested,Obtain before 2026-10-31
+Relation to PCI DSS,SOC 2 is not a substitute for a PCI DSS AOC,Vendor also provides a service provider AOC dated 2026-03 with a responsibility summary,Keep both; check the AOC every year (PCI 12.8.4)
+Review sign-off,Reviewer and date,"IT Manager and Controller, 2026-08-20",Annual

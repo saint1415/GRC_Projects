@@ -1,0 +1,44 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1; PL-2,GV.PO-01,CT-C security exhibit (PL-2),No
+POL-01,4.2,Annual risk assessment with SP 800-30,RA-3; PM-9,ID.RA-01,CT-C security exhibit (RA-3),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,CT-C security exhibit (PM-9),No
+POL-01,4.5,Annual self-assessment with outside review every second year,CA-2; CA-7,ID.IM-02,CT-C security exhibit (CA-2),No
+POL-01,4.6,Annual policy review; time-limited exceptions,PL-1,GV.PO-02,CT-C security exhibit (PL-1),No
+POL-01,5.2,No subcontracted administration without city approval; FAR 52.204-21 flow-down,SA-9; PS-7,GV.SC-05,CT-C contract; CT-F FAR 52.204-21(c),No
+POL-01,5.3,Complete the city and GSA annual courses,AT-2,PR.AT-01,CT-C contract; C-GOVERNMENT-R01 (GSA annual training),No
+POL-01,6.1,Customer data only in approved services,SA-9,GV.SC-05,CT-C security exhibit (SA-9),No
+POL-01,6.2,Provider checklist before a new service,SA-4; SA-9,GV.SC-07,CT-C security exhibit (SA-4),No
+POL-01,6.3,Annual review of the suite provider SOC 2 report,SA-9,GV.SC-07,CT-C security exhibit (SA-9),No
+POL-01,6.4,Parts check and SAM.gov FASCSA search before federal building purchases,SR-3; SR-5,GV.SC-05,CT-F FAR 52.204-23(b); FAR 52.204-25(b)(1); FAR 52.204-30(b),Yes
+POL-01,6.5,Owner-watched remote support; no unattended access,MA-4; MA-5,PR.AA-05,CT-C security exhibit (MA-4),No
+POL-01,7.1,Personal accounts; written request for named accounts in customer systems,IA-2; AC-2,PR.AA-01,CT-C security exhibit (IA-2); CT-F FAR 52.204-21(b)(1)(v),No
+POL-01,7.2,MFA wherever offered,IA-2(1); IA-2(2),PR.AA-03,CT-C security exhibit (IA-2(1); MFA for remote access),Yes
+POL-01,7.3,Unique passphrases in a password manager; defaults changed,IA-5,PR.AA-01,CT-C security exhibit (IA-5); CT-F FAR 52.204-21(b)(1)(vi),Yes
+POL-01,7.4,Remote access to customer systems only through the approved path,AC-17; MA-4,PR.AA-05,CT-C security exhibit (AC-17),Yes
+POL-01,7.5,Standard account for daily work,AC-6; CM-11,PR.AA-05,CT-C security exhibit (AC-6); CT-F FAR 52.204-21(b)(1)(ii),Yes
+POL-01,7.6,Sealed emergency access envelope; second authenticator,CP-2; IA-5,RC.RP-01,CT-C security exhibit (CP-2),No
+POL-01,7.7,"Monthly review of audit trail, session log, and sign-ins",AU-6,DE.AE-02,CT-C security exhibit (AU-6),Yes
+POL-01,7.8,Quarterly account list to the city IT manager,AC-2,PR.AA-05,CT-C security exhibit (AC-2),No
+POL-01,7.9,Report a lost PIV card immediately; return at subcontract end,IA-4,PR.AA-01,CT-F FAR 52.204-9(b),No
+POL-01,7.10,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,CT-C security exhibit (AC-11),No
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,CT-C security exhibit (RA-2),No
+POL-01,8.2,Full-disk encryption on every device,SC-28,PR.DS-01,CT-C security exhibit (SC-28); Fla. Stat. 501.171(2),Yes
+POL-01,8.3,Sharing only to named people; CUI only to the prime and GSA,AC-21; MP-5,PR.DS-02,CT-F 32 CFR 2002.14(c); Fla. Stat. 119.071(3)(b)4.,No
+POL-01,8.4,CUI only in the restricted folder and locked cabinet; mark excerpts,MP-3; MP-4,PR.DS-01,CT-F 32 CFR 2002.14(c); 2002.16(a)(3),Yes
+POL-01,8.5,Nightly and monthly backups of controller programs; quarterly comparison,CP-9; SI-7,PR.DS-11,CT-C security exhibit (CP-9),Yes
+POL-01,8.6,Keep two cardholder exports; contract-end transfer and destruction,SI-12,ID.AM-08,Fla. Stat. 119.0701(2)(b)4.; Fla. Stat. 501.171(2),No
+POL-01,8.7,Shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,CT-F FAR 52.204-21(b)(1)(vii); 32 CFR 2002.14(f),No
+POL-01,8.8,Public records requests go to the city custodian,SI-12,GV.OC-03,Fla. Stat. 119.0701(3)(a),No
+POL-01,9.2,Laptop never on a GSA network; city network only through the VPN,AC-20; AC-19,PR.AA-05,C-GOVERNMENT-R01 (GSA rules of behavior); CT-C security exhibit (AC-20),No
+POL-01,9.3,Approved software sources; updates and antivirus on; encrypted drives only,SI-2; SI-3; MP-7,PR.PS-02,CT-F FAR 52.204-21(b)(1)(xii)-(xv),No
+POL-01,9.4,No customer data in services outside Appendix A,AC-20; SA-9,GV.SC-05,CT-C security exhibit (AC-20); Fla. Stat. 119.071(3)(b)4.,No
+POL-01,9.6,No customer data in AI tools; AI features in customer systems only after P10 and a customer decision,PL-4; SA-9,GV.PO-01,CT-C security exhibit (PL-4),No
+POL-01,9.7,Separate work network at home,SC-7,PR.IR-01,CT-C security exhibit (SC-7); CT-F FAR 52.204-21(b)(1)(x),No
+POL-01,9.8,CUI and administrator training,AT-3,PR.AT-02,CT-F 32 CFR Part 2002; CT-C security exhibit (AT-3),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,CT-C security exhibit (IR-8),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5,RS.MA-02,CT-C security exhibit (IR-5),No
+POL-01,10.3,"Meet the city, prime, FAR, and Florida notice clocks",IR-6,RS.CO-02,CT-C 24-hour notice; C-GOVERNMENT-R01 (BTTRG 1.6.1); CT-F FAR 52.204-25(d); Fla. Stat. 501.171(6)(a),Yes
+POL-01,10.4,Building safety first in an incident,IR-4,RS.MA-01,CT-C security exhibit (IR-4),No
+POL-01,10.5,No ransom for customer systems; OFAC check for any payment,IR-4,RS.MA-01,Fla. Stat. 282.3186 (city duty); OFAC advisory (2021-09-21),No
+POL-01,11.2,Backup controls firm approved by the city,CP-2,RC.RP-01,CT-C security exhibit (CP-2),No
+POL-01,11.3,Manual operation sheet per building; annual walkthrough,CP-2; CP-3,RC.RP-01,CT-C security exhibit (CP-3),No

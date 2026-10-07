@@ -1,0 +1,12 @@
+field,value
+regulators,"Federal Trade Commission (FTC Act, Safeguards Rule for retailers extending credit/auto dealers, Red Flags, COPPA, INFORM); California Privacy Protection Agency and state attorneys general; PCI Security Standards Council (standard setter, not a regulator) and payment brands (enforcement via acquirers); Securities and Exchange Commission (public retailers)"
+primary_regulation,PCI DSS v4.0.1
+primary_regulation_citation,"PCI DSS v4.0.1 (PCI SSC, June 2024)"
+primary_regulation_url,https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1
+primary_regulation_rationale,"Nearly every retailer accepts cards, PCI DSS is the only prescriptive, testable control standard universally imposed on retail (via acquirer contracts), and its 12 requirements map cleanly to a gap assessment. It is not law; supplement with FTC Safeguards Rule for retailers issuing credit or auto dealers, and CCPA cyber-audit regs for large California-facing retailers."
+sensitive_data,"Cardholder data (PAN) and sensitive authentication data; Customer PII and loyalty/purchase history; Consumer credit applications/NPI (store cards, auto financing and leasing); Biometric data (facial recognition, loss prevention); Precise geolocation (mobile apps); Children's personal information"
+critical_systems,"POS terminals and payment gateways/tokenization; E-commerce platform and mobile apps; Loyalty/CRM and customer data platforms; Inventory and supply chain/ERP; Store networks, Wi-Fi and CCTV/biometric systems; Auto dealer management systems (DMS) and F&I systems"
+ai_specific,"FTC Docket 2023190 (Dec 2023 press release) 5-year ban on facial recognition for surveillance; requires notice, deletion, information security program and independent assessments; signals FTC Act Section 5 expectations for AI biometric use in stores.; Cal. Code Regs. tit. 11, Art. 11 (ADMT) Businesses using automated decisionmaking technology for significant decisions must provide pre-use notice, opt-out/access rights; compliance by Jan 1, 2027 for existing uses."
+assurance_alternatives,"PCI DSS validation for card payments (PCI SSC standard, enforced through card-brand contracts)"
+notes,"Retail has no sector-specific federal cyber regulator; FTC is the de facto regulator. Merchant levels (1-4) are defined by card brands, not PCI SSC. CFPB may also supervise larger retail credit/auto finance activities (not researched). Verified 2026-09-25."
+last_verified,2026-09-25

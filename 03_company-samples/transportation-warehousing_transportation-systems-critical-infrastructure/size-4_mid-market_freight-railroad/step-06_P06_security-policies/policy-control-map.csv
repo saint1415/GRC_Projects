@@ -1,0 +1,64 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program documented; CIP controls for Critical Cyber Systems,PM-1; PL-2,GV.PO-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.B.1-2),No
+POL-01,4.2,Cybersecurity and Security Coordinators designated; TSA told within 7 and 37 days of change,PM-2,GV.RR-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.B); C-TRANSPORTATION-S01 (49 CFR 1570.201),No
+POL-01,4.3,Annual SP 800-30 risk assessment coordinated with the hazmat plan review,RA-3; PM-9,ID.RA-05,C-TRANSPORTATION-S06 (49 CFR 172.802(a)); C-TRANSPORTATION-R01 (SD 1580-21-01E II.E),No
+POL-01,4.4,Risk acceptance authority; no safety-linked risk accepted above Low,PM-9,GV.RM-01,None (internal governance),No
+POL-01,4.5,CIP milestones kept; TSA told before a miss; amendments within 50 days,CA-5; PM-9,GV.OV-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.B.2; VI.B; VI.D),No
+POL-01,4.6,Quarterly audit committee reporting,PM-9,GV.OV-01,None (internal governance),No
+POL-01,4.7,Annual 1580.101 applicability check; directive review within 30 days,PM-9,GV.OC-03,C-TRANSPORTATION-S01 (49 CFR 1570.105),No
+POL-01,4.8,Annual policy and standard review,PL-1,GV.PO-02,None (internal governance),No
+POL-01,4.9,"Written, time-limited exceptions that do not conflict with the CIP",PL-1,GV.PO-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E VI),No
+POL-01,4.10,Annual independent assessment; one-third of CIP measures each year; architecture review every 2 years,CA-2; CA-7,ID.IM-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.F.2),Yes
+POL-01,4.11,Proportionate sanctions; collective bargaining procedures apply,PS-8,GV.RR-04,None (internal governance),No
+POL-01,4.12,Vendor security review and contract terms; company keeps CIP responsibility,SA-9,GV.SC-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.A.2; II.A.3),Yes
+POL-01,4.13,Annual reassessment of Tier 1 vendors,SR-6,GV.SC-07,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.A.2),No
+POL-01,4.14,Retention of security records at least 5 years,SI-12,GV.PO-02,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E IV.C); C-TRANSPORTATION-S08 (49 CFR 1570.121),No
+POL-01,4.15,AI tools approved before use; no AI replaces an FRA-required inspection,PM-9; SA-9,GV.RM-01,C-TRANSPORTATION-S09 (49 CFR 213.233(b)),Yes
+POL-02,4.1,Unique accounts; shared accounts only where critical and vaulted; no shared dispatcher logins,IA-2; AC-2,PR.AA-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.4.a),Yes
+POL-02,4.2,Shared passwords changed at each departure and yearly,IA-5; AC-2,PR.AA-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.4.b),Yes
+POL-02,4.3,Least privilege; separation of maintainer and CAD/CTC administrator rights,AC-3; AC-5; AC-6,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),Yes
+POL-02,4.4,MFA everywhere supported; phishing-resistant for administrators; documented OT exceptions,IA-2(1); IA-2(2),PR.AA-03,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.1.b; III.C.2),Yes
+POL-02,4.5,"Same-day disable at termination; tablets, applications, and badges within 24 hours",PS-4; AC-2,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.4.b),Yes
+POL-02,4.6,Remove prior-role access within 5 business days of transfer,PS-5; AC-2,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),Yes
+POL-02,4.7,Quarterly access and application role reviews; yearly trust review,AC-2; AC-6,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3; III.C.5),Yes
+POL-02,4.8,Separate privileged accounts with just-in-time elevation and recording,AC-6(2); AC-6(5),PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),No
+POL-02,4.9,Lockout and session lock; console exception documented in the CIP,AC-7; AC-11,PR.AA-03,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.2),No
+POL-02,4.10,Break-glass accounts sealed and tested quarterly,AC-2,PR.AA-05,None (internal resilience),Yes
+POL-02,4.11,14-character passwords; reset on compromise; default credentials changed,IA-5,PR.AA-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.1.a),Yes
+POL-02,4.12,Vendor remote access only through the PAM jump host; no always-on paths,AC-17; MA-4,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.B.1.b; III.C.2),Yes
+POL-02,4.13,Field housings locked or sealed; key control; quarterly badge review,PE-3,PR.AA-06,C-TRANSPORTATION-S04 (49 CFR 236.3); C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.6),Yes
+POL-03,4.1,Incident response plan and runbooks with positions and resources,IR-8,RS.MA-01,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.1-2),Yes
+POL-03,4.2,Report suspected incidents immediately and within 1 hour,IR-6,RS.MA-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.C),Yes
+POL-03,4.3,Incident log with identification time and classification against the directive definition,IR-5,RS.MA-03,C-TRANSPORTATION-R01 (SD 1580-21-01E II.C.1-2),No
+POL-03,4.4,CISA report within 72 hours naming the directive; 24-hour company target,IR-6,RS.CO-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.C.2-5),Yes
+POL-03,4.5,TSA report of a cyber attack within 24 hours; TSOC call within 12 hours,IR-6,RS.CO-02,C-TRANSPORTATION-S01 (49 CFR 1570.203),Yes
+POL-03,4.6,"SSI release, FRA, hazmat, and PTC failure reports; breach notices",IR-6,RS.CO-03,C-TRANSPORTATION-S03 (1520.9(c)); C-TRANSPORTATION-S05 (part 225); C-TRANSPORTATION-S06 (171.15); C-TRANSPORTATION-S04 (236.1029); C-TRANSPORTATION-S07 (Fla. Stat. 501.171),Yes
+POL-03,4.7,Chief Dispatcher may stop trains; incident commander may order IT/OT isolation,IR-4,RS.MI-01,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.1.c); C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.4),Yes
+POL-03,4.8,Containment objectives and evidence preservation,IR-4,RS.MI-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.1.a),Yes
+POL-03,4.9,Backups scanned when made and when restored,CP-9,RC.RP-03,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.1.b),Yes
+POL-03,4.10,30-minute RSSM answer continues during outages,CP-2,RS.CO-02,C-TRANSPORTATION-S02 (49 CFR 1580.203(d)),Yes
+POL-03,4.11,Ransom decision by the CEO with OFAC check,IR-4,RS.MA-01,"None (OFAC advisory, 2021-09-21)",Yes
+POL-03,4.12,Annual exercise testing 2 objectives with named positions; isolation every 2 years,IR-3,ID.IM-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.3),Yes
+POL-03,4.13,"Role-based incident training for dispatch, PTC, signal, and MSSP staff",IR-2; AT-3,PR.AT-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.3.b),Yes
+POL-03,4.14,Lessons learned within 30 days,IR-4,ID.IM-04,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D),Yes
+POL-04,4.1,Four classes including SSI,RA-2,ID.AM-05,C-TRANSPORTATION-S03 (49 CFR 1520.5),No
+POL-04,4.2,SSI in the restricted library; need to know; vendor records; quarterly review,AC-3; MP-4,PR.DS-01,C-TRANSPORTATION-S03 (1520.9(a)); C-TRANSPORTATION-S08 (1570.121(c)); C-TRANSPORTATION-R01 (SD 1580/82-2022-01E IV.B),Yes
+POL-04,4.3,"SSI marking, destruction, and marking check before filing",MP-3; MP-6,ID.AM-08,C-TRANSPORTATION-S03 (1520.9(b); 1520.13; 1520.19),No
+POL-04,4.4,Prompt report to TSA of SSI release,IR-6,RS.CO-02,C-TRANSPORTATION-S03 (1520.9(c)),Yes
+POL-04,4.5,Hazmat security plan on a need-to-know basis,AC-3,PR.DS-01,C-TRANSPORTATION-S06 (49 CFR 172.802),No
+POL-04,4.6,Encryption at rest and in transit; OT over IT encrypted,SC-8; SC-28,PR.DS-02,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.B.2.b),No
+POL-04,4.7,Daily write-once backups; scanning; quarterly restore tests,CP-9,PR.DS-11,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.1.b),Yes
+POL-04,4.8,Retention schedule including RSSM chain of custody and training records,SI-12,PR.DS-01,C-TRANSPORTATION-S02 (1580.205(h)); C-TRANSPORTATION-S08 (1570.121(a)),No
+POL-04,4.9,Sanitization of media including retired OT and tablets,MP-6,PR.DS-01,C-TRANSPORTATION-S03 (1520.19),No
+POL-04,4.10,Shared service data segregated and returned per agreement,AC-3,PR.DS-01,None (contract),No
+POL-04,4.11,"No Restricted data, SSI, or imagery in unapproved AI",AC-3,PR.DS-01,C-TRANSPORTATION-S03 (1520.9(a)),No
+POL-05,4.1,Operational consoles for operational use only,PL-4; CM-7,PR.PS-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.1),No
+POL-05,4.2,Annual awareness training; TSA security training within 60 days,AT-2,PR.AT-01,C-TRANSPORTATION-S08 (1580.115(b)),No
+POL-05,4.3,Approved software only; allowlisting; macros blocked,CM-11; CM-7,PR.PS-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.1.d),No
+POL-05,4.4,No personal devices or media on company networks or equipment,AC-19; AC-20,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C),No
+POL-05,4.5,Crew tablets locked and losses reported within 1 hour,AC-19,PR.AA-05,None (internal),No
+POL-05,4.6,Report phishing and suspected incidents,IR-6,RS.MA-02,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.1.a),Yes
+POL-05,4.7,No disclosure of SSI or security details; verify callers,AC-3,PR.DS-01,C-TRANSPORTATION-S03 (1520.9(a)),No
+POL-05,4.8,"Approved AI tools only, by data class; human review",PL-4; SA-9,GV.RR-04,C-TRANSPORTATION-S03 (1520.9(a)); C-TRANSPORTATION-S09 (213.233(b)),Yes
+POL-05,4.9,"No bypassing of security controls, locks, or seals",PL-4; PE-3,PR.AA-06,C-TRANSPORTATION-S04 (49 CFR 236.3),Yes
+POL-05,4.10,System use notice,AC-8,PR.AA-05,None (internal),No

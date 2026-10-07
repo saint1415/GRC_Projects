@@ -1,0 +1,15 @@
+review_item,what_to_check,platform_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-05-31,None
+Trust services categories,Security required; Availability needed because contracts and deadlines live on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Transaction management application; document storage; client document sharing; hosting,All in scope; the e-signature integration is out of scope (separate vendor),Review the e-signature vendor separately with the five-question check (POL-01 6.3)
+Subservice organizations,Carve-out or inclusive; which hosting providers,Cloud hosting provider carved out; vendor reviews the host's own SOC 2 report each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated vendor employees kept access for more than 3 days; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the brokerage must run for the vendor's controls to work,Customer enables MFA for its users; assigns roles and removes users promptly; reviews access logs; protects credentials and does not share them; reports suspected compromise to the vendor,"Map to IA-2(1) and IA-2(2) (gaps: POAM-002, POAM-003), AC-2 (quarterly review), AU-6 (gap: POAM-004), IA-2 (gap: shared credential, POAM-001)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA available to all customer users (customer-enabled); encryption at rest and in transit tested without exception,The vendor's MFA protects nothing until the owner turns it on
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,Platform monitored 24x7; customer-facing access log available,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data within the period in the subscription terms,Confirm the period is no longer than 10 days after determination (Fla. Stat. 501.171(6)(a))
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the brokerage's BIA (BP-02: RTO 8 h; RPO 4 h),RTO 8 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-08-19,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Broker-owner 2026-08-19, with the IT technician",Repeat every year (POL-01 6.3)

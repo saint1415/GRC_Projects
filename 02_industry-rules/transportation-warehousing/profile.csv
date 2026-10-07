@@ -1,0 +1,12 @@
+field,value
+regulators,"DHS / Transportation Security Administration (surface and aviation security directives); DHS / U.S. Coast Guard (maritime cyber rule); Department of Transportation (FAA, FRA, FTA, FMCSA, PHMSA, MARAD); DOT OST enforces airline privacy/UDAP under 49 U.S.C. 41712; U.S. Customs and Border Protection (CTPAT); Federal Trade Commission (non-carrier firms: warehousing, logistics brokers)"
+primary_regulation,USCG Maritime Cybersecurity Rule
+primary_regulation_citation,33 CFR Part 101 Subpart F
+primary_regulation_url,https://www.ecfr.gov/current/title-33/part-101/subpart-F
+primary_regulation_rationale,"It is the only codified, publicly available, prescriptive cybersecurity regulation in the transportation sector (TSA SDs are time-limited directives, partly SSI, and the TSA surface NPRM is not final). It enumerates concrete controls (MFA, encryption, logging, segmentation, pen testing, IR plan, training) with fixed compliance dates, making it an ideal gap-analysis target for ports, terminals and marine logistics; rail/pipeline operators should map to the TSA SDs (see c-transportation)."
+sensitive_data,"Passenger PII/PNR and travel itineraries; Shipment manifests, bills of lading, customs data; Security Sensitive Information (SSI, 49 CFR 1520); Driver/crew records and credentials (e.g., TWIC-related data); Payment card data (ticketing); Precise vehicle/asset geolocation and telematics"
+critical_systems,"Rail signaling/PTC, SCADA and dispatch; Pipeline SCADA/ICS; Port terminal operating systems, cranes and access control; Airline reservation, departure control and crew scheduling; Fleet telematics/ELD and TMS; Warehouse automation and WMS"
+ai_specific,
+assurance_alternatives,
+notes,Airlines and 'common carriers subject to the Acts to regulate commerce' are carved out of FTC Act Section 5 jurisdiction (15 U.S.C. 45(a)(2)); DOT handles airline consumer privacy. FMCSA has no cyber-specific rule found for motor carriers (not researched in depth). TSA SD document versions change frequently - confirm on tsa.gov/sd-and-ea. Verified 2026-09-25.
+last_verified,2026-09-25

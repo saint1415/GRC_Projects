@@ -1,0 +1,15 @@
+review_item,what_to_check,access_control_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,Security required; Availability and Confidentiality needed for access control operations,Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Access control and video management platform, door controller cloud connectivity, face verification module, data centers",Platform and cloud connectivity in scope; face verification module launched after the period and not covered,Ask the vendor for the module's security documentation and include it in the next report period
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Cloud hosting provider carved out,Confirm the vendor reviews the hosting provider's own SOC 2 (CUEC below)
+Exceptions noted,Test exceptions and management responses,1 exception: 3 of 40 sampled production changes lacked documented approval; remediated,Accept; monitor in the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Customer administrators provisioned and removed promptly; MFA for administrator accounts; review of administrator activity; secure local network for door controllers,"Map to AC-2 (gap: POAM-011), IA-2(1) (in place for the portal), AU-6 (gap: POAM-015), SC-7 (gap at county service centers: POAM-004)"
+Availability commitments,Recovery objectives vs the BIA (BP-02: RTO 8 h; RPO 1 h),RTO 4 h; RPO 15 min; controllers cache credentials up to 72 h,Meets the BIA; confirm in contract
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2+ between controllers and cloud,None
+Biometric data handling,"Face template storage, retention settings, and deletion",Not described (module outside the period),"Written confirmation that templates are encrypted, not used for vendor model training, and deletable per person"
+GovRAMP status,State and local procurement may require it (C-GOVERNMENT-R08),Vendor states a GovRAMP verification is in progress; not verified in this review,Check the GovRAMP product list before renewal
+Incident notification,Vendor commitment to notify customers,Within 72 hours of confirmation per system description,Negotiate 24 hours so the company can meet its own 24-hour customer terms
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-07-31 received,None
+Review sign-off,Reviewer and date,Contracts Manager and Security Systems Supervisor 2026-08-20,Annual

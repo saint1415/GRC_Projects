@@ -1,0 +1,55 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program meets the HIPAA Security Rule in both roles and is documented,PM-1,GV.PO-01,C-EMERGENCY-R04 (164.316(a)),No
+POL-01,4.2,Security Officer designated in writing,PM-2,GV.RR-02,C-EMERGENCY-R04 (164.308(a)(2)),No
+POL-01,4.3,Annual enterprise risk analysis using SP 800-30,RA-3; PM-9,ID.RA-01,C-EMERGENCY-R04 (164.308(a)(1)(ii)(A)-(B)),Yes
+POL-01,4.4,Risk acceptance authority by level; no emergency-response risk accepted above Low,PM-9,GV.RM-01,C-EMERGENCY-R04 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,Quarterly audit committee reporting,CA-5,GV.OV-01,C-EMERGENCY-R04 (164.308(a)(1)),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,C-EMERGENCY-R04 (164.316(b)(2)(iii)),No
+POL-01,4.7,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,C-EMERGENCY-R04 (164.316(a)),No
+POL-01,4.8,Documented sanctions,PS-8,GV.RR-04,C-EMERGENCY-R04 (164.308(a)(1)(ii)(C)),No
+POL-01,4.9,"No BAA, no PHI, including client PHI and new vendor features",SA-9,GV.SC-05,C-EMERGENCY-R04 (164.308(b)(1)); C-EMERGENCY-R04 (164.314(a)(2)(iii)),Yes
+POL-01,4.10,Annual Tier 1 vendor reassessment,SR-6,GV.SC-07,C-EMERGENCY-R04 (164.308(b)(1)),Yes
+POL-01,4.11,Annual independent evaluation,CA-2,ID.IM-01,C-EMERGENCY-R04 (164.308(a)(8)),No
+POL-01,4.12,6-year retention of security documentation,SI-12,GV.PO-02,C-EMERGENCY-R04 (164.316(b)(2)(i)),No
+POL-01,4.13,AI tools approved through the AI governance gate,PM-9; SA-9,GV.RM-01,C-EMERGENCY-R04 (164.308(a)(1)(ii)(B)),Yes
+POL-02,4.1,Unique accounts; per-vehicle MDC accounts as a time-limited exception,IA-2; AC-2,PR.AA-01,C-EMERGENCY-R04 (164.312(a)(2)(i)),Yes
+POL-02,4.2,"Role-based, approved, least-privilege access; client workspace separation",AC-2; AC-3; AC-6,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(4)(ii)(B)-(C)),Yes
+POL-02,4.3,MFA for all; phishing-resistant MFA for administrators,IA-2(1); IA-2(2); IA-2(8),PR.AA-03,C-EMERGENCY-R04 (164.312(d)),Yes
+POL-02,4.4,Same-day disable; all other access within 24 hours,PS-4; AC-2,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.5,Transfers remove prior access within 5 business days,PS-5; AC-2,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.6,Quarterly access reviews,AC-2; AC-6,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.7,Separate privileged accounts; limited CAD administration; just-in-time cloud rights,AC-6(2); AC-6(5); AC-6,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(4)(ii)(B)),Yes
+POL-02,4.8,"Lockout, idle lock, session timeout; console equivalent measure",AC-7; AC-11; AC-12,PR.AA-05,C-EMERGENCY-R04 (164.312(a)(2)(iii)),No
+POL-02,4.9,Break-glass accounts for critical systems,AC-2; CP-2,PR.AA-05,C-EMERGENCY-R04 (164.312(a)(2)(ii)),Yes
+POL-02,4.10,14-character passwords; vaulted device credentials; no default passwords,IA-5,PR.AA-03,C-EMERGENCY-R04 (164.308(a)(5)(ii)(D)),Yes
+POL-02,4.11,"Vendor remote access through the broker, approved and recorded",AC-17; MA-4,PR.AA-05,C-EMERGENCY-R04 (164.308(a)(3)(ii)(A)),Yes
+POL-02,4.12,"Mobile devices enrolled, encrypted, and wipeable",AC-19; AC-19(5),PR.DS-01,C-EMERGENCY-R04 (164.312(a)(2)(iv)),Yes
+POL-03,4.1,Runbooks for CAD ransomware and billing vendor breach,IR-8,RS.MA-01,C-EMERGENCY-R04 (164.308(a)(6)),Yes
+POL-03,4.2,Manual dispatch at once; county outage notice,CP-2(5); CP-2,RC.RP-01,C-EMERGENCY-R04 (164.308(a)(7)(ii)(C)),Yes
+POL-03,4.3,"Report suspected incidents immediately, within 1 hour",IR-6,RS.MA-02,C-EMERGENCY-R04 (164.308(a)(6)(ii)),Yes
+POL-03,4.4,Log every incident with discovery time,IR-5; IR-4,RS.MA-02,C-EMERGENCY-R04 (164.308(a)(6)(ii)),Yes
+POL-03,4.5,Crisis management team within 2 hours for severity 1,IR-4,RC.RP-01,C-EMERGENCY-R04 (164.308(a)(6)(ii)),Yes
+POL-03,4.6,"Breach determination and decision log, including client attribution",IR-6,RS.AN-03,C-EMERGENCY-R04 (164.402); C-EMERGENCY-R04 (164.414(b)),Yes
+POL-03,4.7,"Notifications per the P08 matrix, confirmed by counsel",IR-6,RS.CO-02,C-EMERGENCY-R04 (164.404-164.410); Fla. Stat. 501.171,Yes
+POL-03,4.8,Insurer hotline before vendors,IR-7,RS.CO-03,C-EMERGENCY-R04 (164.308(a)(6)(ii)),No
+POL-03,4.9,Ransom only with approvals and an OFAC check,IR-4,RS.MA-01,C-EMERGENCY-R04 (164.308(a)(6)(ii)),Yes
+POL-03,4.10,Annual runbook exercises; twice-yearly manual dispatch drills,IR-3; CP-4,ID.IM-02,C-EMERGENCY-R04 (164.308(a)(7)(ii)(D)),Yes
+POL-03,4.11,Lessons learned within 30 days; Medical Director review,IR-4,ID.IM-02,C-EMERGENCY-R04 (164.308(a)(6)(ii)),Yes
+POL-04,4.1,Four classification levels,RA-2,ID.AM-07,C-EMERGENCY-R04 (164.308(a)(1)(ii)(A)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-EMERGENCY-R04 (164.312(a)(2)(iv)); C-EMERGENCY-R04 (164.312(e)(2)(ii)),Yes
+POL-04,4.3,Company-managed keys; separate backup keys,SC-12,PR.DS-01,C-EMERGENCY-R04 (164.312(a)(2)(iv)),No
+POL-04,4.4,Restricted data only in approved systems; client data kept separate,AC-3; SA-9,PR.DS-01,C-EMERGENCY-R04 (164.308(a)(4)(ii)(B)),Yes
+POL-04,4.5,Restricted data and device inventory reconciled quarterly,CM-8,ID.AM-01,C-EMERGENCY-R04 (164.310(d)(2)(iii)),Yes
+POL-04,4.6,Sanitize or destroy media with certificates,MP-6,ID.AM-08,C-EMERGENCY-R04 (164.310(d)(2)(i)-(ii)),No
+POL-04,4.7,"Isolated, write-once, tested backups",CP-9,PR.DS-11,C-EMERGENCY-R04 (164.308(a)(7)(ii)(A)),Yes
+POL-04,4.8,No Restricted data in unapproved AI tools,SA-9,GV.SC-05,C-EMERGENCY-R04 (164.308(b)(1)),Yes
+POL-04,4.9,"Retention: EMS 5 years, Medicare 7 years, security 6 years, client data per BAA",SI-12,GV.PO-02,C-EMERGENCY-R04 (164.316(b)(2)(i)); 42 CFR 424.516(f),No
+POL-05,4.1,"Company systems for company business; no personal use on consoles, MDCs, tablets",PL-4,PR.AT-01,C-EMERGENCY-R04 (164.310(b)),No
+POL-05,4.2,Annual acknowledgment,PL-4,GV.PO-01,C-EMERGENCY-R04 (164.310(b)),No
+POL-05,4.3,Annual and role-based training,AT-2; AT-3,PR.AT-01; PR.AT-02,C-EMERGENCY-R04 (164.308(a)(5)),Yes
+POL-05,4.4,Lock screens; protect tablets; position screens,AC-11,PR.AA-06,C-EMERGENCY-R04 (164.310(c)),No
+POL-05,4.5,No unapproved software or personal devices on operational equipment,CM-11,PR.PS-02,C-EMERGENCY-R04 (164.310(b)),No
+POL-05,4.6,Report phishing and incidents,AT-2; IR-6,PR.AT-01,C-EMERGENCY-R04 (164.308(a)(5)(ii)(A)),Yes
+POL-05,4.7,Access only when the job requires; access is reviewed,AU-6,DE.CM-03,C-EMERGENCY-R04 (164.308(a)(1)(ii)(D)),Yes
+POL-05,4.8,Approved AI tools only; humans responsible for AI-assisted work,PL-4,GV.PO-01,C-EMERGENCY-R04 (164.308(a)(5)),No
+POL-05,4.9,No photos with personal phones,PL-4,PR.AT-01,C-EMERGENCY-R04 (164.310(b)),No

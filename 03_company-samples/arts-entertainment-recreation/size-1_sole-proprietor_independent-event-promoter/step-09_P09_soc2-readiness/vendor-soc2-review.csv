@@ -1,0 +1,16 @@
+review_item,what_to_check,ticketing_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because shows and on-sales depend on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Ticketing platform; hosted checkout; scanner app; payouts; hosting,All in scope; the payment processor and the hosting provider are carved-out subservice organizations,Rely on the processor's own PCI DSS AOC (2026-01-30) for the payment fields
+Subservice organizations,Carve-out or inclusive; which providers,Hosting provider and payment processor carved out; the vendor reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled employee departures had platform access removed after the vendor's 1-business-day target; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the owner must run for the vendor's controls to work,"Customers enable MFA, assign roles and remove users promptly, protect credentials, review account activity, control content and scripts they add to their own pages, and report suspected compromise to the vendor","Map to IA-2(1) (gap: POAM-001), AC-2 (gap: POAM-002), AU-6 (gap: POAM-005), CM-7 (gap: POAM-008), IR-6 (POAM-006)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA offered to all customer users (not enforced by default); encryption at rest and in transit tested without exception,Turn on MFA; the vendor does not force it
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 platform monitoring tested without exception; customer-level activity is the customer's to review,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data; no fixed time in the report,Ask for a notice time in writing; Fla. Stat. 501.171(6)(a) sets 10 days for a third-party agent
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's and processor's reports,None
+"Availability commitments (A1.2, A1.3)","Recovery objectives vs the owner's BIA (BP-01 RTO 1 h with the offline scanner; BP-02 RTO 4 h, RPO 0)",RTO 4 h and RPO near zero stated in the system description; annual recovery test performed; the scanner app works offline,Meets the BIA
+PCI DSS AOC (companion check),Service provider AOC current and covering the hosted checkout,AOC as a service provider dated 2026-03-12; hosted checkout and widget in scope,Download again each July (POL-01 6.1)
+Bridge letter,Coverage from report end date to today,Requested 2026-08-11,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner 2026-08-11, with the IT consultant",Repeat every year (POL-01 6.1)

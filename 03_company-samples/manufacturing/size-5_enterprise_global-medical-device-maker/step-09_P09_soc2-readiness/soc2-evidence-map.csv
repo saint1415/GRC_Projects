@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly status,Report and monthly POA&M snapshots,P07,Collecting
+Both,CC5.3,Policy hierarchy and review records,Policy portal,CISO,Annual,All policies and standards,P06,Ready
+Both,CC6.1; CC6.6,Landing zone guardrail and WAF configuration exports,Cloud posture tool,Director of Cloud Platform Engineering,Quarterly,All quarters,P04,Collecting
+Both,CC6.2; CC6.3,"Access provisioning, transfer, and termination records",Identity governance,Director of Identity and Access Management,Per event,"25 joiners, 25 movers, 25 leavers per service line",P07 AC-2 method,Collecting
+Both,CC6.3,Quarterly access certifications,Identity governance,Director of Identity and Access Management,Quarterly,All campaigns,P02 AC-2,Collecting
+Both,CC6.4,Monitoring center and data center badge reviews,Badge system,"Vice President, Facilities",Quarterly,All reviews,P03 G-070,Collecting
+Both,CC6.7,TLS scan results,Scanner,Director of Security Operations,Monthly,3 months,P04,Collecting
+Both,CC7.1; CC6.8,Vulnerability and image scan reports with SLA tracking,Scanner; SBOM service,Director of Security Operations,Monthly,3 months; 25 findings,P07 RA-5 method,Collecting
+Both,CC7.2; CC7.3,SOC case records and weekly review evidence,SIEM; case system,Director of Security Operations,Weekly,5 weeks; 25 cases,P03 G-041,Collecting
+Both,CC7.4; P6.6,"Incident runbook, customer notices, and breach log",Case system; Privacy Office,Chief Privacy Officer,Per incident,All incidents in the period,P08,Ready
+Both,CC9.2; P6.4,"Vendor register, subcontractor BAAs, and SOC report reviews",GRC platform,Director of Third-Party Risk Management,Annual per vendor,All tier-1 vendors,P03 G-065,Not started (POAM-022)
+SL-1,CC8.1,Release records with PLM approval and promotion logs,PLM; artifact repository,Director of Build and Release Engineering,Per release,25 releases,P07 CM-3,Not started (POAM-010)
+SL-1,A1.2; A1.3,DDC DR test report and backup reports,DR program,"Vice President, Digital Health",Annual; daily,Annual test; 25 backup jobs,P05,Ready
+SL-1,PI1.2; PI1.3,Ingestion validation and processing completeness reports,DDC,"Vice President, Digital Health",Daily,25 days,P04,Collecting
+SL-1,PI1.4,Drug library and firmware delivery confirmations,Update service,"Vice President, Digital Health",Per delivery,25 deliveries,P04,Not started (POAM-023)
+SL-2,A1.2; A1.3; CC7.5; CC9.1,RCM DR retest report and updated continuity plan,DR program,"Vice President, Remote Monitoring Services",Annual,Retest report,P05,Not started (POAM-026)
+SL-2,PI1.1; PI1.4,Report turnaround and urgent-call timeliness reports,RCM platform,"Vice President, Remote Monitoring Services",Daily,25 days; 40 urgent calls,P05 BP-02,Collecting
+SL-2,PI1.3,AI-002 performance monitoring with subgroups,RCM analytics,Chief Medical Officer,Quarterly,All quarters,P10,Not started
+SL-2,C1.2; P4.2; P4.3,Retention register and disposal logs,RCM platform,Chief Privacy Officer,Monthly,3 months,P06 POL-04 4.3,Not started
+SL-2,P1.1; P2.1; P3.2,Patient notice and app consent records,RCM app,Chief Privacy Officer,Per enrollment,40 enrollments,P06 POL-04,Collecting
+SL-2,CC2.3,SL-2 system description,GRC platform,"Vice President, Remote Monitoring Services",Annual,Final description,P02 method,Not started
+Both,CC1.4; CC2.2,"Role-based training records (technicians, engineers, SOC)",Learning system,Chief Human Resources Officer,Annual,25 per role group,P07 AT-3,Ready

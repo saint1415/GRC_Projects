@@ -1,0 +1,15 @@
+review_item,what_to_check,access_control_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,Security required; Availability needed because door control depends on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Cloud platform; mobile app; door controller firmware delivery,All in scope. The video analytics features of the camera service are a separate vendor and are not covered,None
+Subservice organizations,Carve-out or inclusive; which hosting providers,Cloud hosting provider carved out; vendor reviews the host's own SOC 2 report each year,None
+Exceptions noted,Test exceptions and management responses,"1 exception: for 2 of 25 sampled departing vendor employees, access was removed 3 days late; remediated",Accept; check the next report
+Complementary user entity controls (CUECs),Controls the owner must run for the vendor's controls to work,"Customer manages administrator users and credentials, enables MFA for administrators, reviews the administrator audit log, protects door controllers physically, keeps automatic firmware updates on, and reports suspected compromise to the vendor","Map to AC-2 (gap: POAM-005), IA-2(1) (gap: POAM-001), AU-6 (gap: POAM-009), PE-3 (met), SI-2 (met), IR-6 (P08)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA available to all customers (customer-enabled); encryption at rest and in transit tested without exception,Turn on MFA (POAM-001)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data without undue delay; no fixed number of hours,Ask for a stated notice time at renewal
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-01: RTO 8 h; RPO 24 h),99.9% monthly platform availability target; door controllers keep cached credentials and schedules during an outage; annual recovery test performed,Meets the BIA for outages. Configuration tampering by a signed-in administrator is not covered: owner keeps a monthly export (POAM-007)
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner 2026-07-23, with the IT consultant",Repeat every year (POL-01 6.4)

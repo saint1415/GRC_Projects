@@ -1,0 +1,21 @@
+benchmark_id,cpg_tier,cpg_goal,status,current_state,related_gap_or_risk,sp800_53_author_mapping,csf2_author_mapping
+CPG-ESS-01,Essential,Mitigate Known Vulnerabilities,Partially met,Monthly OS patching by the MSP; firewall firmware and medical devices patched irregularly; no vulnerability scanning,"P01 R-022, R-006; P03 164.308(a)(1)(ii)(B)",RA-5; SI-2,ID.RA-01; PR.PS-02
+CPG-ESS-02,Essential,Email Security,Partially met,Email filtering and MFA from the productivity suite; external PHI email not encrypted by default; no phishing exercises,"P01 R-002, R-012",SI-8; SC-8,PR.DS-02; PR.AT-01
+CPG-ESS-03,Essential,Multifactor Authentication,Partially met,"MFA for email, employee remote access, and the cloud console; teleradiology support VPN shared account without MFA; on-site EHR password only",P01 R-001; P03 164.312(d),IA-2(1); IA-2(2); AC-17,PR.AA-03
+CPG-ESS-04,Essential,Basic Cybersecurity Training,Partially met,Annual HIPAA training for employees; contracted clinicians and agency nurses not trained,"P01 R-002, R-023; P03 164.308(a)(5)",AT-2,PR.AT-01
+CPG-ESS-05,Essential,Strong Encryption,Partially met,TLS and VPN in transit; laptops and cloud storage encrypted; desktops and workstations on wheels unencrypted,P01 R-013; P03 164.312(a)(2)(iv),SC-8; SC-13; SC-28,PR.DS-01; PR.DS-02
+CPG-ESS-06,Essential,Revoke Credentials for Departing Workforce Members,Not met,11 active accounts for former agency nurses and contracted clinicians in July 2026,P01 R-009; P03 164.308(a)(3)(ii)(C),AC-2; PS-4; PS-7,PR.AA-05
+CPG-ESS-07,Essential,Basic Incident Planning and Preparedness,Partially met,POL-03 and the P08 ransomware runbook approved 2026-08-31; not yet exercised; emergency plan lacks a cyber annex,P01 R-016; P03 164.308(a)(6); 485.625(a)(2),IR-8; IR-3; CP-2,RS.MA-01; ID.IM-04
+CPG-ESS-08,Essential,Unique Credentials,Partially met,"Unique EHR accounts, but three shared generic accounts and a default password on the monitor central station","P01 R-011, R-026; P03 164.312(a)(2)(i)",IA-2; IA-5; AC-2,PR.AA-01
+CPG-ESS-09,Essential,Separate User and Privileged Accounts,Partially met,IT staff use separate administrator accounts; MSP technicians share one standing administrator account,P01 R-018,AC-6; AC-2,PR.AA-05
+CPG-ESS-10,Essential,Vendor/Supplier Cybersecurity Requirements,Not met,No security requirements or reviews for vendors; two ePHI vendors without a BAA,"P01 R-017, R-018, R-019; P03 164.308(b)(1)",SA-4; SA-9; SR-6,GV.SC-05; GV.SC-07
+CPG-ENH-01,Enhanced,Asset Inventory,Partially met,IT hardware inventoried; medical devices and building OT tracked only for maintenance,"P03 164.310(d); P01 R-006, R-008",CM-8,ID.AM-01; ID.AM-02
+CPG-ENH-02,Enhanced,Third Party Vulnerability Disclosure,Not met,No published way for outside parties to report vulnerabilities in hospital systems,None (low priority for a CAH),RA-5(11),ID.RA-08
+CPG-ENH-03,Enhanced,Third Party Incident Reporting,Partially met,BAAs require breach notice under 164.410; no defined notice period for security incidents,P03 164.314(a)(2)(i),SA-9; IR-6,GV.SC-05; RS.CO-03
+CPG-ENH-04,Enhanced,Cybersecurity Testing,Not met,No vulnerability scanning or penetration testing,P01 R-022,RA-5; CA-8,ID.RA-01; ID.IM-02
+CPG-ENH-05,Enhanced,Cybersecurity Mitigation,Partially met,P07 POA&M now tracks findings with owners and dates; no prior tracking,P07 poam.csv,CA-5; SI-2,ID.RA-06
+CPG-ENH-06,Enhanced,Detect and Respond to Relevant Threats and Tactics,Partially met,EDR on servers and workstations; alerts watched only in business hours,"P01 R-001, R-002",SI-4; IR-4,DE.CM-01; DE.AE-02
+CPG-ENH-07,Enhanced,Network Segmentation,Not met,"One flat network for users, servers, medical devices, OT, and phones","P01 R-001, R-006, R-007, R-008, R-033",SC-7,PR.IR-01
+CPG-ENH-08,Enhanced,Centralized Log Collection,Not met,Logs stay in each system with default retention,P03 164.312(b); P01 R-005,AU-6; AU-11; SI-4,DE.CM-01; PR.PS-04
+CPG-ENH-09,Enhanced,Centralized Incident Planning and Preparedness,Partially met,"Emergency preparedness program coordinates with the county and coalition, but IT and cyber events are outside it",P03 485.625(a)(1)-(2),IR-8; CP-2,ID.IM-04; RS.MA-01
+CPG-ENH-10,Enhanced,Configuration Management,Partially met,"Standard workstation image from the MSP; no documented baselines for servers, network gear, or devices","P01 R-022, R-026",CM-2; CM-6,PR.PS-01

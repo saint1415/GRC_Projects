@@ -1,0 +1,57 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The company must maintain an information security program for IT and OT, documented in this policy set, the supporting standards, the...",PM-1; PL-2,GV.PO-01,C-CHEMICAL-R02 (33 CFR 101.620(b)(1)),No
+POL-01,4.2,"The company must designate in writing, by name and title, a CySO and at least one alternate for the Port plant, reachable 24 hours a day",PM-2,GV.RR-02,C-CHEMICAL-R02 (33 CFR 101.620(b)(3); 33 CFR 101.630(e)(4)),No
+POL-01,4.3,"An enterprise risk assessment must be performed at least annually and after major changes, using NIST SP 800-30 Rev",RA-3; PM-9,ID.RA-01,C-CHEMICAL-R02 (33 CFR 101.650(e)(1)),Yes
+POL-01,4.4,Risk acceptance authority: Risk owners may accept Low and Very Low risks,PM-9,GV.RM-01,Internal (P01 risk appetite),No
+POL-01,4.5,"The vCISO must report to the audit committee each quarter on top risks, POA&M status, incidents, and progress on the USCG roadmap.",CA-5,GV.OV-01,Internal,No
+POL-01,4.6,Policies must be reviewed at least annually and after major changes or incidents; standards at least annually by their owners.,PL-1,GV.PO-02,Internal,No
+POL-01,4.7,"Exceptions to any policy or standard must be requested in writing, risk-rated, approved under 4.4, recorded in the risk register, and...",PL-1,GV.PO-02,C-CHEMICAL-R02 (33 CFR 101.665),No
+POL-01,4.8,"Sanctions: Workforce members who break security policies are sanctioned in proportion to intent and harm, from retraining to termination",PS-8,GV.RR-04,Internal,No
+POL-01,4.9,"Vendors: Before a vendor gets access to OT, critical IT systems, SSI, or formulations, it must pass a security review scaled to its...",SA-4; SA-9; SR-6,GV.SC-05; GV.SC-06,C-CHEMICAL-R02 (33 CFR 101.650(f)(1)-(2)),Yes
+POL-01,4.10,"Tier 1 vendors (OT access, critical IT, or TTRS sub-service providers) must be reassessed each year, including a review of their SOC 2...",SR-6,GV.SC-07,C-CHEMICAL-R02 (33 CFR 101.650(f)(1)),No
+POL-01,4.11,"Management of change: Changes to process control logic, setpoints, alarm limits, SIS logic, terminal automation, OT network rules, and...",CM-3; CM-4,ID.RA-07; PR.PS-01,40 CFR 68.75; 29 CFR 1910.119(l),Yes
+POL-01,4.12,Security controls must be independently evaluated at least annually (P07),CA-2,GV.OV-01,C-CHEMICAL-R02 (33 CFR 101.630(f)(4)),No
+POL-01,4.13,"Security policies, risk assessments, assessments, training, drill and exercise records, and incident records must be kept for at least...",SI-12; AU-11,GV.PO-01; PR.PS-04,C-CHEMICAL-R02 (33 CFR 101.640); 33 CFR 105.225,No
+POL-01,4.14,AI tools must be approved through the AI governance process before use,PM-9,GV.RM-01,Internal,No
+POL-01,4.15,Cyber-initiated failure scenarios from the risk register must be considered in every RMP and PSM process hazard analysis and revalidation.,RA-3,ID.RA-04; GV.RM-06,40 CFR 68.67(c)(4); 29 CFR 1910.119(e)(3)(iv),Yes
+POL-02,4.1,Every user must have a unique account,IA-2; AC-2,PR.AA-01,C-CHEMICAL-R02 (33 CFR 101.650(a)(6)),Yes
+POL-02,4.2,Users must keep separate credentials for critical IT and OT systems; an OT account may never reuse an IT password.,IA-2; IA-5,PR.AA-01; PR.AA-03,C-CHEMICAL-R02 (33 CFR 101.650(a)(6)),Yes
+POL-02,4.3,"Access must be approved by the user's manager and the system owner, and granted at the least privilege needed for the job",AC-2; AC-5; AC-6,PR.AA-05,C-CHEMICAL-R02 (33 CFR 101.650(a)(5)),Yes
+POL-02,4.4,"Privileged and administrator accounts must be separate from everyday accounts, held in the privileged access vault where technically...",AC-6(5),PR.AA-05,Internal,No
+POL-02,4.5,"MFA is required for all access to IT systems, cloud consoles, and SaaS, and for every remote session into OT",IA-2(1),PR.AA-01; PR.AA-03,C-CHEMICAL-R02 (33 CFR 101.650(a)(4)),Yes
+POL-02,4.6,Passwords must meet STD-08 (14 characters minimum where supported),IA-5,PR.AA-01; PR.AA-03,C-CHEMICAL-R02 (33 CFR 101.650(a)(2)-(3)),Yes
+POL-02,4.7,IT systems must lock accounts after 10 failed sign-in attempts,AC-7; AC-11,PR.AA-03,C-CHEMICAL-R02 (33 CFR 101.650(a)(1)),No
+POL-02,4.8,"Remote access to OT must go only through the OT remote access gateway, with a named account, MFA, per-session approval recorded in the...",AC-17; MA-4,PR.AA-05,C-CHEMICAL-R02 (33 CFR 101.650(f)(3)),Yes
+POL-02,4.9,"Leavers' access must be removed the same day, including OT accounts and driver cards",PS-4; PS-5; AC-2,PR.AA-01; PR.AA-05,C-CHEMICAL-R02 (33 CFR 101.650(a)(7)),Yes
+POL-02,4.10,"Managers and system owners must review user access quarterly; OT access, driver cards, and gateway accounts are included.",AC-2,PR.AA-05,Internal,Yes
+POL-02,4.11,"Physical access to control rooms, OT server rooms, rack rooms, SIS cabinets, and field I/O cabinets must be limited to an authorized...",PE-2; PE-3,PR.AA-06,C-CHEMICAL-R02 (33 CFR 101.650(i)(1)),Yes
+POL-02,4.12,"Access to SSI (the FSP, the Facility Security Assessment, the Cybersecurity Plan) and legacy CVI is limited to named people with a need...",AC-3,PR.AA-05; PR.DS-10,49 CFR 1520.9,Yes
+POL-03,4.1,"The company must keep a Cyber Incident Response Plan, made up of this policy, the P08 runbooks, and the notification matrix, and must...",IR-8,RS.MA-01,C-CHEMICAL-R02 (33 CFR 101.620(b)(6); 33 CFR 101.650(g)(2)),Yes
+POL-03,4.2,"Safety first: In any incident touching OT, the Shift Supervisor's decision to put units in a safe state comes first",IR-4; CP-12,RS.MA-01; RS.MI-01,"40 CFR 68.69(a)(1)(iv); C-CHEMICAL-R01 (27.230(a)(8), voluntary benchmark)",Yes
+POL-03,4.3,Everyone must report suspected incidents immediately to the control room or the CySO.,IR-6,DE.AE-06,C-CHEMICAL-R02 (33 CFR 101.650(d)(1)(iv)),Yes
+POL-03,4.4,Regulatory reporting: The incident manager must make sure that: an actual or threatened cyber incident involving the Port plant is...,IR-6,RS.CO-02,C-CHEMICAL-R02 (33 CFR 101.620(b)(7)); 33 CFR 6.16-1; 33 CFR 101.305; 40 CFR 302.6; 40 CFR 355.40-355.43,Yes
+POL-03,4.5,Possible personal information breaches must go to the General Counsel the same day,IR-6,RS.CO-03,Fla. Stat. 501.171,Yes
+POL-03,4.6,"Any incident that resulted in, or could reasonably have resulted in, a catastrophic release must also start an RMP and PSM incident...",IR-4,RS.AN-03,40 CFR 68.81; 29 CFR 1910.119(m),Yes
+POL-03,4.7,"Incidents must be recorded in the incident register with timelines, evidence, decisions, and lessons learned",IR-5,RS.AN-06,C-CHEMICAL-R02 (33 CFR 101.640),No
+POL-03,4.8,The company must hold at least one cyber exercise each calendar year (no more than 18 months apart) and two cyber drills each calendar...,IR-3; CP-4,ID.IM-02,C-CHEMICAL-R02 (33 CFR 101.635(b)-(c)); 40 CFR 68.96,Yes
+POL-03,4.9,"No ransom may be paid without the CEO's approval, legal advice, and a sanctions check against OFAC guidance.",IR-4,RS.MA-01,Internal,Yes
+POL-03,4.10,Recovery must follow the BIA order (P05),CP-10,RC.RP-01,C-CHEMICAL-R02 (33 CFR 101.650(g)(4)),Yes
+POL-03,4.11,CIRCIA reporting is tracked as a proposed requirement and will be added when a final rule takes effect.,IR-6,RS.CO-02,"C-CHEMICAL-R03 (proposed, tracked only)",Yes
+POL-04,4.1,Every information asset must have an owner and a class,RA-2,ID.AM-05,C-CHEMICAL-R02 (33 CFR 101.650(b)(3)),No
+POL-04,4.2,"SSI must be handled under 49 CFR Part 1520: it is disclosed only to covered persons with a need to know, marked, and stored only in the...",AC-3; MP-2,PR.AA-05; PR.DS-10,C-CHEMICAL-R02 (33 CFR 101.630(b)); 49 CFR 1520.9,Yes
+POL-04,4.3,"Restricted and SSI information must not be stored in general file shares, sent to personal accounts, or entered into AI tools other than...",AC-3; AC-4,PR.DS-01; PR.DS-10,Internal,Yes
+POL-04,4.4,Restricted and Confidential data must be encrypted at rest and in transit where technically feasible,SC-8; SC-28,PR.DS-01; PR.DS-02,C-CHEMICAL-R02 (33 CFR 101.650(c)(2)),No
+POL-04,4.5,Logs are Restricted: They must be captured and protected so that only privileged users can read them.,AU-9,PR.DS-10,C-CHEMICAL-R02 (33 CFR 101.650(c)(1)),Yes
+POL-04,4.6,"Configurations and logic for critical OT systems must be backed up at least weekly to offline media and nightly online, protected from...",CP-9,PR.DS-11,C-CHEMICAL-R02 (33 CFR 101.650(g)(4)),Yes
+POL-04,4.7,"Removable media may be used on OT only after scanning at the media kiosk, and only by exception",MP-7,PR.PS-01; PR.DS-01,C-CHEMICAL-R02 (33 CFR 101.650(i)(2)),Yes
+POL-04,4.8,"Media and devices holding Restricted or SSI information must be sanitized before reuse or disposal, with a record kept.",MP-6,PR.DS-01; ID.AM-08,Internal,No
+POL-04,4.9,Records must be kept for the periods in STD-03 and then destroyed.,SI-12,ID.AM-08,Internal,No
+POL-05,4.1,"Users must read and accept this policy before getting access, and each year after.",PL-4,PR.AT-01; GV.PO-01,Internal,No
+POL-05,4.2,Users must complete security awareness training before access and every year,AT-2; AT-3,PR.AT-01; PR.AT-02,C-CHEMICAL-R02 (33 CFR 101.650(d)(1)-(4)),Yes
+POL-05,4.3,Company systems are for business use,PL-4,GV.PO-01,Internal,No
+POL-05,4.4,"Personal phones, USB drives, chargers, and laptops must not be connected to OT systems or control room consoles.",MP-7; SC-41,PR.PS-01,C-CHEMICAL-R02 (33 CFR 101.650(i)(2)),Yes
+POL-05,4.5,"Users must not try to bypass security controls, share passwords, or use another person's account or driver card.",PL-4,PR.AT-01,C-CHEMICAL-R02 (33 CFR 101.650(d)(1)(iii)),No
+POL-05,4.6,Generative AI: Only AI tools on the approved list (STD-07) may be used for company work,PL-4,PR.AT-01; GV.PO-01,Internal (STD-07),No
+POL-05,4.7,"Users must report suspected phishing, lost devices, unusual control system behavior, and other security concerns immediately to the CySO...",IR-6,DE.AE-06,C-CHEMICAL-R02 (33 CFR 101.650(d)(1)(iv)),Yes
+POL-05,4.8,"Hazmat employees must complete security awareness training and, where they handle 50% hydrogen peroxide shipments or implement the DOT...",AT-3,PR.AT-01; PR.AT-02,49 CFR 172.704(a)(4)-(5),Yes
+POL-05,4.9,The company monitors use of its systems for security purposes,AC-8,GV.PO-01,Internal,No

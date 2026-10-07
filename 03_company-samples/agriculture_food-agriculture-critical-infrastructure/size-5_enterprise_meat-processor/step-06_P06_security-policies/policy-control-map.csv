@@ -1,0 +1,58 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The company must maintain an information security program aligned to NIST CSF 2.0 that covers IT and OT,...",PM-1; PL-2,GV.PO-01,None (NIST CSF 2.0 benchmark),No
+POL-01,4.2,The Director of OT Security must lead OT security under the CISO. The SVP FSQA must be designated in writing as...,PM-2,GV.RR-02,C-FOOD-AG-R01 (121.4(d)),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using...",RA-3; PM-9,GV.RM-01,C-FOOD-AG-R01 (121.157(b)(2)),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable...",PM-9,GV.RM-06,None (NIST CSF 2.0 benchmark),No
+POL-01,4.5,Security and food defense work together. The SVP FSQA must receive the risk register each year and after each...,RA-3,ID.RA-01,C-FOOD-AG-R01 (121.157(b)(2)),Yes
+POL-01,4.6,"OT change control. No change to a PLC program, HMI, recipe or setpoint range, smokehouse or oven cycle, MES...",CM-3; CM-4,PR.PS-01,C-FOOD-AG-R01 (121.157(b)(1); 121.157(c)); 9 CFR 417.4(a)(3),Yes
+POL-01,4.7,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they...,PL-1,GV.PO-02,None (NIST CSF 2.0 benchmark),No
+POL-01,4.8,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,None (NIST CSF 2.0 benchmark),No
+POL-01,4.9,Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and...,PS-8,GV.RR-04,None (NIST CSF 2.0 benchmark),No
+POL-01,4.10,No vendor may receive OT remote access or Restricted data until it accepts the company's security terms (named...,SA-9; SR-6,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-01,4.11,Security controls for tier-1 systems and common control providers must be assessed at least annually by an...,CA-2; CA-2(1),ID.IM-01,C-FOOD-AG-R01 (121.150),No
+POL-01,4.12,"Every acquisition must include security due diligence before closing and an integration plan that brings identity,...",RA-3; SA-9,GV.OC-01,None (NIST CSF 2.0 benchmark),Yes
+POL-01,4.13,"Security documentation, including risk analyses, assessments, and required actions, must be retained for at least...",SI-12,GV.PO-02,None (NIST CSF 2.0 benchmark),No
+POL-01,4.14,"The CISO must report cybersecurity risk to the board risk committee at least quarterly, including Very High and...",PM-9,GV.OV-01,17 CFR 229.106(c),No
+POL-02,4.1,"Every user must have a unique identity, including on HMIs, SCADA, the central MES, and the food safety records...",IA-2; AC-2,PR.AA-01,C-FOOD-AG-R01 (121.305(f)); 9 CFR 417.5(b),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted....",AC-2; AC-3; AC-6,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.3,"Formulations and critical setpoints. Changes to cure, brine, cook, and CIP parameters require two people: a recipe...",AC-5; CM-5,PR.AA-05,C-FOOD-AG-R01 (121.135(a)),Yes
+POL-02,4.4,"MFA is required for all remote access, all cloud and administrative access, the MES, the records platform, and...",IA-2(1); IA-2(2),PR.AA-03,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.5,"OT remote access. Vendors and staff may reach OT only through the enterprise OT remote access gateway, with a...",AC-17; MA-4,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.6,"Access must be disabled the same business day as a termination, and immediately for involuntary terminations. OT...",PS-4; AC-2,PR.AA-05,C-FOOD-AG-R01 (121.130(b)),Yes
+POL-02,4.7,"Workforce and OT accounts inactive for 60 days, and customer portal accounts inactive for 90 days, must be...",AC-2(3),PR.AA-05,None (NIST CSF 2.0 benchmark),No
+POL-02,4.8,Managers must certify their staff's IT access every quarter. Plant controls engineers must review OT accounts and...,AC-2,PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.9,"Privileged access must be granted just in time through PAM or the OT gateway, recorded, and limited to the...",AC-6; AC-6(9),PR.AA-05,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.10,"Default passwords must be changed before any device or system is connected, including refrigeration controllers,...",IA-5; CM-6,PR.AA-01,None (NIST CSF 2.0 benchmark),Yes
+POL-02,4.11,"The identity platform locks accounts after 10 failed sign-ins. HMIs must not lock out operators, because lockout...",AC-7; AC-11,PR.AA-03,None (NIST CSF 2.0 benchmark),No
+POL-02,4.12,"Physical access. Badge access is required at every site. Cure and ingredient rooms, server rooms, engine rooms,...",PE-2; PE-3,PR.AA-06,C-FOOD-AG-R01 (121.135(a)),Yes
+POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, starting...",IR-8,RS.MA-01,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.2,"Workforce, agency workers, and vendors must report suspected incidents to the SOC within 1 hour, including...",IR-6,RS.MA-02,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.3,"Every incident must be logged, classified under STD-03.1, and tracked to closure in SOC case management.",IR-5; IR-4,RS.MA-02,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.4,"Food safety first. When an incident affects process controls, CCP monitoring, formulations, or food safety...",IR-4,RS.MA-01,9 CFR 417.3(b),Yes
+POL-03,4.5,Suspected tampering is a food defense event. At PLT-07 it must trigger the food defense corrective action...,IR-4,RS.MA-01,C-FOOD-AG-R01 (121.145; 121.157(b)(3)),Yes
+POL-03,4.6,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours, and the disclosure committee...",IR-6; IR-8,RS.CO-02,SEC Form 8-K Item 1.05,Yes
+POL-03,4.7,"If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4...",IR-6,RS.CO-02,SEC Form 8-K Item 1.05,Yes
+POL-03,4.8,Notifications must meet the deadlines in the P08 notification matrix: FSIS within 24 hours of determining...,IR-6,RS.CO-03,9 CFR 418.2; 21 U.S.C. 350f(d); 40 CFR 302.6,Yes
+POL-03,4.9,"No ransom may be paid without approval from the CEO, the General Counsel, and the cyber insurer, and an OFAC...",IR-4,RS.MI-01,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.10,"Tier-1 systems, including plant OT and the central MES, must have contingency plans with RTO and RPO from the BIA...",CP-2; CP-4; CP-10,RC.RP-01,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.11,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure...",IR-3; IR-8,ID.IM-02,None (NIST CSF 2.0 benchmark),Yes
+POL-03,4.12,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the...,IR-4,ID.IM-03,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.1,Information must be classified in one of four levels. Restricted: the PLT-07 food defense plan and vulnerability...,RA-2,ID.AM-07,None (NIST CSF 2.0 benchmark),No
+POL-04,4.2,The PLT-07 food defense plan and vulnerability assessment must be kept in a restricted library limited to named...,AC-3,PR.DS-01,C-FOOD-AG-R01 (121.315(c); 121.325),Yes
+POL-04,4.3,"Record integrity. CCP, SSOP, food defense, and preventive controls records must be created under named accounts at...",AU-9; AU-10,PR.DS-10,9 CFR 417.5(b); 9 CFR 417.5(d); 9 CFR 416.16(b); 21 CFR 117.305; 21 CFR 121.305,Yes
+POL-04,4.4,Restricted and Confidential data must be encrypted in transit. Restricted data must also be encrypted at rest on...,SC-8; SC-28,PR.DS-02,None (NIST CSF 2.0 benchmark),No
+POL-04,4.5,"Retention. HACCP records follow 9 CFR 417.5(e) (at least 1 year for refrigerated products and 2 years for frozen,...",SI-12; AU-11,PR.DS-11,9 CFR 417.5(e); 9 CFR 416.16(c); 21 CFR 121.315; 21 CFR 117.315,Yes
+POL-04,4.6,"Backups of Restricted and Confidential data, including PLC programs, MES databases, and records, must be...",CP-9,PR.DS-11,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.7,"Media and devices holding Restricted or Confidential data, including replaced HMIs and engineering workstations,...",MP-6,PR.DS-01,Fla. Stat. 501.171(8) (Florida worked example),No
+POL-04,4.8,Restricted data must not be entered into AI tools or other third-party services unless the AI council has approved...,SA-9,GV.SC-05,None (NIST CSF 2.0 benchmark),Yes
+POL-04,4.9,SL-2 customer specifications may be used only for that customer's production and only by named SL-2 and FSQA staff.,AC-3; AC-6,PR.AA-05,None (customer agreements),Yes
+POL-05,4.1,Company systems are for company business. Limited personal use of office computers is allowed if it does not...,PL-4,GV.PO-01,None (NIST CSF 2.0 benchmark),No
+POL-05,4.2,"Every workforce member, including agency temporary workers, must accept this policy before receiving access and...",PL-4,PR.AT-01,None (NIST CSF 2.0 benchmark),No
+POL-05,4.3,"Security awareness training is required at hire and every year for everyone, in English and Spanish. Workers...",AT-2; AT-3,PR.AT-01,C-FOOD-AG-R01 (121.4(b)(2); 121.4(e)),Yes
+POL-05,4.4,"Do not use another person's badge or login, and do not share yours. Sign out of shared terminals when you leave.",AC-11; PL-4,PR.AA-01,None (NIST CSF 2.0 benchmark),No
+POL-05,4.5,"Do not connect USB drives, phones, laptops, or any other device to an HMI, PLC, refrigeration controller, or plant...",MP-7; CM-11,PR.PS-01,None (NIST CSF 2.0 benchmark),No
+POL-05,4.6,Do not open unexpected attachments or links. Report suspicious messages with the Report Phishing button.,AT-2,PR.AT-01,None (NIST CSF 2.0 benchmark),Yes
+POL-05,4.7,"Report immediately anything unusual at a process step: an unknown person, a broken seal or lock, an HMI screen or...",IR-6,RS.MA-02,None (NIST CSF 2.0 benchmark),Yes
+POL-05,4.8,"Generative AI and other AI tools: use only tools on the approved list, only for their approved purpose (P10)....",PL-4; CM-3,GV.PO-01,9 CFR 417.4(a)(3),Yes
+POL-05,4.9,"Photos and video inside plants require supervisor approval. Never photograph restricted areas, HMI screens, or...",PL-4,PR.DS-01,None (NIST CSF 2.0 benchmark),No
+POL-05,4.10,Images and analytics about workers from plant cameras and AI tools may be used only for the safety purposes the AI...,PL-4; AC-3,GV.PO-01,None (NIST CSF 2.0 benchmark),Yes

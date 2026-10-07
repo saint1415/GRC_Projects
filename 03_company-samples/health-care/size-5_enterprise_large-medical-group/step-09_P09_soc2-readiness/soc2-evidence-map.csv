@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.1,MFA and PAM configuration,Identity platform; PAM,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1),Collecting
+Both,CC6.6; CC6.7,"WAF, network policy, and TLS scan results",Landing zone; scanner,Director of Cloud Platform Engineering,Quarterly,All quarterly scans,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports with remediation tickets,EDR console; scanner,Director of Security Operations,Weekly,5 weeks; 25 findings,P07 RA-5 sample,Collecting
+Both,CC7.2; CC7.3; CC7.4,"SOC cases, use case list, and incident reports",SOC case management,Director of Security Operations,Continuous,25 cases,P08,Collecting
+Both,CC9.2,Vendor register with SOC report reviews and BAAs,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P03 (164.308(b)); P07 SA-9,Collecting
+Both,A1.2; A1.3,"Backup reports, restore tests, and DR test reports",Backup service; DR records,CIO,Daily backups; quarterly restore; annual DR,25 backup days; all restore and DR tests,P05; P07 CP-9,Collecting
+SL-1 Patient-app platform,CC2.3; CC3.1,"SL-1 system description, client agreements, and status page history",Contract repository; status page,"Vice President, Digital Health",Annual; per incident,All changes in the period,2025 SOC 2 report,Ready
+SL-1 Patient-app platform,CC8.1,"Pull requests, pipeline approvals, and change advisory board records",Source control; CI/CD,"Vice President, Digital Health",Per change,25 changes,2025 SOC 2 report,Ready
+SL-1 Patient-app platform,C1.1; CC6.1,Tenant isolation test results for 45 client tenants,CI/CD test reports,"Vice President, Digital Health",Every release,25 releases,P04 AC-3 row,Ready
+SL-1 Patient-app platform,A1.1; A1.2,Capacity dashboards and second-region failover test,Cloud provider B monitoring,Director of Cloud Platform Engineering,Quarterly; annual failover,All quarters; failover 2026-06-20,P05 BP-10,Ready
+SL-1 Patient-app platform,P1.1 to P8.1,"Privacy notice versions, consent logs, access and correction request routing, disclosure log",App admin console; Privacy Office tracker,Chief Privacy Officer,Per request; per version,25 requests; all notice versions,New for 2027,Not started (central consent log and automated disclosure log due 2027-03-31)
+SL-2 Lab reference testing,CC1.3; CC3.1,SL-2 system description and service commitments,Contract repository,"Vice President, Laboratory Services",Annual,Document,New,Not started (due 2027-01-31)
+SL-2 Lab reference testing,CC6.2; CC6.3,Outreach portal account inactivity report and quarterly client attestations,Outreach portal,"Vice President, Laboratory Services",Quarterly,All quarterly attestations; inactivity job runs,P07 AC-2(3) and IA-8,Not started (POAM-002)
+SL-2 Lab reference testing,CC8.1; PI1.3,"Lab change board minutes, validation records, and rule version history",LIS; change system,Laboratory Director,Per change,40 rule and build changes,P07 CM-3 sample,Not started (POAM-003)
+SL-2 Lab reference testing,CC7.2; PI1.4,LIS-to-destination result reconciliation reports and SIEM integrity alerts,Integration platform; SIEM,LIS Application Manager,Daily,25 days,P02 SI-7(1),Not started (POAM-006)
+SL-2 Lab reference testing,PI1.2,Interface error queue reviews and accessioning audits,LIS; interface engines,LIS Application Manager,Each shift,25 shifts,P07 SI-10,Ready
+SL-2 Lab reference testing,PI1.4,Critical value call logs with read-back,LIS call log,Laboratory Director,Per event,60 critical values,P03 (42 CFR 493.1291(g)),Ready
+SL-2 Lab reference testing,PI1.5; A1.2,"LIS backup, restore, and retention evidence",Backup service; LIS archive,LIS Application Manager,Daily; quarterly restore,25 days; all restores,P07 CP-9,Ready
+SL-2 Lab reference testing,CC7.5; A1.3,LIS DR retest meeting the 4-hour RTO,DR records,LIS Application Manager,Annual,Retest report,P07 CP-10,Not started (retest due 2027-01-31)
+SL-2 Lab reference testing,CC9.2,Courier and LIS vendor assurance reviews,GRC platform,Director of Third-Party Risk Management,Annual,Both vendors,P07 SA-9,Not started (POAM-015)

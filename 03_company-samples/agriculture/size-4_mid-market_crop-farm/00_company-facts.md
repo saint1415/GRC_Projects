@@ -1,0 +1,145 @@
+# Scenario facts: Cris Santos Company | Agriculture, Forestry, Fishing and Hunting | Mid-Market
+
+All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation or standard, the citation is given.
+
+## 1. The organization
+
+| Item | Fact |
+|---|---|
+| Legal name | Cris Santos Company, Inc. (private; private equity-backed; board with an audit committee) |
+| Business | Diversified precision-agriculture crop farm (NAICS 111998, All Other Miscellaneous Crop Farming). Three farms grow vegetables and melons, berries, peanuts, and sod in rotation, so that no single crop family is half of crop value. Uses connected irrigation and fertigation, GNSS-guided equipment, imagery drones, and farm management software. A central packinghouse packs, cools, and ripens the company's produce and the produce of about 30 independent contract growers |
+| Location | Florida only. **Headquarters campus** (offices, Irrigation Operations Center, equipment shop) next to the **central packinghouse**. **Farm 1 (South Farm):** about 5,000 acres, of which about 3,600 are cropped each season in tomatoes, bell peppers, and watermelons on drip irrigation under plastic mulch. **Farm 2 (Central Farm):** about 1,400 acres: 700 acres of strawberries (overhead freeze protection and drip), 400 acres of blueberries, an on-farm market, and weekend U-pick. **Farm 3 (North Farm):** about 9,000 acres of peanuts, sweet corn, and sod under 46 center pivots and traveling guns |
+| Workforce | 600 employees at the seasonal peak: about 230 year-round employees and up to 370 seasonal farm workers employed under the H-2A temporary agricultural worker program (October to June), housed in company housing at Farm 1 and Farm 2 |
+| Revenue | About $100 million a year in receipts (fictional): crop sales about $88 million, Grower Services fees about $10 million, direct retail about $2 million. Not SBA-small: the standard for NAICS 111998 is $2.5 million in average annual receipts (13 CFR 121.201) |
+| Crop mix (share of crop sales) | Vegetables and melons about $41 million (46.6%: tomatoes $15M, bell peppers $11M, watermelons $9M, sweet corn $6M); berries about $27 million (30.7%: strawberries $19M, blueberries $8M); sod about $11 million (12.5%); peanuts about $9 million (10.2%) |
+| Sales channels | Retail grocery chains (about 55% of produce sales, orders and advance ship notices by EDI), foodservice distributors (about 25%), and terminal market wholesalers (about 20%). Peanuts go to a buying point; sod is sold to landscapers and sod brokers. Retail supplier agreements require an annual third-party food safety audit, a food defense plan, lot traceability, and notice within 24 hours of any event that could affect product safety, traceability, or committed volumes |
+| Grower Services | A business unit that serves about 30 independent contract growers (about 4,500 acres of tomatoes, peppers, and watermelons) under marketing agreements: packing, cooling, ripening, marketing, and weekly pool settlement, plus irrigation monitoring and agronomy alerts for 18 of them whose soil probes and flow meters report into the company platform. Growers see field data, pack-out, grades, and settlements in the grower portal (SYS-12). Contract growers supply about 22% of packinghouse volume |
+| Card payments | The on-farm market uses a processor-managed point-to-point encrypted terminal service; online U-pick and pre-orders use the e-commerce vendor's hosted payment page. No card numbers are stored on or pass through company systems. The acquirer requires an annual PCI DSS self-assessment questionnaire |
+| USDA programs | Federal crop insurance (strawberries, tomatoes, peanuts) through a private crop insurance agent; Farm Service Agency farm records and acreage reports; a Natural Resources Conservation Service (NRCS) conservation contract that cost-shared Farm 1 drip automation. The company keeps its own copies of these program documents |
+| Food safety status | **Covered farm** under the FDA Produce Safety Rule (21 CFR Part 112): average annual produce sales far exceed the inflation-adjusted $25,000 threshold (21 CFR 112.4(a)), and the farm is far above the $500,000 qualified exemption limit (112.5(a)(2)). Sweet corn and peanuts are on the "rarely consumed raw" list and are not covered produce (112.2(a)(1)); sod is not food. Produce Safety records are kept in the farm management platform (SYS-01) |
+| Packinghouse status | The packinghouse is a **secondary activities farm** (21 CFR 1.227, "Farm" paragraph (2)): it is not located on a primary production farm, it packs, cools, holds, and ripens (ethylene) raw agricultural commodities only, the company's own farms grow the majority (about 78%) of what it packs, and the company owns it outright. Ripening with ethylene and packaging without further processing stay within the farm definition (1.227, paragraph (1)(iii)(B)(2)-(3)) |
+| Food traceability | Tomatoes, peppers, and watermelons are on FDA's Food Traceability List; strawberries, blueberries, sweet corn, peanuts, and sod are not. The Food Traceability Rule (21 CFR Part 1, Subpart S) applies to the company as grower, initial packer (including for contract growers), and shipper. FDA proposed to extend the compliance date to 2028-07-20 (90 FR 38084), and the Continuing Appropriations Act, 2026 (Pub. L. 119-37, sec. 780) directed FDA not to enforce the rule before that date (as described in 91 FR 31723, 2026-05-28). The company treats it as a readiness item, not a current enforcement exposure |
+| Pesticide records | Agricultural employer under the EPA Worker Protection Standard: pesticide application and hazard information must be displayed within 24 hours after an application ends and kept for 2 years (40 CFR 170.311(b)). Application records are entered in SYS-01 |
+| Water use | Groundwater from 54 wells under water use permits from the regional water management districts. Permit conditions require monthly withdrawal reports built from flow meter data in the irrigation historian |
+| Cybersecurity regulation | **No binding federal cybersecurity rule applies** (see P03 section 1). The company uses **NIST CSF 2.0** as its benchmark, with **NIST SP 800-82 Rev. 3** for operational technology (OT) |
+| Binding rules that reach company data | Produce Safety Rule records (21 CFR 112 Subpart O); Food Traceability Rule records (21 CFR 1 Subpart S, not enforced before 2028-07-20); H-2A earnings records and statements (20 CFR 655.122(j) and (k)); Worker Protection Standard application information (40 CFR 170.311(b)); PACA growers' agent accounting for contract growers' produce (7 CFR 46.32(b)); Florida data security, disposal, and breach notice duties (Fla. Stat. 501.171) |
+| Not in scope | **21 CFR Part 121 (N11-R01):** applies only to facilities required to register under FD&C Act section 415 (21 CFR 121.1). Farms, including secondary activities farms, are exempt from registration (21 CFR 1.226(b)), and farm activities subject to the Produce Safety standards are exempt (121.5(d)). **Reportable Food Registry (21 U.S.C. 350f):** the duty falls on the responsible party who registers a food facility; the company registers none. **SEC disclosure rules:** privately held. **FAR cyber clauses:** no federal contracts or subcontracts (the NRCS contract is a conservation cost-share agreement, not a procurement contract). **HIPAA:** not a covered entity. **State comprehensive privacy laws:** the company sells produce to businesses and runs a small Florida retail operation; no state comprehensive privacy law was found to apply (Florida's Digital Bill of Rights is reported to reach only businesses with more than $1 billion in revenue; not verified here) |
+| State law approach | Florida law is cited only where a Florida duty is unavoidable (data security, disposal, and breach notification, Fla. Stat. 501.171). Affected people who live in other states or abroad (online customers, H-2A workers at home-country addresses) are handled under "each state where affected individuals reside" in P08 |
+| Regulatory driver labels | N11-R01 does not apply (above). `regulatory_driver` columns therefore cite the benchmark as "CSF 2.0 <subcategory> (benchmark)", the OT guide as "SP 800-82r3 <section>", and binding rules by their own citation (for example "21 CFR 112.161(a)", "21 CFR 1.1455(c) (FTR)", "20 CFR 655.122(j)", "40 CFR 170.311(b)", "Fla. Stat. 501.171(2)"). N11-R01 is cited only where 21 CFR Part 121 is used as a **voluntary** checklist for the food defense plan that retail customers require (fertigation, packinghouse water, ripening rooms) |
+
+## 2. People (role titles only)
+
+| Role | Security and compliance duties |
+|---|---|
+| Board audit committee | Quarterly cyber risk reporting; receives the risk appetite and POA&M status |
+| Chief Executive Officer | Accepts High risk; approves the risk appetite and security budget |
+| Chief Operating Officer | Executive sponsor of the security program; **system owner of the Farm Management and Irrigation Control Platform (FMICP)**; accepts Moderate risk |
+| Chief Financial Officer | IT and security report through the CFO; owns the ERP, treasury, and grower settlement finance controls |
+| Virtual CISO (vCISO, part-time contractor) | Program strategy; board reporting; SSP review |
+| IT Director | IT infrastructure, networks (including the IT/OT boundary firewalls), endpoints, cloud landing zone; day-to-day control owner for IT |
+| Security Manager plus 2 security analysts (one operations, one GRC) | **Designated security lead**; vulnerability management; MSSP liaison; GRC, risk register, and vendor reviews |
+| Director of Irrigation and Water Resources | Owns irrigation and fertigation OT (SCADA, PLCs, pivots, sensors) and water use permit reporting; OT control owner |
+| Packinghouse Manager | Packing lines, forced-air cooling, ripening rooms, cold storage, optical graders, and cold-chain alarms |
+| Director of Food Safety and Quality | Produce Safety records, third-party food safety audits, traceability and mock recalls, the food defense plan, recall decisions with the CEO |
+| HR Director | H-2A program, earnings records and statements, personnel files, workforce privacy |
+| Vice President of Grower Services | Business owner of Grower Services and the grower portal; contract grower relationships |
+| Controller | Settlement calculations, accounts payable, USDA program and crop insurance reporting |
+| Precision Agriculture Manager | Drones (Part 107 remote pilot program), telematics, GNSS and RTK network, agronomy data, and the yield model |
+| Farm Managers (3, one per farm) | Field operations, harvest crews, crew lead tablets, manual irrigation decisions on their farm |
+| Director of Sales | Retail customer EDI and notices; on-farm market and online store |
+| Internal audit (co-sourced firm) | Annual IT audit; independent P07 assessment |
+| Managed security service provider (MSSP) | 24x7 EDR and SIEM monitoring of IT systems (OT not monitored today) |
+| Irrigation SCADA integrator | Installed and supports the SCADA servers and PLCs; remote support under a services agreement |
+| Grower portal development firm | Builds and maintains the grower portal and settlement service under a development contract |
+| Outside parties | Outside general counsel; cyber insurance carrier (breach hotline; panel breach counsel and forensics); crop insurance agent; H-2A filing agent |
+
+## 3. Systems
+
+| ID | System | Hosting | Holds personal or regulated data? | Notes |
+|---|---|---|---|---|
+| SYS-01 | Farm management information system (FMIS) with irrigation module: field and crop plans, pesticide application records, Produce Safety records, harvest field tally, harvest traceability data, work orders, irrigation schedules and recommendations | Vendor SaaS, web and mobile app | Yes: Produce Safety and pesticide records; field tally with worker names and piece-rate counts (H-2A earnings records) | System of record for farm operations. Vendor SOC 2 Type 2 states RTO 8 hours and RPO 1 hour |
+| SYS-02 | Identity provider (single sign-on and MFA, conditional access) | SaaS | No (identities only) | Protects SYS-01 web, SYS-03, the cloud landing zone, SYS-10, SYS-11, and the SYS-12 staff console. The SYS-01 mobile app on crew tablets uses local accounts |
+| SYS-03 | Productivity suite (email, files, chat) | SaaS | Yes: HR exports, food defense plan, contracts | |
+| SYS-04 | Cloud landing zone: 5 accounts (identity and security, shared services, operations workloads, Grower Services workloads, backup) | Public cloud provider (vendor-agnostic) | Yes: grower settlement and pack-out data; irrigation history; drone imagery | Farm data hub (historian replica and integration), imagery data lake, grower portal, settlement service, backups |
+| SYS-05 | Networks: headquarters, packinghouse, 3 farm offices, H-2A housing Wi-Fi; SD-WAN between sites; licensed radio and fiber to Farm 1 and Farm 2 pump stations; cellular for Farm 3 pivots; LoRaWAN gateways for soil probes | On-premises and cellular | In transit | IT/OT firewalls at headquarters and the packinghouse (2025); Farm 1 and Farm 2 pump-station networks are still flat with the farm office networks |
+| SYS-06 | Endpoints: 210 laptops and desktops, 160 rugged tablets and phones (60 crew lead tablets, scouts, irrigation technicians), 20 packinghouse line PCs and kiosks | Managed | Yes (cached) | EDR on laptops and desktops; tablets enrolled in mobile device management; line PCs have EDR in detect-only mode |
+| SYS-07 | Operational technology: irrigation SCADA (redundant servers and 4 HMIs in the Irrigation Operations Center), 54 well pumps with variable-frequency drives, 14 fertigation injection skids, about 1,500 drip-zone valve controllers, 46 center pivots (pivot manufacturer cloud service), about 900 soil moisture probes, 120 flow meters, 14 weather stations; packinghouse forced-air cooling and cold storage refrigeration controls, 12 ethylene ripening rooms, 4 packing lines with PLCs and 2 optical graders, 140 cold-chain temperature sensors with an alarm service | On-premises and vendor cloud (pivots, alarm service) | No personal data | About 2,900 OT and IoT devices; inventory about 55% complete |
+| SYS-08 | Equipment telematics and GNSS guidance: 85 tractors, sprayers (6 with camera-based targeted spraying), planters, and harvest equipment; 3 RTK base stations | Equipment dealer SaaS portal and on-machine displays | Yes: operator sign-in with machine location history (geolocation) | Dealer technicians have standing remote diagnostic access |
+| SYS-09 | Drones and imagery: 6 imagery drones (RGB and multispectral) and ground-station tablets | On-premises devices; imagery to SYS-04 | Incidental (people in fields may appear in images) | Flown by 3 certificated remote pilots under 14 CFR Part 107. The company does no aerial application; any aerial spraying is contracted |
+| SYS-10 | Farm ERP: accounting, accounts payable and receivable, inventory, sales orders, EDI with retail customers | Vendor SaaS | Yes: grower and customer bank details | |
+| SYS-11 | HR, payroll, and timekeeping: HR and payroll SaaS; 14 biometric (finger) time clocks at the packinghouse and farm offices | Vendor SaaS; on-premises clocks | Yes: Social Security numbers, bank accounts, H-2A passport and visa numbers, home-country addresses, biometric templates, earnings records | Payroll provider is a third-party agent under Fla. Stat. 501.171(1)(h) |
+| SYS-12 | Grower portal and settlement service: grower-facing web portal (field data, irrigation alerts, pack-out, grades, settlements) and the weekly pool settlement calculation | Company-owned application in the Grower Services account, built and maintained by a contract development firm | Yes: grower business data, bank details for settlement payments | About 140 grower user accounts; settlement payments about $900,000 a week in season |
+| SYS-13 | Retail sales: on-farm market terminals (processor P2PE) and online U-pick and pre-order store | Card processor service and e-commerce SaaS | Yes: about 9,000 online customer accounts (names, emails, phones; no card data) | |
+| SYS-14 | Security tooling: SIEM (operated by the MSSP), EDR, vulnerability scanner, cloud posture service | SaaS and cloud | Security logs | SIEM receives IdP, cloud, firewall, EDR, SYS-03, and SYS-12 logs. SCADA, PLCs, the pivot cloud, and packinghouse controls send no logs |
+
+**SSP system (P02):** the *Farm Management and Irrigation Control Platform (FMICP)*: SYS-01 (company-managed configuration of the FMIS and its irrigation module), SYS-02 as it protects the platform, SYS-04, SYS-05, the SYS-06 endpoints used to run the farms and the packinghouse, SYS-07, SYS-12, and SYS-14 as it monitors the platform, with interfaces to SYS-08, SYS-09, SYS-10, and SYS-11.
+
+## 4. Current security posture: a defined program with gaps in scale
+
+**In place today:**
+- A security program led by a part-time vCISO since 2024, with a Security Manager and 2 analysts; 5 security policies adopted in 2024
+- MFA for all office users, cloud administrators, and the SYS-01 web console through the identity provider
+- EDR on all laptops and desktops, monitored 24x7 by the MSSP; SIEM covering IT systems
+- Immutable backups (write-once, 35 days) in a separate backup account in a second region for the cloud workloads
+- FMIS vendor SOC 2 Type 2 report on file; FMIS vendor disaster recovery tested annually
+- Quarterly authenticated vulnerability scanning of IT systems; annual external penetration test of the grower portal (last 2025-11)
+- IT/OT firewalls at headquarters and the packinghouse (2025 project)
+- Annual security awareness training and quarterly phishing simulations, in English and Spanish
+- Annual internal IT audit by the co-sourced firm; annual risk assessment (last 2025-07)
+- Cyber insurance with a breach hotline
+- Third-party food safety audits passed each season, and two mock recalls a year that trace lots through SYS-01 and SYS-10
+- Card data kept off company systems by P2PE terminals and a hosted payment page
+- Every pump, injection skid, and pivot can be run by hand at its panel, and Farm 3 has written manual irrigation procedures
+
+**Missing or weak, found in the 2026 assessments:**
+1. The SCADA integrator and the pivot manufacturer have always-on remote access. The integrator uses one shared account through a remote access tool installed on a SCADA server, without MFA.
+2. Farm 1 and Farm 2 pump-station and fertigation networks are flat with the farm office networks. The OT and IoT inventory is about 55% complete, and no OT network or device logs reach the SIEM.
+3. Recovery of the SCADA servers, the farm data hub, and the grower portal has never been tested. PLC and HMI program backups are partly held only by the integrator. Disaster recovery testing covers only the FMIS vendor.
+4. Crew lead tablets in SYS-01 use shared logins at Farm 1 and Farm 2. Access reviews are annual, not quarterly. Seasonal accounts are not removed promptly. Privileged access management exists only in the cloud.
+5. Third-party risk: about 110 vendors, 38 with access to company data or systems. Vendors are reviewed only at onboarding. The equipment dealer has standing access to the telematics portal, and agricultural data vendors' data-use terms were never reviewed.
+6. The grower portal and settlement service were built by a contract firm without a secure development standard. Change management is informal, and changes to settlement calculations are not independently reviewed.
+7. There is no AI governance: 5 AI tools or features were adopted by departments without a security or privacy review.
+8. Policies exist (2024), but supporting standards are thin or missing (OT security, configuration, logging, vendor risk, secure development).
+9. Freeze protection at Farm 2 depends on SCADA automation and one alarm path. The manual night-start procedure is unwritten and untested.
+10. Regulated records (Produce Safety, pesticide application, H-2A earnings, traceability) depend on the FMIS vendor. The company has never exported a full record set for a 24-hour FDA request, and cannot yet produce traceability data as an electronic sortable spreadsheet.
+11. The 14 biometric time clocks and the personnel file share are not covered by any retention or disposal rule, and the data inventory does not list where personal information lives.
+
+## 5. Scenario choices
+
+| Deliverable | Choice |
+|---|---|
+| P03 | NIST CSF 2.0 (all 106 subcategories) as the benchmark, with SP 800-82 Rev. 3 applied to OT subcategories. Binding record rules for the primary business line: 21 CFR 112 Subpart O; 21 CFR 1 Subpart S (readiness); 20 CFR 655.122(j)-(k); 40 CFR 170.311(b); 7 CFR 46.32(b) (PACA); Fla. Stat. 501.171; PCI DSS and retail supplier agreements by contract; N11-R01 documented as not applicable |
+| P08 | **Two incident types:** (1) ransomware on the farm-management and irrigation control systems with theft of HR and grower data, entering through the SCADA integrator's remote access during the tomato and strawberry harvest; (2) an OT integrity incident: unauthorized change to fertigation, irrigation, ripening, or cold-chain controls with possible product safety impact. Both are integrated with crisis management, food safety, and legal |
+| P09 | Readiness for a SOC 2 Type 2 examination of Grower Services (Security, Availability, Processing Integrity, Confidentiality), requested by the contract growers' association and two lenders that finance growers against settlement payments; plus a vendor SOC 2 review program |
+| P10 | AI use-case portfolio: AI-001 computer-vision crop yield prediction, AI-002 FMIS irrigation scheduling with automatic application at Farm 3, AI-003 camera-based targeted spraying, AI-004 packinghouse optical grading (feeds grower settlements), AI-005 enterprise generative AI assistant |
+| Cloud | Multi-account landing zone (5 accounts), vendor-agnostic |
+| Registry defaults | Kept: the primary system (FMICP), the P08 ransomware incident, and AI-001 yield prediction all fit this business. Mid-Market depth adds a second incident type and a portfolio of 5 AI use cases |
+
+## 6. Assessment calendar (fictional)
+
+| Date | Event |
+|---|---|
+| 2026-07-06 to 2026-07-31 | BIA, risk assessment, and gap analysis fieldwork (off-season; no H-2A workers on site) |
+| 2026-08-03 to 2026-08-21 | Control assessment by the co-sourced internal audit firm (OT testing on 2026-08-12, outside irrigation run times and packinghouse operations) |
+| 2026-09-15 | Results to the audit committee; deliverables approved |
+
+## 7. Facts added during the build (fictional; used across P01-P10)
+
+| Topic | Added fact |
+|---|---|
+| Season and revenue per day | About 85% of produce sales ship from November to June, over about 180 shipping days: about $490,000 of produce shipments per shipping day on average, and more than $800,000 on peak spring days. Grower settlements average about $900,000 a week in season |
+| Irrigation Operations Center (IOC) | At headquarters. Redundant SCADA servers, 4 HMIs, and the historian, staffed 5:00 to 22:00 in season. After hours, alarms page the on-call irrigation technician through one SCADA alarm dialer |
+| Farm 2 freeze protection | Overhead irrigation protects 700 acres of strawberries on freeze nights (about 6 to 12 nights a season, December to February). Pumps must start before the canopy reaches the critical temperature, so a failed start costs the crop within about 2 hours |
+| Packinghouse | 4 packing lines, forced-air cooling tunnels, 12 ethylene ripening rooms for tomatoes, cold storage for about 120 truckloads; operates 2 shifts a day in season, about 45 truckloads a week at peak |
+| Cyber insurance | $10 million aggregate limit, $250,000 retention. The carrier's panel supplies breach counsel and forensics. The policy requires notice through the carrier hotline before incident vendors are engaged |
+| Workforce activity | 214 terminations (including 160 seasonal), 41 transfers, and 388 H-2A arrivals in the 12 months to 2026-06-30. The last access review was in February 2026. The June 2026 phishing simulation click rate was 9.1% |
+| Backups | Daily backups of the operations and Grower Services accounts to the backup account, with 35-day write-once retention and separate administrator credentials. SCADA servers are backed up weekly to a local network storage device at headquarters |
+| MSSP | 24x7 monitoring of IT; contract requires a call to the Security Manager within 30 minutes of a high-severity alert |
+| Settlement service | Weekly pool settlement for about 30 growers: pack-out by grade from the optical graders and packing lines, sales prices from SYS-10, less packing, cooling, and marketing charges. Settlement statements post to the grower portal every Tuesday, and payments go out by ACH on Wednesday |
+| Terminology | "Farm Management and Irrigation Control Platform (FMICP)" is the SSP system in P02, identifier CSC-FMICP-01 |
+| Additional role titles | Food Safety Coordinators (one per farm and the packinghouse); Irrigation Technicians; crew leads; Sales and Retail Coordinator; Communications Manager |
+| Other operating details | About 110 vendors, 14 of them Tier 1 under the P09 tiering approach; 38 privileged accounts across all administrative planes; 6 SCADA and PLC vendor or integrator accounts |
+| PACA status | The company holds a PACA license. It markets its own produce and the produce of others (a dealer, 7 CFR 46.2(m)(3)), and for contract growers it acts as a growers' agent (7 CFR 46.2(q)) under pool agreements, so it must keep auditable records of packing and grading results and render accurate, detailed accountings showing how pool costs and prices are computed (7 CFR 46.32(b)) |
+| Contract notice terms | Grower marketing agreements require notice to affected growers within 72 hours of an incident affecting grower data, and before any missed settlement date. The credit agreement requires notice of material disruptions to the lenders' agent; the CEO informs the PE sponsor's operating partner the same day as a severity 1 declaration |
+| Tier 1 vendors (14) | FMIS vendor, cloud provider, identity provider, MSSP, productivity suite vendor, ERP and EDI vendor, HR and payroll provider, SCADA integrator, pivot manufacturer, development firm, cold-chain alarm service, refrigeration contractor, equipment dealer (telematics), SD-WAN service provider. SOC 2 reviews completed in 2026 for the first 4 |
+| P08 runbook files | `ir-runbook.md` (ransomware) and `ir-runbook-ot-integrity.md` (OT integrity incident) |

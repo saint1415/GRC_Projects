@@ -1,0 +1,32 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Security program; reasonable measures to protect CPNI benchmarked to CSF 2.0 and CISA CPGs,PM-1,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.2,"Named security lead, CPNI compliance officer, and CALEA senior officer; refile CALEA designation within 30 days of change",PM-2,GV.RR-02,"C-COMMUNICATIONS-R03 (1.20003(a), (b)(4))",No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.5,Annual independent control assessment supports the CPNI certification,CA-2,ID.IM-02,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.6,Evidence-based annual CPNI certification by March 1,PM-1,GV.OV-01,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.8,"Sanctions for CPNI misuse, including vendor agents",PS-8,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-01,4.9,No CPNI to a vendor without CPNI and security terms and a security review,SA-9,GV.SC-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,4.10,"Retention of CPNI approval, notice, campaign, and breach records",SI-12,GV.PO-02,C-COMMUNICATIONS-R01 (64.2007(a)(3); 64.2008(a)(2); 64.2009(c); 64.2011(d)),No
+POL-02,4.1,Unique accounts; named TACACS+ accounts for network elements,IA-2; AC-2,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.2,Least privilege; bulk export limited; scoped service accounts,AC-6; AC-3,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.3,MFA for all sensitive and network element administration; hardware keys for administrators,IA-2(1); IA-2(2),PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.4,Same-day access removal and shared credential rotation at termination,PS-4; AC-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.5,Quarterly access reviews; monthly overflow vendor roster reconciliation,AC-2; AC-6,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.7,Management plane reachable only from jump hosts; isolated lawful-intercept path,SC-7; AC-17,PR.IR-01,C-COMMUNICATIONS-R01 (64.2010(a)); C-COMMUNICATIONS-R03 (1.20003),Yes
+POL-02,4.8,Sealed break-glass console credentials,AC-2; IA-2(1),PR.AA-05,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-02,4.9,Change vendor default passwords and SNMP strings before connection,IA-5; CM-6,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.10,"Customer authentication for phone, online, and in-person CPNI access; account change notices",IA-8; IA-5,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(b)-(g)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour to the NOC or IT,IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.3,Security incident register doubles as the CPNI breach record,IR-5,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011(d)),No
+POL-03,4.5,"Meet CPNI breach, CALEA compromise, outage, and state notice deadlines",IR-6,RS.CO-02,C-COMMUNICATIONS-R01 (64.2011(b)-(c)); C-COMMUNICATIONS-R03 (1.20003(c)); C-COMMUNICATIONS-R02 (4.9),Yes
+POL-03,4.7,Annual incident response tabletop including NOC and regulatory staff,IR-3,ID.IM-02,C-COMMUNICATIONS-R01 (64.2011),No
+POL-04,4.2,Whole customer account record protected to the CPNI standard,PT-2,ID.AM-07,C-COMMUNICATIONS-R01 (47 U.S.C. 222(a)),No
+POL-04,4.3,CPNI use only as 64.2005 allows; approval flag checked at time of use,PT-4,GV.OC-03,C-COMMUNICATIONS-R01 (64.2007; 64.2009(a)),Yes
+POL-04,4.4,Supervisory approval and register for CPNI campaigns; biennial opt-out notice,PT-5,GV.OC-03,C-COMMUNICATIONS-R01 (64.2008(d)(2); 64.2009(c)-(d)),No
+POL-04,4.5,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-04,4.7,Isolated immutable backups tested quarterly,CP-9; CP-4,PR.DS-11,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-04,4.8,CDR online retention 18 months; remove unneeded SSN digits and dates of birth,SI-12,ID.AM-08,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-05,4.3,Annual awareness training for all staff including field technicians; phishing exercises,AT-2,PR.AT-01,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-05,4.4,"Annual CPNI training for everyone with CPNI access, including vendor agents",AT-3,PR.AT-02,C-COMMUNICATIONS-R01 (64.2009(b)),Yes
+POL-05,4.5,Look up accounts only for a job need; call detail views logged and reviewed,AU-6,DE.CM-03,C-COMMUNICATIONS-R01 (64.2010(b)),Yes
+POL-05,4.9,Approved generative AI tools only; no CPNI in unapproved tools,PL-4,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No

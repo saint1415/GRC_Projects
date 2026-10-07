@@ -1,0 +1,58 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The company must maintain an information security program aligned to NIST CSF 2.0, documented in this policy...",PM-1; PL-2,GV.PO-01,N42-R01 (15 U.S.C. 45(a)); N42-R07 (17 CFR 229.106(b)),No
+POL-01,4.2,"The CISO is the program owner. The President, Federal Solutions must be designated in writing as the CMMC Affirming...",PM-2,GV.RR-02,N42-R02 (32 CFR 170.22(a)(1)),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST...",RA-3; PM-9,GV.RM-01,N42-R03 (SP 800-171 R2 3.11.1); N42-R07 (17 CFR 229.106(b)(1)),Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-06,N42-R07 (17 CFR 229.106(c)(2)),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they...,PL-1,GV.PO-02,N42-R03 (252.204-7012(b)),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,N42-R01 (15 U.S.C. 45(a)),No
+POL-01,4.7,"Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and harm,...",PS-8,GV.RR-04,N42-R01 (15 U.S.C. 45(a)),No
+POL-01,4.8,"No vendor, staffing agency, 3PL, or drop-ship partner may receive company data, system access, or FCI until it has...",SA-9; SR-6,GV.SC-05,N42-R04 (52.204-21(b)(1)); Fla. Stat. 501.171(6),Yes
+POL-01,4.9,"Security controls for tier-1 systems, common control providers, and systems in a CMMC Assessment Scope must be...",CA-2; CA-2(1),ID.IM-01,N42-R03 (SP 800-171 R2 3.12.1),No
+POL-01,4.10,"Every acquisition must include security due diligence before closing and an integration plan that brings identity,...",RA-3; SA-9,GV.OC-01,N42-R07 (17 CFR 229.106(b)),Yes
+POL-01,4.11,"Security and CMMC documentation, including assessments, hashed CMMC artifacts, and incident records, must be...",SI-12,GV.PO-02,N42-R02 (32 CFR 170.17(c)(4)),No
+POL-01,4.12,"The CISO must report cybersecurity and product-integrity risk to the board risk committee at least quarterly,...",PM-9,GV.OV-01,N42-R07 (17 CFR 229.106(c)(1)),No
+POL-01,4.13,Products for federal orders must be bought from the original manufacturer or its authorized sources first....,SR-5; SR-11,GV.SC-07,DFARS 252.246-7008(b) (contract clause),Yes
+POL-01,4.14,Every SKU must have a manufacturer of record. Products of covered manufacturers (FAR 52.204-25) and Kaspersky...,SR-3; SR-4,GV.SC-05,N42-R05 (52.204-25(b)(1)),Yes
+POL-01,4.15,"Open-market receipts of network and security products, and returns of those products, must be authenticated (OEM...",SR-10; SR-11,GV.SC-07,N42-R05 (52.204-25(b)); DFARS 252.246-7008(c) (contract clause),Yes
+POL-01,4.16,"Suspect counterfeit, tampered, or covered items must be quarantined, retained until disposition instructions are...",SR-12; SR-8; IR-6,GV.SC-08,DFARS 252.246-7008(b)(3)(ii) (contract clause); N42-R05 (52.204-25(d)),Yes
+POL-02,4.1,"Every user, service, and device must have a unique identity. Shared accounts are prohibited, including shared kiosk...",IA-2; AC-2,PR.AA-01,N42-R04 (52.204-21(b)(1)(v)-(vi)),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted.",AC-2; AC-3; AC-6,PR.AA-05,N42-R04 (52.204-21(b)(1)(i)-(ii)),Yes
+POL-02,4.3,"Duties that could let one person create and pay a vendor, change prices and enter orders, or set and release credit...",AC-5,PR.AA-05,N42-R01 (15 U.S.C. 45(a)); SOX section 404,Yes
+POL-02,4.4,"MFA is required for all remote access, all administrative and cloud access, all workforce access to the OCFP, and...",IA-2(1); IA-2(2); IA-8,PR.AA-03,N42-R03 (SP 800-171 R2 3.5.3),Yes
+POL-02,4.5,"Access must be disabled the same business day as an employee termination, and within 1 business day of a staffing...",PS-4; AC-2,PR.AA-05,N42-R04 (52.204-21(b)(1)(i)),Yes
+POL-02,4.6,"Workforce accounts inactive for 60 days, and reseller platform users inactive for 120 days, must be disabled...",AC-2(3),PR.AA-05,N42-R03 (SP 800-171 R2 3.5.6),Yes
+POL-02,4.7,Managers must certify their staff's access every quarter; reseller administrators must attest to their users each year.,AC-2,PR.AA-05,N42-R04 (52.204-21(b)(1)(i)),Yes
+POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,N42-R03 (SP 800-171 R2 3.1.5),Yes
+POL-02,4.9,"Vendor and remote maintenance access, including OT vendors, must go through the zero-trust or PAM gateway with...",AC-17; MA-4,PR.AA-05,N42-R03 (SP 800-171 R2 3.7.5),Yes
+POL-02,4.10,"API credentials for reseller and partner integrations must be short-lived, bound to the client, and rotated at least...",IA-5,PR.AA-03,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-02,4.11,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed...",AC-2,PR.AA-05,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, including...",IR-8,RS.MA-01,N42-R03 (SP 800-171 R2 3.6.1),Yes
+POL-03,4.2,"Workforce must report suspected incidents to the SOC within 1 hour; supplier, carrier, and partner contracts must...",IR-6,RS.MA-02,N42-R03 (SP 800-171 R2 3.6.2),Yes
+POL-03,4.3,"Every incident must be logged, classified by severity under STD-03.1, and tracked to closure in SOC case management.",IR-5; IR-4,RS.MA-02,N42-R03 (SP 800-171 R2 3.6.2),Yes
+POL-03,4.4,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours, and the disclosure committee...",IR-6; IR-8,RS.CO-02,N42-R07 (Form 8-K Item 1.05),Yes
+POL-03,4.5,"If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4...",IR-6,RS.CO-02,N42-R07 (Form 8-K Item 1.05),Yes
+POL-03,4.6,Federal reports must meet their clocks: DIBNet within 72 hours of discovering a cyber incident affecting covered...,IR-6,RS.CO-02,N42-R03 (252.204-7012(c)); N42-R05 (52.204-25(d)); FAR 52.204-23(c),Yes
+POL-03,4.7,"The Chief Privacy Officer must document a breach assessment for every incident involving personal information, and...",IR-6,RS.CO-03,State breach laws; Fla. Stat. 501.171,Yes
+POL-03,4.8,"No ransom or extortion payment may be made without approval from the CEO, the General Counsel, and the cyber...",IR-4,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.9,Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05) and must pass a recovery test at...,CP-2; CP-4; CP-10,RC.RP-01,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-03,4.10,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure...",IR-3; IR-8,ID.IM-02,N42-R03 (SP 800-171 R2 3.6.3),Yes
+POL-03,4.11,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the...,IR-4,ID.IM-03,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-04,4.1,"Information must be classified as Public, Internal, Confidential (pricing, contracts, personal information, FCI), or...",RA-2,ID.AM-05,N42-R04 (52.204-21(b)(1)),No
+POL-04,4.2,"CUI may be processed, stored, or transmitted only in the FSCE. CUI that arrives anywhere else, including by customer...",AC-4; SC-7,PR.DS-01,N42-R03 (252.204-7012(b)); N42-R02 (252.204-7021(d)(2)),Yes
+POL-04,4.3,FCI may be processed only in systems inside the enterprise Level 1 scope and shared only with vendors whose...,SA-9; AC-3,PR.DS-01,N42-R04 (52.204-21(b)(1)),Yes
+POL-04,4.4,Confidential and Restricted data must be encrypted at rest and in transit using STD-04.1; CUI must use...,SC-8; SC-28,PR.DS-01,N42-R03 (SP 800-171 R2 3.13.11); N42-R08 (Cal. Civ. Code 1798.150),Yes
+POL-04,4.5,"Files uploaded by customers and partners must be scanned for malware and, on the reseller platform, for CUI markings...",SI-3; SI-4,DE.CM-09,N42-R03 (252.204-7012(b)),Yes
+POL-04,4.6,"Backups of tier-1 data must be immutable, kept in separate backup accounts, and restore-tested at least quarterly.",CP-9,PR.DS-11,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-04,4.7,"Media and devices must be sanitized or destroyed with a certificate before reuse, resale, or disposal.",MP-6,PR.DS-01,N42-R04 (52.204-21(b)(1)(vii)); Fla. Stat. 501.171(8),No
+POL-04,4.8,Confidential data may be used in AI tools only if the tool is on the approved list for that class (STD-05.3);...,AC-20; SA-9,PR.DS-10,N42-R03 (252.204-7012(b)),Yes
+POL-04,4.9,"Data must be kept no longer than the retention schedule allows, and personal information of license registrants must...",SI-12,PR.DS-01,State breach laws; N42-R08,No
+POL-04,4.10,Personal information must be handled in line with privacy notices and consumer rights requests under the CCPA and...,PT-2,GV.OC-03,N42-R08 (Cal. Civ. Code 1798.100 et seq.),No
+POL-05,4.1,Company systems are for business use. Activity on them is logged and may be monitored.,PL-4,PR.AT-01,N42-R01 (15 U.S.C. 45(a)),No
+POL-05,4.2,Every workforce member must complete security awareness training and attest to this policy at hire and annually;...,AT-2; PL-4,PR.AT-01,N42-R03 (SP 800-171 R2 3.2.1),Yes
+POL-05,4.3,Staff in high-risk roles must complete role-based training each year: receiving and returns staff (counterfeit...,AT-3,PR.AT-02,N42-R03 (SP 800-171 R2 3.2.2),Yes
+POL-05,4.4,Personal devices may reach email and chat only through managed apps; personal cloud storage and personal email must...,AC-20,PR.AA-05,N42-R04 (52.204-21(b)(1)(iii)),No
+POL-05,4.5,"Suspected phishing, suspicious supplier requests, and unexpected product substitutions must be reported to the SOC...",IR-6; AT-2,RS.MA-02,N42-R03 (SP 800-171 R2 3.6.2),Yes
+POL-05,4.6,"Only AI tools on the approved list (STD-05.3) may be used for company work, and any new AI use, including AI...",SA-9; CM-8,ID.AM-02,"N42-R01 (15 U.S.C. 45(a)); N42-R08 (Cal. Code Regs. tit. 11, 7200 et seq.)",Yes
+POL-05,4.7,Bank-detail changes and ship-to changes must never be made on the strength of an email alone; they must be verified...,AT-2,PR.AT-01,N42-R01 (15 U.S.C. 45(a)),Yes
+POL-05,4.8,"Credentials, badges, and security keys must never be shared, and nobody may sign in for another person on a kiosk or...",IA-2,PR.AA-01,N42-R04 (52.204-21(b)(1)(v)),Yes
+POL-05,4.9,"CUI printouts and media must stay in the configuration lab, in locked storage when not in use.",MP-2,PR.DS-01,N42-R03 (SP 800-171 R2 3.8.1),No

@@ -1,0 +1,15 @@
+review_item,what_to_check,innkeeping_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because reservations and door codes depend on the platform,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Innkeeping platform; booking engine; channel manager; guest messaging; AI add-on,"All in scope except the AI add-on, which launched after the report period",Ask whether the next report covers the AI add-on (P10)
+Subservice organizations,Carve-out or inclusive; hosting and payments,"Hosting provider carved out; payment processing is the payment facilitator's, covered by its own PCI DSS AOC",Keep both AOCs on file (POL-01 6.2)
+Exceptions noted,Test exceptions and management responses,1 exception: quarterly access review for vendor support staff missed once; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the inn must run for the vendor's controls to work,Customer manages its users and roles; enables MFA; protects credentials; reviews activity logs; reports suspected compromise to the vendor,"Map to AC-2 and AC-3 (POL-01 7.4), IA-2(1) (gap: POAM-001), AU-6 (gap: POAM-008), IR-6 (POAM-009)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA offered to all customers but optional; encryption at rest and in transit tested without exception,MFA is the inn's job: turn it on (POAM-001)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data,Confirm the notice time in the terms; Florida requires third-party agents to notify within 10 days (Fla. Stat. 501.171(6)(a))
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)","Recovery objectives vs the inn's BIA (BP-01: RTO 8 h, RPO 1 h; BP-02: RTO 4 h, RPO 1 h)",RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-22,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-innkeeper 2026-07-22, with the IT consultant",Repeat every year (POL-01 6.2)

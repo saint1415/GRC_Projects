@@ -1,0 +1,68 @@
+# Access Control Policy
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company, Inc. (with Cris Santos Bank, N.A. and Cris Santos Investment Services, LLC) |
+| Policy ID | POL-02 |
+| Hierarchy level | Tier 1 policy (see `policy-hierarchy.md`) |
+| Owner | Director of Identity and Access Management |
+| Approved by | Executive risk committee |
+| Approval date | 2026-09-18 |
+| Effective date | 2026-10-01 |
+| Review cycle | Annually (next review by 2027-09-30), and after major changes, incidents, or acquisitions |
+| Implements (SP 800-53 Rev. 5) | AC-1, AC-2, AC-2(3), AC-3, AC-5, AC-6, AC-6(9), AC-17, IA-1, IA-2, IA-2(1), IA-2(2), IA-5, IA-8, IA-11, PS-4 |
+| CSF 2.0 | PR.AA-01, PR.AA-02, PR.AA-03, PR.AA-05 |
+| Regulatory basis | 12 CFR 30 App. B III.C.1.a, III.C.1.e; 12 CFR 41.90 |
+
+## 1. Purpose
+Make sure only authorized people, processes, and customers reach the group's information and systems, only to the extent their role or entitlement requires; that access ends promptly when it is no longer needed; and that payment instructions are verified before money moves.
+
+## 2. Scope
+All Cris Santos Company workforce members (employees, contractors, and temporary staff) of the parent, Cris Santos Bank, N.A., and Cris Santos Investment Services, LLC, at all sites in the six footprint states and remote locations, including the acquired bank's staff and systems from the merger date. Covers all systems and data, including the data centers, both clouds, SaaS, branches, ATMs, and systems that third parties operate for the group, and the services the group offers to institutional clients (SL-1 and SL-2).
+
+## 3. Roles and responsibilities
+| Role | Responsibility |
+|---|---|
+| Director of Identity and Access Management | Runs the identity platform (SYS-05), identity governance, PAM, and CIAM |
+| Managers and system owners | Approve access; complete quarterly certifications |
+| Chief Human Resources Officer | Timely joiner, mover, and leaver events |
+| Head of Payments Operations | Callback team and payment instruction verification |
+| Head of Treasury Management; Head of Digital Banking Technology | Customer authentication and beneficiary controls in their channels |
+| Client administrators (commercial clients) | Manage their own users under the treasury agreement |
+
+## 4. Policy statements
+Each statement is testable and tagged with its SP 800-53 control(s) and CSF 2.0 subcategory. `policy-control-map.csv` traces each statement to its regulatory driver and shows whether Internal Audit tested it in 2026 (P07).
+
+4.1 Every user, service, and customer must have a unique identity. Shared workforce accounts are prohibited. Service accounts must be registered to an owner, vaulted, certified quarterly, and must not have non-expiring passwords. (IA-2; AC-2; IA-5; PR.AA-01)
+4.2 Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted. (AC-2; AC-3; AC-6; PR.AA-05)
+4.3 Duties that would let one person create and release a payment, or maintain beneficiary templates and approve wires, must be separated; every outgoing wire requires maker-checker. (AC-5; PR.AA-05)
+4.4 MFA is required for all workforce access. Privileged users, and staff who handle client payment instructions, must use phishing-resistant authenticators. (IA-2(1); IA-2(2); PR.AA-03)
+4.5 Access must be removed on every system, including the mainframe, the same business day as a termination, and immediately for involuntary terminations. (PS-4; AC-2; PR.AA-05)
+4.6 Workforce accounts inactive for 60 days must be disabled automatically. (AC-2(3); PR.AA-05)
+4.7 Managers must certify their staff's access every quarter, including mainframe entitlements and service identities. (AC-2; PR.AA-05)
+4.8 Privileged access, including mainframe system privileges, must be granted just in time through PAM, recorded, and limited to the approved window. (AC-6; AC-6(9); PR.AA-05)
+4.9 Remote workforce and vendor access must go through the zero-trust or PAM gateway with approval and session recording. (AC-17; PR.AA-05)
+4.10 Customers must use MFA in digital and treasury channels. SMS one-time passcodes may be used only as a fallback. Adding a payee or beneficiary, raising a limit, or changing contact data requires step-up authentication, including on trusted devices. (IA-8; IA-11; PR.AA-03)
+4.11 Payment instructions or changes received by email, phone, or fax must be verified by a callback to the number on file, performed by the callback team, before execution. Every new wire beneficiary in treasury channels must be confirmed out of band, regardless of amount. (IA-11; SI-4; PR.AA-03)
+4.12 Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed by the Director of Cyber Defense. (AC-2; PR.AA-05)
+
+## 5. Standards and procedures under this policy
+Standards set measurable requirements (approved by the CISO); procedures give step-by-step instructions (approved by the owning director). Both sit below this policy in the hierarchy and cannot contradict it.
+- STD-02.1 Account Management Standard
+- STD-02.2 Identification and Authentication Standard (workforce and customer)
+- STD-02.3 Remote and Vendor Access Standard
+- STD-02.4 Payment Instruction Verification Standard
+- PRC-02.1 Access Provisioning Procedure
+- PRC-02.2 Access Certification Procedure
+- PRC-02.3 Privileged Access Procedure
+- PRC-02.4 Emergency (Break-Glass) Access Procedure
+- PRC-02.5 Callback Procedure
+
+## 6. Compliance and enforcement
+Compliance is monitored through continuous control monitoring, second-line reviews by independent risk management, the annual Internal Audit assessment (P07), and quarterly access certifications. Violations are handled under the sanctions procedure (PRC-01.1, POL-01 statement 4.7), from retraining to termination of employment or contract, in proportion to intent and harm.
+
+## 7. Exceptions
+Exceptions follow POL-01 section 7 and PRC-01.2: requested in the GRC platform, risk-rated with the P01 method, approved at the authority level for the residual risk, recorded in the exception register with compensating controls, and limited to 12 months.
+
+## 8. Related documents
+POL-01 to POL-05; `policy-hierarchy.md`; P01 risk register; P02 CBDC SSP; P03 gap analysis; P08 runbook and notification matrix; P10 AI governance.

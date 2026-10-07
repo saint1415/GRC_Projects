@@ -1,0 +1,15 @@
+review_item,what_to_check,ehr_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because the practice relies on the EHR for care,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,EHR/PM; patient portal; e-prescribing; hosting,All in scope; the e-prescribing network is a carved-out subservice organization,Ask the vendor how it monitors the e-prescribing network
+Subservice organizations,Carve-out or inclusive; which hosting providers,Hosting provider carved out; vendor reviews the host's own SOC 2 each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 1 of 25 sampled production changes lacked documented approval; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the practice must run for the vendor's controls to work,Customer assigns roles and removes users promptly; protects MFA devices; reviews audit reports; reports suspected compromise to the vendor,"Map to AC-2 (quarterly review), IA-2(1) (phone), AU-6 (gap: POAM-005), IR-6 (POAM-006)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA enforced for all customer users; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data; BAA requires breach notice under 164.410,Ask for a shorter notice period at BAA renewal
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the practice's BIA (BP-01 and BP-02: RTO 8 h; RPO 1 h),RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-07-23,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Physician-owner 2026-07-23, with the IT consultant",Repeat every year (POL-01 6.3)

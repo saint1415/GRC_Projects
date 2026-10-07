@@ -1,0 +1,21 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,Fla. Stat. 501.171(2); N56-BM (ID.RA-05),No
+POL-01,4.7,Sanctions for security and records violations,PS-8,GV.RR-04,E-Verify MOU Art. II.A.15; N56-BM (GV.RR-04),No
+POL-01,4.8,Vendor security review and contract terms before sharing personal information,SA-4; SA-9,GV.SC-05; GV.SC-06,Fla. Stat. 501.171(6); N56-BM (GV.SC-05),Yes
+POL-01,4.9,Annual control evaluation and quarterly I-9 quality check,CA-2,ID.IM-01,N56-R03 (8 CFR 274a.2(e)(1)(iii)),No
+POL-01,4.10,Retention of security documentation and I-9 and E-Verify records,SI-12,ID.AM-08,N56-R03 (8 CFR 274a.2(b)(2)(i)(A)); Fla. Stat. 448.095(2)(d),Yes
+POL-02,4.1,Unique accounts; no shared logins including E-Verify,IA-2; AC-2,PR.AA-01,E-Verify MOU Art. II.A.15,Yes
+POL-02,4.2,I-9 records and consumer reports limited to compliance roles,AC-3; AC-6,PR.AA-05,N56-R03 (8 CFR 274a.2(g)(1)(i)); N56-R02 (15 U.S.C. 1681b(b)(1)(A)(ii)),Yes
+POL-02,4.3,SSO with MFA; no SMS codes for payroll,IA-2(1); IA-2(2),PR.AA-03,Fla. Stat. 501.171(2); N56-BM (PR.AA-03),Yes
+POL-02,4.4,Same-day access removal including payroll and E-Verify,PS-4; AC-2,PR.AA-01,E-Verify MOU Art. II.A.3,Yes
+POL-02,4.6,Separation of duties and call-back for bank changes,AC-5,PR.AA-02; PR.AA-05,N56-BM (PR.AA-05),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N56-BM (RS.MA-02),Yes
+POL-03,4.5,"Meet Florida, other-state, DHS E-Verify, and client notice deadlines",IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5); E-Verify MOU Art. II.A.16,Yes
+POL-03,4.7,Annual incident response exercise,IR-3,ID.IM-02,N56-BM (ID.IM-02),No
+POL-04,4.4,No full SSNs or bank numbers in reporting copies,SI-12(1),PR.DS-01,Fla. Stat. 501.171(2),No
+POL-04,4.6,Retention schedule and quarterly purge,SI-12,ID.AM-08,N56-R03 (8 CFR 274a.2(b)(2)(i)(A)); N56-R01 (16 CFR 682.3(a)),Yes
+POL-04,4.7,Certified disposal of paper and devices,MP-6,ID.AM-08,N56-R01 (16 CFR 682.3(b)(1)-(3)); Fla. Stat. 501.171(8),Yes
+POL-04,4.8,"Isolated immutable backups tested quarterly, including the I-9 archive",CP-9; CP-4,PR.DS-11,N56-R03 (8 CFR 274a.2(g)(1)(ii)),Yes
+POL-05,4.3,Annual training; monthly reminders; phishing exercises,AT-2,PR.AT-01,N56-BM (PR.AT-01),Yes
+POL-05,4.4,"Role training for payroll, onboarding, and recruiting staff",AT-3,PR.AT-02,N56-R03 (8 CFR 274a.2(g)(1)(iii)); E-Verify MOU Art. II.A.5,No
+POL-05,4.10,Approved generative AI tools only; AI scores are a sort aid,PL-4,GV.PO-01,Title VII 703(k) (42 U.S.C. 2000e-2(k)); N56-BM (GV.PO-01),No

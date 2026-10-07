@@ -1,0 +1,16 @@
+review_item,what_to_check,tax_software_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,Obtain the next report when issued
+Trust services categories,Security required; Availability (filing deadlines) and Confidentiality (tax return information) needed for the firm's use,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unmodified opinion,None
+System description scope,"Tax preparation application, e-file transmission, customer support, and production data centers",All in scope. The AI document extraction feature is described as optional and is not in the tested scope,Keep the feature off until it passes the POL-04 4.5 checklist (P10 inventory AI-002)
+Subservice organizations,Carve-out or inclusive; which hosting provider,Cloud hosting provider carved out; the vendor states it reviews the host's SOC reports each year,Accept; confirm in the next report
+Data location,Where production data and backups are stored and processed,"U.S. data centers for production and backups, per the system description",Supports the 301.7216-2(d)(1) permission for this vendor (P03 G-045)
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 sampled customer support sessions lacked a recorded customer approval for screen sharing; management added a mandatory approval step in 2026-01,Accept; confirm in the next report
+Complementary user entity controls (CUECs),Controls the firm must operate for the vendor's controls to work,Provision and remove user access promptly; assign roles by least privilege; review user activity; protect workstations and credentials; tell the vendor promptly about suspected account compromise,"Mapped to AC-2 (POAM-001), AC-6 (POAM-004), AU-6 (POAM-005), SC-28 (POAM-014), IR-6 (POAM-007). All five are open gaps at the firm today"
+Availability commitments,"Recovery objectives versus the firm's BIA (BP-01 and BP-02: RTO 8 h, RPO 1 h)",RTO 4 h and RPO 1 h stated in the system description,Meets the BIA. Basis for accepting P01 R-016
+Encryption,At rest and in transit,Encryption at rest with industry-standard algorithms; TLS 1.2 or higher in transit,None
+MFA,Vendor enforcement of MFA for customer users,MFA required for all customer users; cannot be turned off by the customer,None
+Incident notification,Vendor commitment to notify customers of security incidents,System description commits to notify affected customers without undue delay; the contract sets no time limit,Ask for notice within 72 hours at renewal. Florida law already requires a third-party agent to notify within 10 days (Fla. Stat. 501.171(6)(a))
+IRS program status,Vendor is an Authorized IRS e-file Provider,Report states the vendor is an Authorized IRS e-file Provider (transmitter and software developer),None
+Bridge letter,Coverage from the report end date to today,Not provided,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager and Senior Tax Accountant, 2026-08-12","Annual, on receipt of each new report"

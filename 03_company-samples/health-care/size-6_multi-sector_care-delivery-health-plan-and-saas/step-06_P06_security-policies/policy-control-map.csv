@@ -1,0 +1,43 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.2,Group CISO accountable; each covered entity designates its own security and privacy officials,PM-2,GV.RR-02,N62-R01 (164.308(a)(2)),No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,N62-R01 (164.308(a)(1)(ii)(A)-(B)),No
+POL-01,4.4,Risk acceptance authority by level,PM-9,GV.RM-01,N62-R01 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,N62-R01 (164.316(b)(2)(iii)),Yes
+POL-01,4.6,Divisions document common control inheritance annually,PL-2; PM-10; CA-2,GV.RR-02,N62-R01 (164.308(a)(8)),Yes
+POL-01,4.7,HIPAA sanctions documented by each covered entity,PS-8,GV.RR-04,N62-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.8,No BAA no PHI; intercompany BAAs reviewed on service change; subcontractor gate for BA divisions,SA-9; SA-4,GV.SC-05,N62-R01 (164.308(b)(1)-(2); 164.314(a)),Yes
+POL-01,4.9,Annual common control assessment and division samples,CA-2; CA-7,ID.IM-01,N62-R01 (164.308(a)(8)),Yes
+POL-01,4.11,Six-year retention of security documentation,SI-12,GV.PO-02,N62-R01 (164.316(b)(2)(i)),No
+POL-01,4.12,AI systems registered and approved under the Group AI Standard,RA-3; PL-2,GV.RM-01,N62-R07 (45 CFR 92.210); 42 CFR 422.101(c)(1)(i),No
+POL-02,4.1,Unique identities; no shared accounts,IA-2; AC-2,PR.AA-01,N62-R01 (164.312(a)(2)(i)),Yes
+POL-02,4.2,Role-based least privilege; purpose-approved access to another covered entity's PHI; no standing dual-zone access,AC-3; AC-6,PR.AA-05,N62-R01 (164.308(a)(4)); N62-R02 (164.514(d)(2)),Yes
+POL-02,4.3,MFA for all workforce; phishing-resistant for administrators and by 2027-06-30 for remote access,IA-2(1); IA-2(2),PR.AA-03,N62-R01 (164.312(d)),Yes
+POL-02,4.4,"Service accounts owned, governed, workload identity or 90-day key rotation",AC-2; IA-5,PR.AA-01,N62-R01 (164.308(a)(5)(ii)(D)),Yes
+POL-02,4.5,Access disabled within 4 hours of termination; contractor auto-expiry,PS-4; AC-2,PR.AA-05,N62-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.6,Quarterly access certification including privileged and service accounts,AC-2; AC-6(7),PR.AA-05,N62-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.7,Just-in-time privileged access through PAM,AC-6(5),PR.AA-05,N62-R01 (164.308(a)(4)),Yes
+POL-02,4.9,Break-glass accounts per critical system tested quarterly,AC-2,PR.AA-05,N62-R01 (164.312(a)(2)(ii)),No
+POL-02,4.10,Vendor access only through PAM; no persistent tunnels,AC-17; MA-4,PR.AA-05,N62-R01 (164.308(b)(1)),Yes
+POL-02,4.11,MFA for brokers and SaaS customer administrators,IA-8; IA-2,PR.AA-03,N62-R01 (164.312(d)),No
+POL-03,4.1,Report suspected incidents within 1 hour,IR-6,RS.MA-02,N62-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.2,One group severity scale and playbooks,IR-4; IR-8,RS.MA-01,N62-R01 (164.308(a)(6)),Yes
+POL-03,4.4,Each covered entity decides its own breach notices; BA divisions notify customers per BAA,IR-6,RS.CO-02,N62-R03 (164.402-164.410),Yes
+POL-03,4.5,Notification matrix owned by Group General Counsel; reviewed quarterly,IR-6; IR-8,RS.CO-02,N62-R03; N52-R07,Yes
+POL-03,4.6,Severity 1 to disclosure committee within 24 hours; Form 8-K Item 1.05 within 4 business days of materiality,IR-6,RS.CO-03,N52-R08 (Form 8-K Item 1.05),No
+POL-03,4.8,Annual cross-division exercise including notification and materiality,IR-3,ID.IM-02,N62-R01 (164.308(a)(6)),Yes
+POL-04,4.2,Encrypt Restricted information at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,N62-R01 (164.312(a)(2)(iv); 164.312(e)(2)(ii)),Yes
+POL-04,4.3,Covered entity and purpose tags on every PHI dataset,PT-2; PT-3; CM-8,ID.AM-07,N62-R02 (164.502(b)); 42 CFR 422.118(a),Yes
+POL-04,4.4,Minimum-necessary protocol for routine feeds between covered entities,AC-21; PT-3,PR.DS-10,N62-R02 (164.506(c); 164.514(d)(3)),No
+POL-04,4.5,De-identify only by approved method and only where the customer BAA permits,PT-2; AC-4,PR.DS-10,N62-R02 (164.502(a)(3); 164.514(b)),Yes
+POL-04,4.6,Immutable separate-provider backups with quarterly restore tests,CP-9,PR.DS-11,N62-R01 (164.308(a)(7)(ii)(A)),Yes
+POL-04,4.9,No Restricted data in AI tools without approval and a no-training BAA,SA-9; PL-4,GV.SC-05,N62-R01 (164.308(b)(1)),Yes
+POL-05,4.3,"Annual training, monthly reminders, quarterly phishing",AT-2,PR.AT-01,N62-R01 (164.308(a)(5)(ii)(A)),Yes
+POL-05,4.4,Role-based training for data platform users,AT-3,PR.AT-02,N62-R02 (164.530(b)),No
+POL-05,4.7,Approved generative AI tools only,PL-4; PL-4(1),GV.PO-01,N62-R01 (164.308(b)(1)),No
+POL-05,4.8,Record patient conversations only with the consent state law requires,PT-4; PL-4,GV.PO-01,N62-R02; Fla. Stat. 934.03(2)(d) (worked example),No
+SUP-CD,3.1,ASC emergency plans reviewed every 2 years and include a prolonged cyber outage,CP-2,RC.RP-01,N62-R08 (42 CFR 416.54),Yes
+SUP-CD,3.1,Decision support tools inventoried and input variables reviewed,RA-3,GV.RM-01,N62-R07 (45 CFR 92.210(b)-(c)),No
+SUP-HP,3.2,No UM policy or model-assisted workflow without UM committee approval; documented individualized review,CM-3; CA-7,GV.PO-01,42 CFR 422.137(b); 422.101(c)(1)(i),No
+SUP-HP,3.2,State insurance regulator list and contacts in the notification matrix,IR-6,RS.CO-02,N52-R07 (Model #668 sec. 6),Yes
+SUP-HT,3.3,Customer notice register by BAA term,IR-6,RS.CO-02,N62-R03 (164.410),Yes
+SUP-HT,3.3,"AI and product change gate (privacy, BAA, SOC 2 description)",CM-3; CM-4; SA-9,PR.PS-01,N62-R02 (164.504(e)(2)(ii)(D)); SOC 2 CC8.1,Yes

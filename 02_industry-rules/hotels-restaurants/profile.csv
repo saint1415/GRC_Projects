@@ -1,0 +1,12 @@
+field,value
+regulators,"FTC FTC Act Section 5 data security/privacy enforcement; State Attorneys General State breach notification and consumer privacy laws; PCI Security Standards Council / card brands (private) PCI DSS via acquirer contracts, not a government regulator; CISA / DHS SRMA, Commercial Facilities Sector (Lodging subsector)"
+primary_regulation,PCI DSS v4.0.1
+primary_regulation_citation,PCI SSC PCI DSS v4.0.1 (contractual standard)
+primary_regulation_url,https://www.pcisecuritystandards.org/standards/pci-dss/
+primary_regulation_rationale,"Payment card data is the dominant regulated data type in hotels and restaurants, and the largest share of sector breaches involve POS/PMS card data. PCI DSS is the only prescriptive, externally validated control set these businesses are held to (contractually). There is no federal sector cyber statute; FTC Section 5 and state laws judge 'reasonableness', which PCI compliance evidences."
+sensitive_data,"Payment card data (PAN, track data) at POS and PMS; Guest PII: passports/IDs, loyalty profiles, stay history; Employee PII and biometric time-clock data; Reservation and online-ordering account credentials; Guest Wi-Fi usage data"
+critical_systems,Property Management System (PMS); Point-of-sale (POS) and payment terminals; Central reservation system / channel manager; Online ordering and delivery integrations; Guest Wi-Fi and IPTV networks; Electronic door locks / key card systems; Loyalty/CRM platforms
+ai_specific,
+assurance_alternatives,PCI DSS validation for card payments
+notes,"Lodging is a subsector of CISA's Commercial Facilities Sector (SRMA: DHS). PCI DSS is contractual, not law; merchant validation levels are set by card brands. No sector-specific federal AI rules were verified. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

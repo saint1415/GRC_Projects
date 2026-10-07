@@ -1,0 +1,51 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,Business need (supports every SSA-A and VAA-B item),No
+POL-01,4.2,Owner designated as accountable for security and client terms,PM-2,GV.RR-02,Business need,No
+POL-01,4.3,Annual risk assessment using SP 800-30 and after major changes,RA-3; PM-9,ID.RA-01,Business need (Client A annual security questionnaire),No
+POL-01,4.4,Risk decision rules; client-affecting risks never accepted at High,PM-9,GV.RM-01,Business need,No
+POL-01,4.5,Annual self-assessment with an outside review every second year,CA-2,ID.IM-02,Business need,No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,Business need,No
+POL-01,4.7,List of client security terms checked at each contract,PL-1,GV.OC-03,N22-R01 (SSA-A; VAA-B); CEII NDA (18 CFR 388.113(h)(2)),No
+POL-01,5.1,"Written, time-limited exceptions that never break a client term",PL-1,GV.PO-02,Business need,No
+POL-01,5.2,Subcontractor or vendor breaches handled under contract,PS-7; SA-9,GV.SC-05,N22-R01 (SSA-A (5)),No
+POL-01,6.1,Client terms override this policy for that client,SA-9,GV.SC-05,N22-R01 (SSA-A; VAA-B),No
+POL-01,6.2,Vendor list; terms reviewed before any vendor holds client information,SA-9,ID.AM-07,N22-R01 (CIP-011-3 R1 Part 1.2 via SSA-A (1)); Client C contract,No
+POL-01,6.3,No client security information to any helper without written client approval and an access agreement,PS-6; AC-3,PR.AA-05,N22-R01 (CIP-004-7 R6 Part 6.1 via SSA-A (2)); CEII NDA (18 CFR 388.113(h)(2)),Yes
+POL-01,6.4,Tell the client within 24 hours when an authorized person no longer needs access,PS-7; AC-2,PR.AA-05,N22-R01 (CIP-004-7 R6 Part 6.3 via SSA-A (4)),No
+POL-01,6.5,Annual review of the email suite provider SOC 2 report and its customer controls,SA-9,GV.SC-07,N22-R01 (SSA-A (1)),No
+POL-01,6.6,IT technician sessions owner-started and watched; no client folders,AC-17; PS-6,PR.AA-05,N22-R01 (SSA-A (2)),No
+POL-01,7.1,Own accounts; client credentials never shared,AC-2,PR.AA-01,N22-R01 (VAA-B (3) and (4); SSA-A (2)),No
+POL-01,7.2,App-based MFA or security keys on every business service; SMS only as fallback,IA-2(1); IA-2(2),PR.AA-03,N22-R01 (SSA-A (8)),Yes
+POL-01,7.3,Password manager; unique 14-character passphrases; nothing saved in the browser,IA-5,PR.AA-01,N22-R01 (VAA-B (4)),Yes
+POL-01,7.4,Standard daily laptop account; administrator only for installs,AC-6,PR.AA-05,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.2 via VAA-B (1)),Yes
+POL-01,7.5,Laptop lock at 5 minutes; phone at 30 seconds,AC-11,PR.AA-05,N22-R01 (SSA-A (1)),No
+POL-01,7.6,Sealed recovery codes and emergency sheet held by the owner's attorney,AC-2; CP-2,PR.AA-05,N22-R01 (SSA-A (5); VAA-B (5)),No
+POL-01,7.7,"Monthly review of sign-ins, sharing activity, and software vendor advisories",AU-6; SI-5,DE.AE-02,N22-R01 (CIP-013-2 R1 Parts 1.2.1 and 1.2.4 via SSA-A (5) and (6)),Yes
+POL-01,7.8,Quarterly share review; sharing report attached to client access verifications,AC-2; AC-3,PR.AA-05,N22-R01 (CIP-004-7 R6 Part 6.2 via SSA-A (3)),Yes
+POL-01,7.9,Client B gateway only from the business laptop; never approve an unstarted push,AC-17,PR.AA-05,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 6 via VAA-B (3) and (4)),No
+POL-01,8.1,Three-level classification with Client Restricted for BCSI and CEII,RA-2,ID.AM-07,N22-R01 (CIP-011-3 R1 Part 1.1 via SSA-A (1)); CEII NDA,No
+POL-01,8.2,Client Restricted data only in approved locations; never in email or personal accounts,AC-3; AC-20,PR.DS-01,N22-R01 (CIP-011-3 R1 Part 1.2 via SSA-A (1)),Yes
+POL-01,8.3,Full-disk encryption on every device; CEII in its own encrypted archive,SC-28,PR.DS-01,N22-R01 (SSA-A (8)); CEII NDA (18 CFR 388.113(h)(2)),Yes
+POL-01,8.4,BCSI only through the Client A portal; no anyone-with-the-link shares,SC-8; AC-21,PR.DS-02,N22-R01 (CIP-011-3 R1 Part 1.2 via SSA-A (1)),No
+POL-01,8.5,Site photos only with permission; uploaded the same day; photo sync off,AC-19,PR.DS-01,N22-R01 (CIP-011-3 R1 Part 1.2 via SSA-A (1)),No
+POL-01,8.6,"Two dedicated USB drives, scanned before every site use",MP-7,DE.CM-09,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.3 via VAA-B (2)),Yes
+POL-01,8.7,Client information register; return or destroy within 30 days with certification,CM-8; MP-6,ID.AM-01,N22-R01 (SSA-A (7)); CEII NDA (18 CFR 388.113(h)(2)),No
+POL-01,8.8,"Shredding, recorded deletion, and device wipe or certified destruction",MP-6,ID.AM-08,N22-R01 (SSA-A (7)); Fla. Stat. 501.171(8),No
+POL-01,8.9,Six-year retention of security records,SI-12,ID.AM-08,Business need,No
+POL-01,8.10,Daily backup of local settings databases with a quarterly restore test,CP-9,PR.DS-11,Business need (P05 RPO),No
+POL-01,9.1,Business devices for business work only,PL-4,PR.AA-05,N22-R01 (VAA-B (3)),No
+POL-01,9.2,Dedicated field laptop for client relay connections; scan and update before visits until then,PL-4; AC-6,PR.PS-02,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.2 via VAA-B (1)),No
+POL-01,9.3,Updates and antivirus on; engineering software updated before each project and visit,SI-2; SI-3,PR.PS-02,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.2.1 via VAA-B (1)),Yes
+POL-01,9.4,Separate business network; hotspot for gateway sessions until then,SC-7,PR.IR-01,N22-R01 (VAA-B (3)),No
+POL-01,9.5,"AI tools only with assessment, no-retention terms, and client consent",PL-4; SA-9,GV.SC-05,Client C contract; N22-R01 (SSA-A (1)),No
+POL-01,9.6,Client A module and an annual security course with phishing,AT-2,PR.AT-01,N22-R01 (SSA-A (8)),No
+POL-01,10.1,Incident runbook and printed contact sheet,IR-8,RS.MA-01,N22-R01 (SSA-A (5); VAA-B (5)),No
+POL-01,10.2,Same-day incident log; client notice within 24 hours of discovery,IR-5; IR-6,RS.MA-02; RS.CO-02,N22-R01 (CIP-013-2 R1 Part 1.2.1 via SSA-A (5); VAA-B (5)),Yes
+POL-01,10.3,Immediate phone report to Client B of a suspected gateway compromise,IR-6,RS.CO-02,N22-R01 (VAA-B (4)),Yes
+POL-01,10.4,CEII disclosures reported to FERC; Florida 30-day notice assessed,IR-6,RS.CO-02,CEII NDA (18 CFR 388.113(h)(2)); Fla. Stat. 501.171(3)-(4),No
+POL-01,10.5,No ransom without insurer and counsel advice and an OFAC check,IR-4,RS.MA-01,OFAC advisory (2021-09-21),No
+POL-01,10.6,Annual walkthrough; lessons learned within 30 days,IR-3,ID.IM-02,N22-R01 (SSA-A (5)),No
+POL-01,11.1,Recovery follows the BIA priorities,CP-2,RC.RP-01,Business need (P05),No
+POL-01,11.2,Standby engineer under NDA; Client A work waits unless the engineer is authorized,CP-2,RC.RP-01,N22-R01 (CIP-004-7 R6 Part 6.1 via SSA-A (2)),No
+POL-01,11.3,Second client contact for owner unavailability,CP-2,RC.RP-01,N22-R01 (SSA-A (5); VAA-B (5)),No
+POL-01,11.4,"Storm preparation: take devices, drives, and contact sheet",CP-2,RC.RP-01,Business need (P05),No

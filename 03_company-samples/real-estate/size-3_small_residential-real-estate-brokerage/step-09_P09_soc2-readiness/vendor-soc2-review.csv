@@ -1,0 +1,13 @@
+review_item,what_to_check,transaction_platform_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability and Confidentiality needed for the company's use,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Transaction management application, client portal, document storage, e-signature integration, and hosting in scope","Application, client portal, and document storage in scope; e-signature is a third-party integration outside the description",Rely on the e-signature vendor's own assurance (add to the POAM-013 inventory)
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Public cloud hosting provider carved out,Confirm the vendor reviews the hosting provider's own SOC report (listed as a vendor control in the report)
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled production changes lacked documented approval; remediated with a deployment gate in 2026-04,Accept; check in next year's report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and timely removal; enforcing MFA or SSO for all users; assigning least-privilege roles and visibility; reviewing user activity reports; protecting API credentials,"Map to company controls: IA-2(2) not met (POAM-001); AC-2 and PS-7 removal late (POAM-009, POAM-010); AC-6 office-wide visibility (POAM-011); AU-6 no review (POAM-007); API keys in a configuration file (P04 finding 4)"
+Availability commitments,Recovery objectives vs the company's BIA (P05 BP-03: RTO 8 h; RPO 4 h),RTO 4 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers of security incidents,Notify affected customers within 72 hours of confirming an incident (system description); contract includes incident notice terms,"Keep; the Florida third-party agent duty (10 days, Fla. Stat. 501.171(6)(a)) is the legal floor"
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-09-30 requested,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-09-15; accepted by the COO 2026-09-21,Annual (each September)

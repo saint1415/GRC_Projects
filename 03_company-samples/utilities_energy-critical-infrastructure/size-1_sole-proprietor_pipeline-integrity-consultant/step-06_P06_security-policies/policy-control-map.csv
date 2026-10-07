@@ -1,0 +1,41 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,None binding,No
+POL-01,4.2,Owner designated security lead and SSI custodian; SSI duties continue after engagements,PM-2,GV.RR-02,49 CFR 1520.7(j)-(k),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-ENERGY-R03 flow-down (Client A addendum s.11),Yes
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,None binding,No
+POL-01,4.5,Annual evaluation with outside review every second year,CA-2,ID.IM-02,C-ENERGY-R03 flow-down (Client A addendum s.11),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,None binding,No
+POL-01,5.3,"Written, time-limited exceptions; none for SSI sharing or unapproved services",PL-1,GV.PO-02,49 CFR 1520.9(a)(2),No
+POL-01,6.1,"Client data only in services the client approved in writing, including AI tools",SA-9,GV.SC-05,C-ENERGY-R03 flow-down (Client A addendum s.4),Yes
+POL-01,6.2,Subcontractors only with client approval and security terms; never SSI,SA-9; PS-7,GV.SC-05,C-ENERGY-R03 flow-down (Client A addendum s.5); 49 CFR 1520.9(a)(2),Yes
+POL-01,6.3,Vendor list and annual SOC 2 review of the suite provider,SA-9,GV.SC-07,None binding,Yes
+POL-01,6.5,Questionnaire answers backed by evidence,CA-2,GV.SC-07,C-ENERGY-R03 flow-down (Client A addendum s.11),No
+POL-01,7.1,One account per person; no shared credentials,IA-2; AC-2,PR.AA-01,C-ENERGY-R03 flow-down (Client A addendum s.8),No
+POL-01,7.2,"MFA on every account with client data, SSI, or personal information",IA-2(1); IA-2(2),PR.AA-03,C-ENERGY-R03 flow-down (Client A addendum s.2); Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique 16-character passphrases in a password manager,IA-5,PR.AA-01,Fla. Stat. 501.171(2),No
+POL-01,7.4,No anonymous links; named external accounts; minimum extract; remove at task end,AC-3; AC-21,PR.AA-05,49 CFR 1520.9(a)(2); C-ENERGY-R03 flow-down (Client A addendum s.5),No
+POL-01,7.5,Standard daily accounts; admin only for changes,AC-6,PR.AA-05,C-ENERGY-R03 flow-down (Client A addendum s.8),No
+POL-01,7.6,Device lock after 5 minutes (phone 1 minute),AC-11,PR.AA-05,C-ENERGY-R03 flow-down (Client A addendum s.8),No
+POL-01,7.7,Sealed recovery codes and a second MFA key,AC-2; CP-2,PR.AA-05,None binding,No
+POL-01,7.8,"Monthly review of sign-ins, external shares, and SSI folder access",AU-6,DE.AE-02,49 CFR 1520.9(c),No
+POL-01,8.1,Four-level classification including SSI,RA-2,ID.AM-07,49 CFR 1520.5,No
+POL-01,8.2,"SSI only in the dedicated folder and encrypted laptop; never on removable media, AI tools, personal email, or with subcontractors",AC-3; MP-4,PR.DS-01,49 CFR 1520.9(a)(1)-(2),Yes
+POL-01,8.3,Mark SSI and derived drafts; mark unmarked SSI and tell the sender the same day,MP-3,PR.DS-01,49 CFR 1520.9(a)(4); 1520.9(b); 1520.13,Yes
+POL-01,8.4,Client data only through named shares or client portals,SC-8,PR.DS-02,C-ENERGY-R03 flow-down (Client A addendum s.4),No
+POL-01,8.5,Encrypt every device and removable drive,SC-28,PR.DS-01,C-ENERGY-R03 flow-down (Client A addendum s.3),Yes
+POL-01,8.6,Paper SSI in the locking cabinet,MP-4,PR.AA-06,49 CFR 1520.9(a)(1),Yes
+POL-01,8.7,Refer requests for SSI to Client A and TSA,PL-4,GV.PO-01,49 CFR 1520.9(a)(3),No
+POL-01,8.8,Return or destroy client data within 30 days of project end; destroy SSI completely; record each step,SI-12; MP-6,ID.AM-08,49 CFR 1520.19(b); C-ENERGY-R03 flow-down (Client A addendum s.7),Yes
+POL-01,8.9,Weekly encrypted offline backup without SSI; quarterly restore test,CP-9,PR.DS-11,C-ENERGY-R03 flow-down (Client A addendum s.13),Yes
+POL-01,8.10,W-9s only in the accounting SaaS; security records kept 5 years,SI-12,ID.AM-08,Fla. Stat. 501.171(2),Yes
+POL-01,9.2,Household devices on the guest network; router password and firmware,SC-7,PR.IR-01,C-ENERGY-R03 flow-down (Client A addendum s.8),No
+POL-01,9.3,Automatic updates and antivirus stay on,SI-2; SI-3,PR.PS-02,C-ENERGY-R03 flow-down (Client A addendum s.9; s.10),No
+POL-01,9.5,"AI tools only after assessment, client approval, and no-training terms; never SSI or personal information; owner signs every finding",PL-4; SA-9,GV.PO-01,C-ENERGY-R03 flow-down (Client A addendum s.4),No
+POL-01,9.6,Annual security course and SSI awareness module,AT-2,PR.AT-01,C-ENERGY-R03 flow-down (Client A addendum s.12),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-ENERGY-R03 flow-down (Client A addendum s.6),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,C-ENERGY-R03 flow-down (Client A addendum s.6),Yes
+POL-01,10.3,Client notice within 24 hours (A) and 72 hours (B),IR-6,RS.CO-02,C-ENERGY-R03 flow-down (Client A addendum s.6),Yes
+POL-01,10.4,Inform TSA promptly of released SSI,IR-6,RS.CO-02,49 CFR 1520.9(c),Yes
+POL-01,10.5,Florida notices per the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(6),No
+POL-01,10.6,Insurer hotline first; no ransom without counsel and an OFAC check,IR-4,RS.MA-01,None binding (OFAC advisory),No
+POL-01,11.2,Peer engineer arrangement approved by clients,CP-2,RC.RP-01,C-ENERGY-R03 flow-down (Client A addendum s.13),No

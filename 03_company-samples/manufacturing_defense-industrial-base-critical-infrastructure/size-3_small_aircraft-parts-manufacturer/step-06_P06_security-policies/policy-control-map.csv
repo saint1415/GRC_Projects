@@ -1,0 +1,32 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,SP 800-171 program for all CUI systems,PM-1,GV.PO-01,C-DIB-R01 (252.204-7012(b)(2)(i)),No
+POL-01,4.3,CUI only inside the enclave or on controlled paper; SSP updated before boundary changes,PL-2,GV.PO-01,C-DIB-R02 (3.12.4),No
+POL-01,4.4,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-DIB-R02 (3.11.1),No
+POL-01,4.5,Risk acceptance authority by level,PM-9,GV.RM-01,C-DIB-R02 (3.11.1),No
+POL-01,4.8,Sanctions,PS-8,GV.RR-04,C-DIB-R02 (3.9.x policy basis),No
+POL-01,4.9,Annual self-assessment; monthly POA&M review; accurate SPRS score; evidence-based affirmation,CA-2; CA-5,GV.OV-01,C-DIB-R03 (252.204-7019(b)); C-DIB-R02 (3.12.1; 3.12.2; 32 CFR 170.22),No
+POL-01,4.10,"FedRAMP Moderate-equivalent cloud; no flowdown, no CUI",SA-9; SR-3,GV.SC-05,C-DIB-R01 (252.204-7012(b)(2)(ii)(D); (m)(1)); C-DIB-R03 (252.204-7020(g)),No
+POL-02,4.1,Unique accounts including MES and DNC; no shared logins,IA-2; AC-2,PR.AA-01,C-DIB-R02 (3.5.1; 3.5.2),Yes
+POL-02,4.2,U.S.-person confirmation before enclave access,AC-2; PS-3,PR.AA-01,C-DIB-R02 (3.9.1); C-DIB-R05 (22 CFR 120.56),Yes
+POL-02,4.3,Least privilege; no local admin for engineers; operators cannot edit NC programs,AC-6,PR.AA-05,C-DIB-R02 (3.1.5),No
+POL-02,4.4,MFA on all enclave accounts including MES; hardware keys for admins,IA-2(1); IA-2(2),PR.AA-03,C-DIB-R02 (3.5.3),Yes
+POL-02,4.5,Same-day access removal; 45-day inactivity disable,PS-4; AC-2,PR.AA-05,C-DIB-R02 (3.9.2; 3.5.6),Yes
+POL-02,4.6,Quarterly access reviews,AC-2,PR.AA-05,C-DIB-R02 (3.1.1),Yes
+POL-02,4.8,14-character passwords; service credentials in key vault,IA-5(1),PR.AA-01,C-DIB-R02 (3.5.7; 3.5.10),Yes
+POL-02,4.9,Remote access only through the virtual desktop gateway,AC-17,PR.AA-05,C-DIB-R02 (3.1.12),Yes
+POL-02,4.10,No external systems or public AI with CUI,AC-20,PR.AA-05,C-DIB-R02 (3.1.20),Yes
+POL-02,4.11,Visitor log and escort; foreign-person visit approval,PE-3,PR.AA-06,C-DIB-R02 (3.10.3; 3.10.4); C-DIB-R05 (22 CFR 120.56),Yes
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,C-DIB-R02 (3.6.2),Yes
+POL-03,4.4,Report to DoD through DIBNet within 72 hours; incident number to prime,IR-6,RS.CO-02,C-DIB-R01 (252.204-7012(c)(1)(ii); (m)(2)(ii)),Yes
+POL-03,4.5,Two trained reporters with medium assurance certificates,IR-6,RS.CO-02,C-DIB-R01 (252.204-7012(c)(3)),Yes
+POL-03,4.7,Preserve images and monitoring data for 90 days; 1-year log retention,IR-4; AU-11,RS.AN-03,C-DIB-R01 (252.204-7012(e)),Yes
+POL-03,4.9,Annual tabletop with DIBNet drill,IR-3,ID.IM-02,C-DIB-R02 (3.6.3),No
+POL-04,4.2,CUI banner and distribution statement on company-created CUI,MP-3,PR.DS-01,C-DIB-R02 (3.8.4),No
+POL-04,4.4,FIPS-validated encryption for CUI at rest and in transit,SC-13; SC-8; SC-28,PR.DS-01; PR.DS-02,C-DIB-R02 (3.13.8; 3.13.11; 3.13.16); C-DIB-R05 (22 CFR 120.54(a)(5)),Yes
+POL-04,4.5,Printed CUI stored in cabinets and sealed for transport,MP-4; MP-5,PR.DS-01,C-DIB-R02 (3.8.1; 3.8.5),No
+POL-04,4.6,Paper CUI shredded; media sanitized before leaving company control,MP-6,ID.AM-08,C-DIB-R02 (3.8.3); C-DIB-R04 (52.204-21(b)(1)(vii)),Yes
+POL-04,4.7,"Only labeled, inventoried, scanned USB drives",MP-7,PR.DS-01,C-DIB-R02 (3.8.7; 3.8.8),Yes
+POL-04,4.8,"Encrypted, separated, tested backups",CP-9,PR.DS-11,C-DIB-R02 (3.8.9),No
+POL-05,4.3,"Annual CUI, insider threat, and role-based training",AT-2; AT-2(2); AT-3,PR.AT-01; PR.AT-02,C-DIB-R02 (3.2.1; 3.2.2; 3.2.3),Yes
+POL-05,4.5,No unapproved software or removable storage,CM-11,PR.PS-05,C-DIB-R02 (3.4.9),No
+POL-05,4.8,Approved generative AI tools only; never CUI in public AI,PL-4; AC-20,GV.PO-01,C-DIB-R02 (3.1.20); C-DIB-R05 (22 CFR 120.56),Yes

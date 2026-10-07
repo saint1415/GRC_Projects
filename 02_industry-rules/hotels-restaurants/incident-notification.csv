@@ -1,0 +1,4 @@
+obligation,citation,trigger,deadline,notify,source_url,verified
+State breach notification,State statutes,,Varies (commonly 'without unreasonable delay'; some states set 30-60 day limits),Affected individuals; often the state AG; consumer reporting agencies for large breaches,,false
+Payment card compromise,Card brand operating rules / acquirer merchant agreement (contractual),,Per contract (typically immediate),Acquiring bank / card brands; PCI Forensic Investigator engagement,,false
+CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending,proposed 6 CFR 226.5,,72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment,CISA,https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia,true

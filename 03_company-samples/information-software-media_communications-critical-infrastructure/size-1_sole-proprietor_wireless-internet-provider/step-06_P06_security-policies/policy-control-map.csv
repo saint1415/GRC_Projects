@@ -1,0 +1,43 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.2,"Owner designated security lead, privacy lead, CPNI certifying officer, and CALEA senior officer in writing",PM-2,GV.RR-02,C-COMMUNICATIONS-R01 (64.2009(e)); C-COMMUNICATIONS-R03 (1.20003(a)),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.5,Annual evaluation with periodic outside review,CA-2,ID.IM-02,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.7,CALEA policies filed through CEFS; intercepts only with legal and carrier authorization; records with 1.20004 fields,AC-3; PL-1,GV.PO-01,C-COMMUNICATIONS-R03 (1.20003; 1.20004; 1.20005),No
+POL-01,4.8,"Annual CPNI certification by March 1 with an accurate, evidence-based statement",CA-2; PM-1,GV.PO-01,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,5.1,"Sanctions, including for CPNI misuse",PS-8,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-01,5.4,"Written, time-limited exceptions",PL-1,GV.PO-02,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,6.1,"No CPNI or subscriber data to a vendor without confidentiality, security, and breach notice terms",SA-9,GV.SC-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,6.2,Vendor list doubles as the record of third-party access to CPNI,SA-9,ID.AM-07,C-COMMUNICATIONS-R01 (64.2009(c)),Yes
+POL-01,6.3,Annual billing vendor SOC 2 review; VoIP provider report or questionnaire,SA-9,GV.SC-07,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,6.4,Consultant uses named VPN account in owner-approved sessions,AC-17,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,7.1,Named accounts; no shared accounts,IA-2; AC-2,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,7.2,MFA on every service that offers it,IA-2(1),PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,7.3,Unique passphrases in a password manager; unique device passwords; defaults changed before service,IA-5; CM-6,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,7.4,Same-day removal; quarterly account review,AC-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,7.5,Device management only from the management VLAN and VPN,SC-7,PR.IR-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,7.6,Monthly review of SaaS sign-in histories and router logs,AU-6,DE.AE-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,7.7,"Call detail by phone only with a compliant password, or sent to the address or number of record",IA-8,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(b)),Yes
+POL-01,7.8,Online CPNI only after compliant portal sign-in; AI assistant limited to signed-in sessions; account change notices,IA-8,PR.AA-03,"C-COMMUNICATIONS-R01 (64.2010(c), (e), (f))",Yes
+POL-01,7.9,Sealed emergency access envelope,CP-2; AC-2,RC.RP-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,8.1,Three-level classification; whole account record treated as Restricted,RA-2,ID.AM-07,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,8.3,CPNI used only for the home phone service; no marketing; approval status none,PT-3,GV.PO-01,C-COMMUNICATIONS-R01 (64.2005; 64.2009(a)),No
+POL-01,8.4,CDR exports imported directly or deleted; never emailed,SI-12,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,8.5,Full-disk encryption on devices holding Restricted data,SC-28,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,8.6,Weekly automatic router and switch configuration copy,CP-9,PR.DS-11,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,8.8,Security records kept at least 2 years,SI-12,ID.AM-08,C-COMMUNICATIONS-R01 (64.2011(d)),No
+POL-01,9.2,Quarterly firmware review; critical updates within 30 days; advisories; monthly port check,SI-2; RA-5,PR.PS-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,9.4,Change log for router and switch; radio settings from templates,CM-2,PR.PS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,9.5,Encrypted VoIP signaling and media on ATAs,SC-8,PR.DS-02,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,9.6,AI tools: no customer data except the assessed assistant; reassessment before new features,PL-4; SA-9,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,9.7,Annual CPNI and security training,AT-2,PR.AT-01,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011(d)),Yes
+POL-01,10.3,CPNI breach notice to USSS and FBI within 7 business days; hold on customer notice,IR-6,RS.CO-02,C-COMMUNICATIONS-R01 (64.2011(a)-(c)),Yes
+POL-01,10.4,CPNI breach record kept 2 years,IR-5,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011(d)),No
+POL-01,10.5,CALEA compromise and unlawful surveillance report,IR-6,RS.CO-02,C-COMMUNICATIONS-R03 (1.20003(c)),No
+POL-01,10.6,911 center outage contact confirmed yearly; thresholds rechecked,IR-6; CP-2,RS.CO-02,C-COMMUNICATIONS-R02 (4.9(h)),No
+POL-01,10.7,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),No
+POL-01,11.2,Standby restore agreement with the network consultant,CP-2,RC.RP-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,11.3,Spare router with current configuration; restore test twice a year,CP-9,PR.DS-11,C-COMMUNICATIONS-R01 (64.2010(a)),Yes

@@ -1,0 +1,54 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-02,A.1,"Security lead, CPNI coordinator, certifying officer, and CALEA senior officer named in writing",PM-2,GV.RR-02,C-COMMUNICATIONS-R01 (64.2009(e)); C-COMMUNICATIONS-R03 (1.20003(a)),No
+POL-02,A.2,Annual risk assessment with SP 800-30; risks owned and treated,RA-3; PM-9,ID.RA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-02,A.3,Risk acceptance authority; High risks never accepted,PM-9,GV.RM-01,Internal,No
+POL-02,A.4,Sanctions including an express CPNI disciplinary process,PS-8,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-02,A.5,"No CPNI terms, no CPNI; third-party CPNI access register",SA-9,GV.SC-05,C-COMMUNICATIONS-R01 (64.2009(c); 64.2010(a)),Yes
+POL-02,A.6,Annual independent evaluation,CA-2,ID.IM-01,Internal,No
+POL-02,A.7,Evidence file supporting the annual CPNI certification,CA-2,GV.OV-01,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-02,A.8,"Retention of CPNI, breach, intercept, and security records",SI-12,GV.PO-02,C-COMMUNICATIONS-R01 (64.2009(c); 64.2011(d)),No
+POL-02,A.9,Monthly advisory review; critical fixes within 14 days,RA-5; SI-2,ID.RA-01; PR.PS-02,CSF ID.RA-01 and PR.PS-02 benchmark,Yes
+POL-02,A.10,"Annual policy review; written, risk-rated, time-limited exceptions",PL-1,GV.PO-01; GV.PO-02,Internal,No
+POL-02,B.1,Named accounts everywhere; shared network login only as a dated exception,AC-2; IA-2,PR.AA-01,CSF PR.AA-01 benchmark,Yes
+POL-02,B.2,Least privilege; CDR and customer list export limited to 2 roles; scoped API keys,AC-2; AC-6,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,B.3,"MFA for every administrator and remote login, including MSP and consultant",IA-2(1),PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,B.4,Termination checklist including shared secrets and hut access,PS-4; AC-2,PR.AA-05,CSF PR.AA-01 benchmark,Yes
+POL-02,B.5,Monthly account reconciliation and log review,AC-2; AU-6,PR.AA-05; DE.AE-02,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,B.6,Network administration only through the VPN with named MFA logins; no internet-facing management,AC-17; SC-7,PR.IR-01,CSF PR.IR-01 benchmark,Yes
+POL-02,B.7,Secrets in the password manager; defaults changed before service,IA-5,PR.AA-01,CSF PR.AA-01 benchmark,Yes
+POL-02,B.8,Device lock; display-only account for the outage map screen,AC-11,PR.AA-03,Internal,No
+POL-02,B.9,Phone release of call detail only with the PIN; otherwise mail or call back,IA-8,PR.AA-03,"C-COMMUNICATIONS-R01 (64.2010(a), (b))",Yes
+POL-02,B.10,Online access by password; reset by one-time code; assistant only after sign-in,IA-8; IA-5,PR.AA-03,"C-COMMUNICATIONS-R01 (64.2010(c), (e))",Yes
+POL-02,B.11,Photo ID before in-store release of CPNI,IA-8,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(d)),Yes
+POL-02,B.12,Immediate change notices to the number or address of record,IA-8,DE.CM-03,C-COMMUNICATIONS-R01 (64.2010(f)),Yes
+POL-02,B.13,Sealed break-glass network credential,AC-2,PR.AA-05,Internal,Yes
+POL-02,C.1,Look up only accounts you serve,PL-4,PR.AT-01,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-02,C.2,No CPNI or network data in personal accounts or public AI tools,PL-4,PR.AT-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-02,C.3,Lock screens; never share passwords or MFA codes,AC-11; PL-4,PR.AA-03,Internal,No
+POL-02,C.4,Security and CPNI training at hire and yearly; phishing simulations,AT-2; AT-3,PR.AT-01; PR.AT-02,C-COMMUNICATIONS-R01 (64.2009(b)),Yes
+POL-02,C.5,Report suspected incidents at once,IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-02,C.6,Signed policy acknowledgment,PL-4,PR.AT-01,Internal,No
+POL-03,4.1,Intrusion runbook and outage checklist kept and printed,IR-8,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011); C-COMMUNICATIONS-R02 (4.9),No
+POL-03,4.2,Report suspected incidents within 1 hour; outages at once,IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.3,"Incident register with the 64.2011(d) fields, kept 2 years",IR-5,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011(d)),No
+POL-03,4.4,Reasonable determination of a CPNI breach recorded without waiting for forensics,IR-6,RS.AN-03,"C-COMMUNICATIONS-R01 (64.2011(b), (e))",Yes
+POL-03,4.5,Law enforcement notice within 7 business days; customer hold; state notices per matrix,IR-6,RS.CO-02; RS.CO-03,C-COMMUNICATIONS-R01 (64.2011(a)-(c)); Fla. Stat. 501.171,Yes
+POL-03,4.6,CALEA compromise and unlawful surveillance reports,IR-6,RS.CO-02,C-COMMUNICATIONS-R03 (1.20003(c)),Yes
+POL-03,4.7,"Outage thresholds, 911 contact notices, NORS, and DIRS",IR-6; CP-2,RS.CO-02,C-COMMUNICATIONS-R02 (4.9(f)-(h); 4.18),Yes
+POL-03,4.8,Insurer hotline first; MSP and consultant engaged under contract,IR-4,RS.MA-01,Cyber insurance policy (contract),No
+POL-03,4.9,Ransom only with approvals and an OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),No
+POL-03,4.10,Vendor incident reports logged; Florida 10-day agent notice,IR-6; SA-9,GV.SC-08,Fla. Stat. 501.171(6)(a),Yes
+POL-03,4.11,Annual tabletop with the MSP and consultant,IR-3,ID.IM-02,Internal,No
+POL-03,4.12,"Lessons learned within 30 days, into training and certification evidence",IR-4,ID.IM-02,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-04,4.1,Three levels; whole customer account record Restricted,RA-2,ID.AM-07,C-COMMUNICATIONS-R01 (47 U.S.C. 222(a)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit; encrypted management protocols,SC-28; SC-8,PR.DS-01; PR.DS-02,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.3,CPNI used only as 64.2005 allows; no marketing use without adopting approval rules,PT-3; AC-3,GV.OC-03,C-COMMUNICATIONS-R01 (64.2005; 64.2007(b); 64.2009(a)),No
+POL-04,4.4,Restricted data only in approved locations; exports deleted within 30 days,AC-3,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.5,Inventory of systems and data locations,CM-8,ID.AM-01,CSF benchmark,No
+POL-04,4.6,"New vendors approved, under contract terms, and registered",SA-9,GV.SC-05,C-COMMUNICATIONS-R01 (64.2009(c)),Yes
+POL-04,4.7,Approved AI tools only,SA-9; PL-4,GV.SC-05,C-COMMUNICATIONS-R01 (64.2010(c)),Yes
+POL-04,4.8,Stop collecting and purge driver license numbers,SI-12,PR.DS-01,Fla. Stat. 501.171,No
+POL-04,4.9,Off-site encrypted configuration backups; twice-yearly restore test,CP-9; CP-4,PR.DS-11,CSF PR.DS-11 benchmark,Yes
+POL-04,4.10,Factory reset of returned ONTs and parts; disposal log,MP-6,ID.AM-08,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.11,Lawful-intercept information need-to-know and locked,AC-3,PR.DS-01,C-COMMUNICATIONS-R03 (1.20003(b); 1.20004),No
+POL-04,4.12,Retention of account records and CDRs,SI-12,GV.PO-02,C-COMMUNICATIONS-R01 (64.2009(c)),No

@@ -1,0 +1,16 @@
+review_item,what_to_check,ams_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because policy service depends on the AMS,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"AMS application, client upload portal, insurer download interfaces, AI assistant, hosting","Application, portal, and insurer downloads in scope; the AI assistant (added 2026-06) is after the period end and not covered",Ask whether the next report will cover the AI assistant and its model provider
+Subservice organizations,Carve-out or inclusive; which hosting providers,Cloud hosting provider carved out; vendor reviews the host's SOC 2 each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated vendor employees kept access for more than 3 business days; remediated with an automated offboarding feed,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the agency must run for the vendor's controls to work,Customer manages its users and roles; protects MFA devices; reviews activity reports; uses the client upload portal for sensitive documents; reports suspected compromise to the vendor,"Map to AC-2, IA-2(1) (phone; POAM-005 lost-phone steps), AU-6 (gap: POAM-003), SC-8 (gap: POAM-004), IR-6 (P08)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA enforced for all customer users; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data; contract sets notice within 72 hours of confirmation,Meets the 10-day duty in Fla. Stat. 501.171(6)(a); confirm the notice goes to the owner's phone as well as email
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the agency's BIA (BP-01: RTO 8 h; RPO 4 h),RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Data return and deletion,Export format and timing on request or termination (Fla. Stat. 626.748 records),Contract allows full export on request and for 60 days after termination; not tested,Run the first quarterly export (POAM-007)
+Bridge letter,Coverage from report end date to today,Requested 2026-08-06,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-agent 2026-08-06, with the IT consultant",Repeat every August (POL-01 6.4)

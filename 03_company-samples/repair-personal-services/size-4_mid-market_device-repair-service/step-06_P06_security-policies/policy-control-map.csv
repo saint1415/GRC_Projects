@@ -1,0 +1,51 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Program documented in policies, standards, and the SSP; CSF 2.0 benchmark",PM-1; PL-1,GV.PO-01,N81-BM (CSF 2.0 GV.PO-01),No
+POL-01,4.2,Information Security Officer designated in writing,PM-2,GV.RR-02,N81-R03 (PCI DSS v4.0.1 12.1.3),No
+POL-01,4.3,Annual enterprise risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-01,4.4,Risk acceptance authority by level; device content risk not accepted above Low,PM-9,GV.RM-01,N81-R01 (15 U.S.C. 45(n)),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5,GV.OV-01,N81-BM (CSF 2.0 GV.OV-01),No
+POL-01,4.6,Annual policy and standard review and publication,PL-1,GV.PO-02,N81-R03 (PCI DSS v4.0.1 12.1.1; 12.1.2),No
+POL-01,4.8,"Sanctions, including for misuse of customer device data",PS-8,GV.RR-04,N81-R01 (15 U.S.C. 45(n)),No
+POL-01,4.9,"No terms, no data: vendor review and security, data-use, and notice terms",SA-4; SA-9,GV.SC-05,N81-R02 (Fla. Stat. 501.171(6)); N81-R03 (PCI DSS v4.0.1 12.8.1-12.8.3),Yes
+POL-01,4.10,Annual Tier 1 vendor reassessment with SOC 2 or AOC review,SR-6; SA-9,GV.SC-07,N81-R03 (PCI DSS v4.0.1 12.8.4),Yes
+POL-01,4.11,Partner claim data used only for the repair,PT-2; AC-3,GV.OC-03,Partner agreements (contract),Yes
+POL-01,4.12,Annual independent assessment,CA-2,ID.IM-01,N81-R02 (Fla. Stat. 501.171(2)),No
+POL-01,4.13,Retention of security documentation and no-notice determinations,SI-12,GV.PO-02,N81-R02 (Fla. Stat. 501.171(4)(c)),Yes
+POL-01,4.14,AI tools approved before use,PM-9; SA-9,GV.RM-01,N81-R01 (15 U.S.C. 45(a)(1)),Yes
+POL-02,4.1,"Unique named accounts everywhere, including manufacturer portals and counter tablets",IA-2; AC-2,PR.AA-01,Manufacturer A agreement (contract); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.2,Role-based least privilege; passcode field visible only to the assigned technician,AC-3; AC-6,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.3,MFA for all access including vendor portals; security keys for administrators,IA-2(1); IA-2(2),PR.AA-03,Manufacturer A agreement (contract); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.4,Termination: same-day identity provider disable; local accounts within 1 business day,PS-4; AC-2,PR.AA-05,Manufacturer A agreement (contract),Yes
+POL-02,4.6,Quarterly access reviews and monthly reconciliation of local accounts,AC-2; AC-6,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.7,Separate privileged accounts; just-in-time elevation,AC-6(2); AC-6(5),PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),No
+POL-02,4.8,Technicians access customer devices only per STD-08 under recorded sessions,AC-6; AC-3,PR.DS-10,N81-R01 (15 U.S.C. 45(n)); Manufacturer A agreement (contract),Yes
+POL-02,4.11,Password rules; no default credentials; secrets in the secrets service,IA-5,PR.AA-03,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.12,"Vendor remote access through a recorded tool, approved per session",AC-17; MA-4,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.13,"Customer one-time codes for portal, links, and release",IA-8; AC-3,PR.AA-03,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-03,4.1,Runbooks for device data exposure and point-of-sale compromise,IR-8,RS.MA-01,N81-R03 (PCI DSS v4.0.1 12.10.1),Yes
+POL-03,4.2,Immediate reporting; managers log every report; no sanctions for good-faith reports,IR-6,RS.MA-02,N81-R02 (Fla. Stat. 501.171(4)),Yes
+POL-03,4.3,Log incidents with the time the company first had reason to believe a breach occurred,IR-5; IR-4,RS.MA-02,N81-R02 (Fla. Stat. 501.171(3)(a); (4)(a)),Yes
+POL-03,4.5,Evidence first: no wiping or returning items until released; chain of custody,IR-4; AU-9,RS.AN-03,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-03,4.6,Breach determination and decision log; no-notice determinations kept 5 years,IR-6,RS.AN-03,N81-R02 (Fla. Stat. 501.171(4)(c)),Yes
+POL-03,4.7,"Contract clocks start at suspicion (acquirer 24 h, Manufacturer A 24 h, partners 48 h)",IR-6,RS.CO-03,N81-R03 (PCI DSS v4.0.1 12.10.1); Manufacturer A agreement (contract); Partner agreements (contract),Yes
+POL-03,4.8,"Notifications per the P08 matrix, confirmed by counsel",IR-6,RS.CO-02,N81-R02 (Fla. Stat. 501.171(3)-(6)),Yes
+POL-03,4.10,Ransom and extortion payments need approvals and an OFAC check,IR-4,RS.MI-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.11,"Investigation logs collected and retained (1 year searchable, 3 years archived)",AU-2; AU-6; AU-11,DE.CM-03,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-03,4.12,Annual exercise of each runbook,IR-3,ID.IM-02,N81-R03 (PCI DSS v4.0.1 12.10.1),No
+POL-04,4.1,Four classification levels,RA-2,ID.AM-07,N81-R02 (Fla. Stat. 501.171(2)),No
+POL-04,4.2,"Encrypt Restricted data at rest and in transit, including the lab and bench caches",SC-28; SC-8,PR.DS-01,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-04,4.3,Collect less: no account passwords; passcodes only in the restricted field; redact legacy notes,SI-12; SC-28,PR.DS-01,N81-R02 (Fla. Stat. 501.171(1)(g)1.b; (2)),Yes
+POL-04,4.4,Customer data access standard; no personal devices at the bench,AC-6; MP-7,PR.DS-10,N81-R01 (15 U.S.C. 45(n)); Manufacturer A agreement (contract),Yes
+POL-04,4.5,Card data only in P2PE terminals or gateway fields; weekly terminal inspection,SI-12; CM-8; PE-6,PR.DS-01,N81-R03 (PCI DSS v4.0.1 3.2.1; 3.3.1.2; 9.5.1; 9.5.1.1; 9.5.1.2),Yes
+POL-04,4.6,"Checkout page scripts inventoried, authorized, and monitored",CM-8; SI-4,PR.PS-06,N81-R03 (PCI DSS v4.0.1 6.4.3; 11.6.1; SAQ A eligibility),Yes
+POL-04,4.7,Retention: recovered data 30 days; records 3 years after last service; purge jobs alert on failure,SI-12,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)),Yes
+POL-04,4.8,"SP 800-88 Rev. 2 sanitization with verification, validation, and per-device certificates",MP-6,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)); N81-BM (NIST SP 800-88 Rev. 2); N81-R04 (16 CFR 682.3),Yes
+POL-04,4.9,"Encrypted, isolated, write-once backups restore-tested quarterly",CP-9; CP-4,PR.DS-11,N81-BM (CSF 2.0 PR.DS-11),Yes
+POL-04,4.11,Devices in locked storage; tracked shipping,MP-4; MP-5; PE-3,PR.AA-06,N81-R01 (15 U.S.C. 45(n)),Yes
+POL-04,4.12,Decline data recovery for HIPAA covered entities,PL-4,GV.OC-03,N81-R06 (45 CFR 160.103),No
+POL-05,4.2,Acknowledgment of this policy and the confidentiality agreement at hire and yearly,PL-4(1); PS-6,PR.AT-01,Manufacturer A agreement (contract),Yes
+POL-05,4.3,"Awareness and role-based training, including payment terminals and insider risk",AT-2; AT-2(2); AT-3,PR.AT-01; PR.AT-02,N81-R03 (PCI DSS v4.0.1 12.6.1; 9.5.1.3),Yes
+POL-05,4.4,Customer devices used only for the repair; never linked to personal devices,PL-4; AC-20,PR.DS-10,N81-R01 (15 U.S.C. 45(n)),No
+POL-05,4.6,No unapproved software or USB storage,CM-11; MP-7,PR.PS-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-05,4.9,Approved AI tools only; human check of AI outputs,PL-4,GV.PO-01,N81-R01 (15 U.S.C. 45(a)(1)),No
+POL-05,4.10,Recording announcement includes AI summaries; outbound calls recorded only with all-party consent,PT-4; PL-4,GV.OC-03,Fla. Stat. 934.03(2)(d),No

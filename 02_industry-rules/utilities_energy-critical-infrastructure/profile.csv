@@ -1,0 +1,12 @@
+field,value
+regulators,SRMA: Department of Energy (DOE); FERC; NERC and Regional Entities; TSA (pipeline/LNG security); PHMSA (pipeline safety incl. SCADA control room management)
+primary_regulation,TSA Security Directive Pipeline-2021-02G
+primary_regulation_citation,"TSA SD Pipeline-2021-02G, issued under 49 U.S.C. 114"
+primary_regulation_url,https://www.tsa.gov/sites/default/files/signed_security_directive_pipeline-2021-02g_and_transmittal_memo_508c.pdf
+primary_regulation_rationale,Cris Santos Company operates a natural gas transmission pipeline in this vertical. The research for this sector recommends TSA SD Pipeline-2021-02G as the gap target for pipeline operators (NERC CIP applies to bulk electric system entities instead). The directive applies only to pipelines TSA has designated as critical and notified; confirm designation in step 1 of P03.
+sensitive_data,CEII (18 CFR 388.113); BES Cyber System Information (CIP-011); SSI (49 CFR Part 1520) - TSA SD content and pipeline security info; Customer PII/usage data
+critical_systems,"EMS/SCADA; ICCP links; Substation automation and protective relays; Generation DCS; Pipeline SCADA, compressor/pump station PLCs; LNG terminal DCS/SIS; Physical access control systems (PACS) and EACMS"
+ai_specific,; 
+assurance_alternatives,TSA pipeline security directive compliance reviews (for designated pipelines)
+notes,"Upcoming: CIP virtualization suite (July 1, 2028), CIP-015-1 INSM (Oct. 1, 2028), CIP-003-11 (July 1, 2029), CIP-015-2 (Oct. 1, 2029). NERC Project 2022-05 (CIP-003-12/CIP-008-8, reporting threshold changes) in balloting Sept. 2026. DOE BPS national-emergency EO (Aug. 26, 2026) RFI open until Oct. 9, 2026."
+last_verified,2026-09-25

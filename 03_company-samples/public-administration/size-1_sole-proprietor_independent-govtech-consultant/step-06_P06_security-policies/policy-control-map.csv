@@ -1,0 +1,38 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Documented security program, including the CJIS security program",PL-1,GV.PO-01,"N92-R02 (CJISSECPOL v6.1 Appendix H, Security Addendum sec. 3.01); Contract CL-01 (SP 800-53 Rev. 5 Moderate)",No
+POL-01,4.3,Yearly risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,4.4,Risk decision rules; High never accepted; CJI risks always treated,PM-9,GV.RM-01,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,4.5,Yearly self-assessment with outside review every second year,CA-2; CA-7,ID.IM-02,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,4.6,Yearly policy review; security setting changes logged,PL-1,GV.PO-02,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,5.1,Agency access agreements and screening before access,PS-6; PS-3,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-3; PS-6); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,5.2,NDA for anyone else; no CJI without sheriff screening,PS-7,GV.SC-05,N92-R02 (CJISSECPOL v6.1 PS-3),No
+POL-01,6.1,"No agreement, no agency data, including AI tools",SA-9,GV.SC-05,Contract CL-01 (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(2),Yes
+POL-01,6.2,Agency systems only through each agency's access path; no saved agency passwords,AC-17,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-17); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,6.3,"Provider list, yearly review, and pre-purchase checks",SA-4; SA-9,GV.SC-07,Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,6.4,"Owner-started, watched remote support",MA-4; PS-7,PR.AA-05,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.1,One named account per service; no shared credentials,IA-2; AC-2,PR.AA-01,N92-R02 (CJISSECPOL v6.1 IA-2); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.2,MFA on every service that offers it,IA-2(1); IA-2(2),PR.AA-03,N92-R02 (CJISSECPOL v6.1 IA-2); Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,7.3,Standard account for daily laptop work,AC-6,PR.AA-05,Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,7.4,Unique generated passwords; default passwords changed on day one,IA-5,PR.AA-01,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.5,Device lock 10 minutes (inside the CJIS 30-minute maximum),AC-11,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-11); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.6,Sign out of agency systems after each session,AC-12,PR.AA-05,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.7,"Monthly review of sign-ins, sharing, and accounts",AU-6; AC-2,DE.AE-02,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,7.8,Sealed recovery codes and contact sheet with the attorney,AC-2; CP-2,PR.AA-05,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,8.1,Three-level classification,RA-2,ID.AM-07,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,8.2,Approved data locations; CJI only inside the virtual desktop,AC-20; AC-3,ID.AM-07,N92-R02 (CJISSECPOL v6.1 AC-20; SC-28); Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,8.3,Full-disk encryption; one encrypted backup drive kept locked,SC-28; MP-4; MP-7,PR.DS-01,Contract CL-01 (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(2),Yes
+POL-01,8.4,Data location log and quarterly search,CM-12,ID.AM-07,Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,8.5,Delete agency data on the contract date with a certificate,SI-12; MP-6,ID.AM-08,Contract CL-01 (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(2),Yes
+POL-01,8.6,Wipe before repair or disposal; CJIS-grade sanitization for any device that held CJI,MP-6; MA-2; SR-12,ID.AM-08,N92-R02 (CJISSECPOL v6.1 MP-6); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,8.7,Keep security records at least 3 years,SI-12; AU-11,ID.AM-08,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,9.2,Home office or client office only; locked door; separate work Wi-Fi,PE-17; PE-2; SC-7; AC-18,PR.IR-01,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,9.3,"Updates, antivirus, official software sources, quarterly cleanup",SI-2; SI-3; CM-7,PR.PS-02,N92-R02 (CJISSECPOL v6.1 SI-2; SI-3); Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,9.4,"Test data, review, and off-device version control for scripts",SA-3; SA-10; CP-9,PR.PS-06,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,9.5,No agency data in AI tools without approval; no AI eligibility decisions,PL-4; SA-9; AC-20,GV.PO-01,Fla. Stat. 501.171(2); Contract CL-02 (confidentiality),No
+POL-01,9.6,"Yearly security course; CJIS training before access, yearly, and within 30 days of an incident",AT-2,PR.AT-01,N92-R02 (CJISSECPOL v6.1 AT-2),Yes
+POL-01,10.2,"Incident log and reporting clocks (1 hour, 24 hours, same business day, 10 days)",IR-6; IR-5,RS.MA-02; RS.CO-02,N92-R02 (CJISSECPOL v6.1 IR-6); Contract CL-01 (SP 800-53 Rev. 5 Moderate); Fla. Stat. 501.171(6)(a),Yes
+POL-01,10.4,"No ransom without counsel, insurer, OFAC check, and agency agreement",IR-4,RS.MA-01,Fla. Stat. 282.3186 (county and city clients),No
+POL-01,10.5,Yearly walkthrough and lessons learned,IR-3,ID.IM-02,Contract CL-01 (SP 800-53 Rev. 5 Moderate),No
+POL-01,11.2,Automatic encrypted backup with quarterly restore test,CP-9,PR.DS-11,Contract CL-01 (SP 800-53 Rev. 5 Moderate),Yes
+POL-01,12.2,Hardware token kept apart from the laptop; lost token reported in 1 hour,IA-2(1); IR-6,PR.AA-03,N92-R02 (CJISSECPOL v6.1 IA-2; IR-6),No
+POL-01,12.4,Quarterly check for new CJIS Security Policy versions,PL-1,GV.PO-02,"N92-R02 (CJISSECPOL v6.1 Appendix H, Security Addendum sec. 3.01)",No

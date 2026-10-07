@@ -1,0 +1,14 @@
+review_item,what_to_check,bss_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality needed because the BSS holds CPNI and supports customer care,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"BSS application, agent desktop, customer data store, bill presentment, and the API used by the portal and chatbot","All in scope, including the customer API",None
+Subservice organizations,Carve-out or inclusive; hosting and bill print,"Cloud hosting provider carved out; bill print is the company's own vendor, not a BSS subservice organization",Confirm the vendor reviews the hosting provider's SOC 2 (a complementary subservice organization control)
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled production changes lacked documented approval; remediated in 2026-01,Accept; check in next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and removal; federated sign-in with MFA; role assignment; review of audit and export reports; configuration of customer authentication and CPNI approval settings,"Map to AC-2, IA-2(1), AU-6, IA-8, PT-4. Open gaps: AU-6 review (POAM-006), customer authentication settings (POAM-001), access reviews (POAM-011)"
+Availability commitments,"Recovery objectives vs the BIA (BP-05 RTO 8 h, RPO 1 h)",RTO 4 h; RPO 1 h stated in the system description,Meets BIA; confirm in the contract at renewal
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers of security incidents,Notice within 72 hours of confirmation per system description; contract requires breach notice,Negotiate 24-hour security incident notice so the company can meet the 64.2011 7-business-day clock and Florida's 10-day third-party agent duty
+CPNI handling,Vendor treats customer data as the carrier's CPNI; staff training; no secondary use,Confidentiality commitments in the report; CPNI not named,Add CPNI-specific terms at renewal (POL-01 4.9)
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 received,Request an updated bridge letter if the next report is late
+Review sign-off,Reviewer and date,"IT Manager with the Billing Manager, 2026-08-24",Annual

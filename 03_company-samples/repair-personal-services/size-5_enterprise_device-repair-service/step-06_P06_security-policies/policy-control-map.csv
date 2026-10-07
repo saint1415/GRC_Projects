@@ -1,0 +1,52 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The company must maintain an information security program aligned to NIST CSF 2.0 that meets PCI DSS, applicable st...",PM-1; PL-2,GV.PO-01,N81-R03 (PCI DSS v4.0.1 12.1),No
+POL-01,4.2,"The CISO must be designated in writing as security program owner, the Director of Security Operations as HIPAA secu...",PM-2,GV.RR-02,N81-R06 (45 CFR 164.308(a)(2)),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST...",RA-3; PM-9,GV.RM-01,N81-R03 (PCI DSS v4.0.1 12.3); N81-R06 (45 CFR 164.308(a)(1)(ii)(A)),No
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executiv...",PM-9,GV.RM-06,N81-BM (CSF 2.0),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they d...,PL-1,GV.PO-02,N81-R03 (PCI DSS v4.0.1 12.1.2),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,N81-R03 (PCI DSS v4.0.1 12.1),No
+POL-01,4.7,Workforce members who violate security or privacy policies must be sanctioned under PRC-01.1 in proportion to inten...,PS-8,GV.RR-04,"N81-R01 (15 U.S.C. 45(a), (n)); Manufacturer A agreement (contract)",No
+POL-01,4.8,"No vendor may receive customer, card, or client data until it is tiered and assessed under STD-01.3 and its contrac...",SA-9; SR-6,GV.SC-05,N81-R03 (PCI DSS v4.0.1 12.8); N81-R02 (Fla. Stat. 501.171(6)),Yes
+POL-01,4.9,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor...,CA-2; CA-2(1),ID.IM-01,N81-R03 (PCI DSS v4.0.1 annual ROC; merchant agreement); N81-R06 (45 CFR 164.308(a)(8)),No
+POL-01,4.10,Every acquisition must include security due diligence before closing and a funded integration plan that brings iden...,RA-3; SA-9,GV.RM-03,N81-R03 (PCI DSS v4.0.1 12.5.2),Yes
+POL-01,4.11,"Security documentation, including risk analyses, assessments, exceptions, and incident records, must be retained fo...",SI-12,GV.PO-02,N81-R06 (45 CFR 164.316(b)(2)(i)),Yes
+POL-01,4.12,"The CISO must report cybersecurity risk to the risk and technology committee at least quarterly, including Very Hig...",PM-9,GV.OV-01,SEC Regulation S-K Item 106 (17 CFR 229.106(c)),No
+POL-02,4.1,"Every user must have a unique account. Shared accounts are prohibited, including on POS systems, the ticketing syst...",AC-2; IA-2,PR.AA-01,N81-R03 (PCI DSS v4.0.1 8.2.1; 8.2.2); Manufacturer A agreement (contract),Yes
+POL-02,4.2,Access must be granted by approved role templates on least privilege. The restricted passcode field may be viewed o...,AC-3; AC-6,PR.AA-05,N81-R03 (PCI DSS v4.0.1 7.2); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.3,"MFA is required for all workforce access to company systems, all remote and administrative access, and all access i...",IA-2(1); IA-2(2),PR.AA-03,N81-R03 (PCI DSS v4.0.1 8.4),Yes
+POL-02,4.4,Access must be removed the same business day as termination. Managers must enter terminations in the HR system the...,AC-2; PS-4,PR.AA-01,N81-R03 (PCI DSS v4.0.1 8.2.5),Yes
+POL-02,4.5,"Access to the STPP, the cardholder data environment, and privileged roles must be certified quarterly; other access...",AC-2,PR.AA-05,N81-R03 (PCI DSS v4.0.1 7.2.4),Yes
+POL-02,4.6,Privileged access must use PAM with just-in-time elevation and session recording.,AC-6(9); AC-6,PR.AA-05,N81-R03 (PCI DSS v4.0.1 8.2.2; 10.2.1.2),Yes
+POL-02,4.7,Vendor and remote support access must go through PAM. Unmanaged remote support tools are prohibited.,AC-17; MA-4,PR.AA-05,N81-R03 (PCI DSS v4.0.1 8.2.7),Yes
+POL-02,4.8,"Vendor default passwords must be changed before any device or application is used, including POS PCs, PIN pad admin...",IA-5; CM-6,PR.AA-01,N81-R03 (PCI DSS v4.0.1 2.2.2),Yes
+POL-02,4.9,A device may be released only after the customer shows photo ID matching the ticket or gives the one-time code sent...,IA-8,PR.AA-02,"N81-R02 (Fla. Stat. 501.171(2)); N81-R01 (15 U.S.C. 45(a), (n))",No
+POL-02,4.10,"Break-glass accounts must be sealed, monitored, and tested quarterly.",AC-2,PR.AA-05,N81-BM (CSF 2.0 PR.AA-05),Yes
+POL-03,4.1,"The company must maintain an incident response plan and runbooks (P08) and test them at least annually, including a...",IR-8; IR-3,ID.IM-04,N81-R03 (PCI DSS v4.0.1 12.10.1; 12.10.2); SEC Form 8-K Item 1.05,Yes
+POL-03,4.2,"Every workforce member must report a suspected incident immediately, including any customer complaint that someone...",IR-6,RS.MA-02,"N81-R03 (PCI DSS v4.0.1 12.10.1); N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-03,4.3,Incidents must be classified and escalated under STD-03.1; a severity-1 incident must reach the CISO within 1 hour...,IR-4,RS.MA-03,N81-R03 (PCI DSS v4.0.1 12.10.1),Yes
+POL-03,4.4,The CISO must brief the General Counsel within 24 hours of declaring a severity-1 incident. The disclosure committe...,IR-8,RS.MA-04,SEC Form 8-K Item 1.05,Yes
+POL-03,4.5,"Evidence must be preserved: affected bench workstations, POS PCs, and customer devices must not be reimaged, wiped,...",IR-4,RS.AN-07,N81-R03 (PCI DSS v4.0.1 12.10.1),Yes
+POL-03,4.6,"Each breach determination must be documented with counsel for every state where affected individuals reside, and th...",IR-6,RS.CO-02,N81-R02 (Fla. Stat. 501.171(3)-(5)),Yes
+POL-03,4.7,"No ransom or extortion payment may be made without approval of the CEO, the General Counsel, and the insurer, and a...",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.8,Contractual notices must be sent on time: the acquirer within 24 hours of suspecting a card data compromise; Manufa...,IR-6,RS.CO-02,N81-R03 (PCI DSS v4.0.1 12.10.1); N81-R06 (45 CFR 164.410); Manufacturer A agreement (contract),Yes
+POL-03,4.9,Contingency and disaster recovery plans for tier-1 systems must follow the BIA recovery order and be tested at leas...,CP-2; CP-4,RC.RP-01,N81-R06 (45 CFR 164.308(a)(7)); N81-BM (CSF 2.0),Yes
+POL-03,4.10,A lessons-learned review must be held within 14 days of closing a severity-1 or severity-2 incident and documented...,IR-4,ID.IM-03,N81-R03 (PCI DSS v4.0.1 12.10.6),Yes
+POL-04,4.1,"Data must be classified as Restricted (card data, device passcodes, account credentials, customer device content, r...",RA-2,ID.AM-05,N81-BM (CSF 2.0),No
+POL-04,4.2,Restricted and Confidential data must be encrypted in transit and at rest with keys managed under STD-04.1.,SC-8; SC-28,PR.DS-01,N81-R02 (Fla. Stat. 501.171(2)); N81-R03 (PCI DSS v4.0.1 4.2.1),Yes
+POL-04,4.3,"A device passcode may be recorded only in the restricted passcode field, only when a test needs it, and never in no...",SI-12; AC-3,PR.DS-01,"N81-R02 (Fla. Stat. 501.171(2)); N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-04,4.4,Customer data access standard (STD-04.2): technicians may open customer device content only as the test checklist f...,AC-6; MP-7,PR.AA-05,"N81-R02 (Fla. Stat. 501.171(1)(a)); N81-R01 (15 U.S.C. 45(a), (n)); Manufacturer A agreement (contract)",Yes
+POL-04,4.5,"Full card numbers must be entered only into P2PE PIN pads, the processor's hosted payment fields, the DTMF masking...",SI-12,PR.DS-01,N81-R03 (PCI DSS v4.0.1 3.2.1; 3.3.1),Yes
+POL-04,4.6,"Recovered data must be deleted 30 days after delivery, and data transfer caches must be wiped at the end of each job.",SI-12; MP-6,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)),Yes
+POL-04,4.7,"Every device leaving company custody for resale, recycling, or return to an SL-2 client without its data must be sa...",MP-6; MP-6(1),ID.AM-08,"N81-R02 (Fla. Stat. 501.171(8)); N81-R06 (45 CFR 164.310(d)(2)(i)); N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-04,4.8,"Records must follow the retention schedule (STD-04.5): tickets 7 years, call recordings 90 days, background check r...",SI-12,ID.AM-08,N81-R04 (16 CFR 682.3),Yes
+POL-04,4.9,Restricted data must not be entered into an AI tool unless the AI governance committee has approved the use and the...,SA-9,PR.DS-01,"N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-04,4.10,ePHI on SL-2 health care client devices must be handled under the client's BAA; those devices must not be opened ex...,MP-6; AC-6,PR.DS-01,N81-R06 (45 CFR 164.314(a)),Yes
+POL-05,4.1,Every workforce member must acknowledge this policy at hire and every year.,PL-4,PR.AT-01,N81-R03 (PCI DSS v4.0.1 12.2.1),No
+POL-05,4.2,Every workforce member must complete annual security awareness training and take part in phishing simulations; tech...,AT-2; AT-3,PR.AT-01,N81-R03 (PCI DSS v4.0.1 12.6.1; 12.6.3),Yes
+POL-05,4.3,"Customer devices may be connected only to bench workstations on the customer device network, never to office PCs, c...",AC-20; SC-7,PR.IR-01,N81-BM (CSF 2.0 PR.IR-01),Yes
+POL-05,4.4,"Personal phones must not be used to photograph customer device content, and removable media may be used only at reg...",MP-7,PR.DS-10,"N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-05,4.5,"Only approved AI tools on STD-05.3 may be used for company work, and any new AI feature must be registered in the A...",SA-9; PL-4,GV.PO-01,"N81-R01 (15 U.S.C. 45(a), (n))",Yes
+POL-05,4.6,Company data may be stored or processed only in approved systems listed in STD-05.2.,AC-20,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),No
+POL-05,4.7,"Store staff must inspect PIN pads weekly, report signs of tampering at once, and verify the identity of anyone who...",SR-9; PE-3,DE.CM-02,N81-R03 (PCI DSS v4.0.1 9.5.1.2; 9.5.1.3),Yes
+POL-05,4.8,Contact center agents must use the consent prompt at the start of recorded calls and pause recording for any paymen...,PL-4,GV.OC-03,State recording consent laws (Florida worked example: Fla. Stat. 934.03(2)(d)); N81-R03 (PCI DSS v4.0.1 3.3.1),No
+POL-05,4.9,Lost or stolen company devices and suspected incidents must be reported immediately.,IR-6,RS.MA-02,N81-R03 (PCI DSS v4.0.1 12.10.1),Yes

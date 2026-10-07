@@ -1,0 +1,24 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.3,Annual IT and OT risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.G),Yes
+POL-01,4.7,Security changes to OT go through management of change with Gas Control sign-off,CM-3,PR.PS-01,C-ENERGY-R04 (192.631(f)),Yes
+POL-01,4.8,Supplier security requirements before OT or Restricted access,SA-4; SA-9,GV.SC-05,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD II.A.3),Yes
+POL-01,4.9,Annual control assessment; one-third per year,CA-2,ID.IM-02,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.G.2.d),No
+POL-01,4.10,Same-day escalation and compliance project on TSA designation,PM-1,GV.OC-03,C-ENERGY-R02; C-ENERGY-R03 (Section V.A),No
+POL-02,4.1,Unique accounts on business and OT systems,IA-2; AC-2,PR.AA-01,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.4),Yes
+POL-02,4.2,"Shared account only for HMI display login, with conditions",AC-2; IA-5,PR.AA-01,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.4),Yes
+POL-02,4.4,MFA for remote and administrative access; compensating control for HMIs,IA-2(1),PR.AA-03,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.2),Yes
+POL-02,4.5,"Supplier remote sessions: named, MFA, per ticket, recorded; controller notified",AC-17; MA-4,PR.AA-05,C-ENERGY-R04 (192.631(b)(5)); C-ENERGY-R03 readiness (SD III.C.2),Yes
+POL-02,4.6,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.4),Yes
+POL-02,4.7,"Quarterly access reviews, including all OT accounts",AC-2; AC-6,PR.AA-05,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.3),Yes
+POL-02,4.8,Password rules; OT password change schedule; defaults changed before connection,IA-5,PR.AA-01,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.C.1),Yes
+POL-03,4.2,Report suspected incidents within 1 hour; OT issues to the controller at once,IR-6,RS.MA-02,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.F),No
+POL-03,4.5,Gas Control Manager may isolate OT from IT at any time,IR-4; SC-7,RS.MI-01,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.D.4),Yes
+POL-03,4.6,Precautionary shutdown follows P08 criteria; President approves,IR-4; CP-2,RS.MA-01,C-ENERGY-R04 (192.631(b)(3)); 49 CFR 192.615(a)(6),Yes
+POL-03,4.7,Meet notice deadlines in the P08 matrix,IR-6,RS.CO-02,"49 CFR 191.5; Rule 25-12.084, F.A.C.",No
+POL-03,4.9,Annual exercise testing at least two objectives with controllers,IR-3,ID.IM-02,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.F.1.e),No
+POL-04,4.2,Encrypt Restricted information at rest and in transit where supported,SC-28; SC-8,PR.DS-01; PR.DS-02,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.B.2),No
+POL-04,4.5,Offline or immutable SCADA backups; malware check before restore; annual restore test,CP-9; CP-4,PR.DS-11,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.F.1.c),Yes
+POL-04,4.8,SSI handling on TSA designation,MP-3; AC-3,PR.DS-01,"C-ENERGY-R03 (Section IV.B, on designation)",No
+POL-05,4.3,Annual awareness training; quarterly phishing exercises; role-based OT training,AT-2; AT-3,PR.AT-01; PR.AT-02,C-ENERGY-R04 (192.631(h)),Yes
+POL-05,4.4,"No browsing, email, or unscanned USB on OT devices",MP-7; CM-11,PR.PS-05,None binding; CSF 2.0 benchmark; C-ENERGY-R03 readiness (SD III.D.1),No
+POL-05,4.8,Approved generative AI tools only; no Restricted information in AI tools,PL-4,GV.PO-01,None binding; CSF 2.0 benchmark,No

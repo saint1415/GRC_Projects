@@ -1,0 +1,14 @@
+review_item,what_to_check,production_accounting_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Processing Integrity matter for royalty payments and allocations; Confidentiality for owner data,Security; Availability; Confidentiality; Processing Integrity,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Production accounting, allocation engine, revenue distribution, owner portal, and the API the company uses",All in scope; the check printing and ACH file service is a carved-out subservice organization,Obtain the check and ACH provider's assurance summary
+Subservice organizations,Carve-out vs inclusive; hosting provider,Cloud hosting provider carved out,Confirm the vendor reviews its hosting provider's SOC 2 (listed as a vendor control)
+Exceptions noted,Test exceptions and management responses,1 exception: quarterly access review for vendor support staff completed late in one quarter; remediated,Accept; monitor in next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and removal; MFA through the customer's identity provider; role assignment and segregation of duties; review of owner bank detail changes; review of allocation exception reports; protection of API credentials,Map to company controls: AC-2 (gap: POAM-014); IA-2(1) (in place); AC-5 and bank change call-back (gap: P01 R-007); API token in key management (in place)
+Availability commitments,Uptime and recovery objectives vs the company BIA (BP-06: RTO 72 h; RPO 24 h),99.5% monthly uptime; RTO 24 h; RPO 1 h stated in the system description,Meets BIA; confirm in contract
+Processing integrity,Controls over allocation calculations and payment files,Allocation engine change control and payment file reconciliation tested without exception,None; the company still reviews allocation exception reports (CUEC)
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers; Fla. Stat. 501.171(6) requires notice within 10 days of determining a breach,System description commits to notify within 72 hours of confirming a security incident affecting customer data,Add the 72-hour commitment and breach cooperation to the contract at renewal (POAM-020)
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 requested,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"IT Manager with the Production Accounting Manager, 2026-08-20",Annual

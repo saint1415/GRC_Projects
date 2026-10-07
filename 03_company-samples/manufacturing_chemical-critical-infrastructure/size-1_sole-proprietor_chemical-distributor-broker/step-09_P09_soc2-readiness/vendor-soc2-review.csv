@@ -1,0 +1,14 @@
+review_item,what_to_check,email_suite_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability and Confidentiality useful because the suite holds the BOL archive and pickup authorizations,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Mail, file storage, identity and sign-in services, administration console",All in scope for business plans,None
+Subservice organizations,Carve-out or inclusive; which hosting providers,Data center colocation providers carved out; provider reviews their reports each year,None
+Exceptions noted,Test exceptions and management responses,None noted,None
+Complementary user entity controls (CUECs),Controls the business must run for the provider's controls to work,Customer enables MFA; manages users and admin roles; reviews sign-in and audit logs; configures retention and backup of its own data; reports suspected compromise,"Map to IA-2(1) (gap: POAM-001), AU-6 (gap: POAM-007), CP-9 (gap: POAM-006), IR-6 (POAM-008)"
+CC6.1 logical access (CC series as checklist),Provider controls over authentication and encryption,MFA available to all customer users (customer must enable); encryption at rest and in transit tested without exception,The business had not enabled MFA (POAM-001)
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,24x7 monitoring of the platform; suspicious sign-in alerts available to customers,Turn on suspicious sign-in alerts to the phone
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of security incidents affecting their data per the service terms,Florida 501.171(6) applies if the provider maintains personal information for the business
+Availability and recovery (A1.2),Recovery objectives vs the BIA (BP-02: RTO 8 h; RPO 4 h),Platform recovery objectives stated in the system description meet the BIA for the service; the report does not cover recovery of data a customer deletes or an attacker removes,Customer backup still needed (POAM-006)
+Bridge letter,Coverage from report end date to today,Provider bridge letter dated 2026-07-15 posted on the trust portal,None
+Review sign-off,Reviewer and date,"Owner 2026-09-11, with the IT technician",Repeat every year (POL-01 6.2)

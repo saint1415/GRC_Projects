@@ -1,0 +1,12 @@
+field,value
+regulators,Securities and Exchange Commission (SEC) Cyber disclosure for public registrants (Reg S-K Item 106; Form 8-K Item 1.05); ICFR under SOX 404; Board of Governors of the Federal Reserve System Bank and savings & loan holding companies (Reg Y incident notification; Interagency Information Security Guidelines); FTC Section 5 and the Safeguards Rule for non-bank financial subsidiaries
+primary_regulation,NIST CSF 2.0 group profile (voluntary benchmark)
+primary_regulation_citation,"NIST CSWP 29 (CSF 2.0), Govern function emphasis"
+primary_regulation_url,https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final
+primary_regulation_rationale,"Decision 2026-09-26: at Small size the holding company is private, so SEC Regulation S-K Item 106 and Form 8-K Item 1.05 do not apply. The gap analysis benchmarks group-level cyber governance across subsidiaries against CSF 2.0 (organizational profile), emphasizing the Govern function, and records SEC Item 106 as not applicable with the reason."
+sensitive_data,"Material non-public information (MNPI), M&A and financial reporting data; Consolidated employee HR/payroll data, SSNs; Group health plan PHI; Customer financial information (if financial subsidiaries); Intercompany treasury and banking credentials"
+critical_systems,Consolidation / ERP and financial close systems (ICFR scope); Treasury management and payment systems; Shared-services identity (AD/Entra ID) spanning subsidiaries; Board portals; HRIS / benefits platforms
+ai_specific,
+assurance_alternatives,
+notes,"NAICS 55 compliance is mostly inherited from subsidiaries' sectors. The parent-level drivers are SEC (if public) and the Federal Reserve (if a BHC/SLHC). No federal AI rules are specific to holding companies. All 50 states, DC and the territories have breach notification statutes with differing triggers, deadlines and regulator-notice duties. They are not enumerated here."
+last_verified,2026-09-25

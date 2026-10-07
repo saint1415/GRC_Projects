@@ -1,0 +1,12 @@
+field,value
+regulators,Sector Risk Management Agency: Department of Homeland Security (CISA); GSA FedRAMP PMO; Department of Defense (CMMC/DFARS); DOJ National Security Division (28 CFR 202)
+primary_regulation,FedRAMP (Rev5 NIST SP 800-53 baselines / 20x)
+primary_regulation_citation,44 U.S.C. 3607-3616
+primary_regulation_url,https://www.fedramp.gov/
+primary_regulation_rationale,"The most comprehensive, government-recognized control baseline for IT/cloud providers, reusable across agencies and widely used as a commercial benchmark; for DoD-facing IT firms add NIST SP 800-171 (CMMC). OMB M-22-18 software attestation is no longer mandatory (rescinded by M-26-05)."
+sensitive_data,"Customer/tenant data in cloud services; Source code, signing keys and build artifacts; Federal data and CUI; Credentials/identity data; Bulk sensitive personal data (28 CFR 202)"
+critical_systems,"Cloud control planes and hypervisors; Identity providers and PKI; Software supply chain/CI-CD; Managed service provider RMM tools; DNS, CDN and internet routing"
+ai_specific,
+assurance_alternatives,FedRAMP authorization for federal customers; ISO/IEC 27001 certification
+notes,"OMB M-26-05 (Jan 23, 2026) rescinded M-22-18 and M-23-16. Verified 2026-09-25."
+last_verified,2026-09-25

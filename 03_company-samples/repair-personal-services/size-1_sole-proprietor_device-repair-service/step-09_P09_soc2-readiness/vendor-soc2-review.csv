@@ -1,0 +1,13 @@
+review_item,what_to_check,ticketing_pos_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,SOC 2 Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because checkout depends on SYS-01,Security and Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Ticketing, customer records, POS, status links, text and email messaging, hosting",All in scope; the text messaging gateway and the hosting provider are carved-out subservice organizations,"Ask how the vendor monitors the messaging gateway, since fake texts are the P08 scenario"
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 25 sampled production changes lacked a documented approval; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the shop must run for the vendor's controls to work,Customer provisions and removes users; assigns least-privilege roles; enables MFA; reviews activity logs and exports; does not store card data or credentials in free-text fields,"Map to AC-2, IA-2(1), AU-6, SI-12. All four are open gaps: POAM-002, POAM-001, P03 G-077, POAM-003. The vendor's controls protect the shop only once these are done"
+Restricted fields and purge,Ability to limit who sees sensitive fields and purge them,A restricted credential field with automatic purge at ticket close is available but off by default,Turn on for POL-01 8.3 (POAM-003)
+Availability commitments,"Recovery objectives versus the BIA (BP-01: RTO 8 h, RPO 1 h)",RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Encryption,At rest and in transit,Encryption at rest and TLS in transit tested without exception,None
+Incident notification,Vendor commitment to notify customers,Notify affected customers within 72 hours of confirming an incident (system description),Inside the 10-day outer limit for third-party agents in Fla. Stat. 501.171(6)(a); record in the vendor list
+Bridge letter,Coverage from report end date to today,Requested 2026-08-03,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-technician, 2026-08-03",Repeat every year (POL-01 6.3)

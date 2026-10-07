@@ -1,0 +1,12 @@
+field,value
+regulators,"Co-Sector Risk Management Agencies: Department of Homeland Security (TSA, USCG) and Department of Transportation; Transportation Security Administration; U.S. Coast Guard"
+primary_regulation,TSA Security Directive 1580/82-2022-01 series (rail cybersecurity)
+primary_regulation_citation,SD 1580/82-2022-01E; SD Pipeline-2021-02G
+primary_regulation_url,https://www.tsa.gov/sd-and-ea
+primary_regulation_rationale,"Cris Santos Company operates a short line freight railroad in this vertical. TSA rail directives apply only to railroads TSA has designated; confirm designation in step 1 of P03. Research note: For the CISA sector's highest-risk operators (freight/passenger rail, transit, pipelines), the performance-based TSA SDs are the binding requirements (implementation plan, segmentation, access control, monitoring, patching, assessment program, IR testing) and TSA audits against them. Use USCG Subpart F for maritime. Note SDs are revised roughly annually and the TSA NPRM would codify them if finalized."
+sensitive_data,Security Sensitive Information (SSI); OT/ICS network diagrams and configurations; Passenger PII; Cargo and hazmat shipment data
+critical_systems,"Positive Train Control and signaling; Pipeline SCADA/ICS; Air traffic and airport operational systems; Port/terminal OT (cranes, gates); Transit fare collection and dispatch"
+ai_specific,
+assurance_alternatives,
+notes,CISA page lists 7 subsectors: Aviation; Highway and Motor Carrier; Maritime; Mass Transit and Passenger Rail; Pipeline Systems; Freight Rail; Postal and Shipping. Verified 2026-09-25.
+last_verified,2026-09-25

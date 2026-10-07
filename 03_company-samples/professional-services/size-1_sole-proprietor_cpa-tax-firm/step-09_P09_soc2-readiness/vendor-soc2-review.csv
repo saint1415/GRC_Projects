@@ -1,0 +1,15 @@
+review_item,what_to_check,tax_software_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because returns must be filed by deadlines,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Tax preparation and e-file; client portal and e-signature; hosting,"Tax preparation, e-file transmission, and the client portal module are in scope. The AI document extraction feature is not in scope","Before the AI feature is ever turned on, obtain the vendor's description of it and its sub-processor (POL-01 6.3; P10 AI-002)"
+Subservice organizations,Carve-out or inclusive; which hosting providers,Infrastructure hosting provider carved out; the vendor reviews the host's own SOC 2 report each year,None
+Exceptions noted,Test exceptions and management responses,"1 exception: for 2 of 40 sampled departing vendor employees, access was removed 3 days after departure against a 1-day standard; remediated with an automated offboarding feed",Accept; check the next report
+Complementary user entity controls (CUECs),Controls the firm must run for the vendor's controls to work,Customer manages its own users and removes access promptly; protects MFA devices; reviews user activity reports; reports suspected compromise to the vendor; secures its own endpoints and network,"Map to AC-2 (failed: contract preparer account left active; POAM-003), IA-2(1) (phone), AU-6 (gap: POAM-007), IR-6 (POAM-008), SC-7 (home network gap)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA enforced for all customer users; encryption at rest and in transit tested without exception,None
+CC6.7 transmission (CC series as checklist),Protection of returns sent to the IRS and states,E-file transmission over encrypted channels tested without exception,None
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,"Continuous monitoring of the platform, including unusual filing patterns, tested without exception",Ask whether the vendor alerts customers to unusual activity under their EFIN
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data; contract sets no number of days,Ask for written confirmation of notice within 10 days (Fla. Stat. 501.171(6)(a))
+"Availability commitments (A1.2, A1.3)",Recovery objectives against the firm's BIA (BP-01: RTO 24 h; RPO 1 h),RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from the report end date to today,Requested 2026-07-28,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"CPA-owner 2026-07-28, with the IT consultant",Repeat every July (POL-01 6.4)

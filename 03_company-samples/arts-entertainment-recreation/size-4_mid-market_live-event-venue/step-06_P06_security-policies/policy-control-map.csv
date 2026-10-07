@@ -1,0 +1,60 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"Information security program documented in policies, standards, and the SSP",PM-1,GV.PO-01,N71-R04 (12.1.1),No
+POL-01,4.2,Security Manager designated Information Security Officer in writing,PM-2,GV.RR-02,N71-R04 (12.1.3),No
+POL-01,4.3,Annual SP 800-30 risk assessment and targeted risk analyses,RA-3; PM-9,ID.RA-01,N71-R04 (12.3.1); N71-R05 (45(n)),No
+POL-01,4.4,Risk acceptance authority by level; no crowd-safety risk accepted above Low,PM-9,GV.RM-01,N71-R05 (45(n)),No
+POL-01,4.5,"PCI DSS scope and data flows documented per channel, confirmed yearly and before changes; evidence before any AOC",PL-2; CM-8,ID.AM-03,N71-R04 (12.5.1; 12.5.2),Yes
+POL-01,4.6,Annual review of policies and standards; acknowledgment at hire and yearly,PL-1,GV.PO-02,N71-R04 (12.1.2),No
+POL-01,4.7,"Written, risk-rated, time-limited exceptions",PM-9,GV.PO-02,N71-R04 (12.3.1),No
+POL-01,4.8,"Service provider list, agreements with security and breach terms, AOCs, responsibility matrix, annual review",SA-9; SR-6,GV.SC-05; GV.SC-07,N71-R04 (12.8.1; 12.8.2; 12.8.4; 12.8.5),Yes
+POL-01,4.9,"Purchasing gate for software, SaaS, AI features, and scripts",SA-4,GV.SC-06,N71-R04 (12.8.3),No
+POL-01,4.10,Sanctions for policy violations,PS-8,GV.RR-04,N71-R05 (45(n)),No
+POL-01,4.11,Total price in every price display; accurate fee names; privacy notice matches practice,PT-5,GV.OC-03,N71-R05 (16 CFR 464.2; 464.3; 15 U.S.C. 45(a)),No
+POL-01,4.12,"Change control for checkout, pricing, bot, tag manager, website, payment device, and firewall changes",CM-3,PR.PS-01,N71-R04 (6.5.1; 6.5.2),Yes
+POL-01,4.13,"Payment page script inventory, authorization, integrity, two-person publishing, weekly tamper detection",CM-7; SI-7,PR.PS-01; DE.CM-09,N71-R04 (6.4.3; 11.6.1),Yes
+POL-01,4.14,AI tools and features approved through the P10 process,SA-4; PM-9,GV.OC-03,N71-R05 (45(a); 45(n)),No
+POL-01,4.15,Annual independent control assessment,CA-2,ID.IM-02,N71-R04 (12.4); N71-R05 (45(n)),No
+POL-02,4.1,"Unique accounts; no shared accounts except sealed, logged break-glass accounts",IA-2; AC-2,PR.AA-01,N71-R04 (8.2.1; 8.2.2),Yes
+POL-02,4.2,Role-based least privilege with approval; no more than 6 ticketing administrators,AC-6; AC-3,PR.AA-05,N71-R04 (7.2.1; 7.2.2),Yes
+POL-02,4.3,"SSO and MFA for every account, including agency and vendor accounts and tag manager publishers",IA-2(1); IA-2(2),PR.AA-03,N71-R04 (8.4.1; 8.4.2),Yes
+POL-02,4.4,Same-day termination; local and agency accounts and badges within 24 hours; agency end dates,PS-4; AC-2,PR.AA-05,N71-R04 (8.2.5),Yes
+POL-02,4.5,Transfers remove prior access within 5 business days,PS-5,PR.AA-05,N71-R04 (7.2.4),No
+POL-02,4.6,"Quarterly access reviews, including administrator, publishing, and export rights",AC-2; AC-6,PR.AA-05,N71-R04 (7.2.4),Yes
+POL-02,4.7,"Separate privileged accounts, just-in-time elevation, security keys for administrators",AC-6(5); AC-6(2),PR.AA-05,N71-R04 (7.2.2),Yes
+POL-02,4.8,Lockout after 10 attempts; screen lock and session timeouts,AC-7; AC-11; AC-12,PR.AA-03,N71-R04 (8.3.4; 8.2.8),No
+POL-02,4.9,"Password length, scoped and vaulted API keys rotated yearly, no default credentials",IA-5,PR.AA-01; PR.AA-03,N71-R04 (8.3.6; 8.6.2; 8.6.3; 2.2.2),Yes
+POL-02,4.10,"Third-party remote access through the broker with MFA, approval, and recording",AC-17; MA-4,PR.AA-03,N71-R04 (8.4.3; 8.2.7),Yes
+POL-02,4.11,Inactive accounts disabled (45 days SSO; 90 days local),AC-2(3),PR.AA-05,N71-R04 (8.2.6),No
+POL-03,4.1,Incident response plan and runbooks for card compromise and event-day outage,IR-8,RS.MA-01,N71-R04 (12.10.1),Yes
+POL-03,4.2,"Immediate reporting of suspected incidents, within 1 hour at most",IR-6,RS.MA-02,N71-R04 (12.10.1),Yes
+POL-03,4.3,Incident log with time of suspicion and time of determination,IR-5; IR-4,RS.MA-02,N71-R04 (12.10.1); Fla. Stat. 501.171,Yes
+POL-03,4.4,Severity 1 activates the crisis management team within 1 hour,IR-4,RC.RP-01,N71-R04 (12.10.1),Yes
+POL-03,4.5,Acquirer within 24 hours of suspicion; Visa within 3 days through the acquirer; evidence preserved; PFI if required,IR-6,RS.CO-02,N71-R04 (12.10.1),Yes
+POL-03,4.6,"Breach determination and notices per the P08 matrix, confirmed by counsel; 5-year decision records",IR-6,RS.AN-03; RS.CO-03,Fla. Stat. 501.171; N71-R05 (45(n)),Yes
+POL-03,4.7,Insurer hotline before incident vendors,IR-7,RS.MA-01,N71-R05 (45(n)),No
+POL-03,4.8,"Ransom decision requires CEO, counsel, insurer, OFAC check, and law enforcement report",IR-4,RS.MA-01,N71-R05 (45(n)),Yes
+POL-03,4.9,Event-day decisions by the venue General Manager and Director of Safety and Security; life safety first,CP-2,RC.RP-01,N71-R04 (12.10.1),Yes
+POL-03,4.10,Unexpected card data treated as an incident and purged,IR-4,RS.MA-01,N71-R04 (12.10.7),Yes
+POL-03,4.11,Annual exercise per runbook; responder training,IR-3; IR-2,ID.IM-02,N71-R04 (12.10.2; 12.10.4),No
+POL-03,4.12,Alerts triaged per STD-02; MSSP escalation within 30 minutes,SI-4,DE.AE-02,N71-R04 (12.10.5; 10.7.2),Yes
+POL-03,4.13,Lessons learned within 30 days into P01 and P07,IR-4,ID.IM-03,N71-R04 (12.10.6),Yes
+POL-04,4.1,"Four data classes (Restricted, Confidential, Internal, Public)",RA-2,ID.AM-05,N71-R04 (12.5.2),No
+POL-04,4.2,No card data storage; card entry only on P2PE devices or provider forms; no card data by email or on paper,SI-12; MP-6,PR.DS-01,N71-R04 (3.2.1; 3.3.1; 4.2.2; 9.4),Yes
+POL-04,4.3,"Patron data minimization; exports to approved storage, expiring in 30 days",AC-3; SI-12,PR.DS-10,N71-R05 (45(n)); Fla. Stat. 501.171(2),No
+POL-04,4.4,Encryption in transit and at rest,SC-8; SC-28,PR.DS-01; PR.DS-02,N71-R04 (4.2.1); Fla. Stat. 501.171(2),No
+POL-04,4.5,"Retention schedule and secure disposal, including at providers",SI-12; MP-6,PR.DS-01,Fla. Stat. 501.171(8); N71-R04 (3.2.1),Yes
+POL-04,4.6,Review and privacy notice update before new uses of patron data,PT-5,GV.OC-03,N71-R05 (45(a)),No
+POL-04,4.7,Quarterly card data discovery scans,SI-12,PR.DS-01,N71-R04 (12.5.2; 12.10.7),No
+POL-04,4.8,Confidential data shared only under agreement,SA-9,GV.SC-05,N71-R04 (12.8.2),Yes
+POL-04,4.9,"Retention for CCTV, bot mitigation records, and crowd analytics outputs",SI-12,PR.DS-01,15 U.S.C. 45c (evidence); N71-R05 (45(n)),No
+POL-05,4.1,Business use of company systems,PL-4,GV.PO-01,N71-R04 (12.2.1),No
+POL-05,4.2,Never record card numbers or security codes; payments only on P2PE devices or provider forms,PL-4,PR.AT-01,N71-R04 (12.2.1; 3.3.1),No
+POL-05,4.3,Protect credentials; report unexpected MFA prompts,IA-5,PR.AA-01,N71-R04 (8.3.1),Yes
+POL-05,4.4,"Report suspected incidents, unknown scripts, wrong prices, and tampered devices",IR-6,RS.MA-02,N71-R04 (12.10.1),Yes
+POL-05,4.5,"No unapproved software, extensions, or page scripts",CM-11; CM-7,PR.PS-05,N71-R04 (6.4.3),Yes
+POL-05,4.6,"Screen lock, encryption, no disabling security tools",AC-11; SI-3,PR.PS-01,N71-R04 (5.3.5),Yes
+POL-05,4.7,Patron data used only for the job; no personal exports,AC-6,PR.DS-10,N71-R05 (45(n)),Yes
+POL-05,4.8,Approved AI tools only; no Restricted data in AI tools; human review of patron-facing AI content,PL-4,GV.PO-01,N71-R05 (45(a)),No
+POL-05,4.9,P2PE device inspection before each event by leads,AT-3; PE-3,DE.CM-02,N71-R04 (9.5.1.2; 9.5.1.3),Yes
+POL-05,4.10,Total price in every price someone posts or sends,PL-4,GV.OC-03,N71-R05 (16 CFR 464.2),No
+POL-05,4.11,"Awareness training at hire and yearly, plus role-based modules",AT-2; AT-3,PR.AT-01; PR.AT-02,N71-R04 (12.6.3; 12.6.3.1),Yes

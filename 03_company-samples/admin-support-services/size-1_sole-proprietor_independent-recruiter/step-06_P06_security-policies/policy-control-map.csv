@@ -1,0 +1,42 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,N56-BM (GV.PO-01); Fla. Stat. 501.171(2),No
+POL-01,4.2,Owner designated security lead and privacy contact in writing,PM-2,GV.RR-02,N56-BM (GV.RR-02),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,N56-BM (ID.RA-05); Fla. Stat. 501.171(2),Yes
+POL-01,4.4,Risk decision rules; High risks and discrimination risks never accepted as they are,PM-9,GV.RM-01,N56-BM (GV.RM-02),No
+POL-01,4.5,Annual evaluation with an outside review at least every second year,CA-2,ID.IM-01,N56-BM (GV.OV-03),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,N56-BM (GV.PO-02),No
+POL-01,4.7,"Risk check before a new tool, vendor, or AI setting; P10 for AI",CM-3,ID.RA-07,N56-BM (ID.RA-07); Title VII 703(k),No
+POL-01,4.8,Legal and contract duties tracked in the P03 workbook,PM-28,GV.OC-03,N56-BM (GV.OC-03),No
+POL-01,5.3,"Written, time-limited exceptions",PL-1,GV.PO-02,N56-BM (GV.PO-02),No
+POL-01,6.1,"Restricted data only to vendors bound to protect it, not train on it, and report breaches",SA-9,GV.SC-05,N56-BM (GV.SC-05); Fla. Stat. 501.171(2); Fla. Stat. 501.171(6),Yes
+POL-01,6.2,"Vendor list with data, criticality, contact, and breach terms",SA-9,GV.SC-04,N56-BM (GV.SC-04),No
+POL-01,6.3,Pre-signup vendor check; annual SOC 2 review of the partner and ATS vendor,SA-9,GV.SC-07,N56-BM (GV.SC-06); N56-BM (GV.SC-07),Yes
+POL-01,6.4,Exit steps; monthly ATS export,SA-9; CP-9,GV.SC-10,N56-BM (GV.SC-10); N56-BM (PR.DS-11),Yes
+POL-01,6.5,"Owner-started, watched remote support; no unattended access",AC-17,PR.AA-05,N56-BM (PR.AA-05),No
+POL-01,6.6,Never relay contractor bank changes; treat requests as suspected fraud,SA-9; IR-6,GV.SC-05,N56-BM (GV.SC-05),No
+POL-01,7.1,Unique accounts; no shared credentials,IA-2; AC-2,PR.AA-01,N56-BM (PR.AA-01),No
+POL-01,7.2,Strongest available MFA; no SMS codes where better is offered,IA-2(1),PR.AA-03,N56-BM (PR.AA-03); Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique 14-character passphrases in a password manager; change default passwords,IA-5,PR.AA-01,N56-BM (PR.AA-01),Yes
+POL-01,7.4,Quarterly account review; close unused accounts,AC-2,PR.AA-05,N56-BM (PR.AA-05),No
+POL-01,7.5,Device lock after 5 minutes (phone 30 seconds),AC-11,PR.AA-05,N56-BM (PR.AA-05),No
+POL-01,7.6,Sealed emergency access envelope held by the owner's attorney,AC-2; CP-2,RC.RP-01,N56-BM (RC.RP-01),No
+POL-01,7.7,Sign-in alerts and monthly review of email and ATS logs,AU-6,DE.CM-03,N56-BM (DE.CM-03); Fla. Stat. 501.171(2),Yes
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,N56-BM (ID.AM-07),No
+POL-01,8.2,Restricted data only in the partner portal and the sealed envelope; never on the phone or in email,SI-12; AC-3; AC-19,PR.DS-01,N56-BM (PR.DS-01); Fla. Stat. 501.171(2),Yes
+POL-01,8.3,SSNs and dates of birth never by email or text,SC-8,PR.DS-02,N56-BM (PR.DS-02); Fla. Stat. 501.171(2),No
+POL-01,8.4,Collect only what each step needs,SI-12,ID.AM-07,N56-BM (ID.AM-07),No
+POL-01,8.5,Full-disk encryption on every device,SC-28,PR.DS-01,N56-BM (PR.DS-01); Fla. Stat. 501.171(1)(g)2.,No
+POL-01,8.6,Retention schedule,SI-12,ID.AM-08,N56-BM (ID.AM-08); Fla. Stat. 501.171(8),Yes
+POL-01,8.7,"Shredding, device disposal, and disposal records for consumer information",MP-6,ID.AM-08,N56-R01 (16 CFR 682.3(a)); Fla. Stat. 501.171(8),Yes
+POL-01,8.8,Five-year retention of security documentation,SI-12,ID.AM-08,N56-BM (ID.AM-08),No
+POL-01,9.3,"Automatic updates, antivirus, and official software sources",SI-2; SI-3,PR.PS-02,N56-BM (PR.PS-02),No
+POL-01,9.4,Separate work network or phone hotspot,SC-7,PR.IR-01,N56-BM (PR.IR-01),No
+POL-01,9.5,AI tools only after P10; scores never reject alone; notice and accommodation; refuse discriminatory client requests; no personal data in consumer chatbots,PL-4; SA-9,PR.DS-10,"Title VII 703(b), 703(k); ADA 12112(b)(6); N56-BM (GV.SC-05)",No
+POL-01,9.6,Annual security course and monthly alerts,AT-2,PR.AT-01,N56-BM (PR.AT-01),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,N56-BM (RS.MA-01),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,N56-BM (RS.MA-02); Fla. Stat. 501.171(4),Yes
+POL-01,10.3,Count people and data elements against 501.171(1)(g); record the determination date,IR-4,RS.AN-08,Fla. Stat. 501.171(1)(g); Fla. Stat. 501.171(4),No
+POL-01,10.4,Meet notification deadlines in the P08 matrix,IR-6,RS.CO-02,Fla. Stat. 501.171(3)-(5),Yes
+POL-01,10.5,No extortion payment without counsel and an OFAC check,IR-4,RS.MA-01,N56-BM (RS.MA-01),No
+POL-01,11.2,Weekly continuity sheet,CP-2,RC.RP-01,N56-BM (RC.RP-01),No
+POL-01,11.3,Partner coverage arrangement if the owner is unavailable,CP-2,GV.SC-08,N56-BM (GV.SC-08),No

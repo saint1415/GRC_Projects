@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief People Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly,Report; 3 monthly POA&M snapshots,P07,Collecting
+Both,CC5.2; CC6.1,"SSO, MFA and PAM configuration and session records",Identity platform; PAM,Director of Identity and Access Management,Continuous,Configuration once; 25 PAM sessions,"P02; P07 AC-6, IA-2",Collecting
+SL-1,CC6.2; CC6.3,"SL-1 user registration, API key issuance and quarterly review",SL-1 admin console,"Vice President, Digital Services",Quarterly,2 quarterly reviews; 25 new API customers,P09 SL-1 2025 report,Ready
+SL-2,CC6.2; CC6.3,Client account disablement job and client attestations,ETOP; client portal,"Vice President, Terminal Technology",Daily job; quarterly attestations,Job configuration; 2 quarterly attestations per client,P07 AC-2(3),Not started (POAM-018)
+Both,CC6.6; CC6.7,"WAF, firewall and TLS configuration and scans",Cloud consoles; scanners,Director of Network Engineering,Monthly,3 monthly scans,P04,Collecting
+Both,CC6.8; CC7.1,EDR coverage and weekly vulnerability scan reports,EDR console; scanner,Director of Security Operations,Weekly,5 weeks,"P07 RA-5, SI-3",Collecting
+Both,CC7.2; CC7.3,"SOC alerts, triage and case records",SIEM; case management,Director of Security Operations,Continuous,25 cases,P07 IR-4,Collecting
+SL-2,CC7.4; CC2.3,Amended client agreements and joint drill reports,Contract system; exercise records,"Vice President, Terminal Technology","Once, then annual drill",4 agreements; drill report,P08,Not started (POAM-011)
+SL-1,CC7.4,Incident response plan and SL-1 status page history,P08; status page,"Vice President, Digital Services",Per incident,All incidents in the period,P08,Ready
+SL-2,CC7.5; A1.2; A1.3,Failover test of all 11 ETOP environments including C-01 to C-04,DR test report,"Vice President, Terminal Technology",Annual,The test,"P05; P07 CP-4, CP-10",Not started (POAM-005)
+SL-1,CC7.5; A1.3,SL-1 DR test (2026-06-20),DR test report,"Vice President, Digital Services",Annual,The test,P05 DEP-04,Ready
+Both,CC8.1,Change records with approvals and test evidence,Change tool; pipelines,TOS Platform Manager,Per change,25 changes per service line,P07 CM-3,Collecting
+SL-2,PI1.3; CC8.1,"Change tool gate for hold, release and hazardous cargo rule changes",Change tool,TOS Platform Manager,Per change,Gate configuration; 25 rule changes,P07 CM-3,Not started (POAM-014)
+Both,CC9.2,"Vendor register, SOC report reviews and notice clauses",Vendor risk platform,Director of Third-Party Risk Management,Annual per vendor,25 tier-1 vendors,"P03 G-053, G-054",Collecting
+Both,A1.1,Capacity monitoring and standby reservation,Cloud monitoring,Director of Cloud Platform Engineering,Monthly,3 months,P02 CP-2(2),Collecting
+Both,A1.2,Backup job reports and restore tests,Backup service,Director of Cloud Platform Engineering,Daily jobs; monthly restore,25 jobs; 3 restores,P07 CP-9,Ready
+Both,C1.1,Data classification and encryption reports,Data inventory; key management,Chief Compliance Officer,Quarterly,2 quarters,P06 POL-04,Ready
+SL-1,C1.2,SL-1 retention schedule and deletion records,SL-1 platform,"Vice President, Digital Services",Quarterly,2 deletion runs,P06 POL-04,Not started (2026-12-31)
+SL-2,C1.2,Client exit and deletion procedure and records,ETOP,"Vice President, Terminal Technology",Per client exit,Procedure; any exits in the period,P06 POL-04,Not started (2026-12-31)
+SL-1,PI1.1; PI1.3; PI1.4,Published processing specifications and retained reconciliation results (TOS to SL-1),SL-1 platform,"Vice President, Digital Services",Every 15 minutes (retained daily),25 days of reconciliation results,P02 SI-7,Not started (2026-11-30)
+SL-2,PI1.1; PI1.2; PI1.4,"Processing commitments, input validation rules and output checks",ETOP; integration hub,TOS Platform Manager,Continuous,Rules once; 25 error-queue samples,P07 SI-10,Collecting
+Both,PI1.5,"Integrity checks on hold, release and hazardous cargo tables",ETOP; SL-1 platform,TOS Platform Manager,Hourly,25 integrity check results,P07 SI-7,Ready

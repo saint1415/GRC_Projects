@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC5.3,Policy hierarchy and exception register,Policy portal; GRC platform,CISO,Annual plus monthly register review,Policies in force; 3 monthly register reviews,P06,Ready
+Both,CC6.2; CC6.3,"Access provisioning, certification, and termination records",Identity governance,Director of Identity and Access Management,Per event; quarterly certification,25 new accounts; 25 terminations; 2 quarterly certifications,"P07 AC-2, PS-4",Collecting
+Both,CC6.1,MFA and PAM configuration,Identity platform,Director of Identity and Access Management,Per change,Configuration at period start and end; 25 privileged sessions,P02 IA-2(1),Ready
+SL-1,CC6.1; CC6.6,OT remote access gateway session approvals and recordings,OT remote access gateway,Director of OT Security,Per session,25 integrator sessions at SL-1 properties,P07 MA-4,Collecting
+SL-1,CC6.2,Tenant credential suspension and attestation records,Access control platform,"Vice President, Corporate Security",Monthly suspension report; quarterly attestation,3 monthly reports; 2 attestations,P07 AC-2(3),Not started (POAM-002)
+Both,CC6.4,"Physical access reviews for engineering rooms, data rooms, RSOCs; provider SOC 2 reports",Access control platform; vendor register,"Vice President, Corporate Security",Quarterly,2 quarterly reviews,P02 PE-2,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports,EDR console; scanners,Director of Endpoint Engineering,Monthly,3 monthly reports,"P07 SI-3, RA-5",Collecting
+SL-1,CC7.1,OT firmware inventory and patch waves,OT inventory,Director of OT Security,Quarterly,2 quarterly waves,"P07 RA-5, SI-2",Not started (POAM-015)
+Both,CC7.2; CC7.3,SIEM alert triage and case records,SIEM; case system,Director of Security Operations,Continuous,25 cases,"P07 AU-6, IR-4",Collecting
+SL-1,CC7.2,OT log onboarding and passive monitoring coverage for SL-1 properties,OT log pipeline; sensors,Director of OT Security,Monthly coverage report,3 monthly reports,"P07 AU-2, SI-4",Not started (POAM-005)
+Both,CC7.4,"Incident response plan, runbook, and exercise reports",GRC platform,Director of Security Operations,Annual plus per incident,Plan; 2027 exercise report,P08,Ready
+SL-1,CC8.1,BAS change tickets with approvals and monthly program comparisons,Change system; BAS platforms,"Senior Vice President, Engineering",Per change; monthly comparison,25 changes; 3 comparisons,P07 CM-3,Not started (POAM-010)
+SL-2,CC8.1,Release pipeline approvals and test results,CI/CD pipeline,"Vice President, Digital Products",Per release,25 releases,P04 CM-3,Ready
+Both,CC9.2,"Vendor tiering, SOC report reviews, and contract security terms",Vendor register,Director of Third-Party Risk Management,Annual per tier-1 vendor,All tier-1 vendors for the service line,"P07 SA-9, SR-6",Collecting
+Both,A1.2; A1.3,Backup reports and recovery test reports,Backup service; test reports,Director of Cloud Platform Engineering,Daily backups; quarterly tests,25 backup jobs; all tests in the period,"P07 CP-4, CP-9",Collecting
+SL-1,A1.2,Degraded-mode procedures and RSOC full-shift failover test,Engineering procedures; RSOC test report,"Senior Vice President, Engineering",Annual test,Procedures for all SL-1 properties; 1 failover test,P07 CP-2,Not started (POAM-013)
+Both,C1.1; C1.2,"Data classification inventory, retention settings, and disposal certificates",Data inventory; vendor portals,Chief Privacy Officer,Quarterly,2 quarterly purge reports; certificates,P06 POL-04,Collecting
+SL-1,PI1.2; PI1.3; PI1.4,"Owner report and submeter bill validation, check results, and correction log",Data warehouse,"President, Cris Santos Building Services (TRS)",Monthly,3 monthly report cycles,P04 SI-10,Not started (P01 R-053)
+SL-2,P1.1; P2.1; P3.2,Privacy notice versions and consent records,Tenant experience platform,"Vice President, Digital Products",Per change; per consent,Notice versions; 25 consent records,P10 (AI-008 notice),Collecting
+SL-2,P5.1; P5.2; P8.1,Privacy request and complaint log,Privacy portal,Chief Privacy Officer,Per request,25 requests,P06 POL-04,Ready
+SL-2,P6.2; P6.7,Disclosure log to building owners and service providers,Tenant experience platform,"Vice President, Digital Products",Per disclosure,25 disclosures,None,Not started (2027-03-31)

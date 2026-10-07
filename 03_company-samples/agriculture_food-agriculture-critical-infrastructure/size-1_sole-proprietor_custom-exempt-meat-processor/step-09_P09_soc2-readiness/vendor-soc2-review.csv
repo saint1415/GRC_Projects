@@ -1,0 +1,14 @@
+review_item,what_to_check,cold_chain_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because the shop relies on alerts to protect product,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unmodified opinion,None
+System description scope,Sensors and gateways as supplied; cloud platform; dashboard and mobile app; alert delivery,"Platform, app, and alerting in scope; gateway hardware covered only for firmware delivery",Ask how gateway firmware updates are signed and delivered
+Subservice organizations,Carve-out or inclusive; which providers,Cloud hosting and the text-message delivery service are carved out; vendor reviews their reports each year,Note that text-message delivery is outside the opinion; app notifications are a second route
+Exceptions noted,Test exceptions and management responses,1 exception: a departed vendor employee's access removed 9 days late (1 of 25 sampled); remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the shop must run for the vendor's controls to work,Customer protects its credentials and enables MFA; maintains alert contacts and set points; keeps gateways powered and connected; reviews activity reports; reports suspected compromise,"Map to IA-2(1) (gap: POAM-001), CM-6 alert settings (P04), CP-2 battery backup (P01 R-003), AU-6 (gap: POAM-004), IR-6 (POAM-007)"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA offered to all customer users (optional); encryption at rest and in transit tested without exception,Turn MFA on (POAM-001)
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,Continuous monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data through the account email,Register a shop security contact (POL-01 6.2)
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the shop's BIA (BP-01: RTO 1 h for a temperature watch; RPO 12 h),Platform recovery tested annually; the gateway buffers 12 hours of readings offline but cannot send alerts while offline,"Meets RPO; the 1-hour RTO depends on the shop's own manual readings and second contact, not on the vendor"
+Bridge letter,Coverage from report end date to today,Requested 2026-07-30,Obtain before 2026-10-15
+Review sign-off,Reviewer and date,"Owner-operator 2026-07-30, with the IT technician",Repeat every year (POL-01 6.3)

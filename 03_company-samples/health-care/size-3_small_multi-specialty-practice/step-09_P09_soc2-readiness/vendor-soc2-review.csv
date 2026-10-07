@@ -1,0 +1,13 @@
+review_item,what_to_check,ehr_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability and Confidentiality needed for the practice's use,Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,EHR/PM platform; patient portal; e-prescribing; data centers in scope,All in scope; e-prescribing network is a carved-out subservice organization,Obtain e-prescribing network assurance summary
+Subservice organizations,Carve-out vs inclusive; which cloud/hosting providers,Hosting provider carved out,Confirm the hosting provider's own SOC 2 is reviewed by the vendor (CUEC below)
+Exceptions noted,Any test exceptions and management responses,1 exception: 2 of 25 terminated vendor employees' access removed late; remediated,Accept; monitor in next report
+Complementary user entity controls (CUECs),Controls the practice must operate for the vendor's controls to work,User provisioning and removal; MFA enforcement; role assignment; reviewing audit reports,Map to practice controls AC-2; IA-2(1); AU-6 (AU-6 gap: POAM-008)
+Availability commitments,Uptime and recovery objectives vs the practice's BIA (RTO 4 h; RPO 1 h),RTO 4 h; RPO 15 min stated in system description,Meets BIA; confirm in contract
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2+ in transit,None
+Incident notification,Vendor commitment to notify customers,Notify within 72 hours of confirmation per system description; BAA requires breach notice per 164.410,Negotiate 24-hour security incident notice in the next BAA renewal
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-06-30 requested,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-08-20,Annual

@@ -1,0 +1,12 @@
+field,value
+regulators,"SRMA: Department of Agriculture (USDA) and Department of Health and Human Services (HHS/FDA); FDA Food Defense program; USDA Food Safety and Inspection Service (meat, poultry, egg products)"
+primary_regulation,FSMA Intentional Adulteration rule (food defense)
+primary_regulation_citation,21 CFR Part 121
+primary_regulation_url,https://www.ecfr.gov/current/title-21/part-121
+primary_regulation_rationale,"The only binding, sector-specific federal security rule for food facilities; its vulnerability-assessment/mitigation structure maps well to cyber-physical risks (e.g., tampering via compromised batching/dosing controls). Pair with NIST CSF 2.0 for IT/OT control coverage since Part 121 is not IT-specific."
+sensitive_data,"Food defense plans / vulnerability assessments; Recipes, formulations and trade secrets; Supplier and traceability records (FSMA 204); Consumer PII and payment card data; Protected Critical Infrastructure Information (PCII) if submitted to DHS"
+critical_systems,Batch/recipe control systems (DCS/PLC); Cold-chain and refrigeration controls (ammonia systems); MES and ERP; Warehouse management systems; Traceability/lot-coding systems; Packaging line automation
+ai_specific,
+assurance_alternatives,
+notes,"CFATS formerly covered ammonia/chemical holdings at some food facilities but authority lapsed July 2023 (see c-chemical). MTSA/USCG cyber rule applies only to waterfront facilities with MTSA security plans (e.g., grain elevators on navigable waters)."
+last_verified,2026-09-25

@@ -1,0 +1,14 @@
+review_item,what_to_check,cis_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-04-30,None
+Trust services categories,"Security required; Availability and Confidentiality needed for the company's use (billing continuity, customer data)",Security; Availability; Confidentiality,None
+Service auditor,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"CIS application, customer portal, call-campaign module, data centers",All in scope; the payment processor and the outbound call-campaign telephony provider are carved-out subservice organizations,Obtain the payment processor's own attestation summary from the Controller's file
+Subservice organizations,Carve-out vs inclusive; which hosting providers,Public cloud hosting provider carved out; vendor states it reviews the provider's SOC 2 annually,Confirm in next report
+Exceptions noted,Any test exceptions and management responses,1 exception: quarterly access review for vendor support staff missed one quarter; remediated,Accept; monitor in next report
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,User provisioning and removal; enforce single sign-on with MFA; review customer-portal security settings; protect exported customer files,"Map to AC-2 and IA-2(1) (in place for staff); customer-portal MFA not enabled (P01 R-013); exports now on the offline contact list, handled as Confidential (POL-04)"
+Availability commitments,"Recovery objectives vs the company's BIA (BP-06 RTO 24 h, RPO 4 h; BP-07 RTO 72 h)",RTO 8 h; RPO 1 h stated in the system description,Meets the BIA; confirm in contract at renewal
+Call-campaign capacity,"Can the vendor send automated calls to all 18,400 accounts within hours for a Tier 1 notice?","Throughput stated as 20,000 calls per hour; telephony provider carved out",Test with a 500-call campaign; keep broadcast media and posting as the primary backup (40 CFR 141.202(c))
+Encryption,At rest and in transit per the system description,AES-256 at rest; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Notify within 72 hours of confirmation per contract; Fla. Stat. 501.171(6) requires a third-party agent to notify no later than 10 days after determination,Negotiate 24-hour security incident notice at renewal
+Bridge letter,Coverage from report end date to today,Bridge letter through 2026-07-31 received,None
+Review sign-off,Reviewer and date,"IT Manager with the Customer Service and Billing Manager, 2026-08-20",Annual

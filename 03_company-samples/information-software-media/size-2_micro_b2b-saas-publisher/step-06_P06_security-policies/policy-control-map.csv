@@ -1,0 +1,45 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-02,A.1,Security and compliance lead and privacy lead designated in writing,PM-2,GV.RR-02,SOC 2 CC1.3,No
+POL-02,A.2,Annual risk assessment with SP 800-30; every risk owned and treated,RA-3; PM-9,ID.RA-01,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC3.2,No
+POL-02,A.3,Risk acceptance authority; High and Very High never accepted,PM-9,GV.RM-01,SOC 2 CC3.1,No
+POL-02,A.4,"Security, privacy, and AI statements verified by the CTO and approved by the Chief Executive Officer; quarterly review",PL-2,GV.OC-03,N51-R01 (15 U.S.C. 45(a); deception); SOC 2 CC2.3,No
+POL-02,A.5,"No contract, no customer data; sub-processor list and 30-day notice; annual vendor review",SA-9; PS-7,GV.SC-05,N51-R01 (15 U.S.C. 45(a)); Customer DPA (contract); SOC 2 CC9.2,Yes
+POL-02,A.6,Annual independent assessment and annual external penetration test,CA-2; CA-8,ID.IM-01,Customer DPA (contract) (security exhibit); SOC 2 CC4.1,No
+POL-02,A.7,Security records kept at least 3 years,PL-2,GV.PO-02,SOC 2 CC2.1,No
+POL-02,A.8,Annual policy review; policies available to everyone,PL-1,GV.PO-02,SOC 2 CC5.3,No
+POL-02,A.9,"Written, risk-rated, time-limited exceptions",PL-1,GV.PO-01,SOC 2 CC5.3,No
+POL-02,A.10,Proportionate sanctions; good-faith reporting protected,PS-8,GV.RR-04,SOC 2 CC1.5,No
+POL-02,B.1,Named accounts only; root and emergency accounts sealed and alerting,IA-2; AC-2,PR.AA-01,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC6.1,Yes
+POL-02,B.2,Single sign-on for every system that supports it,AC-2; IA-2,PR.AA-01,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC6.2,Yes
+POL-02,B.3,"MFA for all staff, contractor, administrator, and customer administrator accounts; hardware keys for engineers and root",IA-2(1),PR.AA-03,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: require secure passwords and authentication); SOC 2 CC6.1,Yes
+POL-02,B.4,Read-only and deploy-only roles; break-glass administrator limited to 2 people; contractor never administrator,AC-6,PR.AA-05,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: limit administrative access); SOC 2 CC6.3,Yes
+POL-02,B.5,"No long-lived keys; short-lived federated credentials for automation; secrets in the secrets manager, rotated",IA-5,PR.AA-01,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: store passwords securely); SOC 2 CC6.1,Yes
+POL-02,B.6,"Ticket-linked, time-limited, logged access to customer tenants; monthly review",AC-3; AC-6; AU-6,PR.AA-05,Customer DPA (contract) (use limits); SOC 2 CC6.1,Yes
+POL-02,B.7,Access approved on the onboarding checklist before it is granted,AC-2,PR.AA-05,SOC 2 CC6.2,Yes
+POL-02,B.8,"Offboarding checklist on or before the last day, covering systems outside single sign-on",PS-4; AC-2,PR.AA-05,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC6.2,Yes
+POL-02,B.9,Monthly account reconciliation; quarterly role review,AC-2; AC-6,PR.AA-05,SOC 2 CC6.2; CC6.3,Yes
+POL-02,B.10,Company work only on MSP-managed company laptops,AC-17; PS-7,PR.AA-05,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: ensure endpoint security); SOC 2 CC6.8,Yes
+POL-02,C.1 to C.4,Acceptable use: job need only; no customer data in personal or unapproved tools; no production data on laptops; protect credentials,PL-4; SA-3(2),PR.AT-01,N51-R01 (15 U.S.C. 45(a)); Customer DPA (contract); SOC 2 CC1.1,Yes
+POL-02,C.5,Annual awareness training and phishing simulations; annual secure coding training for developers,AT-2; AT-3,PR.AT-01; PR.AT-02,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: train your engineers in secure coding); SOC 2 CC1.4,No
+POL-02,C.7,Signed acknowledgment at hire and after each annual update,PL-4,PR.AT-01,SOC 2 CC1.1,No
+POL-03,4.1,Runbook for cloud credential compromise kept outside the production account and the suite,IR-8,RS.MA-01,Customer DPA (contract); SOC 2 CC7.4,No
+POL-03,4.2,Report suspected incidents within 1 hour,IR-6,RS.MA-02,Customer DPA (contract) (72-hour notice); SOC 2 CC7.3,Yes
+POL-03,4.3,Incident log with discovery and confirmation times,IR-5,RS.MA-02,SOC 2 CC7.3,No
+POL-03,4.4,Customer notice within 72 hours of confirmation; Florida third-party-agent notice within 10 days of determination,IR-6,RS.CO-02; RS.CO-03,Customer DPA (contract); Fla. Stat. 501.171(6)(a); SOC 2 CC7.4,Yes
+POL-03,4.6 and 4.7,"Insurer hotline before outside firms; extortion payment only with Chief Executive Officer approval, counsel, and an OFAC check",IR-4,RS.MA-02,OFAC ransomware advisory (2021-09-21); SOC 2 CC7.4,No
+POL-03,4.8,Incident statements approved and limited to proven facts,IR-4,RS.CO-02,N51-R01 (15 U.S.C. 45(a); deception); SOC 2 CC2.3,No
+POL-03,4.9,"Vendors, the MSP, and the contractor report incidents to the CTO",IR-6; SA-9,RS.MA-02,Customer DPA (contract); SOC 2 CC9.2,Yes
+POL-03,4.10,Weekly review of administrator activity and alerts; monthly admin console session review,AU-6; SI-4,DE.AE-02,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: monitor activity on your network); SOC 2 CC7.2,Yes
+POL-03,4.11 and 4.12,Annual tabletop with the MSP; lessons learned within 30 days,IR-3; IR-4,ID.IM-02,SOC 2 CC7.4; CC7.5,No
+POL-04,4.1,Three information levels; Restricted by default,RA-2,ID.AM-07,SOC 2 C1.1,No
+POL-04,4.2,Restricted customer data only in approved locations; never on laptops,AC-3; SA-3(2),PR.DS-01,N51-R01 (15 U.S.C. 45(a)); Customer DPA (contract); SOC 2 C1.1,Yes
+POL-04,4.3,Full TIN only inside the stored W-9; masked fields; Social Security numbers masked before AI or logs,SI-12(1); SC-28,PR.DS-01,"N51-R01 (15 U.S.C. 45(a)) (deception, website security page); Fla. Stat. 501.171(2); SOC 2 C1.1",Yes
+POL-04,4.4,Encryption at rest and in transit; full-disk encryption on laptops,SC-28; SC-8,PR.DS-01; PR.DS-02,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC6.1; CC6.7,Yes
+POL-04,4.5,Data inventory kept current and checked quarterly,CM-8,ID.AM-01; ID.AM-07,N51-R01 (15 U.S.C. 45(a)) (FTC guide Protecting Personal Information: take stock); SOC 2 CC2.1,No
+POL-04,4.6,"Approval, agreement, sub-processor listing, and 30-day notice before any new data flow",SA-9,GV.SC-05,Customer DPA (contract) (30-day sub-processor notice); SOC 2 CC9.2,Yes
+POL-04,4.7,Approved AI tools list,SA-9; PL-4,GV.SC-05,N51-R01 (15 U.S.C. 45(a)); Customer DPA (contract),Yes
+POL-04,4.8,Synthetic test data; production data outside production only with written approval,SA-3(2),PR.DS-01,N51-R01 (15 U.S.C. 45(a)) (FTC guidance: don't use personal information when it's not necessary); SOC 2 C1.1,Yes
+POL-04,4.9,"Daily backups in a separate account, 35-day write-once retention, versioning, restore test twice a year",CP-9; CP-4,PR.DS-11,"N51-R01 (15 U.S.C. 45(a)) (deception, security exhibit); SOC 2 CC7.5",Yes
+POL-04,4.10,Deletion within 60 days after termination with a certificate; 1-year logs,SI-12,ID.AM-08,Customer DPA (contract) (60-day deletion); SOC 2 C1.2,No
+POL-04,4.11,No Restricted data in logs; data-level logging stays on,AU-2; SI-12,PR.PS-04,N51-R01 (15 U.S.C. 45(a)); SOC 2 CC7.2,Yes
+POL-04,4.12,Laptops wiped before reissue or disposal,MP-6,ID.AM-08,SOC 2 CC6.5,No

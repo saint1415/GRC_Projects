@@ -1,0 +1,40 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B),No
+POL-01,4.2,Owner designated security and privacy lead in writing,PM-2,GV.RR-02,C-COMMERCIAL-FACILITIES-R05 (CPG 1.A),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B); Fla. Stat. 501.171(2),No
+POL-01,4.4,Risk decision rules; High risks never accepted as they are,PM-9,GV.RM-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B),No
+POL-01,4.5,Annual evaluation with an outside reviewer every second year,CA-2,ID.IM-02,C-COMMERCIAL-FACILITIES-R05 (CPG 2.C),No
+POL-01,4.6,"Annual policy review; written, time-limited exceptions",PL-1,GV.PO-02,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B),No
+POL-01,5.1,"Approval before any new device, app, or vendor feature; P10 for AI",CM-7; CM-3,PR.PS-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.P; 3.N),No
+POL-01,5.2,No audio and no face recognition on cameras,CM-7; PT-5,PR.PS-01,C-COMMERCIAL-FACILITIES-R02 (15 U.S.C. 45(a)); Fla. Stat. 934.03,No
+POL-01,5.3,Separate building-device network; guest isolation; nothing exposed to the internet,SC-7,PR.IR-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.I; 3.S),Yes
+POL-01,5.4,Change default passwords; unique router passphrase,IA-5,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.A),Yes
+POL-01,5.5,Automatic firmware updates on; quarterly router check,SI-2,PR.PS-02,C-COMMERCIAL-FACILITIES-R05 (CPG 2.B),No
+POL-01,5.6,Device list and network sketch kept current,CM-8,ID.AM-01,C-COMMERCIAL-FACILITIES-R05 (CPG 2.A; 2.E),No
+POL-01,6.1,Contractor security terms with 72-hour incident notice,SA-9,GV.SC-05,C-COMMERCIAL-FACILITIES-R05 (CPG 1.D),Yes
+POL-01,6.2,No standing contractor administrator accounts,AC-2; AC-6; AC-17,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 1.E; 3.H),Yes
+POL-01,6.4,Annual review of the access control vendor's SOC 2 report and customer controls,SA-9,GV.SC-07,C-COMMERCIAL-FACILITIES-R05 (CPG 1.E),Yes
+POL-01,7.1,Own accounts; no shared credentials,IA-2; AC-2,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.C),Yes
+POL-01,7.2,MFA by app on every account that offers it,IA-2(1),PR.AA-03,C-COMMERCIAL-FACILITIES-R05 (CPG 3.F),Yes
+POL-01,7.3,16-character unique passphrases in a password manager; none in the browser,IA-5,PR.AA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.B),Yes
+POL-01,7.4,"Building credentials: named requests, 1-day departure notice, monthly review, annual tenant confirmation",AC-2; PE-3,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.D),Yes
+POL-01,7.5,Named sharing only; no anyone-with-the-link sharing,AC-3,PR.AA-05,Fla. Stat. 501.171(2),Yes
+POL-01,7.6,Standard laptop account for daily work,AC-6,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.G),No
+POL-01,7.7,Device lock; phone remote wipe,AC-19,PR.AA-05,C-COMMERCIAL-FACILITIES-R05 (CPG 3.F),No
+POL-01,7.8,"Monthly review of admin changes, after-hours door events, sign-ins, and router devices",AU-6,DE.AE-02,C-COMMERCIAL-FACILITIES-R05 (CPG 3.Q; 4.B),Yes
+POL-01,8.1,Three-level data classification,RA-2,ID.AM-07,Fla. Stat. 501.171(2),No
+POL-01,8.2,Restricted data only in approved locations,AC-3,PR.DS-01,Fla. Stat. 501.171(2),Yes
+POL-01,8.3,Laptop full-disk encryption; phone passcode,SC-28,PR.DS-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.K),No
+POL-01,8.4,Owner-controlled backups; monthly access control export; annual restore test,CP-9,PR.DS-11,C-COMMERCIAL-FACILITIES-R05 (CPG 3.O),Yes
+POL-01,8.5,Payment-change call-back rule,AT-2,PR.AT-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.J),No
+POL-01,8.6,"Retention and disposal of guarantor files, credit reports, video, and door history",MP-6; SI-12,ID.AM-08,Fla. Stat. 501.171(8); 16 CFR 682.3(a),No
+POL-01,8.7,Security records kept at least 5 years,SI-12,ID.AM-08,C-COMMERCIAL-FACILITIES-R05 (CPG 1.B),No
+POL-01,9.2,"Official software sources; updates, antivirus on; no unknown USB devices",SI-2; SI-3,DE.CM-09,C-COMMERCIAL-FACILITIES-R05 (CPG 4.A; 3.R),Yes
+POL-01,9.3,AI tools only after a P10 assessment and approval,PL-4; CM-7,GV.PO-01,C-COMMERCIAL-FACILITIES-R02 (15 U.S.C. 45(a)),No
+POL-01,9.4,"Camera signs state video, no audio",PT-5,GV.PO-01,C-COMMERCIAL-FACILITIES-R02 (15 U.S.C. 45(a)),No
+POL-01,9.5,Annual security training for the owner,AT-2,PR.AT-01,C-COMMERCIAL-FACILITIES-R05 (CPG 3.J),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 1.C; 5.A),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,C-COMMERCIAL-FACILITIES-R05 (CPG 4.B),No
+POL-01,10.3,Record the Florida determination date; meet the P08 deadlines,IR-6,RS.CO-02,Fla. Stat. 501.171(3); Fla. Stat. 501.171(4),No
+POL-01,10.4,No ransom without counsel and an OFAC check,IR-4,RS.MA-01,C-COMMERCIAL-FACILITIES-R05 (CPG 5.B),No
+POL-01,11.2,"Manual procedures, sealed envelope, contractor fallback",CP-2,RC.RP-01,C-COMMERCIAL-FACILITIES-R05 (CPG 6.A),No

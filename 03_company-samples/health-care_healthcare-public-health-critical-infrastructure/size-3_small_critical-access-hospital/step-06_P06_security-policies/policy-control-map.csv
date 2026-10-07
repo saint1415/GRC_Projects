@@ -1,0 +1,26 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.3,"Annual risk analysis covering devices, OT, and cloud",RA-3; PM-9,ID.RA-01,C-HPH-R01 (164.308(a)(1)(ii)(A)),Yes
+POL-01,4.7,Cyber and IT outage hazards in the emergency plan,CP-2,ID.IM-04,C-HPH-R07 (42 CFR 485.625(a)(1)-(2)),Yes
+POL-01,4.8,Sanctions for employees and contracted clinicians,PS-8,GV.RR-04,C-HPH-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.9,No BAA no ePHI; annual review of key vendors,SA-9,GV.SC-05,C-HPH-R01 (164.308(b)(1)); C-HPH-R08 (CPG: Vendor/Supplier Cybersecurity Requirements),Yes
+POL-01,4.10,Security requirements and inventory for devices and OT,SA-4; CM-8,ID.AM-01,"C-HPH-R01 (164.310(d)); C-HPH-R04 (524B, procurement lever)",Yes
+POL-01,4.11,Six-year retention of security documentation,SI-12,GV.PO-02,C-HPH-R01 (164.316(b)(2)(i)),No
+POL-02,4.1,Unique accounts; view-only kiosks; no shared logins,IA-2; AC-2,PR.AA-01,C-HPH-R01 (164.312(a)(2)(i)); C-HPH-R08 (CPG: Unique Credentials),Yes
+POL-02,4.3,"MFA for remote, email, cloud, vendor access; hardware keys for admins",IA-2(1); IA-2(2),PR.AA-03,C-HPH-R01 (164.312(d)); C-HPH-R08 (CPG: Multifactor Authentication),Yes
+POL-02,4.4,Same-day removal; end dates on contracted and agency accounts,PS-4; PS-7; AC-2,PR.AA-05,C-HPH-R01 (164.308(a)(3)(ii)(C)); C-HPH-R08 (CPG: Revoke Credentials for Departing Workforce Members),Yes
+POL-02,4.5,Quarterly access reviews; monthly agency reconciliation,AC-2; AC-6,PR.AA-05,C-HPH-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.7,Break-glass accounts; logged EHR emergency access,AC-2,PR.AA-05,C-HPH-R01 (164.312(a)(2)(ii)),Yes
+POL-02,4.8,Password rules; unique local admin; change device defaults,IA-5,PR.AA-03,C-HPH-R01 (164.308(a)(5)(ii)(D)),Yes
+POL-02,4.9,Named vendor and MSP accounts with MFA and approved windows,AC-17; MA-4,PR.AA-05,C-HPH-R01 (164.312(d)),Yes
+POL-03,4.1,Incident response plan as an annex to the emergency plan,IR-8,RS.MA-01,C-HPH-R01 (164.308(a)(6)); C-HPH-R07 (42 CFR 485.625(a)(2)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour on the 24x7 line,IR-6,RS.MA-02,C-HPH-R01 (164.308(a)(6)(ii)),No
+POL-03,4.5,Meet notification deadlines,IR-6,RS.CO-02,C-HPH-R02 (164.404-164.408); Fla. Stat. 501.171,No
+POL-03,4.7,Downtime activation and joint diversion decision; EMTALA screening continues,IR-4; CP-2,RC.RP-01,42 CFR 489.24 (EMTALA); C-HPH-R07 (42 CFR 485.625(a)(3)),Yes
+POL-03,4.8,Annual tabletop filed as the emergency program's additional exercise,IR-3,ID.IM-02,C-HPH-R01 (164.308(a)(6)); C-HPH-R07 (42 CFR 485.625(d)(2)(ii)),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,C-HPH-R01 (164.312(a)(2)(iv); 164.312(e)(2)(ii)),Yes
+POL-04,4.5,Sanitize devices before repair; certified destruction,MP-6,ID.AM-08,C-HPH-R01 (164.310(d)(2)(i)-(ii)),No
+POL-04,4.6,Isolated immutable backups tested quarterly,CP-9,PR.DS-11,C-HPH-R01 (164.308(a)(7)(ii)(A)),Yes
+POL-04,4.7,Custody and back-entry of downtime paper records,MP-4,PR.DS-11,C-HPH-R07 (42 CFR 485.625(b)(5)),No
+POL-05,4.3,Training before access and annually; reminders; phishing exercises,AT-2,PR.AT-01,C-HPH-R01 (164.308(a)(5)(ii)(A)); C-HPH-R08 (CPG: Basic Cybersecurity Training),Yes
+POL-05,4.8,Approved generative AI tools only,PL-4,GV.PO-01,C-HPH-R01 (164.308(b)(1)),No
+POL-05,4.10,No changes to device or clinical decision support settings outside change control,CM-3,PR.PS-01,"C-HPH-R01 (164.312(c)(1)); N62-R07 (45 CFR 92.210, parent vertical ID)",No

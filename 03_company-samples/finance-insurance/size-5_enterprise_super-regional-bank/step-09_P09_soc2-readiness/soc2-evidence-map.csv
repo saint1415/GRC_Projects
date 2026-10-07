@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2,Enterprise cyber risk register and report,GRC platform,CISO,Annual,Current register,P01,Ready
+Both,CC4.1; CC4.2,Internal Audit report and POA&M,GRC platform,Chief Audit Executive,Annual; monthly POA&M updates,Report; 3 monthly POA&M snapshots,P07,Ready
+Both,CC5.2; CC6.1,Common control catalog and SSP,GRC platform,CISO,Annual,Current versions,P02,Ready
+Both,CC6.2,Access provisioning approvals,Identity governance,Director of Identity and Access Management,Continuous,25 new accounts per service line,P07 AC-2,Collecting
+Both,CC6.3,Quarterly access certifications and termination removals,Identity governance; mainframe security product,Director of Identity and Access Management,Quarterly; per termination,All quarters; 25 terminations,"P07 AC-2, PS-4",Collecting
+Both,CC6.4,Data center access reviews,Physical access system,Director of Data Center and Mainframe Operations,Quarterly,All quarters,P02 CCP-05,Collecting
+Both,CC6.6; CC6.7,Firewall rule reviews and TLS scans,Network tools,Director of Network Engineering,Quarterly,All quarters,"P07 SC-7, SC-8",Collecting
+Both,CC6.8,EDR coverage reports,EDR console,Director of Endpoint Engineering,Monthly,3 months,P02 CCP-07,Collecting
+Both,CC7.1,Vulnerability scan and remediation reports,Scanner; ticketing,Director of Cyber Defense,Weekly scans; monthly reports,25 findings,P07 RA-5,Collecting
+Both,CC7.3; CC7.4,Incident case records and runbooks,Case management,Director of Cyber Defense,Per incident,25 incidents,P07 IR-4; P08,Collecting
+Both,CC8.1,Change records with approvals,Change management tool; pipeline,CIO,Per change,25 changes per service line,P07 CM-3,Collecting
+Both,CC9.2,SOC report reviews with CUEC mapping for subservice organizations,GRC platform,Director of Third-Party Risk Management,Annual per vendor,All subservice organizations,P03 G-028,Not started
+SL-1,CC3.3; PI1.2,Out-of-band beneficiary confirmation records,Treasury platform; callback system,Head of Payments Operations,Per beneficiary,25 new beneficiaries,P03 G-014,Not started
+SL-1,CC7.2,Beneficiary-plus-wire alert records,Fraud platform,Director of Fraud Strategy,Per alert,25 alerts,POAM-006,Not started
+SL-1,A1.2; A1.3,Treasury fallback test and core failover test reports,Resilience program,Director of Enterprise Resilience,Annual,Test reports,P05; POAM-018,Collecting
+SL-1,PI1.3; PI1.4,Daily payment reconciliation reports,Payments hub,Head of Payments Operations,Daily,25 days,P07 SI-7,Ready
+SL-1,C1.1,Secure message channel usage and email data loss prevention reports,Treasury platform; email security,Head of Treasury Management,Monthly,3 months,POAM-015,Not started
+SL-2,CC2.3; CC3.1,SL-2 system description and commitments register,GRC platform,Head of Wealth and Institutional Services,Annual,Current version,P09,Not started
+SL-2,CC7.2,Trust platform security event feed and alert records,SIEM,Director of Cyber Defense,Continuous,25 alerts,P09,Not started
+SL-2,A1.3,Trust platform vendor DR test observation,Vendor test report,Head of Wealth and Institutional Services,Annual,Test report,P05 DEP-21,Not started
+SL-2,P1.1; P6.6,Participant privacy notices and breach notification procedure,Privacy office,Chief Privacy Officer,Annual,Current notices; P08 matrix,P08,Ready
+SL-2,P5.1; P6.2; P6.7,Participant request and disclosure logs,Service center system,Chief Privacy Officer,Per request,25 requests,P09,Not started
+SL-2,PI (reference),SOC 1 Type 2 report for trust and custody processing,Service auditor report,Head of Wealth and Institutional Services,Annual,Current report,Existing SOC 1,Ready

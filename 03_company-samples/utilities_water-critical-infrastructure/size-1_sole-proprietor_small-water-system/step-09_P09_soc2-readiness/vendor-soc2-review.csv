@@ -1,0 +1,14 @@
+review_item,what_to_check,portal_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability useful because the owner relies on remote view,Security only,Ask whether the vendor plans to add Availability; the plant does not depend on the portal to run (P05 BP-03 MTD 24 h)
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Cloud portal; relay service; phone app; firmware update service for the routers,"Portal, relay, and app in scope; router firmware development is outside the description",Ask how router firmware updates are signed and announced
+Subservice organizations,Carve-out or inclusive; which hosting providers,Cloud hosting provider carved out; vendor reviews the host's own SOC 2 each year,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled terminated vendor employees kept access for more than 3 days; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the customer must run for the vendor's controls to work,Customer enables MFA for its users; manages and removes its users; reviews its audit logs; secures router credentials; reports suspected compromise to the vendor,"Map to IA-2(1) (gap: POAM-001), AC-2 and MA-4 (gap: POAM-002), AU-6 (gap: POAM-006), IA-5 (gap: POAM-004), IR-6 (POAM-007). None of the five was operating on 2026-07-22"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA available to customers (customer-enabled); encryption in transit and at rest tested without exception,The vendor offers MFA but does not require it; the owner must turn it on
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception; customers get sign-in alerts by email,Confirm sign-in alerts go to the owner's email
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their accounts; no stated time,Ask for a notice time in writing; add to the vendor list
+CC8.1 change management (CC series as checklist),Vendor change control for the portal and relay,Changes approved and tested before release; tested without exception,None
+Bridge letter,Coverage from report end date to today,Requested 2026-07-22,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner-operator 2026-07-22, with the IT technician",Repeat every year (POL-01 6.5)

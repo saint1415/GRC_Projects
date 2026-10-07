@@ -1,0 +1,59 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program documented; CSF 2.0 and CISA CPGs as the benchmark for reasonable measures,PM-1,GV.PO-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.2,"Written designations: vCISO, CPNI compliance officer, CALEA senior officer, 911 certifying official; CALEA refiling within 30 and 90 days",PM-2,GV.RR-02,"C-COMMUNICATIONS-R03 (1.20003(a), (b)(4); 1.20005(a))",No
+POL-01,4.3,Annual enterprise risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.4,Risk acceptance authority by level; no 911-linked risk accepted above Low,PM-9,GV.RM-01,C-COMMUNICATIONS-R02 (4.9); 47 CFR 9.19(b),No
+POL-01,4.5,Quarterly vCISO report to the audit committee,CA-5,GV.OV-01,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.6,Evidence-based annual CPNI certification by March 1; counsel review by December 15,PM-1; CA-2,GV.OV-01,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.7,Annual policy and standard review,PL-1,GV.PO-02,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-01,4.8,"Sanctions, including CPNI misuse and vendor agent discipline",PS-8,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-01,4.9,"Vendor contract terms and security review before access to CPNI, PII, or the network",SA-9; SA-4,GV.SC-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,4.10,Annual reassessment of Tier 1 vendors,SR-6,GV.SC-07,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-01,4.11,Covered List check before buying network equipment; annual CTO attestation,SR-3,GV.SC-05,47 CFR 1.50007,No
+POL-01,4.12,Annual independent control assessment,CA-2,ID.IM-02,C-COMMUNICATIONS-R01 (64.2009(e)),No
+POL-01,4.13,"Retention of CPNI, breach, 911 reliability, and security records",SI-12,GV.PO-02,C-COMMUNICATIONS-R01 (64.2007(a)(3); 64.2011(d)); 47 CFR 9.20(e),No
+POL-01,4.14,AI tools approved through the AI governance process before use,PM-9,GV.RM-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-02,4.1,Unique accounts; no shared accounts on network elements or SYS-18,IA-2; AC-2,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.2,Role-based least privilege; TACACS+ command authorization,AC-2; AC-3; AC-6,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.3,MFA for all access including network elements; security keys for administrators by 2027-03-31,IA-2(1); IA-2(2); IA-2(8),PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.4,Termination: same-day IdP disable; 24-hour local accounts; rotate shared credentials within 5 business days,PS-4; AC-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.5,Transfers: prior access removed within 5 business days,PS-5; AC-2,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.6,"Quarterly access reviews, including TACACS+ roles and BSS export rights",AC-2; AC-6,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.7,Privileged access through PAM or TACACS+; network elements only from jump hosts,AC-6(2); AC-6(5),PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-02,4.8,Lockout and idle timeouts,AC-7; AC-11; AC-12,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-02,4.9,Break-glass credentials sealed at CO-1 and CO-4; tested quarterly,AC-2,PR.AA-05,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-02,4.10,Password rules; vaulted secrets; default credentials and SNMP strings changed before connection,IA-5,PR.AA-01,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.11,Customer authentication by telephone (password) and in store (photo ID); no call detail screens for overflow agents,IA-8; AC-3,PR.AA-03,"C-COMMUNICATIONS-R01 (64.2010(b), (d))",Yes
+POL-02,4.12,Customer authentication online and in the chatbot without biographical or account information,IA-8; IA-5,PR.AA-03,"C-COMMUNICATIONS-R01 (64.2010(c), (e))",Yes
+POL-02,4.13,"Immediate account-change notices to the number or address of record, including SYS-18",AU-12; IA-5,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(f)),Yes
+POL-02,4.14,Business customer exemption only with a dedicated representative and CPNI contract,IA-8,PR.AA-03,C-COMMUNICATIONS-R01 (64.2010(g)),Yes
+POL-02,4.15,Vendor remote access through the access broker; no shared vendor accounts,AC-17; MA-4,PR.AA-05,C-COMMUNICATIONS-R01 (64.2010(a)),Yes
+POL-02,4.16,Lawful-intercept access limited to named employees with lawful authorization,AC-3; PE-3,PR.AA-05,C-COMMUNICATIONS-R03 (1.20000; 1.20003),Yes
+POL-03,4.1,Incident response plan and runbooks for CPNI intrusion and ransomware,IR-8,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.2,Immediate reporting of suspected incidents to the NOC or security team,IR-6,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.3,Incident register with discovery and determination times; serves as the CPNI breach record,IR-5,RS.MA-02,C-COMMUNICATIONS-R01 (64.2011(d)),No
+POL-03,4.4,Severity 1 definition and crisis management team,IR-4,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.5,Service first: NOC assesses 911 impact before containment; PSAP and NORS clocks,IR-4; CP-2,RS.MA-01,C-COMMUNICATIONS-R02 (4.9(h)),Yes
+POL-03,4.6,CPNI breach determination with counsel; date and basis recorded,IR-6,RS.AN-03,C-COMMUNICATIONS-R01 (64.2011(e)),Yes
+POL-03,4.7,"Notification deadlines per the P08 matrix (CPNI, CALEA, outage, opt-out failure, state law)",IR-6,RS.CO-02,C-COMMUNICATIONS-R01 (64.2011(a)-(c); 64.2009(f)); C-COMMUNICATIONS-R02 (4.9); C-COMMUNICATIONS-R03 (1.20003(c)),Yes
+POL-03,4.8,"No ransom without CEO, counsel, insurer, and OFAC check",IR-4,RS.MA-01,C-COMMUNICATIONS-R01 (64.2011),Yes
+POL-03,4.9,Day-0 evidence preservation; SYS-10 forensics only under CALEA-authorized staff,AU-9; IR-4,RS.AN-03,C-COMMUNICATIONS-R03 (1.20003),Yes
+POL-03,4.10,"Annual tabletop with NOC, regulatory affairs, customer operations, counsel, MDR",IR-3,ID.IM-04,C-COMMUNICATIONS-R01 (64.2011),No
+POL-03,4.11,"Lessons learned within 30 days into the risk register, POA&M, and training",IR-4,ID.IM-01,C-COMMUNICATIONS-R01 (64.2009(e)),Yes
+POL-04,4.1,Four classification levels; CPNI and intercept data Restricted; NORS and 911 records Confidential,RA-2,ID.AM-07,C-COMMUNICATIONS-R02 (4.2); 47 CFR 9.20(c),No
+POL-04,4.2,Whole customer account record protected to the CPNI standard,PT-2,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.3,CPNI use only as 64.2005 allows; approval checked at time of use; no tracking of calls to competitors,PT-2; PT-4,GV.OC-03,C-COMMUNICATIONS-R01 (64.2005(b)(2); 64.2007; 64.2009(a)),Yes
+POL-04,4.4,Models and AI tools read CPNI only through approval-filtered views,PT-4; AC-3,PR.DS-01,"C-COMMUNICATIONS-R01 (64.2009(a), (c))",Yes
+POL-04,4.5,Campaign approval and register; disclosure record; biennial notice to all voice accounts; full translation,PT-5,GV.OC-03,"C-COMMUNICATIONS-R01 (64.2008; 64.2009(c), (d))",No
+POL-04,4.6,Encryption at rest and in transit for Restricted data,SC-28; SC-8,PR.DS-01; PR.DS-02,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.7,Restricted data only in approved systems; never in unapproved AI tools,AC-3,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-04,4.8,"Backups encrypted, isolated, immutable, and restore-tested quarterly",CP-9; CP-4,PR.DS-11,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-04,4.9,Retention: CDRs 18 months online; SSN digits removed; intercept and 911 records retained,SI-12,ID.AM-07,C-COMMUNICATIONS-R01 (64.2010(a)); C-COMMUNICATIONS-R03 (1.20004),No
+POL-04,4.10,Certified media and network element disposal,MP-6,ID.AM-08,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-05,4.2,"Signed acknowledgment at hire and annually, including vendor agents",PL-4,GV.RR-04,C-COMMUNICATIONS-R01 (64.2009(b)),No
+POL-05,4.3,Annual awareness training; quarterly phishing exercises,AT-2,PR.AT-01,C-COMMUNICATIONS-R01 (64.2010(a)),No
+POL-05,4.4,"CPNI training before access and annually, including vendor agents",AT-3,PR.AT-01,C-COMMUNICATIONS-R01 (64.2009(b)),Yes
+POL-05,4.5,Role-based training for network engineers and NOC staff,AT-3,PR.AT-02,C-COMMUNICATIONS-R02 (4.9),Yes
+POL-05,4.6,Need-to-know account lookups; monthly review of call detail views,AU-6,DE.CM-03,"C-COMMUNICATIONS-R01 (64.2010(a), (b))",Yes
+POL-05,4.10,Approved AI tools only; no CPNI or configurations in unapproved tools,PL-4; AC-20,PR.DS-01,C-COMMUNICATIONS-R01 (64.2010(a)); C-COMMUNICATIONS-R03 (1.20003),No
+POL-05,4.11,Recording and transcription only with the approved notice; all-party consent,PL-4,GV.OC-03,Fla. Stat. 934.03(2)(d),No

@@ -1,0 +1,55 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,"The company must maintain an information security program aligned to NIST CSF 2.0, with OT protected according to...",PM-1; PL-2,GV.PO-01,N21-BM (SP 800-82r3 3.3.4),No
+POL-01,4.2,"The CISO is accountable for the IT and OT security program, and the Director of OT Security must be designated in...",PM-2,GV.RR-02,N21-BM (SP 800-82r3 3.3.1),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST...",RA-3; PM-9,GV.RM-01,N21-BM (SP 800-82r3 4.1.2); SEC Item 106,Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9,GV.RM-06,N21-BM (SP 800-82r3 4.1.3),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they...,PL-1,GV.PO-02,N21-BM (SP 800-82r3 3.3.4),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,N21-BM (CSF GV.PO-02),No
+POL-01,4.7,"Workforce members who violate security policies must be sanctioned under PRC-01.1 in proportion to intent and harm,...",PS-8,GV.RR-04,N21-BM (CSF GV.RR-04),No
+POL-01,4.8,No vendor may receive company data or remote access to IT or OT until it has been tiered and assessed under STD-01.3...,SA-9; SR-6,GV.SC-05,N21-BM (SP 800-82r3 6.1.5); State breach laws (Fla. Stat. 501.171 worked example),Yes
+POL-01,4.9,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor...,CA-2; CA-2(1),ID.IM-01,N21-BM (CSF ID.IM-01),Yes
+POL-01,4.10,"Every acquisition must include an IT and OT security assessment before closing and an integration plan, funded at...",RA-3; SA-9,GV.OC-01,N21-BM (SP 800-82r3 4.1.2),Yes
+POL-01,4.11,"Security documentation, including risk analyses, assessments, and required actions, must be retained for at least 6...",SI-12,GV.PO-02,N21-BM (CSF GV.PO-02),No
+POL-01,4.12,"The CISO must report cybersecurity and OT risk to the board risk committee at least quarterly, including Very High...",PM-9,GV.OV-01,SEC Item 106,No
+POL-02,4.1,"Every user, service, and device must have a unique identity. Shared accounts are prohibited, except HMI operator...",IA-2; AC-2,PR.AA-01,N21-BM (SP 800-82r3 6.2.1.4),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted....",AC-2; AC-3; AC-6,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.3,"Duties that could let one person change and approve controller logic, or change owner bank details and release a...",AC-5,PR.AA-05,N21-BM (CSF PR.AA-05); SEC Item 106,Yes
+POL-02,4.4,"MFA is required for all remote access, all cloud and administrative access, all access to the OT DMZ and the OT...",IA-2(1); IA-2(2); IA-8,PR.AA-03,N21-BM (SP 800-82r3 6.2.1.4.1),Yes
+POL-02,4.5,"Access, including OT domain and local SCADA accounts, must be disabled the same business day as a termination, and...",PS-4; AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.8),Yes
+POL-02,4.6,"Accounts inactive for 60 days must be disabled automatically, except sealed break-glass accounts.",AC-2(3),PR.AA-05,N21-BM (CSF PR.AA-05),Yes
+POL-02,4.7,"Managers must certify their staff's access every quarter, and the Director of OT Security must certify all OT...",AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-02,4.9,"Vendor and remote access to OT, including drive, compressor, and SCADA vendors, must go through the OT remote access...",AC-17; MA-4,PR.AA-05,N21-BM (SP 800-82r3 6.2.10),Yes
+POL-02,4.10,"Default passwords must be changed before any device (modem, radio, controller, flow computer, drive, network...",IA-5; SC-7,PR.AA-01,N21-BM (SP 800-82r3 6.2.1.4.5),Yes
+POL-02,4.11,"The SCADA networks must connect to corporate networks, the cloud, and acquired networks only through an OT DMZ with...",SC-7; AC-4,PR.IR-01,N21-BM (SP 800-82r3 5.2.3.1),Yes
+POL-02,4.12,"Two sealed break-glass accounts per critical platform, including the SCADA platform and the OT identity domain, must...",AC-2,PR.AA-05,N21-BM (SP 800-82r3 6.2.1),Yes
+POL-03,4.1,The company must maintain an incident response plan with an OT annex and runbooks for its most likely severe...,IR-8,RS.MA-01,N21-BM (SP 800-82r3 3.3.8),Yes
+POL-03,4.2,"Workforce, contractors, acquired sites, and vendors must report suspected incidents to the SOC within 1 hour....",IR-6,RS.MA-02,N21-BM (SP 800-82r3 6.4.1),Yes
+POL-03,4.3,"Every incident must be logged, classified by severity under STD-03.1 (including OT and safety impact), and tracked...",IR-5; IR-4,RS.MA-02,N21-BM (SP 800-82r3 6.4.1),Yes
+POL-03,4.4,Production Controllers may isolate the IT/OT boundary and move an operating area to manual operations on the OT...,IR-4; CP-2,RS.MI-01,N21-BM (SP 800-82r3 6.4.4),Yes
+POL-03,4.5,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours, and the disclosure committee...",IR-6; IR-8,RS.MA-04,SEC Item 1.05,Yes
+POL-03,4.6,"If the disclosure committee determines an incident is material, the Form 8-K Item 1.05 must be filed within 4...",IR-6,RS.CO-02,SEC Item 1.05,Yes
+POL-03,4.7,"Privacy Counsel must document a breach determination for every incident involving personal information, and notices...",IR-6,RS.CO-03,State breach laws (Fla. Stat. 501.171 worked example),Yes
+POL-03,4.8,A release that follows a cyber incident must be reported under PRC-03.4: immediately to the National Response Center...,IR-6; IR-8,RS.CO-02,EPA 40 CFR 110.6; PHMSA 195.52,Yes
+POL-03,4.9,"No ransom may be paid without approval from the CEO, the General Counsel, and the cyber insurer, and an OFAC...",IR-4,RS.MI-01,N21-BM (CSF RS.MI-01),Yes
+POL-03,4.10,"Tier-1 systems, including the SCADA platform at the IOC, BCC, and Florida, must have contingency plans with RTO and...",CP-2; CP-4; CP-7; CP-10,RC.RP-01,N21-BM (SP 800-82r3 6.5.1),Yes
+POL-03,4.11,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure...",IR-3; IR-8,ID.IM-02,N21-BM (SP 800-82r3 6.4.5); SEC Item 1.05,Yes
+POL-03,4.12,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the...,IR-4,ID.IM-03,N21-BM (CSF ID.IM-03),Yes
+POL-04,4.1,"All information must be classified as Restricted, Confidential, Internal, or Public. Restricted includes owner and...",RA-2; AC-16,ID.AM-07,N21-BM (CSF ID.AM-07); State breach laws (Fla. Stat. 501.171 worked example),No
+POL-04,4.2,Restricted and Confidential data must be encrypted at rest and in transit with approved cryptography (STD-04.1)....,SC-8; SC-28; SC-13,PR.DS-01,N21-BM (SP 800-82r3 6.2.3),Yes
+POL-04,4.3,Restricted data must not be stored on file shares or sent by email outside approved secure transfer; owner bank...,AC-3; SC-8,PR.DS-01,State breach laws (Fla. Stat. 501.171 worked example),Yes
+POL-04,4.4,"Production volumes, run tickets, and LACT tickets must be protected against unauthorized change: every edit needs a...",SI-7; AU-2; SI-10,PR.DS-01,N21-BM (CSF PR.DS-01); SEC Item 106,Yes
+POL-04,4.5,"Controller logic, SCADA configuration, and historian data for every operating area must be backed up to a central...",CP-9; CP-9(3),PR.DS-11,N21-BM (SP 800-82r3 6.2.4.3),Yes
+POL-04,4.6,"Media and devices that held Restricted data, including retired HMIs and field controllers, must be sanitized before...",MP-6,PR.DS-01,N21-BM (SP 800-82r3 6.2.3),No
+POL-04,4.7,Restricted data must not be entered into AI tools unless the AI council has approved that tool for that class of...,AC-3; PL-4,PR.DS-01,N21-BM (CSF PR.DS-01),Yes
+POL-04,4.8,Owner and employee records must include the state of residence so that breach notices can follow the law of each...,SI-12; IR-6,ID.AM-07,State breach laws (Fla. Stat. 501.171 worked example),Yes
+POL-04,4.9,Records must be retained and destroyed according to the records retention schedule; personal information must not be...,SI-12,ID.AM-07,N21-BM (CSF ID.AM-07),No
+POL-05,4.1,Company systems are for company business; limited personal use is allowed on corporate devices if it creates no...,PL-4,GV.PO-01,N21-BM (SP 800-82r3 6.2.2),No
+POL-05,4.2,Every workforce member and contractor must acknowledge this policy before receiving access and every year after.,PL-4(1),PR.AT-01,N21-BM (CSF PR.AT-01),No
+POL-05,4.3,"Security awareness training is required at hire and annually. Production Controllers, automation technicians and...",AT-2; AT-3,PR.AT-02,N21-BM (SP 800-82r3 3.3.5),Yes
+POL-05,4.4,"Removable media and personal devices must not be connected to HMIs, engineering workstations, or controllers;...",CM-11; MP-7,PR.PS-05,N21-BM (SP 800-82r3 6.2.6),No
+POL-05,4.5,Users must not install software or connect storage devices to corporate endpoints unless IT approves it.,CM-11,PR.PS-05,N21-BM (CSF PR.PS-05),No
+POL-05,4.6,Field tablets and phones must be enrolled in device management and reported lost within 4 hours so they can be wiped.,AC-19,PR.DS-01,N21-BM (CSF PR.DS-01),No
+POL-05,4.7,Only AI tools on the approved list (STD-05.3) may be used for company work; Restricted data may be entered only into...,PL-4,GV.PO-01,N21-BM (CSF GV.PO-01),No
+POL-05,4.8,"Users must access owner, employee, and reservoir data only as their job requires; access is monitored.",AU-6,DE.CM-03,State breach laws (Fla. Stat. 501.171 worked example),Yes
+POL-05,4.9,Workforce with knowledge of a potential material cybersecurity incident must not trade in company securities and...,PL-4,GV.PO-01,SEC Item 1.05,No

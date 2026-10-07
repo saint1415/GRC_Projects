@@ -1,0 +1,16 @@
+review_item,what_to_check,customs_software_vendor_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-06-30,None
+Trust services categories,Security required; Availability needed because entries cannot wait; Confidentiality because the service holds client records,Security; Availability; Confidentiality,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,"Entry, ISF, and EEI filing; client and shipment files; document storage; hosting",All in scope; the hosting provider is a carved-out subservice organization,None
+Subservice organizations,Carve-out or inclusive; which hosting provider,Hosting provider carved out; vendor reviews the host's own SOC 2 report each year,None
+Data location,Records must be kept within the customs territory of the United States (19 CFR 111.23(a)),System description and contract state U.S. data centers for production and backups,Keep the contract clause at renewal
+Exceptions noted,Test exceptions and management responses,1 exception: 1 of 40 sampled terminated vendor employees kept access for 9 days; remediated with an automated offboarding check,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the business must run for the vendor's controls to work,Customer manages its own users and MFA; protects credentials; reviews sign-in activity; notifies the vendor of suspected compromise; is responsible for the accuracy of data it submits to CBP,"Map to IA-2(1) (met), AU-6 (gap: POL-01 7.7), IR-6 (POAM-006), and the classification review in P10 (111.28(a); 111.39(b))"
+CC6.1 logical access (CC series as checklist),Vendor controls over authentication and encryption,MFA enforced for all customer users since 2025; encryption at rest and in transit tested without exception,None
+CC7.2 monitoring (CC series as checklist),Vendor security monitoring,24x7 monitoring of the platform tested without exception,None
+CC7.4 incident response (CC series as checklist),Vendor commitment to notify customers,Customers notified of security incidents affecting their data within 72 hours of confirmation,Ask for notice within 24 hours so the business can meet the 72-hour CBP clock (111.21(b))
+CC9.2 vendor management (CC series as checklist),Vendor oversight of its own subservice providers,Annual review of the hosting provider's report,None
+"Availability commitments (A1.2, A1.3)",Recovery objectives vs the BIA (BP-01 and BP-04: RTO 8 h or 24 h; RPO 1 h),RTO 4 h; RPO 1 h stated in the system description; annual recovery test performed,Meets the BIA
+Bridge letter,Coverage from report end date to today,Requested 2026-08-25,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,"Owner 2026-08-25, with the IT consultant",Repeat every year (POL-01 6.3)

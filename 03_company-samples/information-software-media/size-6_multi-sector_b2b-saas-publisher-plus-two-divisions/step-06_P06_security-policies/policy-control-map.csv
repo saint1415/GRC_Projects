@@ -1,0 +1,42 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,One group program aligned to CSF 2.0 meeting each division's binding rules,PM-1,GV.PO-01,N51-R01; N52-R03 (16 CFR 314.4); N54-R04; N54-R06,No
+POL-01,4.2,Group CISO accountable; Payments Qualified Individual and Consulting HIPAA Security Official designated in writing,PM-2,GV.RR-02,N52-R03 (16 CFR 314.4(a)); N54-R06 (45 CFR 164.308(a)(2)),No
+POL-01,4.3,Annual SP 800-30 risk assessment covering data held by other divisions; roll-up to group,RA-3; PM-9,ID.RA-01,N52-R03 (16 CFR 314.4(b)),Yes
+POL-01,4.4,Risk acceptance authority by level,PM-9,GV.RM-01,N51-R08 (Reg S-K Item 106),No
+POL-01,4.5,Division supplements may not weaken group policy; re-align within 90 days; annual attestation,PL-1,GV.PO-02,SOC 2 CC5.3,No
+POL-01,4.6,Divisions document common control inheritance yearly,PL-2; CA-2,GV.RR-02,N54-R06 (45 CFR 164.308(a)(8)),Yes
+POL-01,4.7,Sanctions documented,PS-8,GV.RR-04,SOC 2 CC1.5,No
+POL-01,4.8,"Security review, written agreement, and reassessment for vendors, sub-processors, and affiliates",SA-4; SA-9; CA-3,GV.SC-05; GV.SC-07,N52-R03 (16 CFR 314.4(f)); N51-R01 (Start with Security 8); PCI DSS 12.8,Yes
+POL-01,4.9,Annual common control assessment and division samples; external assurance on schedule,CA-2; CA-7,ID.IM-01,"N54-R06 (45 CFR 164.308(a)(8)); N51-R03 (Cal. Code Regs. tit. 11, 7120)",Yes
+POL-01,4.12,AI systems registered and approved under the Group AI Standard with a privacy impact assessment,RA-3; RA-8,GV.RM-01,N51-R01; N51-R03 (ADMT); Colo. SB26-189,Yes
+POL-01,4.13,"Public and contractual statements owned, evidenced, reviewed quarterly, corrected within 10 business days",PL-4,GV.OC-03,N51-R01 (deception),No
+POL-02,4.1,Unique identities in SYS-G1; acquired identities migrate within 18 months,IA-2; AC-2,PR.AA-01,N54-R04 (48 CFR 52.204-21(b)(1)(v)),Yes
+POL-02,4.2,Role-based least privilege with data owner approval,AC-3; AC-6,PR.AA-05,N51-R01 (Start with Security 2); N52-R03 (16 CFR 314.4(c)(1)),Yes
+POL-02,4.3,MFA for all workforce; phishing-resistant for administrators and CDE access,IA-2(1); IA-2(2),PR.AA-03,N52-R03 (16 CFR 314.4(c)(5)); PCI DSS 8.4.2,Yes
+POL-02,4.4,"No new static cloud keys; workload identity; scoped, owned, certified service identities",IA-5; AC-2,PR.AA-01,N51-R01 (Start with Security 3),Yes
+POL-02,4.5,Access disabled within 4 hours of termination,PS-4; AC-2,PR.AA-05,N54-R04 (48 CFR 52.204-21(b)(1)(i)),Yes
+POL-02,4.6,Quarterly certification including partner roles and service identities,AC-2; AC-6(7),PR.AA-05,SOC 2 CC6.2,Yes
+POL-02,4.7,Just-in-time privileged access through PAM with recording,AC-6(5),PR.AA-05,N51-R01 (Start with Security 2),Yes
+POL-02,4.10,Vendor and remote access only through PAM or the client access gateway; no VPN without device checks,AC-17; MA-4,PR.AA-05,N54-R04 (48 CFR 52.204-21(b)(1)(iii)),Yes
+POL-02,4.11,Partner and project access ticket-linked and time-boxed,AC-2; PS-7,PR.AA-05,DPA terms; client contracts,Yes
+POL-02,4.12,Administrator MFA for external users; re-authentication and notice for bank changes,IA-8; IA-11,PR.AA-03,N52-R03 (16 CFR 314.4(c)(1)),No
+POL-03,4.1,One written plan and one notification matrix for all divisions,IR-8,RS.MA-01,N52-R03 (16 CFR 314.4(h)),Yes
+POL-03,4.2,One severity scale,IR-4,RS.MA-02,SOC 2 CC7.4,Yes
+POL-03,4.3,Report suspected incidents immediately; cross-division events within 1 hour,IR-6,RS.MA-02,DPA terms,Yes
+POL-03,4.5,Every notice in the matrix sent by its deadline,IR-6,RS.CO-02,12 CFR 53.4; N52-R03 (16 CFR 314.4(j)); N54-R06 (45 CFR 164.410); state breach laws,Yes
+POL-03,4.6,Disclosure committee briefed within 24 hours; Form 8-K within 4 business days of a materiality determination,IR-6,RS.CO-03,N51-R08 (Form 8-K Item 1.05),Yes
+POL-03,4.8,Annual cross-division tabletop; quarterly playbook tests,IR-3,ID.IM-04,N52-R03 (16 CFR 314.4(h)),No
+POL-03,4.9,Leaked credentials revoked within 1 hour,IR-4; IA-5,RS.MI-01,N51-R01 (Start with Security 3),Yes
+POL-04,4.1,"Every data set inventoried with class, owner (the division with the legal duty), and purposes",RA-2; CM-8,ID.AM-07,N52-R03 (16 CFR 314.4(c)(2)),Yes
+POL-04,4.2,Restricted data under owner-controlled keys with object-level read logging,SC-28(1); AU-12,PR.DS-01,N52-R03 (16 CFR 314.4(c)(3); (c)(8)),Yes
+POL-04,4.3,Single-recipient flows for Restricted data between divisions; no shared storage,AC-4,PR.DS-02,N52-R03 (16 CFR 314.4(f)),Yes
+POL-04,4.4,"New data uses, including AI tuning, need a privacy impact assessment and contract check",PT-3; RA-8,GV.OC-03,N51-R01 (deception); N51-R03 (service provider),Yes
+POL-04,4.5,Retention periods (handoff 7 days; exports 30 days; terminated tenants 90 days; client data at project close),SI-12,ID.AM-08,N52-R03 (16 CFR 314.4(c)(6)); N51-R01 (Start with Security 1),Yes
+POL-04,4.6,Media sanitized with certificates,MP-6,ID.AM-08,N54-R04 (48 CFR 52.204-21(b)(1)(vii)),Yes
+POL-04,4.7,FCI only in the federal project area,AC-3,PR.AA-05,N54-R04 (48 CFR 52.204-21(b)(1)(i)),Yes
+POL-04,4.9,Cardholder data only inside the CDE; tokens outside,SC-7; CM-8,PR.DS-01,PCI DSS 3; 12.5.2.1,Yes
+POL-05,4.2,Only managed devices with group EDR access Restricted or Confidential data,AC-19; SI-3,PR.PS-05,N54-R04 (48 CFR 52.204-21(b)(1)(xiii)),Yes
+POL-05,4.3,Code and scripts only in group-hosted repositories,PL-4; AC-20,PR.AT-01,N51-R01 (Start with Security 3),No
+POL-05,4.5,Annual awareness and role-based training,AT-2; AT-3,PR.AT-01; PR.AT-02,N52-R03 (16 CFR 314.4(e)(1)),Yes
+POL-05,4.7,Approved generative AI tools only; no Restricted data; client opt-in; no federal use without approval,PL-4; PT-4,GV.PO-01,N54-R04 (48 CFR 52.204-21(b)(1)(iv)); client contracts,No
+POL-05,4.9,"Call-back verification for payroll, bank, or payment change requests",AT-2(3),PR.AT-01,N52-R03 (16 CFR 314.4(c)(1)),No

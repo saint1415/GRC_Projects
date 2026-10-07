@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3,Enterprise risk register and risk report,GRC platform,Chief Risk Officer,"Annual, with quarterly KRI updates",Annual register; 2 quarterly updates,P01,Ready
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual; POA&M monthly,Report; 3 monthly POA&M snapshots,P07,Ready
+Both,CC5.3,Policy set and exception register,Policy portal; GRC platform,CISO,Annual review; register monthly,Policies; 3 monthly register reviews,P06,Ready
+Both,CC6.1; CC6.2; CC6.3,Identity governance provisioning and quarterly certifications,Identity platform,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; 2 certifications,P02 AC-2; P07,Collecting
+Both,CC6.1,MFA and SSO configuration,Identity platform,Director of Identity and Access Management,Point in time plus changes,Configuration export; change log,P02 IA-2,Ready
+Both,CC6.4,Physical access reviews and provider SOC 2 reports,Badge system; vendor register,"Vice President, Facilities",Quarterly; annual,2 quarterly reviews; current reports,P02 PE-3,Collecting
+Both,CC6.8; CC7.1,EDR coverage and vulnerability scan reports,EDR console; scanner,Director of Security Operations,Weekly,5 weekly reports,P07 RA-5,Collecting
+Both,CC7.2; CC7.3,SOC monitoring metrics and case samples,SIEM; case management,Director of Security Operations,Daily; monthly metrics,25 cases; 3 monthly metric packages,"P07 SI-4, IR-4",Collecting
+Both,CC7.4; CC7.5,"Incident response plan, runbook, and exercise reports",GRC platform,Director of Security Operations,Annual exercise,Plan; 2026-11-18 tabletop report,P08,Not started
+Both,CC8.1,Change tickets and pipeline approvals,Change management; CI/CD,CIO,Per change,25 changes,P02 CM-3,Collecting
+Both,CC9.2,"Vendor register, BAAs, and SOC report reviews",Vendor risk platform,Director of Third-Party Risk Management,Annual per vendor,All tier-1 vendors; 25 tier-2,P07 SA-9,Collecting
+Both,A1.2; CC9.1,Backup job reports and immutability settings,Backup service,Director of Cloud Platform Engineering,Daily,25 daily jobs,P02 CP-9,Ready
+SL-1,A1.1,Client portal and platform capacity reports,Cloud monitoring,"Vice President, EMS Billing Services",Monthly,3 monthly reports,New,Collecting
+SL-1,A1.3,SL-1 client portal failover test report,GRC platform,"Vice President, EMS Billing Services",Annual,Test report (planned 2027-02),New,Not started
+SL-1,PI1.2; PI1.3,Import edit and claim scrubber reports,Revenue cycle platform,"Vice President, EMS Billing Services",Daily,25 days,New,Collecting
+SL-1,PI1.4,Remittance-to-deposit reconciliations per agency,Revenue cycle platform; bank,"Vice President, EMS Billing Services",Monthly,3 months for 10 agencies,New,Not started
+SL-1,C1.1; C1.2,Agency data partition tests and deletion certificates,Revenue cycle platform,Chief Privacy Officer,Per release; per contract end,All releases; all terminations,2025 SOC 2 report,Ready
+SL-2,CC2.3,SL-2 system description and provider security requirements,GRC platform,"President, Managed Transportation",Annual,Current version,New,Not started
+SL-2,CC6.1; CC6.2,Provider portal MFA and attestation reports,Provider portal,"President, Managed Transportation",Monthly,3 monthly reports,P03 G-051,Not started
+SL-2,CC9.2; P6.4; P6.5,Network provider security attestations and agreements,Network operations system,"President, Managed Transportation",Annual per provider,40 providers (random),P03 G-104,Not started
+SL-2,A1.2; A1.3,Managed transportation platform DR test report,GRC platform,"President, Managed Transportation",Annual,2026-04-22 test report,P05 DEP-19,Ready
+SL-2,P2.1; P3.2,Member consent records for reminders,Managed transportation platform,Chief Privacy Officer,Per booking,25 members,New,Collecting
+SL-2,P6.2; P6.7,Disclosure records per member,Managed transportation platform,"President, Managed Transportation",On request,5 member reports,New,Collecting

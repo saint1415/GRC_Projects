@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1,Internal Audit assessment report,GRC platform,Chief Audit Executive,Annual,Report for the period,P07,Ready
+Both,CC4.2,POA&M with monthly committee review,GRC platform,CISO,Monthly,3 months,P07 poam.csv,Collecting
+Both,CC6.1; CC6.2; CC6.3,Identity governance provisioning and quarterly certifications,Identity platform,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P02 AC-2; P07 AC-2,Collecting
+SL-1,CC6.1; CC6.6,OT remote access gateway sessions with approvals and recordings,OT remote access gateway,Director of OT Security,Per session,25 sessions,P02 AC-17; P07 AC-17,Not started (starts when POAM-001 closes)
+SL-1,CC6.2,Customer console inactivity job reports and tenant attestations,IBOP customer console,"Vice President, Remote Operations",Daily job; quarterly attestation,2 quarters of attestations,P07 AC-2,Not started (POAM-017)
+Both,CC6.4,ROC and colocation physical access reviews,Badge system; colocation SOC 2 reports,"Vice President, Corporate Security and Facilities",Quarterly,All quarters,P02 PE-2,Collecting
+Both,CC6.5; C1.2,Destruction certificates,Destruction vendor portal,Director of Endpoint Engineering,Per event,25 certificates,P03 G-090,Collecting
+SL-1,CC6.6,OT segmentation records for flat-network buildings,Network change records,Director of OT Security,Per building,25 buildings,P07 SC-7,Not started (POAM-018)
+Both,CC6.8,EDR coverage reports,EDR console,Director of Security Operations,Monthly,3 months,P07 SI-3,Ready
+SL-1,CC7.1,Field device credential sweep and configuration compliance reports,PAM vault; compliance tool,Director of OT Security,Monthly,3 months,"P07 CM-6, IA-5",Not started (POAM-003)
+SL-1,CC7.2,OT sensor coverage and alert triage records,OT sensors; SIEM,Director of OT Security,Monthly,3 months; 25 alerts,P07 SI-4,Collecting
+Both,CC7.3; CC7.4,SOC incident case records and customer notices,SOC case management,Director of Security Operations,Per incident,25 incidents,"P07 IR-4, IR-6",Collecting
+SL-1,CC7.5; A1.3,Regional failover and restore test reports,Test records,IBOP Platform Manager,Annual failover; quarterly restore,All tests in the period,P05; P07 CP-10,Not started (POAM-007 retest due 2027-01-31)
+Both,CC8.1,Change tickets with approvals and pipeline gate logs,FSP; pipeline,IBOP Platform Manager,Per change,40 changes,"P07 CM-3, CM-3(1)",Ready
+Both,CC9.2,Vendor and subcontractor reviews and signed addenda,Vendor register,Director of Third-Party Risk Management,Annual and at onboarding,All tier-1 vendors; 25 subcontractors,P03 G-135; P07 SA-9,Collecting
+Both,A1.1; A1.2,"Capacity, backup, and replication reports",Cloud monitoring; backup service,Director of Cloud Platform Engineering,Monthly,3 months,P04,Ready
+SL-1,C1.1; C1.2; P4.2; P4.3,Retention job reports per tenant,IBOP,Chief Privacy Officer,Monthly,3 months; 10 tenants,P03 G-167,Not started (POAM-020)
+SL-1,PI1.1; PI1.2; PI1.3,Badge revocation timeliness and schedule change reports,FSP; PACS audit trail,"Vice President, Remote Operations",Monthly,3 months; 40 changes,"P07 AC-5, SI-7",Ready
+SL-1,PI1.4,Monthly tenant audit reports to customer auditors,IBOP,IBOP Platform Manager,Monthly,3 months; 10 tenants,P02 AU-10,Collecting
+SL-1,P1.1; P2.1; P3.2,Face verification notices and signed consent forms,PACS; customer records,Chief Privacy Officer,Per enrollment,All enrollments at the 3 pilot sites,P10,Not started (POAM-021)
+SL-2,PI1.2; PI1.3; PI1.4,Timestamp edit approvals and monthly SLA reconciliation,FSP,"Vice President, Facility Services Portal",Monthly,3 months,P01 R-016,Not started
+SL-2,CC6.1; CC7.2; A1.2,"FSP security, monitoring, and availability evidence from the 2025 Type 2 report cycle",FSP; cloud provider B,"Vice President, Facility Services Portal",Continuous,Per service auditor request,2025 SOC 2 Type 2 report,Ready

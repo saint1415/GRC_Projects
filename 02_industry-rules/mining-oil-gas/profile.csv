@@ -1,0 +1,12 @@
+field,value
+regulators,"Mine Safety and Health Administration (MSHA, DOL) - mining safety (no cyber rules); Bureau of Safety and Environmental Enforcement (BSEE, DOI) - offshore oil & gas; U.S. Coast Guard - MTSA/OCS facility security incl. cybersecurity; Transportation Security Administration (TSA) - pipeline/LNG security directives (where applicable); Pipeline and Hazardous Materials Safety Administration (PHMSA, DOT); Department of Energy (DOE) - Energy Sector SRMA (oil & natural gas)"
+primary_regulation,NIST CSF 2.0 with NIST SP 800-82 Rev. 3 (voluntary benchmark)
+primary_regulation_citation,NIST CSWP 29; NIST SP 800-82 Rev. 3
+primary_regulation_url,https://csrc.nist.gov/pubs/sp/800/82/r3/final
+primary_regulation_rationale,"Cris Santos Company is an onshore producer here. Per the sector research, onshore-only producers without TSA-designated assets have no binding federal sector cyber rule and should benchmark against NIST CSF 2.0 and NIST SP 800-82 Rev. 3 (OT security). If the company operates Outer Continental Shelf facilities, use the USCG Marine Transportation System cyber rule (N21-R01) instead."
+sensitive_data,"Seismic and reservoir data (trade secret); Facility security plans and assessments (SSI under 49 CFR 1520 for MTSA/TSA); Well control and process safety data; Employee PII / miner records; EAR-controlled technology (e.g., certain drilling/sensor tech)"
+critical_systems,"SCADA for well pads, gathering and compression; DCS/SIS on offshore platforms; PLCs and RTUs; Mine ventilation, hoist and dewatering controls; Fleet/autonomous haulage systems; ERP and production accounting"
+ai_specific,
+assurance_alternatives,
+notes,MSHA (30 CFR) has no cybersecurity requirements; OSHA PSM omitted as not cyber-specific. TSA SDs apply only where the operator owns TSA-designated pipelines/LNG facilities. Cross-cutting (not repeated per unit) (see n11 notes).
+last_verified,2026-09-25

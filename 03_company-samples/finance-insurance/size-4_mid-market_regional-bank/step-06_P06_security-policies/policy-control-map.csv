@@ -1,0 +1,59 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Written program approved by the board,PM-1,GV.PO-01,N52-R02 (II.A; III.A.1),No
+POL-01,4.2,ISO designated by the board; reports to the CRO; independent testing of controls the ISO team operates,PM-2,GV.RR-02,N52-R02 (III.A.2),No
+POL-01,4.3,"Annual risk assessment using SP 800-30, including fraud, providers, respondents, and AI",RA-3,ID.RA-01,N52-R02 (III.B),Yes
+POL-01,4.4,Risk acceptance authority; quarterly comparison with measurable cyber tolerances,PM-9,GV.RM-01,N52-R02 (III.A.2),Yes
+POL-01,4.5,Quarterly and annual reporting to the Board Risk Committee,CA-5; PM-9,GV.OV-01,N52-R02 (III.F),Yes
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,N52-R02 (II.A),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-01,N52-R02 (II.A),No
+POL-01,4.8,Sanctions,PS-8,GV.RR-04,N52-R02 (II.A),No
+POL-01,4.9,"Tiered due diligence, contract terms, annual SOC review with CUEC mapping, 53.4 contacts",SA-9; SR-6,GV.SC-05; GV.SC-07,N52-R02 (III.D.1-3); 12 CFR 53.4,Yes
+POL-01,4.10,Bank as a service provider: respondent contacts and commitments,CA-3,GV.SC-05,12 CFR 53.4; N52-R02 (III.C.1.g),No
+POL-01,4.11,Risk-based independent testing of key controls,CA-2,ID.IM-02,N52-R02 (III.C.3),No
+POL-01,4.12,Program adjusted on change triggers,CA-7,GV.OV-02,N52-R02 (III.E),No
+POL-01,4.13,Validation and fair lending testing of models before production use,SA-9; RA-3,GV.RM-01,12 CFR 1002.6; 12 CFR 1002.9; N52-R01,Yes
+POL-01,4.14,Five-year retention of security documentation,SI-12,GV.PO-02,N52-R02 (III.F),No
+POL-02,4.1,"Unique accounts in every system; no shared, generic, or vendor default accounts",IA-2; IA-5; AC-2,PR.AA-01,N52-R02 (III.C.1.a),Yes
+POL-02,4.2,Role-based least privilege; core role templates,AC-2; AC-6,PR.AA-05,N52-R02 (III.C.1.a),Yes
+POL-02,4.3,Workforce MFA; hardware keys for administrators; number matching,IA-2(1); IA-2(2),PR.AA-03,N52-R02 (III.C.1.a),Yes
+POL-02,4.4,"Privileged accounts in PAM, including core security and payments hub administrators",AC-6(5); AC-6(2),PR.AA-05,N52-R02 (III.C.1.a; III.C.1.e),Yes
+POL-02,4.5,Phishing-resistant customer MFA; out-of-band beneficiary confirmation,IA-8,PR.AA-03,N52-R02 (II.B.3; III.C.1.a),Yes
+POL-02,4.6,Out-of-band verification and alerts for contact-information changes,IA-12,PR.AA-02,N52-R02 (III.C.1.a); 12 CFR 41.90,Yes
+POL-02,4.7,"Same-day access removal at termination, including the core",PS-4; AC-2,PR.AA-05,N52-R02 (III.C.1.a),Yes
+POL-02,4.8,Remove prior roles within 5 business days of transfer,PS-5; AC-2,PR.AA-05,N52-R02 (III.C.1.a),Yes
+POL-02,4.9,Quarterly access reviews against role templates; quarterly privileged review,AC-2; AC-6,PR.AA-05,N52-R02 (III.C.1.a),Yes
+POL-02,4.10,Maker-checker; template separation; dual approval of payments hub configuration,AC-5; CM-3,GV.RR-04,N52-R02 (III.C.1.e),Yes
+POL-02,4.11,Callback to the phone number on file for emailed or phoned wire requests,AC-3; AT-3,PR.AA-05,N52-R02 (III.C.1.a); Fla. Stat. 670.202,Yes
+POL-02,4.12,"Lockout, screen lock, and session timeouts",AC-7; AC-11; AC-12,PR.AA-05,N52-R02 (III.C.1.a),No
+POL-02,4.13,Break-glass accounts tested quarterly,AC-2,PR.AA-05,N52-R02 (III.C.1.h),Yes
+POL-02,4.14,Password length and banned list,IA-5,PR.AA-03,N52-R02 (III.C.1.a),Yes
+POL-02,4.15,Vendor access through PAM with per-session approval and recording,AC-17; MA-4,PR.AA-05,N52-R02 (III.C.1.a; III.D.2),Yes
+POL-03,4.1,Runbooks for BEC and critical provider outage,IR-8,RS.MA-01,N52-R02 (III.C.1.g),Yes
+POL-03,4.2,Report suspected payment fraud or unexpected contact changes within 15 minutes,IR-6,RS.MA-02,N52-R02 (III.C.1.g),Yes
+POL-03,4.3,One incident register linked to BSA cases with discovery time,IR-5; IR-4,RS.MA-02,N52-R02 (Supp. A II.A.1.a),Yes
+POL-03,4.4,Crisis management team within 2 hours for severity 1,IR-4,RC.RP-01,N52-R02 (III.C.1.g),Yes
+POL-03,4.5,Notification incident determination; 36-hour OCC and Federal Reserve notices,IR-6,RS.CO-02,12 CFR 53.3; 12 CFR 225.302,Yes
+POL-03,4.6,Notices to respondent institutions,IR-6,RS.CO-02,12 CFR 53.4,Yes
+POL-03,4.7,Inbound provider notices to designated contacts,IR-6,RS.CO-02,12 CFR 53.4,Yes
+POL-03,4.8,Regulator and customer notice for sensitive customer information; state breach laws,IR-6,RS.CO-03,N52-R02 (Supp. A II.A.1.b; III.A); Fla. Stat. 501.171,Yes
+POL-03,4.9,SAR filing and immediate telephone notice for ongoing violations,IR-6,RS.CO-02,N52-R02 (Supp. A II.A.1.c); 12 CFR 21.11,Yes
+POL-03,4.10,Immediate wire recall and IC3 report,IR-4,RS.MI-01,N52-R02 (Supp. A II.A.1.d),Yes
+POL-03,4.11,Privilege protocol and insurer notice,IR-7,RS.CO-03,Contract (cyber insurance policy and bond),No
+POL-03,4.12,"Ransom decision: board, counsel, insurer, OFAC check",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.13,Annual executive tabletop and runbook exercises,IR-3; IR-2,ID.IM-02,N52-R02 (III.C.1.g; III.C.3),No
+POL-03,4.14,Lessons learned within 30 days,IR-4,ID.IM-03,N52-R02 (III.E),Yes
+POL-04,4.1,Four-level classification,RA-2,ID.AM-07,N52-R02 (II.B.1),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit; secure portal for loan files,SC-28; SC-8,PR.DS-01; PR.DS-02,N52-R02 (III.C.1.c),No
+POL-04,4.3,Customer-managed keys; separate backup keys,SC-12,PR.DS-01,N52-R02 (III.C.1.c),No
+POL-04,4.4,Restricted data only in approved systems; none in non-production,AC-3; CM-7,PR.DS-01,N52-R02 (II.B.1),No
+POL-04,4.6,Restricted data inventory reconciled quarterly,CM-8,ID.AM-07,N52-R02 (III.C.1.d),Yes
+POL-04,4.7,Certified destruction with serial-number certificates,MP-6,ID.AM-08,N52-R02 (II.B.4; III.C.4),No
+POL-04,4.8,Isolated write-once backups; full restores twice a year,CP-9; CP-4,PR.DS-11,N52-R02 (III.C.1.h),Yes
+POL-04,4.9,No Restricted data in unapproved AI tools,SA-9; PL-4,GV.SC-05,N52-R01; N52-R02 (III.C.1.c),Yes
+POL-04,4.10,Retention schedule; SAR records 5 years,SI-12,GV.PO-02,12 CFR 21.11(g),No
+POL-05,4.2,Annual acknowledgment,PL-4(1),GV.PO-01,N52-R02 (III.C.2),No
+POL-05,4.3,Annual training; monthly phishing simulations,AT-2,PR.AT-01,N52-R02 (III.C.2),Yes
+POL-05,4.4,"Role-based fraud, contact-change, and voice impersonation training",AT-3; AT-2(3),PR.AT-02,N52-R02 (III.C.2; III.C.1.a); 12 CFR 41.90(e)(3),Yes
+POL-05,4.7,No unapproved software or USB storage,CM-11,PR.PS-05,N52-R02 (III.C.1.a),No
+POL-05,4.10,Approved AI tools only; human check of outputs,PL-4,GV.PO-01,N52-R01,No
+POL-05,4.11,Job-based account lookup; core access logged and reviewed,AU-6,DE.CM-03,N52-R02 (III.C.1.f),Yes

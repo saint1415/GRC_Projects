@@ -1,0 +1,14 @@
+review_item,what_to_check,cold_chain_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed because cold storage monitoring has a 2-hour MTD (P05 BP-02),Security; Availability,None
+Service auditor and opinion,Independent CPA firm; unqualified opinion,Unqualified opinion,None
+System description scope,"Sensor data collection platform, dashboard, alerting, data retention; gateway firmware updates","Platform, dashboard, alerting engine, and gateway firmware update service in scope; sensors and gateways at customer sites are customer-operated",None
+Subservice organizations,Carve-out or inclusive; which hosting and messaging providers,Cloud hosting provider and text message delivery provider carved out; vendor states it reviews their reports yearly,"Ask how the vendor monitors text message delivery failures, since alerts depend on it"
+Exceptions noted,Test exceptions and management responses,1 exception: 1 of 25 sampled production changes lacked documented approval; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the vendor's controls to work,Customer manages user accounts and MFA; configures alert recipients and escalation; keeps gateways powered and connected; reviews gateway offline notifications; reports sensor faults promptly,"Mapped to AC-2, SI-4, CP-2. Three are open gaps at the plant: shared dashboard login (POAM-001), one alert recipient with no escalation, and no response to gateway offline events (P01 R-004)"
+Availability commitments,"Platform availability and alert delivery versus the BIA (MTD 2 h, RTO 1 h for BP-02)",99.9% monthly platform availability target; alerts sent within 5 minutes of a threshold breach under normal operation,Meets the BIA for the vendor side; the plant's own gateway and internet line are the weaker links
+Data retention,At least 2 years for CCP-related readings (9 CFR 417.5(e)),2 years of readings and alert history; export available,Meets the 2-year minimum for refrigerated product records; export chilling records for shelf-stable lots if kept longer (POL-04 4.8)
+Encryption,At rest and in transit,Encryption at rest; TLS from gateway and dashboard,None
+Incident notification,Vendor commitment to notify customers,Customers notified within 72 hours of confirming a security incident affecting their data,Ask for 24-hour notice at renewal
+Bridge letter,Coverage from report end date to today,Not provided with the report,Request a bridge letter covering 2026-04-01 to 2026-09-30 by 2026-10-31
+Review sign-off,Reviewer and date,"Office Manager with the independent consultant, 2026-08-20",Repeat each year when the new report is issued

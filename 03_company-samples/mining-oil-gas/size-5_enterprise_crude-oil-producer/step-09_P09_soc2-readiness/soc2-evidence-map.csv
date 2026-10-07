@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+Both,CC1.2,Board risk committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.4,Enterprise risk register and quarterly updates,GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly status,Report; 3 monthly POA&M snapshots,P07,Collecting
+Both,CC5.3,Policy hierarchy and review records,Policy portal,CISO,Annual,Review records,P06,Ready
+Both,CC6.1; CC6.2,Identity configuration and provisioning records,Identity governance,Director of Identity and Access Management,Continuous,25 provisioning events,P02; P07 AC-2,Collecting
+Both,CC6.3,Quarterly access certifications and termination evidence,Identity governance; HR system,Director of Identity and Access Management,Quarterly; per termination,All certifications; 25 terminations,"P07 AC-2, PS-4",Collecting
+SL-2,CC6.3,OT domain certification for water facility accounts,OT directory; identity governance,Director of OT Security,Quarterly,All certifications,POAM-001,Not started
+Both,CC6.4,Badge access reviews and provider SOC 2 reports,Badge system; vendor register,"Vice President, Corporate Security and Facilities",Quarterly; annual,All reviews,P02 CCP-07,Ready
+Both,CC6.6; CC7.1,Vulnerability scans and posture reports,Scanner; posture tool,Director of Cloud Platform Engineering,Monthly,3 months,P04,Collecting
+Both,CC6.7,TLS scans and DLP reports,Scanner; DLP console,Director of Network Engineering,Quarterly,2 quarters,P04,Ready
+Both,CC6.8,EDR coverage reports,EDR console,Director of Endpoint Engineering,Monthly,3 months,P02 CCP-06,Ready
+Both,CC7.2; CC7.3,SOC alert and case samples,SIEM; case management,Director of Security Operations,Continuous,25 alerts; 25 cases,"P07 IR-4, SI-4",Collecting
+SL-2,CC7.2,OT monitoring coverage for water facilities,OT monitoring console,Director of Security Operations,Monthly,3 months,POAM-010,Not started
+Both,CC7.4,Incident response plan and tabletop report,GRC platform,Director of Security Operations,Annual,2026-11-19 tabletop report,P08,Not started
+Both,CC8.1,Change records with approvals and pipeline logs,ITSM; CI/CD; OT change system,CIO,Continuous,25 IT changes; 25 OT changes (SL-2),P07 CM-3,Collecting
+Both,CC9.2,"Vendor register, assessments, and SOC report reviews",Vendor register,Director of Third-Party Risk Management,Annual per vendor,All tier-1 vendors,P07 SA-9,Collecting
+SL-1,A1.2; A1.3,Payment cycle restore test and portal failover test,DR test reports,"Vice President, Production and Revenue Accounting",Annual,Test report,P05,Ready
+SL-2,A1.3; CC7.5,SCADA failover retest meeting the water handling RTO,DR test report,"Vice President, Operations Technology and Automation",Annual,Retest report (2027-02),POAM-004,Not started
+SL-1,PI1.2; PI1.3,Run ticket reason codes and LACT reconciliation reports,Hydrocarbon accounting,"Vice President, Production and Revenue Accounting",Daily,25 days,POAM-017,Not started
+SL-1,PI1.4,Payment register reconciliations and statement release approvals,Hydrocarbon accounting; bank portal,"Director, Owner Relations",Monthly,All payment runs in the period,SOX program,Ready
+SL-2,PI1.2; PI1.3; PI1.4,"SCADA-to-ticket reconciliations, exceptions, and dispute log",Water services portal; historian,"Vice President, Midstream and Water",Daily; monthly,25 days; all disputes,R-046,Not started
+SL-1,P4.2; P5.1; P6.2; P7.1,"Privacy operations records (retention, data requests, disclosure log, data quality)",Owner portal; GRC platform,Privacy Counsel (Legal),Monthly,3 months,P06 POL-04,Not started
+Both,C1.1; C1.2,Data classification register and disposal certificates,GRC platform,Chief Compliance Officer,Quarterly,2 quarters,P06 POL-04,Ready
+SL-1,CC3.3; CC6.6,Bank change verification records and portal bot protection reports,Owner portal; call center,"Director, Owner Relations",Continuous,25 bank changes,R-013; R-045,Collecting

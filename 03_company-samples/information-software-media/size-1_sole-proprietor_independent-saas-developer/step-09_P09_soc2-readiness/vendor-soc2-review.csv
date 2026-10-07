@@ -1,0 +1,14 @@
+review_item,what_to_check,hosting_provider_result,follow_up
+Report type and period,Type 2 covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,Request a bridge letter covering 2026-04-01 to today
+Trust services categories,Security required; Availability needed because subscribers rely on the platform daily,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unmodified opinion,None
+System description scope,"Managed application platform, managed database, object storage, account console and API",All in scope,None
+Subservice organizations,Carve-out or inclusive; which data center operators,Data center operators carved out; the provider reviews their reports yearly,None
+Exceptions noted,Test exceptions and management responses,1 exception: 2 of 40 sampled employee terminations removed access after the 1-day target; remediated,Accept; check the next report
+Complementary user entity controls (CUECs),Controls the company must run for the provider's controls to work,"Customer manages its own users, tokens, and MFA; protects credentials and API tokens; configures network access to databases; configures backups and tests restores; reviews account audit logs","Map to IA-2(1) (POAM-002), IA-5(7) (POAM-001), CM-6, CP-9 and CP-4 (POAM-004, POAM-005), AU-6 (POAM-007). Several CUECs are not operating today"
+CC6.1 logical access (CC series as checklist),Provider controls over its own staff access and encryption,MFA for provider staff; customer data encrypted at rest and in transit; tested without exception,None
+CC7.2 monitoring (CC series as checklist),Provider security monitoring,Continuous monitoring of the platform tested without exception; provider does not monitor customer token use on the customer's behalf,Owner must monitor token use (POAM-007)
+CC7.4 incident response (CC series as checklist),Provider commitment to notify customers,Customers notified of incidents affecting their data under the provider's DPA,Record the provider's notice contact in the P08 contact sheet
+"Availability commitments (A1.2, A1.3)","Recovery objectives against the BIA (BP-01: RTO 4 h, RPO 1 h)",Backups and point-in-time recovery are features the customer configures; the provider tests its own platform recovery yearly,"Meets the BIA only with the owner's own restore steps and outside copy (POAM-004, POAM-005)"
+Other sub-processors,"Email service, SMS provider, AI model provider, error monitoring, help desk",Not yet reviewed. The AI model provider has no DPA,Review each report or security page by 2026-12-31 (POAM-006)
+Review sign-off,Reviewer and date,"Owner-developer, 2026-09-09",Repeat every year (POL-01 6.3)

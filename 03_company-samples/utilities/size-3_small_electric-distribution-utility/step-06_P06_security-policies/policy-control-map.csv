@@ -1,0 +1,25 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.2,CIP Senior Manager named; delegations documented,PM-2,GV.RR-02,N22-R01 (CIP-003-9 R3; R4),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-01,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),No
+POL-01,4.5,CIP policy topics approved by the CIP Senior Manager at least every 15 calendar months,PL-1,GV.PO-02,N22-R01 (CIP-003-9 R1),No
+POL-01,4.6,CIP-002 identifications reviewed and approved at least every 15 calendar months; change triggers,RA-2,ID.AM-05,N22-R01 (CIP-002-5.1a R1; R2),No
+POL-01,4.9,Security terms and annual review for key vendors,SA-9,GV.SC-05,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),Yes
+POL-01,4.10,Potential NERC noncompliance reported within 5 business days; Self-Report decision,CA-5,GV.OC-03,N22-R01 (16 U.S.C. 824o(e)),No
+POL-01,4.11,CIP evidence retained at least three calendar years,SI-12,GV.PO-02,N22-R01 (CIP-003-9 Compliance 1.2),No
+POL-02,4.1,Unique accounts including SCADA HMIs; shared accounts retired by 2026-12-31,IA-2; AC-2,PR.AA-01,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),Yes
+POL-02,4.3,"MFA for all remote paths into OT, VPN, and SaaS; phishing-resistant for admins",IA-2(1); IA-2(2),PR.AA-03,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),Yes
+POL-02,4.4,Same-day access removal; keys and badges collected,PS-4; AC-2,PR.AA-05,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),Yes
+POL-02,4.6,"Vendor remote access named, off by default, recorded, disabled on demand, monitored",AC-17; MA-4; SI-4,PR.AA-05,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 6),Yes
+POL-02,4.7,Only necessary routable access to Substation N and E; checked after every change,SC-7; AC-4; CM-6,PR.IR-01,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 3.1),Yes
+POL-02,4.9,Relay and gateway passwords unique per substation and changed after contractor visits,IA-5,PR.AA-01,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 6.2),Yes
+POL-02,4.10,Substation physical access based on need; key log reconciled quarterly,PE-2; PE-3,PR.AA-06,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 2),Yes
+POL-03,4.4,Reportable Cyber Security Incident determination and E-ISAC notice (1-hour internal target),IR-6,RS.CO-02,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 4.2),Yes
+POL-03,4.5,Annual test of the incident response plan; never beyond 36 calendar months,IR-3,ID.IM-02,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 4.5; 4.6),Yes
+POL-03,4.6,"DOE-417, EOP-004, and breach notice deadlines per the P08 matrix",IR-6,RS.CO-02,NERC EOP-004-4 R2; DOE-417; Fla. Stat. 501.171,Yes
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,Fla. Stat. 501.171,No
+POL-04,4.5,Delete customer SSNs after the credit decision,SI-12,PR.DS-01,Fla. Stat. 501.171,No
+POL-04,4.7,Offline or immutable SCADA backups restore-tested quarterly,CP-9; CP-4,PR.DS-11,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),Yes
+POL-05,4.3,Annual awareness training for all staff; phishing exercises,AT-2,PR.AT-01,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 1),Yes
+POL-05,4.6,Contractor laptops reviewed before connecting to relays or SCADA,SI-3,PR.PS-01,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.1; 5.2),Yes
+POL-05,4.7,Removable media scanned at a kiosk before use on OT,MP-7; SI-3,PR.PS-01,N22-R01 (CIP-003-9 R2 Att. 1 Sec. 5.3),Yes
+POL-05,4.9,Approved generative AI tools only; no Restricted data,PL-4,GV.PO-01,Voluntary benchmark (NIST CSF 2.0; SP 800-82 Rev. 3),No

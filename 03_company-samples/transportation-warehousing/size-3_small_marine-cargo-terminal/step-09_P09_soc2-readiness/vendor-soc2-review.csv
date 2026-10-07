@@ -1,0 +1,14 @@
+review_item,what_to_check,tos_vendor_result,follow_up
+Report type and period,Type 2 (operating effectiveness) covering at least 6 months and ending within the last 12 months,Type 2; 12-month period ending 2026-03-31,None
+Trust services categories,Security required; Availability needed for the portal and remote support the terminal relies on,Security; Availability,None
+Service auditor and opinion,Independent CPA firm; opinion type,Unqualified opinion,None
+System description scope,Hosted truck appointment and customer portal; remote support operations; the TOS software the company runs itself,Portal and remote support in scope. The licensed TOS software running in the company's own cloud tenant is not in scope; it is the company's responsibility,Keep TOS server controls in the company SSP (P02); do not rely on this report for them
+Subservice organizations,Carve-out or inclusive; which hosting providers,Portal hosting provider carved out,Confirm the vendor reviews the hosting provider's SOC 2 (listed as a vendor control)
+Exceptions noted,Test exceptions and management responses,1 exception: 3 of 25 sampled remote support sessions had no customer ticket reference; remediated 2026-02,Accept; the company must approve each session on its side (CUEC below)
+Complementary user entity controls (CUECs),Controls the company must operate for the vendor's controls to work,Approve and review vendor remote support sessions; manage portal administrator users; enforce MFA for portal administrators; notify the vendor of terminated users,"Map to AC-2, AC-17 and IA-2(1). Two are open gaps: standing vendor support account and no session review (POAM-013; POAM-024)"
+Availability commitments,Uptime and recovery objectives vs the BIA (BP-08: RTO 8 h; RPO 24 h),99.5% monthly uptime; RTO 8 h; RPO 1 h stated in the system description,Meets the BIA; confirm in the contract
+Encryption,At rest and in transit per the system description,Encryption at rest by the hosting provider; TLS 1.2 or higher in transit,None
+Incident notification,Vendor commitment to notify customers,Within 72 hours of confirmation per contract,"Negotiate notice without delay at renewal, to match 33 CFR 101.650(f)(2) (POAM-024)"
+Vulnerability notification,Vendor process to tell customers about vulnerabilities in the TOS software,Security advisories published to customers; no committed time frame,Add to the contract at renewal (101.650(f)(2))
+Bridge letter,Coverage from report end date to today,Requested for 2026-04-01 to 2026-09-30,Obtain before 2026-10-31
+Review sign-off,Reviewer and date,IT Manager 2026-08-26,Annual; next on receipt of the 2027 report

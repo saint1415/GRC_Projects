@@ -1,0 +1,22 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.7,"Sanctions, including for misuse of customer device data",PS-8,GV.RR-04,N81-R01 (15 U.S.C. 45(n)),No
+POL-01,4.8,Vendor review and contract terms before customer data is shared,SA-9; SA-4,GV.SC-05,N81-R02 (Fla. Stat. 501.171(6)); N81-R03 (PCI DSS v4.0.1 12.8),Yes
+POL-01,4.10,Retention of security documentation and no-notice determinations,SI-12,GV.PO-02,N81-R02 (Fla. Stat. 501.171(4)(c)),No
+POL-02,4.1,"Unique named accounts in SYS-01, bench PCs, and manufacturer portals",IA-2; AC-2,PR.AA-01,Manufacturer A agreement (contract); N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.2,Role-based SYS-01 access; passcodes visible only to the assigned technician,AC-3; AC-6,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.3,MFA for all sensitive access,IA-2(1),PR.AA-03,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.4,Same-day access removal at termination,PS-4; AC-2,PR.AA-05,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-02,4.8,Unique local admin passwords; change default passwords,IA-5,PR.AA-01,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-03,4.2,Report suspected incidents within 1 hour; anonymous line,IR-6,RS.MA-02,N81-R02 (Fla. Stat. 501.171(4)),Yes
+POL-03,4.4,Preserve evidence; do not reimage devices under investigation,IR-4,RS.AN-07,N81-BM (CSF 2.0 RS.AN-07),No
+POL-03,4.6,Meet legal and contractual notice deadlines,IR-6,RS.CO-02,N81-R02 (Fla. Stat. 501.171(3); (4)); N81-R03 (PCI DSS v4.0.1 12.10.1); Manufacturer A agreement (contract),Yes
+POL-03,4.8,Annual incident response test,IR-3,ID.IM-02,N81-R03 (PCI DSS v4.0.1 12.10.1),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,N81-R02 (Fla. Stat. 501.171(2)),Yes
+POL-04,4.3,"Never collect account passwords; passcodes only in the restricted field, purged at release",SC-28; SI-12,PR.DS-01,N81-R02 (Fla. Stat. 501.171(1)(g); (2)),Yes
+POL-04,4.4,Customer data access standard for technicians,AC-6; MP-7,PR.DS-10,N81-R01 (15 U.S.C. 45(n)); Manufacturer A agreement (contract),Yes
+POL-04,4.5,Card data only in P2PE terminals; terminal list and weekly inspections,SI-12; CM-8; PE-6,PR.DS-01; DE.CM-02,N81-R03 (PCI DSS v4.0.1 3.2.1; 3.3.1.2; 9.5.1),Yes
+POL-04,4.6,Delete recovered data 30 days after delivery,SI-12,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)),Yes
+POL-04,4.7,SP 800-88 Rev. 2 sanitization with a certificate per device; shred background reports,MP-6,ID.AM-08,N81-R02 (Fla. Stat. 501.171(8)); N81-R04 (16 CFR 682.3); N81-BM (NIST SP 800-88 Rev. 2),Yes
+POL-04,4.8,Isolated immutable backups tested quarterly,CP-9; CP-4,PR.DS-11,N81-BM (CSF 2.0 PR.DS-11),Yes
+POL-05,4.3,"Annual training, reminders, phishing exercises, and terminal tampering training",AT-2,PR.AT-01,N81-R03 (PCI DSS v4.0.1 9.5.1.3; 12.6.1),Yes
+POL-05,4.9,Approved generative AI tools only; no customer data in unapproved tools,PL-4,GV.PO-01,N81-R01 (15 U.S.C. 45(n)),No

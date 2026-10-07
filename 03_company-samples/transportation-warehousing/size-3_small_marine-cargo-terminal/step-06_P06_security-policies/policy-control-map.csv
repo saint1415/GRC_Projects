@@ -1,0 +1,27 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.2,CySO and alternate designated in writing; reachable 24x7,PM-2,GV.RR-02,N48-49-R01 (101.620(b)(3)),No
+POL-01,4.3,Annual risk assessment as part of the Cybersecurity Assessment,RA-3; PM-9,ID.RA-01,N48-49-R01 (101.650(e)(1)),No
+POL-01,4.4,Risk acceptance authority; no acceptance of High safety or TSI risks,PM-9,GV.RM-01,N48-49-R01 (101.630),No
+POL-01,4.8,Security criteria in procurement; vendor notification of vulnerabilities and incidents,SA-4; SA-9; SR-8,GV.SC-05,N48-49-R01 (101.650(f)(1)-(2)),Yes
+POL-01,4.10,Cyber records kept at least 2 years and protected,SI-12,GV.PO-02,N48-49-R01 (101.640); 33 CFR 105.225,No
+POL-02,4.1,Unique accounts; no shared gate logins; separate credentials on IT and OT,IA-2; AC-2,PR.AA-01,N48-49-R01 (101.650(a)(6)),Yes
+POL-02,4.2,Least privilege; separate administrator accounts,AC-6,PR.AA-05,N48-49-R01 (101.650(a)(5)),Yes
+POL-02,4.3,"MFA for all identity provider users, VPN, cloud admin and remote OT access",IA-2(1); IA-2(2),PR.AA-03,N48-49-R01 (101.650(a)(4)),Yes
+POL-02,4.4,Same-day account and PACS removal at termination,PS-4; AC-2,PR.AA-05,N48-49-R01 (101.650(a)(7)),Yes
+POL-02,4.7,Change default passwords before use; minimum password strength,IA-5,PR.AA-01,N48-49-R01 (101.650(a)(2)-(3)),Yes
+POL-02,4.9,Vendor remote access per session with MFA and recording; OT remote access off by default,AC-17; MA-4,PR.AA-05,N48-49-R01 (101.650(e)(3)(v); 101.650(f)(3)),Yes
+POL-02,4.10,Physical access to OT and related IT equipment limited and logged,PE-3,PR.AA-06,N48-49-R01 (101.650(i)(1)),No
+POL-03,4.1,Cyber Incident Response Plan and ransomware runbook,IR-8; IR-4,RS.MA-01,N48-49-R01 (101.650(g)(2)),Yes
+POL-03,4.2,Report suspected incidents to the CySO within 1 hour,IR-6,RS.MA-02,N48-49-R01 (101.650(d)(1)(iv)),Yes
+POL-03,4.4,"Immediate report to the FBI, CISA and the Captain of the Port",IR-6,RS.CO-02,33 CFR 6.16-1; N48-49-R01 (101.620(b)(7)),Yes
+POL-03,4.7,Stop OT in a safe state when controller integrity is in doubt,IR-4,RS.MI-01,N48-49-R01 (101.650(g)(2)),Yes
+POL-03,4.8,Annual exercise; cyber scenario in the MTSA exercise,IR-3; IR-2,ID.IM-02,N48-49-R01 (101.635; 101.650(d)(2)),No
+POL-04,4.2,Cybersecurity planning documents handled as SSI,MP-3; AC-3,PR.DS-01,N48-49-R01 (101.630(b)),No
+POL-04,4.3,Encryption in transit; no plain FTP,SC-8; SC-28,PR.DS-02,N48-49-R01 (101.650(c)(2)),No
+POL-04,4.5,Inventory of network-connected systems with critical IT and OT designated,CM-8,ID.AM-01,N48-49-R01 (101.650(b)(3)),Yes
+POL-04,4.6,Isolated backups of critical IT and OT restore-tested quarterly,CP-9; CP-4,PR.DS-11,N48-49-R01 (101.650(g)(4)),Yes
+POL-04,4.7,Central logs accessible only to privileged users; 1-year retention,AU-9; AU-11,PR.PS-04,N48-49-R01 (101.650(c)(1)),Yes
+POL-05,4.3,Cyber training within 5 days of access and annually; OT module,AT-2; AT-3,PR.AT-01,N48-49-R01 (101.650(d)(1); 101.650(d)(4)),Yes
+POL-05,4.4,Untrained users accompanied or monitored,AT-2; PS-7,PR.AT-01,N48-49-R01 (101.650(d)(3)),Yes
+POL-05,4.5,Approved hardware and software only; no personal USB or laptops on OT or gate systems,CM-11; MP-7; CM-7,PR.PS-02,N48-49-R01 (101.650(b)(1); 101.650(i)(2)),Yes
+POL-05,4.9,No SSI or cargo data in public generative AI tools,PL-4,GV.PO-01,N48-49-R01 (101.650(c)(2)),No

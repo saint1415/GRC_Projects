@@ -1,0 +1,43 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,One group program aligned to CSF 2.0 with SP 800-82 Rev. 3 for OT,PM-1,GV.PO-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.B.1),No
+POL-01,4.2,Group CISO accountable; TSA Security and Cybersecurity Coordinators designated and reported,PM-2,GV.RR-02,C-TRANSPORTATION-S01 (49 CFR 1570.201); C-TRANSPORTATION-R01 (SD 1580-21-01E II.B),No
+POL-01,4.3,Annual SP 800-30 risk analysis per division with roll-up to group,RA-3; PM-9,ID.RA-01,C-TRANSPORTATION-R01 (SD 1580-21-01E II.E),No
+POL-01,4.4,Risk acceptance authority by level; safety risks rated High must be treated,PM-9,GV.RM-01,C-TRANSPORTATION-R01 (SD 1580-21-01E II.E.2),No
+POL-01,4.5,Division supplements may not weaken group policy; required for every division with OT; annual attestation,PL-1,GV.PO-02,N42-R01; N53-R02,Yes
+POL-01,4.6,Common control catalog; divisions document inheritance each year,PL-2; PM-10; CA-2,GV.RR-02,N42-R04 (52.204-21(b)(1)),Yes
+POL-01,4.7,Sanctions for policy violations,PS-8,GV.RR-04,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C),No
+POL-01,4.8,Third parties under contract with security terms; OT vendor patch timelines; MSSP does not shift responsibility,SA-9; SA-4,GV.SC-05,"C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.A.2, III.E.3)",Yes
+POL-01,4.9,Changes touching Critical Cyber Systems go to the rail change board for a CIP amendment decision,PL-2; CA-3,GV.OC-03,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E VI.B-D),Yes
+POL-01,4.10,Acquisition security gate; TSA applicability 90 days before new or modified rail operations,RA-3,GV.OC-03,C-TRANSPORTATION-S01 (49 CFR 1570.105(b)),No
+POL-01,4.11,Annual assessment of common controls and division samples; one-third of CIP measures each year,CA-2; CA-7,ID.IM-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.F.2.d),Yes
+POL-01,4.12,"Written, risk-rated, time-limited exceptions; no CIP change without amendment",PL-1,GV.PO-02,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E II.B.2),Yes
+POL-01,4.14,AI systems registered and approved before deployment,RA-3; PL-2,GV.RM-01,C-TRANSPORTATION-S08 (49 CFR 213.7),No
+POL-02,4.1,Unique accounts; shared accounts only where critical and vaulted in PAM,AC-2; IA-2,PR.AA-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.4),Yes
+POL-02,4.2,"Least privilege and separation of duties, with documented compensating controls",AC-6; AC-5,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),No
+POL-02,4.3,"MFA for remote, privileged, email, cloud, FCI, and personal information systems; OT compensating controls in the CIP",IA-2(1); IA-2(2),PR.AA-03,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.2); N42-R04 (52.204-21(b)(1)(vi)),Yes
+POL-02,4.4,Memorized secrets per SP 800-63; reset when a shared-secret holder leaves,IA-5,PR.AA-01,"C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.1, III.C.4.b)",Yes
+POL-02,4.5,Disable within 4 hours of termination; quarterly certification of privileged and OT access,AC-2; AC-2(3); PS-4,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),Yes
+POL-02,4.6,Directory trusts documented and reviewed annually,AC-3; CA-3,PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.5),Yes
+POL-02,4.7,Vendor access to OT only through PAM; no always-on access or vendor modems,AC-17; MA-4,PR.IR-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C); C-TRANSPORTATION-S06 (49 CFR 172.802(a)(2)),Yes
+POL-02,4.8,Privileged administration through PAM with separate accounts,AC-6(5),PR.AA-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.3),Yes
+POL-02,4.9,"Physical access to NOCs, data centers, and OT rooms; locked, sealed PTC housings",PE-3,PR.AA-06,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.C.6),No
+POL-03,4.1,Report suspected incidents to the SOC within 1 hour,IR-6,RS.MA-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.C),Yes
+POL-03,4.2,One group severity scale and playbooks,IR-4; IR-8,RS.MA-01,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D),Yes
+POL-03,4.3,NOC may order manual dispatch and IT/OT isolation at once,IR-4; SC-7,RS.MI-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.4; SD 1580-21-01E II.D.1.c),Yes
+POL-03,4.4,CISA report within 24 hours (72-hour outer limit); TSOC within 24 hours for any railroad,IR-6,RS.CO-02,"C-TRANSPORTATION-R01 (SD 1580-21-01E II.C.2, II.C.5); C-TRANSPORTATION-S01 (49 CFR 1570.203)",Yes
+POL-03,4.5,Group notification matrix maintained quarterly; counsel approves notices,IR-6; IR-8,RS.CO-02,C-TRANSPORTATION-S07; C-TRANSPORTATION-S10,Yes
+POL-03,4.6,Severity 1 to the disclosure committee within 24 hours; Form 8-K within 4 business days of materiality,IR-6,RS.CO-03,C-TRANSPORTATION-S10 (Form 8-K Item 1.05),Yes
+POL-03,4.7,Ransom payments need board committee approval and an OFAC check,IR-4,RS.MA-01,C-TRANSPORTATION-S10,No
+POL-03,4.8,Annual cross-division exercise; each Covered Railroad plan exercised annually on two objectives,IR-3,ID.IM-02,C-TRANSPORTATION-R01 (SD 1580-21-01E II.D.3),Yes
+POL-03,4.10,Lessons learned within 30 days; CIP amendment if needed,IR-4,ID.IM-02,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E VI.B),No
+POL-03,4.11,Report unauthorized SSI release to TSA,IR-6,RS.CO-02,C-TRANSPORTATION-S03 (49 CFR 1520.9(c)),Yes
+POL-04,4.2,"SSI only to covered persons with need to know, in the restricted library",AC-3; AC-21; MP-3,PR.DS-01,C-TRANSPORTATION-S03 (49 CFR 1520.9(a)); C-TRANSPORTATION-R01 (SD 1580/82-2022-01E IV.B),Yes
+POL-04,4.3,Screen documents for SSI before sharing outside the group,AC-21,PR.DS-01,C-TRANSPORTATION-S03 (49 CFR 1520.9(a)),Yes
+POL-04,4.4,Restricted information encrypted and accessed by named roles,SC-8; SC-28,PR.DS-01; PR.DS-02,C-TRANSPORTATION-S07 (Fla. Stat. 501.171(2)),No
+POL-04,4.5,FCI in the workspace and ERP; media sanitized with a record,MP-6,PR.DS-01,N42-R04 (52.204-21(b)(1)(vii)),No
+POL-04,4.6,Transfer platforms delete personal information within 7 days of delivery,SI-12,PR.DS-10,C-TRANSPORTATION-S07 (Fla. Stat. 501.171(8)),No
+POL-05,3.2,"Operations devices for operational use only; no email, browsing, or removable media",CM-11,PR.PS-05,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.1.d),No
+POL-05,3.4,Report phishing; never approve unexpected MFA prompts,AT-2(3); SI-8,PR.AT-01,C-TRANSPORTATION-R01 (SD 1580/82-2022-01E III.D.1.a),No
+POL-05,3.5,Call-back verification for any payment instruction change,AT-2(3),PR.AT-01,N42-R01; N53-R02,No
+POL-05,3.6,"Only approved generative AI tools; no SSI, FCI, or Restricted data in unapproved tools",PL-4,GV.PO-01,C-TRANSPORTATION-S03 (49 CFR 1520.9(a)),No
+POL-05,3.7,"Report suspicious items, devices, or sessions at once",AT-2,PR.AT-01,C-TRANSPORTATION-S09 (49 CFR 1580.115),Yes

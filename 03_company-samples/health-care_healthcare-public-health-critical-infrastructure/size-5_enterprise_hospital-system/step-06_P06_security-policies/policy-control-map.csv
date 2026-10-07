@@ -1,0 +1,58 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,The system must maintain an information security program aligned to NIST CSF 2.0 that meets the HIPAA Security Rule...,PM-1; PL-2,GV.OC-03; GV.PO-01; ID.AM-03,C-HPH-R01 (164.308(a)(1)),No
+POL-01,4.2,The Director of Security Operations must be designated in writing as the HIPAA Security Officer and the Chief...,PM-2,GV.RR-01; GV.RR-02,C-HPH-R01 (164.308(a)(2)); HIPAA Privacy Rule 45 CFR 164.105(b),No
+POL-01,4.3,"An enterprise risk analysis must be performed at least annually and after major changes or acquisitions, using NIST...",RA-3; PM-9,GV.RM-06; GV.RM-07; GV.OC-02,C-HPH-R01 (164.308(a)(1)(ii)(A)-(B)); Promoting Interoperability 42 CFR 495.24,Yes
+POL-01,4.4,"Risk may be accepted only at the authority levels in STD-01.1: risk owner (Low), CISO with the accountable executive...",PM-9; RA-7,GV.OC-02; GV.RM-01; GV.OC-05,C-HPH-R01 (164.308(a)(1)(ii)(B)),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they...,PL-1; PM-1,GV.OC-03; GV.PO-01,C-HPH-R01 (164.316(b)(2)(iii)),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.OC-03; GV.PO-01; ID.IM-01,C-HPH-R01 (164.306(d)(3)),No
+POL-01,4.7,Workforce members who violate security or privacy policies must be sanctioned under PRC-01.1 in proportion to intent...,PS-8,,C-HPH-R01 (164.308(a)(1)(ii)(C)),No
+POL-01,4.8,"No vendor may create, receive, maintain, or transmit PHI for the system until a business associate agreement is...",SA-9; SR-6,GV.OC-05; GV.SC-04; GV.OC-02,C-HPH-R01 (164.308(b)(1)); C-HPH-R02 (164.410),Yes
+POL-01,4.9,Security controls for tier-1 systems and common control providers must be assessed at least annually by an assessor...,CA-2; CA-2(1),ID.RA-01; ID.IM-01,C-HPH-R01 (164.308(a)(8)),No
+POL-01,4.10,"Every acquisition must include security due diligence before closing and an integration plan that brings identity,...",RA-3; SA-9,GV.RM-06; GV.RM-07; GV.OC-05,C-HPH-R01 (164.308(a)(1)(ii)(A)),Yes
+POL-01,4.11,"Security documentation, including risk analyses, assessments, and required actions, must be retained for at least 6...",SI-12,ID.AM-07; ID.AM-08,C-HPH-R01 (164.316(b)(2)(i)),No
+POL-01,4.12,"The CISO must report cybersecurity risk to the board risk committee at least quarterly, including Very High and High...",PM-9,GV.OC-02; GV.RM-01,SEC 17 CFR 229.106(c),No
+POL-01,4.13,Cyberattacks and prolonged IT outages must be scored in the facility-based and community-based risk assessments of...,CP-2; IR-8,ID.IM-01; ID.IM-02,C-HPH-R07 (482.15(a)(1)-(2); 482.15(f)(4)),Yes
+POL-02,4.1,Every user and service must have a unique identity. Shared accounts are prohibited for workforce and affiliate...,IA-2; AC-2; IA-5,PR.AA-01; PR.AA-03; PR.AA-05,C-HPH-R01 (164.312(a)(2)(i); 164.308(a)(5)(ii)(D)),Yes
+POL-02,4.2,"Access must be role-based, least-privilege, and approved by the manager or system owner before it is granted.",AC-2; AC-3; AC-6,PR.AA-01; PR.AA-05; PR.DS-10,C-HPH-R01 (164.308(a)(4)(ii)(B)),Yes
+POL-02,4.3,"Duties that could let one person build and migrate clinical content (order sets, drug database, decision support...",AC-5,PR.AA-05,C-HPH-R01 (164.308(a)(4)); CMS CoP 42 CFR 482.24(b),Yes
+POL-02,4.4,"MFA is required for all remote access, all cloud and administrative access, and all affiliate access; on site, badge...",IA-2(1); IA-2(2); IA-8,PR.AA-01; PR.AA-03,C-HPH-R01 (164.312(d)),Yes
+POL-02,4.5,Access must be disabled the same business day as a termination and immediately for involuntary terminations. Agency...,PS-4; PS-7; AC-2,GV.RR-04; DE.CM-06; PR.AA-01,C-HPH-R01 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.6,"Workforce accounts inactive for 60 days, and affiliate accounts inactive for 90 days, must be disabled automatically.",AC-2(3),PR.AA-01; PR.AA-05,C-HPH-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.7,Managers must certify their staff's access every quarter; SL-1 practice administrators must attest to their users...,AC-2,PR.AA-01; PR.AA-05,C-HPH-R01 (164.308(a)(4)(ii)(C)),Yes
+POL-02,4.8,"Privileged access must be granted just in time through PAM, recorded, and limited to the approved window.",AC-6; AC-6(9),PR.AA-05,C-HPH-R01 (164.308(a)(4)(ii)(B)),Yes
+POL-02,4.9,"Vendor and remote maintenance access, including medical device and analyzer vendors, must go through the zero-trust...",AC-17; MA-4,PR.AA-05,C-HPH-R01 (164.312(e)(1); 164.308(b)(1)),Yes
+POL-02,4.10,"Default passwords must be changed before any device, gateway, or system is connected to a hospital network, and...",IA-5,PR.AA-01; PR.AA-03,C-HPH-R01 (164.308(a)(5)(ii)(D)),Yes
+POL-02,4.11,"Two sealed break-glass accounts per critical platform must exist, be tested quarterly, and have every use reviewed...",AC-2,PR.AA-01; PR.AA-05,C-HPH-R01 (164.312(a)(2)(ii)),Yes
+POL-02,4.12,"Records with extra legal protection, including Part 2 records from the H-03 program, must carry a sensitive-record...",AC-3; SC-4,PR.AA-05; PR.DS-10; PR.DS-01,C-HPH-R06 (2.16(a)(1)(ii)),Yes
+POL-03,4.1,"Every workforce member must report a suspected security incident, privacy incident, or lost device to the service...",IR-6,RS.MA-01; RS.MA-02,C-HPH-R01 (164.308(a)(6)(ii)),Yes
+POL-03,4.2,"The SOC must classify every incident under STD-03.1; a severity-1 declaration must activate system incident command,...",IR-4; IR-8,ID.IM-01; ID.IM-02,C-HPH-R01 (164.308(a)(6)); C-HPH-R07 (482.15(a)(2)),Yes
+POL-03,4.3,"The time of discovery must be recorded for every incident that may involve PHI, using the first day the incident was...",IR-5; IR-6,DE.AE-03; RS.MA-02; RS.MA-01,C-HPH-R02 (164.404(a)(2)),Yes
+POL-03,4.4,"The CISO must brief the General Counsel within 24 hours of any severity-1 declaration, and the disclosure committee...",IR-6; IR-8,RS.MA-01; RS.MA-02; ID.IM-01,SEC Form 8-K Item 1.05,Yes
+POL-03,4.5,"The Privacy Officer must complete and document the four-factor breach risk assessment, check for Part 2 records, and...",IR-6,RS.MA-01; RS.MA-02,C-HPH-R02 (164.402; 164.404-164.410); C-HPH-R06 (2.16(b)),Yes
+POL-03,4.6,Ambulance diversion because of an IT outage may be declared only by the hospital president (or delegate) with the ED...,CP-2; IR-4,ID.IM-01; ID.IM-02,EMTALA 42 CFR 489.24(a)-(b); C-HPH-R07 (482.15(a)(2)),Yes
+POL-03,4.7,"No ransom may be paid without approval by the CEO, the General Counsel, and the insurer, and an OFAC sanctions...",IR-4,ID.IM-01; ID.IM-02,OFAC advisory (2021-09-21),Yes
+POL-03,4.8,Tier-1 systems must have contingency plans that meet the BIA recovery objectives; the ECIS must be recoverable from...,CP-2; CP-4; CP-10,ID.IM-01; ID.IM-02; RC.RP-03,C-HPH-R01 (164.308(a)(7)(ii)(B); 164.308(a)(7)(ii)(D)),Yes
+POL-03,4.9,"Backups of tier-1 systems must be kept in an immutable vault in a separate account, restore-tested monthly by sample...",CP-9,PR.DS-01; PR.DS-10,C-HPH-R01 (164.308(a)(7)(ii)(A)),Yes
+POL-03,4.10,"BCA downtime computers must be checked monthly at every hospital, and charge nurses, ED staff, and unit clerks must...",CP-2; AT-3,ID.IM-01; ID.IM-02; PR.AT-01,C-HPH-R01 (164.308(a)(7)(ii)(C)); C-HPH-R07 (482.15(b)(5); 482.15(d)(1)),Yes
+POL-03,4.11,"An enterprise exercise must be held each year that includes EHR downtime at two or more hospitals, diversion...",IR-3; CP-4,ID.IM-02; RC.RP-03,C-HPH-R07 (482.15(d)(2)); C-HPH-R01 (164.308(a)(7)(ii)(D)),Yes
+POL-03,4.12,A lessons-learned review must be held within 14 days of recovery from a severity-1 incident or an IT outage over 2...,IR-4,ID.IM-01; ID.IM-02,C-HPH-R07 (482.15(d)(2)(iii)); C-HPH-R01 (164.308(a)(6)(ii)),Yes
+POL-04,4.1,"All information must be classified as Restricted (PHI, Part 2 records, Social Security numbers, payment card data,...",RA-2,ID.AM-05; ID.RA-04,C-HPH-R01 (164.308(a)(1)(ii)(A)),No
+POL-04,4.2,Restricted data must be encrypted at rest and in transit. Any exception must document why encryption is not...,SC-8; SC-28; SC-13,PR.DS-02; PR.DS-01,C-HPH-R01 (164.312(a)(2)(iv); 164.312(e)(2)(ii); 164.306(d)(3)),Yes
+POL-04,4.3,Use and disclosure of PHI must be limited to the minimum necessary; identified data may be used in the analytics...,AC-6,PR.AA-05,HIPAA Privacy Rule 45 CFR 164.502(b),Yes
+POL-04,4.4,"Part 2 records must be flagged at registration and disclosed only with written consent or under a Part 2 exception,...",AC-3; AC-21,PR.AA-05; PR.DS-10,C-HPH-R06 (2.16(a)),Yes
+POL-04,4.5,"Media and equipment holding Restricted data must be sanitized under NIST SP 800-88 before reuse or disposal, with...",MP-6,,C-HPH-R01 (164.310(d)(2)(i)-(ii)),No
+POL-04,4.6,"Printed downtime reports and paper records must be kept in staff-only areas, shredded when superseded, and...",MP-4; AU-10,,CMS CoP 42 CFR 482.24(c)(1); C-HPH-R07 (482.15(b)(5)),Yes
+POL-04,4.7,"Clinical results and orders must be reconciled across interfaces, and changes to clinical content must go only...",SI-7; SI-10; CM-3,ID.RA-09; PR.DS-01; PR.DS-10,C-HPH-R01 (164.312(c)(1)); CLIA 42 CFR 493.1291(a); CMS CoP 42 CFR 482.24(b),Yes
+POL-04,4.8,Restricted data must not be entered into AI tools unless the AI governance committee has approved the use and a BAA...,SA-9; AC-20,GV.OC-05; GV.SC-04; ID.AM-02,C-HPH-R01 (164.308(b)(1)),Yes
+POL-04,4.9,"Medical records must be retained for at least 5 years, or longer where state law requires; security documentation...",SI-12,ID.AM-07; ID.AM-08,CMS CoP 42 CFR 482.24(b)(1); C-HPH-R01 (164.316(b)(2)(i)),No
+POL-04,4.10,"Every recurring extract of Restricted data must be registered with its purpose, recipient, and retention.",CM-12,ID.AM-07,C-HPH-R01 (164.308(a)(1)(ii)(A)),No
+POL-05,4.1,"Information and systems may be used only for authorized purposes. Looking up one's own record, or the record of a...",PL-4,,C-HPH-R01 (164.308(a)(5)); HIPAA Privacy Rule 45 CFR 164.502(b),No
+POL-05,4.2,"Every user must complete security and privacy training before first access and annually, and accept this policy each...",AT-2; PL-4,PR.AT-01,C-HPH-R01 (164.308(a)(5)(i)),Yes
+POL-05,4.3,"Users must report suspicious email, lost devices, and suspected incidents immediately.",IR-6; AT-2,RS.MA-01; RS.MA-02; PR.AT-01,C-HPH-R01 (164.308(a)(6)(ii)),Yes
+POL-05,4.4,Users must lock or tap out of a workstation whenever they step away.,AC-11,,C-HPH-R01 (164.310(b)),No
+POL-05,4.5,Personal devices may reach system data only through the EHR mobile app or the zero-trust gateway; PHI must not be...,AC-19; AC-20,PR.AA-05; ID.AM-02; ID.AM-04,C-HPH-R01 (164.310(b); 164.310(c)),No
+POL-05,4.6,"Only AI tools on the approved list (STD-05.3) may be used for work, and any AI feature in a vendor product must be...",SA-9; CM-7,GV.OC-05; GV.SC-04; PR.PS-01,C-HPH-R01 (164.308(b)(1)); 45 CFR 92.210,Yes
+POL-05,4.7,"Agency staff, students, and contracted clinicians follow this policy in full; their contracts require it.",PS-7; AT-2,GV.RR-04; DE.CM-06; PR.AT-01,C-HPH-R01 (164.308(a)(3)),Yes
+POL-05,4.8,"Nobody may change clinical decision support settings, including the sepsis model threshold, outside change control.",CM-3; CM-5,ID.RA-07; PR.PS-01,C-HPH-R01 (164.312(c)(1)); 45 CFR 92.210(c),Yes
+POL-05,4.9,"PHI may be sent only through approved channels: secure clinical messaging, encrypted email, or the EHR. Personal...",SC-8; AC-20,PR.DS-02; ID.AM-02; ID.AM-04,C-HPH-R01 (164.312(e)(1)),Yes
+POL-05,4.10,Remote work with PHI is allowed only from managed devices through the zero-trust gateway.,AC-17,PR.AA-05,C-HPH-R01 (164.312(e)(1)),Yes

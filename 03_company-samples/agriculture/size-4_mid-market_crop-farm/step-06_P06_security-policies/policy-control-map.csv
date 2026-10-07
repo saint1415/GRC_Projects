@@ -1,0 +1,61 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Program documented and measured against the CSF 2.0 Target Profile; OT follows SP 800-82 Rev. 3,PM-1,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark); SP 800-82r3 3.3.4,No
+POL-01,4.2,Security lead and OT control owners designated in writing,PM-2,GV.RR-02,CSF 2.0 GV.RR-02 (benchmark),No
+POL-01,4.3,Annual risk assessment using SP 800-30,RA-3; PM-9,ID.RA-05,CSF 2.0 ID.RA-05 (benchmark),Yes
+POL-01,4.4,Risk acceptance authority by level; no safety-linked risk accepted above Low,PM-9,GV.RM-02,CSF 2.0 GV.RM-02 (benchmark),No
+POL-01,4.5,Quarterly reporting to the audit committee,CA-5; PM-9,GV.OV-01,CSF 2.0 GV.OV-01 (benchmark),No
+POL-01,4.6,Annual policy and standard review,PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-01,4.7,"Written, time-limited exceptions",PL-1,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-01,4.8,Sanctions applied equally regardless of visa status,PS-8,GV.RR-04,CSF 2.0 GV.RR-04 (benchmark),No
+POL-01,4.9,Supplier review and security terms before access; purchasing gate; OT and code vendor terms,SA-4; SA-9; SR-2; PM-30,GV.SC-01; GV.SC-05,CSF 2.0 GV.SC-05 (benchmark); Fla. Stat. 501.171(6),Yes
+POL-01,4.10,Annual reassessment of Tier 1 vendors,SR-6; SA-9,GV.SC-07,CSF 2.0 GV.SC-07 (benchmark),Yes
+POL-01,4.11,Annual independent control assessment,CA-2,ID.IM-01,CSF 2.0 ID.IM-01 (benchmark),No
+POL-01,4.12,Retention of security documentation,PL-1,GV.PO-02,CSF 2.0 GV.PO-02 (benchmark),No
+POL-01,4.13,AI tools approved through AI governance; no unreviewed automatic AI action,PM-9; SA-9,GV.RM-01,CSF 2.0 GV.RM-01 (benchmark),Yes
+POL-01,4.14,Requirements register reviewed each July,PM-28,GV.OC-03,CSF 2.0 GV.OC-03 (benchmark),No
+POL-02,4.1,Unique accounts; documented OT exceptions with compensating controls,IA-2; AC-2,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark); 21 CFR 112.161(a)(4); 20 CFR 655.122(j)(1),Yes
+POL-02,4.2,Named crew lead accounts with device PINs on managed tablets,IA-2; AC-19,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark); 21 CFR 112.161(a)(4),Yes
+POL-02,4.3,Role-based least privilege; separation of duties for settlements,AC-2; AC-3; AC-5; AC-6,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark); 7 CFR 46.32(b),Yes
+POL-02,4.4,MFA for all; phishing-resistant MFA for administrators; grower MFA for settlement functions,IA-2(1); IA-2(2); IA-2(8); IA-8,PR.AA-03,CSF 2.0 PR.AA-03 (benchmark),Yes
+POL-02,4.5,"Same-day IdP disable; local, OT, badge, and key removal within 24 hours; season-end sweep",PS-4; AC-2; AC-2(3),PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,4.6,Remove prior-role access within 5 business days of transfer,PS-5; AC-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,4.7,"Quarterly access reviews; quarterly privileged, export, and settlement rights review",AC-2; AC-6,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,4.8,Just-in-time privileged access for all administrative planes; no standing vendor admin,AC-6; AC-6(2); AC-6(5),PR.AA-05,CSF 2.0 PR.AA-05 (benchmark); SP 800-82r3 6.2.1,Yes
+POL-02,4.9,"Vendor sessions brokered, approved, recorded, and ended; no vendor-installed remote tools",AC-17; MA-4,PR.AA-05; DE.CM-06,CSF 2.0 DE.CM-06 (benchmark); SP 800-82r3 6.2.10,Yes
+POL-02,4.10,Default credentials changed before connection; vaulted OT credentials,IA-5,PR.AA-01,CSF 2.0 PR.AA-01 (benchmark),Yes
+POL-02,4.11,Lockout and screen lock; staffed-room exception for HMIs,AC-7; AC-11,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-02,4.12,"Break-glass accounts per critical system, tested quarterly",AC-2,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),Yes
+POL-02,4.13,Badges for control rooms; restricted keys and locked panels at pump stations,PE-3,PR.AA-06,CSF 2.0 PR.AA-06 (benchmark); SP 800-82r3 5.2.2,Yes
+POL-02,4.14,Call-back verification and 48-hour hold for bank detail changes,IA-8,PR.AA-02,CSF 2.0 PR.AA-02 (benchmark),No
+POL-03,4.1,Runbooks for ransomware and OT integrity incidents,IR-8,RS.MA-01,CSF 2.0 RS.MA-01 (benchmark),Yes
+POL-03,4.2,"Report suspected incidents within 1 hour, including unexplained OT behavior",IR-6,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),No
+POL-03,4.3,Log incidents; record discovery and determination times,IR-5; IR-4,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark); Fla. Stat. 501.171(4)(a),Yes
+POL-03,4.4,Crisis management team within 2 hours for severity 1,IR-4,RS.MA-04,CSF 2.0 RS.MA-04 (benchmark),Yes
+POL-03,4.5,Manual operation before OT isolation; stop injection; product hold,IR-4,RS.MI-01,CSF 2.0 RS.MI-01 (benchmark); SP 800-82r3 6.4.4,Yes
+POL-03,4.6,"Breach decision with counsel, recorded in the decision log",IR-6,RS.AN-03,CSF 2.0 RS.AN-03 (benchmark); Fla. Stat. 501.171(4)(c),No
+POL-03,4.7,Meet notice deadlines in the P08 matrix with counsel confirmation,IR-6,RS.CO-02; RS.CO-03,CSF 2.0 RS.CO-02 (benchmark); Fla. Stat. 501.171(3)-(5); Retail supplier agreements (contract),No
+POL-03,4.8,Insurer hotline before engaging vendors,IR-7,RS.CO-03,Cyber insurance policy (contract),No
+POL-03,4.9,"Ransom decision: CEO, counsel, insurer, OFAC check, law enforcement report",IR-4,RS.MA-01,OFAC advisory (2021-09-21),Yes
+POL-03,4.10,"Continuity of H-2A statements, pesticide displays, and FDA record access during incidents",CP-2,RC.RP-02,CSF 2.0 RC.RP-02 (benchmark); 20 CFR 655.122(k); 40 CFR 170.311(b)(5); 21 CFR 112.166(a),Yes
+POL-03,4.11,"Annual exercise per runbook with counsel, executives, integrator, and FMIS vendor",IR-3,ID.IM-02; GV.SC-08,CSF 2.0 ID.IM-02 (benchmark),No
+POL-03,4.12,Lessons learned within 30 days,IR-4,ID.IM-03,CSF 2.0 ID.IM-03 (benchmark),Yes
+POL-04,4.1,Five-level classification including regulated records,RA-2,ID.AM-07,CSF 2.0 ID.AM-07 (benchmark),No
+POL-04,4.2,Encrypt Restricted data at rest and in transit,SC-28; SC-8,PR.DS-01; PR.DS-02,CSF 2.0 PR.DS-01 (benchmark); Fla. Stat. 501.171(2),No
+POL-04,4.3,Company-managed keys; separate backup keys,SC-12,PR.DS-01,CSF 2.0 PR.DS-01 (benchmark),No
+POL-04,4.4,Data inventory reconciled quarterly,CM-8,ID.AM-07,CSF 2.0 ID.AM-07 (benchmark); Fla. Stat. 501.171(2),Yes
+POL-04,4.5,Restricted data only in approved systems; exports deleted within 90 days,AC-3,PR.DS-01,CSF 2.0 PR.DS-01 (benchmark); 20 CFR 655.122(j)(2),No
+POL-04,4.6,Biometric templates deleted within 30 days; telematics history 13 months,SI-12,ID.AM-08,CSF 2.0 ID.AM-08 (benchmark); Fla. Stat. 501.171(2),No
+POL-04,4.7,Retention schedule for regulated records; monthly export; 24-hour retrieval drill,SI-12; CP-9,PR.DS-11,CSF 2.0 PR.DS-11 (benchmark); 21 CFR 112.164; 21 CFR 112.166(a); 40 CFR 170.311(b)(6); 20 CFR 655.122(j)(4); 21 CFR 1.1455(d) (FTR),Yes
+POL-04,4.8,"Isolated, write-once backups restore-tested quarterly; offline versioned OT program copies",CP-9; CP-4,PR.DS-11,CSF 2.0 PR.DS-11 (benchmark); SP 800-82r3 3.3.9,Yes
+POL-04,4.9,"Certified wiping or destruction, including returned OT devices and time clocks",MP-6,ID.AM-08,CSF 2.0 ID.AM-08 (benchmark); Fla. Stat. 501.171(8),No
+POL-04,4.10,Agricultural data shared only under no-secondary-use and deletion terms,SA-9,GV.SC-05,CSF 2.0 GV.SC-05 (benchmark),Yes
+POL-05,4.1,Business use; housing Wi-Fi separate,PL-4,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-05,4.2,Annual acknowledgment in English or Spanish,PL-4(1),GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-05,4.3,Annual training with insider threat content; pre-season field segment; role-based training,AT-2; AT-2(2); AT-3,PR.AT-01; PR.AT-02,CSF 2.0 PR.AT-01 (benchmark); SP 800-82r3 3.3.5,Yes
+POL-05,4.4,Screen lock; own sign-in on crew tablets,AC-11; AC-19,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark); 20 CFR 655.122(j)(1),No
+POL-05,4.5,No unapproved software or USB media on OT and office systems,CM-11,PR.PS-05,CSF 2.0 PR.PS-05 (benchmark),No
+POL-05,4.6,Personal devices only through managed apps; contractors on managed devices,AC-19; AC-20,PR.AA-05,CSF 2.0 PR.AA-05 (benchmark),No
+POL-05,4.7,Confirm payment instruction changes by call-back,AT-2,PR.AT-01,CSF 2.0 PR.AT-01 (benchmark),Yes
+POL-05,4.8,Report unexplained OT behavior and lost devices immediately,IR-6,RS.MA-02,CSF 2.0 RS.MA-02 (benchmark),No
+POL-05,4.9,Drone imagery for crop analysis only; no monitoring of workers; 3-season retention,PL-4; SI-12,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No
+POL-05,4.10,Approved AI tools only; AI outputs checked by a person unless P10 approves automatic action,PL-4,GV.PO-01,CSF 2.0 GV.PO-01 (benchmark),No

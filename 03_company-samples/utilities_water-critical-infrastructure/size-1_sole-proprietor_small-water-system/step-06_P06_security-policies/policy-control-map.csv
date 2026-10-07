@@ -1,0 +1,41 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,Maintain a documented security program,PM-1,GV.PO-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,4.2,Owner designated security lead for panel and business systems,PM-2,GV.RR-02,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,4.3,Annual risk assessment covering the 300i-2(a)(1)(A) elements,RA-3; PM-9,ID.RA-01,C-WATER-R01 (300i-2(a)(1)(A); voluntary benchmark),Yes
+POL-01,4.4,Risk decision rules; disinfection risks never accepted at High,PM-9,GV.RM-01,40 CFR 141.404(c),No
+POL-01,4.5,Annual evaluation with an outside reviewer every second year,CA-2,ID.IM-02,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,4.6,Annual policy review,PL-1,GV.PO-02,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,5.1,Sanctions for any future workforce,PS-8,GV.RR-04,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,5.2,Contractor sanctions; loss of remote access after an unapproved connection,SA-9,GV.SC-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,6.1,Portal is the only allowed remote path,AC-17,PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark); 40 CFR 141.404(c),Yes
+POL-01,6.2,"Integrator account disabled except approved, logged sessions",MA-4; AC-17; AC-2,PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark); 40 CFR 141.404(c),Yes
+POL-01,6.3,New program copy and settings check after every panel change,CM-6; CP-9,PR.PS-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),Yes
+POL-01,6.4,Security terms in agreements with anyone who can reach the panel,SA-4; SA-9,GV.SC-05,C-WATER-R01 (300i-2(a)(1)(A)(vi); voluntary benchmark),No
+POL-01,6.5,Vendor list and annual portal SOC 2 review,SA-9,GV.SC-07,Fla. Stat. 501.171(6),No
+POL-01,7.1,One account per person; no shared credentials,IA-2; AC-2,PR.AA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,7.2,"App-based MFA on portal, billing, and email",IA-2(1),PR.AA-03,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark); Fla. Stat. 501.171(2),Yes
+POL-01,7.3,Unique passphrases; change defaults; no saved portal password,IA-5,PR.AA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),Yes
+POL-01,7.4,Quarterly account review,AC-2,PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,7.5,Standard daily laptop account,AC-6(2),PR.AA-05,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,7.6,Sealed emergency access envelope,AC-2; CP-2,PR.AA-05,40 CFR 141.404(c),No
+POL-01,7.7,Monthly portal sign-in and setpoint review,AU-6,DE.AE-02,40 CFR 141.405(a)(1),Yes
+POL-01,8.1,Three-level classification,RA-2,ID.AM-07,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,8.3,Full-disk encryption on every device,SC-28,PR.DS-01,Fla. Stat. 501.171(2),No
+POL-01,8.4,Two owner-held copies of the PLC program and HMI project,CP-9,PR.DS-11,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark); 40 CFR 141.404(c),Yes
+POL-01,8.5,Compliance record retention periods; spreadsheet in the file account,SI-12; CP-9,ID.AM-08,40 CFR 141.33; 141.405(b)(5),Yes
+POL-01,8.6,Shredding; device wipe or certified destruction with a record,MP-6,ID.AM-08,Fla. Stat. 501.171(8),No
+POL-01,8.7,Delete exports; monthly printed contact list in the binder,SC-28; CP-9,PR.DS-11,40 CFR 141.202(c),No
+POL-01,9.2,Official software sources; updates and antivirus on,SI-2; SI-3,PR.PS-02,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,9.3,Quarterly firmware and advisory check; component inventory,SI-2; CM-8,ID.AM-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,9.4,Router outbound only; remote administration off,CM-6; SC-7,PR.IR-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,9.5,AI tools only after P10 assessment; notices from agency templates,PL-4; SA-9,GV.PO-01,40 CFR 141.205(a),No
+POL-01,9.6,Annual training; relief operator briefing,AT-2,PR.AT-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,10.1,Incident runbook with printed contacts,IR-8,RS.MA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,10.2,Same-day incident log with discovery time,IR-5; IR-6,RS.MA-02,40 CFR 141.405(a)(1),Yes
+POL-01,10.3,Treat the water first: hand feed and 4-hour grab samples,IR-4; CP-2,RS.MA-01,40 CFR 141.403(b)(3)(i)(B); 141.404(c),No
+POL-01,10.4,Primacy agency consultation and notice deadlines,IR-6,RS.CO-02,40 CFR 141.202(b); 141.203(b); 141.405(a)(1),Yes
+POL-01,10.5,No ransom without legal advice and an OFAC check,IR-4,RS.MA-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,10.6,Annual walkthrough with the relief operator; lessons learned,IR-3,ID.IM-02,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No
+POL-01,11.2,Manual-operation sheet in the well house,CP-2,PR.IR-03,40 CFR 141.404(c),No
+POL-01,11.3,Relief agreement covers emergencies; annual hand-operation drill,CP-2,RC.RP-01,40 CFR 141.404(c),No
+POL-01,11.4,Written PLC restore steps,CP-10,RC.RP-01,C-WATER-R01 (300i-2(a)(1)(A)(ii); voluntary benchmark),No

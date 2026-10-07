@@ -1,0 +1,26 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+Both,CC1.1; CC2.2,"Code of conduct, agent agreement, and policy attestations",Learning system; agent services system,Chief Human Resources Officer,Annual and at hire or onboarding,25 new hires and 25 new agents; attestation report,P06,Collecting
+Both,CC1.2,"Board risk committee, audit committee, and Title and Escrow board of managers minutes",Board portal,General Counsel,Quarterly; annual for the board of managers,All meetings in the period,P01 section 8,Collecting
+Both,CC3.2; CC3.3; CC3.4,"Enterprise risk register and quarterly updates, including fraud risks",GRC platform,Chief Risk Officer,Annual plus quarterly,All updates,P01,Collecting
+Both,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual plus monthly POA&M,Report plus 3 monthly POA&M reviews,P07,Collecting
+Both,CC6.1; CC6.2; CC6.3,"Workforce provisioning, termination, and quarterly certification records",Identity governance,Director of Identity and Access Management,Per event; quarterly,25 new accounts; 25 terminations; all certifications,P07 AC-2 and PS-4 samples,Collecting
+Both,CC6.1,"MFA, PAM, and secrets vault configuration",Identity platform; PAM; secrets vault,Director of Identity and Access Management,Configuration plus quarterly check,Configuration once; 25 privileged sessions,P02 IA-2(1); P07 IA-5,Collecting
+Both,CC6.6; CC6.7,"WAF, network policy, and TLS scan results",Landing zone; scanner,Director of Cloud Platform Engineering,Quarterly,All quarterly scans,P04,Collecting
+Both,CC7.1,Vulnerability scan and remediation reports,Scanner; ticketing,Director of Security Operations,Continuous; monthly report,25 findings traced to closure,P07 RA-5,Collecting
+Both,CC7.2; CC7.3; CC7.4,SOC case records and incident reports,SIEM; case system,Director of Security Operations,Per event,25 cases; all severity-1 incidents,P07 IR-4; P08,Collecting
+Both,CC9.2,Vendor register and SOC report reviews for subservice organizations,Vendor register,Director of Third-Party Risk Management,Annual per tier-1 vendor,All tier-1 vendors for the line,P07 SA-9,Collecting
+Both,CC6.4,Cloud provider and colocation SOC 2 reports with complementary user entity control mapping,Vendor register,Director of Third-Party Risk Management,Annual,All reports,P04 section 3,Ready
+Both,CC5.1; CC5.3,"SSP, control map, and policy hierarchy",GRC platform,CISO,Annual,Current versions,P02; P04; P06,Ready
+SL-1,CC8.1,TMCC change records with two approvals and pipeline logs,Change system; CI/CD,Director of Closing Platform Engineering,Per change,40 changes including emergency changes,P07 CM-3,Collecting
+SL-1,CC6.2; CC6.3,"External Hub account creation, inactivity job, and client administrator attestations",Hub directory,Director of Closing Platform Engineering,Per event; quarterly,25 new external accounts; all attestations,P07 AC-2,Not started
+SL-1,PI1.2; PI1.3,Payee verification results and independent callback records,Disbursement Hub; verification provider,"President, Title and Escrow",Per disbursement,60 disbursements across the period,P07 SI-7,Collecting
+SL-1,PI1.3,Dual approval and signed approval records,Disbursement Hub,"Vice President, Escrow Accounting",Per disbursement,60 disbursements (same sample),P07 AC-5; AU-10,Collecting
+SL-1,PI1.4,Payment file integrity checks and daily bank reconciliations,Disbursement Hub; escrow accounting,"Vice President, Escrow Accounting",Daily,25 days,P02 SI-7(1),Ready
+SL-1,A1.2; A1.3; CC7.5,DR test report and retest for the Hub and Disbursement Hub,DR records,Director of Closing Platform Engineering,Annual plus retest,Both tests,P05; P07 CP-10,Not started
+SL-1,C1.1; C1.2,Hub document deletion job reports,Hub,Director of Closing Platform Engineering,Daily job; monthly report,3 months,P02 SI-12,Ready
+SL-2,CC6.2; CC6.3,SYS-13 user provisioning and quarterly certification records,SYS-13; identity governance,"President, Relocation",Per event; quarterly,25 new users; all certifications,None (new),Not started
+SL-2,CC7.2,SYS-13 audit events in the SIEM,SIEM,Director of Security Operations,Continuous,Connector configuration; 5 weeks of review,None (new),Not started
+SL-2,CC2.3; CC3.1,SL-2 system description and client security addendum,Contract repository,"President, Relocation",Annual,Current versions; renewed agreements,None (new),Not started
+SL-2,CC9.2; P6.4; P6.5,Moving and household goods partner contracts with security and notice terms,Contract repository,Director of Third-Party Risk Management,At renewal,All 12 partners with personal data,None (new),Not started
+SL-2,P3.2; P4.2; P6.2,"Electronic consent records, retention settings, and disclosure log",SYS-13,Chief Privacy Officer,Per event,25 enrollments; 3 closed programs,None (new),Not started
+SL-2,A1.2,Relocation platform vendor SOC 2 report and backup attestation,Vendor register,Director of Third-Party Risk Management,Annual,Current report,None,Ready

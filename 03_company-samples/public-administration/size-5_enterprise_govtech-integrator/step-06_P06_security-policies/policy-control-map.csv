@@ -1,0 +1,53 @@
+policy_id,statement_id,statement_summary,sp800_53_controls,csf2_subcategories,regulatory_driver,assessed_in_P07
+POL-01,4.1,The company must maintain an information security program aligned to NIST CSF 2.0 that meets the SP 800-53...,PM-1; PL-2,GV.PO-01,Contract (SP 800-53 Moderate); N92-R02 (Security Addendum sec. 3.01),No
+POL-01,4.2,"The CISO must be designated in writing as program owner, and the Director of Regulated Data Compliance as the CJIS...",PM-2,GV.RR-02,N92-R03 (164.308(a)(2)); N92-R02 (CJISSECPOL v6.1 PM-2),No
+POL-01,4.3,"An enterprise risk assessment must be performed at least annually and after major changes, acquisitions, or new...",RA-3; PM-9,GV.RM-01,N92-R02 (CJISSECPOL v6.1 RA-3); N92-R03 (164.308(a)(1)(ii)(A)); Contract (SP 800-53 Moderate),Yes
+POL-01,4.4,"Risk may be accepted only at the levels in STD-01.1: risk owner (Low), CISO with the segment president (Moderate),...",PM-9; RA-7,GV.RM-06,N92-R01 (Pub. 1075 Exhibit 7); N92-R02 (Security Addendum),No
+POL-01,4.5,Policies must be reviewed at least annually; standards and procedures at least annually or when the controls they...,PL-1,GV.PO-02,Contract (SP 800-53 Moderate),No
+POL-01,4.6,Any deviation from a policy or standard must be approved through the exception process (section 7) before it takes...,PL-1; CA-5,GV.PO-02,Contract (SP 800-53 Moderate),No
+POL-01,4.7,Workforce members who violate security or privacy policies must be sanctioned under PRC-01.1 in proportion to...,PS-8,GV.RR-04,N92-R02 (CJISSECPOL v6.1 PS-8); N92-R01 (Pub. 1075 Exhibit 7),No
+POL-01,4.8,No vendor or subcontractor may receive agency data until it has been tiered and assessed under STD-01.3 and its...,SA-9; SR-6; PS-7,GV.SC-05,N92-R01 (Pub. 1075 Exhibit 7 I(8)-(9)); N92-R02 (Security Addendum); N92-R03 (164.308(b)(2)),Yes
+POL-01,4.9,Tier-1 systems and common control providers must be assessed at least annually by an assessor independent of their...,CA-2; CA-2(1),ID.IM-01,Contract (SP 800-53 Moderate); 17 CFR 229.106(b)(1)(ii),Yes
+POL-01,4.10,Every acquisition must include security due diligence before closing and a funded integration plan. Acquired...,RA-3; SA-9,GV.OC-01,N92-R02 (Security Addendum); Contract (SP 800-53 Moderate),Yes
+POL-01,4.11,"Security documentation, including risk assessments, assessments, incident records, and audit logs of FTI systems,...",SI-12; AU-11,GV.PO-02,N92-R01 (Pub. 1075 sec. 4 AU-11); N92-R03 (164.316(b)(2)(i)),Yes
+POL-01,4.12,"The CISO must report cyber risk to the board risk committee at least quarterly, including Very High and High...",PM-9,GV.OV-01,17 CFR 229.106(c),No
+POL-01,4.13,"All work on agency data, including support and administration, must be performed in the United States by staff and...",SA-9(5); SA-9,GV.SC-05,N92-R01 (Pub. 1075 sec. 3.3.1(b)); N92-R02 (CJISSECPOL v6.1 SA-9),Yes
+POL-02,4.1,"Every user must have a unique identifier; shared and generic accounts are prohibited, including for agency users.",IA-4; AC-2,PR.AA-01,N92-R02 (CJISSECPOL v6.1 IA-4),Yes
+POL-02,4.2,Access must be granted through role templates approved by the system owner and limited to what the role needs;...,AC-6; AC-2,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-6); N92-R03 (164.308(a)(4)(ii)(B)),Yes
+POL-02,4.3,All workforce users must use MFA; privileged users must use phishing-resistant security keys. Agency users must...,IA-2(1); IA-2(2); IA-8,PR.AA-03,N92-R02 (CJISSECPOL v6.1 IA-2(1); IA-2(2)); N92-R01 (Pub. 1075 sec. 4 IA-2),Yes
+POL-02,4.4,Accounts must lock after 5 consecutive invalid attempts within 15 minutes and stay locked until an administrator...,AC-7,PR.AA-03,N92-R02 (CJISSECPOL v6.1 AC-7),Yes
+POL-02,4.5,Access must be disabled the same business day as termination. Subcontractors must report terminations within 1...,PS-4; PS-7; AC-2,PR.AA-01,N92-R02 (CJISSECPOL v6.1 PS-4; PS-7); N92-R03 (164.308(a)(3)(ii)(C)),Yes
+POL-02,4.6,System owners must certify workforce access quarterly and privileged access monthly.,AC-2,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-2),Yes
+POL-02,4.7,"Remote administrative access must go through the zero-trust access broker and PAM from company-managed devices,...",AC-17,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-17),Yes
+POL-02,4.8,Service credentials must be stored in the secrets manager; default vendor passwords must be changed before a...,IA-5,PR.AA-01,N92-R02 (CJISSECPOL v6.1 IA-5),Yes
+POL-02,4.9,"Break-glass accounts must be sealed, monitored, and tested quarterly.",AC-2,PR.AA-05,Contract (SP 800-53 Moderate),Yes
+POL-02,4.10,"No one may access CJI until a fingerprint-based check is complete, the CJIS Security Addendum certification page...",PS-3; PS-6; AT-2,GV.RR-04,"N92-R02 (CJISSECPOL v6.1 PS-3; Security Addendum sec. 2.01); N92-R01 (Pub. 1075 Exhibit 7 I(2), II(1)-(4))",Yes
+POL-02,4.11,"Support access to CJI, FTI, and ePHI tenants must be scoped to one tenant, linked to a ticket, and granted just in...",AC-3; AC-6,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-3); N92-R01 (Pub. 1075 sec. 4 AC-6),Yes
+POL-03,4.1,"The company must maintain an incident response plan and runbooks for its most likely severe incidents, starting...",IR-8,RS.MA-01,N92-R02 (CJISSECPOL v6.1 IR-8); N92-R01 (Pub. 1075 sec. 4 IR-8),Yes
+POL-03,4.2,Workforce members and subcontractors must report suspected incidents immediately and no more than 1 hour after...,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6a),Yes
+POL-03,4.3,"Incident records, tickets, email, and chat must not contain FTI, CJI, or ePHI; evidence is kept in the restricted...",IR-4; IR-5,PR.DS-01,N92-R01 (Pub. 1075 sec. 1.8); N92-R02 (CJISSECPOL v6.1 IR-5),Yes
+POL-03,4.4,The Director of Regulated Data Compliance must notify each affected agency's security contact within 1 hour of...,IR-6,RS.CO-02,N92-R02 (CJISSECPOL v6.1 IR-6b); N92-R01 (Pub. 1075 Exhibit 7; sec. 1.8.4); Fla. Stat. 282.318; 282.3185,Yes
+POL-03,4.5,"Statutory and contract notices must meet their deadlines in the P08 notification matrix, including the 10-day...",IR-6,RS.CO-03,Fla. Stat. 501.171(6)(a); N92-R03 (164.410); DFARS 252.204-7012(c),Yes
+POL-03,4.6,"For a severity-1 incident, the CISO must brief the General Counsel within 24 hours and the disclosure committee...",IR-6; IR-8,RS.CO-02,SEC Form 8-K Item 1.05,Yes
+POL-03,4.7,"No ransom may be paid without approval from the CEO, the General Counsel, and the cyber insurer, consultation with...",IR-4,RS.MI-01,Fla. Stat. 282.3186; OFAC ransomware advisory (2021-09-21),Yes
+POL-03,4.8,Tier-1 systems must have contingency plans with RTO and RPO from the BIA (P05) and must pass a recovery test at...,CP-2; CP-4; CP-10,RC.RP-01,"N92-R02 (CJISSECPOL v6.1 CP-2; CP-4); N92-R03 (164.308(a)(7)(ii)(B), (D))",Yes
+POL-03,4.9,"The incident response plan must be exercised at least annually, including one exercise a year with the disclosure...",IR-3; IR-8,ID.IM-02,N92-R02 (CJISSECPOL v6.1 IR-3),Yes
+POL-03,4.10,Lessons learned must be documented within 30 days of closing a severity-1 or severity-2 incident and fed into the...,IR-4; AT-2,ID.IM-03,N92-R02 (CJISSECPOL v6.1 AT-2; IR-4),Yes
+POL-04,4.1,"Information must be classified as Regulated (FTI, CJI, ePHI, DPPA highly restricted personal information, CUI),...",RA-2,ID.AM-07,N92-R04 (42 CFR 431.305(b)); N92-R05 (18 U.S.C. 2725(4)),No
+POL-04,4.2,Regulated data must be encrypted in transit and at rest with FIPS-validated modules (FIPS 140-3 certified modules...,SC-8; SC-13; SC-28,PR.DS-01; PR.DS-02,N92-R02 (CJISSECPOL v6.1 SC-13; SC-28); N92-R01 (Pub. 1075 sec. 3.3.1(d)-(e)),Yes
+POL-04,4.3,"FTI may be stored only in the approved FTI tenants and their backups. It must never enter IES environments,...",CM-12; MP-3; AC-21,ID.AM-07,N92-R01 (Pub. 1075 sec. 2.C.5; sec. 2.C.11.2),Yes
+POL-04,4.4,Non-production environments must use synthetic or masked data. Real agency data outside production needs written...,SA-3,PR.DS-01,N92-R01 (Pub. 1075 sec. 2.E.6.4); N92-R03 (164.308(a)(1)(ii)(B)),No
+POL-04,4.5,The Director of Regulated Data Compliance must keep an inventory of where Regulated and Restricted data are...,CM-12,ID.AM-07,N92-R01 (Pub. 1075 sec. 3.3.1(b)),No
+POL-04,4.6,"When a contract ends, the agency's data must be returned or deleted within the contract deadline and a deletion...",MP-6; SI-12,ID.AM-08,N92-R01 (Pub. 1075 Exhibit 7 I(5)); Contract (SP 800-53 Moderate),Yes
+POL-04,4.7,"Backups of Regulated and Restricted data must be encrypted, immutable, stored in a separate account and a second...",CP-9,PR.DS-11,N92-R02 (CJISSECPOL v6.1 CP-9); N92-R03 (164.308(a)(7)(ii)(A)),Yes
+POL-04,4.8,Regulated or Restricted data may be sent to an AI service only if the AI governance committee approved the use...,SA-9,GV.SC-05,N92-R04 (42 CFR 431.306(b)); N92-R01 (Pub. 1075 Exhibit 7),Yes
+POL-04,4.9,DPPA personal information may be used or disclosed only for permitted uses recorded with a use code; exports over...,AC-21,PR.DS-01,N92-R05 (18 U.S.C. 2721(a)-(b)),Yes
+POL-04,4.10,Retention must follow each agency contract; security records are kept 7 years (POL-01 4.11).,SI-12,ID.AM-08,Contract (SP 800-53 Moderate),No
+POL-05,4.1,Every workforce member must accept the rules of behavior at hire and annually.,PL-4,PR.AT-01,N92-R02 (CJISSECPOL v6.1 PL-4),No
+POL-05,4.2,Every workforce member must complete security awareness training at hire and annually; staff with CJI or FTI...,AT-2; AT-3,PR.AT-01; PR.AT-02,N92-R02 (CJISSECPOL v6.1 AT-2); N92-R01 (Pub. 1075 Exhibit 7 II(4)),Yes
+POL-05,4.3,"Agency data may be handled only on company-managed devices, or on agency-furnished devices under agency rules....",AC-20; AC-19,PR.AA-05,N92-R02 (CJISSECPOL v6.1 AC-20); N92-R01 (Pub. 1075 sec. 4 AC-20),No
+POL-05,4.4,"Only AI tools on the approved list (STD-05.3) may be used for company work; agency data, source code, and...",PL-4; SA-9,PR.DS-01,N92-R01 (Pub. 1075 Exhibit 7 I(3)); N92-R02 (CJISSECPOL v6.1 PL-4),Yes
+POL-05,4.5,"Staff who work remotely with FTI or CJI must use a private workspace, must not print, and must attest annually to...",PE-17,PR.AA-06,N92-R01 (Pub. 1075 sec. 4 PE-17),No
+POL-05,4.6,Every workforce member must report a suspected incident within 1 hour (POL-03 4.2).,IR-6,RS.MA-02,N92-R02 (CJISSECPOL v6.1 IR-6a),Yes
+POL-05,4.7,Agency data must not be attached to tickets or sent to vendors except through the approved secure channel;...,AC-21,PR.DS-01,N92-R01 (Pub. 1075 Exhibit 7 I(3)),Yes
+POL-05,4.8,"Company systems are monitored; users have no expectation of privacy in them, as the sign-in banner states.",AC-8; PL-4,PR.AT-01,N92-R01 (Pub. 1075 Exhibit 8),No

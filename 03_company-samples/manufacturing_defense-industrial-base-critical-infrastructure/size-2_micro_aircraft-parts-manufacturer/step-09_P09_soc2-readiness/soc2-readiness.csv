@@ -1,0 +1,62 @@
+criterion_id,category,criteria_group,topic_label,in_scope,control_description,control_owner,evidence,related_sp800_53,readiness_status,gap,remediation,target_date
+CC1.1,Security,Control environment,Commitment to integrity and ethical values,Yes,Workforce use rules in POL-02 Part C; sanctions rule A.9,President,POL-02 (approved 2026-08-31),PL-4; PS-8,Partially ready,No signed acknowledgments yet,Collect acknowledgments from all 7 employees,2026-09-30
+CC1.2,Security,Control environment,Board independence and oversight,Yes,The President reviews security monthly with the Office Manager (POA&M progress) from 2026-09,President,Meeting notes (from 2026-09),PM-9,Partially ready,Oversight just started; no record yet,Keep monthly meeting notes,2026-12-31
+CC1.3,Security,Control environment,"Structures, reporting lines, authorities",Yes,Office Manager designated Security and Compliance Coordinator; roles in SSP section 5,President,Designation letter 2026-07-06; SSP,PM-2,Ready,,,
+CC1.4,Security,Control environment,Commitment to competence,Yes,Hire orientation only; MSP technicians not screened by the company,Office Manager,Orientation checklist,AT-2; PS-3,Not ready,No training; 4 of 5 employees could not say what CUI is,Annual training (POAM-011); MSP technician terms (POAM-009),2026-11-30
+CC1.5,Security,Control environment,Accountability for internal control,Yes,Sanctions rule and named owners in the risk register and POA&M,President,POL-02 A.9; P01; P07,PS-8,Partially ready,Accountability not yet exercised,Owners report at the monthly meeting,2026-12-31
+CC2.1,Security,Information and communication,Quality information to support controls,Yes,MSP device list covers 4 computers; logs not reviewed,Office Manager,RMM list,CM-8; AU-6,Not ready,Incomplete inventory; no log review,Inventory (POAM-013); monthly log review (POAM-007),2026-12-31
+CC2.2,Security,Information and communication,Internal communication of objectives and responsibilities,Yes,"POL-02, POL-03, POL-04 approved and stored in the CUI suite",Office Manager,Policies,PL-4,Partially ready,Not yet communicated or acknowledged,Staff briefing and acknowledgments,2026-09-30
+CC2.3,Security,Information and communication,Communication with external parties,Yes,Customer contacts known; no security contacts; supplier terms commercial,President,Contact list (draft),SA-9; IR-6,Partially ready,No security contacts or supplier security terms,Printed contact list; processor and MSP terms,2026-10-31
+CC3.1,Security,Risk assessment,Objectives specified to enable risk identification,Yes,Risk tolerance and acceptance authority set,President,POL-02 A.3; P01 section 1,PM-9,Ready,,,
+CC3.2,Security,Risk assessment,Risk identification and analysis,Yes,Risk assessment with SP 800-30 completed 2026-07-24,Office Manager,P01 risk register,RA-3,Ready,,,
+CC3.3,Security,Risk assessment,Fraud risk considered,Yes,"Fraud risk not considered (for example, false certificates of conformance or diverted drawings)",President,None,RA-3,Not ready,Not assessed,Add fraud scenarios to the July 2027 risk assessment,2027-07-31
+CC3.4,Security,Risk assessment,Significant change identified and assessed,Yes,Change triggers for reassessment in POL-02 A.2,Office Manager,POL-02,RA-3; CM-3,Partially ready,No change log yet,Change log (P03 G-037),2026-12-31
+CC4.1,Security,Monitoring activities,Ongoing and separate evaluations,Yes,Independent readiness assessment 2026-08-10 to 2026-08-12,Office Manager,P07 assessment plan and results,CA-2,Ready,,,
+CC4.2,Security,Monitoring activities,Deficiencies evaluated and communicated,Yes,Deficiencies on the POA&M with owners and dates,Office Manager,P07 poam.csv,CA-5,Ready,,,
+CC5.1,Security,Control activities,Control activities selected to mitigate risk,Yes,Controls selected in the SSP; most partially implemented,Office Manager,P02 control table,PL-2,Partially ready,"37 of 55 controls partially implemented, 15 planned",Work the POA&M,2027-03-15
+CC5.2,Security,Control activities,General controls over technology,Yes,MSP runs general IT controls; company oversight starting,Office Manager,MSP contract; P04,SA-9; SI-2,Partially ready,No responsibility matrix,MSP amendment (POAM-009),2026-10-31
+CC5.3,Security,Control activities,Control activities deployed through policies and procedures,Yes,Three policies approved; procedures being written,Office Manager,"POL-02, POL-03, POL-04",PL-1,Partially ready,Procedures (checklists) not finished,"Offboarding, review, and USB checklists",2026-10-31
+CC6.1,Security,Logical and physical access,"Logical access security software, infrastructure, architecture",Yes,MFA on the CUI suite; firewall; laptop encryption,Office Manager,P02; P07 IA-2(1) test,IA-2; IA-2(1); AC-3,Partially ready,Shared logins; no MFA on local and some admin access,POAM-002,2026-10-31
+CC6.2,Security,Logical and physical access,User registration and authorization,Yes,Accounts created on verbal request,Office Manager,P07 AC-2 results,AC-2,Not ready,No approvals or procedure,Onboarding checklist (POAM-001),2026-10-31
+CC6.3,Security,Logical and physical access,"Role-based access, least privilege, removal",Yes,No reviews; access removal late (110 days),Office Manager,P07 AC-2 and PS-4 results,AC-2; AC-6; PS-4,Not ready,No reviews; late removal; local admin,"POAM-001, POAM-012",2026-10-31
+CC6.4,Security,Logical and physical access,Physical access restrictions,Yes,Locked unit with alarm; visitors not controlled during the day,Office Manager,P07 PE-8 results,PE-3; PE-8,Partially ready,Dock door open; visitor log incomplete,POAM-006,2026-09-30
+CC6.5,Security,Logical and physical access,Asset disposal and data protection,Yes,Paper drawings in the general trash; no wipe records,Office Manager,P03 G-066,MP-6,Not ready,No disposal process,Shred bin and wipe certificates,2026-09-30
+CC6.6,Security,Logical and physical access,Protection against threats from outside boundaries,Yes,Firewall blocks inbound; guest Wi-Fi separate,Office Manager,Firewall export,SC-7; AC-18,Partially ready,Flat internal network,Enclave VLAN (POAM-004),2026-11-30
+CC6.7,Security,Logical and physical access,Restriction of data transmission and movement,Yes,"CUI moves through the commercial suite, ERP, backup, and USB drives",Office Manager,"P03 G-003, G-111",SC-8; AC-4; MP-7,Not ready,Uncontrolled data movement,"Boundary clean-up and USB control (POAM-005, POAM-010)",2026-10-31
+CC6.8,Security,Logical and physical access,Prevention and detection of unauthorized or malicious software,Yes,MSP antivirus on all computers,Office Manager,Antivirus export,SI-3,Partially ready,No allowlisting; free software installs on SYS-03,Remove local admin; allowlisting,2027-01-31
+CC7.1,Security,System operations,Detection of configuration changes and vulnerabilities,Yes,No vulnerability scanning; manual updates of shop software,Office Manager,P03 G-082,SI-2; RA-5,Not ready,No scanning,Monthly scans,2026-10-31
+CC7.2,Security,System operations,Monitoring for anomalies and security events,Yes,No monitoring or alerts,Office Manager,P07 AU-6 results,SI-4; AU-6,Not ready,Nothing watches for anomalies,POAM-007,2026-12-31
+CC7.3,Security,System operations,Evaluation of security events,Yes,No incident log or evaluation process before 2026-08-31,President,None,IR-5; IR-6,Not ready,No records,Incident log under POL-03,2026-09-30
+CC7.4,Security,System operations,Incident response,Yes,P08 runbook and POL-03 approved,President,P08,IR-4; IR-8,Partially ready,Untested; no DoD certificate,POAM-008,2026-11-30
+CC7.5,Security,System operations,Recovery from incidents,Yes,No restore test; recovery steps unwritten,Office Manager,P05 findings,CP-10; CP-9,Not ready,Recovery unproven,Restore test (POAM-010); contingency plan,2026-12-31
+CC8.1,Security,Change management,"Change authorization, design, testing, approval",Yes,Changes made by the MSP or the CNC Programmer without approval,Office Manager,P03 G-037,CM-3,Not ready,No change control,Change log approved by the Office Manager,2026-12-31
+CC9.1,Security,Risk mitigation,Business disruption risk mitigation,Yes,BIA approved (P05),President,P05,CP-2,Partially ready,No contingency plan,Short contingency plan,2026-12-31
+CC9.2,Security,Risk mitigation,Vendor and business partner risk management,Yes,MSP SOC 2 report reviewed (Part B); cloud offering FedRAMP listed,President,vendor-soc2-review.csv; FedRAMP listing,SA-9,Partially ready,No responsibility matrix; backup subcontractor not authorized for CUI; provider CRM missing,"POAM-009, POAM-010",2026-10-31
+A1.1,Availability,Availability,Capacity management,No,,,,,N/A,,Not requested by Customer C; availability is covered by the BIA (P05),
+A1.2,Availability,Availability,"Environmental protections, backup, recovery infrastructure",No,,,,,N/A,,Not requested by Customer C; availability is covered by the BIA (P05),
+A1.3,Availability,Availability,Recovery plan testing,No,,,,,N/A,,Not requested by Customer C; availability is covered by the BIA (P05),
+C1.1,Confidentiality,Confidentiality,Identification and maintenance of confidential information,Yes,Classes and CUI rules in POL-04; job folders in the CUI suite,President,POL-04; P02,RA-2; AC-4,Partially ready,"Confidential data also in the commercial suite, ERP, and backup","Boundary clean-up (P03 G-111, G-125)",2026-10-31
+C1.2,Confidentiality,Confidentiality,Disposal of confidential information,Yes,No destruction process for paper or drives,Office Manager,P03 G-066,MP-6,Not ready,No disposal records,"Shred bin, cross-cut shredding, MSP wipe certificates",2026-09-30
+PI1.1,Processing Integrity,Processing integrity,Quality information about processing objectives,No,,,,,N/A,,,
+PI1.2,Processing Integrity,Processing integrity,System inputs,No,,,,,N/A,,,
+PI1.3,Processing Integrity,Processing integrity,System processing,No,,,,,N/A,,,
+PI1.4,Processing Integrity,Processing integrity,System outputs,No,,,,,N/A,,,
+PI1.5,Processing Integrity,Processing integrity,Stored data,No,,,,,N/A,,,
+P1.1,Privacy,Notice,Privacy notice,No,,,,,N/A,,,
+P2.1,Privacy,Choice and consent,Choice and consent,No,,,,,N/A,,,
+P3.1,Privacy,Collection,Collection consistent with objectives,No,,,,,N/A,,,
+P3.2,Privacy,Collection,Explicit consent where required,No,,,,,N/A,,,
+P4.1,Privacy,"Use, retention, disposal",Use limited to objectives,No,,,,,N/A,,,
+P4.2,Privacy,"Use, retention, disposal",Retention,No,,,,,N/A,,,
+P4.3,Privacy,"Use, retention, disposal",Disposal,No,,,,,N/A,,,
+P5.1,Privacy,Access,Data subject access,No,,,,,N/A,,,
+P5.2,Privacy,Access,Correction,No,,,,,N/A,,,
+P6.1,Privacy,Disclosure and notification,Disclosure to third parties with consent,No,,,,,N/A,,,
+P6.2,Privacy,Disclosure and notification,Record of authorized disclosures,No,,,,,N/A,,,
+P6.3,Privacy,Disclosure and notification,Record of unauthorized disclosures,No,,,,,N/A,,,
+P6.4,Privacy,Disclosure and notification,Third-party commitments,No,,,,,N/A,,,
+P6.5,Privacy,Disclosure and notification,Third-party notification of unauthorized disclosure,No,,,,,N/A,,,
+P6.6,Privacy,Disclosure and notification,Breach notification to affected parties,No,,,,,N/A,,,
+P6.7,Privacy,Disclosure and notification,Accounting of disclosures to data subjects,No,,,,,N/A,,,
+P7.1,Privacy,Quality,"Accurate, complete, relevant personal information",No,,,,,N/A,,,
+P8.1,Privacy,Monitoring and enforcement,"Inquiries, complaints, disputes",No,,,,,N/A,,,

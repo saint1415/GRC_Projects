@@ -1,0 +1,23 @@
+csf2_category,category,delivered_by,group_current,group_target,supply_current,supply_target,home_services_current,home_services_target,finance_current,finance_target,basis_for_group_current,subsidiary_notes
+GV.OC,Organizational Context,Group,2,3,1,3,1,3,2,3,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Finance knew its Safeguards Rule duty; Supply and Home Services had never considered cyber requirements
+GV.RM,Risk Management Strategy,Group,2,3,1,3,1,3,1,3,Rounded mean of 7 subcategory ratings in gap-analysis.csv,Subsidiaries follow the group appetite once approved; no local risk process
+GV.RR,"Roles, Responsibilities, and Authorities",Group and subsidiary,2,3,1,3,1,3,2,3,Rounded mean of 4 subcategory ratings in gap-analysis.csv,Finance has the Qualified Individual and oversight roles; other Presidents have no cyber duties
+GV.PO,Policy,Group,2,3,1,3,1,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Group policies apply to all; Finance adds a supplement
+GV.OV,Oversight,Group,1,3,1,3,1,3,1,3,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Finance oversight runs through the annual Qualified Individual report
+GV.SC,Cybersecurity Supply Chain Risk Management,Group and subsidiary,2,3,1,3,1,3,2,3,Rounded mean of 10 subcategory ratings in gap-analysis.csv,Subsidiaries buy their own line-of-business SaaS; Finance obtained its servicing vendor's SOC 2
+ID.AM,Asset Management,Group and subsidiary,2,3,2,3,1,3,2,4,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Home Services tablets and SYS-11 not in the SaaS inventory
+ID.RA,Risk Assessment,Group,3,3,2,3,2,3,2,4,Rounded mean of 5 subcategory ratings in gap-analysis.csv,Shared risk assessment and scanning cover all entities
+ID.IM,Improvement,Group,3,3,2,3,2,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Improvement cycle run centrally
+PR.AA,"Identity Management, Authentication, and Access Control",Group and subsidiary,3,3,2,3,1,3,3,4,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Supply counter shared account; Home Services SYS-11 local accounts; Finance on SSO
+PR.AT,Awareness and Training,Group,3,3,2,3,2,3,3,4,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Finance staff also complete lender-required training
+PR.DS,Data Security,Group,3,3,2,3,2,3,2,4,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Finance customer information drives the higher target
+PR.PS,Platform Security,Group,2,3,2,3,1,3,2,3,Rounded mean of 3 subcategory ratings in gap-analysis.csv,Home Services firewall firmware behind
+PR.IR,Technology Infrastructure Resilience,Group and subsidiary,3,3,1,3,2,3,2,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Supply warehouse has a single circuit and flat network
+DE.CM,Continuous Monitoring,Group,2,3,1,3,1,3,1,4,Rounded mean of 4 subcategory ratings in gap-analysis.csv,No subsidiary monitors locally; all depends on the shared platform
+DE.AE,Adverse Event Analysis,Group,2,3,1,3,1,3,1,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Analysis done centrally
+RS.MA,Incident Management,Group and subsidiary,1,3,1,3,1,3,1,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Presidents need a local escalation role in the runbook
+RS.AN,Incident Analysis,Group,1,3,1,3,1,3,1,3,Assessed at category level (no subcategory selected this cycle),No forensic retainer; analysis would be improvised
+RS.CO,Incident Response Reporting and Communication,Group and subsidiary,2,3,1,3,1,3,2,4,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Finance has FTC and borrower notice duties
+RS.MI,Incident Mitigation,Group,2,3,1,3,1,3,1,3,Rounded mean of 1 subcategory ratings in gap-analysis.csv,Containment is done centrally
+RC.RP,Incident Recovery Plan Execution,Group and subsidiary,1,3,1,3,1,3,1,3,Rounded mean of 2 subcategory ratings in gap-analysis.csv,Each subsidiary needs manual workarounds from the BIA
+RC.CO,Incident Recovery Communication,Group,1,3,1,3,1,3,1,3,Rounded mean of 1 subcategory ratings in gap-analysis.csv,Recovery communications run centrally

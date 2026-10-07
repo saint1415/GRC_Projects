@@ -1,0 +1,12 @@
+field,value
+regulators,SRMA: Department of Homeland Security (CISA); FERC Division of Dam Safety and Inspections (non-federal hydropower licensees); U.S. Army Corps of Engineers (federal dams/levees); Bureau of Reclamation (federal dams); NERC (hydro generators meeting BES criteria)
+primary_regulation,FERC Security Program for Hydropower Projects (Rev. 3A)
+primary_regulation_citation,"FERC D2SI Security Program, incl. Section 9 cyber/SCADA and Form 3 Cyber Security Inspection Checklist"
+primary_regulation_url,https://www.ferc.gov/sites/default/files/2020-04/security.pdf
+primary_regulation_rationale,"The only dam-specific federal security program with explicit cyber/SCADA requirements, inspected by FERC D2SI. Hydro generators that are BES assets must also meet NERC CIP; federal (USACE/USBR) dams follow internal federal (FISMA) controls instead."
+sensitive_data,"CEII (dam inundation maps, design data; 18 CFR 388.113); Vulnerability/Security Assessments and Security Plans; PCII; BES Cyber System Information (for BES hydro)"
+critical_systems,Spillway and gate control PLCs; Hydro unit control/governor systems; SCADA and remote control centers for multiple projects; Dam safety instrumentation and early-warning systems; Levee pump station controls
+ai_specific,
+assurance_alternatives,
+notes,CIRCIA NPRM has no dams-specific sector criterion; hydro owners are covered via NERC CIP/OE-417 criterion or size standard.
+last_verified,2026-09-25

@@ -1,0 +1,28 @@
+service_line,criteria,evidence_item,source_system,control_owner,frequency,type2_sample_basis,reused_from,collection_status
+All three,CC1.1; CC2.2,Code of conduct and policy attestations,Learning system,Chief Human Resources Officer,Annual and at hire,25 new hires; attestation report,P06,Collecting
+All three,CC1.2,Board risk and technology committee and audit committee minutes,Board portal,General Counsel,Quarterly,All quarters in the period,P01 section 8,Collecting
+All three,CC1.4,Background screening and U.S.-person verification records,HR system,Chief Human Resources Officer,At hire,25 new hires (G1 sample for SL-2),P02 PS-3,Collecting
+All three,CC3.2; CC3.3,Enterprise risk register and report,GRC platform,Chief Risk Officer,Annual,The 2026 assessment,P01,Ready
+All three,CC4.1; CC4.2,Internal Audit report and POA&M status,GRC platform,Chief Audit Executive,Annual; POA&M monthly,The 2026 report; 3 monthly POA&M reviews,P07,Ready
+All three,CC5.3,"Policy hierarchy, approvals, and exception register",Policy portal; GRC platform,CISO,Annual; exceptions monthly,Approval records; 3 monthly register reviews,P06,Ready
+All three,CC6.1; CC6.2; CC6.3,"Workforce provisioning, privileged reviews, and termination records",Identity governance; PAM,Director of Identity and Access Management,Per event; quarterly reviews,25 provisioning events; 25 terminations; 2 quarterly reviews per service line,"P07 AC-2, PS-4",Collecting
+SL-2,CC6.3,Weekly check for standing privileged grants in G1,PAM,Director of Identity and Access Management,Weekly,5 weeks,POAM-002,Not started
+All three,CC6.4,Data center badge reviews and visitor logs,Physical access system,"Vice President, Data Center Operations",Quarterly reviews,2 quarters; 25 visitor entries,P07 PE-3,Collecting
+All three,CC6.5; C1.2,Drive destruction certificates and customer deletion records,Asset system; deletion service,"Vice President, Data Center Operations",Per event,25 drives; 25 contract-end deletions,P07 MP-6,Collecting
+All three,CC6.6; CC6.7,Network policy reviews and TLS scans,Network policy repository; scanner,"Vice President, Global Network",Quarterly,2 quarters,P04,Collecting
+SL-1; SL-2,CC6.1,Cryptographic module inventory with validation status,GRC platform,Director of Key Management and PKI,Monthly,3 months,"P03 G-053, G-054",Collecting
+All three,CC6.8; CC8.1,Release approvals for host and guest-agent channels with approver signatures,Fleet automation; signing service,"Vice President, Software Supply Chain",Per release,25 releases per channel,POAM-001,Not started
+All three,CC7.1,"Vulnerability scans, KEV tracker, and remediation timeliness",Vulnerability platform,Director of Security Operations,Monthly,3 months; 25 remediated findings,"P07 RA-5, SI-2; FedRAMP monthly reports",Collecting
+All three,CC7.2,"SOC alert review, AI triage auto-close sample reviews, and automated action approvals",SIEM; SOC case platform,Director of Security Operations,Daily sample; weekly hunts,5 weeks of daily samples; 25 automated actions,POAM-013; P10,Not started
+All three,CC7.3; CC7.4,"Incident cases, runbooks, and exercise reports",SOC case platform,Director of Security Operations,Per incident; annual exercise,25 incidents; the 2026-11-18 tabletop,P08,Collecting
+SL-1; SL-2,CC2.3,Status page history and customer incident notices,Status page (Cloud provider X); notice platform,"Senior Vice President, Customer Support",Per event,All notices in the period,P08,Collecting
+SL-1; SL-2,CC7.5; A1.3,Regional control plane DR test reports,DR test repository,"Vice President, Control Plane Engineering",Annual per region,All tests in the period,"P05; P07 CP-4, CP-10",Collecting
+SL-2,A1.3,G1 full failover test meeting the 2-hour RTO,DR test repository,"Vice President, Control Plane Engineering",Annual,The 2027-01 retest,POAM-009,Not started
+All three,A1.1,Capacity reports per region,Capacity planning system,"Vice President, Platform Engineering",Monthly,3 months,P05 BP-15,Collecting
+All three,A1.2,Backup reports and out-of-band vault restore test,Backup service; vault,"Vice President, Control Plane Engineering",Daily; annual restore,25 backup days; the annual restore,P07 CP-9,Ready
+All three,CC9.2,Vendor register and tier-1 SOC report reviews,GRC platform,Director of Third-Party Risk Management,Annual per vendor,25 tier-1 reviews,POAM-006,Collecting
+SL-1,PI1.3; PI1.4,Meter-to-invoice reconciliation,Billing system (SYS-13),Chief Financial Officer,Daily (after 2027-01-31),25 days,SOX key controls,Not started
+SL-3,PI1.2; PI1.3; PI1.4,"Managed job schedules, completion reconciliation, and customer patch reports",Fleet automation,"Senior Vice President, Managed Infrastructure Services",Per job; monthly reports,25 jobs; 3 monthly reports per sampled customer,P05 BP-08,Collecting
+SL-3,CC6.1; CC7.2; CC9.2,"AQ-1 migration evidence: PAM enrollment, real-time RMM logs, vendor addendum, server migration records",Identity governance; SIEM; contract register,"Senior Vice President, Managed Infrastructure Services",Per milestone,All milestones,POAM-022,Not started
+SL-3,C1.1,Customer-approved access requests for managed servers,Access request system,"Senior Vice President, Managed Infrastructure Services",Per request,25 requests,PRC-04.1,Not started
+SL-2,CC3.1; CC5.1,"HCP-G SSP, Class D delta, and FedRAMP assessment report",GRC platform,Director of FedRAMP Compliance,Annual,Current versions,P02; P03,Ready

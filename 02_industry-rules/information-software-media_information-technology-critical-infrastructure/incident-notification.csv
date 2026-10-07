@@ -1,0 +1,5 @@
+obligation,citation,trigger,deadline,notify,source_url,verified
+DFARS cyber incident report affecting covered defense information,48 CFR 252.204-7012(c),,Within 72 hours of discovery,DoD (DIBNet portal); subcontractors also notify prime,https://www.ecfr.gov/current/title-48/section-252.204-7012,true
+Bank service provider notification,12 CFR 53.4; 225.303; 304.24,,As soon as possible (4+ hour material disruption),Affected banking organization customers,https://www.ecfr.gov/current/title-12/part-53,true
+FedRAMP incident communications,FedRAMP Incident Communications Procedures / agency ATO terms (US-CERT/CISA reporting),,Per FedRAMP procedures (not verified in this pass),"Agency customers, FedRAMP PMO, CISA",https://www.fedramp.gov/,false
+CIRCIA covered cyber incident / ransom payment reports (pending final rule),6 U.S.C. 681b(a),,72 hours (covered incident); 24 hours (ransom payment) - not yet effective,CISA,https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title6-section681b&num=0&edition=prelim,true
