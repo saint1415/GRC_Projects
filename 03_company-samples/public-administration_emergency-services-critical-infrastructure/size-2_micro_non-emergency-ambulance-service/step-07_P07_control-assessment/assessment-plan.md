@@ -67,7 +67,8 @@ The MSP operates most technical controls, so evidence came from it. Requested on
 | **Total** | **87** |
 
 **Fully other than satisfied:** IA-2, IA-2(1), AU-6, CP-4, SC-28. No process or technology met the objective.
-**Largely satisfied:** SI-3 (detection, updates, scans, and quarantine work; after-hours alerting and false-positive handling do not) and CP-9 (backups run and are encrypted; they are not protected from deletion and have never been restored).
+**Largely satisfied:** SI-3 (detection, updates, scans, and quarantine work; after-hours alerting and false-positive handling do not).
+**Half satisfied:** CP-9 (backups run and are encrypted; they are not protected from deletion and have never been restored).
 
 **New findings from testing:**
 1. A free remote desktop tool, installed in 2025 by a former scheduler for after-hours access, ran on the dispatch desktop outside MSP management with a reused password (CM-07a., CM-07b.[04], CM-07b.[05]). The MSP removed it on 2026-08-19. The tool's own log showed no unknown sessions in the 90 days it kept. Added to the risk register as R-023 and to POAM-014.
