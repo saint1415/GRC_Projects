@@ -138,9 +138,9 @@ def check_evidence_based(sd, intake):
     p07 = next(sd.glob("step-07_*/assessment-results.csv"), None)
     if p07 and any(not r.get("test_type", "").startswith(("Operating effectiveness", "Design", "Not implemented")) for r in rows(p07)):
         errors.append(f"{p07.relative_to(ROOT)}: every row needs a test_type (Operating effectiveness, Design, Not implemented)")
-    p01 = next(sd.glob("step-04_*/risk-register.csv"), None)
-    if p01 and any(not r.get("likelihood_basis", "").strip() or not r.get("assessment_pass", "").strip() for r in rows(p01)):
-        errors.append(f"{p01.relative_to(ROOT)}: every risk needs a likelihood_basis and an assessment_pass")
+    for p01 in sd.glob("step-04_*/risk-register*.csv"):
+        if any(not r.get("likelihood_basis", "").strip() or not r.get("assessment_pass", "").startswith("Pass ") for r in rows(p01)):
+            errors.append(f"{p01.relative_to(ROOT)}: every risk needs a likelihood_basis and an assessment_pass starting 'Pass 1' or 'Pass 2'")
 
 
 # ---- completed samples (00_company-facts.md present): definition of done

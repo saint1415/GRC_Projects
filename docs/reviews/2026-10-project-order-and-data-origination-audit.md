@@ -51,3 +51,18 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 2 (independent pharmacy):** the EPCS audit report is treated as on file in P03 and P07 but was obtained on 2026-08-12; two MSP reports labelled July fell inside a fieldwork window that ended in July; a backup console finding called "new from testing" in P07 already appears in pass 1 of the risk register and the SSP.
 - **Size 4 (hospital):** the SSP gives 6 legacy VPNs without written terms in one place and 3 in another; a July backup sample is cited by P03 after its fieldwork ended; two pass-1 risks quote P07 results; P07 marks a plan approval Satisfied although the approval came after fieldwork.
 - **Size 5 (hospital system):** P07 calls the risk analysis approved before P01 was approved; the 24-hour recovery target is said to come from the BIA, which ran after the restore test it is measured against; one gap row says the unified program has covered all 8 hospitals since 2024, although one hospital joined in 2026.
+
+### Agriculture, 2026-10-08
+
+Six samples, 553 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 29 minutes.
+
+Fixes made to earlier batches during this one:
+- **Health Care size 4:** the `assessment_pass` and `last_reviewed` values were swapped on all 50 risks. Swapped back; the validator now requires every pass value to start with "Pass" and checks division risk registers too.
+- **Health Care size 6:** three P07 evidence IDs used a trailing hyphen number (EV-C-AC2-3 and two others). Renamed to the parenthesis form used everywhere else.
+- **Agriculture size 3:** the Florida Digital Bill of Rights threshold was marked unverified. Fla. Stat. 501.702 was read on 2026-10-08: a controller must have more than $1 billion in global gross annual revenue and meet one further test.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **Size 2 (micro crop farm):** pass-1 deliverables dated 2026-07-31 rely on the FMIS vendor's SOC 2 report, which arrived on 2026-08-18.
+- **Size 4 (mid-market crop farm):** the SSP's backup evidence says 30 of 30 days, P07 says 31 of 31; training completion is 94% in the SSP and 96% in P07; personnel-share readers are 48 in the SSP and R-003 but 46 in P03.
+- **Size 5 (enterprise crop farm):** P03 cites board minutes and a budget approval dated after its own approval; the facts say up to 7,300 seasonal accounts while the deliverables count 3,840.
+- **Size 6 (crop farm plus two divisions):** the cloud map says the food defense repository is limited to qualified individuals, while the facts and P01 say 140 plant staff can read it.
