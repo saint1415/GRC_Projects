@@ -1,0 +1,20 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"EHR/PM, patient portal, e-prescribing, ASC perioperative module",SYS-01,ePHI,BAA signed; agreement renews in 2027,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-035; EV-036; EV-038; EV-040,Recovery terms in the contract are the vendor's RTO 12 hours and RPO 1 hour
+V-02,Identity provider vendor,"SSO, MFA and conditional access",SYS-02,Workforce identities,Subscription terms,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-035; EV-039,Not a business associate (no PHI)
+V-03,PACS vendor,"PACS and RIS software, AI triage module, remote support",SYS-03; AI-003,ePHI,BAA signed; service agreement,HITRUST-style questionnaire (2025-11),EV-035; EV-036; EV-037; EV-040; EV-052,Remote support through its own tool with standing access
+V-04,Public cloud provider,IaaS/PaaS for the 4-account landing zone,SYS-04,"ePHI (encrypted, company-managed keys)",Customer agreement with BAA,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-035; EV-036; EV-039,
+V-05,Managed security service provider (MSSP),24x7 EDR and SIEM monitoring,SYS-06; SYS-08,Security logs with PHI fragments; privileged EDR agents,BAA signed; contract requires a call within 30 minutes on high severity,SOC 2 report received at onboarding,EV-019; EV-035; EV-036; EV-037,Current report requested (open request)
+V-06,SD-WAN provider,Managed SD-WAN edges and circuits,SYS-05,Encrypted network traffic,Service agreement,None on file,EV-012; EV-035,
+V-07,Clearinghouse,"Eligibility, claims and remittance for all payers",SYS-04 (interface engine),ePHI,BAA signed; single clearinghouse agreement,SOC 2 report received at onboarding,EV-035; EV-036; EV-037; EV-042,About $1.9 million in expected collections a week
+V-08,Reference laboratories (2),Lab orders and results,SYS-04 (interface engine),ePHI,BAA signed,None on file,EV-022; EV-035; EV-036,
+V-09,Teleradiology reading group,Overflow and after-hours reads,SYS-03,ePHI,BAA signed,None on file,EV-022; EV-035; EV-036,
+V-10,Health information exchange,Care summaries and referrals,SYS-04 (interface engine),ePHI,Participation agreement,None on file,EV-022; EV-040,
+V-11,AI scribe vendor,Ambient clinical documentation,AI-001,ePHI (visit audio and notes),Vendor standard BAA; permits de-identified data use,None on file at intake,EV-035; EV-036; EV-037; EV-050,40 provider seats from 2026-02; no security or privacy review record
+V-12,Prior-authorization automation vendor,Payer form completion and submission,AI-004,ePHI,BAA signed,None on file,EV-035; EV-036; EV-037; EV-050,In use since 2025-11; no security or privacy review record
+V-13,Website chatbot vendor,Scheduling and general questions on the website,AI-005,"ePHI (names, dates of birth, reason for visit)",None located,None on file,EV-035; EV-036; EV-050,In use since 2026-04
+V-14,Cloud fax vendor,Cloud fax,APP-03,ePHI,BAA signed,SOC 2 Type 2 (2025),EV-035; EV-036; EV-037,
+V-15,Media destruction vendor,Certified drive destruction,SYS-06,PHI on retired media,Service agreement,Certificates of destruction,EV-035; EV-047,
+V-16,Modality and copier lessors,Leased imaging modalities and copiers,SYS-07,PHI on device drives,Leases with no media sanitization clause,None on file,EV-035; EV-040; EV-047,No sanitization certificate asked for at return
+V-17,Payroll and HR SaaS vendor,Payroll and HR system,APP-01,Workforce data,Subscription terms,None on file,EV-035,
+V-18,Telephony provider,Phones and call center,APP-02,PHI (incidental),Service agreement,None on file,EV-035,
+V-19,Other PHI vendors,"Statement printing, mail, transcription, collections and other services",Various,PHI as each contract allows,BAAs located for the remainder of the 110; none located for 30 of the 140 PHI vendors,Onboarding questionnaires for vendors added since 2023,EV-035; EV-036; EV-037,Summary row so the register reconciles to the 140 PHI vendors in EV-036
