@@ -2,11 +2,12 @@
 
 **Organization:** Cris Santos Company Holdings, Inc., Crop Farming division (focus division), inheriting group common controls from corporate shared services | **Tier:** Multi-Sector | **Vertical:** Agriculture, Forestry, Fishing and Hunting
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **OT guidance:** NIST SP 800-82 Rev. 3 (September 2023) | **Version:** 1.0, 2026-09-10
+**Sources:** the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); Crop Farming configuration exports, inventories, contracts and plans (EV-034 to EV-055); group common control evidence (EV-004 to EV-022) and the inheritance matrices (EV-018); the FMIS vendor's SOC 2 report (EV-078); and P07 test results. The `evidence` column in `control-implementation.csv` and `common-control-catalog.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
-> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **FMICP**, the focus division's primary system, because it carries the group's top risks (P01 GR-01 and GR-02), it is where common control inheritance is weakest (scenario gap 2), and it feeds two other divisions (harvest lot data to Food Processing, payroll tally to group HR). Food Processing (SYS-D3) and Farm Supply (SYS-D4, SYS-D5) keep division SSPs that inherit from the same common control catalog (`common-control-catalog.csv`).
+> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **FMICP**, the focus division's primary system, because it carries the group's top risks (P01 GR-01 and GR-02), it is where common control inheritance is weakest (EV-018), and it feeds two other divisions (harvest lot data to Food Processing, payroll tally to group HR). Food Processing (SYS-D3) and Farm Supply (SYS-D4, SYS-D5) keep division SSPs that inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Farm Management and Irrigation Control Platform (**FMICP**), identifier CSCH-SYS-D1. It is SYS-D1 in `../00_company-facts.md`.
+Farm Management and Irrigation Control Platform (**FMICP**), identifier CSCH-SYS-D1. It is SYS-D1, with components SYS-D1-ROC, SYS-D1-FIELD, SYS-D1-DIR, SYS-D1-HUB, SYS-D1-IMG and SYS-D1-TAB, in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The FMICP runs field, irrigation, harvest, and farm record work on about 240,000 farmed acres at 38 farm operations in 5 southeastern states. It supports:
@@ -99,6 +100,8 @@ SP 800-60's catalog is built for federal missions and has no farm operations typ
 OT tailoring decisions (for example, HMIs that stay signed in and do not lock out operators, AC-2(5), AC-7, AC-11) are recorded with their compensating controls. Other High-baseline controls are fully inherited from the FMIS vendor or the cloud providers (evidenced by SOC 2 reports, P09) or tailored out in the group tailoring register (for example, IA-2(12), which concerns federal PIV credentials).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-D1 and its components, and the shared services SYS-G1 to SYS-G4 it inherits from) and the Crop Farming exports EV-037 to EV-046.
+
 - **Inside:** the FMIS tenant configuration and roles, ROC-1 to ROC-3 OT networks (SCADA servers, historians, HMIs, engineering workstations), field OT at 38 farms, the farm data hub and imagery store accounts in provider A, the harvest tablets, and the legacy farm operations directory.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC and OT monitoring, SYS-G3 landing zone and WAN, and SYS-G4 HR and payroll controls.
 - **Outside, interconnected:** SYS-D2 (equipment telematics, GNSS, drones), SYS-D3 (Food Processing traceability, harvest lot file), SYS-G4 (payroll tally export), the FMIS vendor platform, the cellular carrier private network, and the integrator's own systems.
@@ -149,17 +152,17 @@ See `control-implementation.csv` (219 controls) and `common-control-catalog.csv`
 | System-specific | 101 |
 
 **The 120 partially implemented and 13 planned controls** show a division that inherits a mature corporate program for its IT but runs its OT largely on its own. They cluster in six places (examples; the CSV lists all):
-- **Remote access and the boundary between the corporate cloud, ROCs, and acquired farms** (scenario gap 1): AC-4, AC-17, AC-17(1), AC-17(4), MA-4, AC-20, SC-7, SC-7(3), SC-7(5), SC-7(21), PL-8, IA-8, PS-6, PS-7, SA-4, SA-9.
-- **Seasonal workforce identity** (gap 3): AC-2, AC-2(1), AC-2(3), AC-3, AC-6(7), AC-19, IA-2, IA-2(2), PS-4, AU-3.
+- **Remote access and the boundary between the corporate cloud, ROCs, and acquired farms** (EV-020, EV-037, EV-044): AC-4, AC-17, AC-17(1), AC-17(4), MA-4, AC-20, SC-7, SC-7(3), SC-7(5), SC-7(21), PL-8, IA-8, PS-6, PS-7, SA-4, SA-9.
+- **Seasonal workforce identity** (EV-002, EV-039): AC-2, AC-2(1), AC-2(3), AC-3, AC-6(7), AC-19, IA-2, IA-2(2), PS-4, AU-3.
 - **Privileged and default credentials in OT:** AC-6, AC-6(5), IA-2(1), IA-5, AC-18, AC-18(1).
-- **Inventory, vulnerability management, and monitoring of farm OT** (gap 2): CM-8, RA-5, SI-2, SI-3, SI-4, SI-4(4), AU-6, CA-2, CA-7, CA-8.
+- **Inventory, vulnerability management, and monitoring of farm OT** (EV-008, EV-010, EV-043): CM-8, RA-5, SI-2, SI-3, SI-4, SI-4(4), AU-6, CA-2, CA-7, CA-8.
 - **Integrity of control logic and setpoints:** CM-3, CM-4, CM-5, SI-7, SI-10, SC-24, CP-12, AC-5, SA-10, SA-11.
 - **Recovery and fail-safe operation, including freeze nights:** CP-2, CP-3, CP-4, CP-6, CP-9, CP-9(1), CP-10, SI-17, SI-12.
 
 The 13 planned controls are new capabilities with funded projects: AC-2(12), AC-6(3), AC-17(3), CM-3(2), CM-7(5), CP-7, IA-2(5), MA-3(2), SC-7(18), SI-6, SI-7(1), SR-8, SR-10.
 
 ### 10.2 Common control inheritance by division
-`common-control-catalog.csv` lists 118 controls that corporate provides. Inheritance is **documented** for Food Processing (2025 matrix, including plant OT) and Farm Supply (PCI DSS responsibility matrix, 2026), and for this plan. For Crop Farming it is documented only for division IT: **96 of the 118 common controls have no documented inheritance for the Crop Farming OT estate** (scenario gap 2). In practice this means, for example, that the group SOC does not monitor 29 farms (SI-4), group vulnerability management does not scan farm OT (RA-5), and group PAM does not cover the farm operations directory (AC-6(5)), while division staff assumed all three were inherited. POAM-009 documents inheritance and the division's remaining responsibilities by 2026-12-31.
+`common-control-catalog.csv` lists 118 controls that corporate provides. Inheritance is **documented** for Food Processing (2025 matrix, including plant OT) and Farm Supply (PCI DSS responsibility matrix, 2026), and for this plan. For Crop Farming it is documented only for division IT: **96 of the 118 common controls have no documented inheritance for the Crop Farming OT estate** (EV-018). In practice this means, for example, that the group SOC does not monitor 29 farms (SI-4), group vulnerability management does not scan farm OT (RA-5), and group PAM does not cover the farm operations directory (AC-6(5)), while division staff assumed all three were inherited. POAM-009 documents inheritance and the division's remaining responsibilities by 2026-12-31.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and FMICP and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit with the OT assessment firm. OT testing ran outside irrigation run windows. See P07 `assessment-results.csv` and `poam.csv`.
@@ -171,7 +174,7 @@ Common controls were assessed once, and FMICP and division controls sampled, fro
 - **Crew leads** will use named accounts with a device PIN on managed tablets, which is proportionate for entering tally on a group-owned device.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and FMIS vendor report review (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and FMIS vendor report review (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **FMICP:** Farm Management and Irrigation Control Platform

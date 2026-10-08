@@ -22,11 +22,11 @@ Most safeguards in all three divisions come from the same corporate providers, s
 |---|---|---|---|---|
 | Common control (SYS-G1) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5 | 42 | Every division access control; GR-01, GR-05, GR-12 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1) | PS-4, AT-2 | 15 | Terminations and training for about 45,000 users including seasonal workers | Focused / Focused |
-| Common control (SYS-G2) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-03, GR-04; scenario gaps 2 and 6 | Focused / Comprehensive |
+| Common control (SYS-G2) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-03, GR-04; EV-008, EV-012, EV-018 | Focused / Comprehensive |
 | Common control (SYS-G3) | CP-9, SC-7, SC-8, SC-28 | 14 | GR-01; immutable backups and the hub network | Focused / Focused |
-| FMICP (Crop Farming SSP system) | AC-17, MA-4, AC-3, IA-2, CM-3, CM-8, CP-2, CP-4, SC-7, SI-17, SC-24 | 68 | SSP system; CF-001 (Very High), CF-002 to CF-004; scenario gaps 1 and 3 | Comprehensive / Comprehensive (3 ROCs; 6 legacy and 3 acquired farms) |
-| Division sample: Food Processing | CM-5, SI-7, SA-9, AU-9, CP-9 | 26 | FP-001, FP-002, FP-003; scenario gap 4 | Focused / Focused (3 of 11 facilities) |
-| Division sample: Farm Supply | AC-3, CM-4, SA-11, SA-9, AC-6 | 19 | FS-004, FS-005; scenario gap 7 | Focused / Focused |
+| FMICP (Crop Farming SSP system) | AC-17, MA-4, AC-3, IA-2, CM-3, CM-8, CP-2, CP-4, SC-7, SI-17, SC-24 | 68 | SSP system; CF-001 (Very High), CF-002 to CF-004; EV-020, EV-037, EV-039, EV-044 | Comprehensive / Comprehensive (3 ROCs; 6 legacy and 3 acquired farms) |
+| Division sample: Food Processing | CM-5, SI-7, SA-9, AU-9, CP-9 | 26 | FP-001, FP-002, FP-003; EV-057, EV-058, EV-061 | Focused / Focused (3 of 11 facilities) |
+| Division sample: Farm Supply | AC-3, CM-4, SA-11, SA-9, AC-6 | 19 | FS-004, FS-005; EV-070, EV-092 | Focused / Focused |
 | **Total** | **37** | **237** | | |
 
 ## 3. Methods and objects
@@ -40,6 +40,18 @@ Most safeguards in all three divisions come from the same corporate providers, s
   - a loss-of-communication test on one test pivot at a legacy farm and one at an acquired farm;
   - restores of 3 data sets from the immutable vault and of 1 PLC program to a test controller at a plant;
   - a setpoint change test on a blanching line test recipe; cross-tenant access attempts in portal test tenants.
+
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee and the Group CISO approved them on 2026-09-10, effective 2026-10-01, and the Crop Farming supplement v2026-09 was re-issued after fieldwork, on 2026-09-08. The draft policies were reviewed as drafts, for design only, and no determination statement in `assessment-results.csv` rests on them: every statement was tested against the controls in force under the 2024 group policies, the division supplements on file at intake (EV-017) and the IR plan v5. The `test_type` column says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before fieldwork and was tested on samples, configurations, interviews, or live systems | 228 |
+| Design | The statement rests on a draft whose design was reviewed; operation is tested at the 2027-04 follow-up | 0 |
+| Not implemented | Nothing existed to test: documented connection requirements for the integrator remote tool (AC-17), a manual freeze start procedure at the acquired ROC-1 farms (SI-17), integrity checks on plant historian data (SI-7, 2 statements), review of refrigeration contractor session recordings (SA-9), security and privacy impact analyses for the AI prescription launch (CM-4, 2 statements), and a portal privacy assessment plan and AI prescription validation testing (SA-11, 2 statements) | 9 |
+| **Total** | | **237** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 55 terminations come from the HR roster and identity governance records in EV-002 and EV-005, the modem and gateway sample from the OT asset inventory in EV-043, and the acquired farm remote access tests from the remote access inventory in EV-037).
 
 ## 4. Rules of engagement (OT)
 - No active scanning of live PLCs or field controllers. Credential checks used single read-only attempts on modems and gateways outside irrigation run windows; any device that misbehaved would be power-cycled by the irrigation technician on site (none did).

@@ -45,14 +45,16 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**214 of 216** sample companies are finished (2,140 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**216 of 216** sample companies are finished (2,160 deliverables). The full industry by size grid is in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
 | Agriculture, Forestry, Fishing and Hunting | Sole Proprietorship | Crop farm | [README](03_company-samples/agriculture/size-1_sole-proprietor_crop-farm/README.md) |
 | Agriculture, Forestry, Fishing and Hunting | Micro | Crop farm | [README](03_company-samples/agriculture/size-2_micro_crop-farm/README.md) |
 | Agriculture, Forestry, Fishing and Hunting | Small | Diversified crop farm | [README](03_company-samples/agriculture/size-3_small_diversified-crop-farm/README.md) |
+| Agriculture, Forestry, Fishing and Hunting | Mid-Market | Crop farm | [README](03_company-samples/agriculture/size-4_mid-market_crop-farm/README.md) |
 | Agriculture, Forestry, Fishing and Hunting | Enterprise | Crop farm | [README](03_company-samples/agriculture/size-5_enterprise_crop-farm/README.md) |
+| Agriculture, Forestry, Fishing and Hunting | Multi-Sector | Crop farm plus two divisions | [README](03_company-samples/agriculture/size-6_multi-sector_crop-farm-plus-two-divisions/README.md) |
 | Food and Agriculture | Sole Proprietorship | Custom-exempt meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-1_sole-proprietor_custom-exempt-meat-processor/README.md) |
 | Food and Agriculture | Micro | Meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-2_micro_meat-processor/README.md) |
 | Food and Agriculture | Small | Meat processor | [README](03_company-samples/agriculture_food-agriculture-critical-infrastructure/size-3_small_meat-processor/README.md) |

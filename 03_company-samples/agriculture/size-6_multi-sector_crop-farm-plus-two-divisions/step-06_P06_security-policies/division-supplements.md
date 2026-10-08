@@ -71,7 +71,7 @@ The v2023 supplement was written for division IT before the 2024 farm acquisitio
 | OT changes | Change tickets for servers only | All logic, setpoint, and limit changes controlled (POL-01 4.9) | Uncontrolled changes at acquired farms (CF-005; POAM-011) |
 | Seasonal access | Farm offices remove accounts "when practical" | Disabled on the season-end date (POL-02 4.5) | 1,140 stale accounts (CF-007; POAM-005) |
 | Shared logins | Crew logins allowed | Named accounts only (POL-02 4.1) | Unattributable records (CF-006) |
-| Common control inheritance | Not addressed | Documented per system including OT (POL-01 4.6) | Scenario gap 2 (POAM-009) |
+| Common control inheritance | Not addressed | Documented per system including OT (POL-01 4.6) | No inheritance entries for the OT estate (EV-018; POAM-009) |
 
 **Why it happened.** The supplement had an owner but no review trigger tied to acquisitions. **Fix:** POL-01 4.7 now requires a security review before any acquisition and integration within 180 days, and the Group CISO's policy office tracks supplement versions in the policy register.
 

@@ -112,7 +112,7 @@ The full order is in `bia.csv` (`recovery_priority`). In short:
 17. to 27. ERP, fertigation (returns last on each farm, after a supervised low-rate test), Produce Safety records, blending, e-commerce, grower receiving, equipment and drones, payroll, credit, financial close, and the yield model.
 
 ## 8. Key findings
-1. **Shared services have the shortest RTOs, as they must.** The group identity RTO of 1 hour was met in two 2026 tests. The farm OT estate is the exception: ROC SCADA signs in through a legacy directory that has never been included in those tests.
+1. **Shared services have the shortest RTOs, as they must.** The group identity RTO of 1 hour was met in two 2026 tests (EV-004). The farm OT estate is the exception: ROC SCADA signs in through a legacy directory that has never been included in those tests.
 2. **The FMICP's availability depends on ROC SCADA, not on the cloud.** The FMIS vendor's RTO of 8 hours and the cloud hub's RTO of 2 hours are both longer than the 4-hour freeze-season MTD for BP-CF01. Irrigation must keep running from the ROCs, or by hand, when both are down.
 3. **ROC-1 is a single point of failure for the strawberry crop** and has no tested failover (POAM-008).
 4. **Traceability crosses divisions and has never been tested under outage** (BP-CF04 to BP-FP04). Producing records within 24 hours (21 CFR 1.361) with the farm data hub down depends on paper lot tags at 38 farms.
