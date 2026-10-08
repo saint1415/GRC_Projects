@@ -8,13 +8,13 @@
 | Categories in scope | Security (CC1-CC9) and Availability (A1) |
 | Target report | None. Readiness self-assessment only (no Type 1 or Type 2 audit planned) |
 | Part A | Pharmacy readiness self-assessment (`soc2-readiness.csv`), used to answer the ALF management company's vendor questionnaire |
-| Part B | PMS vendor SOC 2 Type 2 report and EPCS third-party audit report review (`vendor-soc2-review.csv`) |
+| Part B | PMS vendor SOC 2 Type 2 report (EV-023) and EPCS third-party audit report (EV-065) review (`vendor-soc2-review.csv`) |
 | Prepared | Part B reviewed 2026-08-12; Part A completed 2026-08-21 by the Store Manager with the independent consultant; approved by the pharmacist-owner 2026-08-28 |
 
 ## 1. Why SOC 2 for this organization
 An independent pharmacy is **not** a SOC 2 service organization in the usual sense. It dispenses to patients; it does not run systems for other businesses. The Trust Services Criteria are used here for two practical reasons.
 
-**A. Answering a questionnaire.** The pharmacy supplies weekly adherence packs to about 40 residents of two assisted living facilities run by one management company, its largest single relationship (P05 BP-05). In July 2026 the management company sent its pharmacy vendors a security questionnaire organized by the Trust Services Criteria, asking about security and the ability to keep packs and deliveries coming. The response is due 2026-09-30. The pharmacy will answer with this self-assessment, the POA&M (P07), and a named security contact.
+**A. Answering a questionnaire.** The pharmacy supplies weekly adherence packs to about 40 residents of two assisted living facilities run by one management company, its largest single relationship (P05 BP-05). In July 2026 the management company sent its pharmacy vendors a security questionnaire organized by the Trust Services Criteria, asking about security and the ability to keep packs and deliveries coming. The response is due 2026-09-30 (EV-033). The pharmacy will answer with this self-assessment, the POA&M (P07), and a named security contact.
 
 **The pharmacy will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the pharmacy's controls were defined in August 2026. An audit would also cost far more than the management company asked for; its questionnaire instructions accept a self-assessment from small vendors.
 

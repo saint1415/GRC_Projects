@@ -18,9 +18,9 @@ Keep a printed copy in the downtime kit and at home. The PMS is gone and the ven
 | PMS vendor (status page, support line, account manager) | Confirm the outage, scope, expected restore time, and whether pharmacy data was taken; ask for written updates | Hour 0 |
 | On-call IT consultant (BA) | Check the counter desktop for signs of compromise; disable the vendor's remote-support agent; preserve evidence | Hour 0-1 |
 | Breach counsel (health care privacy attorney) | Breach and DEA reporting decisions; whether the vendor's discovery date counts as the pharmacy's; notices | Hours 0-4 |
-| Insurance agent | No standalone cyber policy. Ask whether the business owner's or professional liability policy has a cyber or business-interruption endorsement *before* hiring any outside firm | Hours 0-4 |
+| Insurance agent | No standalone cyber policy (EV-020, EV-029; the coverage question is an open intake request). Ask whether the business owner's or professional liability policy has a cyber or business-interruption endorsement *before* hiring any outside firm | Hours 0-4 |
 | Nearby independent pharmacy (transfer arrangement) | Take new prescriptions and transfers for patients the pharmacy cannot serve | Hours 1-2 |
-| Main prescriber offices (about 10 send most prescriptions) | Route e-prescriptions to another pharmacy for the duration; phone or fax non-controlled prescriptions if the patient wants to wait | Hours 1-4 |
+| Main prescriber offices (about 10 send most prescriptions; EV-009) | Route e-prescriptions to another pharmacy for the duration; phone or fax non-controlled prescriptions if the patient wants to wait | Hours 1-4 |
 | Relief pharmacist | Extra coverage for the paper workload; confirm availability for the coming days | Hours 1-8 |
 | DEA (local Diversion field office) | One-business-day EPCS security incident report (section 5) | By the end of the next business day |
 | Florida PDMP (Department of Health) | Manual reporting or an extension request (section 5) | Day 0 to 1 |

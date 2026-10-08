@@ -3,9 +3,9 @@
 
 > Cris Santos Company is a one-person business: Cris Santos owns and runs it alone as a sole proprietorship, operating as an independent pharmacy.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -48,13 +48,14 @@ HHS (Sector Risk Management Agency) SRMA for HPH per CISA and NSM-22 (cyber coor
 | [HITECH 'recognized security practices'](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section17941&num=0&edition=prelim) | 42 U.S.C. 17941 (Pub. L. 116-321) | None. |
 | [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Hospitals: 100 or more beds (CAHs covered regardless). Otherwise, exceeding the SBA size standard for the NAICS code. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | The owner's records: vendor portals; bank and card statements; the email inbox; the insurer questionnaire. Short evidence list; a one-page inventory of devices; accounts and vendors; applicability of each candidate rule. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Pharmacy Core SaaS Stack. | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). | P02: the system boundary and its controls |

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (independent community pharmacy) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Store Manager (Privacy and Security Officer) with the pharmacist-owner, the Staff Pharmacist, the Lead Pharmacy Technician, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** pharmacist-owner, 2026-08-28
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-050), FY2025 sales and cash report (EV-044), dispensing, patient and delivery volume report (EV-045), backup job report (EV-018), PMS vendor SOC 2 report (EV-023), MSP service contract (EV-028), packaging equipment service contract (EV-029). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the pharmacist-owner.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the pharmacy, how long each can be down, and how much data each can lose. It supports:
@@ -10,13 +11,13 @@ This BIA lists every business function of the pharmacy, how long each can be dow
 - impact ratings in the risk register (P01);
 - the recovery order and diversion decision in the incident response runbook (P08).
 
-The CMS emergency preparedness conditions (C-HPH-R07, 42 CFR 482.15 and the parallel rules) do not apply: pharmacies are not among the covered provider types. The drivers here are the HIPAA contingency plan standard, the DEA rules for electronic controlled substance prescriptions (21 CFR Part 1311), and the Florida pharmacy duties in `../00_company-facts.md` section 1.
+The CMS emergency preparedness conditions (C-HPH-R07, 42 CFR 482.15 and the parallel rules) do not apply: pharmacies are not among the covered provider types. The drivers here are the HIPAA contingency plan standard, the DEA rules for electronic controlled substance prescriptions (21 CFR Part 1311), and the Florida pharmacy duties recorded in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) (FL-893.055, FL-893.07, FL-465).
 
 ## 2. System and business description
-One Florida storefront, 7 employees, about 3,100 active patients, about 55 prescriptions a business day, and about 25 deliveries a day. About 70 patients, including about 40 residents of two assisted living facilities (ALFs), receive weekly adherence packs. Nearly everything runs in vendor SaaS: the pharmacy management system (PMS, SYS-01), the productivity suite (SYS-02), cloud fax (SYS-06), the MSP-operated cloud backup (SYS-07), and the proof-of-delivery app (SYS-08). On site are 5 desktops, 2 laptops, and a delivery phone (SYS-03), the store network (SYS-04), and the adherence packaging system (SYS-05). The MSP runs IT. See `../00_company-facts.md` sections 3 and 7.
+One Florida storefront, 7 employees, about 3,100 active patients, about 55 prescriptions a business day, and about 25 deliveries a day. About 70 patients, including about 40 residents of two assisted living facilities (ALFs), receive weekly adherence packs. Nearly everything runs in vendor SaaS: the pharmacy management system (PMS, SYS-01), the productivity suite (SYS-02), cloud fax (SYS-06), the MSP-operated cloud backup (SYS-07), and the proof-of-delivery app (SYS-08). On site are 5 desktops, 2 laptops, and a delivery phone (SYS-03), the store network (SYS-04), and the adherence packaging system (SYS-05). The MSP runs IT. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual sales, about $3,600 per business day.
+Dollar values are scaled to about $1.1 million in annual sales across about 306 business days, about $3,600 per business day (EV-044).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -48,11 +49,11 @@ Dollar values are scaled to about $1.1 million in annual sales, about $3,600 per
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 PMS (SaaS) | Profiles, e-prescriptions including EPCS, DUR, labels, claims, PDMP file, refill line, signature capture, packaging interface | PMS vendor's backups and replication (vendor SOC 2 report states RPO 30 minutes and RTO 4 hours; see P09) | BP-01 to BP-05, BP-07 |
+| SYS-01 PMS (SaaS) | Profiles, e-prescriptions including EPCS, DUR, labels, claims, PDMP file, refill line, signature capture, packaging interface | PMS vendor's backups and replication (vendor SOC 2 report states RPO 30 minutes and RTO 4 hours, EV-023; see P09) | BP-01 to BP-05, BP-07 |
 | SYS-02 Productivity suite (SaaS) | Email and the shared drive | Vendor service resilience; shared drive copied nightly to SYS-07 | BP-07, BP-09 |
 | SYS-03 Endpoints | 5 desktops, 2 laptops, delivery phone | No data stored locally by design; downloaded faxes and reports in practice. The owner laptop holds the CSOS certificate | All |
 | SYS-04 Store network and internet | Firewall, Wi-Fi, VoIP phones, one internet line | Firewall configuration backed up by the MSP | All |
-| SYS-05 Adherence packaging system | Strip packager and controller workstation with local pack history | Nightly image in SYS-07; **never restore-tested** | BP-05 |
+| SYS-05 Adherence packaging system | Strip packager and controller workstation with local pack history | Nightly image in SYS-07; **never restore-tested** (EV-018) | BP-05 |
 | SYS-06 Cloud fax (SaaS) | Prescriptions, refill authorizations, ALF orders | Faxes queue at the vendor | BP-01, BP-07 |
 | SYS-07 Cloud backup (SaaS, MSP-operated) | Shared drive copy; images of the back-office desktop and SYS-05 workstation; 30 days of versions | **Never restore-tested** | BP-05, BP-09 |
 | SYS-08 Proof-of-delivery app (SaaS) | Route list and signatures on the delivery phone | Vendor-held; no backup agreement | BP-06 |
@@ -62,9 +63,9 @@ Dollar values are scaled to about $1.1 million in annual sales, about $3,600 per
 | Vendor | Functions that stop without it | BAA | Evidence of recovery capability |
 |---|---|---|---|
 | PMS vendor (with the e-prescribing network, claims switch, and PDMP connection) | BP-01 to BP-05, BP-07 | Yes | SOC 2 Type 2 report reviewed (P09); RTO 4 h and RPO 30 min meet this BIA |
-| MSP | Recovery of every on-site system; operates the backup | Yes | No written recovery commitment; the contract has a 4-business-hour response time only |
+| MSP | Recovery of every on-site system; operates the backup | Yes | No written recovery commitment; the contract has a 4-business-hour response time only (EV-028) |
 | Backup service (MSP subcontractor) | Restore of the shared drive and the SYS-05 workstation | Through the MSP (flow-down not verified) | None until the first restore test |
-| Packaging equipment vendor | BP-05 | **No** | Service contract with next-business-day on-site support; no recovery commitment for the workstation software |
+| Packaging equipment vendor | BP-05 | **No** | Service contract with next-business-day on-site support; no recovery commitment for the workstation software (EV-029) |
 | Productivity suite vendor | BP-07, BP-09 | Yes | Vendor service commitments (standard terms) |
 | Cloud fax vendor | BP-01, BP-07 | Yes | Vendor service commitments |
 | Proof-of-delivery app vendor | BP-06 | **No** | None (free tier) |
@@ -76,7 +77,7 @@ Dollar values are scaled to about $1.1 million in annual sales, about $3,600 per
 2. **The internet line is a single point of failure for every High function** (risk R-010). The PMS is reachable only over the internet.
 3. **On-site recovery is unproven.** SYS-07 has never been restore-tested, so the 24-hour RPO for BP-05 and BP-09 and the rebuild of the packaging workstation are assumptions (risk R-005).
 4. **The MSP contract has no recovery commitment.** Its 4-business-hour response time is not a recovery time. The contract amendment in P01 (R-013) adds one.
-5. **There is no downtime procedure.** The workarounds in `bia.csv` were described by the pharmacists in interviews; none is written down or practiced. The contingency plan due 2026-11-30 (P03) turns them into a one-page downtime card.
+5. **There is no downtime procedure.** The workarounds in `bia.csv` were described by the pharmacists in interviews (EV-050); none is written down or practiced, and the document request returned no downtime procedure (EV-038). The contingency plan due 2026-11-30 (P03) turns them into a one-page downtime card.
 
 ## 6. Recovery priorities
 | Priority | Resource | Expected recovery time | Alternate strategy |

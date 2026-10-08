@@ -1,0 +1,35 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,"Corporate shared services (parent company, intercompany)","Identity, SOC, data centers, network, file service, cloud and backup for all divisions",SYS-G1; SYS-G2; SYS-G3-DC; SYS-G3-FILE; SYS-G3-CLOUD; SYS-G3-VAULT,ePHI of both covered entities; College customer information and education records,"Intercompany BAAs: Hospital System 2021, Health Plan 2022; College intercompany services agreement 2025",Common control assessment by group internal audit,EV-001; EV-004; EV-024; EV-026,Internal business associate and College service provider
+V-02,Public cloud provider A,"IaaS/PaaS: landing zone, Health Plan UM platform and portals, HCIS imaging archive tier",SYS-G3-CLOUD; SYS-P1-UM; SYS-P1-PORT; SYS-H2-PACS,ePHI; member NPI,Customer agreement with BAA,SOC 2 Type 2,EV-019; EV-030; EV-031,Group
+V-03,Public cloud provider B,Immutable backup vault; planned clean recovery environment,SYS-G3-VAULT,ePHI; member NPI; student customer information (backups),Customer agreement with BAA,SOC 2 Type 2,EV-021; EV-030; EV-031,Group
+V-04,DC2 colocation operator,Data center space and building perimeter for DC2,SYS-G3-DC,Hosted equipment holding ePHI,Colocation agreement,SOC 2 Type 2,EV-018; EV-031,Group
+V-05,Identity SaaS vendor,"Single sign-on, MFA, PAM and identity governance",SYS-G1,Workforce identities,Subscription terms,None on file,EV-030; EV-005,Group
+V-06,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs (incidental ePHI),Subscription terms,Tier 1 review,EV-030; EV-014,Group
+V-07,Forensic retainer firm,Incident response support,SYS-G2,As needed during an incident,Retainer agreement,None on file,EV-030,Group
+V-08,Carriers,WAN links and voice,SYS-G3-NET,Encrypted traffic,Carrier contracts,None on file,EV-017; EV-030,Group. Diverse carriers at each hospital
+V-09,"Hardware, virtualization and backup software vendors",Data center platforms and backup software,SYS-G3-DC; SYS-G3-VAULT,No routine data access,Support contracts,None on file,EV-030,Group
+V-10,Collaboration and email SaaS vendor,"Email, chat and collaboration",SYS-G3-FILE,ePHI (incidental),Subscription terms,None on file,EV-030; EV-035,Group
+V-11,ERP and HR SaaS vendors; payroll provider; SEC filing agent,"Finance, HR, payroll and filings",SYS-G4,Financial and workforce data,Subscription and service terms,None on file,EV-030; EV-013,Group
+V-12,Penetration testing firm,Annual external penetration test,SYS-G3-DC; SYS-H1,Test results,Engagement letter,Report dated 2026-03,EV-016,Group
+V-13,EHR vendor,"EHR software, releases and support; sepsis model; deterioration index; portal reply drafting feature",SYS-H1; AI-001; AI-002; AI-005,ePHI,BAA,"SOC 2 Type 2 (support and release environment, not the group-hosted instance)",EV-061; EV-031; EV-045,Hospital System
+V-14,"Ancillary clinical system vendors (laboratory, blood bank, PACS and archive, pharmacy automation, cardiology)",Software and support,SYS-H2-LAB; SYS-H2-PACS; SYS-H2-RX; SYS-H2-CARD,ePHI,BAAs; named vendor accounts in PAM,Annual tier 1 review,EV-061; EV-030; EV-008,Hospital System
+V-15,Medical device manufacturers,"Device support, including remote support",SYS-H3,ePHI on devices,Purchase and service contracts,Device security review at purchase,EV-054; EV-056; EV-030,Hospital System. 140 remote connections; 37 outside PAM
+V-16,Reference laboratory,Send-out testing,SYS-H2-INT; SYS-H2-LAB,ePHI,BAA; interface agreement,None on file,EV-061; EV-051,Hospital System
+V-17,Health information exchange,Clinical document exchange,SYS-H2-INT,ePHI,Participation agreement and BAA,None on file,EV-061; EV-051,Hospital System
+V-18,Clearinghouses,Claims and eligibility transactions,SYS-H1; SYS-P1-CORE,ePHI,BAAs,None on file,EV-061; EV-039; EV-030,Hospital System and Health Plan
+V-19,Telehealth vendor,Video visits,SYS-H-TEL,ePHI,BAA,SOC 2 Type 2,EV-061; EV-031; EV-063,Hospital System
+V-20,Nurse call and secure messaging vendors,Clinical communications,SYS-H3,ePHI (messages),Service contracts,None on file,EV-030,Hospital System
+V-21,Teleradiology group,Night imaging reads,SYS-H2-PACS,ePHI,Services agreement,None on file,EV-030,Hospital System
+V-22,AI scribe vendor,Ambient documentation pilot,AI-003,ePHI (encounter audio and notes),BAA with no-training terms,None on file,EV-061; EV-032,Hospital System
+V-23,Imaging AI vendor,CT intracranial hemorrhage triage,AI-004,ePHI,BAA,Vendor states FDA clearance,EV-061; EV-032,Hospital System
+V-24,Certified destruction vendor,Paper and media destruction,SYS-G3-DC; HOSP-END,PHI on paper and media,Service agreement,Certificates of destruction,EV-018; EV-059,Group and Hospital System
+V-25,Customer identity vendor,Member sign-in for portals,SYS-P1-PORT,Member identities,Subscription terms,None on file,EV-030; EV-070,Health Plan
+V-26,Delegated UM and pharmacy benefit vendors,Delegated health plan functions,SYS-P1-UM; SYS-P1-CORE,ePHI,BAAs; delegation agreements,Annual questionnaire and oversight audit,EV-071,Health Plan
+V-27,Payment bank; stop-loss carriers,Claims payments; ASO stop-loss coverage,SYS-P1-CORE,Payment and claims data,Service agreements,None on file,EV-030,Health Plan
+V-28,College SIS and financial aid SaaS vendor,Student information and financial aid system,SYS-E1-SIS,Student customer information; education records,Contract with security terms; school official designation,SOC 2 report reviewed at contract only,EV-084; EV-086,College
+V-29,College LMS vendor,Learning management,SYS-E1-LMS,Education records,Contract with security terms,Reviewed at contract only,EV-084,College
+V-30,Clinical placement platform vendor; background check vendor,Placement and clearance tracking,SYS-E1-PLC,Education records,Contracts with security terms,Reviewed at contract only,EV-084,College
+V-31,Online proctoring vendor,Exam proctoring with face detection,SYS-E1-PROC; AI-008,Webcam video; face detection data,Contract silent on face data retention,Reviewed at contract only,EV-084; EV-032,College
+V-32,Education AI tutoring vendor,AI tutoring assistant,AI-009,Course content; student questions,Contract with no-training terms,Reviewed at contract only,EV-084; EV-032,College
+V-33,Academic EHR training platform vendor,Simulated EHR for teaching,SYS-E1-AEHR,Synthetic data only,Contract,Reviewed at contract only,EV-084; EV-081,College
+V-34,Enterprise AI assistant vendor,Workforce generative AI assistant,AI-010,Internal documents; PHI for approved roles,BAA with no-training terms,None on file,EV-032,Group

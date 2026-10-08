@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded for-profit hospital system: 8 hospitals, 1,970 beds; FL, GA, AL) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners and hospital presidents, 2026-05-04 to 2026-06-26 | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-08-24 | **Reported to:** risk committee of the board, 2026-09-15
+**Sources:** process owner and hospital president interviews 2026-05-04 to 2026-06-12 (EV-079, EV-080), dependency and contract review (EV-081), the tele-critical care failover test (EV-082), site and license register (EV-055), FY2025 revenue report (EV-053), operational volume report (EV-054), claims routing report (EV-041), DR test, backup and contingency records (EV-023, EV-019, EV-024), the H-08 legacy EHR contract (EV-056), service line agreements (EV-043, EV-044) and the H-01 diversion protocol (EV-052). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the hospital system depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties, the acquired hospital H-08, and the two service lines sold to other organizations. It feeds:
@@ -15,10 +16,10 @@ This enterprise-wide BIA identifies the business processes the hospital system d
 **Results in one line:** 21 processes were analyzed; 14 are High criticality and 7 Moderate. 11 processes need recovery within 4 hours. The dependency map (`dependency-map.csv`) lists 28 dependencies, 9 of them single points of failure and 4 never tested.
 
 ## 2. System and business description
-Cris Santos Company operates 8 acute-care hospitals with 1,970 licensed beds in Florida, Georgia, and Alabama, 3 freestanding emergency departments, 4 outpatient imaging centers, and 46 physician group clinics. It has 12,000 employees, about 102,000 admissions and 560,000 emergency visits a year, and about $4.8 billion in annual revenue. The technology estate is described in `../00_company-facts.md` section 3: a customer-managed enterprise EHR in two data centers (SYS-01, SYS-03), an identity platform (SYS-02), two public clouds (SYS-04), an SD-WAN (SYS-05), about 26,000 endpoints and 41,000 networked medical devices (SYS-06), building and clinical OT (SYS-07), enterprise imaging (SYS-08), ERP and payroll (SYS-09), about 1,500 vendors (SYS-10), and unified communications (SYS-12). H-08, acquired on 2025-10-01, still runs its own EHR (SYS-13) until 2027-03-01.
+Cris Santos Company operates 8 acute-care hospitals with 1,970 licensed beds in Florida, Georgia, and Alabama, 3 freestanding emergency departments, 4 outpatient imaging centers, and 46 physician group clinics. It has 12,000 employees, about 102,000 admissions and 560,000 emergency visits a year, and about $4.8 billion in annual revenue. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): a customer-managed enterprise EHR in two data centers (SYS-01, SYS-03), an identity platform (SYS-02), two public clouds (SYS-04), an SD-WAN (SYS-05), about 26,000 endpoints and 41,000 networked medical devices (SYS-06), building and clinical OT (SYS-07), enterprise imaging (SYS-08), ERP and payroll (SYS-09), about 1,500 vendors (SYS-10), and unified communications (SYS-12). H-08, acquired on 2025-10-01, still runs its own EHR (SYS-13) until 2027-03-01.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the materiality worksheet in P08 section 7. Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-053) and to the materiality worksheet in P08 section 7. Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -62,7 +63,7 @@ Ordered by RTO, then MTD.
 - **Contracts** set the SL-1 (BP-14) and SL-2 (BP-15) objectives. SL-2 partner hospitals' ICU patients depend on remote monitoring overnight, so its MTD is 4 hours.
 - **Regulation** tightens financial close (BP-18) during the quarter-end window, when the MTD drops to 48 hours because of SEC filing deadlines.
 
-**Two recovery objectives for the ECIS.** The 4-hour RTO for BP-01 to BP-07 is met by failover to DC-2 (2.6 hours in the 2026-03-21 test). Ransomware that also reaches DC-2 (both data centers share one directory) needs a restore from the immutable vault. For that case the business set a **24-hour cyber recovery target**, the longest the hospitals can run on BCA downtime computers and paper before patient safety, diversion, and record integrity become unmanageable. The 2026-04-18 full restore test took **41 hours** (R-004; POAM-003).
+**Two recovery objectives for the ECIS.** The 4-hour RTO for BP-01 to BP-07 is met by failover to DC-2 (2.6 hours in the 2026-03-21 test, EV-023). Ransomware that also reaches DC-2 (both data centers share one directory) needs a restore from the immutable vault. For that case the business set a **24-hour cyber recovery target**, the longest the hospitals can run on BCA downtime computers and paper before patient safety, diversion, and record integrity become unmanageable. The 2026-04-18 full restore test took **41 hours** (EV-023; R-004; POAM-003).
 
 ## 5. Diversion thresholds by process (for the emergency plan and P08)
 EMTALA allows a hospital to direct an ambulance that is not yet on its property to another facility only when the hospital "does not have the staff or facilities to accept any additional emergency patients" (42 CFR 489.24(b), definition of "comes to the emergency department"). Anyone who arrives must still be screened and stabilized. The BIA gives the emergency plan these IT-outage triggers, to be applied hospital by hospital:
@@ -75,17 +76,17 @@ EMTALA allows a hospital to direct an ambulance that is not yet on its property 
 | Phones, secure messaging, and radio fallback all unavailable | BP-08 | Full diversion |
 | Operating room air handling or medical gas alarms unavailable | BP-09 | Trauma and surgical traffic |
 
-No more than one hospital in a county may go on full IT-outage diversion without the System Transfer and Command Center coordinating with county EMS and the receiving hospitals. Today these criteria are agreed only for H-01 (DEP-10; R-009; POAM-018).
+No more than one hospital in a county may go on full IT-outage diversion without the System Transfer and Command Center coordinating with county EMS and the receiving hospitals. Today these criteria are agreed only for H-01 (EV-052; DEP-10; R-009; POAM-018).
 
 ## 6. Dependency mapping and third parties
 The full map is in `dependency-map.csv`. Key findings:
 
-1. **Cyber recovery, not failover (DEP-01 to DEP-05).** Failover between data centers is fast and tested. The gap is the case where both data centers are compromised. The immutable vault keeps clean copies, but a full restore takes 41 hours, and the isolated recovery environment where restored systems are rebuilt and checked is not finished.
-2. **Clearinghouse concentration (DEP-08).** One clearinghouse carries about 80% of claims. The secondary clearinghouse has no contracted surge capacity, and the payer-portal fallback has never been tested. A 30-day outage would defer about $315 million of expected payments (R-005; POAM-019).
-3. **Acquired hospital H-08 (DEP-21, DEP-22).** Its legacy EHR vendor's contract states a 24-hour RTO against an 8-hour BIA RTO, the restore has never been tested by the system, and H-08 reaches the enterprise integration engine over a legacy site VPN.
-4. **EMS and diversion (DEP-10).** EMS agencies in 9 counties depend on the system's EDs. Only H-01 has agreed IT-outage diversion criteria.
-5. **Medical devices and OT (DEP-12 to DEP-14).** About 2,600 networked devices run unsupported operating systems, three analyzer platforms use vendor remote tools outside PAM, and OT is not segmented at H-07 and H-08.
-6. **Tele-critical care (DEP-17, DEP-18).** SL-2 has no alternate virtual care center; its cloud platform failover met the 2-hour RTO in 2026-06.
+1. **Cyber recovery, not failover (DEP-01 to DEP-05).** Failover between data centers is fast and tested. The gap is the case where both data centers are compromised. The immutable vault keeps clean copies, but a full restore takes 41 hours, and the isolated recovery environment where restored systems are rebuilt and checked is not finished (EV-023, EV-024).
+2. **Clearinghouse concentration (DEP-08).** One clearinghouse carries about 80% of claims. The secondary clearinghouse has no contracted surge capacity, and the payer-portal fallback has never been tested (EV-041, EV-080). A 30-day outage would defer about $315 million of expected payments (R-005; POAM-019).
+3. **Acquired hospital H-08 (DEP-21, DEP-22).** Its legacy EHR vendor's contract states a 24-hour RTO against an 8-hour BIA RTO, the restore has never been tested by the system, and H-08 reaches the enterprise integration engine over a legacy site VPN (EV-056, EV-014).
+4. **EMS and diversion (DEP-10).** EMS agencies in 9 counties depend on the system's EDs. Only H-01 has agreed IT-outage diversion criteria (EV-052).
+5. **Medical devices and OT (DEP-12 to DEP-14).** About 2,600 networked devices run unsupported operating systems, three analyzer platforms use vendor remote tools outside PAM, and OT is not segmented at H-07 and H-08 (EV-012, EV-016, EV-017).
+6. **Tele-critical care (DEP-17, DEP-18).** SL-2 has no alternate virtual care center; its cloud platform failover met the 2-hour RTO in 2026-06 (EV-082).
 
 ## 7. Resource requirements
 | Resource / component | Description | Supports process |

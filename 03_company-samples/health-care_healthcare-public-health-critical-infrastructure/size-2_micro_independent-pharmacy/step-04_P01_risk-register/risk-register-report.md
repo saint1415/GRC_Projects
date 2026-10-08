@@ -12,7 +12,7 @@
 | Approved | 2026-08-28 by the pharmacist-owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole pharmacy and its key vendors. That covers every system that creates, receives, maintains, or transmits ePHI (SYS-01 to SYS-09 in `../00_company-facts.md`), the store itself, and the vendors that handle ePHI or administer systems for the pharmacy: the PMS vendor (with the e-prescribing network, claims switch, and PDMP connection it runs), the MSP, the productivity suite vendor, the cloud fax vendor, the backup service, the packaging equipment vendor, and the proof-of-delivery app vendor. The controlled substance risk score (SYS-09) is in scope as a risk (R-019); its full review is in P10.
+**Scope.** The whole pharmacy and its key vendors. That covers every system that creates, receives, maintains, or transmits ePHI (SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the store itself, and the vendors that handle ePHI or administer systems for the pharmacy: the PMS vendor (with the e-prescribing network, claims switch, and PDMP connection it runs), the MSP, the productivity suite vendor, the cloud fax vendor, the backup service, the packaging equipment vendor, and the proof-of-delivery app vendor ([vendor register](../step-00_P00_intake/vendor-register.csv)). The controlled substance risk score (SYS-09) is in scope as a risk (R-019); its full review is in P10.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Store Manager may accept.
@@ -20,11 +20,11 @@
 - High and Very High: not accepted. The pharmacist-owner approves a dated treatment plan instead.
 - Two kinds of risk are never accepted at Moderate or above, whatever the cost: risks of patient harm (a missed allergy, interaction, or dose) and risks of breaking a DEA or Florida controlled substance duty.
 
-This is the pharmacy's first documented risk analysis. The only earlier document is a 2022 HIPAA checklist from the PMS vendor, which did not rate likelihood or impact and is not relied on.
+This is the pharmacy's first documented risk analysis. The only earlier document is a 2022 HIPAA checklist from the PMS vendor (EV-039), which did not rate likelihood or impact and is not relied on.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), and interviews with the pharmacist-owner, the Staff Pharmacist, the Store Manager, the Lead Pharmacy Technician, the Delivery Driver, and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), and interviews with the pharmacist-owner, the Staff Pharmacist, the Store Manager, the Lead Pharmacy Technician, the Delivery Driver, and the MSP lead technician (2026-07-13 to 2026-07-24, EV-051). The gap analysis ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the payroll and contracts records, the walk-throughs, the account comparison of 2026-07-14 (EV-052), the controlled substance permission and EPCS report reviews (EV-055, EV-059) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3). For a pharmacy with about $3,600 of sales per business day and records for about 11,500 individuals in the PMS, a breach of thousands of patients, a missed DEA duty, or a day without dispensing is rated High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -55,10 +55,12 @@ Status: 10 In progress, 10 Open, 3 Closed (R-006 treated; R-020 and R-021 accept
 **The second theme is controlled substance duties that the software supports but nobody performs.** The PMS generates the daily EPCS audit report, but no one reads it (R-011). The CSOS certificate was used by someone other than its holder (R-014). Non-pharmacists could alter dispensed controlled substance records (R-006). The vendor switched on a risk score that pharmacists had not reviewed (R-019). None of these needs new technology; each needs a named person and a short routine.
 
 **Risks that were fixed or found during the work:**
-- R-006: the permission to annotate and alter dispensed controlled substance prescription records was removed from the Lead Pharmacy Technician and the Store Manager on 2026-07-17, the day after it was found. The pharmacist-owner reviewed the 12-month audit trail of alterations and found no change to a drug, quantity, or patient. The risk is closed.
-- R-004: a former technician's PMS and email accounts were disabled on 2026-07-14, about 11 weeks after the last day. The PMS and email sign-in logs showed no use after the last day, so the Store Manager (Privacy Officer) documented that no breach occurred. The process gap remains open.
-- R-014: the CSOS certificate was revoked on 2026-07-17 and a new one was issued to the pharmacist-owner on 2026-08-03. Schedule II orders used paper DEA order forms in between. The wholesaler's order history showed no orders the pharmacist-owner did not recognize.
-- R-023: added on 2026-08-05 after P07 testing found the same local administrator password on all 5 desktops and the packaging workstation.
+- R-006: the permission to annotate and alter dispensed controlled substance prescription records was removed from the Lead Pharmacy Technician and the Store Manager on 2026-07-17, the day after it was found (EV-055, EV-056). The pharmacist-owner reviewed the 12-month audit trail of alterations and found no change to a drug, quantity, or patient. The risk is closed.
+- R-004: a former technician's PMS and email accounts were disabled on 2026-07-14, about 11 weeks after the last day. The PMS and email sign-in logs showed no use after the last day, so the Store Manager (Privacy Officer) documented that no breach occurred (EV-052). The process gap remains open.
+- R-014: the CSOS certificate was revoked on 2026-07-17 and a new one was issued to the pharmacist-owner on 2026-08-03. Schedule II orders used paper DEA order forms in between. The wholesaler's order history showed no orders the pharmacist-owner did not recognize (EV-057, EV-058, EV-064).
+- R-023: added on 2026-08-05 after P07 testing found the same local administrator password on all 5 desktops and the packaging workstation (EV-IA-5).
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-05 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the pharmacist-owner; about $5,200 one-time and $3,240 a year):**

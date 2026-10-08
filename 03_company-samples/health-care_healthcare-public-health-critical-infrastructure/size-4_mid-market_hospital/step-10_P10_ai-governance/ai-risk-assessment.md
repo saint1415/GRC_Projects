@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed 112-bed community acute-care hospital) |
 | Tier / Vertical | Mid-Market / Healthcare and Public Health |
-| Scope | Portfolio of 6 AI and decision support use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. Full assessment of AI-001, the registry default use case |
+| Scope | Portfolio of 6 AI and decision support use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The inventory was built at intake from the accounts payable vendor master, the EHR and PACS configuration, the EHR upgrade notes and committee minutes, and a department heads survey (EV-040, EV-055, EV-008, EV-071); the number of public generative AI users was counted in the P10 web proxy review (EV-070). What staff enter into public AI sites was checked only in a sample of 25 sessions, so its full extent was not established; R-029 treats it as unknown beyond that sample. Full assessment of AI-001, the registry default use case |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook, with the Generative AI Profile (NIST AI 600-1) for AI-003 and AI-006 |
 | Assessors / dates | Chief Medical Officer (clinical), Compliance and Privacy Officer (privacy, Section 1557 Coordinator), vCISO and Information Security Manager (security), CNO and the ED Medical Director (sepsis workflow), Quality Director (validation data); 2026-08-17 to 2026-08-28 |
 | Decision | Chief Operating Officer and Chief Medical Officer on the recommendation of the Clinical Decision Support Committee, 2026-09-17; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-No AI tool at the hospital went through a security, privacy, or clinical review before use (gap 9). The sepsis model arrived switched on in an EHR upgrade; the imaging triage software was bought by Imaging; the ED scribe pilot started with a vendor's standard contract; the coding tool was bought by Revenue Cycle; and staff were found pasting text into public chatbots.
+No AI tool at the hospital went through a security, privacy, or clinical review before use (EV-055). The sepsis model arrived switched on in an EHR upgrade; the imaging triage software was bought by Imaging; the ED scribe pilot started with a vendor's standard contract; the coding tool was bought by Revenue Cycle; and staff were found pasting text into public chatbots.
 
 | ID | Use case | Risk tier | 92.210 in scope? | Decision |
 |---|---|---|---|---|

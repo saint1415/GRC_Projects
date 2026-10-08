@@ -1,0 +1,24 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"Hosted EHR, patient portal, sepsis prediction model",SYS-01; SYS-13,ePHI,BAA signed; contract with security terms,"SOC 2 Type 2, 12 months ending 2026-03-31, with bridge letter through 2026-06-30",EV-018; EV-021; EV-022,Named VPN account for vendor support
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,SOC 2 report from the vendor portal,EV-019; EV-021,Not a business associate (no ePHI)
+V-03,Productivity suite vendor,"Email, files, chat",SYS-03,ePHI (incidental),Online subscription terms,SOC 2 report from the vendor portal,EV-019; EV-021,Not in the BAA inventory (open request)
+V-04,Public cloud provider,"IaaS/PaaS for the imaging archive, interface engine and backup vault",SYS-04,ePHI,BAA signed; customer agreement with security terms,SOC 2 report and shared responsibility description,EV-019; EV-021; EV-022,
+V-05,Managed service provider (MSP),"Network and server administration, patching, EDR console, business-hours alert monitoring",SYS-04; SYS-05; SYS-06,ePHI (administrative access),BAA signed; service agreement,None on file,EV-012; EV-021; EV-022,Remote management agent on every server and workstation; one shared domain administrator account
+V-06,Clearinghouse,"Claims, eligibility and remittance",SYS-09,ePHI,BAA signed; clearinghouse agreement,None on file,EV-021; EV-022; EV-023,Single clearinghouse
+V-07,Teleradiology group,Reads of all CT and X-ray studies,SYS-10,ePHI,BAA signed,None on file,EV-015; EV-021; EV-022,Support VPN profile uses one shared account with a password only
+V-08,Telepharmacy service,After-hours order verification in the EHR,SYS-11,ePHI,BAA signed,None on file,EV-015; EV-021; EV-022,Named accounts with MFA
+V-09,Reference laboratory,Send-out orders and results,SYS-12,ePHI,BAA signed,None on file,EV-021; EV-022,
+V-10,Health information exchange (HIE),Care summary exchange,SYS-12,ePHI,BAA signed; participation agreement,None on file,EV-022; EV-054,
+V-11,Cloud fax service,Records requests and transfer documents,SYS-14,ePHI,None located,None on file,EV-021; EV-022,
+V-12,Biomedical equipment service contractor,Preventive maintenance and repair of medical devices,SYS-07,ePHI stored on devices,Service agreement; no BAA located,None on file,EV-021; EV-022; EV-042; EV-043,Devices leave for repair; technicians work in device areas
+V-13,Certified destruction vendor,Destruction of IT drives,n/a,ePHI on retired drives,Service agreement,Certificates of destruction,EV-021; EV-042,
+V-14,Building automation and nurse call vendors,Service and remote support for building OT,SYS-08,Patient names and rooms (nurse call),Service contracts,None on file,EV-015; EV-021; EV-056,Vendor-initiated remote sessions; contracts silent on configuration backups
+V-15,"Device manufacturers (CT, dispensing cabinets, infusion pumps)",Service plans and remote support,SYS-07,ePHI on devices,Service plans,No MDS2 forms on file,EV-015; EV-021; EV-022; EV-044,Vendor-initiated remote sessions
+V-16,Emergency physician group,24x7 ED staffing and daytime inpatient coverage,SYS-01,ePHI,Professional services agreement,Not applicable (clinical services),EV-004; EV-021,Clinicians hold named EHR accounts
+V-17,Telehospitalist service,Night inpatient coverage,SYS-01,ePHI,Professional services agreement,Not applicable (clinical services),EV-004; EV-021,Clinicians hold named EHR accounts
+V-18,Nursing agencies,Agency nurses (about 4 shifts a week),SYS-01,ePHI,Staffing agreements requiring screening and confidentiality,Not applicable (staffing),EV-004; EV-021,End dates recorded only when an agency reports one
+V-19,Payroll provider,Payroll and time capture,BUS-01,Workforce data,Subscription terms,None on file,EV-003; EV-021,No ePHI
+V-20,Internet and phone carriers,Fiber circuit; cellular backup; phone lines,SYS-05,Network traffic,Carrier contracts,Not applicable,EV-021; EV-046,One fiber circuit from one carrier
+V-21,Payment terminal service,Vendor-hosted point-to-point encrypted card terminals,n/a,Payment card data,Service agreement,None on file,EV-021,Outside the ePHI systems
+V-22,Cyber insurer,Cyber insurance; forensic and breach response panel,n/a,None routinely,Insurance policy,Not applicable,EV-021; EV-051,
+V-23,State health department (not a vendor),"Electronic laboratory reporting, immunization and syndromic surveillance feeds",SYS-12,ePHI (permitted public health disclosure),Onboarding agreement,Not applicable,EV-054,Not a business associate

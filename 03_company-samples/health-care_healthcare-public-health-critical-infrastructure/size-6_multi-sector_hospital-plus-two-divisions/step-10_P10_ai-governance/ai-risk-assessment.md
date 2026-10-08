@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for three priority use cases. **Priority 1:** the sepsis prediction model in all 9 hospitals (AI-001). **Priority 2:** the Health Plan prior authorization triage model in shadow mode (AI-006). **Priority 3:** the College's online exam proctoring (AI-008) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook; the Generative AI Profile (AI 600-1) for the generative use cases (AI-003, AI-005, AI-009, AI-010). AI 600-1 does not apply to AI-001, a predictive model |
 | Assessors / dates | Group AI council (chaired by the Group Chief Risk Officer). Sepsis model validation at all 9 hospitals 2026-08-10 to 2026-08-21 by the System CMIO's clinical informatics team with each hospital's sepsis coordinator; council review 2026-08-28; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 6 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list, EHR module configuration and model registries (EV-032), division configuration and contract records (EV-064, EV-068, EV-069, EV-084) and the sepsis model validation (EV-103). The `source_evidence` column names the source of each row. Not established: workforce use of public generative AI tools outside the approved tools (intake open request), and whether every AI feature that vendors switch on inside existing products has been found |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -31,7 +31,7 @@
 5. **Change gate.** A material change (new model version, new threshold, new decision role, new hospital) triggers re-assessment before release.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short.** The standard was adopted in 2026, after the sepsis model had already gone live in all 9 hospitals in 2025 at the vendor's default threshold, validated only at the flagship (scenario gap 6; P01 HS-009, HS-010). It came in time to stop the Health Plan's triage model from moving past shadow mode without UM committee review (HP-005).
+**Where the program fell short.** The standard was adopted in 2026, after the sepsis model had already gone live in all 9 hospitals in 2025 at the vendor's default threshold, validated only at the flagship (group gap 6; EV-064; P01 HS-009, HS-010). It came in time to stop the Health Plan's triage model from moving past shadow mode without UM committee review (HP-005).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

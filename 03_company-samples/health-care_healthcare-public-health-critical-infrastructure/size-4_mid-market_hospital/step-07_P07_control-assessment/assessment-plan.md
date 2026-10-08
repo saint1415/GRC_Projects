@@ -25,7 +25,7 @@ Mid-Market tier scope: 25-40 controls. **34 controls, 243 determination statemen
 | IA-2, IA-2(1) | Unique IDs and MFA; 164.312(a)(2)(i), 164.312(d) | Focused | Focused (25 privileged accounts) |
 | AT-2 | Training; 164.308(a)(5) | Basic | Focused |
 | AU-2, AU-6 | Activity review gap; 164.308(a)(1)(ii)(D), 164.312(b); R-014, R-037 | Focused | Focused |
-| CM-6, CM-8 | Configuration and device inventory; gaps 1 and 10; R-007, R-040 | Focused | Focused |
+| CM-6, CM-8 | Configuration and device inventory; EV-013 and EV-027 (P03 164.310(d), 164.316(a)); R-007, R-040 | Focused | Focused |
 | CP-2, CP-4, CP-8, CP-9, CP-10 | Contingency, communications, and recovery; 164.308(a)(7); 482.15(b)(5), (c)(3); R-001 (Very High), R-003, R-006, R-017 | Comprehensive | Comprehensive |
 | IR-4, IR-6, IR-8 | Incident capability; 164.308(a)(6) | Focused | Basic |
 | MP-6, PE-3 | Physical and media; 164.310 | Basic | Focused |
@@ -55,6 +55,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
 | Device returns to vendors (2026) | 6 | 6 | MP-6 |
 | Staff for reporting-awareness interviews | 600 | 15 | IR-6, AT-2 |
 | Network closets | 41 | 12 | PE-3 |
+
+### What each test could show
+The 2026 policies (P06), the new standards and the two P08 runbooks were drafts during fieldwork; they were approved on 2026-09-17 and take effect on 2026-10-01. The 2023 policies, standards and incident response plan, the emergency operations plan and the unit downtime procedures were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 187 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the incident response plan and P08 runbooks examined for IR-8); its design was reviewed. Operation is tested at the 2027-03 follow-up | 13 |
+| Not implemented | Nothing existed to test | 43 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population above comes from an intake export or the workforce population refreshed to 2026-06-30: terminations, non-employee departures, transfers and new EHR accounts from EV-060; privileged accounts from EV-007; networked devices from EV-013; remote access vendors from EV-015; endpoints from EV-010; BAAs and accounts payable vendors from EV-041 and EV-040; incidents from EV-036; Critical findings from EV-018; servers from EV-012; device returns from EV-051; network closets from EV-014; and staff from the HR roster (EV-003). The July 2026 backup job days were drawn by the assessors from the backup service during fieldwork (EV-CP-9).
 
 ## 3. Methods and objects
 - **Examine:**
@@ -135,7 +146,7 @@ Other than satisfied statements by risk: 26 High, 51 Moderate, 17 Low.
 | SI-4 | 10 | 2 | Moderate | POAM-020 |
 | SI-7 | 3 | 3 | Moderate | POAM-021 |
 
-**Fully satisfied (4 controls):** IR-6 (all 15 interviewed staff knew how to report), RA-3 (the 2026 risk analysis), SC-28 (encryption of endpoints, servers, cloud storage, and backups), and SI-3 (EDR quarantined every test file within 4 minutes). These confirm the strengths listed in the scenario facts.
+**Fully satisfied (4 controls):** IR-6 (all 15 interviewed staff knew how to report), RA-3 (the 2026 risk analysis), SC-28 (encryption of endpoints, servers, cloud storage, and backups), and SI-3 (EDR quarantined every test file within 4 minutes). These confirm what the intake evidence showed (EV-010, EV-011, EV-020, EV-032, EV-038).
 
 **Fully other than satisfied (6 controls):** AC-6, IA-2(1), CP-4, CP-8, CP-10, and SR-6.
 

@@ -22,6 +22,8 @@ The pharmacy owns almost no infrastructure. Most of the PCSS is vendor SaaS, and
 - **SYS-08:** proof-of-delivery app (SaaS, free tier) on the delivery phone
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Which rules apply was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv); this section lists the ones that affect the PCSS.
+
 | ID | Requirement | Citation |
 |---|---|---|
 | C-HPH-R01 | HIPAA Security Rule | 45 CFR Part 164, Subpart C |
@@ -79,7 +81,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the pharmacy controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the pharmacy controls or pays someone to control on its behalf:
 - **Inside:** the pharmacy's PMS tenant configuration, user roles, and EPCS settings (SYS-01), the productivity suite tenant and shared drive (SYS-02), 5 desktops, 2 laptops, and the delivery phone (SYS-03), the store network (SYS-04), the packaging system (SYS-05), the cloud fax account (SYS-06), the backup subscription (SYS-07), and the delivery app account (SYS-08).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers; the e-prescribing network, claims switch, and PDMP connection (reached through the PMS vendor); PBMs; the Florida PDMP web portal; the wholesaler ordering portal and CSOS ordering; the MSP's remote management platform; the packaging vendor's remote-support service; and the SYS-09 risk score, which runs inside the PMS vendor's platform and is assessed separately in P10.
 
@@ -123,11 +125,11 @@ By responsibility: 19 system-specific (the pharmacy), 23 hybrid (the pharmacy wi
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the pharmacy relies on | Evidence | What the pharmacy must still do |
 |---|---|---|---|
-| PMS vendor | Platform security, encryption, backups including the daily backup of controlled substance records (CP-9), EPCS digital signature and archiving (SC-13), the EPCS audit trail and daily audit report (AU-2), lockout (AC-7) | SOC 2 Type 2 report and EPCS third-party audit report reviewed 2026-08-12 (P09) | Complementary user entity controls: user provisioning and removal, role assignment (including who may alter controlled substance records, 21 CFR 1311.200(e)), MFA settings, review of access reports and the daily EPCS report, and the one-business-day report of EPCS security incidents (1311.215(c)) |
-| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation; BAA accepted 2024 | Account management, MFA settings, sharing and forwarding settings, encryption rule, log review |
-| Cloud fax vendor | Encrypted transmission and storage (SC-8) | Vendor documentation; BAA | Account management; recipient verification |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
-| Backup service (MSP subcontractor) | Storage of backup copies (CP-9) | None yet; restore test due 2026-09-30 | Confirm the subcontractor BAA through the MSP |
+| PMS vendor | Platform security, encryption, backups including the daily backup of controlled substance records (CP-9), EPCS digital signature and archiving (SC-13), the EPCS audit trail and daily audit report (AU-2), lockout (AC-7) | SOC 2 Type 2 report (EV-023) and EPCS third-party audit report (EV-065) reviewed 2026-08-12 (P09) | Complementary user entity controls: user provisioning and removal, role assignment (including who may alter controlled substance records, 21 CFR 1311.200(e)), MFA settings, review of access reports and the daily EPCS report, and the one-business-day report of EPCS security incidents (1311.215(c)) |
+| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-037); BAA accepted 2024 (EV-007) | Account management, MFA settings, sharing and forwarding settings, encryption rule, log review |
+| Cloud fax vendor | Encrypted transmission and storage (SC-8) | Vendor documentation (EV-037); BAA (EV-021) | Account management; recipient verification |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports (EV-015); P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
+| Backup service (MSP subcontractor) | Storage of backup copies (CP-9) | None yet (no restore jobs in the history, EV-018); restore test due 2026-09-30 | Confirm the subcontractor BAA through the MSP |
 
 **Inherited does not mean done.** Three of the PMS vendor's complementary user entity controls are open gaps at the pharmacy: account removal (AC-2, PS-4), review of access reports and the daily EPCS audit report (AU-6), and in-store MFA (IA-2(2)). The fourth, controlled substance permissions, was fixed on 2026-07-17 (AC-6).
 
@@ -138,7 +140,7 @@ Assessed 2026-08-04 to 2026-08-06 by an independent consultant. See P07 `assessm
 Workforce users sign in to the productivity suite with a password and a phone authenticator app, and to the PMS from outside the store the same way. Inside the store, PMS sign-in uses a password only, because the vendor treats the store network as a trusted location. For access to ePHI at the Moderate category, that in-store gap is accepted only until the vendor's second-factor option is enabled (target 2026-12-31; IA-2(2)). EPCS prescriber authentication happens in the prescribers' own applications, outside this boundary. The CSOS certificate is a DEA-issued digital certificate held by the pharmacist-owner alone (21 CFR 1311.30(a)).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and PMS vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and PMS vendor report review (P09), AI assessment (P10). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **ALF:** assisted living facility

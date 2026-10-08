@@ -13,13 +13,13 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that creates, receives, maintains, or transmits ePHI, member information, or student customer information in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 data centers, network, file service, cloud, and backup vault, and SYS-G4 ERP and HR. Division systems are SYS-H1 to SYS-H3, SYS-P1, and SYS-E1 and SYS-E2 (`../00_company-facts.md` section 3).
+**Scope.** Every system that creates, receives, maintains, or transmits ePHI, member information, or student customer information in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 data centers, network, file service, cloud, and backup vault, and SYS-G4 ERP and HR. Division systems are SYS-H1 to SYS-H3, SYS-P1, and SYS-E1 and SYS-E2 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. The Hospital System, the focus division, has the most detailed register (30 risks).
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-025):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,11 +30,13 @@
 Patient-safety risks rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the HHS 405(d) HICP threat list for large organizations, and interviews with each division's leadership, clinical engineering, and the system emergency management director.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, the HHS 405(d) HICP threat list for large organizations, interviews with each division's leadership, clinical engineering, and the system emergency management director (EV-092 group, EV-093 Hospital System, EV-094 Health Plan, EV-095 College), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05). Patient-safety consequences (delayed treatment, medication errors, missed results) rate Very High; group impact reflects several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including the P07 results available by then. P07 testing continued to 2026-08-28; it confirmed existing risks and added none, so every risk in the four registers is Pass 1 (`assessment_pass`). The plain-text interface passwords found in P07 testing on 2026-07-09 (EV-C1-IA-5) were folded into HS-019 in Pass 1. Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 | Register | Very High | High | Moderate | Low | Very Low | Total | Rolled up to group |
@@ -71,11 +73,11 @@ The Health Plan has no High risks. Its program inherits documented common contro
 
 ### What the results say
 There are no Very High risks, and most control families are in place: a 24x7 SOC, PAM, quarterly access certification, immutable backups, and a tested failover to DC2. The High risks cluster in three places:
-1. **What the divisions share** (GR-01, GR-07). One directory forest and unseparated server zones in two data centers mean one ransomware compromise can stop all 9 hospitals, the claims core, and the College's administrative files at once, and the restore path from the vault has never been proven (scenario gap 1).
-2. **Patient safety during and around IT failures** (HS-002, HS-011, GR-02). The hospitals' paper downtime is built for hours, the unified emergency plan has no system-wide IT outage scenario (gap 2), and the device estate has unsupported and unsegmented parts (gap 3).
-3. **Governance that has not caught up** (GR-04, ED-001). The sepsis model went live at 9 hospitals with validation at one (gap 6), and the College is still outside group identity controls (gap 5).
+1. **What the divisions share** (GR-01, GR-07). One directory forest and unseparated server zones in two data centers mean one ransomware compromise can stop all 9 hospitals, the claims core, and the College's administrative files at once, and the restore path from the vault has never been proven (group gap 1).
+2. **Patient safety during and around IT failures** (HS-002, HS-011, GR-02). The hospitals' paper downtime is built for hours, the unified emergency plan has no system-wide IT outage scenario (group gap 2), and the device estate has unsupported and unsegmented parts (group gap 3).
+3. **Governance that has not caught up** (GR-04, ED-001). The sepsis model went live at 9 hospitals with validation at one (group gap 6), and the College is still outside group identity controls (group gap 5).
 
-Scenario gaps 4, 7, and 8 (student access, minimum necessary between covered entities, multi-regulator notification) are Moderate at group level (GR-05, GR-09, GR-03). They matter because each involves two or more divisions and none can be fixed by one division alone.
+Group gaps 4, 7, and 8 (student access, minimum necessary between covered entities, multi-regulator notification) are Moderate at group level (GR-05, GR-09, GR-03). They matter because each involves two or more divisions and none can be fixed by one division alone.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** clean recovery environment and directory tier separation (GR-01); device network segmentation and vendor PAM (GR-02, GR-07); group AI program (GR-04); College migration to SYS-G1 (GR-06); SIEM coverage of device networks and the College (GR-12).

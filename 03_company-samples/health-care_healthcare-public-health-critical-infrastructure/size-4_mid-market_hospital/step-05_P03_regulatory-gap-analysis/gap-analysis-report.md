@@ -11,6 +11,8 @@
 | Approved | Chief Operating Officer, 2026-09-17 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** acute inpatient, emergency, surgical, obstetric, and diagnostic services billed to Medicare, Florida Medicaid, and commercial payers, plus EHR services to 18 affiliated practices.
 
 At Mid-Market size the gap analysis covers every rule that binds the primary business line, not just the primary regulation. Each rule in the vertical registry (C-HPH-R01 to C-HPH-R11) and each other rule found in the screening was checked for applicability at this size first.
@@ -32,28 +34,28 @@ At Mid-Market size the gap analysis covers every rule that binds the primary bus
 | HITECH recognized security practices (C-HPH-R10), 42 U.S.C. 17941 | **Applies as a mitigating factor** | OCR must consider recognized security practices in place for the previous 12 months. Operating the CPGs and HICP practices now builds that record | Roadmap |
 | FDA sec. 524B (C-HPH-R04) | **Not directly** | Duties fall on device manufacturers. The hospital uses it in purchasing (SBOM, vulnerability plan, update support) | P06 STD-04 |
 | FTC Health Breach Notification Rule (C-HPH-R05) | **No** | 16 CFR 318.1 excludes HIPAA covered entities and business associates acting as such | Not analyzed |
-| 42 CFR Part 2 (C-HPH-R06) | **No** | The hospital is not a Part 2 program (see `../00_company-facts.md`) | Not analyzed |
+| 42 CFR Part 2 (C-HPH-R06) | **No** | The hospital is not a Part 2 program (obligations register C-HPH-R06; EV-047, EV-056) | Not analyzed |
 | HIPAA Security Rule NPRM (C-HPH-R03) | **Proposed only** | Not a current obligation | Section 6 |
 | CIRCIA (C-HPH-R11) | **Not in effect** | Proposed 6 CFR 226.2(b)(11) would cover hospitals with 100 or more beds; this hospital has 112. No final rule as of 2026-10-06 | Section 6; P08 |
 
 **Excluded HIPAA Security Rule rows (7), with reasons:**
 - **164.308(a)(4)(ii)(A)** (isolating clearinghouse functions): the hospital is not a health care clearinghouse.
 - **164.314(a)(2)(ii)** (other arrangements): no governmental entity business associates. State and county health departments receive public health reports as permitted disclosures, not as business associates.
-- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): **confirmed not applicable.** The employee health plan is fully insured, and the hospital as plan sponsor receives only summary health information and enrollment and disenrollment information, which 164.314(b)(1) excludes (disclosures under 164.504(f)(1)(ii) or (iii)). Confirmed with the benefits broker on 2026-07-08.
+- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): **confirmed not applicable.** The employee health plan is fully insured, and the hospital as plan sponsor receives only summary health information and enrollment and disenrollment information, which 164.314(b)(1) excludes (disclosures under 164.504(f)(1)(ii) or (iii)). Confirmed with the benefits broker on 2026-07-08 (EV-069, EV-048).
 
 **One 482.15 row is excluded:** 482.15(f) (unified program for a multi-facility health system), because the hospital is independent.
 
 ## 2. Method
 1. **Requirements.** HIPAA Security Rule requirements and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool), all 69 rows of the Health Care crosswalk. NIST's dataset numbers the written-contract specification 164.308(b)(4); this analysis uses the current rule's 164.308(b)(3). The Breach Notification, 482.15, 482.24, 489.24, 495.24, 92.210, and 803.30 rows were decomposed from the eCFR text (2026-09-23 version); summaries are paraphrased.
 2. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. The HIPAA rows use the Health Care crosswalk in `02_industry-rules/health-care/`, an **author mapping**; NIST's official OLIR mapping (SP 800-53 Rev. 5.1.1) is shown beside it in `nist_official_sp800_53r5_1_1`. No official NIST mapping exists for the other rules, so those rows are this analysis's own author mapping.
-3. **Evidence.** Interviews with every process owner; document review; configuration exports; walkthroughs of the ED, ICU, 3 nursing units, pharmacy, laboratory, the data center, and the outpatient center (2026-07-07 to 2026-07-09).
-4. **Evidence sampling.** Where a requirement operates many times, a sample was tested, chosen at random from system-generated populations using the co-sourced internal audit firm's attribute sampling table:
+3. **Evidence.** Current state was established from the intake evidence (exports and documents collected 2026-06-01 to 2026-06-19: EV-001 to EV-056 and EV-071 to EV-073), gap analysis interviews with the process owners (EV-059), walkthroughs of the ED, ICU, 3 nursing units, pharmacy, laboratory, the data center, and the outpatient center (2026-07-07 to 2026-07-09, EV-063), the configuration and access reviews and the TLS scan (EV-064 to EV-066), the samples below (EV-061, EV-062, EV-067, EV-068), and the benefits broker confirmation (EV-069). Where a row was refreshed with P07 results through 2026-08-14, the `evidence` column cites the P07 ID (for example EV-CP-9). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+4. **Evidence sampling.** Where a requirement operates many times, a sample was tested, chosen at random from the system-generated populations collected at intake or refreshed to 2026-06-30 (EV-036, EV-037, EV-041, EV-051 and EV-060), using the co-sourced internal audit firm's attribute sampling table:
    - employee terminations: 25 of 142;
    - non-employee departures (contracted, agency, practice users): 25 of about 210;
    - transfers: 25 of 88;
    - new EHR accounts: 25;
    - new hires: 25;
-   - backup job days: 31 of 31 (July 2026);
+   - backup job days: 31 of 31 (July 2026, from P07, EV-CP-9);
    - BAAs: 20 of 168;
    - vendors from accounts payable: 20;
    - incidents: 10 of 41;

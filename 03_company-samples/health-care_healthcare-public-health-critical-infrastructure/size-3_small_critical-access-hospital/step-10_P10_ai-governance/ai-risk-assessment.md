@@ -7,12 +7,12 @@
 | AI use case | AI-001: the EHR vendor's sepsis prediction model (SYS-13), live for adult ED and inpatient encounters since 2026-03-02 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook. AI 600-1 (Generative AI Profile) does not apply: the model is a predictive model, not generative AI |
 | Assessors / dates | Chief of Medical Staff, Quality and Compliance Manager (Section 1557 Coordinator), IT Manager, and the Director of Nursing; review 2026-08-17 to 2026-08-21 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the EHR release notes and source attribute display, the EHR decision support configuration, the identity provider app list and a staff survey (EV-049, EV-050, EV-006). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Chief of Medical Staff (clinical performance and use). **Section 1557 duties:** Quality and Compliance Manager, as Section 1557 Coordinator (45 CFR 92.7). **Technical owner:** IT Manager (configuration, change control, vendor liaison).
 - **Decision authority:** High-tier AI use cases need governing body approval on the recommendation of the medical staff quality committee. Medium tier: CEO. Low tier: IT Manager.
-- **How the model went live (the governance gap).** The vendor made the model available in an EHR upgrade, and it was switched on at the request of a nursing leader to support the sepsis protocol. Nobody assessed it, set a threshold, trained staff, or named an owner (gap 14 in `../00_company-facts.md`; P01 R-020, R-021). This assessment is being done after go-live.
+- **How the model went live (the governance gap).** The vendor made the model available in an EHR upgrade, and it was switched on at the request of a nursing leader to support the sepsis protocol. Nobody assessed it, set a threshold, trained staff, or named an owner (EV-049; P01 R-020, R-021). This assessment is being done after go-live.
 - **Policies that apply:** POL-01 4.3 (risk review for new clinical systems and AI tools), POL-05 4.10 (no changes to clinical decision support settings outside change control), POL-04 4.8 (no Restricted data in unapproved AI tools).
 - **Monitoring home:** results go to the medical staff quality committee monthly and into the CAH's quality assessment and performance improvement program (42 CFR 485.641).
 - **Scale for a small hospital:** there is no AI committee. The four assessors review all AI use cases quarterly.

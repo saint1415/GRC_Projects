@@ -19,7 +19,7 @@
 Set up the pharmacy's security program, make sure only authorized people reach patient, prescription, and controlled substance information and only as far as their job requires, and tell the workforce how to use pharmacy systems.
 
 ## 2. Scope
-All workforce members of Cris Santos Company: both pharmacists, technicians, the front-store clerk, the delivery driver, and any temporary or relief staff, interns, or students. It covers every system and every copy of pharmacy information, including systems run for the pharmacy by the MSP and SaaS vendors (SYS-01 to SYS-09 in `../00_company-facts.md`), and the DEA CSOS certificate.
+All workforce members of Cris Santos Company: both pharmacists, technicians, the front-store clerk, the delivery driver, and any temporary or relief staff, interns, or students. It covers every system and every copy of pharmacy information, including systems run for the pharmacy by the MSP and SaaS vendors (SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), and the DEA CSOS certificate.
 
 ## 3. Roles and responsibilities
 | Role | Responsibility |

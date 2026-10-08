@@ -12,7 +12,7 @@
 | Approved | 2026-09-04 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-08, the CSOS certificate, paper prescriptions and logs in the store, the relief pharmacist, and the contracted services (PMS vendor, cloud fax vendor, email and file suite vendor, IT consultant). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-08, the CSOS certificate, paper prescriptions and logs in the store, the relief pharmacist, and the contracted services (PMS vendor, cloud fax vendor, email and file suite vendor, IT consultant), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The pharmacist-owner owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as they are. A risk to patient safety is never accepted above Low.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), the DEA EPCS and CSOS duties, and a walk through the counter desktop, PMS settings, store network, and SaaS accounts with the IT consultant on 2026-08-04 and 2026-08-06.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the DEA EPCS and CSOS duties, and a walk through the counter desktop, PMS settings, store network, and SaaS accounts with the IT consultant on 2026-08-04 and 2026-08-06 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the PMS, desktop and network reviews (EV-001 to EV-004, EV-014, EV-016, EV-017), the relief-day records (EV-021), the vendor and chatbot records, and the owner's self-review (EV-036). A one-person pharmacy keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -32,6 +32,8 @@
 | Moderate | 10 |
 | Low | 2 |
 | **Total** | **15** |
+
+**One pass.** The register was completed on 2026-08-07 from intake and self-assessment evidence. The control tests ran on 2026-08-06, inside the same week, so this pass already reflects them: R-002, R-003, R-004 and R-008 cite P07 test evidence (EV-AC-17, EV-IA-2, EV-SC-7, EV-AU-6). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 ### Top risks
 | Risk ID | Risk | Level | Treatment | Owner | Due |

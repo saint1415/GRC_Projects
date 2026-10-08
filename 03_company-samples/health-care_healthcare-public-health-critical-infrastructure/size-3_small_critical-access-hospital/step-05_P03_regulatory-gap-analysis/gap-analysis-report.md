@@ -11,7 +11,9 @@
 | Assessor | IT Manager (Security Officer) with the Quality and Compliance Manager (Privacy Officer) and the Facilities Manager (Emergency Preparedness Coordinator) |
 
 ## 1. Applicability
-**HIPAA Security Rule: applies.** The hospital is a health care provider that transmits health information electronically in standard transactions (claims and eligibility through its clearinghouse), so it is a covered entity under 45 CFR 160.103. There is no size exemption. 45 CFR 164.306(b) lets the hospital weigh its size, complexity, capabilities, and costs when choosing *how* to meet each standard, not *whether* to meet it.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here and the obligations screened alongside them.
+
+**HIPAA Security Rule: applies.** The hospital is a health care provider that transmits health information electronically in standard transactions (claims and eligibility through its clearinghouse, EV-023), so it is a covered entity under 45 CFR 160.103. There is no size exemption. 45 CFR 164.306(b) lets the hospital weigh its size, complexity, capabilities, and costs when choosing *how* to meet each standard, not *whether* to meet it.
 
 HIPAA rows excluded, with reasons:
 - **164.308(a)(4)(ii)(A)** (isolating clearinghouse functions): the hospital is not a clearinghouse.
@@ -33,13 +35,13 @@ HIPAA rows excluded, with reasons:
 | HITECH recognized security practices (C-HPH-R10), 42 U.S.C. 17941 | Applies as a mitigating factor | OCR must consider recognized security practices in place for the prior 12 months. Operating the CPGs and HICP practices now builds that record |
 | FDA sec. 524B (C-HPH-R04) | Does not apply directly | Duties fall on device manufacturers. The hospital uses it as a procurement lever (SBOM, MDS2, patch support) |
 | FTC Health Breach Notification Rule (C-HPH-R05) | Does not apply | 16 CFR 318.1 excludes HIPAA covered entities |
-| 42 CFR Part 2 (C-HPH-R06) | Excluded | Scoping decision; also screened: the hospital is not a Part 2 program (see `../00_company-facts.md`) |
+| 42 CFR Part 2 (C-HPH-R06) | Excluded | Scoping decision; also screened: the license and service list show the hospital is not a Part 2 program (EV-024; obligations register) |
 | CIRCIA (C-HPH-R11) | Not in effect | Proposed 6 CFR 226.2 would cover critical access hospitals regardless of size. No final rule as of 2026-09-26. Tracked for P08 |
 
 ## 2. Method
 1. **Requirements.** HIPAA requirements and their Required and Addressable designations come from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool). NIST's dataset numbers the written-contract specification 164.308(b)(4); this analysis uses the current rule's 164.308(b)(3). The 485.625 rows follow the regulation's own paragraph structure (eCFR, 2026-09-23); summaries are paraphrased.
 2. **Crosswalk.** HIPAA rows use the Health Care crosswalk in `02_industry-rules/health-care/`: the CSF 2.0 and SP 800-53 columns are an author mapping, and NIST's official OLIR 110 mapping (SP 800-53 Rev. 5.1.1) is shown next to it in `nist_official_sp800_53r5_1_1`. No official NIST mapping exists for 485.625, so those rows are an author mapping.
-3. **Evidence.** Interviews (CEO, IT Manager, Director of Nursing, Facilities Manager, Laboratory and Imaging Managers, HIM Manager, Business Office Manager, HR Manager), document review, configuration exports, and a walkthrough of the hospital on 2026-07-16.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, the emergency preparedness program records, and the device and OT walk-throughs of 2026-07-08), the account reconciliation (EV-059), the TLS scan (EV-058), a walk-through of the hospital on 2026-07-16 (EV-061), the BAA sample review (EV-063), and gap analysis interviews with the CEO, IT Manager, Director of Nursing, Facilities Manager, Laboratory and Imaging Managers, HIM Manager, Business Office Manager, HR Manager and Quality and Compliance Manager (EV-062). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row is Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Addressable is not optional.** For each addressable specification, the hospital must implement it, implement an equivalent alternative, or document why neither is reasonable and appropriate (164.306(d)(3)). Every addressable gap below is being implemented; none is being documented as unreasonable.

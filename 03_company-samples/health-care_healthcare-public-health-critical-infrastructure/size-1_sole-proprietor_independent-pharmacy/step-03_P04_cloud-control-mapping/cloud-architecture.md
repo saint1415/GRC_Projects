@@ -65,9 +65,9 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 The DEA EPCS rule draws the same line. The pharmacy application provider must have the application audited or certified (21 CFR 1311.300) and the application must analyze its audit trail every day (1311.215(b)). The **pharmacy** must check that finding before first use (1311.200(a)), set logical access so only authorized people can dispense and annotate controlled substance prescriptions (1311.200(e)), and decide whether each flagged event is a security incident that must be reported within one business day (1311.215(c)). Those three duties are customer rows in this map (IA-2, AC-6, AU-6).
 
 ## 4. Findings from the mapping
-1. **The PMS treats the store as trusted.** MFA applies only outside the store, and inside the store one account is shared. The control most needed for controlled substance records (one person, one account) is the customer's, not the vendor's. Tracked as P01 R-003 and R-007.
-2. **The vendor's support channel is an inbound path into the store.** The remote-support agent allowed unattended access to the desktop that holds the CSOS key. Switched to attended mode on 2026-08-06; tracked with R-002.
-3. **One email suite holds PHI without a BAA in effect.** Fax-to-email puts prescriptions in the inbox. Accepting the vendor's BAA is a few clicks (R-006).
-4. **The cloud fax portal has MFA available but off.** Found during this mapping; turn on by 2026-09-15.
-5. **The vendor's RTO (12 hours) is longer than the BIA's RTO for dispensing (4 hours).** The pharmacy cannot buy a faster recovery from a SaaS vendor at this size; it bridges the gap with paper downtime procedures (P05, P08, R-001).
-6. **The store network is flat.** Customers on Wi-Fi share a network with the desktop and the camera recorder (R-004).
+1. **The PMS treats the store as trusted.** MFA applies only outside the store, and inside the store one account is shared (EV-001, EV-002, EV-021). The control most needed for controlled substance records (one person, one account) is the customer's, not the vendor's. Tracked as P01 R-003 and R-007.
+2. **The vendor's support channel is an inbound path into the store.** The remote-support agent allowed unattended access to the desktop that holds the CSOS key (EV-004, EV-014). Switched to attended mode on 2026-08-06; tracked with R-002.
+3. **One email suite holds PHI without a BAA in effect.** Fax-to-email puts prescriptions in the inbox (EV-012, EV-013). Accepting the vendor's BAA is a few clicks (R-006).
+4. **The cloud fax portal has MFA available but off.** Found during this mapping, from the fax portal settings collected at intake (EV-013); turn on by 2026-09-15.
+5. **The vendor's RTO (12 hours) is longer than the BIA's RTO for dispensing (4 hours)** (EV-037). The pharmacy cannot buy a faster recovery from a SaaS vendor at this size; it bridges the gap with paper downtime procedures (P05, P08, R-001).
+6. **The store network is flat.** Customers on Wi-Fi share a network with the desktop and the camera recorder (EV-016; R-004).

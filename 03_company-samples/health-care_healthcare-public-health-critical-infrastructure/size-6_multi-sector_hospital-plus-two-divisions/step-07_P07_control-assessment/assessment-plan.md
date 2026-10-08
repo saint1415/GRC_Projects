@@ -16,21 +16,21 @@ Most safeguards in the Hospital System and the Health Plan come from the same co
 2. **The HCIS's** own and hybrid controls were assessed because it is the SSP system and carries the group's top risk (GR-01).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-The College was sampled on its Safeguards Rule elements (risk assessment, MFA, incident response, training) because it is outside most common controls (scenario gap 5). This is its first independent test since the 2023 acquisition.
+The College was sampled on its Safeguards Rule elements (risk assessment, MFA, incident response, training) because it is outside most common controls (group gap 5). This is its first independent test since the 2023 acquisition.
 
 ## 2. Controls selected
 **37 control assessments** (32 distinct controls; AT-2, CP-9, IA-2(1), IR-8, and SC-7 were assessed in two scopes), **259 determination statements**.
 
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
-| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Access for every division; GR-05, GR-08; scenario gap 4 | Focused / Comprehensive (all divisions sampled) |
+| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Access for every division; GR-05, GR-08; group gap 4 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1; Group HR) | PS-4, AT-2 | 15 | Terminations and training for 43,000 group-identity users and about 4,500 trainees a year | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-12; scenario gap 8 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-12; group gap 8 | Focused / Comprehensive |
 | Common control (SYS-G3 data centers and cloud) | CP-9, SC-7, SC-8, SC-28, CM-6 | 20 | GR-01; immutable backups and data center zones | Focused / Focused |
-| HCIS (SSP system) | AC-3, AU-6, CP-2, CP-4, CP-10, SI-2, CM-8 | 51 | HS-001, HS-002, HS-015 (High and Moderate); scenario gaps 1 and 2 | Comprehensive / Focused (3 of 9 hospitals visited) |
-| Division sample: Hospital System | MA-4, PS-7, SC-7 | 19 | HS-005, HS-006, HS-007; scenario gaps 3 and 4 | Focused / Focused (all 140 vendor connections; 22 school agreements) |
-| Division sample: Health Plan | AC-21, PT-3, SA-9, CP-9 | 20 | HP-002, HP-003, HP-007; scenario gap 7 | Focused / Focused |
-| Division sample: College | RA-3, IA-2(1), IR-8, AT-2 | 36 | ED-001, ED-002, ED-006; scenario gap 5 | Focused / Focused |
+| HCIS (SSP system) | AC-3, AU-6, CP-2, CP-4, CP-10, SI-2, CM-8 | 51 | HS-001, HS-002, HS-015 (High and Moderate); group gaps 1 and 2 | Comprehensive / Focused (3 of 9 hospitals visited) |
+| Division sample: Hospital System | MA-4, PS-7, SC-7 | 19 | HS-005, HS-006, HS-007; group gaps 3 and 4 | Focused / Focused (all 140 vendor connections; 22 school agreements) |
+| Division sample: Health Plan | AC-21, PT-3, SA-9, CP-9 | 20 | HP-002, HP-003, HP-007; group gap 7 | Focused / Focused |
+| Division sample: College | RA-3, IA-2(1), IR-8, AT-2 | 36 | ED-001, ED-002, ED-006; group gap 5 | Focused / Focused |
 | **Total** | **37** | **259** | | |
 
 ## 3. Methods and objects
@@ -45,6 +45,17 @@ The College was sampled on its Safeguards Rule elements (risk assessment, MFA, i
   - a TLS scan of 80 endpoints;
   - role tests in the EHR under 6 roles at 3 hospitals;
   - a review of all 140 device vendor connections.
+
+### What each test could show
+The group policies v2026 (P06), including POL-03, and the multi-regulator notification matrix were drafts during fieldwork; the board risk committee approved them on 2026-09-15, effective 2026-10-01. Controls that already operated under the pre-2026 group policies, the group IR plan v5 (2025) and the existing division plans were tested for operation. Statements that rest on the drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before 2026 and was tested on samples, configurations, or live systems | 249 |
+| Design | The statement rests on a draft (IR-6: the notification matrix and POL-03 v2026); its design was reviewed. Operation is tested at the 2027-04 follow-up | 2 |
+| Not implemented | Nothing existed to test (vault restore of the EHR and reconstitution, CP-4 and CP-10; monitoring of schools, PS-7; a protocol and documented purposes for the ADT feed, AC-21 and PT-3; monitoring of delegated vendors between reviews, SA-9; College administrator MFA, IA-2(1); College phishing exercises, AT-2) | 8 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C1-AC-2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-006, the student account extract from the EHR user report and roster files in EV-041 and EV-042, the 140 vendor connections from EV-056, and the 22 school agreements from EV-043).
 
 ## 4. Rules of engagement
 - No testing that could affect patient care, devices in use, claims payment, or students' coursework. Network tests ran in maintenance windows with clinical engineering present; no scanning of devices connected to patients.
@@ -61,13 +72,13 @@ The College was sampled on its Safeguards Rule elements (risk assessment, MFA, i
 | Division sample: College | 26 | 10 | 36 |
 | **Total** | **198** | **61** | **259** |
 
-**Common controls are mostly strong.** 108 of 133 common statements were satisfied. Privileged access (AC-6(5), IA-2(1)), unique identification (IA-2), terminations (PS-4), backups (CP-9), and encryption (SC-8, SC-28) had no findings. The common findings are about **students and trainees** (AC-2, AC-2(3), AT-2), **service account credentials** (IA-5), **monitoring and scanning coverage** of device networks, vendor sessions, and the College (SI-4, RA-5), **separation inside the data centers** (SC-7), and **incident handling across divisions** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 8.
+**Common controls are mostly strong.** 108 of 133 common statements were satisfied. Privileged access (AC-6(5), IA-2(1)), unique identification (IA-2), terminations (PS-4), backups (CP-9), and encryption (SC-8, SC-28) had no findings. The common findings are about **students and trainees** (AC-2, AC-2(3), AT-2), **service account credentials** (IA-5), **monitoring and scanning coverage** of device networks, vendor sessions, and the College (SI-4, RA-5), **separation inside the data centers** (SC-7), and **incident handling across divisions** (IR-3, IR-4, IR-6, IR-8), which is group gap 8.
 
-**The HCIS is resilient to a site loss but not to ransomware.** Role-based access and privacy monitoring were sound (AC-3, AU-6). But the contingency plan, testing, and recovery controls (CP-2, CP-4, CP-10) show that recovery after a compromise of both data centers is unplanned and untested (scenario gap 1), and downtime workstations at 3 hospitals were not tested (gap 2). Ancillary patching (SI-2) and the inventory of interfaced devices (CM-8) also fell short.
+**The HCIS is resilient to a site loss but not to ransomware.** Role-based access and privacy monitoring were sound (AC-3, AU-6). But the contingency plan, testing, and recovery controls (CP-2, CP-4, CP-10) show that recovery after a compromise of both data centers is unplanned and untested (group gap 1), and downtime workstations at 3 hospitals were not tested (group gap 2). Ancillary patching (SI-2) and the inventory of interfaced devices (CM-8) also fell short.
 
 **Division samples:**
 - *Hospital System:* the 37 device vendor connections outside PAM caused 5 of 8 MA-4 statements to fail (approval, monitoring, strong authentication, and ending sessions and connections; High); device networks at 4 hospitals are not separated (SC-7); outside schools are not bound to report student changes (PS-7).
-- *Health Plan:* no protocol or documented purpose for the hospital ADT feed (AC-21, PT-3, gap 7); vendor monitoring once a year (SA-9); claims recovery runbooks on the claims share (CP-9).
+- *Health Plan:* no protocol or documented purpose for the hospital ADT feed (AC-21, PT-3, group gap 7); vendor monitoring once a year (SA-9); claims recovery runbooks on the claims share (CP-9).
 - *College:* MFA missing for SIS administrators (IA-2(1), High); the risk assessment and IR plan date from 2022 (RA-3, IR-8); training lacks phishing exercises (AT-2).
 
 **Controls fully other than satisfied** (every statement failed): IR-3 (common), CP-10 (HCIS), and IA-2(1) (College). IR-3 and IA-2(1) each have one determination statement; CP-10 has two.

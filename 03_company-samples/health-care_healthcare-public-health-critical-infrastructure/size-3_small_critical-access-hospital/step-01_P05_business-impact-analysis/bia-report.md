@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (rural critical access hospital) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Security Officer) with the Director of Nursing, Facilities Manager, and department managers | **Approved:** CEO, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-057), FY2025 revenue report (EV-025), patient volume report (EV-026), backup job reports (EV-017), the EHR vendor's SOC 2 report (EV-018), downtime PC print logs (EV-033), and the phone inventory and communication plan (EV-046, EV-030). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CEO.
 
 ## 1. Overview and purpose
 This BIA identifies the processes the hospital depends on, how long each can be down, and how much data it can lose. It supports:
@@ -10,10 +11,10 @@ This BIA identifies the processes the hospital depends on, how long each can be 
 - the availability rating in the SSP (P02), impact ratings in the risk register (P01), and the recovery order in the incident response runbook (P08).
 
 ## 2. System and business description
-The hospital has 12 inpatient beds used for acute or swing-bed care, a 24-hour emergency department with about 20 visits a day, a laboratory, CT and X-ray, and a small pharmacy. Clinical work runs on the Hospital Clinical Information System (HCIS): a vendor-hosted EHR, an identity provider, a cloud tenant (imaging archive, interface engine, backup vault), the hospital network and server room, endpoints, and medical devices. Building and clinical OT shares the same network. The nearest hospital that can take diverted patients is about 45 miles away. See `../00_company-facts.md` sections 1 and 3.
+The hospital has 12 inpatient beds used for acute or swing-bed care, a 24-hour emergency department with about 20 visits a day, a laboratory, CT and X-ray, and a small pharmacy. Clinical work runs on the Hospital Clinical Information System (HCIS): a vendor-hosted EHR, an identity provider, a cloud tenant (imaging archive, interface engine, backup vault), the hospital network and server room, endpoints, and medical devices. Building and clinical OT shares the same network. The nearest hospital that can take diverted patients is about 45 miles away. Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $28.2 million in annual revenue, about $77,000 a day.
+Dollar values are scaled to $28.2 million in FY2025 revenue, about $77,000 a day (EV-025).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -50,7 +51,7 @@ The table is in recovery priority order. Eight processes are High, two Moderate,
 - **BP-09 RPO of 168 hours** reflects that OT configurations change rarely; a weekly configuration export is enough. Today no export is taken (gap below).
 
 ## 5. Key findings
-1. **The EHR vendor's recovery commitment does not meet the BIA.** The vendor's SOC 2 system description states an RTO of 8 hours and an RPO of 15 minutes (P09). The RPO meets the 15-minute need of BP-01 to BP-03. The RTO does not meet their 2-hour need. Until the contract says otherwise, downtime procedures must carry up to 8 hours of EHR outage, and those procedures are from 2019 and untested (P01 R-004).
+1. **The EHR vendor's recovery commitment does not meet the BIA.** The vendor's SOC 2 system description states an RTO of 8 hours and an RPO of 15 minutes (EV-018; P09). The RPO meets the 15-minute need of BP-01 to BP-03. The RTO does not meet their 2-hour need. Until the contract says otherwise, downtime procedures must carry up to 8 hours of EHR outage, and those procedures are from 2019 and untested (P01 R-004).
 2. **Hospital-managed recovery is unproven.** Backups of the servers, interface engine, and imaging archive have never been restore-tested, and the backup appliance is reachable from the directory (P01 R-003). The 2-hour RTO for the dispensing cabinet server and analyzer middleware (BP-03, BP-04) and the 4-hour RTO for the imaging archive (BP-05) are therefore targets, not capabilities.
 3. **One network carries everything.** Phones, OT, medical devices, and workstations share one flat network and one fiber circuit. A single attack or fiber cut hits BP-01, BP-04, BP-05, BP-09, and BP-12 at once (P01 R-001, R-014, R-033).
 4. **No OT configuration backups.** The building automation and nurse call vendors have not confirmed they keep configuration backups (BP-09 RPO unsupported today).

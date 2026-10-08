@@ -39,6 +39,18 @@ Small tier scope: 15-25 controls. **22 controls, 186 determination statements.**
   - default-credential checks on networked medical devices, after hours, with the manufacturer's field engineer present
   - an after-hours EDR alert routing test (21:40)
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-08-31. A control that a draft introduces has not operated yet, so it was reviewed as a draft for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 74 |
+| Design | The control is new (the 2026 risk analysis, the draft POL-03, or the draft P08 runbook); its design was reviewed. Operation is tested at the next annual review (risk analysis) or the 2027-02 follow-up | 24 |
+| Not implemented | Nothing existed to test | 88 |
+| **Total** | | **186** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled terminations come from the 10 in EV-003 and EV-005, the 10 sampled access requests from EV-005, and the accounts tested from the identity provider export in EV-001).
+
 ## 3. Rules of engagement
 - No testing that could disrupt patient care. Device tests ran after hours on devices not in use, with the Director of Nursing's approval and the manufacturer's field engineer present. No infusion pump was tested while connected to a patient.
 - No ePHI was copied off site. Screenshots were redacted.
