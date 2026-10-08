@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (multi-specialty physician group with an ASC and an imaging center) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager with the vCISO, the process owners named in `bia.csv`, and the ASC Administrator | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-053), FY2025 revenue report by business unit (EV-048), Q2 2026 operating volume report (EV-049), clearinghouse agreement (EV-042), EHR vendor SOC 2 report (EV-038), backup job reports (EV-018), downtime procedures (EV-025) and the ASC emergency plan (EV-026). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: the 8 clinics, the ambulatory surgery center (ASC), the imaging center, the central business office (CBO), and enterprise support functions. It rates 17 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and patient safety.
@@ -15,10 +16,10 @@ The results feed:
 - the Availability criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company runs 8 clinics, a Medicare-certified ASC with 4 operating rooms, and an imaging center (MRI, CT, X-ray) in Florida, with about 110,000 active patients. Clinical and business work runs on the Enterprise Clinical Platform (ECP) described in the SSP (P02): the SaaS EHR/PM, the identity provider, the PACS and radiology information system, the 4-account cloud landing zone (interface engine, data warehouse, file services, backups), the 10 site networks on SD-WAN, 870 endpoints, about 400 networked medical devices, and the MSSP-operated SIEM. About 140 vendors handle PHI (see `../00_company-facts.md` sections 3, 4, and 7).
+The company runs 8 clinics, a Medicare-certified ASC with 4 operating rooms, and an imaging center (MRI, CT, X-ray) in Florida, with about 110,000 active patients. Clinical and business work runs on the Enterprise Clinical Platform (ECP) described in the SSP (P02): the SaaS EHR/PM, the identity provider, the PACS and radiology information system, the 4-account cloud landing zone (interface engine, data warehouse, file services, backups), the 10 site networks on SD-WAN, 870 endpoints, about 400 networked medical devices, and the MSSP-operated SIEM. About 140 vendors handle PHI (intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $100 million in annual revenue over about 250 operating days: about $240,000 per day for the clinics, $88,000 for the ASC, and $48,000 for the imaging center. About $1.9 million in expected collections moves through the clearinghouse each week (about $380,000 per business day).
+Dollar values are scaled to about $100 million in annual revenue over about 250 operating days (EV-048): about $240,000 per day for the clinics, $88,000 for the ASC, and $48,000 for the imaging center. About $1.9 million in expected collections moves through the clearinghouse each week (about $380,000 per business day; EV-042).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -28,7 +29,7 @@ Dollar values are scaled to about $100 million in annual revenue over about 250 
 | Patient safety | Plausible patient harm (missed allergy, wrong dose, delayed critical result, intraoperative information loss) | Delayed but safe care | None |
 | Reputation | Regional media coverage, loss of the hospital joint venture partner, or referral loss | Patient complaints or online reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra labor, over the MTD. Recovery assumptions came from the process owners: about 35% of cancelled clinic visits, 50% of cancelled ASC cases, and 40% of deferred imaging studies are not recovered. For claims (BP-10), the loss is overtime, denials, and interest on the credit line; the delayed cash is shown separately.
+**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra labor, over the MTD. Recovery assumptions came from the process owners (EV-053): about 35% of cancelled clinic visits, 50% of cancelled ASC cases, and 40% of deferred imaging studies are not recovered. For claims (BP-10), the loss is overtime, denials, and interest on the credit line; the delayed cash is shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -61,10 +62,10 @@ Dollar values are scaled to about $100 million in annual revenue over about 250 
 - **Regulatory** duties drive the ASC rows (42 CFR 416.54) and BP-08 (critical result communication).
 
 ## 5. Key findings
-1. **EHR vendor recovery objectives do not meet the BIA.** The EHR vendor's SOC 2 system description states RTO 12 hours and RPO 1 hour. The BIA needs RTO 2 hours for the ASC (BP-04) and 4 hours for clinics (BP-01 to BP-03). The downtime report workstations (hourly read-only extract) make the MTD achievable in read-only mode, but the ASC RPO of 15 minutes is not met. Action: negotiate contract recovery terms and add an ASC-specific extract every 15 minutes (P01 R-013; P09 vendor review).
-2. **Practice-managed recovery is unproven.** The interface engine (BP-08, BP-09, BP-10), PACS (BP-07), and data warehouse (BP-15) have never been restore-tested (gap 4). Their RTOs of 6 to 120 hours are targets, not demonstrated capabilities (P01 R-014 to R-016; P07 CP-4).
+1. **EHR vendor recovery objectives do not meet the BIA.** The EHR vendor's SOC 2 system description states RTO 12 hours and RPO 1 hour (EV-038). The BIA needs RTO 2 hours for the ASC (BP-04) and 4 hours for clinics (BP-01 to BP-03). The downtime report workstations (hourly read-only extract) make the MTD achievable in read-only mode, but the ASC RPO of 15 minutes is not met. Action: negotiate contract recovery terms and add an ASC-specific extract every 15 minutes (P01 R-013; P09 vendor review).
+2. **Practice-managed recovery is unproven.** The interface engine (BP-08, BP-09, BP-10), PACS (BP-07), and data warehouse (BP-15) have never been restore-tested (EV-018, EV-024). Their RTOs of 6 to 120 hours are targets, not demonstrated capabilities (P01 R-014 to R-016; P07 CP-4).
 3. **The clearinghouse is a single point of failure.** One clearinghouse carries all claims and eligibility. A multi-week outage would delay about $1.9 million of collections per week (P01 R-012; P08 `ir-runbook-vendor-outage.md`).
-4. **The ASC emergency plan does not address cyber events** such as loss of the EHR or of the infusion pump network (gap 6; section 7).
+4. **The ASC emergency plan does not address cyber events** such as loss of the EHR or of the infusion pump network (EV-026; section 7).
 5. **Medical devices keep working without the network**, but monitoring, drug library updates, and results flow stop. Manual workarounds exist but are not written into the downtime procedures for BP-05 and BP-07.
 
 ## 6. Resource requirements

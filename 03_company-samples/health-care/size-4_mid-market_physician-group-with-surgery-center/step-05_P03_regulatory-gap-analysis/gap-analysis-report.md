@@ -10,6 +10,8 @@
 | Approved | Chief Operating Officer, 2026-09-15 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** physician services, ambulatory surgery, and diagnostic imaging, all billed to Medicare, Florida Medicaid, and commercial payers.
 
 | Regulation | Applies? | Basis |
@@ -21,7 +23,7 @@
 **Excluded HIPAA Security Rule rows (7), with reasons:**
 - **164.308(a)(4)(ii)(A)** (isolating clearinghouse functions): the company is not a health care clearinghouse.
 - **164.314(a)(2)(ii)** (other arrangements): no governmental entity business associates.
-- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): **confirmed not applicable.** The employee health plan is fully insured. The company, as plan sponsor, receives only summary health information and enrollment and disenrollment information. 164.314(b)(1) excludes that case (disclosures under 164.504(f)(1)(ii) or (iii)). A fully insured plan that receives only that information is also relieved of most Privacy Rule administrative requirements (164.530(k)). The health insurance issuer holds the plan's PHI as its own covered entity. Confirmed with the benefits broker and the plan documents on 2026-07-22.
+- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): **confirmed not applicable.** The employee health plan is fully insured. The company, as plan sponsor, receives only summary health information and enrollment and disenrollment information. 164.314(b)(1) excludes that case (disclosures under 164.504(f)(1)(ii) or (iii)). A fully insured plan that receives only that information is also relieved of most Privacy Rule administrative requirements (164.530(k)). The health insurance issuer holds the plan's PHI as its own covered entity. Confirmed with the benefits broker and the plan documents on 2026-07-22 (EV-064, EV-043).
 
 **Other applicable regulations and where they are handled:**
 | Regulation | Where covered |
@@ -36,8 +38,8 @@
 ## 2. Method
 1. **Requirements.** HIPAA Security Rule requirements and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool), all 69 rows of the Health Care crosswalk. Breach Notification Rule and 42 CFR 416.54 requirements were decomposed from the eCFR text (2026-09-23 version, verified through the eCFR API).
 2. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. The HIPAA Security Rule rows use the Health Care crosswalk in `02_industry-rules/health-care/`, which is an **author mapping** (NIST's official CSF 2.0 mapping is not yet published). The Breach Notification and 416.54 rows are this analysis's own author mapping.
-3. **Evidence.** Interviews with the process owners, document review, configuration exports, and walkthroughs at 4 of 10 sites (Clinic 1 with the CBO, Clinic 5, the ASC, and the imaging center).
-4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were chosen at random from system-generated populations, with sizes based on the co-sourced internal audit firm's attribute sampling table for a moderate-risk control operating many times a year:
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, and the walk-throughs at 4 of 10 sites on 2026-06-23 to 2026-06-26: Clinic 1 with the CBO, Clinic 5, the ASC, and the imaging center, EV-045), the TLS scan (EV-059), gap analysis interviews with the IT Director, the Compliance and Privacy Officer, the ASC Administrator and other process owners (EV-055 to EV-058), the samples below (EV-060 to EV-063), and the benefits broker confirmation (EV-064). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were chosen at random from the system-generated populations collected at intake (for example the 118 terminations and 64 transfers in EV-003, and the 37 incidents in EV-031), with sizes based on the co-sourced internal audit firm's attribute sampling table for a moderate-risk control operating many times a year:
    - terminations: 25 of 118;
    - transfers: 25 of 64;
    - new EHR accounts: 25;

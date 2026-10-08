@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-15
 
 ## 1. System Name and Identifier
-Enterprise Clinical Platform (**ECP**), identifier CSC-ECP-01. The ECP is the company's major system. It comprises SYS-01 to SYS-08 in `../00_company-facts.md`.
+Enterprise Clinical Platform (**ECP**), identifier CSC-ECP-01. The ECP is the company's major system. It comprises SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The ECP supports every clinical and business process in the BIA (P05) across 8 clinics, the ambulatory surgery center (ASC), the imaging center, and the central business office (CBO). It serves 600 workforce members (including 90 providers) and about 110,000 active patients.
@@ -86,6 +86,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Integrity was considered for High.** Medication and implant data at the ASC could contribute to severe harm if altered. The team kept integrity at Moderate for three reasons: clinicians independently verify these data at the point of care, infusion pumps run standalone on a validated library, and the EHR vendor maintains record integrity controls. To compensate, the baseline adds integrity-focused tailoring (section 10.1).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint count (870) is the endpoint console total (EV-009); the medical device count is the biomedical service estimate of about 400, of which about 240 are in the device inventory (EV-011).
+
 **Inside the boundary:**
 - the company's EHR tenant configuration, roles, and interfaces;
 - the identity provider tenant;
@@ -165,7 +167,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 31 | EHR vendor, identity vendor, cloud provider, MSSP, PACS vendor, SD-WAN provider |
 | Common/Inherited | 16 | Identity vendor (for example AC-7, IA-2(1)), cloud provider (CP-6, SC-12), MSSP (IR-7), EHR vendor (AC-12, SI-7) |
 
-The Partially implemented statements trace to the 9 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-011, EV-024 and EV-036) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -176,7 +178,7 @@ The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-
 - **Patients.** Patients use the EHR vendor's portal, which provides identity proofing and optional MFA. It is governed by the vendor and outside this boundary. P01 R-049 tracks the plan to promote portal MFA.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ASC:** ambulatory surgery center

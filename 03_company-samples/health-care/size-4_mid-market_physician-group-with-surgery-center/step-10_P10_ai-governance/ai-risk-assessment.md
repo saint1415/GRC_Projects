@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed multi-specialty physician group with an ASC and an imaging center) |
 | Tier / Vertical | Mid-Market / Health Care and Social Assistance |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv` |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, the EHR and PACS configuration and a department heads survey (EV-035, EV-050, EV-007, EV-052). How many staff use public generative AI sites, and what they enter, was not established (intake open request); R-025 treats it as unknown |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-004, and AI-005 |
 | Assessors / date | Chief Medical Officer (clinical), vCISO and Security Manager (security), Compliance and Privacy Officer (privacy and legal), 2026-08-24 to 2026-09-10 |
 | Decision | Chief Operating Officer and Chief Medical Officer, 2026-09-15; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-Four of the five tools (AI-001, AI-003, AI-004, AI-005) were adopted by departments without a security or privacy review (gap 7). AI-002 came with the EHR. None of the tools is out of control, but three need conditions before they grow:
+Four of the five tools (AI-001, AI-003, AI-004, AI-005) were adopted by departments without a security or privacy review (EV-037, EV-050). AI-002 came with the EHR. None of the tools is out of control, but three need conditions before they grow:
 - **AI-001, the AI scribe:** has no reliable recording-consent process. That is a Florida law issue (Fla. Stat. 934.03).
 - **AI-004, prior authorization:** submits 70% of requests with no human review.
 - **AI-005, the chatbot:** receives PHI with no BAA.

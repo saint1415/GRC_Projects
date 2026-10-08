@@ -25,7 +25,7 @@ Mid-Market tier scope: 25-40 controls. **34 controls, 242 determination statemen
 | IA-2, IA-2(1) | Unique IDs and MFA; 164.312(a)(2)(i), 164.312(d) | Focused | Focused |
 | AT-2 | Training; 164.308(a)(5) | Basic | Focused |
 | AU-2, AU-6, AU-11 | Activity review gap; 164.308(a)(1)(ii)(D), 164.312(b); R-007, R-041 | Focused | Focused |
-| CM-2, CM-6, CM-8 | Configuration and inventory; gap 1 and gap 8; R-005, R-040 | Focused | Focused |
+| CM-2, CM-6, CM-8 | Configuration and inventory; EV-011 and EV-023 (P03 164.310(d), 164.316(a)); R-005, R-040 | Focused | Focused |
 | CP-2, CP-4, CP-9, CP-10 | Contingency and recovery; 164.308(a)(7); R-001 (Very High), R-014 to R-016 | Comprehensive | Comprehensive |
 | IR-4, IR-6, IR-8 | Incident capability; 164.308(a)(6); R-042 | Focused | Basic |
 | MP-6, PE-3 | Physical and media; 164.310 | Basic | Focused (4 of 10 sites) |
@@ -81,6 +81,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - benchmark configuration scans of 10 servers
   - an EHR audit query on 10 randomly chosen non-VIP patients
 
+### What each test could show
+The 2026 policies (P06) and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and take effect on 2026-10-01. The 2023 policies, standards and plans were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 185 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the ASC, vendor outage and legal coverage in the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 2 |
+| Not implemented | Nothing existed to test | 55 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), new EHR accounts from the EHR role report (EV-007), privileged accounts from EV-006, inventoried medical devices from EV-011, endpoints from EV-009, BAAs and accounts payable vendors from EV-036 and EV-035, incidents from EV-031, and Critical findings from the scan reports (EV-015).
+
 ## 4. Rules of engagement
 - No testing that could disrupt patient care. Medical device tests ran after hours with manufacturer approval and the ASC Administrator or Imaging Center Director present. Infusion pumps were excluded from active testing.
 - No PHI left company systems. Screenshots were redacted, and evidence was stored in the firm's encrypted workpaper system under its BAA.
@@ -133,7 +144,7 @@ Other than satisfied statements by risk: 46 High, 44 Moderate, 6 Low.
 | SI-4 | 10 | 2 | Moderate | POAM-021 |
 | SR-6 | 0 | 1 | High | POAM-018 |
 
-**Fully satisfied (6 controls):** CP-9 (isolated, write-once, encrypted backups), IA-2(1) (MFA on all 25 sampled privileged accounts), IR-6, RA-3, SC-28, and SI-3 (EDR detected and quarantined every test file within 5 minutes). These confirm the strengths listed in the scenario facts.
+**Fully satisfied (6 controls):** CP-9 (isolated, write-once, encrypted backups), IA-2(1) (MFA on all 25 sampled privileged accounts), IR-6, RA-3, SC-28, and SI-3 (EDR detected and quarantined every test file within 5 minutes). These confirm what the intake evidence showed (EV-002, EV-009, EV-010, EV-018, EV-027).
 
 **Fully other than satisfied (5 controls):** AC-6, AU-11, CP-4, CP-10, and SR-6.
 
