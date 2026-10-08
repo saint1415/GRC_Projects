@@ -106,7 +106,7 @@ An exercise scenario, not a real event. Counts are illustrative.
 | Clock starts | Action | Deadline | Owner |
 |---|---|---|---|
 | Reasonable suspicion (Day 0, 10:05) | Sponsor banks A to D: suspected account data compromise | Within 24 hours (contract); immediately under Visa's rules | Head of bank and network relationships |
-| Reasonable suspicion | Report to Visa through the sponsor banks; other brands per their rules | 3 calendar days (Visa) | Head of bank and network relationships |
+| Reasonable suspicion | Report to Visa through the sponsor banks; American Express within 72 hours of discovery (DSOP Section 3); Mastercard and Discover per their rules | 3 calendar days (Visa); 72 hours (American Express) | Head of bank and network relationships |
 | Notice to Visa | Incident report to Visa and the acquiring banks | 3 calendar days after notice | Payment Processing division CISO |
 | Window of exposure set | At-risk account numbers to Visa | 3 calendar days | Head of settlement operations |
 | Software division learns ISV credentials exposed (Day 0, 11:30) | ISV notices | 24 hours | Software division client trust and assurance director |

@@ -105,7 +105,7 @@ An exercise scenario, not a real event. Counts are illustrative.
 
 ## 7. Reporting and communication (RS.CO)
 **Follow `notification-matrix.csv` (33 rows).** Counsel approves every notice. The matrix has four layers:
-1. **Card ecosystem (contractual):** Acquirers A and B immediately; Visa within 3 calendar days of suspicion, the incident report 3 days after that, and at-risk accounts within 3 days; PFI steps if Visa requires one; other brands through the acquirers.
+1. **Card ecosystem (contractual):** Acquirers A and B immediately; Visa within 3 calendar days of suspicion, the incident report 3 days after that, and at-risk accounts within 3 days; PFI steps if Visa requires one; American Express within 72 hours of discovery (DSOP Section 3); Mastercard and Discover through the acquirers.
 2. **Owners (contractual and as service provider):** each owner of an affected managed hotel within 24 hours, with the facts for the owner's own acquirer notice. Owners' associations for the autopay data.
 3. **Regulators and individuals:** the FTC within 30 days of discovery for the finance subsidiary; state notices to individuals, attorneys general, and consumer reporting agencies under each state's law (Florida worked example).
 4. **Investors:** the disclosure committee's materiality decision and, if material, Form 8-K Item 1.05.

@@ -123,7 +123,7 @@ Three teams with separate decisions, so that technical work, hotel operations, a
 | Within 24 hours of suspicion | Acquirer notified (contract term; fictional) | CFO |
 | Within 24 hours of suspicion, if D2 applies | Franchisor notified (franchise agreement; fictional) | General Counsel |
 | Within 48 hours of suspicion, from 2027-01-01, if D2 applies | REIT owner notified (management agreement; fictional) | General Counsel |
-| Within 3 calendar days of suspicion | Compromise reported to Visa (through the acquirer); other brands per the acquirer's instructions | CFO |
+| Within 3 calendar days of suspicion | Compromise reported to Visa (through the acquirer); American Express within 72 hours of discovery (DSOP Section 3); Mastercard and Discover per the acquirer's instructions | CFO |
 | Within 3 calendar days of the Visa notice | Incident report to Visa and the acquirer (WTDIC Attachment A) | Security Manager and CFO |
 | Within 3 calendar days of identifying at-risk cards or the window of exposure | At-risk account numbers to Visa through the acquirer | CFO |
 | Within 5 business days of a Visa PFI notice | PFI contracted; Visa and the acquirer told the PFI's name | CFO with the General Counsel |

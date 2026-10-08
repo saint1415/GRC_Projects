@@ -52,14 +52,14 @@ Declare an incident when any of these happens: a guest asks about a "payment ver
 - **Reservations:** the innkeeping software is reachable from the phone. If it must stay locked for the vendor's review, close availability in both OTAs and use the printed 14-day arrivals list (P05 BP-01).
 - **Laptop:** do not clean and reuse it. The consultant reinstalls it from clean media with encryption on and no saved passwords, after evidence is saved.
 - **Breach assessment with counsel:** which Florida residents' names were accessed with ID numbers (ID photos), or with card numbers and security codes (card forms)? Count affected people and their states of residence; this sets which rows of `notification-matrix.csv` apply. With about 1,900 ID photos, more than 500 Floridians and more than 1,000 notices are likely if the photo backup was reached.
-- **Card brands:** the facilitator tells the owner what Visa and the other brands need. If card numbers were displayed or emailed forms were read, at-risk account numbers go to Visa through the facilitator within 3 calendar days.
+- **Card brands:** the facilitator tells the owner what Visa and the other brands need. If card numbers were displayed or emailed forms were read, at-risk account numbers go to Visa through the facilitator within 3 calendar days. American Express requires notice within 72 hours of discovery (DSOP Section 3); confirm with the facilitator who sends it.
 - **Extortion:** nothing is paid without counsel's advice and an OFAC sanctions check.
 
 ## 6. Notice deadlines (from `notification-matrix.csv`)
 | Deadline | Notice | Applies when |
 |---|---|---|
 | Within 24 hours of suspicion | Payment facilitator (contract) | Any suspected card data or payment account compromise |
-| Within 3 calendar days of suspicion | Visa, through the facilitator; other brands as the facilitator directs | Visa account data possibly accessed |
+| Within 3 calendar days of suspicion | Visa, through the facilitator; American Express within 72 hours of discovery (DSOP Section 3); Mastercard and Discover as the facilitator directs | Visa account data possibly accessed |
 | Within 30 days of determination | Florida individual notices; Department of Legal Affairs if 500+ Floridians (the 15-day good-cause extension applies only to individual notices) | Florida residents' personal information accessed |
 | Without unreasonable delay | Consumer reporting agencies | More than 1,000 notified at one time |
 | Per each state | Notices to guests who live in other states | Non-Florida residents affected |
