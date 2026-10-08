@@ -224,10 +224,10 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Health Care and Social Assistance | Enterprise | Large medical group | [README](03_company-samples/health-care/size-5_enterprise_large-medical-group/README.md) |
 | Health Care and Social Assistance | Multi-Sector | Care delivery health plan and SaaS | [README](03_company-samples/health-care/size-6_multi-sector_care-delivery-health-plan-and-saas/README.md) |
 | Healthcare and Public Health | Sole Proprietorship | Independent pharmacy | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-1_sole-proprietor_independent-pharmacy/README.md) |
+| Healthcare and Public Health | Micro | Independent pharmacy | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-2_micro_independent-pharmacy/README.md) |
 | Healthcare and Public Health | Small | Critical access hospital | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-3_small_critical-access-hospital/README.md) |
 | Healthcare and Public Health | Mid-Market | Hospital | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-4_mid-market_hospital/README.md) |
 | Healthcare and Public Health | Enterprise | Hospital system | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-5_enterprise_hospital-system/README.md) |
-| Healthcare and Public Health | Multi-Sector | Hospital plus two divisions | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-6_multi-sector_hospital-plus-two-divisions/README.md) |
 | Arts, Entertainment, and Recreation | Sole Proprietorship | Independent event promoter | [README](03_company-samples/arts-entertainment-recreation/size-1_sole-proprietor_independent-event-promoter/README.md) |
 | Arts, Entertainment, and Recreation | Micro | Live event venue | [README](03_company-samples/arts-entertainment-recreation/size-2_micro_live-event-venue/README.md) |
 | Arts, Entertainment, and Recreation | Small | Live event venue | [README](03_company-samples/arts-entertainment-recreation/size-3_small_live-event-venue/README.md) |
