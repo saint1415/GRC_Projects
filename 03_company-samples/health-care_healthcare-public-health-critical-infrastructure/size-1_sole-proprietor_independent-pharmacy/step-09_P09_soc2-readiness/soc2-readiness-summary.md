@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022), criterion IDs and short topic labels only |
 | Categories in scope | Security (CC1-CC9) only |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the PMS vendor's SOC 2 Type 2 report and EPCS certification report (`vendor-soc2-review.csv`, an extra file added for this tier) |
+| Part B | Review of the PMS vendor's SOC 2 Type 2 report and EPCS certification report, requested at intake and received on 2026-08-05 (EV-037, EV-038; `vendor-soc2-review.csv`, an extra file added for this tier) |
 | Prepared | 2026-08-05 (Part B) and 2026-08-07 (Part A) by the pharmacist-owner with the IT consultant; adopted 2026-09-04 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

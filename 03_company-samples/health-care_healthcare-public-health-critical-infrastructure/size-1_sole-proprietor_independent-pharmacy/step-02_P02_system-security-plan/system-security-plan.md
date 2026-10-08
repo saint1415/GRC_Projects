@@ -7,7 +7,7 @@
 Pharmacy Core SaaS Stack (**PCSS**), identifier CSC-SYS-001. It is the registry's "core business SaaS stack (email, files, client and billing records)". In a pharmacy, the client and billing records system is the pharmacy management system (PMS).
 
 ## 2. System Overview
-The PCSS is everything the pharmacy uses to fill about 3,500 prescriptions a year for about 650 active patients: prescription intake (including electronic prescriptions for controlled substances, EPCS), drug utilization review, labels, claims to PBMs, PDMP reporting, refill reminders, compounding records, faxes, email, and Schedule II ordering. One pharmacist runs it; a relief pharmacist uses it about 2 days a month. Components are SYS-01 to SYS-08 in `../00_company-facts.md` section 3: the vendor-hosted PMS, an email and file suite, a counter desktop, a laptop, a phone, a cloud fax service, the store network, and a consumer AI chatbot (use restricted; see P10). There is no server and no IaaS. Most safeguards for the PMS are **inherited from the PMS vendor**; the owner is responsible for accounts, devices, the store network, data placement, and vendor contracts (P04).
+The PCSS is everything the pharmacy uses to fill about 3,500 prescriptions a year for about 650 active patients: prescription intake (including electronic prescriptions for controlled substances, EPCS), drug utilization review, labels, claims to PBMs, PDMP reporting, refill reminders, compounding records, faxes, email, and Schedule II ordering. One pharmacist runs it; a relief pharmacist uses it about 2 days a month. Components are SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the vendor-hosted PMS, an email and file suite, a counter desktop, a laptop, a phone, a cloud fax service, the store network, and a consumer AI chatbot (use restricted; see P10). There is no server and no IaaS. Most safeguards for the PMS are **inherited from the PMS vendor**; the owner is responsible for accounts, devices, the store network, data placement, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -53,6 +53,8 @@ Operational. Planned changes: own accounts for each pharmacist and MFA for the a
 ## 7. Authorization Boundary Description
 - **Inside:** the pharmacy's PMS account settings and roles, the email and file suite, the cloud fax account, the counter desktop, laptop, and phone, the store network, the CSOS certificate, the AI chatbot account, and paper prescriptions and logs in the store.
 - **Outside (external services):** the PMS vendor's platform and its e-prescribing network and claims switch, the cloud fax platform, the email and file suite platform, the Florida PDMP, the drug wholesaler, the card processor's terminal, and the AI chatbot vendor.
+
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The wholesaler portal (OTH-05), the accounting SaaS (OTH-06), and the card processor's terminal (OTH-07) hold no patient data and are outside it.
 
 Diagram: P04 `cloud-architecture.md`.
 
@@ -105,7 +107,7 @@ Self-assessed 2026-08-03 to 2026-08-07 with the IT consultant. See P07.
 PMS web sign-in from outside the store requires a password and a second factor on the owner's phone, which is appropriate for remote access to ePHI at a Moderate categorization. Inside the store, the PMS accepts a password alone, and one account is shared, which is **not acceptable** for an administrator account or for controlled substance records that must name the person who dispensed (21 CFR 1311.205(b)(10)(iii)). Own accounts and MFA for the administrator role at every location are due 2026-09-30. Patients do not sign in to any pharmacy system; the refill phone line uses the prescription number only.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **BA / BAA:** business associate / business associate agreement
