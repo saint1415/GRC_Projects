@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Construction | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two commercial public cloud providers, called provider A and provider B, plus a separate FedRAMP Moderate authorized government-community cloud offering for CUI (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two commercial public cloud providers, called provider A and provider B, plus a separate FedRAMP Moderate authorized government-community cloud offering for CUI (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zone), the Project Delivery and Payment Platform (the P02 SSP system), the CUI enclave (SYS-G6), and the division workloads that run on or beside them.
 
 ## 1. Design in one paragraph
@@ -127,7 +127,18 @@ flowchart LR
 
 **Target state (POAM-006, POAM-009, POAM-011; due 2026-11-30 to 2026-12-31):** the integration hub scans every upload for CUI markings and quarantines matches; the enclave "field release" export is removed and superintendents view CUI drawings in enclave virtual desktops from jobsite trailers; the remittance block is generated only by the payment-instruction service from bank data already verified in SYS-G4, and project accountants can no longer type it; remittance edits and bulk downloads stream to the SIEM.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** The three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the commercial SYS-G3 landing zone, with cloud roles federated from SYS-G1. The CUI enclave (SYS-G6) is the one separate tenant. It runs on a government-community cloud offering at the FedRAMP Moderate baseline, with its own identities, desktops, email, and files, and it serves Construction and A&E. It inherits only governance, HR, and SOC monitoring from the group.
+
+**Reason.** CUI in an external cloud must meet FedRAMP Moderate equivalency under DFARS 252.204-7012(b)(2)(ii)(D) and 32 CFR 170.16(c)(2), so CUI never belongs in the commercial landing zone. SYS-G1 and the landing zone network sit outside the enclave's authorized boundary, so the enclave cannot inherit them. Everything else shares SYS-G1 so that common controls are assessed once.
+
+**What limits blast radius.** Enclave users have separate identities with phishing-resistant MFA, sponsored per DoD project and reviewed quarterly. The enclave gateway sends only one-way notices to the PDPP. In the landing zone, administrators use just-in-time PAM with session recording, break-glass roles are sealed, and there are no long-lived cloud user keys. Backups sit in provider B with a separate backup identity.
+
+**Known gaps.** The enclave "field release" export lets CUI reach the PDPP (POAM-006, POAM-011). 11 BAS integrators keep remote access outside group PAM (POAM-023). PDPP-local external accounts are outside SYS-G1 (POAM-001).
+
+Cross-division risks: GR-05 (ransomware spreads through shared services), GR-19 (identity platform outage stops all divisions), GR-01 (CUI outside the enclave).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 55 rows across 31 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -147,7 +158,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, and email security are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access within the application, and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers. CUI controls are **enclave-specific**: the enclave does not inherit the commercial landing zone's identity or network controls, because those sit outside its authorized boundary.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division and enclave components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Enclave identities; PDPP external users; property SaaS SSO; TSSI remote access | AC-2, AC-3, AC-6(5), IA-2, IA-2(1), IA-8, MA-4 | Customer (configuration); vendor (service) |
@@ -160,7 +171,7 @@ flowchart LR
 
 Jobsite trailers, offices, and building equipment rooms are physical locations the group controls. They are covered by P03 (FAR 52.204-21(b)(1)(viii)-(ix); NIST SP 800-171 R2 3.10.x) and P07, not by this cloud map.
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -176,7 +187,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. Whether a particular government-community service is FedRAMP Moderate authorized is checked on the FedRAMP Marketplace for the exact service offering before CUI is placed in it (32 CFR 170.16(c)(2)(i)); the group does not assume it from the region name.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The boundary between the enclave and the PDPP is a process, not a control.** The enclave is sound on paper (FedRAMP Moderate, separate identities, encryption). The weak point is the "field release" export that lets users carry CUI drawings out to the commercial PDPP, where nothing detects them (AC-4; P01 GR-01; POAM-006 and POAM-011).
 2. **Payment integrity depends on a free-text field.** The payment factory's bank-change controls are strong (AC-5, SI-10, SI-7 in SYS-G4). The PDPP remittance block bypasses them because a project accountant can type any bank details onto a pay application cover sheet (P01 GR-02; POAM-009).
 3. **Property building systems are inside the landing zone but outside the SOC.** The BAS supervisory servers sit in a Property account and inherit guardrails, but site VPNs reach flat building networks, integrators connect around group PAM, and nothing is in the SIEM (SC-7, MA-4, SI-4; POAM-003, POAM-022, POAM-023).

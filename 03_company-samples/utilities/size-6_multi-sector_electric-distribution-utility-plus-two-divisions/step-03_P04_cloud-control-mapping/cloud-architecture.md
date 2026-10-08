@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Utilities | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones), the cloud-hosted part of the shared OT remote access platform (SYS-G4), and the division workloads that run in the cloud or as SaaS. The SSP system (P02) is the Distribution Operations Platform, which is **on premises**; this document shows where it touches the cloud.
 
 ## 1. Design in one paragraph
@@ -110,7 +110,15 @@ flowchart LR
 
 **Target state (POAM-001, POAM-005, POAM-003, POAM-009):** every SYS-G4 session to the DOP needs DCC approval and a work order, with separate entitlements per OT environment; all DOP traffic to and from the corporate network passes through the OT DMZ under deny-by-default rules; network sensors in both DCC networks feed the group SOC; DOP backups get an offline, immutable copy. Gateway rules at the 74 transmission substations allow only DNP3 from the FEPs (POAM-014).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** SYS-G1 holds the IT identities of all three divisions, and divisions get their own accounts inside the landing zone. SYS-G1 is not used inside the CIP Electronic Security Perimeters.
+- **Separate OT identity.** The DOP has its own OT domain, separate from SYS-G1. Gas Production's field SCADA has a separate OT domain. The TCC EMS has its own CIP-005 Intermediate System. Remote users authenticate at the SYS-G4 gateway through SYS-G1 with MFA, then to the jump host with their OT domain account.
+- **Why.** No OT control system runs in the cloud, and the only cloud-to-OT path is SYS-G4. OT access is a shared system, but each OT owner decides who may reach its environment.
+- **What limits blast radius.** SYS-G4 connectors make outbound-only connections, every session is recorded, and vendors connect only through SYS-G4 with MFA. Just-in-time PAM elevation for cloud and IT administration. The backup vault uses a separate backup identity and holds no OT backups. The load-forecasting workspace has no access from the DOP.
+- **Known gaps.** 230 Engineering Services accounts have standing access to all three OT environments (GR-01, POAM-001). The DOP has 14 broad OT domain administrator accounts (GR-10). Malicious-communication detection on vendor sessions covers 31 of 74 substations (POAM-013).
+- **Cross-division risks:** GR-01, GR-07, GR-08, GR-10 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 50 rows across 21 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -129,7 +137,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. **OT access is a shared system, not a common control:** it is operated centrally, but each OT owner decides who may reach its environment and when. Application behavior and data access inside each application are **division-specific**, because they depend on each division's regulators and clients.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, SYS-G4 broker | AMI and CIS roles, SYS-S1 permissions, SYS-N2 federation | AC-2, AC-3, AC-6, AC-17, IA-2, IA-2(1) | Customer (configuration); vendor (service) |
@@ -140,7 +148,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, and EDR vendors | AMI, CIS, accounting, AI assistant vendors | SA-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | None in the cloud; OT facilities are covered in P02 | PE-3 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -156,7 +164,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The riskiest cloud component is the one that touches OT.** The SYS-G4 broker is well built (MFA, encryption, recording, outbound-only connectors), but one Engineering Services role reaches the DOP, the substations, and the Gas Production POC (AC-6, AC-17; P01 GR-01; POAM-001).
 2. **The DOP leaks to the cloud outside its DMZ.** The outage map feed leaves the DOP directly (AC-4). It carries only aggregate counts, but the path is a way in (POAM-005).
 3. **Client CEII and BCSI need their own access model** on SYS-S1 (AC-3, AC-6). Encryption and backups are sound; inherited project-wide permissions are not (POAM-020). The same platform holds the Electric Utility's own TCC BCSI, which brings CIP-004-7 R6 into a cloud document platform (P03; POAM-015).

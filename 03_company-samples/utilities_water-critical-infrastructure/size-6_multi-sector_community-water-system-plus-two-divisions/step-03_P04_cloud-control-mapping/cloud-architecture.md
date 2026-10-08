@@ -1,6 +1,6 @@
 # Cloud and OT Architecture with Control Placement: Cris Santos Company Holdings | Water and Wastewater Systems | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B, plus a government-community cloud offering of provider A for the Construction CUI enclave (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B, plus a government-community cloud offering of provider A for the Construction CUI enclave (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones and data platform), the OT remote access gateway (SYS-G4), the division workloads that run on or connect to them, and the cloud-facing edge of the SSP system, RS1-SCADA (P02).
 
 ## 1. Design in one paragraph
@@ -115,7 +115,15 @@ flowchart LR
 
 **Target state (POAM-002, POAM-003, POAM-008, POAM-019; through 2027-03-31):** commissioning engineers use per-session approval like everyone else; Construction laptops reach the WTP-A maintenance segment only under an interconnection agreement and through the gateway; every commissioning change goes through RS-1 management of change; an OT sensor is added at WTP-C; and the 19 acquired systems move behind SYS-G4 by 2027-06-30 (POAM-013).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the landing zone. Each regional OT directory federates to SYS-G1 for MFA at the 14 regional SCADA systems.
+- **One deliberate separate tenant.** The Construction CUI enclave (SYS-C2) runs in a separate tenant of a government-community cloud offering, with its own identity tenant and no federation from SYS-G1.
+- **Why.** Covered defense information needs a cloud that meets FedRAMP Moderate equivalency (DFARS 252.204-7012(b)(2)(ii)(D)). RS1-SCADA also stays outside the shared landing zone and only pushes data outward through its OT DMZ.
+- **What limits blast radius.** Enclave users have phishing-resistant MFA. OT operators use named accounts in the RS-1 OT directory, and privileged accounts are checked out from group PAM. Remote access goes through SYS-G4 jump hosts in each regional OT DMZ. Cloud roles are federated from SYS-G1 with no long-lived user keys.
+- **Known gaps.** Per-session approval is waived for 34 commissioning engineers (GR-01, POAM-002). OT directory accounts are certified yearly, not quarterly (POAM-001). The 19 acquired water systems use local OT accounts and are not yet behind SYS-G4 (GR-04, POAM-013). One identity platform carries the OT MFA federation (GR-10).
+- **Cross-division risks:** GR-01, GR-02, GR-04, GR-10 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 52 rows across 24 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -134,7 +142,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, and the OT remote access path are **common**. A division cannot opt out of them, only request an exception under POL-01. Application behavior, tenant isolation, client devices, and anything that touches covered defense information are **division-specific**, because they depend on each division's regulators and clients. The CUI enclave is the one deliberate exception to common identity: it does not federate to SYS-G1, so Construction operates its identity controls itself.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, SYS-G4 broker | CUI enclave identity tenant, CIS staff sign-in, SYS-E1 device certificates | AC-2, AC-3, AC-6(5), AC-17, IA-2(1), IA-3 | Customer (configuration); vendor (service) |
@@ -145,7 +153,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | CIS, LIMS, project platform, fleet systems | SA-9, CP-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | RS-1 plants and control rooms | PE-3, MP-6 | Provider (inherited) for cloud; Water Utility for plants |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -161,7 +169,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. Whether a specific government-community offering meets FedRAMP Moderate equivalency for a given service is confirmed from the provider's documentation for that service, not assumed from the offering name.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weak point is the remote path, not the cloud.** Common cloud controls are sound and reused. The gateway (SYS-G4) is well built, but an exception waived per-session approval for 34 commissioning engineers, and Construction laptops connect to the WTP-A maintenance segment without an interconnection agreement (AC-17, AC-20(1); P01 GR-01; POAM-002, POAM-019).
 2. **RS1-SCADA only pushes data out.** Historian replication is outbound-only from the OT DMZ (AC-4), so the cloud cannot be used as a path into OT. AI-001 alerts return to operators as notifications, not control commands.
 3. **CUI has leaked outside the enclave** (AC-4 on SYS-C1, SC-28 and CM-7 on laptops). The enclave design is right; the problem is what engineers copy out of it (POAM-018).

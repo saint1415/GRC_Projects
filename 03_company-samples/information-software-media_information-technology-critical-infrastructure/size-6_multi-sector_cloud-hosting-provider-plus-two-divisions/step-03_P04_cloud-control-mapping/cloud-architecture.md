@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Information Technology | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** the group's own commercial cloud (SL-1, operated by the Cloud Hosting division) and one unaffiliated public cloud provider ("external provider X") for the backup vault. Vendor-agnostic; see section 5.
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** the group's own commercial cloud (SL-1, operated by the Cloud Hosting division) and one unaffiliated public cloud provider ("external provider X") for the backup vault. Vendor-agnostic; see section 6.
 **Scope:** the shared group platform (the landing zone on SL-1, the SOC, identity, and the backup vault) plus the division workloads that run on it. The SSP system (P02) is the HCP, the control plane of SL-1 and G1.
 
 ## 1. Design in one paragraph
@@ -112,7 +112,18 @@ flowchart LR
 
 **Target state (POAM-001 and POAM-002, due 2026-12-31):** partner operators sign in through SYS-G1 with hardware keys and request time-limited, per-client access through PAM; the federation trust with the legacy tenant is removed; run-command volume across tenants raises an alert; the RMM agents leave the CDE connected-to segment and the enclave (POAM-014), which get their own management tooling.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts in the group landing zone on SL-1, with roles federated from SYS-G1. Payment Processing's CDE runs in dedicated accounts in R1 and R3, still under SYS-G1. The DoD CUI enclave (SYS-M2) is the one separate tenant: it sits in G1, the Government Cloud region, with its own network boundary. Managed IT engineers still sign in through the division's legacy identity tenant, which federates into SYS-G1 until migration on 2027-03-31.
+
+**Reason.** Covered defense information may be stored only with a cloud provider that meets the FedRAMP Moderate baseline or its equivalent (DFARS 252.204-7012(b)(2)(ii)(D)), so the enclave sits in G1, not in a commercial region. The immutable backup vault sits outside SL-1 at external provider X on purpose, so a provider-wide compromise of SL-1 cannot reach the last copy. Everything else shares SYS-G1 so common controls are assessed once.
+
+**What limits blast radius.** Administrators and HCP privileged roles use phishing-resistant hardware keys and just-in-time PAM with session recording. CDE roles come only through SYS-G1 PAM, with no partner-operator or support path into CDE accounts. Cloud accounts have no local users except sealed break-glass accounts. Support engineers cannot grant themselves access. The backup vault uses a separate backup identity, confirmed in P07.
+
+**Known gaps.** The partner-operator path gives standing access to about 4,100 tenants from the legacy tenant, with push MFA and 12-hour sessions (POAM-001, POAM-002). One RMM tenant has agents in the CDE connected-to segment and the enclave (POAM-014).
+
+Cross-division risks: GR-01 (stolen partner-operator session), GR-02 (RMM script reaches the CDE and the enclave), GR-07 (ransomware through shared identity and landing zone), GR-11 (privileged insider across divisions).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 37 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -132,7 +143,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, logging, keys, backups, and EDR are **common**. A division cannot opt out, only request an exception under POL-01. Facility, host, and isolation controls are **platform** controls: the other divisions inherit them from the Cloud Hosting division exactly as an external customer would, which is why Payment Processing needs them in its PCI DSS responsibility matrix (scenario gap 6). Application behavior, data access inside an application, and client-facing tooling are **division-specific**, because they answer to each division's regulators and clients.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common or platform components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, landing-zone IAM, HCP policy engine | Partner-operator path, customer IAM, G1 agency federation, RMM accounts, CDE roles | AC-2, AC-3, AC-6(5), AC-12, IA-2(1), IA-8, IA-2(12) | Customer for workforce identity; provider for the HCP's enforcement; shared for customer MFA |
@@ -142,7 +153,7 @@ flowchart LR
 | Logging and monitoring | Log archive, SIEM, AI triage | HCP audit records, run-command logs, RMM logs, CDE logs | AU-2, AU-3, AU-6, AU-9, AU-11, SI-4, IR-4 | Shared: services generate logs; the SOC retains and reviews them |
 | Physical | SL-1 and G1 data centers | CDE and G1 cages | PE-3, MP-6 | Provider (the Cloud Hosting division) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on any named provider. The group's own service categories line up with the public providers' categories, which helps when customers and assessors compare shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -157,7 +168,7 @@ The design does not depend on any named provider. The group's own service catego
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split the SL-1 shared responsibility model also uses: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. The run-command row matters most here: every provider treats "who may run commands in my virtual machines" as a customer decision, so the partner-operator scope must be granted by each managed-hosting tenant, not assumed.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weakest placement is a path, not a component.** The HCP's own controls are strong (AC-3 tenant isolation, SI-7 signing, AU-3 audit content). The gap is the partner-operator path: a standing, non-phishing-resistant identity from another division's tenant, with 12-hour sessions and reach into about 4,100 tenants (P01 GR-01; POAM-001).
 2. **One RMM tenant connects three divisions.** RMM agents on settlement-support servers put the RMM vendor and every RMM technician inside Payment Processing's PCI DSS scope (connected-to systems) and inside the CMMC scope of the enclave. Separate tooling for internal systems removes both problems (POAM-014).
 3. **The other divisions are customers of SL-1 and must treat it that way.** Seven platform rows (facilities, isolation, erase, DDoS) are inherited by the CDE and the enclave. Payment Processing's PCI DSS responsibility matrix and an intercompany agreement under 16 CFR 314.4(f) must say so (scenario gap 6; POAM-018).

@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Arts, Entertainment, and Recreation | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones and WAN), the two shared systems that run on it (the TVOP and the patron data platform SYS-G4), and the division workloads around them. The SSP system (P02) is the TVOP.
 
 ## 1. Design in one paragraph
@@ -117,7 +117,18 @@ flowchart LR
 
 **Target state (POAM-006 to POAM-009, due 2026-11-30 to 2026-12-31):** tenant tags are allowed on event pages only and blocked in every checkout step by the content security policy; the payment step loads only the 14 inventoried platform scripts; change-and-tamper detection alerts the SOC on any new or changed script on any tenant's payment page; script vendors are assessed and contracted; tenant tag changes are logged and alerted.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1) for workforce access. Each division gets its own accounts inside the SYS-G3 landing zones, with cloud roles federated from SYS-G1. The TVOP keeps payment orchestration and the token vault in a separate CDE account, still under SYS-G1. No division has a separate tenant with its own workforce identity. Two parts of the estate sit outside SYS-G1 because they never joined the platform: the 8 acquired theaters and about 2,600 local hotel PMS accounts.
+
+**Reason.** One identity platform, one SIEM, and one backup design let group internal audit assess common controls once. The separate CDE account keeps card data in its own PCI DSS scope (SC-7(21)). Patron and client users sign in through the TVOP customer identity service, not SYS-G1.
+
+**What limits blast radius.** Administrators and key custodians use phishing-resistant hardware keys and just-in-time PAM with session recording. Cloud IAM has no local users except sealed break-glass accounts. Backups use a separate backup identity. On the patron data platform, cross-division views need privacy approval.
+
+**Known gaps.** 412 support engineers hold a standing impersonation role into client tenants (GR-14). 38% of client administrators have no MFA (POAM-010). The hotel PMS accounts and the acquired theaters are outside SYS-G1 (POAM-015, POAM-018).
+
+Cross-division risks: GR-02 (ransomware spreads through shared identity, WAN, and cloud), GR-07 (identity takeover used against the TVOP or division systems), GR-01 (checkout skimming across every division's tenants).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 55 rows across 32 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -137,7 +148,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Payment page content, tenant settings, and patron data use are **TVOP** controls, because one platform serves every division and client. Card-present devices, venue and hotel networks, and the PMS are **division-specific**, because each division answers to its own acquirer and runs its own premises.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Shared system and division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Customer identity service (patrons, client users), streaming sign-in, hotel PMS local accounts | AC-2, AC-3, AC-6(5), IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -148,7 +159,7 @@ flowchart LR
 | Logging and monitoring | Log archive, SIEM | Application, tenant configuration, and payment logs | AU-6, AU-9, AU-11, SI-4 | Shared: providers generate platform logs; group retains and reviews |
 | Physical | Provider data centers | Box office areas, P2PE devices, front desks | PE-3, MP-6, SR-10 | Provider for data centers; divisions for venues and hotels |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -164,7 +175,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For PCI DSS, each provider's own AOC covers only its part; the QSA tests the group's part.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The payment page is the weak point, and no cloud control covers it.** Encryption, tokenization, and the CDE account are sound (SC-28(1), SC-12, SC-7(21)). The gap is code that runs in the patron's browser: the content security policy trusts the tag manager domain, so any tenant tag runs on checkout (SC-18, CM-8, SI-7; P01 GR-01; POAM-006, POAM-007). This is the entry point used in the P08 scenario.
 2. **One platform, three PCI roles.** The TVOP is a service provider to its clients and to the group's own merchants. A single tenant's tag can affect patrons of every division, so the fix belongs in the platform, not in each tenant's settings.
 3. **The patron data platform receives more than its uses need** (PT-2, PT-3). The hotel PMS export carries identity document numbers, and the TVOP feed carries all tenants' purchaser data (POAM-012, POAM-024).

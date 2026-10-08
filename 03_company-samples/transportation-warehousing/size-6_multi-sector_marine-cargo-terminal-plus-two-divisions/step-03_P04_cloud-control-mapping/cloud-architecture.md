@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Transportation and Warehousing | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, the WAN and the backup vault, plus the SYS-G4 integration hub) and the division workloads that run on it or connect to it. The SSP system (P02) is the Terminal Operations Platform (TOP).
 **Handling:** Terminal network and OT zone details are SSI (49 CFR part 1520); this document shows the design pattern only.
 
@@ -116,7 +116,14 @@ flowchart LR
 
 **Target state (POAM-008, POAM-010 and POAM-011):** the group logistics role is replaced by a cargo-owner view of Freight Trading's own shipments through SYS-T6, like any other customer; SYS-T5 returns to advisory mode at T5 until the AI council approves a safety case; T7 to T9 move onto SYS-T1 and the standard OT zone design by 2027-06-30.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions federate to the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own identity tenant. Staff and vendor sessions to TOS servers and terminal OT go through one group zero trust access service and jump host.
+- **Why.** One identity platform and one jump host let group internal audit assess them once.
+- **What limits blast radius.** Phishing-resistant MFA for administrators and just-in-time PAM elevation with session recording. Jump host sessions need per-session approval and are recorded. Logs are written to a separate account readable only by privileged SOC roles. The integration hub is meant to route each partner flow only to the division account it serves.
+- **Known gaps.** Today one hub service account can write to three divisions' inbound folders, and 11 partner credentials are shared across divisions (GR-01, POAM-014). 212 Freight Trading users hold the group logistics TOS role (GR-02, POAM-008). Gulf terminals still use always-on vendor modems (MT-003). One identity platform serves 45,000 users plus partner accounts (GR-10).
+- **Cross-division risks:** GR-01, GR-02, GR-06, GR-10, GR-15 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has **54 rows across 29 components**. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -136,7 +143,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, remote access, logging, keys, backups and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access inside the application, OT zones and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers. The integration hub is a deliberate exception: it is shared, so its controls must separate the divisions' partner flows (AC-4), which they do not fully do today.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, zero trust access and jump host | TOS roles, SYS-T6 customer identity, SaaS application roles | AC-2, AC-3, AC-6(5), AC-17, IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -148,7 +155,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, ERP and productivity vendors | CTRM, yard, property management, optimization service | SA-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | Terminals, gate complexes, warehouses (outside the cloud model) | PE-3, MP-6 | Provider for data centers (inherited); FSOs and building teams for sites |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -164,7 +171,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification and data. None of the providers' models covers on-premises OT or building systems, which stay entirely with the group.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The integration hub is the group's widest shared path.** One service account can write to the TOS, trading and property inbound folders, 11 partner credentials are shared across divisions, and 2 carriers still use plain FTP (AC-4, CA-3, SC-8; POAM-014). This is how the P08 incident spreads from one division's partner to all three.
 2. **The TOP's cloud controls are sound; its weak points are inside the application and at the edge.** Encryption, keys, backups and the replica are in place (SC-28, CP-9, CP-7). The gaps are the group logistics role (AC-3; scenario gap 1) and the unreviewed path from SYS-T5 to the T5 equipment control system (CA-9; gap 8).
 3. **The Gulf terminals and the building systems are outside the platform's protection.** SYS-T1L has local backups only and flat networks (CP-9, SC-7; P01 MT-002, MT-004). Building systems are reached by integrators over the internet and are not monitored (AC-17, SI-4; P01 RE-001, RE-002). Neither is covered by a cloud provider's shared responsibility model, so every control is the group's own.

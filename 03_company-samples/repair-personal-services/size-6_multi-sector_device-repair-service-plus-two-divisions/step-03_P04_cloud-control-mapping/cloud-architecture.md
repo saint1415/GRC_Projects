@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Other Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), two group colocation data centers, and division SaaS tools
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), two group colocation data centers, and division SaaS tools
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, SYS-G4 customer engagement platform) plus the division workloads that run on it or connect to it. The SSP system (P02) is the Service Ticketing and Point-of-Sale Platform (STPP).
 
 ## 1. Design in one paragraph
@@ -121,7 +121,14 @@ flowchart LR
 
 **Target state (POAM-001, POAM-002, POAM-007, POAM-009, POAM-018; due 2026-11-15 to 2027-03-31):** every store uses the passcode vault and notes are purged; benches at in-store counters use named accounts and sit on their own network, reachable from nothing in the retail CDE; bench tools run from an allow list and update only through the group software channel after integrity checks; the diagnostics payload drops free-text notes.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own identity tenant. IT Support's SaaS tools sit outside the cloud platform, and the RMM console takes SSO from SYS-G1. Customers use one sign-in across divisions (SYS-G4).
+- **Why.** One identity platform lets group internal audit assess it once.
+- **What limits blast radius.** Phishing-resistant MFA for administrators and just-in-time PAM elevation with session recording. Division administrators cannot delete logs in the log archive. STPP internal calls use workload identities. The AI remediation agent runs only allow-listed script types under a scoped RMM role.
+- **Known gaps.** The RMM console has 14 standing global administrators (GR-03, POAM-005), and RMM administrator MFA is not yet phishing-resistant (POAM-004). Shared bench logins at in-store counters and 3 shared depot logins on Manufacturer B's portal sit outside identity governance (POAM-001). Consumer MFA on the shared customer account is optional (GR-15).
+- **Cross-division risks:** GR-02, GR-03, GR-07, GR-08, GR-15 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 35 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -140,7 +147,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access within the application, store and bench networks, and customer-facing tools are **division-specific**, because they depend on each division's card brands, manufacturers, and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, SYS-G4 customer identity | STPP gateway and interface secrets, manufacturer portals, RMM console | AC-2, AC-3, AC-6(5), IA-2, IA-2(1), IA-5, IA-8 | Customer (configuration); vendor (service) |
@@ -151,7 +158,7 @@ flowchart LR
 | SaaS and vendor dependencies | Identity, SIEM, EDR, chatbot vendors | Bench tool vendors, AI diagnostics provider, RMM and PSA vendors | SA-9, SR-3, SI-7 | Provider for the service; customer for use, update integrity, and oversight |
 | Physical | Provider and colocation data centers | Stores, depots, labs (not cloud) | PE-3 | Provider (inherited) for data centers; group for its own sites (P02) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -167,7 +174,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weak points are at the edge, not in the cloud.** The STPP's cloud controls are sound (SC-28, SC-12, CP-9, AU-9). The gaps are in the store estates the cloud mapping does not reach: shared bench logins, self-updating bench tools, and in-store counter benches on retail store networks (AC-2, CM-7, SR-3, SC-7; P01 GR-01, GR-02, GR-04).
 2. **One store network, two merchants.** The in-store counters are a Device Repair system inside a Retail network. The retail segmentation test, not the repair program, found that 112 counters could reach POS lanes. Ownership of that boundary is now explicit: Retail owns the store network and its segmentation (SC-7, division-specific row); Device Repair owns the bench workstations on it (POAM-009 has both owners).
 3. **Two passcode stores remain outside the vault.** Free-text notes in the STPP and transcripts in the group chatbot (SYS-G4) both hold passcodes. The vault solves only the first, and only at 680 stores (SC-28(1); POAM-002, POAM-018).

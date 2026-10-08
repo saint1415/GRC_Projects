@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Critical Manufacturing | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones) plus the division workloads that run on it. The SSP system (P02) is the Group ERP and Production Scheduling Platform (GEPS), a shared corporate system.
 
 ## 1. Design in one paragraph
@@ -110,7 +110,18 @@ flowchart LR
 
 **Target state (POAM-002, POAM-004, POAM-007; due 2026-12-31 to 2027-03-31):** one hub service account per plant with keys in the secret store; hub-to-plant traffic baselined and alerted; the P8 MES behind an OT DMZ like P1 to P7; a tested full restore of APS and the hub in provider B, including how each plant MES re-synchronizes its work order queue.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1) for IT identities. Each division gets its own accounts inside the SYS-G3 landing zones, with roles federated from SYS-G1 and scoped to division accounts. No division has a separate cloud tenant with its own identity. SYS-G1 is not used inside the Electric Utility's CIP Electronic Security Perimeters, and neither the TCC nor the plant controllers depend on SYS-G1 or the GEPS to run.
+
+**Reason.** One identity platform, one SIEM, and one backup design let group internal audit assess common controls once. The TCC is a NERC CIP medium impact system, so it stays on a private network inside its Electronic Security Perimeter, outside the cloud and outside SYS-G1. Keeping it and the plant controllers off SYS-G1 limits how far a cloud or identity incident can spread.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys and just-in-time PAM with session recording, including ERP vendor support. There are no standing cross-division administrator roles. At plants P1 to P7, nothing in the cloud can reach a controller directly, because OT DMZs sit in between. The Fleet Monitoring Service takes only utility-initiated, one-way, mutually authenticated data. Only SOC log administrators manage the write-once log archive, and backups use a separate backup identity.
+
+**Known gaps.** Six integration hub service accounts with static keys can write work orders to every plant (POAM-002). Plant P8 has a dual-homed MES and no OT DMZ (POAM-007), and a two-way trust links its legacy domain to the corporate domain (GR-07).
+
+Cross-division risks: GR-01 (ransomware spreads through shared IT services), GR-07 (pivot through the P8 legacy domain trust), GR-15 (insider abuse of cross-division GEPS access).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 54 rows across 27 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -129,7 +140,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, tenant isolation, and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers (utility addenda, client CIP terms, NERC CIP).
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Supplier portal identity, FMS subscriber identities, code repository access | AC-2, AC-3, AC-6(5), IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -140,7 +151,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | Code repositories, AMI and CIS, predictive maintenance vendor, model provider | SA-9, SI-7 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | none | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -155,7 +166,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The integration hub is the GEPS's weak point, not the cloud.** Encryption, keys, guardrails, and backups are sound (SC-28, SC-12, CM-6, CP-9). The gap is that one hub with 6 over-privileged service accounts with static keys can write work orders to every plant (AC-6, IA-5; P01 GR-02; POAM-002).
 2. **The cloud boundary stops at the OT DMZ, except at P8.** At P1 to P7 nothing in the cloud can reach a controller directly. At P8 the hub reaches a dual-homed MES and a vendor connector sends historian data straight to the internet (SC-7, AC-4; P01 MF-001; POAM-007).
 3. **Recovery is designed but unproven** (CP-7, CP-10). Database replication to provider B works, but APS and the hub have never been restored in a test (POAM-004).
