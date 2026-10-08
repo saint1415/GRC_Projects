@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 
 ## 1. System Name and Identifier
-Hospital EHR and Clinical Systems (**HECS**), identifier CSC-HECS-01. HECS is the hospital's major system. It comprises the hospital's configuration and use of SYS-01 to SYS-08 and SYS-10 in `../00_company-facts.md`, and their interfaces to the external services in SYS-12.
+Hospital EHR and Clinical Systems (**HECS**), identifier CSC-HECS-01. HECS is the hospital's major system. It comprises the hospital's configuration and use of SYS-01 to SYS-08 and SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), and their interfaces to the external services in SYS-12.
 
 ## 2. System Overview
 HECS supports every clinical process in the BIA (P05): emergency care, inpatient and critical care, women's services, surgery, pharmacy, laboratory and blood bank, imaging and the catheterization lab, patient access, and the affiliated practice program, at the main campus and the off-campus outpatient center. It serves 600 employees, about 280 independent physicians with privileges, contracted clinicians and agency nurses, and about 240 affiliated practice users, and it holds records for about 310,000 individuals.
@@ -45,7 +45,7 @@ Building and clinical OT (SYS-09) and clinical communications (SYS-11) share the
 | Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-10 | P06 | Policy basis for every control |
 
 Not applicable:
-- **42 CFR Part 2 (C-HPH-R06).** The hospital is not a Part 2 program (screened in `../00_company-facts.md`).
+- **42 CFR Part 2 (C-HPH-R06).** The hospital is not a Part 2 program (intake obligations register, C-HPH-R06; EV-047, EV-056).
 - **FTC Health Breach Notification Rule (C-HPH-R05).** Covered entities and business associates acting as such are excluded (16 CFR 318.1).
 - **HIPAA group health plan requirements (164.314(b)).** The employee health plan is fully insured, and the hospital as plan sponsor receives only summary health and enrollment information (P03).
 - **CIRCIA (C-HPH-R11).** Proposed only. If finalized as proposed, it would cover this hospital because it has 100 or more beds (P03, P08).
@@ -99,6 +99,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Integrity and availability were considered for High.** A tampered infusion pump drug library or an altered blood bank record could contribute to death, and a network-wide outage forces diversion. The team kept both at Moderate for four reasons: clinicians independently verify medications at the bedside (barcode scanning and pharmacist verification), pumps run standalone on a validated library, blood products are re-verified at the bedside by two nurses, and documented paper procedures sustain care through the 4-hour MTD. To compensate, the baseline adds integrity-focused tailoring (section 10.1), and P01 carries pump library and device risks separately (R-007, R-015).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts are the endpoint console totals (EV-010); the server count is the CMDB total of 52 (EV-012); the medical device count is the clinical engineering maintenance inventory total of about 1,650, of which about 1,150 are in the security inventory (EV-013).
+
 **Inside the boundary:**
 - the hospital's EHR tenant configuration, the 64-role security catalog, the sepsis model settings, and the ambulatory module used by the affiliated practices;
 - the identity provider tenant and the on-premises directory;
@@ -167,7 +169,7 @@ The diagram is in P04 `cloud-architecture.md`.
 ### 10.1 Control implementation status
 **Baseline and tailoring.** HECS uses the NIST SP 800-53B **Moderate** baseline (287 controls and enhancements), tailored as follows:
 - **Documented here: 133 controls** in `control-implementation.csv`. They cover every SP 800-53 control mapped to a HIPAA Security Rule standard or implementation specification in the Health Care crosswalk (an author mapping), plus the Moderate controls that address the risks in P01 (segmentation, privileged access, vendor access, monitoring, recovery, unsupported devices) and the controls that support 42 CFR 482.15 (CP-2, CP-2(1), CP-2(3), CP-3, CP-4, CP-8, IR-3, PE-11).
-- **Selected by tailoring (added):** PM-1, PM-2, and PM-9, which are not in the Moderate baseline but are needed for HIPAA 164.308(a)(1)-(2), and SA-3(2), added because production PHI sits in the interface engine test environment (gap 11).
+- **Selected by tailoring (added):** PM-1, PM-2, and PM-9, which are not in the Moderate baseline but are needed for HIPAA 164.308(a)(1)-(2), and SA-3(2), added because production PHI sits in the interface engine test environment (EV-025).
 - **Integrity tailoring:** CM-3 and CM-4 statements cover EHR build changes and vendor feature activations; SI-7 covers the drug library and interface mappings; SI-10 covers interface validation.
 - **Inherited without separate statements:** the remaining Moderate-baseline physical and environmental controls for cloud and SaaS data centers (for example PE-9, PE-10, PE-12, PE-13, PE-15) and platform-level SA and SC controls. They are inherited from the EHR vendor, the identity vendor, the cloud provider, and the MSSP, and are evidenced by their SOC 2 Type 2 reports, which are reviewed each year (P09 `vendor-soc2-review.csv`). The PACS vendor has no SOC 2 report, so the PACS application controls are rated as hybrid and assessed directly.
 - **Deferred:** the other Moderate controls with no HIPAA mapping and no Moderate-or-higher risk in P01 (for example SA-11 developer testing and SA-15 development process, because the hospital does not develop software). They are recorded as tailoring decisions and reviewed each year.
@@ -187,7 +189,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 38 | EHR vendor, identity vendor, cloud provider, MSSP, medical device manufacturers, vendor access platform provider, email security vendor |
 | Common/Inherited | 7 | Identity vendor (AC-7, IA-2(8)), EHR vendor (AC-12), cloud provider (CP-6, SC-12), carriers and cloud provider (SC-5), MSSP and insurer panel (IR-7) |
 
-The large share of Partially implemented statements reflects the scenario: the hospital has a defined program, but its controls do not yet reach medical devices, OT, vendors, non-employee users, or on-premises recovery. The statements trace to the 13 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The large share of Partially implemented statements reflects the scenario: the hospital has a defined program, but its controls do not yet reach medical devices, OT, vendors, non-employee users, or on-premises recovery. The statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-013, EV-022 and EV-028) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 34 controls from 2026-07-27 to 2026-08-14 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -195,12 +197,12 @@ The co-sourced internal audit firm assessed 34 controls from 2026-07-27 to 2026-
 ## 11. Digital Identity Acceptance Statement
 - **Workforce on campus.** Clinical workstations use badge tap (something the user has) plus a password (something the user knows) through the identity provider's single sign-on agent. This gives two factors at the bedside without slowing clinicians, and it is accepted for the Moderate categorization.
 - **Remote and external access.** Workforce, contracted physicians, and affiliated practice users authenticate with a password and push MFA with number matching, under conditional access that checks device compliance and sign-in risk.
-- **Administrators.** Administrators will move to phishing-resistant authenticators (FIDO2 security keys) by 2027-03-31 (P01 R-009). Until then, cloud administration goes through the privileged access broker with just-in-time elevation; other administration does not (gap 4).
+- **Administrators.** Administrators will move to phishing-resistant authenticators (FIDO2 security keys) by 2027-03-31 (P01 R-009). Until then, cloud administration goes through the privileged access broker with just-in-time elevation; other administration does not (EV-007).
 - **Vendors.** Vendor support must move to named accounts on the vendor access platform with MFA by 2026-12-31 (P01 R-010). The 14 persistent VPN accounts are a documented exception until then.
 - **Patients.** Patients use the EHR vendor's portal, which provides identity proofing and optional MFA. It is governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis, CPG benchmark, and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); emergency operations plan (482.15 program).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); gap analysis, CPG benchmark, and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); emergency operations plan (482.15 program).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

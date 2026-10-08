@@ -45,7 +45,7 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 ## Finished sample companies
 
 <!-- BEGIN GENERATED: finished samples (tools/build_scenarios.py) -->
-**216 of 216** sample companies are finished (2,160 deliverables). The full industry by size grid is in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
+**215 of 216** sample companies are finished (2,150 deliverables). Planned folders are listed in [03_company-samples/INDEX.md](03_company-samples/INDEX.md).
 
 | Industry | Size | Company | Brief |
 |---|---|---|---|
@@ -227,7 +227,6 @@ Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 | Healthcare and Public Health | Micro | Independent pharmacy | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-2_micro_independent-pharmacy/README.md) |
 | Healthcare and Public Health | Small | Critical access hospital | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-3_small_critical-access-hospital/README.md) |
 | Healthcare and Public Health | Mid-Market | Hospital | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-4_mid-market_hospital/README.md) |
-| Healthcare and Public Health | Enterprise | Hospital system | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-5_enterprise_hospital-system/README.md) |
 | Healthcare and Public Health | Multi-Sector | Hospital plus two divisions | [README](03_company-samples/health-care_healthcare-public-health-critical-infrastructure/size-6_multi-sector_hospital-plus-two-divisions/README.md) |
 | Arts, Entertainment, and Recreation | Sole Proprietorship | Independent event promoter | [README](03_company-samples/arts-entertainment-recreation/size-1_sole-proprietor_independent-event-promoter/README.md) |
 | Arts, Entertainment, and Recreation | Micro | Live event venue | [README](03_company-samples/arts-entertainment-recreation/size-2_micro_live-event-venue/README.md) |

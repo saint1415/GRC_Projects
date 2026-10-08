@@ -1,0 +1,35 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"EHR software, upgrades and 24x7 support",SYS-01; SYS-15; AI-001; AI-004; AI-006,ePHI (support access through PAM),Support agreement and BAA,Release security test summaries,EV-040; EV-016; EV-015,Tier 1
+V-02,Identity platform vendor,"Directory, SSO, MFA, PAM and identity governance",SYS-02,Workforce identities,Subscription agreement,Per vendor register,EV-038; EV-039,Tier 1
+V-03,Cloud provider A,"Portal and FHIR API front end, backup vault, isolated recovery environment",SYS-01-PORT; SYS-04; SYS-04-VAULT,ePHI,Customer agreement with BAA,SOC 2 Type 2; shared responsibility documentation,EV-040; EV-042,
+V-04,Cloud provider B,"Analytics platform, tele-critical care platform hosting, AI services",SYS-04; SYS-14; DATA-AN; AI-005,ePHI,Customer agreement with BAA and no-training terms for AI services,SOC 2 Type 2; shared responsibility documentation,EV-040; EV-042; EV-077,Subservice organization for SL-2
+V-05,DC-2 colocation provider,"Data center space, power and physical security",SYS-03,Hosted equipment (ePHI at rest),Colocation contract,SOC 2 report,EV-042; EV-049,Provider generators with 72 hours of fuel
+V-06,Primary clearinghouse,"Claims, eligibility and remittance (about 80% of claims)",SAAS-CH,ePHI,BAA and services agreement,SOC 2 report,EV-041; EV-042; EV-047,No tested fallback on record
+V-07,Secondary clearinghouse,Claims (about 12% of volume),SAAS-CH,ePHI,BAA and services agreement; no surge capacity clause,Per vendor register,EV-041,
+V-08,Managed security service provider,SOC overflow triage,SIEM,Security logs (may contain PHI),Services agreement,Per vendor register,EV-022; EV-003; EV-038,Access through PAM
+V-09,Analyzer and middleware vendors (11 platforms),"Analyzers, middleware, maintenance and remote support",SYS-06-MD; SYS-01-IE,ePHI (support access),Service agreements,Per vendor register,EV-012; EV-016; EV-040,3 device and analyzer platforms use always-on vendor remote tools outside PAM
+V-10,"Medical device manufacturers (pumps, monitors, ADCs)","Devices, gateways and support",SYS-06-MD; SYS-01-GW,ePHI (device data),Purchase and service agreements with security and SBOM terms,Per vendor register,EV-012; EV-040,
+V-11,PACS vendor,Enterprise imaging software and support,SYS-08,ePHI,Support agreement with BAA,Per vendor register,EV-038; EV-081,
+V-12,Tele-ICU software vendor,Tele-ICU application,SYS-14,ePHI,BAA,SOC 2 Type 2 (reviewed 2026-05),EV-042; EV-044; EV-090,Carved out of the SL-2 SOC 2 scope
+V-13,H-08 legacy EHR vendor,Vendor-hosted legacy EHR,SYS-13,ePHI,Inherited contract; RTO 24 h; backups every 4 hours,None on file,EV-056,Until the 2027-03-01 conversion
+V-14,H-08 local IT support firm,Directory and desktop support at H-08,SYS-13,ePHI (administrative access),Inherited agreement,None on file,EV-007; EV-056,
+V-15,Unified communications vendor and carriers,"Voice, secure messaging, circuits",SYS-12; SYS-05,ePHI (incidental),Service and carrier contracts,Per vendor register,EV-027; EV-013,
+V-16,"ERP, payroll and supply chain SaaS vendor","Finance, payroll and supply chain",SYS-09,Employee PII; financial data,Subscription agreement,SOC 1 and SOC 2 reports (reviewed 2026-05),EV-042; EV-074; EV-090,SOX-relevant
+V-17,Productivity suite vendor,"Email, files, chat and the enterprise AI assistant",SAAS-PROD; AI-011,ePHI (incidental),Subscription with BAA and no-training terms,SOC 2 report,EV-042; EV-072; EV-077,
+V-18,Reference laboratory and blood supplier,Send-out testing; blood products,SYS-01-IE,ePHI,BAA and interface agreement,Per vendor register,EV-059; EV-040,
+V-19,Health information exchanges and state health departments,Record exchange; public health reporting,SYS-01-IE,ePHI,Participation agreements,n/a,EV-059; EV-062,
+V-20,Staffing agencies (42 contracts),Agency and contracted clinical staff,SYS-01; SYS-02,ePHI (staff access),"Contracts requiring screening, training and departure notice within 1 business day",n/a,EV-006,
+V-21,Offshore coding vendor,Remote coding,SYS-01,ePHI,BAA; virtual desktop access only,Per vendor register,EV-038,
+V-22,AI scribe vendor,Ambient clinical documentation,AI-002,ePHI (visit audio),BAA,Per vendor register,EV-076; EV-039; EV-040,
+V-23,Radiology AI vendor,CT stroke and hemorrhage triage,AI-003,ePHI,BAA,FDA clearance; vendor performance data,EV-076; EV-039,
+V-24,Coding and revenue cycle software vendors,Coding suggestions; denial prediction,AI-007; AI-010,ePHI,BAAs,Per vendor register,EV-076; EV-039,
+V-25,Workforce management vendor,Staffing and census forecasting,AI-009,Census and staffing data (no patient identifiers),Subscription agreement,Per vendor register,EV-076; EV-039,
+V-26,Perioperative system vendor,Surgical case duration prediction feature,AI-008,ePHI,Through the vendor agreement,Per vendor register,EV-076,
+V-27,Security operations tooling vendor,SOC alert triage assistant,AI-012,Security logs,Subscription agreement,Per vendor register,EV-076; EV-039,
+V-28,Certified media destruction vendor,Drive and device destruction,SYS-06-EP; SYS-03,PHI on media,Service agreement,Certificates of destruction,EV-050,
+V-29,Breach notice mail vendor and call center,Notice letters and call handling,n/a,PHI (names and addresses),Retainer contracts,Per vendor register,EV-040; EV-037,
+V-30,Cyber insurer,Cyber insurance; breach hotline and panel firms,n/a,Incident information when notified,Policy,n/a,EV-068,Insurer consent and an OFAC check before any ransom payment
+V-31,Outside securities and breach counsel; forensics firms,Disclosure advice; state breach matrix; incident response,n/a,Incident information,Engagements and retainers,n/a,EV-065; EV-066; EV-068,
+V-32,Building automation vendor and medical gas service contractor,OT systems and service,SYS-07,None,Service contracts,Per vendor register,EV-017,Remote access through the gateway
+V-33,Drug wholesaler and medical-surgical distributors,Pharmaceuticals and supplies,SYS-09,Order data,Supply agreements,n/a,EV-039; EV-081,
+V-34,Bank lockbox and statement vendor,Remittances and patient statements,SYS-09,Patient billing data,Service agreements,Per vendor register,EV-039; EV-081,
