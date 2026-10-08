@@ -49,7 +49,7 @@ Treatment: 33 Mitigate, 2 Accept (R-031 and R-034, both Low).
 | R-002 | Covered (Section 889) equipment delivered on a federal order | Mandatory manufacturer of record; screening list with a hard block on federal orders | Government Contracts Manager | 2026-11-30 |
 | R-003 | Supplier email compromise diverts a supplier payment | Call-back verification; second approver; 5-day hold after bank changes | Controller | 2026-10-15 |
 | R-004 | CUI disclosed from the open file share or ERP attachments | CUI enclave project; purge ERP attachments | IT Manager | 2026-12-15 |
-| R-005 | CMMC Level 2 not achieved in time; Prime B option lost | Monthly POA&M review; close 5-point items first; C3PAO booked for 2027-02 | Chief Operating Officer | 2027-01-31 |
+| R-005 | SP 800-171 compliance or the CMMC status Prime B requires not achieved in time; Prime B option lost | Monthly POA&M review; close 5-point items first; voluntary C3PAO booked for 2027-02 | Chief Operating Officer | 2027-01-31 |
 | R-006 | Unsupported SPRS score and Level 1 affirmation | Corrected SPRS entries on counsel's advice | Chief Executive Officer | 2026-10-31 |
 | R-007 | Ransomware encrypts WMS, file server, and endpoints | 24x7 managed detection; immutable backups; segmentation | IT Manager | 2027-01-15 |
 | R-010 | MSP RMM tool compromise reaches every device | Customer responsibility matrix; session approval; source restrictions | Chief Operating Officer | 2026-12-15 |

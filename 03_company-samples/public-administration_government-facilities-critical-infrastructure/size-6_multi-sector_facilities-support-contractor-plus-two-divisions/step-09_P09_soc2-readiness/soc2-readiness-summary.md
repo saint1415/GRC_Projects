@@ -23,7 +23,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 **Why Construction is out of scope:**
 1. **No user entities.** Building owners buy a building, not an ongoing system service. They rely on contract performance, bonding, and inspections, not on Construction's information systems.
-2. **Assurance comes from other programs.** DoD customers rely on DFARS 252.204-7012, SPRS assessments, and CMMC (32 CFR Part 170). Its Level 2 C3PAO assessment (POAM-020) is the assurance those customers need.
+2. **Assurance comes from other programs.** DoD customers rely on DFARS 252.204-7012, SPRS assessments, and CMMC (32 CFR Part 170). Its voluntary Level 2 C3PAO assessment (POAM-020) gives those customers independent assurance. CMMC Phase 2 was suspended on 2026-07-13, but SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies.
 3. **Revisit trigger:** if Construction starts operating buildings after turnover (for example a commissioning-as-a-service offering on the IBOP), that work joins the Facilities Support service description.
 
 **Why the janitorial and guard services are out of scope:** the customer directs the work at its own site, and the controls that matter (screening, training, credential return) are personnel controls that customers check through contract terms and site audits. The group answers those questions with this sample's P03 and P07 results. Customers at FTI and criminal justice buildings apply their own agency rules through the contract (IRS Pub. 1075; CJIS Security Policy).

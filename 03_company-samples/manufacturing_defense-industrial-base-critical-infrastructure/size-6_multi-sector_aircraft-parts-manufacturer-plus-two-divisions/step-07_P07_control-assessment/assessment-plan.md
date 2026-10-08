@@ -8,7 +8,7 @@
 | Procedures | NIST SP 800-53A Rev. 5, Release 5.2.0 (determination statements from `00_universal-framework/frameworks/sp800-53a_objectives.csv`) |
 | Assessor and independence | Group internal audit, which reports to the board audit and risk committee and neither designs nor operates the controls. Division security and compliance leads and the Group CMMC program director acted as liaisons only |
 | Assessment window | 2026-07-06 to 2026-08-28 |
-| Also satisfies | SP 800-171 Rev. 2 requirement 3.12.1 (periodic assessment) for the Enterprise CUI Environment, as a readiness check before the C3PAO assessment (target window 2026-12-07 to 2026-12-18). It is not a CMMC assessment and does not produce a CMMC status |
+| Also satisfies | SP 800-171 Rev. 2 requirement 3.12.1 (periodic assessment) for the Enterprise CUI Environment, as a readiness check before the voluntary C3PAO assessment (target window 2026-12-07 to 2026-12-18). It is not a CMMC assessment and does not produce a CMMC status |
 
 ## 1. Approach: assess common controls once, then sample divisions
 Most safeguards in all three divisions come from the same corporate providers. Testing them three times would waste effort and give three slightly different answers. So:

@@ -15,7 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Commercial customers | **Customer C**, a commercial aerospace tier-1 supplier (about 25% of revenue), plus aftermarket and repair customers |
 | CUI handled | Controlled technical information (CTI) as defined in DFARS 252.204-7012(a): controlled engineering drawings, 3D models, specifications, and NC programs derived from them. It is covered defense information (CDI) and CUI. Some parts are ITAR defense articles, so their technical data is ITAR-controlled |
 | Contract clauses in current subcontracts | DFARS 252.204-7012 (MAY 2024), 252.204-7019 and 252.204-7020 (NOV 2023), FAR 52.204-21 (NOV 2021). Current subcontracts were awarded before 2025-11-10 and do not include DFARS 252.204-7021 |
-| CMMC requirement | Prime A notified suppliers that solicitations issued from 2026-11-10 (CMMC Phase 2, 32 CFR 170.3(e)(2)) will flow down DFARS 252.204-7021 (NOV 2025) at **CMMC Level 2 (C3PAO)**. Under 32 CFR 170.23(a)(3), that is the minimum for a subcontractor handling CUI when the prime contract requires Level 2 (C3PAO) |
+| CMMC requirement | Prime A notified suppliers that solicitations issued from 2026-11-10 (CMMC Phase 2, 32 CFR 170.3(e)(2)) would flow down DFARS 252.204-7021 (NOV 2025) at **CMMC Level 2 (C3PAO)**. Under 32 CFR 170.23(a)(3), that is the minimum for a subcontractor handling CUI when the prime contract requires Level 2 (C3PAO). The DoD (Department of War) CIO memorandum of 2026-07-13 suspended CMMC Phase 2, so that Level 2 (C3PAO) requirement is suspended. Until 2028-11-09 DoD includes 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self) (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5). The company keeps preparing because it still owes NIST SP 800-171 Rev. 2 under DFARS 252.204-7012, and it keeps the C3PAO assessment as a voluntary choice |
 | Export controls | Registered with the State Department's Directorate of Defense Trade Controls (22 CFR 122.1: one occasion of manufacturing a defense article requires registration). Some commercial parts carry EAR-controlled technology |
 | Not in scope | Classified information: the company holds no facility clearance, so NISPOM (32 CFR Part 117) does not apply. CIRCIA reporting: the final rule is not published (proposed only). Health, payment card, and consumer data: none beyond employee records |
 | State law approach | Florida law is cited only where unavoidable (breach notice for employee personal information, Fla. Stat. 501.171). Otherwise the samples stay federal |
@@ -37,7 +37,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | HR Manager | Screening, onboarding, termination notices, training records |
 | Controller | ERP owner; finance; cyber insurance policy holder |
 | Managed service provider (MSP) | After-hours help desk and patching for the **corporate network only**. No enclave accounts (confirmed in P03 scoping) |
-| Independent assessor | Contracted for the P07 readiness assessment; not involved in operating controls. A C3PAO will be engaged separately for certification |
+| Independent assessor | Contracted for the P07 readiness assessment; not involved in operating controls. A C3PAO will be engaged separately for a voluntary certification assessment |
 
 ## 3. Systems
 
@@ -110,11 +110,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2024-08-30 | SSP v1.0 and POA&M written (not updated since) |
 | 2024-09-12 | SPRS Basic Assessment score of 96 posted (self-assessment) |
 | 2026-07-13 to 2026-07-24 | Risk assessment and gap analysis fieldwork |
+| 2026-07-13 | The DoD (Department of War) CIO memorandum suspends CMMC Phase 2 (DoD Class Deviation 2026-O0025, Revision 3) |
 | 2026-08-03 to 2026-08-07 | Control assessment fieldwork (independent assessor; plant walkthrough 2026-08-05) |
 | 2026-08-31 | Deliverables approved by the Vice President of Operations; High risks and budget approved by the President |
 | 2026-09-30 | Corrected SPRS Basic Assessment score due (Contracts Manager) |
-| 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2): one calendar year after Phase 1, which began with the DFARS rule effective 2025-11-10, 90 FR 43560) |
-| 2027-02-15 to 2027-02-26 | Target window for the Level 2 certification assessment by a C3PAO |
+| 2026-11-10 | Planned start of CMMC Phase 2 (32 CFR 170.3(e)(2): one calendar year after Phase 1, which began with the DFARS rule effective 2025-11-10, 90 FR 43560); suspended by the 2026-07-13 CIO memorandum |
+| 2027-02-15 to 2027-02-26 | Target window for a voluntary Level 2 certification assessment by a C3PAO |
 
 ## 7. Facts added while completing the deliverables (fictional)
 

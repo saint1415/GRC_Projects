@@ -79,7 +79,7 @@ High risks to public safety (uncontrolled release, missed dam safety anomalies) 
 The program is defined and largely works: no risk is Very High, the HOC Electronic Security Perimeters, Intermediate Systems, OT identity domain, and SOC are sound, and most Moderate risks are about coverage, not design. The High risks cluster around **where the divisions meet**:
 1. **Constructors inside Hydro plants** (GR-01). Because Constructors is an affiliate, its commissioning kits were treated as internal and bypassed the vendor controls that every outside OEM must use (scenario gap 1). This is the group's top risk and the path used in the P08 scenario.
 2. **Engineering's cloud service connected back to Hydro** (GR-03) and **Engineering's AI model on Hydro's dam safety critical path** (GR-05). Hydro relies on an intercompany service that has no interconnection agreement, no SOC 2 report yet, and no change control for alert thresholds (gaps 3, 6, and 10).
-3. **CUI handling for federal work** (GR-06). The enclave is sound, but the self-assessment score of 74 is below the 88 needed for a Conditional Level 2 status, and Phase 2 of CMMC begins 2026-11-10 (gap 5).
+3. **CUI handling for federal work** (GR-06). The enclave is sound, but the self-assessment score of 74 is below the 88 needed for a Conditional Level 2 status (gap 5). CMMC Phase 2 (planned for 2026-11-10) is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13, but SP 800-171 Rev. 2 is still owed under DFARS 252.204-7012 and a program office may still require a specific CMMC level.
 
 Hydro's own High risks (HY-004, HY-006) are the scale problems expected at this size: legacy OT and monitoring that has not yet reached every plant below the HOCs (gaps 2 and 4).
 

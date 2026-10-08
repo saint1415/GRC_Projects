@@ -101,7 +101,7 @@ Each funded item maps to a P07 POA&M entry.
 
 **Avoided (2):** R-031 (applicant ranking feature disabled on 2026-09-17) and R-032 (public chatbots prohibited). **Transferred (1):** R-038 (hurricane: insurance plus preparation steps).
 
-**Contract actions:** DFARS 252.204-7012 and 252.204-7020 flowdown to 9 suppliers (R-010) by 2026-10-31; DFARS 252.204-7021 in purchase order templates before 2026-11-10 (R-043); vendor security terms for the additive printer and predictive maintenance vendors (R-016, R-026).
+**Contract actions:** DFARS 252.204-7012 and 252.204-7020 flowdown to 9 suppliers (R-010) by 2026-10-31; DFARS 252.204-7021 in purchase order templates by 2026-11-09, for use when a prime flows down a CMMC level (R-043; CMMC Phase 2 is suspended); vendor security terms for the additive printer and predictive maintenance vendors (R-016, R-026).
 
 ## 5. Enterprise and system-level registers
 This file is the **enterprise register**. Following NIST IR 8286 Rev. 1, it rolls up to the company's enterprise risk register as two lines owned by the COO and reported to the audit committee each quarter: "Defense contract eligibility (CMMC and DFARS)" and "Cybersecurity and production resilience", with the counts above and the top risks.

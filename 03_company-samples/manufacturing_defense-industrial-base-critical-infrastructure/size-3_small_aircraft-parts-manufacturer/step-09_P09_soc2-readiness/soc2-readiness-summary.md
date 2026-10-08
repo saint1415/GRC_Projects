@@ -7,11 +7,11 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022) |
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None now. Readiness self-assessment for Customer C; no CPA engagement planned |
-| Primary assurance | CMMC Level 2 certification assessment by a C3PAO (32 CFR Part 170), target window 2027-02-15 to 2027-02-26 |
+| Primary assurance | Voluntary CMMC Level 2 certification assessment by a C3PAO (32 CFR Part 170), target window 2027-02-15 to 2027-02-26; CMMC Phase 2 was suspended on 2026-07-13 |
 | Prepared | 2026-08-24 by the IT Manager; approved by the Vice President of Operations 2026-08-31 |
 
 ## 1. Why SOC 2 (or an alternative) for this organization
-**CMMC is the assurance that matters for most of the revenue.** About 58% of revenue is defense work for Prime A and Prime B. For them, the recognized evidence is a CMMC status in SPRS: Level 2 (C3PAO) for Prime A's awards from Phase 2 (32 CFR 170.23(a)(3)), plus the SP 800-171 DoD Assessment score required by DFARS 252.204-7019 and 252.204-7020. A SOC 2 report does not replace either one.
+**CMMC is the assurance that matters for most of the revenue.** About 58% of revenue is defense work for Prime A and Prime B. For them, the recognized evidence is a CMMC status in SPRS (Prime A's planned Level 2 (C3PAO) flowdown from Phase 2 is suspended under DoD Class Deviation 2026-O0025, Revision 3, so a C3PAO result is voluntary for now), plus the SP 800-171 DoD Assessment score required by DFARS 252.204-7019 and 252.204-7020. A SOC 2 report does not replace either one.
 
 **Customer C asked for something different.** Customer C, a commercial aerospace tier-1 supplier (about 25% of revenue), added a supplier cybersecurity section to its annual supplier review. It accepts either a SOC 2 report or a self-assessment against the Trust Services Criteria, and asked for the **Security category only**. The company is a parts manufacturer, not a service organization that hosts systems for Customer C, so a CPA-issued SOC 2 report would be unusual and costly. The company will send this readiness self-assessment instead.
 

@@ -32,7 +32,7 @@ Engineering laptops that reach CAD only through the virtual desktop service are 
 | ID | Requirement | Citation | How it applies to the GCEE |
 |---|---|---|---|
 | C-DIB-R01 | DFARS 252.204-7012 (MAY 2024) | 48 CFR 252.204-7012 | SP 800-171 on covered contractor information systems; external cloud providers holding CDI must meet security requirements equivalent to the FedRAMP Moderate baseline and paragraphs (c) to (g) ((b)(2)(ii)(D)); 72-hour reporting; malware to DC3; 90-day image preservation; flowdown ((m)) |
-| C-DIB-R02 | CMMC Program and DFARS 252.204-7021 (NOV 2025) | 32 CFR Part 170; 48 CFR 252.204-7021 | Level 2 (C3PAO) status for awards from Phase 2 (2026-11-10); scoping per 170.19(c); scoring per 170.24; POA&M limits per 170.21; Level 3 for Program H from Phase 3, with Final Level 2 (C3PAO) for the Level 3 scope as a prerequisite (170.18(a)(1)) |
+| C-DIB-R02 | CMMC Program and DFARS 252.204-7021 (NOV 2025) | 32 CFR Part 170; 48 CFR 252.204-7021 | Phase 2 (planned for 2026-11-10) suspended by the 2026-07-13 CIO memorandum; 252.204-7021 only where a program office requires a specific level (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5); voluntary Level 2 (C3PAO) assessment planned; scoping per 170.19(c); scoring per 170.24; POA&M limits per 170.21; Program H Level 3 expectation suspended, readiness continues, with Final Level 2 (C3PAO) for the Level 3 scope as a prerequisite (170.18(a)(1)) |
 | C-DIB-R03 | DFARS 252.204-7019 and 252.204-7020 (NOV 2023) | 48 CFR 252.204-7019, 252.204-7020 | Current SP 800-171 DoD Assessment in SPRS (DIBCAC High Assessment, 2024); subcontractor assessment checks before award ((g)) |
 | C-DIB-R04 | FAR 52.204-21 (NOV 2021) | 48 CFR 52.204-21 | Basic safeguarding for FCI; met inside the GCEE and on corporate systems |
 | C-DIB-R05 | ITAR | 22 CFR Parts 120-130 | Release of technical data to a foreign person is an export (22 CFR 120.56); U.S.-person gating; the encrypted-data carve-out in 22 CFR 120.54(a)(5) is relied on only where its conditions are met |
@@ -51,7 +51,7 @@ Approved by the Group CISO and the Group data and engineering platforms director
 The group is not a federal agency, so there is no authorization to operate. The equivalent internal decision:
 - **Decision:** authorized to operate with conditions, 2026-09-15, by the Group CISO and the Group Chief Risk Officer.
 - **Conditions:** (1) stop exporting Aircraft Parts CUI to SYS-D4 and move that data into the GCEE by 2026-11-30, unless SYS-D4 shows FedRAMP Moderate equivalency first (POAM-006); (2) close every requirement that 32 CFR 170.21 does not allow on a POA&M before the C3PAO assessment window (2026-12-07); (3) no new interconnection without an interconnection agreement (CA-3).
-- **External validation:** the CMMC Level 2 certification assessment by a C3PAO (target window 2026-12-07 to 2026-12-18), then a Level 3 certification assessment by DCMA DIBCAC for the Program H scope after Final Level 2 (C3PAO) status.
+- **External validation:** a voluntary CMMC Level 2 certification assessment by a C3PAO (target window 2026-12-07 to 2026-12-18), then a Level 3 certification assessment by DCMA DIBCAC for the Program H scope after Final Level 2 (C3PAO) status, if Program H requires it.
 - **Review:** annually, after the C3PAO assessment, and when Plant 9 or the HPC cluster joins.
 
 ### 4.3 System Operational Status

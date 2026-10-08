@@ -25,7 +25,7 @@ The group is a private contractor, not a government entity. Apart from the Drive
 
 ### 1.2 IT Consulting
 - **DFARS 252.204-7012** is in 58 DoD contracts and subcontracts: adequate security under NIST SP 800-171, 72-hour incident reporting with a medium assurance certificate, 90-day media preservation, and flowdown.
-- **CMMC.** The DFARS CMMC acquisition rule took effect 2025-11-10 (Phase 1). **Phase 2 begins 2026-11-10** and adds Level 2 (C3PAO) for applicable solicitations (32 CFR 170.3(e)(2)). 32 CFR 170.14(c)(3) fixes SP 800-171 **Rev. 2** for Level 2. CMMC does not apply to federal information systems operated on behalf of the Government (170.3(b)), which scopes out the agency-owned systems the division operates under managed services task orders.
+- **CMMC.** The DFARS CMMC acquisition rule took effect 2025-11-10 (Phase 1). **Phase 2 was to begin 2026-11-10** and add Level 2 (C3PAO) for applicable solicitations (32 CFR 170.3(e)(2)). The DoD (Department of War) CIO memorandum of 2026-07-13 suspends CMMC Phase 2. Until 2028-11-09, DoD includes clause 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self). SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies (DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5)). 32 CFR 170.14(c)(3) fixes SP 800-171 **Rev. 2** for Level 2. CMMC does not apply to federal information systems operated on behalf of the Government (170.3(b)), which scopes out the agency-owned systems the division operates under managed services task orders.
 - **FAR 52.204-21** applies to about 140 federal civilian contracts with federal contract information.
 - **HIPAA business associate** duties apply to 19 engagements with public hospitals and county health departments.
 - **The 800-171 rows** list the requirements where the enclave or the acquired estate differ from group controls. The division's full 110-requirement self-assessment is kept with the enclave SSP and is not reproduced here.
@@ -60,7 +60,7 @@ The group is a private contractor, not a government entity. Apart from the Drive
 | N92-R07 CIRCIA (proposed) | Tracked only | Tracked only | Tracked only | Tracked only |
 | N92-R08 GovRAMP | Requested for the ACMP (P09) | Not applicable | Applies to the Civic Suite (contractual) | Not applicable |
 | N54-R04 FAR 52.204-21 | Not applicable (no federal contracts) | **Applies** (about 140 contracts) | Applies to the Grants Management contract terms | Common controls cover the 15 requirements |
-| N54-R05 DFARS 252.204-7012; SP 800-171 Rev. 2; CMMC | Not applicable | **Applies** (58 DoD contracts; Phase 2 from 2026-11-10) | Not applicable | Common controls inherited by the enclave (undocumented) |
+| N54-R05 DFARS 252.204-7012; SP 800-171 Rev. 2; CMMC | Not applicable | **Applies** (58 DoD contracts; CMMC Phase 2 suspended) | Not applicable | Common controls inherited by the enclave (undocumented) |
 | N51-R07 FedRAMP | Not applicable | Not applicable | **Applies** (Grants Management federal edition) | Not applicable |
 | N51-R01 FTC Act Section 5 | Applies (general) | Applies (general) | **Applies** (product security claims) | Applies |
 | N51-R04 DOJ Data Security Program, 28 CFR Part 202 | Applies (bulk sensitive data) | Applies | Applies | Group procurement screening |
@@ -111,7 +111,7 @@ The High gaps fall into four themes, all shared with other divisions:
 | Not applicable rules (FTC Safeguards, IRC 7216, conduct rules, CIRCIA) | 4 | 0 | 0 | 0 | 4 |
 | **Total** | **29** | **7** | **16** | **1** | **5** |
 
-Of the 17 rows with a gap, 4 are High (IC-G01, IC-G02, IC-G13, IC-G19), 12 Moderate, and 1 Low. **Not met:** IC-G19, no CMMC Level 2 (C3PAO) assessment scheduled with Phase 2 eight weeks after approval. Almost every gap traces to the **acquired firm**: CUI on its file shares (3.1.3), its VPN with SMS codes (3.1.12), its endpoints without group EDR (3.14.2), and an SPRS score that predates it. The enclave itself, which inherits group controls, is close to ready; what it lacks is documentation of that inheritance (3.12.4; scenario gap 3).
+Of the 17 rows with a gap, 4 are High (IC-G01, IC-G02, IC-G13, IC-G19), 12 Moderate, and 1 Low. **Not met:** IC-G19, no CMMC Level 2 status and no C3PAO assessment scheduled. Phase 2 is suspended, so the C3PAO assessment is now voluntary, but SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies. Almost every gap traces to the **acquired firm**: CUI on its file shares (3.1.3), its VPN with SMS codes (3.1.12), its endpoints without group EDR (3.14.2), and an SPRS score that predates it. The enclave itself, which inherits group controls, is close to ready; what it lacks is documentation of that inheritance (3.12.4; scenario gap 3).
 
 ### 4.3 Government Software Products (`gap-analysis-govsoftware.csv`)
 | Requirement set | Rows | Met | Partially met | Not met | N/A |
@@ -132,7 +132,7 @@ Of the 13 rows with a gap, 2 are High, 9 Moderate, and 2 Low. **Not met:** SW-G0
 |---|---|---|---|---|---|---|---|
 | 1 | Shared-service and subcontractor staff screening (1, 10) | Group, GovTech, Software | CJISSECPOL v6.1 PS-3, SA-9, Appendix H; Pub. 1075 sec. 2.C.3, Exhibit 7 I(2), I(8) | High | Suspend unscreened access by 2026-10-31; one group screening register; flowdown checklist (POAM-001, POAM-012) | Group CISO; Group public sector compliance director | 2026-12-31 |
 | 2 | Cross-division notification (5) | All | CJISSECPOL v6.1 IR-6; Pub. 1075 sec. 1.8; DFARS 252.204-7012(c); 45 CFR 164.410; Fla. Stat. 501.171(6)(a); Form 8-K Item 1.05 | High | Group notification matrix with every agency, BAA, DoD, and state clock; tabletop (POAM-003, POAM-004) | Group General Counsel | 2026-12-15 |
-| 3 | Acquired consulting firm and CMMC (4, 7) | IT Consulting | DFARS 252.204-7012(b); SP 800-171 Rev. 2 3.1.3, 3.1.12, 3.14.2; 32 CFR 170.17 | High | VPN MFA, EDR, CUI into the enclave, then a C3PAO assessment (POAM-018, POAM-020, POAM-024) | IT Consulting president | 2027-03-31 |
+| 3 | Acquired consulting firm and CMMC (4, 7) | IT Consulting | DFARS 252.204-7012(b); SP 800-171 Rev. 2 3.1.3, 3.1.12, 3.14.2; 32 CFR 170.17 | High | VPN MFA, EDR, CUI into the enclave, then a voluntary C3PAO assessment (POAM-018, POAM-020, POAM-024) | IT Consulting president | 2027-03-31 |
 | 4 | RMS connectors and AI assist beta (6, 9) | Software | CJISSECPOL v6.1 SC-13, SA-9 | High | Replace 41 connector modules; stop CJI to the model service until reviewed (POAM-021, POAM-022) | Government Software Products president | 2026-12-31 |
 | 5 | IEP AI eligibility recommendations (6) | GovTech | 7 CFR 272.4(a)(2); 272.6(a); 42 CFR 431.10(b)(3) | High | Review-first design, deterministic rules, bias testing, applicant notice (P10; POAM-016) | GovTech Data and AI director | 2026-12-31 |
 | 6 | Recovery at scale (8) | GovTech | SP 800-53 CP-4, CP-10; contract RTO | High | Parallel restore automation; full-scale exercise (POAM-011) | ACMP platform director | 2027-03-31 |
@@ -146,7 +146,7 @@ High and Moderate gaps are carried into the registers (P01) and the POA&M (P07).
 ## 6. Pending and dated changes
 - **CJIS FIPS 140-2 cutoff.** CJISSECPOL v6.1 SC-13 states that FIPS 140-2 certificates "will not be acceptable after September 21, 2026." GovTech's ACMP paths moved in 2026-08 (CJ-10, Met); the RMS connectors will not (SW-G03).
 - **CJIS zero-cycle end.** [Priority 2] to [Priority 4] requirements become sanctionable in audits after **2027-09-30**. The contracts already require them. Each new CJISSECPOL version is reviewed within 60 days (CJ-02).
-- **CMMC Phase 2** begins **2026-11-10** (32 CFR 170.3(e)(2)); Phase 3 begins one year after Phase 2.
+- **CMMC Phase 2** was planned for **2026-11-10** (32 CFR 170.3(e)(2)) and is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13. Under DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5), DoD includes clause 252.204-7021 until 2028-11-09 only when a program office or requiring activity requires a specific CMMC level, and on or after 2028-11-10 whenever the contractor will process, store, or transmit FCI or CUI on its own systems (except COTS-only buys).
 - **FAR overhaul.** The "Revolutionary FAR Overhaul" proposed rule (2026-06-23) would move information security clauses into FAR part 40. It is proposed only; FAR 52.204-21 still governs.
 - **HIPAA Security Rule NPRM** (90 FR 898, 2025-01-06) is proposed only. If finalized as proposed it would remove the addressable category and require encryption with limited exceptions, which would turn IC-G24 into a mandatory gap.
 - **CIRCIA.** Proposed rule only (89 FR 23644). The proposed size-based criterion would likely reach the group (it exceeds the SBA size standard for its NAICS code), so it is tracked for P08 when a final rule is published.

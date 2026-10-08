@@ -28,7 +28,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | ID | Requirement | Citation |
 |---|---|---|
 | N42-R03 | DFARS Safeguarding Covered Defense Information and Cyber Incident Reporting | 48 CFR 252.204-7012 (Prime B subcontract) |
-| N42-R02 | CMMC Program: Level 2 (C3PAO) required for the Prime B option period from 2027-04-01; Level 1 (Self) for Prime A and Prime C | 32 CFR Part 170; DFARS 252.204-7021 |
+| N42-R02 | CMMC Program: Prime B's Level 2 (C3PAO) requirement for the option period from 2027-04-01 is suspended with CMMC Phase 2 (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5); voluntary C3PAO assessment planned; Level 1 (Self) for Prime A and Prime C | 32 CFR Part 170; DFARS 252.204-7021 |
 | N42-R04 | FAR Basic Safeguarding of Covered Contractor Information Systems (FCI) | 48 CFR 52.204-21 |
 | N42-R05 | Section 889 covered telecommunications and video surveillance prohibition | 48 CFR 52.204-25 |
 | DFARS | Sources of Electronic Parts (Prime B subcontract) | 48 CFR 252.246-7008 |

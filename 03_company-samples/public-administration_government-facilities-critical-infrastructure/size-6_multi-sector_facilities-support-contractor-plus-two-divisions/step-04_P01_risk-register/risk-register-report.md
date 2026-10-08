@@ -52,7 +52,7 @@ Life-safety and physical-security risks rated High at a customer building may no
 | GR-01 | Intruder gains IBOP administrator access and changes doors, schedules, and setpoints at many customer buildings | FS-001, FS-002, FS-003, FS-017, FS-030, CN-006, JS-010 | Retire legacy remote access; per-customer just-in-time administration; OT log onboarding | Group CISO | 2027-03-31 |
 | GR-02 | Ransomware spreads through shared services into the IBOP and division systems | FS-007, FS-010, FS-020, CN-008, JS-012 | Segment flat sites; replace unsupported workstations; restore tests | Group CISO | 2027-03-31 |
 | GR-04 | AI in physical security, building control, and hiring causes unfair, unsafe, or unlawful outcomes | FS-005, FS-006, CN-012, JS-004, JS-005, JS-014, JS-016 | Group AI program conditions (P10) | Group Chief Risk Officer | 2027-03-31 |
-| GR-05 | Covered defense information mishandled; loss of DoD award eligibility | FS-015, CN-001, CN-002, CN-003, CN-018 | Enclave migration; SPRS score above 88; C3PAO assessment | Construction division president | 2027-03-31 |
+| GR-05 | Covered defense information mishandled; loss of DoD award eligibility | FS-015, CN-001, CN-002, CN-003, CN-018 | Enclave migration; SPRS score above 88; voluntary C3PAO assessment | Construction division president | 2027-03-31 |
 | GR-06 | Covered telecommunications or video equipment found in use | FS-016, CN-010, JS-001 | Confirm the 4 NVRs; extend screening to the installation business | Group procurement director | 2026-11-30 |
 
 ### Facilities Support (focus division): risks rated High
@@ -65,7 +65,7 @@ Life-safety and physical-security risks rated High at a customer building may no
 | Risk ID | Division | Risk | Owner | Due |
 |---|---|---|---|---|
 | CN-001 | Construction | CUI drawings in the commercial project collaboration SaaS are breached or found by DoD | Construction CUI program manager | 2026-12-31 |
-| CN-002 | Construction | No CMMC Level 2 (C3PAO) status for DoD bids after 2026-11-10 | Construction division president | 2027-03-31 |
+| CN-002 | Construction | No CMMC Level 2 status for DoD bids that require it (Phase 2 suspended 2026-07-13) | Construction division president | 2027-03-31 |
 | CN-018 | Construction | SPRS score overstates implementation | Group General Counsel | 2026-12-31 |
 | JS-001 | Janitorial and Security | Covered video equipment at the central monitoring station or in installed systems | Janitorial and Security technology services director | 2026-12-31 |
 | JS-009 | Janitorial and Security | Former workers keep customer-site badges and keys | Janitorial and Security operations director | 2026-12-31 |

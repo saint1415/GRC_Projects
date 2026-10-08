@@ -96,7 +96,7 @@ The cloud providers are described by service category only (vendor-agnostic). Th
 5. **Disclosure readiness.** The SEC materiality playbook does not weigh harm that falls mainly on agency customers (contract termination, public trust), and the disclosure committee has not exercised since 2025-04. Two of its seven members joined in 2026.
 6. **Recovery of eligibility systems.** The AG-04 IES recovered in 14 hours against an 8-hour contract RTO in the 2026 DR test.
 7. **AI.** 12 AI use cases, 8 reviewed by the AI governance committee. The AI eligibility assistant pilot (AI-001) has bias testing only on English-language test data, and caseworkers accept most of its suggestions.
-8. **Federal readiness.** The CUI enclave has 6 open NIST SP 800-171 requirements on its plan of action, and no CMMC Level 2 (C3PAO) assessment is scheduled.
+8. **Federal readiness.** The CUI enclave has 6 open NIST SP 800-171 requirements on its plan of action, and no CMMC Level 2 (C3PAO) assessment is scheduled. The prime's expected Level 2 (C3PAO) requirement for the 2027-04-01 option is suspended with CMMC Phase 2 (the DoD (Department of War) CIO memorandum of 2026-07-13; DoD Class Deviation 2026-O0025, Revision 3), but SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies.
 
 ## 5. Scenario choices
 

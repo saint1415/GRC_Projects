@@ -60,7 +60,7 @@ High risks to life safety (jobsite safety systems, building life-safety interfac
 |---|---|---|---|---|
 | CON-001 | Attacker in a project executive's mailbox diverts an owner's pay application payment | Standing remittance letter to every owner; confirmation call on first payment to any account; validated remittance block | Construction VP of project controls | 2026-12-31 |
 | CON-005 | CUI drawings from design-build projects stored in the PDPP and commercial email | Enclave desktops in trailers; purge and block (GR-01) | Construction security and compliance lead | 2026-12-31 |
-| CON-008 | Construction cannot compete for DoD design-build work that requires Level 2 (C3PAO) after Phase 2 begins | Close blocking requirements; C3PAO assessment in 2027-02 (GR-03) | Construction division president | 2027-02-28 |
+| CON-008 | Construction cannot compete for DoD design-build work that requires Level 2 (C3PAO) or Level 2 (Self) (CMMC Phase 2 is suspended) | Close blocking requirements; C3PAO assessment in 2027-02 (GR-03) | Construction division president | 2027-02-28 |
 | CON-015 | Attacker steals client system credentials from the TSSI vault and disables client security systems | Per-client vault partitions; credential rotation at handover; hardware-backed keys | Systems Integration Director | 2027-03-31 |
 
 ### Other division risks rated High

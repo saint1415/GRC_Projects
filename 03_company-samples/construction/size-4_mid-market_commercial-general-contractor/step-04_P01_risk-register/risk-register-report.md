@@ -64,7 +64,7 @@ Cyber insurance ($10 million limit, $1 million social engineering sublimit, $250
 | R-001 | Business email compromise redirects an owner's progress payment | High | Phishing-resistant MFA for payment roles; owner remittance-change letters; lookalike-domain monitoring; DMARC reject | Chief Financial Officer | 2026-12-31 |
 | R-002 | Fraudulent subcontractor bank change diverts a payment | High | Remove the urgent override; call-back evidence; change alerts; first-payment hold | Controller | 2026-10-31 |
 | R-004 | CUI stolen from a subcontractor without flowdown or verified security | High | Flowdown to 14 trades; SPRS verification; CUI only through the CPE | Director of Contracts and Compliance | 2026-11-30 |
-| R-007 | Not CMMC Level 2 (C3PAO) certified by the follow-on MATOC award | High | P03 roadmap; readiness check 2027-03; C3PAO assessment 2027-04 | Chief Operating Officer | 2027-04-23 |
+| R-007 | Not CMMC Level 2 (C3PAO) certified by the follow-on MATOC award | High | P03 roadmap; readiness check 2027-03; voluntary C3PAO assessment 2027-04 | Chief Operating Officer | 2027-04-23 |
 | R-008 | SPRS score or affirmation overstates implementation (False Claims Act exposure) | High | Corrected score (-23) by 2026-09-30 with counsel review; independent reperformance | General Counsel | 2026-09-30 |
 | R-016 | Stolen enclave session used to steal CUI without detection | High | Monitoring service inside the government-community cloud; correlation with corporate identities | Security Manager | 2027-01-31 |
 | R-021 | MBSS remote access used to control a client's access control or cameras | High | All sites through the company gateway with named, recorded sessions | Director of Technology and Security Systems | 2026-12-31 |
@@ -91,7 +91,7 @@ Each funded item maps to a P07 POA&M entry or a P03 roadmap milestone.
 
 **Accepted (3):** R-036 (Low, IT Director; second circuit and generator in place), R-046 (Low, Equipment and Fleet Manager; low data sensitivity), R-050 (Low, General Counsel; records exist in vendor systems).
 
-**Contract actions:** DFARS 252.204-7012 flowdown to 14 FC-4 trades (R-004) by 2026-11-30; DFARS 252.204-7021 rider in subcontract templates before 2026-11-10; ERP billing-week priority support at the 2027 renewal (R-018); Section 889 confirmation from every jobsite technology rental vendor (R-051).
+**Contract actions:** DFARS 252.204-7012 flowdown to 14 FC-4 trades (R-004) by 2026-11-30; DFARS 252.204-7021 rider in subcontract templates by 2026-11-09, for use when a contract requires a CMMC level (CMMC Phase 2 is suspended); ERP billing-week priority support at the 2027 renewal (R-018); Section 889 confirmation from every jobsite technology rental vendor (R-051).
 
 ## 5. Enterprise and system-level registers
 This file is the **enterprise register**. Following NIST IR 8286 Rev. 1, it rolls up to the company's enterprise risk register as one line, "Cybersecurity, payment integrity, and federal contract compliance", owned by the COO and reported to the audit committee each quarter with the counts above and the top risks.
