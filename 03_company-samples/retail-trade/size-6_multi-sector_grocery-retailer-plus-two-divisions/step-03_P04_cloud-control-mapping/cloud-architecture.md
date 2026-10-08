@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Retail Trade | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), plus two group colocation data centers
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), plus two group colocation data centers
 **Scope:** the shared corporate platform (SYS-G3 landing zones and data centers, SYS-G4 digital front door) plus the division workloads that run on it. The SSP system (P02) is the E-commerce and Point-of-Sale Platform (EPP).
 
 ## 1. Design in one paragraph
@@ -134,7 +134,14 @@ flowchart LR
 
 **Target state (POAM-001, POAM-002, POAM-004, due 2026-11-30 to 2027-03-31):** payment pages load only scripts on an approved list per page, from a payment-pages-only tag container with no "all pages" inheritance; payment page monitoring covers the web checkout, the app web view, the wholesale portal payment page, and the cardholder portal payment page, with alerts to the SOC; the Rewards Card number is entered in an isolated payment frame served by Financial Services, so the retail page never handles it.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own identity tenant. The retail CDE accounts (storefront and order services) are separate from every other account.
+- **Why.** One identity platform and one front door let group internal audit assess them once. Account separation, not tenant separation, is what keeps the CDE apart.
+- **What limits blast radius.** Phishing-resistant MFA for administrators and just-in-time PAM elevation with session recording. Roles are federated from SYS-G1, with no local cloud users except sealed break-glass accounts. The hub inspects traffic between division accounts, and CDE accounts accept traffic only from the CDN. Only the pipeline deploys to production. The backup vault uses a separate backup identity.
+- **Known gaps.** The POS vendor reaches the 46 acquired stores through its own remote support tool outside PAM (POAM-007). Payment switch application accounts are still managed by hand (POAM-010). Part of the remote workforce still uses number-matching MFA (GR-07).
+- **Cross-division risks:** GR-01, GR-02, GR-07, GR-15 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 58 rows across 36 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -153,7 +160,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, and the digital front door are **common**. A division cannot opt out of them, only request an exception through POL-01. What runs on a page, who may see a customer's data inside an application, and how a division's regulators are served are **division-specific**. The tag management service shows why the line matters: it is a common service, but what it loads onto a payment page is a division's PCI DSS 6.4.3 duty. Today nobody owns that seam (P01 GR-01).
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, customer identity | Storefront admin console, portal and cardholder accounts | AC-2, AC-3, AC-6(5), IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -164,7 +171,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, tag management, CDN vendors | Processor hosted fields, card processing platform, pricing engine, EDI | SA-9, CP-9, AU-6, SC-18 | Provider for the service; customer for use and oversight |
 | Physical | Provider and colocation data centers | Stores and distribution centers (outside this map's cloud scope) | PE-3 | Provider (inherited) or shared |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -180,7 +187,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For the payment processor's hosted fields, the split is set by the processor's AOC and the PCI responsibility matrix, not by a cloud provider document.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weakest point is a common service, not a cloud setting.** Encryption, keys, guardrails, and network separation are sound. The tag management service can put any approved marketing script on any page of any division, including payment pages (CM-3, SC-18; P01 GR-01; POAM-001).
 2. **Hosted payment fields protect the fields, not the page.** The processor's fields keep card data out of the EPP, but a script on the surrounding page can draw a fake form. Change and tamper detection (SI-7, PCI DSS 11.6.1) runs only on the retail web checkout, and two other payment pages in the group have none (POAM-002).
 3. **The Rewards Card field sits between two programs.** PCI DSS does not cover a private-label card, and the Financial Services Safeguards program did not look at a retail page. The fix is architectural: an isolated payment frame for the Rewards Card, run by Financial Services (AC-4; POAM-004).

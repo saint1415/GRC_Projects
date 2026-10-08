@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Communications | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones) plus the division workloads that run on it, and the private links to the Carrier's 6 regional NOC data centers. The SSP system (P02) is the Carrier's OSS/BSS, including the service assurance platform that the Engineering and Tower divisions use as tenants.
 
 ## 1. Design in one paragraph
@@ -115,7 +115,18 @@ flowchart LR
 
 **Target state (POAM-008, due 2027-03-31):** the legacy cross-tenant role is removed by 2026-11-30; each tenant gets its own role catalog, ticket API scope, and encryption key; Carrier tickets that Engineering crews need for joint restoration are shared through a minimum-data "work package" view that omits customer names and call detail; the Tower tenant's alarm path gets a standby ingestion route that does not depend on the Carrier tenant being reachable.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zones, with roles federated from SYS-G1 only. Engineering's FCI enclave (SYS-E2) is a separate account, not a separate tenant. On the shared service assurance platform, Engineering and Tower operators are tenants that sign in through SYS-G1 like any workforce user. No division has a separate identity tenant.
+
+**Reason.** One identity platform, one SIEM, and one backup design let group internal audit assess common controls once. The sample states that CPNI separation between divisions is an authorization problem (AC-3), not an authentication one, so it is solved by tenant partitioning, not by a separate identity provider.
+
+**What limits blast radius.** IT administrators use phishing-resistant hardware keys and just-in-time PAM with session recording. Cloud IAM has no local users except sealed break-glass accounts, and the hub network denies by default for every division account. No administrator can delete logs in the object-locked archive, and the SIEM flags bulk CPNI access by any tenant role. Backups use a separate backup identity. Federal project data cannot be copied from the FCI enclave to the general design workspace.
+
+**Known gaps.** About 470 affiliate operators still hold a legacy cross-tenant read role over Carrier tickets with CPNI (POAM-008). The SYS-E1 gateways keep persistent tunnels into the Carrier's acquired-region management plane and use six shared administrator accounts (POAM-024, POAM-025).
+
+Cross-division risks: GR-01 (intrusion into management planes across divisions), GR-02 (shared service assurance platform exposes CPNI), GR-03 (ransomware through shared services), GR-08 (identity platform compromise).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 52 rows across 29 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -134,7 +145,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, tenant partitioning, customer-facing identity, and device fleets (RMUs, network elements) are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Customer identity in the portal and chatbot; RMU device identity; MNO gateway accounts | AC-2, AC-3, AC-6(5), IA-2(1), IA-3, IA-5, IA-8 | Customer (configuration); vendor (service) |
@@ -145,7 +156,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | CCaaS, chatbot vendor, lease management, smart locks | SA-9, IA-8, AU-12 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | Regional NOC data centers (on premises, outside this map; P02 PE controls) | PE-3, MP-6 | Provider (cloud); Carrier (NOCs) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -161,7 +172,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **Tenant partitioning, not encryption, is the shared platform's weak point.** Encryption and keys are sound (SC-28, SC-12). The gap is that three divisions' operators share one instance and a legacy role lets about 470 affiliate operators read Carrier tickets with CPNI (AC-3, AC-6; P01 GR-02; POAM-008).
 2. **The CDR store cannot answer "what was read?"** Every provider offers object-level read logging, but it is not enabled (AU-12; POAM-014). In an intrusion the Carrier would have to treat all 24 months of CDRs in the affected regions as exposed (P08).
 3. **Engineering's gateways are a bridge between networks.** The SYS-E1 gateways in provider B hold persistent tunnels into 64 customer networks and into the Carrier's acquired-region management plane, with shared administrator accounts (AC-17, IA-5; POAM-024, POAM-025). This is the entry path in the P08 scenario.

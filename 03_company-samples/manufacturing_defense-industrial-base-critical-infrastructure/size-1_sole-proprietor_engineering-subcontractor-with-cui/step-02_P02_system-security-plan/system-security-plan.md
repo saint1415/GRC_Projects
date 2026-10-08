@@ -47,7 +47,7 @@ Operational. Planned changes: SYS-10 go-live and CUI migration out of SYS-01 (20
 | Commercial customer proprietary data | Moderate | Moderate | Low | Nondisclosure agreements; possible EAR-controlled technology |
 | **EOS category (high-water mark)** | **Moderate** | **Moderate** | **Low** | |
 
-**Baseline:** the 110 security requirements of NIST SP 800-171 Rev. 2 (all apply; four have no in-scope component today and are scored as Met under 32 CFR 170.24(b)(3), see P03). For P07 and the risk register, those requirements are traced to a tailored set of 30 SP 800-53 Rev. 5 Moderate controls in `control-implementation.csv`.
+**Baseline:** the 110 security requirements of NIST SP 800-171 Rev. 2 (all apply; four have no in-scope component today and are scored as Met under 32 CFR 170.24(b)(3), see P03). For P07 and the risk register, those requirements are traced to a tailored set of 34 SP 800-53 Rev. 5 Moderate controls in `control-implementation.csv`.
 
 ## 7. Authorization Boundary Description
 - **Inside (CMMC Level 2 assessment scope, 32 CFR 170.19(c)):** CUI Assets: SYS-02 laptop, SYS-07 USB backup drive, SYS-08 printer and scanner, SYS-01 (until CUI leaves it on 2026-11-30), SYS-03 phone (until CUI is removed from it), SYS-10 (after go-live). Security Protection Assets: SYS-04 home router and Wi-Fi; SYS-03 phone as the MFA device; the password manager (planned). Also inside: the owner, the home office room, and printed CUI.
@@ -81,12 +81,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 30 controls:
-- Implemented: 5
-- Partially implemented: 19
+See `control-implementation.csv`. Summary of 34 controls:
+- Implemented: 6
+- Partially implemented: 22
 - Planned: 6
 
-Inheritance: 12 hybrid (a provider runs the mechanism and the owner configures or uses it) and 18 the owner's alone. No control is fully inherited, because SYS-01 is not an acceptable home for CUI and SYS-10 is not live yet. Once SYS-10 is live, its customer responsibility matrix will be referenced here (32 CFR 170.16(c)(2)(iii)).
+Inheritance: 13 hybrid (a provider runs the mechanism and the owner configures or uses it) and 21 the owner's alone. No control is fully inherited, because SYS-01 is not an acceptable home for CUI and SYS-10 is not live yet. Once SYS-10 is live, its customer responsibility matrix will be referenced here (32 CFR 170.16(c)(2)(iii)).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

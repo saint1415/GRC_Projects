@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Transportation Systems | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), plus company data centers DC-1 and DC-2
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), plus company data centers DC-1 and DC-2
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, the SYS-G5 integration platform, logging, keys, and backups) and the division workloads that run on it or depend on it. The SSP system (P02, TDPB) is on premises; its cloud dependencies are shown separately.
 
 ## 1. Design in one paragraph
@@ -107,7 +107,15 @@ flowchart LR
 
 **Target state (POAM-001, POAM-003, POAM-004, POAM-005):** the SYS-G5 route into the TMS interface server is described in an amended CIP with its own inspected DMZ rule; CTC and PTC logs reach the SIEM with 1-year retention; the PTC back office standby is rebuilt to match production and meets its 4-hour RTO; unpatched PTC servers have documented compensating measures until the vendor certifies patches.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own cloud tenant.
+- **Separate OT identity.** Rail OT has a separate rail OT directory. Dispatchers sign in to consoles with named rail OT directory accounts. The dispatching and PTC back office (TDPB) stays on premises and reaches the cloud only through the industrial DMZ.
+- **Why.** TDPB stays on premises for latency and availability. Access rules come from TSA SD 1580/82-2022-01E: III.C.3 for cloud roles and III.C.5 for directory trusts.
+- **What limits blast radius.** Corporate users reach the industrial DMZ only through PAM jump hosts. Conditional access by device and location, phishing-resistant MFA for administrators, and just-in-time PAM elevation with session recording. Cloud roles are federated from SYS-G1 only, with no local cloud users except sealed break-glass accounts. TDPB has a clean-room recovery account in provider B.
+- **Known gaps.** A one-way trust between the rail OT directory and the corporate directory has never been reviewed (RR-006, POAM-018). CTC code servers use 3 shared administrator accounts. 21 acquired terminals use local accounts outside identity governance (gap 5).
+- **Cross-division risks:** GR-01, GR-02, GR-11, GR-14 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 46 rows across 28 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -126,7 +134,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, and the integration platform are **common**. A division cannot opt out, only request an exception through POL-01. Application behavior, operational technology, and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers: TSA and FRA for the railroads, FAR clauses and hazmat rules for terminals and wholesale, lease and vendor terms for buildings.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | TMS roles, TOS kiosks, property portal users, CDS customer users | AC-2, AC-3, AC-6(5), IA-2(1), IA-5 | Customer (configuration); vendor (service) |
@@ -137,7 +145,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, and EDR vendors | Crew telephony, telematics, building OT vendors, property and right-of-way systems | SA-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers (DC-1 and DC-2 are company-run and covered in P02) | none | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -153,7 +161,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The integration platform is the group's hidden Critical Cyber System dependency** (AC-4). It is common, cloud-hosted, and connects every division, and it feeds the TMS interface server that sits next to dispatch. It must be named in the CIP and given its own DMZ rule (gap 1; P01 GR-01; POAM-001).
 2. **The integration platform also holds personal information it does not need** (SI-12). HR export files for all divisions sit in the transfer store with no purge. In a breach they would turn an operational incident into a multi-state notification event (P08).
 3. **TDPB's cloud dependencies are recovery and monitoring, not operations.** The vault and the clean-room recovery account are sound (CP-9, CP-9(1), CP-10); the weak link is log forwarding from CTC and PTC servers (AU-12; POAM-003).

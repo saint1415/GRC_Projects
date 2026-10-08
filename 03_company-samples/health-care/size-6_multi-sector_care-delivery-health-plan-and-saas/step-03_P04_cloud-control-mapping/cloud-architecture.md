@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Health Care | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 4)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones and the Group Data Platform) plus the division workloads that run on it. The SSP system (P02) is the Group Data Platform.
 
 ## 1. Design in one paragraph
@@ -119,7 +119,18 @@ flowchart LR
 
 **Target state (POAM-006 and POAM-007, due 2027-03-31):** the Care Delivery and Health Plan zones move to separate accounts with separate keys; every table carries a covered entity and purpose tag enforced by the policy engine; SaaS data is de-identified inside SYS-D3 before export, so identifiable SaaS data never reaches staging; cross-division analysis uses approved, minimum-necessary views only.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zone, with roles federated from SYS-G1. No division has a separate tenant with its own workforce identity. PHI is separated inside the Group Data Platform instead: the Care Delivery and Health Plan PHI zones each have their own keys and data owner. Patients and SaaS customers use their own identity services (SYS-D4 patient identity, SYS-D3 customer tenants).
+
+**Reason.** Care Delivery and the Health Plan are separate covered entities, and corporate is a business associate of both. The sample applies HIPAA minimum necessary (164.502(b)) between them by zone, account, and key, not by identity tenant. One identity platform lets group internal audit assess common controls once.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys, just-in-time PAM with session recording, and a tiered admin model. Cloud IAM has no local users except sealed break-glass accounts. Administrators cannot delete logs in the write-only log account. Analyst roles are set per zone, and backups use a separate backup identity.
+
+**Known gaps.** The two PHI zones still share storage areas, standing cross-division analyst access is being removed, and the zones move to separate accounts by 2027-03-31 (POAM-006). Nine service accounts still use static keys (POAM-002).
+
+Cross-division risks: GR-01 (cross-division PHI exposure on the GDP), GR-02 (ransomware spreads through shared services), GR-07 (identity platform compromise reaches all divisions).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 30 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -138,7 +149,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access within the application, and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Patient identity (SYS-D4), member and broker portals, SaaS customer tenants | AC-2, AC-3, AC-6(5), IA-2, IA-2(1) | Customer (configuration); vendor (service) |
@@ -149,7 +160,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | EHR vendor, model provider | SA-9, CP-9, AU-6 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | none | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -165,7 +176,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **Zoning, not encryption, is the GDP's weak point.** Encryption and keys are sound (SC-28, SC-12). The gap is that two covered entities' PHI share storage areas and the policy engine enforces purpose on only 61% of tables (AC-3, PT-3; P01 GR-01; POAM-006).
 2. **The staging area breaks the de-identification promise** (AC-4). Identifiable SaaS data can land before de-identification runs. Moving de-identification into SYS-D3 removes the problem at the source (POAM-007).
 3. **The model provider is a new external dependency** outside both landing zones (SA-9). It needs monitoring and per-patient request logging (AU-3) to support 164.410(c)(1) notices (POAM-018).

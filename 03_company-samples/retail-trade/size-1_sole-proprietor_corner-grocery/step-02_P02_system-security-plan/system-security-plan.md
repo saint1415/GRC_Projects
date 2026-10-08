@@ -47,7 +47,7 @@ Operational. Planned changes: guest Wi-Fi for customers (2026-09-30); separate n
 | Business financial data | Low | Moderate | Low | Errors affect tax filings; deadlines are in weeks (P05 MTD 168 h) |
 | **Category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 23 controls that carry the PCI DSS and reasonable-security safeguards for a one-person store (`control-implementation.csv`). Other Moderate controls are inherited from the processor and SaaS vendors (evidence: the processor's PCI DSS attestation and the website builder's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 27 controls that carry the PCI DSS and reasonable-security safeguards for a one-person store (`control-implementation.csv`). Other Moderate controls are inherited from the processor and SaaS vendors (evidence: the processor's PCI DSS attestation and the website builder's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in the online store, merchant portal, POS app, email, and accounting SaaS; the terminal on the counter; the tablet, laptop, and phone; the router and store network; the cameras; the AI chatbot account; and the phone-order pad.
@@ -81,12 +81,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 23 controls:
-- Implemented: 5
-- Partially implemented: 14
-- Planned: 4
+See `control-implementation.csv`. Summary of 27 controls:
+- Implemented: 6
+- Partially implemented: 16
+- Planned: 5
 
-Inheritance: 1 fully inherited (SC-8, encryption in transit by the processor and vendors), 9 hybrid (a provider operates the mechanism and the owner configures or uses it), and 13 the owner's alone (AC-11, AC-18, AT-2, AU-6, CM-8, CP-2, IA-5, IR-8, MP-4, MP-6, PE-3, RA-3, SA-9).
+Inheritance: 2 fully inherited (SC-8, encryption in transit by the processor and vendors; AU-9, logs kept by the processor and vendors), 9 hybrid (a provider operates the mechanism and the owner configures or uses it), and 16 the owner's alone (AC-5, AC-11, AC-18, AT-2, AU-6, CA-2(1), CM-3, CM-8, CP-2, IA-5, IR-8, MP-4, MP-6, PE-3, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

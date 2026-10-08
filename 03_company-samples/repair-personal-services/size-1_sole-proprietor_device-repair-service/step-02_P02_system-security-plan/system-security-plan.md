@@ -47,7 +47,7 @@ Operational. Planned changes: named fill-in account and MFA on SYS-01 (2026-09-1
 | Payment transactions | Low | Moderate | Moderate | Card data stays in the P2PE terminal; revenue depends on taking payment at release (P05 MTD 24 h) |
 | **STPS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that a one-person shop can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors and the processor (evidence: the ticketing vendor's SOC 2 report, P09, and the P2PE solution listing) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that a one-person shop can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors and the processor (evidence: the ticketing vendor's SOC 2 report, P09, and the P2PE solution listing) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's SYS-01 account and settings, the processor portal account, the productivity, accounting, bank, camera, website, and AI accounts, the laptop, bench PC, transfer drives, tablet, and phone, the shop router and Wi-Fi, the card terminal as a physical device, and paper intake forms and tags in the shop.
@@ -85,12 +85,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 6
-- Partially implemented: 14
-- Planned: 4
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 7
+- Partially implemented: 16
+- Planned: 5
 
-Inheritance: 2 fully inherited from the ticketing vendor (AC-3, AU-2), 10 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 12 the owner's alone (AC-11, AC-18, AT-2, AU-6, CP-2, IA-5, IR-6, IR-8, PE-3, RA-3, SA-9, SI-12).
+Inheritance: 3 fully inherited from the ticketing vendor (AC-3, AU-2, AU-9), 10 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 15 the owner's alone (AC-5, AC-11, AC-18, AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-6, IR-8, PE-3, RA-3, SA-9, SI-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

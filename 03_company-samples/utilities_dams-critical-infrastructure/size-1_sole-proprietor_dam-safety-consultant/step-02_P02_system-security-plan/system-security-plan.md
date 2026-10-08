@@ -51,7 +51,7 @@ Operational. Planned changes: password manager and MFA everywhere (2026-09-15); 
 
 **Security-sensitive material is kept out of the boundary on purpose.** Client A's Security Plan and Form 3 answers would be a High confidentiality information type: they describe how a high hazard dam is protected. A one-person business cannot run the High baseline. The design answer is that this material is **never stored in the CBSS**; it is read only inside Client A's portal or on site (CSCA-A (2); Rev. 3A 7.3). The June 2026 download (`00_company-facts.md` section 4, item 2) showed that the rule needs a technical backstop, so the owner asked Client A on 2026-07-22 to set the portal folder to view-only.
 
-**Baseline:** SP 800-53B Moderate, tailored to 25 controls that carry the client and CEII duties for a one-person business (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 29 controls that carry the client and CEII duties for a one-person business (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the email and file suite tenant, the accounting SaaS account, the laptop, phone, and tablet, the home office network, the AI tool accounts, the USB backup drive, paper records, and the owner's credentials for the client-operated systems.
@@ -85,12 +85,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 25 controls:
-- Implemented: 7
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 29 controls:
+- Implemented: 9
+- Partially implemented: 17
 - Planned: 3
 
-Inheritance: 1 fully inherited (SC-8, TLS on every service), 11 hybrid (a provider or client runs the mechanism and the owner configures or uses it correctly), and 13 the owner's alone (AC-6(2), AC-11, AC-19, CP-2, IA-5, IA-5(2), IR-6, IR-8, MP-4, MP-6, PE-3, RA-3, SA-9).
+Inheritance: 1 fully inherited (SC-8, TLS on every service), 13 hybrid (a provider or client runs the mechanism and the owner configures or uses it correctly), and 15 the owner's alone (AC-5, AC-6(2), AC-11, AC-19, CA-2(1), CP-2, IA-5, IA-5(2), IR-6, IR-8, MP-4, MP-6, PE-3, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

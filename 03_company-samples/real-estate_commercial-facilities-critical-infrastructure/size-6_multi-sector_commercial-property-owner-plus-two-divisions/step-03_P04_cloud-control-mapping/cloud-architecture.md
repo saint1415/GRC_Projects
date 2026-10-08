@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Commercial Facilities | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), plus a government-community cloud offering for the Construction CUI enclave
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), plus a government-community cloud offering for the Construction CUI enclave
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zone), the cloud-hosted parts of the BAACS (the SSP system, P02), the on-premises OT those cloud services supervise, and the division workloads and SaaS services that connect to them.
 
 ## 1. Design in one paragraph
@@ -115,7 +115,15 @@ flowchart LR
 
 **Target state (POAM-006, POAM-007, POAM-009, POAM-018):** every legacy remote tool removed and all integrator access through the gateway; OT zones with deny-by-default rules at every owned property and hotel; every site's configuration and controller programs backed up to the provider B vault after each change; the BTI tools moved into a landing-zone account with guardrails, with OT credentials held in the group vault; a standby central supervisor in provider B.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the landing zone.
+- **One deliberate separate tenant.** The Construction CUI enclave (SYS-D4) is a FedRAMP Moderate authorized government-community offering with its own identity domain. It has no connection to SYS-G1 or the hub, and CUI leaves it only through its transfer gateway.
+- **Why.** Covered defense information in an external cloud must meet FedRAMP Moderate equivalency (DFARS 252.204-7012(b)(2)(ii)(D)). Everything else shares SYS-G1 so group internal audit can assess it once.
+- **What limits blast radius.** Phishing-resistant MFA for BAACS administrators and just-in-time PAM elevation with session recording. Federated roles per division account, with no long-lived cloud keys in the landing zone. Access control platform roles are set by region and property.
+- **Known gaps.** The BTI tools (SYS-D5) sit in a 2020 Construction account outside the landing zone, with local administrator accounts (GR-02, POAM-018). BTI technician accounts are synchronized from the Construction directory without end dates (POAM-001). The access control platform still has 40 enterprise-wide administrators (GR-06).
+- **Cross-division risks:** GR-01, GR-02, GR-07, GR-17 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 50 rows across 25 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -134,7 +142,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers. The BTI tools are the exception that proves the rule: they serve the whole group but were built as a division asset, so none of the common controls reach them.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division and BAACS components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Platform tenant administrators, PMS staff, loyalty members, enclave identity | AC-2, AC-3, AC-6(5), IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -147,7 +155,7 @@ flowchart LR
 
 **On-premises OT is not "cloud," but it is placed here on purpose.** The cloud supervisor is only as safe as the sites it connects to, and the sites are only as safe as the remote path into them. Showing both in one map is what makes the legacy remote tool visible as a bypass of every common control.
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -163,7 +171,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. The enclave row is listed only so readers can find the equivalent category; which offering the Construction division uses is not material to this sample.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The BTI tools are a hole in the landing zone.** SYS-D5 holds programs and credentials for every group building, yet it sits in a 2020 Construction account with no guardrails, local administrator accounts, and snapshots in the same account. Its management endpoint was public until 2026-08. Any common control the group relies on (guardrails, EDR coverage, immutable backup, SIEM) does not reach it (P01 GR-02; POAM-018).
 2. **The legacy remote tools bypass the gateway.** At 47 sites, integrator sessions reach site supervisors through vendor relay services, outside the hub, the gateway, MFA, and recording (AC-17; POAM-006). This is the entry path used in the P08 scenario.
 3. **Segmentation decides blast radius.** Where OT zones exist (80 of 230 owned and hotel sites), a compromise of building IT cannot reach controllers. Where they do not, malware on any building PC can reach site supervisors and door controllers (SC-7; POAM-007).

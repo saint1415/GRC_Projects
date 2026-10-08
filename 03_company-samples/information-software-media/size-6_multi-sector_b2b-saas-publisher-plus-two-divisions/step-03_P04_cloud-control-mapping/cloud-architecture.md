@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Information | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, CI/CD, keys, logging, backups) plus the division workloads that run on it. The SSP system (P02) is the Workforce Cloud Platform (WCP, SYS-D1).
 
 ## 1. Design in one paragraph
@@ -103,7 +103,18 @@ flowchart LR
 
 **Target state (POAM-001, POAM-006 to POAM-009, due by 2026-12-31):** handoff files move to a dedicated per-recipient channel in the payroll engine's intake (provider B) with customer-managed keys, read logging, and 7-day retention; the export bucket keeps only customer-requested exports with 30-day retention; every integration, including the consulting toolkit, uses short-lived workload credentials scoped to one tenant and one project; a guardrail blocks new static keys.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the landing zones, with roles federated from SYS-G1 and account-level permission boundaries. The payments cardholder data environment (SYS-D4) sits in separate accounts in provider B with its own segmentation, still under SYS-G1. No division has a separate tenant by design. The 2,600 consultants from the 2025 acquisition still federate from the acquired firm's own identity provider until 2027-03-31.
+
+**Reason.** One identity platform, one SIEM, one backup design, and one pipeline let group internal audit assess common controls once. The sample treats regulator-specific segmentation (the PCI DSS cardholder data environment, the federal contract information area) as division-specific, and builds the CDE with separate accounts and segmentation, not a separate identity.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys and just-in-time PAM with session recording. All access into the CDE goes through group PAM with MFA. WCP tenants are separated by tenant-scoped database roles, and support access is tenant-scoped with a ticket. Backups for all divisions sit in provider B with a separate backup identity.
+
+**Known gaps.** 1,140 static cloud keys exist, and 37 consulting toolkit keys can read every tenant export prefix (POAM-001). Acquired firm accounts are outside group certification and EDR (POAM-015, POAM-016). The six-monthly CDE segmentation test was missed (POAM-021).
+
+Cross-division risks: GR-01 (leaked static key reads data across divisions), GR-02 (attack spreads through shared identity and CI/CD), GR-10 (acquired firm stack as entry point), GR-07 (identity outage stops all divisions).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 54 rows across 27 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -121,7 +132,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, and CI/CD are **common**. A division cannot opt out of them, only request an exception through POL-01. Data flows, application behavior, and regulator-specific segmentation (the PCI DSS cardholder data environment, the federal contract information area) are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, secrets manager | WCP customer identity; consulting toolkit keys; acquired firm identity provider; CDE access | AC-2, AC-3, AC-6(5), IA-2(1), IA-5, IA-8 | Customer (configuration); vendor (service) |
@@ -132,7 +143,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR, source hosting vendors | Model provider; collaboration SaaS | SA-9, SA-11 | Provider for the service; group for use and oversight |
 | Physical | Provider data centers | none | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -148,7 +159,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **Keys and buckets, not encryption, are the weak point.** Encryption is on everywhere (SC-28). The problem is who can read: one export bucket holds the most sensitive data in the group, uses provider-managed keys, has no read logging, and can be read by 37 static keys held by another division (AC-3, AC-4, AU-12, IA-5; P01 GR-01; the P08 scenario).
 2. **The payroll handoff crosses a division boundary without a contract.** The data belongs to the Payments and Payroll program under 16 CFR Part 314, but it is stored and controlled by the Cloud Software division. Moving the intake into the payroll engine's accounts puts the data under the owner's controls (CA-3; POAM-020).
 3. **Secret scanning stops at the group's repositories.** Keys in personal repositories are invisible to it (RA-5 row). The real fix is fewer static keys, not wider scanning.

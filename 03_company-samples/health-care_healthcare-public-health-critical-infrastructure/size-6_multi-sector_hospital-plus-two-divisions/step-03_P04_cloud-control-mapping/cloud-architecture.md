@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Healthcare and Public Health | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two group data centers (DC1, DC2) and two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two group data centers (DC1, DC2) and two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate platform (SYS-G1 to SYS-G3: identity, SOC, data centers, cloud landing zone, backup vault) plus the division workloads that run on it or beside it. The SSP system (P02) is the Hospital Clinical Information System (HCIS).
 
 ## 1. Design in one paragraph
@@ -105,7 +105,18 @@ flowchart LR
 
 **Why the recovery path matters.** Failover to DC2 handles a site loss; it does not handle ransomware, because DC2 trusts the same directory forest. The target state (POAM-012, due 2027-03-31) is a clean recovery environment at provider B with its own identity store, golden images, and a tested EHR restore sequence, plus a separated highest-privilege directory tier and data center zones split by division (POAM-007, due 2027-06-30).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** The Hospital System, the Health Plan, and corporate share the group identity platform (SYS-G1) and one directory forest across DC1 and DC2. Cloud workloads run in their own accounts in the provider A landing zone, with roles federated from SYS-G1. The College is the exception: it keeps a separate directory (SYS-E2) with its own joiner-mover-leaver process, because it has not yet migrated (due 2027-06-30). No division has a separate tenant by design.
+
+**Reason.** The Hospital System and the Health Plan are separate covered entities, and corporate is a business associate for data center, identity, and SOC services. The sample separates their data by account and by data flow controls (the admission-notice feed crosses an account and entity boundary), not by identity. The only deliberate separate identity store is the planned clean recovery environment at provider B, so the EHR can be rebuilt without trusting the group directory.
+
+**What limits blast radius.** Administrators use phishing-resistant MFA and just-in-time PAM with session recording. Cloud IAM allows no long-lived keys for people. The immutable vault sits in a separate provider and account with a separate backup identity that group directory credentials cannot reach. Only the SOC platform team administers the write-once log archive.
+
+**Known gaps.** The highest-privilege directory tier is not isolated, and server zones are not split by division (POAM-007). The clean recovery environment and EHR restore test are not done (POAM-012). 37 vendor connections bypass PAM (POAM-013). Student and trainee EHR accounts are outside identity governance (POAM-001).
+
+Cross-division risks: GR-01 (ransomware spreads through the shared directory and data centers), GR-08 (identity platform compromise), GR-06 (College outside common controls).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 46 rows across 38 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -124,7 +135,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data flows between covered entities, medical device networks, and external-user identity are **division-specific**, because they answer to each division's regulators (CMS and OCR for the hospitals, CMS and state insurance departments for the Health Plan, Federal Student Aid and the FTC Safeguards Rule for the College).
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, group directory, cloud IAM | Member and broker portals, telehealth, College directory | AC-2, AC-3, AC-6, AC-6(5), IA-2(1), IA-8 | Customer (configuration); vendor (identity service) |
@@ -135,7 +146,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR, email vendors | EHR vendor, telehealth, College SaaS, proctoring | SA-9, SI-8, IA-8 | Provider for the service; customer for configuration and oversight |
 | Physical | Provider data centers; DC1 and DC2 | Hospital closets and device rooms | PE-3 | Provider (cloud); group (DC1, DC2) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -150,7 +161,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For DC1 and DC2 the group owns every layer except the colocation operator's building perimeter at DC2.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The shared directory, not the cloud, is the weak point.** Cloud guardrails, keys, and the backup vault are sound (CM-6, SC-12, CP-9, CP-6). The ransomware risk comes from one directory forest and unseparated server zones that span both data centers and three divisions (AC-6, SC-7; P01 GR-01; POAM-007, POAM-012).
 2. **The vault is ready; the restore path is not.** Immutable copies exist in a separate provider and account, but there is no clean place to restore the EHR into. The planned recovery environment at provider B closes this gap (CP-10).
 3. **Device networks and vendor access are division-specific risks with group consequences.** Flat device networks at 4 hospitals and 37 vendor connections outside PAM (SC-7, MA-4; POAM-013, POAM-015) are owned by the Hospital System but feed group risk GR-02.

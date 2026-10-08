@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Financial Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two group data centers plus two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two group data centers plus two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate platform (SYS-G3 data centers and landing zones, the SYS-G4 data platform) plus the division workloads that run on it. The SSP system (P02) is the Payment Processing Platform (PPP).
 
 ## 1. Design in one paragraph
@@ -126,7 +126,18 @@ flowchart LR
 
 **Target state (POAM-001 to POAM-004 and POAM-007, due by 2027-03-31):** Merchant Consulting users sign in through SYS-G1 with phishing-resistant MFA and no SMS path; the case export permission is limited to supervisors with a ticket; dispute documents are masked on upload and purged 90 days after closure; SYS-P6 events feed the SIEM with a bulk-export detection; merchants upload dispute evidence through a portal instead of email.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** Payment Processing, Software, and corporate share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zones, with roles federated from SYS-G1. Merchant Consulting is the exception: its people still sign in through the acquired firm's tenant and identity provider (SYS-M1), which is federated to SYS-G1 for the dispute platform (SYS-P6) and the ISV support console. That split comes from the acquisition, not from a rule, and migration to SYS-G1 is due 2027-03-31.
+
+**Reason.** One identity platform, one SIEM, and one backup design let group internal audit assess common controls once. The processor's core CDE and the Software division's gateway are separate CDEs with separate PCI DSS assessments, but both use SYS-G1 identities.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys and just-in-time PAM with session recording. Privileged commands on CDE hosts run only from PAM jump hosts. Detokenization is limited to named service identities, and the group data platform receives tokens only. Cloud IAM has no local users except sealed break-glass accounts. Cross-provider backups use a separate backup identity.
+
+**Known gaps.** SYS-M1 uses SMS codes and has no PAM (POAM-002). 37 departed consultants still had active SYS-M1 accounts (POAM-001). All dispute analysts can bulk export case files (POAM-003). ISV API credentials show in clear in the support console (POAM-018).
+
+Cross-division risks: GR-02 (cross-division access path into the CDE), GR-06 (ransomware through shared services), GR-07 (compromise of a SYS-G1 administrator).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 55 rows across 34 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -144,7 +155,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, what each role can see inside an application, payment-page integrity, and customer-facing identity are **division-specific**, because they depend on each division's own assessors (QSA, SOC 2 service auditor) and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, PAM | Merchant portal identity, ISV portal, SYS-M1 (consulting) | AC-2, AC-3, AC-6(5), IA-2(1), IA-2(2), IA-8 | Customer (configuration); vendor (service) |
@@ -155,7 +166,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | Model provider, app developers, consulting SaaS | SA-9, IA-2(2) | Provider for the service; customer for use and oversight |
 | Physical | Group data centers; provider data centers | none | PE-3, MP-6, CP-7 | Group for its data centers; provider for cloud facilities (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -171,7 +182,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data, and, for PCI DSS, the content of its payment pages. The payment HSMs and the data center CDE are group-operated, so no provider shares those controls. The cloud providers' own AOCs cover the facility and infrastructure requirements the group inherits in provider A and B accounts (PCI DSS 12.8.5).
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The processor's core is sound; its edges are not.** Segmentation, HSM key management, and the token vault (SC-7, SC-12, SC-13, SC-28) are group-operated and fully implemented. The weak points are where other divisions' people and pages touch the CDE: consulting identities (IA-2(2), AC-2), a bulk export permission (AC-6), and unmonitored application events (AU-12, SI-4) in SYS-P6 (P01 GR-02; POAM-001 to POAM-004).
 2. **The browser is a shared boundary.** Storefront pages on SYS-S1 host the processor's payment fields. The processor protects the fields (SI-7 on SYS-P4); the Software division is responsible for every script on the page around them, and covers only the standard template today (gap 3; POAM-015). An injected script can still overlay or alter what the consumer sees.
 3. **The gateway is a second CDE with a single active region** (CP-7). Its recovery and its separate ROC are the Software division's, but a long outage hits the processor's revenue and its ISVs at once (gap 8; POAM-019).

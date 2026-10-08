@@ -45,7 +45,7 @@ Operational. Planned changes: payment links replace keyed phone orders (2026-09-
 | Business records (contracts, settlements, books) | Low | Moderate | Low | Wrong payment instructions cause loss; deadlines are measured in days (P05 MTD 72 to 120 h) |
 | **TVOP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that a one-person promoter can run and that carry the PCI DSS, FTC, and Florida duties (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: AOCs and the ticketing vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that a one-person promoter can run and that carry the PCI DSS, FTC, and Florida duties (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: AOCs and the ticketing vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts, settings, users, and data in SYS-01 to SYS-06; the website's pages and scripts; the laptop, the owner's phone, and the two scanning phones; the Room's router and Wi-Fi.
@@ -77,12 +77,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 9
-- Partially implemented: 12
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 10
+- Partially implemented: 15
 - Planned: 3
 
-Inheritance: 2 fully inherited from the vendors (AC-3, AU-2), 10 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 12 the owner's alone (AC-11, AC-18, AT-2, AU-6, CP-2, IA-5, IR-8, PL-4, RA-3, SA-9, SC-7, SI-12).
+Inheritance: 3 fully inherited from the vendors (AC-3, AU-2, AU-9), 11 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 14 the owner's alone (AC-11, AC-18, AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-8, PL-4, RA-3, SA-9, SC-7, SI-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

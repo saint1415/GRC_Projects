@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Educational Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones and the group data platform) plus the division workloads that run on it or connect to it. The SSP system (P02) is the college's Student Records and Learning Platform (SRLP).
 
 ## 1. Design in one paragraph
@@ -114,7 +114,18 @@ flowchart LR
 
 **Target state (POAM-005 to POAM-007, due 2027-03-31):** the clinic utilization tables are purged; any future clinic feed carries only aggregate, de-identified counts for the college's own students; warehouse roles are scoped to legitimate educational interest (advisors to their caseload, institutional research to approved projects); every table carries an owner, data type, and purpose tag enforced by the policy engine; FAFSA-derived fields are restricted to the financial aid role.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zone, with scoped roles federated from SYS-G1. No division has a separate tenant with its own workforce identity. The college's SIS and LMS run as a tenant on its sister division's Campus Platform (SYS-E1), which is an application tenant, not an identity boundary. Students and families sign in through the platform identity service. About 40% of Student Health users still sign in through the legacy domain (SYS-S2) from the 2024 acquisition, which is being migrated to SYS-G1.
+
+**Reason.** One identity platform, one SIEM, and one backup design let group internal audit assess common controls once. The sample names no rule or contract that requires a division to have its own tenant.
+
+**What limits blast radius.** Administrators use phishing-resistant MFA and just-in-time PAM with session recording. Cloud IAM has no long-lived users. Customer tenants on SYS-E1 and SYS-E2 are isolated by tenant keys and row-level policies. Backups use a separate backup identity.
+
+**Known gaps.** 61 support accounts hold standing read access to every customer tenant, including the college's (POAM-001). Student Health legacy users have no MFA at on-site clinical workstations (POAM-016, POAM-017). One shared local administrator password was found on 31 legacy campus servers (POAM-011).
+
+Cross-division risks: GR-01 (support console exposes every tenant), GR-02 (ransomware spreads from legacy sites through shared services), GR-09 (Student Health outside group controls).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 55 rows across 34 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -135,7 +146,7 @@ flowchart LR
 
 **A sister division as a cloud provider.** For the college, Education Software is a SaaS provider like any other. The shared responsibility split for the SIS and LMS tenant follows the SaaS pattern: Education Software owns the application, platform identity service, multi-tenant database, and standby; the college owns roles, access approvals, tenant settings, integrations, and its data. That split is only written down in this map and the SSP. The intercompany agreement does not state it (POAM-009).
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Platform identity for students and families, support console, FAMS, legacy clinic domain | AC-2, AC-3, AC-6, AC-6(5), IA-2(1), IA-2(2), IA-5, IA-8 | Customer (configuration); vendor (service) |
@@ -146,7 +157,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | FAMS, CRM, proctoring, EHR vendors, model provider | SA-9, CP-9, AU-6, IA-2(2) | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | Campus and clinic server rooms (legacy) | PE-3, MP-6 | Provider (inherited) for cloud |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -162,7 +173,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **Purpose, not encryption, is the warehouse's weak point.** Encryption and keys are sound (SC-28, SC-12). The gap is who can see what and why: analysts can query every student and the clinic tables (AC-3, AC-6, PT-3; P01 HE-002; POAM-005 to POAM-007).
 2. **The support console is the group's widest door.** One support account can read about 6,300 customer tenants, including the college's (AC-6 on SYS-E3; P01 GR-01; POAM-001). It is a common risk to every customer and to the college, but it is owned by one division.
 3. **The college's most important service provider has no contract terms.** The SaaS split is sound in practice but undocumented between the divisions (SA-9; POAM-009).

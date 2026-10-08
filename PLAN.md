@@ -407,7 +407,7 @@ Phase 5 filled every remaining cell of the matrix: the Sole Proprietorship, Micr
 | HIPAA Security Rule NPRM (90 FR 898) | Proposed Jan 2025; regulatory agenda projects a final rule July 2027 | Health Care P03, P06, P07 |
 | CIRCIA final rule (6 CFR 226) | Targeted Sept 2026; not published | Cross-sector P08 notification baseline |
 | FedRAMP Consolidated Rules 2026 | Mandatory 2027-01-01; no new Rev 5 certifications after 2027-06-11 | P02, P04 for federal-facing scenarios |
-| CMMC phase-in | Phase 2 starts 2026-11-10 | Defense Industrial Base, Manufacturing, Construction |
+| CMMC phase-in | Phase 2 was set to start 2026-11-10. **Check first:** secondary sources (2026-07 to 2026-09) report that DoD suspended Phase 2 and wrote the pause into DoD Class Deviation 2026-O0025 (Revision 3 signed 2026-09-03), with SP 800-171 Rev. 2 still required through DFARS 252.204-7012. The DoD deviation page (acq.osd.mil) could not be reached from the build environment on 2026-10-08, so the samples are not changed yet. 42 samples cite the 2026-11-10 date or Phase 2. | Defense Industrial Base, Manufacturing, Construction, and federal contractors in other industries |
 | NIST AI RMF revision | In progress (AI Action Plan) | P10 |
 | Colorado SB26-189 (ADMT) and CPPA ADMT rules | Both effective or compliance-due 2027-01-01 | P10, cross-sector |
 | SBA size standards proposed rule | Proposed Aug 2026; comments to 2026-11-20 | Tier sizing (rerun `refresh_sba_standards.py` when final) |
@@ -436,4 +436,4 @@ Phase 5 filled every remaining cell of the matrix: the Sole Proprietorship, Micr
 2. **Industry picks.** The 36 primary industries and 22 tier substitutions are proposals in two CSVs. Change any pick and rebuild.
 3. **Multi-Sector pairings.** 33 of the 36 Multi-Sector division pairings were proposed for this project and are now built. Review them in `02_industry-rules/multi-sector-divisions.csv`; changing one means rebuilding that sample.
 4. **Office formats.** If you want Word or PDF versions of a finished sample for a meeting, that is a later export step.
-5. **External review backlog.** The October 2026 architecture review and our response are in `docs/reviews/2026-10-gemini-architecture-review-response.md`. Fixes A to G are applied. Its backlog (size-1 tailoring rows, size-6 tenancy paragraphs, nuclear size 5-6 license-transfer rows, two source checks) is open.
+5. **External review backlog.** The October 2026 architecture review and our response are in `docs/reviews/2026-10-gemini-architecture-review-response.md`. Fixes A to G and backlog items 1 to 3 are applied (size-1 compensating-control rows, size-6 tenancy decisions, nuclear license-transfer rows). Still open: reading the DoD class deviations (2024-O0013 and the reported CMMC Phase 2 suspension, 2026-O0025) at the primary source; see the watch list.

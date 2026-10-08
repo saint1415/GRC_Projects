@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Mining, Quarrying, and Oil and Gas Extraction | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones and the SYS-G6 group data platform), the division workloads that run on it, and the paths between the cloud and each division's on-premises OT. The SSP system (P02) is the Field SCADA and Production Accounting System (FSPA).
 
 ## 1. Design in one paragraph
@@ -126,7 +126,15 @@ flowchart LR
 
 **Target state (POAM-001 and POAM-002, due 2027-03-31 and 2026-12-31):** each OT DMZ pushes historian data outward over a one-way, read-only path to SYS-G6, so no cloud identity can connect into any OT DMZ; each division has its own jump server set, reachable only from privileged access workstations and never from the virtual desktop pool; SYS-P5 is reachable only through the Production jump servers until it migrates.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions federate to the group identity platform, SYS-G1, and get their own accounts (subscriptions or projects) inside each landing zone. No division has a separate tenant or identity provider.
+- **OT stays out.** Control systems run on premises behind each division's OT DMZ. FSPA controllers sign in to SCADA consoles with named local accounts tied to SYS-G1 identifiers, so control does not depend on SYS-G1 being available.
+- **Why.** One identity platform lets group internal audit assess it once. Because OT is not in the cloud, the identity paths that matter are the ones that cross the OT DMZs.
+- **What limits blast radius.** Phishing-resistant MFA for administrators, just-in-time PAM elevation with session recording, and quarterly certification. Division administrators cannot delete the write-once log archive. The machine learning workspace has no route to any OT DMZ.
+- **Known gaps.** Five jump servers shared by OT support staff of all three divisions are reachable from the virtual desktop pool (POAM-002; target is one jump server set per division). One SYS-G6 service account can write to the historian brokers in all three OT DMZs (POAM-001; target is a one-way, read-only push). One identity platform serves 45,000 users and every division application (GR-08).
+- **Cross-division risks:** GR-01, GR-02, GR-03, GR-08, GR-12 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 47 rows across 30 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -145,7 +153,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**: a division cannot opt out, only request an exception under POL-01. Anything that crosses into OT (the jump servers, the historian connector, vendor remote access) is also governed by the group OT DMZ standard, owned by the Group OT Security Director, because a weakness there affects every division at once. Application behavior and customer-facing identity are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, PAM, shared jump servers, cloud IAM | Shipper portal identity; field tablets | AC-2, AC-3, AC-6(5), AC-17, IA-2(1) | Customer (configuration); vendor (service) |
@@ -156,7 +164,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | Hydrocarbon accounting, bidding, telematics, turbine OEM service | SA-9, AC-17 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | none in the cloud (control rooms and plants are covered in the division plans) | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -172,7 +180,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The cloud reaches into OT in two places, and both are shared.** The SYS-G6 historian connector pulls from all three OT DMZs with one account that can write (AC-4; P01 GR-01; POAM-001), and the shared jump servers reach all three OT DMZs from a pool that the corporate virtual desktops can route to (AC-17; GR-02; POAM-002). Each is acceptable for one division; shared across three, a single compromise crosses every division's IT/OT boundary. Both are the spread path in the P08 scenario.
 2. **A model wrote to field equipment through the cloud.** The predictive maintenance model's speed changes travelled from the ML workspace through the SCADA interface to 640 rod pump controllers (CM-4; P10; POAM-021). It is now advisory only. A write path from the cloud to OT needs the same safety management of change as any field logic change.
 3. **Vendor remote access is a cloud-to-OT path too.** The turbine OEM's remote service at Plant P3 is a standing vendor path that the CIP-003-9 low impact plan does not yet monitor for malicious communications (POAM-013).

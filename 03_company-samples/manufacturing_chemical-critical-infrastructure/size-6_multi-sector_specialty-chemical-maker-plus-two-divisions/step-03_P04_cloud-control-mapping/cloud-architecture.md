@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Chemical | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, the OT remote access gateway broker, ERP integration, the data platform) plus the division workloads that run on it, and every conduit between the cloud and the Plant C1 PCBMS (the P02 SSP system, which itself runs on premises).
 
 ## 1. Design in one paragraph
@@ -112,7 +112,18 @@ flowchart LR
 
 **Target state (POAM-001, POAM-005):** the gateway connector requires a per-session approval from the Plant C1 shift superintendent and named integrator accounts; the AI-001 interface is read-only from the plant side, so operators see recommendations and enter any change by hand under the operating procedure; recipe and configuration transfers from SYS-C8 land in a DMZ staging share for the plant MOC screen.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions federate to the group identity platform (SYS-G1) and get their own accounts inside the SYS-G3 landing zone. No division has a separate cloud tenant with its own identity. Plant and terminal OT is the boundary that matters here: the plants and Terminal T1 stay on premises, keep separate OT domains that are reconciled monthly, and are reached from the cloud only through five conduits that end in each site's OT DMZ.
+
+**Reason.** One identity platform, one SIEM with an OT desk, one backup design, and one gateway let group internal audit assess common controls once. Anything that crosses into a plant or terminal OT DMZ is placed per site, because it depends on that site's process safety and regulators.
+
+**What limits blast radius.** Administrators and central engineers use phishing-resistant MFA and just-in-time PAM with session recording, and OT domain administrator credentials are held in PAM. The OT remote access gateway is the single path for vendor, integrator, and engineering sessions. The historian replica feed to the data platform is one-way, with no inbound path. Backups use a separate backup identity, and Plant C1 restores do not depend on the cloud.
+
+**Known gaps.** The gateway has shared integrator accounts and no per-session site approval, and 8 of 17 sites do not record sessions (POAM-001). The telemetry gateway vendor portal has no MFA (POAM-019). The 7 legacy plants have flat networks and no OT monitoring (GR-05).
+
+Cross-division risks: GR-01 (stolen integrator credential on the shared OT gateway reaches several plants and Terminal T1), GR-03 (ransomware on ERP-connected servers stops all three divisions), GR-05 (spread through legacy plant networks).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 28 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -132,7 +143,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, the OT remote access gateway, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior and anything that crosses into a plant or terminal OT DMZ are **division-specific or PCBMS interface** placements, because they depend on that site's process safety and regulators.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, OT gateway broker and connectors | Customer portal identity; ELD accounts; telemetry vendor portal accounts | AC-2, AC-6(5), AC-17, AC-17(3), IA-2, IA-2(1) | Customer (configuration); vendor (service) |
@@ -144,7 +155,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | LIMS, telematics and ELD, driver records, telemetry vendor portal, hosted model provider | SA-9, AC-21 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | none | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -160,7 +171,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data, and anything it connects to its own plants.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The cloud's biggest risk to the plants is a conduit, not a workload.** The gateway broker runs in provider A and reaches every plant and Terminal T1. Its controls are common (AC-17, MA-4), so one weakness (shared integrator accounts, no site approval) repeats at 17 sites (P01 GR-01; POAM-001).
 2. **A cloud service wrote into a chemical plant's OT DMZ.** From 2026-06 to 2026-09-03, AI-001 in provider A wrote setpoints to the Plant C1 advisory interface, and the DCS applied them within bounded ranges (AC-4, CA-3, CM-3; P01 SC-007; P10). No other cloud workload has any write path into OT.
 3. **The managed inventory service depends on a vendor portal outside both landing zones.** The portal that configures about 2,600 customer gateways has no MFA (IA-2(1); scenario gap 6; POAM-019). It is the only path in the map where a stolen password could change what customers' tanks report.

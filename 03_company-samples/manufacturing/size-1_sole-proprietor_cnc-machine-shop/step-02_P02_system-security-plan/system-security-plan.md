@@ -48,7 +48,7 @@ Operational. Planned changes: separate network for the VMC and laptop (2026-10-3
 | Financial (invoices, payments) | Low | Moderate | Low | Payment redirection is the main risk; invoicing can wait a week (P05 MTD 168 h) |
 | **SBS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls (`control-implementation.csv`) that carry the 15 FAR 52.204-21 requirements, the OEM contract terms, and the CSF 2.0 benchmark for a one-person shop. Other Moderate controls are inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls (`control-implementation.csv`) that carry the 15 FAR 52.204-21 requirements, the OEM contract terms, and the CSF 2.0 benchmark for a one-person shop. Other Moderate controls are inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the productivity suite account and its settings, the accounting SaaS account settings and users, the laptop, the phone, the router and shop Wi-Fi, the website account, the VMC and turning center controllers (as specialized assets), USB sticks, and paper travelers and records in the bay.
@@ -79,12 +79,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 4
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 6
+- Partially implemented: 17
 - Planned: 5
 
-Inheritance: 12 hybrid (a provider operates the mechanism and the owner configures or uses it) and 12 the owner's alone. None is fully inherited, because at the SaaS layer the customer always keeps identities, data, and devices (P04).
+Inheritance: 14 hybrid (a provider operates the mechanism and the owner configures or uses it) and 14 the owner's alone. None is fully inherited, because at the SaaS layer the customer always keeps identities, data, and devices (P04).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

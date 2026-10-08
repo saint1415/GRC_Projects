@@ -43,7 +43,7 @@ Operational. Planned changes: MFA on every SaaS account (2026-09-15); encrypted 
 | Books and records | Low | Moderate | Low | Must be complete and producible to the OFR (Fla. Stat. 517.121) |
 | **APSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the Safeguards Rule elements for a one-person adviser (`control-implementation.csv`). Other Moderate controls are either inherited from the custodian and SaaS vendors (evidence: the portfolio platform's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the Safeguards Rule elements for a one-person adviser (`control-implementation.csv`). Other Moderate controls are either inherited from the custodian and SaaS vendors (evidence: the portfolio platform's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01 to SYS-06, SYS-09, and SYS-10; the laptop, phone, and USB drive; the home network as used for business; paper client files in the locked cabinet.
@@ -77,12 +77,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 6
-- Partially implemented: 13
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 8
+- Partially implemented: 15
 - Planned: 5
 
-Inheritance: 1 fully inherited from the SaaS vendors (AU-2), 9 hybrid (the vendor operates the mechanism, the owner configures or uses it correctly), and 14 the owner's alone.
+Inheritance: 2 fully inherited from the SaaS vendors (AU-2, AU-9), 10 hybrid (the vendor operates the mechanism, the owner configures or uses it correctly), and 16 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

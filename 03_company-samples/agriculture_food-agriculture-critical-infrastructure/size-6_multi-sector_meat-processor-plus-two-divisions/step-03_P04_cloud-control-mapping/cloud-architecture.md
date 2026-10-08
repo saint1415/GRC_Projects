@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Food and Agriculture | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), a group colocation data center, and SaaS vendors
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), a group colocation data center, and SaaS vendors
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones), the shared SaaS services every division uses (SYS-G4 ERP, SYS-G6 cold-chain monitoring), the cloud components of the SSP system (the PPCM's food safety records application and recipe master library), and the division workloads on the platform. Plant OT stays on premises; this document shows where it connects.
 
 ## 1. Design in one paragraph
@@ -124,7 +124,18 @@ flowchart LR
 
 **Target state (POAM-001 and POAM-002, due 2027-03-31 and 2026-12-31):** Plants 2 and 5 rebuilt to the reference architecture: OT servers moved to the separate OT domain, an OT DMZ broker in front of SYS-M5 and the ERP, the integrator VPN and the modem removed, all vendor access through SYS-G5, and cold-chain gateways on a segmented sensor network. The cold-chain alert integration server becomes an active-active pair with a tested failover (POAM-005).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1) for IT and cloud access. Each division gets its own accounts inside the SYS-G3 landing zone and receives only division roles federated from SYS-G1. No division has a separate cloud tenant. Plant OT is the exception: Plants 1, 3, 4, and 6 run a separate OT domain, while the OT servers at Plants 2 and 5 and the DC automation servers are still joined to the corporate domain.
+
+**Reason.** Shared identity lets one identity platform, one SIEM, one backup design, and one OT gateway design be assessed once by group internal audit. The sample is moving all plant OT into the separate OT domain so that ransomware in the corporate directory cannot reach plant control systems (GR-01).
+
+**What limits blast radius.** Administrators and OT engineers use phishing-resistant MFA and just-in-time PAM with session recording. Break-glass roles are sealed, and division administrators cannot delete logs in the separate write-once archive. Plant OT data reaches SYS-M5 and the ERP only through one-way brokered flows in the OT DMZ at four plants. Vendors reach OT only through named, recorded SYS-G5 sessions. Backups use a separate backup identity.
+
+**Known gaps.** Plants 2 and 5 have no OT DMZ and stay in the corporate domain (POAM-001). SYS-G5 does not yet cover Plants 2 and 5 or three DCs (POAM-002). 34 privileged directory service accounts are outside PAM (POAM-012).
+
+Cross-division risks: GR-01 (ransomware spreads through the corporate directory to plant OT and DC automation), GR-07 (identity platform outage stops sign-in across all divisions).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 29 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -143,7 +154,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, OT remote access, and cold-chain alerting are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access within an application, customer-facing identity, and payment flows are **division-specific**, because they depend on each division's regulators, customers, and contracts.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, SYS-G5 gateway | Customer identity (SYS-R2), telematics accounts, 3PL portal users | AC-2, AC-3, AC-6(5), AC-17, IA-2, IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -154,7 +165,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR, ERP, cold-chain SaaS | WMS, TMS, AI vision vendor, payment processor | SA-9, CP-9, CM-3 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | none in the cloud (plants, DCs, and stores are on premises) | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -170,7 +181,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. None of the three covers on-premises OT, which is entirely the group's responsibility.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weak points are on premises, not in the cloud.** Cloud guardrails, keys, and backups are sound (CM-6, SC-28, CP-9). The PPCM's exposure comes from Plants 2 and 5 connecting directly to the corporate network and the cloud without an OT DMZ (AC-4, SC-7; P01 GR-01; POAM-001).
 2. **The cold-chain alert integration server is a common control with no alternate processing** (CP-7). It is in the colocation data center, not the cloud, and it serves all three divisions (P01 GR-02; POAM-005).
 3. **The recipe master library is a food safety asset in the cloud.** Its integrity depends on separating library administration from cloud platform administration and on change alerts to plant FSQA (CM-5, AU-12; P01 MT-017).

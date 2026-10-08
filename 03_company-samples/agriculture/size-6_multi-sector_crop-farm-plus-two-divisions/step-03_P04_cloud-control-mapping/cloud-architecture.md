@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Agriculture | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, WAN, and SOC tooling) plus the division workloads that run on it or connect to it. The SSP system (P02) is the Crop Farming **Farm Management and Irrigation Control Platform (FMICP)**, whose cloud parts (farm data hub, imagery store) sit in provider A and whose OT parts sit on premises at 3 ROCs and 38 farms.
 
 ## 1. Design in one paragraph
@@ -131,7 +131,18 @@ flowchart LR
 
 **Target state (POAM-001 to POAM-003, due 2026-11-15 to 2026-12-31):** every flow between the ROCs and the corporate cloud ends in an OT DMZ at each ROC; the hub reads historian replicas in the DMZ and can open no connection into SCADA; integrator and engineer remote access goes only through the group PAM gateway to a jump host per ROC; the farm operations directory's administrator accounts come under group PAM with MFA; the 14 acquired farms move to segmented field and ROC networks by 2027-03-31.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zone, with cloud roles federated from SYS-G1 and set per division account. No division has a separate cloud tenant with its own identity. One exception exists by history, not by design: the ROC SCADA servers, HMIs, and the 2024 acquired farms' servers sit in a legacy "farm operations" directory that predates SYS-G1. The sample plans to migrate it to SYS-G1 by 2027-12-31.
+
+**Reason.** Corporate provides identity, PAM, logging, keys, backups, and EDR as common controls that no division can opt out of. The sample names no rule or contract that requires a division to have its own tenant.
+
+**What limits blast radius.** Administrators use phishing-resistant MFA and just-in-time PAM with session recording. Cloud IAM has no long-lived user keys, and guardrails apply to every division account. The group PAM gateway is the only approved vendor path into plant OT and legacy ROCs. The immutable backup vault uses a separate backup identity.
+
+**Known gaps.** The farm data hub has a two-way path into ROC SCADA until the OT DMZ is built (POAM-002). Integrator access at acquired farms bypasses group PAM (POAM-001). The 11 farm directory domain administrators are outside PAM and have no MFA (POAM-003).
+
+Cross-division risks: GR-01 (ransomware spreads from farm OT to the corporate cloud and ERP), GR-12 (legacy farm directory compromise), GR-18 (over-privileged shared service insider).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 57 rows across 30 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -150,7 +161,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, PAM, network guardrails, logging, keys, backups, EDR, and OT monitoring sensors are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access inside the application, OT design, and customer-facing identity are **division-specific**, because they depend on each division's regulators, customers, and plant or farm operations.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, PAM gateway, cloud IAM | FMIS accounts and tablets, portal customer identity, telematics and drone accounts | AC-2, AC-3, AC-6(5), AC-17, IA-2, IA-2(1), MA-4 | Customer (configuration); vendor (service) |
@@ -161,7 +172,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR, OT monitoring vendors | FMIS vendor, quality software vendor, telematics and drone vendors | SA-9, CP-9, AU-6 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | ROCs, plants, branches (outside the cloud scope; see P02) | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -178,7 +189,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. None of them covers on-premises OT, which stays fully with the group.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The cloud is not the weak point; the bridge from the cloud into farm OT is.** Landing-zone controls are common and strong. The farm data hub, a normal cloud workload, has a two-way path into ROC SCADA (AC-4, SC-7; P01 CF-004, GR-01). An attacker who reaches the corporate cloud network can reach irrigation control. The OT DMZ (POAM-002) removes that path.
 2. **Vendor remote access is split.** Plant OT and legacy ROCs use the group PAM gateway with recorded sessions; the 14 acquired farms let the integrator in through an always-on tool with a shared account (AC-17; POAM-001). One common control exists; Crop Farming has not adopted it everywhere.
 3. **The FMIS is a cloud control path into OT.** Schedule and setpoint changes made in the vendor's irrigation module reach ROC SCADA, and nobody reviews them (CM-3; POAM-011). The vendor's SOC 2 report covers its own controls, not whether the farms' changes are right (P09).

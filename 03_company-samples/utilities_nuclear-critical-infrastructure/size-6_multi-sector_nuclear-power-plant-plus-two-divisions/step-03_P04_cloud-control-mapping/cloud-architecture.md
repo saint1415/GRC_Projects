@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Nuclear Reactors, Materials, and Waste | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3) plus the division workloads on it, and the on-premises edge of the P02 system (station business networks, one-way devices, kiosk update server). The SSP system (P02) is the Plant Business Network and Work Management System (PBN-WMS).
 
 ## 1. Design in one paragraph
@@ -101,7 +101,15 @@ flowchart LR
 
 **Target state (POAM-001, POAM-003, POAM-004, POAM-005, POAM-010; due 2026-11-30 to 2027-03-31):** division-managed laptops land in a contractor segment with a device check and reach only the WMS and approved file shares; cross-division accounts end with the outage assignment; CDA work packages sit in a restricted WMS module with a cyber security sensitive label; the kiosk update server moves to a restricted segment, and every update package is checked against the vendor's signature before the CST releases it to the kiosks.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions federate their business systems to the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own identity tenant. The DOE projects enclave (SYS-E4) is a separate account with no peering to other division accounts.
+- **What stays out.** No CDA, SGI, CSP document, fleet operations center component, or Part 37 security system is in the cloud. Plant data leaves each station only one way, through hardware one-way devices.
+- **Why.** The nuclear design rule keeps CDAs off the shared platform. The PBN-WMS was analyzed under 10 CFR 73.54(b)(1) and is outside the CSP scope. The P02 plan records the choice for cross-division users: the fix is assignment-bound access and a device check, not separate identities.
+- **What limits blast radius.** Hardware keys for administrators and just-in-time PAM elevation with session recording. Division administrators cannot delete logs in the write-once archive. Work management vendors use named federated guest accounts with MFA.
+- **Known gaps.** About 1,900 standing cross-division accounts are removed a median of 46 days late (GR-01, POAM-001). Division-managed laptops join station business networks with no device check (POAM-005). Vendor support sessions are not recorded. Dosimetry customer administrators use a password only (POAM-013).
+- **Cross-division risks:** GR-01, GR-03, GR-10, GR-12, GR-18 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 53 rows across 35 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -120,7 +128,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception under POL-01. Application behavior, data access within an application, customer-facing identity, and regulator-specific design rules are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | WMS vendor guest access, dosimetry customer identity, waste portal customer accounts | AC-2, AC-3, AC-6(5), IA-2, IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -131,7 +139,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | CAP, predictive maintenance, engineering collaboration, waste tracking, telematics | SA-9, CP-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | Station and facility rooms (on-premises) | PE-3, MP-6 | Provider (cloud); station security (on-premises) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -146,7 +154,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The cloud is not on the path to the reactors, by design.** No row maps a CDA, SGI, or CSP control to a cloud service. The design rules (PL-8, MP-4) and the one-way devices (AC-4) are the most important rows in the map, and they are met.
 2. **The weak points are at the station edge, not in the cloud.** Division-managed laptops on station networks (IA-3), the kiosk update server (SI-7, SC-7), and printers with default passwords (IA-5, found in P07) are on-premises PBN-WMS components.
 3. **WMS data, not WMS infrastructure, is the cloud risk.** Encryption, keys, and backups are sound (SC-28, SC-12, CP-9). The gap is who can read CDA work packages (AC-3, MP-3; POAM-003).

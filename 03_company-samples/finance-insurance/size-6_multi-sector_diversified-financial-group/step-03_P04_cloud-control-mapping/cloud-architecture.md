@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Finance and Insurance | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5), plus two group data centers
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6), plus two group data centers
 **Scope:** the shared corporate platform (SYS-G3 data centers and landing zones, with SYS-G1, SYS-G2, and SYS-G4) plus the division workloads that run on it. The SSP system (P02) is the Core and Digital Banking Platform (CDBP).
 
 ## 1. Design in one paragraph
@@ -125,7 +125,18 @@ flowchart LR
 
 **Target state (POAM-003, POAM-008, POAM-009, POAM-011):** support console access is tenant-scoped and tied to a support ticket, with step-up authentication; workforce console sessions are bound to managed devices and last no more than 8 hours; business payment MFA can no longer be switched off by any tenant; the payment initiation gateway runs hot in both data centers and fails over in a tested runbook.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zones, with roles federated from SYS-G1, and the same identity reaches the core in the group data centers. No division has a separate tenant with its own workforce identity. Separation of the bank from the 310 client institutions happens inside the CDBP: one database schema and key per tenant, a dedicated cluster for the bank tenant, and a customer identity service for end users. The lease administration SaaS still uses local accounts, not SYS-G1.
+
+**Reason.** One identity platform, one SIEM, one backup design, and one key policy let group internal audit assess common controls once. The sample names no rule or contract that requires a division to have its own identity tenant.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys and just-in-time PAM with session recording. Cloud IAM has no local users except sealed break-glass accounts. Tenant administrators are limited to their own tenant, tested each release. The data platform extract filter blocks client tenant data. Core vendor maintenance and building controller vendor access go only through PAM. Backups use a separate backup identity.
+
+**Known gaps.** Workforce sessions last 12 hours and are not device-bound (POAM-003). 460 support staff hold standing read access to every tenant (POAM-008). 37 CDBP service accounts are outside identity governance (POAM-001).
+
+Cross-division risks: GR-02 (stolen session tokens move through shared identity and email into several divisions), GR-06 (ransomware in the group data centers), GR-10 (insider misuse across tenants or divisions).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 57 rows across 32 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -151,7 +162,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, EDR, email protection, and data center physical security are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, tenant and customer identity, and data access inside an application are **division-specific** or belong to the CDBP, because they depend on each division's regulators and clients.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | CDBP and division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Customer identity service, tenant and support consoles, loan and lease SaaS accounts | AC-2, AC-3, AC-6, AC-6(5), AC-12, IA-2(1), IA-8, IA-11 | Customer (configuration); vendor (service) |
@@ -162,7 +173,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR, email vendors | Loan origination, loan servicing, lease, source hosting, status page vendors | SA-9, SA-10, SI-8, IR-6 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers; group data center buildings | Branch and operations center buildings | PE-2, PE-3, MP-6 | Provider (cloud, inherited); Group Property Management (group buildings) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -178,7 +189,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For the two group data centers, the group owns every layer, with the buildings run by Group Property Management.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **Identity sessions, not encryption, are the weak point.** Encryption and keys are sound (SC-12, SC-28, SC-28(1)). The gap is that a stolen workforce session token can be replayed for 12 hours from anywhere (AC-12, POAM-003), and one such session reaches the support console, which can read every tenant (AC-6, POAM-008). P08 is built on this path.
 2. **Tenant settings can undo platform security.** The platform supports business payment MFA, but 41 client tenants switched it off (IA-8). Because clients are user entities, this is a complementary user entity control in the SOC reports; changing the default (POAM-009) moves it back into the platform's control.
 3. **The payment path has one weak link.** Everything from the platform to the Federal Reserve payment services is private, signed, and monitored (AC-4, SI-7, SC-8(1)), but the payment initiation gateway has only a cold standby (CP-7; P01 BR-004; POAM-011).

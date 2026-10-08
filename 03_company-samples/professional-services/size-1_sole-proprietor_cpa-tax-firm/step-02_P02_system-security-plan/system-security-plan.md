@@ -46,7 +46,7 @@ Operational. Planned changes: scan-to-folder replaces scan-to-email and MFA goes
 | Practice administration (billing) | Low | Low | Low | Fees can be billed late (P05 MTD 168 h) |
 | **TPSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the Safeguards Rule elements for a one-person practice (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the tax software vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the Safeguards Rule elements for a one-person practice (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the tax software vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01 to SYS-04, SYS-08, and SYS-09; the laptop, printer-scanner, and phone; the home office's use of the home network and router; paper files in the home office.
@@ -79,12 +79,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
-- Implemented: 8
-- Partially implemented: 15
-- Planned: 3
+See `control-implementation.csv`. Summary of 30 controls:
+- Implemented: 9
+- Partially implemented: 17
+- Planned: 4
 
-Inheritance: 1 fully inherited (AU-2, from the tax software vendor and the email suite), 10 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 15 the owner's alone.
+Inheritance: 2 fully inherited (AU-2 and AU-9, from the tax software vendor and the email suite), 10 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 18 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

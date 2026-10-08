@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Manufacturing | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones, WAN, and colocation data center) plus the division workloads that run on it or connect to it. The SSP system (P02) is the Device Engineering and Manufacturing System (DEMS).
 
 ## 1. Design in one paragraph
@@ -115,7 +115,18 @@ flowchart LR
 
 **Target state (POAM-003, POAM-005, POAM-006, due 2027-03-31):** IX-3 signing moves into the HSM service (or IX-3 moves to a new key through a planned field transition), Plants D and E get the same production zones as Plants A to C, and every test station uses individual operator sign-in.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions share the group identity platform (SYS-G1). Each division gets its own accounts inside the SYS-G3 landing zone, with roles federated from SYS-G1. No division has a separate tenant with its own identity. Testing's findings vault is the strongest internal boundary: its own account and keys, encryption per client, and no route to Medical Devices accounts. The 4 acquired Testing laboratories still use a local directory until federation to SYS-G1 (due 2027-03-31).
+
+**Reason.** One identity platform, one SIEM, one backup design, and one key service let group internal audit assess common controls once. Testing's client confidentiality needs an information barrier between Testing and Medical Devices, and the sample builds it with a separate account, keys, and network path, not with a separate identity tenant.
+
+**What limits blast radius.** Administrators and key custodians use phishing-resistant hardware keys and just-in-time PAM with session recording, including MES vendor sessions. Cloud IAM has no local users except sealed break-glass accounts. Division administrators cannot delete logs in the write-only log account. Distribution center automation takes vendor access only through PAM. Backups use a separate backup identity.
+
+**Known gaps.** A collaboration space shared with 212 Medical Devices engineers lets data cross the Testing barrier by hand (POAM-010); barrier groups in SYS-G1 are the planned fix. Plants D and E sit outside the common network design (POAM-005). The acquired laboratories are outside SYS-G1 (POAM-015).
+
+Cross-division risks: GR-07 (identity platform or privileged account compromise), GR-03 (ransomware spreads from IT into plants and distribution centers), GR-05 (Testing information barrier).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 50 rows across 35 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -134,7 +145,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. What each division builds on top is **division-specific**, because it depends on that division's regulators and customers: FDA and hospital BAAs for the DCC, federal contract clauses for Distribution, and client confidentiality for Testing.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Device certificates (DCC), ordering portal users, Testing client users, acquired laboratory directory | AC-2, AC-3, AC-6(5), IA-2, IA-2(1), IA-3 | Customer (configuration); vendor (service) |
@@ -145,7 +156,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | PLM, source hosting, eQMS, LIMS, EDI network | SA-9, AC-3, AC-5 | Provider for the service; customer for use, roles, and oversight |
 | Physical | Provider data centers | Plants, distribution centers, laboratories (group-managed, outside cloud scope) | PE-3, MP-6 | Provider for cloud; group facilities for sites |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -161,7 +172,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. On-premises components (HSMs, plants, colocation, distribution centers, laboratories) are fully the group's responsibility.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weakest link in the release chain is not in the cloud.** The cloud pipeline, HSMs, and update service are sound (SI-7, SC-12, SI-7(15)). The IX-3 software key on the Plant D build server bypasses all of them (SC-12; P01 MD-003; POAM-003). An attacker who took that key could sign firmware that about 42,000 IX-3 pumps would accept.
 2. **Plants D and E are outside the common network design** (SC-7). They were connected to the WAN after the 2024 acquisition without the production zones used at Plants A to C (POAM-005).
 3. **The Testing information barrier holds at the network layer but not the application layer** (AC-4). The findings vault has its own account and keys, and no route to Medical Devices accounts, but a collaboration space shared with 212 Medical Devices engineers lets data cross the barrier by hand (POAM-010).

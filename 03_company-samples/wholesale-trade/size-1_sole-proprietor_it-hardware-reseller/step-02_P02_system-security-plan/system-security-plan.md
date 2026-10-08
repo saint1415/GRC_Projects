@@ -48,7 +48,7 @@ Operational. Planned changes: business-only Wi-Fi network and password manager (
 | Financial management (invoices, payments, bank details) | Moderate | Moderate | Low | Payment redirection already cost $2,340 (P01 R-002); MTD 120 hours |
 | **ROD category (high-water mark)** | **Moderate** | **Moderate** | **Low** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 22 controls that carry the 15 FAR 52.204-21 requirements, the supply chain duties, and the top risks for a one-person business (`control-implementation.csv`). Other controls are inherited from the SaaS vendors (evidence: the accounting SaaS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system.
+**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the 15 FAR 52.204-21 requirements, the supply chain duties, and the top risks for a one-person business (`control-implementation.csv`). Other controls are inherited from the SaaS vendors (evidence: the accounting SaaS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, SYS-03, and SYS-10; the laptop and phone; the home router and Wi-Fi as used for business; the garage staging bench and stock cabinet; and paper tag sheets.
@@ -82,12 +82,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 22 controls:
-- Implemented: 5
-- Partially implemented: 13
+See `control-implementation.csv`. Summary of 26 controls:
+- Implemented: 7
+- Partially implemented: 15
 - Planned: 4
 
-Inheritance: 1 fully inherited from the SaaS vendors (AC-3), 10 hybrid (the vendor provides the mechanism, the owner configures or uses it correctly), and 11 the owner's alone (AC-20, AC-22, AT-2, IR-8, MP-6, PE-3, RA-3, SA-9, SR-3, SR-5, SR-11).
+Inheritance: 2 fully inherited from the SaaS vendors (AC-3, AU-9), 11 hybrid (the vendor provides the mechanism, the owner configures or uses it correctly), and 13 the owner's alone (AC-5, AC-20, AC-22, AT-2, CA-2(1), IR-8, MP-6, PE-3, RA-3, SA-9, SR-3, SR-5, SR-11).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

@@ -49,7 +49,7 @@ Operational. Planned changes: deletion and certification of county phase 1 extra
 | Business records (invoices, contracts) | Low | Low | Low | P05 BP-04, MTD 240 h |
 | **CDE category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, as the county contract requires for contractor devices that store county data, tailored to **26 controls** that carry the owner's real duties (`control-implementation.csv`). The other Moderate controls are either inherited from SaaS providers or the agencies, or tailored out because they assume staff, servers, or software development. P03 records the decision for all 177 Moderate base controls. Where CJISSECPOL v6.1 sets a stricter value (for example, a 30-minute maximum device lock, 1-hour incident reporting, and FIPS 140-3 encryption for any CJI at rest outside a physically secure location), the stricter value governs.
+**Baseline:** SP 800-53B Moderate, as the county contract requires for contractor devices that store county data, tailored to **30 controls** that carry the owner's real duties (`control-implementation.csv`). The other Moderate controls are either inherited from SaaS providers or the agencies, or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`), with AC-5 and CM-3 marked Not applicable. P03 records the decision for all 177 Moderate base controls. Where CJISSECPOL v6.1 sets a stricter value (for example, a 30-minute maximum device lock, 1-hour incident reporting, and FIPS 140-3 encryption for any CJI at rest outside a physically secure location), the stricter value governs.
 
 ## 7. Authorization Boundary Description
 - **Inside:** the laptop, phone, USB backup drive, home office network, and the owner's accounts and settings in the productivity suite, password manager, accounting and website services, and AI assistant; paper in the locked file box.
@@ -80,12 +80,13 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
-- Implemented: 7
-- Partially implemented: 19
+See `control-implementation.csv`. Summary of 30 controls:
+- Implemented: 8
+- Partially implemented: 20
 - Planned: 0
+- Not applicable: 2
 
-Inheritance: 13 hybrid (a provider or agency runs the mechanism and the owner configures or uses it correctly) and 13 the owner's alone. None is fully inherited, because every control here depends on something the owner does.
+Inheritance: 14 hybrid (a provider or agency runs the mechanism and the owner configures or uses it correctly) and 16 the owner's alone. None is fully inherited, because every control here depends on something the owner does.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

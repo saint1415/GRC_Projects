@@ -51,7 +51,7 @@ Operational. Planned changes: password manager and MFA (2026-09-15); business-gr
 
 Information types are named in plain terms; SP 800-60 has no food production type, so the ratings follow FIPS 199 definitions directly.
 
-**Baseline:** SP 800-53B Moderate, tailored to 23 controls that a one-person shop can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the cold-chain vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 27 controls that a one-person shop can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the cold-chain vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, SYS-05, SYS-07, SYS-08, and SYS-10; the sensors, gateway, and smokehouse controller; the laptop, scale and label printer, and phone; the shop router and Wi-Fi; paper cut sheets and logs in the shop.
@@ -84,12 +84,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 23 controls:
-- Implemented: 7
-- Partially implemented: 12
+See `control-implementation.csv`. Summary of 27 controls:
+- Implemented: 9
+- Partially implemented: 14
 - Planned: 4
 
-Inheritance: 2 fully inherited from vendors (AC-3, AU-2), 9 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 12 the owner's alone (AC-6, AT-2, AU-6, CM-6, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9).
+Inheritance: 3 fully inherited from vendors (AC-3, AU-2, AU-9), 10 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 14 the owner's alone (AC-6, AT-2, AU-6, CA-2(1), CM-3, CM-6, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

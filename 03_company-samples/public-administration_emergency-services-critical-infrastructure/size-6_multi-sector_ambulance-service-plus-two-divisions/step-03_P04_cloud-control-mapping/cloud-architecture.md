@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Emergency Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones) plus the division workloads that run on it or beside it. The SSP system (P02) is the Dispatch and Patient Care Platform (DPCP).
 
 ## 1. Design in one paragraph
@@ -122,7 +122,14 @@ flowchart LR
 
 **Target state (POAM-003, POAM-012, POAM-013):** the CAD, its database, and the integration engine move to a dedicated DPCP account in the provider A landing zone, inspected by the hub and covered by guardrails; the revenue cycle file transfer servers move to a separate BDS account with no route to the CAD management network; CAD vendor support uses group PAM with recorded sessions; and a warm CAD standby in provider B can take over within the 1-hour RTO.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions federate to the group identity platform, SYS-G1, and get their own accounts inside the landing zone. No division has its own identity tenant. Division SaaS (ePCR, EHR, telehealth) takes workforce sign-in from SYS-G1, and client agency users federate from their own identity providers or use SYS-G1 guest accounts with MFA.
+- **Why.** One identity platform lets group internal audit assess it once. Separation between divisions is meant to come from accounts, which is why the target state moves the CAD into a dedicated DPCP account and the revenue cycle file transfer servers into a separate BDS account with no route to the CAD management network (POAM-012).
+- **What limits blast radius.** Phishing-resistant MFA for administrators and just-in-time PAM elevation with session recording. Dispatch consoles use badge plus PIN. Platform administrators cannot delete the object-locked log archive. The backup vault uses a separate backup identity.
+- **Known gaps.** The 2019 legacy account still holds the CAD and the revenue cycle file transfer servers on one management subnet, outside the guardrails, with 9 local cloud users (GR-02, POAM-012). The CAD vendor has 6 standing administrator accounts outside PAM (GR-05, POAM-003). Vehicles use shared CAD accounts (POAM-002).
+- **Cross-division risks:** GR-02, GR-05, GR-07, GR-13 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 50 rows across 28 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -141,7 +148,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, client partitions, field devices, and customer-facing identity are **division-specific**, because they depend on each division's regulators, clients, and counties.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | MDC vehicle accounts, client agency users, patient check-in identity | AC-2, AC-3, AC-6(5), IA-2, IA-2(1), IA-8 | Customer (configuration); vendor (service) |
@@ -152,7 +159,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | ePCR, EHR, telehealth, monitor relay, contact center, AI triage | SA-9, CP-9, AU-6, AU-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers | Communications centers | PE-3, PE-11, MP-6 | Provider (data centers); BDS (centers) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -167,7 +174,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The legacy account is the weak point, not the providers.** Encryption, keys, and backups are sound (SC-28, SC-12, CP-9). The CAD and the revenue cycle file transfer servers share a management subnet that bypasses hub inspection and guardrails (AC-4, SC-7, CM-6). An attacker in either system can reach the other. This is the path the P08 scenario uses (P01 GR-02; POAM-012).
 2. **Recovery stops at the provider A boundary.** The CAD database restores to any point in 35 days, but only inside provider A. Hourly copies reach the provider B vault, but there is nothing in provider B to run them on (CP-10; P01 GR-01; POAM-013).
 3. **Field devices are the largest unmanaged estate.** About 2,400 routers and MDCs connect straight to the CAD with a shared tunnel key and shared vehicle accounts (IA-3, IA-2, CM-6). They are division-specific rows because the Ambulance fleet team runs them, which is also why their inheritance is not documented (P02 section 10.2).

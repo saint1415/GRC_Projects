@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Accommodation and Food Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called Cloud provider A and Cloud provider B (vendor-agnostic; see section 5), two colocation data centers, and SaaS vendors
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called Cloud provider A and Cloud provider B (vendor-agnostic; see section 6), two colocation data centers, and SaaS vendors
 **Scope:** the shared corporate platform (SYS-G1 to SYS-G5) plus the division workloads that run on it or connect to it. The SSP system (P02) is the Hotels division's Property Management and Point-of-Sale Platform (PMPS).
 
 ## 1. Design in one paragraph
@@ -129,7 +129,18 @@ flowchart LR
 
 **Target state (POAM-001, POAM-013, P2PE program; 2026-11-30 to 2027-06-30):** the legacy POS vendor reaches its servers only through group PAM with named accounts, and then the legacy POS is replaced by the cloud POS with validated P2PE; the CRS integration service account reads only the loyalty fields; owners' bank data leaves the guest profile hub and stays tokenized in SYS-V3 (P03).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** Hotels, Attractions, and corporate share the group identity platform (SYS-G1). Each division gets its own accounts inside the landing zones, with roles federated from SYS-G1. Group payment services (SYS-G4) run in a dedicated CDE account, and the guest profile hub (SYS-G5) in its own account, both under SYS-G1. Vacation Ownership's 6,500 users stay on the division's legacy directory until they join SYS-G1 on 2027-03-31. No division has a separate tenant by design.
+
+**Reason.** One identity platform, one SIEM, one tokenization service, and one backup design let group internal audit assess common controls once. The dedicated CDE account keeps card data in one PCI DSS scope that serves all three divisions with tokens. The sample names no rule that requires a division to have its own identity tenant.
+
+**What limits blast radius.** Administrators use phishing-resistant MFA and just-in-time PAM with session recording, and 11 of 13 property-system vendors connect through PAM. CDE accounts allow only payments engineering roles, and cloud IAM has no long-lived user keys. Divisions receive card tokens, not card numbers. Backups use a separate backup identity.
+
+**Known gaps.** The legacy POS vendor's always-on tool is outside PAM (POAM-001). The CRS integration service account reads every guest profile hub table (POAM-013). 340 Vacation Ownership users reach loan origination without MFA (POAM-020). A vendor jump host bridges park business and ride control networks (GR-09).
+
+Cross-division risks: GR-05 (ransomware through shared identity and network), GR-01 (POS malware through the shared vendor), GR-10 (credential stuffing across the shared guest identity).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 52 rows across 34 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -150,7 +161,7 @@ flowchart LR
 
 **Why payment services are common.** One tokenization service means one place where card numbers are stored, one key hierarchy, and one set of PCI DSS Requirement 3 controls. All three divisions' validations (two QSA ROCs and one SAQ D) inherit them, and group internal audit assessed them once (P07).
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM, SYS-G5 customer identity | PMS roles, ticketing staff sign-in, Vacation Ownership legacy directory | AC-2, AC-3, AC-6(5), IA-2(1), IA-2(2), IA-8 | Customer (configuration); vendor (service) |
@@ -161,7 +172,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | PMS, cloud POS, ticketing, loan servicing, contact center, revenue management, chatbot | SA-9, CP-9 | Provider for the service; customer for use and oversight |
 | Physical | Provider and colocation facilities | Hotel IT rooms, POI devices, ride control cabinets | PE-3, MP-6, SR-9 | Provider (inherited) for data centers; customer for properties |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -177,7 +188,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For PCI DSS, each SaaS or service provider's AOC and responsibility matrix (Requirement 12.8.5) shows which requirements it meets for the group.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weakest links are outside the cloud platform.** The common cloud controls are sound. The gaps sit at the legacy POS servers (vendor remote tool outside PAM, no EDR; MA-4, SI-3), the ride control networks (SC-7), and the Vacation Ownership legacy data center (SC-28, IA-2(2)). Each is a division-specific or PMPS row.
 2. **The guest profile hub is a shared data store with a shared credential.** Encryption is in place (SC-28), but the CRS integration service account reads every table (AC-6), and the hub holds owners' bank account numbers that should never have left SYS-V3 (P01 GR-02; POAM-013).
 3. **Payment page scripts are a shared duty.** SYS-G4 serves the payment form, but each division owns the pages that embed it. The 3 park ticket microsites lack a script inventory and tamper detection (CM-7, SI-7; PCI DSS 6.4.3 and 11.6.1; POAM-012).

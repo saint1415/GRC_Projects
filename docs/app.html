@@ -12,6 +12,10 @@
   try { saved = localStorage.getItem("grc-look"); } catch (e) {}
   var look = q === "board" || q === "case" ? q : saved === "board" ? "board" : "case";
   document.documentElement.dataset.look = look;
+  var paper = null; try { paper = localStorage.getItem("grc-paper"); } catch (e) {}
+  paper = paper === "light" || paper === "dark" ? paper : "auto";
+  document.documentElement.dataset.paperPref = paper;
+  document.documentElement.dataset.paper = paper === "auto" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : paper;
   document.title = look === "board" ? "Santos Threat Board" : "Santos Case Files";
 })();
 </script>
@@ -30,7 +34,20 @@ html[data-look="case"] {
   --body: "Courier Prime", "Courier New", ui-monospace, monospace;
   --mono: "Courier Prime", "Courier New", ui-monospace, monospace;
   --shadow: 0 2px 0 var(--line), 0 14px 30px rgba(21, 35, 60, .1);
+  --folder-active: #ead9ab; --card-rule: #dbe3ed; --mark: rgba(196, 54, 31, .22); --card-shadow: rgba(40, 32, 10, .12); --veil: rgba(21, 35, 60, .55);
+  --stamp-blend: multiply; --lvl-ink: #ffffff;
   color-scheme: light;
+}
+/* Case Files after dark: the same file drawer on a night desk. Chosen with the Paper switch (Light, Dark, Auto). */
+html[data-look="case"][data-paper="dark"] {
+  --bg: #10151d; --surface: #1a212c; --sunk: #141a23; --ink: #e4e8ef; --muted: #9aa5b6; --line: #2f3a4a;
+  --accent: #ff6b4f; --accent-ink: #10151d; --link: #8fb8ff; --folder: #5e4d29; --folder-edge: #8a7240; --folder-ink: #f3e6c4;
+  --vh: #ff5c5c; --h: #ff7a5c; --m: #e3b04c; --l: #7fbf86; --vl: #8a94a3;
+  --met: #7fbf86; --part: #e3b04c; --not: #ff7a5c; --na: #3a4556;
+  --shadow: 0 2px 0 #0b0f15, 0 14px 30px rgba(0, 0, 0, .45);
+  --folder-active: #6e5a30; --card-rule: #252e3b; --mark: rgba(255, 107, 79, .28); --card-shadow: rgba(0, 0, 0, .45); --veil: rgba(4, 6, 10, .7);
+  --stamp-blend: normal; --lvl-ink: #10151d;
+  color-scheme: dark;
 }
 html[data-look="board"] {
   --bg: #060a11; --surface: #0d1726; --sunk: #0a121e; --ink: #d3e5f0; --muted: #7e97a9; --line: #1d3147;
@@ -157,7 +174,7 @@ html[data-look="board"] .bar span { box-shadow: 0 0 10px currentColor; }
 .tw tr:last-child td { border-bottom: 0; }
 .tw td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tw td.id { font-family: var(--mono); white-space: nowrap; color: var(--muted); }
-.lvl { font: 700 12px/1 var(--body); white-space: nowrap; padding: 3px 6px; color: #fff; display: inline-block; }
+.lvl { font: 700 12px/1 var(--body); white-space: nowrap; padding: 3px 6px; color: var(--lvl-ink, #fff); display: inline-block; }
 html[data-look="board"] .lvl { color: #06101a; }
 .lvl.vh { background: var(--vh); } .lvl.h { background: var(--h); } .lvl.m { background: var(--m); } .lvl.l { background: var(--l); } .lvl.vl { background: var(--vl); }
 .prose { max-width: 78ch; }
@@ -172,20 +189,20 @@ details[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: 1
 .hero h1 { font: 900 clamp(46px, 9vw, 112px)/.86 var(--display); text-transform: uppercase; letter-spacing: -.01em; }
 .hero h1 em { font-style: normal; color: var(--accent); }
 .hero p { max-width: 58ch; font-size: 17px; margin: 16px 0 0; }
-.hero p b { background: linear-gradient(transparent 62%, rgba(196, 54, 31, .22) 62%); }
+.hero p b { background: linear-gradient(transparent 62%, var(--mark) 62%); }
 .drawer { margin-top: 34px; }
 .ftabs { display: flex; gap: 4px; overflow-x: auto; padding: 0 2px; scrollbar-width: thin; }
 .ftab { flex: none; background: var(--folder); border: 1px solid var(--folder-edge); border-bottom: 0; border-radius: 6px 6px 0 0; padding: 8px 12px 6px; cursor: pointer;
   font: 700 15px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--folder-ink); max-width: 210px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transform: translateY(6px); transition: transform .15s; }
 .ftab:hover { transform: translateY(2px); }
-.ftab[aria-selected="true"] { background: #ead9ab; transform: none; }
-.folder { background: #ead9ab; border: 1px solid var(--folder-edge); padding: clamp(14px, 3vw, 26px); border-radius: 0 6px 6px 6px; color: var(--folder-ink); }
+.ftab[aria-selected="true"] { background: var(--folder-active); transform: none; }
+.folder { background: var(--folder-active); border: 1px solid var(--folder-edge); padding: clamp(14px, 3vw, 26px); border-radius: 0 6px 6px 6px; color: var(--folder-ink); }
 .folder h2 { font: 800 clamp(24px, 4vw, 38px)/1 var(--display); text-transform: uppercase; }
 .folder .sub { font-size: 14px; margin: 6px 0 16px; }
 .icards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: 12px; }
 .icard { text-align: left; background: var(--surface); color: var(--ink); border: 0; border-top: 3px solid var(--line); padding: 12px 12px 14px; cursor: pointer; min-height: 146px; display: grid; align-content: start; gap: 6px;
-  box-shadow: 0 1px 0 var(--line), 0 6px 14px rgba(40, 32, 10, .12); background-image: repeating-linear-gradient(transparent 0 23px, #dbe3ed 23px 24px); background-position: 0 40px; transition: transform .18s, box-shadow .18s; }
-.icard:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 1px 0 var(--line), 0 14px 24px rgba(40, 32, 10, .18); }
+  box-shadow: 0 1px 0 var(--line), 0 6px 14px var(--card-shadow); background-image: repeating-linear-gradient(transparent 0 23px, var(--card-rule) 23px 24px); background-position: 0 40px; transition: transform .18s, box-shadow .18s; }
+.icard:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 1px 0 var(--line), 0 14px 24px var(--card-shadow); }
 .icard[aria-pressed="true"] { border-top-color: var(--accent); }
 .icard .no { font: 700 11.5px/1.2 var(--mono); color: var(--muted); letter-spacing: .06em; }
 .icard .bn { font: 800 21px/1.05 var(--display); text-transform: uppercase; }
@@ -201,7 +218,7 @@ details[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: 1
 .tally { display: flex; gap: 3px; flex-wrap: wrap; margin: 6px 0 4px; }
 .tally i { width: 8px; height: 22px; background: var(--c); display: block; }
 .stamp { position: absolute; top: clamp(64px, 9vw, 84px); right: clamp(12px, 4vw, 36px); border: 4px solid var(--accent); color: var(--accent); padding: 6px 12px;
-  font: 900 clamp(20px, 3vw, 32px)/1 var(--display); text-transform: uppercase; letter-spacing: .04em; transform: rotate(-9deg); opacity: .88; mix-blend-mode: multiply; pointer-events: none; text-align: center; background: transparent; }
+  font: 900 clamp(20px, 3vw, 32px)/1 var(--display); text-transform: uppercase; letter-spacing: .04em; transform: rotate(-9deg); opacity: .88; mix-blend-mode: var(--stamp-blend, multiply); pointer-events: none; text-align: center; background: transparent; }
 .stamp small { display: block; font: 700 11.5px/1.2 var(--mono); letter-spacing: .08em; }
 @media (prefers-reduced-motion: no-preference) { .stamp.hit { animation: thunk .38s cubic-bezier(.3, 1.6, .5, 1) both; } }
 @keyframes thunk { from { transform: rotate(-9deg) scale(2.3); opacity: 0; } }
@@ -246,7 +263,7 @@ details[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: 1
 /* ---------- results, story, compare, tour ---------- */
 .results { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); margin-top: 16px; }
 .rcard { display: grid; gap: 8px; align-content: start; text-align: left; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; cursor: pointer; min-width: 0; }
-html[data-look="case"] .rcard { border: 0; border-top: 3px solid var(--line); box-shadow: 0 1px 0 var(--line), 0 6px 14px rgba(21, 35, 60, .08); }
+html[data-look="case"] .rcard { border: 0; border-top: 3px solid var(--line); box-shadow: 0 1px 0 var(--line), 0 6px 14px var(--card-shadow); }
 .rcard:hover { border-color: var(--accent); }
 .rcard h3 { font-size: 21px; }
 html[data-look="case"] .rcard h3 { text-transform: uppercase; font-weight: 800; }
@@ -311,7 +328,7 @@ html[data-look="case"] .tourp h3 { text-transform: uppercase; font-weight: 900; 
 
 /* ---------- incident simulator ---------- */
 #sim { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 20px 16px; }
-html[data-look="case"] #sim { background: rgba(21, 35, 60, .55); }
+html[data-look="case"] #sim { background: var(--veil); }
 html[data-look="board"] #sim { background: rgba(4, 6, 10, .93); }
 .simbox { position: relative; width: min(820px, 100%); max-height: 100%; overflow: auto; padding: clamp(18px, 3vw, 28px); }
 html[data-look="case"] .simbox { background: var(--surface); box-shadow: 0 30px 60px rgba(0, 0, 0, .3); }
@@ -355,6 +372,12 @@ footer .wrap { padding-block: 18px 34px; }
           <button type="button" data-look="case" aria-pressed="false">Case Files</button>
           <button type="button" data-look="board" aria-pressed="false">Threat Board</button>
           <a id="plainlink" href="explorer.html">Plain</a>
+        </div>
+        <div class="switch only-case" role="group" aria-label="Paper (light or dark)" id="paper">
+          <span class="lab">Paper</span>
+          <button type="button" data-paper="light" aria-pressed="false">Light</button>
+          <button type="button" data-paper="dark" aria-pressed="false">Dark</button>
+          <button type="button" data-paper="auto" aria-pressed="false" title="Follow your device setting">Auto</button>
         </div>
         <button class="sound only-board" id="sound" aria-pressed="false">Sound off</button>
         <a href="index.html">Home</a>
@@ -427,16 +450,28 @@ function blip(f = 880, d = .05, type = "square", v = .03) {
 }
 $("#sound").onclick = e => { soundOn = !soundOn; e.currentTarget.setAttribute("aria-pressed", soundOn); e.currentTarget.textContent = soundOn ? "Sound on" : "Sound off"; blip(660, .08, "sine", .05); };
 
+/* ---------- paper: light, dark, or follow the device (Case Files) ---------- */
+const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+function setPaper(pref) {
+  const root = document.documentElement;
+  root.dataset.paperPref = pref; store.set("grc-paper", pref);
+  root.dataset.paper = pref === "auto" ? (darkQuery.matches ? "dark" : "light") : pref;
+  document.querySelectorAll("#paper button").forEach(b => b.setAttribute("aria-pressed", b.dataset.paper === pref));
+}
+document.querySelectorAll("#paper button").forEach(b => b.addEventListener("click", () => setPaper(b.dataset.paper)));
+darkQuery.addEventListener?.("change", () => { if (document.documentElement.dataset.paperPref === "auto") setPaper("auto"); });
+setPaper(document.documentElement.dataset.paperPref || "auto");
+
 /* ---------- look switching (keeps the current view and company) ---------- */
 function setLook(look, fromUser) {
   LOOK = look; document.documentElement.dataset.look = look; store.set("grc-look", look);
   document.title = look === "board" ? "Santos Threat Board" : "Santos Case Files";
-  document.querySelectorAll(".switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.look === look));
+  document.querySelectorAll(".switch button[data-look]").forEach(b => b.setAttribute("aria-pressed", b.dataset.look === look));
   history.replaceState(null, "", `?look=${look}${location.hash}`);
   if (look === "board") boot(); else $("#boot").hidden = true;
   if (fromUser) { route(true); blip(520, .1, "triangle", .04); }
 }
-document.querySelectorAll(".switch button").forEach(b => b.addEventListener("click", () => { if (b.dataset.look !== LOOK) setLook(b.dataset.look, true); }));
+document.querySelectorAll(".switch button[data-look]").forEach(b => b.addEventListener("click", () => { if (b.dataset.look !== LOOK) setLook(b.dataset.look, true); }));
 
 const BOOT = ["CRIS SANTOS COMPANY // GRC OPERATIONS CONSOLE", "", "> mounting 36 sector overlays ............ OK", "> loading 216 entities ................... OK",
   "> indexing 9,645 risk records ......... OK", "> verifying citations against eCFR ........ OK", "> arming notification clocks .............. OK", "", "ALL SYSTEMS NOMINAL."];

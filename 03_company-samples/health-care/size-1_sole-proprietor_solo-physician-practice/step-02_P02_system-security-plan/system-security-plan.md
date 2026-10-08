@@ -44,7 +44,7 @@ Operational. Planned changes: move email and files to a business plan with a BAA
 | Health care administration (claims) | Moderate | Moderate | Low | Financial and identity data; payers accept late claims (P05 MTD 120 h) |
 | **PSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 22 controls that carry the HIPAA safeguards for a one-person practice (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the EHR vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the HIPAA safeguards for a one-person practice (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the EHR vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's EHR/PM account settings and user roles, the email and file account, the cloud fax account, the laptop, tablet, and phone, the suite's use of the building Wi-Fi, and paper records in the suite.
@@ -75,12 +75,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 22 controls:
-- Implemented: 9
-- Partially implemented: 11
+See `control-implementation.csv`. Summary of 26 controls:
+- Implemented: 11
+- Partially implemented: 13
 - Planned: 2
 
-Inheritance: 3 fully inherited from the EHR vendor (AC-3, AU-2, SC-5), 12 hybrid (vendor operates the mechanism, the owner configures or uses it correctly), and 7 the owner's alone (AC-11, AT-2, AU-6, CP-2, IR-8, RA-3, SA-9).
+Inheritance: 4 fully inherited from the vendors (AC-3, AU-2, AU-9, SC-5), 13 hybrid (vendor operates the mechanism, the owner configures or uses it correctly), and 9 the owner's alone (AC-11, AT-2, AU-6, CA-2(1), CM-3, CP-2, IR-8, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

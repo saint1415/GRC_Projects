@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Defense Industrial Base | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A (a government-community offering, FedRAMP authorized at High, used for everything that holds CUI) and provider B (a commercial offering, used only for non-CUI workloads). Vendor-agnostic; see section 5.
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A (a government-community offering, FedRAMP authorized at High, used for everything that holds CUI) and provider B (a commercial offering, used only for non-CUI workloads). Vendor-agnostic; see section 6.
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones), the GCEE (the SSP system in P02), and the division workloads that run on or connect to the platform.
 
 ## 1. Design in one paragraph
@@ -112,7 +112,15 @@ flowchart LR
 
 **Target state (POAM-006, POAM-005, POAM-013, POAM-009, due 2026-11-30 to 2027-03-31):** the SYS-D4 export is stopped and Aircraft Parts sustainment data lives in the GCEE until SYS-D4 shows FedRAMP Moderate equivalency; every thick workstation carries its CMMC asset category; Program H has its own download and egress baselines; the HPC link has an interconnection agreement and hardened nodes; Plant 9 connects only after migration.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions sign in through the group identity platform, SYS-G1, and get their own accounts inside the provider A landing zone. No division has its own identity tenant.
+- **Split by data, not by division.** SYS-G1 has a government-community tenant for every CUI environment and a commercial tenant for other workforce use. SYS-D3 has its own authorization boundary but inherits SYS-G1 to SYS-G3, as documented in its package.
+- **Why.** CUI in an external cloud must meet FedRAMP Moderate equivalency (DFARS 252.204-7012(b)(2)(ii)(D)), so the boundary is drawn around CUI. One CUI identity tenant lets group internal audit assess it once.
+- **What limits blast radius.** Administrators use hardware security keys and just-in-time PAM elevation with session recording. A U.S.-person attribute is required before any CUI group. Cloud roles are federated from SYS-G1 with no long-lived user keys, and provider B guardrails block CUI. The backup vault uses a separate backup identity.
+- **Known gaps.** One tenant serves every CUI system and still has global administrator roles (GR-19). 31 GCEE service accounts are still managed by hand (POAM-001).
+- **Cross-division risks:** GR-01, GR-02, GR-19 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 52 rows across 30 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -131,7 +139,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. What a division does with CUI, its plant and test equipment, and its customer-facing services are **division-specific**, because they depend on each division's contracts, regulators, and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1 government-community tenant, cloud IAM | SYS-D4 customer tenant federation, Program H access group | AC-2, AC-3, AC-6(5), IA-2(1) | Customer (configuration); vendor (service) |
@@ -142,7 +150,7 @@ flowchart LR
 | On premises and OT | Private links | Plant networks, machines, USB transfer, Plant 9 | SC-7, MP-7, CM-8, SC-13 | Customer |
 | Physical | Provider data centers | Plant and center floors (in plant SSPs) | PE-3, MP-6 | Provider (inherited) for the cloud |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation. Where CUI is involved, the group uses each provider's government-community offering, not its commercial one.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -158,7 +166,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data. For CMMC, the group references each CUI-holding provider's customer responsibility matrix in the SSP (32 CFR 170.17(c)(5)(iii)).
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The weakest placement is a sister division, not a vendor.** Aircraft Parts sends sustainment CUI to SYS-D4, which runs on a FedRAMP-authorized platform but is not itself FedRAMP authorized and has 23 open 3PAO findings. Under DFARS 252.204-7012(b)(2)(ii)(D) and 32 CFR 170.19(c)(2), a CSP holding CUI must meet security requirements equivalent to the FedRAMP Moderate baseline. Building on an authorized platform does not make the application authorized (SA-9, CA-2; POAM-006 and POAM-015).
 2. **The OT edge is where common controls stop.** Identity, encryption, and monitoring are strong in the cloud. At the plants, MES and DNC logs are collected at only 4 of 8 connected plants (AU-12), and USB loading at 3 plants lacks device control (MP-7). Specialized Assets are inventoried but two plants' records are incomplete.
 3. **Engineering Services brought systems into scope before bringing controls.** The HPC cluster connects to the GCEE without an interconnection agreement or a hardened baseline (CA-3, CM-2), and field laptops are a path for CUI to leave the GCEE (AC-20).

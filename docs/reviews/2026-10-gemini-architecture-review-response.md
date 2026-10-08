@@ -234,11 +234,13 @@ Every fix is documentation or a one-row fact. No verdict, risk score, or count c
 
 ## Backlog
 
-1. **3.1:** add explicit tailoring rows (AC-5, AU-9, CM-3, CA-2(1)) with named compensating controls to the 36 size-1 `step-02_P02_system-security-plan/control-implementation.csv` files.
-2. **3.3:** add a "Tenancy and identity decision" paragraph to the 36 size-6 `step-03_P04_cloud-control-mapping/cloud-architecture.md` files, following Fix F.
-3. **1.1:** add "License transfer and ownership" rows to the nuclear size-5 and size-6 facts files (10 CFR 50.80 consent on any future change of control).
-4. **4.3:** re-verify DFARS class deviation 2024-O0013 on acq.osd.mil when reachable, and add it to `00_universal-framework/sources/source-register.csv` if confirmed.
-5. **2.1:** check the ISO/IEC 27001:2022 clause order against a licensed copy before citing ISO in the build guide.
+Status as of 2026-10-08.
+
+1. **3.1: Done.** All 36 size-1 `control-implementation.csv` files now have one row each for AC-5, AU-9, CM-3, and CA-2(1). Each row starts "Compensating control (one-person business)" and uses only that sample's own facts. Statuses are honest: most are Partially implemented, because the outside review in POL-01 has not happened yet. The SSP control counts and summaries were updated to match.
+2. **3.3: Done.** All 36 size-6 `cloud-architecture.md` files have a "Tenancy and identity decision" section (section 3; later sections renumbered). Most groups share one identity platform with separate accounts per division. Separate tenants with their own identities exist only where a rule requires a separate boundary, such as CUI enclaves under DFARS 252.204-7012(b)(2)(ii)(D) and 32 CFR 170.16(c)(2). Each section names the cross-division risk IDs and open POA&M items.
+3. **1.1: Done.** The nuclear size-5 and size-6 facts files have "License transfer and ownership" rows (10 CFR 50.80(a), 50.80(b)(1)(i), 50.38).
+4. **4.3: Still open, blocked.** The DoD class deviation pages on acq.osd.mil fail TLS verification from the build environment, and a second fetch path returned HTTP 503. Secondary sources agree that Class Deviation 2024-O0013 (Revision 1) still ties 252.204-7012 to SP 800-171 Rev. 2. It is not added to the source register until the primary text is read. **New finding while checking:** secondary sources report that DoD suspended CMMC Phase 2 (set for 2026-11-10) through Class Deviation 2026-O0025 (Revision 3 signed 2026-09-03). 42 samples cite the Phase 2 date. This is logged on the `PLAN.md` watch list; no sample changes until the primary text is read.
+5. **2.1: Closed, no change.** The build guide does not cite ISO/IEC 27001. Check the clause order against a licensed copy before any future citation.
 
 ## Not adopted
 

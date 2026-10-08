@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Energy | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate platform (SYS-G1 to SYS-G3 and the group data platform SYS-G6) plus the division workloads that run on it, and the on-premises OT systems those workloads connect to. The SSP system (P02) is the Pipeline SCADA and Gas Control System (PSGCS), which stays on premises.
 
 ## 1. Design in one paragraph
@@ -117,7 +117,15 @@ flowchart LR
 
 **Target state:** SYS-T4 moves into a dedicated measurement enclave with its own identity store, so a corporate directory compromise no longer reaches a server that touches OT (POAM-007, due 2027-06-30); the OT remote access gateway is split by division (POAM-001); leak-detection model changes enter the control room management of change (POAM-010, POAM-026).
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+- **Decision.** All three divisions federate to the group identity platform, SYS-G1, which includes the corporate directory and the OT remote access gateway. Divisions get their own accounts inside the landing zone. No division has its own identity tenant today.
+- **OT stays out.** OT never runs in the cloud. SCADA, station control, and field SCADA stay on premises behind OT DMZs, and the cloud receives one-way historian replicas only.
+- **Why.** One identity platform lets group internal audit assess it once. The planned exception is gas measurement (SYS-T4): it moves into a dedicated measurement enclave with its own identity store, so a corporate directory compromise no longer reaches a server that touches OT (POAM-007, due 2027-06-30).
+- **What limits blast radius.** Phishing-resistant MFA for administrators and OT gateway users, and just-in-time PAM elevation with session recording. The central OT DMZ broker pushes one way and accepts no inbound sessions from IT except PAM landing. Vendor sessions are enabled per ticket and recorded. Integrity Data Platform clients federate from their own identity providers or use IDP accounts with MFA.
+- **Known gaps.** One OT remote access gateway serves three divisions, separated by policy only (GR-02, POAM-001). OT gateway accounts are not yet in quarterly certification (POAM-002). Integrity Services engineers hold standing read access to the Transmission historian replica (POAM-021).
+- **Cross-division risks:** GR-02, GR-12, GR-15 in [risk-register.csv](../step-04_P01_risk-register/risk-register.csv).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 48 rows across 34 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -136,7 +144,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, the OT remote access gateway, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Application behavior, data access inside an application, customer-facing identity (shippers, clients), and anything that connects to OT are **division-specific**, because they depend on each division's regulators and customers.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | Division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, corporate directory, OT remote access gateway, cloud IAM | Shipper identity (SYS-T5), client identity (SYS-E1), SCADA local accounts (PSGCS) | AC-2, AC-3, AC-6(5), AC-17, IA-2(1) | Customer (configuration); vendor (identity service) |
@@ -147,7 +155,7 @@ flowchart LR
 | SaaS dependencies | Identity, SIEM, EDR vendors | Hydrocarbon accounting SaaS | SA-9, AC-2 | Provider for the service; customer for use and oversight |
 | Physical | Provider data centers; group data centers | Gas control centers and stations (PSGCS, on premises) | PE-3 | Provider for its facilities; group for its own |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -164,7 +172,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The cloud is not where the OT risk is; the seams are.** SCADA never runs in the cloud and replicas flow one way. The two weak placements are on premises: gas measurement servers that are corporate-directory members yet receive data from the OT DMZ (SC-7; POAM-007), and one remote access gateway shared by three divisions (AC-17; POAM-001).
 2. **The Integrity Data Platform is sound as a platform but not yet as an SSI store.** Tenant isolation, encryption, and standby are in place (AC-3, SC-28, CP-7). What is missing is SSI labeling and need-to-know enforcement for the Transmission division's and 9 designated clients' SSI (POAM-019), and enforced deletion of assessment evidence (MP-6; POAM-020).
 3. **The group data platform is where AI meets OT.** It trains the leak-detection model that controllers see. Its release process is sound (signed packages, SI-7), but it is not linked to control room change management (CM-3; POAM-026).

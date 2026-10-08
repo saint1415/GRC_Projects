@@ -1,6 +1,6 @@
 # Cloud Architecture and Control Placement: Cris Santos Company Holdings | Admin and Support Services | Multi-Sector
 
-**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 5)
+**Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector | **Providers:** two public cloud providers, called provider A and provider B (vendor-agnostic; see section 6)
 **Scope:** the shared corporate cloud platform (SYS-G3 landing zones), the Group Workforce Platform (GWP, SYS-G4) that runs on it and on SaaS, and the division workloads. The SSP system (P02) is the GWP.
 
 ## 1. Design in one paragraph
@@ -112,7 +112,18 @@ flowchart LR
 
 **Target state (POAM-006, POAM-008, POAM-010, due 2026-12-31 to 2027-03-31):** the visit-pay interface sends an anonymous visit ID, date, and visit type only, and existing patient identifiers are purged from the payroll engine and data hub; associate bank changes require an app-based or passkey authenticator plus out-of-band confirmation; the I-9 archive has object-level access logging; integration service accounts use workload identity.
 
-## 3. Common versus division-specific controls
+## 3. Tenancy and identity decision
+**Decision.** All three divisions and the GWP share the group identity platform (SYS-G1). Each gets its own accounts inside the SYS-G3 landing zone, and cloud roles are federated from SYS-G1. No division has a separate tenant with its own identity. The Consulting Federal Solutions enclave is a separate account in provider B with its own firewall and no route to other division accounts, but its cloud roles still come from SYS-G1.
+
+**Reason.** One identity platform lets HR events drive accounts for every division and lets group internal audit assess the common controls once. The sample names no rule or contract that requires a separate tenant. The enclave holds federal contract information under FAR 52.204-21, and the sample isolates it by account and network path, not by identity.
+
+**What limits blast radius.** Administrators use phishing-resistant hardware keys and just-in-time PAM elevation with session recording. Cloud IAM has no local users except sealed break-glass accounts. The immutable backup vault uses a separate backup identity, and workload administrators cannot delete logs in the write-once archive.
+
+**Known gaps.** About 1,400 E-Verify users sit outside SSO (POAM-001), 41 integration service accounts use static secrets (POAM-002), and kiosks at 61 branches share the staff network (GR-13).
+
+Cross-division risks: GR-07 (compromise of SYS-G1 or a privileged account), GR-02 (ransomware halts pay for every division), GR-13 (pivot from branch kiosks).
+
+## 4. Common versus division-specific controls
 `cloud-control-map.csv` has 52 rows across 32 components. The `control_scope` column shows who owns each placement:
 
 | Scope | Rows | What it means |
@@ -131,7 +142,7 @@ flowchart LR
 
 **Rule of thumb.** Identity, network guardrails, logging, keys, backups, and EDR are **common**. A division cannot opt out of them, only request an exception through POL-01. Data access inside an application, client and patient-facing identity, and anything a division's own regulator or client contract governs (the Federal Solutions enclave under FAR 52.204-21, the Home Health EHR under HIPAA, the VMS tenant under client contracts) are **division-specific**.
 
-## 4. Layers
+## 5. Layers
 | Layer | Common components | GWP and division components | Key controls | Responsibility |
 |---|---|---|---|---|
 | Identity | SYS-G1, cloud IAM | Associate self-service, candidate accounts, client portal users, client-issued consultant accounts | AC-2, AC-3, AC-6(5), IA-2(1), IA-2(2), AC-20 | Customer (configuration); vendor (service) |
@@ -142,7 +153,7 @@ flowchart LR
 | SaaS dependencies | Identity and SIEM vendors | ATS, onboarding, credentialing, AI add-on, VMS, EHR | SA-9, CP-9, AC-3, SI-12 | Provider for the service; customer for configuration, use, and oversight |
 | Physical | Provider data centers | Branch and agency offices (outside cloud scope) | PE-3, MP-6 | Provider (inherited) |
 
-## 5. Service categories and provider equivalents
+## 6. Service categories and provider equivalents
 The design does not depend on a provider. This table gives each provider's name for each service category, for reading its shared responsibility documentation.
 
 | Service category | AWS | Microsoft Azure | Google Cloud |
@@ -158,7 +169,7 @@ The design does not depend on a provider. This table gives each provider's name 
 
 Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_universal-framework/sources/source-register.csv`. All three agree on the split used here: for IaaS the provider owns facilities, hosts, and virtualization; for PaaS the provider also owns the runtime; for SaaS the provider owns the application. The customer always keeps identities, access decisions, data classification, and data.
 
-## 6. Findings from the mapping
+## 7. Findings from the mapping
 1. **The GWP's weak points are data scope and authentication, not encryption.** Encryption and tokenization are sound (SC-28, SC-12). The gaps are patient data that should never have entered payroll (AC-4, PT-3, CM-12; POAM-006, POAM-013) and an SMS one-time code guarding bank changes for 1.1 million self-service users (IA-2(2); POAM-008).
 2. **Much of the GWP is SaaS, so vendor oversight is a control, not paperwork** (SA-9). The ATS, onboarding, and credentialing vendors provide SOC 2 Type 2 reports; the AI ranking add-on vendor provides none and may train on candidate data (POAM-012).
 3. **E-Verify sits outside every boundary.** It is a DHS website used by about 1,400 named users. The group cannot federate it, so account control depends on the termination checklist and quarterly reviews (POAM-001).

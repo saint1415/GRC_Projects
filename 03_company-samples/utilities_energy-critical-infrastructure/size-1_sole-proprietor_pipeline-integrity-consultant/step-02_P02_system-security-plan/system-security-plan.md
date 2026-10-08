@@ -48,7 +48,7 @@ Operational. Planned changes: password manager and accounting MFA (2026-09-15); 
 | Business and subcontractor records (invoices, W-9s) | Moderate | Low | Low | Social Security numbers of 5 individuals (Fla. Stat. 501.171) |
 | **CBSS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the SSI duties, the Client A addendum, and basic hygiene for a one-person firm (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system.
+**Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the SSI duties, the Client A addendum, and basic hygiene for a one-person firm (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's suite tenant and its settings, the laptop, the phone, the USB backup drive and any vendor drive while in the owner's custody, the accounting SaaS account, the AI tool trial account (being closed), the home office network as used for work, and paper client files in the home office.
@@ -81,12 +81,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
-- Implemented: 7
-- Partially implemented: 14
-- Planned: 5
+See `control-implementation.csv`. Summary of 30 controls:
+- Implemented: 9
+- Partially implemented: 15
+- Planned: 6
 
-Inheritance: 2 fully inherited from the suite provider (AU-2, SC-5), 9 hybrid (a provider runs the mechanism, the owner configures or uses it correctly), and 15 the owner's alone.
+Inheritance: 3 fully inherited from the suite provider (AU-2, AU-9, SC-5), 10 hybrid (a provider runs the mechanism, the owner configures or uses it correctly), and 17 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

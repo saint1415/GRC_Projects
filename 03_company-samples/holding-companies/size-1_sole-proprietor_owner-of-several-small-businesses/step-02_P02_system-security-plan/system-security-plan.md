@@ -47,7 +47,7 @@ Operational. Planned changes: password manager and app-based MFA (2026-09-15); b
 | Business operations and correspondence (email, contracts) | Moderate | Moderate | Moderate | Email is the recovery path for every system (P05 BP-01, MTD 24 h) |
 | **SBP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 22 controls a one-person back office can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the accounting service's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 26 controls a one-person back office can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the accounting service's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the suite tenant and its settings, the four accounting company files, the online banking profile, the payroll accounts, the owner's administrator access to the three LLC systems, the AI assistant add-on, the owner's laptop and phone, the Storage office desktop, the Laundry POS tablet, the routers at the three sites, the gate controller, and paper move-in forms.
@@ -81,12 +81,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 22 controls:
-- Implemented: 5
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 26 controls:
+- Implemented: 6
+- Partially implemented: 18
 - Planned: 2
 
-Inheritance: 2 fully inherited from the SaaS vendors (AC-3, AU-2), 11 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 9 the owner's alone (AC-6, AT-2, AU-6, CM-8, CP-2, IR-8, MP-6, RA-3, SA-9).
+Inheritance: 3 fully inherited from the SaaS vendors (AC-3, AU-2, AU-9), 12 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 11 the owner's alone (AC-6, AT-2, AU-6, CA-2(1), CM-3, CM-8, CP-2, IR-8, MP-6, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

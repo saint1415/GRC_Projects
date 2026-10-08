@@ -51,7 +51,7 @@ Operational. Planned changes: MFA on the accounting SaaS and router portal (2026
 | Business records (quotes, invoices, remittance details, tax records) | Moderate | Moderate | Low | Payment fraud and financial loss; can wait 72 hours (P05 BP-04) |
 | **FSBS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the customer contract duties and the High risks for a one-person business (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. The integrity rating would rise to High if the owner ever became responsible for a machine's safety functions; that would be a new contract and a new assessment.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the customer contract duties and the High risks for a one-person business (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`). The integrity rating would rise to High if the owner ever became responsible for a machine's safety functions; that would be a new contract and a new assessment.
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's tenant settings and accounts in the productivity suite, accounting SaaS, router cloud portal, and vibration analytics SaaS; the service laptop and its virtual machine; the phone; the field connection kit (cables, adapters, 8 USB sticks, a small switch); the router at Customer B (owner property); the home office network as the owner uses it; the paper file cabinet.
@@ -86,12 +86,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 3 (IA-2, MA-4, RA-3)
-- Partially implemented: 17
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 4 (AU-9, IA-2, MA-4, RA-3)
+- Partially implemented: 20
 - Planned: 4 (AC-6, AT-2, MP-6, SI-7)
 
-Inheritance: none fully inherited at the control level; 8 hybrid (a provider or Customer A operates the mechanism and the owner configures or uses it correctly: AC-2, AC-17, CP-9, IA-2, IA-2(1), SC-28, SI-2, SI-3) and 16 the owner's alone.
+Inheritance: none fully inherited at the control level; 10 hybrid (a provider or Customer A operates the mechanism and the owner configures or uses it correctly: AC-2, AC-5, AC-17, AU-9, CP-9, IA-2, IA-2(1), SC-28, SI-2, SI-3) and 18 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

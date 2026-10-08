@@ -44,7 +44,7 @@ Operational. Planned changes: password manager and MFA on every account (2026-08
 | Billing records | Low | Low | Low | No card numbers (processor-hosted page); BIA MTD 336 h (BP-04) |
 | **CBSS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the COPPA security program and Florida duties for a one-person business (`control-implementation.csv`). PT-4 and PT-5 come from the SP 800-53B privacy baseline because COPPA is mainly a notice and consent rule. Other Moderate controls are either inherited from the SaaS vendors (evidence: the client-management SaaS SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the COPPA security program and Florida duties for a one-person business (`control-implementation.csv`). PT-4 and PT-5 come from the SP 800-53B privacy baseline because COPPA is mainly a notice and consent rule. Other Moderate controls are either inherited from the SaaS vendors (evidence: the client-management SaaS SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's account settings and member lists in SYS-01 to SYS-04 and SYS-08, the AI assistant account (SYS-09), the laptop, the phone, the home router settings, and paper worksheets and notes at home.
@@ -79,12 +79,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 4
-- Partially implemented: 16
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 5
+- Partially implemented: 19
 - Planned: 4
 
-Inheritance: 1 fully inherited from the SaaS vendors (AC-3), 10 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 13 the owner's alone (AC-11, AT-2, AU-6, CP-2, IA-5, IR-8, MP-6, PL-4, PT-4, PT-5, RA-3, SA-9, SI-12).
+Inheritance: 2 fully inherited from the SaaS vendors (AC-3, AU-9), 10 hybrid (the vendor provides the mechanism and the owner configures or uses it), and 16 the owner's alone (AC-5, AC-11, AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-8, MP-6, PL-4, PT-4, PT-5, RA-3, SA-9, SI-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |
