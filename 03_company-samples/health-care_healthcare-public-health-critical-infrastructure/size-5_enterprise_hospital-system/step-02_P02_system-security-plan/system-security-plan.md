@@ -80,6 +80,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Baseline.** The ECIS uses the **SP 800-53B High baseline**. `control-implementation.csv` documents **212 controls**: all 188 base controls of the High baseline and 24 control enhancements selected because they carry the most risk for this system (account automation, MFA, backups, recovery, integrity checks). The remaining 158 High-baseline enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. Program management (PM) controls are documented once at the enterprise level, and privacy-baseline controls are documented in the enterprise privacy program (PL-11).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-01-IE, SYS-01-GW, SYS-01-BCA, SYS-01-PORT and SYS-15) and the prior SSP version 2.0 (EV-060).
+
 **Inside the boundary:** EHR database, application, and presentation servers in DC-1 and DC-2; the integration engine cluster; clinical device integration gateways; BCA downtime computers; the portal and FHIR API front end in its Cloud provider A workload account; the SYS-15 configuration; and EHR configuration for the SL-1 affiliate environment.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -198,7 +200,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Patients:** portal accounts with identity verification at enrollment and MFA offered; MFA required for proxy access.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud and data center architecture (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware and diversion runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio and sepsis model assessment (P10), ECIS contingency plan v6, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud and data center architecture (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware and diversion runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio and sepsis model assessment (P10), ECIS contingency plan v6 (EV-024), prior SSP version 2.0 and configuration management plan v3 (EV-060), enterprise common control catalog (EV-071). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **BCA:** business continuity access (read-only downtime computers with recent patient reports)

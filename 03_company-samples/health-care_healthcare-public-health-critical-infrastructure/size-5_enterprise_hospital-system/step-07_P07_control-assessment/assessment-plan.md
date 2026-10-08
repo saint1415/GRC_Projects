@@ -80,6 +80,18 @@ Internal Audit used **attribute sampling** for controls that operate on a popula
 
 Random selections used the audit software's seeded random number generator; seeds and selections are in the workpapers (EV references).
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; POL-02 to POL-05 were approved on 2026-08-24 and POL-01 on 2026-09-15, and the set takes effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy hierarchy in force (EV-028), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 286 (250 Satisfied, 36 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: detection of results misfiled or changed between analyzer and chart (SI-07a.[03]), a defined response to such changes (SI-07b.[03]), and monitoring of staffing agency compliance with security terms (PS-07e.) | 3 |
+| **Total** | | **289** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example the PAM and identity governance records, EV-003 and EV-004, the HR and staffing records, EV-005 and EV-006, and the ECIS change records, EV-057) and were refreshed to 2026-06-30 at kickoff.
+
 ## 3. Methods and objects
 - **Examine:** policies and standards (P06), the SSP (P02), identity governance and PAM records, EHR security class matrix and audit trails, change records, backup and recovery test reports, vulnerability scans, the vendor register, the incident response plan, materiality playbook, and disclosure committee minutes, the unified emergency plan and downtime procedures.
 - **Interview:** Vice President, Clinical Applications; EHR Technical Director; Chief Nursing Officer; Chief Medical Information Officer; Director of Security Operations; Director of Identity and Access Management; Director of Clinical Engineering; Vice President, Emergency Management; General Counsel; CFO; COO; CISO; 20 randomly selected nurses and ED staff.

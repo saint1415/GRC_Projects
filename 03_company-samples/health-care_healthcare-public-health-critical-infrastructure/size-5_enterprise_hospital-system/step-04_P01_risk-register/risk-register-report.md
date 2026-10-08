@@ -46,8 +46,8 @@
 Patient-safety risks (ER-05) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the health sector threat picture (ransomware against hospitals, third-party concentration, medical devices), the BIA (P05), the gap analysis (P03), the Internal Audit assessment (P07), and the AI review (P10).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the health sector threat picture (ransomware against hospitals, third-party concentration, medical devices) in the SOC's threat intelligence (EV-070), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-029), and risk workshops with the SOC, Clinical Engineering, the Integration Management Office, Revenue Cycle, Emergency Management, the Laboratory, Pharmacy, Third-Party Risk, Digital Health, Data Center Operations and Finance (EV-083). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings. The Internal Audit assessment (P07) fed the second pass, and the AI review (P10) updated the AI risks.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-022), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, the gap analysis samples, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). Any plausible patient harm or forced diversion at more than one hospital is Very High.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -70,6 +70,8 @@ By threat source type: Adversarial 32, Structural 22, Accidental 11, Environment
 By treatment: Mitigate 55, Accept 10, Avoid 1.
 By status: In progress 51, Open 5, Closed (accepted) 10.
 **26 risks are outside tolerance**, and each has a dated treatment plan. 26 risks are reported to the board (every High and Very High risk, and every risk outside tolerance).
+
+**Two passes.** Pass 1 was completed on 2026-06-26 from the intake evidence and the May and June fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-056 was added on 2026-08-07 after testing found default vendor passwords on 2 of 16 device integration gateways (EV-IA-5), and the risks that P07 tested were updated with the results (R-012, R-013, R-027, R-030, R-057 and R-058; their `last_reviewed` date is 2026-08-07 and their `likelihood_basis` cites the P07 evidence ID). The AI review (P10) updated R-010, R-035, R-036 and R-038 on 2026-08-14. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low or below | Exposure (highest) | Tolerance | Outside tolerance |
@@ -106,12 +108,12 @@ By status: In progress 51, Open 5, Closed (accepted) 10.
 | R-056 | Default vendor passwords on clinical device integration gateways let an attacker change device data feeding the EHR | High | ER-05 | Change passwords and vault them; check every gateway quarterly (POAM-010) | Director of Clinical Engineering | 2026-10-31 |
 
 ## 6. Themes from the 2026 analysis
-1. **Recovery when both data centers are hit (ER-01).** Failover works, but ransomware that reaches the shared directory affects DC-1 and DC-2 together. The 41-hour vault restore and the unfinished isolated recovery environment (R-004) are the main reason R-001 is Very High.
-2. **Diversion and downtime at scale (ER-05).** EMTALA lets a hospital divert ambulances only when it lacks the staff or facilities to accept more emergency patients, and anyone who arrives must still be screened (42 CFR 489.24). Only H-01 has agreed IT-outage criteria, and no exercise has tested several hospitals in downtime at once (R-009, R-018, R-043, R-058).
-3. **H-08 integration (ER-04).** The acquired hospital's flat network, legacy directory, partial EDR, and missing log feeds raise the likelihood of R-001 and R-003 until the 2027-03-01 conversion.
-4. **Medical devices (ER-05).** About 88% of 41,000 networked devices are inventoried and about 2,600 run unsupported operating systems (R-006, R-007). Testing found default passwords on 2 device integration gateways (R-056), which went into this register as a new risk.
-5. **Third parties (ER-03).** Clearinghouse concentration (R-005) and 41 overdue vendor reassessments (R-019).
-6. **AI (ER-08).** The sepsis model's version 2 update went live without local revalidation (R-010); P10 measured subgroup gaps and set conditions.
+1. **Recovery when both data centers are hit (ER-01).** Failover works, but ransomware that reaches the shared directory affects DC-1 and DC-2 together. The 41-hour vault restore and the unfinished isolated recovery environment (R-004; EV-023, EV-024) are the main reason R-001 is Very High.
+2. **Diversion and downtime at scale (ER-05).** EMTALA lets a hospital divert ambulances only when it lacks the staff or facilities to accept more emergency patients, and anyone who arrives must still be screened (42 CFR 489.24). Only H-01 has agreed IT-outage criteria, and no exercise has tested several hospitals in downtime at once (R-009, R-018, R-043, R-058; EV-052, EV-089).
+3. **H-08 integration (ER-04).** The acquired hospital's flat network, legacy directory, partial EDR, and missing log feeds raise the likelihood of R-001 and R-003 until the 2027-03-01 conversion (EV-007, EV-010, EV-013, EV-021, EV-056).
+4. **Medical devices (ER-05).** About 88% of 41,000 networked devices are inventoried and about 2,600 run unsupported operating systems (R-006, R-007; EV-012). Testing found default passwords on 2 device integration gateways (R-056; EV-IA-5), which went into this register as a new risk.
+5. **Third parties (ER-03).** Clearinghouse concentration (R-005; EV-041) and 41 overdue vendor reassessments (R-019; EV-038).
+6. **AI (ER-08).** The sepsis model's version 2 update went live without local revalidation (R-010; EV-078); P10 measured subgroup gaps and set conditions.
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q2), about $7.4 million:** isolated recovery environment and restore automation ($2.6M), H-08 SD-WAN, EDR, encryption, and identity work ahead of conversion ($1.3M), medical device replacement brought forward ($1.9M), device discovery and NAC at H-06 to H-08 ($780K), service account vaulting ($310K), clearinghouse surge contract and fallback test ($220K), sepsis model revalidation and monitoring ($160K), and outside counsel for the joint disclosure tabletop ($45K). Items map to the POA&M in P07.
