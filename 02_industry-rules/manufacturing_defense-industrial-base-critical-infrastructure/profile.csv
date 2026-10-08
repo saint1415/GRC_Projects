@@ -3,10 +3,10 @@ regulators,SRMA: Department of Defense (DoD); DoD CIO - CMMC Program Management 
 primary_regulation,CMMC Level 2 / NIST SP 800-171 Rev. 2
 primary_regulation_citation,32 CFR Part 170; 48 CFR 252.204-7012 and 252.204-7021
 primary_regulation_url,https://www.ecfr.gov/current/title-32/part-170
-primary_regulation_rationale,"Direct analogue to the HIPAA Security Rule for the DIB: binding, 110 enumerated requirements with a defined assessment methodology and scoring, third-party certification (C3PAO) becoming a condition of award from Phase 2 (Nov. 10, 2026)."
+primary_regulation_rationale,"Direct analogue to the HIPAA Security Rule for the DIB: binding, 110 enumerated requirements with a defined assessment methodology and scoring, and a third-party certification (C3PAO) path. The Phase 2 start that would have made C3PAO certification a condition of award (Nov. 10, 2026) was suspended by the DoD (Department of War) CIO memorandum of 2026-07-13 (DoD Class Deviation 2026-O0025, Revision 3)."
 sensitive_data,Controlled Unclassified Information (CUI) / Covered Defense Information; Controlled Technical Information; Federal Contract Information (FCI); ITAR technical data; EAR-controlled technology; Classified information (NISPOM)
 critical_systems,"CUI enclaves / GCC-High or FedRAMP Moderate cloud; PLM/CAD and engineering data repositories; MES and CNC/additive manufacturing; ERP (e.g., DCAA-compliant accounting); Classified information systems; Test and evaluation systems"
 ai_specific,
 assurance_alternatives,CMMC assessment (32 CFR Part 170) for DoD contracts; SOC 2 is secondary
-notes,"CMMC phase-in: Phase 1 Nov. 10, 2025; Phase 2 Nov. 10, 2026; Phase 3 Nov. 10, 2027; Phase 4 Nov. 10, 2028. FAR CUI proposed rule (Jan. 15, 2025) not final."
+notes,"CMMC phase-in: Phase 1 Nov. 10, 2025. Phase 2 (planned Nov. 10, 2026) suspended by the DoD CIO memorandum of 2026-07-13; under DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5), clause 252.204-7021 is used until 2028-11-09 only when a program office requires a CMMC level, and from 2028-11-10 whenever FCI or CUI is handled. FAR CUI proposed rule (Jan. 15, 2025) not final."
 last_verified,2026-09-25
