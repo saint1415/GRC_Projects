@@ -10,7 +10,7 @@
 ## 1. Purpose and scope
 Intake collected the hospital's own records before any assessment work began on 2026-07-13. It covers the organization, the systems that create, receive, maintain or transmit ePHI, the building OT that shares their network, the suppliers and contracted clinical groups that touch them, the emergency preparedness program, and the rules that may bind the hospital. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Later steps add their own fieldwork evidence (interviews, scans, tests) to the same register, so one list backs every deliverable.
 
-This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the regulatory analysis (P03) and the control assessment (P07).
 
 ## 2. Sources collected
 | Area | Evidence IDs | System of record | As of |
@@ -65,7 +65,7 @@ This report records **observations, not findings**. Whether an observation meets
 | P02 SSP | The system boundary from the asset inventory; as-found configuration from EV-001, EV-002, EV-006 to EV-017 and EV-020 |
 | P04 Cloud mapping | Cloud and SaaS components (EV-016, EV-021) and provider assurance (EV-018, EV-019) |
 | P01 Risk register | Likelihood inputs from the ticket history (EV-047), configuration exports, the walk-throughs (EV-044, EV-056) and the emergency program records (EV-027 to EV-030) |
-| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the HIPAA Security Rule and 42 CFR 485.625 |
+| P03 Regulatory analysis | The obligations register (which rules apply) and every observation above, compared with the HIPAA Security Rule and 42 CFR 485.625 |
 | P06 Policies | The document request response (EV-035) and the handbook (EV-036) |
 | P07 Control assessment | Populations to sample from (EV-001, EV-003, EV-005, EV-009) |
 | P08 IR runbook | Notification duties from the obligations register; contacts from the vendor register; the insurer's response panel (EV-051) |

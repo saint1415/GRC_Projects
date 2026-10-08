@@ -36,7 +36,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
 Not applicable:
-- 42 CFR Part 2 (C-HPH-R06): the hospital is not a Part 2 program (scoping decision; see `../00_company-facts.md`).
+- 42 CFR Part 2 (C-HPH-R06): the hospital is not a Part 2 program (scoping decision, screened in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) from the license and service list, EV-024).
 - FTC Health Breach Notification Rule (C-HPH-R05): covered entities are excluded (16 CFR 318.1).
 - FDA sec. 524B (C-HPH-R04): applies to device manufacturers; the hospital uses it in purchasing.
 - CIRCIA (C-HPH-R11): proposed only. If finalized as proposed, it would cover critical access hospitals regardless of size.
@@ -82,7 +82,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 The CSF 2.0 column in `control-implementation.csv` lists up to three subcategories from NIST's official CSF 2.0 to SP 800-53 crosswalk (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). Where NIST lists none for a control, the column gives an author mapping labeled as such.
 
 ## 7. Authorization Boundary Description
-The boundary contains hospital-managed components and the hospital's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains hospital-managed components and the hospital's configuration of vendor services:
 - **Inside:** the EHR tenant configuration, user roles, and sepsis model settings; the identity provider tenant; the cloud tenant (3 workloads); the hospital network, phones, and server room; 88 desktops and workstations on wheels, 12 laptops, 16 barcode scanners, and 2 downtime PCs; and the medical devices listed in section 9.
 - **Outside (external services, interconnected):** the EHR vendor's platform, the cloud provider's infrastructure, the clearinghouse, teleradiology group, telepharmacy service, reference laboratory, HIE, state health department, and cloud fax service.
 - **Outside, same network (separate system):** building and clinical OT (SYS-08), owned by the Facilities Manager. It shares the flat network today, which is why segmentation is the first major modification. It is covered in P01 and P04.
@@ -142,7 +142,7 @@ By inheritance: 60 system-specific, 16 hybrid, 4 common/inherited.
 Patients use the EHR vendor's portal with its own identity proofing and MFA. That is governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), gap analysis and CPG benchmark (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor report review (P09), AI assessment (P10), and the hospital's emergency preparedness plan (42 CFR 485.625).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), gap analysis and CPG benchmark (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor report review (P09), AI assessment (P10), and the hospital's emergency preparedness plan (42 CFR 485.625).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement
