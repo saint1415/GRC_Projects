@@ -70,3 +70,14 @@ Primary sources were sought for the 16 sample rows that covered Mastercard, Amer
 Each of the 16 rows now gives the American Express clock and keeps Mastercard and Discover as "per the acquirer's instructions (not verified)". The rows are edited in place. Their `verified` value is `true (American Express DSOP); false (Mastercard, Discover)`, following the existing pattern for mixed rows. The runbook passages for these samples were updated to match.
 
 The 19 Visa sample rows and the 3 vertical card rows said "Other brands' rules not verified". They now say that the DSOP requires notice to American Express within 72 hours of discovery if the business accepts American Express, and that the Mastercard and Discover rules were not verified.
+
+## Follow-up: merchant-agreement card rows in the samples (2026-10-08)
+
+46 sample rows give a duty that comes from a contract: a merchant, payment facilitator or sponsor bank agreement, a client or management agreement, or an intercompany term. Contract terms for fictional companies cannot be checked against a public source, so this review checked whether each row was internally consistent and whether it was useful.
+
+| Rows | Finding | Change |
+|---|---|---|
+| 32 rows with a stated clock: Arts and Entertainment, Hotels and Restaurants, Repair and Personal Services, Retail Trade, and the Information size 6 sponsor bank | Each clock matches the sample's facts, policies and runbooks. Most are 24 hours from suspicion. One client agreement gives 72 hours, one intercompany term gives same day, and one client support term gives 2 business days. No conflicting clock was found. Each is tighter than, or separate from, Visa's 3-day clock | The `verified` label is normalized to `n/a (contract term; fictional)` |
+| 14 rows with no clock: Agriculture sizes 1, 3, 4 and 5; Food and Agriculture size 1; Holding Companies sizes 1, 3, 4 and 5; Commercial Facilities sizes 2 to 6 | They said only "per merchant agreement", and none of these samples has a Visa row, so they carried no clock at all | Each now says the time is not set in the sample. It adds Visa's verified duty: report the compromise to Visa within 3 calendar days of suspicion or confirmation, through the processor or acquirer (What To Do If Compromised v10.0, A.1.1). `verified` is `n/a (contract term not set); true (Visa clock)` |
+
+No new fictional facts were added. The PCI DSS requirement references in these rows (12.9, 12.9.2, 12.10, 12.10.1) and the industry requirement IDs they cite (N44-45-R01, N71-R04, N72-R01, N81-R03) were checked against the industry rules and are consistent.
