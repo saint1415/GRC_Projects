@@ -98,7 +98,7 @@ An exercise scenario, not a real event. Counts are illustrative and come from th
 
 ## 7. Reporting and communication (RS.CO)
 **Follow `notification-matrix.csv` (27 rows).** Counsel approves every external notice (POL-03 4.5). The matrix has four layers:
-1. **Payment system duties (contract):** both acquirers within 24 hours of suspicion, and then card brand instructions through them. Brand rules were not verified for this sample; follow the acquirer.
+1. **Payment system duties (contract):** both acquirers within 24 hours of suspicion. Visa's rules also require the compromise to be reported to Visa within 3 calendar days of suspicion, through the acquirers (Visa What To Do If Compromised v10.0, A.1.1). Other brands' rules were not verified; follow the acquirer.
 2. **Inside the group:** Grocery Retail notifies Financial Services at once (as its agent for the Rewards Card field, Fla. Stat. 501.171(6)(a) gives at most 10 days).
 3. **Each division's own duties to people and regulators:**
    - *Grocery Retail* notifies brand card holders under the law of each state where they reside.

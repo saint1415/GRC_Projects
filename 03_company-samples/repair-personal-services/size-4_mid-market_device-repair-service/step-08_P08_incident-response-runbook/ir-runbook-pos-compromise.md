@@ -90,7 +90,7 @@ The company keeps card data out of its systems by design: card-present payments 
 | Within 24 hours of suspicion | Manufacturer A notice if program customers are involved (variant 3) | Director of Partner Programs |
 | Within 48 hours of discovery | Partner notice if claim data is involved (variant 3) | Director of Partner Programs |
 | Day 0-2 | Report to law enforcement as counsel advises (FBI IC3 or U.S. Secret Service for card and account compromise) | Security Manager through counsel |
-| As directed by the acquirer | Card brand case steps, which may include a PCI Forensic Investigator (brand rules not verified here) | Chief Financial Officer |
+| Within 3 calendar days of suspicion | Visa compromise report through the acquirer, then the incident report within 3 more days; if Visa requires a PCI Forensic Investigator, retain one within 5 business days (Visa What To Do If Compromised v10.0, A.1, A.2, A.5). Other brands as the acquirer directs | Chief Financial Officer |
 | No later than 30 days after determination | Florida individual notices; Department of Legal Affairs notice if 500 or more Floridians | Privacy and Compliance Manager and counsel |
 | Without unreasonable delay | Consumer reporting agencies if more than 1,000 individuals are notified at a single time | General Counsel |
 | Per each state's law | Notices to checkout customers and claimants in other states | Outside breach counsel |

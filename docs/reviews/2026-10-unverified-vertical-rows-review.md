@@ -44,3 +44,15 @@
 ## Follow-up, not in this change
 
 The sample notification matrices (`step-08_P08_incident-response-runbook/notification-matrix.csv`) carry 914 rows marked unverified across 215 samples. Most are contractual or voluntary duties with no public primary source, such as cyber insurance claim notice (188) or voluntary reports to law enforcement. About 30 are card brand rows, which could now cite the Visa rules above.
+
+## Follow-up: card brand rows in the samples (2026-10-08)
+
+The 19 sample notification-matrix rows that cited unverified "card brand rules" now use Visa as the worked example. They cover 18 samples in Agriculture, Food and Agriculture, Construction, Information, Information Technology, Emergency Services, Repair and Personal Services, Retail Trade and Wholesale Trade. The Visa duties are: tell the acquirer immediately; make sure the event is reported to Visa within 3 calendar days of suspicion or confirmation; send the incident report within 3 more calendar days; and retain a PCI Forensic Investigator within 5 business days if Visa requires one. The source is Visa What To Do If Compromised v10.0 (effective 2026-06-25), Sections A.1, A.2, A.3.1, A.5 and A.6, read with Visa Core Rule 10.3.1.2. Each row still says that other brands' rules were not verified. Rows are edited in place, so no row counts changed. Two runbook passages that called the brand rules unverified were updated to match.
+
+The three vertical card rows above now carry the same 3-day clock. Before this change they said only "immediately", which comes from the Core Rules. The guide that rule points to sets the 3-day clock.
+
+Left as they are, by decision:
+- 46 merchant-agreement rows. Their clocks are fictional contract terms for each sample company, so no public source can verify them.
+- 16 rows for Mastercard, American Express and Discover. Mastercard's site returned HTTP 403.
+
+Source note: on 2026-10-08 the Visa URL served version 9.0 (November 2024). Copies of the same URL saved earlier, and the samples, use version 10.0, effective 25 June 2026. The 3-day reporting and incident-report clocks are the same in both versions.
