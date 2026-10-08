@@ -40,7 +40,7 @@ The measures in 101.650(a) to (i) must be "in place and documented" in named sec
 | FAR 52.204-21 (N42-R04) | **Yes** | The clause is in the division's DoD supply contracts, and the division's systems process Federal Contract Information (FCI) |
 | CMMC Level 1 (N42-R02; 32 CFR Part 170) | **Yes** | Final Level 1 (Self) status was entered in SPRS on 2025-11-03. A Level 1 self-assessment must cover every system that processes, stores or transmits FCI (170.19(b)(1)), must MET all requirements with no POA&Ms (170.15(a)(1)), and is repeated and re-affirmed each year (170.15(a)(1); 170.22) |
 | DFARS 252.204-7012 (N42-R03) | **Yes, when covered defense information is present** | The clause is in the contracts. No contract identifies covered defense information to date. CUI-marked drawings received on 2026-06-18 for a quote may be covered defense information if they support performance of a contract; status is being confirmed with the prime contractor. Until then the group treats them as covered |
-| CMMC Level 2 | Not yet | Required only where a contract requires it for CUI; Phase 2 of the phase-in starts 2026-11-10 (N42-R02 status) |
+| CMMC Level 2 | Not yet | Required only where a contract requires it for CUI; Phase 2 (planned for 2026-11-10) is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self) (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5; N42-R02 status) |
 | FAR 52.204-25 (N42-R05) | **Yes** | In the contracts; reporting within 1 business day of identifying covered telecommunications equipment or services |
 | FTC Act Section 5 (N42-R01) | Yes | General |
 | CCPA and CPPA regulations (N42-R08) | No | The 2026 data inventory found no operations, employees or consumers in California |
@@ -143,6 +143,6 @@ High and Moderate gaps are carried into the registers (P01) and the POA&M (P07).
 
 ## 6. Pending regulatory changes
 - **Subpart F:** no change pending for facilities. The final rule asked for comment on delaying implementation for U.S.-flagged vessels only; the Federal Register search on 2026-09-26 found no later rule or proposal, and eCFR shows no version after 2025-07-16.
-- **CMMC phase-in:** Phase 2 begins 2026-11-10, when Level 2 (C3PAO) requirements start to appear in applicable solicitations. It matters only if the division accepts CUI work (P01 FT-013).
+- **CMMC phase-in:** Phase 2 (planned for 2026-11-10, when Level 2 (C3PAO) requirements were to start appearing in applicable solicitations) is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13. Until 2028-11-09 DoD includes clause 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self). SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies to any CUI work (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5). It matters only if the division accepts CUI work (P01 FT-013).
 - **CIRCIA:** final rule not published as of 2026-09-25; not treated as a current obligation (P08 tracks it).
 - The `pending_rule_change` column is "None" on every Subpart F row and notes the CMMC phase-in on the CMMC rows.
