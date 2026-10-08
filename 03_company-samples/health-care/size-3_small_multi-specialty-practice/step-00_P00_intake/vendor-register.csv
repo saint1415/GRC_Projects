@@ -1,0 +1,12 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"EHR/PM, patient portal, e-prescribing",SYS-01,ePHI,BAA signed,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-021; EV-022,
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,None on file,EV-020,Not a business associate (no ePHI)
+V-03,Productivity suite vendor,"Email, files, chat",SYS-03,ePHI (incidental),Subscription terms with BAA addendum,None on file,EV-020; EV-021,
+V-04,Public cloud provider,"IaaS/PaaS for imaging archive, interface engine, backups",SYS-04,ePHI,Customer agreement with BAA,SOC 2 report from the provider portal,EV-021; EV-023,
+V-05,Managed service provider (MSP),"Help desk, patching, backup monitoring",SYS-04; SYS-05; SYS-06,ePHI (administrative access),BAA signed,None on file,EV-020; EV-021,Remote management tool reaches every endpoint
+V-06,Clearinghouse,"Claims, eligibility and remittance",SYS-08,ePHI,BAA signed,None on file,EV-021; EV-024,
+V-07,Reference laboratory,Lab orders and results,SYS-09,ePHI,BAA signed,None on file,EV-021,
+V-08,Cloud fax vendor,Cloud fax,SYS-10,ePHI,None located,None on file,EV-020; EV-021,
+V-09,Telehealth video vendor,Video visits,SYS-10,ePHI,None located,None on file,EV-020; EV-021,
+V-10,AI scribe vendor,Ambient clinical documentation,SYS-11,ePHI,Draft BAA in legal review,None on file,EV-020; EV-021; EV-031,Pilot started June 2026
+V-11,Paper shredding vendor,On-site paper destruction,n/a,PHI on paper,Service agreement,Monthly certificates of destruction,EV-020; EV-027,

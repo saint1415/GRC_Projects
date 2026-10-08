@@ -59,3 +59,9 @@ t6,P07,Common controls plus division samples,Assess common controls once; sample
 t6,P08,Incident spanning divisions,Notification matrix across all division regulators,Runbook plus multi-regulator notification matrix
 t6,P09,Service lines per division,Scoping decisions per division,Readiness report per in-scope division
 t6,P10,Group AI governance program,Group standards; division use cases; regulator-specific rules,AI governance assessment plus inventory
+t1,P00,The owner's records: vendor portals; bank and card statements; the email inbox; the insurer questionnaire,Short evidence list; a one-page inventory of devices; accounts and vendors; applicability of each candidate rule,Evidence list plus one-page inventory
+t2,P00,Vendor admin consoles; payroll provider; MSP reports; contracts folder; insurer questionnaire,Evidence register; asset and vendor inventories; obligations register,Intake workbook plus short report
+t3,P00,Identity provider and endpoint exports; HR roster and terminations; vendor and contract lists; prior assessments; incident log,Dated evidence register; full asset; data and vendor inventories; obligations register with legal basis,Intake workbook plus report
+t4,P00,CMDB or endpoint console; HR system; AP vendor master; contract register; prior audits; scans; incident tickets,Evidence register with owners and as-of dates; inventories reconciled across sources; obligations register,Intake workbook plus report
+t5,P00,Enterprise systems of record across business units; prior audits and exams; internal audit workpapers,Evidence register by business unit; reconciled inventories; obligations register reviewed by counsel,Intake workbook plus report
+t6,P00,Group and division systems of record; shared-service inventories; intercompany agreements,Evidence register per division; group inventories; obligations register per division and for the group,Intake workbooks plus group report

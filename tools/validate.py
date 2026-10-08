@@ -103,6 +103,46 @@ for p in md_files:
         if not (p.parent / target).resolve().exists():
             errors.append(f"{p.relative_to(ROOT)}: broken link {target}")
 
+# ---- evidence-based samples (step-00 intake present): every finding traces to dated evidence
+EV_RE = re.compile(r"\bEV-(?:\d{3}|[A-Z]{2}-\d+(?:\(\d+\))?)")
+JUDGMENT_RE = re.compile(r"\b(not compliant|non-?compliant|gap|deficien\w*|weakness\w*|inadequate|insufficient)\b", re.I)
+INTAKE_FILES = ("evidence-register.csv", "asset-inventory.csv", "vendor-register.csv", "obligations-register.csv", "intake-report.md")
+
+
+def check_evidence_based(sd, intake):
+    where = intake.relative_to(ROOT)
+    for f in INTAKE_FILES:
+        if not (intake / f).exists():
+            errors.append(f"{where}: missing {f}")
+    if not (intake / "evidence-register.csv").exists():
+        return
+    reg = rows(intake / "evidence-register.csv")
+    ids = [r["evidence_id"] for r in reg]
+    for dup in sorted({i for i in ids if ids.count(i) > 1}):
+        errors.append(f"{where}/evidence-register.csv: duplicate evidence ID {dup}")
+    for r in reg:
+        for col in ("title", "source_system", "owner", "as_of_date", "collected_date", "phase", "what_it_shows"):
+            if not r.get(col, "").strip():
+                errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} has no {col}")
+        if r.get("collected_date", "") < r.get("as_of_date", ""):
+            errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} collected before its as-of date")
+        if JUDGMENT_RE.search(r.get("what_it_shows", "")):
+            errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} states a judgment; record observations only")
+    known = set(ids)
+    for p in [x for x in sd.rglob("*") if x.suffix in (".md", ".csv") and x.name != "_context.md"]:
+        for ref in sorted(set(EV_RE.findall(p.read_text(encoding="utf-8")))):
+            if ref not in known:
+                errors.append(f"{p.relative_to(ROOT)}: cites {ref}, which is not in the evidence register")
+    if re.search(r"^## .*Current security posture", (sd / "00_company-facts.md").read_text(encoding="utf-8"), re.M):
+        errors.append(f"{sd.relative_to(ROOT)}/00_company-facts.md: evidence-based facts must not pre-state the security posture")
+    p07 = next(sd.glob("step-07_*/assessment-results.csv"), None)
+    if p07 and any(not r.get("test_type", "").startswith(("Operating effectiveness", "Design", "Not implemented")) for r in rows(p07)):
+        errors.append(f"{p07.relative_to(ROOT)}: every row needs a test_type (Operating effectiveness, Design, Not implemented)")
+    p01 = next(sd.glob("step-04_*/risk-register.csv"), None)
+    if p01 and any(not r.get("likelihood_basis", "").strip() or not r.get("assessment_pass", "").strip() for r in rows(p01)):
+        errors.append(f"{p01.relative_to(ROOT)}: every risk needs a likelihood_basis and an assessment_pass")
+
+
 # ---- completed samples (00_company-facts.md present): definition of done
 for facts in S.rglob("00_company-facts.md"):
     sd = facts.parent
@@ -133,6 +173,9 @@ for facts in S.rglob("00_company-facts.md"):
             cid = f"{fam}-{int(num)}" + (f"({int(enh)})" if enh else "")
             if cid not in ctrl_ids:
                 errors.append(f"{where}: unknown SP 800-53 control {cid}")
+    intake = sd / "step-00_P00_intake"
+    if intake.exists():
+        check_evidence_based(sd, intake)
     print(f"Completed sample checked: {sd.relative_to(S)}")
 
 # ---- sample count and folder names (each folder must match sample-folder-labels.csv)
