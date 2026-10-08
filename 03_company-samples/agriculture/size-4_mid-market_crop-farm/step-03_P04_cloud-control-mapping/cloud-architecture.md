@@ -13,7 +13,7 @@ flowchart LR
     ITFW["IT/OT firewalls (HQ, packinghouse)<br/>SC-7, AC-4"]
     subgraph OT["OT zones"]
       SCADA["Irrigation SCADA, HMIs, historian<br/>AC-17, CM-3, SI-2"]
-      PUMP["Farms 1-2 pump stations and fertigation<br/>flat with farm office (gap 2)"]
+      PUMP["Farms 1-2 pump stations and fertigation<br/>flat with farm office (EV-015)"]
       PH["Packinghouse controls and graders<br/>IA-5, SC-7(5)"]
     end
   end
@@ -129,9 +129,9 @@ The design is independent of the provider. This table gives each provider's name
 - **SaaS** (FMIS, identity provider, SIEM, pivot cloud, alarm service): the provider also owns the application. The customer keeps identities, roles, audit review, exports, and vendor oversight.
 
 ## 5. Findings from the mapping
-1. **The grower portal is the company's own code.** Because the company owns the application in the Grower Services account, it carries the customer side of every PaaS control plus the development controls (SA-11, CM-3) that a SaaS customer would inherit. The development firm can deploy to production without a company approval step, and the pipeline has no dependency or static analysis scanning (gap 6; P01 R-011, R-045). Fix: approval gate, scanning, and a secure development standard (POAM-017).
-2. **OT stays out of the cloud, by design.** The one-way historian push from the headquarters OT firewall to the farm data hub is the right pattern (SP 800-82 Rev. 3 section 5.2.3). The weak points are outside the landing zone: vendor remote access straight into SCADA (gap 1) and the pivot manufacturer's cloud, which has standing access to all 46 pivots and no security terms (P01 R-002, R-014).
-3. **Recovery is designed but unproven.** Backups are isolated (separate account, second region, write-once, separate credentials), which is the strongest control in the environment. No restore of the farm data hub, the time-series database, or the settlement database has been tested (gap 3). Fix: quarterly restore tests into an isolated recovery network from 2026-10-21.
+1. **The grower portal is the company's own code.** Because the company owns the application in the Grower Services account, it carries the customer side of every PaaS control plus the development controls (SA-11, CM-3) that a SaaS customer would inherit. The development firm can deploy to production without a company approval step, and the pipeline has no dependency or static analysis scanning (EV-053; P01 R-011, R-045). Fix: approval gate, scanning, and a secure development standard (POAM-017).
+2. **OT stays out of the cloud, by design.** The one-way historian push from the headquarters OT firewall to the farm data hub is the right pattern (SP 800-82 Rev. 3 section 5.2.3). The weak points are outside the landing zone: vendor remote access straight into SCADA (EV-008) and the pivot manufacturer's cloud, which has standing access to all 46 pivots and no security terms (P01 R-002, R-014).
+3. **Recovery is designed but unproven.** Backups are isolated (separate account, second region, write-once, separate credentials), which is the strongest control in the environment. No restore of the farm data hub, the time-series database, or the settlement database has been tested (EV-024). Fix: quarterly restore tests into an isolated recovery network from 2026-10-21.
 4. **Logging stops at the OT boundary.** The landing zone logs well, but SCADA, PLC, and packinghouse controller events never reach the SIEM, and egress volume alerts are not configured (P01 R-003, R-021). Fix: passive OT monitoring and egress alerts by 2027-03-31 and 2027-01-31.
 5. **Boundary check.** Every in-scope component in the SSP (P02 section 9) appears in the diagram or is covered by an on-premises row in the SSP. Every cloud component has at least one row in the control map, and each account has controls from at least 2 of the AC, AU, CM, IA, SC, and SI families or inherits them.
 6. **Inherited controls rely on SOC 2 reports.** Controls marked Provider or Shared for the cloud provider, FMIS vendor, identity provider, and MSSP depend on their SOC 2 Type 2 reports and complementary user entity controls, reviewed each year in P09 `vendor-soc2-review.csv`. The pivot manufacturer has no report.

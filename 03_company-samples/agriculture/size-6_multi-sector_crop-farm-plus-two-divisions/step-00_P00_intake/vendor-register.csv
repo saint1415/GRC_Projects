@@ -1,0 +1,24 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Identity platform vendor,"Single sign-on, MFA, PAM and identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2 report,EV-026; EV-027,Group shared service
+V-02,"SIEM, EDR and OT monitoring vendors","SIEM, endpoint detection and response, passive OT monitoring",SYS-G2,Security logs (incidental personal information),Subscription terms,SOC 2 Type 2 reports (SIEM and EDR vendors),EV-026; EV-027,
+V-03,Cloud provider A,"IaaS/PaaS for the landing zone, ERP servers, farm data hub, imagery store, traceability, e-commerce and credit file share",SYS-G3; SYS-G4; SYS-D1-HUB; SYS-D1-IMG; SYS-D3-TRC; SYS-D4; SYS-D4-CRD,Personal information; operational data,Customer agreement,SOC 2 Type 2 report; shared responsibility documentation,EV-019; EV-026; EV-027,
+V-04,Cloud provider B,"Portal production, DR replica and immutable backup vault",SYS-G3; SYS-D5,Personal information; grower field data; backups,Customer agreement,SOC 2 Type 2 report; shared responsibility documentation,EV-019; EV-026; EV-027,Portal subservice organization (P09)
+V-05,HR and payroll SaaS vendor,"HR, payroll, earnings statements",SYS-G4,Worker personal information; H-2A passport and visa data,Subscription terms; breach contact registered,None on file,EV-025; EV-026; EV-031,
+V-06,ERP software vendor,ERP application,SYS-G4,Financial and customer data,License and support terms,None on file,EV-026,
+V-07,FMIS vendor,Farm management information system with irrigation control module,SYS-D1,Worker names with tally; farm records; irrigation commands,Master agreement (renewed 2025) with security terms and 72-hour incident notice,"SOC 2 Type 2, 12 months ending 2026-03-31 (received during BIA fieldwork)",EV-026; EV-050; EV-078,Tiered critical
+V-08,Regional irrigation integrator,PLC and SCADA support at the 14 acquired farms,SYS-D1-ROC; SYS-D1-FIELD,Full SCADA and PLC control (remote),Time-and-materials agreement without security terms,None on file,EV-026; EV-036; EV-037,Not tiered; always-on remote tool
+V-09,Cellular carrier,Private network for pivot panels; site connectivity,SYS-D1-FIELD; SYS-G3,Pivot commands and status,Carrier contract,None on file,EV-026; EV-044,Not tiered
+V-10,Equipment dealers,Equipment telematics portals and dealer support,SYS-D2,Operator location histories; as-applied and yield data,Dealer terms,None on file,EV-026; EV-052,Standing dealer technician access
+V-11,Drone fleet software vendor and drone vendor,Drone fleet management; embedded weed detection model,SYS-D2; AI-003,Flight logs; field imagery,Software terms,None on file,EV-026; EV-052,
+V-12,Quality software vendor,Quality and food safety records service,SYS-D3-QR,Food safety monitoring records,Subscription terms,None on file,EV-026,
+V-13,Refrigeration contractor,Remote support of ammonia refrigeration controls,SYS-D3,Control system access through group PAM,Contractor agreement,None on file,EV-026; EV-061,Sessions through group PAM
+V-14,"Plant OT integrators, equipment and sorting vendors","Line equipment, controls and sorting systems",SYS-D3; AI-004,Control system access,Equipment and service terms,None on file,EV-026,
+V-15,Third-party laboratory,Laboratory results portal,SYS-D3-QR,Test results,Service terms,SOC 2 Type 2 report,EV-026; EV-027,
+V-16,Card processor and acquirer,"Card payments, tokens, hosted payment fields",SYS-D4,Payment card data,Acquirer agreement (annual report on compliance required),Processor attestation; QSA report on compliance (Farm Supply),EV-031; EV-067,
+V-17,Customer identity vendor,Grower and cooperative sign-in for the portal,SYS-D5,Grower identities,Subscription terms,SOC 2 Type 2 report,EV-026; EV-027; EV-069,Portal subservice organization (P09)
+V-18,Blending plant controls integrator,Blending plant controller support,SYS-D4,Controller access through group PAM,Service terms,None on file,EV-026; EV-073,
+V-19,E-commerce platform vendor,E-commerce ordering platform,SYS-D4,Orders; customer accounts,Subscription terms,None on file,EV-026,
+V-20,H-2A filing agent,H-2A program filings,SYS-G4 (exports),H-2A worker documents,Agent agreement; no breach contact registered,None on file,EV-025; EV-026; EV-031,
+V-21,Forensic retainer firm and cyber insurer,Incident response retainer; cyber insurance,All,Incident data,Retainer agreement; insurance policy,None on file,EV-026; EV-028,Retainer scope covers IT only
+V-22,AI tool vendors,Enterprise generative AI assistant; coding assistant; proposed credit scoring model,AI-007; AI-008; AI-010,Internal documents; source code,License terms (no-training terms for the assistant and the coding assistant),None on file,EV-026; EV-033,
+V-23,Credit bureau,Credit reports for grower trade credit,SYS-D4-CRD,Grower personal information,Subscriber agreement,None on file,EV-026,

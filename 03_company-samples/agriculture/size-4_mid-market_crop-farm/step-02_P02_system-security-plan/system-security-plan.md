@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-15
 
 ## 1. System Name and Identifier
-Farm Management and Irrigation Control Platform (**FMICP**), identifier CSC-FMICP-01. The FMICP is the company's major system. It comprises the components listed for the SSP system in `../00_company-facts.md` section 3.
+Farm Management and Irrigation Control Platform (**FMICP**), identifier CSC-FMICP-01. The FMICP is the company's major system. It comprises the components listed for the SSP system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The FMICP plans, controls, and records the company's crop production and packing: irrigation and fertigation on three farms (about 15,400 acres), freeze protection at Farm 2, harvest crew dispatch and field tally, packing, cooling, and ripening at the central packinghouse, cold-chain monitoring, food safety and traceability records, and the Grower Services portal and weekly settlement for about 30 contract growers. It supports the High and Moderate processes in the BIA (P05). Users are about 230 year-round staff, 60 crew leads on tablets, about 140 grower portal users, and named vendor technicians.
@@ -95,6 +95,8 @@ SP 800-60 Vol. 2 Rev. 1 is built around federal mission areas and has no farm pr
 **Integrity was considered for High.** Fertigation and ethylene ripening involve chemicals. The team kept integrity at Moderate for three reasons: injection skids have mechanical maximum-rate limits and backflow prevention, ripening rooms have gas detectors with hardwired shutoffs that software cannot override, and operators check rates and room settings at each shift. To compensate, the plan adds integrity tailoring: CM-3, CM-4, and SI-7 cover PLC programs, recipes, and settlement code, and SI-4 adds setpoint change alerting once OT monitoring is in place.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts are the CMDB and endpoint console totals (EV-012: 210 laptops and desktops, of which about 140 are used to run the farms and the packinghouse, 160 tablets and phones, and 20 line PCs). The OT count of about 2,900 devices comes from installer invoices and purchasing records (EV-014); about 1,600 of them are in the OT inventory (EV-013).
+
 **Inside the boundary:**
 - the company's SYS-01 tenant configuration, roles, and integrations;
 - the identity provider tenant as it protects the FMICP;
@@ -125,11 +127,11 @@ The diagram is in P04 `cloud-architecture.md`.
 | Cold-chain alarm service | Outbound sensor data; inbound alerts | Temperatures | Service agreement |
 | ERP and EDI provider (SYS-10) | Bidirectional | Orders, shipments, prices for settlements | SaaS agreement |
 | Payroll provider (SYS-11) | Outbound tally hours and piece counts | Worker names and earnings data | SaaS agreement; third-party agent under Fla. Stat. 501.171 |
-| Equipment dealer telematics (SYS-08) | Inbound as-applied and yield data; dealer remote diagnostics | Machine data with operator location | Dealer terms; **standing dealer access (gap 5)** |
+| Equipment dealer telematics (SYS-08) | Inbound as-applied and yield data; dealer remote diagnostics | Machine data with operator location | Dealer terms; **standing dealer access (EV-010)** |
 | Agronomy analytics vendor (AI-001) | Outbound imagery; inbound yield estimates | Drone imagery, block yields | Click-through terms; **data-use terms under review (P10)** |
 | Contract growers' sensor gateways (18 growers) | Inbound | Soil moisture and flow data | Marketing agreement schedule; **no interconnection terms** |
-| SCADA integrator | Inbound remote support | Full SCADA access | Services agreement; **no security terms; shared account (gap 1)** |
-| Development firm | Inbound deployments to the Grower Services account | Code and configuration | Development contract; **no secure development terms (gap 6)** |
+| SCADA integrator | Inbound remote support | Full SCADA access | Services agreement; **no security terms; shared account (EV-048, EV-008)** |
+| Development firm | Inbound deployments to the Grower Services account | Code and configuration | Development contract; **no secure development terms (EV-053)** |
 | MSSP | Inbound logs; remote response actions | Security logs | Contract; SOC 2 Type 2 |
 | Bank (settlement ACH) | Outbound | Grower payment files | Treasury agreement; dual approval |
 
@@ -177,7 +179,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 33 | FMIS vendor, identity vendor, cloud provider, MSSP |
 | Common/Inherited | 7 | Identity vendor (AC-2(1), AC-7, AC-12), cloud provider (CP-6, SC-12, SC-13), MSSP (IR-7) |
 
-The Partially implemented statements trace to the 11 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. IT controls are mostly in place; the shortfalls concentrate in OT, vendors, recovery, and the grower portal's development process.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-008, EV-013, EV-024 and EV-053) and to the P07 findings. IT controls are mostly in place; the shortfalls concentrate in OT, vendors, recovery, and the grower portal's development process.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 33 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -190,7 +192,7 @@ The co-sourced internal audit firm assessed 33 controls from 2026-08-03 to 2026-
 - **Growers.** Grower portal users have unique accounts with email verification. MFA will be required for any user who can view settlements or change bank details by 2027-03-31 (P01 R-011).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **FMICP:** Farm Management and Irrigation Control Platform

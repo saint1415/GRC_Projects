@@ -13,6 +13,8 @@
 | Workbook | `gap-analysis.csv` (137 rows) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** growing, packing, and marketing fresh produce (vegetables and melons, berries), plus peanuts and sod, and packing and marketing produce for about 30 contract growers.
 
 **Step 1 was to find a cybersecurity rule that binds the company. None applies.**
@@ -45,8 +47,8 @@ Drones are flown under 14 CFR Part 107 by certificated remote pilots. Part 107 s
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcomes come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows were decomposed from the eCFR text current as of 2026-09-23 and the 2026 Florida Statutes, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the company's CSF Target Profile (**High 38, Medium 40, Low 28**), set by the vCISO and the COO from the risk register (P01) and BIA (P05).
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`. The `sp800_53_controls` column is the author's key-control subset. Regulation rows use an author mapping, because no official NIST mapping exists for them.
-4. **Evidence.** Interviews with every process owner, document review, configuration exports, and walkthroughs of headquarters, the IOC, the packinghouse, and pump stations at Farms 1 and 2 (2026-07-14 to 2026-07-16; pump-station sample on 2026-08-12 with P07).
-5. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population, using the co-sourced firm's attribute sampling table (25 items for a control operating many times a year; 5 to 12 for weekly or monthly controls):
+4. **Evidence.** Current state was established from the intake evidence (exports, documents and records collected 2026-06-15 to 2026-07-02, EV-001 to EV-065), gap analysis interviews with the irrigation and packinghouse owners, the SCADA integrator, outside general counsel and the other process owners (EV-068, EV-070, EV-071, EV-072), walkthroughs of headquarters, the IOC, the packinghouse, and pump stations at Farms 1 and 2 (2026-07-14 to 2026-07-16, EV-069; pump-station sample on 2026-08-12 with P07, EV-PE-3), the personnel share permissions export and data scan (EV-073, EV-074), the firewall rule exports (EV-075), the grower portal review and TLS scan (EV-076), and the samples below (EV-077, EV-078, EV-079, EV-080). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+5. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population collected at intake (for example the 214 terminations and 41 transfers in EV-003, the 22 incidents in EV-028, and the 110 vendors in EV-047), using the co-sourced firm's attribute sampling table (25 items for a control operating many times a year; 5 to 12 for weekly or monthly controls):
    - harvest and field sanitation records: 30 across the 3 farms (112.161);
    - H-2A worker records and earnings statements: 25 (May 2026 pay periods);
    - pesticide applications: 20 (WPS display timing);
