@@ -440,13 +440,24 @@ function heat(s) { const p = ranked.findIndex(v => v >= share(s)) / (ranked.leng
   return { c: p >= .67 ? "var(--h)" : p >= .33 ? "var(--m)" : "var(--l)", o: (.3 + p * .7).toFixed(2) }; }
 
 /* ---------- sound (Threat Board only, off until turned on) ---------- */
-let ac = null, soundOn = false;
+let ac = null, master = null, soundOn = false;
+function audio() {
+  if (!ac) {
+    try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
+    master = ac.createGain(); master.gain.value = .6; master.connect(ac.destination);
+  }
+  if (ac.state !== "running") ac.resume().catch(() => {});
+  return ac;
+}
+// v is the relative loudness each caller asks for; scale it to an audible peak and give every tone a short attack and a decay long enough to hear.
 function blip(f = 880, d = .05, type = "square", v = .03) {
   if (!soundOn || LOOK !== "board") return;
-  try { ac = ac || new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return; }
-  const o = ac.createOscillator(), g = ac.createGain();
-  o.type = type; o.frequency.value = f; g.gain.value = v; g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d);
-  o.connect(g).connect(ac.destination); o.start(); o.stop(ac.currentTime + d);
+  const c = audio(); if (!c) return;
+  const t = c.currentTime, len = Math.max(d * 1.5, .12), peak = Math.min(v * 6, .35);
+  const o = c.createOscillator(), g = c.createGain();
+  o.type = type; o.frequency.setValueAtTime(f, t);
+  g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + .008); g.gain.exponentialRampToValueAtTime(.0001, t + len);
+  o.connect(g).connect(master); o.start(t); o.stop(t + len + .02);
 }
 $("#sound").onclick = e => { soundOn = !soundOn; e.currentTarget.setAttribute("aria-pressed", soundOn); e.currentTarget.textContent = soundOn ? "Sound on" : "Sound off"; blip(660, .08, "sine", .05); };
 
@@ -562,7 +573,8 @@ function renderBoard() {
       <div class="gkey"><span><i style="background:var(--h)"></i>Top third</span><span><i style="background:var(--m)"></i>Middle third</span><span><i style="background:var(--l)"></i>Bottom third</span><span>Ranked by share of risks rated High or Very High; brighter is higher</span></div></section>
     <section class="panel dossier" id="dossier" aria-live="polite"></section></div>`;
   $("#rules").onclick = e => { const b = e.target.closest(".chip"); if (!b) return; RULE = b.dataset.r; document.querySelectorAll("#rules .chip").forEach(x => x.setAttribute("aria-pressed", x === b)); blip(520); paintGrid(); };
-  $("#tgrid").addEventListener("mouseover", e => { if (e.target.closest(".cell")) blip(1200 + Math.random() * 300, .02, "square", .012); });
+  let lastTick = 0;
+  $("#tgrid").addEventListener("mouseover", e => { const n = performance.now(); if (e.target.closest(".cell") && n - lastTick > 70) { lastTick = n; blip(1200 + Math.random() * 300, .02, "square", .012); } });
   $("#tgrid").addEventListener("click", e => { const c = e.target.closest(".cell"); if (!c) return; blip(440, .09, "sawtooth", .03); dossier(byId[c.dataset.id]); });
   dossier(SEL);
 }
