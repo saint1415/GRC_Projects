@@ -4,7 +4,7 @@ This page is the short answer to "what did you build?" It covers the whole libra
 
 ## In one paragraph
 
-One universal method for each of the 10 GRC projects was built once, then applied to one company shown in 36 industries and 6 sizes. Each finished sample company has all 10 deliverables, from business impact analysis to AI governance. It also has one facts file that every deliverable shares, so a reader can follow a risk from the risk register to the policy that answers it and the test that checks it. Every regulation is cited to its primary source, and every sample passes automated checks: risk scores recalculate from the NIST tables, and every control test statement matches NIST's official wording.
+One universal method for each of the 10 GRC projects was built once, then applied to one company shown in 36 industries and 6 sizes. Each finished sample company has all 10 deliverables, from business impact analysis to AI governance. It also has one facts file that every deliverable shares, so a reader can follow a risk from the risk register to the policy that answers it and the test that checks it. Every regulation is cited to its primary source, and every sample passes automated checks: risk scores recalculate from the NIST tables, and every control test statement matches NIST's official wording. A public [explorer site](https://saint1415.github.io/GRC_Projects/) lets anyone read each company as a plain-English story, in two looks or a plain reading mode.
 
 ## Phases
 
@@ -19,12 +19,26 @@ One universal method for each of the 10 GRC projects was built once, then applie
 
 Phase records, decisions, and corrections: [PLAN.md](PLAN.md).
 
+## Since Phase 5 (2026-10-07 to 2026-10-08)
+
+| Work | What it delivered | Pull requests |
+|---|---|---|
+| Sample company explorer | A public website built from the sample folders: [saint1415.github.io/GRC_Projects](https://saint1415.github.io/GRC_Projects/). A landing page offers two looks, **Case Files** (an auditor's file drawer, on light or dark paper) and **Threat Board** (an operations console), plus a plain reading mode. A switch on every page swaps looks and keeps your place. Each company is told as a 9-part plain-English story, with a guided 10-step tour, search by rule, side-by-side size comparison, and an incident simulator that runs the company's legal notice clocks. Rebuilt by `tools/build_explorer.py`. | [#2](https://github.com/saint1415/GRC_Projects/pull/2), [#4](https://github.com/saint1415/GRC_Projects/pull/4), [#5](https://github.com/saint1415/GRC_Projects/pull/5) |
+| External architecture review | An outside review (Gemini) was answered point by point with repository evidence and primary sources: [response](docs/reviews/2026-10-gemini-architecture-review-response.md). Several claims did not hold up, for example that the defense samples use SP 800-171 Rev. 3, that NYC Local Law 144 was missing, and that small companies were given enterprise cloud designs. The valid points were fixed: correct legal forms for the national bank, credit union, and electric cooperative; bank, NRC, and FOCI ownership approvals; fit checks before SOC 2 and AI work; the as-is security plan explained against the NIST RMF; and a compensating controls table for one-person companies. | [#3](https://github.com/saint1415/GRC_Projects/pull/3) |
+| Review backlog | All 36 sole proprietor security plans gained explicit compensating controls for AC-5, AU-9, CM-3, and CA-2(1). All 36 Multi-Sector cloud architectures gained a tenancy and identity decision. The nuclear size 5 and 6 samples gained license-transfer rows (10 CFR 50.80). | [#5](https://github.com/saint1415/GRC_Projects/pull/5) |
+| Multi-Sector pairings review | All 36 three-division pairings were checked for realism, teaching value, and lawful ownership: [review](docs/reviews/2026-10-multi-sector-pairings-review.md). All were kept. Three gained missing facts: utility holding company and affiliate purchase rules (18 CFR 366, 35.44; Fla. Admin. Code R. 25-6.1351) and Florida lending licenses for a store card (Fla. Stat. 520.32, 516.02). | [#6](https://github.com/saint1415/GRC_Projects/pull/6) |
+| CMMC Phase 2 suspension | DoD Class Deviation 2026-O0025, Revision 3 was read in full. It confirms that Phase 2 (planned for 2026-11-10) is suspended and that SP 800-171 Rev. 2 still applies under DFARS 252.204-7012. The industry rules and 29 affected samples were updated, each as of its own assessment date, with no change to any score or count. | [#7](https://github.com/saint1415/GRC_Projects/pull/7) |
+| FAR overhaul clause numbers | The FAR Part 40 deviation text in use at DoD, GSA, DHS, DOE, VA, and most other agencies was read and applied dual-track: contracts already awarded keep FAR 52.204-21, -23, -25 and DFARS 252.204-7019/-7020, while new awards carry FAR 52.240-90 to -93 and DFARS 252.240-7997. The real change, one prohibited-product report within 72 hours (FAR 52.240-91(h)), now appears in all 200 notification matrices that cite the old clauses. | [#8](https://github.com/saint1415/GRC_Projects/pull/8) |
+
+**Checks after each change:** `tools/validate.py` reports 0 errors across 216 samples and 5,835 markdown files. The one remaining warning is the 19 vertical rows still marked unverified. Open items and the regulatory watch list are in [PLAN.md](PLAN.md).
+
 ## What the samples demonstrate
 
 - **Scalability.** The same project at six sizes: a solo practitioner's one-page policy grows into a group-wide policy hierarchy with division supplements. See the [build guide](docs/how-to-build-the-10-projects.md), section 2.
 - **A deliberate build order.** Projects are built in dependency order (business impact analysis first, AI governance last), so each one reuses the last. Folder names carry the step number.
 - **Applicability before analysis.** Each gap analysis first asks whether the headline rule actually binds this company at this size. Examples: TSA pipeline and rail directives reach only designated operators, the NRC reactor cyber rule does not reach a waste processor, and FedRAMP does not apply without a federal customer. When the rule does not apply, the sample says so with the citation and uses the rule that does.
 - **Official mappings where they exist.** The HIPAA gap analyses carry NIST's official HIPAA-to-SP 800-53 mapping (OLIR 110). Where a mapping is the author's own, it is labeled.
+- **Keeping current.** When a rule changes, the change is read at its primary source and applied once in the shared layers, then to each affected sample as of that sample's own date. The CMMC Phase 2 suspension and the FAR overhaul renumbering were handled this way.
 - **Verification discipline.** Regulatory facts were checked against eCFR, the Federal Register, and agency sites. Errors found along the way were corrected across all affected samples. One example: the scope of Florida's 15-day breach notice extension. Each correction is recorded in PLAN.md.
 
 ## Finished sample companies
