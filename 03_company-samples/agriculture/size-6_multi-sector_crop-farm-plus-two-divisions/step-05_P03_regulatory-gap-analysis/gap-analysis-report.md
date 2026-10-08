@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads with each division's food safety, labor compliance, and OT leads, coordinated by the Group Chief Risk Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Which rules bind which division
 | Candidate | Crop Farming | Food Processing | Farm Supply | Basis |
 |---|---|---|---|---|
@@ -38,7 +40,7 @@
 - **DFARS 252.204-7012 and CMMC (N31-33-R01, N31-33-R02, N42-R02, N42-R03):** no DoD contracts and no covered defense information in any division.
 - **CIRCIA:** not in effect.
 
-**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See the FAR overhaul row in `../00_company-facts.md` section 1.
 
 ## 2. Regulation-by-division matrix
 | Requirement | Crop Farming | Food Processing | Farm Supply | Group (corporate) |
@@ -64,7 +66,7 @@
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the eCFR text current through 2026-09-23, the Federal Register, and the 2026 Florida Statutes, with short quotes or paraphrases. PCI DSS rows list requirement numbers with topic labels in our own words; the standard's text is not reproduced.
 2. **Target Profile.** Each Crop Farming subcategory has a priority (High 37, Medium 40, Low 29), set by the division security and compliance lead and the Crop Farming division president from P01 and P05.
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (SRC-OLIR-CSF-53) in `nist_official_sp800_53r5`. `sp800_53_controls` is an author-selected key-control subset (the same subset used in the group's Small agriculture sample, reused because it still fits). Regulation rows carry an author mapping (no official NIST mapping exists for them).
-4. **Evidence.** Interviews with division leadership, ROC staff, farm food safety coordinators, plant food defense and preventive controls qualified individuals, and the Farm Supply credit and portal teams; document review; configuration exports; record samples (120 farm records, 90 plant monitoring records); and P07 test results.
+4. **Evidence.** Current state was established from the intake evidence (exports, documents, and the walk-throughs of 3 ROCs and 6 farms on 2026-04-21 to 2026-04-23, EV-053, and of 3 Food Processing plants, EV-066), gap analysis interviews with each division (EV-084 Crop Farming, EV-089 Food Processing, EV-091 Farm Supply, EV-093 group), record samples and tests (120 farm records, EV-085; 90 plant monitoring records, EV-090; the FMIS export test, EV-087; the review sign-off and tally reports, EV-086 and EV-088; the credit share permission export, EV-092), the FMIS vendor's SOC 2 report (EV-078), documents received after fieldwork (EV-094, EV-095), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Current CSF Tier for Crop Farming: Tier 2 (Risk Informed)**, because the group program and risk process reach the division, but OT practices at the 14 acquired farms are ad hoc. **Target: Tier 3 (Repeatable) by 2027-12-31.** Food Processing and Farm Supply are assessed against their own regulations and are not profiled here.
@@ -104,7 +106,7 @@ Of the 80 partially met or not met rows, 22 are rated High, 43 Moderate, and 15 
 | Customer agreements (1) | 0 | 1 | 0 | 0 |
 | **Total (30)** | **9** | **18** | **2** | **1** |
 
-**Not met:** FP-G11 (21 CFR 121.157(b)(2)); FP-G23 (21 CFR 1.1455(c)(3)(ii)). FP-G23 is a readiness gap for a rule FDA will not enforce before 2028-07-20. The most important is 121.157(b)(2): the 2026 assessment is new information about vulnerabilities at actionable process steps (control system paths to setpoints and dosing), and it must trigger reanalysis. The vulnerability assessments (121.130(a)-(b)) and the food safety plans (117.126(b)) are written and signed, but they treat process controls as physical equipment (scenario gap 4).
+**Not met:** FP-G11 (21 CFR 121.157(b)(2)); FP-G23 (21 CFR 1.1455(c)(3)(ii)). FP-G23 is a readiness gap for a rule FDA will not enforce before 2028-07-20. The most important is 121.157(b)(2): the 2026 assessment is new information about vulnerabilities at actionable process steps (control system paths to setpoints and dosing), and it must trigger reanalysis. The vulnerability assessments (121.130(a)-(b)) and the food safety plans (117.126(b)) are written and signed, but they treat process controls as physical equipment (EV-057, EV-058).
 
 ### 4.3 Farm Supply (`gap-analysis-farm-supply.csv`)
 | Obligation group | Met | Partially met | Not met | N/A |
@@ -131,17 +133,17 @@ Card data controls are mature: the 2026 report on compliance found all 12 PCI DS
 Across all four tables, 110 rows are partially met or not met: 30 High, 58 Moderate, and 22 Low.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation or benchmark | Risk | Action | Owner | Target |
+| # | Gap (evidence) | Divisions | Citation or benchmark | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
-| 1 | Farm OT reachable from the corporate cloud and the integrator (1) | CF | CSF 2.0 PR.IR-01, PR.AA-03, DE.CM-06; SP 800-82r3 5.2.3, 6.2.10 | High | Integrator through group PAM; OT DMZ; farm directory under PAM | Crop Farming OT security manager | 2026-12-31 |
-| 2 | Cyber missing from food defense and food safety plans (4) | FP | 21 CFR 121.130(a)-(b), 121.135, 121.157(b)(2); 117.126(b); 29 CFR 1910.119(l) | High | Reanalysis with cyber scenarios; setpoint integrity checks; control changes through MOC | Food Processing VP Food Safety and Quality | 2027-03-31 |
-| 3 | Seasonal identity breaks record attribution (3) | CF | 21 CFR 112.161(a)(4); 20 CFR 655.122(j)(1) | High | Named crew accounts; season-end disablement | Crop Farming labor compliance director | 2026-11-30 |
-| 4 | Traceability under outage untested (5) | CF, FP | 21 CFR 1.361; 112.166(a) | High | 24-hour records drill with the hub down; signed lot manifests | Group VP Food Safety and Quality | 2027-03-31 |
-| 5 | Uneven inheritance and OT monitoring (2) | CF | CSF 2.0 ID.AM-01, ID.RA-01, DE.CM-01 | High | Inheritance matrix; OT monitoring and vulnerability management at all farms | Crop Farming security and compliance lead; Group SOC director | 2027-06-30 |
-| 6 | Notification matrix incomplete (6) | All | Form 8-K Item 1.05; Fla. Stat. 501.171(3)-(6); buyer, customer, cooperative terms | Moderate | Multi-regulator matrix (P08); cross-division tabletop | Group General Counsel | 2026-12-15 |
-| 7 | Portal AI and data-use commitments (7) | FS | N42-R01 (15 U.S.C. 45(a)); portal terms | High | Data-use review; substantiate or revise claims; SOC 2 readiness | Farm Supply digital agronomy general manager | 2027-03-31 |
-| 8 | Grower credit files over-shared | FS | Fla. Stat. 501.171(2) (worked example) | High | Restrict access; bulk access alerts | Farm Supply credit director | 2026-11-30 |
-| 9 | Farm records depend on one SaaS copy | CF | 21 CFR 112.162, 112.164(a)(1); 20 CFR 655.122(j)(4); 40 CFR 170.311(b)(6) | Moderate | Monthly export and retention schedule | Crop Farming Director of Food Safety | 2026-12-31 |
+| 1 | Farm OT reachable from the corporate cloud and the integrator (EV-020, EV-037, EV-044) | CF | CSF 2.0 PR.IR-01, PR.AA-03, DE.CM-06; SP 800-82r3 5.2.3, 6.2.10 | High | Integrator through group PAM; OT DMZ; farm directory under PAM | Crop Farming OT security manager | 2026-12-31 |
+| 2 | Cyber missing from food defense and food safety plans (EV-057, EV-058) | FP | 21 CFR 121.130(a)-(b), 121.135, 121.157(b)(2); 117.126(b); 29 CFR 1910.119(l) | High | Reanalysis with cyber scenarios; setpoint integrity checks; control changes through MOC | Food Processing VP Food Safety and Quality | 2027-03-31 |
+| 3 | Seasonal identity breaks record attribution (EV-039, EV-085, EV-C-AC2) | CF | 21 CFR 112.161(a)(4); 20 CFR 655.122(j)(1) | High | Named crew accounts; season-end disablement | Crop Farming labor compliance director | 2026-11-30 |
+| 4 | Traceability under outage untested (EV-045, EV-062) | CF, FP | 21 CFR 1.361; 112.166(a) | High | 24-hour records drill with the hub down; signed lot manifests | Group VP Food Safety and Quality | 2027-03-31 |
+| 5 | Uneven inheritance and OT monitoring (EV-018, EV-008, EV-010) | CF | CSF 2.0 ID.AM-01, ID.RA-01, DE.CM-01 | High | Inheritance matrix; OT monitoring and vulnerability management at all farms | Crop Farming security and compliance lead; Group SOC director | 2027-06-30 |
+| 6 | Notification matrix incomplete (EV-012, EV-C-IR6) | All | Form 8-K Item 1.05; Fla. Stat. 501.171(3)-(6); buyer, customer, cooperative terms | Moderate | Multi-regulator matrix (P08); cross-division tabletop | Group General Counsel | 2026-12-15 |
+| 7 | Portal AI and data-use commitments (EV-070, EV-069) | FS | N42-R01 (15 U.S.C. 45(a)); portal terms | High | Data-use review; substantiate or revise claims; SOC 2 readiness | Farm Supply digital agronomy general manager | 2027-03-31 |
+| 8 | Grower credit files over-shared (EV-092) | FS | Fla. Stat. 501.171(2) (worked example) | High | Restrict access; bulk access alerts | Farm Supply credit director | 2026-11-30 |
+| 9 | Farm records depend on one SaaS copy (EV-048, EV-087) | CF | 21 CFR 112.162, 112.164(a)(1); 20 CFR 655.122(j)(4); 40 CFR 170.311(b)(6) | Moderate | Monthly export and retention schedule | Crop Farming Director of Food Safety | 2026-12-31 |
 
 High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). POAM-012, POAM-015, POAM-016, POAM-019, POAM-020, and POAM-022 trace directly to this analysis.
 

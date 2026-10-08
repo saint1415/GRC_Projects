@@ -7,7 +7,7 @@
 Farm Management and Irrigation Control Platform (**FMICP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The FMICP is everything the farm uses to grow, protect, record, and sell its crops: the farm management and irrigation software (SYS-01), the pump controller, pivot panel, probes, and freeze sensor it controls (SYS-06), the laptop, phone, and tablet, the home network, the drone, the AI yield trial, the accounting and banking SaaS, and the booking and payment systems. Components are SYS-01 to SYS-10 in `../00_company-facts.md` section 3. One person, the owner-operator, uses and runs all of it. There is no server and no IaaS. Most application safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts, data, devices, the home network, and the field devices (P04).
+The FMICP is everything the farm uses to grow, protect, record, and sell its crops: the farm management and irrigation software (SYS-01), the pump controller, pivot panel, probes, and freeze sensor it controls (SYS-06), the laptop, phone, and tablet, the home network, the drone, the AI yield trial, the accounting and banking SaaS, and the booking and payment systems. Components are SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). One person, the owner-operator, uses and runs all of it. There is no server and no IaaS. Most application safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts, data, devices, the home network, and the field devices (P04).
 
 The part that matters most is the path from SYS-01 to the pump and pivot: anyone who controls the SYS-01 administrator or technician account can start or stop irrigation and silence the freeze alarm (P05 BP-01).
 
@@ -22,7 +22,7 @@ The part that matters most is the path from SYS-01 to the pump and pivot: anyone
 | Contract | Card processor merchant terms; FMIS, booking, and AI vendor terms; irrigation dealer service agreement | Contracts |
 | Internal | Information Security Policy | POL-01 (P06) |
 
-Not applicable: 21 CFR Part 121 (N11-R01), because farms do not register as food facilities (21 CFR 1.226(b), 121.1); H-2A rules, because the farm has no employees. See P03 section 1.
+Not applicable: 21 CFR Part 121 (N11-R01), because farms do not register as food facilities (21 CFR 1.226(b), 121.1); H-2A rules, because the farm has no employees. Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); see also P03 section 1.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -54,6 +54,7 @@ SP 800-60's information type catalog is built for federal missions and has no fa
 **Baseline:** SP 800-53B Moderate, tailored to 27 controls that matter for a one-person farm (`control-implementation.csv`), with the SP 800-82 Rev. 3 OT guidance applied to SYS-06. Other Moderate controls are either inherited from the SaaS vendors (evidence: the FMIS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, software development, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): SYS-01 to SYS-10 (with the SYS-01 scheduling module, AI-002) and the paper files (OTH-01) are inside; the tractor guidance display (OTH-02) and the public chatbot (AI-003, governed in P10) are outside.
 - **Inside:** the owner's account settings and users in SYS-01, SYS-08, SYS-09, and SYS-10; the email and file account; the laptop, phone, and tablet; the home router, access point, and customer Wi-Fi; the pump controller, pivot panel, probes, and freeze sensor; the drone; paper program documents in the home office.
 - **Outside (external services):** the SaaS platforms themselves, the card processor, the pivot panel's cellular connectivity service (run by the FMIS vendor and its carrier), the internet provider, the bank, and the tractor's guidance display (offline; its files enter by USB stick).
 
@@ -110,7 +111,7 @@ Self-assessed 2026-07-13 to 2026-07-17 with the on-call IT technician. See P07.
 Email, online banking, and the accounting SaaS require a password and a second factor. The SYS-01 administrator account, which can start and stop irrigation, and the booking platform admin account use a password only until MFA is turned on (2026-09-15); for an account that can affect a crop in one night this is not acceptable, and it is POAM-001. Text-message codes on email are accepted for now and will move to an authenticator app with the password manager. Customers use the booking platform's own sign-in, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **FMIS:** farm management information system (SYS-01)

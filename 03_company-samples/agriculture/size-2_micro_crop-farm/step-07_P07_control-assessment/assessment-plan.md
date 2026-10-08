@@ -35,6 +35,17 @@ Micro tier scope: 10-15 controls. **13 controls, 102 determination statements.**
   - patch status on the 3 office computers and firmware versions on the gateway and controller
   - an industry-standard harmless antivirus test file on 1 laptop, and an after-hours test alert to check routing
 
+### What each test could show
+The new policies (P06) were drafted from 2026-08-03 to 2026-08-07 and approved on 2026-08-31, after fieldwork ended. During fieldwork they were drafts, so they were reviewed for design only. A control that a draft policy or the draft SSP introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or condition existed before 2026 and was tested on samples, settings, or live systems | 46 |
+| Design | The control is new (a draft policy or the draft SSP); its design was reviewed. Operation is tested at the 2027-02 follow-up | 5 |
+| Not implemented | Nothing existed to test | 51 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees and the January 2026 termination in EV-001, the SYS-01 and suite accounts in EV-003 and EV-007, and the telematics accounts in EV-021; the 3 office computers come from the MSP device list in EV-009).
+
 ### MSP and dealer evidence requested
 The MSP and the irrigation dealer operate most technical controls, so evidence came from them. Requested on 2026-08-03 with a one-week deadline:
 
@@ -48,7 +59,7 @@ The MSP and the irrigation dealer operate most technical controls, so evidence c
 | List of MSP technicians with access and their MFA status | AC-17, SA-9 | MSP statement only (technicians use MFA); no list by fieldwork end; follow-up in POAM-010 |
 | Gateway connection history and 2026 service invoices | MA-4 | Yes, 2026-08-10 (dealer) |
 | Copy of the current controller program | CP-9 | Not received by fieldwork end; dealer agreed to hand it over by 2026-09-30 (POAM-003) |
-| FMIS vendor SOC 2 Type 2 report | SA-9 | Yes, 2026-08-18 (requested from the vendor 2026-08-03; reviewed in P09 on 2026-08-20) |
+| FMIS vendor SOC 2 Type 2 report | SA-9 | Yes, 2026-08-18, after fieldwork (EV-052; requested from the vendor 2026-08-03; reviewed in P09 on 2026-08-20) |
 
 ## 3. Rules of engagement (OT safety first)
 - **No active scanning of the pump station controller, the VFD, the gateway, or the pivot panels.** SP 800-82 Rev. 3 warns that active scans can disrupt OT. Reachability was shown with a single connection attempt from the shop Wi-Fi.
@@ -72,9 +83,9 @@ The MSP and the irrigation dealer operate most technical controls, so evidence c
 - From the shop Wi-Fi, a laptop reached the pump station touchscreen's web interface (SC-07a.[04]). Anyone who knows the Wi-Fi password, including former contractors, could reach irrigation control.
 - The Technician's SYS-01 administrator account, the backup console, and the gateway each accepted a password alone (IA-02(01)).
 - The gateway connection history and invoices show 9 dealer remote sessions in 2026 that the farm did not approve or record (MA-04a.[01]).
-- Two dealer technician accounts in the telematics portal belonged to people who no longer work for the dealer (AC-02f.[05]). They were removed on 2026-08-14.
+- Two dealer technician accounts in the telematics portal belonged to people who no longer work for the dealer (AC-02f.[05]). They were removed on 2026-08-14 (EV-051).
 
-**New finding (critical exposure, reported 2026-08-12):** the gateway's administration page was reachable from the internet and accepted the manufacturer's default password (IA-05e.). This was not known before testing. It was added to the risk register as R-023 (High) and to POAM-007. The dealer changed the password and turned off internet-facing administration on 2026-08-14; a firmware update and retest are due 2026-09-30.
+**New finding (critical exposure, reported 2026-08-12):** the gateway's administration page was reachable from the internet and accepted the manufacturer's default password (IA-05e.). This was not known before testing. It was added to the risk register as R-023 (High) and to POAM-007. The dealer changed the password and turned off internet-facing administration on 2026-08-14 (EV-050); a firmware update and retest are due 2026-09-30.
 
 All 13 controls have at least one weakness and a POA&M item in `poam.csv`. The six High items are POAM-002 to POAM-007: remote access, backups, recovery testing, malware detection, network separation, and default credentials. They match the P01 theme: irrigation and records sit behind a few unmanaged passwords and an unproven backup.
 

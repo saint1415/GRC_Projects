@@ -83,6 +83,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Irrigation and Water Resources; Vice President, Digital Agronomy; SCADA Engineering Manager; FMIS Platform Manager; 3 Irrigation Control Center Managers (R1, R3, R4); Director of OT Security; Director of Security Operations; Director of Identity and Access Management; Director of Network Engineering; Director of Third-Party Risk Management; General Counsel; CFO; CISO; Vice President, Investor Relations; 20 randomly selected staff, including 6 control center operators.
 - **Test:** access tests with test accounts; credential tests on HMIs, LoRaWAN gateways, and pivot panels in maintenance windows; a remote tool discovery scan of the OT DMZ and field segments; a reachability test from an AQ-01 farm office network; passive packet capture on an APN segment; observation of 2 fertigation interlock tests and 1 restore; generation of 6 event types to confirm logging.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy set in force (5 policies, 20 standards and their procedures, EV-041), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 286 (240 Satisfied, 46 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: alerting on failed fertigation interlock verifications (SI-06c.[01]), which are recorded on paper only | 1 |
+| **Total** | | **287** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005, the OT change and patch tickets, EV-016, and the gateway session log, EV-022) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No test could affect irrigation, fertigation, freeze protection, or packing. OT tests ran only in scheduled maintenance windows, with the regional Irrigation Control Center Manager's written approval and an operator present who could stop the test at any time.
 - No active scanning of live PLCs or pivot panels outside a maintenance window. Passive methods came first (SP 800-82 Rev. 3 section 6.1.3). Credential tests used read-only logins and changed no settings.

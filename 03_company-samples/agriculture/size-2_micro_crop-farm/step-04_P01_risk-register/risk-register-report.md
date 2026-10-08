@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner and General Manager |
 
 ## 1. Scope and risk framing
-**Scope.** The whole farm and its key vendors. That covers the Farm Management and Irrigation Control Platform (FMICP) in the SSP (P02), the eight business processes in the BIA (P05), the systems that hold personal and regulated records (SYS-01 to SYS-10 in `../00_company-facts.md`), and the outside parties that run or reach those systems: the FMIS vendor, the MSP, the irrigation dealer, the equipment dealer, the backup service, the payroll service and H-2A filing agent, and the AI vendor.
+**Scope.** The whole farm and its key vendors. That covers the Farm Management and Irrigation Control Platform (FMICP) in the SSP (P02), the eight business processes in the BIA (P05), the systems that hold personal and regulated records (SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), and the outside parties that run or reach those systems: the FMIS vendor, the MSP, the irrigation dealer, the equipment dealer, the backup service, the payroll service and H-2A filing agent, and the AI vendor ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager (Security Coordinator) may accept.
@@ -22,8 +22,8 @@
 This is the farm's first documented cybersecurity risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the OT threat sources in SP 800-82 Rev. 3, the BIA (P05), the gap analysis (P03), and interviews with the Owner and General Manager, the Office Manager, the Irrigation and Equipment Technician, the Field Supervisor, the MSP technician, and the irrigation dealer (2026-07-20 to 2026-07-31).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the OT threat sources in SP 800-82 Rev. 3, the BIA (P05), the intake evidence, and interviews with the Owner and General Manager, the Office Manager, the Irrigation and Equipment Technician, the Field Supervisor, the MSP technician, and the irrigation dealer (2026-07-20 to 2026-07-31, EV-041). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the irrigation dealer's records, the payroll and contracts records, the walk-throughs, the account comparison of 2026-07-21 (EV-042) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, regulatory, safety, reputation). Season matters: impact was rated for the late-May to mid-July watermelon harvest, when an outage costs the most.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,9 +51,11 @@ Treatments: 21 Mitigate and 2 Accept. Status: 16 Open, 5 In progress, 2 Closed (
 **The common theme is that a small farm's irrigation and records sit behind a few passwords nobody manages.** The dealer's gateway (R-002, R-023), the Technician's SYS-01 account (R-003), and the flat shop network (R-020) are three ways to reach irrigation, and none of them has MFA or monitoring. The office side has the same pattern: one phishing email (R-001) could take the payroll and H-2A files (R-005) and the only usable backup (R-004). The treatments for the three High risks also reduce R-002, R-003, R-005, R-008, R-013, and R-020.
 
 **Risks that were fixed or found during the work:**
-- R-010: the former bookkeeper's mailbox was disabled on 2026-07-21, the day it was found, and its forwarding rule removed. The Office Manager reviewed the 41 messages forwarded after her departure and documented on 2026-07-24 that none contained personal information as defined in Fla. Stat. 501.171(1)(g), so no breach notice was needed. The process gap remains open.
-- R-023: added on 2026-08-13 after P07 testing found the gateway admin page reachable from the internet with the default password. The dealer fixed the password and turned off internet-facing administration on 2026-08-14. The risk stays In progress until the firmware update and retest.
-- R-017: the Security Coordinator designation and the three policies were approved on 2026-08-31.
+- R-010: the former bookkeeper's mailbox was disabled on 2026-07-21, the day the account comparison found it (EV-042), and its forwarding rule removed. The Office Manager reviewed the 41 messages forwarded after her departure and documented on 2026-07-24 that none contained personal information as defined in Fla. Stat. 501.171(1)(g), so no breach notice was needed (EV-043). The process gap remains open.
+- R-023: added on 2026-08-13 after P07 testing found the gateway admin page reachable from the internet with the default password (EV-IA-5). The dealer fixed the password and turned off internet-facing administration on 2026-08-14 (EV-050). The risk stays In progress until the firmware update and retest.
+- R-017: the Security Coordinator designation (EV-053) and the three policies were approved on 2026-08-31.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-13 from P07 testing, and R-002 was reviewed the same day. The `assessment_pass` column shows which pass produced each risk.
 
 **Food defense note.** R-008 (fertigation changed by an attacker or by mistake) is the only risk where harm to produce through the farm's systems is plausible. 21 CFR Part 121 (N11-R01) does not apply to the farm (P03 section 1), but its vulnerability-assessment approach was used as a voluntary checklist for that risk.
 

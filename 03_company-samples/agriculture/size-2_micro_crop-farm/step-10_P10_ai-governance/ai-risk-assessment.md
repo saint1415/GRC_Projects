@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1). AI-001 is a computer-vision model, not generative AI, so the Generative AI Profile (AI 600-1) was not applied to it; it is used as guidance for AI-002 in the inventory |
 | Assessor / date | Office Manager (Security Coordinator) with the Irrigation and Equipment Technician (remote pilot), 2026-08-25 |
 | Decision | Owner and General Manager, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the bank and card statements, the agronomy analytics vendor's account and terms, and the intake staff question (EV-023, EV-022, EV-037). What the Office Manager has entered into public chatbots rests on her own statement; no chatbot histories were reviewed, so it was not established from records (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner and decision authority:** the Owner and General Manager, who uses the estimates and runs the pilot. At a 7-person farm there is no AI committee. The Owner and General Manager, the Security Coordinator, and the Technician review AI use at the monthly security meeting and at the July risk assessment.
@@ -19,7 +19,7 @@
   - POL-02 C.2: no Restricted information in public AI chatbots (AI-002).
 - **Approved-tools list:** kept by the Security Coordinator under POL-04 4.6. It was created on 2026-08-31. AI-001 is listed with the conditions in section 6; no public chatbot is listed.
 
-**How the pilot started.** The Owner and General Manager signed up for the vendor's service in April 2026 under click-through terms that let the vendor use farm imagery and yield data to improve its models. Nobody reviewed the terms, and the farm had no approved-tools list (`../00_company-facts.md` section 4, item 14; P01 R-018). The policies approved on 2026-08-31 now forbid that path.
+**How the pilot started.** The Owner and General Manager signed up for the vendor's service in April 2026 under click-through terms that let the vendor use farm imagery and yield data to improve its models. Nobody reviewed the terms, and the farm had no approved-tools list (EV-022; EV-032; P01 R-018). The policies approved on 2026-08-31 now forbid that path.
 
 ## 2. MAP
 | Item | Description |
@@ -56,7 +56,7 @@
 - using estimates in crop insurance or FSA reports
 
 ## 4. MEASURE
-Results are from the 2026 watermelon pilot: 11 weekly flights from 2026-05-04 to 2026-07-13 over 4 watermelon fields (two seedless varieties: an established variety on 60 acres and a new variety on 30 acres). The Owner and General Manager and the Security Coordinator compared 36 field-week estimates, made 1 week ahead, with actual loads by field from the harvest log and load records (2026-08-25).
+Results are from the 2026 watermelon pilot: 11 weekly flights from 2026-05-04 to 2026-07-13 over 4 watermelon fields (two seedless varieties: an established variety on 60 acres and a new variety on 30 acres). The Owner and General Manager and the Security Coordinator compared 36 field-week estimates, made 1 week ahead, with actual loads by field from the harvest log and load records (2026-08-25, EV-054).
 
 | Trustworthy characteristic | Test / metric | Result (pilot) | Pass? |
 |---|---|---|---|

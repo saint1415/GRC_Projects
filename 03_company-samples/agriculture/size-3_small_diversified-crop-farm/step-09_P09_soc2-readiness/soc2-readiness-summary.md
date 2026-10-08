@@ -18,7 +18,7 @@ The Trust Services Criteria still matter to the farm in two ways:
 
 **A. Security self-benchmark.** The Security criteria give an outside yardstick for the same program that P03 measured against CSF 2.0. Where both find the same gap (for example, account removal, monitoring, or recovery), the finding is stronger. No CPA opinion is sought, and none is implied.
 
-**B. Supplier oversight.** The farm's most important system, SYS-01, is a vendor SaaS. The vendor's SOC 2 Type 2 report is the main evidence for the controls the farm inherits (P02, P04), and supplier assessment (GV.SC-07) is a High priority in the farm's CSF 2.0 Target Profile. The report had been on file since 2025 but was never read (P03 G-028, POAM-016).
+**B. Supplier oversight.** The farm's most important system, SYS-01, is a vendor SaaS. The vendor's SOC 2 Type 2 report is the main evidence for the controls the farm inherits (P02, P04), and supplier assessment (GV.SC-07) is a High priority in the farm's CSF 2.0 Target Profile. The report had been on file since 2025 but was never read (EV-031; P03 G-028, POAM-016).
 
 ## 2. System description (scope)
 - **Services:** growing, harvesting, packing, and selling produce and peanuts; the internal services that support them (irrigation control, harvest tally, food safety records, payroll).

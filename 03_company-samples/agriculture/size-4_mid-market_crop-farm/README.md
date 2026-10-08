@@ -3,9 +3,9 @@
 
 > Cris Santos Company, Inc. is a privately held mid-market company with 600 employees, operating as a crop farm.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -36,13 +36,14 @@ U.S. Department of Agriculture (USDA) - co-SRMA for Food and Agriculture; Food a
 |---|---|---|
 | [FSMA Intentional Adulteration (food defense) rule](https://www.ecfr.gov/current/title-21/part-121) | 21 CFR Part 121 | Very small business (< $10,000,000/yr average human-food sales plus market value of food held, inflation-adjusted, 3-year average) exempt except must document eligibility (21 CFR 121.5(a), 121.3). Also exempt: holding (except liquid storage tanks), intact-container packing/labeling, animal food, certain alcoholic beverages. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | CMDB or endpoint console; HR system; AP vendor master; contract register; prior audits; scans; incident tickets. Evidence register with owners and as-of dates; inventories reconciled across sources; obligations register. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Farm Management and Irrigation Control Platform (FMICP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. | P02: the system boundary and its controls |

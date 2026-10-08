@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (diversified precision-agriculture crop farm) | **Tier:** Small (15 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Operations and Technology Manager (security lead) with the Farm Manager, Irrigation Technician, and Food Safety and Packing Lead | **Approved:** Majority owner and General Manager, 2026-08-31
+**Sources:** process owner interviews 2026-07-14 to 2026-07-15 (EV-047), receipts report 2023 to 2025 (EV-037), backup job reports (EV-023), the integrator's statement on PLC program copies (EV-014), and the FMIS vendor's SOC 2 report (EV-031). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the majority owner and General Manager.
 
 ## 1. Overview and purpose
 This BIA identifies which farm processes depend on technology, how long each can be down, and how much data each can lose. It supports:
@@ -10,15 +11,15 @@ This BIA identifies which farm processes depend on technology, how long each can
 - the recovery order in the ransomware runbook (P08);
 - CSF 2.0 subcategories ID.AM-05 (assets prioritized by criticality) and RC.RP-01 to RC.RP-03 in the gap analysis (P03).
 
-It covers all ten business processes. Interviews were held on 2026-07-14 and 2026-07-15 with the process owners named in `bia.csv`.
+It covers all ten business processes. Interviews were held on 2026-07-14 and 2026-07-15 with the process owners named in `bia.csv` (EV-047).
 
 ## 2. System and business description
-The farm grows peanuts, strawberries, and vegetables and melons on about 640 acres in two blocks, with 15 employees and $1.5 million in receipts. Most revenue arrives between December and June, about $7,500 per in-season day. Field and packing work runs on the FMICP: a farm management and irrigation SaaS platform (SYS-01), the pump-house PLC and SCADA HMI, pivot panels and field sensors (SYS-07), a cloud tenant with the farm data hub (SYS-04), the farm networks (SYS-05), and endpoints and tablets (SYS-06). See `../00_company-facts.md` sections 3 and 4.
+The farm grows peanuts, strawberries, and vegetables and melons on about 640 acres in two blocks, with 15 employees and $1.5 million in receipts. Most revenue arrives between December and June, about $7,500 per in-season day ($1.5 million across about 200 in-season days, EV-037). Field and packing work runs on the FMICP: a farm management and irrigation SaaS platform (SYS-01), the pump-house PLC and SCADA HMI, pivot panels and field sensors (SYS-07), a cloud tenant with the farm data hub (SYS-04), the farm networks (SYS-05), and endpoints and tablets (SYS-06). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [intake report](../step-00_P00_intake/intake-report.md).
 
 **What is different about a farm:** the biggest losses come from **time-critical physical processes**, not from data. A freeze night without overhead irrigation, a day without water on drip beds in May, or a cooler failure in peak season destroys crop that cannot be re-created. Every critical process therefore has a manual workaround, and the question for recovery is how long staff can sustain it.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $1.5 million in annual receipts, concentrated in about 200 in-season days.
+Dollar values are scaled to $1.5 million in annual receipts, concentrated in about 200 in-season days, about $7,500 per in-season day (EV-037).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -51,9 +52,9 @@ Counts: 3 High, 5 Moderate, 2 Low.
 - **BP-06 and BP-08 (records):** regulatory, not revenue, drives these. Produce Safety records kept off site must be produced within 24 hours of an FDA request (21 CFR 112.166(a)). H-2A earnings records kept at a central office must be produced within 72 hours of a DOL request (20 CFR 655.122(j)(2)).
 
 **Key findings:**
-1. **The PLC program has no farm-held backup.** It exists only on the integrator's laptop (gap 5). If the PLC or HMI were lost, the 6-hour RTO for BP-01 depends entirely on the integrator's availability.
-2. **Backups are unproven.** The data hub and file share backups have never been restore-tested and sit in the same cloud account as production (gap 6), so the RTOs for BP-01 (flow history), BP-06, and BP-08 are unproven. This is risk R-003 in P01.
-3. **SYS-01 recovery commitments must be checked.** The FMIS vendor's SOC 2 report (P09) states an RTO of 8 hours and an RPO of 1 hour. That RTO is longer than the 6-hour RTO for BP-01, so manual irrigation, not the vendor, carries that process for the first hours of a vendor outage. The 1-hour RPO meets every process that depends on SYS-01.
+1. **The PLC program has no farm-held backup.** It exists only on the integrator's laptop (EV-014). If the PLC or HMI were lost, the 6-hour RTO for BP-01 depends entirely on the integrator's availability.
+2. **Backups are unproven.** The data hub and file share backups have never been restore-tested and sit in the same cloud account as production (EV-022, EV-023), so the RTOs for BP-01 (flow history), BP-06, and BP-08 are unproven. This is risk R-003 in P01.
+3. **SYS-01 recovery commitments must be checked.** The FMIS vendor's SOC 2 report (EV-031, reviewed in P09) states an RTO of 8 hours and an RPO of 1 hour. That RTO is longer than the 6-hour RTO for BP-01, so manual irrigation, not the vendor, carries that process for the first hours of a vendor outage. The 1-hour RPO meets every process that depends on SYS-01.
 
 ## 5. Resource requirements
 | Resource | Description | Supports |

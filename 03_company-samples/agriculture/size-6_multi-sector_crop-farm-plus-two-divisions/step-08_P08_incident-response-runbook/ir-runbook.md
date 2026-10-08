@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06) |
 | Runbook owner | Group CISO; OT safety steps owned by the Crop Farming and Food Processing OT security managers; notifications owned by the Group General Counsel |
 | Approved | 2026-09-10 by the Group CISO and the Group General Counsel |
-| Last tested | IT playbooks tested quarterly. **The multi-regulator notification matrix and the OT steps have never been exercised** (scenario gap 6). First freeze-season tabletop due 2026-12-15 (POAM-010); manual freeze drill due 2026-11-15 (POAM-008) |
+| Last tested | IT playbooks tested quarterly. **The multi-regulator notification matrix and the OT steps have never been exercised** (EV-012; P07 EV-C-IR6). First freeze-season tabletop due 2026-12-15 (POAM-010); manual freeze drill due 2026-11-15 (POAM-008) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

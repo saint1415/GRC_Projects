@@ -7,7 +7,7 @@
 | Scope | The group AI governance program (group standard and division use cases), with **computer-vision crop yield prediction (AI-001)** as the priority use case, and the regulator- and customer-specific rules for the two High-tier use cases in production or pilot (AI-006 portal prescriptions, AI-003 spray drones) and the proposed credit model (AI-007) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (AI 600-1) applies only to AI-008, because AI-001, AI-003, AI-004, and AI-006 are not generative models |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-28; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 5 Medium, 2 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 5 Medium, 2 Low), built from AI tool discovery across SaaS discovery, procurement, the model registry and division AI owners' lists (EV-033), the yield model registry (EV-054), the portal release record (EV-070) and the drone fleet settings (EV-052); the `source_evidence` column names the source of each row. Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Physical safety.** AI that can move equipment or apply products (AI-002 if automated, AI-003, AI-006) needs locked limits set by a qualified person and a human able to stop it.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after AI-001 and AI-006 were already in production. AI-001 model versions were released without validation or change control (scenario gap 7; P01 GR-08), and AI-006 launched on 2026-03-01 without security, privacy, or validation review (P07 CM-4 and SA-11 findings; POAM-019).
+**Where the program fell short in 2026.** The standard was adopted after AI-001 and AI-006 were already in production. AI-001 model versions were released without validation or change control (EV-054, EV-096; P01 GR-08), and AI-006 launched on 2026-03-01 without security, privacy, or validation review (P07 CM-4 and SA-11 findings; POAM-019).
 
 ## 2. MAP
 ### 2.1 Inventory
@@ -86,7 +86,7 @@
 **Re-tier triggers:** using AI-001 to set job order worker counts or to cut hours without review (to High, Employment); enabling automatic irrigation in AI-002 (to High, Safety/CI); letting AI-006 export prescriptions outside agronomic ranges without approval (re-assessment); any automated credit decision by AI-007.
 
 ## 4. MEASURE
-Results are from monitoring and audits between 2026-05 and 2026-08.
+Results are from monitoring and audits between 2026-05 and 2026-08, recorded by the Group AI council (EV-096).
 
 ### 4.1 AI-001 yield prediction (2025-26 season, 26 weekly flights, about 1,900 block-weeks compared with harvest totals)
 | Trustworthy characteristic | Test / metric | Result | Pass? |

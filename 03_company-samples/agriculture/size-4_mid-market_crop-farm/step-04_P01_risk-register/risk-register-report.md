@@ -11,7 +11,7 @@
 | Approved | 2026-09-15: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (three farms, irrigation and water resources, the packinghouse, food safety, sales, Grower Services, HR, finance, and corporate IT), the Farm Management and Irrigation Control Platform (FMICP; P02), the systems around it (SYS-08 to SYS-13), about 110 vendors, and the AI portfolio (P10). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units (three farms, irrigation and water resources, the packinghouse, food safety, sales, Grower Services, HR, finance, and corporate IT), the Farm Management and Irrigation Control Platform (FMICP; P02), the systems around it (SYS-08 to SYS-13), about 110 vendors, and the AI portfolio (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -36,8 +36,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $250,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the IT Director, the Security Manager and the MSSP service lead (EV-067). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident queue (EV-028), scan results (EV-017), phishing results (EV-037), configuration exports, the walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -69,6 +69,8 @@ Cyber insurance ($10 million limit, $250,000 retention) transfers part of the fi
 | R-021 | OT intrusions and setpoint changes go undetected | High | Passive OT monitoring into the SIEM; change alerts | Security Manager | 2027-03-31 |
 | R-023 | Hurricane causes multi-day loss of power and connectivity | High | Hurricane plan with cyber recovery steps; backup links; alternate SCADA operation | Chief Operating Officer | 2027-05-31 |
 | R-050 | Default credentials on packinghouse ripening and refrigeration controllers (found in P07) | High | Change credentials; remove the broad firewall rule; contractor jump host | Packinghouse Manager | 2026-10-15 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-050 was added on 2026-08-14 after testing found default administrator credentials on the ripening room and cold storage refrigeration controllers, reachable from the packinghouse office VLAN (EV-IA-5, EV-SC-7). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **OT access and recovery (R-001, R-002, R-005, R-007, R-018, R-019, R-021, R-050).** IT is reasonably protected and monitored. OT is reachable by vendors with shared accounts, partly flat, unmonitored, and not recoverable from company-held copies.

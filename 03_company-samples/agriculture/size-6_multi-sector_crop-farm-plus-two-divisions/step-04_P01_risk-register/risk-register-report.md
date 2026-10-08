@@ -12,13 +12,13 @@
 | Approved | 2026-09-10 by the board risk committee (group register, all High and Very High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system in the three divisions plus the corporate shared services they depend on: SYS-G1 (identity), SYS-G2 (SOC and OT monitoring), SYS-G3 (cloud platform and WAN), and SYS-G4 (ERP, HR, and payroll). Division systems are SYS-D1 to SYS-D5 (`../00_company-facts.md` sections 3 and 7). OT is in scope everywhere: farm irrigation and fertigation, plant process lines, ammonia refrigeration, and blending plants.
+**Scope.** Every system in the three divisions plus the corporate shared services they depend on: SYS-G1 (identity), SYS-G2 (SOC and OT monitoring), SYS-G3 (cloud platform and WAN), and SYS-G4 (ERP, HR, and payroll). Division systems are SYS-D1 to SYS-D5, with their components, in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv); suppliers are in the [vendor register](../step-00_P00_intake/vendor-register.csv). OT is in scope everywhere: farm irrigation and fertigation, plant process lines, ammonia refrigeration, and blending plants.
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Crop Farming, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-016):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -29,8 +29,8 @@
 **Worker-safety and food-safety risks rated High must be treated, not accepted.** That rule covers FP-001 and FP-002 and the group risks GR-02 and GR-06.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C, the BIA (P05), the gap analyses (P03), the common control assessment and OT sampling (P07), and interviews with each division's operations, food safety, and OT leads.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C, the BIA (P05), the intake evidence, risk interviews with each division's operations, food safety, and OT leads (EV-079 group, EV-080 Crop Farming, EV-081 Food Processing, EV-082 Farm Supply), the gap analyses (P03), and the first results of the common control assessment and OT sampling (P07), which began on 2026-07-01 inside the fieldwork window. The farm data hub storage review during this fieldwork found the H-2A onboarding exports behind CF-009 (EV-083).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, record samples, interviews, and the P07 tests completed by 2026-07-31. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05), including safety. Group impact reflects enterprise consequences: several divisions at once, SEC disclosure, and food supply effects beyond one plant or farm.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -70,11 +70,13 @@
 | FP-002 | Food Processing | High | Compromise of ammonia refrigeration controls causes a release or loss of cold storage | Food Processing plant OT security manager | 2026-12-31 |
 | FS-005 | Farm Supply | High | Grower credit files with Social Security numbers and personal guarantees are stolen | Farm Supply credit director | 2026-11-30 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including the P07 common control tests run in July (for example the 1,140 seasonal accounts, EV-C-AC2, and the default credentials on sampled modems, EV-C-IA5). P07 testing continued to 2026-08-31; it confirmed existing risks and added none, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
+
 ### What the results say
 The corporate program is sound: a 24x7 SOC, PAM for IT, MFA for the workforce, immutable backups, and a PCI DSS-validated card environment. The High risks cluster where **corporate IT meets division OT** and where **one incident crosses divisions**:
-1. **The path from third-party access and the corporate cloud into farm OT** (GR-01, GR-12; CF-001, CF-002, CF-004; scenario gap 1).
-2. **Manipulation of process controls with safety or food safety consequences** (GR-02, GR-06; CF-003, FP-001, FP-002; scenario gap 4).
-3. **Controls the division assumes it inherits but does not** (GR-04, Moderate at group level; scenario gap 2). It is Moderate only because the group SOC and EDR still cover farm IT; it explains why P07 sampled farm OT heavily.
+1. **The path from third-party access and the corporate cloud into farm OT** (GR-01, GR-12; CF-001, CF-002, CF-004; EV-020, EV-037, EV-038).
+2. **Manipulation of process controls with safety or food safety consequences** (GR-02, GR-06; CF-003, FP-001, FP-002; EV-057, EV-058, EV-061).
+3. **Controls the division assumes it inherits but does not** (GR-04, Moderate at group level; EV-018, EV-008). It is Moderate only because the group SOC and EDR still cover farm IT; it explains why P07 sampled farm OT heavily.
 
 Seasonal identity (GR-05), traceability under outage (GR-07), the notification matrix (GR-03), and AI governance (GR-08, GR-09) are Moderate at group level. Each has a dated plan because each one would make a High risk worse during a real incident.
 

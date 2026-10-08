@@ -28,7 +28,7 @@ Mid-Market tier scope: 25-40 controls. **33 controls, 265 determination statemen
 | CA-3, SA-9, SR-6 | Interconnections and vendors; R-014, R-027; CSF GV.SC-05, GV.SC-07 | Focused | Focused (20 of 110 vendor files) |
 | CM-2, CM-6, CM-7 | Baselines and hardening; R-039, R-019 | Focused | Focused (10 servers) |
 | CM-3, SA-11 | OT and settlement change control; secure development; R-006, R-012, R-045 | Focused | Focused |
-| CM-8 | OT inventory; R-020; gap 2 | Focused | Focused (12 pump stations) |
+| CM-8 | OT inventory; EV-013 and EV-014 (P03 ID.AM-01); R-020 | Focused | Focused (12 pump stations) |
 | CP-2, CP-4, CP-9, CP-10 | Contingency, freeze protection, and recovery; R-001 (Very High), R-004, R-007, R-008 | Comprehensive | Comprehensive |
 | IR-4, IR-8 | Incident capability for OT and business impacts; R-038 | Focused | Focused (10 of 22 incidents) |
 | PE-3 | Physical access to field OT; CSF PR.AA-06 | Basic | Focused (12 of 54 pump stations) |
@@ -83,6 +83,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - restore of one farm data hub table from the backup account into the recovery network
   - benchmark configuration scans of 10 servers
   - trace of 20 tally edits in the SYS-01 audit trail
+
+### What each test could show
+The 2026 policies (P06) and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and take effect on 2026-10-01. The 2024 policies, standards and plans were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, records or live systems | 213 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the OT, food safety, crisis management, legal and external sharing coverage in the P08 runbooks; the remote maintenance tools listed in the draft SSP); its design was reviewed. Operation is tested at the 2027-03 follow-up | 5 |
+| Not implemented | Nothing existed to test | 47 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations, transfers and new accounts from the HR report (EV-003), privileged accounts from EV-006, pump stations and OT devices from EV-013 and EV-014, endpoints from EV-012, vendor files from EV-047 and EV-048, incidents from EV-028, Critical findings from the scan reports (EV-017), IT changes from EV-021, settlement service changes from EV-053, and PLC and HMI programs from EV-025.
 
 ## 4. Rules of engagement
 - **No testing that could disrupt irrigation, freeze protection, or packing.** OT tests ran on 2026-08-12 outside irrigation run times and packinghouse operations, with the control owner present. **No active scanning of PLCs, VFDs, or controllers** (SP 800-82 Rev. 3 section 6.1.3): network evidence came from passive capture and firewall exports. Credential tests used read-only sign-in, logged out immediately, and changed nothing.

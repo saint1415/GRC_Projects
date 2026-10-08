@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole farm as one system: SYS-01 to SYS-10, the irrigation equipment at both parcels, paper program documents, and the outside parties (irrigation dealer, FMIS vendor, booking vendor, AI yield vendor, custom harvest operator). Processes come from the BIA (P05).
+**Scope.** The whole farm as one system: SYS-01 to SYS-10, the irrigation equipment at both parcels, paper program documents, and the outside parties (irrigation dealer, FMIS vendor, booking vendor, AI yield vendor, custom harvest operator), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **What the farm cares about most.** Losing a crop in one night (freeze protection), losing the season's sales, and losing the records that keep the farm out of the full Produce Safety Rule. A breach notice would be small (personal information of 2 individuals is held by the farm itself), but the irrigation and records risks are large.
 
@@ -22,11 +22,11 @@
 - High and Very High: must be treated with a dated plan, never accepted as they are. Any risk that can cost a crop must be treated before freeze season (2026-11-30).
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the SaaS control map (P04), and a walk through the laptop, router, pump house, and SaaS accounts with the IT technician. SP 800-82 Rev. 3 section 4.1 (Managing OT Security Risk) was used for the irrigation risks.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the SaaS control map (P04), and a walk through the laptop, router, pump house, and SaaS accounts with the IT technician on 2026-07-15 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings. SP 800-82 Rev. 3 section 4.1 (Managing OT Security Risk) was used for the irrigation risks.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and router reviews (EV-002, EV-011, EV-020, EV-022), the dealer records (EV-001, EV-008), the alarm settings (EV-004), the document search (EV-030), and the owner's self-reviews (EV-034, EV-036). A one-person farm keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (a lost crop block is Severe cost; P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
-5. **Feedback from testing.** R-005 includes the default password found on the pump controller in P07 testing on 2026-07-16.
+5. **Feedback from testing.** R-005 includes the default password found on the pump controller in P07 testing on 2026-07-16 (EV-IA-5, EV-SC-7).
 
 ## 3. Results
 | Risk level | Count |
@@ -46,6 +46,8 @@
 | R-004 | Dealer's always-on technician account misused | Moderate | Viewer role; service windows; contract terms | Owner-operator | 2026-09-30 |
 | R-006 | Owner unavailable (single point of failure) | Moderate | Mutual-aid neighbor; sealed recovery codes | Owner-operator | 2026-11-30 |
 | R-007 | Records lost, so the qualified exemption cannot be shown | Moderate | Monthly exports; annual eligibility review | Owner-operator | 2026-10-31 |
+
+**One pass.** The register was completed on 2026-07-17 from intake and self-assessment evidence. The control tests ran on 2026-07-16, inside the same week, so this pass already reflects them: R-005 was identified from the intake router and walk-through evidence (EV-022, EV-009) and cites the pump controller test result (EV-IA-5, EV-SC-7). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks share one theme: **anyone who gets one password, or onto the farm-stand Wi-Fi, can reach the irrigation.** The fixes cost almost nothing: MFA on SYS-01 and the booking platform, a password manager, changing two default passwords, and turning on the router's guest isolation. All three must be done before the strawberries go in the ground for the December freeze season.
 

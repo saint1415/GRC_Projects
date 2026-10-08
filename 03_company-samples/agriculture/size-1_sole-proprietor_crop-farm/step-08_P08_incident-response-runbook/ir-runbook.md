@@ -22,7 +22,7 @@ Keep a printed copy in the home office and inside the pump house. Assume the lap
 | Booking platform vendor | Lock the admin account; report exports, site changes, refunds | Hours 1-4 |
 | Bank | Watch for payee changes and unusual payments | Hours 1-4 |
 | Breach counsel (privacy attorney) | Breach determination, Florida notices, ransom questions | Hours 2-8, if personal information may be involved |
-| Farm liability insurer | Ask whether any cyber coverage applies before hiring outside help | Hours 2-8 |
+| Farm liability insurer | No cyber policy today (EV-018, EV-028; whether the farm liability policy covers cyber events is an open intake request). Ask whether any cyber coverage applies before hiring outside help | Hours 2-8 |
 | FBI (IC3 online report) | Voluntary report; supports OFAC mitigation | Day 1 |
 
 Contact numbers are kept on the printed copy only, not in this file.

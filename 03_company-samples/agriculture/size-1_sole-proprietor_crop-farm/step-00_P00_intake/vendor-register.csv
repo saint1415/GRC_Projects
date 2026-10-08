@@ -1,0 +1,20 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,FMIS vendor,Farm management and irrigation software; remote control path to the pump and pivot; scheduling recommendations,SYS-01; SYS-06; AI-002,Farm records; irrigation commands and alarms,Subscription terms,"SOC 2 Type 2 (Security and Availability), 12 months ending 2026-03-31",EV-001; EV-007; EV-018,The cellular device connectivity service that carries commands to the pivot panel is a carved-out subservice organization (EV-007)
+V-02,Irrigation dealer,"Installation and support of the pump controller, pivot panel and soil moisture probes",SYS-01 (technician account); SYS-06,Remote control and settings of the pump and pivot,Service agreement (2024) with no security terms,None on file,EV-001; EV-008; EV-018; EV-019,Technician account active all year; service visit booked for September 2026
+V-03,Booking platform vendor,"Booking and online pre-order platform, farm website, hosted payment page",SYS-10,"About 1,800 customer accounts; reservations; payments",Subscription terms,None on file,EV-011; EV-012; EV-013; EV-018,Holds customer accounts as a third-party agent (Fla. Stat. 501.171(1)(h)); no farm breach contact registered (EV-011)
+V-04,Card processor,Processor-managed card reader and card processing,SYS-10; SYS-04,Card transactions (encrypted at the reader),Merchant agreement,None on file,EV-014; EV-018,No self-assessment questionnaire requested
+V-05,Email marketing service,Customer email list and campaigns,SYS-10,"About 2,100 subscriber email addresses",Subscription terms,None on file,EV-015; EV-018,
+V-06,Accounting SaaS vendor,Bookkeeping and sales records,SYS-09,Books; W-9 data; bank account details,Subscription terms,None on file,EV-017; EV-018,
+V-07,Bank,Online banking and payments,SYS-09,Bank account details; payments,Account agreement,None on file,EV-017; EV-018,One-time code before a new payee
+V-08,Consumer email and file provider,Email and cloud file storage,SYS-02,Scanned W-9s; customer export; program documents,Consumer terms of service,None on file,EV-016; EV-018,"Personal plan, also used for family mail"
+V-09,AI yield vendor,Computer-vision yield prediction trial,SYS-08,Drone imagery; block yields,Click-through trial terms that allow use of farm data to improve its models,None on file,EV-031; EV-032,See P10 (AI-001)
+V-10,Public chatbot provider,General-purpose generative AI chatbot,AI-003,"Draft text, prices and U-pick hours",Consumer terms,None on file,EV-033,See P10 (AI-003)
+V-11,Internet provider,Home Farm internet and router,SYS-05,Network traffic in transit,Customer agreement,None on file,EV-018; EV-022,Router supplied by the provider
+V-12,Cellular carrier,Phone service; alarm text delivery,SYS-04,Alarm texts and codes in transit,Customer agreement,None on file,EV-018; EV-021,
+V-13,On-call IT technician (local computer repair shop),"Hourly help with the laptop, phone and router",SYS-03; SYS-04; SYS-05,Device access during sessions the owner starts,None found (billed by invoice),None on file,EV-018; EV-019,No standing access
+V-14,Custom harvest operator,Digs and combines the peanuts with its own equipment and crew,None,W-9 (name and Social Security number),Invoices; W-9 on file,Not applicable,EV-019; EV-024; EV-026,No system access
+V-15,Tax preparer (CPA),Prepares Schedule F,SYS-09 (receives exports),Accounting exports including W-9 data,Engagement letter,None on file,EV-017; EV-018; EV-024,
+V-16,Crop insurance agent,Federal crop insurance policy on peanuts,None,Acreage and production reports,Crop insurance policy,Not applicable,EV-018; EV-027,
+V-17,Farm liability insurer,Farm liability policy,None,None,Policy declarations (2026),Not applicable,EV-018; EV-028,Whether the policy covers cyber events is an open intake request
+V-18,Peanut buying point,Buys the peanut crop,None,Delivery and settlement records,Buying point contract; settlement sheets,Not applicable,EV-025,"Customer, not a supplier; one buyer"
+V-19,River Field landowner,Cash-rent lease of about 100 acres,None,W-9 (name and Social Security number),Lease,Not applicable,EV-018; EV-026,

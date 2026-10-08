@@ -12,6 +12,8 @@
 | Workbook | `gap-analysis.csv` (145 rows) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with counsel's review (EV-077); the Part 121 conclusion was confirmed in the 2026-07 applicability memo (EV-088). This section restates the results for the rules analyzed here.
+
 **No binding sector-specific federal cybersecurity rule applies to the company.** Each candidate was checked:
 
 | Candidate | Applies? | Basis |
@@ -40,7 +42,7 @@
 1. **Decompose.** The 106 CSF 2.0 subcategories and outcome text come from `00_universal-framework/frameworks/csf2_core.csv`. Binding rules were broken into citation-level duties from the eCFR text current as of 2026-09-23 (21 CFR 112.161-112.166; 21 CFR 1.1315-1.1340 and 1.1455; 20 CFR 655.122; 40 CFR 170.311; 14 CFR 107.7, 107.9, 107.12, 137.11; 17 CFR 229.106), the SEC's Form 8-K instructions for Item 1.05, and the 2026 Florida statute. PCI DSS rows list only the questionnaire type; the standard's text is not reproduced.
 2. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (SRC-OLIR-CSF-53) in `nist_official_sp800_53r5`; the `sp800_53_controls` column is a key-control subset chosen by the author. Binding-rule rows are author mappings and are labeled that way.
 3. **Target Profile.** Each subcategory has a priority (High 51, Medium 53, Low 2), set by the CISO and the Chief Risk Officer from the risk register (P01) and BIA (P05).
-4. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random, stratified by region where noted. **35 rows were tested by sampling or full-population analytics; 19 found exceptions.**
+4. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random, stratified by region where noted. **35 rows were tested by sampling or full-population analytics; 19 found exceptions.** Current state was established from the intake evidence (exports, documents and records from the enterprise systems of record, EV-001 to EV-078 and EV-093), gap analysis interviews with control owners (EV-083), the samples and analytics (EV-084 to EV-087), the Part 121 applicability memo (EV-088), the 2026 third-party food safety audit reports (EV-089), and, where Internal Audit had already tested a control, its P07 results (for example EV-CM-6 and EV-IA-5). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Rate.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale. High gaps are in the P01 register and the P07 POA&M.
 
 **CSF Tier.** Current: **Tier 3 (Repeatable) for IT and Tier 2 (Risk Informed) for OT.** Target: Tier 3 for OT by 2027-12, once OT vendor access, change control, and monitoring coverage are closed.
