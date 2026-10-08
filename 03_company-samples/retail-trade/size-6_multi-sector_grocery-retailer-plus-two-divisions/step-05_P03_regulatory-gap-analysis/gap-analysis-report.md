@@ -34,6 +34,8 @@ The Rewards Card is a private-label card that works only at group stores. It is 
 ### 1.3 Why the retail scope is large
 The PIN pads encrypt card data under the processor's encryption solution, but that solution is **not a PCI-listed validated P2PE solution**, so lanes, store controllers, POS networks, and the payment switch stay in scope. Online, the processor's hosted payment fields keep card data out of the storefront, but the checkout page around them is still a payment page under 6.4.3 and 11.6.1. These two choices explain why most retail rows apply.
 
+**Lending licenses (context, not cyber rules).** Financial Services lends under state licenses, for example Florida's retail installment seller license (Fla. Stat. 520.32(1)) and consumer finance license (Fla. Stat. 516.02). Licensing is not scored here; the security duties for the same customer data are the FTC Safeguards Rule rows in this analysis (see `00_company-facts.md`).
+
 ## 2. Regulation-by-division matrix
 | Requirement | Grocery Retail | Grocery Wholesale | Financial Services | Group (corporate) |
 |---|---|---|---|---|

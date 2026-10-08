@@ -59,6 +59,8 @@ NERC CIP standards apply to registered entities, not to their vendors. They reac
 | N54-R06 HIPAA business associate | Not applicable: no PHI |
 | CEII, 18 CFR 388.113 | Applies as a route: non-employee agents may obtain an owner's CEII from FERC only with the owner's written authorization (388.113(g)(1)); clients' CEII terms then govern handling |
 
+**Holding company and affiliate rules (context, not cyber rules).** FERC's holding company rules (18 CFR 366.2 to 366.4), its rule on affiliate purchases by a transmission-owning utility (18 CFR 35.44(b)(2)), and the Florida PSC affiliate transaction rule (Fla. Admin. Code R. 25-6.1351) govern how the Electric Utility prices and records what it buys from its sister divisions. They are not security requirements, so they are not scored here. They matter here because the intercompany agreements behind those purchases are also where the group's security terms for its sister divisions belong (see `00_company-facts.md`).
+
 ## 2. Regulation-by-division matrix
 | Requirement | Electric Utility | Gas Production | Engineering Services | Group (corporate) |
 |---|---|---|---|---|
