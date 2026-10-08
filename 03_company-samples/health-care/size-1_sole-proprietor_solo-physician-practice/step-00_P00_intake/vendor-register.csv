@@ -1,0 +1,11 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"EHR/PM, patient portal, e-prescribing, clinical decision support reminders",SYS-01; AI-002,ePHI,BAA signed,"SOC 2 Type 2 (Security and Availability), 12 months ending 2026-03-31",EV-013; EV-014; EV-024,E-prescribing network and hosting provider are carved-out subservice organizations
+V-02,Consumer email and file provider,Email and file storage,SYS-02,ePHI (incidental),Consumer terms of service; no BAA,None on file,EV-005; EV-013; EV-014,The provider offers a BAA only on business plans
+V-03,Cloud fax vendor,Cloud fax,SYS-05,ePHI,BAA signed,None on file,EV-006; EV-013; EV-014,
+V-04,Billing company,"Charge entry, electronic claims, payment posting",SYS-01 (named billing-role accounts),ePHI,Service agreement and BAA signed,None on file,EV-013; EV-017; EV-018,Submits standard transactions for the practice
+V-05,Answering service,After-hours calls and messages,SYS-04 (messages by text),ePHI,Standard service terms; no BAA,None on file,EV-013; EV-014; EV-016,
+V-06,On-call IT consultant,Hourly laptop and Wi-Fi help,SYS-03; SYS-06,ePHI (remote sessions on the laptop),BAA signed 2026-07-17,None on file,EV-013; EV-014; EV-015,Remote sessions on the laptop before 2026-07-17; remote-support tool installed (EV-007)
+V-07,Consumer AI scribe app vendor,Visit recording and draft notes,SYS-07,ePHI,Click-through consumer terms; no BAA,None on file,EV-013; EV-026; EV-027,Free trial from 2026-07-06
+V-08,Building landlord,"Exam suite lease, building entry and reception, shared tenant Wi-Fi, locked shredding bin",SYS-06; OTH-02,Network traffic in transit; paper for shredding,Lease,Shredding certificates go to building management,EV-009; EV-010; EV-012,The shredding contractor is engaged by the building
+V-09,Accounting SaaS vendor,Bookkeeping,OTH-01,Practice financial data,Subscription terms,None on file,EV-014,No patient data found
+V-10,Phone carrier,Mobile service; device trade-in,SYS-04,SMS texts in transit,Customer agreement,None on file,EV-014; EV-023,Previous phone traded in 2025-04-12

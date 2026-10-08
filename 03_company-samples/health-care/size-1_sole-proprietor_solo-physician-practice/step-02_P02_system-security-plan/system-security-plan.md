@@ -7,7 +7,7 @@
 Practice Systems Profile (**PSP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The PSP is everything the practice uses to see about 900 active patients: scheduling, charting, e-prescribing, the patient portal, faxing, billing, and patient communication. One person, the physician-owner, uses and runs it. Components are SYS-01 to SYS-07 in `../00_company-facts.md` section 3: the EHR/PM (SaaS), a consumer email and file account, a laptop and tablet, a personal phone, a cloud fax service, the shared building Wi-Fi, and a consumer AI scribe app (trial paused; see P10). There is no server and no IaaS. Most safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, and vendor contracts (P04).
+The PSP is everything the practice uses to see about 900 active patients: scheduling, charting, e-prescribing, the patient portal, faxing, billing, and patient communication. One person, the physician-owner, uses and runs it. Components are SYS-01 to SYS-07 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the EHR/PM (SaaS), a consumer email and file account, a laptop and tablet, a personal phone, a cloud fax service, the shared building Wi-Fi, and a consumer AI scribe app (trial paused; see P10). There is no server and no IaaS. Most safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -47,6 +47,7 @@ Operational. Planned changes: move email and files to a business plan with a BAA
 **Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the HIPAA safeguards for a one-person practice (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the EHR vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The accounting SaaS (OTH-01) holds no patient data and is outside it.
 - **Inside:** the owner's EHR/PM account settings and user roles, the email and file account, the cloud fax account, the laptop, tablet, and phone, the suite's use of the building Wi-Fi, and paper records in the suite.
 - **Outside (external services):** the EHR vendor's platform, the billing company, the answering service, the cloud fax platform, the e-prescribing network, the AI scribe app vendor, and the building network equipment.
 
@@ -99,7 +100,7 @@ Self-assessed 2026-07-20 to 2026-07-24 with the IT consultant. See P07.
 The EHR requires a password and a second factor on the owner's phone, which is appropriate for remote access to ePHI at a Moderate categorization. The email account and cloud fax portal use a password only until MFA is turned on (2026-09-15). Patients use the EHR vendor's portal and its identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **BA / BAA:** business associate / business associate agreement

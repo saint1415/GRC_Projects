@@ -7,10 +7,10 @@
 | AI use case | AI-001: consumer AI scribe app on the owner's phone (SYS-07). Trial 2026-07-06 to 2026-07-17, about 96 recorded visits; paused 2026-07-20 |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; AI 600-1 for generative AI risks |
 | Assessor and decision | Physician-owner, 2026-08-25; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the phone's app store history and the app itself, the bank and card statements, the EHR decision support settings, and the BAA folder (EV-026, EV-014, EV-025, EV-013). With no staff, there was no survey to run. Not established: what the vendor still holds from the trial recordings, and whether it used them for training. The deletion request in section 6 is the first step to find out |
 
 ## 1. What it does (Map)
-The app records the patient visit on the phone, sends the audio to the app vendor's cloud, and returns a draft note that the owner copies into the EHR. Inputs and outputs are ePHI. It is a consumer product: the owner accepted click-through terms, and the vendor offers **no BAA**. The terms allow the vendor to keep recordings and use them to improve its service. Patients were **not asked for consent** before recording.
+The app records the patient visit on the phone (EV-026), sends the audio to the app vendor's cloud, and returns a draft note that the owner copies into the EHR. Inputs and outputs are ePHI. It is a consumer product: the owner accepted click-through terms, and the vendor offers **no BAA**. The terms allow the vendor to keep recordings and use them to improve its service (EV-027). Patients were **not asked for consent** before recording (EV-028).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |

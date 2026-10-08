@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Health Care | Sole Proprietorship
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
 
 ## 1. The organization
 | Item | Fact |
@@ -12,9 +12,9 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Patients | About 900 active patients; about 12 visits per clinic day, 4 days a week |
 | Revenue | About $180,000 a year (fictional). SBA-small (standard $16.0 million, NAICS 621111) |
 | Payers | Medicare, Florida Medicaid, and commercial plans. Medicaid is federal financial assistance, so Section 1557 (45 CFR Part 92) applies |
-| HIPAA status | **Covered entity.** A contracted billing company submits claims electronically on the practice's behalf (45 CFR 160.103) |
+| HIPAA status | **Covered entity**, determined in the intake obligations register (N62-R01): a contracted billing company submits claims electronically on the practice's behalf (EV-017; 45 CFR 160.103) |
 | Contrast worth noting | If the physician ran a cash-only direct primary care practice and never conducted standard electronic transactions, HIPAA would not apply. The applicability test is function, not size |
-| Not in scope | 42 CFR Part 2; group health plan requirements; payment cards (a vendor-hosted card reader) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): 42 CFR Part 2, the FTC Health Breach Notification Rule, CMS emergency preparedness conditions, and group health plan requirements do not apply. Payment cards: a vendor-hosted card reader outside the practice's systems |
 | State law approach | Florida law is cited only where unavoidable (breach notice, Fla. Stat. 501.171; recording consent, Fla. Stat. 934.03) |
 
 ## 2. People and contracted services (role titles only)
@@ -22,10 +22,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 |---|---|
 | Physician-owner | Every role: owner, Privacy Officer, Security Officer, risk acceptor |
 | Billing company | Claims and payment posting. A business associate (BAA on file) |
-| Answering service | After-hours calls and messages. **No BAA on file** |
-| On-call IT consultant | Hourly help with the laptop and Wi-Fi. No standing access. **No BAA** (has had remote access to the laptop) |
+| Answering service | After-hours calls and messages. **No BAA on file** (EV-013, EV-016) |
+| On-call IT consultant | Hourly help with the laptop and Wi-Fi. No standing access. **No BAA** (has had remote access to the laptop, EV-015) until the BAA signed on 2026-07-17 (EV-013; see section 7) |
 
 ## 3. Systems
+
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Hosting | Holds ePHI? | Notes |
 |---|---|---|---|---|
 | SYS-01 | All-in-one EHR/PM with patient portal and e-prescribing | Vendor SaaS | Yes | System of record. BAA on file. The vendor enforces MFA |
@@ -38,28 +41,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **SSP system (P02):** the *Practice Systems Profile*: SYS-01 to SYS-07.
 
-## 4. Current security posture: early (few formal controls)
-**In place today:**
-- EHR MFA (enforced by the vendor)
-- BAAs with the EHR vendor, billing company, and cloud fax
-- The EHR vendor's backups
-- Automatic OS updates on the laptop and phone
-- Built-in antivirus
-- Paper shredded with a building-provided shredding bin
-
-**Missing:**
-1. No risk analysis ever performed (Required, 164.308(a)(1)(ii)(A)).
-2. No written policies or procedures.
-3. Email is a personal consumer account with no BAA, and it holds PHI.
-4. The laptop is unencrypted.
-5. The office is on a shared building Wi-Fi network.
-6. Patients are texted from a personal phone with no safeguards.
-7. The answering service and IT consultant have no BAAs.
-8. No incident plan and no contacts list.
-9. No MFA on email.
-10. No backup of downloaded files or photos.
-11. The AI scribe app was used without a BAA or patient consent.
-12. No security training (the owner has only CME exposure).
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. For a one-person practice the sources are the vendors' admin portals, the EHR's reports, bank and card statements, the inbox, signed agreements, the phone, and the insurance agent's portal.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the HIPAA Security Rule** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -72,8 +58,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-07-20 to 2026-07-24 | Self-assessment with the on-call IT consultant (after BAA signature) |
-| 2026-08-31 | Deliverables adopted by the physician-owner |
+| 2026-07-13 to 2026-07-17 | Intake: the owner collects portal exports, statements, agreements, device settings and the suite walk-through; inventories; obligations register |
+| 2026-07-20 to 2026-07-24 | Self-assessment with the on-call IT consultant (after BAA signature): BIA, risk analysis, gap analysis, and control assessment (tests on 2026-07-23) |
+| 2026-07-27 to 2026-08-28 | POL-01 drafted from the gaps and the test results |
+| 2026-08-31 | Deliverables and POL-01 adopted by the physician-owner |
+| 2027-02 (planned) | Follow-up check: operating effectiveness of the controls POL-01 introduced, after at least one quarter of operation |
 
 ## 7. Facts added while building the deliverables (Phase 2)
 These facts were added so the deliverables agree with each other. They do not change sections 1 to 6.

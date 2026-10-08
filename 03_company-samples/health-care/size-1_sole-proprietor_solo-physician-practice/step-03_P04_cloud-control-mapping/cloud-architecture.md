@@ -52,7 +52,7 @@ flowchart LR
 All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM) agree on the SaaS split: the provider runs the application, the platform, and the facilities; **the customer always keeps its identities and accounts, its data, and its devices.** That is why 12 of the 15 rows in the control map are the owner's. A SOC 2 report or a BAA from the vendor never covers these three layers. No IaaS provider equivalents table is needed, because the practice runs no infrastructure.
 
 ## 4. Findings from the mapping
-1. **Two vendors hold PHI with no BAA** (email and files, AI scribe). The SaaS model cannot fix this; only a contract can. Tracked as P01 R-003 and R-009.
-2. **MFA is off where it is free to turn on** (email, cloud fax). The cloud fax MFA gap was found during this mapping. Tracked with R-002.
+1. **Two vendors hold PHI with no BAA** (email and files, AI scribe; EV-013, EV-005, EV-027). The SaaS model cannot fix this; only a contract can. Tracked as P01 R-003 and R-009.
+2. **MFA is off where it is free to turn on** (email, cloud fax). The cloud fax MFA gap was found during this mapping, from the fax portal settings collected at intake (EV-006). Tracked with R-002.
 3. **The owner's phone is part of the security boundary.** It holds the EHR second factor, patient texts, and clinical photos. Losing it is both a disclosure risk (R-005) and a lockout risk (R-010).
 4. **Inherited EHR controls depend on the vendor's SOC 2 report** and on the owner operating the complementary user entity controls (account removal, MFA, log review) listed in P09.

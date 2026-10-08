@@ -17,7 +17,7 @@ Keep a printed copy in the suite and at home. Assume the laptop and the email ac
 |---|---|---|
 | On-call IT consultant (BA) | Isolate the laptop, preserve evidence, check other devices | Hour 0 |
 | Breach counsel (health care privacy attorney) | Privilege, breach determination, notices, ransom questions | Hours 0-4 |
-| Cyber insurer, **if any** | No standalone cyber policy today. Call the professional liability carrier to ask whether a cyber endorsement applies *before* hiring any outside firm | Hours 0-4 |
+| Cyber insurer, **if any** | No standalone cyber policy today (EV-014, EV-029; the endorsement question is an open intake request). Call the professional liability carrier to ask whether a cyber endorsement applies *before* hiring any outside firm | Hours 0-4 |
 | EHR vendor support | Revoke laptop sessions; pull the audit log for the account; confirm the EHR is clean | Hours 1-4 |
 | Billing company (BA) | Warn of possible fraud using stolen patient and claim data; confirm its systems are clean; watch for fake payment-change requests | Hours 4-8 |
 | Email provider account recovery | Lock out the attacker; review forwarding rules and sessions | Hours 1-2 |

@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-07, paper records in the exam suite, and the four contracted services (billing company, answering service, IT consultant, cloud fax). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-07, paper records in the exam suite, and the four contracted services (billing company, answering service, IT consultant, cloud fax), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The physician-owner owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. Any risk to patient safety rated High is never accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), and a walk through the laptop, phone, and SaaS accounts with the IT consultant.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through the laptop, phone, and SaaS accounts with the IT consultant on 2026-07-21 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account and device reviews (EV-004, EV-007, EV-008), the vendor records, the AI scribe records, and the owner's self-review (EV-032). A one-person practice keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -42,6 +42,8 @@
 | R-003 | PHI in a consumer email account with no BAA | Moderate | Business plan with a BAA; migrate and delete | Physician-owner | 2026-10-31 |
 | R-009 | AI scribe app used with no BAA or consent | Moderate | Avoid: do not resume; deletion request; breach risk assessment (P10) | Physician-owner | 2026-09-30 |
 | R-010 | Physician-owner unavailable (single point of failure) | Moderate | Coverage arrangement; sealed recovery codes | Physician-owner | 2026-12-31 |
+
+**One pass.** The register was completed on 2026-07-24 from intake and self-assessment evidence. The control tests ran on 2026-07-23, inside the same week, so this pass already reflects them: R-008 cites the remote-support finding (EV-SA-9). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks share one cause: **patient information sits on an unencrypted laptop and in a consumer email account protected only by a password.** Two built-in settings (email MFA and disk encryption) cost nothing and reduce R-001, R-002, and R-004 within two weeks of adoption. Moving email and files to a business plan with a BAA then closes R-003 and most of R-012.
 
