@@ -40,7 +40,7 @@ This report records **observations, not findings**. Whether an observation meets
 
 **Reconciliation across sources.**
 - **Workforce.** The HR roster has about 230 year-round employees and up to 370 H-2A workers in season (EV-003). Office, management, IT and settlement users have identity provider accounts (EV-001); crew leads use 6 shared SYS-01 logins, and field workers have no system accounts (EV-007). The 214 terminations and 41 transfers are the sampling populations for P03 and P07.
-- **Endpoints.** The CMDB total (210 laptops and desktops, 160 tablets and phones, 20 line PCs) matches the SSP boundary and the BIA resource table (EV-012).
+- **Endpoints.** The CMDB total (210 laptops and desktops, 160 tablets and phones, 20 line PCs) matches the BIA resource table and the SSP component inventory, which counts about 140 of the 210 laptops and desktops as used to run the farms and the packinghouse (EV-012).
 - **OT devices.** The OT inventory (about 1,600) and the installer invoices and purchasing records (about 2,900) differ by about 1,300 devices (EV-013, EV-014). The difference stays an open request.
 - **PLC and HMI programs.** The program list accounts for all 68 programs: 37 with company copies and 31 held only by the integrator (EV-025).
 - **Vendors.** About 110 vendors in accounts payable, 38 of them flagged with data or system access (EV-047, EV-048). The named vendors and two summary rows in [`vendor-register.csv`](vendor-register.csv) add up to the 38 and the 110.
