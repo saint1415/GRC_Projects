@@ -46,7 +46,7 @@ Operational. Planned changes: authenticator-app MFA on email and MFA on the ATS 
 | Contractor assignment data (start requests, pay and bill rates) | Moderate | Moderate | Moderate | A missed start request stops a contractor starting (P05 BP-01 MTD 24 h) |
 | **RPSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 23 controls that a one-person, SaaS-only business can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the partner's SOC 2 report, P09; vendor security pages) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 27 controls that a one-person, SaaS-only business can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the partner's SOC 2 report, P09; vendor security pages) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts, settings, and data in the ATS, email and files, partner portal, accounting, e-signature, sourcing, and chatbot services; the laptop and phone; the home network as used for work; paper in the home office.
@@ -80,12 +80,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 23 controls:
-- Implemented: 7
-- Partially implemented: 13
+See `control-implementation.csv`. Summary of 27 controls:
+- Implemented: 9
+- Partially implemented: 15
 - Planned: 3
 
-Inheritance: 1 fully inherited from the SaaS vendors (AU-2), 9 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 13 the owner's alone.
+Inheritance: 2 fully inherited from the SaaS vendors (AU-2, AU-9), 10 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 15 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

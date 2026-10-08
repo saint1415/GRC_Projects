@@ -58,7 +58,7 @@ Operational. Planned changes: customer credentials moved into a shared password 
 | Customer account and billing records | Moderate | Low | Low | Contact data and portal sign-ins; billing can wait 72 h (P05) |
 | **HCP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the reasonable-security expectations for a one-person reseller (`control-implementation.csv`). Other Moderate controls are inherited from the upstream provider and the SaaS vendors (evidence: the upstream SOC 2 report, P09) or tailored out because they assume staff, owned networks, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the reasonable-security expectations for a one-person reseller (`control-implementation.csv`). Other Moderate controls are inherited from the upstream provider and the SaaS vendors (evidence: the upstream SOC 2 report, P09) or tailored out because they assume staff, owned networks, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's administrator accounts and settings in SYS-01 to SYS-06, the freelance developer's dashboard account, the customer password spreadsheet and password manager, and the owner's laptop and phone.
@@ -91,12 +91,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 5
-- Partially implemented: 16
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 6
+- Partially implemented: 19
 - Planned: 3
 
-Inheritance: 3 fully inherited from the upstream provider (AC-3, PE-3, SC-7), 12 hybrid (the vendor provides the mechanism, the owner configures or uses it), and 9 the owner's alone (AT-2, AU-6, CP-2, IA-5, IR-6, IR-8, PS-7, RA-3, SA-9).
+Inheritance: 3 fully inherited from the upstream provider (AC-3, PE-3, SC-7), 14 hybrid (the vendor provides the mechanism, the owner configures or uses it), and 11 the owner's alone (AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-6, IR-8, PS-7, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

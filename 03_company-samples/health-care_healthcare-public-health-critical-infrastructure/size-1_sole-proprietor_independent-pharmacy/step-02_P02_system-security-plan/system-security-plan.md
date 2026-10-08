@@ -48,7 +48,7 @@ Operational. Planned changes: own accounts for each pharmacist and MFA for the a
 | Health care administration (claims and payments) | Moderate | Moderate | Low | Financial and identity data; claims can be submitted after recovery (P05 MTD 72 h) |
 | **PCSS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 27 controls that carry the HIPAA safeguards and the pharmacy's EPCS and CSOS duties for a one-person pharmacy (`control-implementation.csv`). Other Moderate controls are inherited from the PMS vendor (evidence: its SOC 2 and EPCS certification reports, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the HIPAA safeguards and the pharmacy's EPCS and CSOS duties for a one-person pharmacy (`control-implementation.csv`). Other Moderate controls are inherited from the PMS vendor (evidence: its SOC 2 and EPCS certification reports, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the pharmacy's PMS account settings and roles, the email and file suite, the cloud fax account, the counter desktop, laptop, and phone, the store network, the CSOS certificate, the AI chatbot account, and paper prescriptions and logs in the store.
@@ -81,12 +81,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 27 controls:
+See `control-implementation.csv`. Summary of 30 controls:
 - Implemented: 8
-- Partially implemented: 16
+- Partially implemented: 19
 - Planned: 3
 
-Inheritance: 3 fully inherited from the PMS vendor (AC-3, AU-2, AU-9), 12 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 12 the owner's alone (AC-11, AT-2, AU-6, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9, SC-12).
+Inheritance: 3 fully inherited from the PMS vendor (AC-3, AU-2, AU-9), 13 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 14 the owner's alone (AC-11, AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9, SC-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

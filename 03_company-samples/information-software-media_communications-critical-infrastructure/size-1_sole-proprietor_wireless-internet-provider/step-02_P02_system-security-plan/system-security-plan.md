@@ -49,7 +49,7 @@ Operational. Planned changes: router firmware update and management filter rewor
 
 Information types follow the intent of NIST SP 800-60; the security categorization uses FIPS 199 impact levels.
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the CPNI "reasonable measures" duty (64.2010(a)) and the network security practices that matter most for a one-person ISP (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the billing vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the CPNI "reasonable measures" duty (64.2010(a)) and the network security practices that matter most for a one-person ISP (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the billing vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, SYS-03, SYS-04, SYS-07, and SYS-08; the laptop and phone; the edge router, core switch, access points, backhaul radios, customer radios, and ATAs, as far as their management and configuration go; paper sign-up forms in the home office.
@@ -82,12 +82,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
+See `control-implementation.csv`. Summary of 28 controls:
 - Implemented: 4
-- Partially implemented: 17
+- Partially implemented: 21
 - Planned: 3
 
-Inheritance: 12 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly) and 12 the owner's alone (AC-17, AT-2, AU-6, CM-6, CP-2, IA-5, IR-6, IR-8, RA-3, RA-5, SA-9, SC-7). None is fully inherited, because the owner always keeps identities, data, and the network.
+Inheritance: 14 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly) and 14 the owner's alone (AC-17, AT-2, AU-6, CA-2(1), CM-3, CM-6, CP-2, IA-5, IR-6, IR-8, RA-3, RA-5, SA-9, SC-7). None is fully inherited, because the owner always keeps identities, data, and the network.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

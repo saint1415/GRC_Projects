@@ -49,7 +49,7 @@ Because one person designs, runs, and checks every control, independence is limi
 | Personal information of subcontractors (W-9 forms) | Moderate | Low | Low | Social Security numbers trigger Florida breach duties |
 | **PMPAS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 23 controls (`control-implementation.csv`). The set covers every FAR 52.204-21 requirement (which the SP 800-171 R2 chain maps to these controls) plus the controls that stop payment fraud (MFA, call-back verification, log review). Other Moderate controls are inherited from the SaaS vendors (evidence: the project management vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 27 controls (`control-implementation.csv`). The set covers every FAR 52.204-21 requirement (which the SP 800-171 R2 chain maps to these controls) plus the controls that stop payment fraud (MFA, call-back verification, log review). Other Moderate controls are inherited from the SaaS vendors (evidence: the project management vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, and SYS-03; the laptop; the phone; the home office network; paper plan sets and files in the home office and truck.
@@ -83,12 +83,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 23 controls:
-- Implemented: 3
-- Partially implemented: 16
+See `control-implementation.csv`. Summary of 27 controls:
+- Implemented: 4
+- Partially implemented: 19
 - Planned: 4
 
-Inheritance: 9 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly) and 14 the owner's alone. None is fully inherited, because even where a SaaS vendor runs the mechanism, the owner still decides who gets access and where data goes.
+Inheritance: 11 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly) and 16 the owner's alone. None is fully inherited, because even where a SaaS vendor runs the mechanism, the owner still decides who gets access and where data goes.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

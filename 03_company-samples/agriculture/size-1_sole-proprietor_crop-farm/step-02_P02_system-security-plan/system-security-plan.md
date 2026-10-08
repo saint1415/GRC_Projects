@@ -51,7 +51,7 @@ SP 800-60's information type catalog is built for federal missions and has no fa
 | Farm operational and yield data; customer contact lists | Moderate | Low | Low | Commercially sensitive; little harm if briefly unavailable |
 | **FMICP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 23 controls that matter for a one-person farm (`control-implementation.csv`), with the SP 800-82 Rev. 3 OT guidance applied to SYS-06. Other Moderate controls are either inherited from the SaaS vendors (evidence: the FMIS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, software development, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 27 controls that matter for a one-person farm (`control-implementation.csv`), with the SP 800-82 Rev. 3 OT guidance applied to SYS-06. Other Moderate controls are either inherited from the SaaS vendors (evidence: the FMIS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, software development, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's account settings and users in SYS-01, SYS-08, SYS-09, and SYS-10; the email and file account; the laptop, phone, and tablet; the home router, access point, and customer Wi-Fi; the pump controller, pivot panel, probes, and freeze sensor; the drone; paper program documents in the home office.
@@ -86,12 +86,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 23 controls:
-- Implemented: 7
-- Partially implemented: 13
+See `control-implementation.csv`. Summary of 27 controls:
+- Implemented: 8
+- Partially implemented: 16
 - Planned: 3
 
-Inheritance: 1 fully inherited from the FMIS vendor (AC-3), 10 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 12 the owner's alone (AC-6, AC-18, AT-2, AU-6, CM-8, CP-2, IA-5, IR-8, PE-3, RA-3, SA-9, SI-12).
+Inheritance: 2 fully inherited from the vendors (AC-3, AU-9), 11 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 14 the owner's alone (AC-6, AC-18, AT-2, AU-6, CA-2(1), CM-3, CM-8, CP-2, IA-5, IR-8, PE-3, RA-3, SA-9, SI-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

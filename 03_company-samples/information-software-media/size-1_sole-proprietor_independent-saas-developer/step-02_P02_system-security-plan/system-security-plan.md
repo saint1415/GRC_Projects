@@ -43,7 +43,7 @@ Operational since 2023. Planned changes: secrets moved out of the laptop and rot
 | Billing and business records | Low | Moderate | Low | Held by the payment processor and accounting SaaS; BP-05 MTD 168 h |
 | **MBP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 25 controls that carry the safeguards a one-person software business can operate and check (`control-implementation.csv`). One control outside the Moderate baseline, IA-5(7), was added because the top risk (P01 R-001) is plaintext secrets on the laptop. Other Moderate controls are either inherited from the hosting provider (evidence: its SOC 2 Type 2 report, reviewed 2026-09-09 in P09) or tailored out because they assume staff, facilities, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 29 controls that carry the safeguards a one-person software business can operate and check (`control-implementation.csv`). One control outside the Moderate baseline, IA-5(7), was added because the top risk (P01 R-001) is plaintext secrets on the laptop. Other Moderate controls are either inherited from the hosting provider (evidence: its SOC 2 Type 2 report, reviewed 2026-09-09 in P09) or tailored out because they assume staff, facilities, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's hosting account (application, job worker, admin console, database, photo storage, settings), the source repository and CI configuration, the owner's accounts and settings in every SaaS service (SYS-03 to SYS-08), the domain and DNS records, the laptop and the phone, and the secrets that connect them.
@@ -77,12 +77,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 25 controls:
-- Implemented: 4
-- Partially implemented: 17
+See `control-implementation.csv`. Summary of 29 controls:
+- Implemented: 5
+- Partially implemented: 20
 - Planned: 4
 
-Inheritance: 12 hybrid (the provider operates the mechanism and the owner configures and uses it correctly) and 13 the owner's alone (AC-3, AC-6(5), AC-7, AT-2, AU-6, CP-2, CP-4, IA-5(7), IR-6, IR-8, RA-3, SA-9, SA-11). None is fully inherited, because even the hosting provider's encryption, edge, and backups depend on the owner's account settings and secrets.
+Inheritance: 13 hybrid (the provider operates the mechanism and the owner configures and uses it correctly) and 16 the owner's alone (AC-3, AC-5, AC-6(5), AC-7, AT-2, AU-6, CA-2(1), CM-3, CP-2, CP-4, IA-5(7), IR-6, IR-8, RA-3, SA-9, SA-11). None is fully inherited, because even the hosting provider's encryption, edge, and backups depend on the owner's account settings and secrets.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |
