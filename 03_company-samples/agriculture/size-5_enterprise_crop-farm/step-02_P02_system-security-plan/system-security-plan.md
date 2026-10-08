@@ -91,6 +91,8 @@ SP 800-60's information type catalog is built for federal missions and has no fa
 **Documented controls.** `control-implementation.csv` documents **147 controls**: 135 from the Moderate baseline and 12 High-baseline supplements. The remaining Moderate-baseline controls and enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, the farm data hub part of SYS-04-A, SYS-05 and SYS-05-F, with SYS-02-PV as an interconnected service).
+
 **Inside the boundary:** the FMIS tenant configuration and roles, the SCADA masters and PLC program library at DC-1 and DC-2, the 6 control centers (HMIs, engineering workstations, historian collectors, OT firewalls, OT DMZ), all field OT devices on company farms (including AQ-01), the field network segments (APN, licensed radio, LoRaWAN), and the farm data hub workload on Cloud provider A.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -219,7 +221,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Integrators:** named gateway accounts with MFA and session recording. Exceptions until POAM-004 and POAM-002 close: INT-4 and INT-5 tools, and the AQ-02 pivot cloud service.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-002 irrigation scheduling recommendations (P10), FMICP contingency plan v3, regional freeze plans, OT change procedure PRC-01.4, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-002 irrigation scheduling recommendations (P10), FMICP contingency plan v3, regional freeze plans, OT change procedure PRC-01.4, enterprise common control catalog (EV-044), FMICP contingency plan v3 and regional freeze plans (EV-050). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **APN:** access point name (a private cellular network segment)

@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, Inc. (publicly traded diversified precision-agriculture crop farm; FL, GA, SC, NC) |
 | Tier / Vertical | Enterprise / Agriculture, Forestry, Fishing and Hunting |
 | Scope | Enterprise AI portfolio (11 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001 computer-vision crop yield prediction in section 6 |
+| Inventory | `ai-use-case-inventory.csv` (11 use cases), built from the AI governance committee register (EV-076), the accounts payable vendor master (EV-056), the dealer portal and e-commerce SaaS records (EV-024, EV-061), and the committee's 2026-07-15 and 2026-08-26 minutes (EV-090). The `source_evidence` column names the source of each entry. Not established at intake: AI features embedded in vendor products beyond the four in the register (intake open request), and workforce use of public AI tools on personal devices |
 | Framework | NIST AI RMF 1.0 (AI 100-1); the Generative AI Profile (NIST AI 600-1) for the generative use cases (AI-008, AI-011); repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Risk Officer), meeting of 2026-08-26; the GRC team and the Data Science Lead prepared the portfolio review |
 | Decision | Executive risk committee, 2026-09-10 (section 8) |

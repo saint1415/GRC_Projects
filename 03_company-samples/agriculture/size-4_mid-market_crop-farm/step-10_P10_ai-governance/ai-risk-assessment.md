@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed diversified precision-agriculture crop farm with a central packinghouse and a Grower Services unit) |
 | Tier / Vertical | Mid-Market / Agriculture, Forestry, Fishing and Hunting |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. The registry use case, computer-vision crop yield prediction, is AI-001 |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, the SYS-01, pivot cloud and equipment settings and a department survey (EV-047, EV-065, EV-009, EV-010). How many staff used public chatbots, and what they entered, was not established (intake open request); R-032 treats it as unknown. The registry use case, computer-vision crop yield prediction, is AI-001 |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-005. AI-001 to AI-004 are computer-vision or predictive models, not generative AI |
 | Assessors / date | Precision Agriculture Manager (business owner of the portfolio), vCISO and Security Manager (security), Director of Irrigation and Water Resources (OT), HR Director (worker impact), Vice President of Grower Services (grower impact), 2026-08-24 to 2026-09-08 |
 | Decision | Chief Operating Officer, 2026-09-15; High-tier decisions noted by the Chief Executive Officer |
 
 ## 1. Summary
-All 5 AI tools or features were adopted by departments without a security or privacy review (gap 7 in `../00_company-facts.md`). None is out of control, but two act on the physical world or on people's work without enough human checks:
+All 5 AI tools or features were adopted by departments without a security or privacy review (EV-065, EV-052). None is out of control, but two act on the physical world or on people's work without enough human checks:
 - **AI-002, automatic irrigation scheduling,** sends schedules to 12 Farm 3 pivots with no plausibility limits or approval. Three automatic schedules after soil probe faults ran far above the agronomist's recommendation.
 - **AI-001, yield prediction,** is now an input to H-2A job order and crew-hour planning, and it is biased by strawberry variety and early-season stage.
 

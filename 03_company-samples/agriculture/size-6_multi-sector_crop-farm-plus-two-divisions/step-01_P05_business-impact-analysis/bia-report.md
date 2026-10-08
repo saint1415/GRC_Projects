@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees at seasonal peak) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 (off-season for Florida strawberries) | **Approved:** board risk committee, 2026-09-10
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-074 group, EV-075 Crop Farming, EV-076 Food Processing, EV-077 Farm Supply), FY2025 revenue by division (EV-003), workforce and H-2A counts (EV-002), farm scale and freeze protection acreage (EV-034), backup and recovery records (EV-021, EV-047, EV-060, EV-062), and recovery and notice terms (EV-049, EV-050, EV-065, EV-069, and the FMIS vendor's SOC 2 report, EV-078). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,10 +16,10 @@ It supports:
 - the Grower Agronomy Portal's availability commitments, which matter for its SOC 2 readiness (P09).
 
 ## 2. System and business description
-Corporate shared services run SYS-G1 (identity), SYS-G2 (SOC, SIEM, EDR, passive OT monitoring), SYS-G3 (cloud platform on two providers, WAN, and group data platform), and SYS-G4 (ERP on cloud IaaS and the HR and payroll SaaS). Division systems are SYS-D1 (the FMICP: FMIS tenant, 3 regional irrigation operations centers (ROCs) with SCADA, field OT at 38 farms, farm data hub, imagery store), SYS-D2 (connected equipment, GNSS guidance, and drones), SYS-D3 (plant MES and OT, ammonia refrigeration controls, quality and food defense records, traceability, warehouse management), SYS-D4 (branch POS, e-commerce, distribution center warehouse management, blending plant controllers), and SYS-D5 (Grower Agronomy Portal). See `../00_company-facts.md` sections 3 and 7.
+Corporate shared services run SYS-G1 (identity), SYS-G2 (SOC, SIEM, EDR, passive OT monitoring), SYS-G3 (cloud platform on two providers, WAN, and group data platform), and SYS-G4 (ERP on cloud IaaS and the HR and payroll SaaS). Division systems are SYS-D1 (the FMICP: FMIS tenant, 3 regional irrigation operations centers (ROCs) with SCADA, field OT at 38 farms, farm data hub, imagery store), SYS-D2 (connected equipment, GNSS guidance, and drones), SYS-D3 (plant MES and OT, ammonia refrigeration controls, quality and food defense records, traceability, warehouse management), SYS-D4 (branch POS, e-commerce, distribution center warehouse management, blending plant controllers), and SYS-D5 (Grower Agronomy Portal). The full list, with the evidence behind each entry, is in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Food Processing about $29 million per day, Farm Supply about $13 million per day (concentrated in planting season), and Crop Farming about $11 million per day including intercompany sales (concentrated in the harvest season; the strawberry crop alone is worth about $310 million a season).
+Dollar values use the FY2025 revenue by division (EV-003) divided by 365 days: Food Processing about $10.6 billion, or about $29 million per day; Farm Supply about $4.8 billion, or about $13 million per day (concentrated in planting season); and Crop Farming about $4.1 billion including intercompany sales, or about $11 million per day (concentrated in the harvest season; the strawberry crop alone is worth about $310 million a season, EV-034).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -74,7 +75,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 |---|---|---|---|
 | Sign-in (SYS-G1) | Group | Every process | A group identity outage stops all three divisions at once. ROC HMIs and the farm operations directory still sign in locally, which keeps irrigation running but sits outside group PAM (P02 gap) |
 | Farm data hub on the corporate cloud network | Crop Farming | Group cloud platform | Telemetry, harvest lot files, and payroll tally all flow through it. It also gives a network path from the corporate cloud into ROC SCADA (P01 CF-004, GR-01) |
-| Harvest lot file (nightly) | Crop Farming | Food Processing traceability (BP-FP04) | About 40% of Food Processing produce and peanuts come from group farms. Nobody has tested producing traceability records for FDA within 24 hours while the hub is down (scenario gap 5) |
+| Harvest lot file (nightly) | Crop Farming | Food Processing traceability (BP-FP04) | About 40% of Food Processing produce and peanuts come from group farms. Nobody has tested producing traceability records for FDA within 24 hours while the hub is down (EV-045, EV-062) |
 | Payroll tally export | Crop Farming | Group payroll (BP-G06) | H-2A earnings statements depend on accurate tally reaching payroll each week |
 | Inputs (seed, fertilizer, crop protection, irrigation parts) | Farm Supply | Crop Farming (BP-CF02, BP-CF07) | A distribution center outage in planting season delays group farms as well as outside growers |
 | Yield estimates (AI-001) | Crop Farming | Food Processing production plans; forward sales; financial close (BP-G07) | Not time critical (Low), but errors spread to three functions without change control (P10) |

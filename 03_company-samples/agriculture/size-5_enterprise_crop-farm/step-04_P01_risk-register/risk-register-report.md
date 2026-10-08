@@ -46,8 +46,8 @@
 Safety risks (ER-05) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the food and agriculture threat picture (ransomware in harvest season, OT vendor remote access, field device vulnerabilities, third-party concentration), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the food and agriculture threat picture (ransomware in harvest season, OT vendor remote access, field device vulnerabilities, third-party concentration) in the SOC's threat intelligence (EV-038), the BIA (P05), the intake evidence ([intake report](../step-00_P00_intake/intake-report.md); systems in the [asset inventory](../step-00_P00_intake/asset-inventory.csv) and suppliers in the [vendor register](../step-00_P00_intake/vendor-register.csv)), the 2025 risk analysis (EV-042), and risk workshops with the SOC, OT Security, SCADA Engineering, the Integration Management Office, Third-Party Risk, Packing and Cold Chain, Food Safety, HR and H-2A, Finance, and Data Science (EV-082). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-037), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3): for example, Very High means more than $20 million cumulative loss, a plausible worker injury or chemical exposure, or a missed SEC filing.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -55,6 +55,8 @@ Safety risks (ER-05) at High or above cannot be accepted without a dated treatme
    - Each row is normalized into one of **8 enterprise risks (ER-01 to ER-08)** in the Chief Risk Officer's enterprise risk register, with an ERM category (strategic, operational, safety, compliance, financial).
    - **Aggregation rule:** an enterprise risk's exposure equals its highest constituent risk level, and the profile also reports how many constituent risks sit outside tolerance. This keeps one severe risk from being averaged away.
    - The enterprise risk profile (section 4) is what the board risk committee sees each quarter.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-009 was added on 2026-08-28 after testing found default credentials on 3 pump station HMIs and 11 LoRaWAN gateways (EV-IA-5, EV-CM-6), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 3. Results
 | Risk level | Count |
