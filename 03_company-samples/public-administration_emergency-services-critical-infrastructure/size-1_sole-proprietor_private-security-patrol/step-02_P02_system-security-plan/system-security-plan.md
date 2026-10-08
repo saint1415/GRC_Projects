@@ -44,7 +44,7 @@ Operational. Planned changes: password manager and app-based MFA (2026-09-15); a
 | Business administration (contracts, invoices) | Low | Moderate | Low | Wrong bank details on an invoice cause loss; billing can wait days (P05 BP-04) |
 | **PBS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that a one-person patrol can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the patrol app vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. PE-3 is applied to the physical access devices the owner holds for clients (keys, cards, and codes), which is where this business's highest-consequence data lives.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that a one-person patrol can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the patrol app vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`). PE-3 is applied to the physical access devices the owner holds for clients (keys, cards, and codes), which is where this business's highest-consequence data lives.
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's patrol app admin account, its settings and client portal accounts; the email and file account; the accounting SaaS account; the laptop, phone, and body camera; the home router; client keys, cards, and codes; the paper key log and paper records at the home office.
@@ -76,12 +76,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
-- Implemented: 5
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 28 controls:
+- Implemented: 6
+- Partially implemented: 18
 - Planned: 4
 
-Inheritance: 2 fully inherited from the patrol app vendor (AC-3, AU-2), 9 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 13 the owner's alone (AC-11, AC-19, AT-2, AU-6, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9, SI-12).
+Inheritance: 3 fully inherited from the patrol app vendor (AC-3, AU-2, AU-9), 9 hybrid (a vendor operates the mechanism and the owner configures or uses it correctly), and 16 the owner's alone (AC-5, AC-11, AC-19, AT-2, AU-6, CA-2(1), CM-3, CP-2, IA-5, IR-6, IR-8, MP-6, PE-3, RA-3, SA-9, SI-12).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

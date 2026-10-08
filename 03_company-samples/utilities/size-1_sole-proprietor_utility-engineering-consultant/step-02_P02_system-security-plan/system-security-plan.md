@@ -45,7 +45,7 @@ Operational. Planned changes: password manager and app-based MFA (2026-09-15); s
 | Business administration (billing, contracts) | Low | Moderate | Low | A changed bank detail on an invoice diverts payments (P01 R-008) |
 | **CBS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the clients' flow-down terms for a one-person business (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS providers (evidence: the email suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a network the business does not run.
+**Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the clients' flow-down terms for a one-person business (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS providers (evidence: the email suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a network the business does not run. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the email and file suite tenant and its sharing settings, the accounting SaaS account, the laptop, the phone, the USB drives, the home office network as used for business, the owner's accounts and credentials for the Client A portal and the Client B gateway, the two AI tool accounts, and paper in the home office.
@@ -77,12 +77,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
-- Implemented: 5
-- Partially implemented: 16
+See `control-implementation.csv`. Summary of 30 controls:
+- Implemented: 8
+- Partially implemented: 17
 - Planned: 5
 
-Inheritance: 11 hybrid (a provider or client operates the mechanism and the owner configures or uses it correctly) and 15 the owner's alone. None is fully inherited: even where a provider or client runs the control, the owner still holds the credentials and decides where client data goes.
+Inheritance: 13 hybrid (a provider or client operates the mechanism and the owner configures or uses it correctly) and 17 the owner's alone. None is fully inherited: even where a provider or client runs the control, the owner still holds the credentials and decides where client data goes.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

@@ -52,7 +52,7 @@ Operational. Planned changes: MFA on all building portals (2026-09-15); a busine
 | Tenant accounts and rent (lease terms, ACH bank details) | Moderate | Moderate | Low | Financial data; a week of delay is survivable (P05 MTD 120 h) |
 | **PSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-The information types are described in plain terms; SP 800-60 has no building-operations type that fits a private landlord. **Baseline:** SP 800-53B Moderate, tailored to 22 controls a one-person landlord can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the access control vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+The information types are described in plain terms; SP 800-60 has no building-operations type that fits a private landlord. **Baseline:** SP 800-53B Moderate, tailored to 26 controls a one-person landlord can run (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the access control vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's administrator accounts and settings in SYS-01, SYS-02, SYS-03, SYS-05, SYS-06, and SYS-09; the 4 door controllers and readers, 6 cameras, and 8 thermostats as devices on the building network; the router (SYS-04); the laptop and phone; the paper lease files.
@@ -87,12 +87,12 @@ Serial numbers, firmware versions, and locations are being added (CM-8, due 2026
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 22 controls:
-- Implemented: 5
-- Partially implemented: 14
-- Planned: 3
+See `control-implementation.csv`. Summary of 26 controls:
+- Implemented: 6
+- Partially implemented: 16
+- Planned: 4
 
-Inheritance: 1 fully inherited from the vendors (AU-2), 10 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 11 the owner's alone (AC-6, AT-2, AU-6, CM-8, CP-2, IA-5, IR-8, MP-6, RA-3, SA-9, SC-7).
+Inheritance: 2 fully inherited from the vendors (AU-2, AU-9), 10 hybrid (a vendor operates the mechanism, the owner configures or uses it correctly), and 14 the owner's alone (AC-5, AC-6, AT-2, AU-6, CA-2(1), CM-3, CM-8, CP-2, IA-5, IR-8, MP-6, RA-3, SA-9, SC-7).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

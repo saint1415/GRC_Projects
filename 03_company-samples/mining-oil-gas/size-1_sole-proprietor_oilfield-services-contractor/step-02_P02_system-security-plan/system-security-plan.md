@@ -46,7 +46,7 @@ Operational. Planned changes: standard daily laptop account and password manager
 | Business and personal information (invoices, helper W-9s) | Moderate | Low | Low | Social Security numbers are personal information under Fla. Stat. 501.171 |
 | **FSBS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 26 controls that a one-person contractor can run and that answer Customer A's security schedule (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the productivity suite SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 29 controls that a one-person contractor can run and that answer Customer A's security schedule (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS providers (evidence: the productivity suite SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's SaaS accounts and their settings (SYS-01, SYS-02, SYS-08), the laptop and phone, USB drives and cables, the home office network, and the owner's credentials and client software for customer remote access.
@@ -79,12 +79,12 @@ Customer field devices the owner programs are listed per customer in the planned
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
+See `control-implementation.csv`. Summary of 29 controls:
 - Implemented: 6
-- Partially implemented: 14
+- Partially implemented: 17
 - Planned: 6
 
-Inheritance: 1 fully inherited (SC-8), 10 hybrid (a provider or Customer A operates the mechanism and the owner configures or uses it correctly), and 15 the owner's alone (AC-6(2), AC-11, AC-19, AT-2, CA-3, CM-3, CM-8, CP-2, IA-5, IR-6, IR-8, MP-7, PL-4, RA-3, SA-9).
+Inheritance: 1 fully inherited (SC-8), 11 hybrid (a provider or Customer A operates the mechanism and the owner configures or uses it correctly), and 17 the owner's alone (AC-5, AC-6(2), AC-11, AC-19, AT-2, CA-2(1), CA-3, CM-3, CM-8, CP-2, IA-5, IR-6, IR-8, MP-7, PL-4, RA-3, SA-9).
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

@@ -57,7 +57,7 @@ Impact levels follow FIPS 199.
 | Business administration (invoices, contracts) | Low | Low | Low | BP-04 MTD 240 h |
 | **BSSE category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, as the city security exhibit requires. All 177 Moderate base controls were assessed in the gap analysis (P03); 44 are not applicable to a one-person environment, with the reason given in each row. This plan documents the **31 controls** that carry the key safeguards (`control-implementation.csv`). The other applicable controls are covered in P03 with the same statements.
+**Baseline:** SP 800-53B Moderate, as the city security exhibit requires. All 177 Moderate base controls were assessed in the gap analysis (P03); 44 are not applicable to a one-person environment, with the reason given in each row. This plan documents the **35 controls** that carry the key safeguards (`control-implementation.csv`). The other applicable controls are covered in P03 with the same statements.
 
 ## 7. Authorization Boundary Description
 - **Inside:** the laptop (SYS-01), the productivity suite tenant (SYS-02), the phone (SYS-03), the remote-desktop subscription account and its agent's configuration (SYS-04), the accounting tenant (SYS-05), the home office network equipment (SYS-06), the consumer AI chatbot account (SYS-07), the owner's accounts in the city VPN, identity provider, access control tenant, and BAS supervisory controller, and paper drawings in the van cabinet and home office.
@@ -90,12 +90,13 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 31 controls:
-- Implemented: 8
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 35 controls:
+- Implemented: 9
+- Partially implemented: 17
 - Planned: 8
+- Not applicable: 1
 
-Inheritance: 15 hybrid (a SaaS provider, the device vendor, the city, or GSA operates part of the mechanism and the owner configures or uses it correctly) and 16 the owner's alone. None is fully inherited, because even where a provider runs the mechanism the owner still decides who gets access and where the data goes.
+Inheritance: 16 hybrid (a SaaS provider, the device vendor, the city, or GSA operates part of the mechanism and the owner configures or uses it correctly) and 19 the owner's alone. None is fully inherited, because even where a provider runs the mechanism the owner still decides who gets access and where the data goes.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

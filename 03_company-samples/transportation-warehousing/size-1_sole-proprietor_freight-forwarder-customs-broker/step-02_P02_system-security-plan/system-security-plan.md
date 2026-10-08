@@ -45,7 +45,7 @@ Operational. Planned changes: independent backup of the records archive (2026-10
 | Financial transactions (duty payments, freight wires, client ledgers) | Moderate | Moderate | Low | A changed payee sends client money to a criminal; payments can wait two days (P05 MTD 48 h) |
 | **CBSS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 26 controls that carry the record and confidentiality duties of a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the customs software vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system.
+**Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the record and confidentiality duties of a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the customs software vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in the customs software, email and file suite, accounting SaaS, and online banking; the laptop, printer-scanner, and phone; the home network as used for business; and the paper records in the locked cabinet.
@@ -77,12 +77,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 26 controls:
-- Implemented: 10
-- Partially implemented: 14
+See `control-implementation.csv`. Summary of 30 controls:
+- Implemented: 12
+- Partially implemented: 16
 - Planned: 2
 
-Inheritance: 3 fully inherited from vendors (AC-3, AU-2, SI-8), 10 hybrid (the vendor operates the mechanism, the owner configures or uses it correctly), and 13 the owner's alone.
+Inheritance: 4 fully inherited from vendors (AC-3, AU-2, AU-9, SI-8), 11 hybrid (the vendor operates the mechanism, the owner configures or uses it correctly), and 15 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

@@ -51,7 +51,7 @@ Information types are named by the owner and rated with the FIPS 199 impact defi
 | Customer information (names, addresses, contacts, portal credentials) | Moderate | Low | Moderate | Portal credentials are personal information under Fla. Stat. 501.171; contacts are needed for 24-hour notices |
 | **WSOP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 25 controls that a one-person water system can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the portal vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program.
+**Baseline:** SP 800-53B Moderate, tailored to 29 controls that a one-person water system can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the portal vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the control panel and alarm dialer, the cellular router, the owner's portal, billing, email, and file accounts and their settings, the laptop, the phone, the home network, and paper records at the well house and home office.
@@ -82,12 +82,12 @@ Model, firmware, and network address are not yet recorded for the panel componen
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 25 controls:
-- Implemented: 5
-- Partially implemented: 15
+See `control-implementation.csv`. Summary of 29 controls:
+- Implemented: 6
+- Partially implemented: 18
 - Planned: 5
 
-Inheritance: 1 fully inherited from the SaaS vendors (AU-2), 11 hybrid (vendor runs the mechanism, the owner configures or uses it), and 13 the owner's alone.
+Inheritance: 2 fully inherited from the SaaS vendors (AU-2, AU-9), 11 hybrid (vendor runs the mechanism, the owner configures or uses it), and 16 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |

@@ -50,7 +50,7 @@ Operational. Planned changes: separate mailbox login for the coordinator and aut
 
 Integrity is rated Moderate rather than High because every wire also passes through a bank and a title company, and because the phone callback rule (POL-01 8.4) gives a second, independent check. If the owner ever handled closing disbursements as settlement agent, integrity would move to High.
 
-**Baseline:** SP 800-53B Moderate, tailored to 24 controls that carry the binding duties and the benchmark elements for a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors and the bank (evidence: the platform vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development.
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the binding duties and the benchmark elements for a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors and the bank (evidence: the platform vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in SYS-01 to SYS-06, the laptop and phone, the home office network as used for work, the escrow ledger spreadsheet, and paper files in the home office.
@@ -84,12 +84,12 @@ Diagram: P04 `cloud-architecture.md`.
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
-See `control-implementation.csv`. Summary of 24 controls:
+See `control-implementation.csv`. Summary of 28 controls:
 - Implemented: 5
-- Partially implemented: 14
-- Planned: 5
+- Partially implemented: 17
+- Planned: 6
 
-Inheritance: 1 fully inherited from the email provider (SI-8), 10 hybrid (the vendor or bank operates the mechanism, the owner configures or uses it correctly), and 13 the owner's alone.
+Inheritance: 1 fully inherited from the email provider (SI-8), 11 hybrid (the vendor or bank operates the mechanism, the owner configures or uses it correctly), and 16 the owner's alone.
 
 **Key safeguards per CSF Function:**
 | Function | Key safeguards |
