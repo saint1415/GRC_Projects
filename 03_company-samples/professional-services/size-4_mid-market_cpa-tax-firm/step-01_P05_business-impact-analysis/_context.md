@@ -20,7 +20,7 @@ Use these IDs in the `regulatory_driver` columns of the working files.
 | N54-R04 | FAR Basic Safeguarding clause | 48 CFR 52.204-21 (prescribed at FAR 4.1903) |
 | N54-R05 | DFARS 252.204-7012 + CMMC | 48 CFR 252.204-7012; 32 CFR Part 170; 48 CFR 204.7502 / 252.204-7021 |
 | N54-R06 | HIPAA (as business associate) | 45 CFR 164.302-164.318, 164.410, 164.504(e) |
-| N54-R07 | ABA Model Rules 1.1 (cmt. 8) and 1.6(c) | ABA Model Rules of Professional Conduct (model rules, NOT law; binding only as adopted by each state's highest court) |
+| N54-R07 | ABA Model Rules 1.1 (cmt. 8) and 1.6(c), as adopted in Florida (Rules 4-1.1 and 4-1.6(e)) | Rules Regulating The Florida Bar, Chapter 4: Rule 4-1.1 comment (competence) and Rule 4-1.6(e). The ABA Model Rules are not law; they bind only as each state's highest court adopts them |
 | N54-R08 | AICPA Code of Professional Conduct - Confidential Client Information | AICPA Code ET sec. 1.700 (professional standard, NOT law; incorporated by many state boards of accountancy) |
 | N54-R09 | CIRCIA (proposed) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) |
 

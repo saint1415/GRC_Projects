@@ -433,7 +433,7 @@ Phase 5 filled every remaining cell of the matrix: the Sole Proprietorship, Micr
 
 ## 6. Open items
 
-1. **Unverified research rows.** A small number of vertical rows are marked `verified=false`. `tools/validate.py` counts them. Confirm each against its source before using it in a deliverable.
+1. **Unverified research rows: reviewed 2026-10-08.** 17 of 19 vertical rows were verified against primary sources (Florida breach and local government statutes, Visa rules, FedRAMP 2026 rules, 44 U.S.C. 3554 and CISA guidelines, Florida Bar rules). Two stay `verified=false` because their sources could not be reached: Illinois BIPA (N72-R05) and the AICPA Code (N54-R08). See `docs/reviews/2026-10-unverified-vertical-rows-review.md`. `tools/validate.py` still counts them.
 2. **Industry picks.** The 36 primary industries and 22 tier substitutions are proposals in two CSVs. Change any pick and rebuild.
 3. **Multi-Sector pairings: reviewed 2026-10-08.** All 36 pairings are kept; three samples gained missing facts (utility holding company and affiliate rules for Utilities and Critical Manufacturing, state lending licenses for Retail Trade). See `docs/reviews/2026-10-multi-sector-pairings-review.md`. Changing a pairing still means rebuilding that sample.
 4. **Office formats.** If you want Word or PDF versions of a finished sample for a meeting, that is a later export step.
