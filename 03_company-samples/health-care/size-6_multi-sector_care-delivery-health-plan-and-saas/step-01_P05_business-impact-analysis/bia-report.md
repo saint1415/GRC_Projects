@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 | **Approved:** board risk committee, 2026-09-10
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-078 group, EV-079 Care Delivery, EV-080 Health Plan, EV-081 SaaS), FY2025 revenue by division (EV-003), patient and member volumes (EV-053, EV-058), backup and DR records (EV-022, EV-030, EV-061, EV-072), and vendor recovery terms (EV-051). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,10 +16,10 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, and SYS-G3 cloud, network, and the Group Data Platform. Division systems are SYS-D1 (Care Delivery EHR, LIS, PACS; vendor-hosted EHR), SYS-D2 (Health Plan claims core in a colocation data center, plus UM and portals in the cloud), SYS-D3 (the SaaS on provider B), and SYS-D4 (the Care Delivery patient-app platform). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, and SYS-G3 cloud, network, and the Group Data Platform. Division systems are SYS-D1 (Care Delivery EHR, LIS, PACS; vendor-hosted EHR), SYS-D2 (Health Plan claims core in a colocation data center, plus UM and portals in the cloud), SYS-D3 (the SaaS on provider B), and SYS-D4 (the Care Delivery patient-app platform). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Care Delivery about $20 million per day, Health Plan about $26 million per day in premiums, and the SaaS about $3.3 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Care Delivery about $7.2 billion, or about $20 million per day; the Health Plan about $9.6 billion in premiums, or about $26 million per day; and the SaaS about $1.2 billion, or about $3.3 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -103,7 +104,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 12. to 25. Eligibility, patient app, white-label practices, claims, member services, SaaS support, revenue cycle, the Group Data Platform, care management, release pipeline, finance, the AI summary feature, HR, and broker management.
 
 ## 8. Key findings
-1. **RTOs for shared services are shorter than any division's**, as they must be. The group identity RTO of 1 hour has been met in two tests in 2026.
+1. **RTOs for shared services are shorter than any division's**, as they must be. The group identity RTO of 1 hour has been met in two tests in 2026 (EV-078).
 2. **The Health Plan claims core RTO of 24 hours is unproven after ransomware**, because restores are tested once a year (P01 HP-003; POAM-017 covers the documentation gap).
 3. **The Group Data Platform is Moderate for availability but High for confidentiality** (P02). Its recovery can wait; its protection cannot.
 4. **Notification capacity is itself a process** (BP-HT03, BP-G02, BP-G07). If the SOC or the support desk is down during an incident, notice clocks keep running. The P08 runbook uses out-of-band channels for this reason.

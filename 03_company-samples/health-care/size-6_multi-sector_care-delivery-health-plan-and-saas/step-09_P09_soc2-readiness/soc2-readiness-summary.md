@@ -32,7 +32,7 @@ The Health Plan still benefits from this work: its delegated vendors' SOC report
 ### 2.1 Health-Tech SaaS
 - **Services:** referrals, transitions of care, and care team coordination for about 420 customers; the "care summary assist" generative AI feature for 61 opt-in customers (launched 2026-04-15).
 - **Infrastructure and software:** SYS-D3 on cloud provider B (container platform, managed database, warm standby region); group identity (SYS-G1) and SOC (SYS-G2) carved in as internal shared services.
-- **Subservice organizations (carve-out):** cloud provider B; **the third-party model provider** (not yet in the description, scenario gap 4).
+- **Subservice organizations (carve-out):** cloud provider B; **the third-party model provider** (not yet in the description, group gap 4).
 - **People:** about 6,000 SaaS employees plus group SOC and identity teams.
 - **Data:** customer PHI (about 12 million patients' records).
 - **Complementary user entity controls:** customer SSO and MFA, user provisioning and removal, review of customer audit reports.

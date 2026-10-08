@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Group Data Platform**, a shared corporate system, because it holds PHI from both covered-entity divisions and data derived from the SaaS, it inherits most of its controls from corporate (SYS-G1 to SYS-G3), and it carries the group's top risk (P01 GR-01). Each division's own primary system (for Care Delivery, the EHR and practice management system SYS-D1) keeps a division SSP that inherits from the same common control catalog.
 
 ## 1. System Name and Identifier
-Group Data Platform (**GDP**), identifier CSCH-SYS-G3-DP. Part of SYS-G3 (group cloud platform and data platform) in `../00_company-facts.md`.
+Group Data Platform (**GDP**), identifier CSCH-SYS-G3-DP. Part of SYS-G3 (group cloud platform and data platform); listed as SYS-G3-DP in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The GDP is the group's analytics and data science platform. It supports:
@@ -41,7 +41,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | Contracts | Intercompany BAAs; SaaS customer BAAs | 45 CFR 164.504(e) | The Health Plan intercompany BAA (2019) predates the GDP (POAM-020); 97 SaaS customer BAAs do not permit de-identification for analytics (POAM-022) |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
 
-Not applicable: 42 CFR Part 2 (no division runs a Part 2 program); FTC Health Breach Notification Rule (all health data here is held by or for HIPAA covered entities).
+Not applicable: 42 CFR Part 2 (no division runs a Part 2 program); FTC Health Breach Notification Rule (all health data here is held by or for HIPAA covered entities). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -89,6 +89,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 Other High-baseline controls are either fully inherited from the cloud providers (for example, most PE controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the group does not operate).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-G3-DP and the shared services it inherits from) and the platform exports EV-025 to EV-030.
 - **Inside:** the GDP accounts in provider A (ingestion, lake, warehouse, workspace, catalog and policy engine, keys, reporting) and the DR replica and backup vault in provider B.
 - **Outside, inherited (common control providers):** SYS-G1 identity platform, SYS-G2 SOC, SIEM, and EDR, and the SYS-G3 landing zone (network hub, logging account, guardrails).
 - **Outside, interconnected:** SYS-D1 (Care Delivery EHR, LIS, PACS exports), SYS-D2 (Health Plan claims, enrollment, UM), and SYS-D3 (SaaS de-identified exports).
@@ -136,12 +137,12 @@ See `control-implementation.csv` (123 controls) and `common-control-catalog.csv`
 | System-specific | 22 |
 
 **The 20 partially implemented controls** cluster in three places:
-- **Purpose-based access and minimum necessary** (scenario gap 1): AC-3, AC-4, AC-6, AC-21, AU-6, CM-8, PT-2, PT-3, AT-3, SI-12.
+- **Purpose-based access and minimum necessary** (group gap 1): AC-3, AC-4, AC-6, AC-21, AU-6, CM-8, PT-2, PT-3, AT-3, SI-12.
 - **Account and key hygiene for service accounts:** AC-2, AC-2(12), IA-5, SI-4(4).
 - **Governance across divisions** (gaps 5 and 6, and contracts): IR-3, IR-6, PL-2, PM-10, SA-4, CP-4.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 82 controls provided by corporate. Inheritance is **documented for Care Delivery** (2025 inheritance matrix), for the SaaS (its SOC 2 system description carves in the group services), and for the GDP (this plan). It is **not documented for the Health Plan** (scenario gap 6). Until POAM-015 closes, the Health Plan cannot show which of its HIPAA safeguards are met by group controls, and P07 found two CA-2 determination statements other than satisfied for this reason.
+The common control catalog lists 82 controls provided by corporate. Inheritance is **documented for Care Delivery** (2025 inheritance matrix), for the SaaS (its SOC 2 system description carves in the group services), and for the GDP (this plan). It is **not documented for the Health Plan** (group gap 6). Until POAM-015 closes, the Health Plan cannot show which of its HIPAA safeguards are met by group controls, and P07 found two CA-2 determination statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and platform and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -152,7 +153,7 @@ Common controls were assessed once, and platform and division controls sampled, 
 - **No patients, members, or SaaS customers** access the GDP directly.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

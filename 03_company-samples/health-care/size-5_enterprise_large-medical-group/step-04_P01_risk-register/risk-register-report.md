@@ -46,8 +46,8 @@
 Patient-safety risks (ER-05) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the Health Care sector threat picture (ransomware, third-party concentration, medical devices), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the Health Care sector threat picture (ransomware, third-party concentration, medical devices) in the SOC's threat intelligence (EV-073), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-025), and risk workshops with the SOC, Clinical Engineering, the Integration Management Office, Revenue Cycle, the Laboratory, Digital Health, Third-Party Risk and Finance (EV-079). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-020), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -69,6 +69,8 @@ By threat source type: Adversarial 29, Structural 27, Accidental 8, Environmenta
 By treatment: Mitigate 55, Accept 8, Avoid 2.
 By status: In progress 43, Open 14, Closed (accepted) 8.
 **19 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-058 was added on 2026-08-28 after testing found default vendor service passwords on 3 analyzers (EV-IA-5), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -106,7 +108,7 @@ By status: In progress 43, Open 14, Closed (accepted) 8.
 ## 6. Themes from the 2026 analysis
 1. **Acquisition integration (ER-04).** Three acquired practices (AQ-06 to AQ-08) are on legacy identity and flat networks, and two run their own EHRs without SIEM audit feeds. These conditions raise the likelihood of enterprise ransomware (R-001, R-003), late terminations (R-004), undetected snooping (R-016), and data loss (R-015). Treatment: identity federation, SD-WAN migration, and EHR migration, all due by 2027-04-30. Going forward, deal approvals must include security due diligence and integration funding (R-061).
 2. **Clearinghouse concentration (ER-03).** 70% of claims go through one clearinghouse, and the manual fallback has never been tested (R-005). The industry saw this failure mode in 2024. Treatment: contracted surge capacity and a fallback test by 2027-01-31.
-3. **Medical devices (ER-05).** About 85% of 9,000 networked devices are inventoried, 1,100 run unsupported operating systems, and NAC covers 60% of sites (R-006, R-007, R-008). Testing found default passwords on 3 analyzers (R-058).
+3. **Medical devices (ER-05).** About 85% of 9,000 networked devices are inventoried, 1,100 run unsupported operating systems, and NAC covers 60% of sites (R-006, R-007, R-008; EV-011, EV-012). Testing found default passwords on 3 analyzers (R-058; EV-IA-5).
 4. **AI (ER-08).** 14 use cases; 9 reviewed; bias testing only on vendor data (R-012, R-013). The AI resume-ranking feature was switched off pending review (R-043, treatment Avoid).
 5. **Materiality and disclosure (ER-06).** The materiality playbook has not been exercised with the disclosure committee since the 2025 acquisitions (R-017). A full tabletop is set for 2026-11-12.
 6. **Legacy audit logging.** The two acquired-practice EHRs send no audit logs to the SIEM (R-016, R-057).

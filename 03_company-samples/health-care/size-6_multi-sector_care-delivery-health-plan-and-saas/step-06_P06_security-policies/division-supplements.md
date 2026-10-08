@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Care Delivery | v2026 | 2026-06-15 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after effective date) | Confirm alignment |
-| Health Plan | v2024 | 2024-03 | **Drifted** (scenario gap 2); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-014) |
+| Health Plan | v2024 | 2024-03 | **Drifted** (group gap 2); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-014) |
 | Health-Tech SaaS | v2025 | 2025-11 | Aligned, but missing an AI and subcontractor change gate required by POL-01 4.8 and 4.12 | Add the change gate by 2026-10-31 (POAM-018) |
 
 ## 3. What each supplement adds

@@ -79,6 +79,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Documented controls.** `control-implementation.csv` documents **138 controls**: 128 from the Moderate baseline and 10 High-baseline integrity supplements. The remaining Moderate-baseline enhancements (mostly control enhancements for AC, AU, CM, CP, IA, SC, and SI) are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are documented in the enterprise privacy program.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-03-LIS, SYS-03-OP, SYS-03-IE and SYS-05-MD) and the prior SSP version 1.1 (EV-074).
+
 **Inside the boundary:** the LIS application servers and database in the LIS workload account (Cloud provider A), the outreach portal application, the LIS interfaces configured on the shared interface engines, the instrument middleware servers, the analyzer VLANs at the central lab, and lab workstations and printers.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -189,7 +191,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Patients** do not use the LIS directly. They see results through the patient-app platform (SL-1), which has its own identity controls (P09).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-010 autoverification pilot (P10), LIS contingency plan v4, LIS validation plan, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-010 autoverification pilot (P10), LIS contingency plan v4 (EV-054), LIS validation plan (EV-074), enterprise common control catalog (EV-069). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

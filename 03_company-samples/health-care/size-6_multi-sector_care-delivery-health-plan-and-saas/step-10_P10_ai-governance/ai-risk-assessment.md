@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for three priority use cases: the Health Plan UM model (AI-005), the SaaS care summary assist feature (AI-007), and Care Delivery's AI scribe and decision support (AI-001, AI-002, AI-003) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-28; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 3 High, 5 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 3 High, 5 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list and model registries (EV-041), division configuration records (EV-057, EV-063, EV-070, EV-071) and Care Delivery gap analysis interviews (EV-086). Not established: workforce use of public generative AI tools outside the approved tools (intake open request), and whether every specialty clinical calculator has been found (CD-018) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Change gate.** A material change (new model, new provider, new feature that changes how PHI is processed, new decision role) triggers re-assessment before release.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after two of the priority use cases were already live. The UM model was never presented to the UM committee (scenario gap 3), and the SaaS feature launched without the change gate (gap 4). Both are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after two of the priority use cases were already live. The UM model was never presented to the UM committee (group gap 3), and the SaaS feature launched without the change gate (gap 4). Both are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

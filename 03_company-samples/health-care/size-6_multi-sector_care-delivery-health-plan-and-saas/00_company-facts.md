@@ -1,15 +1,15 @@
 # Scenario facts: Cris Santos Company | Health Care | Multi-Sector
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
 
 ## 1. The organization
 | Item | Fact |
 |---|---|
 | Legal name | Cris Santos Company Holdings, Inc. (publicly traded SEC registrant) |
 | Structure | A holding company with three divisions and corporate shared services |
-| Division 1: Care Delivery (NAICS 621111), **focus of this scenario** | Multi-specialty medical group, ASCs, imaging, and lab. About 20,000 employees. A HIPAA covered entity |
-| Division 2: Health Plan (NAICS 524114, sector 52 Finance and Insurance) | Medicare Advantage and commercial health plans; about 900,000 members. About 14,000 employees. A HIPAA covered entity (health plan). State insurance regulation applies in each state of operation (handled generically) |
-| Division 3: Health-Tech SaaS (NAICS 513210, sector 51 Information) | Care-coordination SaaS sold to external hospitals and practices nationwide. About 6,000 employees. A **business associate** of its customers; issues SOC 2 Type 2 reports |
+| Division 1: Care Delivery (NAICS 621111), **focus of this scenario** | Multi-specialty medical group, ASCs, imaging, and lab. About 20,000 employees. A HIPAA covered entity, decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (N62-R01-CD) |
+| Division 2: Health Plan (NAICS 524114, sector 52 Finance and Insurance) | Medicare Advantage and commercial health plans; about 900,000 members. About 14,000 employees. A HIPAA covered entity (health plan). State insurance regulation applies in each state of operation (handled generically). Both decided in the obligations register (N62-R01-HP, N52-R07) |
+| Division 3: Health-Tech SaaS (NAICS 513210, sector 51 Information) | Care-coordination SaaS sold to external hospitals and practices nationwide. About 6,000 employees. A **business associate** of its customers (obligations register N62-R01-HT); issues SOC 2 Type 2 reports |
 | Corporate shared services | Identity, network, security operations, data platform, HR, finance, legal. About 5,000 employees |
 | Location | Headquartered in Florida. Care Delivery and the Health Plan in 6 southeastern states; the SaaS serves customers nationwide. **State law handled generically**, with Florida as the worked example |
 | Workforce / revenue | 45,000 employees; about $18 billion revenue (fictional) |
@@ -26,6 +26,9 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | SEC materiality |
 
 ## 3. Systems
+
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv). Suppliers are in the [vendor register](step-00_P00_intake/vendor-register.csv).
+
 | ID | System | Owner |
 |---|---|---|
 | SYS-G1 | Group identity platform (SSO, MFA, PAM, identity governance) | Corporate |
@@ -37,24 +40,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **SSP system (P02):** the *Group Data Platform* (shared corporate system). It holds PHI from both covered-entity divisions and de-identified data for SaaS analytics, and inherits common controls from SYS-G1 to SYS-G3.
 
-## 4. Current security posture: mostly compliant, with group-level gaps
-**In place today:**
-- Group policies aligned to CSF 2.0
-- A common control catalog
-- 24x7 group SOC
-- PAM
-- Quarterly access certification
-- Immutable backups
-- SaaS SOC 2 Type 2 reports issued annually
-- SEC Item 106 disclosure
-
-**Gaps:**
-1. **Data segregation.** The Group Data Platform mixes Health Plan and Care Delivery PHI with inconsistent purpose-based access. Minimum-necessary enforcement between divisions is not verified.
-2. **Division supplements.** Division policy supplements have drifted from group policy. The Health Plan's standards were last aligned in 2024.
-3. **Utilization-management AI.** The Health Plan's AI utilization-management model must support, not replace, individualized medical necessity determinations (42 CFR 422.101(c)(1)(i)). Documentation of clinician review is incomplete.
-4. **SaaS product AI.** The SaaS division launched a generative AI summarization feature for customers without updating its SOC 2 system description or customer BAAs.
-5. **Shared incident notification.** A shared-service incident may trigger notices from two covered entities, SaaS customer notices under BAAs, SEC disclosure, and state insurance regulators. The single notification matrix is not yet exercised.
-6. **Common control inheritance.** It is documented for Care Delivery but not for the Health Plan.
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Rows are grouped by division (Group, Group Data Platform, Care Delivery, Health Plan, Health-Tech SaaS). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** to each division and to the group is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps** against HIPAA, Medicare Advantage, state insurance law and customer commitments are judged in the gap analyses (P03), which also number the six group gaps cited across this sample, and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -67,9 +57,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-05-01 to 2026-07-31 | Group and division risk analyses |
-| 2026-07-01 to 2026-08-31 | Common control assessment (group internal audit) plus division samples |
-| 2026-09-10 | Results to the board risk committee |
+| 2026-03-30 to 2026-04-24 | Intake: evidence requests, exports, walk-throughs, inventories, obligations register |
+| 2026-05-01 to 2026-07-31 | BIA interviews (May), group and division risk analyses, and gap analysis fieldwork |
+| 2026-06-01 to 2026-06-12 | Group policies v2026 drafted from the gaps found so far (P06); the Care Delivery supplement was aligned to the drafts on 2026-06-15 |
+| 2026-07-01 to 2026-08-31 | Common control assessment (group internal audit) plus division samples: operating tests of controls already in place; design review of the draft v2026 policies, incident response plan and notification matrix |
+| 2026-09-10 | Results to the board risk committee; deliverables and group policies v2026 approved (policies effective 2026-10-01) |
+| 2027-04 (planned) | Follow-up assessment: operating effectiveness of the controls the v2026 policies introduced, after at least one quarter of operation |
 
 ## 7. Facts added while building the deliverables (Phase 2)
 These facts were added so the deliverables could be completed. They do not change sections 1 to 6.
@@ -88,6 +81,6 @@ These facts were added so the deliverables could be completed. They do not chang
 | SaaS BAA terms | The standard SaaS BAA (2024 version) requires notice to the customer of a breach of unsecured PHI within 10 calendar days of discovery and of other security incidents within 5 business days. 42 customers negotiated 72-hour breach notice. 97 customer BAAs signed before 2022 do not expressly permit de-identification for product analytics |
 | Group Data Platform content | Care Delivery PHI (clinical and billing data for about 2.1 million patients), Health Plan PHI (claims, enrollment, and UM data for about 900,000 members), and de-identified SaaS analytics data sets (expert determination method, 45 CFR 164.514(b)(1)) |
 | Cloud | Provider A (primary) hosts the corporate landing zone, the Group Data Platform, and Care Delivery and Health Plan cloud workloads. Provider B hosts SaaS production and the Group Data Platform disaster recovery replica and backup vault. SYS-D1 EHR is hosted by the EHR vendor. The Health Plan claims core (SYS-D2) runs in a group colocation data center |
-| Out of scope by fact | No division operates a federally assisted substance use disorder program (42 CFR Part 2 program). No division holds a bank charter or a New York insurance license |
+| Out of scope by fact | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv). No division operates a federally assisted substance use disorder program (42 CFR Part 2 program). No division holds a bank charter or a New York insurance license |
 | Revenue split (fictional) | Care Delivery about $7.2 billion; Health Plan about $9.6 billion (premiums); Health-Tech SaaS about $1.2 billion. Total about $18 billion, as in section 1 |
 | Risk acceptance | Low: division security and compliance lead. Moderate: division president. High: Group Chief Risk Officer with the Group CISO, reported to the board risk committee. Very High: board risk committee only |

@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI council (chaired by the Chief Medical Information Officer), meeting of 2026-08-19; GRC team prepared the portfolio review |
 | Decision | Executive risk committee, 2026-09-10 (section 9) |
+| Inventory | `ai-use-case-inventory.csv` (14 use cases), built from the AI council register (EV-049), a SaaS and AI feature discovery review of the SSO application catalog, vendor feature settings and procurement records (EV-050), the accounts payable vendor master (EV-035) and the AI scribe enrollment report (EV-051). Discovery added AI-006 and AI-012, which were not in the register. Not established at intake: AI features embedded in other vendors' products that discovery did not surface (intake open request), and workforce use of public AI tools from personal devices |
 
 ## 1. Portfolio summary
 | Measure | Result |

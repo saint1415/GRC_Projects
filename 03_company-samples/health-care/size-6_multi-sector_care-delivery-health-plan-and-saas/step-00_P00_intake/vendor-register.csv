@@ -1,0 +1,29 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,"Corporate shared services (parent company, intercompany)","Identity, SOC, cloud and data platform for both covered entities",SYS-G1; SYS-G2; SYS-G3; SYS-G3-DP,ePHI of Care Delivery and the Health Plan,Intercompany BAAs: Care Delivery 2024; Health Plan 2019,Common control assessment by group internal audit,EV-001; EV-004; EV-035,Internal business associate. The 2019 BAA predates the GDP
+V-02,Public cloud provider A,"IaaS/PaaS: landing zone, GDP, SYS-D4, division cloud workloads",SYS-G3; SYS-G3-DP; SYS-D4; SYS-D2-UM; SYS-D2-PORT,ePHI,Customer agreement with BAA,SOC 2 Type 2,EV-039; EV-040; EV-018,Group
+V-03,Public cloud provider B,SaaS production; GDP DR replica and backup vault,SYS-D3; SYS-G3-DP,ePHI; customer PHI,Customer agreement with BAA; SaaS subcontractor BAA,SOC 2 Type 2,EV-039; EV-040; EV-070,Group and Health-Tech SaaS
+V-04,Identity SaaS vendor,"SSO, MFA, PAM, identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-039; EV-040,Group
+V-05,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs (incidental ePHI),Subscription terms (tier 1),Annual tier 1 assessment,EV-039,Group
+V-06,Forensic retainer firm,Incident response support,SYS-G2,As needed during an incident,Retainer agreement,None on file,EV-039,Group
+V-07,Catalog SaaS vendor,GDP catalog and policy engine,SYS-G3-DP,Dataset metadata,Subscription terms,SOC 2 Type 2,EV-039; EV-040,Group
+V-08,Carriers,WAN links and cellular failover,NET-WAN,Encrypted traffic,Carrier contracts,None on file,EV-039; EV-020,Group
+V-09,Colocation provider,Data center for the Health Plan claims core,SYS-D2-CORE,ePHI (hosted equipment),Colocation agreement,None on file,EV-039; EV-061,Health Plan
+V-10,ERP vendor; filing agent,Finance system; SEC filing agent,SYS-ERP,Financial data,Subscription and service terms,None on file,EV-039; EV-032,Group
+V-11,Payroll provider; payment bank,Payroll; claims and commission payments,SYS-HR; SYS-D2-CORE,Workforce and payment data,Service agreements,None on file,EV-039,Group and Health Plan
+V-12,Penetration testing firm,Annual independent penetration test,SYS-G3; SYS-G3-DP,Test results,Engagement letter,Report dated 2026-03,EV-014,Group
+V-13,Cyber insurer,Cyber insurance,n/a,Incident facts when a claim is made,Policy in force for 2026,n/a,EV-042,Group
+V-14,EHR vendor,"Hosted EHR/PM, decision support models",SYS-D1; AI-002,ePHI,BAA; contract RTO 4 hours and RPO 15 minutes,SOC 2 Type 2,EV-051; EV-040,Care Delivery
+V-15,Imaging and device vendors,"PACS, modalities and device support",SYS-D1-PACS; MED-CD,ePHI,BAAs (imaging vendors),None on file,EV-051,Care Delivery. Two hold persistent remote support tunnels
+V-16,Reference laboratories,Lab orders and results,SYS-D1-LIS; SYS-D1-INT,ePHI,BAAs,None on file,EV-051,Care Delivery
+V-17,Clearinghouse,Claims and eligibility (85% of Care Delivery claims),SYS-D1,ePHI,BAA,None on file,EV-051; EV-052,Care Delivery. A second clearinghouse is being contracted
+V-18,AI scribe vendor,Ambient documentation,AI-001,ePHI (visit audio and notes),BAA with no-training terms,None on file,EV-051; EV-057,Care Delivery
+V-19,Specialty application vendors,Specialty clinical applications and calculators,AI-003,ePHI,Not established at intake,None on file,EV-039; EV-086,Care Delivery
+V-20,Imaging AI vendor,Imaging AI triage (proposed),AI-004,ePHI if deployed,In procurement,Vendor states FDA clearance; not verified,EV-041,Care Delivery
+V-21,Certified destruction vendor,Paper and media destruction,SITE-CD,PHI on paper and media,Service agreement,Certificates of destruction,EV-054,Care Delivery
+V-22,Customer identity vendor,Patient and member sign-in,SYS-D4; SYS-D2-PORT,Patient and member identities,Subscription terms,None on file,EV-039,Care Delivery and Health Plan
+V-23,Health Plan delegated vendors (14),Delegated health plan functions,SYS-D2,ePHI,Delegation agreements,Annual review,EV-065; EV-039,Health Plan
+V-24,Model provider,Hosted large language model for care summary assist,AI-007; SYS-D3,Customer PHI (patient documents),"Subcontractor BAA signed 2026-03, zero data retention",Onboarding assessment; no retention attestation received,EV-070; EV-071,Health-Tech SaaS
+V-25,Support tool vendor,SaaS support desk,SYS-D3-SUP,Customer PHI in tickets,Subscription terms,None on file,EV-039; EV-074,Health-Tech SaaS
+V-26,Source hosting vendor,Source code and build pipeline,SYS-D3-CI,Source code,Subscription terms,None on file,EV-039; EV-073,Health-Tech SaaS
+V-27,Enterprise AI assistant vendor,Workforce generative AI assistant,AI-009,Internal documents; PHI for approved roles,BAA with no-training terms,None on file,EV-041,Group
+V-28,Coding assistant vendor,Engineer coding assistant,AI-008,Source code,Enterprise terms with no training on customer code,None on file,EV-041,Health-Tech SaaS
