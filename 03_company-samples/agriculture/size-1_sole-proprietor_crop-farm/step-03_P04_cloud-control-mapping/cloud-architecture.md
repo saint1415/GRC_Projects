@@ -55,8 +55,8 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 **What is different on a farm:** the SaaS platform reaches back into the physical world. A command typed into SYS-01 starts a well pump or stops a pivot. The vendor secures the command path, but **who is allowed to send commands is the farm's decision**, and today two accounts can do it with a password alone.
 
 ## 4. Findings from the mapping
-1. **The irrigation control account is the most valuable account the farm has, and the weakest.** SYS-01 administrator access uses a password only, and that password is reused on the booking platform and saved in a shared laptop browser. Tracked as P01 R-002.
-2. **A third party can run the farm's irrigation at any time.** The dealer's technician account has full control all year, with no contract terms (R-004).
-3. **The field and the farm stand share a network.** A customer on the posted Wi-Fi password is on the same network as the pump controller, whose local page still has its default password (R-005; found in P07 testing).
-4. **No farm-held copy of anything.** The vendors back up their own platforms, but the farm has never exported SYS-01 or the booking sales records that prove its qualified exemption (R-007).
-5. **The pivot's command channel is carved out of the vendor's SOC 2 report** (P09). The owner relies on the vendor's statement that it is encrypted and asks for the vendor's review of that provider.
+1. **The irrigation control account is the most valuable account the farm has, and the weakest.** SYS-01 administrator access uses a password only, and that password is reused on the booking platform and saved in a shared laptop browser (EV-002, EV-020). Tracked as P01 R-002.
+2. **A third party can run the farm's irrigation at any time.** The dealer's technician account has full control all year, with no contract terms (EV-001, EV-008; R-004).
+3. **The field and the farm stand share a network.** A customer on the posted Wi-Fi password is on the same network as the pump controller, whose local page still has its default password (EV-022, EV-009; R-005; the default password was found in P07 testing, EV-IA-5 and EV-SC-7).
+4. **No farm-held copy of anything.** The vendors back up their own platforms, but the farm has never exported SYS-01 or the booking sales records that prove its qualified exemption (EV-005, EV-023, EV-030; R-007).
+5. **The pivot's command channel is carved out of the vendor's SOC 2 report** (EV-007; reviewed in P09). The owner relies on the vendor's statement that it is encrypted and asks for the vendor's review of that provider.
