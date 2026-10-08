@@ -15,7 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Commercial customers | **Customer C**, a commercial aerospace tier-1 supplier, plus local industrial customers |
 | CUI handled | Controlled technical information (CTI) as defined in DFARS 252.204-7012(a): drawings, 3D models, and specifications received from Prime A and Supplier B, and the CAM files, NC programs, setup sheets, and CMM inspection programs derived from them. It is covered defense information (CDI) and CUI. About 60 of the shop's 140 active part numbers are CUI; about 25 of those are ITAR defense articles, so their technical data is ITAR-controlled |
 | Contract clauses in current purchase orders | DFARS 252.204-7012 (MAY 2024), 252.204-7019 and 252.204-7020 (NOV 2023), and FAR 52.204-21 (NOV 2021), in both Prime A's and Supplier B's purchase order terms. No current purchase order includes DFARS 252.204-7021 |
-| CMMC requirement | On 2026-06-15 Prime A told suppliers that purchase orders under its new program contract (awarded in 2026 with a CMMC Level 2 (Self) requirement, as Phase 1 allows under 32 CFR 170.3(e)(1)) will flow down DFARS 252.204-7021 (NOV 2025) at **CMMC Level 2 (Self)** for purchase orders issued from **2027-04-01**. A subcontractor that processes CUI needs at least Level 2 (Self) (32 CFR 170.23(a)(2)), and Level 2 (C3PAO) if the prime contract requires it (170.23(a)(3)). Prime A warned that later programs may require Level 2 (C3PAO) once Phase 2 begins on 2026-11-10. Supplier B has not yet stated a level |
+| CMMC requirement | On 2026-06-15 Prime A told suppliers that purchase orders under its new program contract (awarded in 2026 with a CMMC Level 2 (Self) requirement, as Phase 1 allows under 32 CFR 170.3(e)(1)) will flow down DFARS 252.204-7021 (NOV 2025) at **CMMC Level 2 (Self)** for purchase orders issued from **2027-04-01**. A subcontractor that processes CUI needs at least Level 2 (Self) (32 CFR 170.23(a)(2)), and Level 2 (C3PAO) if the prime contract requires it (170.23(a)(3)). Prime A warned that later programs may require Level 2 (C3PAO) once Phase 2 begins on 2026-11-10. The DoD (Department of War) CIO memorandum of 2026-07-13 suspended Phase 2, so that Level 2 (C3PAO) requirement is suspended. During the suspension requiring activities may require Level 1 (Self) or Level 2 (Self), so Prime A's Level 2 (Self) flowdown can still apply, and SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5). Supplier B has not yet stated a level |
 | Export controls | Registered with the State Department's Directorate of Defense Trade Controls (22 CFR 122.1: one occasion of manufacturing a defense article requires registration, even with no exports). The President is the Empowered Official (22 CFR 120.67). Some commercial parts carry EAR-controlled technology |
 | Not in scope | Classified information: no facility clearance, so NISPOM (32 CFR Part 117) does not apply. CIRCIA reporting: the final rule is not published. Health, payment card, and consumer data: none beyond employee records |
 | State law approach | Florida law is cited only where unavoidable (breach notice for employee personal information, Fla. Stat. 501.171). Otherwise the samples stay federal |
@@ -100,10 +100,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-06-15 | Prime A notice: CMMC Level 2 (Self) for purchase orders issued from 2027-04-01 |
 | 2026-07-06 | Office Manager designated Security and Compliance Coordinator |
 | 2026-07-13 to 2026-07-24 | BIA, risk assessment, and gap analysis with the MSP lead technician |
+| 2026-07-13 | The DoD (Department of War) CIO memorandum suspends CMMC Phase 2 (DoD Class Deviation 2026-O0025, Revision 3) |
 | 2026-08-10 to 2026-08-12 | Control assessment by the independent consultant (on site 2026-08-11) |
 | 2026-08-31 | Deliverables approved by the President |
 | 2026-09-30 | Corrected SPRS score due |
-| 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2)) |
+| 2026-11-10 | Planned start of CMMC Phase 2 (32 CFR 170.3(e)(2)); suspended by the 2026-07-13 CIO memorandum |
 | 2027-03-15 | Target: Level 2 self-assessment complete, results and affirmation in SPRS |
 | 2027-04-01 | Prime A purchase orders require CMMC Level 2 (Self) |
 

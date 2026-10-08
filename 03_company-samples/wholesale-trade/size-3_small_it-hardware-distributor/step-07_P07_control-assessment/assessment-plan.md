@@ -8,7 +8,7 @@
 | Procedures | NIST SP 800-53A Rev. 5, Release 5.2.0 (determination statements from NIST OSCAL content) |
 | Assessor(s) and independence | Contracted independent assessor. Not involved in operating or designing the controls. Escorted by the IT Manager |
 | Assessment window | 2026-08-03 to 2026-08-07 (walkthrough of the distribution center, dock, and lab cage 2026-08-05) |
-| Also supports | SP 800-171 Rev. 2 requirement 3.12.1 (periodic assessment); readiness for the 2027-02 CMMC Level 2 (C3PAO) assessment |
+| Also supports | SP 800-171 Rev. 2 requirement 3.12.1 (periodic assessment); readiness for the voluntary 2027-02 CMMC Level 2 (C3PAO) assessment |
 
 ## 1. Scope and controls selected
 Small tier scope: 15-25 controls. **25 controls, 130 determination statements.** Controls were chosen because they support the High risks in P01, cover the SP 800-171 requirements that cannot be placed on a CMMC POA&M, or test the supply chain controls behind the P08 incident scenario.

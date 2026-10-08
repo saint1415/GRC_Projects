@@ -14,7 +14,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Customers | About 380 active commercial reseller accounts in Florida, Georgia, and Alabama (about 84% of revenue). Three DoD prime contractors buy from the company under subcontract purchase orders (about 16% of revenue, $8.6 million) |
 | Suppliers | 47 active suppliers: 35 authorized sources (original equipment manufacturer (OEM) programs and OEM-authorized distributors) and 12 independent brokers (gray market) used for hard-to-find items, about 6% of purchase spend |
 | Federal Contract Information (FCI) order stream | Orders under Prime A and Prime C subcontracts that include custom kitting and asset labeling. The purchase orders contain FAR 52.204-21, FAR 52.204-25, and, since 2026-01, DFARS 252.204-7021 at CMMC Level 1 (Self). Orders exclusively for commercially available off-the-shelf (COTS) items carry neither FAR 52.204-21 (see its paragraph (c)) nor a CMMC requirement (32 CFR 170.3(c)) |
-| Controlled Unclassified Information (CUI) order stream | Prime B subcontract (awarded 2024-06) to stage and configure network switches and video equipment for DoD installations, using CUI-marked configuration documents (network drawings, IP addressing plans, device configuration templates). The subcontract contains DFARS 252.204-7012, 252.204-7019/-7020, 252.246-7008, and FAR 52.204-25. Prime B has notified the company that the option period starting **2027-04-01** will require CMMC Status of **Level 2 (C3PAO)**, flowed down under 32 CFR 170.23(a)(3) |
+| Controlled Unclassified Information (CUI) order stream | Prime B subcontract (awarded 2024-06) to stage and configure network switches and video equipment for DoD installations, using CUI-marked configuration documents (network drawings, IP addressing plans, device configuration templates). The subcontract contains DFARS 252.204-7012, 252.204-7019/-7020, 252.246-7008, and FAR 52.204-25. Prime B notified the company that the option period starting **2027-04-01** would require CMMC Status of **Level 2 (C3PAO)**, flowed down under 32 CFR 170.23(a)(3). That requirement is suspended with CMMC Phase 2 by the DoD (Department of War) CIO memorandum of 2026-07-13 (DoD Class Deviation 2026-O0025, Revision 3). The company keeps preparing because it still owes NIST SP 800-171 Rev. 2 under DFARS 252.204-7012 |
 | SPRS status | NIST SP 800-171 Basic Assessment posted 2024-03-15 with a self-reported score of 96 out of 110, with no supporting worksheet. CMMC Level 1 (Self) result and affirmation entered 2026-01-20 without a documented self-assessment |
 | Not in scope | SEC disclosure rules (the company is private). CCPA/CPRA: the company has no California customers, suppliers, or operations (counsel confirmed 2026-06; revisit before onboarding California resellers). CTPAT: the company buys from U.S. distributors and is not an importer of record, so it has not joined the voluntary program. Payment cards: reseller card payments go through the portal vendor's hosted payment page, outside company systems |
 | State law approach | Florida law is cited only where unavoidable (breach notification, Fla. Stat. 501.171, for employee and reseller-contact personal information). Otherwise the samples stay federal |
@@ -107,11 +107,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Date | Event |
 |---|---|
 | 2026-07-13 to 2026-07-24 | Risk assessment and gap analysis fieldwork |
+| 2026-07-13 | The DoD (Department of War) CIO memorandum suspends CMMC Phase 2 (DoD Class Deviation 2026-O0025, Revision 3) |
 | 2026-08-03 to 2026-08-07 | Control assessment fieldwork (contracted independent assessor) |
 | 2026-08-31 | Deliverables approved by the Chief Operating Officer; High risks and the budget approved by the Chief Executive Officer |
-| 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2)) |
-| 2027-02 | Planned CMMC Level 2 (C3PAO) certification assessment |
-| 2027-04-01 | Prime B option period starts (requires CMMC Level 2 (C3PAO)) |
+| 2026-11-10 | Planned start of CMMC Phase 2 (32 CFR 170.3(e)(2)); suspended by the 2026-07-13 CIO memorandum |
+| 2027-02 | Planned voluntary CMMC Level 2 (C3PAO) certification assessment |
+| 2027-04-01 | Prime B option period starts (its CMMC Level 2 (C3PAO) requirement is suspended under the deviation) |
 
 ## 7. Facts added during the build (fictional; used across P01-P10)
 
