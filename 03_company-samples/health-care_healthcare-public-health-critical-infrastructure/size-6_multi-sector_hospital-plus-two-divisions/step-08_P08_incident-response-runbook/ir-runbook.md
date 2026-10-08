@@ -10,7 +10,7 @@
 | Emergency plan link | This runbook is the cyber annex of the hospitals' unified emergency preparedness plan (42 CFR 482.15(a)(2), (f)); clinical, diversion, and community communication steps use the plan's incident command and communication plan (482.15(c)) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel; clinical operations owned by the system emergency management director |
 | Approved | 2026-09-15 by the Group CISO, the Group General Counsel, and the Hospital System president |
-| Last tested | Technical playbooks tested quarterly. **The cross-division scenario, the notification matrix, and the diversion steps have not been exercised** (scenario gaps 2 and 8). The first tabletop is due 2026-12-15 and will count as the hospitals' additional annual exercise (POAM-005, POAM-023) |
+| Last tested | Technical playbooks tested quarterly. **The cross-division scenario, the notification matrix, and the diversion steps have not been exercised** (group gaps 2 and 8; EV-011, EV-012). The first tabletop is due 2026-12-15 and will count as the hospitals' additional annual exercise (POAM-005, POAM-023) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.
