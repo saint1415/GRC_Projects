@@ -10,7 +10,7 @@
 | Approved | 2026-08-31 by the owner physician |
 
 ## 1. Applicability
-The HIPAA Security Rule **applies**. The practice is a health care provider that sends claims and eligibility requests electronically in standard transactions through its EHR's clearinghouse. That makes it a covered entity under 45 CFR 160.103.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rule analyzed here. The HIPAA Security Rule **applies**. The practice is a health care provider that sends claims and eligibility requests electronically in standard transactions through its EHR's clearinghouse (EV-019). That makes it a covered entity under 45 CFR 160.103.
 
 There is no size exemption. Section 164.306(b) lets a 7-person office weigh its size, complexity, technical capabilities, and costs when deciding *how* to meet each standard, not *whether* to meet it.
 
@@ -24,7 +24,7 @@ There is no size exemption. Section 164.306(b) lets a 7-person office weigh its 
 ## 2. Method
 1. **Requirements.** All 69 rows of the Health Care crosswalk, taken from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool), with their Required/Addressable designations.
 2. **Crosswalk.** Each requirement is mapped to CSF 2.0 and SP 800-53 Rev. 5 using `02_industry-rules/health-care/hipaa-security-rule-crosswalk.csv`. That mapping is an **author mapping**, not NIST's official mapping, which is not yet published for CSF 2.0.
-3. **Documentary evidence.** Each status rests on a named document or record: the EHR user and role lists, the productivity suite user export and security settings, the MSP's device list, patch report, antivirus console export, and backup job report, the BAA folder, the new-hire video sign-in sheet, the 2019 checklist, and a walkthrough of the suite on 2026-07-22. Interviews covered all 7 staff and the MSP lead technician.
+3. **Documentary evidence.** Each status rests on a named document or record from intake (2026-07-06 to 2026-07-17): the EHR user and role lists and settings (EV-002, EV-003), the productivity suite exports (EV-004 to EV-007), the MSP's device list, policy and encryption reports, monthly report, antivirus export and backup job report (EV-009 to EV-015), the contracts folder (EV-017 to EV-019), the new-hire video sign-in sheet (EV-027), and the 2019 checklist (EV-025). Fieldwork added the risk analysis account comparison of 2026-07-21 (EV-042), interviews with all 7 staff and the MSP lead technician (EV-043), a walkthrough of the suite on 2026-07-22 (EV-044), the BAA terms review (EV-045), a sample of 10 sent emails (EV-046), and a personnel file sample (EV-047). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each requirement was rated Met, Partially met, Not met, or Not applicable **as of the end of fieldwork (2026-07-31)**. Actions completed since then are noted in the remediation column (for example, the productivity suite BAA accepted 2026-08-14) but do not change the status.
 
 **Addressable is not optional.** For each addressable specification, the practice must implement it, implement an equivalent alternative, or document why neither is reasonable and appropriate (164.306(d)(3)). For every addressable gap below, the practice chose to implement. None is being documented as unreasonable.
