@@ -10,7 +10,7 @@
 | Decision | Chief Operating Officer and Chief Medical Officer on the recommendation of the Clinical Decision Support Committee, 2026-09-17; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-No AI tool at the hospital went through a security, privacy, or clinical review before use (gap 9). The sepsis model arrived switched on in an EHR upgrade; the imaging triage software was bought by Imaging; the ED scribe pilot started with a vendor's standard contract; the coding tool was bought by Revenue Cycle; and staff were found pasting text into public chatbots.
+No AI tool at the hospital went through a security, privacy, or clinical review before use (EV-055). The sepsis model arrived switched on in an EHR upgrade; the imaging triage software was bought by Imaging; the ED scribe pilot started with a vendor's standard contract; the coding tool was bought by Revenue Cycle; and staff were found pasting text into public chatbots.
 
 | ID | Use case | Risk tier | 92.210 in scope? | Decision |
 |---|---|---|---|---|

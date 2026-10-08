@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the focus division's primary system, the **Hospital Clinical Information System (HCIS)**, because the BIA (P05) ranks its processes highest (2- to 4-hour MTDs for ED care, inpatient care, pharmacy, and laboratory), it carries the group's top risk (P01 GR-01, ransomware in the shared data centers), and it inherits most of its infrastructure controls from corporate. The plan comes with a **common control catalog** (`common-control-catalog.csv`, 99 controls) that the Health Plan and the College also inherit from.
 
 ## 1. System Name and Identifier
-Hospital Clinical Information System (**HCIS**), identifier CSCH-HS-HCIS. It is SYS-H1 plus the parts of SYS-H2 that exchange data with it, as defined in `../00_company-facts.md` section 3.
+Hospital Clinical Information System (**HCIS**), identifier CSCH-HS-HCIS. It is SYS-H1 plus the parts of SYS-H2 that exchange data with it, listed as SYS-H1, SYS-H1-DT, SYS-H2-INT, SYS-H2-LAB, SYS-H2-PACS and SYS-H2-RX in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The HCIS is the clinical and revenue backbone of the 9 hospitals. It supports:
@@ -40,7 +40,7 @@ About 34,000 workforce users (employees, employed physicians, contractors, and a
 | Contracts | Intercompany BAA (2021); community-connect BAAs; EHR vendor BAA | 45 CFR 164.504(e); 164.314(a) | |
 | Internal | Group policies POL-01 to POL-05 and the Hospital System supplement | P06 | |
 
-Screened out: 42 CFR Part 2 (no hospital is a Part 2 program; records received from outside programs are flagged and handled case by case); FTC Health Breach Notification Rule (16 CFR 318.1 excludes HIPAA covered entities); FERPA (student health clearance records are held by the College, not in the HCIS).
+Screened out: 42 CFR Part 2 (no hospital is a Part 2 program; records received from outside programs are flagged and handled case by case); FTC Health Breach Notification Rule (16 CFR 318.1 excludes HIPAA covered entities); FERPA (student health clearance records are held by the College, not in the HCIS). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -79,7 +79,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 
 **Baseline:** the NIST SP 800-53B **High** baseline, tailored. The plan documents **123 controls** in `control-implementation.csv`:
 - 118 from the High baseline;
-- 3 from the privacy baseline (PM-9, PT-2, PT-3), added because minimum necessary between the two covered entities is a scenario gap;
+- 3 from the privacy baseline (PM-9, PT-2, PT-3), added because minimum necessary between the two covered entities is group gap 7 (P03);
 - 2 program management controls not in any baseline (PM-1, PM-2).
 
 Other High-baseline controls are inherited in full from corporate without HCIS-specific content (for example, most PE controls for the data centers) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the Hospital System does not run). The `csf2_subcategories` column comes from NIST's CSF 2.0 to SP 800-53 crosswalk (`00_universal-framework/crosswalks/`); for 12 controls the crosswalk lists no subcategory, and those cells are an author mapping (AC-11, CA-6, CP-3, IR-2, MA-4, MP-6, PL-4, PS-3, PS-4, PS-8, PT-2, PT-3).
@@ -89,7 +89,7 @@ Other High-baseline controls are inherited in full from corporate without HCIS-s
 - **Outside, inherited (common control providers):** SYS-G1 identity and the group directory, SYS-G2 SOC, SIEM, and EDR, and SYS-G3 data center facilities, network, file service, cloud platform, and backup vault.
 - **Outside, interconnected:** SYS-H3 medical devices and clinical OT (device integration through the interface engine), the Health Plan (admission notices and eligibility, SYS-P1), the health information exchange, the reference laboratory, public health agencies, the clearinghouse, and the community-connect practices.
 
-The diagram is in P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (the HCIS rows and the shared services they inherit from) and the HCIS exports EV-040, EV-041, EV-048 and EV-051. The diagram is in P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
@@ -135,15 +135,15 @@ See `control-implementation.csv` (123 controls) and `common-control-catalog.csv`
 | System-specific | 24 |
 
 **The 20 partially implemented controls** cluster in six places:
-- **Student and trainee access** (scenario gap 4): AC-2, AC-2(3), IA-2(2), AT-2, PS-7.
-- **Recovery from a ransomware attack that reaches both data centers, and its link to emergency preparedness** (gaps 1 and 2): CP-2, CP-2(1), CP-4, CP-10.
-- **Shared data center architecture** (gap 1): SC-7.
+- **Student and trainee access** (group gap 4): AC-2, AC-2(3), IA-2(2), AT-2, PS-7.
+- **Recovery from a ransomware attack that reaches both data centers, and its link to emergency preparedness** (group gaps 1 and 2): CP-2, CP-2(1), CP-4, CP-10.
+- **Shared data center architecture** (group gap 1): SC-7.
 - **Clinical system hygiene:** SI-2, SA-22, CM-8, IA-5.
-- **Minimum necessary between the two covered entities** (gap 7): AC-4, CA-3, PT-3.
-- **Cross-division incident notification** (gap 8): IR-3, IR-6, IR-8.
+- **Minimum necessary between the two covered entities** (group gap 7): AC-4, CA-3, PT-3.
+- **Cross-division incident notification** (group gap 8): IR-3, IR-6, IR-8.
 
 ### 10.2 Common control inheritance by division
-The catalog lists 99 controls provided fully or partly by corporate. Inheritance is **documented** for the Hospital System (2024 inheritance matrix) and the Health Plan (2025 matrix). The **College inherits only part** of the catalog: 29 controls are inherited (mostly data center and backup controls for its file shares in DC1, plus group internal audit), 44 partly (SOC monitoring, policy, HR, and risk), and 26 not at all (identity and third-party risk), because it still runs its own directory (scenario gap 5). Until the College moves to SYS-G1 (due 2027-06-30), it must meet the Safeguards Rule access and MFA elements itself (P03).
+The catalog lists 99 controls provided fully or partly by corporate. Inheritance is **documented** for the Hospital System (2024 inheritance matrix) and the Health Plan (2025 matrix). The **College inherits only part** of the catalog: 29 controls are inherited (mostly data center and backup controls for its file shares in DC1, plus group internal audit), 44 partly (SOC monitoring, policy, HR, and risk), and 26 not at all (identity and third-party risk), because it still runs its own directory (group gap 5). Until the College moves to SYS-G1 (due 2027-06-30), it must meet the Safeguards Rule access and MFA elements itself (P03).
 
 ### 10.3 Control assessment status
 Group internal audit assessed the common controls once, and sampled HCIS and division controls, from 2026-07-06 to 2026-08-28. See P07 `assessment-results.csv` and `poam.csv`.
@@ -152,10 +152,10 @@ Group internal audit assessed the common controls once, and sampled HCIS and div
 - **Workforce users** unlock clinical workstations with a badge tap and PIN and use SYS-G1 MFA for remote access and email. **Administrators** use phishing-resistant authenticators and just-in-time PAM elevation. This fits a High system used on shared clinical workstations, where speed of access is a patient safety factor.
 - **Students and trainees** use local EHR accounts with a password only. This does not meet the plan's assurance level and is a condition of the authorization (POAM-001).
 - **Community-connect practice users** authenticate through their practices' identity providers with MFA required by contract (IA-8). **Patients** use the portal's own identity service and are outside the workforce assurance level.
-- **Service and interface accounts** should use managed credentials with rotation; 63 still have static passwords older than 1 year (POAM-002).
+- **Service and interface accounts** should use managed credentials with rotation; 63 still have static passwords older than 1 year (EV-052; POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness for the community-connect service (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness for the community-connect service (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **ADT:** admission, discharge, and transfer messages

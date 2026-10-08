@@ -5,7 +5,7 @@
 | Organization | Cris Santos Company, Inc. (PE-backed 112-bed community acute-care hospital) |
 | Tier / Vertical | Mid-Market / Healthcare and Public Health |
 | Incident type | A workforce member (employee, contracted clinician, agency nurse, or affiliated practice user) views or discloses a patient's record without a work reason. Worked example: a local public figure is admitted after a car crash, and several staff open the record within hours |
-| Why this incident | It is the most common privacy breach in hospitals, it is the High risk P01 R-014, and today's EHR monitoring would catch it only if the patient was flagged as VIP (gap 7) |
+| Why this incident | It is the most common privacy breach in hospitals, it is the High risk P01 R-014, and today's EHR monitoring would catch it only if the patient was flagged as VIP (EV-024) |
 | Framework | NIST SP 800-61 Rev. 3 (CSF 2.0 Community Profile) |
 | Policy basis | POL-02 4.13 (EHR access monitoring); POL-03; POL-05 4.2; POL-01 4.8 (sanctions) |
 | Companion documents | `ir-runbook.md` (ransomware); `notification-matrix.csv` |

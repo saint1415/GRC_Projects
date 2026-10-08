@@ -25,7 +25,7 @@ Mid-Market tier scope: 25-40 controls. **34 controls, 243 determination statemen
 | IA-2, IA-2(1) | Unique IDs and MFA; 164.312(a)(2)(i), 164.312(d) | Focused | Focused (25 privileged accounts) |
 | AT-2 | Training; 164.308(a)(5) | Basic | Focused |
 | AU-2, AU-6 | Activity review gap; 164.308(a)(1)(ii)(D), 164.312(b); R-014, R-037 | Focused | Focused |
-| CM-6, CM-8 | Configuration and device inventory; gaps 1 and 10; R-007, R-040 | Focused | Focused |
+| CM-6, CM-8 | Configuration and device inventory; EV-013 and EV-027 (P03 164.310(d), 164.316(a)); R-007, R-040 | Focused | Focused |
 | CP-2, CP-4, CP-8, CP-9, CP-10 | Contingency, communications, and recovery; 164.308(a)(7); 482.15(b)(5), (c)(3); R-001 (Very High), R-003, R-006, R-017 | Comprehensive | Comprehensive |
 | IR-4, IR-6, IR-8 | Incident capability; 164.308(a)(6) | Focused | Basic |
 | MP-6, PE-3 | Physical and media; 164.310 | Basic | Focused |

@@ -67,10 +67,10 @@ Dollar values are scaled to $100.0 million in annual revenue, about $274,000 a d
 
 ## 5. Key findings
 1. **EHR vendor recovery objectives do not meet the BIA.** The EHR vendor's SOC 2 system description states RTO 12 hours and RPO 15 minutes. The BIA needs RTO 2 hours for BP-01, BP-02, and BP-04 to BP-08. The downtime workstations make the 4-hour MTD survivable in read-only mode, but beyond 4 hours the ED decision turns to diversion. Action: negotiate recovery terms at renewal and extend the downtime procedures to cover a 72-hour outage (P01 R-005; P09 vendor review).
-2. **Hospital-managed recovery is unproven.** The LIS, dispensing cabinet server, pump server, monitoring gateway, fetal surveillance server, and cardiology system run in the on-premises data center and have never been restore-tested; there is no IT disaster recovery plan (gap 3). Their 1- to 2-hour RTOs are targets, not demonstrated capabilities (P01 R-003; P07 CP-4, CP-10).
-3. **One campus network carries clinical care, phones, alarms, and building systems.** A single attack on the network hits BP-01, BP-03, BP-05, BP-10, and BP-11 at once (gaps 1 and 13; P01 R-001, R-007, R-016).
+2. **Hospital-managed recovery is unproven.** The LIS, dispensing cabinet server, pump server, monitoring gateway, fetal surveillance server, and cardiology system run in the on-premises data center and have never been restore-tested; there is no IT disaster recovery plan (EV-021, EV-028). Their 1- to 2-hour RTOs are targets, not demonstrated capabilities (P01 R-003; P07 CP-4, CP-10).
+3. **One campus network carries clinical care, phones, alarms, and building systems.** A single attack on the network hits BP-01, BP-03, BP-05, BP-10, and BP-11 at once (EV-014, EV-016; P01 R-001, R-007, R-016).
 4. **No OT configuration backups.** The building automation and nurse call vendors have not confirmed that they keep configuration backups, so the BP-11 RPO is unsupported today.
-5. **The emergency plan has no cyber hazard.** The 482.15 hazard vulnerability analysis ranks "IT outage" as short and low, and there are no diversion criteria for an IT outage (gap 2; section 7).
+5. **The emergency plan has no cyber hazard.** The 482.15 hazard vulnerability analysis ranks "IT outage" as short and low, and there are no diversion criteria for an IT outage (EV-030; section 7).
 6. **The affiliated practices depend on the hospital's recovery.** 18 practices lose their EHR whenever the hospital does. The service agreement promises practice access within 8 hours of EHR availability, which has never been tested (P09).
 
 ## 6. Resource requirements
