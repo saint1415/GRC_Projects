@@ -23,6 +23,8 @@
 
 **Not applicable, with reasons (4 requirements, 4 clause rows):** 3.7.5 (no nonlocal maintenance), 3.13.5 (no public system components in scope), 3.13.7 (no VPN or tunnels), and 3.13.14 (no VoIP) are scored as Met under 32 CFR 170.24(b)(3). Flowdown and subcontractor checks (G-119, G-123, G-126) do not apply because the owner has no subcontractors. DDTC registration (G-131) does not apply for the reason above. NISPOM (32 CFR Part 117) does not apply (no facility clearance). CIRCIA has no final rule.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 110 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and point value from the CMMC Scoring Methodology (32 CFR 170.24(c)(2)). Requirement text is quoted from the public-domain NIST publication. The 21 clause rows cite each clause or section paragraph as checked on eCFR (version date 2026-09-23).
 2. **Crosswalk.** CSF 2.0 and SP 800-53 Rev. 5 mappings reuse the Defense Industrial Base Small sample's derivation from NIST's official mappings through each requirement's SP 800-171 Rev. 3 counterpart; the route through Rev. 3 is the author's, and the `crosswalk_source` column says so. Clause rows are author mappings.

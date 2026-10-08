@@ -55,6 +55,8 @@ The city's BAS controllers, supervisory controller, and access control tenant ar
 | Fla. Stat. 282.3185(5) and 282.3186 | City duties the owner supports | The city must report ransomware within 12 hours and other severity level 3 to 5 incidents within 48 hours of discovery, and may not pay a ransom. These bind the city; the owner's 24-hour contract notice makes sure the city hears in time (P08) |
 | FedRAMP, DFARS 252.204-7012, CMMC | Not applicable | No company system is operated on behalf of GSA; no Department of Defense work |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** One row per Moderate base control (G-001 to G-177), from the repository copy of the SP 800-53 Rev. 5.2.0 catalog and its baseline flags; 20 FAR rows cited to clause paragraph (FAR-01 to FAR-20); one GSA row, one CUI row, and three Florida rows. FAR, CFR, and Florida text was read from eCFR (point in time 2026-09-23) and the 2026 Florida Statutes.
 2. **Crosswalk.** CSF 2.0 subcategories for 134 base controls come from NIST's official CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). The other 43 base controls have no official reference; they and all overlay rows carry an **author mapping**, labeled in `crosswalk_source`.

@@ -36,6 +36,8 @@ Both directives apply to "Owners and Operators of a hazardous liquid and natural
 - **FTC Safeguards Rule (N54-R01):** Integrity Services is not a financial institution under 16 CFR 314.2 (IG-20). Other professional-services rules (tax preparer, federal contractor, HIPAA business associate, professional conduct) do not apply (IG-21).
 - **CIRCIA (C-ENERGY-R05):** final rule not published as of 2026-09-25; tracked only.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Gas Transmission | Gathering and Production | Integrity Services | Group (corporate) |
 |---|---|---|---|---|

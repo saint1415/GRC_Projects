@@ -31,6 +31,8 @@
 
 **Not applicable row:** G-155, the CPPA cybersecurity audit (below thresholds; rechecked each year).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.** The 110 SP 800-171 rows follow NIST's official structure (families 3.1 to 3.14), with the CMMC identifier and point value from the CMMC Scoring Methodology (32 CFR 170.24). The 15 FAR 52.204-21 rows quote the clause (48 CFR 52.204-21(b)(1)) and use the Level 1 identifiers in Table 2 to 32 CFR 170.15(c)(1)(ii). Clause and regulation rows cite each paragraph as read on eCFR (version date 2026-09-23); SEC rows follow 17 CFR 229.106 and the SEC's Item 1.05 compliance guide. CTPAT rows describe the program's criteria by section only, because the criteria text could not be retrieved from CBP during this analysis.
 2. **Crosswalk.** SP 800-171 rows use the official SP 800-171 Rev. 2 Appendix D mapping (Rev. 4 control IDs, kept in `nist_official_sp800_53_appendix_d`), refined to Rev. 5 by the author; CSF 2.0 subcategories are derived from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference. All other rows are author mappings and are labeled that way.

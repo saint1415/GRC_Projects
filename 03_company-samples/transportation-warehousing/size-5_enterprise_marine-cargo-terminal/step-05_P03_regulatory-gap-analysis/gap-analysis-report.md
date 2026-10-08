@@ -38,6 +38,8 @@
 
 **Enterprise features of the rule used here.** One person may be CySO for several facilities if each Plan lists them (101.625(b)); one Plan may cover several facilities of similar operations if it addresses each facility's specific risks (101.630(d)(2)). The company uses both: one CySO for all 8 facilities, one Plan for T-01 to T-07 with facility annexes, and a separate Plan for T-08 until it migrates to ETOP.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.** Subpart F rows follow the regulation's own structure: each paragraph of 101.620 to 101.665 that imposes a duty, at the most granular citation that is separately verifiable. Definitions (101.615), purpose (101.600), applicability (101.605), federalism (101.610) and severability (101.670) set context and have no rows. Other regulations were broken into citation-level duties from the eCFR text (33 CFR 6.16-1, 101.305, 105.105, 105.225, 105.305 and 17 CFR 229.106, retrieved for 2026-09-23), the Federal Register notices for the MARSEC Directives, the SEC adopting release and the Florida statute. Brief quotes are used; this is public-domain federal text.
 2. **Requirement type.** The `requirement_type` column records when each duty takes effect, using the dates in section 1.

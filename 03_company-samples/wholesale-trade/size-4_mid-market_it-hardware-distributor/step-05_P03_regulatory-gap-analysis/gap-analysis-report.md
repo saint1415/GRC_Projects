@@ -36,6 +36,8 @@
 | State breach notification laws (Florida as the worked example) | P08 notification matrix |
 | Title VII and 29 CFR 1607 (AI resume screening) | P10 |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 110 requirements, their Basic or Derived type, and their text come from NIST's SP 800-171 Rev. 2 requirements dataset. CMMC practice IDs follow 32 CFR 170.14(c); point values follow the CMMC Scoring Methodology (32 CFR 170.24). The 15 FAR 52.204-21 requirements are quoted from 48 CFR 52.204-21(b)(1) and linked to their SP 800-171 equivalents per Table 2 to 32 CFR 170.15(c)(1)(ii). Clause rows follow each clause's own paragraph structure from the eCFR text (2026-09-23 version).
 2. **Crosswalk.** SP 800-53 controls come from the official SP 800-171 Rev. 2 Appendix D mapping (Rev. 4 IDs), refined to Rev. 5 by the author (column `nist_official_sp800_53_appendix_d` keeps the official list). CSF 2.0 subcategories are derived from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference. Clause rows use an author mapping and are labeled as such.

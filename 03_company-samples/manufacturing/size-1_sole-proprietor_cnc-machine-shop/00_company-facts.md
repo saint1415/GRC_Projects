@@ -18,6 +18,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Regulatory driver IDs | **N31-33-R02** (CMMC; its Level 1 requirements are the 15 FAR 52.204-21 requirements, 32 CFR 170.14(c)) is the main driver. FAR 52.204-21 is also cited as **C-DIB-R04** from the Defense Industrial Base vertical (verified). N31-33-R03 (ITAR) and N31-33-R04 (EAR) drive the controlled-data intake rule. N31-33-R05 (524B) is recorded as not applicable. Customer contract terms are cited as "OEM SQA" and "Aerospace PO terms". The benchmark is NIST CSF 2.0 with the Small Business Quick-Start Guide (NIST SP 1300, February 2024) |
 | State law approach | Florida law is cited only where unavoidable (the Fla. Stat. 501.171 applicability check in P08) |
 | Not in scope | HIPAA (no PHI); payment card standards (the few card payments go through the accounting SaaS's hosted payment page); SEC disclosure rules (not a registrant); CIRCIA (proposed rule only) |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People and contracted services (role titles only)
 | Role | Duties |

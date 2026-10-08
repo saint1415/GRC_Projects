@@ -18,6 +18,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Insurance | Cyber policy with $1 million aggregate limit and a $250,000 social engineering (funds transfer fraud) sublimit. Performance and payment bonds through a surety |
 | Not in scope | CUI and NIST SP 800-171 (no CUI held; see P03 escalation plan). HIPAA (the company holds no PHI for clients). PCI DSS (no card payments accepted). SEC rules (privately held) |
 | State law approach | Florida law is cited only where a Florida duty is unavoidable (breach notification, Fla. Stat. 501.171). The samples otherwise stay federal |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 

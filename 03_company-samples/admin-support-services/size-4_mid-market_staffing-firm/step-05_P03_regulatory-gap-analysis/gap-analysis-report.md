@@ -44,6 +44,8 @@
 
 **Also checked, outside this workbook:** Title VII (42 U.S.C. 2000e-2(b), (k)), the ADEA (29 U.S.C. 623(b)), and the ADA (42 U.S.C. 12112(b)(6)) for the AI tools, assessed in P10. The FLSA payday rule for overtime (29 CFR 778.106) is a driver in the BIA and the payroll outage runbook.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategories come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows were decomposed from the eCFR, U.S. Code, Florida Statutes, and MOU texts listed above, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority (High 49, Medium 46, Low 11), set by the vCISO and the COO from the risk register (P01) and BIA (P05). Subcategories protecting SSNs, bank data, I-9 records, medical information, and payroll are High.

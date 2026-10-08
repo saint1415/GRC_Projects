@@ -57,6 +57,8 @@ The Interagency Guidelines (C-FINANCIAL-R02) apply to the sponsor banks and reac
 | COPPA, FedRAMP, FCC CPNI, PADFA (N51-R02, R07, R06, R05) | No child-directed services, federal agency customers, carrier operations, or data broker sales |
 | IRC 7216, FAR, DFARS and CMMC, HIPAA, ABA and AICPA rules (N54-R02 to R08) | No tax preparation, federal contracts, PHI, legal services, or attestation work |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Payment Processing | Payments Software Platform | Merchant Consulting | Group (corporate) |
 |---|---|---|---|---|

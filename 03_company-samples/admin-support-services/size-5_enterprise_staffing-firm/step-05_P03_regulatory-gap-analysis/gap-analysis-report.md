@@ -39,6 +39,8 @@
 | CIRCIA (proposed 6 CFR Part 226) | **Not in force** | Final rule not published as of 2026-09-25 |
 | SOX Section 404 | Separate program | IT general controls over the payroll engine and ERP are tested by the SOX program and not repeated here |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategories come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows were broken into citation-level duties from the primary texts listed above, with short quotes or paraphrases. Colorado rows cite C.R.S. 6-1-1703 to 6-1-1705 as enacted by SB26-189.
 2. **Target Profile.** Each subcategory has a Target Profile priority (High 49, Medium 50, Low 7) set by the CISO and the Chief Risk Officer from the risk register (P01) and BIA (P05). Subcategories that protect pay, SSNs, and Form I-9 records are High.

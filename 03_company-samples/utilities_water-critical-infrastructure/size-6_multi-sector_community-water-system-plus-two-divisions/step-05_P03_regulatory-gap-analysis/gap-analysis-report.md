@@ -43,6 +43,8 @@ NAICS 56 has no sector-specific federal cyber mandate, and Environmental Service
 - client contracts and expected SOC 2 commitments for the monitoring service (P09).
 FCRA employment procedures (15 U.S.C. 1681b(b)) and Form I-9 retention (8 CFR 274a.2(b)(2)) also apply to the division as an employer, but they are HR process duties handled by group HR and are not analyzed row by row here.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Water Utility | Construction | Environmental Services | Group (corporate) |
 |---|---|---|---|---|

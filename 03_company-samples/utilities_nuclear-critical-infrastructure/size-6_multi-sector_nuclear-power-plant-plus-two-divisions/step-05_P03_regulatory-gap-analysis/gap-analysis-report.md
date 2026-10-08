@@ -49,6 +49,8 @@ Other binding rules: the DOT hazmat security plan for category 2 shipments (49 C
 - **CIRCIA:** not in effect. No final rule was published as of 2026-09-25. As proposed, the group would be covered.
 - **OFAC:** sanctions check before any ransom payment.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Nuclear Generation | Engineering and Radiation Services | Radioactive Waste Management | Group (corporate) |
 |---|---|---|---|---|

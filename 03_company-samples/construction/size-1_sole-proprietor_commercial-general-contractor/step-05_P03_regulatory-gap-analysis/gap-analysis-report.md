@@ -29,6 +29,8 @@
 
 **Not a size question.** None of these rules has a small-business or one-person exemption. Size only shapes *how* the owner meets them: settings in SaaS accounts and on two devices, a home office door lock, and a paper visitor log.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** Each paragraph of FAR 52.204-21(b)(1) is one row with the clause's own text. Requirement (ix) is split into its three phrases, as in 32 CFR 170.15 Table 2, giving 17 rows for the 15 requirements. Clause paragraphs (b)(2) and (c), the CMMC duties, FAR 52.204-25, and the applicability of DFARS 252.204-7012 are separate rows. **32 rows in all.**
 2. **Crosswalk.** FAR rows follow the official chain used in the Small construction sample: 32 CFR 170.15 Table 2 maps each requirement to NIST SP 800-171 R2; the Rev. 3 withdrawal notes give the Rev. 3 successor; CSF 2.0 comes from NIST's CSF 2.0-to-SP 800-171 Rev. 3 mapping; SP 800-53 comes from the SP 800-171 Rev. 3 tailoring tables. Where NIST publishes no mapping, and for the CMMC, Section 889, and DFARS rows, the mapping is the author's and is labeled so in `crosswalk_source`.

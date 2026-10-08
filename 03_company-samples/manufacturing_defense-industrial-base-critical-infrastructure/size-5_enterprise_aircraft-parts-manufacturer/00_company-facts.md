@@ -21,6 +21,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Public company duties | SEC Form 8-K Item 1.05 and Regulation S-K Item 106 (17 CFR 229.106); SOX internal control over financial reporting, including IT general controls for ERP |
 | Not in scope | CIRCIA reporting (final rule not published; proposed only). Health and consumer payment data: none beyond employee benefits data handled by the benefits program. FedRAMP as a seller: the company sells no cloud services to the Government |
 | State law approach | State breach laws are handled generically (each state where affected individuals reside), with Florida (Fla. Stat. 501.171) as the worked example. Employee personal information is the main personal data in scope |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-25 and DFARS 252.204-7019 and -7020) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. New DoD awards under DFARS Part 240 (DoD Class Deviation 2026-O0025, Revision 3) carry 252.240-7997 for DoD-led Medium and High NIST SP 800-171 assessments instead of 252.204-7019 and -7020. Sources: SRC-FAR-RFO-PART40 and SRC-DFARS-DEV-2026-O0025 |
 
 ## 2. People (role titles only)
 

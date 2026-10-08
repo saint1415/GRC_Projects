@@ -52,6 +52,8 @@ No binding federal sector cybersecurity rule applies to an onshore producer. Par
 ### 1.5 Group-wide screens
 USCG Subpart F does not apply (no vessel, MTSA facility, or OCS facility; 33 CFR 101.605(a)). CIRCIA is not in effect; if finalized as proposed, the group would be covered because 45,000 employees exceeds the 1,250-employee SBA standard for NAICS 211120 (13 CFR 121.201). FAR safeguarding and covered-article clauses do not apply (no federal contracts).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** Production rows are the 106 CSF 2.0 subcategories, quoted from the CSF 2.0 core, plus two EPA rows. NERC rows follow each standard's requirement and Attachment 1 structure (CIP-002-5.1a, CIP-003-9, CIP-012-2, EOP-004-4, read from the NERC standard documents). Part 195, HMR, and FMCSA rows follow the CFR section structure (eCFR, current through 2026-09-23). Group rows follow 17 CFR 229.106, Form 8-K Item 1.05, and Fla. Stat. 501.171.
 2. **Crosswalk.** For CSF rows, SP 800-53 Rev. 5 controls come from NIST's official CSF 2.0 informative references (column `nist_official_sp800_53r5`); `sp800_53_controls` is the author's key-control selection, and the SP 800-82 Rev. 3 section (`sp800_82r3_reference`) is an author mapping because SP 800-82 Rev. 3 is organized by CSF 1.1 categories. All NERC, PHMSA, HMR, FMCSA, SEC, and state rows carry an **author mapping**.

@@ -34,6 +34,8 @@
 
 Two related items: FAR 52.204-25 (Section 889) also flows down, but only its reporting duty matters to a parts supplier (row G-006). HIPAA does not apply (no PHI).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** FAR 52.204-21 rows follow the clause structure, paragraphs (b)(1)(i) to (xv) and (c), with a short quote of each requirement (public-domain regulation text). CMMC rows cite the 32 CFR 170 and DFARS 252.204-7021 paragraphs. OEM rows are the shop's contract terms. Benchmark rows are the 22 CSF 2.0 categories, with the SP 1300 quick-start actions in the author's words.
 2. **Crosswalk.** For the FAR rows, the CMMC requirement ID and SP 800-171 R2 number come from 32 CFR 170.15(c)(1)(ii) Table 2 (official). The CSF 2.0 and SP 800-53 columns are an **author mapping**. For the CSF benchmark rows, the SP 800-53 controls are a subset of NIST's official CSF 2.0 informative references.

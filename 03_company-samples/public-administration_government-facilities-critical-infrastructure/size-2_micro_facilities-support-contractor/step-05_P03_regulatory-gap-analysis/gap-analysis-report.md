@@ -43,6 +43,8 @@ The vertical profile names SP 800-53 Rev. 5 as the primary control set, because 
 ### 1.3 OT tailoring
 Controls were applied to the gateways and the remote paths into customer BAS networks using NIST SP 800-82 Rev. 3. Examples: no active vulnerability scanning of customer BAS networks without the customer's approval (RA-5); no malware agents on gateways, compensated by outbound-only tunnels (SI-3, SC-7); BACnet cannot be encrypted, so segmentation and VPN limits compensate (SC-8, AC-4). Four developer controls (SA-3, SA-10, SA-11, SA-15) are not applicable because the company develops no software; its vendors' practices are reviewed under SA-9.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** One row per Moderate base control (G-001 to G-177), with its Moderate enhancements assessed inside the row and named in the citation column; 23 FAR rows (G-178 to G-200) cited to clause paragraph; 5 Florida rows (G-201 to G-205). FAR and Florida text is U.S. and state government text, so short quotes are used.
 2. **Crosswalk.**

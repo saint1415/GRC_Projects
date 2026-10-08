@@ -24,6 +24,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Payment cards | The online store uses the e-commerce vendor's hosted payment page; plant employee stores use vendor-managed encrypting terminals. No card numbers are stored or processed on company systems. PCI DSS obligations are contractual through the acquirer and are not analyzed here |
 | Regulatory driver IDs | C-FOOD-AG-R01 (21 CFR Part 121) is the primary driver. Binding rules outside the vertical registry are cited directly after being read on eCFR: 9 CFR Parts 416, 417, and 418 (FSIS), 21 CFR 117.305 and 117.315 (FDA records), 21 U.S.C. 350f (Reportable Food Registry), 40 CFR 302.6 and 355.40-355.42 (release reporting), 17 CFR 229.106 and Form 8-K Item 1.05 (SEC). NIST CSF 2.0 and SP 800-82 Rev. 3 are the voluntary OT benchmark |
 | Growth | PLT-08 (Texas) was acquired in October 2025 and is still being integrated (see gap 1) |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 

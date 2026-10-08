@@ -52,6 +52,8 @@ With no binding security rule, the division benchmarks itself against **NIST CSF
 - **FTC Act Section 5 (N42-R01):** security and AI claims in marketing (DCC, Testing services).
 - **EAR (N31-33-R04):** Medical Devices technology and client technical data at Testing; managed by group trade compliance. Not scored in these tables.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Medical Devices | Distribution | Testing | Group (corporate) |
 |---|---|---|---|---|

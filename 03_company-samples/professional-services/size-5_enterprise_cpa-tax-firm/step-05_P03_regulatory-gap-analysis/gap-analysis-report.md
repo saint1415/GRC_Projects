@@ -29,6 +29,8 @@
 
 **Considered and excluded within the analyzed rules:** 314.4(a)(1)-(3) (the Qualified Individual is a firm employee) and 314.6 (consumer count far above 5,000) are rated Not applicable.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.** Each paragraph of 16 CFR 314.3 and 314.4 became one row, split to the lowest level that states its own duty; 314.4(h)(1)-(7) got one row each. For IRC 7216, each permission or condition that governs how the firm shares data became a row. HIPAA rows use the requirement text and types from the Health Care crosswalk (NIST SP 800-66 Rev. 2 wording) plus the eCFR text of 164.308(b), 164.410, and 164.502(a)(3) (retrieved for 2026-09-23). FAR rows follow the clause text of 52.204-21(b)(1)(i)-(xv) and (c). Florida rows follow the statute text.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. These are **author mappings**: no official NIST mapping of 16 CFR 314, 26 CFR 301.7216, IRS publications, FAR 52.204-21, or Fla. Stat. 501.171 was found. HIPAA rows use the repository's Health Care crosswalk (also an author mapping).

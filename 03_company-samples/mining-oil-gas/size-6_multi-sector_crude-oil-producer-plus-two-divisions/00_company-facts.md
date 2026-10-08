@@ -15,6 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce / revenue | 45,000 employees; about $18.0 billion revenue (fictional) |
 | SBA size status | Not small. The SBA standard for NAICS 211120 is 1,250 employees (13 CFR 121.201) |
 | Why these three businesses | The producer monetizes its associated gas (the Power Generation division buys residue gas made from it) and moves its own crude (the Crude Logistics division) |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Duties |

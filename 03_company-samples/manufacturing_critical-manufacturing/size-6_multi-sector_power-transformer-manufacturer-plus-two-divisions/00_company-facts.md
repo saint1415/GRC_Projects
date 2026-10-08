@@ -16,6 +16,7 @@ All 10 deliverables in this folder use the facts below. The company, its plants,
 | Workforce / revenue | 45,000 employees; about $18.0 billion revenue (fictional): Transformer Manufacturing about $9.6 billion (about $26.3 million per calendar day), Electric Utility about $6.0 billion, Grid Engineering about $2.4 billion (external revenue only) |
 | SBA size status | Not small. The SBA size standard for NAICS 335311 is 800 employees (13 CFR 121.201) |
 | SEC status | Common stock listed on a U.S. exchange; not a smaller reporting company. Form 8-K Item 1.05 and Regulation S-K Item 106 (17 CFR 229.106) apply to the holding company |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ### 1.1 Transformer Manufacturing detail (focus division)
 | Item | Fact |

@@ -42,6 +42,8 @@ The Government Cloud has held a FedRAMP Rev5 **Moderate** agency authorization s
 | State | Fla. Stat. 501.171(6) and other state laws | **Yes** | Third-party agent duty to notify customers; each state where affected individuals reside applies its own law |
 | C-IT-R06 | CIRCIA | Not in force | No final rule as of 2026-09-25 (section 6) |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** Rows follow each regulation's own structure:
    - **90 FedRAMP rules** (G-001 to G-090) from the 15 rulesets that apply to a Rev5 Class C provider maintaining a certification. Each row cites the rule ID and the keyword that applies to Class C (75 MUST, 3 MUST NOT, 11 SHOULD, 1 SHOULD NOT). Where a rule varies by class, the Class C version is used. Summaries are paraphrased; FedRAMP rule text is a U.S. government work. Rules only for initial applicants, agencies, or assessors were left out.

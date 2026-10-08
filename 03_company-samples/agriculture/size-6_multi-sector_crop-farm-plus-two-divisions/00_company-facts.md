@@ -14,6 +14,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Location | Headquartered in Florida. Operations in 7 southeastern states (Crop Farming in 5 of them). **State law is handled generically** ("each state where affected individuals reside"), with Florida as the worked example |
 | Workforce / revenue | 45,000 employees at seasonal peak; about $18.0 billion revenue (fictional, consolidated, after intercompany eliminations) |
 | Why these divisions | Vertical integration from field to packed product to farm inputs: Farm Supply sells inputs to Crop Farming and outside growers; Crop Farming sells produce and peanuts to Food Processing and outside buyers |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Duties |

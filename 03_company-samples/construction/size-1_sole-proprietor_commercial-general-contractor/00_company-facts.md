@@ -18,6 +18,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Insurance | General liability and tool coverage only. **No cyber insurance and no funds transfer fraud or social engineering coverage** (confirmed with the insurance agent on 2026-07-14) |
 | Not in scope | CUI, NIST SP 800-171, and DFARS 252.204-7012 (no DoD contract today and no CUI expected; see P03). HIPAA (the dental office build-out gives the owner no patient information). PCI DSS (no card payments). SEC rules (not a public company) |
 | State law approach | Florida law is cited only where a Florida duty is unavoidable (breach notification, Fla. Stat. 501.171, which covers sole proprietorships). The samples otherwise stay federal |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People and contracted services (role titles only)
 

@@ -14,6 +14,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Location | Headquartered in Florida. All stores, depots, employees, and customers are in **26 states** in the Southeast, Mid-Atlantic, Midwest, and Texas. The group has **no stores, employees, customers, shipments, or mail-in service in California, Colorado, or New York** (a standing group decision, reviewed by counsel each year). **State law is handled generically** ("each state where affected individuals reside"), with Florida as the worked example |
 | Workforce / revenue | 45,000 employees; about **$18.0 billion** annual revenue (fictional): Device Repair about $3.9 billion, Electronics Retail about $12.6 billion, IT Support Services about $1.5 billion |
 | Why this combination | A consumer technology services group: Retail sells the devices, plans, and support subscriptions; Device Repair fixes, sanitizes, and refurbishes the devices; IT Support supports the people and businesses that use them |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Duties |

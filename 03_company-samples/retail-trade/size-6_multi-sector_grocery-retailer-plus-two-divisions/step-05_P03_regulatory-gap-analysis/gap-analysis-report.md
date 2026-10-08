@@ -36,6 +36,8 @@ The PIN pads encrypt card data under the processor's encryption solution, but th
 
 **Lending licenses (context, not cyber rules).** Financial Services lends under state licenses, for example Florida's retail installment seller license (Fla. Stat. 520.32(1)) and consumer finance license (Fla. Stat. 516.02). Licensing is not scored here; the security duties for the same customer data are the FTC Safeguards Rule rows in this analysis (see `00_company-facts.md`).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Grocery Retail | Grocery Wholesale | Financial Services | Group (corporate) |
 |---|---|---|---|---|

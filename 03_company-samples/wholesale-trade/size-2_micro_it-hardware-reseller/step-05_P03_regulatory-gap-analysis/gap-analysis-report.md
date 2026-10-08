@@ -26,6 +26,8 @@
 - FAR 52.204-21(b)(1)(xi): no publicly accessible components inside the boundary (G-011).
 - SEC disclosure rules (private), CCPA/CPRA (no California business; revenue far below the threshold), CTPAT (voluntary; not an importer of record), Trade Agreements Act (no GSA schedule; no 2026 order includes the clause). See `../00_company-facts.md` section 1.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 15 requirements are quoted from 48 CFR 52.204-21(b)(1). CMMC practice IDs and the SP 800-171 Rev. 2 equivalents come from Table 2 to 32 CFR 170.15(c)(1)(ii). Clause rows cite the eCFR text of each clause and regulation (current as of 2026-09-23); Florida rows cite the statute as published by the Florida Legislature.
 2. **Crosswalk.** For the 15 FAR rows, SP 800-53 controls come from the SP 800-171 Rev. 2 Appendix D mapping of the equivalent requirement, refined to Rev. 5 by the author, and CSF 2.0 subcategories are derived from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference (two rows, AC-22 and MP-6, have no CSF mapping there). All other rows use an **author mapping**, labeled as such.

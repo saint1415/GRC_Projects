@@ -42,6 +42,8 @@ The vertical profile names SP 800-53 Rev. 5 as the primary control set because F
 ### 1.3 OT tailoring
 The controls were applied to OT components (BACnet controllers, door controllers, edge firewalls, engineering workstations) using the OT guidance in NIST SP 800-82 Rev. 3. Examples: vulnerability scanning of OT uses passive discovery and approved windows, not live active scans (RA-5). Where BACnet cannot encrypt, segmentation compensates (SC-8, SC-7). No control was tailored out. Three developer controls (SA-10, SA-11, SA-15) were assessed against the company's vendors, because the company develops no software.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** One row per Moderate base control (rows G-001 to G-177), with its Moderate enhancements listed in the citation column; 20 FAR rows (G-178 to G-197) cited to clause paragraph.
 2. **Crosswalk.**

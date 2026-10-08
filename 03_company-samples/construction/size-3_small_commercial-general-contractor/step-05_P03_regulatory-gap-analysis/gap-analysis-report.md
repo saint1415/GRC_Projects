@@ -33,6 +33,8 @@ Video surveillance equipment from Hytera, Hikvision, and Dahua is covered only w
 
 **Not a size question.** None of these rules has a small-business exemption. The company's size only shapes *how* it meets them (for example, an MSP-run control rather than in-house staff).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** Each paragraph of FAR 52.204-21(b)(1) is one row, using the clause's own numbering and quoting its text. Requirement (ix) is split into its three phrases, as in 32 CFR 170.15 Table 2, giving 17 rows for the 15 requirements. Clause paragraphs (b)(2) and (c), the CMMC program duties (32 CFR 170.15, 170.19, 170.22, 170.23; DFARS 252.204-7021), FAR 52.204-25, and the applicability of DFARS 252.204-7012 are separate rows.
 2. **Crosswalk.**

@@ -47,6 +47,8 @@ The group is a private contractor, not a government entity. Apart from the Drive
 | Colorado SB26-189 | Watch item | No IEP or RMS customer in Colorado today; effective 2027-01-01; status unsettled |
 | Election systems (EAC VVSG) | Not applicable | The group builds no voting or voter registration systems |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | GovTech Integration | IT Consulting | Government Software Products | Group (corporate) |
 |---|---|---|---|---|

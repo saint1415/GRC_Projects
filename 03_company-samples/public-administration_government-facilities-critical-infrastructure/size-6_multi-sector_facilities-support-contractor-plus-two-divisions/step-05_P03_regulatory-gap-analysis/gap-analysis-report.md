@@ -28,6 +28,8 @@ There is no size exemption anywhere in this analysis. The group is not small und
 | C-GOVERNMENT-R07 | SLCGP (6 U.S.C. 665g) | No | A grant condition for governments. Customers' grant-funded projects may add contract terms, which are handled as contract terms |
 | C-GOVERNMENT-R08 | GovRAMP | **Yes for the IBOP, by contract from 2027** | One state customer's 2027 renewal requires GovRAMP verification of the IBOP by 2027-07-01. GovRAMP is a nonprofit verification program, not law |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Facilities Support (focus) | Construction | Janitorial and Security | Group (corporate) |
 |---|---|---|---|---|

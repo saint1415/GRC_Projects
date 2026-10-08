@@ -54,6 +54,8 @@ The FTC Safeguards Rule protects "customer information", meaning nonpublic perso
 - **CTPAT (N48-49-R05):** voluntary; both Marine Terminals and Freight Trading are partners.
 - **Excluded:** TSA rail, public transportation and pipeline Security Directives and aviation security program requirements (N48-49-R02 to R04): the group operates none of those modes. 49 U.S.C. 41712 (N48-49-R06): airlines and ticket agents only. CIRCIA: final rule not published as of 2026-09-25, tracked only (GRP-G08).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Marine Terminals | Freight Trading | Port Real Estate | Group (corporate) |
 |---|---|---|---|---|
