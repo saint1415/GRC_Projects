@@ -10,7 +10,7 @@
 | Scenario brief | [README.md](../README.md) |
 
 **Regulation to analyze:** CMMC Level 2 / NIST SP 800-171 Rev. 2, 32 CFR Part 170; 48 CFR 252.204-7012 and 252.204-7021
-**Why:** Direct analogue to the HIPAA Security Rule for the DIB: binding, 110 enumerated requirements with a defined assessment methodology and scoring, third-party certification (C3PAO) becoming a condition of award from Phase 2 (Nov. 10, 2026). Later development: on 2026-07-13 the DoD (Department of War) CIO suspended CMMC Phase 2; see DoD Class Deviation 2026-O0025, Revision 3.
+**Why:** Direct analogue to the HIPAA Security Rule for the DIB: binding, 110 enumerated requirements with a defined assessment methodology and scoring, and a third-party certification (C3PAO) path. The Phase 2 start that would have made C3PAO certification a condition of award (Nov. 10, 2026) was suspended by the DoD (Department of War) CIO memorandum of 2026-07-13 (DoD Class Deviation 2026-O0025, Revision 3).
 
 ## Regulatory drivers to trace in this deliverable
 Use these IDs in the `regulatory_driver` columns of the working files.
