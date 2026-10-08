@@ -29,7 +29,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | ID | Requirement | Citation | How it applies to the OFP |
 |---|---|---|---|
 | N42-R03 | DFARS Safeguarding Covered Defense Information and Cyber Incident Reporting | 48 CFR 252.204-7012 | The FFE and any OFP component that stores CUI is a covered contractor information system: SP 800-171 Rev. 2, 72-hour reporting, 90-day preservation, and FedRAMP Moderate equivalency for cloud services that hold CDI ((b)(2)(ii)(D)) |
-| N42-R02 | CMMC Program, Level 2 (C3PAO) from Phase 2 awards | 32 CFR Part 170; DFARS 252.204-7021 | The FFE plus the security protection assets it relies on (SYS-G1, SYS-G2, DC badge systems) form the Level 2 assessment scope (32 CFR 170.19(c)) |
+| N42-R02 | CMMC Program, Level 2 (C3PAO) as the primes requested (Phase 2 suspended; customer-driven) | 32 CFR Part 170; DFARS 252.204-7021 | The FFE plus the security protection assets it relies on (SYS-G1, SYS-G2, DC badge systems) form the Level 2 assessment scope (32 CFR 170.19(c)) |
 | N42-R04 | FAR Basic Safeguarding (FCI) | 48 CFR 52.204-21 | The ERP, EDI hub, and WMS hold FCI from DoD orders and shipments |
 | N42-R05 | Section 889 prohibition | 48 CFR 52.204-25 | The item master screening flags and the federal order block |
 | DFARS | Sources of electronic parts; SP 800-171 DoD Assessments | 48 CFR 252.246-7008; 252.204-7019 and -7020 | Sourcing order for integration jobs; SPRS score for the CUI environment |
@@ -49,7 +49,7 @@ Approved by the Group CISO and the Group ERP and platforms director (system owne
 ### 4.2 System Authorization Decision
 The group is not a federal agency, so there is no formal authorization. The equivalent internal decision:
 - **Decision:** authorized to operate with conditions, 2026-09-15, by the Group CISO and the Group Chief Risk Officer (acceptance authority for High risks).
-- **Conditions:** (1) purge CUI from the commercial ERP and collaboration tenant and block attachments on DoD orders by 2026-11-30 (POAM-007); (2) close the IC-2 lab network route by 2026-10-31 (POAM-006); (3) no new integration job for a Phase 2 award until the CMMC readiness check passes (POAM-010).
+- **Conditions:** (1) purge CUI from the commercial ERP and collaboration tenant and block attachments on DoD orders by 2026-11-30 (POAM-007); (2) close the IC-2 lab network route by 2026-10-31 (POAM-006); (3) no new integration job under a prime award that requires a CMMC level until the CMMC readiness check passes (POAM-010).
 - **CMMC affirmation:** the IT Distribution president, as Affirming Official (32 CFR 170.22), will not affirm Level 2 compliance until the C3PAO assessment closes with a Final or Conditional status.
 - **Reauthorization:** annually, or after the C3PAO assessment (2027-01).
 

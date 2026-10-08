@@ -35,7 +35,7 @@ The forecasting platform (SYS-15), other AI tools (SYS-16), and third parties (S
 | ID | Requirement | Citation | How it affects the DOP |
 |---|---|---|---|
 | N42-R03 | DFARS Safeguarding Covered Defense Information and Cyber Incident Reporting | 48 CFR 252.204-7012 (Prime A, B, C subcontracts) | SP 800-171 Rev. 2 for every system that holds CUI; FedRAMP Moderate equivalency for cloud services holding CUI; 72-hour reporting; image preservation |
-| N42-R02 | CMMC Program: Level 2 (C3PAO) required from 2027-06-01; Level 1 (Self) for the FCI stream | 32 CFR Part 170; DFARS 252.204-7021 | Assessment scope and asset categories (170.19); POA&M limits (170.21); annual affirmation (170.22) |
+| N42-R02 | CMMC Program: Level 2 (C3PAO) requested by the primes from 2027-06-01 (suspended with CMMC Phase 2; still prepared for); Level 1 (Self) for the FCI stream | 32 CFR Part 170; DFARS 252.204-7021 | Assessment scope and asset categories (170.19); POA&M limits (170.21); annual affirmation (170.22) |
 | N42-R04 | FAR Basic Safeguarding of Covered Contractor Information Systems | 48 CFR 52.204-21 | 15 safeguarding requirements for systems holding FCI (ERP, WMS, EDI, TMS, email) |
 | N42-R05 | Section 889 covered telecommunications and video surveillance prohibition | 48 CFR 52.204-25 | Screening of products on federal orders and of the company's own systems; 1-business-day report |
 | FAR | FASCSA orders prohibition | 48 CFR 52.204-30 | SAM.gov search for FASCSA orders; 3-business-day report |

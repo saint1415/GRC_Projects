@@ -24,7 +24,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 **Why IT Consulting is out of scope:**
 1. **No system that clients rely on.** Advisory and program management are professional services. The division's managed application support operates agency-owned systems under each agency's own authorization and controls (P03 IC-G21 notes the same distinction for CMMC).
-2. **Assurance comes from other regimes.** DoD work is assessed under DFARS 252.204-7012 and CMMC (Level 2 by a C3PAO, P03 IC-G19); federal civilian work follows FAR 52.204-21; public hospital and county health clients rely on business associate agreements (P03 IC-G23 to IC-G25).
+2. **Assurance comes from other regimes.** DoD work is assessed under DFARS 252.204-7012 and CMMC (Level 2, with a voluntary C3PAO assessment while Phase 2 is suspended, P03 IC-G19); federal civilian work follows FAR 52.204-21; public hospital and county health clients rely on business associate agreements (P03 IC-G23 to IC-G25).
 3. **Client questionnaires** are answered with the group security program description and this sample's P03 and P07 results.
 4. **Revisit trigger:** if the division starts hosting a system for clients (for example a shared data migration service), assess whether a SOC 2 report is needed.
 

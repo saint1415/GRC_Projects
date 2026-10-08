@@ -6,7 +6,7 @@
 | Tier / Vertical | Multi-Sector / Defense Industrial Base |
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022) |
 | Scoping | Per division (section 1). One readiness report: the Defense Software industry edition (`soc2-readiness.csv`). Aircraft Parts and Engineering Services are out of scope; the DoD edition relies on its FedRAMP and DoD authorizations |
-| Primary assurance for DoD work | CMMC Level 2 (C3PAO) for the Enterprise CUI Environment (target window 2026-12-07 to 2026-12-18) and Level 3 (DIBCAC) for Program H later; SPRS assessments under DFARS 252.204-7019 and 252.204-7020 |
+| Primary assurance for DoD work | SP 800-171 Rev. 2 under DFARS 252.204-7012; a voluntary CMMC Level 2 (C3PAO) assessment of the Enterprise CUI Environment (target window 2026-12-07 to 2026-12-18), since CMMC Phase 2 was suspended on 2026-07-13; Level 3 (DIBCAC) for Program H later if required; SPRS assessments under DFARS 252.204-7019 and 252.204-7020 |
 | Prepared | 2026-09-15 by the Group Chief Risk Officer's assurance team with the Defense Software security and compliance lead |
 
 ## 1. Scoping decisions per division

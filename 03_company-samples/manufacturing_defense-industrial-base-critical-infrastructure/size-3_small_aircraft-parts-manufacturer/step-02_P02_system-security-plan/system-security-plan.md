@@ -27,7 +27,7 @@ The cloud services are described by service category and are vendor-agnostic (se
 | ID | Requirement | Citation | How it affects the CEE |
 |---|---|---|---|
 | C-DIB-R01 | DFARS 252.204-7012 (MAY 2024) | 48 CFR 252.204-7012 | SP 800-171 on covered contractor information systems; FedRAMP Moderate-equivalent cloud; 72-hour reporting; malware to DC3; 90-day image preservation; flowdown |
-| C-DIB-R02 | CMMC Program and DFARS 252.204-7021 (NOV 2025) | 32 CFR Part 170; 48 CFR 252.204-7021 | Level 2 (C3PAO) status required for Prime A awards from Phase 2 (2026-11-10); scoping per 170.19(c); scoring per 170.24; POA&M limits per 170.21 |
+| C-DIB-R02 | CMMC Program and DFARS 252.204-7021 (NOV 2025) | 32 CFR Part 170; 48 CFR 252.204-7021 | Prime A's planned Level 2 (C3PAO) flowdown from Phase 2 (2026-11-10) is suspended by the 2026-07-13 CIO memorandum (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5); voluntary C3PAO assessment planned; scoping per 170.19(c); scoring per 170.24; POA&M limits per 170.21 |
 | C-DIB-R03 | DFARS 252.204-7019 and 252.204-7020 (NOV 2023) | 48 CFR 252.204-7019, 252.204-7020 | Current SP 800-171 DoD Assessment score in SPRS; Government assessment access |
 | C-DIB-R04 | FAR 52.204-21 (NOV 2021) | 48 CFR 52.204-21 | Basic safeguarding for FCI (also on corporate systems outside this boundary) |
 | C-DIB-R05 | ITAR | 22 CFR Parts 120-130 | Release of technical data to foreign persons is an export (22 CFR 120.56); U.S.-person access control; encrypted-data carve-out conditions (22 CFR 120.54(a)(5)) |

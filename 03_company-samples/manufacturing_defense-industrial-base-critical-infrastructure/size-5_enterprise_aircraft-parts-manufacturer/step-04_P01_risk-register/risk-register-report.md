@@ -86,7 +86,7 @@ By status: In progress 47, Open 4, Closed (accepted) 12, Closed (avoided) 1.
 
 **Reading the profile:**
 - **ER-01 (CUI compromise)** carries the only Very High risk: exploitation of the internet-facing managed file transfer service by a state-sponsored actor (R-001). It is also the P08 scenario. The insider (R-003) and export attribute (R-004) risks keep the exposure High even after R-001 is treated.
-- **ER-02 (contract eligibility)** is the board's main concern this year. The annual affirmation (R-013) and the Program H Level 3 requirement (R-014) depend on the same remediation work, and one work order for a contract with DFARS 252.204-7021 was routed to KS-1 (R-015).
+- **ER-02 (contract eligibility)** is the board's main concern this year. The annual affirmation (R-013) and the Program H Level 3 requirement (R-014; suspended with CMMC Phase 2, but preparation continues) depend on the same remediation work, and one work order for a contract with DFARS 252.204-7021 was routed to KS-1 (R-015).
 - **ER-06 (integration)** is where the technical debt sits: KS-1 (R-022, R-046) and AZ-1 (R-047).
 - **ER-08 (AI)** is within tolerance today because the AI-001 assistant is in a controlled pilot; expansion depends on the conditions in P10.
 
@@ -111,7 +111,7 @@ By status: In progress 47, Open 4, Closed (accepted) 12, Closed (avoided) 1.
 1. **Drift after certification (ER-02).** Final Level 2 (C3PAO) status was earned in 2026-03, but sampling found operating exceptions in the six certified sites that would score 80 today (P03). The COO cannot make the 2027-03-20 affirmation until they close (R-013, R-017, R-020).
 2. **New and acquired sites (ER-06).** AZ-1 joined after the assessment and KS-1 remains outside the scope. Both carry segmentation, baseline, logging, and backup gaps (R-022, R-023, R-043, R-046, R-047, R-049), and a contract routing error put 7021 work on KS-1 (R-015).
 3. **Export control inside the enclave (ER-01).** A data migration dropped ITAR attributes on 14 PLM folders, and an EAR-licensed foreign-person engineer opened ITAR files (R-004). The Senior Empowered Official filed an initial voluntary disclosure notification on 2026-08-19 (R-051).
-4. **Supply chain (ER-04).** Only 46% of CUI suppliers have a verified CMMC status, and 4 of 60 sampled purchase orders lacked the DFARS clauses (R-029, R-031). Phase 2 begins 2026-11-10.
+4. **Supply chain (ER-04).** Only 46% of CUI suppliers have a verified CMMC status, and 4 of 60 sampled purchase orders lacked the DFARS clauses (R-029, R-031). CMMC Phase 2 (planned for 2026-11-10) is suspended, but CUI suppliers still owe SP 800-171 Rev. 2 under DFARS 252.204-7012, so verification continues.
 5. **Level 3 (ER-02).** 10 of 24 requirements are met. Penetration testing, threat hunting records, supply chain planning, and specialized asset segregation are the main gaps (R-014).
 6. **Disclosure readiness (ER-07).** The materiality playbook was tested only with ransomware. A data theft with no outage, and an 8-K draft that must not reveal CUI or classified details, are not covered (R-050).
 

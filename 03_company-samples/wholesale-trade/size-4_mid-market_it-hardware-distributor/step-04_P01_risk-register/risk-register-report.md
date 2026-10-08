@@ -66,7 +66,7 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-004 | CUI outside the enclave is disclosed | High | CUI cleanup: ERP attachment block and purge, prime-domain mail rule, Prime C onboarding, FIL-only printing | Director of Federal Programs | 2026-11-30 |
 | R-005 | Attack on DC automation through the corporate network or the integrator's remote tool | High | OT VLAN, remote access gateway, OT monitoring, integrator security terms | Director of Distribution Operations | 2027-03-31 |
 | R-006 | Covered (Section 889) equipment delivered on a federal order | High | Mandatory manufacturer of record; drop-ship screening; white-label attestations | Director of Federal Programs | 2026-12-15 |
-| R-008 | CMMC Level 2 (C3PAO) not achieved by 2027-06-01 | High | Monthly POA&M review; non-POA&M items closed by 2027-01-31; C3PAO booked for 2027-03 | Chief Operating Officer | 2027-03-31 |
+| R-008 | CMMC Level 2 (C3PAO) not achieved by 2027-06-01 | High | Monthly POA&M review; non-POA&M items closed by 2027-01-31; C3PAO booked for 2027-03 (customer-driven while CMMC Phase 2 is suspended) | Chief Operating Officer | 2027-03-31 |
 | R-011 | Reseller portal account takeover | High | Enforce reseller MFA; bot management; ship-to change alerts | Vice President of Sales Operations | 2027-01-31 |
 | R-017 | Takeover of an ERP, WMS, or enclave administrator account | High | Fewer administrators; just-in-time elevation; weekly privileged activity review | Security Manager | 2027-01-31 |
 | R-023 | Tampered firmware in FIL-configured equipment reaches a DoD network | High | OEM signature or hash check on every device; per-job advisory screening | Federal Integration Lab Manager | 2026-12-31 |

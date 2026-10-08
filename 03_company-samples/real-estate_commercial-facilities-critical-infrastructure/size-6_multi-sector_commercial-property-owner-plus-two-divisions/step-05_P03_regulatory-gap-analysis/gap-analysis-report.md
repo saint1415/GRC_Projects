@@ -98,7 +98,7 @@ The 37 partially met rows break down by gap risk as 4 High, 22 Moderate, and 11 
 
 Of the 18 rows with gaps, 4 are High, 13 Moderate, and 1 Low.
 
-**Not met (2):** CUI on a system without the required CMMC status (CN-G-024: CUI drawings for 2 DoD client facilities were found in the BTI repository, SYS-D5), and no CMMC Level 2 (C3PAO) assessment scheduled before Phase 2 begins on 2026-11-10 (CN-G-027).
+**Not met (2):** CUI on a system without the required CMMC status (CN-G-024: CUI drawings for 2 DoD client facilities were found in the BTI repository, SYS-D5), and no CMMC Level 2 (C3PAO) assessment scheduled for DoD solicitations that may require one (CN-G-027). CMMC Phase 2 (planned for 2026-11-10) is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13, so the assessment is a voluntary choice. A program office may still require a specific CMMC level (DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5)).
 
 **The cross-division link.** The BTI unit is part of Construction but works mainly for the other two divisions. Its repository received CUI from federal projects because BTI technicians install security systems at DoD client facilities and copied the drawings they needed into the tool they use for every building. This puts federal contract duties (DFARS 252.204-7012(b)(2) and (c)) on a tool the group's building platform depends on. It is why a BAACS incident in P08 has a DoD reporting branch.
 
@@ -171,7 +171,7 @@ High and Moderate gaps are carried into the registers (P01) and the POA&M (P07).
 None of these is treated as a current obligation.
 - **CIRCIA:** the final rule was not published as of 2026-09-25. As proposed (89 FR 23644), the group would be covered under the size-based criterion, so the P08 matrix would add 72-hour incident and 24-hour ransom payment reports to CISA when a final rule takes effect.
 - **PCI DSS:** PCI SSC ran a request for comments on v4.0.1 (June to July 2026) toward a next version. v4.0.1 remains current.
-- **CMMC phase-in:** Phase 2 begins 2026-11-10 (Level 2 (C3PAO) as a condition of award where required); Phase 3 begins 2027-11-10; Phase 4 begins 2028-11-10 (32 CFR 170.3(e)). Level 2 stays tied to NIST SP 800-171 R2 (32 CFR 170.14(c)(3)).
+- **CMMC phase-in:** Phase 2 (planned for 2026-11-10) is suspended by the DoD (Department of War) CIO memorandum of 2026-07-13. This is in effect, not pending. Until 2028-11-09 DoD includes clause 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self). SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies (DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5)). The rule text still shows Phase 3 beginning 2027-11-10 and Phase 4 beginning 2028-11-10 (32 CFR 170.3(e)). Level 2 stays tied to NIST SP 800-171 R2 (32 CFR 170.14(c)(3)).
 - **Revolutionary FAR Overhaul:** a proposed rule (FR Doc. 2026-12559, 2026-06-23) would renumber FAR 52.204-21 (proposed 52.240-5) and add CUI clauses based on NIST SP 800-171 Rev. 3. Not final; affected rows are flagged in `pending_rule_change`.
 - **NIST SP 800-82 Rev. 4** is an initial public draft (2026-09-21). Rev. 3 remains the final guide used here.
 - **CPG 2.0** states a targeted revision cycle of 24 to 36 months.

@@ -17,7 +17,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SBA size status | Not small (SBA standard for NAICS 423430 is 250 employees, 13 CFR 121.201) |
 | Federal business (Federal Solutions) | About $1.9 billion a year. About 70% is orders exclusively for commercially available off-the-shelf (COTS) products, which carry FAR 52.204-25 but no CMMC requirement (32 CFR 170.3(c)) and no FAR 52.204-21 in COTS subcontracts. About 30% is integration work under subcontracts with 6 DoD prime contractors (Primes A to F) that include DFARS 252.204-7012, 252.204-7019 and -7020, 252.246-7008, FAR 52.204-21, and FAR 52.204-25; awards made from 2025-11-10 also include DFARS 252.204-7021 |
 | CUI handled | Prime-provided configuration documents for DoD installations (network drawings, IP addressing plans, device configuration templates, and installation schedules) marked as Controlled Unclassified Information (CUI). They are covered defense information under DFARS 252.204-7012(a) |
-| CMMC requirement | Primes A to F have notified Federal Solutions that integration subcontracts and option periods awarded from Phase 2 (2026-11-10, 32 CFR 170.3(e)(2)) require a CMMC Status of **Level 2 (C3PAO)**, flowed down under 32 CFR 170.23(a)(3). The first affected option period (Prime B) starts **2027-04-01** |
+| CMMC requirement | Primes A to F have notified Federal Solutions that integration subcontracts and option periods awarded from Phase 2 (2026-11-10, 32 CFR 170.3(e)(2)) require a CMMC Status of **Level 2 (C3PAO)**, flowed down under 32 CFR 170.23(a)(3). The first affected option period (Prime B) starts **2027-04-01**. That requirement is suspended: the DoD (Department of War) CIO memorandum of 2026-07-13 suspended CMMC Phase 2, and under DoD Class Deviation 2026-O0025, Revision 3 (DFARS 240.371-5), DoD includes clause 252.204-7021 until 2028-11-09 only when a program office requires a specific CMMC level. During the suspension requiring activities may require Level 1 (Self) or Level 2 (Self). Federal Solutions keeps preparing because it still owes SP 800-171 Rev. 2 under DFARS 252.204-7012, and keeps the 2027-01 C3PAO assessment as a customer-driven choice |
 | Payment cards | Online Retail is classified by its acquiring bank as a Level 1 merchant and must deliver an annual PCI DSS Report on Compliance (ROC) signed by a Qualified Security Assessor (QSA). The IT Distribution reseller portal takes business card payments through a payment service provider's hosted payment page and files an annual self-assessment questionnaire with its acquirer. Logistics takes no card payments |
 | Not in scope by fact | USCG maritime cybersecurity rule (no vessel or MTSA-regulated facility, 33 CFR parts 104 to 106); TSA security directives (no rail, pipeline, or aviation operations; not an indirect air carrier); FTC Safeguards Rule and Red Flags Rule (consumer financing is extended by third-party lenders at checkout; the group extends no consumer credit, counsel confirmed 2026-06); COPPA (no service directed to children and an age gate on accounts); FACTA receipt truncation (no printed point-of-sale receipts); classified work (none) |
 
@@ -123,10 +123,10 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | 2026-05-04 to 2026-07-31 | Group and division BIAs, risk analyses, and gap analyses |
 | 2026-07-06 to 2026-08-28 | Common control assessment (group internal audit) plus division samples |
 | 2026-09-15 | Results to the board audit and risk committee; deliverables approved |
-| 2026-11-10 | CMMC Phase 2 begins (32 CFR 170.3(e)(2)) |
+| 2026-11-10 | Planned CMMC Phase 2 start (32 CFR 170.3(e)(2)), suspended by the DoD (Department of War) CIO memorandum of 2026-07-13 |
 | 2026-11-02 to 2026-11-20 | PCI DSS 2026 ROC fieldwork by the QSA (Online Retail) |
-| 2027-01-11 to 2027-01-22 | Planned CMMC Level 2 (C3PAO) assessment of the CUI environment |
-| 2027-04-01 | First prime option period requiring Level 2 (C3PAO) (Prime B) |
+| 2027-01-11 to 2027-01-22 | Planned CMMC Level 2 (C3PAO) assessment of the CUI environment (customer-driven while CMMC Phase 2 is suspended) |
+| 2027-04-01 | First prime option period that was to require Level 2 (C3PAO) (Prime B); requirement suspended with CMMC Phase 2 |
 | 2028-04-01 | First CCPA cybersecurity audit report due (2026 revenue over $100 million; Cal. Code Regs. tit. 11, 7121) |
 
 ## 7. Facts added while building the deliverables

@@ -17,7 +17,7 @@
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. GovTech Integration, the focus division, has the most detailed register.
-- **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to it. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating. For example, IC-004 (no CMMC status at Phase 2) is High for IT Consulting, but GR-06 is Moderate for the group, because DoD work is about 10% of one division's revenue.
+- **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to it. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating. For example, IC-004 (no CMMC Level 2 status) is High for IT Consulting, but GR-06 is Moderate for the group, because DoD work is about 10% of one division's revenue.
 
 **Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
 | Level | Who may accept |
@@ -71,7 +71,7 @@ A risk that would breach a CJIS Security Addendum, Pub. 1075 Exhibit 7, or DFARS
 |---|---|---|---|---|---|
 | IC-001 | IT Consulting | **Very High** | Ransomware through the acquired firm's VPN (password and SMS codes) and the directory trust | IT Consulting security and compliance lead | 2026-12-31 |
 | IC-002 | IT Consulting | High | DoD CUI on the acquired firm's file shares outside the enclave | IT Consulting defense programs director | 2026-12-31 |
-| IC-004 | IT Consulting | High | No CMMC Level 2 (C3PAO) status when Phase 2 solicitations require it | IT Consulting president | 2027-03-31 |
+| IC-004 | IT Consulting | High | No CMMC Level 2 status when DoD solicitations require it (Phase 2 is suspended) | IT Consulting president | 2027-03-31 |
 | SW-001 | Software | High | RMS connectors still on FIPS 140-2 modules after the CJIS deadline | Software division RMS general manager | 2026-12-31 |
 | SW-002 | Software | High | Intrusion in the RMS exposes CJI of about 620 agencies | Government Software Products security and compliance lead | 2027-03-31 |
 | SW-003 | Software | High | RMS AI assist adds or omits facts in police narratives | Software division RMS general manager | 2026-12-31 |

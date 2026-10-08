@@ -15,7 +15,7 @@
 
 **DFARS 252.204-7019 and 252.204-7020 apply now.** A current SP 800-171 DoD Assessment score (not more than 3 years old) must be in SPRS. The 2024 Basic Assessment of 96 is current by date, but it is not accurate (section 3).
 
-**CMMC Level 2 (C3PAO) applies from the next Prime A awards.** Current subcontracts predate 2025-11-10 and do not include DFARS 252.204-7021. Prime A has told suppliers that solicitations issued from 2026-11-10 (Phase 2, 32 CFR 170.3(e)(2)) will flow down Level 2 (C3PAO). A subcontractor that processes CUI under a prime contract requiring Level 2 (C3PAO) needs at least that status (32 CFR 170.23(a)(3)). There is no size exemption. The company's Affirming Official is the President (32 CFR 170.22).
+**CMMC Level 2 (C3PAO) was due from the next Prime A awards, and is now suspended.** Current subcontracts predate 2025-11-10 and do not include DFARS 252.204-7021. Prime A told suppliers that solicitations issued from 2026-11-10 (Phase 2, 32 CFR 170.3(e)(2)) would flow down Level 2 (C3PAO). The DoD (Department of War) CIO memorandum of 2026-07-13 suspended CMMC Phase 2. Until 2028-11-09 DoD includes 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self) (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5). SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies, so the company keeps preparing and keeps the C3PAO assessment as a voluntary choice. A subcontractor that processes CUI under a prime contract requiring Level 2 (C3PAO) needs at least that status (32 CFR 170.23(a)(3)). There is no size exemption. The company's Affirming Official is the President (32 CFR 170.22).
 
 **Scope.** The assessment covers the CUI Engineering Enclave defined in the SSP (P02), using the CMMC Level 2 asset categories in 32 CFR 170.19(c). The CNC machines and CMMs are Specialized Assets. The corporate network, payroll, and the MSP are Out-of-Scope Assets, separated by the enclave firewall (the MSP has no enclave accounts, confirmed 2026-07-16). ERP holds DoD purchase order data (FCI) and its scoping position is open (G-125).
 
@@ -80,7 +80,7 @@ Conditional status also allows only 1-point requirements on a POA&M (plus 3.13.1
 
 | Gap | Citation | Risk level | Action | Owner | Target |
 |---|---|---|---|---|---|
-| G-124 Not eligible for Level 2 (C3PAO) awards | 252.204-7021(d)(1); 32 CFR 170.17, 170.22 | Very High | Complete this roadmap; C3PAO assessment; affirmation by the President | Vice President of Operations | 2027-02-26 |
+| G-124 Not eligible for Level 2 (C3PAO) awards | 252.204-7021(d)(1); 32 CFR 170.17, 170.22 | Very High | Complete this roadmap; voluntary C3PAO assessment; affirmation by the President | Vice President of Operations | 2027-02-26 |
 | G-121 SPRS score overstates implementation | 252.204-7019(b); 252.204-7020(d) | High | Post -65 and a date-to-110; update after each milestone | Contracts Manager | 2026-09-30 |
 | G-020, G-077, G-078 External systems and visitor control (cannot be on a POA&M) | 3.1.20; 3.10.3; 3.10.4 | High (3.1.20, 3.10.3) | Block public AI and file-sharing from the enclave; escort and log every shop-floor visitor | IT Manager; Facilities and Security Coordinator | 2026-10-31 |
 | G-056, G-114, G-115, G-117 Cannot report to DoD or preserve evidence | 3.6.2; 252.204-7012(c), (e) | High | Medium assurance certificates; P08 runbook; forensic retainer; DIBNet drill 2026-11-18 | Contracts Manager; IT Manager | 2026-10-31 to 2026-11-30 |
@@ -98,7 +98,7 @@ Conditional status also allows only 1-point requirements on a POA&M (plus 3.13.1
 2. **By 2026-10-31:** all items that cannot be on a POA&M; DoD reporting certificates; flowdowns; ERP scoping position (G-125); asset categories and diagram (G-127).
 3. **By 2026-11-30:** MES identity and MFA, FIPS confirmation, scanning, log review, P08 tabletop.
 4. **By 2026-12-31:** baselines, CUI and insider threat training, first full self-assessment against SP 800-171A objectives.
-5. **By 2027-01-31:** DNC serial gateway, allowlisting enforcement, 24x7 detection. Readiness re-check in late January 2027, then the C3PAO assessment (2027-02-15 to 2027-02-26).
+5. **By 2027-01-31:** DNC serial gateway, allowlisting enforcement, 24x7 detection. Readiness re-check in late January 2027, then the voluntary C3PAO assessment (2027-02-15 to 2027-02-26).
 
 The full list, with evidence, is in `gap-analysis.csv`. High and Very High gaps are carried into the risk register (P01) and the POA&M (P07).
 

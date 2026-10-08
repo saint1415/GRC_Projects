@@ -43,7 +43,7 @@ By threat source type: 16 Adversarial, 9 Accidental, 6 Structural, 1 Environment
 ### Top risks
 | Risk ID | Risk | Level | Treatment | Owner | Due |
 |---|---|---|---|---|---|
-| R-001 | Cannot show CMMC Level 2 (C3PAO) status when Prime A flows down DFARS 252.204-7021 | Very High | Remediation roadmap (P03); C3PAO assessment 2027-02 | Vice President of Operations | 2027-02-26 |
+| R-001 | Cannot show the CMMC status Prime A flows down or SP 800-171 Rev. 2 compliance under DFARS 252.204-7012 | Very High | Remediation roadmap (P03); voluntary C3PAO assessment 2027-02 | Vice President of Operations | 2027-02-26 |
 | R-002 | Phishing steals an engineer's session token; CAD models bulk-synced from the enclave | High | Phishing-resistant MFA; download alerts; log review; 24x7 detection | IT Manager | 2027-01-31 |
 | R-003 | SPRS score of 96 overstates implementation (recalculated -65) | High | Corrected score and date-to-110 in SPRS | Contracts Manager | 2026-09-30 |
 | R-005 | Visitor or foreign person sees ITAR drawings on the shop floor | High | Escort and log every visitor; cell drawing cabinets | Plant Manager | 2026-10-31 |
