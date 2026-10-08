@@ -88,7 +88,7 @@ Led by the forensic firm (or the PFI) through breach counsel, with the MSP suppl
 | When | Action | Owner |
 |---|---|---|
 | Hour 0-24 | Acquirer notified (contract term); insurer notified; counsel engaged | Owner-Manager |
-| Within 3 calendar days of suspicion | Compromise reported to Visa through the acquirer; other brands per the acquirer's instructions | Owner-Manager |
+| Within 3 calendar days of suspicion | Compromise reported to Visa through the acquirer; American Express within 72 hours of discovery (DSOP Section 3); Mastercard and Discover per the acquirer's instructions | Owner-Manager |
 | Within 3 calendar days of the Visa notice | Incident report to Visa and the acquirer | Assistant Manager and Owner-Manager with forensics |
 | Within 3 calendar days of identifying at-risk cards or the window | At-risk account numbers to Visa through the acquirer | Owner-Manager |
 | Within 5 business days of a Visa PFI notice | PFI contracted; Visa and the acquirer told its name | Owner-Manager |

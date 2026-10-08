@@ -56,3 +56,17 @@ Left as they are, by decision:
 - 16 rows for Mastercard, American Express and Discover. Mastercard's site returned HTTP 403.
 
 Source note: on 2026-10-08 the Visa URL served version 9.0 (November 2024). Copies of the same URL saved earlier, and the samples, use version 10.0, effective 25 June 2026. The 3-day reporting and incident-report clocks are the same in both versions.
+
+## Follow-up: other card brands in the samples (2026-10-08)
+
+Primary sources were sought for the 16 sample rows that covered Mastercard, American Express and Discover together.
+
+| Brand | Result | Source |
+|---|---|---|
+| American Express | Verified. Notify American Express "immediately and in no case later than seventy-two (72) hours after discovery of a Data Incident", through its Enterprise Incident Response Program, and name a company contact. For 10,000 or more card numbers, engage a PCI Forensic Investigator within 5 days of discovery and send the unedited report within 10 business days of its completion. For fewer, send an investigation summary within 10 business days of completing the investigation | Data Security Operating Policy (DSOP), United States, April 2026, Section 3 (americanexpress.com) |
+| Mastercard | Not verified. Every Mastercard URL for the Security Rules and Procedures returned HTTP 403, including the current mastercard.com path. Copies hosted by acquirers were not used, because they are not Mastercard's own publication and are dated 2023 | n/a |
+| Discover | Not verified. No Discover rules page for merchant compromise reporting could be found. The service center page that search results cited does not contain the 48-hour text | n/a |
+
+Each of the 16 rows now gives the American Express clock and keeps Mastercard and Discover as "per the acquirer's instructions (not verified)". The rows are edited in place. Their `verified` value is `true (American Express DSOP); false (Mastercard, Discover)`, following the existing pattern for mixed rows. The runbook passages for these samples were updated to match.
+
+The 19 Visa sample rows and the 3 vertical card rows said "Other brands' rules not verified". They now say that the DSOP requires notice to American Express within 72 hours of discovery if the business accepts American Express, and that the Mastercard and Discover rules were not verified.

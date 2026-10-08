@@ -101,7 +101,7 @@ Led by the forensic firm through breach counsel, with the processor partner supp
 | Discovery | FTC notice if counsel finds a notification event of 500 or more consumers (16 CFR 314.4(j)) | As soon as possible; no later than 30 days | Operations Manager with counsel |
 | Determination of breach | Notice to affected merchants as their third-party agent, if counsel so finds (Fla. Stat. 501.171(6)(a); other states vary) | As expeditiously as practicable; Florida outer limit 10 days | Operations Manager with counsel |
 | Day 0 to 2 | Voluntary report to the U.S. Secret Service or FBI | As soon as practicable | Owner with counsel |
-| Other card brands | Each brand's rules, through the sponsor bank | Per brand rules (confirm with the sponsor bank) | Operations Manager |
+| Other card brands | American Express DSOP Section 3; Mastercard and Discover rules through the sponsor bank | American Express: within 72 hours of discovery. Mastercard and Discover: per brand rules (confirm with the sponsor bank) | Operations Manager |
 
 **Plan to the shortest clock.** The 24-hour contract notice comes first, then Visa's 3 calendar days. Merchants need the company's information early, because their own state-law clocks start when they learn of the breach.
 

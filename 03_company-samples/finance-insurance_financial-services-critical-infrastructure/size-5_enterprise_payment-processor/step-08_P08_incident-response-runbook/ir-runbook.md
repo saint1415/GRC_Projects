@@ -127,7 +127,7 @@ This step runs in parallel with sections 4 and 5. It does not wait for the inves
 
 ### 7.2 Card brands and sponsor banks (account data)
 - Stolen clearing files carry full PAN, so this is an account data compromise. Notify the acquiring banks immediately (Visa WTDIC Section A.3.1), and in any case within 24 hours under each sponsor agreement.
-- Report to Visa within 3 calendar days of reasonable suspicion; send the incident report within 3 calendar days after that notice; send at-risk account numbers within 3 calendar days of setting the window of exposure. Follow each other brand's rules through the banks.
+- Report to Visa within 3 calendar days of reasonable suspicion; send the incident report within 3 calendar days after that notice; send at-risk account numbers within 3 calendar days of setting the window of exposure. Notify American Express within 72 hours of discovery (DSOP Section 3). Follow Mastercard's and Discover's rules through the banks.
 - Engage a PFI when a brand requires one (WTDIC Section A.5).
 
 ### 7.3 FTC notice (16 CFR 314.4(j))
