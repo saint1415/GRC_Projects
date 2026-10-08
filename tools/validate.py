@@ -104,7 +104,7 @@ for p in md_files:
             errors.append(f"{p.relative_to(ROOT)}: broken link {target}")
 
 # ---- evidence-based samples (step-00 intake present): every finding traces to dated evidence
-EV_RE = re.compile(r"\bEV-(?:\d{3}|[A-Z]{2}-\d+(?:\(\d+\))?(?:-\d+)*)")
+EV_RE = re.compile(r"\bEV-[A-Z0-9](?:[A-Za-z0-9]|\(\d+\)|-(?=[A-Za-z0-9]))*")
 JUDGMENT_RE = re.compile(r"\b(not compliant|non-?compliant|gap|deficien\w*|weakness\w*|inadequate|insufficient)\b", re.I)
 INTAKE_FILES = ("evidence-register.csv", "asset-inventory.csv", "vendor-register.csv", "obligations-register.csv", "intake-report.md")
 

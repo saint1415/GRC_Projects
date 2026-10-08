@@ -289,7 +289,7 @@ def sample(folder):
         intake = {"evidence": len(reg), "intakeItems": sum(r.get("phase") == "Intake" for r in reg),
                   "sources": len({r["source_system"] for r in reg}), "open": len(ob),
                   "applies": sum(r["applies"].startswith("Yes") for r in obl), "notApplies": sum(r["applies"].startswith("No") for r in obl),
-                  "fieldwork": sum(r.get("phase", "").endswith("fieldwork") for r in reg)}
+                  "fieldwork": sum(r.get("phase") != "Intake" for r in reg)}
     _, scen = find(fs, "Scenario choices")
     head, body = first_table(sysmd)
     ci = next((i for i, h in enumerate(head) if h.lower() == "system"), 1)
