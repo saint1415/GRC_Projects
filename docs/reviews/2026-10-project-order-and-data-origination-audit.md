@@ -54,7 +54,7 @@ Pre-existing inconsistencies exposed by dating the evidence:
 
 ### Agriculture, 2026-10-08
 
-Six samples, 553 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 29 minutes.
+Six samples, 573 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 29 minutes.
 
 Fixes made to earlier batches during this one:
 - **Health Care size 4:** the `assessment_pass` and `last_reviewed` values were swapped on all 50 risks. Swapped back; the validator now requires every pass value to start with "Pass" and checks division risk registers too.
