@@ -12,7 +12,7 @@ Intake collected the pharmacy's own records before any assessment work began on 
 
 A 7-person pharmacy has no HR system, CMDB or accounts payable vendor master. Its systems of record are the vendor admin consoles (PMS, productivity suite, cloud fax, delivery app), the payroll service, the MSP's exports and monthly report, the paper BAA and contracts folder, the card statements and invoices, the store's license and registration files, and what can be seen in the store.
 
-This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the regulatory analysis (P03) and the control assessment (P07).
 
 ## 2. Sources collected
 | Area | Evidence IDs | System of record | As of |
@@ -55,7 +55,7 @@ This report records **observations, not findings**. Whether an observation meets
 | P02 SSP | The system boundary from the asset inventory; as-found configuration from EV-002 to EV-020 |
 | P04 Cloud mapping | SaaS components and the MSP-operated backup (EV-002 to EV-011, EV-018, EV-030) and provider documentation (EV-023, EV-037) |
 | P01 Risk register | Likelihood inputs from the console and MSP exports, the contracts folder, the walk-through (EV-047) and the Store Manager interview (EV-048) |
-| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the HIPAA and DEA requirements |
+| P03 Regulatory analysis | The obligations register (which rules apply) and every observation above, compared with the HIPAA and DEA requirements |
 | P06 Policies | The 2019 binder (EV-038), the handbook (EV-042) and the designation letter (EV-040) |
 | P07 Control assessment | Populations to test from (EV-001, EV-002, EV-006, EV-008, EV-009, EV-012) |
 | P08 IR runbook | Notification duties from the obligations register; contacts from the vendor register; the cyber policy (EV-036) |

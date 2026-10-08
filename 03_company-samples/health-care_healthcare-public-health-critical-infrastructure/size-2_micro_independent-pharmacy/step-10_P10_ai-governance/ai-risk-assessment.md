@@ -9,7 +9,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. AI 600-1 is not used: the score is a predictive model, not generative AI |
 | Assessor / dates | Staff Pharmacist (clinical lead) with the Store Manager (Privacy and Security Officer), 2026-08-17 to 2026-08-19 |
 | Decision | Pharmacist-owner, 2026-08-28 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the PMS release notes and score documentation, the PMS DUR configuration, the card statements and vendor invoices (no AI tool charges) and a staff survey (EV-025, EV-026, EV-027, EV-030, EV-049). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Staff Pharmacist, as clinical lead for the score. **Decision authority:** the pharmacist-owner, who is also the DEA registrant contact.
@@ -20,7 +20,7 @@
 - **Approved-tools list:** kept by the Store Manager in POL-04 4.6.
 - **Scale for a Micro pharmacy:** there is no AI committee. The pharmacist-owner, the Staff Pharmacist, and the Store Manager review AI use at the monthly security meeting.
 
-**How the score went live.** The vendor's May 2026 release added the score and switched it on for every customer by default. The release notes went to the Store Manager's email and were not read. From then until this review, every user, including technicians and the front-store clerk, saw a colored flag (Low, Elevated, High) on each incoming controlled substance prescription. Two technicians told the review that they had told patients their prescription was "flagged by the system" and would need extra checks (P01 R-019).
+**How the score went live.** The vendor's May 2026 release added the score and switched it on for every customer by default. The release notes went to the Store Manager's email and were not read (EV-025). From then until this review, every user, including technicians and the front-store clerk, saw a colored flag (EV-049) (Low, Elevated, High) on each incoming controlled substance prescription. Two technicians told the review that they had told patients their prescription was "flagged by the system" and would need extra checks (P01 R-019).
 
 ## 2. MAP
 | Item | Description |
@@ -28,7 +28,7 @@
 | Purpose and intended use | Help the pharmacist decide how closely to review an incoming controlled substance prescription, as part of the pharmacist's corresponding responsibility to dispense only prescriptions issued for a legitimate medical purpose (21 CFR 1306.04(a)) |
 | Users | Intended: the two pharmacists. Actual until 2026-08-19: all PMS users |
 | Affected people | About 6 to 7 controlled substance prescriptions a business day (about 12% of about 55); patients with chronic pain, ADHD, anxiety, or sleep disorders; their prescribers |
-| Inputs (vendor documentation) | Patient age and sex; number of prescribers and pharmacies in the PMS history; morphine milligram equivalents; early refill history; payment type (cash or insurance); distance between the patient's address and the prescriber |
+| Inputs (vendor documentation, EV-026) | Patient age and sex; number of prescribers and pharmacies in the PMS history; morphine milligram equivalents; early refill history; payment type (cash or insurance); distance between the patient's address and the prescriber |
 | Output | A score from 0 to 100 shown as Low, Elevated, or High, with the top three contributing factors |
 | Data | All inputs come from the pharmacy's own PMS data (ePHI). The score does not use the state PDMP. The vendor's documentation says the model was trained on de-identified dispensing data from its customer base; the PMS BAA permits de-identification, and it is not clear whether this pharmacy's data was used |
 | Build or buy | Buy: a feature of the PMS, run in the vendor's platform under the existing PMS BAA |
@@ -54,7 +54,7 @@
 High tier requires human review before action, bias testing, an impact assessment (this document), notice to affected people where appropriate, and ongoing monitoring. Section 6 sets these as conditions.
 
 ## 4. MEASURE
-The Staff Pharmacist pulled every controlled substance prescription processed from 2026-06-01 to 2026-07-31 (342 prescriptions) and compared the flag with the pharmacists' own documented assessment and the outcome.
+The Staff Pharmacist pulled every controlled substance prescription processed from 2026-06-01 to 2026-07-31 (342 prescriptions, EV-066) and compared the flag with the pharmacists' own documented assessment and the outcome.
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|
