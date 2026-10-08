@@ -38,6 +38,8 @@
 
 **Also checked, outside this workbook:** Title VII, the ADEA, and the ADA apply to the AI match feature and are assessed in P10.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the eCFR text current as of 2026-09-23, the U.S. Code, the 2026 Florida Statutes, and the MOU, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the firm's CSF Target Profile (High 26, Medium 54, Low 26), set by the Operations Manager and the Owner from the risk register (P01) and BIA (P05). Subcategories that protect payroll, SSNs, and Form I-9 records are High.

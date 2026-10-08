@@ -30,6 +30,8 @@
 - **NISPOM (32 CFR Part 117):** no facility clearance and no classified information (G-136).
 - **CIRCIA:** the final rule is not published; nothing is required yet.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 110 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and the point value from the CMMC Scoring Methodology (32 CFR 170.24(c)(2)). Requirement text is quoted from the public-domain NIST publication. The 26 clause and regulation rows cite the paragraph of each clause or section as checked on eCFR (version date 2026-09-23).
 2. **Crosswalk.** CSF 2.0 and SP 800-53 Rev. 5 mappings are derived from NIST's official mappings through the SP 800-171 Rev. 3 counterpart of each requirement (the Rev. 2 to Rev. 3 change analysis, the SP 800-171r3 CUI overlay, and the CSF 2.0 to SP 800-171r3 mapping). The route through Rev. 3 is the author's; the `crosswalk_source` column says so for each row. Clause rows use author mappings.

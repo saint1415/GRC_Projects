@@ -35,6 +35,8 @@ The company is a private contractor, not an agency. Most rules reach it **throug
 | SLCGP (N92-R06) | **No** | A grant condition on recipient governments |
 | Colorado SB26-189 and other state AI laws | **Not today** | No customers in Colorado or Texas; reassessed before any bid there (P10) |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** One row per Moderate base control (177) from the repository copy of the SP 800-53 Rev. 5.2.0 catalog and its baseline flags. Overlay rows were added only where another rule sets a value or duty beyond the base control text: 12 CJIS rows, 15 Pub. 1075 rows, 9 HIPAA rows, 6 Medicaid and SNAP rows, 3 DPPA rows, 7 SEC rows, 6 state law rows, 10 federal contract and CMMC rows, and 4 applicability rows (FedRAMP, GovRAMP, CIRCIA, SLCGP). Public-domain texts (CFR sections, statutes, CJISSECPOL, Pub. 1075) are quoted or summarized with section numbers.
 2. **Crosswalk.** CSF 2.0 subcategories for the 177 base controls come from NIST's official CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). Overlay rows are author mappings and say so. The `regulatory_driver` column shows which overlays also contain each control; HIPAA citations come from the repository HIPAA crosswalk (an author mapping) and apply only to the AG-04 business associate scope.

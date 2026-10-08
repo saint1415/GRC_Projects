@@ -60,6 +60,8 @@ The CPNI rules bind "telecommunications carriers," defined by reference to 47 U.
 ### 1.5 Excluded, with reasons
 Submarine cable landing license rules (C-COMMUNICATIONS-R04; no cable or SLTE); CMRS-only CPNI rules (64.2010(h)); the EAS cybersecurity order (no video or broadcast service); state comprehensive privacy laws (assessed by the Group Chief Privacy Officer outside this security sample).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Telecom Carrier | Network Engineering Services | Tower and Fiber Infrastructure | Group (corporate) |
 |---|---|---|---|---|

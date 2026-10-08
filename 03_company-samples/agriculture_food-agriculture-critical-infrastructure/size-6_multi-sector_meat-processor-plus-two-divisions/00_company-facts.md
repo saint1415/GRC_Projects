@@ -15,6 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce / revenue | 45,000 employees; about $18.0 billion revenue (fictional): Meat Processing about $7.0 billion (external sales; intercompany sales to Food Distribution are eliminated), Food Distribution about $5.0 billion, Grocery Retail about $6.0 billion |
 | SBA size status | Not small. SBA standards (13 CFR 121.201): 1,000 employees for NAICS 311612; 250 employees for NAICS 424410; $40.0 million receipts for NAICS 445110. Each division exceeds its standard |
 | Why these divisions | The processor also distributes and sells its own products: about 30% of Meat Processing volume moves through the group's DCs, and about 40% of the stores' fresh and deli meat comes from the group's plants. One supply chain, three regulators' views of it |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Security, food safety, and compliance duties |

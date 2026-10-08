@@ -66,6 +66,8 @@ SEC Reg S-K Item 106 and Form 8-K Item 1.05 (the group is an SEC registrant); st
 
 **Not applicable, with reasons:** pipeline, aviation, and maritime rules (C-TRANSPORTATION-R02 to R05: no pipeline, airport, or MTSA-regulated vessel or facility); HIPAA (the employee health plan is a separate covered entity). CIRCIA (R07) and the TSA surface cyber NPRM (R06) are proposed only (section 6).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Freight Railroad | Transload and Wholesale | Real Estate | Group (corporate) |
 |---|---|---|---|---|

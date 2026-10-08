@@ -57,6 +57,8 @@ No sector regulator governs Engineering's security directly. Its binding duties 
 ### 1.5 Group-wide
 As an SEC registrant, the group must disclose material cybersecurity incidents on Form 8-K Item 1.05 within 4 business days after the materiality determination, and describe its program annually under Reg S-K Item 106. State breach laws apply in each state where affected individuals reside (Florida worked example: Fla. Stat. 501.171).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Hydro | Constructors | Engineering | Group (corporate) |
 |---|---|---|---|---|

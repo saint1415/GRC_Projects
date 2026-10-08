@@ -45,6 +45,8 @@ Fla. Stat. 501.171(1)(a) excludes "good faith access of personal information by 
 ### 1.6 FTC precedent
 A search of ftc.gov found no FTC enforcement action against a repair business for technician snooping. The closest precedent is *In re DesignerWare, LLC* and seven rent-to-own operators (complaints announced 2012-09-25; final orders 2013-04-15): the FTC treated covert collection of data from consumers' rented computers as unfair and banned it. The FTC's May 2021 report *Nixing the Fix* found no empirical evidence that independent repair shops are more or less likely than authorized ones to compromise customer data. The lesson for the group is the same as for a small shop: its duty does not depend on authorized status, and its statements about technician access must be true (G-107).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Device Repair | Electronics Retail | IT Support Services | Group (corporate) |
 |---|---|---|---|---|

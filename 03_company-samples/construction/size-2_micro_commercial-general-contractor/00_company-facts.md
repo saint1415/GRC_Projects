@@ -18,6 +18,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Insurance | General liability, builder's risk, and payment and performance bonds through a surety for public jobs. **Cyber policy:** $500,000 aggregate limit with a 24x7 breach hotline and panel vendors (breach counsel, forensics), and a **$25,000 social engineering (funds transfer fraud) sublimit** that applies only if the company verified the payment change by a call-back to a known number and kept a record |
 | Not in scope | CUI and NIST SP 800-171 (no CUI held; the Owner decided on 2026-08-31 not to bid work that needs CUI). HIPAA (the company works inside medical offices but holds no PHI for clients). PCI DSS (no card payments accepted). SEC rules (privately held) |
 | State law approach | Florida law is cited only where a Florida duty is unavoidable (breach notification, Fla. Stat. 501.171). The samples otherwise stay federal |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 

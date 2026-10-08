@@ -14,6 +14,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Location | Headquartered in Florida. Employees in 44 states; customers and workers in all 50 states. **State law is handled generically** ("each state where affected individuals reside"), with Florida as the worked example. No offshore hosting; no employees, contractors, or vendors located in a country of concern under 28 CFR Part 202 |
 | Workforce / revenue | 45,000 employees; about $18.0 billion annual revenue (fictional) |
 | Not in scope by fact | FedRAMP (no government edition of Workforce Cloud; federal clients of the consulting division use other cloud products); COPPA (business service, not directed to children under 13); FCC CPNI rules (not a carrier); DFARS 252.204-7012 and CMMC (no DoD contracts); NYDFS Part 500 (no New York license); no bank charter in the group |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Duties |

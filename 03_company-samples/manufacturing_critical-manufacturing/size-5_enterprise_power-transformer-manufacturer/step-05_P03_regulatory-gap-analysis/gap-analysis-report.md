@@ -30,6 +30,8 @@
 | State breach and data security laws | **Yes** | Employee and applicant personal information in at least 6 states. The law of each state where affected individuals reside applies; Florida (Fla. Stat. 501.171) is the worked example |
 | SOX Section 404 | Separate program | IT general controls over the ERP, HR, and payroll are tested by the SOX program and not repeated here |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.**
    - CSF rows use the subcategory text from `00_universal-framework/frameworks/csf2_core.csv`, plus the SP 800-82 Rev. 3 section that gives OT guidance. SP 800-82 Rev. 3 Section 6 is organized by CSF 1.1 categories, so it is cited by **section number only** and CSF 2.0 IDs are used for the outcomes.

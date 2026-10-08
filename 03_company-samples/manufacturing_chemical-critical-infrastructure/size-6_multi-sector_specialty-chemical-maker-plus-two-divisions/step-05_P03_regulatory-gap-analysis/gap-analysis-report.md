@@ -41,6 +41,8 @@ Applicability was decided first, from each division's chemicals, quantities, sit
 - **CCPA:** applies to the group's California workforce data (about 110 drivers live in California). Below the cyber audit volume triggers (GG-09).
 - **Not applicable:** TSA surface Security Directives (designated rail and pipeline operators only), FAR clauses and CMMC (no federal contracts), EAR (no controlled technology found, 2026-03), DEA List I (none distributed), PCI DSS (no card payments).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Specialty Chemicals | Distribution | Hazmat Transport | Group (corporate) |
 |---|---|---|---|---|

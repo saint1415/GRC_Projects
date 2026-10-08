@@ -37,6 +37,8 @@ The CPG 2.0 report (*Cross-Sector Cybersecurity Performance Goals, Version 2.0*,
 ### 1.3 Why the focus division's rows are group rows too
 The Commercial Property division does not run its building systems alone. The BAACS (P02) is a corporate system, and the BTI unit in Construction services it. So most CPG rows describe group controls as they apply at Commercial Property sites, with hotel sites noted where they differ. Hotel building OT is covered by the same group plan (P01 HO-004).
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Commercial Property | Construction | Hotels | Group (corporate) |
 |---|---|---|---|---|

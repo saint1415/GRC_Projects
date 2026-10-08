@@ -58,6 +58,8 @@ FAR 52.204-21 applies to the 14 federal contracts because consultants' systems h
 | State breach notification laws | Each state where affected individuals reside; Florida worked example in P08 (Fla. Stat. 501.171) |
 | Not applicable | FedRAMP (no government edition), COPPA (not child-directed), FCC CPNI rules (not a carrier), PADFA (the group is not a data broker), DFARS 252.204-7012 and CMMC (no DoD contracts), NYDFS Part 500 (no New York license) |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Cloud Software | Technology Consulting | Payments and Payroll | Group (corporate) |
 |---|---|---|---|---|

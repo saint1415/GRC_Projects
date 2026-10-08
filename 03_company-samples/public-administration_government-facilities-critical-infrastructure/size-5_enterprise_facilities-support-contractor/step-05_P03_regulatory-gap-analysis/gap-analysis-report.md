@@ -37,6 +37,8 @@ The vertical profile names SP 800-53 Rev. 5 as the primary control set because F
 ### 1.2 OT tailoring
 Controls were applied to OT components using NIST SP 800-82 Rev. 3: passive discovery instead of active scans of field controllers (RA-5), segmentation to compensate for unencrypted BACnet and legacy reader wiring (SC-8), and vendor hardening guides for PACS and BAS products (CM-6). No control was tailored out. Developer controls (SA-10, SA-11, SA-15) apply to the company's own integration code and the FSP, and to vendors through contracts.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.** One row per Moderate base control (G-001 to G-177) with its Moderate enhancements in the citation column; FAR clauses to the paragraph (G-178 to G-199); CUI, BTTRG, SEC, CJIS, FERPA, GovRAMP, and state law requirements to the section or paragraph (G-200 to G-233); and four rows recording requirements that do not apply (G-234 to G-237).
 2. **Crosswalk.** 134 control rows use NIST's official CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). The other 43 control rows and all non-NIST rows are author mappings, labeled as such. FAR rows map through the SP 800-171 Rev. 2 lineage of the 15 basic safeguarding requirements.

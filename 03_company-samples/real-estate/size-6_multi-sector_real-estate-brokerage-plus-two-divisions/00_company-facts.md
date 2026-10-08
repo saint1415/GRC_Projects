@@ -15,6 +15,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce | 45,000 employees: Residential Brokerage 13,000; Mortgage and Title 11,000; Homebuilding 16,000; corporate shared services 5,000. Plus about 52,000 contractor sales associates |
 | Revenue | $18.0 billion in annual receipts (fictional): Homebuilding $8.0 billion; Residential Brokerage $7.4 billion (gross commission income, before agent splits); Mortgage and Title $2.6 billion (mortgage $1.5 billion; title and settlement $1.1 billion). Above the SBA standard of $15.0 million for NAICS 531210 (13 CFR 121.201), so not SBA-small |
 | Why this combination | A real estate group from build to sale to financing: Homebuilding builds the homes, the brokerage sells new and resale homes, Mortgage and Title finances and closes them. Affiliated referrals between divisions are **affiliated business arrangements** under RESPA (12 CFR 1024.15) |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
 | Role | Security and compliance duties |

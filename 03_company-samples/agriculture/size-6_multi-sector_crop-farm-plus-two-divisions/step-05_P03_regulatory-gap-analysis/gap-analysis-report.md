@@ -38,6 +38,8 @@
 - **DFARS 252.204-7012 and CMMC (N31-33-R01, N31-33-R02, N42-R02, N42-R03):** no DoD contracts and no covered defense information in any division.
 - **CIRCIA:** not in effect.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Crop Farming | Food Processing | Farm Supply | Group (corporate) |
 |---|---|---|---|---|

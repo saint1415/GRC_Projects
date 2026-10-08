@@ -37,6 +37,8 @@
 - **N62-R05 42 CFR Part 2:** Home Health is not a Part 2 program. **N62-R06 FTC Health Breach Notification Rule:** excluded for HIPAA covered entities (16 CFR 318.1).
 - **CIRCIA (proposed 6 CFR Part 226):** no final rule as of 2026-09-25.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Staffing | Consulting | Home Health | Group (corporate) |
 |---|---|---|---|---|

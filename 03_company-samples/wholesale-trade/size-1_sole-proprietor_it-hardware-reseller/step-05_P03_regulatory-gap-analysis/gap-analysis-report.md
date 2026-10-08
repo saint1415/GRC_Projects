@@ -24,6 +24,8 @@
 
 **Not applicable, with reasons:** FAR 52.204-21(b)(1)(xi) (no publicly accessible components; G-011); FAR 52.204-21(c) (no lower-tier subcontractor holds FCI; G-025); DFARS 252.204-7012 and SP 800-171 (no CUI); SEC rules, CCPA/CPRA, and CTPAT (see `../00_company-facts.md` section 1). The Trade Agreements Act was not analyzed: the owner holds no GSA Schedule or federal prime contract.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 15 requirements are quoted from 48 CFR 52.204-21(b)(1) (eCFR, current as of 2026-09-23). CMMC practice IDs follow 32 CFR 170.14(c)(2), and each is linked to its SP 800-171 Rev. 2 equivalent per Table 2 to 32 CFR 170.15(c)(1)(ii). Requirement (ix) maps to three SP 800-171 requirements (3.10.3, 3.10.4, 3.10.5).
 2. **Crosswalk.** SP 800-53 controls come from the SP 800-171 Rev. 2 Appendix D mapping, refined to Rev. 5 by the author; CSF 2.0 subcategories come from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference. Procedure and clause rows use an **author mapping** and are labeled as such.

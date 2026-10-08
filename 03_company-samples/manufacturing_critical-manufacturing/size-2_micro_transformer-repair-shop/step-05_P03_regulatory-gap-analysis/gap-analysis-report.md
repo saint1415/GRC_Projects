@@ -50,6 +50,8 @@ With no binding cyber rule, the shop needs a yardstick that covers both the offi
 
 **Target:** CSF Tier 2 (Risk Informed) by the end of 2027, with the High gaps closed first.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.**
    - CSF rows use the subcategory text from `00_universal-framework/frameworks/csf2_core.csv`, plus the SP 800-82 Rev. 3 section that gives OT guidance.

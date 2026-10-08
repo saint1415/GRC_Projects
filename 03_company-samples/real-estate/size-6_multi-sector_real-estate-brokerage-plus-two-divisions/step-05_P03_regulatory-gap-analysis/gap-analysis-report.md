@@ -56,6 +56,8 @@ The group's top risk is diverted closing funds (P01 GR-01). State escrow and tru
 | FAR 52.204-21, DFARS 252.204-7012, CMMC (N23-R01 to N23-R04) | No: Homebuilding holds no federal contracts | Homebuilding table (recorded as not applicable) |
 | CIRCIA | No: final rule not published as of 2026-09-25 | P08 watch item |
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Residential Brokerage | Mortgage and Title | Homebuilding | Group (corporate) |
 |---|---|---|---|---|

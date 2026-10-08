@@ -24,6 +24,8 @@
 - FAR 52.204-21(b)(1)(xi): the same reason (G-121).
 - SEC disclosure rules (private company), CCPA/CPRA (no California business), and CTPAT (voluntary; not an importer of record). See `../00_company-facts.md` section 1.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 110 requirements, their Basic or Derived type, and their text were taken from NIST's SP 800-171 Rev. 2 requirements dataset. CMMC practice IDs follow 32 CFR 170.14(c). Point values follow the CMMC Scoring Methodology (32 CFR 170.24). The 15 FAR 52.204-21 requirements are quoted from the clause (48 CFR 52.204-21(b)(1)) and linked to their SP 800-171 equivalents per Table 2 to 32 CFR 170.15(c)(1)(ii). Clause rows cite the eCFR text of each clause (current as of 2026-09-23).
 2. **Crosswalk.** SP 800-53 controls come from the official SP 800-171 Rev. 2 Appendix D mapping (which uses Rev. 4 control IDs), refined to Rev. 5 by the author (column `nist_official_sp800_53_appendix_d` keeps the official list). CSF 2.0 subcategories are derived from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference. Clause rows use an author mapping and are labeled as such.

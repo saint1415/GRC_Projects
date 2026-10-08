@@ -14,6 +14,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Location | Headquartered in Florida. Operations in 11 states and the District of Columbia. **State law handled generically** ("each state where affected individuals reside"), with Florida as the worked example |
 | Workforce / revenue | 45,000 employees; about $18.0 billion revenue (fictional). Not small under the SBA standard for NAICS 561210 ($47.0 million; 13 CFR 121.201) |
 | Sector context | Government Services and Facilities sector (co-Sector Risk Management Agencies: DHS and GSA, NSM-22). The group is a contractor to government facility owners, not a government entity |
+| FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23, 52.204-25 and DFARS 252.204-7019 and -7020) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. New DoD awards under DFARS Part 240 (DoD Class Deviation 2026-O0025, Revision 3) carry 252.240-7997 for DoD-led Medium and High NIST SP 800-171 assessments instead of 252.204-7019 and -7020. Sources: SRC-FAR-RFO-PART40 and SRC-DFARS-DEV-2026-O0025 |
 
 ## 2. People (role titles only)
 | Role | Security and privacy duties |

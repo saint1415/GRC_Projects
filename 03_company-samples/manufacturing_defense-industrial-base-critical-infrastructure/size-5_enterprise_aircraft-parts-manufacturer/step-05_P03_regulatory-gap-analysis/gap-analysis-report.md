@@ -29,6 +29,8 @@
 
 **Scope.** The 110 Level 2 rows cover the CMMC Assessment Scope "CEE and MOZ" at 7 sites, with the `gap_sites` column showing which site drives each gap. AZ-1 joined the scope on 2026-05-18 and has not yet been covered by a certification assessment. The `ks1_legacy_status` column scores the KS-1 legacy environment separately, because KS-1 holds CUI under DFARS 252.204-7012 but is outside the certified scope.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Decompose.** The 110 Level 2 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and point value from the CMMC Scoring Methodology (32 CFR 170.24). The 24 Level 3 rows quote table 1 to 32 CFR 170.14(c)(4) (public domain). Clause and regulation rows cite each paragraph as checked on eCFR (version date 2026-09-23); SEC rows follow 17 CFR 229.106 and the SEC's Item 1.05 compliance guide.
 2. **Crosswalk.** Level 2 rows map to CSF 2.0 and SP 800-53 Rev. 5 through NIST's official mappings via each requirement's SP 800-171 Rev. 3 counterpart (the route through Rev. 3 is the author's). Level 3 and clause rows are author mappings, labeled in `crosswalk_source`.

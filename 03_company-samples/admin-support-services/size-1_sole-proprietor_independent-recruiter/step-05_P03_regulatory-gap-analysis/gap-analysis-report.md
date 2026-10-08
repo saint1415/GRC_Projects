@@ -36,6 +36,8 @@
 
 **Also checked, outside this workbook:** Title VII (42 U.S.C. 2000e-2(b) and (k)) and the ADA (42 U.S.C. 12112(b)(6)) apply to the AI match add-on, because the business is an employment agency. Title VII defines one as "any person regularly undertaking with or without compensation to procure employees for an employer" (42 U.S.C. 2000e(c)) with no headcount test of its own, the clients are employers with 15 or more employees, and the EEOC states that a recruitment company that regularly refers employees "is covered no matter how many employees it has." These are assessed in P10.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the 2026 Florida Statutes and the eCFR text current as of 2026-09-23, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the business (High 22, Medium 46, Low 38), set by the owner from the risk register (P01) and BIA (P05). Subcategories that protect SSNs, ID numbers, account access, and breach notice are High.

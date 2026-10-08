@@ -37,6 +37,8 @@ FAR 52.204-21 sets 15 basic requirements for any system that holds FCI. The PDPP
 - **CCPA/CPRA and Colorado SB26-189:** no California or Colorado operations; no AI tool makes consequential decisions about individuals in those states.
 - **CIRCIA:** the final rule was not published as of 2026-09-25. Nothing in it is treated as a current obligation.
 
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+
 ## 2. Regulation-by-division matrix
 | Requirement | Construction (focus) | Property | A&E | Group (corporate) |
 |---|---|---|---|---|
