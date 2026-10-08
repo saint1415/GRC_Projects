@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads and division privacy officers, coordinated by the Group Chief Privacy Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what under HIPAA
 | Entity | HIPAA role | Basis |
 |---|---|---|
@@ -23,7 +25,7 @@
 There is no size exemption. 45 CFR 164.306(b) lets each entity consider its size, complexity, capabilities, and costs when choosing *how* to meet a standard, not *whether* to meet it.
 
 ### 1.2 Affiliated covered entity decision (confirmed as the scenario requires)
-Under 45 CFR 164.105(b), legally separate covered entities under common ownership or control *may* designate themselves a single affiliated covered entity, and the designation must be documented. **No designation exists.** Group legal confirmed on 2026-08-14 that Care Delivery and the Health Plan operate as **separate covered entities**. Consequences used throughout this sample:
+Under 45 CFR 164.105(b), legally separate covered entities under common ownership or control *may* designate themselves a single affiliated covered entity, and the designation must be documented. **No designation exists.** Group legal confirmed on 2026-08-14 (EV-089) that Care Delivery and the Health Plan operate as **separate covered entities**. Consequences used throughout this sample:
 - Each covered entity has its own security and privacy officials, its own risk analysis, and **its own breach notification duties** (P08).
 - PHI that moves between them is a **disclosure**, not an internal use. It needs a permission such as 164.506(c) (for example, 164.506(c)(4) health care operations disclosures, which require that both entities have a relationship with the individual) and must meet minimum necessary (164.502(b), 164.514(d)(3)).
 - Designating an affiliated covered entity would not remove minimum necessary. Because it would combine health plan and provider functions, it would also bring the 164.504(g) rule: PHI of people who receive only one function's services may be used only for that function. The group decided not to designate for now and to revisit after the Group Data Platform zones are separated.
@@ -59,12 +61,21 @@ Under 45 CFR 164.105(b), legally separate covered entities under common ownershi
 ## 3. Method
 1. **Requirements.** HIPAA Security Rule rows and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool). Medicare Advantage, Privacy Rule, and Breach Notification rows were read from the eCFR (current through 2026-09-23). State insurance rows are generic, based on NAIC Model #668, whose text varies by state.
 2. **Crosswalk.** Security Rule rows use the Health Care crosswalk in `02_industry-rules/health-care/`, an **author mapping**, because NIST's official mapping is not yet published for CSF 2.0. Other rows carry an author mapping made for this analysis.
-3. **Evidence.** Interviews with each division's security, privacy, clinical, and legal leads; document review; configuration exports; the 2026-07 UM case audit (60 cases); and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, and the walk-through of six Care Delivery sites on 2026-04-14 to 2026-04-16), gap analysis interviews with each division's security, privacy, clinical, and legal leads (EV-086 Care Delivery, EV-087 Health Plan, EV-088 SaaS), UM document reviews and samples (EV-090 to EV-093, including the 2026-07 UM case audit of 60 cases, EV-092), other fieldwork documents (EV-089, EV-094 to EV-097), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable.
 
 **Addressable is not optional.** For each addressable specification, the entity must implement it, implement an equivalent alternative, or document why neither is reasonable and appropriate (164.306(d)(3)). No addressable gap below is being documented as unreasonable.
 
 ## 4. Results
+### 4.0 Group gaps
+Six gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 6 across this sample.
+1. **Data segregation.** The Group Data Platform mixes Health Plan and Care Delivery PHI with inconsistent purpose-based access, and minimum-necessary enforcement between divisions is not verified (EV-025, EV-027, EV-028; P07 AC-3).
+2. **Division supplements.** Division policy supplements have drifted from group policy; the Health Plan's standards were last aligned in 2024 (EV-016, EV-059).
+3. **Utilization-management AI.** The Health Plan's UM model must support, not replace, individualized medical necessity determinations (42 CFR 422.101(c)(1)(i)); documentation of clinician review is incomplete (EV-063, EV-092).
+4. **SaaS product AI.** The generative summarization feature was launched for customers without updating the SOC 2 system description or customer BAAs (EV-068, EV-069, EV-071).
+5. **Shared incident notification.** A shared-service incident may trigger notices from two covered entities, SaaS customer notices under BAAs, SEC disclosure, and state insurance regulators; the single notification matrix is not yet exercised (EV-031).
+6. **Common control inheritance.** Inheritance is documented for Care Delivery but not for the Health Plan (EV-017, EV-060).
+
 ### 4.1 Care Delivery: HIPAA Security Rule (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -87,7 +98,7 @@ Of the 18 partially met rows, 5 are standards, 7 are **Required** implementation
 | State insurance law (generic), GLBA, NYDFS | 2 | 1 | 0 | 1 |
 | **Total (41)** | **14** | **20** | **3** | **4** |
 
-The Health Plan's Security Rule rows focus on the specifications where its evidence differs from Care Delivery's. All other specifications rely on the same group common controls, which is why documenting inheritance (scenario gap 6) matters.
+The Health Plan's Security Rule rows focus on the specifications where its evidence differs from Care Delivery's. All other specifications rely on the same group common controls, which is why documenting inheritance (group gap 6) matters.
 
 **Not met:** 164.316(b)(2)(iii) (standards not updated since 2024, gap 2); 164.514(d)(3) (no minimum-necessary protocols for routine feeds with Care Delivery, gap 1); 42 CFR 422.137(b) (the model-assisted UM workflow was never approved by the UM committee, gap 3).
 
@@ -106,7 +117,7 @@ The Health Plan's Security Rule rows focus on the specifications where its evide
 **Not met:** the SOC 2 system description omits the AI feature and its model provider; customer contracts were not updated for AI processing (both gap 4); and the AI feature logs requests by tenant rather than by patient, so the SaaS could not identify each affected individual for a 164.410(c)(1) notice if the model provider were breached.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Mixed PHI and inconsistent purpose-based access on the Group Data Platform (1) | CD, HP, SaaS | 164.308(a)(4); 164.502(b); 164.514(d); 422.118(a) | High | Zone separation by covered entity; purpose tags at 100%; minimum-necessary protocol per routine feed | Group data platform director; Group Chief Privacy Officer | 2027-03-31 |
 | 2 | UM model governance (3) | HP | 422.101(c)(1)(i); 422.137(b), (d) | High | UM committee approval; structured reviewer rationale; monthly audit | Health Plan medical director | 2026-12-31 |

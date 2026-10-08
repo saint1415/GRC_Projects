@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded multi-specialty medical group with ASCs, imaging centers, and a CLIA-certified central lab) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners, 2026-06-01 to 2026-07-15 | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** risk committee of the board, 2026-09-10
+**Sources:** process owner interviews 2026-06-01 to 2026-07-10 (EV-075, EV-076), dependency and contract review (EV-078), site and entity register (EV-047), FY2025 revenue report (EV-045), operational volume report (EV-046), claims routing report (EV-037), DR test and backup records (EV-021, EV-017, EV-022, EV-023), and the patient-app failover observation (EV-077). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the group depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties and acquired practices. It feeds:
@@ -15,10 +16,10 @@ This enterprise-wide BIA identifies the business processes the group depends on,
 **Results in one line:** 17 processes were analyzed; 9 are High criticality, 7 Moderate, and 1 Low. 7 processes need recovery within 4 hours. The dependency map (`dependency-map.csv`) lists 26 dependencies, 11 of them single points of failure and 6 never tested.
 
 ## 2. System and business description
-Cris Santos Company runs 159 sites in Florida, Georgia, Alabama, and South Carolina: 140 clinics, 6 ambulatory surgery centers, 12 imaging centers, and 1 central CLIA-certified laboratory. It has 12,000 employees (about 1,800 providers), about 2.1 million active patients, and about $4.8 billion in annual revenue. The technology estate is described in `../00_company-facts.md` section 3: a vendor-hosted enterprise EHR (SYS-01), an identity platform (SYS-02), a multi-cloud estate across two public cloud providers plus two colocation data centers (SYS-03), an SD-WAN (SYS-04), about 20,000 endpoints and 9,000 networked medical devices (SYS-05), ERP and payroll (SYS-06), and about 900 vendors (SYS-07). Eight practices were acquired in 2025-2026; three are not yet integrated (AQ-06 to AQ-08).
+Cris Santos Company runs 159 sites in Florida, Georgia, Alabama, and South Carolina: 140 clinics, 6 ambulatory surgery centers, 12 imaging centers, and 1 central CLIA-certified laboratory. It has 12,000 employees (about 1,800 providers), about 2.1 million active patients, and about $4.8 billion in annual revenue. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): a vendor-hosted enterprise EHR (SYS-01), an identity platform (SYS-02), a multi-cloud estate across two public cloud providers plus two colocation data centers (SYS-03), an SD-WAN (SYS-04), about 20,000 endpoints and 9,000 networked medical devices (SYS-05), ERP and payroll (SYS-06), and about 900 vendors (SYS-07). Eight practices were acquired in 2025-2026; three are not yet integrated (AQ-06 to AQ-08).
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the group's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-045) and to the group's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -60,8 +61,8 @@ The full map is in `dependency-map.csv`. Key findings:
 
 1. **Clearinghouse concentration (DEP-08).** One clearinghouse carries 70% of claims and most eligibility checks. The secondary clearinghouse has no contracted surge capacity, and the manual fallback (payer portals for the top 10 payers) has never been tested. The industry saw this failure mode in 2024, when an attack on a major clearinghouse disrupted claims processing nationwide. A 30-day outage would defer about $277 million of collections. This is P01 risk R-005 and POA&M item POAM-019.
 2. **Acquired practices (DEP-21 to DEP-23).** AQ-07 and AQ-08 run their own EHRs with nightly backups, so their real RPO is 24 hours against a 15-minute target, and their vendor contracts state a 24-hour RTO against an 8-hour BIA RTO. Neither restore has been tested. Both also send lab orders into the LIS and claims to the secondary clearinghouse, so an outage or compromise there spreads to BP-04 and BP-08.
-3. **Laboratory (DEP-03, DEP-12 to DEP-14).** The LIS met its RPO but recovered in 5.5 hours against its 4-hour RTO in the 2026-05-16 disaster recovery test. The courier and specimen tracking service has no SOC report and no tested fallback.
-4. **Single EHR instance (DEP-01).** The vendor's contract RTO (4 hours) and RPO (15 minutes) meet the BIA, and the vendor's failover test was observed in April 2026. The read-only downtime service is the main workaround for BP-01 to BP-03.
+3. **Laboratory (DEP-03, DEP-12 to DEP-14).** The LIS met its RPO but recovered in 5.5 hours against its 4-hour RTO in the 2026-05-16 disaster recovery test (EV-021). The courier and specimen tracking service has no SOC report and no tested fallback.
+4. **Single EHR instance (DEP-01).** The vendor's contract RTO (4 hours) and RPO (15 minutes) meet the BIA, and the vendor's failover test was observed in April 2026 (EV-022). The read-only downtime service is the main workaround for BP-01 to BP-03.
 5. **Industry-wide dependencies (DEP-11).** The national e-prescribing network is a single point of failure the group cannot remove; the workaround is procedural.
 
 ## 6. Resource requirements

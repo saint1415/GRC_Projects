@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 38 determination statem
 - **Test (2026-07-23):** sign-ins to the EHR, email, and cloud fax from a new browser; idle-lock timing on the laptop and tablet; download of a standard antivirus test file; encryption status on each device; review of the remote-support tool's settings.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The first risk analysis (P01) was completed on 2026-07-24, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices and vendor records | 20 |
+| Design | The control is new (the 2026 risk analysis); its design was reviewed. Operation is checked at the July 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 12 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the EHR, email and fax accounts (EV-001, EV-004, EV-006), the 3 devices (EV-007, EV-008), and the 7 vendors that handle PHI (EV-013). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No testing during clinic hours. No patient data copied off the devices; screenshots were cropped to settings only.
 - The IT consultant worked only under the BAA signed 2026-07-17, in sessions the owner started and watched.

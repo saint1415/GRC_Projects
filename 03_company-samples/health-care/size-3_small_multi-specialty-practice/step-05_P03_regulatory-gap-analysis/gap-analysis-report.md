@@ -9,7 +9,7 @@
 | Assessor | IT Manager (Security Officer) with the Privacy Officer |
 
 ## 1. Applicability
-The HIPAA Security Rule **applies**. The practice is a health care provider that transmits health information electronically in standard transactions (claims and eligibility through its clearinghouse). That makes it a covered entity under 45 CFR 160.103.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rule analyzed here. The HIPAA Security Rule **applies**. The practice is a health care provider that transmits health information electronically in standard transactions (claims and eligibility through its clearinghouse). That makes it a covered entity under 45 CFR 160.103.
 
 There is no size exemption. 45 CFR 164.306(b) lets the practice consider its size, complexity, capabilities, and costs when choosing *how* to meet each standard, but not *whether* to meet it.
 
@@ -25,7 +25,7 @@ There is no size exemption. 45 CFR 164.306(b) lets the practice consider its siz
 ## 2. Method
 1. **Requirements.** Requirements and their Required/Addressable designations come from NIST SP 800-66 Rev. 2 (NIST's dataset in its Cybersecurity and Privacy Reference Tool).
 2. **Crosswalk.** Each requirement was mapped to CSF 2.0 and SP 800-53 Rev. 5 using the Health Care crosswalk in `02_industry-rules/health-care/`. That crosswalk is an author mapping; NIST's official mapping is not yet published for CSF 2.0.
-3. **Evidence.** Current state was established by interviews (Practice Administrator, IT Manager, Clinic Managers, Billing Manager, HR), document review, system configuration exports, and a walkthrough of both clinics on 2026-08-05.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents and the walk-through of both clinics on 2026-07-09), the TLS scan (EV-034), and gap analysis interviews with the Practice Administrator, IT Manager, Clinic Managers, Billing Manager and HR (EV-035). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each requirement was rated Met, Partially met, Not met, or Not applicable.
 
 **Addressable is not optional.** For each addressable specification, the practice must implement it, implement an equivalent alternative, or document why neither is reasonable and appropriate (164.306(d)(3)). Every addressable gap below is being implemented; none is being documented as unreasonable.

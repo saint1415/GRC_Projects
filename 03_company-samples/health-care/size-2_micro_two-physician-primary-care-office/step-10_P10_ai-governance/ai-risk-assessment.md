@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (Privacy and Security Officer) with the associate physician, 2026-08-25 |
 | Decision | Owner physician, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the card statements and vendor invoices, the AI scribe vendor documents, the EHR configuration and a staff survey (EV-022, EV-023, EV-039, EV-036). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the associate physician, who runs the pilot. **Decision authority:** the owner physician.
@@ -19,7 +19,7 @@
 - **Approved-tools list:** kept by the Office Manager in POL-04 4.6. It has one entry, the AI scribe, for the associate physician only.
 - **Scale for a Micro practice:** there is no AI committee. The owner physician, associate physician, and Office Manager review AI use at the monthly security meeting.
 
-**How the pilot started.** The associate physician signed up for the vendor's trial on 2026-06-01 and began recording visits. The BAA was sent for review but not signed. That broke the "no BAA, no ePHI" rule that the practice has now written down (P01 R-011; P03 164.308(b)(1)).
+**How the pilot started.** The associate physician signed up for the vendor's trial on 2026-06-01 and began recording visits (EV-023). The BAA was sent for review but not signed. That broke the "no BAA, no ePHI" rule that the practice has now written down (P01 R-011; P03 164.308(b)(1)).
 
 ## 2. MAP
 | Item | Description |

@@ -288,6 +288,10 @@ def write_scenario(u, tier_id, vd):
     t, p, o = f["_tier"], f["_size"], f["_override"]
     d = sample_dir(u, tier_id)
     d.mkdir(parents=True, exist_ok=True)
+    # Evidence-based samples have a step-00 intake folder; every finding cites its evidence IDs.
+    # Older samples keep their current-posture section in the facts file until they are rebuilt.
+    intake = (d / "step-00_P00_intake").exists()
+    steps_here = [pj for pj in projects if pj["project_id"] != "P00" or intake]
     legal_default = {"t1": COMPANY, "t2": f"{COMPANY}, LLC", "t3": f"{COMPANY}, LLC",
              "t4": f"{COMPANY}, Inc.", "t5": f"{COMPANY}, Inc.", "t6": f"{COMPANY} Holdings, Inc."}[tier_id]
     facts_file = d / "00_company-facts.md"
@@ -330,9 +334,13 @@ def write_scenario(u, tier_id, vd):
         size_rows.append(("Total assets (fictional)", money(p["assets"])))
     pr = vd["profile"]
     L = [GENERATED, f"# {f['scenario_title']}", "", f"> {intro}", "",
-         "This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). "
+         f"This folder is a self-contained scenario. Read this page first, then open the project folders in step order ({'step-00' if intake else 'step-01'} to step-10). "
          "Each project folder has a `_context.md` explaining what that deliverable looks like for this company.", ""]
-    if (d / "00_company-facts.md").exists():
+    if (d / "00_company-facts.md").exists() and intake:
+        L += ["> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. "
+              "[00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in "
+              "[step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.", ""]
+    elif (d / "00_company-facts.md").exists():
         L += ["> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share "
               "(locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.", ""]
     L += ["## At a glance", "| | |", "|---|---|",
@@ -364,12 +372,13 @@ def write_scenario(u, tier_id, vd):
           "| Requirement | Citation | Size thresholds / exemptions |", "|---|---|---|"]
     for r in vd["requirements"]:
         L.append(f"| [{md_escape(r['short_name'])}]({r['source_url']}) | {md_escape(r['citation'])} | {md_escape(r['size_thresholds'])} |")
-    L += ["", "Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).", "",
-          "## The 10 projects for this company, in build order",
+    L += ["", ("Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5)."
+           if intake else "Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5)."), "",
+          "## The 10 projects for this company, in build order" + (", after intake" if intake else ""),
           "Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: "
           f"[how-to-build-the-10-projects.md]({rel(d, ROOT / 'docs' / 'how-to-build-the-10-projects.md')}).", "",
           "| Step | Project | What it covers here | Builds on |", "|---|---|---|---|"]
-    for pj in projects:
+    for pj in steps_here:
         sc = tier_scaling(tier_id, pj["project_id"], private)
         extra = {"P02": f" System: {f['system_name']}.", "P03": f" Regulation: {f['primary_regulation']}.",
                  "P08": f" Incident: {f['ir_scenario']}.", "P10": f" AI use case: {f['ai_use_case']}."}.get(pj["project_id"], "")
@@ -387,7 +396,7 @@ def write_scenario(u, tier_id, vd):
     (d / "README.md").write_text("\n".join(L))
 
     # ---- project folders
-    for pj in projects:
+    for pj in steps_here:
         pd = d / pj["slug"]
         pd.mkdir(exist_ok=True)
         src = U / "projects" / pj["slug"]

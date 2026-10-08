@@ -71,6 +71,7 @@ TAGS = [
 
 # One plain-English line per project, shown in the guided tour.
 PROJECT_PLAIN = {
+    "P00": "Before judging anything, collect the company's own records: exports, documents, walk-throughs and interviews, each dated and given an ID. Record what they show, not whether it is good enough, and decide which rules apply.",
     "P05": "Before protecting anything, list what the business does and how long each activity can stop before real harm. Those downtime limits decide what gets fixed first.",
     "P02": "Pick the one system the business cannot live without, draw a line around it, and write down how each security control works there today.",
     "P04": "Show which parts of that system run in the cloud or in vendor services, and who is responsible for each control: the company or the provider.",
@@ -276,6 +277,19 @@ def sample(folder):
     _, org = find(fs, "The organization")
     _, sysmd = find(fs, "Systems")
     post_h, post = find(fs, "Current security posture")
+    intake = None
+    if "P00" in step:  # evidence-based sample: the starting point is what the records showed, not a pre-written verdict
+        reg = rows(step["P00"] / "evidence-register.csv")
+        obl = rows(step["P00"] / "obligations-register.csv")
+        ir = (step["P00"] / "intake-report.md").read_text(encoding="utf-8")
+        _, post = find(sections(ir), "Observations by area")
+        _, opened = find(sections(ir), "Open requests")
+        _, ob = first_table(opened)
+        post_h = f"Starting point: {len(reg)} dated evidence items"
+        intake = {"evidence": len(reg), "intakeItems": sum(r.get("phase") == "Intake" for r in reg),
+                  "sources": len({r["source_system"] for r in reg}), "open": len(ob),
+                  "applies": sum(r["applies"].startswith("Yes") for r in obl), "notApplies": sum(r["applies"].startswith("No") for r in obl),
+                  "fieldwork": sum(r.get("phase") != "Intake" for r in reg)}
     _, scen = find(fs, "Scenario choices")
     head, body = first_table(sysmd)
     ci = next((i for i, h in enumerate(head) if h.lower() == "system"), 1)
@@ -340,6 +354,8 @@ def sample(folder):
     res = rows(step["P07"] / "assessment-results.csv")
     poam = rows(step["P07"] / "poam.csv")
     p07 = {
+        "testType": {k: sum((r.get("test_type") or "").startswith(k) for r in res) for k in ("Operating effectiveness", "Design", "Not implemented")}
+                    if res and "test_type" in res[0] else None,
         "controls": len({r.get("control_id") for r in res}),
         "objectives": len(res),
         "sat": sum(r.get("finding") == "Satisfied" for r in res),
@@ -378,13 +394,15 @@ def sample(folder):
                                                    "Primary industry", "Primary system", "IT footprint",
                                                    "Who owns security and compliance") if k in g},
         "org": md_to_html(org, folder), "systems": systems, "scenario": scenario,
-        "postureTitle": strip_md(post_h.split(":", 1)[1]) if post_h and ":" in post_h else "",
+        "postureTitle": strip_md(post_h.split(":", 1)[1]).strip() if post_h and ":" in post_h else "",
         "posture": md_to_html(post, folder),
         "tags": tags_for(gap, notif), "rule": rule_short, "ruleFull": rule,
         "bia": {"count": len(bia), "top": bia_top},
         "ssp": {"system": g.get("Primary system", ""), "controls": len(ssp), "status": ssp_status},
         "cloud": {"rows": len(cloud), "components": components, "resp": resp},
-        "risk": {"counts": rc, "total": len(risks), "top": top_risks},
+        "risk": {"counts": rc, "total": len(risks), "top": top_risks,
+                 "pass2": sum((r.get("assessment_pass") or "").startswith("Pass 2") for r in risks) if risks and "assessment_pass" in risks[0] else None},
+        "intake": intake,
         "gap": {"counts": gc, "total": len(gap), "appl": md_to_html(appl, step["P03"])},
         "policies": pols, "p07": p07,
         "p08": {"incident": incident, "clocks": clocks[:12], "clockCount": len(clocks)},

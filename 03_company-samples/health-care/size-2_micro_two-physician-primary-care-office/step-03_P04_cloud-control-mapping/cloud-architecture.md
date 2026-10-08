@@ -4,7 +4,7 @@
 **System:** Office Clinical Platform (OCP), as defined in the SSP (P02) | **Prepared:** 2026-07-31 by the Office Manager with the MSP lead technician | **Approved:** owner physician, 2026-08-31
 
 ## 1. Diagram
-The practice runs no servers and no IaaS tenant. Its "cloud" is a set of SaaS services plus one cloud workload that the MSP operates for it: the file-sync backup of the shared drive (SYS-05).
+The practice runs no servers and no IaaS tenant. Its "cloud" is a set of SaaS services plus one cloud workload that the MSP operates for it: the file-sync backup of the shared drive (SYS-05). The components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); the `evidence_source` column in `cloud-control-map.csv` cites the evidence ID behind each placement.
 
 ```mermaid
 flowchart LR

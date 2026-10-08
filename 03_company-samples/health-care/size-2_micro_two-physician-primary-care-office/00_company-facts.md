@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Health Care | Micro
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
 
 ## 1. The organization
 | Item | Fact |
@@ -12,8 +12,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Patients | About 3,500 active patients; about 40 visits per clinic day |
 | Revenue | About $1.1 million a year (fictional). SBA-small (standard $16.0 million) |
 | Payers | Medicare, Florida Medicaid, and commercial plans. Section 1557 applies (Medicaid is federal financial assistance) |
-| HIPAA status | **Covered entity.** Claims are sent electronically through the EHR's clearinghouse |
-| Not in scope | 42 CFR Part 2; group health plan requirements; payment cards (vendor-hosted terminal) |
+| HIPAA status | **Covered entity**, determined in the intake obligations register (N62-R01): claims are sent electronically through the EHR's clearinghouse (EV-019) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): 42 CFR Part 2, the FTC Health Breach Notification Rule, and CMS emergency preparedness conditions do not apply. Group health plan requirements are excluded in the gap analysis (P03). Payment cards: vendor-hosted terminal |
 | State law approach | Florida law cited only where unavoidable |
 
 ## 2. People (role titles only)
@@ -25,6 +25,9 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Managed service provider (MSP) | IT support, patching, antivirus, firewall. A business associate (BAA on file) |
 
 ## 3. Systems
+
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Hosting | Holds ePHI? | Notes |
 |---|---|---|---|---|
 | SYS-01 | EHR/PM with portal, e-prescribing, and clearinghouse | Vendor SaaS | Yes | BAA on file; MFA enforced |
@@ -38,28 +41,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **SSP system (P02):** the *Office Clinical Platform*: SYS-01 to SYS-07.
 
-## 4. Current security posture: early to partial
-**In place today:**
-- MFA on the EHR and email
-- MSP patching, antivirus, and firewall
-- BAAs with the EHR vendor, MSP, and fax vendor
-- Laptop encryption
-- Unique EHR logins
-- Guest Wi-Fi separation
-- New-hire HIPAA video
+## 4. Where the evidence is
 
-**Missing:**
-1. The last risk analysis was a 2019 consultant checklist; nothing since.
-2. Policies are a purchased template, never adopted.
-3. The productivity suite BAA has not been accepted.
-4. Desktops are unencrypted.
-5. The shared-drive backup has never been restore-tested.
-6. No audit log review.
-7. No incident response plan.
-8. Terminations are handled by the office manager "when remembered". One former MA's account was found active after 3 months.
-9. No annual training or phishing awareness.
-10. The AI scribe pilot started before the BAA was signed.
-11. No inventory of devices or where ePHI lives.
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). For a 7-person office the systems of record are the vendor admin consoles, the payroll service, the MSP's reports, the contracts folder, and a walk-through. Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the HIPAA Security Rule** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -72,28 +59,31 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-07-20 to 2026-07-31 | Risk analysis and gap analysis with the MSP |
-| 2026-08-10 to 2026-08-12 | Control assessment (independent consultant) |
-| 2026-08-31 | Deliverables approved by the owner physician |
+| 2026-07-06 to 2026-07-17 | Intake: evidence requests, exports from the vendor consoles, the payroll service and the MSP, the contracts folder, a walk-through, inventories, obligations register |
+| 2026-07-20 to 2026-07-31 | BIA interviews, risk analysis and gap analysis with the MSP |
+| 2026-08-03 to 2026-08-07 | Policies drafted from the gaps |
+| 2026-08-10 to 2026-08-12 | Control assessment (independent consultant): operating tests of controls already in place; design review of the draft policies |
+| 2026-08-31 | Deliverables and policies approved by the owner physician |
+| 2027-02 (planned) | Follow-up assessment: operating effectiveness of the controls the new policies introduced, after at least one quarter of operation |
 
 ## 7. Facts added while building the deliverables
-These facts were added in Phase 2 because the deliverables needed them. They do not change sections 1-6.
+These facts were added in Phase 2 because the deliverables needed them. They do not change sections 1-6. Facts drawn from the practice's records cite the evidence register ID they rest on.
 
 | Topic | Added fact | Used in |
 |---|---|---|
-| Physicians | The owner physician and one **associate physician**. The associate physician runs the AI scribe pilot (started 2026-06-01) | P01, P10 |
-| Endpoints | SYS-03 is 6 desktops (2 front desk, 1 billing, 2 clinical stations, 1 procedure-room workstation connected to SYS-07) and 4 laptops (both physicians, office manager, billing). The 2 tablets are used by the physicians in exam rooms; they are MSP-managed with a passcode and built-in device encryption | P01, P02, P04, P07 |
-| Shared drive | The "shared drive" is the practice's shared folder in the productivity suite (SYS-02). It is synced to the desktops by the suite's sync client. SYS-05 copies it nightly and keeps 30 days of versions (the default). SYS-05 is administered with one MSP administrator account | P01, P04, P05, P08 |
-| Backup vendor | The SYS-05 subscription is held by the MSP and resold to the practice, so the backup vendor is the MSP's subcontractor. The MSP BAA requires subcontractor BAAs; flow-down has not been verified | P03, P04, P07 |
-| Clearinghouse and lab | The clearinghouse is contracted through the EHR vendor as its subcontractor. Reference laboratory orders and results flow through the EHR vendor's lab interface | P02, P05 |
-| Internet | One business internet line; no failover | P01, P05 |
-| Cyber insurance | The practice holds a cyber liability policy with a 24x7 breach hotline and panel vendors (breach counsel, forensics). The policy requires prompt notice and use of panel vendors | P08 |
-| Former MA account | Found active on 2026-07-21 during the risk analysis, 3 months after termination, and disabled that day. The EHR and email sign-in logs showed no use after the termination date | P01, P03, P07 |
-| Referral network | A local hospital's referral network sent a security questionnaire in July 2026; the response is due 2026-09-30 | P09 |
+| Physicians | The owner physician and one **associate physician**. The associate physician runs the AI scribe pilot (started 2026-06-01) (EV-001; EV-023) | P01, P10 |
+| Endpoints | SYS-03 is 6 desktops (2 front desk, 1 billing, 2 clinical stations, 1 procedure-room workstation connected to SYS-07) and 4 laptops (both physicians, office manager, billing). The 2 tablets are used by the physicians in exam rooms; they are MSP-managed with a passcode and built-in device encryption (EV-009; EV-011; EV-033) | P01, P02, P04, P07 |
+| Shared drive | The "shared drive" is the practice's shared folder in the productivity suite (SYS-02). It is synced to the desktops by the suite's sync client. SYS-05 copies it nightly and keeps 30 days of versions (the default). SYS-05 is administered with one MSP administrator account (EV-006; EV-015) | P01, P04, P05, P08 |
+| Backup vendor | The SYS-05 subscription is held by the MSP and resold to the practice, so the backup vendor is the MSP's subcontractor. The MSP BAA requires subcontractor BAAs; flow-down has not been verified (EV-015; EV-017; EV-022) | P03, P04, P07 |
+| Clearinghouse and lab | The clearinghouse is contracted through the EHR vendor as its subcontractor. Reference laboratory orders and results flow through the EHR vendor's lab interface (EV-019) | P02, P05 |
+| Internet | One business internet line; no failover (EV-032) | P01, P05 |
+| Cyber insurance | The practice holds a cyber liability policy with a 24x7 breach hotline and panel vendors (breach counsel, forensics). The policy requires prompt notice and use of panel vendors (EV-028) | P08 |
+| Former MA account | Found active on 2026-07-21 during the risk analysis, 3 months after termination, and disabled that day. The EHR and email sign-in logs showed no use after the termination date (EV-042) | P01, P03, P07 |
+| Referral network | A local hospital's referral network sent a security questionnaire in July 2026; the response is due 2026-09-30 (EV-029) | P09 |
 | Assessor | The P07 assessor is an independent HIPAA security consultant, not involved in the risk analysis or in operating any control | P07 |
-| ECG workstation patching | P07 testing found that the MSP had excluded the procedure-room workstation (SYS-07 host) from patching since April 2026, at the device vendor's request, without telling the practice | P01, P07 |
-| Productivity suite BAA | The Office Manager accepted the productivity suite BAA in the admin console on 2026-08-14, after the fieldwork found the gap | P01, P03, P07 |
-| MSP contract | Covers help desk, patching, antivirus, firewall, Wi-Fi, and backup administration, with a 4-business-hour response time and no recovery time commitment | P05, P07 |
-| Office security | Keyed suite entry with an after-hours alarm; keys held by the Office Manager and both physicians; locked network closet | P02, P03 |
-| Finances and payroll | A cash reserve covers about 30 days of expenses; payroll runs biweekly through an outside payroll service | P01, P05 |
-| Past events | A staff phone was lost in 2025 and a fax was misdirected; both were handled informally with no record. Two desktops were retired in 2025 with no disposal record | P03, P09 |
+| ECG workstation patching | P07 testing found that the MSP had excluded the procedure-room workstation (SYS-07 host) from patching since April 2026, at the device vendor's request, without telling the practice (EV-SI-2) | P01, P07 |
+| Productivity suite BAA | The Office Manager accepted the productivity suite BAA in the admin console on 2026-08-14, after the fieldwork found the gap (EV-048) | P01, P03, P07 |
+| MSP contract | Covers help desk, patching, antivirus, firewall, Wi-Fi, and backup administration, with a 4-business-hour response time and no recovery time commitment (EV-018) | P05, P07 |
+| Office security | Keyed suite entry with an after-hours alarm; keys held by the Office Manager and both physicians; locked network closet (EV-033; EV-034) | P02, P03 |
+| Finances and payroll | A cash reserve covers about 30 days of expenses; payroll runs biweekly through an outside payroll service (EV-030; EV-001) | P01, P05 |
+| Past events | A staff phone was lost in 2025 and a fax was misdirected; both were handled informally with no record. Two desktops were retired in 2025 with no disposal record (EV-035; EV-016) | P03, P09 |

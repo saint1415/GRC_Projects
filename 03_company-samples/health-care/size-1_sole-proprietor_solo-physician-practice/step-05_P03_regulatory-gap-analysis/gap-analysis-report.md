@@ -6,11 +6,11 @@
 | Tier / Vertical | Sole Proprietorship / Health Care and Social Assistance |
 | Regulation analyzed | HIPAA Security Rule, 45 CFR Part 164, Subpart C (in force; last amended 2020-11-24) |
 | Assessment dates | 2026-07-20 to 2026-07-24 (self-assessment) |
-| Assessor | Physician-owner, with the on-call IT consultant (under BAA since 2026-07-17). Evidence is self-attested |
+| Assessor | Physician-owner, with the on-call IT consultant (under BAA since 2026-07-17). Evidence is the intake record and the owner's self-review (EV-032) |
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
-**The HIPAA Security Rule applies.** Under 45 CFR 160.103, a covered entity includes "a health care provider who transmits any health information in electronic form in connection with a transaction covered by this subchapter." The physician is a health care provider. The practice's billing company submits claims electronically to Medicare, Florida Medicaid, and commercial plans on the practice's behalf. Those are standard transactions, and 45 CFR 162.923(c) lets a covered entity use a business associate to conduct them. Using a billing company does not move the obligation away from the practice. It is how the practice conducts its transactions.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rule analyzed here. **The HIPAA Security Rule applies.** Under 45 CFR 160.103, a covered entity includes "a health care provider who transmits any health information in electronic form in connection with a transaction covered by this subchapter." The physician is a health care provider. The practice's billing company submits claims electronically to Medicare, Florida Medicaid, and commercial plans on the practice's behalf (EV-017). Those are standard transactions, and 45 CFR 162.923(c) lets a covered entity use a business associate to conduct them. Using a billing company does not move the obligation away from the practice. It is how the practice conducts its transactions.
 
 **The test is function, not size.** A physician who ran a cash-only direct primary care practice, never billed insurance, and never conducted a standard electronic transaction (directly or through anyone else) would not be a HIPAA covered entity, whatever its size. This practice would become exempt only by giving up electronic claims, which is not realistic with Medicare and Medicaid patients.
 
@@ -21,12 +21,12 @@ There is no small-practice exemption. 45 CFR 164.306(b) lets the practice weigh 
 - **164.314(a)(2)(ii)** (other arrangements): no business associate is a governmental entity.
 - **164.314(b)** and its four specifications (group health plans): the practice sponsors no group health plan.
 
-**Workforce specifications.** The practice has no workforce other than the owner (45 CFR 160.103 defines workforce as employees, volunteers, trainees, and others under the practice's direct control). Workforce clearance (164.308(a)(3)(ii)(B)) is addressed by documenting that it is not reasonable and appropriate today, as 164.306(d)(3)(ii)(B) permits. The other workforce specifications still apply to contractor access and are rated below.
+**Workforce specifications.** The practice has no workforce other than the owner (EV-019; 45 CFR 160.103 defines workforce as employees, volunteers, trainees, and others under the practice's direct control). Workforce clearance (164.308(a)(3)(ii)(B)) is addressed by documenting that it is not reasonable and appropriate today, as 164.306(d)(3)(ii)(B) permits. The other workforce specifications still apply to contractor access and are rated below.
 
 ## 2. Method
 1. **Requirements.** All 69 rows of the Health Care crosswalk (`02_industry-rules/health-care/hipaa-security-rule-crosswalk.csv`). Titles, types, and text come from NIST SP 800-66 Rev. 2.
 2. **Crosswalk.** CSF 2.0 and SP 800-53 columns are an **author mapping**, not NIST's official mapping (see the crosswalk README).
-3. **Evidence.** Self-attested by the owner, checked where possible by looking at the setting on screen with the IT consultant (EHR user list, device settings, BAA folder, suite walkthrough on 2026-07-21).
+3. **Evidence.** Current state was established from the intake evidence (portal exports, device settings, the BAA folder, statements, and the suite walk-through on 2026-07-15) and the owner's written self-review, checked on screen with the IT consultant on 2026-07-20 and 2026-07-21 (EV-032). Where the self-assessment tests had run (2026-07-23), their results are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Addressable is not optional: each addressable gap is being implemented, or (for workforce clearance) documented under 164.306(d)(3).
 
 ## 3. Results summary

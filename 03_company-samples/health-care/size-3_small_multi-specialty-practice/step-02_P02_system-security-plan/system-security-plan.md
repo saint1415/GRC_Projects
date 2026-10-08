@@ -68,7 +68,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems. Examples: PM-series program-level controls beyond PM-1, PM-2, and PM-9.
 
 ## 7. Authorization Boundary Description
-The boundary contains practice-managed components and the practice's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains practice-managed components and the practice's configuration of vendor services:
 - **Inside:** the EHR tenant configuration and user roles, the identity provider tenant, the cloud tenant (3 workloads), both clinic networks, 70 workstations and laptops, 12 tablets, the X-ray modality workstation, and networked ECG carts and monitors.
 - **Outside (external services, interconnected):** the EHR vendor's platform, the cloud provider's infrastructure, the clearinghouse, the reference laboratory, the cloud fax and telehealth services, and the AI scribe service.
 
@@ -115,7 +115,7 @@ All workforce users authenticate through the identity provider with a password a
 Patients use the EHR vendor's portal with its own identity proofing and MFA. That is governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

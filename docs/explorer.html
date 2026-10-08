@@ -360,7 +360,7 @@ function renderCompany(s) {
   h += sec(1, `<div class="tw"><table><thead><tr><th>ID</th><th>System</th></tr></thead><tbody>${s.systems.map(r => `<tr><td class="mono" style="white-space:nowrap">${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</tbody></table></div>
     <p style="font-size:14.5px;margin:0">The security plan (step 2) focuses on <strong>${esc(s.ssp.system)}</strong>.</p>`);
 
-  h += sec(2, `<p style="margin:0 0 10px">Starting point: <strong>${esc(s.postureTitle)}</strong>.</p><details><summary>What was in place and what was missing</summary><div class="prose">${s.posture}</div></details>
+  h += sec(2, `<p style="margin:0 0 10px">Starting point: <strong>${esc(s.postureTitle)}</strong>.</p><details><summary>${s.intake ? "What the records showed at intake (observations, not findings)" : "What was in place and what was missing"}</summary><div class="prose">${s.posture}</div></details>
     <h4 style="font:600 14px/1.3 var(--sans);margin:14px 0 8px">The scenarios this company was tested against</h4>
     <div class="tw"><table><tbody>${s.scenario.map(r => `<tr><th style="width:30%">${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join("")}</tbody></table></div>`);
 
@@ -427,11 +427,13 @@ function renderCompare(unit) {
 }
 
 /* ---------------- tour ---------------- */
+const stepsOf = s => D.projects.filter(p => p.id !== "P00" || s.intake);
 function tourBody(s, p) {
   const f = stepFolder(s, p.id);
   const T = (head, rows) => `<div class="tw"><table><thead><tr>${head.map(x => `<th>${x}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
   let b = "";
   switch (p.id) {
+    case "P00": b = s.intake ? `<p>${fmt(s.intake.evidence)} dated evidence items: ${fmt(s.intake.intakeItems)} collected at intake and ${fmt(s.intake.fieldwork)} added by later steps. ${fmt(s.intake.applies)} rules apply and ${fmt(s.intake.notApplies)} were ruled out, each with its basis. ${fmt(s.intake.open)} requests were still open.</p><details><summary>What the records showed (observations, not findings)</summary><div class="prose">${s.posture}</div></details>` : ""; break;
     case "P05": b = `<p>${fmt(s.bia.count)} business processes were rated. The first ones to bring back:</p>` + T(["Process", "RTO (hours)", "RPO (hours)", "Criticality"], s.bia.top.map(r => `<tr><td>${esc(r[0])}</td><td class="num">${esc(r[1])}</td><td class="num">${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`)) +
       `<p style="font-size:14px;color:var(--muted)">RTO is how fast it must be back. RPO is how much data, in hours, the business can afford to lose.</p>`; break;
     case "P02": b = `<p>The plan covers <strong>${esc(s.ssp.system)}</strong> with ${fmt(s.ssp.controls)} control statements.</p>` + T(["Implementation status", "Controls"], Object.entries(s.ssp.status).sort((a, b) => b[1] - a[1]).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="num">${fmt(v)}</td></tr>`)); break;
@@ -451,25 +453,26 @@ function tourBody(s, p) {
 }
 function renderTour(arg) {
   const parts = (arg || "").split("/");
-  const n = /^\d+$/.test(parts[parts.length - 1]) ? +parts.pop() : 1;
+  const n = /^\d+$/.test(parts[parts.length - 1]) ? +parts.pop() : null;
   const id = byId[parts.join("/")] ? parts.join("/") : TOUR_DEFAULT;
-  const s = byId[id], step = Math.min(10, Math.max(1, n)), p = D.projects[step - 1], u = unitOf[s.unit];
+  const s = byId[id], u = unitOf[s.unit], PJ = stepsOf(s), first = PJ[0].step, last = PJ[PJ.length - 1].step;
+  const step = Math.min(last, Math.max(first, n == null ? first : n)), p = PJ.find(x => x.step === step);
   let h = `<p class="intro">Follow one company from its first project to its last. Each step uses what the earlier steps produced, the same order a real program would follow. Pick any company to tour.</p>
     <div class="row" style="gap:12px;align-items:end;margin-bottom:12px"><label class="f sel" style="flex-basis:420px">Industry<select id="tu">${D.units.map(x => `<option value="${esc(x.unit)}"${x.unit === s.unit ? " selected" : ""}>${esc(unitName(x))}</option>`).join("")}</select></label>
     <label class="f sel" style="flex-basis:180px">Size<select id="tt">${[1, 2, 3, 4, 5, 6].map(t => `<option value="${t}"${t === s.tier ? " selected" : ""}>${tierName(t)}</option>`).join("")}</select></label>
     <button class="btn" data-go="c/${esc(s.id)}">Read this company's story</button></div>
     <div class="tour"><div><div class="kicker">${esc(u.name)} · ${tierName(s.tier)}</div><h2 style="font-size:26px;margin-top:4px">${esc(s.business)}</h2></div>
-    <div class="stepper" role="list">${D.projects.map(x => `<button role="listitem" data-step="${x.step}" ${x.step === step ? 'aria-current="step"' : ""}><span class="s">Step ${x.step} · ${x.id}</span><span class="t">${esc(x.name)}</span></button>`).join("")}</div>
-    <article class="panel"><div class="stepno">Step ${step} of 10 · ${p.id}</div><h3>${esc(p.name)}</h3><p class="plain">${esc(p.plain)}</p><p class="builds">Builds on: ${esc(p.buildsOn)}.</p>
+    <div class="stepper" role="list">${PJ.map(x => `<button role="listitem" data-step="${x.step}" ${x.step === step ? 'aria-current="step"' : ""}><span class="s">Step ${x.step} · ${x.id}</span><span class="t">${esc(x.name)}</span></button>`).join("")}</div>
+    <article class="panel"><div class="stepno">Step ${step} of ${last} · ${p.id}</div><h3>${esc(p.name)}</h3><p class="plain">${esc(p.plain)}</p><p class="builds">Builds on: ${esc(p.buildsOn)}.</p>
     <h4 class="here">In this company</h4>${tourBody(s, p)}
-    <div class="nav2"><button class="btn" id="prev" ${step === 1 ? "disabled" : ""}>Previous step</button><button class="btn primary" id="next">${step === 10 ? "Finish: read the full story" : "Next step"}</button></div></article></div>`;
+    <div class="nav2"><button class="btn" id="prev" ${step === first ? "disabled" : ""}>Previous step</button><button class="btn primary" id="next">${step === last ? "Finish: read the full story" : "Next step"}</button></div></article></div>`;
   view.innerHTML = h;
   const to = (sid, k) => go(`tour/${sid}/${k}`);
   $("#tu").addEventListener("change", e => { const x = D.samples.find(y => y.unit === e.target.value && y.tier === s.tier); to(x.id, step); });
   $("#tt").addEventListener("change", e => { const x = D.samples.find(y => y.unit === s.unit && y.tier === +e.target.value); to(x.id, step); });
   view.querySelectorAll("[data-step]").forEach(b => b.addEventListener("click", () => to(s.id, +b.dataset.step)));
   $("#prev").addEventListener("click", () => to(s.id, step - 1));
-  $("#next").addEventListener("click", () => step === 10 ? go("c/" + s.id) : to(s.id, step + 1));
+  $("#next").addEventListener("click", () => step === last ? go("c/" + s.id) : to(s.id, step + 1));
   wire();
 }
 

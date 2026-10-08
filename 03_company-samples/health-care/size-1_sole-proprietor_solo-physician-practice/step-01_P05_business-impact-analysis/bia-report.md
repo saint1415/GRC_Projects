@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (solo primary care physician practice) | **Tier:** Sole Proprietorship (physician-owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Physician-owner, 2026-07-22, with the on-call IT consultant (under BAA) | **Adopted:** Physician-owner, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-20 to 2026-07-22 (EV-030), the 2025 Schedule C (EV-019), the visit volume report (EV-020), the billing company's claims reports (EV-018), and the EHR vendor's SOC 2 system description (EV-024). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the practice depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the practice depends on, how
 - the recovery order in the incident runbook (P08).
 
 ## 2. Business description
-One physician sees about 12 patients a day, 4 days a week, in a leased exam suite in a shared medical office building in Florida. The practice has no employees. The EHR/PM (SYS-01) is vendor SaaS and holds the medical record. Everything else runs on a laptop, a tablet, and a personal phone, plus a consumer email account, a cloud fax service, a billing company, and an answering service. See `../00_company-facts.md` sections 1 to 3.
+One physician sees about 12 patients a day, 4 days a week, in a leased exam suite in a shared medical office building in Florida. The practice has no employees. The EHR/PM (SYS-01) is vendor SaaS and holds the medical record. Everything else runs on a laptop, a tablet, and a personal phone, plus a consumer email account, a cloud fax service, a billing company, and an answering service. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $900 per clinic day.
+Dollar values are scaled to about $180,000 in annual revenue (EV-019) across about 200 clinic days (EV-020), or about $900 per clinic day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,7 +34,7 @@ Dollar values are scaled to about $180,000 in annual revenue, or about $900 per 
 | BP-04 Billing and claims | Moderate | 120 h | 72 h | 24 h |
 | BP-05 Practice administration | Low | 120 h | 72 h | 24 h |
 
-**What drives the values:** patient safety drives BP-01 and BP-02, because the physician cannot safely prescribe without the allergy and medication lists. Revenue drives BP-04 less than time suggests, because payers accept late claims within their filing limits. The 1-hour RPO for BP-01 and BP-02 depends on the EHR vendor's backups (confirmed in the vendor's SOC 2 report, P09). The 24-hour RPO for BP-05 is **not supported today**: downloaded files and clinical photos have no backup (P01 R-012).
+**What drives the values:** patient safety drives BP-01 and BP-02, because the physician cannot safely prescribe without the allergy and medication lists. Revenue drives BP-04 less than time suggests, because payers accept late claims within their filing limits. The 1-hour RPO for BP-01 and BP-02 depends on the EHR vendor's backups (confirmed in the vendor's SOC 2 report, EV-024; reviewed in P09). The 24-hour RPO for BP-05 is **not supported today**: downloaded files and clinical photos have no backup (P01 R-012).
 
 **Single-person dependency (the key finding).** The physician-owner is the only clinician, the only prescriber, the only administrator, and the only person who holds the EHR, email, and device credentials. The EHR's second factor is on the owner's one phone. If the owner is ill, injured, or without the phone, every function above exceeds its MTD at once, and nobody else can reach patients, the EHR, or the vendors. Actions (P01 R-010, due 2026-12-31):
 1. Sign a written coverage arrangement with a nearby physician for urgent patient needs and refills.

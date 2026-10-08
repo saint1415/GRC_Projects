@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Health Care | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes.
 
 ## 1. The organization
 | Item | Fact |
@@ -12,8 +12,9 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Patients | About 2.1 million active patients |
 | Revenue | About $4.8 billion a year (fictional) |
 | Payers | Medicare, Medicaid (4 states), commercial, Medicare Advantage. Section 1557 applies |
-| HIPAA status | **Covered entity** (organized as a single covered entity) |
-| Added at this size | SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106); SOX IT general controls; CMS emergency preparedness for ASCs (42 CFR 416.54); growth by acquisition (8 practices acquired in 2025-2026) |
+| HIPAA status | **Covered entity** (organized as a single covered entity), determined in the intake obligations register (N62-R01): the payer and clearinghouse agreements cover standard electronic transactions (EV-058). Also a business associate for the SL-1 client practices (EV-040) |
+| Added at this size | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106); SOX IT general controls; CMS emergency preparedness for the ASCs (42 CFR 416.54); CLIA for the central lab. Growth by acquisition (8 practices acquired in 2025-2026) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): the FTC Health Breach Notification Rule, 42 CFR 2.16(b), group health plan requirements (45 CFR 164.314(b)), the clearinghouse isolation specification, CIRCIA (not in force) and federal contract clauses do not apply |
 
 ## 2. People (role titles only)
 | Role | Duties |
@@ -28,40 +29,26 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | 8-K materiality decisions (General Counsel chairs) |
 
 ## 3. Systems
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
 | SYS-01 | Enterprise EHR/PM (vendor-hosted) | Single instance; acquired practices migrate within 12 months |
-| SYS-02 | Identity platform (SSO, MFA, privileged access management, identity governance) | Acquired practices' identities are not yet federated at 3 of 8 acquisitions |
+| SYS-02 | Identity platform (SSO, MFA, privileged access management, identity governance) | Acquired practices' identities are not yet federated at 3 of 8 acquisitions (EV-001, EV-006) |
 | SYS-03 | Multi-cloud estate (two public cloud providers, vendor-agnostic) plus 2 colocation data centers | Data warehouse, interface engines, lab information system, patient apps |
 | SYS-04 | Enterprise network (SD-WAN, NAC at 60% of sites) | |
-| SYS-05 | About 20,000 endpoints; about 9,000 networked medical devices | Medical device inventory about 85% complete |
+| SYS-05 | About 20,000 endpoints; about 9,000 networked medical devices | Medical device inventory about 85% complete (EV-011) |
 | SYS-06 | ERP and payroll (SOX-relevant) | SOX IT general controls tested annually |
 | SYS-07 | About 900 third-party vendors (320 with PHI) | Tiered third-party risk program; single clearinghouse for 70% of claims |
 | SYS-08 | AI portfolio (14 use cases) | Governed by an AI council formed in 2025 |
 
 **SSP system (P02):** the *Laboratory Information System (LIS)*, a high-value system that is Moderate, with integrity treated at High for result accuracy, and inherits common controls from the enterprise platform.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
-**In place today:**
-- A mature program aligned to CSF 2.0
-- Annual risk analysis tied to ERM (NIST IR 8286)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- 24x7 SOC
-- PAM
-- Quarterly access certification
-- Immutable backups
-- Annual DR tests for tier-1 systems
-- Tiered vendor reviews
-- Annual SOC 2 Type 2 for its patient-app platform
-- SEC Item 106 disclosure in its 10-K
-
-**Targeted gaps:**
-1. **Acquisition integration.** 3 of 8 acquired practices are still on legacy identity and flat networks, and 2 still run their own EHR instances.
-2. **Clearinghouse concentration.** One clearinghouse handles 70% of claims, and the manual fallback is untested. The industry saw this risk in 2024, when an attack on a major clearinghouse disrupted claims processing nationwide.
-3. **Medical devices.** The inventory is 85% complete, 1,100 devices run unsupported operating systems, and network access control covers 60% of sites.
-4. **AI.** 14 AI use cases, but only 9 have completed council review. Bias testing has been done only on vendor-supplied data.
-5. **Materiality.** The playbook has not been exercised with the disclosure committee since the 2025 acquisitions.
-6. **Legacy.** Two acquired practices' EHR instances lack audit log feeds to the SIEM.
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across the business units, prior Internal Audit and SOX workpapers, regulator correspondence, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against the HIPAA Security Rule and the other applicable rules** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -74,9 +61,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis |
-| 2026-07-13 to 2026-08-28 | Control assessment (internal audit, second-line GRC) |
-| 2026-09-10 | Results to the risk committee |
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | BIA interviews and dependency review |
+| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (gap analysis evidence sampling completed 2026-08-14) |
+| 2026-06-22 to 2026-07-10 | 2026 annual revision of POL-01 to POL-05 drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment (internal audit, second-line GRC): operating tests of controls in force under the 2025 policy set; design review of the draft 2026 revisions |
+| 2026-09-10 | Results to the risk committee; 2026 policy revisions approved (effective 2026-10-01) |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the Phase 2 deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
@@ -118,10 +109,10 @@ These facts were added while building the deliverables. They do not change secti
 
 **Service lines offered to external clients (P09).** SL-1: the patient-app platform, licensed to about 45 independent practices under business associate agreements (the group acts as a business associate for these clients). SL-1 has had an annual SOC 2 Type 2 report (Security, Availability, Confidentiality) since 2024. SL-2: lab reference testing for about 260 external client practices (no SOC 2 report yet).
 
-**42 CFR Part 2.** The group does not operate a federally assisted substance use disorder program. It receives some Part 2 records from outside programs with patient consent and handles them as a lawful holder (42 CFR 2.16(a) policies).
+**42 CFR Part 2.** The group does not operate a federally assisted substance use disorder program. It receives some Part 2 records from outside programs with patient consent and handles them as a lawful holder (42 CFR 2.16(a) policies). Applicability is in the obligations register (N62-R05; EV-057).
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Three members joined after the 2025 acquisitions.
 
-**Employee health plan.** The company's employee group health plan is a separate covered entity handled by the benefits program; it is outside the scope of these deliverables.
+**Employee health plan.** The company's employee group health plan is a separate covered entity handled by the benefits program; it is outside the scope of these deliverables (obligations register N62-R01; EV-061).
 
 **Recording consent.** Recording consent laws differ by state. The group applies all-party prior consent for ambient documentation in all four states, using Florida (Fla. Stat. 934.03(2)(d)) as the worked example.

@@ -11,7 +11,7 @@ The design demonstrates **scalability**. One universal method produces each deli
 | See what has been accomplished | [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md) |
 | Read any sample company as a plain-English story: browse, search by rule, compare sizes, take a guided tour, or run its incident clock | [Sample company explorer](https://saint1415.github.io/GRC_Projects/) (live site). Pick a look, Case Files or Threat Board, and switch at any time; a plain reading mode is also there. Source: `docs/`, rebuilt by `tools/build_explorer.py` |
 | Pick a sample company for a meeting | [03_company-samples/INDEX.md](03_company-samples/INDEX.md), then that company's `README.md` |
-| Learn the best order to build the 10 projects, and how size changes them | [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md) |
+| Learn where the facts come from, the best order to build the 10 projects, and how size changes them | [docs/how-to-build-the-10-projects.md](docs/how-to-build-the-10-projects.md) |
 | Run a meeting from a sample | [docs/meeting-guide.md](docs/meeting-guide.md) |
 | See how a project is done, for any company | [00_universal-framework/projects/](00_universal-framework/projects/) |
 | Understand the plan, decisions, and phase records | [PLAN.md](PLAN.md) |
@@ -25,8 +25,9 @@ Every name says what it holds. A sample company's path reads as **industry / siz
 03_company-samples/
   health-care/                                         industry
     size-3_small_multi-specialty-practice/             company size + what the business does
-      00_company-facts.md                              the facts every project uses (read second)
+      00_company-facts.md                              who the company is (read second)
       README.md                                        one-page meeting brief (read first)
+      step-00_P00_intake/                              step 0: the evidence every finding cites (pilot: Health Care)
       step-01_P05_business-impact-analysis/            build step 1 = Notion project P05
       step-02_P02_system-security-plan/
       ...
@@ -36,7 +37,7 @@ Every name says what it holds. A sample company's path reads as **industry / siz
 ```
 
 - **Sizes:** `size-1_sole-proprietor` (owner only), `size-2_micro` (1-9 employees), `size-3_small` (10 or more employees, within the SBA small-business standard for its industry), `size-4_mid-market` (above the SBA standard, under 1,000 employees), `size-5_enterprise` (1,000 or more), `size-6_multi-sector` (1,000 or more, with divisions in three industries). Definitions: [`01_company-sizes/tiers.csv`](01_company-sizes/tiers.csv).
-- **Steps vs. project numbers:** `step-NN` is the order to build in; `PNN` is the project's number in the Notion list. The [build guide](docs/how-to-build-the-10-projects.md) explains why the order differs.
+- **Steps vs. project numbers:** `step-NN` is the order to build in; `PNN` is the project's number in the Notion list. Step 0 (P00, intake) is not in the Notion list; it collects the dated evidence the other ten cite. The [build guide](docs/how-to-build-the-10-projects.md) explains the order.
 - **Done vs. planned:** a folder with `00_company-facts.md` is a finished sample. Other folders hold the brief and blank templates, ready to fill in.
 
 ## How it is organized (macro to granular)

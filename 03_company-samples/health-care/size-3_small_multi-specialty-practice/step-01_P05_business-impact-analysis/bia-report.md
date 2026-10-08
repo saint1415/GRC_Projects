@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (multi-specialty physician practice) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Security Officer) with the Clinic Managers and Billing Manager | **Approved:** Practice Administrator, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-032), FY2025 revenue report (EV-028), visit volume report (EV-029), backup job reports (EV-011). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Practice Administrator.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the practice depends on, how long each can be down, and how much data it can lose. It supports:
@@ -14,7 +15,7 @@ This BIA identifies which business processes the practice depends on, how long e
 The practice runs two Florida clinics with 60 employees and about 240 visits per clinic day. Clinical and billing work runs on the Clinical and Revenue Cycle Platform (CRCP): a SaaS EHR/PM, an identity provider, a cloud tenant (imaging archive, interface engine, backups), clinic networks, endpoints, and medical devices. See `../00_company-facts.md` sections 3-4.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $9.6 million in annual revenue, about $38,400 per clinic day.
+Dollar values are scaled to $9.6 million in annual revenue across 250 clinic days, about $38,400 per clinic day (EV-028).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

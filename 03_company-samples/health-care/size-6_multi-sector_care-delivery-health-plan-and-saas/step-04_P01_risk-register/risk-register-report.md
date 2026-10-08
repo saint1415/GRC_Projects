@@ -13,7 +13,7 @@
 | Approved | 2026-09-10 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that creates, receives, maintains, or transmits ePHI or customer PHI in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), and the group cloud and data platform (SYS-G3). Division systems are SYS-D1 to SYS-D4 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that creates, receives, maintains, or transmits ePHI or customer PHI in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), and the group cloud and data platform (SYS-G3). Division systems are SYS-D1 to SYS-D4 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Care Delivery, the focus division, has the most detailed register.
@@ -30,8 +30,8 @@
 Patient-safety and member-harm risks at High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, interviews with each division's leadership (EV-082 group, EV-083 Care Delivery, EV-084 Health Plan, EV-085 SaaS), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-01 inside the fieldwork window. The gap analyses ran in the same window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -69,9 +69,11 @@ Patient-safety and member-harm risks at High may not be accepted. They must be t
 | HT-001 | Health-Tech SaaS | Tenant isolation defect exposes one customer's data to another | SaaS chief technology officer | 2027-03-31 |
 | HT-003 | Health-Tech SaaS | AI feature launched without updated SOC 2 system description or customer BAAs | SaaS general manager | 2026-11-30 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-31; it confirmed existing risks and added none, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
+
 ### What the results say
 The program is mostly sound. There are no Very High risks, and most control families are in place: a 24x7 SOC, PAM, quarterly access certification, and immutable backups. The High risks cluster around **what the group shares**, not around any one division's basics:
-1. **The Group Data Platform** (GR-01) holds PHI for two covered entities in mixed zones. Purpose-based access is inconsistent, and minimum-necessary enforcement between divisions has not been verified (scenario gap 1).
+1. **The Group Data Platform** (GR-01) holds PHI for two covered entities in mixed zones. Purpose-based access is inconsistent, and minimum-necessary enforcement between divisions has not been verified (group gap 1).
 2. **AI governance** (GR-04) has fallen behind deployment in all three divisions (gaps 3 and 4).
 3. **Shared-service incidents** (GR-02, and the Moderate risk GR-03) would trigger two covered entities' breach duties, SaaS customer notices, state insurance notices, and an SEC materiality decision at once (gap 5).
 

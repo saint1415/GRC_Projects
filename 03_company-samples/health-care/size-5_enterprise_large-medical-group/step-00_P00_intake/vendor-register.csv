@@ -1,0 +1,32 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"Enterprise EHR/PM, portal back end, e-prescribing, read-only downtime service",SYS-01,ePHI,"Contract with BAA; RTO 4 h, RPO 15 min",SOC 2 Type 2; failover test observed 2026-04-18,EV-022; EV-038,Tier 1
+V-02,Identity platform vendor,"SSO, MFA, PAM, identity governance",SYS-02,Workforce identities,Subscription agreement,Vendor SOC 2 in the vendor register,EV-034; EV-035,Tier 1
+V-03,Cloud provider A,"IaaS and PaaS for the LIS, interface engines and outreach portal",SYS-03; SYS-03-LIS; SYS-03-IE; SYS-03-OP,ePHI,Customer agreement with BAA,SOC 2 Type 2; shared responsibility documentation,EV-036; EV-038,Subservice organization for SL-2
+V-04,Cloud provider B,PaaS and AI services for the patient app and data warehouse,SYS-03; SYS-03-APP; SYS-03-DW; AI-008,ePHI,Customer agreement with BAA and no-training terms for AI services,SOC 2 Type 2; shared responsibility documentation,EV-036; EV-038,Subservice organization for SL-1
+V-05,Colocation providers (DC-1 and DC-2),"Data center space, power and physical security",SYS-03; SYS-03-PACS,Hosted equipment (ePHI at rest),Colocation agreements,SOC 2 Type 2 reports,EV-038; EV-070,72-hour generator fuel contracts
+V-06,Primary clearinghouse,"Claims, eligibility and remittance (70% of claims)",SAAS-CH,ePHI,BAA and services agreement,"SOC 2 Type 2, reviewed annually",EV-037; EV-038; EV-058,No contracted fallback capacity elsewhere
+V-07,Secondary clearinghouse,"Claims for 18% of volume, including AQ-06 to AQ-08",SAAS-CH,ePHI,Legacy contract from acquisitions; no surge capacity clause,Not listed in the reports on file,EV-037; EV-034,
+V-08,LIS software vendor,"LIS software, support and remote troubleshooting through PAM",SYS-03-LIS,ePHI (support access),BAA and support agreement,Report for the remote support service requested; not received at intake,EV-036; EV-034,Open request
+V-09,Instrument and analyzer vendors (9 platforms),"Analyzers, firmware, maintenance and remote support",SYS-05-MD,ePHI (support access),Service agreements,None on file,EV-015; EV-034,4 platforms use the vendor's own always-on remote tool
+V-10,Courier and specimen tracking vendor,Specimen pickup and tracking events,SYS-03-LIS,Specimen manifests (ePHI),Contract,No SOC report on file,EV-034,Open request
+V-11,Reference laboratory,Send-out testing,SYS-03-IE,ePHI,BAA and interface agreement,Per vendor register,EV-036; EV-055,
+V-12,Managed security service provider (MSSP),SOC overflow analysis,SIEM,Security logs (may contain PHI),Services agreement with BAA,Per vendor register,EV-020; EV-034,Read-only roles through PAM
+V-13,PACS vendor,PACS and RIS software and support,SYS-03-PACS,ePHI,Support agreement with BAA,Per vendor register,EV-034; EV-070,
+V-14,Radiology AI vendors,CT triage and mammography CAD,AI-002; AI-003,ePHI,BAAs,Vendor-supplied performance data,EV-035; EV-049,
+V-15,Ophthalmic AI vendor,Autonomous diabetic retinopathy screening,AI-004,ePHI,BAA,Vendor-supplied performance data,EV-035; EV-049,
+V-16,AI scribe vendor,Ambient clinical documentation,AI-001,ePHI (visit audio),BAA with no-training and audio deletion terms,Per vendor register,EV-035; EV-051,About 650 providers enrolled
+V-17,Enterprise generative AI service vendor,Workforce AI assistant,AI-013,PHI in the approved tenant,BAA with no-training terms,Per vendor register,EV-035; EV-036,
+V-18,Coding and revenue cycle software vendors,Coding suggestions; denial prediction,AI-007; AI-011,ePHI,BAAs,Per vendor register,EV-035,
+V-19,HR software suite vendor,"Recruiting, including resume ranking feature",AI-012,Applicant PII,Subscription agreement,Per vendor register,EV-035; EV-050,Not a business associate
+V-20,Security tooling vendor,SOC alert triage assistant,AI-014,Security logs,BAA,Per vendor register,EV-034; EV-049,
+V-21,ERP and payroll SaaS vendor,"Finance, supply chain and payroll",SYS-06,Employee PII; financial data,Subscription agreement,SOC 1 and SOC 2 reports,EV-038; EV-035,SOX-relevant
+V-22,Productivity suite vendor,"Email, files, chat",SAAS-PROD,ePHI (incidental),Subscription with BAA,SOC 2 Type 2,EV-038; EV-071,
+V-23,Telephony carrier and telehealth vendor,Contact center telephony and video visits,SAAS-TEL,ePHI,Carrier contract; telehealth agreement with BAA,Per vendor register,EV-065; EV-034,Single primary carrier
+V-24,National e-prescribing network,Prescription routing,SYS-01,ePHI,Through the EHR vendor,Industry network,EV-065,No alternative network
+V-25,HIE organizations and release-of-information vendor,Record exchange and release,SYS-03-IE,ePHI,Participation agreements; BAA,Per vendor register,EV-055; EV-034,
+V-26,AQ-07 and AQ-08 legacy EHR vendors,Legacy EHR software and support,AQ-07-EHR; AQ-08-EHR,ePHI,Inherited agreements (in the inherited contract set),None on file,EV-023; EV-034,Contract RTO 24 h
+V-27,Local IT support firms (AQ-06 to AQ-08),"Directory, desktop and incident support at acquired sites",SYS-02-L,ePHI (administrative access),Inherited agreements (in the inherited contract set),None on file,EV-006; EV-034,
+V-28,Inherited acquisition vendors (23 contracts),Various services at acquired practices,Various,Possibly PHI,23 contracts with no review record,None on file,EV-034,BAA status requested at intake
+V-29,Certified media destruction vendor,Drive and device destruction,SYS-05-EP,PHI on media,Service agreement,Certificates of destruction,EV-043,
+V-30,Breach notice mail vendor and statement print vendor,Notice letters and patient statements,n/a,PHI (names and addresses),Contracts with BAA,Per vendor register,EV-036; EV-033,
+V-31,Cyber insurer,Cyber insurance,n/a,Incident information when notified,Policy,n/a,EV-063,Approval needed before any ransom payment

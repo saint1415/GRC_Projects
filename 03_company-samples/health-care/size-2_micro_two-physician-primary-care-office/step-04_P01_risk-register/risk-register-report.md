@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the owner physician |
 
 ## 1. Scope and risk framing
-**Scope.** The whole practice and its key vendors. That covers every system that creates, receives, maintains, or transmits ePHI (SYS-01 to SYS-08 in `../00_company-facts.md`), the office suite, and the vendors that handle ePHI for the practice: the EHR vendor, the MSP, the productivity suite vendor, the cloud fax vendor, the backup service, and the AI scribe vendor.
+**Scope.** The whole practice and its key vendors. That covers every system that creates, receives, maintains, or transmits ePHI (SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the office suite, and the vendors that handle ePHI for the practice: the EHR vendor, the MSP, the productivity suite vendor, the cloud fax vendor, the backup service, and the AI scribe vendor ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
@@ -22,8 +22,8 @@
 This is the practice's first documented risk analysis since a 2019 consultant checklist. The 2019 checklist did not rate likelihood or impact and is not relied on.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), and interviews with both physicians, the Office Manager, the Billing Specialist, the Front Desk Coordinator, and the MSP lead technician (2026-07-20 to 2026-07-31).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, and interviews with both physicians, the Office Manager, the Billing Specialist, the Front Desk Coordinator, and the MSP lead technician (2026-07-20 to 2026-07-31, EV-041). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the payroll and contracts records, the walk-through, the account comparison of 2026-07-21 (EV-042) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a practice with about $4,400 of revenue per clinic day and about 3,500 patients, a breach of every patient record or a week-long closure is rated High or Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,9 +51,11 @@ Status: 9 In progress, 11 Open, 3 Closed (R-006 treated; R-020 and R-021 accepte
 **The common theme is ransomware.** The practice cannot yet detect an intrusion quickly (R-001), does not know every place PHI sits (R-002), and gives one outside party administrator access to every device (R-013). The treatments for these three also reduce R-003, R-005, R-007, and R-015.
 
 **Risks that were fixed or found during the work:**
-- R-006: the productivity suite BAA was accepted in the admin console on 2026-08-14. The risk is closed.
-- R-004: the former MA's account was disabled on 2026-07-21, the day it was found. The EHR and email sign-in logs showed no use after the termination date, so the Office Manager (Privacy Officer) documented that no breach occurred. The process gap remains open.
-- R-023: added on 2026-08-12 after P07 testing found that the MSP had excluded the procedure-room workstation from patching since April 2026.
+- R-006: the productivity suite BAA was accepted in the admin console on 2026-08-14 (EV-048). The risk is closed.
+- R-004: the former MA's account was disabled on 2026-07-21, the day the account comparison found it (EV-042). The EHR and email sign-in logs showed no use after the termination date, so the Office Manager (Privacy Officer) documented that no breach occurred. The process gap remains open.
+- R-023: added on 2026-08-12 after P07 testing found that the MSP had excluded the procedure-room workstation from patching since April 2026 (EV-SI-2).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the owner physician; about $4,800 one-time and $4,300 a year):**

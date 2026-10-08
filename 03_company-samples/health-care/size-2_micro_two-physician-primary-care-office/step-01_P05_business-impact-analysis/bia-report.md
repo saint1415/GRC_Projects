@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (primary care office, two physicians) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (Privacy and Security Officer) with both physicians, the Billing Specialist, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** owner physician, 2026-08-31
+**Sources:** process owner interviews 2026-07-20 to 2026-07-22 (EV-040), FY2025 revenue and cash report (EV-030), visit volume and charges report (EV-031), backup job report (EV-015), EHR vendor SOC 2 report (EV-021), MSP service contract (EV-018). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the owner physician.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the practice, how long each can be down, and how much data each can lose. It supports:
@@ -13,10 +14,10 @@ This BIA lists every business function of the practice, how long each can be dow
 The CMS emergency preparedness conditions (42 CFR 482.15 and the parallel rules) do not apply: physician offices are not among the covered provider types. The HIPAA contingency plan standard is the driver here.
 
 ## 2. System and business description
-One Florida office suite, 7 employees, about 3,500 active patients, and about 40 visits per clinic day. Nearly everything runs in vendor SaaS: the EHR/PM with portal, e-prescribing, and clearinghouse (SYS-01), the productivity suite (SYS-02), and cloud fax (SYS-06). On site are 10 computers and 2 tablets (SYS-03), the office network (SYS-04), and the ECG machine and spirometer (SYS-07). The MSP runs IT. See `../00_company-facts.md` sections 3 and 7.
+One Florida office suite, 7 employees, about 3,500 active patients, and about 40 visits per clinic day. Nearly everything runs in vendor SaaS: the EHR/PM with portal, e-prescribing, and clearinghouse (SYS-01), the productivity suite (SYS-02), and cloud fax (SYS-06). On site are 10 computers and 2 tablets (SYS-03), the office network (SYS-04), and the ECG machine and spirometer (SYS-07). The MSP runs IT. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 per clinic day.
+Dollar values are scaled to about $1.1 million in annual revenue across 250 clinic days, about $4,400 per clinic day (EV-030).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -46,7 +47,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 p
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 EHR/PM (SaaS) | Chart, schedule, portal, e-prescribing, lab interface, clearinghouse | EHR vendor's backups and replication (vendor SOC 2 report states RPO 15 minutes; see P09) | BP-01, BP-02, BP-03, BP-06, BP-07 |
+| SYS-01 EHR/PM (SaaS) | Chart, schedule, portal, e-prescribing, lab interface, clearinghouse | EHR vendor's backups and replication (vendor SOC 2 report states RPO 15 minutes, EV-021; see P09) | BP-01, BP-02, BP-03, BP-06, BP-07 |
 | SYS-02 Productivity suite (SaaS) | Email and the shared drive | Vendor service resilience; shared drive copied nightly to SYS-05 | BP-05, BP-07, BP-08 |
 | SYS-05 File-sync backup (SaaS) | Nightly copy of the shared drive, 30 days of versions | **Never restore-tested** | BP-08 |
 | SYS-06 Cloud fax (SaaS) | Inbound and outbound fax | Faxes queue at the vendor | BP-05 |
@@ -59,8 +60,8 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 p
 | Vendor | Functions that stop without it | BAA | Evidence of recovery capability |
 |---|---|---|---|
 | EHR vendor (with its clearinghouse, e-prescribing network, and lab interface) | BP-01, BP-02, BP-03, BP-06 | Yes | SOC 2 Type 2 report reviewed (P09); RTO 4 h and RPO 15 min meet this BIA |
-| MSP | Recovery of every on-site system; operates the backup | Yes | No written recovery commitment; the MSP contract has only a 4-business-hour response time |
-| Productivity suite vendor | BP-05, BP-07, BP-08 | Accepted 2026-08-14 | Vendor service commitments (standard terms) |
+| MSP | Recovery of every on-site system; operates the backup | Yes | No written recovery commitment; the MSP contract has only a 4-business-hour response time (EV-018) |
+| Productivity suite vendor | BP-05, BP-07, BP-08 | Accepted 2026-08-14 (EV-048) | Vendor service commitments (standard terms) |
 | Backup service (MSP subcontractor) | Restore of the shared drive | Through the MSP (flow-down not verified) | None until the first restore test |
 | Cloud fax vendor | BP-05 | Yes | Vendor service commitments |
 | Internet provider | Every SaaS function | Not a business associate (conduit) | None; single line |

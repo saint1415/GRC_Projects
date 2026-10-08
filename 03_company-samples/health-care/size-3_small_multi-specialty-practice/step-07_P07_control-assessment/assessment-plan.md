@@ -37,6 +37,17 @@ Small tier scope: 15-25 controls. **22 controls, 164 determination statements.**
   - antivirus alert routing
   - a TLS scan of external services
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31. A control that a draft policy introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 75 |
+| Design | The control is new (the 2026 risk analysis, or a draft policy); its design was reviewed. Operation is tested at the 2027-02 follow-up | 9 |
+| Not implemented | Nothing existed to test | 80 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 5 sampled terminations come from the 7 in EV-003 and EV-004).
+
 ## 3. Rules of engagement
 - No testing that could disrupt patient care. Medical device tests happened after hours, with the Clinic A Manager present.
 - No ePHI was copied off-site. Screenshots were redacted.

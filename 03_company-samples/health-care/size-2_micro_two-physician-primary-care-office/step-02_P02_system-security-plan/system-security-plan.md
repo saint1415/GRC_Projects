@@ -71,7 +71,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the practice controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the practice controls or pays someone to control on its behalf:
 - **Inside:** the practice's EHR tenant configuration and user roles (SYS-01), the productivity suite tenant and shared drive (SYS-02), 12 devices (SYS-03), the office network (SYS-04), the practice's backup subscription (SYS-05), the cloud fax account (SYS-06), and the ECG machine, spirometer, and their workstation (SYS-07).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers, the clearinghouse and e-prescribing network (reached through the EHR vendor), the reference laboratory, the MSP's remote management platform, and the AI scribe service (SYS-08, a pilot assessed separately in P10).
 
@@ -112,10 +112,10 @@ By responsibility: 19 system-specific (the practice), 19 hybrid (the practice wi
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the practice relies on | Evidence | What the practice must still do |
 |---|---|---|---|
-| EHR vendor | Platform security, encryption, backups (CP-9), session timeout (AC-12), audit records (AU-2, AU-11), account lockout (AC-7) | SOC 2 Type 2 report reviewed 2026-08-20 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, MFA enforcement, access report review |
-| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation; BAA accepted 2026-08-14 | Account management, MFA settings, forwarding and sharing settings, log review |
-| Cloud fax vendor | Encrypted transmission and storage (SC-8) | Vendor documentation; BAA | Account management; recipient verification |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), device encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
+| EHR vendor | Platform security, encryption, backups (CP-9), session timeout (AC-12), audit records (AU-2, AU-11), account lockout (AC-7) | SOC 2 Type 2 report (EV-021) reviewed 2026-08-20 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, MFA enforcement, access report review |
+| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-038); BAA accepted 2026-08-14 (EV-048) | Account management, MFA settings, forwarding and sharing settings, log review |
+| Cloud fax vendor | Encrypted transmission and storage (SC-8) | Vendor documentation (EV-038); BAA (EV-017) | Account management; recipient verification |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), device encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports (EV-012); P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
 | Backup service (MSP subcontractor) | Storage of shared-drive copies (CP-9) | None yet; restore test due 2026-09-30 | Confirm subcontractor BAA through the MSP |
 
 **Inherited does not mean done.** Two of the EHR vendor's complementary user entity controls are open gaps at the practice: account removal (AC-2, PS-4) and access report review (AU-6).
@@ -127,7 +127,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Workforce users sign in to the EHR and the productivity suite with a password and a second factor (a phone authenticator app). This is appropriate for access to ePHI at the Moderate category. Number matching for push approvals is being enabled (P01 R-003). Patients use the EHR vendor's portal with its own identity proofing; that is governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and EHR vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and EHR vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

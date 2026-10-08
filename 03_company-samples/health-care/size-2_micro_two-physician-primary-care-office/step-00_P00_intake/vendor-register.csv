@@ -1,0 +1,14 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,EHR vendor,"EHR/PM, patient portal, e-prescribing, lab interface, clearinghouse connection",SYS-01,ePHI,BAA signed; EHR vendor agreement,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-017; EV-019; EV-021,
+V-02,Clearinghouse,"Claims, eligibility and remittance",SYS-01 (through the EHR vendor),ePHI,None with the practice; engaged by the EHR vendor as its subcontractor,Carved out of the EHR vendor's SOC 2 report,EV-019; EV-021,
+V-03,E-prescribing network,Electronic prescriptions,SYS-01 (through the EHR vendor),ePHI,None with the practice; reached through the EHR vendor,Carved out of the EHR vendor's SOC 2 report,EV-019; EV-021,
+V-04,Reference laboratory,Lab orders and results,SYS-01 (EHR lab interface),PHI (treatment),None with the practice; orders and results flow through the EHR vendor's lab interface,None on file,EV-019,Treatment disclosure between providers
+V-05,Productivity suite vendor,Email and files,SYS-02,ePHI,"BAA offered in the admin console, not accepted at intake; accepted 2026-08-14 (EV-048)",Vendor security documentation,EV-005; EV-022; EV-038,
+V-06,Managed service provider (MSP),"Help desk, patching, antivirus, firewall, Wi-Fi, backup administration",SYS-03; SYS-04; SYS-05; SYS-07,ePHI (administrative access),BAA signed; service contract,None on file,EV-017; EV-018; EV-022,Remote management tool reaches every computer
+V-07,Backup vendor (MSP subcontractor),Cloud file-sync backup,SYS-05,ePHI,"None with the practice; the MSP BAA requires a subcontractor BAA, none provided",Vendor security documentation (through the MSP),EV-015; EV-017; EV-038,Subscription resold by the MSP
+V-08,Cloud fax vendor,Cloud fax,SYS-06,ePHI,BAA signed,Vendor security documentation,EV-008; EV-017; EV-038,
+V-09,AI scribe vendor,Ambient clinical documentation,SYS-08,ePHI,Draft BAA under review; vendor standard terms,None on file,EV-017; EV-023,Trial since 2026-06-01; no charges on the card statements
+V-10,Internet provider,One business internet line,SYS-04,ePHI in transit (conduit),Service agreement,None,EV-022; EV-032,Not a business associate (conduit)
+V-11,Phone carrier,Office phone line,n/a,Calls,Service agreement,None,EV-022; EV-032,
+V-12,Payroll service,Biweekly payroll,n/a,Workforce payroll data (no PHI),Service agreement,None on file,EV-001; EV-022,
+V-13,Cyber insurer and panel vendors,Cyber liability policy; breach hotline; panel breach counsel and forensics,n/a,PHI only during an incident engagement,Insurance policy,n/a,EV-022; EV-028,Policy requires prompt notice and use of panel vendors

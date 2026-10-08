@@ -7,7 +7,7 @@
 | AI use case | AI-001: ambient clinical documentation (AI scribe) pilot, 3 providers since June 2026 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Medical Director (Privacy Officer) with the IT Manager, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounts payable list, the identity provider app list, the EHR configuration and a staff survey (EV-020, EV-031, EV-005). How many staff use public chatbots was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Medical Director. **Decision authority:** Practice Administrator (Medium tier). Majority owner if re-tiered High.

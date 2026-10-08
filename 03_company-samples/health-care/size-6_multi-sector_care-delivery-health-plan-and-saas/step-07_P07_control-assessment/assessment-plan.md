@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The Group Data Platform's** system-specific controls were assessed because it is the SSP system and carries the top group risk (GR-01).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-The Health Plan was sampled on governance controls (PL-1, CA-2) because its inheritance is undocumented (scenario gap 6) and its standards have drifted (gap 2).
+The Health Plan was sampled on governance controls (PL-1, CA-2) because its inheritance is undocumented (group gap 6) and its standards have drifted (gap 2).
 
 ## 2. Controls selected
 **39 control assessments** (36 distinct controls; AC-3, CP-9, and SA-9 were assessed in two scopes), **261 determination statements**.
@@ -25,9 +25,9 @@ The Health Plan was sampled on governance controls (PL-1, CA-2) because its inhe
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Every division's access control; GR-07 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1; Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-12; scenario gap 5 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-12; group gap 5 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-8, SC-12, SC-28, CM-6 | 22 | GR-02; immutable backups and guardrails | Focused / Focused |
-| Group Data Platform | AC-3, AC-4, AC-6, PT-3, CM-8, CP-4 | 20 | GR-01 (High); scenario gap 1 | Comprehensive / Comprehensive |
+| Group Data Platform | AC-3, AC-4, AC-6, PT-3, CM-8, CP-4 | 20 | GR-01 (High); group gap 1 | Comprehensive / Comprehensive |
 | Division sample: Care Delivery | AU-6, SI-2, CP-2, SA-9 | 43 | CD-001, CD-006, CD-007, CD-017; ASC plans (42 CFR 416.54) | Focused / Focused (4 regions, 3 of 14 ASCs) |
 | Division sample: Health Plan | PL-1, CA-2, AU-11, CP-9 | 35 | Gaps 2 and 6; HP-003, HP-005 | Focused / Focused |
 | Division sample: Health-Tech SaaS | SA-9, CM-3, CM-4, SA-11, AC-3 | 28 | HT-001, HT-003 (High); gap 4 | Focused / Focused |
@@ -45,6 +45,17 @@ The Health Plan was sampled on governance controls (PL-1, CA-2) because its inhe
   - a TLS scan of 60 endpoints and an external exposure scan of the landing zones;
   - cross-tenant access attempts in SaaS test tenants.
 
+### What each test could show
+The group policies v2026 (P06), the incident response plan v5 and the multi-regulator notification matrix were drafts during fieldwork; the board risk committee approved them on 2026-09-10, effective 2026-10-01. Controls that the 2025 group policies already required were tested for operation. Statements that rest on the v2026 drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before 2026 under the 2025 group policies and was tested on samples, configurations, or live systems | 236 |
+| Design | The statement rests on a draft (IR-8: incident response plan v5; IR-6: the notification matrix and POL-03 v2026); its design was reviewed. Operation is tested at the 2027-04 follow-up | 19 |
+| Not implemented | Nothing existed to test (GDP purpose-change review, PT-3; monitoring of imaging vendor tunnels and of the model provider, SA-9; AI feature accuracy testing, SA-11; confirmation of inherited controls for the Health Plan, CA-2) | 6 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-006, and the 6 analyst roles from the platform role report in EV-027).
+
 ## 4. Rules of engagement
 - No testing that could affect patient care, claims payment, or SaaS customers. Tests ran in non-production tenants where possible; the GDP egress test used synthetic data.
 - No PHI left group systems. Screenshots were redacted.
@@ -60,9 +71,9 @@ The Health Plan was sampled on governance controls (PL-1, CA-2) because its inhe
 | Division sample: Health-Tech SaaS | 23 | 5 | 28 |
 | **Total** | **222** | **39** | **261** |
 
-**Common controls are strong.** 122 of 135 common statements were satisfied. Identity (IA-2, IA-2(1), AC-2(3), AC-6(5)), cloud protection (CP-9, SC-7, SC-8, SC-12, SC-28), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 5.
+**Common controls are strong.** 122 of 135 common statements were satisfied. Identity (IA-2, IA-2(1), AC-2(3), AC-6(5)), cloud protection (CP-9, SC-7, SC-8, SC-12, SC-28), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is group gap 5.
 
-**The Group Data Platform is where the risk is.** AC-3, AC-4, and AC-6 were fully other than satisfied, and 3 of 6 PT-3 statements failed. Test queries under 2 of 6 analyst roles reached the other covered entity's tables (scenario gap 1).
+**The Group Data Platform is where the risk is.** AC-3, AC-4, and AC-6 were fully other than satisfied, and 3 of 6 PT-3 statements failed. Test queries under 2 of 6 analyst roles reached the other covered entity's tables (group gap 1).
 
 **Division samples:**
 - *Care Delivery:* late patching at legacy sites and unsupported devices (SI-2), contingency plans that assume short outages (CP-2), unmonitored imaging vendor tunnels (SA-9), and no activity review for the legacy EHR (AU-6).

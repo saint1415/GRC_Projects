@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the Practice Administrator (Moderate and below) and the majority owner (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Clinical and Revenue Cycle Platform (CRCP) and the business processes in the BIA (P05). That covers every system that creates, receives, maintains, or transmits ePHI at both clinics, plus the vendors that handle ePHI for the practice (`../00_company-facts.md` section 3).
+**Scope.** The Clinical and Revenue Cycle Platform (CRCP) and the business processes in the BIA (P05). That covers every system that creates, receives, maintains, or transmits ePHI at both clinics, plus the vendors that handle ePHI for the practice ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 This is the practice's first documented risk analysis since 2021.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, interviews with the Clinic Managers and Billing Manager, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, the intake evidence, and interviews with the Clinic Managers and Billing Manager (EV-033). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the ticket history (EV-017), configuration exports, walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables, not assigned by hand.
 
@@ -47,7 +47,7 @@ This is the practice's first documented risk analysis since 2021.
 
 The three High risks share one theme: **the practice could not recover from a ransomware attack today.** Detection is weak (R-001), the backups are exposed (R-005), and a trusted vendor has broad access (R-022). Fixing these three also reduces six related Moderate risks (R-002, R-007, R-013, R-017, R-019, R-021) and one Low risk (R-026).
 
-R-031 was added on 2026-08-07 after control assessment testing (P07) found manufacturer default passwords on four vital-sign monitors.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-031 was added on 2026-08-07 after testing found manufacturer default passwords on four vital-sign monitors (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 budget, $48,000):**

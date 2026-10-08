@@ -1,0 +1,13 @@
+asset_id,asset,asset_type,hosting,owner,data_types,regulated_data,users_or_count,source_evidence,notes
+SYS-01,Electronic health record and practice management (EHR/PM) with patient portal and e-prescribing,service,Vendor SaaS,Medical Director (clinical); Billing Manager (revenue cycle),Clinical records; schedules; claims,ePHI,60 workforce users; patient portal,EV-005; EV-019; EV-020; EV-022,System of record
+SYS-02,Identity provider (single sign-on and MFA),service,SaaS,IT Manager,Workforce identities,None (identities only),60 workforce accounts; 3 cloud administrators,EV-001; EV-002,"Signs users in to SYS-01, SYS-03 and SYS-04"
+SYS-03,"Productivity suite (email, files, chat)",service,SaaS,IT Manager,Email; files,ePHI (incidental),60 users,EV-030,Staff email PHI to referring offices
+SYS-04,"Cloud tenant: imaging archive, interface engine, backup vault",service,IaaS/PaaS (public cloud provider),IT Manager,X-ray images; lab and claims interface messages; backups,ePHI,3 workloads,EV-010; EV-011; EV-023,Backup vault in the same region and account as production
+SYS-05,Clinic networks (Clinic A and Clinic B),network,On-premises,IT Manager,Network traffic,ePHI (in transit),2 sites,EV-008,"Firewalls, switches and Wi-Fi; site-to-site VPN to SYS-04; single ISP at Clinic B"
+SYS-06,Endpoints,hardware,On-premises,IT Manager,Cached records; documents,ePHI (cached),58 desktops; 12 laptops; 12 tablets,EV-006,
+SYS-07,"Medical devices: X-ray unit and modality workstation, 6 ECG carts, networked vital-sign monitors",hardware,On-premises,Clinic A Manager,Images; vital signs; ECG traces,ePHI,1 modality; 6 ECG carts; networked monitors,EV-009,On the clinic user network
+SYS-08,Clearinghouse,service,Vendor SaaS,Billing Manager,Claims; eligibility; remittance,ePHI,Billing staff,EV-020; EV-021; EV-024,Standard electronic transactions
+SYS-09,Reference laboratory interface,service,Vendor,Medical Director,Lab orders and results,ePHI,Through the SYS-04 interface engine,EV-020; EV-021,
+SYS-10,Cloud fax and telehealth video,service,Vendor SaaS,Practice Administrator,Faxed records; video visits,ePHI,Front desk; providers,EV-020; EV-021,
+SYS-11,Ambient clinical documentation (AI scribe),ai,Vendor SaaS,Medical Director,Visit audio; transcripts; draft notes,ePHI,3 providers (pilot since June 2026),EV-020; EV-021; EV-031,
+AI-PUB,Public generative AI chatbots used by staff,ai,Consumer web services,Practice Administrator,Unknown; drafts of letters,Unknown,Staff (number not established),EV-031,Found through the staff survey; not purchased by the practice

@@ -13,11 +13,11 @@
 ## 1. Why SOC 2 for this organization
 A two-physician office is **not** a SOC 2 service organization. It treats patients; it does not provide services to other businesses. The Trust Services Criteria are used here for two practical reasons.
 
-**A. Answering a questionnaire.** In July 2026 a local hospital's referral network sent the practice a security questionnaire. The network shares patients and referral information with its member offices and asked about security and availability. Its questions follow the Trust Services Criteria. The practice will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30.
+**A. Answering a questionnaire.** In July 2026 a local hospital's referral network sent the practice a security questionnaire (EV-029). The network shares patients and referral information with its member offices and asked about security and availability. Its questions follow the Trust Services Criteria. The practice will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30.
 
 **The practice will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the practice's controls were defined in August 2026. An audit would also cost far more than the network asked for. The network accepted a self-assessment in its questionnaire instructions.
 
-**B. Relying on the EHR vendor.** The EHR vendor carries most of the practice's inherited controls (P02 section 10.2). Its SOC 2 Type 2 report is the evidence for those controls, and reviewing it each year is part of vendor oversight under 45 CFR 164.308(b) and SA-9.
+**B. Relying on the EHR vendor.** The EHR vendor carries most of the practice's inherited controls (P02 section 10.2). Its SOC 2 Type 2 report (EV-021) is the evidence for those controls, and reviewing it each year is part of vendor oversight under 45 CFR 164.308(b) and SA-9.
 
 **Why Availability and not another category.** The referral network needs to know it can reach the practice and that referrals will not be lost. The practice cannot see patients without the EHR and the internet (P05). Confidentiality of patient information is covered under the Security criteria and the HIPAA Privacy Rule. Processing Integrity and Privacy were not requested.
 

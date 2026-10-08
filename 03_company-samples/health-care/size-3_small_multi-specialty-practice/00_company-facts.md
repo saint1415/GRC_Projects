@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Health Care | Small
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. Where a fact comes from a regulation or standard, the citation is given.
+All 11 deliverables in this folder use the facts below. The company is fictitious. Where a fact comes from a regulation or standard, the citation is given.
 
 ## 1. The organization
 
@@ -13,8 +13,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Patients | About 18,000 active patients; about 240 visits per clinic day |
 | Revenue | $9.6 million a year (fictional). Under the SBA standard of $16.0 million for NAICS 621111, so SBA-small |
 | Payers | Medicare, Florida Medicaid, and commercial plans. Medicaid is federal financial assistance, so Section 1557 of the Affordable Care Act applies (45 CFR Part 92) |
-| HIPAA status | **Covered entity.** A health care provider that transmits claims electronically through a clearinghouse (45 CFR 160.103) |
-| Not in scope | 42 CFR Part 2: the practice does not run a federally assisted substance use disorder program. Group health plan requirements (45 CFR 164.314(b)): the practice does not administer a group health plan. Payment card data: card terminals are a vendor-hosted, point-to-point encrypted service outside the ePHI systems |
+| HIPAA status | **Covered entity**, determined in the intake obligations register (N62-R01): the clearinghouse agreement covers standard electronic transactions (EV-024) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): 42 CFR Part 2, the FTC Health Breach Notification Rule, CMS emergency preparedness conditions, and group health plan requirements do not apply. Payment card data: card terminals are a vendor-hosted, point-to-point encrypted service outside the ePHI systems |
 | State law approach | Florida law is cited only where a Florida duty is unavoidable (breach notification, Fla. Stat. 501.171). The samples otherwise stay federal |
 
 ## 2. People (role titles only)
@@ -32,6 +32,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Hosting | Holds ePHI? | Notes |
 |---|---|---|---|---|
 | SYS-01 | Electronic health record and practice management (EHR/PM) with patient portal and e-prescribing | Vendor SaaS | Yes | System of record. The vendor is a business associate with a SOC 2 Type 2 report |
@@ -48,37 +50,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **SSP system (P02):** the *Clinical and Revenue Cycle Platform (CRCP)*: SYS-01, SYS-02, SYS-04, SYS-05, SYS-06, SYS-07, and their interfaces to SYS-08 and SYS-09.
 
-## 4. Current security posture: partially compliant
+## 4. Where the evidence is
 
-**In place today:**
-- MFA for email, the EHR, and the cloud console
-- Unique user IDs in the EHR
-- A BAA with the EHR vendor, clearinghouse, MSP, and reference lab
-- Automatic OS patching on endpoints
-- Antivirus (signature-based)
-- Badge access at Clinic A
-- A paper shredding vendor
-- New-hire HIPAA training
-- Full-disk encryption on laptops, but not on desktops
-- Daily backups of SYS-04 workloads, stored in the same cloud region
-- The EHR vendor's own backups
-
-**Missing or weak, found in the 2026 assessments:**
-1. No documented security risk analysis since 2021 (Required, 164.308(a)(1)(ii)(A)).
-2. Security policies are a 2019 template, never adopted or reviewed.
-3. No review of audit logs or EHR access reports.
-4. No written incident response plan. Incidents are handled ad hoc.
-5. No contingency plan, downtime procedure, or backup restore test. Backups sit in the same region and account as production.
-6. The X-ray modality workstation uses a shared login and runs an unsupported operating system version.
-7. Desktop workstations are unencrypted.
-8. No BAAs with the cloud fax or telehealth vendors. The AI scribe vendor's BAA is still under legal review.
-9. Accounts of departing staff are disabled within about 5 business days, with no same-day process.
-10. No vulnerability scanning. Signature antivirus only (no endpoint detection and response).
-11. Training happens only at hire. There are no periodic security reminders or phishing exercises.
-12. Clinic B uses keyed locks, and no log is kept of who holds the keys.
-13. Hard drives are destroyed without certificates of destruction.
-14. Clinical staff have no approved-tools list for generative AI.
-15. Four networked vital-sign monitors still use the manufacturer's default admin password (found during P07 testing).
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the HIPAA Security Rule** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -93,6 +70,9 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 | Date | Event |
 |---|---|
-| 2026-07-13 to 2026-07-24 | Security risk analysis and gap analysis fieldwork |
-| 2026-08-03 to 2026-08-07 | Control assessment fieldwork |
-| 2026-08-31 | Deliverables approved by the Practice Administrator |
+| 2026-06-29 to 2026-07-10 | Intake: evidence requests, exports, walk-throughs, inventories, obligations register |
+| 2026-07-13 to 2026-07-24 | BIA interviews, security risk analysis and gap analysis fieldwork |
+| 2026-07-27 to 2026-07-31 | Policies drafted from the gaps |
+| 2026-08-03 to 2026-08-07 | Control assessment fieldwork: operating tests of controls already in place; design review of the draft policies |
+| 2026-08-31 | Deliverables and policies approved by the Practice Administrator |
+| 2027-02 (planned) | Follow-up assessment: operating effectiveness of the controls the new policies introduced, after at least one quarter of operation |

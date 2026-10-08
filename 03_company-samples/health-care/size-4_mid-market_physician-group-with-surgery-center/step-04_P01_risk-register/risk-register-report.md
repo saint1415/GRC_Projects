@@ -11,7 +11,7 @@
 | Approved | 2026-09-15: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (8 clinics, the ASC, the imaging center, the central business office, and enterprise functions), the Enterprise Clinical Platform (ECP, SYS-01 to SYS-08), the 140 vendors with PHI access (SYS-09), and the AI tools (SYS-10). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and control assessment (P07).
+**Scope.** All business units (8 clinics, the ASC, the imaging center, the central business office, and enterprise functions), the Enterprise Clinical Platform (ECP, SYS-01 to SYS-08), the 140 vendors with PHI access (SYS-09), and the AI tools (SYS-10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,8 +35,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $250,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Health Care overlay and HHS 405(d) threat themes (ransomware, email phishing, medical device attacks, third-party compromise), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Health Care overlay and HHS 405(d) threat themes (ransomware, email phishing, medical device attacks, third-party compromise), the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the IT Director, the Security Manager and the MSSP (EV-054). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-031), scan results (EV-015), phishing results (EV-033), configuration exports, the walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, patient safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -67,6 +67,8 @@ Cyber insurance ($10 million limit, $250,000 retention) transfers part of the fi
 | R-019 | AI scribe recording without documented all-party consent | High | Consent notice, script, EHR field, monthly audit | Chief Medical Officer | 2026-11-30 |
 | R-037 | MSSP or EHR vendor remote access used as a supply-chain entry point | High | Annual SOC 2 and CUEC review; vendor access through the access broker | vCISO | 2027-03-31 |
 | R-050 | PACS vendor service accounts with domain administrator rights (found in P07) | High | Remove rights; managed service accounts; vault secrets | Security Manager | 2026-10-31 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-050 was added on 2026-08-14 after testing found 3 PACS vendor service accounts with domain administrator rights and non-expiring passwords (EV-AC-6, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **Recovery and segmentation (R-001, R-003, R-009, R-014 to R-016, R-050).** The company can detect attacks (EDR, MSSP, SIEM) and its backups are isolated, but it has not proven it can recover its own workloads, and flat networks at 5 sites would let an attack reach medical devices.

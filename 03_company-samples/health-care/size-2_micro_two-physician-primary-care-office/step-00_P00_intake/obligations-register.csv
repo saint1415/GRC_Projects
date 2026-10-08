@@ -1,0 +1,11 @@
+obligation_id,obligation,citation,applies,basis,source_evidence,analyzed_in
+N62-R01,HIPAA Security Rule,"45 CFR Part 164, Subpart C",Yes,"A health care provider that transmits health information electronically in standard transactions is a covered entity (45 CFR 160.103). The practice sends claims and eligibility requests electronically through the EHR vendor's clearinghouse. No size exemption; 164.306(b) affects how, not whether",EV-019; EV-020,P03
+N62-R02,HIPAA Privacy Rule,"45 CFR Part 164, Subpart E",Yes,Same covered entity status,EV-019,P06; P08; P10
+N62-R03,HIPAA Breach Notification Rule,45 CFR 164.400-164.414,Yes,Same covered entity status,EV-019,P08
+N62-R04,HIPAA Security Rule NPRM (2025),90 FR 898 (2025-01-06); RIN 0945-AA22,No (proposed only),Not a final rule; tracked for planning,n/a,P03 (pending changes)
+N62-R05,42 CFR Part 2 (SUD records),42 U.S.C. 290dd-2; 42 CFR Part 2,No,The practice runs no federally assisted substance use disorder program; none appears in the payer agreements or services,EV-020; EV-031,n/a
+N62-R06,FTC Health Breach Notification Rule,16 CFR Part 318,No,16 CFR 318.1 excludes HIPAA covered entities; the practice is not a vendor of personal health records,EV-019,n/a
+N62-R07,Section 1557: patient care decision support tools,42 U.S.C. 18116; 45 CFR 92.210,Yes,The practice receives HHS federal financial assistance through Florida Medicaid. The EHR decision support reminders use age and sex as inputs; the AI scribe is in scope only if suggestion features are enabled,EV-020; EV-039,P10
+N62-R08,CMS Emergency Preparedness conditions,42 CFR 482.15 and parallel rules,No,"The conditions apply to hospitals and 16 other certified provider types, not to physician offices",EV-020,n/a
+N62-R09,HIPAA applicability to social assistance,45 CFR 160.103,No,"The practice is a physician office, not a social assistance organization",EV-031,n/a
+FL-501.171,Florida Information Protection Act (breach notification),Fla. Stat. 501.171,Yes,The practice holds personal information of Florida residents,EV-031,P08

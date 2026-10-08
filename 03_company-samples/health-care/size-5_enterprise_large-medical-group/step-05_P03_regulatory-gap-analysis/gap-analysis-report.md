@@ -10,15 +10,17 @@
 | Approved | Chief Compliance Officer and CISO, 2026-08-21; roadmap reviewed by the risk committee of the board, 2026-09-10 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with counsel's review (EV-060). This section restates the results for the rules analyzed here.
+
 | Regulation | Applies? | Basis |
 |---|---|---|
 | HIPAA Security Rule (N62-R01) | **Yes** | Health care provider that transmits health information electronically in standard transactions, so a covered entity (45 CFR 160.103). No size exemption; 164.306(b) affects how, not whether. Also a business associate for the 45 SL-1 client practices |
 | HIPAA Breach Notification Rule (N62-R03) | **Yes** | Covered entity (164.404-164.408) and business associate (164.410) |
 | HIPAA Privacy Rule (N62-R02) | **Yes** | Covered entity; only safeguard-related provisions are in scope here |
 | SEC Item 1.05 and Item 106 | **Yes** | Publicly traded SEC registrant, not a smaller reporting company |
-| 42 CFR 416.54 (N62-R08) | **Yes, for the 6 ASCs** | ASC condition for coverage. The clinics, imaging centers, and lab are not provider types covered by the CMS emergency preparedness rule; they follow the enterprise contingency program |
+| 42 CFR 416.54 (N62-R08) | **Yes, for the 6 ASCs** | ASC condition for coverage. The clinics, imaging centers, and lab are not provider types covered by the CMS emergency preparedness rule; they follow the enterprise contingency program (EV-059) |
 | 45 CFR 92.210 (N62-R07) | **Yes** | Receives federal financial assistance (Medicare, Medicaid) and operates a health program |
-| CLIA (42 CFR Part 493) | **Yes, for the central lab** | CLIA-certified laboratory. Only the test report (493.1291) and retention (493.1105) provisions that depend on the LIS are analyzed |
+| CLIA (42 CFR Part 493) | **Yes, for the central lab** | CLIA-certified laboratory (EV-059). Only the test report (493.1291) and retention (493.1105) provisions that depend on the LIS are analyzed |
 | 42 CFR Part 2 (N62-R05) | **Partly** | Not a Part 2 program; a lawful holder of records received from outside programs (2.16(a) applies; 2.16(b) does not) |
 | FTC HBNR (N62-R06) | **No** | 16 CFR 318.1 excludes HIPAA covered entities and business associates acting as such |
 | State breach and data security laws | **Yes** | The law of each state where affected individuals reside; Florida (Fla. Stat. 501.171) is the worked example |
@@ -31,7 +33,7 @@ HIPAA exclusions (Not applicable): 164.308(a)(4)(ii)(A), because the group perfo
 ## 2. Method
 1. **Decompose.** HIPAA Security Rule requirements and their Required and Addressable types come from NIST SP 800-66 Rev. 2 (all 69 rows in the Health Care crosswalk). Other regulations were broken into citation-level duties from the eCFR text (retrieved 2026-09-23 versions for 42 CFR 416.54, 42 CFR 493.1291 and 493.1105, 42 CFR 2.16, 45 CFR 92.210, 45 CFR 164.404, and 17 CFR 229.106), the SEC's compliance guide for Item 1.05, and the Florida statute text.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. HIPAA rows use the Health Care crosswalk (an author mapping, because NIST's official mapping is not yet published for CSF 2.0). Other rows are author mappings and are labeled that way.
-3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random. **40 rows were tested by sampling or full-population analytics; 16 found exceptions.**
+3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random. **40 rows were tested by sampling or full-population analytics; 16 found exceptions.** Current state was established from the intake evidence (exports, documents and records from the enterprise systems of record, EV-001 to EV-074), gap analysis interviews with control owners (EV-080), the samples, analytics and walk-throughs of 10 sites and the 6 ASCs (EV-081 to EV-086), the external TLS scan (EV-087), the AI inventory review (EV-088), and, where Internal Audit had already tested a control, its P07 results (for example EV-AC-2 and EV-IR-4). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Rate.** Met, Partially met, Not met, or Not applicable. Each gap is rated with the P01 scale and carries an owner and date. High gaps are in the P01 register and the P07 POA&M.
 
 **Addressable is not optional.** For each addressable specification, the group implements it, implements an equivalent, or documents why neither is reasonable and appropriate (164.306(d)(3)). All addressable gaps below are being implemented; none is documented as unreasonable.
