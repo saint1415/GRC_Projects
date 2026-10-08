@@ -38,3 +38,16 @@ Kept as is, because it was realistic: P04 after P02; P08 assembled from P05 and 
 - observations contain no judgment words;
 - the facts file has no pre-stated posture section;
 - every P07 result has a test type and every risk has a likelihood basis and a pass.
+
+## Rollout log
+
+Industries are converted one at a time after the pilot. Each batch records what the conversion cost and which pre-existing inconsistencies the dated evidence exposed. Findings, counts and risk levels were not changed during conversion; the inconsistencies below are left for a separate fix.
+
+### Healthcare and Public Health (critical infrastructure), 2026-10-08
+
+Six samples, 605 evidence rows in all. Agent cost: about 2.6 million tokens; the longest sample took 31 minutes.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **Size 2 (independent pharmacy):** the EPCS audit report is treated as on file in P03 and P07 but was obtained on 2026-08-12; two MSP reports labelled July fell inside a fieldwork window that ended in July; a backup console finding called "new from testing" in P07 already appears in pass 1 of the risk register and the SSP.
+- **Size 4 (hospital):** the SSP gives 6 legacy VPNs without written terms in one place and 3 in another; a July backup sample is cited by P03 after its fieldwork ended; two pass-1 risks quote P07 results; P07 marks a plan approval Satisfied although the approval came after fieldwork.
+- **Size 5 (hospital system):** P07 calls the risk analysis approved before P01 was approved; the 24-hour recovery target is said to come from the BIA, which ran after the restore test it is measured against; one gap row says the unified program has covered all 8 hospitals since 2024, although one hospital joined in 2026.
