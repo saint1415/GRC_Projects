@@ -434,6 +434,6 @@ Phase 5 filled every remaining cell of the matrix: the Sole Proprietorship, Micr
 
 1. **Unverified research rows.** A small number of vertical rows are marked `verified=false`. `tools/validate.py` counts them. Confirm each against its source before using it in a deliverable.
 2. **Industry picks.** The 36 primary industries and 22 tier substitutions are proposals in two CSVs. Change any pick and rebuild.
-3. **Multi-Sector pairings.** 33 of the 36 Multi-Sector division pairings were proposed for this project and are now built. Review them in `02_industry-rules/multi-sector-divisions.csv`; changing one means rebuilding that sample.
+3. **Multi-Sector pairings: reviewed 2026-10-08.** All 36 pairings are kept; three samples gained missing facts (utility holding company and affiliate rules for Utilities and Critical Manufacturing, state lending licenses for Retail Trade). See `docs/reviews/2026-10-multi-sector-pairings-review.md`. Changing a pairing still means rebuilding that sample.
 4. **Office formats.** If you want Word or PDF versions of a finished sample for a meeting, that is a later export step.
 5. **External review backlog.** The October 2026 architecture review and our response are in `docs/reviews/2026-10-gemini-architecture-review-response.md`. Fixes A to G and backlog items 1 to 3 are applied (size-1 compensating-control rows, size-6 tenancy decisions, nuclear license-transfer rows). Still open: reading the DoD class deviations (2024-O0013 and the reported CMMC Phase 2 suspension, 2026-O0025) at the primary source; see the watch list.

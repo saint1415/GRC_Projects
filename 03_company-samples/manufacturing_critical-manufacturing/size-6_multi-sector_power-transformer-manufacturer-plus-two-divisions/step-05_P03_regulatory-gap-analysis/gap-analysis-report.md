@@ -32,6 +32,8 @@
 - **Other utility registry rows** (TSA pipeline directives N22-R02, NRC 10 CFR 73.54 N22-R03, SDWA section 1433 N22-R04): no pipeline, no generation or NRC license, no water system (EU-G50 to EU-G52).
 - **Professional services registry rows** for Grid Engineering (FTC Safeguards Rule N54-R01, tax preparer rules N54-R02 and R03, HIPAA N54-R06): the division is not a financial institution, prepares no tax returns, and holds no PHI (ES-G23, ES-G24, ES-G26). N54-R07 and N54-R08 (professional conduct rules for lawyers and CPAs, both unverified in the registry) were not relied on; they do not fit an engineering firm.
 
+**Holding company and affiliate rules (context, not cyber rules).** FERC's holding company rules (18 CFR 366.2 to 366.4), its rule on affiliate purchases by a transmission-owning utility (18 CFR 35.44(b)(2)), and the Florida PSC affiliate transaction rule (Fla. Admin. Code R. 25-6.1351) govern how the Electric Utility prices and records what it buys from its sister divisions. They are not security requirements, so they are not scored here. They matter here because the intercompany agreements behind those purchases are also where the group's security terms for its sister divisions belong (see `00_company-facts.md`).
+
 ## 2. Regulation-by-division matrix
 | Requirement | Transformer Manufacturing | Electric Utility | Grid Engineering | Group (corporate) |
 |---|---|---|---|---|
