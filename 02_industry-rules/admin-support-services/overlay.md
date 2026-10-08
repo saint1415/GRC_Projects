@@ -29,7 +29,7 @@ Source: https://www.nist.gov/cyberframework
 | Obligation | Citation | Deadline | Notify |
 |---|---|---|---|
 | [Business associate breach notice](https://www.ecfr.gov/current/title-45/section-164.410) | 45 CFR 164.410 | No later than 60 calendar days after discovery | HIPAA covered entity client |
-| [State data breach notification]() | State statutes (all 50 states) | Varies by state | Affected residents; often the state AG/regulator and consumer reporting agencies |
+| [State data breach notification (Florida worked example)](http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0501/Sections/0501.171.html) | Fla. Stat. 501.171(3)-(5). Each other state where affected residents live applies its own statute (not reviewed here) | Individuals: as expeditiously as practicable and no later than 30 days after determination of the breach or reason to believe one occurred (15 more days if good cause is given in writing to the department within 30 days). Department of Legal Affairs: no later than 30 days, if 500 or more Floridians. Consumer reporting agencies: without unreasonable delay, if more than 1,000 individuals | Affected Florida residents; Florida Department of Legal Affairs (500 or more); nationwide consumer reporting agencies (more than 1,000) |
 | [CIRCIA covered cyber incident / ransom payment report (proposed) - NOT YET IN EFFECT; final rule pending](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia) | proposed 6 CFR 226.5 | 72 hours after reasonable belief a covered incident occurred; 24 hours after a ransom payment | CISA |
 
 ## Sector context
