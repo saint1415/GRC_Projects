@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the Farm Manager (Moderate and below) and the majority owner and General Manager (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Farm Management and Irrigation Control Platform (FMICP) defined in the SSP (P02), the ten business processes in the BIA (P05), and the systems that hold personal and regulated records: payroll and H-2A files, Produce Safety records, telematics location history, and online customer data (`../00_company-facts.md` section 3).
+**Scope.** The Farm Management and Irrigation Control Platform (FMICP) defined in the SSP (P02), the ten business processes in the BIA (P05), and the systems that hold personal and regulated records: payroll and H-2A files, Produce Safety records, telematics location history, and online customer data ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Operations and Technology Manager may accept.
@@ -21,8 +21,8 @@
 This is the farm's first documented cybersecurity risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, interviews with the Farm Manager, Irrigation Technician, Food Safety and Packing Lead, and Office and HR Manager, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, the intake evidence, and interviews with the Farm Manager, Irrigation Technician, Food Safety and Packing Lead, and Office and HR Manager (EV-048). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the MSP ticket history (EV-041), configuration exports, supplier terms, the walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, regulatory, safety, reputation). Season matters: impact was rated for the December to June harvest season, when the farm earns most of its receipts.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -53,7 +53,7 @@ Fixing the four High risks also reduces six related Moderate risks: R-005, R-013
 
 **Food defense note.** R-005 (fertigation manipulation) is the only risk where intentional adulteration of produce is plausible. 21 CFR Part 121 (N11-R01) does not apply to the farm (P03 section 1), but its vulnerability-assessment approach was used as a voluntary checklist for that risk.
 
-R-014 was added on 2026-08-07 after control assessment testing (P07) found manufacturer default passwords on the LoRaWAN gateway and two pivot panel modems.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-014 was added on 2026-08-07 after testing found manufacturer default passwords on the LoRaWAN gateway and two pivot panel modems (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $31,500):**

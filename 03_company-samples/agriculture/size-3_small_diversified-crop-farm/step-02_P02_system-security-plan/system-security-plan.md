@@ -70,7 +70,7 @@ SP 800-60's information type catalog is built for federal missions and has no fa
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems or to organizations that develop software (for example, the SA-11 developer testing control).
 
 ## 7. Authorization Boundary Description
-The boundary contains farm-managed components and the farm's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains farm-managed components and the farm's configuration of vendor services:
 - **Inside:** the SYS-01 tenant configuration and user roles, the identity provider tenant, the cloud tenant (3 workloads), the headquarters and pump-house networks, the pivot cellular modems and LoRaWAN gateway, 8 laptops, 3 desktops, 11 tablets and phones, the PLC, HMI, pivot panels, valve controllers, sensors, and cooler alarm sensors.
 - **Outside (external services, interconnected):** the FMIS vendor's platform, the cloud provider's infrastructure, the equipment dealer's telematics portal (SYS-08), the agronomy analytics vendor (SYS-12), the cooler alarm service, the cellular carriers, and the integrator's own systems.
 - **Outside and not interconnected:** accounting and payroll (SYS-10) and sales systems (SYS-11).
@@ -124,7 +124,7 @@ Office and management users authenticate through the identity provider with a pa
 Two exceptions are not acceptable and are on the POA&M: the SYS-01 mobile app signs in with a password only (vendor MFA to be enabled, R-006), and the integrator's remote tool uses one shared account without MFA (POAM-002). Crew leads will use named accounts with a device PIN on managed tablets, which is proportionate for entering tally records on a farm-owned device.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and FMIS vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and FMIS vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **EDR:** endpoint detection and response

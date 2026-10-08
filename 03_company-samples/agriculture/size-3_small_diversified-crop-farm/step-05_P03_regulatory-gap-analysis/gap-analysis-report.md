@@ -12,7 +12,7 @@
 | Workbook | `gap-analysis.csv` (124 rows) |
 
 ## 1. Applicability
-**Step 1 was to find the rule that binds the farm. None of the candidates is a cybersecurity rule that applies to this farm.**
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here. **Step 1 was to find the rule that binds the farm. None of the candidates is a cybersecurity rule that applies to this farm.**
 
 | Candidate | Applies? | Why (citation) |
 |---|---|---|
@@ -36,7 +36,7 @@
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the eCFR text current as of 2026-09-23 and the 2026 Florida Statutes, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the farm's CSF Target Profile (High 36, Medium 39, Low 31), set by the security lead and the majority owner from the risk register (P01) and BIA (P05).
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (CSF 2.0 to SP 800-53 Rev. 5.2.0, SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`. The `sp800_53_controls` column is a key-control subset chosen by the author. Regulation rows use an author mapping (no official NIST mapping exists).
-4. **Evidence.** Interviews (majority owner, Farm Manager, Operations and Technology Manager, Irrigation Technician, Food Safety and Packing Lead, Office and HR Manager, 6 other staff, the MSP technician), document review, configuration exports, a sample of 20 harvest records, and a walkthrough of headquarters, the pump house, and the North Block on 2026-07-20.
+4. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts, and the walk-throughs of both blocks on 2026-07-08 and 2026-07-09), gap analysis interviews with the majority owner, Farm Manager, Operations and Technology Manager, Irrigation Technician, Food Safety and Packing Lead, and Office and HR Manager (EV-049), interviews with 6 other staff (EV-050), the MSP technician and the integrator's field engineer (EV-053), an account and records review with a sample of 20 harvest records (EV-051), and a walkthrough of headquarters, the pump house, and the North Block on 2026-07-20 (EV-052). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Current CSF Tier: Tier 1 (Partial).** Security has been ad hoc and informal. **Target: Tier 2 (Risk Informed) by 2027-08**, meaning practices approved by the majority owner and driven by the risk register, which is realistic for a 15-person farm with a part-time security lead.

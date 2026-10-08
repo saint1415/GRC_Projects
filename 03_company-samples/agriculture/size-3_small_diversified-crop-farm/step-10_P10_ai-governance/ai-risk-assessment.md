@@ -7,7 +7,7 @@
 | AI use case | AI-001: computer-vision yield prediction from drone imagery (agronomy analytics SaaS, SYS-12), piloted on 14 acres of strawberries and 18 acres of watermelons in the 2025-26 season |
 | Framework | NIST AI RMF 1.0 (AI 100-1). The model is a computer-vision model, not generative AI, so the Generative AI Profile (AI 600-1) was not applied to AI-001; it applies to AI-003 in the inventory |
 | Assessor / date | Farm Manager (business owner) with the Operations and Technology Manager, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the vendor payments report, the AI vendor's sign-up email and terms, the SYS-01 irrigation module settings and a staff survey (EV-025, EV-029, EV-006, EV-045). How many office staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Farm Manager. **Decision authority:** Farm Manager for Medium-tier use cases, with the majority owner and General Manager informed; the majority owner decides if a use case is re-tiered High.
@@ -25,7 +25,7 @@
 | Purpose and intended use | Estimate weekly marketable yield per block, 1 to 3 weeks ahead, from fruit and flower counts detected in drone images. Used to plan harvest crew hours and to set weekly volume commitments to the distributor |
 | Users / operators | Equipment and Drone Specialist (flies weekly missions, uploads orthomosaics); Farm Manager (planning); Sales and Farm Stand Coordinator (distributor commitments) |
 | Affected people | Harvest crews, including 4 H-2A workers, whose offered hours follow the harvest plan; the distributor, which buys against the commitments; people who appear incidentally in field images |
-| Data | **Inputs:** RGB and multispectral orthomosaics, block boundaries, variety and planting dates, and historical block yields (block totals from tally, never per-worker data). **Outputs:** block-level yield estimates with a confidence range and image overlays showing detected fruit. **Training:** the vendor's model was trained mainly on imagery from other growing regions; the vendor fine-tunes per customer. **The vendor's click-through terms allow it to use farm imagery and yields to improve its models (P01 R-026)** |
+| Data | **Inputs:** RGB and multispectral orthomosaics, block boundaries, variety and planting dates, and historical block yields (block totals from tally, never per-worker data). **Outputs:** block-level yield estimates with a confidence range and image overlays showing detected fruit. **Training:** the vendor's model was trained mainly on imagery from other growing regions; the vendor fine-tunes per customer. **The vendor's click-through terms allow it to use farm imagery and yields to improve its models (EV-029; P01 R-026)** |
 | Build or buy | Buy: vendor SaaS. Estimates are exported to a planning spreadsheet; there is no connection to SYS-01 or to irrigation |
 | Not intended | Setting the number of H-2A workers in a job order; reducing crew hours without the Farm Manager's review; evaluating individual workers; crop insurance or USDA program reporting; driving irrigation or variable-rate application. Each of these would require re-assessment |
 

@@ -4,7 +4,7 @@
 **System:** Farm Management and Irrigation Control Platform (FMICP), as defined in the SSP (P02)
 
 ## 1. Diagram
-The diagram shows the environment **as found in July 2026**. Items marked "gap" are on the POA&M (P07). The dashed line from the integrator is the always-on remote access path that the redesign removes.
+The diagram shows the environment **as found in July 2026**, drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and configuration exports (EV-010, EV-011, EV-022, EV-023). Items marked "gap" are on the POA&M (P07). The dashed line from the integrator is the always-on remote access path that the redesign removes.
 
 ```mermaid
 flowchart LR
@@ -82,8 +82,8 @@ Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_un
 - **OT is always the farm's.** No cloud shared responsibility model covers the PLC, HMI, or field devices. SP 800-82 Rev. 3 (SRC-800-82) is the reference for those rows.
 
 ## 4. Findings from the mapping
-1. **The cloud edge is the OT edge (SC-7, SC-8).** The data collector on the HMI sends pump, flow, and weather data to the data hub VM over the internet without encryption. The VM accepts that traffic only from the farm's public IP address (confirmed in the network rule export), which limits exposure, but the data is readable in transit and the HMI needs an internet path. Fix: site-to-site VPN from the headquarters firewall to the tenant, and move the collector to a small OT gateway on the segmented OT network so the HMI itself has no internet route. Tracked as P01 R-022 and POAM-006.
-2. **Backup isolation (CP-9).** The backup vault shares the production account, region, and administrators. Fix: a separate backup account with immutable retention in a second region, plus a monthly SYS-01 record export and versioned PLC and HMI program backups. Tracked as P01 R-003 and R-015, and POAM-003.
-3. **SaaS configuration is the farm's job (SI-4, AU-6).** SYS-01 can alert on irrigation schedule and setpoint changes, but the alerts are switched off. Turning them on is a customer responsibility and costs nothing. Tracked as POAM-011.
-4. **Inherited controls rely on vendor SOC 2 reports.** Rows marked "Provider" for SYS-01 depend on the FMIS vendor's SOC 2 Type 2 report, reviewed in P09. Its complementary user entity controls (MFA, user removal, audit review) are open gaps at the farm.
-5. **Imagery storage (AC-3).** The bucket holding drone orthomosaics is private and shared with the AI vendor through a time-limited signed link per upload (confirmed). Keep it that way; do not make the bucket public for convenience.
+1. **The cloud edge is the OT edge (SC-7, SC-8).** The data collector on the HMI sends pump, flow, and weather data to the data hub VM over the internet without encryption. The VM accepts that traffic only from the farm's public IP address (confirmed in the network rule export, EV-022), which limits exposure, but the data is readable in transit and the HMI needs an internet path. Fix: site-to-site VPN from the headquarters firewall to the tenant, and move the collector to a small OT gateway on the segmented OT network so the HMI itself has no internet route. Tracked as P01 R-022 and POAM-006.
+2. **Backup isolation (CP-9).** The backup vault shares the production account, region, and administrators (EV-022, EV-023). Fix: a separate backup account with immutable retention in a second region, plus a monthly SYS-01 record export and versioned PLC and HMI program backups. Tracked as P01 R-003 and R-015, and POAM-003.
+3. **SaaS configuration is the farm's job (SI-4, AU-6).** SYS-01 can alert on irrigation schedule and setpoint changes, but the alerts are switched off (EV-006). Turning them on is a customer responsibility and costs nothing. Tracked as POAM-011.
+4. **Inherited controls rely on vendor SOC 2 reports.** Rows marked "Provider" for SYS-01 depend on the FMIS vendor's SOC 2 Type 2 report (EV-031), reviewed in P09. Its complementary user entity controls (MFA, user removal, audit review) are open gaps at the farm.
+5. **Imagery storage (AC-3).** The bucket holding drone orthomosaics is private and shared with the AI vendor through a time-limited signed link per upload (confirmed in the bucket policy export, EV-022). Keep it that way; do not make the bucket public for convenience.

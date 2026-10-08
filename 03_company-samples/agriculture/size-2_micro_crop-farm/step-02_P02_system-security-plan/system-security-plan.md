@@ -75,7 +75,7 @@ SP 800-60's information type catalog is built for federal missions and has no fa
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with IT staff and software development (for example, configuration change boards, separate development environments, and developer testing). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the farm controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). It contains what the farm controls or pays someone to control on its behalf:
 - **Inside:** the farm's SYS-01 tenant configuration and user roles, the productivity suite tenant and Office folder (SYS-02), 8 devices (SYS-03), the shop network (SYS-04), the pump station, gateway, pivot panels, probes, flow meters, and weather station (SYS-05), and the farm's backup subscription (SYS-08).
 - **Outside (external services, interconnected):** the FMIS vendor's platform and the pivot manufacturer's connectivity service behind it, the cellular carriers, the MSP's remote management platform, the equipment dealer's telematics portal (SYS-06), the drone and imagery (SYS-07), and the agronomy analytics vendor (SYS-09, a pilot assessed in P10).
 - **Outside and not interconnected:** accounting and payroll (SYS-10). Payroll exports and H-2A documents reach the Office folder by download, so the Office folder is inside the boundary.
@@ -119,11 +119,11 @@ By responsibility: 27 system-specific (the farm), 14 hybrid (the farm with a ven
 ### 10.2 Inherited, MSP-provided, and dealer-provided controls
 | Provider | What the farm relies on | Evidence | What the farm must still do |
 |---|---|---|---|
-| FMIS vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit trail (AU-2), the pivot connectivity service | SOC 2 Type 2 report received 2026-08-18 and reviewed (P09) | Complementary user entity controls: user provisioning and removal, MFA for every user, review of audit and change reports, protection of the devices that run the app |
-| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation | Accounts, MFA for every mailbox, forwarding and sharing settings, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9) | Monthly MSP report; P07 evidence requests | Oversight: approve exceptions, read the monthly report, annual MSP review (P01 R-021) |
-| Irrigation dealer | Pump station programming and gateway configuration (CM-2, MA-4) | Service invoices only | Approve each remote session; hold a copy of the program; security terms in the agreement (POAM-002, POAM-010) |
-| Backup service (resold by the MSP) | Storage of suite copies (CP-9) | None until the first restore test (due 2026-09-30) | MFA on the console; immutable retention |
+| FMIS vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit trail (AU-2), the pivot connectivity service | SOC 2 Type 2 report (EV-052) received 2026-08-18 and reviewed (P09) | Complementary user entity controls: user provisioning and removal, MFA for every user, review of audit and change reports, protection of the devices that run the app |
+| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-038) | Accounts, MFA for every mailbox, forwarding and sharing settings, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9) | Monthly MSP report (EV-012); MSP contract (EV-017); P07 evidence requests | Oversight: approve exceptions, read the monthly report, annual MSP review (P01 R-021) |
+| Irrigation dealer | Pump station programming and gateway configuration (CM-2, MA-4) | Service agreement and invoices only (EV-018, EV-019) | Approve each remote session; hold a copy of the program; security terms in the agreement (POAM-002, POAM-010) |
+| Backup service (resold by the MSP) | Storage of suite copies (CP-9) | Backup settings (EV-015); no restore evidence until the first restore test (due 2026-09-30) | MFA on the console; immutable retention |
 
 **Inherited does not mean done.** Two of the FMIS vendor's complementary user entity controls are open gaps at the farm: MFA for every user (IA-2(1); the Technician's account and the shared field login) and review of audit and change reports (AU-6).
 
@@ -134,7 +134,7 @@ Assessed 2026-08-10 to 2026-08-13 by an independent consultant, with OT tests on
 Office users sign in to the productivity suite with a password and a phone authenticator app, which is appropriate for a Moderate system. Two exceptions are not acceptable and are on the POA&M: the Technician's SYS-01 administrator account, which can start and stop pivots, has no MFA (POAM-008), and the crew shares one SYS-01 login (POAM-001). Crew members will get named SYS-01 accounts with a short PIN on the managed field tablet, which is proportionate for entering hours and Produce Safety records on a farm-owned device.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and FMIS vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and FMIS vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **FMICP:** Farm Management and Irrigation Control Platform

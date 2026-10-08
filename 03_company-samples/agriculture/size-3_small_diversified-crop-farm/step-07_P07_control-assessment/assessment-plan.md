@@ -36,6 +36,17 @@ Small tier scope: 15-25 controls. **21 controls, 179 determination statements.**
   - antivirus test file on 2 laptops and review of where the alert went
   - external scan of the farm's public IP address
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-08-31. A control that a draft policy introduces has not operated yet, so it was reviewed as a draft for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 50 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy or runbook); its design was reviewed. Operation is tested at the next annual review (risk assessment, 6 statements) or the 2027-02 follow-up (draft policies and runbook, 20 statements) | 26 |
+| Not implemented | Nothing existed to test | 103 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 4 sampled departures are all 4 in EV-003, and the 6 sampled account requests are the 6 emails in EV-005).
+
 ## 3. Rules of engagement (OT safety first)
 - **No active scanning of the PLC, VFDs, or pivot controllers.** SP 800-82 Rev. 3 warns that active scans can disrupt OT. Reachability was shown with a single connection attempt to the PLC programming port, not a scan.
 - OT tests ran on 2026-08-05 between 06:00 and 10:00, outside irrigation run times, with the Irrigation Technician present and pumps in local control.
