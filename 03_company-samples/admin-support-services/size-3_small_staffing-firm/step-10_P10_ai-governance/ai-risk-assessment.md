@@ -7,7 +7,7 @@
 | AI use case | AI-001: AI resume screening and candidate ranking add-on to the ATS (SYS-09), in production since 2026-03-02 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; NIST AI 600-1 for the generative feature in AI-002 |
 | Assessor / date | Director of Recruiting with the HR and Compliance Manager and the IT Manager, 2026-08-25; independent statistical review contracted for 2026 Q4 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounts payable list, the ATS marketplace order and configuration, the ATS audit history, and a staff survey with the identity provider app list (EV-035, EV-039, EV-010, EV-050). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Recruiting. **Decision authority:** COO for High-tier AI (this use case). The President is informed of any High-tier AI decision.

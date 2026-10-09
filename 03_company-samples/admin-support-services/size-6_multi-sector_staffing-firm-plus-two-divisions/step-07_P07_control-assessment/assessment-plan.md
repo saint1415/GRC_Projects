@@ -16,21 +16,21 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The Group Workforce Platform's** system-specific and hybrid controls were assessed because it is the SSP system and carries the top group risks (GR-01, GR-05, GR-10).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Home Health was sampled most heavily (60 statements) on governance and resilience controls (PL-1, CA-2, CP-2) and endpoint protection (SI-3), because its inheritance is undocumented (scenario gap 6), its supplement has drifted (gap 3), and its tablets sit outside group endpoint management.
+Home Health was sampled most heavily (60 statements) on governance and resilience controls (PL-1, CA-2, CP-2) and endpoint protection (SI-3), because its inheritance is undocumented (group gap 6), its supplement has drifted (group gap 3), and its tablets sit outside group endpoint management.
 
 ## 2. Controls selected
 **39 control assessments** (36 distinct controls; SC-7, PS-4, and CP-9 were assessed in two scopes), **266 determination statements**.
 
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
-| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Every division's access control; E-Verify accounts (gap 8); GR-07, GR-09 | Focused / Comprehensive (all divisions sampled) |
+| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Every division's access control; E-Verify accounts (group gap 8); GR-07, GR-09 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1; Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 core employees | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-12; scenario gap 5 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-12; group gap 5 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-8, SC-28, CM-6 | 20 | GR-02; immutable backups, tokenization, guardrails | Focused / Focused |
-| Group Workforce Platform | AC-4, AC-6, IA-2(2), PT-3, AU-12, CP-4, SA-9, CM-12 | 30 | GR-01, GR-05, GR-10 (High); scenario gaps 1, 2, 4, 8 | Comprehensive / Comprehensive |
+| Group Workforce Platform | AC-4, AC-6, IA-2(2), PT-3, AU-12, CP-4, SA-9, CM-12 | 30 | GR-01, GR-05, GR-10 (High); group gaps 1, 2, 4, 8 | Comprehensive / Comprehensive |
 | Division sample: Staffing | CM-8, MP-6, AU-6, SC-7 | 19 | ST-006, ST-015; Disposal Rule (16 CFR 682.3) | Focused / Focused (6 branches, 4 on-site offices) |
-| Division sample: Consulting | AC-20, PS-4, CP-9, SI-2 | 24 | CN-001 (High), CN-004; scenario gap 7; FAR 52.204-21 | Focused / Focused (10 engagements; the enclave) |
-| Division sample: Home Health | PL-1, CA-2, SI-3, CP-2 | 60 | HH-002 (High), HH-006 to HH-008; gaps 3 and 6; 42 CFR 484.102 | Focused / Focused (3 agencies in 3 states) |
+| Division sample: Consulting | AC-20, PS-4, CP-9, SI-2 | 24 | CN-001 (High), CN-004; group gap 7; FAR 52.204-21 | Focused / Focused (10 engagements; the enclave) |
+| Division sample: Home Health | PL-1, CA-2, SI-3, CP-2 | 60 | HH-002 (High), HH-006 to HH-008; group gaps 3 and 6; 42 CFR 484.102 | Focused / Focused (3 agencies in 3 states) |
 | **Total** | **39** | **266** | | |
 
 ## 3. Methods and objects
@@ -45,6 +45,17 @@ Home Health was sampled most heavily (60 statements) on governance and resilienc
   - restores of 3 payroll engine tables from the provider B vault and of 2 enclave file shares;
   - a TLS scan of 70 endpoints and an external exposure scan of the landing zones;
   - kiosk network tests at 6 branches; 30 field tablets checked in 3 agencies.
+
+### What each test could show
+The group policies v2026 (P06), including POL-03, were drafts during fieldwork; the board risk committee approved them on 2026-09-10, effective 2026-10-01. Controls that the 2025 group policies, the 2025 incident response plan, and the division supplements already required were tested for operation. Statements that rest on the v2026 drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before the v2026 policies and was tested on samples, configurations, or live systems | 259 |
+| Design | The statement rests on a draft (IR-6: POL-03 v2026 and the notification procedure); its design was reviewed. Operation is tested at the 2027-04 follow-up | 2 |
+| Not implemented | Nothing existed to test (monitoring of purpose changes, PT-3; monitoring of the AI ranking vendor, SA-9; review of VMS tenant logs, AU-6; a register of client-issued accounts, AC-20; assessment of inherited controls for Home Health, CA-2) | 5 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-011, the E-Verify accounts from EV-047, the 40 incident cases from EV-016, the 6 branches from EV-051, the 40 consultant roll-offs from the roll-off log in EV-058, and the 30 tablets from EV-065).
 
 ## 4. Rules of engagement
 - No testing that could affect a payroll run, a client go-live, or patient visits. Bank-change tests ran in a test tenant with synthetic workers.
@@ -61,7 +72,7 @@ Home Health was sampled most heavily (60 statements) on governance and resilienc
 | Division sample: Home Health | 50 | 10 | 60 |
 | **Total** | **221** | **45** | **266** |
 
-**Common controls are strong.** 118 of 133 common statements were satisfied. Identity assurance (IA-2, IA-2(1), AC-2(3), AC-6(5)), cloud protection (CP-9, SC-7, SC-8, SC-28, CM-6), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **accounts outside identity governance** (AC-2, IA-5: E-Verify users and integration service accounts), **monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 5.
+**Common controls are strong.** 118 of 133 common statements were satisfied. Identity assurance (IA-2, IA-2(1), AC-2(3), AC-6(5)), cloud protection (CP-9, SC-7, SC-8, SC-28, CM-6), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **accounts outside identity governance** (AC-2, IA-5: E-Verify users and integration service accounts), **monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is group gap 5.
 
 **The Group Workforce Platform is where the risk is.** AC-4, AC-6, and IA-2(2) were fully other than satisfied: visit-pay records carry patient identifiers into payroll, every payroll role tested could see them, and an SMS code both signs associates in and approves bank changes. A scripted burst of 25 bank changes to one account raised no alert (SI-4). Half of the PT-3 statements failed, and the I-9 archive produced no audit records for test reads (AU-12).
 
@@ -78,4 +89,4 @@ Home Health was sampled most heavily (60 statements) on governance and resilienc
 `poam.csv` has **28 items**: 23 from this assessment and 5 from the P03 gap analyses (POAM-024 to POAM-028). By risk: 6 High (POAM-006 visit-pay patient data, POAM-008 self-service authentication, POAM-017 client-issued accounts, POAM-024 intercompany BAA scope, POAM-025 AI hiring duties from 2027-01-01, POAM-026 Consulting subcontractor BAAs), 21 Moderate, and 1 Low. Status: 21 In progress, 7 Open. Each item names the related P01 risks.
 
 ## 7. Deliverables and acceptance
-`assessment-results.csv` (266 rows, with an `assessment_scope` column), `poam.csv` (28 items), and this plan and summary. Results were presented to the board risk committee and accepted by the Group CISO and the Group Chief Risk Officer on 2026-09-10. Division presidents accepted their division findings the same week.
+`assessment-results.csv` (266 rows, with `test_type` and `assessment_scope` columns), `poam.csv` (28 items), and this plan and summary. Results were presented to the board risk committee and accepted by the Group CISO and the Group Chief Risk Officer on 2026-09-10. Division presidents accepted their division findings the same week.

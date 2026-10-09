@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (temporary staffing firm) | **Tier:** Small (60 internal staff; about 450 associates on assignment weekly) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Lead) with the Payroll Manager, HR and Compliance Manager, and Director of Recruiting | **Approved:** COO, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-14 (EV-051), 2025 receipts and billing report (EV-046), associate payroll summary (EV-047), recruiting and onboarding volume report (EV-048), records listing and snapshot reports (EV-022, EV-023), and vendor recovery statements (EV-036, EV-037). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the COO.
+
 ## 1. Overview and purpose
 This BIA identifies which business processes the firm depends on, how long each can be down, and how much data it can lose. It supports:
 - the contingency plan due 2026-12-31 (CP-2; CSF 2.0 RC.RP), including the manual payroll procedure;
@@ -12,10 +14,10 @@ This BIA identifies which business processes the firm depends on, how long each 
 - the recovery order in the incident response runbook (P08).
 
 ## 2. System and business description
-The firm places temporary associates with about 180 Florida clients from headquarters and 3 other branches. Every week it onboards about 40 new associates, dispatches about 450 to client shifts, collects approved time, and pays them on Friday. Work runs on the Associate Payroll and Applicant Tracking Platform (APATP): a SaaS ATS with the I-9 module and client portal, a SaaS payroll platform, a timekeeping app, an identity provider, and a cloud tenant (integration service, reporting database, document archive, backups). See `../00_company-facts.md` sections 3-4.
+The firm places temporary associates with about 180 Florida clients from headquarters and 3 other branches. Every week it onboards about 40 new associates, dispatches about 450 to client shifts, collects approved time, and pays them on Friday. Work runs on the Associate Payroll and Applicant Tracking Platform (APATP): a SaaS ATS with the I-9 module and client portal, a SaaS payroll platform, a timekeeping app, an identity provider, and a cloud tenant (integration service, reporting database, document archive, backups). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $20.4 million in receipts a year: about $80,000 in billings and about $19,000 in gross margin per business day.
+Dollar values are scaled to $20.4 million in receipts a year across 255 business days: about $80,000 in billings and about $19,000 in gross margin per business day (EV-046).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

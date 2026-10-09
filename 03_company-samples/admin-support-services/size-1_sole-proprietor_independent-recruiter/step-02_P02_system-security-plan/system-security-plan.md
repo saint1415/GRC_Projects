@@ -7,7 +7,7 @@
 Recruiting and Placement Systems Profile (**RPSP**), identifier CSC-SYS-001. This is the business's version of the registry's "payroll and applicant tracking system": the applicant tracking system plus the back-office partner portal that feeds the partner's payroll. The business runs no payroll of its own (`../00_company-facts.md` section 5).
 
 ## 2. System Overview
-The RPSP is everything the owner uses to recruit, submit, and place candidates and to keep 11 contractors on assignment: the recruiting ATS/CRM with its AI match add-on (SYS-01), business email and files (SYS-02), the back-office partner portal (SYS-03), accounting (SYS-04), e-signature (SYS-05), the owner's sourcing accounts (SYS-09), and a consumer AI chatbot (SYS-10), reached from one laptop (SYS-06), a personal phone (SYS-07), and the home network (SYS-08). One person, the owner-recruiter, uses and runs it. There is no server and no IaaS. Platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, and vendor terms (P04).
+The RPSP is everything the owner uses to recruit, submit, and place candidates and to keep 11 contractors on assignment: the recruiting ATS/CRM with its AI match add-on (SYS-01), business email and files (SYS-02), the back-office partner portal (SYS-03), accounting (SYS-04), e-signature (SYS-05), the owner's sourcing accounts (SYS-09), and a consumer AI chatbot (SYS-10), reached from one laptop (SYS-06), a personal phone (SYS-07), and the home network (SYS-08), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). One person, the owner-recruiter, uses and runs it. There is no server and no IaaS. Platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, and vendor terms (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation | Applies? |
@@ -52,7 +52,7 @@ Operational. Planned changes: authenticator-app MFA on email and MFA on the ATS 
 - **Inside:** the owner's accounts, settings, and data in the ATS, email and files, partner portal, accounting, e-signature, sourcing, and chatbot services; the laptop and phone; the home network as used for work; paper in the home office.
 - **Outside (external services):** the SaaS platforms themselves, the partner's payroll, I-9, E-Verify, and background check operations, the job boards and networking site, the internet provider, and the clients' systems.
 
-Diagram: P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-10, AI-001 and OTH-01). Diagram: P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Party | Data | Agreement |
@@ -104,7 +104,7 @@ Self-assessed 2026-07-20 to 2026-07-24 with the IT support technician. See P07.
 Every account the owner holds is an administrator account over personal information, so each needs a second factor that resists phishing as far as the service allows. Today only the accounting SaaS meets that. Email uses SMS codes, which an adversary-in-the-middle page can relay; the partner portal's code goes to that same mailbox; the ATS has no second factor. Target by 2026-09-15: authenticator-app MFA with number matching on email, MFA on the ATS, and the partner portal code moved to the authenticator app if the partner supports it (otherwise protected by the stronger email MFA). Candidates and clients use no accounts in this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and partner report review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and partner report review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **ATS:** applicant tracking system

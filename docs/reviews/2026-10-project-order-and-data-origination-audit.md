@@ -80,3 +80,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market meat processor):** the same 23 of 41 Plant 2 OT change records are cited as P03 evidence (EV-065) and as a P07 test sample.
 - **Size 5 (enterprise meat processor):** G-045 cites a P01 transmittal dated 2026-09-08, after P03 was approved on 2026-08-21.
 - **Size 6 (meat processor plus two divisions):** the Plant 6 walkthrough on 2026-07-14 falls inside the P07 window but is kept as P03 fieldwork; the P04 cloud map's "limited to qualified individuals" wording, logged for Agriculture size 6, does not occur here.
+
+### Administrative and Support Services, 2026-10-09
+
+Six samples, 576 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 31 minutes.
+
+Fixes made during this batch:
+- **Size 1 (independent recruiter):** the home office walk-through moved from 2026-07-21, inside the P07 window, to 2026-07-15 at intake.
+- **Sizes 1 and 4:** EV-IA-2-1 renamed EV-IA-2(1).
+- **Size 6 (staffing firm plus two divisions):** four P07 evidence IDs ran the enhancement number into the control number (EV-C-AC23, EV-C-AC65, EV-C-IA21, EV-G-IA22). Renamed to EV-C-AC2(3), EV-C-AC6(5), EV-C-IA2(1) and EV-G-IA2(2).
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03, P08 and P10 cite regulatory text checks dated 2026-09-23 to 2026-10-06, after the deliverables were approved.
+- **Size 1:** about 3,400 ATS records "since 2019" does not fit about 1,200 added each year with nothing deleted; P03 cites draft policies during a week when, by the calendar, no draft existed; the 2026-07-23 search is said to cover the mailbox and laptop but its results include phone photos.
+- **Size 2 (micro staffing firm):** P07 examined the payroll vendor's SOC 2 report, which arrived two days after fieldwork ended; P07 cites the owner's approval and a policy effective date that come after its own results; P04, prepared 2026-07-31, cites P07 tests and POA&M IDs; the ATS "7 named users" leaves out a former recruiter's account that stayed active until 2026-07-21.
+- **Size 3 (small staffing firm):** P03 rates G-062 Met on a TLS scan dated in the P07 window (kept as P03 follow-up); E-Verify users are 6 specialists in the facts, 6 accounts with 2 departed in G-126, and 4 current users in G-127; SSP IA-12 cites an onboarding procedure that G-120 says is not written down.
+- **Size 4 (mid-market staffing firm):** P07 cites approvals and audit committee minutes dated 2026-09-22, after fieldwork ended on 2026-09-04; pass-1 risks R-010, R-031 and R-045 cite P07 results; P09 cites minutes dated after it was prepared; the SSP's "I-9 sample of 25" matches neither the P03 nor the P07 sample; AI-002 records a change dated 2026-10-31 as done.
+- **Size 5 (enterprise staffing firm):** P03 cites a September budget approval after its own approval; P09 calls the SL-2 system description a draft while its evidence map says it has not started; the P07 plan header and schedule give different fieldwork windows; R-012 lists kiosk EDR that G-079 says is missing.
+- **Size 6:** POAM-020 and the P03 roadmap say 2026-12-31 while the division supplement and POL-01 say 2026-11-30; G-150 cites a counsel memo on Staffing's business associate status that the facts do not mention.

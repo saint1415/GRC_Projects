@@ -14,6 +14,8 @@
 | Workbook | `gap-analysis.csv` (157 rows) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** temporary help services in Florida (Light Industrial, Office and Professional, Healthcare Staffing), with the MSP program and direct hire as adjacent services.
 
 **Step 1 was to find a cybersecurity rule that binds a staffing firm. None does,** at this size or any other: the vertical profile names NIST CSF 2.0 as the benchmark because NAICS 56 has no sector-specific federal cyber mandate.
@@ -50,7 +52,8 @@
 1. **Requirements.** The 106 CSF 2.0 subcategories come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows were decomposed from the eCFR, U.S. Code, Florida Statutes, and MOU texts listed above, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority (High 49, Medium 46, Low 11), set by the vCISO and the COO from the risk register (P01) and BIA (P05). Subcategories protecting SSNs, bank data, I-9 records, medical information, and payroll are High.
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`; the `sp800_53_controls` column is a key-control subset chosen by the author. Regulation rows use an author mapping (no official NIST mapping exists for these rules).
-4. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population, sized with the co-sourced internal audit firm's attribute sampling table (25 items for a control operating many times a year at moderate risk, 50 where the population exceeds 5,000):
+4. **Evidence.** Current state was established from the intake evidence (exports, documents and records collected 2026-06-22 to 2026-07-10, EV-001 to EV-060), gap analysis interviews with the General Counsel, the Onboarding and Compliance Specialists, the Director of Compliance and Privacy and the other process owners (EV-063 to EV-066), walkthroughs of HQ with Branch 1, Branch 6 and On-site Program 2 (2026-07-21 to 2026-07-23, EV-067), the mailbox and file-share searches (EV-072), the TLS scan (EV-074), the residence-state report test (EV-075), the firewall rule review (EV-076), and the samples below (EV-068 to EV-071, EV-073, EV-077). Approvals dated 2026-09-22 are cited from EV-078, and P07 results by the P07 evidence IDs (for example EV-IA-5). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+5. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population collected at intake (for example the 142 terminations in EV-003, the 2026 H1 hires and shift starts in EV-055, the 64 vendors in EV-042, and the 41 critical findings in EV-018), sized with the co-sourced internal audit firm's attribute sampling table (25 items for a control operating many times a year at moderate risk, 50 where the population exceeds 5,000):
    - new associate hires, I-9 Section 2 and E-Verify timing: 50 of about 6,900 (2026 H1);
    - remote I-9 examinations: 15 of about 900;
    - scanned archive forms: 50 of about 74,000;
@@ -65,7 +68,7 @@
    - critical vulnerability findings: all 41 (2026 H1);
    - full searches of mailboxes and file shares for document images and SSN extracts.
    Each `evidence` cell names its sample and result.
-5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
+6. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Current CSF Tier: Tier 2 (Risk Informed).** The program has approved policies and a risk method, but practices are not yet consistent across SaaS, vendors, and AI. **Target: Tier 3 (Repeatable) by 2027-12-31,** in step with the SOC 2 Type 2 observation period.
 

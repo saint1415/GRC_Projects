@@ -78,6 +78,18 @@ Internal Audit used **attribute sampling** for controls that operate on a popula
 
 Random selections used the audit software's seeded random number generator; seeds and selections are in the workpapers (EV references).
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-029), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 277 (240 Satisfied, 37 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: integrity verification of bank and paycard files on the SFTP staging server (SI-07a.[03]), a defined action for an altered pay file (SI-07b.[03]), and a retention or purge rule for data platform extracts (SI-12[04]) | 3 |
+| **Total** | | **280** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HCM records, EV-004 and EV-005, the change records, EV-025, and the vendor register, EV-045) and were refreshed to 2026-06-30 at kickoff.
+
 ## 3. Methods and objects
 - **Examine:** policies and standards (P06), the SSP (P02), identity governance and PAM records, E-Verify user lists, integration key inventory, payroll role matrix, change tickets and approvals, DR test report, backup reports, vulnerability scans, vendor register and SOC report reviews, retention schedule and record-age queries, the incident response plan and disclosure playbook, disclosure committee minutes.
 - **Interview:** Senior Vice President, Payroll and Associate Services; Vice President, Payroll Technology; Payroll Engine Application Manager; Vice President, Employment Compliance; Director of Employment Eligibility Compliance; Vice President, Associate Service Center; Treasurer; Director of Security Operations; Director of Identity and Access Management; Director of Network and Endpoint Engineering; General Counsel; CFO; CISO; 20 randomly selected payroll, onboarding, and branch staff.

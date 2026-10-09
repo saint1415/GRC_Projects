@@ -1,0 +1,28 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,"Corporate shared services (parent company, intercompany)","IT hosting, identity, SOC and EHR integration for Home Health; GWP payroll for all divisions",SYS-G1; SYS-G2; SYS-G3; SYS-G4,Home Health PHI (EHR integration; visit-pay records),Intercompany BAA 2023-10 (payroll not listed),Common control assessment by group internal audit,EV-001; EV-005; EV-030,Internal business associate of Home Health
+V-02,Public cloud provider A,"IaaS/PaaS: hub, payroll engine, integration platform, data hub, I-9 archive, visit-pay interface",SYS-G3; SYS-G4,Personal information; PHI (visit-pay records),Customer agreement,SOC 2 Type 2,EV-021; EV-040,Group
+V-03,Public cloud provider B,"GWP DR replica, backup vault, Federal Solutions enclave",SYS-G3; SYS-G4-DR; SYS-D2-FED,Personal information; PHI; federal contract information,Customer agreement,SOC 2 Type 2,EV-021; EV-040,Group and Consulting
+V-04,Identity SaaS vendor,"SSO, MFA, PAM, identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-010; EV-040,Group
+V-05,SIEM and EDR vendors; managed security service provider,"Security monitoring, endpoint protection, overflow monitoring",SYS-G2,Security logs,Subscription and service terms,SOC 2 Type 2,EV-015; EV-040,Group
+V-06,ATS vendor,"Applicant tracking, career sites, ATS client portal, job ad drafting",SYS-G4-ATS,Candidate data,Group contract template terms,SOC 2 Type 2,EV-027; EV-039; EV-040,Tier 1
+V-07,AI ranking add-on vendor,Applicant scoring (AI-001),SYS-G4-ATS,Resumes; application answers,ATS marketplace terms; allow training on candidate data,None on file,EV-037; EV-040,Enabled 2025-05 with no due diligence record (EV-037)
+V-08,Recruiting assistant vendor,Conversational pre-screening and scheduling (AI-002),SYS-G4-ATS,Candidate phone numbers; screening answers,ATS integration terms,Not established at intake,EV-037; EV-046,Staffing
+V-09,Onboarding and Form I-9 vendor,"Onboarding, electronic Form I-9, background check ordering",SYS-G4-ONB,Forms I-9; document images; consumer reports,Group contract template terms,SOC 2 Type 2,EV-027; EV-040; EV-048,Tier 1
+V-10,Credentialing vendor,Clinician credentialing,SYS-G4-CRED,Credentials; medical screening files,Group contract template terms,SOC 2 Type 2,EV-027; EV-040,Tier 1
+V-11,Background screening providers (2),Employment background checks and drug screens,SYS-G4-ONB,Candidate identity data; consumer reports,Provider agreements with FCRA certifications,Not established at intake,EV-039; EV-045; EV-049,"About 430,000 checks a year (EV-045)"
+V-12,ACH originating banks (2) and paycard program manager,Pay delivery,SYS-G4-PAY,Pay files with bank account numbers,Bank agreements; file encryption,Not established at intake,EV-004; EV-026; EV-027,About $190 million a week (EV-004)
+V-13,Tax filing service,Wage and tax filings,SYS-G4-PAY,Wage and tax data,Service agreement,Not established at intake,EV-027; EV-039,
+V-14,DHS E-Verify,Employment eligibility verification,EXT-EV,Form I-9 data; case results,MOU for Employers per employing entity; Federal contractor enrollment for Consulting,n/a (federal program),EV-047,
+V-15,VMS vendor,Managed Workforce Solutions program tenant,SYS-D1-VMS,Requisitions; timesheets; invoices; worker data,Vendor agreement,"SOC 2 Type 2 (RTO 8 hours, RPO 1 hour)",EV-040; EV-053,Single VMS vendor for 48 programs
+V-16,Timekeeping vendor,On-site time clocks,SYS-D1-CLOCK,Time punches,Vendor agreement,Not established at intake,EV-054,Single vendor (EV-054)
+V-17,Contact center platform vendor,Recruiting contact center and associate service center,SYS-D1-CC,Call recordings,Vendor agreement,Not established at intake,EV-055,
+V-18,Document management vendor,Consulting engagement repository,SYS-D2,Client PHI; engagement files,Vendor agreement,SOC 2 Type 2,EV-040; EV-059,
+V-19,Independent consultants (about 240 subcontractors),Consulting delivery,SYS-D2; EXT-CLIENT,Client PHI,Subcontract template with confidentiality terms; no BAA terms,n/a,EV-056; EV-057,
+V-20,Home Health EHR vendor,"Hosted EHR, scheduling and EVV, billing; hospitalization risk model (AI-005)",SYS-D3; SYS-D3-SCHED; SYS-D3-BILL,ePHI,BAA,SOC 2 Type 2,EV-040; EV-066; EV-069,
+V-21,Ambient documentation vendor,Visit documentation pilot (AI-006),SYS-D3,Visit audio; transcripts (ePHI),BAA with no-training terms,Not established at intake,EV-069,
+V-22,Enterprise generative AI service vendor,Drafting assistant (AI-007) and enterprise assistant pilot (AI-009),SYS-D2; SYS-G1,Internal and client confidential information (PHI prohibited),Enterprise terms with no-training commitments,Not established at intake,EV-046,
+V-23,Shredding and media sanitization vendors,Branch shred bins; laptop and media wipes,SYS-D1; SYS-D2-LAP,Paper consumer reports and forms; retired media,Service agreements,Certificates,EV-043; EV-049,
+V-24,Penetration testing firm,Annual GWP penetration test,SYS-G4,Test access only,Engagement letter,n/a,EV-019,
+V-25,Carriers and SD-WAN service,Site connectivity,NET-WAN,Traffic in transit (encrypted),Carrier agreements,Not established at intake,EV-021,
+V-26,Independent bias auditor,NYC Local Law 144 bias audit of AI-001,AI-001,Aggregated selection data,Engagement letter,n/a,EV-038,
+V-27,Breach notification mail vendor,Home Health breach letters,SYS-D3,Names and addresses of affected individuals,Vendor agreement,Not established at intake,EV-068,

@@ -9,11 +9,13 @@
 | Checked and found not applicable | FCRA 1681b(b) (N56-R02), Form I-9 (N56-R03), Fla. Stat. 448.095, and N56-R04 to N56-R09 |
 | Text verified | eCFR (8 CFR 274a.2; 16 CFR 682) as of 2026-09-23; 2026 Florida Statutes (501.171); 42 U.S.C. 2000e and 12111 from govinfo.gov; EEOC "Coverage of Employment Agencies" page, read 2026-10-06 |
 | Assessment dates | 2026-07-20 to 2026-07-24 (self-assessment; mailbox and device search 2026-07-23) |
-| Assessor | Owner-recruiter, with the on-call IT support technician (confidentiality agreement since 2026-07-17). Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner-recruiter, with the on-call IT support technician (confidentiality agreement since 2026-07-17). Evidence is the intake record and the owner's self-review (EV-030), checked on screen where possible |
 | Workbook | `gap-analysis.csv` (122 rows) |
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Step 1 was to find a cybersecurity rule that binds an independent recruiter. None does.** The vertical profile names NIST CSF 2.0 as the primary benchmark because NAICS 56 has no sector-specific federal cyber mandate. Each vertical requirement was checked against this business:
 
 | Candidate | Applies? | Why (citation) |
@@ -42,7 +44,7 @@
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the 2026 Florida Statutes and the eCFR text current as of 2026-09-23, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the business (High 22, Medium 46, Low 38), set by the owner from the risk register (P01) and BIA (P05). Subcategories that protect SSNs, ID numbers, account access, and breach notice are High.
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (CSF 2.0 to SP 800-53 Rev. 5.2.0, SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`. The `sp800_53_controls` column is a key-control subset chosen by the author. Regulation rows use an author mapping.
-4. **Evidence.** Self-attested by the owner and checked on screen with the IT technician: account security pages, the account list (2026-07-22), the mailbox and device search (2026-07-23), the partner agreement and a call with the partner's payroll desk (2026-07-22), vendor terms, and a home office walkthrough (2026-07-21).
+4. **Evidence.** Current state was established from the intake evidence (account security pages, device and router settings, the mailbox review, statements, the partner agreement, vendor terms, and the home office walk-through on 2026-07-15), the owner's written self-review checked on screen with the IT technician (EV-030), the account list (2026-07-22, EV-031), a call with the partner's payroll desk (2026-07-22, EV-032), the partner's SOC 2 report (EV-033), and the P07 mailbox and device search (2026-07-23, EV-SI-12). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Current CSF Tier: Tier 1 (Partial).** Security has been informal and reactive. **Target: Tier 2 (Risk Informed) by 2027-07**, meaning practices written down and driven by the risk register.

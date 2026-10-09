@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed staffing and temporary help firm) | **Tier:** Mid-Market (600 internal staff; about 3,600 associates on assignment weekly) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager with the vCISO, the process owners named in `bia.csv`, and the IT Director | **Fieldwork:** 2026-07-13 to 2026-08-07 | **Approved:** Chief Operating Officer, 2026-09-22 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-13 to 2026-07-17 (EV-061), FY2025 revenue report by business unit (EV-054), operating volume report (EV-055), payroll calendar (EV-041), credit agreement and funding procedure (EV-057), MSP client agreements and program report (EV-046, EV-056), vendor SOC 2 reports and recovery commitments (EV-044), and backup and restore records (EV-022, EV-023). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and loss assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Light Industrial (including the 6 on-site programs), Office and Professional, Healthcare Staffing, Managed Workforce Solutions, and the HQ shared services (payroll and billing, the onboarding and compliance center, credentialing, the recruiting contact center, finance, and HR). It rates 15 business processes and quantifies what an outage costs in money, operations, regulatory exposure, safety, and reputation.
@@ -15,10 +16,10 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment for the Managed Workforce Solutions system (P09).
 
 ## 2. System and business description
-The firm places about 3,600 associates a week with about 950 Florida clients from headquarters, 14 branches, and 6 on-site programs, and runs the contingent workforce programs of 2 MSP clients. Every business day it onboards about 55 new associates, and every Friday it pays about $1.45 million in wages. Work runs on the Associate Payroll and Applicant Tracking Platform (APATP) described in the SSP (P02): the SaaS ATS with the I-9 module, the SaaS payroll and billing platform, the identity provider, the timekeeping app and fingerprint clocks, the credentialing platform, the 4-account cloud landing zone (integration platform, data warehouse, document archive, backups), the SD-WAN networks, and about 970 endpoints. See `../00_company-facts.md` sections 3, 4, and 7.
+The firm places about 3,600 associates a week with about 950 Florida clients from headquarters, 14 branches, and 6 on-site programs, and runs the contingent workforce programs of 2 MSP clients. Every business day it onboards about 55 new associates, and every Friday it pays about $1.45 million in wages. Work runs on the Associate Payroll and Applicant Tracking Platform (APATP) described in the SSP (P02): the SaaS ATS with the I-9 module, the SaaS payroll and billing platform, the identity provider, the timekeeping app and fingerprint clocks, the credentialing platform, the 4-account cloud landing zone (integration platform, data warehouse, document archive, backups), the SD-WAN networks, and about 970 endpoints. The components and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $100.0 million in receipts: about $385,000 billed per business day (branch units about $215,000, on-site programs about $70,000, Managed Workforce Solutions about $19,000) and about $57,500 per calendar day in Healthcare, where shifts run 7 days a week.
+Dollar values are scaled to $100.0 million in receipts (EV-054): about $385,000 billed per business day (branch units about $215,000, on-site programs about $70,000, Managed Workforce Solutions about $19,000) and about $57,500 per calendar day in Healthcare, where shifts run 7 days a week.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -28,7 +29,7 @@ Dollar values are scaled to $100.0 million in receipts: about $385,000 billed pe
 | Safety | A clinician without verified credentials or health clearance at a patient's bedside, or associates sent to a closed or unsafe site | Delayed site safety information | None |
 | Reputation | Loss of an MSP client or a top-20 client, or public wage complaints | Associate complaints or online reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is gross margin that is not recovered, plus extra labor, client credits, and refill costs, over the MTD. Process owners supplied the assumptions: about 30% of next-day branch orders go unfilled in a 24-hour dispatch outage, about 5% of associates leave after a missed payday, and a delayed new start loses about $350 of gross margin per day. Cash that is delayed but not lost (BP-11) is shown separately.
+**How loss at MTD was estimated.** Estimated loss is gross margin that is not recovered, plus extra labor, client credits, and refill costs, over the MTD. Process owners supplied the assumptions (EV-061): about 30% of next-day branch orders go unfilled in a 24-hour dispatch outage, about 5% of associates leave after a missed payday, and a delayed new start loses about $350 of gross margin per day. Cash that is delayed but not lost (BP-11) is shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -62,11 +63,11 @@ Dollar values are scaled to $100.0 million in receipts: about $385,000 billed pe
 - **Client contracts drive BP-04, BP-06, and BP-07.** Fill-rate credits, on-site program credits, and MSP availability commitments turn hours of downtime into money and, at worst, a lost client.
 
 ## 5. Key findings
-1. **The ATS vendor's recovery objectives do not meet two processes.** The ATS vendor states RTO 12 hours and RPO 1 hour. Dispatch (BP-04) and on-site programs (BP-06) need RTO 8 hours. The daily assignment export makes the 24-hour MTD achievable by phone, but dispatch slows sharply. Action: recovery terms at the 2027 ATS renewal and a twice-daily export (P01 R-023).
-2. **The credentialing platform states no recovery objective.** BP-05 needs RTO 4 hours and RPO 1 hour, and the vendor has no SOC 2 report. The daily credential status export is the only fallback and was not in place for 2 of 5 sampled days (P01 R-024; P09 vendor review).
-3. **Payroll is the dominant clock, and the fallback does not exist yet.** The payroll vendor's RTO of 8 hours meets BP-01, but a ransomware event at the vendor could last days. There is no written or tested off-cycle manual payroll procedure (gap 7; P01 R-005; P08 `ir-runbook-payroll-outage.md`).
-4. **Firm-managed recovery is unproven.** The data warehouse restore was tested in 2026-03, but the integration platform has never been restored, and the document archive (scanned Forms I-9 from 2012-2021) is replicated, not backed up. The RTOs for BP-02, BP-03, and BP-10 depend on them (P01 R-012, R-026; P07 CP-4).
-5. **Payroll funding has a single path.** The Thursday credit line draw depends on the bank portal and the borrowing base report from the payroll platform. A phone fallback exists but has never been exercised (BP-12).
+1. **The ATS vendor's recovery objectives do not meet two processes.** The ATS vendor states RTO 12 hours and RPO 1 hour (EV-044). Dispatch (BP-04) and on-site programs (BP-06) need RTO 8 hours. The daily assignment export makes the 24-hour MTD achievable by phone, but dispatch slows sharply. Action: recovery terms at the 2027 ATS renewal and a twice-daily export (P01 R-023).
+2. **The credentialing platform states no recovery objective.** BP-05 needs RTO 4 hours and RPO 1 hour, and the vendor has no SOC 2 report. The daily credential status export is the only fallback and was not in place for 2 of 5 sampled days (EV-071; P01 R-024; P09 vendor review).
+3. **Payroll is the dominant clock, and the fallback does not exist yet.** The payroll vendor's RTO of 8 hours meets BP-01, but a ransomware event at the vendor could last days. There is no written or tested off-cycle manual payroll procedure (EV-036; P01 R-005; P08 `ir-runbook-payroll-outage.md`).
+4. **Firm-managed recovery is unproven.** The data warehouse restore was tested in 2026-03 (EV-023), but the integration platform has never been restored, and the document archive (scanned Forms I-9 from 2012-2021) is replicated, not backed up (EV-022). The RTOs for BP-02, BP-03, and BP-10 depend on them (P01 R-012, R-026; P07 CP-4).
+5. **Payroll funding has a single path.** The Thursday credit line draw depends on the bank portal and the borrowing base report from the payroll platform. A phone fallback exists but has never been exercised (EV-057; BP-12).
 
 ## 6. Resource requirements
 | Resource | Description | Supports |

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (temporary staffing firm) | **Tier:** Micro (7 internal staff) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Operations Manager (Security and Privacy Lead) with the Account Manager, the Onboarding and Payroll Coordinator, the Senior Recruiter, and the MSP lead technician, 2026-07-20 to 2026-07-31; vendor recovery figures added 2026-08-20 from the payroll vendor SOC 2 review (P09) | **Approved:** Owner, 2026-08-31
+**Sources:** process owner interviews 2026-07-20 to 2026-07-23 (EV-039), FY2025 financial reports (EV-016), associate payroll register (EV-002), payroll services agreement (EV-005), ATS activity reports (EV-010), onboarding steps (EV-035), E-Verify file (EV-013), suite backup job report (EV-021), ATS terms (EV-009), MSP service contract (EV-018), and the payroll vendor SOC 2 report (EV-049, received 2026-08-14). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the firm, how long each can be down, and how much data each can lose. No law requires a staffing firm to have a contingency plan. The firm did this BIA because its two core duties are time-bound: associates must be at client sites the next morning, and they must be paid every Friday. The BIA feeds:
@@ -11,10 +12,10 @@ This BIA lists every business function of the firm, how long each can be down, a
 - the recovery order in the incident response runbook (P08).
 
 ## 2. System and business description
-One Central Florida office suite, 7 internal staff, about 22 temporary associates on assignment in an average week, and about 30 client accounts. The firm owns almost no infrastructure. Its work runs in vendor SaaS: the staffing ATS (SYS-01), the payroll and timekeeping service (SYS-02), the productivity suite (SYS-03), the background screening portal (SYS-06), E-Verify (SYS-07), and the accounting SaaS (SYS-10). On site are 8 laptops, an applicant tablet, and a scanner (SYS-04) and the office network (SYS-05). The MSP runs IT and the suite backup (SYS-08). See `../00_company-facts.md` sections 3 and 7.
+One Central Florida office suite, 7 internal staff, about 22 temporary associates on assignment in an average week, and about 30 client accounts. The firm owns almost no infrastructure. Its work runs in vendor SaaS: the staffing ATS (SYS-01), the payroll and timekeeping service (SYS-02), the productivity suite (SYS-03), the background screening portal (SYS-06), E-Verify (SYS-07), and the accounting SaaS (SYS-10). On site are 8 laptops, an applicant tablet, and a scanner (SYS-04) and the office network (SYS-05). The MSP runs IT and the suite backup (SYS-08). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual receipts: about $19,400 billed a week (about $3,900 a business day) and a weekly associate payroll of about $13,500.
+Dollar values are scaled to about $1.1 million in annual receipts: about $19,400 billed a week (about $3,900 a business day) (EV-016) and a weekly associate payroll of about $13,500 (EV-002).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -45,8 +46,8 @@ Dollar values are scaled to about $1.1 million in annual receipts: about $19,400
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 Staffing ATS (SaaS) | Applicants, job orders, onboarding packets, screening orders | ATS vendor's platform backups. The vendor's stated recovery figures were not obtained (SOC 2 report requested 2026-08-03, not received) | BP-01, BP-03, BP-05, BP-08 |
-| SYS-02 Payroll and timekeeping service (SaaS) | Payroll, tax filing, direct deposit, time capture, approvals | Payroll vendor's backups and replication. Its SOC 2 report states an RPO of 1 hour and an RTO of 8 hours (P09 review) | BP-02, BP-04, BP-06 |
+| SYS-01 Staffing ATS (SaaS) | Applicants, job orders, onboarding packets, screening orders | ATS vendor's platform backups. The vendor's stated recovery figures were not obtained (SOC 2 report requested 2026-08-03, not received; EV-009) | BP-01, BP-03, BP-05, BP-08 |
+| SYS-02 Payroll and timekeeping service (SaaS) | Payroll, tax filing, direct deposit, time capture, approvals | Payroll vendor's backups and replication. Its SOC 2 report states an RPO of 1 hour and an RTO of 8 hours (EV-049; P09 review) | BP-02, BP-04, BP-06 |
 | SYS-03 Productivity suite (SaaS) | Email, calendar, shared drive (Onboarding folder) | Vendor service resilience; daily copy to SYS-08 | BP-01, BP-03, BP-07, BP-08 |
 | SYS-08 Suite backup (SaaS, MSP-operated) | Daily copy of email and the shared drive, 30 days | **Never restore-tested** | BP-07 |
 | SYS-06 Screening provider portal | Background check orders and FCRA letters | Provider-hosted; usable directly if the ATS integration fails | BP-03 |
@@ -59,10 +60,10 @@ Dollar values are scaled to about $1.1 million in annual receipts: about $19,400
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Security and recovery evidence |
 |---|---|---|
-| Payroll service vendor | BP-02, BP-04, BP-06 | SOC 2 Type 2 report received 2026-08-14 and reviewed (P09); RTO 8 h and RPO 1 h meet this BIA |
+| Payroll service vendor | BP-02, BP-04, BP-06 | SOC 2 Type 2 report received 2026-08-14 (EV-049) and reviewed (P09); RTO 8 h and RPO 1 h meet this BIA |
 | ATS vendor (and its AI subprocessor) | BP-01, BP-03, BP-05, BP-08 | Trust page claims a SOC 2 Type 2 report; requested 2026-08-03, not received by 2026-08-31 |
 | Productivity suite vendor | BP-01, BP-07, email for everything | Vendor service commitments (standard terms) |
-| MSP | Recovery of every laptop and the network; operates the suite backup | No written recovery commitment; the contract has a 4-business-hour response time only |
+| MSP | Recovery of every laptop and the network; operates the suite backup | No written recovery commitment; the contract has a 4-business-hour response time only (EV-018) |
 | Background screening provider | BP-03 | Not reviewed |
 | DHS E-Verify | BP-03 | Federal system; the MOU extends the case deadline during outages |
 | Internet provider and phone carrier | Every SaaS function at the office; BP-01 calls | None; single line. Laptops can work from home and phones forward to cell phones |

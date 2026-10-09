@@ -38,6 +38,17 @@ Small tier scope: 15-25 controls. **22 controls, 156 determination statements.**
   - a kiosk network test at Branch 3 (reachability of staff devices)
   - an after-hours EDR test alert and its review time
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-08-31. They were reviewed as drafts for design only: a control that a draft policy introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 72 |
+| Design | The control comes from a draft policy or the draft P08 runbook; its design was reviewed. Operation is tested at the 2027-02 follow-up | 3 |
+| Not implemented | Nothing existed to test | 81 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled terminations come from the 16 in EV-003 and EV-004, and the E-Verify comparison starts from the 6 user accounts in EV-058).
+
 ## 3. Rules of engagement
 - No test changed payroll data, bank accounts, or E-Verify cases. E-Verify was examined through its user and case reports only.
 - No personal information left the firm. Screenshots were redacted to the last 4 digits.

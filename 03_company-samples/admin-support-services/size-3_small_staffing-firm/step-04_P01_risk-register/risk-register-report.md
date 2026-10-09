@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the COO (Moderate and below) and the President (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Associate Payroll and Applicant Tracking Platform (APATP) and the business processes in the BIA (P05). That covers every system that holds candidate, associate, and client data at headquarters and the 3 other branches, plus the vendors that hold that data for the firm (`../00_company-facts.md` section 3).
+**Scope.** The Associate Payroll and Applicant Tracking Platform (APATP) and the business processes in the BIA (P05). That covers every system that holds candidate, associate, and client data at headquarters and the 3 other branches, plus the vendors that hold that data for the firm ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What the firm is protecting.** About 31,000 current and former associate records with SSNs and bank accounts, about 1,500 consumer reports a year, Form I-9 records and document images, and a weekly payroll of about $270,000.
 
@@ -23,8 +23,8 @@
 This is the firm's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, interviews with the Payroll Manager, HR and Compliance Manager, Director of Recruiting, and two Branch Managers, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, the intake evidence, and interviews with the Payroll Manager, HR and Compliance Manager, Director of Recruiting, and two Branch Managers (EV-052). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the ticket history (EV-028), configuration exports, contracts, walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables with a script, not assigned by hand.
 
@@ -49,7 +49,7 @@ This is the firm's first documented risk assessment.
 
 The three High risks share one theme: **the firm holds a large store of worker identity and bank data in places that are easy to reach and hard to recover.** The payroll platform has the weakest sign-in of any system (R-001), a reporting copy holds far more SSNs than any report needs (R-005), and backups would not survive an attacker with cloud admin rights (R-004). Fixing these also reduces five related Moderate risks (R-002, R-003, R-009, R-017, R-035).
 
-R-034 was added on 2026-08-07 after control assessment testing (P07) found that a departed Onboarding Specialist's E-Verify login had been used by a colleague after the departure date.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-034 was added on 2026-08-07 after testing found that a departed Onboarding Specialist's E-Verify login had been used by a colleague after the departure date (EV-IA-2, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 budget, $54,000):**

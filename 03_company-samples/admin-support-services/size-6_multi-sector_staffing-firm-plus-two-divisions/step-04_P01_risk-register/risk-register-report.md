@@ -13,13 +13,13 @@
 | Approved | 2026-09-10 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds worker, candidate, client, or patient data in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), the group cloud platform and network (SYS-G3), and the Group Workforce Platform (SYS-G4). Division systems are SYS-D1 to SYS-D3 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that holds worker, candidate, client, or patient data in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), the group cloud platform and network (SYS-G3), and the Group Workforce Platform (SYS-G4). Division systems are SYS-D1 to SYS-D3 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Staffing, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact. They are not simply the highest division rating.
 
-**Risk tolerance and who can accept risk** (recorded in `../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (recorded in `../00_company-facts.md` section 7, from the risk management strategy, EV-007):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,11 +30,13 @@
 Patient-safety risks at High may not be accepted, and neither may risks that leave workers unpaid. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the 2025 payroll fraud record, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, the 2025 payroll fraud record (EV-033), interviews with each division's leadership (EV-074 group, EV-075 Staffing, EV-076 Consulting, EV-077 Home Health), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-01 inside the fieldwork window. The gap analyses ran in the same window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, records, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: workers in many states at once, several regulators, client loss, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-31 and added no new risk to the registers, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to existing risks (`related_risk_ids` in `poam.csv`).
 
 ## 3. Results
 
@@ -72,12 +74,12 @@ Patient-safety risks at High may not be accepted, and neither may risks that lea
 
 ### What the results say
 The program is sound where the group has invested longest: identity, the SOC, backups, and tokenization in the payroll engine. There are no Very High risks. The High risks cluster around **what the group shares** and **what it acquired**:
-1. **The Group Workforce Platform** (GR-01, GR-02, GR-05, GR-10) concentrates every division's worker data and pay. Its two sharpest problems are patient data that should never have entered payroll (scenario gap 1) and a phishable SMS code that guards bank changes for 1.1 million people (gap 2).
-2. **AI in hiring** (GR-04) now touches every division's recruiting, and the 2027-01-01 Colorado and California dates turn a fairness risk into a compliance deadline (gap 4).
-3. **Consulting's business associate access** (CN-001, CN-002) is a client-trust risk: the group would be the source of a hospital client's breach (gap 7).
-4. **Home Health** (HH-002, and the Moderate group risk GR-06) is still being brought into group controls three years after acquisition (gaps 3 and 6).
+1. **The Group Workforce Platform** (GR-01, GR-02, GR-05, GR-10) concentrates every division's worker data and pay. Its two sharpest problems are patient data that should never have entered payroll (group gap 1) and a phishable SMS code that guards bank changes for 1.1 million people (group gap 2).
+2. **AI in hiring** (GR-04) now touches every division's recruiting, and the 2027-01-01 Colorado and California dates turn a fairness risk into a compliance deadline (group gap 4).
+3. **Consulting's business associate access** (CN-001, CN-002) is a client-trust risk: the group would be the source of a hospital client's breach (group gap 7).
+4. **Home Health** (HH-002, and the Moderate group risk GR-06) is still being brought into group controls three years after acquisition (group gaps 3 and 6).
 
-Shared-incident notification (GR-03) is Moderate at group level, but it is the risk the P08 runbook addresses most directly, because a GWP breach would set E-Verify, state, HIPAA, client, and SEC clocks running at once (gap 5).
+Shared-incident notification (GR-03) is Moderate at group level, but it is the risk the P08 runbook addresses most directly, because a GWP breach would set E-Verify, state, HIPAA, client, and SEC clocks running at once (group gap 5).
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** visit-pay redesign and purge (GR-10, GR-01); self-service authentication upgrade (GR-05); isolated payroll recovery testing (GR-02); group AI governance program (GR-04); Home Health endpoint migration and SIEM onboarding (GR-06, GR-12); kiosk segmentation at 61 branches (GR-13); retention automation (GR-14); MSP SOC 2 program (GR-15).

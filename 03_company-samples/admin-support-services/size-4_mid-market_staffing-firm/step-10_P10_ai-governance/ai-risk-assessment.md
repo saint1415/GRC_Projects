@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed staffing and temporary help firm) |
 | Tier / Vertical | Mid-Market / Administrative and Support and Waste Management and Remediation Services |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry use case, AI resume screening and candidate ranking, is AI-001 and gets the deepest review |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`, built from the intake AI tool discovery: the ATS marketplace app list and settings history, the identity provider app list, the accounts payable vendor master, the timekeeping feature list and a department heads survey (EV-058, EV-042, EV-020, EV-030). Whether staff use public generative AI sites with firm data, and how much, was not established (intake open request); P01 R-018 rates that threat without a user count. The registry use case, AI resume screening and candidate ranking, is AI-001 and gets the deepest review |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; NIST AI 600-1 (Generative AI Profile) for AI-002, AI-003, and AI-004 |
 | Assessors / date | Director of Recruiting Operations (business), vCISO and Security Manager (security), Director of Compliance and Privacy and the General Counsel (privacy and legal), data analysts (testing), 2026-08-24 to 2026-09-15; independent statistician engaged for the 2026 Q4 re-test |
 | Decision | Chief Operating Officer, 2026-09-22; High-tier decisions noted by the CEO and reported to the audit committee |
 
 ## 1. Summary
-Two tools now affect who gets work, and neither was reviewed before it went live (gap 9 in `../00_company-facts.md`):
+Two tools now affect who gets work, and neither was reviewed before it went live (EV-058, EV-020):
 - **AI-001, resume ranking,** auto-advanced Light Industrial applicants for a year. In 2026 H1, 85% of Light Industrial placements came from its auto-advanced list, and testing found a sex disparity and a Hispanic or Latino disparity.
 - **AI-002, the text assistant,** closes applications on knockout answers (lifting, transportation, shifts) with no accommodation path, and works only in English.
 
@@ -96,7 +96,7 @@ Tiers use the repository rubric (`00_universal-framework/projects/step-10_P10_ai
 **Re-tier triggers:** AI-001 drops to Medium only if it becomes a pure search aid with no score or order shown. AI-005 rises to High if flags ever change pay without review.
 
 ## 5. MEASURE
-### 5.1 AI-001 resume ranking (retrospective, 2026 H1)
+### 5.1 AI-001 resume ranking (retrospective, 2026 H1; EV-079)
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Recruiter review of 200 random applicants per division: does the score agree with the job order's minimum requirements? Target at least 90% | Light Industrial 83%; Office and Professional 91%. Most misses were forklift and equipment certifications in non-standard formats and Spanish-language resumes | **No** for Light Industrial |
@@ -104,13 +104,13 @@ Tiers use the repository rubric (`00_universal-framework/projects/step-10_P10_ai
 | Accountable and transparent | Change control; applicant notice | Auto-advance enabled without approval; no notice | **No** |
 | Explainable and interpretable | Can a recruiter see why an applicant scored as they did? | Match summary lists matched and missing requirements; vendor provided feature weights on request (2026-08-28) | Partial |
 | Privacy-enhanced | Minimum data; retention; no secondary use | No SSNs or self-ID data; vendor keeps resumes for the subscription term; training on firm data not excluded | **No** |
-| Fair, with harmful bias managed | Auto-advance rate by group (voluntary self-identification, 61% response). Flag if a group's rate is below 80% of the highest group's rate **and** the difference is statistically significant (two-proportion z test, p < 0.05) | **Light Industrial, sex:** men 6,920 of 15,200 advanced (45.5%); women 2,950 of 8,400 (35.1%); impact ratio **0.77**, z = 15.5. **Light Industrial, race or ethnicity:** White 3,100 of 7,000 (44.3%); Black 2,560 of 6,400 (40.0%), ratio 0.90, z = 5.0 (significant but above 0.80: monitored, not flagged); Hispanic or Latino 2,750 of 7,900 (34.8%), ratio **0.79**, z = 11.8. Groups under 100 self-identified applicants were not tested. **Office and Professional, sex:** women 1,420 of 3,010 (47.2%); men 1,300 of 2,840 (45.8%), ratio 0.97, z = 1.1 (not flagged) | **No.** Two disparities flagged |
+| Fair, with harmful bias managed | Auto-advance rate by group (voluntary self-identification, 61% response; EV-079). Flag if a group's rate is below 80% of the highest group's rate **and** the difference is statistically significant (two-proportion z test, p < 0.05) | **Light Industrial, sex:** men 6,920 of 15,200 advanced (45.5%); women 2,950 of 8,400 (35.1%); impact ratio **0.77**, z = 15.5. **Light Industrial, race or ethnicity:** White 3,100 of 7,000 (44.3%); Black 2,560 of 6,400 (40.0%), ratio 0.90, z = 5.0 (significant but above 0.80: monitored, not flagged); Hispanic or Latino 2,750 of 7,900 (34.8%), ratio **0.79**, z = 11.8. Groups under 100 self-identified applicants were not tested. **Office and Professional, sex:** women 1,420 of 3,010 (47.2%); men 1,300 of 2,840 (45.8%), ratio 0.97, z = 1.1 (not flagged) | **No.** Two disparities flagged |
 
 **Bias causes.** The vendor's feature weights show that most of the Light Industrial sex gap comes from a penalty for employment gaps longer than 6 months and from heavy weight on equipment keywords that appear less often on resumes listing picking and packing roles. The Hispanic or Latino gap tracks the parser's poor reading of Spanish-language resumes (the same cause as the validity miss). None of these features is required by the job orders, so removing them is a less discriminatory alternative that also improves validity.
 
 **Age.** The firm does not collect age before an offer. The vendor confirmed that graduation dates and "years since first job" are not used, and the firm capped experience credit at 5 years.
 
-### 5.2 AI-002 text assistant (2026-02-02 to 2026-08-31)
+### 5.2 AI-002 text assistant (2026-02-02 to 2026-08-31; EV-080)
 | Test | Result | Pass? |
 |---|---|---|
 | Knockout effect | 22% of about 31,000 conversations ended on a knockout answer: lifting 41%, transportation 33%, shift availability 26%. Applications were closed with no recruiter review | **No** (automatic rejection; possible screen-out of people with disabilities) |
@@ -119,7 +119,7 @@ Tiers use the repository rubric (`00_universal-framework/projects/step-10_P10_ai
 | Accuracy of answers (generative part) | Review of 100 transcripts: 4 gave wrong pay or shift information | Partial |
 | Security and privacy | Transcripts kept by the vendor indefinitely; no data use terms | **No** |
 
-### 5.3 Other use cases
+### 5.3 Other use cases (EV-081)
 - **AI-003:** review of 50 generated job ads found 3 with "recent graduates preferred" language (age preference risk under 29 U.S.C. 623(e)); all were edited before posting by luck rather than by checklist.
 - **AI-004:** pilot users reviewed; data loss rules block Restricted data types; no incidents.
 - **AI-005:** sample of 50 flags from 2026-07: 31 were explained by GPS drift at 2 large distribution centers; 3 punches had been deleted by on-site coordinators without client confirmation (possible unpaid time). No automatic deduction exists, but the review is not documented.

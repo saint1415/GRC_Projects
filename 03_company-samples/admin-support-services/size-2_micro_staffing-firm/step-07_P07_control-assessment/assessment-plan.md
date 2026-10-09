@@ -34,6 +34,17 @@ Micro tier scope: 10-15 controls. **13 controls, 81 determination statements.** 
   - sign-in attempts to the backup console and firewall management page without a second factor, with the MSP present
   - review of the payroll MFA setting and alert settings with the Operations Manager
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 32 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy); its design was reviewed. Operation is tested at the next annual review (risk assessment) or the 2027-02 follow-up (draft policy) | 9 |
+| Not implemented | Nothing existed to test | 40 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 staff and the 3 departures in EV-001, and the termination review drew on the departure records in EV-028).
+
 ### MSP evidence requested
 The MSP operates most technical controls, so evidence came from it. Requested on 2026-08-03 with a one-week deadline:
 

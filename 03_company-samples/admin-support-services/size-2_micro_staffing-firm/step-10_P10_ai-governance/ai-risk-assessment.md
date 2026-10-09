@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; NIST AI 600-1 for the generative writer in AI-002 |
 | Assessor / date | Senior Recruiter (ATS administrator) with the Operations Manager, 2026-08-25; statistical method checked by the independent consultant |
 | Decision | Owner, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the ATS AI settings and change history, the AI feature terms, the card statements and a staff AI question (EV-008, EV-009, EV-017, EV-036). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Senior Recruiter, who administers the ATS. **Decision authority:** the Owner.
@@ -19,7 +19,7 @@
 - **Approved-tools list:** kept by the Operations Manager with POL-04. Today it lists AI-001 (sort-only mode, under the conditions in section 6) and AI-002 (with human review).
 - **Scale for a Micro firm:** there is no AI committee. The Owner, the Operations Manager, and the Senior Recruiter review AI use at the monthly security meeting, together with the quarterly bias results.
 
-**How the feature started.** An ATS upgrade in March 2026 added the AI match feature. The Senior Recruiter turned it on on 2026-03-16, accepted the vendor's AI terms by click-through, and set the "smart filter" to hide applicants scoring under 50 on Light Industrial job orders to save screening time. Nobody else knew. There was no review, no bias test, no notice to applicants, and no way for an applicant to ask for a person to look at the application (P01 R-009, R-010; P03 G-045). The filter was turned off on 2026-07-24, during the risk assessment.
+**How the feature started.** An ATS upgrade in March 2026 added the AI match feature. The Senior Recruiter turned it on on 2026-03-16, accepted the vendor's AI terms by click-through, and set the "smart filter" to hide applicants scoring under 50 on Light Industrial job orders to save screening time. Nobody else knew. There was no review, no bias test, no notice to applicants, and no way for an applicant to ask for a person to look at the application (EV-008, EV-037; P01 R-009, R-010; P03 G-045). The filter was turned off on 2026-07-24, during the risk assessment (EV-042).
 
 ## 2. MAP
 | Item | Description |
@@ -62,7 +62,7 @@
 - **Would re-tier to Medium only if:** the feature becomes a pure search aid with no score or order shown. Not planned.
 
 ## 4. MEASURE
-Retrospective test on the 560 Light Industrial applicants from 2026-03-16 to 2026-07-24. "Shown" means not hidden by the filter. Sex and race or ethnicity come from the ATS's voluntary self-identification form (325 of 560 answered, 58%), which recruiters cannot see and the feature does not use.
+Retrospective test on the 560 Light Industrial applicants from 2026-03-16 to 2026-07-24 (EV-051). "Shown" means not hidden by the filter. Sex and race or ethnicity come from the ATS's voluntary self-identification form (325 of 560 answered, 58%), which recruiters cannot see and the feature does not use.
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|
@@ -70,7 +70,7 @@ Retrospective test on the 560 Light Industrial applicants from 2026-03-16 to 202
 | Safe | Not a physical safety system; the harm is exclusion from work | See fairness | n/a |
 | Secure and resilient | Vendor security review; MFA on the ATS; data terms | ATS MFA on; no vendor review; no data use, deletion, or breach terms | **No** |
 | Accountable and transparent | Change control; notice to applicants | Filter switched on without approval; applicants not told an automated tool scores them | **No** |
-| Explainable and interpretable | Recruiter can see why an applicant scored as they did | Match summary lists matched and missing requirements; the vendor gave a feature-weight sheet on request on 2026-08-19 | Partial |
+| Explainable and interpretable | Recruiter can see why an applicant scored as they did | Match summary lists matched and missing requirements; the vendor gave a feature-weight sheet on request on 2026-08-19 (EV-050) | Partial |
 | Privacy-enhanced | Minimum data; retention; no secondary use | No SSNs or self-ID data sent; model-improvement use not opted out; no deletion term | **No** |
 | Fair, with harmful bias managed | Compare shown rates between groups. Flag if a group's rate is below 80% of the highest group's rate **and** the difference is statistically significant (two-proportion z test, p < 0.05). Groups with fewer than 50 applicants are not tested | **Sex:** men 139 of 190 shown (73.2%); women 76 of 135 (56.3%); impact ratio **0.77**, z = 3.2. **Resume language:** English 335 of 496 (67.5%); Spanish or bilingual 29 of 64 (45.3%); ratio **0.67**, z = 3.5. **Race or ethnicity:** White 108 of 148 (73.0%); Hispanic or Latino 70 of 112 (62.5%); ratio 0.86, z = 1.8 (not flagged). Black or African American (41) and other groups were below the testing minimum | **No.** Two disparities flagged |
 
@@ -95,7 +95,7 @@ Retrospective test on the 560 Light Industrial applicants from 2026-03-16 to 202
 - The score only sorts the list. Nothing is hidden, rejected, or advanced automatically.
 - The recruiter sets the job order's minimum requirements (shift, certification, distance) as filters; every applicant who meets them gets a human review before a referral decision.
 - A recruiter who passes over a higher-scored applicant who meets the requirements records a reason in the ATS.
-- The employment-gap feature is off and the equipment keyword list is replaced by the certification field (vendor confirmed the change on 2026-08-28).
+- The employment-gap feature is off and the equipment keyword list is replaced by the certification field (vendor confirmed the change on 2026-08-28, EV-052).
 - Spanish-language resumes bypass the score and go to the bilingual Recruiter until the vendor shows at least 90% agreement for them.
 - Client requests are recorded as job requirements only. Any client preference tied to a protected trait is refused and reported to the Operations Manager (Title VII 703(b)).
 

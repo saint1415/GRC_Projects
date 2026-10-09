@@ -10,7 +10,7 @@
 | Target report | SOC 2 **Type 2**, observation period 2027-04-01 to 2027-09-30 (6 months), report expected by 2027-11-30; Type 1 (design) as of 2027-03-31 as an interim deliverable |
 | Part A | Firm readiness assessment (`soc2-readiness.csv`) |
 | Part B | Vendor SOC 2 review program (`vendor-soc2-review.csv`) |
-| Prepared | 2026-09-18 by the vCISO and the Security Manager with the VP Managed Workforce Solutions, using P02, P05, P06, and P07 evidence; approved by the COO 2026-09-22 |
+| Prepared | 2026-09-18 by the vCISO and the Security Manager with the VP Managed Workforce Solutions, using P02, P05, P06, and P07 evidence and the intake [evidence register](../step-00_P00_intake/evidence-register.csv) (the `evidence` column in `soc2-readiness.csv` cites its IDs); approved by the COO 2026-09-22 |
 
 ## 1. Why SOC 2 for this organization
 A staffing firm that only supplies labor is usually **not** a SOC 2 service organization: its associates work under the client's supervision on the client's systems, and the data the firm most needs to protect is its own workforce data. The Small sample reached that conclusion. **This firm's Managed Workforce Solutions unit is different:**

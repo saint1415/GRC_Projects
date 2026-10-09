@@ -11,7 +11,7 @@
 | Approved | 2026-09-22: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, and the risk appetite); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (Light Industrial with the 6 on-site programs, Office and Professional, Healthcare Staffing, Managed Workforce Solutions) and HQ shared services; the Associate Payroll and Applicant Tracking Platform (APATP) and the systems around it (`../00_company-facts.md` section 3); and the vendors that hold firm data. Processes and impact values come from the BIA (P05); vulnerabilities come from the SSP (P02), the cloud mapping (P04), the gap analysis (P03), and the control assessment (P07).
+**Scope.** All business units (Light Industrial with the 6 on-site programs, Office and Professional, Healthcare Staffing, Managed Workforce Solutions) and HQ shared services; the Associate Payroll and Applicant Tracking Platform (APATP) and the systems around it, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv); and the vendors that hold firm data, as listed in the intake [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the SSP (P02), the cloud mapping (P04), the gap analysis (P03), and the control assessment (P07).
 
 **What the firm is protecting.** About 168,000 associate records with SSNs and bank accounts, about 610,000 candidate profiles, about 10,900 consumer reports a year, Form I-9 records and document images since 2012, medical information for about 2,600 clinicians, finger templates for about 1,300 associates, and a weekly payroll of about $1.45 million.
 
@@ -38,8 +38,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $100,000 insurance retention are tolerable. Scenarios above $1 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical overlay, the BIA, interviews with every process owner and 3 Branch Managers, the 2026 H1 incident log (including 41 pay diversion cases), the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical overlay, the BIA, the intake evidence, interviews with every process owner and 3 Branch Managers (EV-062), the 2025-2026 incident log (EV-039) and the 2026 H1 payroll fraud case log with its 41 pay diversion cases (EV-009), the gap analysis (P03), and the control assessment (P07). The gap analysis ran in the same fieldwork window, and the two shared findings. The control assessment added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the payroll fraud case log (EV-009), scan results (EV-018), phishing results (EV-040), MSSP reports (EV-027), configuration exports, the walk-throughs and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (P05 section 3).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -76,7 +76,7 @@ Cyber insurance ($5 million limit, $100,000 retention) and the crime policy's $2
 - **Payday is the firm's hardest deadline (R-004, R-005, R-025).** No manual payroll procedure exists, so a vendor outage or ransomware in payroll week would turn into missed wages.
 - **AI adopted without governance (R-015 to R-018).** Two tools affect who gets work. P10 addresses them.
 
-R-052 was added on 2026-08-26 after the co-sourced internal audit firm found the payroll API key in the integration platform's container image during P07 testing.
+**Two passes.** Pass 1 was completed on 2026-08-07 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-052 was added on 2026-08-26 after the co-sourced internal audit firm found the payroll API key in the integration platform's container image during P07 testing (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 **Funded in the FY2027 security plan (approved by the CEO 2026-09-22, $410,000 one-time and $257,000 a year):**

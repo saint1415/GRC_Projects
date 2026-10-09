@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-22
 
 ## 1. System Name and Identifier
-Associate Payroll and Applicant Tracking Platform (**APATP**), identifier CSC-APATP-01. The APATP is the firm's major system. Its scope is defined in `../00_company-facts.md` section 3.
+Associate Payroll and Applicant Tracking Platform (**APATP**), identifier CSC-APATP-01. The APATP is the firm's major system. Its components are listed below and in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The APATP supports the firm's cycle from applicant to paycheck in every business unit: recruiting and AI-assisted screening, onboarding (tax forms, direct deposit, Form I-9, background checks, drug screens, E-Verify), Healthcare credentialing, time capture and client approval, weekly associate payroll for about 3,600 associates, and client invoicing. It is used by the 600 internal staff at HQ, 14 branches, and 6 on-site programs, by associates (self-service and timekeeping), and by client supervisors and hospital compliance staff.
@@ -95,6 +95,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Confidentiality was considered for High.** A theft of the full associate register would expose SSNs and bank accounts of about 168,000 people. The team kept confidentiality at Moderate because the harm, while serious, is limited to identity theft and financial loss that notice, credit monitoring, and recovery can contain, and it does not threaten the firm's ability to operate at all. To compensate, the plan adds data minimization (SI-12(1)) and monitoring of bulk exports (AU-6(1)).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts are the device management totals (EV-014), and the 12 fingerprint clocks come from the timekeeping console (EV-030).
+
 **Inside the boundary:**
 - the firm's ATS tenant configuration, roles, I-9 module settings, and associate portal settings;
 - the payroll platform users, roles, and settings;
@@ -172,7 +174,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 33 | ATS, payroll, identity, and credentialing vendors; cloud provider; MSSP; SD-WAN provider |
 | Common/Inherited | 12 | Identity vendor (for example AC-7, IA-2(1)), cloud provider (CP-6, SC-12), MSSP (IR-7), SaaS vendors (AC-12, SC-13) |
 
-The Partially implemented statements trace to the 15 numbered gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-007, EV-024 and EV-026) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 35 controls from 2026-08-17 to 2026-09-04 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported to the audit committee each quarter.
@@ -191,7 +193,7 @@ The step-by-step business process documentation required by 274a.2(f)(1) (how fo
 - **Client and supplier users.** Client supervisors, hospital compliance staff, and MSP suppliers use vendor-managed accounts in the client portal, the credentialing client portal, and the VMS. MFA is required in the VMS and is planned for the credentialing client portal (IA-8).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AHCA:** Agency for Health Care Administration (Florida)
