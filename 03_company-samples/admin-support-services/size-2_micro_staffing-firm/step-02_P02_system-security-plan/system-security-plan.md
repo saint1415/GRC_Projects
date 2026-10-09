@@ -34,7 +34,7 @@ The firm owns almost no infrastructure. The PATS is mostly vendor SaaS, and a ma
 | Federal | Title VII, ADEA, ADA (employment agency and employer) | 42 U.S.C. 2000e-2; 29 U.S.C. 623; 42 U.S.C. 12112 | Use of the AI match feature in referrals (P10) |
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 | |
 
-Not applicable (see P03 for reasons): HIPAA as a business associate (N56-R04), TCPA and the Telemarketing Sales Rule (N56-R05), PCI DSS (N56-R06), FAR 52.204-21 (N56-R07), NYC Local Law 144 (N56-R08), PHMSA security plans (N56-R09).
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); reasons restated in P03): HIPAA as a business associate (N56-R04), TCPA and the Telemarketing Sales Rule (N56-R05), PCI DSS (N56-R06), FAR 52.204-21 (N56-R07), NYC Local Law 144 (N56-R08), PHMSA security plans (N56-R09).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -76,7 +76,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 Two controls outside the Moderate baseline were added by tailoring: PM-2 (the designated lead) and PT-5 (privacy notice, because applicants must be told about AI scoring). SI-12 is in the baseline and is called out because Form I-9 and consumer report retention is the firm's largest data problem.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the firm controls, or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the firm controls, or pays someone to control on its behalf:
 - **Inside:** the firm's ATS tenant, users, and settings (SYS-01); its payroll service account, administrators, and settings (SYS-02); the suite tenant and shared drive (SYS-03); 8 laptops, the applicant tablet, the scanner, and the work use of 7 personal phones (SYS-04); the office network (SYS-05); the firm's backup subscription (SYS-08).
 - **Outside but interconnected (reviewed in this plan):** the screening provider's platform (SYS-06), E-Verify (SYS-07), and the ATS vendor's AI subprocessor (SYS-09).
 - **Outside:** the vendors' own platforms and data centers, the firm's bank, job boards, the MSP's remote management platform, and the accounting SaaS (SYS-10), which holds no worker PII beyond client contacts.
@@ -120,10 +120,10 @@ By responsibility: 21 system-specific (the firm), 17 hybrid (the firm with a ven
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the firm relies on | Evidence | What the firm must still do |
 |---|---|---|---|
-| Payroll service vendor | Platform security, encryption, backups (CP-9), audit records (AU-2, AU-11), lockout (AC-7) | SOC 2 Type 2 report reviewed 2026-08-20 (P09) | Complementary user entity controls: administrator provisioning and removal, MFA settings, review of bank changes and exports |
-| ATS vendor | Platform security, encryption, backups, role enforcement (AC-3), audit records (AU-2) | Trust page only; SOC 2 report requested, not received | Users and roles, MFA enforcement, export review, AI settings |
-| Productivity suite vendor | Platform security, encryption in transit and at rest (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation | Account management, MFA settings, folder permissions, forwarding rules, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), screen lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
+| Payroll service vendor | Platform security, encryption, backups (CP-9), audit records (AU-2, AU-11), lockout (AC-7) | SOC 2 Type 2 report (EV-049) reviewed 2026-08-20 (P09) | Complementary user entity controls: administrator provisioning and removal, MFA settings, review of bank changes and exports |
+| ATS vendor | Platform security, encryption, backups, role enforcement (AC-3), audit records (AU-2) | Trust page only (EV-009); SOC 2 report requested, not received | Users and roles, MFA enforcement, export review, AI settings |
+| Productivity suite vendor | Platform security, encryption in transit and at rest (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-038) | Account management, MFA settings, folder permissions, forwarding rules, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), screen lock (AC-11) | MSP reports (EV-019 to EV-021); MSP contract (EV-018); P07 evidence requests | Oversight: approve exceptions, review reports monthly, annual MSP security review (P01 R-013) |
 | Backup service (MSP-operated) | Storage of suite copies (CP-9) | None yet; restore test due 2026-09-30 | Require MFA on the console; receive restore results |
 
 **Inherited does not mean done.** The payroll vendor's report lists controls the firm must run for the vendor's controls to work. Two are open gaps: MFA strong enough to resist phishing on administrator accounts (IA-2(1)) and review of bank changes and exports (AU-6, SI-4). Those two gaps are exactly the path of the P08 scenario.
@@ -135,7 +135,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Staff sign in to the ATS and the suite with a password and a second factor from a phone app. The payroll service uses a password and an SMS code, which is weaker than the other two because a phishing page can relay the code in real time. Given that the payroll service can change where money goes, the firm will move its administrators to authenticator-app MFA by 2026-10-31 (R-001) and add a call-back rule for every bank change. Associates use the payroll vendor's self-service with a password only; adding a verification step for bank changes is requested from the vendor (R-002). Applicants use the ATS career site without an account.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and payroll vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and payroll vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AiTM:** adversary-in-the-middle (a phishing page that relays the sign-in, including MFA codes)
