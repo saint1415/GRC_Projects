@@ -82,6 +82,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Engineering; Director of OT Security; Director of Security Operations; Director of Identity and Access Management; Director of Refrigeration and Process Safety; SVP FSQA; the four sampled plants' Plant Managers, FSQA managers, and controls engineers; General Counsel; CFO; CISO; 20 randomly selected plant workers.
 - **Test:** access tests with test accounts in the MES validation environment; release signature verification; comparison of 60 active HMI setpoints with released recipes; credential tests on OT management interfaces (with vendor approval, during sanitation windows); reachability tests from the corporate network at PLT-05 and from the PLT-08 office VLAN; OT monitoring test alerts; a backup restore observation; a deletion attempt against the log archive.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy set in force (EV-028) and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up, or after its POA&M due date where that is later. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 291 (244 Satisfied, 47 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: reconciliation of OT change tickets with PLC download events (CM-03f.[02]) and a tool that compares active HMI setpoints with the released recipe (SI-07a.[03]) | 2 |
+| **Total** | | **293** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005, the plant OT directories, EV-006, the OT asset inventory, EV-011, and the OT change records, EV-059) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - **No testing could affect food safety or worker safety.** OT tests ran only during scheduled sanitation windows with no product on the lines, with the plant controls engineer and the plant FSQA manager present. No test wrote to a PLC, changed a setpoint, or touched a safety instrumented function or ammonia detection.
 - Refrigeration controller tests at DC-03 and PLT-05 were read-only, with the Director of Refrigeration and Process Safety's approval and a refrigeration technician present, following the PSM site rules.

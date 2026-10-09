@@ -92,6 +92,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 Privacy-baseline controls are documented in the enterprise privacy program; the PPCM holds little personal information (operator names and badge IDs).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-05, SYS-05-L, SYS-11, SYS-11-L, SYS-15 and the OT security tooling, OT-SEC), the prior SSP version 1.1 and the OT reference architecture (EV-070).
+
 **Inside the boundary:** at each plant, SYS-01, SYS-02, and SYS-03 and the plant's OT DMZ; refrigeration controllers at the 4 DCs; the cold-chain sensors and gateways at all 12 sites and the company's configuration of the cold-chain SaaS; the central MES, enterprise historian, and food safety records platform in their Cloud provider A workload accounts; and the OT remote access gateway and the legacy paths at PLT-05 and PLT-08.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -100,7 +102,7 @@ Privacy-baseline controls are documented in the enterprise privacy program; the 
 - SOC, SIEM, EDR, and vulnerability scanners: CCP-04
 - ERP (SYS-06), WMS and TMS (SYS-07), traceability platform (SYS-12), customer portals (SYS-13), AI vision inspection edge servers and vendor cloud (AI-001), and the cold-chain vendor's platform
 
-**Boundary weaknesses:** PLT-05 has no OT DMZ and a contractor modem on its refrigeration controller; PLT-08 is a flat network with a VPN into SCADA without MFA (POAM-001 to POAM-003).
+**Boundary weaknesses:** PLT-05 has no OT DMZ and a contractor modem on its refrigeration controller; PLT-08 is a flat network with a VPN into SCADA without MFA (EV-013, EV-014, EV-015; POAM-001 to POAM-003).
 
 ```mermaid
 flowchart LR
@@ -161,7 +163,7 @@ The enterprise multi-cloud diagram is in P04 `cloud-architecture.md`.
 | OT remote access gateway | Virtual appliances in each plant OT DMZ, brokered centrally | 6 plants | Director of OT Security |
 | Plant OT backup appliances with offline copies | On-premises storage | 7 plants (PLT-08 uses a domain-joined device) | Plant controls engineers |
 
-Counts come from the OT asset inventory, which is about 91% complete (CM-8, POAM-009).
+Counts come from the OT asset inventory (EV-011), which is about 91% complete (CM-8, POAM-009).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -214,7 +216,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Records sign-offs:** e-signatures on the records platform bind each sign-off to a named user at 7 plants; PLT-08 does not meet this statement until its migration (POAM-007).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness (P09), AI portfolio including AI-001 (P10), the PPCM contingency plan v3, the OT reference architecture, the PLT-07 food defense plan, the HACCP plans for each plant, and the enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness (P09), AI portfolio including AI-001 (P10), the PPCM contingency plan v3 (EV-025), the OT reference architecture (EV-070), the PLT-07 food defense plan (EV-058), the HACCP plans for each plant (EV-056), and the enterprise common control catalog (EV-036). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

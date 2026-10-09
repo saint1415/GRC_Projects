@@ -124,7 +124,7 @@ This table is for reading provider documentation only. The architecture, control
 **Rules for inheriting:**
 1. A workload may claim a common control only if its account was created by account vending and passes the posture baseline.
 2. Customer-side identity, data protection, and logging stay explicit at every layer: even a SaaS application has Customer rows for access and review (AC-2, AU-6, SA-9), because those are always the company's job.
-3. SaaS rows cite the vendor's SOC 2 report, reviewed by the third-party risk team (P09 evidence map).
+3. SaaS rows cite the vendor's SOC 2 report, reviewed by the third-party risk team (EV-045; P09 evidence map). The `evidence_source` column in `cloud-control-map.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each row.
 4. No cloud workload may hold a direct network path to a PLC, HMI, or refrigeration controller. All traffic goes through the plant edge layer.
 
 ## 6. Validation against the PPCM SSP (P02)
