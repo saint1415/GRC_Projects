@@ -105,6 +105,7 @@ for p in md_files:
 
 # ---- evidence-based samples (step-00 intake present): every finding traces to dated evidence
 EV_RE = re.compile(r"\bEV-[A-Z0-9](?:[A-Za-z0-9]|\(\d+\)|-(?=[A-Za-z0-9]))*")
+PHASE_RE = re.compile(r"Intake|Intake follow-up|P(?:0[1-9]|10) (?:fieldwork|follow-up)")
 JUDGMENT_RE = re.compile(r"\b(not compliant|non-?compliant|gap|deficien\w*|weakness\w*|inadequate|insufficient)\b", re.I)
 INTAKE_FILES = ("evidence-register.csv", "asset-inventory.csv", "vendor-register.csv", "obligations-register.csv", "intake-report.md")
 
@@ -128,6 +129,8 @@ def check_evidence_based(sd, intake):
             errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} collected before its as-of date")
         if JUDGMENT_RE.search(r.get("what_it_shows", "")):
             errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} states a judgment; record observations only")
+        if r.get("phase", "").strip() and not PHASE_RE.fullmatch(r["phase"]):
+            errors.append(f"{where}/evidence-register.csv: {r['evidence_id']} has phase '{r['phase']}'; use Intake, Intake follow-up, or Pnn fieldwork / Pnn follow-up")
     known = set(ids)
     for p in [x for x in sd.rglob("*") if x.suffix in (".md", ".csv") and x.name != "_context.md"]:
         for ref in sorted(set(EV_RE.findall(p.read_text(encoding="utf-8")))):

@@ -17,7 +17,7 @@
 
 | File | Purpose |
 |---|---|
-| `evidence-register.csv` | One row per item collected: source system, type, owner, as-of and collected dates, the phase that collected it, and what it shows (observations only). Intake creates the first rows; later fieldwork (BIA interviews, risk and gap interviews, control tests) adds its own rows, so one register backs every deliverable. |
+| `evidence-register.csv` | One row per item collected: source system, type, owner, as-of and collected dates, the phase that collected it, and what it shows (observations only). Intake creates the first rows; later fieldwork (BIA interviews, risk and gap interviews, control tests) adds its own rows, so one register backs every deliverable. The `phase` column is `Intake`, `Intake follow-up` (an answer to an intake request that arrived after the intake window), `Pnn fieldwork`, or `Pnn follow-up` (evidence received after that step's fieldwork). |
 | `asset-inventory.csv` | Hardware, software, services, data stores, networks, and AI tools, each with its owner, hosting, data types, and source evidence. |
 | `vendor-register.csv` | Suppliers and service providers, the systems and data they touch, the agreements and assurance reports on file, and the source evidence. |
 | `obligations-register.csv` | Each candidate obligation, whether it applies, the factual and legal basis, and which step analyzes it. |
