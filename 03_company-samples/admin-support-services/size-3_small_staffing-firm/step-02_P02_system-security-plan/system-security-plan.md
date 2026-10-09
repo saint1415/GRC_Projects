@@ -32,7 +32,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | Benchmark | NIST CSF 2.0 (voluntary; label N56-BM) | P03 |
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
-Not applicable: HIPAA (N56-R04), PCI DSS (N56-R06), FAR 52.204-21 (N56-R07), NYC Local Law 144 (N56-R08), TCPA/TSR (N56-R05), and PHMSA security plans (N56-R09). Reasons are in P03 section 1.
+Not applicable: HIPAA (N56-R04), PCI DSS (N56-R06), FAR 52.204-21 (N56-R07), NYC Local Law 144 (N56-R08), TCPA/TSR (N56-R05), and PHMSA security plans (N56-R09). Reasons are in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and P03 section 1.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -72,7 +72,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 Five controls outside the Moderate baseline were added by tailoring: three program-level controls that a small firm needs because the security program and this system share one owner, PM-1, PM-2, and PM-9; and two privacy controls that carry legal duties, PT-5 (FCRA disclosure and applicant notice) and SI-12(1) (remove SSNs from the reporting copy). The other 65 controls are in the Moderate baseline.
 
 ## 7. Authorization Boundary Description
-The boundary contains firm-managed components and the firm's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains firm-managed components and the firm's configuration of vendor services:
 - **Inside:** the ATS tenant configuration, roles, and I-9 module settings; the payroll platform users and settings; the identity provider tenant; the timekeeping app admin settings; the cloud tenant (4 workloads); the 4 office networks; 62 laptops, 8 kiosks, 4 scanners, and 34 smartphones.
 - **Outside (external services, interconnected):** the ATS, payroll, and timekeeping vendors' platforms; the cloud provider's infrastructure; the background screening provider; E-Verify (DHS); the AI screening vendor; the payroll vendor's bank.
 
@@ -123,7 +123,7 @@ Internal staff authenticate through the identity provider with a password and nu
 Associates use the ATS self-service portal and the timekeeping app with vendor-managed sign-in and MFA. Their identity is proofed at hire through Form I-9 document examination and E-Verify (IA-12).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **APATP:** Associate Payroll and Applicant Tracking Platform

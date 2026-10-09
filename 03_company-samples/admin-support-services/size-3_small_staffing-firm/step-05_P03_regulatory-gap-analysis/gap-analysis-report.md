@@ -13,6 +13,8 @@
 | Workbook | `gap-analysis.csv` (151 rows) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result and the reasoning for the rules analyzed here.
+
 **Step 1 was to find a cybersecurity rule that binds a temporary staffing firm. None does.** The vertical profile names NIST CSF 2.0 as the primary benchmark because NAICS 56 has no sector-specific federal cyber mandate. That holds for this firm:
 
 | Candidate | Applies? | Why (citation) |
@@ -43,7 +45,7 @@
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). Regulation rows cite the eCFR text current as of 2026-09-23, the U.S. Code, the 2026 Florida Statutes, and the E-Verify MOU, with short quotes or paraphrases.
 2. **Target Profile.** Each subcategory has a priority for the firm's CSF Target Profile (High 35, Medium 48, Low 23), set by the IT Manager and the COO from the risk register (P01) and BIA (P05). Subcategories that protect SSNs, I-9 records, and payroll are High.
 3. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (CSF 2.0 to SP 800-53 Rev. 5.2.0, SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`. The `sp800_53_controls` column is a key-control subset chosen by the author. Regulation rows use an author mapping (no official NIST mapping exists for these rules).
-4. **Evidence.** Interviews (COO, Controller, Payroll Manager, HR and Compliance Manager, Director of Recruiting, 3 Onboarding Specialists, 2 Branch Managers, 8 other staff, the managed IT provider), document review, configuration exports, a sample of 25 associate I-9s with E-Verify cases, 20 background check rejections, a 30-form sample of the scanned I-9 archive, and walkthroughs of HQ and Branch 3.
+4. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts and vendor reports, EV-001 to EV-050); interviews with the COO, President, Controller, Payroll Manager, HR and Compliance Manager, Director of Recruiting, 3 Onboarding Specialists, 2 Branch Managers and the managed IT provider (EV-053) and 8 other staff (EV-056); walkthroughs of HQ on 2026-07-15 and Branch 3 on 2026-07-16 (EV-054, EV-055); a sample of 25 associate I-9s with E-Verify cases (EV-057, EV-058); a 30-form sample of the scanned I-9 archive (EV-059); a recruiter mailbox search (EV-060); the I-9 module walk-through (EV-061); 25 background check orders and 20 rejections (EV-062); and a TLS scan received after fieldwork (EV-063). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **Current CSF Tier: Tier 1 (Partial).** Security has been informal and reactive. **Target: Tier 2 (Risk Informed) by 2027-08**, meaning practices approved by leadership and driven by the risk register.

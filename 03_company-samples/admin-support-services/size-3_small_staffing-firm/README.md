@@ -3,9 +3,9 @@
 
 > Cris Santos Company, LLC is a small business with 60 employees, operating as a staffing firm.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -44,13 +44,14 @@ FTC FCRA Disposal Rule, Telemarketing Sales Rule, FTC Act Section 5; Federal Com
 | [NYC Local Law 144 (Automated Employment Decision Tools)](https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page) | NYC Admin. Code 20-870 et seq. (Local Law 144 of 2021) | None. |
 | [PHMSA hazmat security plans](https://www.ecfr.gov/current/title-49/part-172/subpart-I) | 49 CFR 172.800-172.804 | Applicability depends on the material/quantity thresholds in 49 CFR 172.800 (not itemized here). |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Identity provider and endpoint exports; HR roster and terminations; vendor and contract lists; prior assessments; incident log. Dated evidence register; full asset; data and vendor inventories; obligations register with legal basis. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business processes. MTD/RTO/RPO; resource and dependency mapping. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One major system with a defined boundary. Full SSP outline per SP 800-18 Rev. 2; control implementation statements. System: Associate Payroll and Applicant Tracking Platform (APATP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | One cloud environment (IaaS/PaaS) plus SaaS. Control-by-component mapping; shared responsibility by service. | P02: the system boundary and its controls |
