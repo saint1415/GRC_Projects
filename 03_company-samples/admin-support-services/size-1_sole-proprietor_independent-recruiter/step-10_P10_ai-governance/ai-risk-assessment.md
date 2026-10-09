@@ -7,10 +7,10 @@
 | AI use case | AI-001: AI resume screening and candidate ranking, the AI match add-on to the ATS (SYS-01). On since 2026-02-02; automatic rejection on for two job orders from 2026-04-06 to 2026-06-26; sort-only since 2026-07-21 |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; AI 600-1 for the generative chatbot (AI-002) |
 | Assessor and decision | Owner-recruiter, 2026-08-25; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the ATS add-on settings and disposition history, the add-on terms and help documentation, the job ads, the chatbot account settings and history, and the bank and card statements (EV-005, EV-006, EV-007, EV-027, EV-017). With no staff, there was no survey to run. Not established: the add-on's feature weights (the full feature list was requested on 2026-07-24), whether either vendor has used the candidate data for training, and group outcomes for the 236 automatic rejections, because the owner collects no demographic data |
 
 ## 1. What it does (Map)
-The add-on reads each resume, scores the applicant 0-100 against the job order (skills, titles, years of experience, education, location, and, per the vendor's help documentation, employment gaps), and sorts the applicant list. It can also send an automatic rejection email below a chosen score. The owner turned that on for a staff accountant and a help desk analyst job: of 412 applicants, **236 were rejected by the tool with no human review**. The vendor's terms let it use customer data to improve its models unless an opt-out setting (off by default) is turned on. The owner does not collect demographic data, so group outcomes cannot be measured directly.
+The add-on reads each resume, scores the applicant 0-100 against the job order (skills, titles, years of experience, education, location, and, per the vendor's help documentation, employment gaps), and sorts the applicant list. It can also send an automatic rejection email below a chosen score. The owner turned that on for a staff accountant and a help desk analyst job: of 412 applicants, **236 were rejected by the tool with no human review** (EV-005). The vendor's terms let it use customer data to improve its models unless an opt-out setting (off by default) is turned on (EV-005, EV-006). The owner does not collect demographic data, so group outcomes cannot be measured directly.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |

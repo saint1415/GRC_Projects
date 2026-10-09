@@ -29,7 +29,18 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 48 determination statem
 ## 2. Methods and objects
 - **Examine:** account security pages, the account list, the browser password store, the router admin page, phone settings, the partner agreement and SOC 2 report, ATS and AI add-on terms, P01 and P05.
 - **Test (2026-07-23):** sign-ins to email, the ATS, the partner portal, and accounting from a new browser; a search of the mailbox, file storage, laptop, and phone camera roll for SSNs, ID images, and consumer reports; a check of the router admin password.
-- **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen. A call with the partner's payroll desk (2026-07-22) supplied the SA-9 evidence about bank changes.
+- **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen. A call with the partner's payroll desk (2026-07-22, EV-032) supplied the SA-9 evidence about bank changes.
+
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The first risk assessment (P01) was completed on 2026-07-24, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, mailbox and vendor records | 21 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the July 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 21 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the owner's accounts (EV-001, EV-008, EV-012, EV-015, EV-031), the laptop and phone (EV-020, EV-021), the router (EV-023), the mailbox (EV-009), and the vendor terms (EV-004, EV-006, EV-013, EV-027). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
 
 ## 3. Rules of engagement
 - Search results were counted, not copied: no SSN, ID image, or report left the owner's accounts, and screenshots were cropped to settings and counts only.
