@@ -17,7 +17,7 @@ The ALPP carries an associate from application to paycheck. It supports all four
 | Pay and bill | Payroll and billing engine (SYS-03, commercial staffing back-office software, customer-managed on Cloud provider A) | About $65 million a week to about 78,000 associates; about $92 million a week invoiced |
 | Connect | ALPP integrations on the enterprise integration platform (Cloud provider A) | About 900 interface jobs a day |
 
-**Why integrity and confidentiality both matter.** The ALPP holds SSNs, Form I-9 document images, bank accounts, and consumer reports for millions of current and former associates and candidates, so a confidentiality breach is the firm's largest privacy exposure. It also moves real money every week: a changed bank account or an altered pay file sends wages to a criminal. In 2025, 214 fraudulent associate bank changes diverted about $612,000 (facts gap 1).
+**Why integrity and confidentiality both matter.** The ALPP holds SSNs, Form I-9 document images, bank accounts, and consumer reports for millions of current and former associates and candidates, so a confidentiality breach is the firm's largest privacy exposure. It also moves real money every week: a changed bank account or an altered pay file sends wages to a criminal. In 2025, 214 fraudulent associate bank changes diverted about $612,000 (EV-044).
 
 Users: about 9,800 workforce users (recruiters, onboarding specialists, payroll and billing staff, Associate Service Center agents), about 310,000 associate self-service accounts active in 2025, and about 21,000 client approvers in the timesheet portal.
 
@@ -38,7 +38,7 @@ Users: about 9,800 workforce users (recruiters, onboarding specialists, payroll 
 | Contract | Client agreements; SOC 2 | P09 | SL-2 payrolling runs on the ALPP payroll engine |
 | Internal | POL-01 to POL-05 and standards | P06 | Enterprise policy hierarchy |
 
-Not applicable to the ALPP: N56-R04 (the firm is not a HIPAA business associate for clinician placements; see facts section 1), N56-R05 (recruiting texts are sent from SYS-01 under the Privacy Office's consent program, a contact-consent duty outside this plan), N56-R06 (no payment cards), N56-R09 (no hazardous materials).
+Not applicable to the ALPP: N56-R04 (the firm is not a HIPAA business associate for clinician placements; see the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and EV-062), N56-R05 (recruiting texts are sent from SYS-01 under the Privacy Office's consent program, a contact-consent duty outside this plan), N56-R06 (no payment cards), N56-R09 (no hazardous materials).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -85,6 +85,8 @@ Information types follow the NIST SP 800-60 Vol. 2 Rev. 1 human resources and fi
 **Documented controls.** `control-implementation.csv` documents **141 controls**: 133 from the Moderate baseline and 8 High-baseline supplements. The remaining Moderate-baseline controls and enhancements are fully inherited from the enterprise common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are documented in the enterprise privacy program.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-03, SYS-03-SF, SYS-03-IP, SYS-04, SYS-04-TC and SYS-06-ARC) and the prior SSP version 1.1.
+
 **Inside the boundary:** the payroll engine servers and database in the payroll workload account (Cloud provider A); the ALPP integrations configured on the integration platform; the firm's tenants, configuration, roles, and data in SYS-01, SYS-02, and SYS-04; the SFTP staging service for bank, paycard, and tax files; the time clock server (DC-1) and the 140 on-site time clocks; the scanned I-9 archive file server (DC-2); and workforce endpoints while used to operate the ALPP.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -207,7 +209,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Candidates:** career site accounts carry no pay or identity data beyond the application, so password plus email verification is accepted.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), payroll and HR breach runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 (P10), ALPP contingency plan v3, electronic I-9 system description (8 CFR 274a.2(e)(5)), enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), payroll and HR breach runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 (P10), ALPP contingency plan v3 (EV-024), electronic I-9 system description (8 CFR 274a.2(e)(5); EV-035), enterprise common control catalog (EV-034). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House (bank payment files)
