@@ -11,7 +11,7 @@
 | Risk owner / approver | Owner and General Manager, 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business and its key vendors: every system in `../00_company-facts.md` section 3 (the plant machines, the cold-chain service, the records app, the office SaaS, the network and endpoints, the backup), and the vendors that run or reach them: the MSP, the smokehouse manufacturer, the packaging machine vendor, the cold-chain vendor, the records app vendor, the payroll service, and the card terminal provider. Food safety outcomes are in scope where a cyber event can cause them (wrong cook cycle, lost monitoring, wrong label).
+**Scope.** The whole business and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (the plant machines, the cold-chain service, the records app, the office SaaS, the network and endpoints, the backup), and the vendors that run or reach them: the MSP, the smokehouse manufacturer, the packaging machine vendor, the cold-chain vendor, the records app vendor, the payroll service, and the card terminal provider ([vendor register](../step-00_P00_intake/vendor-register.csv)). Food safety outcomes are in scope where a cyber event can cause them (wrong cook cycle, lost monitoring, wrong label).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
@@ -21,8 +21,8 @@
 This is the company's first risk assessment. Before 2026 security was whatever the MSP did on the office computers.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the SSP (P02), the cloud mapping (P04), the gap analysis (P03), a plant walkthrough on 2026-07-22, and interviews with the owner, the Production Supervisor, the Maintenance and Sanitation Technician, the Office Manager, two production workers, and the MSP lead technician.
-2. **Rate likelihood.** For each event, the likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, and so was the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the SSP (P02), the cloud mapping (P04), the intake evidence, a plant walkthrough on 2026-07-22 (EV-048), and interviews with the owner, the Production Supervisor, the Maintenance and Sanitation Technician, the Office Manager, two production workers, and the MSP lead technician (2026-07-20 to 2026-07-31, EV-046). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** For each event, the likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, and so was the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console, controller and MSP exports, the contracts folder and food safety binder, the walk-throughs and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Undercooked ready-to-eat product or an undeclared allergen reaching consumers is rated Very High; loss of the cold storage inventory or a week without production is High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -52,9 +52,11 @@ Status: 8 In progress, 12 Open, 3 Closed (R-023 treated; R-020 and R-021 accepte
 **Food safety and cyber risk are the same risk here.** R-002, R-009, R-019, and R-023 are cyber events whose harm is unsafe or misbranded food. Each one also triggers the FSIS duties to hold product and review it (9 CFR 417.3(b)) and to notify FSIS within 24 hours if adulterated or misbranded product entered commerce (418.2). That is why the Production Supervisor owns them, not the Office Manager.
 
 **Risks fixed or found during the work:**
-- R-023: P07 testing on 2026-08-11 found the manufacturer default administrator password on the smokehouse controller's web interface. It was changed the same day. The cook-log history was checked against the paper handheld readings for July and showed no unexplained changes. Closed.
-- R-002 and R-003: the smokehouse portal connection and the packaging vendor's remote desktop tool were set to supervised, on-request sessions on 2026-08-12.
-- R-007: all shared passwords and the smokehouse PIN were changed on 2026-08-12.
+- R-023: P07 testing on 2026-08-11 found the manufacturer default administrator password on the smokehouse controller's web interface (EV-SC-7). It was changed the same day. The cook-log history was checked against the paper handheld readings for July and showed no unexplained changes. Closed.
+- R-002 and R-003: the smokehouse portal connection and the packaging vendor's remote desktop tool were set to supervised, on-request sessions on 2026-08-12 (EV-AC-17).
+- R-007: all shared passwords and the smokehouse PIN were changed on 2026-08-12 (EV-AC-2).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-12 from P07 testing. R-017 and R-022 were identified in Pass 1 and reviewed again with the P10 assessment on 2026-08-25. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the owner; about $6,000 one-time and $1,800 a year):**

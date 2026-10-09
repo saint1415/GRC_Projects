@@ -35,6 +35,17 @@ Micro tier scope: 10-15 controls. **13 controls, 106 determination statements.**
   - a test edit on a copy of a cook-log export to see whether the change is detectable
   - an industry-standard harmless antivirus test file on the labeling PC, and an after-hours test alert at 18:30 to check routing
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested on samples or live systems | 39 |
+| Design | The control is new (a draft policy); its design was reviewed. Operation is tested at the 2027-02 follow-up | 1 |
+| Not implemented | Nothing existed to test | 66 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees and the March 2026 departure in EV-001, and the network scan was compared with the 3 PCs in the MSP device list in EV-013).
+
 ### MSP evidence requested
 The MSP operates the PC and network controls, so evidence came from it. Requested on 2026-08-03 with a one-week deadline:
 

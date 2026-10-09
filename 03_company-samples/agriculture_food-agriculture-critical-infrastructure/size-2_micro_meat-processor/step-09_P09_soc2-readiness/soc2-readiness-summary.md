@@ -13,11 +13,11 @@
 ## 1. Why SOC 2 for this organization
 A 7-person meat plant is **not** a SOC 2 service organization. It sells food, not services to other businesses' systems. The Trust Services Criteria are used here for two practical reasons.
 
-**A. Answering a customer questionnaire.** The 12-store regional grocery chain that became a customer in May 2026 sent a supplier security questionnaire in July. It asks how the supplier protects its systems and whether it can keep supplying during an outage. Its questions follow the Trust Services Criteria. The company will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30.
+**A. Answering a customer questionnaire.** The 12-store regional grocery chain that became a customer in May 2026 sent a supplier security questionnaire in July (EV-042). It asks how the supplier protects its systems and whether it can keep supplying during an outage. Its questions follow the Trust Services Criteria. The company will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30.
 
 **The company will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the company's controls were defined in August 2026. An audit would also cost more than the company's entire 2026 security budget. The grocery chain's questionnaire instructions accept a self-assessment from small suppliers.
 
-**B. Relying on the cold-chain vendor.** The cold-chain monitoring service watches every cooler, the freezer, the blast chill cooler, and the truck, and it records the chilling CCP. Its SOC 2 Type 2 report is the evidence for the controls the company inherits from it (P02 section 10.2). Reviewing it each year is part of vendor oversight (SA-9).
+**B. Relying on the cold-chain vendor.** The cold-chain monitoring service watches every cooler, the freezer, the blast chill cooler, and the truck, and it records the chilling CCP. Its SOC 2 Type 2 report (EV-051) is the evidence for the controls the company inherits from it (P02 section 10.2). Reviewing it each year is part of vendor oversight (SA-9).
 
 **Why Availability and not another category.** The grocery chain cares most about continuity of supply, and the plant's most time-critical process is cold storage monitoring (P05 MTD 2 hours). Formulation confidentiality is covered under the Security criteria. Processing Integrity was considered because labels and lot codes must be accurate, but the company processes no data for others, and label accuracy is governed by the FSIS rules analyzed in P03. Privacy does not fit: the company holds no consumer personal information.
 
@@ -45,7 +45,7 @@ A 7-person meat plant is **not** a SOC 2 service organization. It sells food, no
 - CC6.7: encrypted connections to every SaaS service
 
 **Not ready:**
-- CC2.1: no inventory of plant equipment (3 of 17 devices listed)
+- CC2.1: no inventory of plant equipment (3 of 17 devices listed; EV-013, EV-CM-8)
 - CC3.4 and CC8.1: changes to machines, settings, and the AI camera are not assessed or approved
 - CC6.2 and CC6.3: access granted and removed without a process; shared logins
 - CC7.1, CC7.2, CC7.3: no scanning, monitoring, setting comparison, or incident records

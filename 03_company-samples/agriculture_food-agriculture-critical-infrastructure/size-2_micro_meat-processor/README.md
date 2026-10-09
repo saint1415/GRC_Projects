@@ -3,9 +3,9 @@
 
 > Cris Santos Company, LLC is a micro business with 7 employees, operating as a meat processor.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -38,13 +38,14 @@ SRMA: Department of Agriculture (USDA) and Department of Health and Human Servic
 | [CIRCIA (Cyber Incident Reporting for Critical Infrastructure Act of 2022) - proposed 6 CFR Part 226](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR Part 226 (NPRM 89 FR 23644, Apr. 4, 2024) | Proposed 226.2(a): exceeds SBA size standard in 13 CFR Part 121 for the entity's NAICS code (employee- or revenue-based depending on NAICS); sector-based criteria apply regardless of size. |
 | [USCG Cybersecurity in the Marine Transportation System final rule](https://www.federalregister.gov/documents/2025/01/17/2025-00708/cybersecurity-in-the-marine-transportation-system) | 33 CFR Part 101, Subpart F (33 CFR 101.600-101.670); FR Doc. 2025-00708 (Jan. 17, 2025) | No size threshold; applicability is by MTSA facility/vessel/OCS facility status (33 CFR 101.605). |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Vendor admin consoles; payroll provider; MSP reports; contracts folder; insurer questionnaire. Evidence register; asset and vendor inventories; obligations register. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Plant Production and Cold-Chain Monitoring System (PPCM). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. | P02: the system boundary and its controls |

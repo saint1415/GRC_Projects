@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (USDA-inspected sausage and smoked meats plant) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (security and compliance lead) with the owner, the Production Supervisor, the Maintenance and Sanitation Technician, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** owner, 2026-08-31
+**Sources:** process owner interviews 2026-07-20 to 2026-07-24 (EV-045), FY2025 sales report (EV-039), customer list and weekly sales (EV-040), month-end inventory valuation (EV-041), backup job report (EV-018), MSP service contract (EV-020), refrigeration contractor agreement (EV-021), cold-chain vendor SOC 2 report (EV-051). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the owner.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the plant, how long each can be down, and how much data each can lose. It supports:
@@ -13,10 +14,10 @@ This BIA lists every business function of the plant, how long each can be down, 
 No federal rule requires this plant to have a contingency plan. FSIS rules require that CCPs are monitored and recorded and that product is not shipped until its records are reviewed, whatever happens to the systems. The BIA is how the plant keeps those duties during an outage.
 
 ## 2. System and business description
-One Florida plant, 7 employees, about 40 wholesale accounts and a retail counter, about $4,400 of sales per production day. The plant runs two automated lines (stuffer and linker; thermoforming packager with label printer), a programmable smokehouse, and a cold-chain monitoring service with wireless sensors. Food safety records live in a SaaS records app on two floor tablets. Office work runs in SaaS (productivity suite, accounting, payroll). An MSP runs the office computers, firewall, and backup; equipment vendors support the plant machines. See `../00_company-facts.md` sections 1 and 3.
+One Florida plant, 7 employees, about 40 wholesale accounts and a retail counter, about $4,400 of sales per production day across 250 production days (EV-039). The plant runs two automated lines (stuffer and linker; thermoforming packager with label printer), a programmable smokehouse, and a cold-chain monitoring service with wireless sensors. Food safety records live in a SaaS records app on two floor tablets. Office work runs in SaaS (productivity suite, accounting, payroll). An MSP runs the office computers, firewall, and backup; equipment vendors support the plant machines. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual sales and about $25,000 to $40,000 of product and raw material in cold storage at any time.
+Dollar values are scaled to about $1.1 million in annual sales, about $4,400 per production day (EV-039), and about $25,000 to $40,000 of product and raw material in cold storage at any time (EV-041).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -51,7 +52,7 @@ Dollar values are scaled to about $1.1 million in annual sales and about $25,000
 | SYS-01 Smokehouse controller | Cook and smoke cycles; core-probe log (90 days on the device) | Cycles exist only on the controller. **No backup.** Cook logs exported to the labeling PC, which is backed up | BP-01 |
 | SYS-02 Line controls | Stuffer HMI; packager PLC, HMI, and label printer | Settings and packager recipes exist only on the machines. **No backup** | BP-03, BP-04 |
 | SYS-03 Labeling PC | Label templates, lot-code software, smokehouse vendor software | Nightly cloud backup (SYS-09), never restore-tested | BP-01, BP-04 |
-| SYS-04 Cold-chain monitoring service | Sensors, product probe, gateway, SaaS dashboard, text alerts | Vendor SaaS keeps history; sensors buffer readings while the gateway is offline (vendor documentation) | BP-01, BP-02 |
+| SYS-04 Cold-chain monitoring service | Sensors, product probe, gateway, SaaS dashboard, text alerts | Vendor SaaS keeps history; sensors buffer readings while the gateway is offline (vendor documentation, EV-044) | BP-01, BP-02 |
 | SYS-05 Food safety records app | SSOP and HACCP records on 2 floor tablets | Vendor SaaS (SOC 2 not yet requested) | BP-05 |
 | SYS-06 Productivity suite | Email, HACCP plans, SSOPs, formulations, recall procedure | Vendor service resilience; nightly backup (SYS-09) | BP-03, BP-06, BP-08 |
 | SYS-07 Accounting and invoicing | Orders, invoices with lot numbers, customers | Vendor SaaS | BP-06, BP-08 |
@@ -62,20 +63,20 @@ Dollar values are scaled to about $1.1 million in annual sales and about $25,000
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Evidence of recovery capability |
 |---|---|---|
-| Cold-chain monitoring vendor | BP-02 alerts; BP-01 chilling log | SOC 2 Type 2 report reviewed (P09); stated availability commitment meets this BIA if the plant's own gateway and network stay up |
+| Cold-chain monitoring vendor | BP-02 alerts; BP-01 chilling log | SOC 2 Type 2 report (EV-051) reviewed (P09); stated availability commitment meets this BIA if the plant's own gateway and network stay up |
 | Food safety records app vendor | BP-05 | None requested yet (P01 R-018) |
 | Smokehouse manufacturer | Remote service for SYS-01 | None; service by phone and site visit |
 | Packaging machine vendor | Remote support for SYS-02 and SYS-12 | None |
-| MSP | Recovery of office computers, the labeling PC, the firewall, and backups | No written recovery commitment; the contract has a next-business-day response time and excludes plant equipment |
-| Internet provider | BP-02 alerts, BP-05 records, BP-06 orders | None; single line |
-| Refrigeration contractor | Repair of refrigeration (BP-02) | 4-hour emergency response in the service agreement |
+| MSP | Recovery of office computers, the labeling PC, the firewall, and backups | No written recovery commitment; the contract has a next-business-day response time and excludes plant equipment (EV-020) |
+| Internet provider | BP-02 alerts, BP-05 records, BP-06 orders | None; single line (EV-025) |
+| Refrigeration contractor | Repair of refrigeration (BP-02) | 4-hour emergency response in the service agreement (EV-021) |
 
 **Key findings:**
 1. **The cold-chain alert path has single points of failure.** Alerts depend on the gateway, the office network, one internet line, and one person's phone. Any one of them failing silently leaves BP-02 unwatched (P01 R-004, R-013).
 2. **Plant equipment settings have no backup.** Smokehouse cycles, stuffer HMI settings, and packager recipes exist only on the machines. If a controller is wiped or encrypted, the RTOs for BP-01, BP-03, and BP-04 depend on vendors rebuilding them from memory (P01 R-006).
 3. **The office backup is unproven.** SYS-09 has never been restore-tested, so the 24-hour RPO for label templates and documents is an assumption (P01 R-006).
 4. **The MSP contract has no recovery commitment and does not cover the plant.** A next-business-day response cannot meet a 1-hour or 4-hour RTO. The contract amendment in P01 (R-012) adds one.
-5. **Paper fallbacks exist in practice but not on paper.** Staff described manual CCP forms and temperature logs, but there is no written procedure or downtime binder. Building one is the cheapest fix in this BIA (P03 417.2(c)(4)).
+5. **Paper fallbacks exist in practice but not on paper.** Staff described manual CCP forms and temperature logs (EV-045), but there is no written procedure or downtime binder (EV-033). Building one is the cheapest fix in this BIA (P03 417.2(c)(4)).
 
 ## 6. Recovery priorities
 | Priority | Resource | Expected recovery time | Alternate strategy |
