@@ -98,3 +98,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market staffing firm):** P07 cites approvals and audit committee minutes dated 2026-09-22, after fieldwork ended on 2026-09-04; pass-1 risks R-010, R-031 and R-045 cite P07 results; P09 cites minutes dated after it was prepared; the SSP's "I-9 sample of 25" matches neither the P03 nor the P07 sample; AI-002 records a change dated 2026-10-31 as done.
 - **Size 5 (enterprise staffing firm):** P03 cites a September budget approval after its own approval; P09 calls the SL-2 system description a draft while its evidence map says it has not started; the P07 plan header and schedule give different fieldwork windows; R-012 lists kiosk EDR that G-079 says is missing.
 - **Size 6:** POAM-020 and the P03 roadmap say 2026-12-31 while the division supplement and POL-01 say 2026-11-30; G-150 cites a counsel memo on Staffing's business associate status that the facts do not mention.
+
+### Arts, Entertainment and Recreation, 2026-10-09
+
+Six samples, 614 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 26 minutes.
+
+Fixes made during this batch:
+- **Validator:** the evidence register `phase` column now accepts only `Intake`, `Intake follow-up`, `Pnn fieldwork` and `Pnn follow-up`. The one earlier value outside that set (`P09 review`, Healthcare and Public Health size 2) became `P09 fieldwork`.
+- **Sizes 1 and 3:** EV-IA-2-1 renamed EV-IA-2(1). **Size 6:** EV-C-AC23, EV-C-AC65 and EV-C-IA21 renamed to the parenthesis form.
+- **Size 5:** a sentence the conversion added to P10 ("Discovery found no AI use outside the register") was removed; it was a new conclusion.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03, P08 and P10 cite regulatory text checks dated 2026-09-23 to 2026-10-06, after the deliverables were approved.
+- **Size 1 (independent event promoter):** "19 monthly exports" for 2024-12 to 2026-07 covers 20 months; the SSP's AC-11 and P04's laptop encryption cite a P07 walk-through for controls P07 did not test.
+- **Size 2 (micro venue):** the BIA, P04 and P03 rest on the ticketing vendor's AOC and SOC 2 report, first read on 2026-08-19, after their fieldwork; the P07 plan lists both as examined during 08-10 to 08-12; R-004 (reviewed 07-24) cites the 08-03 purge.
+- **Size 3 (small venue):** pass-1 R-006 states 5 stale accounts that P07 found later; the P07 plan puts network tests on 08-04 while SC-7 says 08-05; POAM-002 cites G-031 for requirement 7.2, which is G-030; G-035 cites EV-IA-2 where the MFA test is EV-IA-2(1); P09 (2026-08-21) cites events of 2026-08-31.
+- **Size 4 (mid-market venue):** CM-07a says 31 third-party scripts while its evidence shows 33; P09 (2026-09-04) cites minutes and risk appetite of 2026-09-15; P09 says vendor reviews ended 2026-09-11, the calendar says 2026-09-04; P09 says quarterly committee reporting began 2026-09 while the facts say it is quarterly.
+- **Size 5 (enterprise venue):** P03 cites P10 tests that ran after its sampling ended; the BIA cites P01, POA&M and P08 items approved later; P07 findings cite policy sections approved after the report; DEP-19 gives the last MSSP tabletop as 2026-03-19 while the facts and P08 say 2025-10-21.
+- **Size 6 (venue plus two divisions):** LV-021 says group venues use rotating barcodes while the facts say 3 still use static ones; GR-05 lists policies effective 2026-10-01 as an existing control in a register prepared 2026-07-31.

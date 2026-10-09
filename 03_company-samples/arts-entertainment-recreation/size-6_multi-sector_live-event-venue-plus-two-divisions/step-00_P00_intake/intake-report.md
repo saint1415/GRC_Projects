@@ -10,7 +10,7 @@
 ## 1. Purpose and scope
 Intake collected the group's own records before any assessment work began on 2026-05-01. It covers the legal entities, the systems that store, process, or transmit card data or patron, guest, and subscriber data in each division and in corporate shared services, the suppliers that touch them, and the rules that may bind each division and the group. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Items are grouped by division: the title of each row starts with Group, Live Venues, Hotels and Restaurants, or Ticketing and Streaming. Later steps add their own fieldwork evidence (interviews, scans, document reviews, tests) to the same register, so one list backs every deliverable.
 
-This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analyses (P03) and the control assessment (P07).
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the regulatory analyses (P03) and the control assessment (P07).
 
 ## 2. Sources collected
 | Division | Area | Evidence IDs | System of record | As of |
@@ -64,7 +64,7 @@ This report records **observations, not findings**. Whether an observation meets
 | P02 SSP | The TVOP boundary from the asset inventory; as-found configuration from EV-006 to EV-024 and EV-061 to EV-071; common controls from EV-017 |
 | P04 Cloud mapping | Cloud and platform components (EV-018 to EV-024, EV-065 to EV-071) and provider assurance (EV-034, EV-062) |
 | P01 Risk registers | Likelihood inputs from configuration exports, inventories, contracts, and plans in all four registers (the `likelihood_basis` column) |
-| P03 Gap analyses | The obligations register (which rules apply to which division) and every observation above, compared with the requirements |
+| P03 Regulatory analyses | The obligations register (which rules apply to which division) and every observation above, compared with the requirements |
 | P06 Policies | The 2025 group policies and standards (EV-016) and the hotels standards v2024 (EV-058) |
 | P07 Control assessment | Populations to sample from (EV-002, EV-007, EV-012, EV-022, EV-054, EV-068) |
 | P08 IR runbook | Notification duties per division from the obligations register; the draft matrix (EV-026); client notice terms (EV-063); acquirer requirements (EV-005) |
