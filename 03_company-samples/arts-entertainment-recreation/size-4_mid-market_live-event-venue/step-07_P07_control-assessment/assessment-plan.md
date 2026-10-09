@@ -85,6 +85,18 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - a restore of one CMS folder from the backup account
   - a query of the ticketing audit log for bulk exports in July 2026
 
+### What each test could show
+The 2026 policies and standards (P06) and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and take effect on 2026-10-01. The 2024 policies, standards, incident response plan and IT continuity plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems or the documents in force | 186 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; 12-month log retention in POL-03 and STD-02; card compromise, event-day, reportable incident and external sharing coverage in the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 5 |
+| Not implemented | Nothing existed to test | 47 |
+| **Total** | | **238** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export or a gap analysis capture: ticketing venue users from the ticketing user export (EV-006), terminations and transfers from the HR report (EV-003), new accounts from the identity provider export (EV-001), privileged accounts from EV-009, integrator-installed devices from the integrator list (EV-017), payment page scripts from the P03 capture (EV-068), ticketing setting changes from the settings history (EV-007) and infrastructure changes from the change records (EV-023), P2PE devices from the device lists (EV-019), laptops and PCs from the endpoint console (EV-013), service providers from the vendor files (EV-043), incidents from the incident queue (EV-033), and critical findings from the scan reports (EV-020).
+
 ## 4. Rules of engagement
 - No testing during an on-sale or during doors. Network and device tests ran on dark days or after hours, with the Vice President of Venue Operations' approval.
 - No card data was entered, copied, or photographed. CRM notes with card numbers were reviewed with numbers masked and reported to the Security Manager under POL-03 4.10.
@@ -136,7 +148,7 @@ Other than satisfied statements by risk: 58 High, 47 Moderate, 8 Low.
 | SI-7 | 2 | 4 | High | POAM-010 |
 | SR-6 | 0 | 1 | High | POAM-021 |
 
-**Fully satisfied (2 controls):** CP-9 (isolated, write-once backups; the test restore succeeded) and SI-3 (EDR quarantined every test file within 4 minutes and alerted the MSSP). These confirm the strengths in the scenario facts.
+**Fully satisfied (2 controls):** CP-9 (isolated, write-once backups; the test restore succeeded) and SI-3 (EDR quarantined every test file within 4 minutes and alerted the MSSP). These confirm what the intake evidence showed (EV-013, EV-026).
 
 **Fully other than satisfied (7 controls):** AC-6, AC-6(5), AU-11, CA-8, CP-4, IA-2(1), and SR-6.
 

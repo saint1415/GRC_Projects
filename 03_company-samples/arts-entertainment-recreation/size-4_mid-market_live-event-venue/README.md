@@ -3,9 +3,9 @@
 
 > Cris Santos Company, Inc. is a privately held mid-market company with 600 employees, operating as a live event venue.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -41,13 +41,14 @@ State gaming regulators (e.g., Nevada Gaming Control Board / Nevada Gaming Commi
 | [FTC Act Section 5 (unfair/deceptive practices)](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section45&num=0&edition=prelim) | 15 U.S.C. 45(a) | None. |
 | [COPPA Rule](https://www.ecfr.gov/current/title-16/part-312) | 16 CFR Part 312 | Nonprofits exempt from FTC Act Section 5 are excluded from 'operator'. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | CMDB or endpoint console; HR system; AP vendor master; contract register; prior audits; scans; incident tickets. Evidence register with owners and as-of dates; inventories reconciled across sources; obligations register. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: Ticketing and Venue Operations Platform (TVOP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. | P02: the system boundary and its controls |

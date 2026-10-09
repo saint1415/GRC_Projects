@@ -73,7 +73,7 @@ Crowd-safety and guest-safety risks rated High may not be accepted. They must be
 
 ### What the results say
 The program is defined and mostly sound. There are no Very High risks. Identity, monitoring, backups, tokenization, and P2PE at the integrated venues all work, and the ticketing platform holds a current service provider AOC. The High risks cluster around **what the group shares and what it has not yet absorbed**:
-1. **The shared checkout** (GR-01). One platform serves three internal merchant roles and 1,150 clients, and the checkout trusts code that tenants and script vendors control (scenario gap 1). This is the scenario of the P08 runbook.
+1. **The shared checkout** (GR-01). One platform serves three internal merchant roles and 1,150 clients, and the checkout trusts code that tenants and script vendors control (group gap 1). This is the scenario of the P08 runbook.
 2. **Card-present channels outside P2PE** (GR-09). The acquired theaters and the hotel front desks are the group's remaining card data on its own networks (gap 2).
 3. **Data and pricing practices** (GR-10, GR-11, GR-04). The patron data platform takes more data than its uses need (gap 3), price displays outside the checkout omit fees, and the pricing and bot modules run without group AI approval (gap 4). These are FTC Act and fee rule exposures, not only security ones.
 4. **Shared-service incidents** (GR-02, and the Moderate risk GR-03) would trigger client, card brand, state, and SEC duties at once (gap 5).

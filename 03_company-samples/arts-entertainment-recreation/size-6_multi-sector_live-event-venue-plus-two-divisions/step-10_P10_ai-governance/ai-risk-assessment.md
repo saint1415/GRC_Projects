@@ -31,7 +31,7 @@
 6. **Change gate.** A material change (new model, new input type, new decision role, new client offering) triggers re-assessment before release.
 7. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after AI-001, AI-002, and AI-006 were live. Dynamic pricing was offered to clients without the parity safeguard, the bot challenge's accessible alternative was off by default for new on-sales, and the face entry pilot started without a privacy review (scenario gap 4). All three are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after AI-001, AI-002, and AI-006 were live. Dynamic pricing was offered to clients without the parity safeguard, the bot challenge's accessible alternative was off by default for new on-sales, and the face entry pilot started without a privacy review (group gap 4). All three are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

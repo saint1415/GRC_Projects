@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner and General Manager |
 
 ## 1. Scope and risk framing
-**Scope.** The business and its key vendors: the Ticketing and Venue Operations Platform (TVOP) defined in the SSP (P02), both merchant accounts (MID-T and MID-F), the business functions in the BIA (P05), and the vendors that hold patron or card data or run systems for the company: the ticketing vendor, the payment partner, the POS vendor, the MSP, the website builder and the freelance web designer, the email marketing service, and the staffing contractors (`../00_company-facts.md` sections 2 and 3).
+**Scope.** The business and its key vendors: the Ticketing and Venue Operations Platform (TVOP) defined in the SSP (P02), both merchant accounts (MID-T and MID-F), the business functions in the BIA (P05), and the vendors that hold patron or card data or run systems for the company: the ticketing vendor, the payment partner, the POS vendor, the MSP, the website builder and the freelance web designer, the email marketing service, and the staffing contractors (SYS-01 to SYS-12 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Venue Manager may accept.
@@ -22,8 +22,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), interviews with all 7 employees and the MSP account technician, and observation of two show nights (2026-07-17 and 2026-07-18) and an on-sale (2026-07-21).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), interviews with all 7 employees and the MSP account technician (2026-07-13 to 2026-07-24, EV-045), and observation of two show nights (2026-07-17 and 2026-07-18, EV-052 and EV-053) and an on-sale (2026-07-21, EV-047). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the acquirer records, the contracts folder, the walk-throughs and show-night observations, the account comparison of 2026-07-21 (EV-046) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, contractual and regulatory, attendee safety, reputation). For a club with about $7,300 of revenue per show and about 47,000 patron records, a card skimming event across the online channel or the loss of the ticketing merchant account is rated High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,10 +53,12 @@ Status: 9 In progress, 13 Open, 1 Closed (R-018 accepted). Treatments: 19 Mitiga
 R-005 is a business risk rather than a security event, but it is rated High because MID-T carries about $610,000 a year in ticket revenue. The cheapest treatment, which is to stop taking card numbers by phone or email, **avoids** R-003 and R-004 rather than mitigating them, and it is what makes a reduced SAQ possible (P03 section 1.2).
 
 **Risks that were fixed or found during the work:**
-- R-006: the former Marketing Coordinator's ticketing account was disabled on 2026-07-21, the day it was found. The ticketing audit log showed no sign-ins after the departure date. The process gap remains open.
-- R-004: the MSP purged the 23 emails with card numbers on 2026-08-03. The process change is still open.
-- R-011: the spare door reader was locked in the back office safe on 2026-07-22.
-- R-023: added on 2026-08-12 after P07 testing found a 2024 API token still sending patron records every night to a lapsed email marketing account. The token was revoked the same day.
+- R-006: the former Marketing Coordinator's ticketing account was disabled on 2026-07-21, the day the account comparison found it (EV-046). The ticketing audit log showed no sign-ins after the departure date. The process gap remains open.
+- R-004: the MSP purged the 23 emails with card numbers on 2026-08-03 (EV-059). The process change is still open.
+- R-011: the spare door reader was locked in the back office safe on 2026-07-22 (EV-057).
+- R-023: added on 2026-08-12 after P07 testing found a 2024 API token still sending patron records every night to a lapsed email marketing account (EV-SA-9). The token was revoked on 2026-08-12.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $5,700 one-time and $2,160 a year, fictional):**

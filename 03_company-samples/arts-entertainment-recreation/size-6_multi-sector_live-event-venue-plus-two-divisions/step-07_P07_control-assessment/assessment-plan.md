@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The TVOP's** system-specific controls were assessed because it is the SSP system and carries the top group risk (GR-01).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Hotels and Restaurants was sampled most heavily (PL-1, CA-2, AC-2, SC-7) because its inheritance is undocumented (scenario gap 6), its standards have drifted (gap 7), and its SAQ D is due 2026-12-31.
+Hotels and Restaurants was sampled most heavily (PL-1, CA-2, AC-2, SC-7) because its inheritance is undocumented (group gap 6), its standards have drifted (gap 7), and its SAQ D is due 2026-12-31.
 
 ## 2. Controls selected
 **39 control assessments** (35 distinct controls; SC-7 was assessed in three scopes, and AC-2 and CP-4 in two), **275 determination statements**.
@@ -25,9 +25,9 @@ Hotels and Restaurants was sampled most heavily (PL-1, CA-2, AC-2, SC-7) because
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Every division's access control; GR-07 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-12; scenario gap 5 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-12; group gap 5 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-8, SC-12, SC-28, CM-6 | 22 | GR-02; CDE account; keys and backups | Focused / Focused |
-| TVOP | CM-8, SI-7, SC-18, CM-3, AC-22, SA-9, AU-6, PT-3 | 49 | GR-01 and GR-10 (High); scenario gaps 1 and 3 | Comprehensive / Comprehensive |
+| TVOP | CM-8, SI-7, SC-18, CM-3, AC-22, SA-9, AU-6, PT-3 | 49 | GR-01 and GR-10 (High); group gaps 1 and 3 | Comprehensive / Comprehensive |
 | Division sample: Live Venues | CP-4, SC-7 (acquired theaters), AC-17, SR-10 | 16 | LV-002 (High), LV-012; gap 2 | Focused / Focused (3 of 8 theaters; 4 integrated venues) |
 | Division sample: Hotels and Restaurants | PL-1, CA-2, AC-2 (PMS), SC-7 (front desks) | 60 | Gaps 6 and 7; HO-001 (High), HO-004 | Focused / Focused (4 of 16 hotels) |
 | Division sample: Ticketing and Streaming | SA-11, AC-6, CP-4 (TVOP failover) | 15 | TS-003, TS-007, TS-011; GR-04 | Focused / Focused |
@@ -45,6 +45,17 @@ Hotels and Restaurants was sampled most heavily (PL-1, CA-2, AC-2, SC-7) because
   - a TLS scan of 70 endpoints and an external exposure scan;
   - offline scanner tests at 2 venues and network walks at 3 acquired theaters and 4 hotels;
   - a sample of 30 support impersonation sessions.
+
+### What each test could show
+The group policies v2026 (P06) and the multi-role notification matrix were drafts during fieldwork; they were approved on 2026-09-15, effective 2026-10-01. Controls that the 2025 group policies, the division standards, and the platform's own procedures already required were tested for operation. Statements that rest on the v2026 drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before fieldwork under the 2025 group policies, the division standards, or the platform's procedures, and was tested on samples, configurations, or live systems | 269 |
+| Design | The statement rests on a draft (IR-6: the notification matrix and POL-03 v2026); its design was reviewed. Operation is tested at the 2027-04 follow-up | 2 |
+| Not implemented | Nothing existed to test (an action for payment page changes outside the platform list, SI-7; monitoring of script vendors, SA-9; confirmation that inherited controls operate for the hotels' PCI scope, CA-2; test results for accessible seating price rules and challenge accessibility, SA-11) | 4 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-007, the PMS accounts from the export in EV-054, and the tenant payment pages from the checkout scan of 2026-07-21, EV-097).
 
 ## 4. Rules of engagement
 - No testing during on-sales or within 6 hours of doors at any venue. The checkout test used a test tenant with no real patrons and a harmless tag.
@@ -65,7 +76,7 @@ Hotels and Restaurants was sampled most heavily (PL-1, CA-2, AC-2, SC-7) because
 | Division sample: Ticketing and Streaming | 12 | 3 | 15 |
 | **Total** | **222** | **53** | **275** |
 
-**Common controls are strong.** 121 of 135 common statements were satisfied. MFA (IA-2, IA-2(1)), PAM (AC-6(5)), terminations (PS-4), training (AT-2), vulnerability management (RA-5), and every cloud control (CP-9, SC-7, SC-8, SC-12, SC-28, CM-6) had no findings. The common findings are **seasonal accounts** (AC-2, AC-2(3)), **static integration keys** (IA-5), **monitoring coverage** (SI-4), and **incident response across divisions and clients** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 5.
+**Common controls are strong.** 121 of 135 common statements were satisfied. MFA (IA-2, IA-2(1)), PAM (AC-6(5)), terminations (PS-4), training (AT-2), vulnerability management (RA-5), and every cloud control (CP-9, SC-7, SC-8, SC-12, SC-28, CM-6) had no findings. The common findings are **seasonal accounts** (AC-2, AC-2(3)), **static integration keys** (IA-5), **monitoring coverage** (SI-4), and **incident response across divisions and clients** (IR-3, IR-4, IR-6, IR-8), which is group gap 5.
 
 **The TVOP is where the risk is.** 19 of 49 statements were other than satisfied. The test tag on the test tenant's checkout page was **not inventoried, not detected by tamper detection, and not seen by the SOC** (CM-8, SC-18, SI-7, SI-4). Tenant tag changes are not change-controlled or reviewed (CM-3, AC-22, AU-6), the vendors whose code runs on checkout were never assessed (SA-9), and the training feed exceeds client agreements (PT-3).
 

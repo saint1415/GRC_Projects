@@ -140,13 +140,13 @@ See `control-implementation.csv` (171 controls) and `common-control-catalog.csv`
 | System-specific | 43 |
 
 **The 19 partially implemented controls** cluster in four places:
-- **Checkout scripts added by tenants** (scenario gap 1): AC-22, CM-3, CM-7, CM-8, SA-9, SC-18, SI-7, SR-6, AU-6.
+- **Checkout scripts added by tenants** (group gap 1): AC-22, CM-3, CM-7, CM-8, SA-9, SC-18, SI-7, SR-6, AU-6.
 - **Access for people outside the core team:** AC-2 (seasonal box office accounts), AC-6 (support impersonation role), IA-8 (client administrators without MFA).
 - **Data purpose** (gap 3): PT-2, PT-3.
 - **Cross-division response and AI** (gaps 4 and 5): IR-3, IR-6, IR-8, AT-3, SA-11.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 127 controls that corporate provides (or passes through from the cloud providers) fully (106) or in part (21). Inheritance is **documented for Live Venues** (2025 inheritance matrix, which does not cover the 8 acquired theaters), for **Ticketing and Streaming** (its service provider ROC and SOC 2 system description carve in the group services), and for the TVOP (this plan). It is **not documented for Hotels and Restaurants** (scenario gap 6). Until POAM-014 closes, the hotels division cannot show its acquirer which PCI DSS requirements group controls meet, and its PMS sits outside SYS-G1 and the SIEM.
+The common control catalog lists 127 controls that corporate provides (or passes through from the cloud providers) fully (106) or in part (21). Inheritance is **documented for Live Venues** (2025 inheritance matrix, which does not cover the 8 acquired theaters), for **Ticketing and Streaming** (its service provider ROC and SOC 2 system description carve in the group services), and for the TVOP (this plan). It is **not documented for Hotels and Restaurants** (group gap 6). Until POAM-014 closes, the hotels division cannot show its acquirer which PCI DSS requirements group controls meet, and its PMS sits outside SYS-G1 and the SIEM.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and TVOP and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`. The QSA's 2026 service provider ROC (AOC 2026-03-31) is separate evidence for the CDE.

@@ -47,8 +47,8 @@
 Safety risks (ER-06) and card data risks (ER-02) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the live entertainment threat picture (e-skimming, ticket bots, account takeover, data warehouse credential theft, ransomware), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the live entertainment threat picture (e-skimming, ticket bots, account takeover, data warehouse credential theft, ransomware) in the SOC's threat intelligence (EV-071), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-025), and risk workshops with the SOC, Platform, Payments and Data Engineering, the Integration Management Office, Venue Security and Safety, Third-Party Risk Management, Ticketing Operations, Pricing and Revenue Management, Finance and Payroll, and the Privacy Office (EV-080). The gap analysis and PCI DSS pre-assessment (P03) ran in the same fieldwork window, and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-021), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, the P03 samples, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -56,6 +56,8 @@ Safety risks (ER-06) and card data risks (ER-02) at High or above cannot be acce
    - Each row is normalized into one of **8 enterprise risks (ER-01 to ER-08)** in the Chief Risk Officer's enterprise risk register, with an ERM category.
    - **Aggregation rule:** an enterprise risk's exposure equals its highest constituent risk level, and the profile also reports how many constituent risks sit outside tolerance. This keeps one severe risk from being averaged away.
    - The enterprise risk profile (section 4) is what the board risk committee sees each quarter.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-014 was added on 2026-08-28 after testing found vendor default credentials on turnstile controllers at 2 venues and a building management interface at a third (EV-IA-5), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 3. Results
 | Risk level | Count |
@@ -108,10 +110,10 @@ By status: In progress 52, Open 2, Closed (accepted) 11.
 | R-023 | Malicious code in a third-party library or SDK | High | ER-04 | SBOM and version pinning for all services; staged SDK rollout | Chief Technology Officer | 2027-06-30 |
 
 ## 6. Themes from the 2026 analysis
-1. **The payment page is the main target (ER-02).** The payment service itself is well isolated, but the page around the payment fields is not under full control on client templates (R-001, R-022). Payment page script attacks are the risk that PCI DSS Requirements 6.4.3 and 11.6.1 address.
-2. **Identities outside the workforce (ER-03).** Workforce identity is strong, but client users, client API keys, and data warehouse service accounts are not held to the same standard (R-003, R-005, R-024).
-3. **Acquisition integration (ER-05).** AV-01 to AV-06 brought non-P2PE POS, flat networks, and a legacy directory into the merchant CDE on day one (R-004, R-031, R-057, R-060). Going forward, deal approvals must include security due diligence and funding (R-061).
-4. **Venue safety depends on OT and offline modes (ER-06).** Gate entry and venue OT are where a cyber event becomes a safety event (R-013 to R-015). Testing found default credentials on OT devices at 3 venues (R-014).
+1. **The payment page is the main target (ER-02).** The payment service itself is well isolated, but the page around the payment fields is not under full control on client templates (R-001, R-022; EV-030, EV-084). Payment page script attacks are the risk that PCI DSS Requirements 6.4.3 and 11.6.1 address.
+2. **Identities outside the workforce (ER-03).** Workforce identity is strong, but client users, client API keys, and data warehouse service accounts are not held to the same standard (R-003, R-005, R-024; EV-007, EV-008, EV-034).
+3. **Acquisition integration (ER-05).** AV-01 to AV-06 brought non-P2PE POS, flat networks, and a legacy directory into the merchant CDE on day one (R-004, R-031, R-057, R-060; EV-053, EV-029). Going forward, deal approvals must include security due diligence and funding (R-061).
+4. **Venue safety depends on OT and offline modes (ER-06).** Gate entry and venue OT are where a cyber event becomes a safety event (R-013 to R-015). Testing found default credentials on OT devices at 3 venues (R-014; EV-IA-5).
 5. **Concentration (ER-04).** One edge and bot management provider and one tokenization provider sit under every online sale (R-008, R-011).
 6. **AI and fair access (ER-08).** Dynamic pricing and bot detection affect what patrons pay and whether they can buy at all; accessible seating parity and challenge accessibility are the open issues (R-016, R-043, R-045).
 

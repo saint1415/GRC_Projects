@@ -1,0 +1,32 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,IaaS and PaaS for the ticketing platform and the CDE accounts (two regions),SYS-01; SYS-02; SYS-05,Patron PII; account data in CDE accounts,Customer agreement,SOC 2 Type 2; AOC; shared responsibility documentation,EV-040; EV-017,Subservice organization for SL-1
+V-02,Cloud provider B,"PaaS and AI services for the data warehouse, customer data platform, settlement application and AI models",SYS-05-DW; SYS-05-CDP; SYS-05-SET; AI-001; AI-007,Patron PII; settlement data,Customer agreement with no-training terms for AI services,SOC 2 Type 2; shared responsibility documentation,EV-040; EV-056,Subservice organization for SL-2
+V-03,Tokenization and vault provider,"Tokenization, card vault and card data keys",SYS-02,Account data,Service agreement with PCI DSS responsibility matrix; no exit or token migration clause,AOC dated 2026-03,EV-038; EV-040,Tokens are specific to the provider
+V-04,Processor 1,Card authorization (about 70% of card-not-present and all stand sales),SYS-02; SYS-03,Account data,Processing agreement,AOC,EV-038; EV-040; EV-051,Routing failover tested 2026-03-11
+V-05,Processor 2,Card authorization (about 30% of card-not-present),SYS-02,Account data,Processing agreement,AOC,EV-038; EV-040; EV-051,
+V-06,Acquiring bank,Merchant acquiring,SYS-02; SYS-03,Transaction data,Merchant agreement (24-hour compromise notice; annual ROC and AOC),n/a,EV-058,Letter of 2026-02-15: not a designated entity
+V-07,"Edge network, WAF and bot management provider","WAF, DDoS protection, bot management for all public endpoints",SYS-01; SYS-01-PRC; AI-002,Patron sessions and bot signals,Service agreement with responsibility matrix,AOC; SOC 2 Type 2,EV-038; EV-040; EV-068,Single provider for all web and app traffic
+V-08,P2PE solution provider and cloud POS vendor,"Validated P2PE solution, box office and stand POS",SYS-03,Encrypted account data,P2PE and POS agreements with responsibility matrix,AOC; P2PE solution listing,EV-038; EV-040,30 venues
+V-09,Legacy POS vendor (AV-01 to AV-06),Legacy POS software and readers,SYS-03-AV,Account data,Inherited agreement from the acquisition,None on file,EV-053; EV-037,Non-P2PE
+V-10,Local IT support firm (AV-01 to AV-06),"Directory, desktop, POS and incident support at the acquired venues",SYS-04-L; SYS-03-AV,Administrative access to systems with account data,Inherited agreement from the acquisition,None on file,EV-006; EV-037; EV-053,
+V-11,Cloud contact center platform vendor,"Contact center telephony, recording and case management",SYS-09,Recordings; case notes; patron PII,Subscription agreement,SOC 2 Type 2,EV-032; EV-040,Failover tested 2026-02
+V-12,Outsourced overflow contact center,Overflow phone sales and patron support (about 35% of contacts),SYS-09; SYS-02,Patron PII; spoken card numbers,Services contract with security terms,PCI DSS AOC expiring 2026-05-31; no renewal on file at intake,EV-036; EV-038; EV-033,About 220 agents
+V-13,"ERP, payroll and HCM SaaS vendor","Finance, payroll, human capital management and applicant ranking feature",SYS-08; AI-010,Employee and applicant PII; financial data,Subscription agreement,SOC 1 and SOC 2 reports,EV-040; EV-037,SOX-relevant
+V-14,Email and SMS providers (two),Transactional and marketing messages,SYS-10,Patron contact data,Data processing terms,Per vendor register,EV-073; EV-036,
+V-15,Marketing tag vendors,"Advertising pixels and analytics tags, including on client checkout templates",SYS-10; SYS-01-CO,Page and purchase events,Marketing terms only,None (not in the vendor register),EV-031; EV-037,Count of tag vendors on checkout pages established in P03 fieldwork
+V-16,Colocation providers (DC-1 and DC-2),"Data center space, power and physical security",SYS-05-DC,Hosted equipment,Colocation agreements with 72-hour fuel contracts,SOC 2 Type 2,EV-038; EV-040,
+V-17,SD-WAN and venue internet carriers,Venue connectivity,SYS-06,Network traffic,Carrier contracts,n/a,EV-038; EV-014,AV venues on single carriers
+V-18,Building management integrators (4),Building management support with remote access,SYS-06-OT,OT access,Service agreements,Per vendor register,EV-013; EV-036,Remote access outside PAM at 9 venues
+V-19,"CCTV, video management and weapons screening vendors",Venue safety systems and cloud device management,SYS-06-OT,CCTV video,Service agreements,Per vendor register,EV-013; EV-036,Vendor cloud consoles with MFA
+V-20,Managed security service provider (MSSP),SOC overflow outside business hours,SIEM,Security logs,Services agreement,Per vendor register,EV-021; EV-003,Access through PAM
+V-21,Entry face matching vendor,Facial recognition express entry pilot,AI-005,Face images and templates,Pilot agreement,Per vendor register,EV-037; EV-055,
+V-22,CCTV analytics vendor,Crowd density analytics,AI-006,CCTV video,Pilot agreement,Per vendor register,EV-037; EV-055,
+V-23,Generative AI and code assistant vendors,"Enterprise AI assistant, marketing generative AI and code assistant",AI-009; AI-011; AI-012,Internal documents; source code,Subscription agreements with no-training terms,Per vendor register,EV-037; EV-056,
+V-24,SIEM vendor,SIEM and alert triage feature,AI-013,Security logs,Subscription agreement,Per vendor register,EV-037; EV-056,
+V-25,QSA firm,Annual merchant and service provider Reports on Compliance,SYS-01; SYS-02; SYS-03,Assessment evidence,2026 engagement letter,n/a,EV-027,Fieldwork planned 2026-10-19 to 2026-11-25
+V-26,Penetration testing firm,Annual penetration tests and 6-monthly segmentation tests,SYS-01; SYS-02,Test findings,Engagement letter,n/a,EV-016,Independent of the systems tested
+V-27,Booking SaaS vendor,Booking and promotion planning,APP-BOOK,Artist and offer data,Subscription agreement,Per vendor register,EV-037,
+V-28,Settlement banks,Settlement payments and treasury,SYS-05-SET; SYS-08,Payment instructions,Banking agreements,n/a,EV-037,Second bank relationship
+V-29,Mobile app stores and push notification services,App distribution and push messages,SYS-01,App and device tokens,Platform terms,n/a,EV-050,About 11 million active installs
+V-30,Certified media destruction vendor,Drive and device destruction,SYS-07,Data on media,Service agreement,Certificates of destruction,EV-048,
+V-31,Cyber insurer,Cyber insurance,n/a,Incident information when notified,Policy,n/a,EV-061,Consent required before any extortion payment

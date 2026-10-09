@@ -11,6 +11,7 @@
 | Approved | General Manager, 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
 
 ### 1.1 PCI DSS applies by contract
 The company accepts payment cards through two merchant accounts, and its merchant agreement requires PCI DSS compliance. PCI SSC sets no size tiers. Merchant levels and validation rules come from the card brands and the acquirer, not from PCI SSC.
@@ -22,7 +23,7 @@ The company accepts payment cards through two merchant accounts, and its merchan
 | Merchant account | Channel | How card data flows | SAQ fit |
 |---|---|---|---|
 | MID-F (food, beverage, merchandise) | Card present at bars and stands | PCI-listed validated P2PE readers; card data encrypted in the device; the company holds no keys | **SAQ P2PE**, confirmed by the acquirer |
-| MID-T (tickets) | Online | Patrons follow "Buy tickets" links from the company website to checkout pages hosted by the ticketing vendor | Could fit **SAQ A** only if every element of the payment page comes from the compliant provider and the company confirms its site is not open to script attacks. **Today it fails:** the company adds 9 third-party scripts to the checkout page (G-027) |
+| MID-T (tickets) | Online | Patrons follow "Buy tickets" links from the company website to checkout pages hosted by the ticketing vendor (EV-029) | Could fit **SAQ A** only if every element of the payment page comes from the compliant provider and the company confirms its site is not open to script attacks. **Today it fails:** the company adds 9 third-party scripts to the checkout page (G-027) |
 | MID-T | Box office windows | USB card readers attached to box office PCs. The readers encrypt, but they are **not part of a PCI-listed validated P2PE solution** | No reduced SAQ. The PCs and their network are in scope |
 | MID-T | Phone orders | Staff type the caller's card number into the box office web app on the PCs | Not SAQ A (not fully outsourced). Not SAQ C-VT, which needs an isolated device used only for the virtual terminal with no attached card readers. These PCs are on the shared corporate segment and are used for email and browsing |
 
@@ -49,7 +50,7 @@ Option B costs about $6,500 (6 devices and setup, fictional) and removes the 6 P
 1. **Requirements.** PCI DSS was broken into its 12 principal requirements and their requirement groups (for example 8.2). The payment page requirements were taken to the defined-requirement level (6.4.1, 6.4.2, 6.4.3, and 11.6.1), and the appendices were added. Labels are short topics written for this analysis, not PCI SSC text, because PCI DSS is copyrighted. Read the requirement text in the official standard (the company holds a licensed copy of v4.0.1). No newer PCI DSS version was found on the PCI SSC standards page on 2026-09-26.
 2. **FTC rows** cite the statute (uscode.house.gov) and the rule text (eCFR, Part 464 as of 2026-09-23).
 3. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. **This is an author mapping.** No official NIST mapping from PCI DSS v4.0.1 or Part 464 to CSF 2.0 or SP 800-53 was used.
-4. **Evidence.** Interviews (majority owner, General Manager, Controller, Director of Ticketing, Marketing Director, Food and Beverage Manager, box office staff, the marketing agency, the integrator), document review (2025 SAQs, merchant agreement, acquirer letter, vendor AOCs and SOC 2 report), ticketing and firewall configuration exports, a browser capture of the checkout page on 2026-07-21, a card-number search of box office PCs and file shares on 2026-07-22, and observation of an on-sale (2026-07-17) and a show night (2026-07-18).
+4. **Evidence.** Current state was established from the intake evidence (configuration exports, the 2025 SAQs (EV-022), the merchant agreement (EV-023), the acquirer letter (EV-021), and the vendor AOCs and SOC 2 report (EV-025 to EV-027)), the firewall rule export (EV-051), a refreshed ticketing user export (EV-055), observation of an on-sale on 2026-07-17 (EV-052) and a show night on 2026-07-18 (EV-053), the reader reconciliation (EV-054), page captures including the checkout browser capture on 2026-07-21 (EV-056, EV-057), a TLS test (EV-058), a card-number search of box office PCs and file shares on 2026-07-22 (EV-059), and gap analysis interviews (EV-061) with the majority owner, General Manager, Controller, Director of Ticketing, Marketing Director, Food and Beverage Manager, box office staff, the marketing agency, and the integrator. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

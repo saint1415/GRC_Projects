@@ -75,7 +75,7 @@ Information types are the closest analogs in NIST SP 800-60 Vol. 2 Rev. 1 (writt
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, separate development environments and configuration change boards). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the company controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the company controls or pays someone to control on its behalf:
 - **Inside:** the company's tenant configuration in the ticketing platform (9 venue users, price tiers, demand tools settings, checkout widget settings, API tokens); the 2 door tablets and 2 door readers plus the spare reader; the back-office PC, the bar office PC, 3 laptops, and 3 scanners; the productivity suite tenant; the venue network; the website builder account and its pages and scripts; and the MSP-operated suite backup.
 - **Outside (external services, interconnected):** the ticketing vendor's platform and checkout widget code, the payment partner's gateway and P2PE solution, the acquirer, the bar POS and its P2PE solution (SYS-03), the email marketing service (SYS-08), finance and payroll (SYS-09), CCTV (SYS-10), and the MSP's remote management platform.
 
@@ -136,7 +136,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Staff sign in to the productivity suite with a password and a phone authenticator app. **Ticketing platform and website users do not have MFA.** They use local passwords, and two logins are shared. That falls short of what the Moderate category and PCI DSS 8.4 expect for administrator access. Enforcing the ticketing platform's MFA for every venue user, named door logins for contractor staff, and MFA on the website administrator account are due 2026-09-30 (P07 POAM-001, POAM-003). Patrons create accounts with the ticketing vendor's own sign-in controls, which are outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)
