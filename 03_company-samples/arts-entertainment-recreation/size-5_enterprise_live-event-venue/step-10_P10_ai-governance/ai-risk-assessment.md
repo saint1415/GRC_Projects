@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for AI-007, AI-009, AI-011, and AI-012; repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Vice President, Data and AI), meeting of 2026-08-25; GRC team prepared the portfolio review; fieldwork 2026-08-17 to 2026-08-28 |
 | Decision | Executive risk committee, 2026-09-10 (section 10) |
+| Inventory | `ai-use-case-inventory.csv` (13 use cases), built from the AI governance committee register (EV-055), a review of the SSO application catalog, vendor feature settings and procurement records (EV-056), and the accounts payable vendor master (EV-037). Discovery found no AI use outside the register. Not established at intake: AI features embedded in other vendors' products that the review did not surface, AI features that SL-1 clients add to their own templates, and workforce use of public AI tools from personal devices |
 | Related | P01 R-009, R-016, R-041 to R-045; P03 G-082, G-084, G-088, G-090; P06 POL-01 4.15, POL-04 4.7 to 4.10, POL-05 4.6; P07 POAM-020 |
 
 ## 1. Portfolio summary
@@ -78,7 +79,7 @@ Rubric: `00_universal-framework/projects/step-10_P10_ai-governance/README.md` (r
 ## 5. Portfolio findings that need action
 1. **Unreviewed High-tier tools.** AI-005, AI-006, and AI-010 started through vendor pilots or releases. AI-005 was paused on 2026-07-31 and AI-010's ranking was disabled on 2026-06-30 (P01 R-042 avoided; R-045). AI-006 may continue only in its 3-arena pilot until review.
 2. **Client modules.** AI-001 is offered to SL-1 clients as an opt-in module. Clients set their own floors and ceilings, but the company runs the model, so the accessible seating parity control and the total-price display must be enforced by the platform for every client (POL-01 4.15).
-3. **Generative tools.** AI-007 must never invent fee or refund terms (AI 600-1 confabulation risk); answers are grounded in approved policy pages, and weekly sampling found 3 incorrect answers in 200 (1.5%), all about transfer deadlines.
+3. **Generative tools.** AI-007 must never invent fee or refund terms (AI 600-1 confabulation risk); answers are grounded in approved policy pages, and weekly sampling found 3 incorrect answers in 200 (1.5%), all about transfer deadlines (EV-093).
 
 ## 6. MEASURE: portfolio bias testing plan
 | Tool | Metric | Groups compared | Threshold for action |

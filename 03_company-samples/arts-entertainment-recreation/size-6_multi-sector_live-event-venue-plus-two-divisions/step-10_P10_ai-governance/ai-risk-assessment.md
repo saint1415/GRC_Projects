@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standard, the division use-case inventory, and the rules that apply to three priority use cases: dynamic ticket pricing (AI-001), bot detection and virtual queue (AI-002), and the face-based express entry pilot (AI-006) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (AI 600-1) for AI-007 and AI-009 only |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), fieldwork 2026-08-17 to 2026-08-28; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 application list and the TVOP module register (EV-035), module and platform configuration records (EV-038, EV-059, EV-072, EV-074), the face entry pilot records (EV-084), and the P10 fieldwork tests (EV-101 to EV-104). Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 | Related | P01 GR-04, GR-10, GR-11, GR-17, LV-003, LV-010, LV-011, TS-003, TS-011, TS-013, HO-008; P03 G-071, G-072, G-076, G-077, TS-G37; P06 POL-01 4.12 and 4.14, POL-04 4.6 and 4.7, POL-05 4.7; P07 POAM-020, POAM-022, POAM-026 |
 
 ## 1. GOVERN (group program)

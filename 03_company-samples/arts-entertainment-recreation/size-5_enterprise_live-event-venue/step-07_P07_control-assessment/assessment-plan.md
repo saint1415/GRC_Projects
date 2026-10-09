@@ -84,6 +84,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** President, Ticketing; Chief Technology Officer; Directors of Platform Engineering, Payments Engineering, Security Operations, and Identity and Access Management; Director of Payments and PCI Compliance; General Counsel; CFO; CISO; Vice President, Integration Management Office; 20 randomly selected box office and contact center staff.
 - **Test:** cross-tenant access tests with test accounts; a simulated script change on own-brand and client test templates; reachability tests from an AV venue office network; default-credential tests on turnstile and access control devices (with vendor approval, between events); a deletion attempt on the log archive; malformed requests in the test environment; a restore observation; a listening sample of overflow center recordings.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy set in force (EV-024), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 254 (221 Satisfied, 33 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: integrity verification of scripts and headers on client checkout templates (SI-07a.[01]) and a defined response to unauthorized changes there (SI-07b.[01]) | 2 |
+| **Total** | | **256** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005, and the payment service change records, EV-067) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect an on-sale, a live event, or gate entry. Device tests ran between events with the venue general manager's approval and an integrator present.
 - Script change tests used test templates on a non-production client tenant; malformed request tests ran only in the test environment.

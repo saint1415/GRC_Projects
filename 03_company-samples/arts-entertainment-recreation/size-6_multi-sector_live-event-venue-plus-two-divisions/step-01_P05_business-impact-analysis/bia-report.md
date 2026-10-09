@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-075 group, EV-076 Live Venues, EV-077 Hotels and Restaurants, EV-078 Ticketing and Streaming), FY2025 revenue by division (EV-003), card transaction volumes (EV-004), venue, hotel, and platform volumes (EV-043, EV-053, EV-064), backup and failover records (EV-022, EV-071, EV-079), and client commitments (EV-063). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -14,12 +15,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and the wide-area network, and SYS-G4 the patron data platform. Division systems are SYS-D1 (venue operations estate), SYS-D2 (hotel systems, with a vendor-hosted PMS), SYS-D3 (the ticketing platform in provider A, disaster recovery in provider B), and SYS-D4 (streaming, in provider B). See `../00_company-facts.md` sections 1, 3, and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and the wide-area network, and SYS-G4 the patron data platform. Division systems are SYS-D1 (venue operations estate), SYS-D2 (hotel systems, with a vendor-hosted PMS), SYS-D3 (the ticketing platform in provider A, disaster recovery in provider B), and SYS-D4 (streaming, in provider B). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What makes this group different:** the most time-critical window is not the business day. It is **the 60 to 90 minutes before doors** at a venue, and **the first minutes of a high-demand on-sale** on the ticketing platform. A platform outage at 10:00 on an on-sale morning hits the group's venues, its hotel packages, and 1,150 client venues at once.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Live Venues about $25.8 million per day on average (much higher on event weekends), Hotels and Restaurants about $16.7 million per day, and Ticketing and Streaming about $6.8 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Live Venues about $9.4 billion, or about $25.8 million per day on average (much higher on event weekends); Hotels and Restaurants about $6.1 billion, or about $16.7 million per day; and Ticketing and Streaming about $2.5 billion, or about $6.8 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
