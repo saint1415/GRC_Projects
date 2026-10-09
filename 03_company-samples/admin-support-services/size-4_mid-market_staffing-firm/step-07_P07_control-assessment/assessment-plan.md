@@ -81,6 +81,18 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - a reachability test from a Branch 9 kiosk to staff devices
   - a simulated impossible-travel sign-in to test MSSP escalation
 
+### What each test could show
+The 2026 policies (POL-01 to POL-05), the standards index, the BIA and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-22, and the policies take effect on 2026-10-01. The 2024 policies and the 2024 standards (STD-06, STD-08 and STD-09) were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems, or records | 160 |
+| Design | The statement rests on a 2026 draft (the BIA and P08 runbooks for CP-2, IR-6, and IR-8; the quarterly review in draft POL-02 4.6; monthly scanning in draft STD-09); its design was reviewed. Operation is tested at the 2027-03 follow-up | 21 |
+| Not implemented | Nothing existed to test | 66 |
+| **Total** | | **247** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), E-Verify and VMS users from EV-010 and EV-011, privileged accounts from EV-005, ATS changes from EV-020, remote I-9 examinations from EV-031, endpoints from EV-014, vendor contracts from EV-042 and EV-043, incidents from EV-039, critical findings from EV-018, and disposals from EV-050.
+
 ## 4. Rules of engagement
 - No testing that could disrupt payroll week. Payroll tests ran on Monday and Tuesday with the Director of Payroll and Billing present; the test export used a test user and was deleted under supervision.
 - No Restricted data left firm systems. Screenshots were redacted, and evidence was kept in the audit firm's encrypted workpaper system.
@@ -134,7 +146,7 @@ Other than satisfied statements by risk: 38 High, 55 Moderate, 18 Low.
 | SI-12 | 0 | 4 | Moderate | POAM-014 |
 | SR-6 | 0 | 1 | Moderate | POAM-017 |
 
-**Fully satisfied (3 controls):** IA-2(1) (MFA on all 25 sampled privileged accounts), RA-3 (the 2026 SP 800-30 assessment), and SC-28 (encryption at rest on every sampled store and device). The MSSP escalation test was answered in 18 minutes, and all 30 July backup jobs succeeded, which confirms the strengths in the scenario facts.
+**Fully satisfied (3 controls):** IA-2(1) (MFA on all 25 sampled privileged accounts), RA-3 (the 2026 SP 800-30 assessment), and SC-28 (encryption at rest on every sampled store and device). The MSSP escalation test was answered in 18 minutes, and all 30 July backup jobs succeeded, which confirms what the intake evidence showed (EV-002, EV-015, EV-021, EV-022, EV-026).
 
 **Fully other than satisfied (6 controls):** AC-3, AC-5, AC-6, CP-10, SI-12, and SR-6.
 
