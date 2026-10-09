@@ -68,8 +68,8 @@ This file says who the company is. It does not say how well its security works. 
 | Date | Event |
 |---|---|
 | 2026-03-30 to 2026-04-24 | Intake: evidence requests, exports, documents, inventories, obligations register |
-| 2026-05-01 to 2026-07-31 | Group and division BIAs (interviews in May), risk analyses (interviews in June), and gap analyses (fieldwork from 2026-06-29) |
-| 2026-06-01 to 2026-06-19 | Group policies v2026 drafted from the gaps found so far (P06); the Staffing supplement was aligned to the drafts on 2026-06-20 and the Consulting supplement on 2026-07-15 |
+| 2026-05-01 to 2026-07-31 | Group and division BIAs (interviews in May), risk analyses (interviews in June), and gap analyses |
+| 2026-06-01 to 2026-06-19 | Group policies v2026 drafted from the risks and gaps found so far (P06); the Staffing supplement was aligned to the drafts on 2026-06-20 and the Consulting supplement on 2026-07-15 |
 | 2026-07-01 to 2026-08-31 | Common control assessment (group internal audit) plus division samples: operating tests of controls already in place; design review of the draft v2026 policies |
 | 2026-09-10 | Results to the board risk committee; deliverables and group policies v2026 approved (policies effective 2026-10-01) |
 | 2027-04 (planned) | Follow-up assessment: operating effectiveness of the controls the v2026 policies introduced, after at least one quarter of operation |

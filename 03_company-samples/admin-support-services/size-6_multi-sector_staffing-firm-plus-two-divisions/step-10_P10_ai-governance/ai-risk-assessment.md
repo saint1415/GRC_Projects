@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the regulator-specific rules for the priority use cases: **AI-001 AI resume screening and candidate ranking** (group-wide, focus), AI-002 the recruiting assistant (Staffing), AI-005 the hospitalization risk model (Home Health), and AI-008 the denial-prediction model (Consulting) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 3 High, 6 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list and the model registry (EV-046), the AI ranking add-on vendor file and ATS configuration (EV-037), the 2026-04 NYC bias audit (EV-038), Home Health AI records (EV-069), and the AI council's use-case review in 2026-08 (EV-096), which added AI-004 (a pilot since 2026-07, after intake). Not established: workforce use of public generative AI tools outside the approved tools (intake open request), and adverse impact results for AI-001 outside NYC requisitions (none provided, EV-038) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure

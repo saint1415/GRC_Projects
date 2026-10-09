@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-10 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (scenario gap 5); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
+| Last tested | Technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (group gap 5; EV-020); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

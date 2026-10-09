@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Staffing | v2026 | 2026-06-20 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Confirm alignment |
 | Consulting | v2026 | 2026-07-15 | Aligned, but missing the client-account register rule and the subcontractor BAA rule (POL-02 4.7; POL-01 4.8) | Add both by 2026-10-31 |
-| Home Health | v2023 | 2023-11 (written at acquisition) | **Drifted** (scenario gap 3); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
+| Home Health | v2023 | 2023-11 (written at acquisition) | **Drifted** (group gap 3; EV-063); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
 
 ## 3. What each supplement adds
 ### 3.1 Staffing supplement (employer of record; focus division)
@@ -68,9 +68,9 @@ The 2023 Home Health standards were written at acquisition, before the 2025 and 
 | Endpoint protection | Antivirus on laptops only | EDR on all managed devices including tablets (supplement 3.3) | 28% of tablets without EDR (HH-002) |
 | Log retention | 90 days in the EHR export | 1 year searchable, 6 years archived (logging standard) | Breach scoping limited |
 | Incident severity | Home Health 3-level scale | One group scale (POL-03 4.2) | Inconsistent escalation |
-| New data feeds | IT approval only | Privacy impact assessment (POL-01 4.9) | The visit-pay feed went live without one (gap 1) |
+| New data feeds | IT approval only | Privacy impact assessment (POL-01 4.9) | The visit-pay feed went live without one (group gap 1; EV-031) |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.13) | Hospitalization risk model and recording pilot not reviewed (HH-010, HH-011) |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 6 (POAM-021) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Group gap 6 (POAM-021) |
 
 **Why the drift happened.** The supplement was written by the acquired company's IT team in 2023 and had no owner after that team moved under the Group CISO. **Fix:** POL-01 4.5 now requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office tracks supplement versions in the policy register.
 

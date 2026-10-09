@@ -13,6 +13,8 @@
 | Assessors | Division security and compliance leads, the Staffing Vice President, Employment Compliance, the Consulting HIPAA compliance officer, and the Home Health HIPAA Privacy and Security Officers, coordinated by the Group Chief Privacy Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 What each division is under the law
 | Entity | Status | Basis |
 |---|---|---|
@@ -20,13 +22,13 @@
 | Consulting | **Business associate** of about 160 hospital and health-system clients: its consulting and management services involve disclosure of PHI to it | 45 CFR 160.103 ("business associate" (1)(ii)) |
 | Consulting, Federal Solutions | Federal contractor holding federal contract information on 11 civilian prime contracts | 48 CFR 52.204-21; 52.222-54 |
 | Home Health | **Covered entity** (health care provider transmitting standard transactions); Medicare-certified home health agency | 45 CFR 160.103; 42 CFR Part 484 |
-| Corporate shared services | Business associate of Home Health for IT hosting, identity, SOC, and EHR integration under the 2023 intercompany BAA. **Also receives Home Health PHI for payroll, which the BAA does not cover** (scenario gap 1) | 45 CFR 160.103; 164.308(b)(1); 164.504(e) |
+| Corporate shared services | Business associate of Home Health for IT hosting, identity, SOC, and EHR integration under the 2023 intercompany BAA. **Also receives Home Health PHI for payroll, which the BAA does not cover** (group gap 1; EV-005, EV-030) | 45 CFR 160.103; 164.308(b)(1); 164.504(e) |
 | Every employing entity | Employer for Form I-9, E-Verify (MOU for Employers; Consulting also as a Federal contractor), FCRA, and the Disposal Rule | 8 CFR 274a.2; MOU; 15 U.S.C. 1681b(b); 16 CFR 682.3 |
 | The holding company | SEC registrant | Form 8-K Item 1.05; 17 CFR 229.106 |
 
 **Workers' own records are not PHI.** Clinician credential files and Home Health employees' payroll records are employment records held as employer, which the PHI definition excludes (45 CFR 160.103). They are still personal information under state law (Florida's definition includes medical history and condition, Fla. Stat. 501.171(1)(g)1.a.(IV)) and confidential medical files under the ADA (29 CFR 1630.14(b)(1)). Patient data in visit-pay records is different: it is Home Health PHI wherever it sits.
 
-**The FTC Safeguards Rule (N54-R01), the primary regulation in the Consulting vertical's profile, does not apply.** It covers financial institutions, meaning institutions significantly engaged in activities financial in nature (16 CFR 314.2(h)(1)). Counsel concluded in 2026-07 that no Consulting line completes income tax returns, extends credit, or processes financial data as a service. HIPAA and FAR 52.204-21 are the binding rules for Consulting, so they are its gap targets.
+**The FTC Safeguards Rule (N54-R01), the primary regulation in the Consulting vertical's profile, does not apply.** It covers financial institutions, meaning institutions significantly engaged in activities financial in nature (16 CFR 314.2(h)(1)). Counsel concluded in 2026-07 (EV-081) that no Consulting line completes income tax returns, extends credit, or processes financial data as a service. HIPAA and FAR 52.204-21 are the binding rules for Consulting, so they are its gap targets.
 
 ### 1.2 Excluded requirements, with reasons
 - **N56-R04 for Staffing:** not a business associate for placements (above). 214 hospital contracts contain BAA or confidentiality terms; they are tracked as contract duties.
@@ -64,12 +66,23 @@
 1. **Requirements.** The 106 CSF 2.0 subcategories come from NIST's CSF 2.0 core (`00_universal-framework/frameworks/csf2_core.csv`). HIPAA Security Rule rows and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 (via the Health Care crosswalk). Other rows cite the eCFR, the U.S. Code, the 2026 Florida Statutes, the E-Verify MOU, and the cross-sector register (`00_universal-framework/cross-sector/us-cross-sector-obligations.md`) for CCPA and Colorado SB26-189.
 2. **Target Profile (Staffing).** Each CSF subcategory has a priority: High 28, Medium 71, Low 7, set by the Staffing security and compliance lead and the Group CISO from P01 and P05. Subcategories that protect SSNs, I-9 records, and pay are High.
 3. **Crosswalk.** CSF 2.0 to SP 800-53 uses the **official NIST informative reference** (SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`; the `sp800_53_controls` column lists the official controls that are also in the P02 GWP baseline. HIPAA rows use the Health Care crosswalk, an **author mapping** with NIST's official SP 800-53 mapping beside it (`nist_official_sp800_53r5_1_1`). All other rows carry an author mapping.
-4. **Evidence.** Interviews; document review; configuration exports; a sample of 120 Forms I-9 with E-Verify cases across divisions; a mock I-9 inspection (2026-06); 40 Healthcare Staffing rejections; 40 consultant roll-offs; 25 consultant subcontracts; 50 closed engagements; the Home Health emergency plan and exercise reports; and P07 test results.
+4. **Evidence.** Current state was established from the intake evidence (exports, documents and records, EV-001 to EV-069), gap analysis interviews (EV-078 Staffing and group, EV-079 Consulting, EV-080 Home Health), the 2026-07 counsel memos (EV-081), and fieldwork samples and documents: a sample of 120 Forms I-9 with E-Verify cases across divisions (EV-082); a mock I-9 inspection (2026-06, EV-083); the 2026 Q2 E-Verify user review (EV-084); 60 FCRA authorizations and 40 Healthcare Staffing rejections (EV-085); role and access tests (EV-086); NYC notice samples (EV-087); a tier 1 vendor contract review (EV-088); the Staffing and Consulting supplements (EV-089, EV-090); 25 consultant subcontracts and 50 closed engagements (EV-091); a repository scan (EV-092); 40 assigned Federal Solutions employees (EV-093); the Home Health exercise and drill reports (EV-094); a Home Health termination sample (EV-095); and P07 test results, including 40 consultant roll-offs (EV-N-PS4). The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale. Obligations that start on 2027-01-01 are rated against readiness today.
 
 **Current CSF Tier for Staffing: Tier 3 (Repeatable).** Target: Tier 3 everywhere, with Tier 4 (Adaptive) for identity and payroll fraud monitoring by 2027-12.
 
 ## 4. Results
+### 4.0 Group gaps
+Eight gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 8 across this sample.
+1. **Visit-pay feed carries PHI into the GWP.** Since 2024-04 each Home Health visit record sent for per-visit pay carries the patient's name, address, visit date, and visit type. No minimum-necessary review was done, the intercompany BAA does not cover payroll, and about 640 payroll users can view the records (EV-030, EV-031, EV-005, EV-028; P07 AC-4, AC-6).
+2. **Payroll diversion.** Associates change direct deposit accounts in the self-service app after an SMS one-time code. In 2025, 690 fraudulent changes diverted about $1.9 million of pay, which the group repaid (EV-032, EV-033; P07 IA-2(2), SI-4).
+3. **Home Health integration and policy drift.** Home Health's supplement was last aligned to group policy in 2023. About 11,500 field tablets sit in a legacy device management tool, and group EDR covers 72% of them (EV-063, EV-065, EV-017; P07 PL-1, SI-3).
+4. **AI in hiring.** The AI ranking add-on scores applicants for all three divisions. Only NYC requisitions have a bias audit; there is no group-wide adverse impact monitoring, and the Colorado and California duties that start 2027-01-01 are not designed (EV-037, EV-038, EV-007).
+5. **Shared incident notification.** A GWP incident would trigger state breach laws in most states, the E-Verify MOU notice to DHS, HIPAA notices for Home Health, client contract notices, and an SEC materiality decision. The single notification matrix has not been exercised (EV-020; P07 IR-3).
+6. **Common control inheritance** is documented for Staffing and Consulting but not for Home Health (EV-009, EV-064; P07 CA-2).
+7. **Consulting access to client systems.** About 6,300 client-issued accounts are not inventoried centrally; client notices at consultant roll-off are late; client PHI is saved in the engagement document repository without classification (EV-058, EV-059, EV-092; P07 AC-20, PS-4).
+8. **E-Verify and I-9 access.** About 1,400 E-Verify user accounts sit outside SSO, and the 2026 Q2 review found 52 accounts of departed users. The scanned paper I-9 archive (2009-2016) has no access audit trail (EV-047, EV-084, EV-034; P07 AC-2, AU-12).
+
 ### 4.1 Staffing and group-wide rows (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -91,7 +104,7 @@
 | Vertical requirements not applicable to Staffing (5) | 0 | 0 | 0 | 5 |
 | **Total (154)** | **101** | **44** | **4** | **5** |
 
-Of the 48 rows partially met or not met, 4 are High, 35 Moderate, 8 Low, and 1 Very Low. The High rows are PR.AA-03 (SMS codes for associate bank changes), Fla. Stat. 501.171(2) (reasonable measures, for scenario gaps 1 and 2), and the two 2027-01-01 AI obligations (CPPA ADMT rules and Colorado SB26-189).
+Of the 48 rows partially met or not met, 4 are High, 35 Moderate, 8 Low, and 1 Very Low. The High rows are PR.AA-03 (SMS codes for associate bank changes), Fla. Stat. 501.171(2) (reasonable measures, for group gaps 1 and 2), and the two 2027-01-01 AI obligations (CPPA ADMT rules and Colorado SB26-189).
 
 **The pattern:** Staffing runs the steps that happen once per hire well (I-9 timing, E-Verify cases, FCRA authorization). Its gaps are at the edges of the program: E-Verify accounts outside SSO (the one Not met MOU row, Art. II.A.3), the unlogged 2009-2016 I-9 archive (four I-9 rows), a phishable code guarding bank changes, and AI hiring duties that start in under four months. The one Not met CSF row is ID.RA-10: the AI ranking vendor was never assessed before use.
 
@@ -107,7 +120,7 @@ Of the 48 rows partially met or not met, 4 are High, 35 Moderate, 8 Low, and 1 V
 | FTC Safeguards, IRC 7216, DFARS, professional codes, CIRCIA (5) | 0 | 0 | 0 | 5 |
 | **Total (47)** | **26** | **15** | **1** | **5** |
 
-**Not met:** 164.308(a)(3)(ii)(C), termination procedures. Group access ends within 4 hours, but the client-issued EHR accounts consultants use are not inventoried, and clients were told of roll-off more than 5 business days late in 17 of 40 cases (scenario gap 7). **High partially met rows:** risk management (164.308(a)(1)(ii)(B)) and subcontractor assurances (164.308(b)(2) and 164.504(e)(2)(ii)(D)), because about 240 independent subcontractors handle PHI without subcontractor BAAs. The Federal Solutions enclave is in good shape: 15 of 16 FAR rows are met; the exception is patching speed ((b)(1)(xii)).
+**Not met:** 164.308(a)(3)(ii)(C), termination procedures. Group access ends within 4 hours, but the client-issued EHR accounts consultants use are not inventoried, and clients were told of roll-off more than 5 business days late in 17 of 40 cases (group gap 7). **High partially met rows:** risk management (164.308(a)(1)(ii)(B)) and subcontractor assurances (164.308(b)(2) and 164.504(e)(2)(ii)(D)), because about 240 independent subcontractors handle PHI without subcontractor BAAs. The Federal Solutions enclave is in good shape: 15 of 16 FAR rows are met; the exception is patching speed ((b)(1)(xii)).
 
 ### 4.3 Home Health (`gap-analysis-home-health.csv`)
 | Regulation | Met | Partially met | Not met | N/A |
@@ -122,18 +135,18 @@ Of the 48 rows partially met or not met, 4 are High, 35 Moderate, 8 Low, and 1 V
 | 42 CFR Part 2; FTC HBNR (2) | 0 | 0 | 0 | 2 |
 | **Total (44)** | **19** | **18** | **5** | **2** |
 
-The Security Rule rows focus on where Home Health's evidence differs from the group's; other specifications rely on group common controls, which is why documenting inheritance (scenario gap 6) matters.
+The Security Rule rows focus on where Home Health's evidence differs from the group's; other specifications rely on group common controls, which is why documenting inheritance (group gap 6) matters.
 
 **Not met:**
-- 164.308(b)(1), because corporate receives patient data for payroll without BAA coverage (gap 1).
-- 164.316(b)(2)(iii), because the Home Health standards were last updated in 2023 (gap 3).
+- 164.308(b)(1), because corporate receives patient data for payroll without BAA coverage (group gap 1).
+- 164.316(b)(2)(iii), because the Home Health standards were last updated in 2023 (group gap 3).
 - 164.502(b) and 164.514(d)(3): the visit-pay feed sends names and addresses when pay needs only an anonymous visit ID, and there is no protocol for this routine disclosure.
 - 45 CFR 92.210: the hospitalization risk model was never reviewed for protected-trait inputs.
 
 **Why the visit-pay feed matters legally.** Paying Home Health's own clinicians is Home Health's business management, a health care operations activity, so sharing PHI with a business associate for it can be permitted. But only under a BAA that covers the service, and only the minimum necessary. Neither condition is met. The fix is to stop sending the identifiers rather than to paper over the flow.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Patient data in the GWP through the visit-pay feed (1) | HH, Group | 164.308(b)(1); 164.502(b); 164.514(d)(3); 484.110(d) | High | Anonymous visit IDs; purge historical identifiers; BAA amendment for anything that remains | Group Chief Privacy Officer; Home Health HIPAA Privacy Officer | 2026-12-31 (stop); 2027-03-31 (purge) |
 | 2 | Phishable self-service authentication for bank changes (2) | Staffing, all workers | CSF PR.AA-03; Fla. Stat. 501.171(2) | High | Passkey or app authenticator; out-of-band confirmation; 3-day hold on first-time changes | Group payroll director | 2027-03-31 |
