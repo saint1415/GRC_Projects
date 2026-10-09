@@ -11,7 +11,7 @@
 | Approved | 2026-09-04 by the General Manager (Moderate and below) and the majority owner (High and Very High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Plant Production and Cold-Chain Monitoring System (PPCM) defined in the SSP (P02), the business systems it connects to, and the processes in the BIA (P05). That covers the process control network, SCADA and historian, the recipe and batch system, the ammonia refrigeration controls, cold-chain monitoring, the cloud tenant that holds electronic food safety records, and the vendors with remote access (`../00_company-facts.md` sections 3-4).
+**Scope.** The Plant Production and Cold-Chain Monitoring System (PPCM) defined in the SSP (P02), the business systems it connects to, and the processes in the BIA (P05). That covers the process control network, SCADA and historian, the recipe and batch system, the ammonia refrigeration controls, cold-chain monitoring, the cloud tenant that holds electronic food safety records, and the vendors with remote access ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What makes this register different from an office IT register.** Several risks here end in adulterated or temperature-abused food, not in lost data. Impact ratings therefore consider consumer health, product holds and recalls, and FSIS or FDA action, as well as downtime and cost.
 
@@ -21,8 +21,8 @@
 - High and Very High: only the majority owner may accept, and only temporarily with a dated treatment plan. Risks that could put adulterated product into commerce are not acceptable at High; they must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and vulnerabilities), the BIA, the 2023 food defense plan, interviews with the Operations Manager, Controls Engineer, Maintenance and Refrigeration Manager, and Warehouse and Logistics Manager, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and vulnerabilities), the BIA, the intake evidence (including the 2023 food defense plan, EV-018), interviews with the Operations Manager, Controls Engineer, Maintenance and Refrigeration Manager, and Warehouse and Logistics Manager (EV-047), and the plant walkthrough on 2026-07-15 (EV-048). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the ticket and incident log (EV-029), contracts, the walkthrough and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories, which include a food safety category.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -51,7 +51,7 @@ The seven High and Very High risks share one theme: **the plant's process contro
 
 **Food defense link.** R-003 and R-004 are intentional adulteration scenarios carried out through the control system rather than by hand. The 2023 vulnerability assessment did not consider them. They are the input to the food defense reanalysis required by 21 CFR 121.157(b)(2) (see P03).
 
-R-032 was added on 2026-08-14 after control assessment testing (P07) found the manufacturer default password on the refrigeration controller.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-08-14 after testing found the manufacturer default password on the refrigeration controller (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $186,000):**

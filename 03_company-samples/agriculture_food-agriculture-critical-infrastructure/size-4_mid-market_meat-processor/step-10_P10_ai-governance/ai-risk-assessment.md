@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed meat processor with two USDA-inspected plants) |
 | Tier / Vertical | Mid-Market / Food and Agriculture |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. AI-001, AI quality inspection on processing lines, is assessed in depth |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the identity provider app list, the accounts payable vendor master, the HR SaaS release notes and a department heads survey (EV-058, EV-047), the AI vision vendor's records (EV-059) and the P10 tests and interviews (EV-068). How many staff use public generative AI tools, and what they enter, was not established (intake open request); R-028 treats it as unknown. AI-001, AI quality inspection on processing lines, is assessed in depth |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook, with the Generative AI Profile (NIST AI 600-1) for AI-004 only |
 | Assessors / date | VP FSQA and the Plant 1 FSQA Manager (food safety), Controls Engineering Manager (OT), vCISO and Security Manager (security), HR Director and General Counsel (AI-005), 2026-08-17 to 2026-09-04 |
 | Decision | Chief Operating Officer, 2026-09-04 (Medium and Low); Chief Executive Officer, 2026-09-15 (High tier: AI-001 and AI-005) |
 
 ## 1. Summary
-Three AI systems reached production without a review (gap 13): the vision inspection system on Plant 1 Lines 5-7, the ERP's forecasting module, and the applicant ranking feature the HR SaaS vendor turned on by default. None is out of control, but each needed conditions:
+Three AI systems reached production without a review (EV-058, EV-059): the vision inspection system on Plant 1 Lines 5-7, the ERP's forecasting module, and the applicant ranking feature the HR SaaS vendor turned on by default. None is out of control, but each needed conditions:
 - **AI-001, AI vision inspection:** useful as a supplemental check, but its relationship to the x-ray and metal detection CCP was never written down, its vendor updates models without notice, and it misses foreign material on bacon more often than on other products.
 - **AI-005, applicant ranking:** a consequential employment decision tool that nobody chose. It was disabled on 2026-08-20.
 - **AI-002 and AI-003** are advisory and stay in production with monitoring. **AI-004** is a proposed enterprise assistant that gives staff a safe alternative to public tools.

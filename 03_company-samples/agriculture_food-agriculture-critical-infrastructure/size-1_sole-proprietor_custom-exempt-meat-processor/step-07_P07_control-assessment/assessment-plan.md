@@ -31,6 +31,17 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 50 determination stateme
 - **Test (2026-07-29):** sign-ins to each SaaS account from a new browser; sign-in to the router admin page and the smokehouse panel with their factory defaults; reachability of the router and smokehouse controller from a phone on the shop Wi-Fi; a port check from outside; download of a standard antivirus test file.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen.
 
+### What each test could show
+No written security policy existed before this work (EV-029). POL-01's draft rules were written from the gap analysis on 2026-07-27 and 2026-07-28 and served as test criteria, but POL-01 was completed and adopted on 2026-08-31, after fieldwork. Its drafts were therefore reviewed for design only, and none of the new rules it introduces (the password rules, the monthly log and program list review, the monthly exports, the AI input rule in POL-01 9.5) had operated or was tested here. The first risk assessment (P01) was completed on 2026-07-31, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or condition existed before the assessment and was tested or examined on the live accounts, devices, network and vendor records | 26 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the July 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 18 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the populations each test covered: the vendor accounts the owner signs in to (EV-001, EV-006, EV-011, EV-013, EV-015), the laptop and phone (EV-008, EV-009), the router and the smokehouse controller (EV-019, EV-006), and the 9 vendors that provide shop systems (V-01 to V-09 in the intake [vendor register](../step-00_P00_intake/vendor-register.csv)). Controls that POL-01 introduces are tested for operation at the 2027-01 follow-up, after at least one quarter of use that includes the October to December busy season.
+
 ## 3. Rules of engagement
 - No testing while product was in the smokehouse or while the walk-ins were being loaded. The cold-chain alert settings were viewed but not changed during the test.
 - No customer records were copied off the devices; screenshots were cropped to settings only.

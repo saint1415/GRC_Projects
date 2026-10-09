@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06) |
 | Runbook owner | Group CISO; food safety decisions owned by the Group Chief Food Safety and Quality Officer; notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO, the Group Chief Food Safety and Quality Officer, and the Group General Counsel |
-| Last tested | IT playbooks tested quarterly. **The cross-division notification matrix and the product hold steps have not been exercised** (scenario gap 6); the first cross-division tabletop is due 2026-12-15 (POAM-011) |
+| Last tested | IT playbooks tested quarterly. **The cross-division notification matrix and the product hold steps have not been exercised** (group gap 6); the first cross-division tabletop is due 2026-12-15 (POAM-011) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

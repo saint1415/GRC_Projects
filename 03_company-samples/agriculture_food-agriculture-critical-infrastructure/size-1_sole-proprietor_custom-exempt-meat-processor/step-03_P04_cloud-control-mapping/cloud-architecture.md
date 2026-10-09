@@ -60,8 +60,8 @@ flowchart LR
 The three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM) agree on the SaaS split: the provider runs the application, the platform, and the facilities; **the customer always keeps its identities, its data, and its devices.** Two of the shop's services add a fourth customer layer: **device configuration.** The cold-chain vendor runs a reliable platform (P09), but whether an alert reaches anyone depends on settings only the shop controls: who is on the alert list, whether "gateway offline" is reported, and whether the gateway has power. That is why 15 of the 17 rows in the control map are the customer's. No IaaS provider equivalents table is needed, because the shop runs no infrastructure.
 
 ## 4. Findings from the mapping
-1. **The alert path has a single point of failure at every step** (one gateway on wall power, one phone, offline notice off). Found in this mapping; tracked as P01 R-003.
-2. **One password opens both devices that act on food** (cold-chain settings and smokehouse programs), and it is saved in the laptop browser. Tracked as R-002.
-3. **The custom records live in one consumer file with no version history.** The vendor cannot restore what it never versioned. Tracked as R-004.
-4. **The public AI chatbot receives recipe and cure data** under consumer terms. Tracked as R-012 and in P10.
-5. **Inherited controls depend on vendor evidence.** Only the cold-chain vendor has provided a SOC 2 report; the smokehouse manufacturer and booking vendor have provided nothing (SA-9 gap, P07).
+1. **The alert path has a single point of failure at every step** (one gateway on wall power, one phone, offline notice off). Found in this mapping, from the alert settings and walk-through collected at intake (EV-002, EV-020); tracked as P01 R-003.
+2. **One password opens both devices that act on food** (cold-chain settings and smokehouse programs), and it is saved in the laptop browser (EV-008). Tracked as R-002.
+3. **The custom records live in one consumer file with no version history.** The vendor cannot restore what it never versioned (EV-011, EV-012). Tracked as R-004.
+4. **The public AI chatbot receives recipe and cure data** under consumer terms (EV-024, EV-025). Tracked as R-012 and in P10.
+5. **Inherited controls depend on vendor evidence.** Only the cold-chain vendor has provided a SOC 2 report; the smokehouse manufacturer and booking vendor have provided nothing (EV-005, EV-007, EV-013; SA-9 gap, P07).

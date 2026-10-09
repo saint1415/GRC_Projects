@@ -7,7 +7,7 @@
 Shop Production and Cold-Chain Monitoring System (**SPCM**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The SPCM is everything the shop uses to keep customers' carcasses and product cold, process them to each owner's cut sheet, cure and smoke them, label every package "Not for Sale", and keep the custom records the exemption requires. One person, the owner-operator, uses and runs it. Components are SYS-01 to SYS-10 in `../00_company-facts.md` section 3: a cold-chain monitoring service with five sensors and a gateway, a smokehouse controller with a cloud app, a shop laptop driving a scale and label printer, a consumer email and file account, the owner's phone, a booking form, accounting and payments, the shop Wi-Fi, and a public AI chatbot. There is no server, no processing-line network, and no IaaS. Most safeguards inside the services are **inherited from the vendors**; the owner is responsible for accounts, data, devices, the shop network, and vendor choices (P04).
+The SPCM is everything the shop uses to keep customers' carcasses and product cold, process them to each owner's cut sheet, cure and smoke them, label every package "Not for Sale", and keep the custom records the exemption requires. One person, the owner-operator, uses and runs it. Components are SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): a cold-chain monitoring service with five sensors and a gateway, a smokehouse controller with a cloud app, a shop laptop driving a scale and label printer, a consumer email and file account, the owner's phone, a booking form, accounting and payments, the shop Wi-Fi, and a public AI chatbot. There is no server, no processing-line network, and no IaaS. Most safeguards inside the services are **inherited from the vendors**; the owner is responsible for accounts, data, devices, the shop network, and vendor choices (P04).
 
 Two components act on food, not just on data: the smokehouse controller runs cook programs, and the cold-chain service is the only real-time warning that a cooler is failing. That is why integrity and availability, not confidentiality, set the categorization in section 6.
 
@@ -24,7 +24,7 @@ Two components act on food, not just on data: the smokehouse controller runs coo
 | Voluntary benchmark | NIST CSF 2.0 | P03 checklist |
 | Internal | Information Security Policy POL-01 (P06) | All components |
 
-Not applicable (P03 section 1): C-FOOD-AG-R01 (21 CFR Part 121; the shop is not required to register, 21 CFR 1.226(g)), C-FOOD-AG-R02 (CIRCIA, proposed only), C-FOOD-AG-R03 (USCG MTS rule), the Reportable Food Registry, and 9 CFR 417 and 418.2 (official establishments).
+Not applicable (intake [obligations register](../step-00_P00_intake/obligations-register.csv); P03 section 1): C-FOOD-AG-R01 (21 CFR Part 121; the shop is not required to register, 21 CFR 1.226(g)), C-FOOD-AG-R02 (CIRCIA, proposed only), C-FOOD-AG-R03 (USCG MTS rule), the Reportable Food Registry, and 9 CFR 417 and 418.2 (official establishments).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -54,6 +54,7 @@ Information types are named in plain terms; SP 800-60 has no food production typ
 **Baseline:** SP 800-53B Moderate, tailored to 27 controls that a one-person shop can run (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the cold-chain vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): SYS-01 to SYS-10, with the anomaly alert feature (AI-002) as part of SYS-01 and the paper records (OTH-01). The walk-ins and condensing units (OTH-02) are the equipment the system watches; the refrigeration contractor maintains them.
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, SYS-05, SYS-07, SYS-08, and SYS-10; the sensors, gateway, and smokehouse controller; the laptop, scale and label printer, and phone; the shop router and Wi-Fi; paper cut sheets and logs in the shop.
 - **Outside (external services):** the vendors' platforms and their subservice providers, the mobile slaughter operator, the refrigeration contractor, the card processor, and the internet provider's network.
 
@@ -108,7 +109,7 @@ Self-assessed 2026-07-27 to 2026-07-31 with the on-call IT technician. See P07.
 Every SaaS account is an administrator account held by the owner, so each should require a second factor. Today email (text message) and accounting meet that. The cold-chain account and booking form admin use a password only until MFA is turned on (2026-09-15). The smokehouse app offers no MFA; compensating steps are a unique passphrase, remote program editing turned off, and a monthly check of the controller's program list. Customers do not sign in to any shop system.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **Custom exempt:** preparation of meat for the animal's owner under 9 CFR 303.1(a)(2), without inspection, marked "Not for Sale"

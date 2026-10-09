@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the focus division's primary system, the **PPCM**, because it is where a cyber event becomes a food safety event: it runs and records every step that makes the six plants' food safe, and it carries the group's food defense risk (P01 GR-09). It also shows inheritance clearly: most of its controls come from corporate (SYS-G1, SYS-G2, SYS-G3, SYS-G5) and from the shared cold-chain platform (SYS-G6). The group common control catalog (`common-control-catalog.csv`, 82 controls) is the same catalog Food Distribution and Grocery Retail inherit from.
 
 ## 1. System Name and Identifier
-Plant Production and Cold-Chain Monitoring System (**PPCM**), identifier CSCH-MP-SYS-001. It covers SYS-M1 to SYS-M5 and the plant tier of SYS-G6 in `../00_company-facts.md` section 3.
+Plant Production and Cold-Chain Monitoring System (**PPCM**), identifier CSCH-MP-SYS-001. It covers SYS-M1 to SYS-M5 and the plant tier of SYS-G6, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PPCM runs and records formulation and cure dosing, cooking and smoking, chilling, packaging and lot coding, and cold storage at six plants. It produces the electronic CCP records that FSIS inspection program personnel review at every plant, and at Plant 6 the food defense monitoring records required by 21 CFR Part 121. About 9,500 production, maintenance, FSQA, and warehouse staff use it across two production shifts and a sanitation shift.
@@ -33,7 +33,7 @@ OT zones follow the SP 800-82 Rev. 3 layered model (levels 0 to 3 in the plant, 
 | SEC | Cybersecurity incident disclosure | Form 8-K Item 1.05 | A PPCM incident may be material to the group (P08) |
 | Internal | Group policies POL-01 to POL-05 and the Meat Processing supplement | P06 | Apply to IT and OT |
 
-Not applicable: USCG MTS cyber rule (C-FOOD-AG-R03), because no plant is an MTSA-regulated facility. OSHA PSM (29 CFR 1910.119) and EPA RMP (40 CFR Part 68) apply to the ammonia systems as process safety rules managed by plant PSM programs; they are context here, but the refrigeration controllers are inside the boundary.
+Not applicable: USCG MTS cyber rule (C-FOOD-AG-R03), because no plant is an MTSA-regulated facility. Applicability for each division and the group is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). OSHA PSM (29 CFR 1910.119) and EPA RMP (40 CFR Part 68) apply to the ammonia systems as process safety rules managed by plant PSM programs; they are context here, but the refrigeration controllers are inside the boundary.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -80,6 +80,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 Other High-baseline controls are inherited from the cloud providers and SaaS vendors (evidenced by their SOC 2 reports, P09), or tailored out with a reason in the group tailoring register (for example, AC-7 lockout on HMIs, where operator lockout during an upset is itself a safety risk, and controls that assume federal systems). Where the IT form of a control would disrupt the process, SP 800-82 Rev. 3 compensating forms are used (for example, application allowlisting instead of agent-based scanning on HMIs).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-M1 to SYS-M5 and the plant tier of SYS-G6, with the shared services they inherit from) and the plant exports EV-042 to EV-061.
 - **Inside:** SYS-M1 to SYS-M5 at all six plants (PLCs, HMIs, dosing skids, CIP controls, smokehouse controllers, packaging controls, SCADA, historians, engineering workstations, MES, refrigeration controllers), the recipe master library and SYS-M5 accounts in provider A, and the plant tier of SYS-G6 (sensors, gateways, and the plants' configuration in the vendor SaaS).
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SIEM, and EDR, SYS-G3 cloud landing zone and colocation network, SYS-G5 OT remote access gateway and OT monitoring, and the SYS-G6 platform core (vendor SaaS and the alert integration server).
 - **Outside, interconnected:** SYS-G4 ERP (production orders, consumption), SYS-D1 WMS (lot and pallet data for shipments to DCs), and SYS-M6 AI vision inspection (lot data in, reject counts out).
@@ -112,7 +113,7 @@ The diagrams are in P04 `cloud-architecture.md` (section 2.2).
 | SYS-M5 food safety records application | PaaS application and database | Provider A (immutable backups in provider B) | Division VP FSQA |
 | OT DMZ and plant firewalls | Network | Plants 1, 3, 4, 6 (not Plants 2 and 5) | Group OT security director |
 
-Plants 1, 3, 4, and 6 inventories come from passive OT monitoring (CM-8). Plants 2 and 5 inventories are 2024 spreadsheets (POAM-008).
+Plants 1, 3, 4, and 6 inventories come from passive OT monitoring (CM-8). Plants 2 and 5 inventories are 2024 spreadsheets (EV-045; POAM-008).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -133,14 +134,14 @@ See `control-implementation.csv` (104 controls) and `common-control-catalog.csv`
 | System-specific | 22 |
 
 **Why so many partially implemented controls.** Most of the 53 are partial for one reason: the control works at Plants 1, 3, 4, and 6 but not yet at the two acquired plants. The rest cluster in three places:
-- **Plants 2 and 5 below the reference architecture** (scenario gap 1): AC-4, AC-17, AC-17(1), MA-4, MA-5, SC-7, SC-7(5), CM-2, CM-7, CM-8, CP-9, CP-10, SI-2, SI-3, SI-4, RA-5, MP-7, SA-22, PL-8, AU-12, AC-6(9).
-- **Shared operator logins and record integrity** (scenario gap 4): AC-2, AC-3, AC-5, AC-6, AC-11, AU-3, AU-9, IA-2, IA-2(2), IA-5, CM-5, SI-7.
-- **Food defense change control, the shared cold-chain platform, suppliers, and cross-division incident handling** (gaps 2, 3, 6, and 9): CM-3, CM-4, CA-7, CA-3, CP-2, CP-4, CP-7, SA-4, SA-9, PS-7, SR-3, AU-6, AT-2, AT-3, IR-2, IR-3, IR-4, IR-6, IR-8, AC-18.
+- **Plants 2 and 5 below the reference architecture** (group gap 1): AC-4, AC-17, AC-17(1), MA-4, MA-5, SC-7, SC-7(5), CM-2, CM-7, CM-8, CP-9, CP-10, SI-2, SI-3, SI-4, RA-5, MP-7, SA-22, PL-8, AU-12, AC-6(9).
+- **Shared operator logins and record integrity** (group gap 4): AC-2, AC-3, AC-5, AC-6, AC-11, AU-3, AU-9, IA-2, IA-2(2), IA-5, CM-5, SI-7.
+- **Food defense change control, the shared cold-chain platform, suppliers, and cross-division incident handling** (group gaps 2, 3, 6, and 9): CM-3, CM-4, CA-7, CA-3, CP-2, CP-4, CP-7, SA-4, SA-9, PS-7, SR-3, AU-6, AT-2, AT-3, IR-2, IR-3, IR-4, IR-6, IR-8, AC-18.
 
 The 3 planned controls are AU-10 (electronic signatures in SYS-M5), RA-9 (criticality analysis of components that act on food), and SR-6 (annual OT and cold-chain supplier reviews).
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 82 controls provided by corporate. Inheritance is **documented for Meat Processing** (2025 inheritance matrix; SYS-G5 coverage limited to Plants 1, 3, 4, and 6), for **Grocery Retail** (the PCI DSS responsibility matrix in the 2025 ROC), and for the **PPCM** (this plan). It is **not documented for Food Distribution** (scenario gap 7). Until POAM-017 closes, Food Distribution cannot show its 3PL customers or the service auditor (P09) which controls it inherits, and P07 found CA-2 statements other than satisfied for this reason.
+The common control catalog lists 82 controls provided by corporate. Inheritance is **documented for Meat Processing** (2025 inheritance matrix; SYS-G5 coverage limited to Plants 1, 3, 4, and 6), for **Grocery Retail** (the PCI DSS responsibility matrix in the 2025 ROC), and for the **PPCM** (this plan). It is **not documented for Food Distribution** (group gap 7). Until POAM-017 closes, Food Distribution cannot show its 3PL customers or the service auditor (P09) which controls it inherits, and P07 found CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and PPCM and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit, with OT testing at Plants 2, 5, and 6 during weekend sanitation windows. See P07 `assessment-results.csv` and `poam.csv`.
@@ -151,7 +152,7 @@ Common controls were assessed once, and PPCM and division controls sampled, from
 - **Service accounts** that touch OT must be managed in PAM; 34 privileged directory service accounts are not yet (POAM-012).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and vendor review (P09), AI governance (P10), the Plant 6 food defense plan (2024), and each plant's HACCP plans.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and vendor review (P09), AI governance (P10), the Plant 6 food defense plan (2024), and each plant's HACCP plans.
 
 ## 13. Acronym List and Glossary
 - **CCP:** critical control point (9 CFR 417.1)

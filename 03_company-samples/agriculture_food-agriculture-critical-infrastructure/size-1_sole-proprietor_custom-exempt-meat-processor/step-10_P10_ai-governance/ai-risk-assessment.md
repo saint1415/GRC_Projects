@@ -8,10 +8,10 @@
 | Why this use case | Adapted from the registry default (AI quality inspection on processing lines): a one-person shop has no camera inspection line. The chatbot is the AI tool the owner actually uses, and its answers bear directly on a binding ingredient rule |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks (confabulation; data privacy) |
 | Assessor and decision | Owner-operator, 2026-07-30; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is the cold-chain vendor's anomaly alert feature, Low tier) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is the cold-chain vendor's anomaly alert feature, Low tier), built at intake from the chatbot account and its terms, the laptop browser history and the phone's apps, the bank and card statements, and the cold-chain alert settings (EV-024, EV-025, EV-008, EV-009, EV-026, EV-002). With no staff, there was no survey to run. Not established: what the vendor still holds from the about 30 conversations, and whether it has used them to improve its service. A free AI tool used outside the laptop browser and the phone's apps would not show in these sources |
 
 ## 1. What it does (Map)
-The owner types a recipe and a batch weight (for example, "brine for 40 lb of ham at 10 percent pump") and the chatbot answers with scaled amounts of salt, sugar, and cure. The owner also asks it to draft texts telling customers their order is ready, sometimes with the customer's first name and pickup time. The chatbot is a general-purpose consumer product. Its terms allow the vendor to use inputs to improve its service, and the owner never turned off the training setting. Nothing the chatbot says is checked by the vendor for food safety.
+The owner types a recipe and a batch weight (for example, "brine for 40 lb of ham at 10 percent pump") and the chatbot answers with scaled amounts of salt, sugar, and cure. The owner also asks it to draft texts telling customers their order is ready, sometimes with the customer's first name and pickup time. The chatbot is a general-purpose consumer product. Its terms allow the vendor to use inputs to improve its service (EV-025), and the owner never turned off the training setting (EV-024). Nothing the chatbot says is checked by the vendor for food safety.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -21,7 +21,7 @@ The owner types a recipe and a batch weight (for example, "brine for 40 lb of ha
 | State AI laws on consequential decisions | No | The chatbot makes no decision about a person (employment, credit, housing, insurance, education, health care, government services, legal services) |
 
 ## 3. Risk screen (repository rubric)
-**Tier: High** as used until 2026-07-30, because the rubric puts any AI that "can affect physical safety" in the High tier, and a cure amount does. On 2026-07-30 the owner re-checked 12 saved chatbot answers against the cure supplier's printed chart: 11 matched; **1 (a brine for 40 lb of ham) gave a cure amount about 25% above the chart.** The owner had noticed at the time that it looked high and used the chart value, so no batch was affected. This is the generative AI risk NIST AI 600-1 calls confabulation: a confident, wrong number.
+**Tier: High** as used until 2026-07-30, because the rubric puts any AI that "can affect physical safety" in the High tier, and a cure amount does. On 2026-07-30 the owner re-checked 12 saved chatbot answers against the cure supplier's printed chart (EV-033): 11 matched; **1 (a brine for 40 lb of ham) gave a cure amount about 25% above the chart.** The owner had noticed at the time that it looked high and used the chart value, so no batch was affected. This is the generative AI risk NIST AI 600-1 calls confabulation: a confident, wrong number.
 
 **After the restriction in section 6, the remaining use (drafting texts with no customer details) is Low tier:** internal productivity, no decisions about people, no regulated data.
 

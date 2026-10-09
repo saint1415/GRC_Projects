@@ -7,12 +7,14 @@
 | Primary regulation | FSMA Intentional Adulteration rule, 21 CFR Part 121 (C-FOOD-AG-R01), applied to Plant 6, with FSIS HACCP and recall rules (9 CFR 417.2-417.5, 418.2-418.3) for electronic CCP records at all six plants and an OT benchmark (NIST CSF 2.0 with SP 800-82 Rev. 3, voluntary) |
 | Division regulations | Food Distribution: FDA registration, refrigerated storage (21 CFR 117.206), sanitary transportation (21 CFR 1.900-1.912), FSIS registration and records (9 CFR 320.1, 320.5), and the Food Traceability Rule (enforcement deferred). Grocery Retail: PCI DSS v4.0.1 (contractual), FACTA receipt truncation, FSIS grinding records, FTC Act Section 5 |
 | Gap tables | `gap-analysis.csv` (Meat Processing, 88 rows); `gap-analysis-food-distribution.csv` (42 rows); `gap-analysis-grocery-retail.csv` (67 rows) |
-| Assessment dates | 2026-05-04 to 2026-07-31 (plant walkthroughs, including Plant 6 on 2026-07-14), with evidence updated from the P07 assessment (to 2026-08-28) |
+| Assessment dates | Intake evidence collected 2026-03-30 to 2026-04-24; gap analysis fieldwork 2026-06-29 to 2026-07-24 within the 2026-05-04 to 2026-07-31 analysis window (plant walkthroughs, including Plant 6 on 2026-07-14), with evidence updated from the P07 assessment (to 2026-08-28) |
 | Assessors | Division security and compliance leads with the Plant 6 FSQA manager (qualified individual under 121.4(c)), the Division food safety manager (Distribution), and the Grocery Retail payments security manager; coordinated by the Group Chief Food Safety and Quality Officer and reviewed by group internal audit |
 
 Regulatory text was read from eCFR (point-in-time 2026-09-23), govinfo.gov, federalregister.gov, and fda.gov. PCI DSS is a copyrighted standard: rows list requirement numbers with short topic labels in our own words.
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what under the food rules
 | Site | FDA status | FSIS status | Basis |
 |---|---|---|---|
@@ -74,10 +76,22 @@ Part 121 regulates intentional adulteration intended to cause wide-scale public 
 ## 3. Method
 1. **Requirements.** Part 121 rows follow the rule's structure at paragraph level (Subparts A, C, and D; 121.401 prohibited acts is enforcement context, not a row). FSIS rows are limited to the paragraphs that touch electronic monitoring, records, corrective actions for unforeseen deviations, reassessment, and notification. Food Distribution rows follow 21 CFR 117.206, 1.900-1.912, 9 CFR 320.1 and 320.5, and Subpart S. Grocery Retail rows list the 63 second-level PCI DSS v4.0.1 requirements by number with topic labels in our own words.
 2. **Crosswalk.** NIST publishes no mapping for these food rules or for PCI DSS, so those rows carry an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such. Benchmark rows use the official NIST CSF 2.0 to SP 800-53 informative references (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), showing a subset.
-3. **Evidence.** Interviews at all six plants, DC-1 and DC-3, and 8 stores; review of the Plant 6 food defense plan, HACCP plans, monitoring, corrective action, and verification records (12-week and 12-month samples), sanitary transportation procedures, the 2025 ROC and the 2026 segmentation test, change records, and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports and documents collected 2026-03-30 to 2026-04-24, EV-001 to EV-079, including the Plant 6 food defense plan, HACCP plans, sanitary transportation procedures, the 2025 ROC and the 2026 segmentation test, and change records), gap analysis interviews and walkthroughs at all six plants, DC-1 and DC-3, and 8 stores (EV-088 group, EV-089 Meat Processing, EV-095 Food Distribution, EV-097 Grocery Retail), record samples and tests (EV-090 Plant 6 food defense records, 12-week and 12-month samples; EV-091 agency onboarding; EV-092 CCP records; EV-093 Plant 2 wireless survey; EV-096 DC records), the Food Distribution applicability memo (EV-094), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated on the P01 risk scale.
 
 ## 4. Results
+### 4.0 Group gaps
+Nine gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 9 across this sample.
+1. **OT segmentation and remote access are uneven.** Plants 2 and 5 (acquired 2024) have flat IT and OT networks, OT servers joined to the corporate domain, an integrator's shared always-on VPN account, and (Plant 5) a refrigeration contractor's cellular modem. SYS-G5 is not deployed there or at three DCs (EV-010, EV-044, EV-051, EV-023; P07 SC-7, AC-17).
+2. **The shared cold-chain monitoring platform is a single point of failure across divisions.** One alert integration server routes every alert for plants, DCs, trailers, and stores; its failover has never been tested; gateways at DCs and stores sit on general store and DC networks; alerts do not reach the SOC; and the vendor's SOC 2 report had not been reviewed since 2024 (EV-025, EV-026, EV-027; P07 CP-4, SA-9).
+3. **The Plant 6 food defense plan has not been reanalyzed.** The 2024 vulnerability assessment did not evaluate control-system paths (recipe changes, brine dosing, CIP valves) for the plant-based line, and the plan was not reanalyzed after the 2025 MES upgrade (21 CFR 121.130, 121.157). Verification records are incomplete (EV-056, EV-049, EV-089, EV-090).
+4. **Electronic CCP record integrity is weak at two plants.** Historian audit trails are disabled and MES logins are shared at Plants 2 and 5 (9 CFR 417.5(d)); HMIs at all plants use shared operator logins (EV-047, EV-046, EV-092; P07 AU-9, IA-2).
+5. **PCI DSS scope is not yet reduced everywhere.** 30 stores remain outside P2PE; the 2026 segmentation test found a path from the store Wi-Fi management network to POS lanes in one store design; the inventory and authorization of scripts on the online payment page is incomplete (EV-073, EV-071, EV-074).
+6. **Cross-division incident notification has not been exercised.** One incident in a shared service could trigger FSIS and FDA food notices, state breach notices in several states, card brand and acquirer duties, 3PL customer notices, and an SEC materiality decision. The notification matrix exists in draft and has never been exercised (EV-014, EV-013).
+7. **Food Distribution governance lags.** Its security standards (2023) have drifted from the 2025 group policies, and its inheritance of group common controls is not documented (EV-063, EV-007; P07 PL-1, CA-2).
+8. **AI governance lags deployment.** AI vision inspection went into production at three plants before the Group AI Standard existed; a store loss-prevention camera analytics pilot started at 12 stores without a privacy review (EV-037, EV-078).
+9. **OT and cold-chain third parties are not managed to the group standard.** No security terms or reviews for controls integrators and refrigeration contractors at Plants 2 and 5; the cold-chain vendor's assurance was out of date (EV-052, EV-028, EV-027).
+
 ### 4.1 Meat Processing (`gap-analysis.csv`)
 | Source | Rows | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|---|
@@ -110,7 +124,7 @@ The 38 open rows (partially met or not met) break down by gap risk as 18 High, 1
 | NIST CSF 2.0 benchmark (voluntary) | 10 | 0 | 8 | 2 | 0 |
 | **Total** | **42** | **19** | **19** | **3** | **1** |
 
-The 22 open rows are 2 High, 15 Moderate, and 5 Low. The food rules are mostly met on paper; the gaps sit where those rules **depend on data from shared systems**: monitoring through one cold-chain alert path (117.206(a)(2), High), reviews beyond 7 working days at three DCs (117.206(a)(4)(iii)), and telematics data that cannot be attributed or retained long enough (1.908(a)(3)(iii), (e)(2)). The two Not met benchmark rows are scenario gap 7: drifted standards (GV.PO-01) and undocumented inheritance (GV.RR-02).
+The 22 open rows are 2 High, 15 Moderate, and 5 Low. The food rules are mostly met on paper; the gaps sit where those rules **depend on data from shared systems**: monitoring through one cold-chain alert path (117.206(a)(2), High), reviews beyond 7 working days at three DCs (117.206(a)(4)(iii)), and telematics data that cannot be attributed or retained long enough (1.908(a)(3)(iii), (e)(2)). The two Not met benchmark rows are group gap 7: drifted standards (GV.PO-01) and undocumented inheritance (GV.RR-02).
 
 ### 4.3 Grocery Retail (`gap-analysis-grocery-retail.csv`)
 | Obligation | Rows | Met | Partially met | Not met | N/A |
@@ -122,7 +136,7 @@ The 22 open rows are 2 High, 15 Moderate, and 5 Low. The food rules are mostly m
 The 14 open rows are 3 High, 10 Moderate, and 1 Low. Grocery Retail is the most mature division. Its open items come from its own testing: one store network design lets the Wi-Fi management network reach POS lanes (Req. 1.3, 2.3, 11.4; High), and payment page script management and tamper detection are incomplete (Req. 6.4 partially met, 11.6 Not met). Requirements 3.6 and 3.7 are not applicable because no account data is stored; 12.9 applies only to service providers.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Plant 6 reanalysis after the 2025 MES upgrade; control-system paths not assessed (3) | MP | 121.130(a), (b); 121.157(b)(1)-(2), (c), (d) | High | Reanalysis with P01 and P07 inputs; food defense sign-off in OT change control | Plant 6 FSQA manager | 2026-12-31 (POAM-023, POAM-007) |
 | 2 | No interlock on the plant-based CIP path | MP | 121.135(a) | High | Hardwired CIP interlock; brine system as an actionable process step | Plant 6 plant manager | 2026-11-30 |

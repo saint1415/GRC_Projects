@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. AI 600-1 is not applied: AI-001 is not generative |
 | Assessor / date | Office Manager (security and compliance lead) with the Production Supervisor, 2026-08-25 |
 | Decision | Owner, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the packaging machine purchase order and commissioning record, the intake interviews, the cold-chain dashboard settings and vendor documentation, and a staff question (EV-011, EV-035, EV-036, EV-006, EV-044, EV-043). What has been entered into public chatbots was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Production Supervisor (label accuracy and product release). **Technical contact:** the Maintenance and Sanitation Technician (camera, network, vendor sessions). **Decision authority:** the owner, because AI-001 is High tier and POL-02 A.3 reserves High risk decisions to the owner.
@@ -20,7 +20,7 @@
 - **Approved-tools list:** kept by the Office Manager in POL-04 4.6. It has one entry, AI-001, for Line 2 only.
 - **Scale for a Micro company:** there is no AI committee. The owner, Production Supervisor, and Office Manager review AI use at the monthly security meeting.
 
-**How the pilot started.** The camera module came with the new packaging machine in June 2026. The vendor turned it on during commissioning, with automatic image upload and automatic model updates. Nobody wrote down what it was for, how it would be checked, or what the vendor could do with the images (scenario facts gap 14). This assessment closes the documentation gap; sections 4 and 6 set the conditions.
+**How the pilot started.** The camera module came with the new packaging machine in June 2026. The vendor turned it on during commissioning, with automatic image upload and automatic model updates. Nobody wrote down what it was for, how it would be checked, or what the vendor could do with the images (EV-011; EV-036). This assessment closes the documentation gap; sections 4 and 6 set the conditions.
 
 ## 2. MAP
 | Item | Description |
@@ -40,7 +40,7 @@
 | FSIS recall notice (9 CFR 418.2) and recall procedure (418.3) | **Yes, as a consequence** | A label error that reaches commerce can be misbranding and trigger the 24-hour notice |
 | FSIS HACCP (9 CFR Part 417) | **Indirectly** | Not a CCP today; relevant if AI-001 changes the process or replaces a check (417.4(a)(3)) |
 | FTC Act Section 5 | Indirectly | Applies to the vendor's accuracy claims. The purchase file keeps the claim the company relied on ("99% label verification") |
-| Florida recording law (Fla. Stat. 934.03) | No | It covers interception of oral communications. AI-001 captures images only; the vendor confirmed the camera has no microphone |
+| Florida recording law (Fla. Stat. 934.03) | No | It covers interception of oral communications. AI-001 captures images only; the vendor confirmed the camera has no microphone (EV-044) |
 | State AI and employment AI laws | No | The company operates only in Florida, and AI-001 makes no decision about any person. **Using AI-001 images to evaluate workers is prohibited** by company decision |
 
 ## 3. Risk tier
@@ -57,7 +57,7 @@
 - any use of images to monitor or evaluate workers
 
 ## 4. MEASURE
-Pilot results cover 2026-06-15 to 2026-08-21. The Production Supervisor placed seeded defects on each production day: packs with a wrong label, a label missing the allergen statement, a wrong lot code, and a deliberately bad seal.
+Pilot results cover 2026-06-15 to 2026-08-21 (EV-052). The Production Supervisor placed seeded defects on each production day: packs with a wrong label, a label missing the allergen statement, a wrong lot code, and a deliberately bad seal.
 
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
@@ -65,7 +65,7 @@ Pilot results cover 2026-06-15 to 2026-08-21. The Production Supervisor placed s
 | Valid and reliable | Seeded seal defects detected: at least 95% overall and at least 90% for every product group | 94% overall (113 of 120); snack sticks 82% (23 of 28) | **No.** Snack stick subgroup fails |
 | Valid and reliable | False reject rate of 2% or less (avoids staff ignoring the bin) | 3.4% overall; 6.1% in the two weeks after the 2026-07-28 film change | **No** |
 | Safe | First-label check and second-person template check unchanged; every reject decided by a person | Confirmed by walkthrough and the reject log | Yes |
-| Secure and resilient | Camera on the plant network; vendor access supervised; model updates only through the change log | Camera on the flat network; two model updates pushed without notice (2026-07-09 and 2026-08-04) | **No** |
+| Secure and resilient | Camera on the plant network; vendor access supervised; model updates only through the change log | Camera on the flat network (EV-SC-7); two model updates pushed without notice (2026-07-09 and 2026-08-04, EV-052) | **No** |
 | Accountable and transparent | Rejects logged with defect type and disposition in the records app | Logged in the vendor dashboard only | Partial |
 | Explainable and interpretable | Supervisor can see the image and the flagged region for each reject | Available in the vendor dashboard | Yes |
 | Privacy-enhanced | No audio; worker images not used for other purposes; image retention 90 days; no vendor reuse outside the service | No audio confirmed; retention and reuse terms missing | **No** |

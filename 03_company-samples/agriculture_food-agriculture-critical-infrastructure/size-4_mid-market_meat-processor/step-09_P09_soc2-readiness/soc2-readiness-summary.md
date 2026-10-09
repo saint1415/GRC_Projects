@@ -10,7 +10,7 @@
 | Target report | SOC 2 **Type 2**, observation period 2027-04-01 to 2027-09-30 (6 months), report by 2027-12-31 as the customer contract requires |
 | Part A | Company readiness assessment (`soc2-readiness.csv`) |
 | Part B | Vendor SOC 2 review program (`vendor-soc2-review.csv`) |
-| Prepared | 2026-08-28 by the vCISO and the GRC Analyst, using P02, P04, P05, and P07 evidence; approved by the Chief Financial Officer (executive sponsor) 2026-09-15 |
+| Prepared | 2026-08-28 by the vCISO and the GRC Analyst, using P02, P04, P05, and P07 evidence and the intake records of the customer agreement and the CTES (EV-051, EV-052); approved by the Chief Financial Officer (executive sponsor) 2026-09-15 |
 
 ## 1. Why SOC 2 for a meat processor
 A meat processor is usually **not** a SOC 2 service organization. It sells food, not services. That changed when the company built the Customer Traceability and EDI Services:

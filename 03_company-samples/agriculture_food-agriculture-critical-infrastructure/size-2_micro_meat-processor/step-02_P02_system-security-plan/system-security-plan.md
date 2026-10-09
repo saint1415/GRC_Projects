@@ -35,7 +35,7 @@ The company owns little IT. The office side is SaaS run by vendors, with an MSP 
 | Benchmark | NIST CSF 2.0 and SP 800-82 Rev. 3 | Voluntary | Used to tailor the baseline for IT and OT controls no rule requires |
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 | Apply to IT and plant equipment |
 
-Not applicable:
+Not applicable (decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv)):
 - FSMA Intentional Adulteration rule (C-FOOD-AG-R01): the plant is regulated exclusively by USDA and does not register with FDA (21 CFR 1.226(g); 121.1).
 - CIRCIA (C-FOOD-AG-R02): proposed only, and the company is far below the proposed size criterion. Tracked in P03.
 - USCG MTS cyber rule (C-FOOD-AG-R03): the plant is not an MTSA facility.
@@ -85,6 +85,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 - **Compensated** on plant equipment where the IT form of a control is not possible, following SP 800-82 Rev. 3 (for example, network separation and supervised vendor sessions instead of antivirus on the stuffer HMI).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** SYS-01 to SYS-09 and SYS-13: the smokehouse controller, line controls and label printer, labeling PC, cold-chain sensors, probe, and gateway with the company's configuration of the cold-chain service, the company's records app, suite, and accounting tenants, the firewall, network, and endpoints, the company's backup subscription, and the remote access paths.
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers, the smokehouse manufacturer's cloud portal, the packaging vendor's remote support service, the MSP's remote management platform, the payroll service (SYS-10), the card terminal (SYS-11, on its own cellular link), and the AI camera pilot (SYS-12), which is assessed separately in P10 and enters this boundary only when the P10 conditions are met.
 
@@ -117,7 +118,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 | Firewall, switch, staff and guest Wi-Fi; office desktop; owner laptop; 2 company phones (SYS-08) | Network and endpoints | Office network closet; office | Office Manager (MSP operates) |
 | Backup subscription (SYS-09) | SaaS | Backup vendor (MSP subcontractor) | Office Manager (MSP operates) |
 
-The inventory above is the first one the company has had. POL-04 4.4 makes the Office Manager keep it current (CM-8).
+The inventory above is the first one the company has had, taken from the intake asset inventory. POL-04 4.4 makes the Office Manager keep it current (CM-8).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -132,14 +133,14 @@ By responsibility: 24 system-specific (the company), 18 hybrid (the company with
 ### 10.2 Inherited, MSP-provided, and vendor-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Cold-chain monitoring vendor | Sensor data collection, storage, alerting platform, encryption in transit (SC-8), 2-year history (AU-11) | SOC 2 Type 2 report reviewed 2026-08-20 (P09) | Complementary user entity controls: user accounts, alert recipients and escalation, gateway network and power, reviewing offline events |
-| Food safety records app vendor | Platform security, edit history, retention | Vendor documentation only | Named accounts; administrator control; records integrity procedure (AU-9) |
-| Productivity suite vendor | Platform security, encryption, MFA service, audit logging | Vendor documentation | Account management, MFA settings, folder permissions, log review |
-| Accounting service vendor | Platform security, MFA, encryption | Vendor documentation | Account management |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), screen lock (AC-11) on the office computers and labeling PC | Monthly MSP report; P07 evidence requests | Direct and check the work; approve exceptions; annual MSP review (P01 R-012). **Plant machines are not covered by the MSP** |
-| Smokehouse manufacturer and packaging vendor | Remote maintenance and firmware for their machines | None | Enable sessions only on request; supervise; log (MA-4, AC-17) |
+| Cold-chain monitoring vendor | Sensor data collection, storage, alerting platform, encryption in transit (SC-8), 2-year history (AU-11) | SOC 2 Type 2 report (EV-051) reviewed 2026-08-20 (P09) | Complementary user entity controls: user accounts, alert recipients and escalation, gateway network and power, reviewing offline events |
+| Food safety records app vendor | Platform security, edit history, retention | Vendor documentation only (EV-044) | Named accounts; administrator control; records integrity procedure (AU-9) |
+| Productivity suite vendor | Platform security, encryption, MFA service, audit logging | Vendor documentation (EV-044) | Account management, MFA settings, folder permissions, log review |
+| Accounting service vendor | Platform security, MFA, encryption | Vendor documentation (EV-044) | Account management |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), screen lock (AC-11) on the office computers and labeling PC | Monthly MSP report (EV-015); MSP contract (EV-020); P07 evidence requests | Direct and check the work; approve exceptions; annual MSP review (P01 R-012). **Plant machines are not covered by the MSP** |
+| Smokehouse manufacturer and packaging vendor | Remote maintenance and firmware for their machines | None (EV-012) | Enable sessions only on request; supervise; log (MA-4, AC-17) |
 
-**Inherited does not mean done.** The cold-chain vendor's report assumes the customer manages alert recipients and keeps the gateway connected. Both are open gaps at the plant (P01 R-004).
+**Inherited does not mean done.** The cold-chain vendor's report assumes the customer manages alert recipients and keeps the gateway connected. Both are open gaps at the plant (EV-006; EV-007; P01 R-004).
 
 ### 10.3 Control assessment status
 Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessment-results.csv` and `poam.csv`.
@@ -148,7 +149,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Office users sign in to the productivity suite and accounting service with a password and a phone authenticator app. Floor users today share a records app login and a labeling PC login, which does not meet the attribution FSIS expects for record entries (9 CFR 417.5(b)). By 2026-10-31 each floor user will have a named records app account with a short PIN on the shared tablets, and the labeling PC will require a named login. That level is accepted for the plant floor because the tablets stay inside the plant and the records app keeps an edit history. Administrator and vendor remote access require MFA (POL-02 B.3).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and cold-chain vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and cold-chain vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **CCP:** critical control point (9 CFR 417.1)

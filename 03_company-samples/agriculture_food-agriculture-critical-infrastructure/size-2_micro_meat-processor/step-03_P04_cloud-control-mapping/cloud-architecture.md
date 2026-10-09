@@ -1,7 +1,7 @@
 # Cloud Architecture and Control Placement: Cris Santos Company | Food and Agriculture | Micro
 
 **Organization:** Cris Santos Company, LLC (USDA-inspected sausage and smoked meats plant) | **Tier:** Micro | **Provider:** Vendor-agnostic SaaS (see section 3)
-**System:** Plant Production and Cold-Chain Monitoring System (PPCM), as defined in the SSP (P02) | **Prepared:** 2026-07-31 by the Office Manager with the MSP lead technician | **Approved:** owner, 2026-08-31
+**System:** Plant Production and Cold-Chain Monitoring System (PPCM), as defined in the SSP (P02); components from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) | **Prepared:** 2026-07-31 by the Office Manager with the MSP lead technician | **Approved:** owner, 2026-08-31
 
 ## 1. Diagram
 The company runs no servers and no IaaS tenant. Its "cloud" is a set of SaaS services, one cloud workload the MSP operates for it (the cloud backup, SYS-09), and two vendor cloud connections that reach into plant machines. The dashed lines are the connections that bypass the company's own control today.
@@ -88,8 +88,8 @@ The design is vendor-agnostic. For SaaS, the split is the same in all three majo
 | Remote monitoring and management | MSP device management | Device management SaaS |
 
 ## 4. Findings from the mapping
-1. **Two vendor connections reach plant machines without the company's control (AC-17, IA-2(1)).** The smokehouse portal was always on with a shared login and no MFA, and the packaging vendor's remote desktop tool ran unattended with a static password. Anyone holding either credential could change a cook cycle or a label template. Both were set to supervised, on-request sessions on 2026-08-12; named accounts with MFA follow by 2026-10-31 (P01 R-002, R-003; POAM-002).
-2. **The cold-chain service is only as good as the plant's side of it (SI-4, SC-7).** The vendor's platform is strong and evidenced by its SOC 2 report. But alerts go to one phone, nobody is told when the gateway goes offline, and the gateway depends on the office network and one internet line (P01 R-004).
+1. **Two vendor connections reach plant machines without the company's control (AC-17, IA-2(1)).** The smokehouse portal was always on with a shared login and no MFA, and the packaging vendor's remote desktop tool ran unattended with a static password (EV-008; EV-009). Anyone holding either credential could change a cook cycle or a label template. Both were set to supervised, on-request sessions on 2026-08-12; named accounts with MFA follow by 2026-10-31 (P01 R-002, R-003; POAM-002).
+2. **The cold-chain service is only as good as the plant's side of it (SI-4, SC-7).** The vendor's platform is strong and evidenced by its SOC 2 report. But alerts go to one phone, nobody is told when the gateway goes offline (EV-006; EV-007), and the gateway depends on the office network and one internet line (P01 R-004).
 3. **Records integrity is a customer duty (IA-2, AU-9).** The records app keeps an edit history, but shared logins and a shared administrator mean entries cannot be tied to a person. FSIS expects each entry to be initialed by the person who made it and computer records to have integrity controls (9 CFR 417.5(b), (d); 416.16(a), (b)).
-4. **Backups miss what matters most on the plant floor (CP-9, CP-4).** The cloud backup covers two PCs and the suite, has never been tested, and can be deleted with one MSP password. Smokehouse cycles, HMI settings, and packager recipes are not backed up anywhere (P01 R-006).
+4. **Backups miss what matters most on the plant floor (CP-9, CP-4).** The cloud backup covers two PCs and the suite, has never been tested, and can be deleted with one MSP password. Smokehouse cycles, HMI settings, and packager recipes are not backed up anywhere (EV-018; EV-010; P01 R-006).
 5. **The AI camera sits outside the boundary on purpose.** It sends images to its vendor and receives model updates with no contract terms. It is mapped here only to show the SA-9 gap and enters the SSP boundary when the P10 conditions are met.

@@ -12,12 +12,14 @@
 
 ## 1. Applicability
 
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here and records the scope decisions that the register leaves to P03.
+
 ### 1.1 Does Part 121 apply to a meat processing plant?
 **Usually not, but it does here.** Part 121 applies to "the owner, operator or agent in charge of a domestic or foreign food facility that manufactures/processes, packs, or holds food for consumption in the United States and is required to register under section 415 of the Federal Food, Drug, and Cosmetic Act, unless one of the exemptions in § 121.5 applies" (21 CFR 121.1). The facility definition in 121.3 points to the registration rule in 21 CFR Part 1, Subpart H.
 
 The registration rule exempts "Facilities that are regulated exclusively, throughout the entire facility, by the U.S. Department of Agriculture under the Federal Meat Inspection Act" (21 CFR 1.226(g)). A plant that made only FSIS-inspected meat products would not register with FDA and **would not be covered by Part 121**. FDA's own compliance policy guide states the jurisdictional split: USDA has exclusive jurisdiction over a meat product up to the time it leaves a USDA-inspected plant (FDA CPG Sec. 565.100).
 
-Cris Santos Company lost the 1.226(g) exemption in 2023, when it opened the smoked seafood room. Finfish is FDA-regulated food, so the plant registered with FDA in February 2023 (21 CFR 1.225) and is now a covered facility.
+Cris Santos Company lost the 1.226(g) exemption in 2023, when it opened the smoked seafood room. Finfish is FDA-regulated food, so the plant registered with FDA in February 2023 (21 CFR 1.225; registration file, EV-037) and is now a covered facility.
 
 ### 1.2 Size and exemptions (21 CFR 121.5)
 | Exemption | Result | Reason |
@@ -64,7 +66,7 @@ Neither rule sets technical security controls for OT. The 12 benchmark rows use 
 ## 2. Method
 1. **Requirements.** Part 121 rows follow the rule's own structure at paragraph level: 121.1 and 121.4-121.5 (Subpart A), 121.126-121.157 (Subpart C), 121.305-121.325 (Subpart D). 121.401 (prohibited acts) is enforcement context, not a requirement row. FSIS and seafood HACCP rows are limited to the paragraphs that touch electronic monitoring, records, corrective actions for unforeseen deviations, reassessment, and notification.
 2. **Crosswalk.** NIST has published no mapping for Part 121 or 9 CFR Part 417, so those rows carry an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such. Benchmark rows use the official NIST CSF 2.0 to SP 800-53 informative references (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), showing a subset.
-3. **Evidence.** Interviews (General Manager, FSQA Manager, Controls Engineer, Maintenance and Refrigeration Manager, IT Manager, Sanitation Supervisor, seafood room lead); review of the 2023 food defense plan, HACCP plans, monitoring and corrective action logs (12-week sample), training records, change history, firewall and VPN configuration; and the 2026-07-15 walkthrough.
+3. **Evidence.** Current state was established from the intake evidence (the 2023 food defense plan, EV-018; monitoring and corrective action logs with a 12-week sample, EV-019; training and qualification records, EV-020 and EV-021; HACCP plans and the recall procedure, EV-022; change records, EV-025; and the firewall, VPN, account and records configuration exports), the 2026-07-15 plant walkthrough (EV-048), gap analysis interviews with the General Manager, FSQA Manager, Controls Engineer, Maintenance and Refrigeration Manager, IT Manager, Sanitation Supervisor and seafood room lead (EV-049), record samples (EV-050), and a TLS scan (EV-051). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gaps were rated on the P01 risk scale.
 
 ## 3. Results summary

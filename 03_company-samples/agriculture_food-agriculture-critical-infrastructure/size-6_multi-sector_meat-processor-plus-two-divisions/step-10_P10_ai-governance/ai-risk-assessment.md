@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the rules that apply to each division's use cases. Priority use case: **AI-001 AI quality inspection on processing lines** (Meat Processing). Second priority: **AI-005 store loss-prevention camera analytics** (Grocery Retail pilot) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; NIST AI 600-1 for the generative AI assistant (AI-008) only. AI-001 is not generative |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-02; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (8 use cases: 2 High, 5 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (8 use cases: 2 High, 5 Medium, 1 Low), built from AI tool discovery across procurement records, SaaS discovery, the SYS-G1 app list and the data platform model registry (EV-037), division configuration records (EV-058, EV-065, EV-077, EV-078), the use case owner refresh in 2026-08 (EV-100), and the test results in section 4 (EV-101 to EV-103). Not established: workforce use of public generative AI tools outside the enterprise assistant (intake open request) |
 | Related | P01 GR-04, GR-12, GR-20, MT-013, MT-014, RT-009, RT-018; P07 POAM-015, POAM-023, POAM-026; P06 POL-01 4.12 and 4.13, POL-04 4.9, POL-05 4.7 and 4.8 |
 
 ## 1. GOVERN (group program)
@@ -30,7 +30,7 @@
 5. **Vendor terms** (POL-01 4.8; POL-04 4.9): no training or reuse of group data outside the service, image and video retention limits, deletion on exit, notice before model updates, and vendor access only through SYS-G5.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7). **Images and video** are used only for the approved purpose, never to evaluate workers or identify shoppers (POL-05 4.8).
 
-**Where the program fell short (scenario gap 8).** The standard was adopted after AI-001 was already in production at three plants (since 2025) and after the AI-005 pilot started at 12 stores without a privacy review. The Food Distribution forecasting and routing tools (AI-003, AI-004) were not registered until this assessment. Each now has conditions (section 6), tracked as POAM-026.
+**Where the program fell short (group gap 8).** The standard was adopted after AI-001 was already in production at three plants (since 2025) and after the AI-005 pilot started at 12 stores without a privacy review. The Food Distribution forecasting and routing tools (AI-003, AI-004) were not registered until this assessment. Each now has conditions (section 6), tracked as POAM-026.
 
 ## 2. MAP
 ### 2.1 Inventory summary
@@ -106,7 +106,7 @@
 - AI-007: use in discipline, attendance points, or hours reductions (to High).
 
 ## 4. MEASURE
-### 4.1 AI-001 (seeded-defect tests and line data, 2026-05-04 to 2026-08-21)
+### 4.1 AI-001 (seeded-defect tests and line data, 2026-05-04 to 2026-08-21; EV-101)
 Seeded tests used certified test pieces and deliberately defective packs placed by QA on every shift.
 
 | Characteristic | Test / metric | Result | Pass? |
@@ -130,7 +130,7 @@ Seeded tests used certified test pieces and deliberately defective packs placed 
 - **Thresholds:** at least 95% detection overall and 90% per group; false diverts of 2% or less; no group more than 5 points worse than overall on any metric.
 - **Frequency:** seeded tests every shift; monthly group report to the Division VP FSQA; full re-test after any model update, camera move, lighting change, or packaging change; quarterly summary to the council.
 
-### 4.2 AI-005 (pilot data, 2026-04-06 to 2026-07-31, 12 stores)
+### 4.2 AI-005 (pilot data, 2026-04-06 to 2026-07-31, 12 stores; EV-102)
 | Characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Share of alerts confirmed as a likely non-scan after video review (target of at least 50% before any expansion) | 31% | **No** |
@@ -140,7 +140,7 @@ Seeded tests used certified test pieces and deliberately defective packs placed 
 | Accountable and transparent | Store signage and privacy notice describe the analytics | Neither | **No** |
 | Secure and resilient | Vendor security review and contract terms (POL-01 4.8) | Not done | **No** |
 
-### 4.3 Other use cases (summary)
+### 4.3 Other use cases (summary; EV-103)
 | Use case | Metric | Result | Pass? |
 |---|---|---|---|
 | AI-002 | No write path from the model to SYS-M4 (configuration review) | Read-only export confirmed at all three plants | Yes |

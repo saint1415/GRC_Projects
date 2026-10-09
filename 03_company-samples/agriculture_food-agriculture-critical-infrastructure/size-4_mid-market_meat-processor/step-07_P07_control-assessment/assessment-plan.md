@@ -83,6 +83,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - a simulated impossible-travel sign-in to test MSSP escalation
   - a restore of one records application table from the backup account
 
+### What each test could show
+The 2026 policies (P06), the standards index, and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and the policies take effect on 2026-10-01. The 2024 policies, standards, and plans were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems (122 Satisfied, 56 Other than satisfied) | 178 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the food safety, FSIS notice, and PSM steps in the P08 runbooks); its design was reviewed. Operation is tested at the 2027 Q3 follow-up | 4 |
+| Not implemented | Nothing existed to test | 62 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), privileged identity provider and cloud accounts from EV-006, OT privileged and engineering accounts from EV-007, OT change records from EV-027, MES formulation releases from EV-026, HMIs from the Plant 1 sensor export and the Plant 2 equipment list (EV-011, EV-012), inspection devices from EV-011 and EV-012, Critical and High findings from the scan reports (EV-018), incidents from the incident log (EV-033), vendors from the contract register (EV-048), laptops from the endpoint console (EV-010), and floor workers from the HR roster (EV-003).
+
 ## 4. Rules of engagement
 - No testing that could affect product, people, or the ammonia systems. OT tests ran only when lines were down for sanitation, with the Controls Engineering Manager and the relevant plant FSQA manager present. No setpoint, recipe, or controller value was changed. Refrigeration controllers were examined only, never tested.
 - No production data left company systems. Screenshots were redacted, and evidence was stored in the firm's encrypted workpaper system.

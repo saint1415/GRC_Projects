@@ -7,11 +7,11 @@
 | Vertical | Food and Agriculture |
 | Method | NIST SP 800-30 Rev. 1 (Tables G-2 to G-5, H-3, I-2, I-3 values); enterprise roll-up per NIST IR 8286 Rev. 1 |
 | Also supports | HACCP reassessment inputs (9 CFR 417.4(a)(3)); the voluntary food defense vulnerability assessments; PSM process hazard analysis revalidation (29 CFR 1910.119(e)) |
-| Prepared | 2026-07-24 by the Security Manager and the vCISO with the Controls Engineering Manager and the VP FSQA; updated 2026-08-21 with P07 results (R-052 added 2026-08-10 from P07 testing) and 2026-09-04 with P10 results |
+| Prepared | 2026-07-24 by the Security Manager and the vCISO with the Controls Engineering Manager and the VP FSQA; updated 2026-08-21 with P07 results (R-052 added 2026-08-10 from P07 testing, pass 2) and 2026-09-04 with P10 results |
 | Approved | 2026-09-15: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** Both plants and the corporate functions, the Plant Production and Cold-Chain Monitoring System (PPCM, SSP in P02), the cloud landing zone (P04), the business SaaS systems, the Customer Traceability and EDI Services (P09), the 26 vendors with OT, cloud, or data access, and the AI portfolio (P10). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** Both plants and the corporate functions, the Plant Production and Cold-Chain Monitoring System (PPCM, SSP in P02), the cloud landing zone (P04), the business SaaS systems, the Customer Traceability and EDI Services (P09), the 26 vendors with OT, cloud, or data access, and the AI portfolio (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -36,8 +36,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $3 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Food and Agriculture overlay, CISA and FBI advisories on ransomware in food processing, the BIA, interviews with every process owner, walkthroughs of both plants (2026-07-08 and 2026-07-14), the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Food and Agriculture overlay, CISA and FBI advisories on ransomware in food processing (EV-019), the BIA, the intake evidence, risk interviews and a threat workshop with the process owners, the IT Director, the Controls Engineering Manager and the MSSP (EV-061), and walkthroughs of both plants (2026-07-08 and 2026-07-14; EV-062, EV-063). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. Pass 1 closed on 2026-07-24. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-033), scan results (EV-018), phishing results (EV-034), configuration exports, the walkthroughs, the record samples and the interviews. A rating with no evidence behind it would be a guess, so none was made. The `assessment_pass` column shows when each risk entered the register: Pass 1 (2026-07-24) for the risk assessment fieldwork, Pass 2 for risks added from P07 testing.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, food and worker safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -52,7 +52,7 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Very Low | 0 |
 | **Total** | **52** |
 
-Treatments: 48 Mitigate, 4 Accept (R-030, R-040, R-049, R-050). Status: 23 Open, 25 In progress, 4 Accepted.
+Treatments: 48 Mitigate, 4 Accept (R-030, R-040, R-049, R-050). Status: 23 Open, 25 In progress, 4 Accepted. Assessment pass: 51 risks from pass 1 (2026-07-24) and 1 from pass 2 (R-052, added 2026-08-10 from P07 testing).
 
 Cyber insurance ($15 million limit, $500,000 retention) transfers part of the financial exposure for R-001, R-002, and R-034. It is not recorded as the treatment for any risk, because it does not lower the likelihood of harm to consumers, workers, or operations.
 
@@ -73,7 +73,7 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-026 | Over-reliance on AI vision inspection lets foreign material pass | High | P10 conditions; subgroup monitoring | VP FSQA | 2026-12-31 |
 | R-031 | Insider routes CIP chemicals into the Injector 2 brine system | High | Hardwired interlock; valve alarms | Director of Engineering and Maintenance | 2026-12-31 |
 | R-038 | SOC 2 Type 2 not ready; largest customer reduces volume | High | P09 remediation; observation period from 2027-04-01 | Chief Financial Officer | 2027-12-31 |
-| R-052 | Default password on the Line 6 x-ray unit used to weaken the foreign material CCP (found in P07) | High | Credential sweep of inspection devices; disable web services | OT security engineer | 2026-10-31 |
+| R-052 | Default password on the Line 6 x-ray unit used to weaken the foreign material CCP (found in P07 testing, EV-IA-5; pass 2) | High | Credential sweep of inspection devices; disable web services | OT security engineer | 2026-10-31 |
 
 **Themes.**
 - **Plant 2 carries the acquisition's debt (R-001, R-002, R-004, R-005, R-008, R-012, R-021, R-047).** The company bought a plant with a flat network, shared remote access, and no OT inventory. Most Very High and High risks start there.

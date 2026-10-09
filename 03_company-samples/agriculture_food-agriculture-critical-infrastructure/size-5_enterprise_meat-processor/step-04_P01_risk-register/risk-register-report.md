@@ -49,8 +49,8 @@
 Food safety (ER-02) and worker safety (ER-05) risks at High or above cannot be accepted; they must be treated with a dated plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and vulnerabilities), the sector threat picture (ransomware against food processors, vendor remote access, cyber-physical tampering), the BIA (P05), the gap analysis (P03), the AI council review (P10), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and vulnerabilities), the sector threat picture (ransomware against food processors, vendor remote access, cyber-physical tampering) in the SOC's threat intelligence (EV-038), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-029), and risk workshops with the SOC, the OT Security team, plant controls engineers, FSQA, Refrigeration and Process Safety, the Integration Management Office, Distribution and Transportation, Third-Party Risk, Finance and AI council members (EV-078). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) and the AI council review (P10) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-024), coverage and configuration exports from the enterprise and plant systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3), which include food safety and worker safety.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -72,6 +72,8 @@ By threat source type: Adversarial 28, Structural 27, Accidental 8, Environmenta
 By treatment: Mitigate 55, Accept 8, Avoid 2.
 By status: In progress 33, Open 22, Closed (accepted) 8, Closed (avoided) 2.
 **26 risks are outside tolerance** and each has a dated treatment plan. All 26 are reported to the board (`board_reported` = Yes).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07) and the AI council review (P10): R-016 was added on 2026-08-14 after testing found manufacturer default passwords on the DC-03 refrigeration controller and two PLT-04 X-ray systems (EV-CM-6, EV-IA-5); the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28 and their `likelihood_basis` cites the P07 evidence ID); and the AI risks were updated on 2026-08-26. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -113,15 +115,15 @@ By status: In progress 33, Open 22, Closed (accepted) 8, Closed (avoided) 2.
 
 **Food defense link.** R-003, R-004, and R-047 are intentional adulteration scenarios carried out through the control system rather than by hand. For PLT-07 they are inputs to the reanalysis required after the MES migration (21 CFR 121.157(b)(1); R-009; POAM-006). For the other plants they feed the voluntary functional food defense plans.
 
-**New risks from testing and review.** R-016 was added on 2026-08-14 after Internal Audit found default passwords (P07). R-012 was raised to High on 2026-08-26 after the AI council learned of the PLT-03 inspection change (P10).
+**New risks from testing and review.** R-016 was added on 2026-08-14 after Internal Audit found default passwords (P07; EV-CM-6, EV-IA-5). R-012 was raised to High on 2026-08-26 after the AI council learned of the PLT-03 inspection change (P10; EV-084).
 
 ## 6. Themes from the 2026 analysis
-1. **Acquisition integration (ER-04).** PLT-08 is on a legacy directory, a flat network, an integrator VPN without MFA, and a legacy eHACCP application (R-002, R-062, R-065). Treatment: integration by 2027-03-31. Going forward, deal approvals must include security due diligence and integration funding (R-061).
-2. **Setpoint and recipe integrity (ER-02).** The central MES made recipe control stronger and more concentrated at the same time: one place to enforce two-person approval, and one place an attacker would aim for (R-003, R-004, R-047).
-3. **Cold-chain concentration (ER-03).** One vendor, no contracted recovery time, an exception in its SOC 2 report, and a manual fallback exercised at only 3 of 12 sites (R-005).
-4. **Legacy OT (ER-01).** 118 unsupported HMIs, 9 unsupported engineering workstations, and OT patching limited to sanitation windows (R-007, R-026).
-5. **Disclosure readiness (ER-06).** The disclosure committee has never practiced a production halt with product holds and recalls, which is how a food company's material incident would most likely look (R-010).
-6. **AI governance (ER-08).** A plant changed a food safety staffing practice because of an AI tool without HACCP reassessment or council approval (R-012).
+1. **Acquisition integration (ER-04).** PLT-08 is on a legacy directory, a flat network, an integrator VPN without MFA, and a legacy eHACCP application (R-002, R-062, R-065; EV-055, EV-013, EV-014, EV-027). Treatment: integration by 2027-03-31. Going forward, deal approvals must include security due diligence and integration funding (R-061).
+2. **Setpoint and recipe integrity (ER-02).** The central MES made recipe control stronger and more concentrated at the same time: one place to enforce two-person approval, and one place an attacker would aim for (R-003, R-004, R-047; EV-007, EV-008, EV-AC-5).
+3. **Cold-chain concentration (ER-03).** One vendor, no contracted recovery time, an exception in its SOC 2 report, and a manual fallback exercised at only 3 of 12 sites (R-005; EV-044, EV-045, EV-025).
+4. **Legacy OT (ER-01).** 118 unsupported HMIs, 9 unsupported engineering workstations, and OT patching limited to sanitation windows (R-007, R-026; EV-011, EV-016).
+5. **Disclosure readiness (ER-06).** The disclosure committee has never practiced a production halt with product holds and recalls, which is how a food company's material incident would most likely look (R-010; EV-032).
+6. **AI governance (ER-08).** A plant changed a food safety staffing practice because of an AI tool without HACCP reassessment or council approval (R-012; EV-084).
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q4), about $9.4 million:** PLT-08 integration security work ($2.1M); OT DMZ, gateway, and monitoring at PLT-05 ($640K); replacement of unsupported HMIs and engineering workstations ($3.8M over two years); HMI second-badge override and integrity comparison in the MES ($720K); MES failover automation ($310K); OT monitoring and EDR at PLT-05 and PLT-08 ($460K); cold-chain contract renegotiation and manual log exercises ($180K); vendor review backlog ($240K); plant training kiosks ($520K); outside counsel and a facilitator for the disclosure tabletop ($60K); credential sweep and commissioning checks ($90K); PLT-03 inspection staffing restored ($280K a year). Items map to the POA&M in P07.

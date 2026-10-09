@@ -1,0 +1,18 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,"IaaS/PaaS for the records application, historian replica, traceability database and backups",SYS-06,HACCP and food defense records; traceability data,Customer agreement,SOC 2 report and shared responsibility documentation from the provider portal,EV-031; EV-034,
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-09,Workforce identities,Subscription terms,None on file,EV-031,
+V-03,Productivity suite vendor,"Email, files, chat",SYS-10,Documents including the food defense plan and formulations,Subscription terms,None on file,EV-031,
+V-04,ERP vendor,"Orders, purchasing, inventory, accounting, demand forecasting",SYS-07,Business and customer data,Subscription with availability commitments,None on file,EV-031; EV-032,
+V-05,WMS vendor,Warehouse management,SYS-08,Inventory and shipment data,Subscription with availability commitments,None on file,EV-031; EV-032,
+V-06,Cold-chain monitoring vendor,"Sensors, gateway and SaaS alerting",SYS-04,Temperatures and alarms,SaaS contract with no security terms,"SOC 2 Type 2, Security and Availability, 12 months ending 2026-03-31",EV-031; EV-032; EV-033,Report obtained at intake; reviewed in P09
+V-07,Controls integrator,Remote SCADA and PLC support,SYS-01; SYS-02; SYS-05; SYS-14,Process control access (setpoints; PLC logic),Service contract with support roles and response times; no security or interconnection terms,None on file,EV-013; EV-031; EV-032,Shared always-on VPN account (EV-011)
+V-08,Refrigeration contractor,Refrigeration controller maintenance and remote monitoring,SYS-03; SYS-14,Refrigeration controller access,Service agreement with no security terms,None on file,EV-031; EV-032,Remote monitoring through a cellular modem on the controller
+V-09,EDR and managed detection vendor,EDR agents and managed detection on office endpoints,SYS-11,Endpoint telemetry,Subscription terms,None on file,EV-009; EV-031,
+V-10,AI vision inspection vendor,Vision models; edge server support; model training,SYS-13,Product and label images; lot codes; incidental worker images,Vendor contract with a confidentiality clause; no image retention or reuse terms,None on file,EV-031; EV-032; EV-045,Remote support of the edge server; pilot since May 2026
+V-11,E-commerce vendor,Online store with hosted payment page,SYS-12,Online customer accounts,Subscription terms,None on file,EV-031; EV-032; EV-043,
+V-12,Card acquirer and terminal provider,Card processing; vendor-managed encrypting terminal,SYS-12,Card data (vendor-handled),Merchant agreement,None on file,EV-031; EV-032; EV-043,PCI DSS obligations are contractual through the acquirer
+V-13,Payroll service,"Payroll, tax filings, HR module",SVC-01,Employee personal and bank data,Contract with a breach notice clause,None on file,EV-031; EV-032,SOC 2 report requested at intake; not provided
+V-14,Staffing agency,Agency temporary workers,n/a,Worker names and sign-in records,Staffing agreement,n/a,EV-021; EV-031,Up to 25 workers for the holiday ham season
+V-15,Security awareness training vendor,Office awareness training,n/a,Staff names and completions,Subscription terms,n/a,EV-026; EV-031,
+V-16,Cyber insurer,Cyber insurance with breach hotline and panel vendors,n/a,Claim information,Insurance policy,n/a,EV-030; EV-031,
+V-17,Internet service provider,Single internet connection for the plant,SYS-11; SYS-04; SYS-06,Network traffic,Service agreement,n/a,EV-011; EV-031,
