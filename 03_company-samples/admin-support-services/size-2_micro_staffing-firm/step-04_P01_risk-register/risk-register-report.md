@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole firm and its key vendors: the PATS (SSP, P02), the paper Form I-9 files, the accounting SaaS, and the vendors that hold worker data or run systems for the firm: the payroll service vendor, the ATS vendor and its AI subprocessor, the productivity suite vendor, the background screening provider, the MSP, and the backup service.
+**Scope.** The whole firm and its key vendors: the PATS (SSP, P02), the paper Form I-9 files, the accounting SaaS (all in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), and the vendors that hold worker data or run systems for the firm: the payroll service vendor, the ATS vendor and its AI subprocessor, the productivity suite vendor, the background screening provider, the MSP, and the backup service ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Operations Manager may accept.
@@ -22,8 +22,8 @@
 This is the firm's first documented risk assessment. Before 2026, security decisions were made one at a time, mostly when the cyber insurer asked a question.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), and interviews with all 7 staff and the MSP lead technician (2026-07-20 to 2026-07-31), plus an office walkthrough on 2026-07-22.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), and interviews with all 7 staff and the MSP lead technician (2026-07-20 to 2026-07-31, EV-040), plus an office walkthrough on 2026-07-22 (EV-046). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the payroll reports, the contracts and HR files, the walk-throughs, the account comparison of 2026-07-21 (EV-041), the records search of 2026-07-22 (EV-045), the compliance samples (EV-047, EV-048) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a firm with about $19,400 of weekly billings and records on several hundred workers and about 9,800 candidates, theft of every worker's SSN or a diverted payroll is rated High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,9 +51,11 @@ Status: 6 In progress, 13 Open, 3 Closed (R-022 treated; R-012 and R-019 accepte
 **The common theme is the payroll and onboarding data.** The firm's most damaging plausible event is not ransomware: it is someone quietly taking every worker's SSN and bank details and redirecting pay. Three weaknesses line up behind that path: a phishable second factor on the payroll service (R-001), no call-back on bank changes (R-002), and no one watching exports or bank changes. Fixing those three also lowers R-003 and R-016.
 
 **Risks that were fixed or found during the work:**
-- R-006: the former recruiter's ATS and email accounts were disabled on 2026-07-21, the day they were found. The ATS and suite sign-in logs showed no use after her last day (2026-05-15), so the Operations Manager documented that no breach occurred. The process gap remains open.
-- R-009: the AI feature's smart filter was turned off on 2026-07-24, during this assessment. The P10 conditions are still open.
-- R-022: added on 2026-08-12 after P07 testing found a former Coordinator's E-Verify account still active. It was deactivated on 2026-08-11; the E-Verify user report showed no sign-in after 2025-12-10. Closed; the process gap stays in R-006.
+- R-006: the former recruiter's ATS and email accounts were disabled on 2026-07-21, the day the account comparison found them (EV-041). The ATS and suite sign-in logs showed no use after her last day (2026-05-15), so the Operations Manager documented that no breach occurred. The process gap remains open.
+- R-009: the AI feature's smart filter was turned off on 2026-07-24, during this assessment (EV-042). The P10 conditions are still open.
+- R-022: added on 2026-08-12 after P07 testing found a former Coordinator's E-Verify account still active (EV-AC-2). It was deactivated on 2026-08-11; the E-Verify user report showed no sign-in after 2025-12-10. Closed; the process gap stays in R-006.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-022 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $1,900 one-time and $2,900 a year):**
