@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (custom-exempt meat processing shop) | **Tier:** Sole Proprietorship (owner-operator only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-operator, 2026-07-28, with the on-call IT technician | **Adopted:** Owner-operator, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-27 to 2026-07-28 (EV-030), the 2025 Schedule C (EV-018), the accounting fee report (EV-017), the custom records (EV-012), the cold-chain alert settings (EV-002), and the cold-chain vendor's SOC 2 system description (EV-005). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the shop depends on, how long each can be down, and how much data it can lose. It feeds:
@@ -13,10 +14,10 @@ This one-page BIA lists the five business functions the shop depends on, how lon
 No regulation requires a BIA from a custom-exempt shop. It is done because the shop holds other people's meat: a cooler failure is a loss to customers, not only to the business.
 
 ## 2. Business description
-One owner-operator cuts, cures, smokes, and packages about 180 beef, 260 hogs, and 40 lambs and goats a year for the animals' owners, under the custom exemption (9 CFR 303.1(a)(2)). A separate mobile slaughter operator delivers the carcasses. The shop's systems are a cold-chain monitoring service (SYS-01), a smokehouse controller and app (SYS-02), a shop laptop with the label printer (SYS-03, SYS-04), a consumer email and file account (SYS-05), the owner's phone (SYS-06), a booking form (SYS-07), accounting and payments (SYS-08), the shop Wi-Fi (SYS-09), and a public AI chatbot (SYS-10). See `../00_company-facts.md` sections 1 to 3.
+One owner-operator cuts, cures, smokes, and packages about 180 beef, 260 hogs, and 40 lambs and goats a year for the animals' owners, under the custom exemption (9 CFR 303.1(a)(2)). A separate mobile slaughter operator delivers the carcasses. The shop's systems are a cold-chain monitoring service (SYS-01), a smokehouse controller and app (SYS-02), a shop laptop with the label printer (SYS-03, SYS-04), a consumer email and file account (SYS-05), the owner's phone (SYS-06), a booking form (SYS-07), accounting and payments (SYS-08), the shop Wi-Fi (SYS-09), and a public AI chatbot (SYS-10). See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 a year in processing fees, or about $3,500 a week in season. Customers' meat is valued at replacement cost.
+Dollar values are scaled to about $180,000 a year in processing fees (EV-018), or about $3,500 a week in season (EV-017). Customers' meat is valued at replacement cost.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -39,7 +40,7 @@ Dollar values are scaled to about $180,000 a year in processing fees, or about $
 
 **RPOs that are not supported today:**
 - BP-03 and BP-05 (24 h): the cook programs, the cure sheet, and the custom records spreadsheet have no backup or version history (P01 R-004).
-- BP-01: alerts stop entirely when the gateway loses power or internet. The gateway buffers 12 hours of readings, so the record survives, but **nobody is told in real time** (P01 R-003).
+- BP-01: alerts stop entirely when the gateway loses power or internet. The gateway buffers 12 hours of readings (EV-005), so the record survives, but **nobody is told in real time** (P01 R-003).
 
 **Single-person dependency (the key finding).** The owner is the only person who cuts, cures, smokes, labels, answers alerts, and holds the passwords. Cold-chain alerts go to one phone. If the owner is ill, injured, asleep through an alert, or without the phone, BP-01 exceeds its 4-hour MTD with nobody aware of it. Actions (P01 R-009 and R-003, due before the 2026-10-15 busy season):
 1. Add a second alert contact in SYS-01: a neighboring custom processor, under a written reciprocal agreement that also offers emergency cooler space.

@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, Inc. (PE-backed meat processor with two USDA-inspected plants) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager with the vCISO, the process owners named in `bia.csv`, the Controls Engineering Manager, and the Director of Engineering and Maintenance | **Fieldwork:** 2026-07-06 to 2026-07-24 | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the audit committee the same day)
 
+**Sources:** process owner interviews 2026-07-06 to 2026-07-15 (EV-060), sales and inventory valuation for the 12 months to 2026-06-30 (EV-057), cold-chain configuration (EV-028), cloud and OT backup and restore records (EV-021 to EV-023), PSM and RMP documents (EV-043), generator records (EV-045), and customer agreements and EDI volumes (EV-051, EV-052). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
+
 ## 1. Overview and purpose
 This BIA covers every business unit: Plant 1 (Central Florida, further processing and ready-to-eat products), Plant 2 (North Florida, ground and case-ready products, acquired 2025-03-03), and the corporate functions that serve both. It rates 18 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and food and worker safety.
 
@@ -15,12 +17,12 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company processes purchased beef and pork into branded and private-label products for grocery chains, foodservice distributors, and club stores, with about $480 million in sales. Production and cold storage at both plants run on the PPCM described in the SSP (P02): process controls, SCADA and historians, the recipe and batch systems (MES), the refrigeration controllers, cold-chain monitoring, OT remote access, and the cloud landing zone that holds the food safety records application and the traceability database. Business systems (ERP, WMS, HR and payroll) are SaaS. See `../00_company-facts.md` sections 1, 3, and 7.
+The company processes purchased beef and pork into branded and private-label products for grocery chains, foodservice distributors, and club stores, with about $480 million in sales. Production and cold storage at both plants run on the PPCM described in the SSP (P02): process controls, SCADA and historians, the recipe and batch systems (MES), the refrigeration controllers, cold-chain monitoring, OT remote access, and the cloud landing zone that holds the food safety records application and the traceability database. Business systems (ERP, WMS, HR and payroll) are SaaS. Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What is different about a food plant.** Downtime is not only lost revenue. Product that sits in a smokehouse, a brine injector, a blender, or a cooler while controls or monitoring are down may have to be held, evaluated, and destroyed, and it cannot ship without complete CCP records (9 CFR 417.5(c)). Recovery objectives are set to protect product and people, not only to bring systems back.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.32 million of sales per production day at Plant 1 and $600,000 at Plant 2 (about 250 production days a year), with about $9 million of product in Plant 1 coolers and freezers and $3 million at Plant 2 on a typical day.
+Dollar values are scaled to about $1.32 million of sales per production day at Plant 1 and $600,000 at Plant 2 (about $330 million and $150 million over about 250 production days a year; EV-057), with about $9 million of product in Plant 1 coolers and freezers and $3 million at Plant 2 on a typical day (EV-057).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -30,7 +32,7 @@ Dollar values are scaled to about $1.32 million of sales per production day at P
 | Food and worker safety | Plausible consumer illness (temperature abuse, undercooking, cure error, Listeria) or worker harm (ammonia) | Product held for evaluation | None |
 | Reputation | A recall with public notice, or loss of a grocery chain customer | Customer chargebacks or complaints | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is unrecovered sales plus product loss, extra labor, and customer penalties over the MTD. Process owners estimated that about 30% of lost packaging output is not recovered through Saturday shifts (BP-04, BP-08). For BP-16 the loss is overtime and interest; the delayed cash is shown separately. Revenue per day is assigned to the packaging processes (BP-04, BP-08), because every product passes them, so it is not double counted.
+**How loss at MTD was estimated.** Estimated loss is unrecovered sales plus product loss, extra labor, and customer penalties over the MTD. Process owners estimated (EV-060) that about 30% of lost packaging output is not recovered through Saturday shifts (BP-04, BP-08). For BP-16 the loss is overtime and interest; the delayed cash is shown separately. Revenue per day is assigned to the packaging processes (BP-04, BP-08), because every product passes them, so it is not double counted.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -67,12 +69,12 @@ Dollar values are scaled to about $1.32 million of sales per production day at P
 - **Cash flow, not time, drives BP-16.** Customers pay on EDI invoices; about $3.9 million is delayed for each 72 hours of outage.
 
 ## 5. Key findings
-1. **OT recovery is unproven at both plants.** Plant 1 SCADA and MES backups sit on an OT backup server that is neither offline nor immutable, and only the Plant 1 SCADA server has been restore-tested (2025). Plant 2 PLC programs exist only on the integrator's laptops (gap 7). The 4-hour and 8-hour RTOs for BP-02, BP-03, BP-04, BP-07, and BP-08 are targets, not demonstrated capabilities (P01 R-007, R-008; P07 CP-4, CP-9).
-2. **Plant 2 cold-chain monitoring has one alert path** (SMS to one supervisor), its gateways depend on the Plant 2 office Wi-Fi, and Plant 2 has no written manual log procedure (gap 9). The 1-hour RTO for BP-06 cannot be met reliably today (P01 R-012).
-3. **Blend recipes at Plant 2 exist only in the blender HMIs.** There is no recovery point for BP-07 other than the integrator's laptop copies (P01 R-008).
-4. **Plant 1 x-ray and metal detection run standalone**, which keeps the foreign material CCP working during an MES outage. The AI vision system (AI-001) is not a CCP and can be bypassed (P10).
-5. **Cloud workloads are the best-protected layer.** The records application, traceability database, and EDI gateway have isolated, write-once backups. Their restore tests ran in 2026-04 for the records application only (P04 finding 3).
-6. **The cold-chain monitoring vendor's commitments are unknown.** It has not provided a SOC 2 report (gap 10; P09 vendor review).
+1. **OT recovery is unproven at both plants.** Plant 1 SCADA and MES backups sit on an OT backup server that is neither offline nor immutable, and only the Plant 1 SCADA server has been restore-tested (2025). Plant 2 PLC programs exist only on the integrator's laptops (EV-022, EV-023). The 4-hour and 8-hour RTOs for BP-02, BP-03, BP-04, BP-07, and BP-08 are targets, not demonstrated capabilities (P01 R-007, R-008; P07 CP-4, CP-9).
+2. **Plant 2 cold-chain monitoring has one alert path** (SMS to one supervisor), its gateways depend on the Plant 2 office Wi-Fi, and no written Plant 2 manual log procedure was provided at intake (EV-028, EV-015). The 1-hour RTO for BP-06 cannot be met reliably today (P01 R-012).
+3. **Blend recipes at Plant 2 exist only in the blender HMIs** (EV-022). There is no recovery point for BP-07 other than the integrator's laptop copies (P01 R-008).
+4. **Plant 1 x-ray and metal detection run standalone** (EV-059), which keeps the foreign material CCP working during an MES outage. The AI vision system (AI-001) is not a CCP and can be bypassed (P10).
+5. **Cloud workloads are the best-protected layer.** The records application, traceability database, and EDI gateway have isolated, write-once backups. Their restore tests ran in 2026-04 for the records application only (EV-023; P04 finding 3).
+6. **The cold-chain monitoring vendor's commitments are unknown.** It has not provided a SOC 2 report (EV-049; P09 vendor review).
 
 ## 6. Resource requirements
 | Resource | Description | Supports | Backup or replication method |

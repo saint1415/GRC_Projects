@@ -21,7 +21,7 @@ Keep a printed copy in the shop binder and in the house. Assume the laptop and e
 | Cold-chain vendor support | Lock the account, list recent sign-ins and setting changes, restore alert contacts | Hour 1 |
 | Smokehouse manufacturer support | Lock the app account; confirm which programs changed and when | Hour 1 |
 | Business attorney (or a data breach attorney the insurer names) | Breach determination under Fla. Stat. 501.171, notices, any ransom question | Hours 1-8 |
-| Business liability insurer | Ask whether a cyber endorsement applies **before** hiring any outside firm. No standalone cyber policy | Hours 1-8 |
+| Business liability insurer | Ask whether a cyber endorsement applies **before** hiring any outside firm. No standalone cyber policy (EV-026, EV-028; the endorsement question is an open intake request) | Hours 1-8 |
 | Card processor | Only if the phone or card reader may be affected | As needed |
 | FBI (IC3 online report) | Voluntary report; supports OFAC mitigation if payment is ever considered | Day 1 |
 

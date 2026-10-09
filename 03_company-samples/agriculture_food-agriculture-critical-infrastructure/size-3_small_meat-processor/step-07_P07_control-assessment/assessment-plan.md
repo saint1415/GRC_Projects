@@ -40,6 +40,17 @@ Small tier scope: 15-25 controls. **22 controls, 182 determination statements.**
   - remote access test to the integrator VPN from an external network (with approval)
   - malware detection test (EICAR) on 2 office endpoints only
 
+### What each test could show
+The new policies (P06) and the ransomware runbook (P08) were drafts during fieldwork; they were approved on 2026-09-04 and took effect on 2026-09-07. They were reviewed as drafts, for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 63 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy); its design was reviewed. Operation is tested at the 2027-03 follow-up or the next annual review | 10 |
+| Not implemented | Nothing existed to test | 109 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 10 production terminations come from the HR report in EV-003 and the ticket export in EV-004).
+
 ## 3. Rules of engagement
 - **No active testing of live process controls.** OT tests ran only during the sanitation window with lines stopped, product cleared from affected areas, and the Controls Engineer present. No PLC logic was downloaded or changed. Scans were read-only and rate-limited, following SP 800-82 Rev. 3 cautions on active scanning in OT.
 - **Refrigeration stays on.** The refrigeration controller was tested for sign-in only, with the refrigeration contractor present and the engine room staffed. No setpoint was changed.

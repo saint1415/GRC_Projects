@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Food and Agriculture | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a statute, regulation, or agency publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23), govinfo.gov, federalregister.gov, and uscode.house.gov between 2026-09-26 and 2026-10-04.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a statute, regulation, or agency publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23), govinfo.gov, federalregister.gov, and uscode.house.gov between 2026-09-26 and 2026-10-04.
 
 ## 1. The organization
 
@@ -14,16 +14,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Customers | National and regional grocery chains, club stores, foodservice distributors, and quick-service restaurant chains (about 94% of sales); about 25 private-label and co-manufacturing customers (service line SL-2); about 40 food companies that use the company's cold storage and transportation (service line SL-1); and an online store for gift boxes with about 140,000 consumer accounts nationwide (hosted payment page) |
 | SEC status | Publicly traded; large accelerated filer. SEC Form 8-K Item 1.05 and Regulation S-K Item 106 (17 CFR 229.106) apply. SOX IT general controls over the ERP and payroll are tested annually by the SOX program |
 | SBA size status | Not small: 12,000 employees against the 1,000-employee SBA size standard for NAICS 311612 (13 CFR 121.201) |
-| USDA FSIS status | All 8 plants are **official establishments** under federal grants of inspection (Federal Meat Inspection Act), each with FSIS inspection program personnel assigned, HACCP plans (9 CFR Part 417), Sanitation SOPs (9 CFR Part 416), and written recall procedures (9 CFR 418.3). Each plant runs an annual mock recall |
-| FDA status | **PLT-07 (Tennessee) is a registered food facility** (FD&C Act section 415; 21 CFR 1.225) since its plant-based room opened in March 2022. The registration exemption in 21 CFR 1.226(g) covers only facilities "regulated exclusively, throughout the entire facility" by USDA, so it does not cover PLT-07. The other 7 plants make only FSIS-inspected meat products and are exempt from registration under 1.226(g). DC-01 and DC-02 also hold PLT-07's FDA-regulated products; their FDA registration and 21 CFR Part 117 duties are managed by the corporate FSQA program and are outside this analysis |
-| FSMA Intentional Adulteration rule | **Applies to PLT-07** (21 CFR 121.1). Not a very small business (121.5(a)) and not a small business (121.3: fewer than 500 full-time equivalent employees, including subsidiaries and affiliates). Businesses other than small and very small businesses had to comply 3 years after the rule's July 26, 2016 effective date (81 FR 34166, May 27, 2016), so the rule applied in full from the first day of plant-based production in 2022. Holding at the DCs is exempt (121.5(b)). The other 7 plants follow **voluntary** functional food defense plans (FSIS guidance), which are not scored as Part 121 compliance |
+| USDA FSIS status | All 8 plants are **official establishments** under federal grants of inspection (Federal Meat Inspection Act; EV-056), determined in the intake obligations register (FSIS-416, FSIS-417, FSIS-418), each with FSIS inspection program personnel assigned, HACCP plans (9 CFR Part 417), Sanitation SOPs (9 CFR Part 416), and written recall procedures (9 CFR 418.3). Each plant runs an annual mock recall |
+| FDA status | **PLT-07 (Tennessee) is a registered food facility** (FD&C Act section 415; 21 CFR 1.225) since its plant-based room opened in March 2022 (EV-057). The registration exemption in 21 CFR 1.226(g) covers only facilities "regulated exclusively, throughout the entire facility" by USDA, so it does not cover PLT-07. The other 7 plants make only FSIS-inspected meat products and are exempt from registration under 1.226(g). DC-01 and DC-02 also hold PLT-07's FDA-regulated products; their FDA registration and 21 CFR Part 117 duties are managed by the corporate FSQA program and are outside this analysis |
+| FSMA Intentional Adulteration rule | **Applies to PLT-07** (21 CFR 121.1), determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (C-FOOD-AG-R01; EV-057, EV-061). Not a very small business (121.5(a)) and not a small business (121.3: fewer than 500 full-time equivalent employees, including subsidiaries and affiliates). Businesses other than small and very small businesses had to comply 3 years after the rule's July 26, 2016 effective date (81 FR 34166, May 27, 2016), so the rule applied in full from the first day of plant-based production in 2022. Holding at the DCs is exempt (121.5(b)). The other 7 plants follow **voluntary** functional food defense plans (FSIS guidance), which are not scored as Part 121 compliance |
 | FDA preventive controls | PLT-07 is also subject to 21 CFR Part 117 (current good manufacturing practice and preventive controls for human food). The FSQA program owns it; only its record requirements that depend on electronic systems (117.305, 117.315(c)) are analyzed here |
 | Ammonia refrigeration | 12 anhydrous ammonia systems (8 plants, 4 DCs), from about 12,000 lb to about 48,000 lb each, all above the 10,000 lb threshold quantity in OSHA process safety management (29 CFR 1910.119, Appendix A) and EPA risk management program rules (40 CFR 68.130). PSM and RMP programs are owned by the Director of Refrigeration and Process Safety. Ammonia is a CERCLA hazardous substance with a 100 lb reportable quantity (40 CFR 302.4); release reporting is in P08. These programs are context for risk and incident response; they are not analyzed in P03 beyond release reporting |
-| Not in scope | USCG MTS cyber rule (C-FOOD-AG-R03): no MTSA-regulated facility. CFATS: authority lapsed in July 2023. FAR 52.204-21 and 52.204-25: no federal prime contracts or subcontracts (school and institutional sales go through distributors). PCII: the company has never submitted information to DHS under the PCII program |
-| CIRCIA | C-FOOD-AG-R02 is a **proposed** rule only (final rule not published as of 2026-10-04). As proposed (226.2(a)), the company would be covered because it exceeds the SBA size standard for its NAICS code. Tracked as a pending change; reporting to CISA is voluntary today |
-| Payment cards | The online store uses the e-commerce vendor's hosted payment page; plant employee stores use vendor-managed encrypting terminals. No card numbers are stored or processed on company systems. PCI DSS obligations are contractual through the acquirer and are not analyzed here |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv), with counsel's review (EV-061). USCG MTS cyber rule (C-FOOD-AG-R03): no MTSA-regulated facility. CFATS: authority lapsed in July 2023. FAR 52.204-21 and 52.204-25: no federal prime contracts or subcontracts (school and institutional sales go through distributors). PCII: the company has never submitted information to DHS under the PCII program |
+| CIRCIA | Recorded in the intake obligations register as not in force (C-FOOD-AG-R02). It is a **proposed** rule only (final rule not published as of 2026-10-04). As proposed (226.2(a)), the company would be covered because it exceeds the SBA size standard for its NAICS code. Tracked as a pending change; reporting to CISA is voluntary today |
+| Payment cards | The online store uses the e-commerce vendor's hosted payment page; plant employee stores use vendor-managed encrypting terminals. No card numbers are stored or processed on company systems. PCI DSS obligations are contractual through the acquirer and are not analyzed here (obligations register PCI-DSS; EV-065) |
 | Regulatory driver IDs | C-FOOD-AG-R01 (21 CFR Part 121) is the primary driver. Binding rules outside the vertical registry are cited directly after being read on eCFR: 9 CFR Parts 416, 417, and 418 (FSIS), 21 CFR 117.305 and 117.315 (FDA records), 21 U.S.C. 350f (Reportable Food Registry), 40 CFR 302.6 and 355.40-355.42 (release reporting), 17 CFR 229.106 and Form 8-K Item 1.05 (SEC). NIST CSF 2.0 and SP 800-82 Rev. 3 are the voluntary OT benchmark |
-| Growth | PLT-08 (Texas) was acquired in October 2025 and is still being integrated (see gap 1) |
+| Growth | PLT-08 (Texas) was acquired in October 2025 and is still being integrated; integration is due 2027-03-31 (EV-055) |
 | FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
 ## 2. People (role titles only)
@@ -43,61 +43,37 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
-| SYS-01 | Plant process control networks (OT, Purdue levels 0-2) at the 8 plants | About 2,600 PLCs and controllers and 680 HMIs: brine injection and cure (sodium nitrite) dosing skids, CIP valve manifolds, 64 smokehouses and ovens, chilling, slicers, packaging, metal detectors, X-ray inspection, checkweighers. **118 HMIs run an unsupported operating system** |
-| SYS-02 | Plant SCADA servers, historians, engineering workstations, and MES edge servers (OT level 3) | One set per plant. **Historian audit trails are disabled at PLT-02, PLT-05, and PLT-08.** 9 engineering workstations run an unsupported operating system |
-| SYS-03 | Ammonia refrigeration control systems (12) | Vendor-maintained by three refrigeration contractors. **At PLT-05 one contractor keeps an always-on cellular modem on the controller** |
-| SYS-04 | Cold-chain monitoring service | About 3,400 wireless sensors at the 12 sites, telematics on 380 refrigerated trailers, gateways at each site, and the vendor's SaaS dashboard and alerting. One vendor for all sites |
-| SYS-05 | Central MES: recipe, formulation, batch, label, and lot management, plus the enterprise historian | Migrated to Cloud provider A between 2025-06 and 2026-02. Holds every formulation (including cure and brine), pushes approved recipes and setpoint ranges to the plant MES edge servers, and prints lot codes and labels. Two-person approval is enforced centrally. **Plant supervisors can override cure and brine setpoints at the HMI within the pushed range without a second approval, and overrides raise no alert** |
+| SYS-01 | Plant process control networks (OT, Purdue levels 0-2) at the 8 plants | About 2,600 PLCs and controllers and 680 HMIs: brine injection and cure (sodium nitrite) dosing skids, CIP valve manifolds, 64 smokehouses and ovens, chilling, slicers, packaging, metal detectors, X-ray inspection, checkweighers. **118 HMIs run an unsupported operating system** (EV-011) |
+| SYS-02 | Plant SCADA servers, historians, engineering workstations, and MES edge servers (OT level 3) | One set per plant. **Historian audit trails are disabled at PLT-02, PLT-05, and PLT-08** (EV-026). 9 engineering workstations run an unsupported operating system (EV-011) |
+| SYS-03 | Ammonia refrigeration control systems (12) | Vendor-maintained by three refrigeration contractors. **At PLT-05 one contractor keeps an always-on cellular modem on the controller** (EV-015) |
+| SYS-04 | Cold-chain monitoring service | About 3,400 wireless sensors at the 12 sites, telematics on 380 refrigerated trailers, gateways at each site, and the vendor's SaaS dashboard and alerting. One vendor for all sites (EV-067, EV-042) |
+| SYS-05 | Central MES: recipe, formulation, batch, label, and lot management, plus the enterprise historian | Migrated to Cloud provider A between 2025-06 and 2026-02 (EV-059). Holds every formulation (including cure and brine), pushes approved recipes and setpoint ranges to the plant MES edge servers, and prints lot codes and labels. Two-person approval is enforced centrally. **Plant supervisors can override cure and brine setpoints at the HMI within the pushed range without a second approval, and overrides raise no alert** (EV-008) |
 | SYS-06 | ERP and payroll (SaaS) | Orders, procurement, inventory, finance, payroll. SOX-relevant |
 | SYS-07 | Warehouse management and transportation management systems (WMS and TMS) | DC-01 to DC-04 and fleet dispatch; about 2,100 handheld scanners |
-| SYS-08 | Identity platform (SSO, MFA, privileged access management, identity governance) | Covers all IT users at 7 plants, the DCs, and headquarters. **Plant OT uses separate OT directories per plant, federated for named engineering access at 6 plants.** PLT-08 still runs a legacy directory |
+| SYS-08 | Identity platform (SSO, MFA, privileged access management, identity governance) | Covers all IT users at 7 plants, the DCs, and headquarters. **Plant OT uses separate OT directories per plant, federated for named engineering access at 6 plants** (EV-006). PLT-08 still runs a legacy directory (EV-001) |
 | SYS-09 | Multi-cloud estate (two public cloud providers, vendor-agnostic) plus COLO-1 and COLO-2 | Cloud provider A: central MES, enterprise historian, food safety records platform, traceability platform, data lake and AI services. Cloud provider B: SL-1 and SL-2 customer portals, e-commerce integration. Colocation: network core, legacy applications, offline backup copies |
 | SYS-10 | Enterprise network (SD-WAN at 14 sites) and IT endpoints | About 6,800 IT endpoints including 1,900 shared floor terminals; EDR on IT endpoints |
-| SYS-11 | Food safety records platform (Cloud provider A) | Electronic HACCP, Sanitation SOP, food defense (PLT-07), and preventive controls (PLT-07) records with e-signatures; pre-shipment review. Live at 7 plants; **PLT-08 still uses a legacy local eHACCP application with shared accounts** |
+| SYS-11 | Food safety records platform (Cloud provider A) | Electronic HACCP, Sanitation SOP, food defense (PLT-07), and preventive controls (PLT-07) records with e-signatures; pre-shipment review. Live at 7 plants; **PLT-08 still uses a legacy local eHACCP application with shared accounts** (EV-027) |
 | SYS-12 | Traceability and recall platform (Cloud provider A) | Lot genealogy from receiving to customer shipment; recall execution |
 | SYS-13 | Customer portals and online store | SL-1 cold storage customer portal and SL-2 co-manufacturing portal (Cloud provider B); online store (e-commerce SaaS with hosted payment page) |
-| SYS-14 | AI portfolio (10 use cases) | Governed by an AI council formed in 2025 (see P10) |
-| SYS-15 | OT remote access | Enterprise OT remote access gateway (named accounts, MFA, approval, session recording) at 6 plants. **PLT-05 and PLT-08 still have legacy vendor paths** |
-| SYS-16 | Third parties | About 1,400 vendors; 65 with OT remote access (controls integrators, equipment makers, refrigeration contractors); tiered third-party risk program |
+| SYS-14 | AI portfolio (10 use cases) | Governed by an AI council formed in 2025 (EV-068; see P10) |
+| SYS-15 | OT remote access | Enterprise OT remote access gateway (named accounts, MFA, approval, session recording) at 6 plants. **PLT-05 and PLT-08 still have legacy vendor paths** (EV-014) |
+| SYS-16 | Third parties | About 1,400 vendors; 65 with OT remote access (controls integrators, equipment makers, refrigeration contractors); tiered third-party risk program (EV-042) |
 
 **SSP system (P02):** the *Plant Production and Cold-Chain Monitoring System (PPCM)*: the enterprise plant OT standard as deployed at the 8 plants (SYS-01, SYS-02, SYS-03), the central MES and enterprise historian (SYS-05), cold-chain monitoring (SYS-04), the food safety records platform (SYS-11), and OT remote access (SYS-15), inheriting common controls from the enterprise platform.
 
 **Registry defaults kept.** The registry's primary system, incident (ransomware halting processing lines and cold-chain monitoring), and AI use case (AI quality inspection on processing lines) all fit this business. At this size each is broadened: the PPCM covers 8 plant instances plus central services, the incident spans several plants and triggers the SEC materiality step, and AI quality inspection is one use case in a 10-item portfolio.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
+## 4. Where the evidence is
 
-**In place today:**
-- A mature program aligned to CSF 2.0 for IT and OT, with an OT Security team under the CISO
-- Annual risk analysis tied to ERM (NIST IR 8286)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- 24x7 SOC (in-house plus MSSP overflow); passive OT network monitoring at 6 plants
-- OT DMZ and the enterprise OT remote access gateway at 6 plants
-- PAM; quarterly access certification for IT systems
-- Immutable backups for cloud workloads; annual DR tests for tier-1 systems
-- Central MES with two-person formulation approval and a signed master for every formulation
-- HACCP plans, Sanitation SOPs, and recall procedures under FSIS inspection at all 8 plants; annual mock recalls
-- A Part 121 food defense plan at PLT-07 (reanalyzed 2025-03) and voluntary functional food defense plans at the other 7 plants
-- PSM and RMP programs for the 12 ammonia systems
-- Tiered vendor reviews
-- An SOC 2 Type 1 report (Security, Availability) for SL-1 as of 2025-12-31
-- SEC Item 106 disclosure in the 10-K; a disclosure committee with a materiality playbook
-- Cyber insurance
-
-**Targeted gaps:**
-1. **Acquisition integration.** PLT-08 (acquired 2025-10) is still on a legacy directory and a flat IT and OT network, its controls integrator uses a VPN account without MFA, it has no OT monitoring, and its electronic HACCP records sit in a legacy application with shared accounts. Integration is due 2027-03-31.
-2. **OT boundary and remote access.** The OT DMZ and remote access gateway are live at 6 of 8 plants. At PLT-05 a refrigeration contractor keeps an always-on cellular modem on the refrigeration controller. 14 of 65 OT vendors still use legacy paths.
-3. **Legacy OT.** 118 of 680 HMIs and 9 engineering workstations run unsupported operating systems. The OT asset inventory is about 91% complete.
-4. **Recipe and setpoint integrity.** Plant supervisors can override cure and brine setpoints within the pushed range without a second approval, and overrides raise no alert. The PLT-07 food defense reanalysis (2025-03) predates the central MES migration (completed 2026-02), which was not treated as a reanalysis trigger (21 CFR 121.157(b)(1)).
-5. **Cold-chain concentration.** One monitoring vendor serves all 12 sites and 380 trailers. The manual temperature log fallback has been exercised at only 3 of 12 sites, and the vendor's SOC 2 report has an exception on alert delivery.
-6. **OT recovery.** Plant OT restores have been demonstrated at 4 of 8 plants. The central MES recovered in 7.5 hours against a 4-hour RTO in the 2026-05-16 DR test.
-7. **Electronic CCP records.** Historian audit trails are disabled at PLT-02, PLT-05, and PLT-08, and PLT-08's eHACCP application uses shared accounts (9 CFR 417.5(d)).
-8. **Third parties.** Tier-1 OT vendors with a current security review: 71%. Two refrigeration contractor contracts have no security terms.
-9. **Materiality.** The 2025-11 disclosure committee tabletop did not include a production halt with product holds and recalls, and the playbook has no method for adding product loss and recall costs to the quantitative factors.
-10. **AI.** 10 use cases; 6 have completed council review. At PLT-03, two packaging lines cut manual visual inspection from two inspectors to one in 2026-04 after AI vision inspection went live, without HACCP reassessment or council approval. Three use cases have been tested only on vendor data.
-11. **Workforce training.** Plant workforce security awareness completion is 78% (multilingual modules launched 2026-03). At PLT-07, 3 of 25 sampled agency temporary workers at actionable process steps had no food defense awareness training record (21 CFR 121.4(b)(2)).
-12. **Default credentials.** P07 testing on 2026-08-13 found the manufacturer default administrator password on the refrigeration controller web interface at DC-03 and on two X-ray inspection systems at PLT-04.
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across the business units and plants (identity platform and plant OT directories, HR system, OT asset inventory, OT monitoring and the OT remote access gateway, cloud consoles and SIEM, the central MES, plant historians and the food safety records platform, the third-party risk register and accounts payable vendor master, the contract repository, FSQA document control), prior Internal Audit and SOX workpapers, board and committee records, the SEC filings, and regulator correspondence.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against Part 121 and the other applicable rules, and against the CSF 2.0 and SP 800-82 Rev. 3 benchmark,** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -116,18 +92,22 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 | Date | Event |
 |---|---|
-| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (plant walkthroughs 2026-06-15 to 2026-07-10) |
-| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit; OT testing during sanitation windows at PLT-03, PLT-05, PLT-07, and PLT-08) |
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | BIA interviews and dependency review |
+| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (plant walkthroughs 2026-06-15 to 2026-07-10; gap analysis evidence sampling completed 2026-08-14) |
+| 2026-06-22 to 2026-07-10 | 2026 revision of POL-01 to POL-05 and the policy hierarchy drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit; OT testing during sanitation windows at PLT-03, PLT-05, PLT-07, and PLT-08): operating tests of controls in force under the existing policy set; design review of the draft 2026 revisions |
 | 2026-08-21 | SOC 2 readiness review completed |
 | 2026-08-26 | AI council portfolio review |
 | 2026-09-08 | Executive risk committee approval |
-| 2026-09-10 | Results to the risk committee and audit committee of the board |
+| 2026-09-10 | Results to the risk committee and audit committee of the board; 2026 policy revisions approved (effective 2026-10-01) |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the deliverables
 
 These facts were added while building the deliverables. They do not change sections 1-6.
 
-**Plants and distribution centers.**
+**Plants and distribution centers (EV-054, EV-005).**
 | Site | State | Products and notes | Employees |
 |---|---|---|---|
 | PLT-01 | Florida | Bacon, hams, smoked meats; SL-2 private label | About 1,500 |
@@ -169,10 +149,10 @@ These facts were added while building the deliverables. They do not change secti
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, SVP FSQA, and Vice President, Investor Relations, advised by outside securities counsel. The SVP FSQA joined in 2026-06 so that product holds and recalls are represented.
 
-**PPCM volumes.** About 4,100 formulations in the central MES; about 1,900 recipe and setpoint-range changes a year; about 210 OT user accounts with write access across the plants; about 3.2 million CCP monitoring records a year across the 8 plants.
+**PPCM volumes (EV-007, EV-053, EV-006).** About 4,100 formulations in the central MES; about 1,900 recipe and setpoint-range changes a year; about 210 OT user accounts with write access across the plants; about 3.2 million CCP monitoring records a year across the 8 plants.
 
-**Service lines offered to external clients (P09).** SL-1 cold storage and logistics services: about 40 food company customers, about $160 million a year in revenue, customer portal with inventory, temperature history, and lot data. SOC 2 Type 1 report (Security, Availability) as of 2025-12-31. SL-2 co-manufacturing and private label: about 25 customers, about $620 million a year in revenue, production at PLT-01, PLT-03, PLT-04, and PLT-07; customer portal for production orders, specifications, CCP record packages, and certificates of analysis. Two national retail customers require a SOC 2 Type 2 report including Confidentiality and Processing Integrity by the end of 2027.
+**Service lines offered to external clients (P09; EV-046, EV-047, EV-052).** SL-1 cold storage and logistics services: about 40 food company customers, about $160 million a year in revenue, customer portal with inventory, temperature history, and lot data. SOC 2 Type 1 report (Security, Availability) as of 2025-12-31. SL-2 co-manufacturing and private label: about 25 customers, about $620 million a year in revenue, production at PLT-01, PLT-03, PLT-04, and PLT-07; customer portal for production orders, specifications, CCP record packages, and certificates of analysis. Two national retail customers require a SOC 2 Type 2 report including Confidentiality and Processing Integrity by the end of 2027.
 
-**Plant-based room at PLT-07.** Separate room with its own entrance, blending tanks, and forming line; shares the central MES, the plant SCADA and historian, the CIP system, and the ammonia refrigeration with the meat lines. The FSQA program confirmed that none of its products is on FDA's Food Traceability List.
+**Plant-based room at PLT-07.** Separate room with its own entrance, blending tanks, and forming line; shares the central MES, the plant SCADA and historian, the CIP system, and the ammonia refrigeration with the meat lines. The FSQA program confirmed that none of its products is on FDA's Food Traceability List (EV-057).
 
-**Online store.** About 140,000 consumer accounts (name, address, email, order history; passwords handled by the e-commerce vendor). Employee personal information (12,000 employees, including Social Security numbers and bank details) sits in the ERP and payroll SaaS.
+**Online store (EV-065).** About 140,000 consumer accounts (name, address, email, order history; passwords handled by the e-commerce vendor). Employee personal information (12,000 employees, including Social Security numbers and bank details) sits in the ERP and payroll SaaS.

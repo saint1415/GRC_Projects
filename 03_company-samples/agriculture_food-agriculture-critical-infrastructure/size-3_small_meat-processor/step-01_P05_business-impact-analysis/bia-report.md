@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (meat processing plant with a smoked seafood room) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager with the Operations Manager, FSQA Manager, Maintenance and Refrigeration Manager, and Warehouse and Logistics Manager | **Approved:** General Manager, 2026-09-04
+**Sources:** process owner interviews 2026-07-13 to 2026-07-14 (EV-046), FY2025 sales and inventory reports (EV-039), cloud and OT backup job reports (EV-016, EV-017), cold-chain monitoring configuration (EV-035), HACCP plans and recall procedure (EV-022). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the General Manager.
 
 ## 1. Overview and purpose
 This BIA identifies which plant processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,12 +12,12 @@ This BIA identifies which plant processes the company depends on, how long each 
 - HACCP corrective action planning for unforeseen deviations (9 CFR 417.3(b)), because a control-system outage is one.
 
 ## 2. System and business description
-One Florida plant with 250 employees runs four processing lines, five smokehouses, an ammonia refrigeration system, coolers, a freezer warehouse, and shipping docks. Human food sales are about $148 million a year. Production and cold storage run on the PPCM: process controls, SCADA and historian, the recipe and batch system (MES), refrigeration controls, cold-chain monitoring, and a cloud tenant for food safety records. Business systems (ERP, WMS) are SaaS. See `../00_company-facts.md` sections 1 and 3.
+One Florida plant with 250 employees runs four processing lines, five smokehouses, an ammonia refrigeration system, coolers, a freezer warehouse, and shipping docks. Human food sales are about $148 million a year. Production and cold storage run on the PPCM: process controls, SCADA and historian, the recipe and batch system (MES), refrigeration controls, cold-chain monitoring, and a cloud tenant for food safety records. Business systems (ERP, WMS) are SaaS. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What is different about a food plant.** Downtime is not only lost revenue. Product that sits in a smokehouse, a brine tank, or a cooler while controls or monitoring are down may have to be held, evaluated, and possibly destroyed, and it cannot ship without complete CCP records (9 CFR 417.5(c)). Recovery time objectives are set so that product can be protected, not only so that systems come back.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $590,000 in revenue per production day (250 production days a year).
+Dollar values are scaled to about $148 million in human food sales across 250 production days, about $590,000 in revenue per production day (EV-039).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

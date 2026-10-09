@@ -2,9 +2,10 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed meat processor with two USDA-inspected plants) | **Tier:** Mid-Market | **Vertical:** Food and Agriculture
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026), with OT guidance from NIST SP 800-82 Rev. 3 | **Version:** 1.0, 2026-09-15
+**Sources:** the intake [evidence register](../step-00_P00_intake/evidence-register.csv) (configuration exports, OT inventories and documents, EV-001 to EV-059), the plant walkthroughs in P03 fieldwork (EV-062, EV-063), and the P07 test results (EV-AC-2 to EV-SR-6). The `evidence` column in `control-implementation.csv` names the source of each statement.
 
 ## 1. System Name and Identifier
-Plant Production and Cold-Chain Monitoring System (**PPCM**), identifier CSC-PPCM-01. The PPCM is the company's major system. It comprises SYS-01 to SYS-07, SYS-14, and SYS-15 in `../00_company-facts.md`.
+Plant Production and Cold-Chain Monitoring System (**PPCM**), identifier CSC-PPCM-01. The PPCM is the company's major system. It comprises SYS-01 to SYS-07, SYS-14, and SYS-15 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PPCM runs and records every step that makes the company's food safe at both plants: formulation and cure dosing, cooking, smoking, and chilling, grinding and blending, packaging, foreign material inspection, lot coding and labeling, and cold storage. It also supervises the two ammonia refrigeration systems. It produces the electronic CCP, Sanitation SOP, and Listeria records that FSIS reviews. It serves about 700 production, maintenance, warehouse, sanitation, and FSQA workers across two production shifts and a sanitation shift at each plant (P05 BP-01 to BP-09, BP-13).
@@ -98,6 +99,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1, adapted for OT. Impact
 **Why High and not Moderate.** The tier guide expects a Moderate system at this size. The PPCM is categorized on its own information types, not on company size: integrity of process control data and availability of the ammonia alarm view both reach High. The baseline is therefore the **NIST SP 800-53B High baseline**, tailored with the SP 800-82 Rev. 3 OT overlay.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). OT device counts come from the Plant 1 passive sensor export (EV-011) and the Plant 2 integrator and maintenance records (EV-012); the network layout comes from the diagrams and firewall exports (EV-014) and the remote access records (EV-016, EV-017).
+
 **Inside the boundary:**
 - PLCs, HMIs, smokehouse and oven controllers, injectors, the dosing skid, CIP controls, blenders and fat analyzers, packaging controls, metal detectors, and x-ray units at both plants;
 - SCADA servers, historians, engineering workstations, the Plant 1 MES, and the Plant 2 label server;
@@ -150,7 +153,7 @@ Both are scheduled for correction (POAM-016 and POAM-004). The diagram is in P04
 | Records application, historian replicas, traceability database | Cloud PaaS application and database services | Workloads account | IT Director (VP FSQA owns the data) |
 | Backup vault | Cloud backup service with write-once retention | Backup account (second region) | IT Director |
 
-The OT counts above come from the Plant 1 passive sensor, maintenance records, and the walkthroughs. A complete OT inventory does not exist yet at Plant 2 (CM-8, POAM-008).
+The OT counts above come from the Plant 1 passive sensor export (EV-011), the Plant 2 integrator and maintenance records (EV-012), the unsupported component list (EV-013), and the walkthroughs (EV-062, EV-063). A complete OT inventory does not exist yet at Plant 2 (CM-8, POAM-008).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -178,7 +181,7 @@ The OT counts above come from the Plant 1 passive sensor, maintenance records, a
 | Hybrid | 30 | Identity provider vendor (11), cloud provider (10), MSSP (8), cold-chain, ERP, and WMS vendors (1) |
 | Common/Inherited | 4 | Identity provider vendor (AC-2(1), IA-2(2), IA-2(8)); cyber insurer panel and MSSP (IR-7) |
 
-The Partially implemented statements trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. The pattern is consistent: the IT and cloud layers are close to complete, Plant 1 OT is partly built, and Plant 2 OT has almost nothing.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-007, EV-017, EV-022 and EV-025) and to the P07 findings. The pattern is consistent: the IT and cloud layers are close to complete, Plant 1 OT is partly built, and Plant 2 OT has almost nothing.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -192,7 +195,7 @@ The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-
 - **Records signatures.** Electronic CCP and Sanitation SOP record entries must be attributable to the employee who made them (9 CFR 417.5(b), 416.16(a)). Typed initials under a shared login do not meet that. Named accounts with an authenticated sign-off are the target (POAM-017).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); HACCP plans, Sanitation SOPs, and the PSM and RMP program documents for both plants.
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); HACCP plans, Sanitation SOPs, and the PSM and RMP program documents for both plants.
 
 ## 13. Acronym List and Glossary
 - **CCP:** critical control point (9 CFR 417.1)

@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-10, the walk-in cooler and freezer, the smokehouse, paper records in the shop, and the people and vendors the shop depends on. Processes and impact levels come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-10, the walk-in cooler and freezer, the smokehouse, paper records in the shop, and the people and vendors the shop depends on, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact levels come from the BIA (P05).
 
 **What makes this shop different from an office.** Two systems act on food. A changed alarm set point or a silenced alert can let customers' meat spoil unnoticed, and a changed cook program or cure amount can make product unsafe. Impact is therefore rated on product safety and customers' property, not only on data.
 
@@ -21,8 +21,8 @@
 - High and Very High: must be treated with a dated plan. A risk that could put unsafe product in a customer's home is never accepted at High.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the P03 gap analysis, and a walkthrough of the shop, the devices, and each SaaS account with the IT technician on 2026-07-28 and 2026-07-29.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk-through of the shop, the devices, and each SaaS account with the IT technician on 2026-07-28 and 2026-07-29 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and router reviews (EV-001, EV-006, EV-008, EV-019), the alert settings and the vendor's SOC 2 report (EV-002, EV-005), the shop walk-through (EV-020), the records (EV-011, EV-012, EV-023), the chatbot records (EV-024, EV-025, EV-033), and the owner's self-review (EV-032). A one-person shop keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -44,6 +44,8 @@
 | R-004 | Loss of custom records, cook programs, cure sheet, or label templates | Moderate | Versioned file plan; monthly encrypted export; printed programs | Owner-operator | 2026-10-15 |
 | R-005 | Unchecked AI chatbot cure calculation exceeds 9 CFR 424.21(c) limits | Moderate | Supplier chart is the only source; check recorded on each batch sheet (P10) | Owner-operator | 2026-09-30 |
 | R-009 | Owner unavailable (single point of failure) | Moderate | Reciprocal agreement with a neighboring processor; sealed emergency sheet | Owner-operator | 2026-10-15 |
+
+**One pass.** The register was completed on 2026-07-31 from intake and self-assessment evidence. The control tests ran on 2026-07-29, inside the same week, so this pass already reflects them: R-002 cites the password test (EV-IA-5) and R-006 the network test (EV-SC-7). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 **The common thread.** Three of the four High risks (R-002, R-003, R-010) end the same way: customers' meat warms or is cooked wrongly and nobody notices in time. The fixes are mostly settings and agreements, not equipment: turning on MFA and the offline notice, adding a second alert contact, and writing down what the owner already does by habit. R-005 is Moderate only because the owner usually catches a wrong number by eye; its impact is Very High, which is why it has a short due date.
 

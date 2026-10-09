@@ -21,6 +21,8 @@ The PPCM runs and records every step that makes the plant's food safe: formulati
 The cloud tenant is described by service category and is vendor-agnostic (see P04). OT zones follow the SP 800-82 Rev. 3 layered model: field devices and controllers (levels 0-1), HMIs and supervisory control (level 2), SCADA, historian, and MES (level 3), and the business network (level 4). Today levels 3 and 4 are not separated by an OT DMZ (see section 7).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Which rules bind the company was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section lists how each one touches the PPCM.
+
 | ID | Requirement | Citation | How it touches the PPCM |
 |---|---|---|---|
 | C-FOOD-AG-R01 | FSMA Intentional Adulteration rule | 21 CFR Part 121 | The dosing skid, brine tank, CIP valves, and recipe system are paths to adulterate the seafood product; mitigation strategies, monitoring, and records live in the PPCM |
@@ -76,6 +78,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adapted fo
 - **Compensated** in OT where the IT form of a control would disrupt the process, following SP 800-82 Rev. 3 (for example, application allowlisting instead of agent-based scanning on HMIs).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** SYS-01 to SYS-06 and SYS-14: PLCs, HMIs, dosing skid, brine tank and CIP controls, smokehouse controllers, packaging controls, SCADA, historian, engineering workstation, MES, the refrigeration controller, the cold-chain sensors and gateway, the company's configuration of the cold-chain SaaS, the cloud tenant (four workloads), and the remote access paths.
 - **Outside (interconnected):** ERP (SYS-07), WMS (SYS-08), identity provider (SYS-09), corporate network and endpoints (SYS-11), AI vision inspection (SYS-13), the cold-chain vendor's platform, and the cloud provider's infrastructure.
 - **Boundary weaknesses:** the MES server is dual-homed on the corporate and control networks, and the cold-chain gateway sits on the corporate Wi-Fi. Both cross the boundary without a controlled interface and are scheduled for correction (POAM-001).
@@ -108,7 +111,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Network storage device (OT backups) | On-premises storage | Plant server room (gap) | Controls Engineer |
 | Corporate-to-OT firewall | Network | Plant server room | IT Manager |
 
-The OT component counts above are from interviews and a walkthrough. A formal OT asset inventory does not exist yet (CM-8, POAM-015).
+The OT component counts above are from the integrator's 2025 service report (EV-013), interviews (EV-049) and the plant walkthrough (EV-048), recorded in the intake asset inventory. A formal OT asset inventory does not exist yet (CM-8, POAM-015).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -130,7 +133,7 @@ Business and cloud users authenticate through the identity provider with a passw
 - a second approver for formulation changes.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10), the 2023 food defense plan, and the HACCP plans.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10), the 2023 food defense plan, and the HACCP plans.
 
 ## 13. Acronym List and Glossary
 - **CCP:** critical control point (9 CFR 417.1)
