@@ -12,6 +12,8 @@
 | Approved | Chief Operating Officer, 2026-09-15 |
 
 ## 1. Applicability
+Which rules apply was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the grants of inspection and product lists (EV-037), the PSM and RMP documents (EV-043), the HR roster (EV-003) and the customer agreements (EV-051). This section records the reasoning for the decisions that shape the analysis; the rows below analyze each applicable rule requirement by requirement.
+
 **Primary business line:** further processing of beef and pork into branded and private-label products at two FSIS official establishments, sold to grocery chains, foodservice distributors, and club stores. The tier calls for every rule that binds that line. The first question is which ones do.
 
 ### 1.1 The vertical's primary regulation does not apply
@@ -46,7 +48,7 @@ The registration rule does not apply to "Facilities that are regulated exclusive
 ## 2. Method
 1. **Requirements.** Rows follow each rule's own structure at paragraph level, read from eCFR. FSIS Part 416 rows cover 416.11-416.16 (416.17, agency verification, is context). Part 417 rows cover every paragraph of 417.2-417.5 and 417.7 that sets a duty; 417.1 (definitions), 417.6 (inadequate systems), and 417.8 (agency verification) are context. PSM and RMP rows are limited to the paragraphs that touch controls, alarms, change, contractors, incidents, emergency response, and audits. Short quotes are from the public-domain CFR text.
 2. **Crosswalk.** NIST has published no mapping for 9 CFR, 29 CFR 1910.119, 40 CFR Part 68, or Fla. Stat. 501.171, so those rows carry an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such. Benchmark rows use the official NIST CSF 2.0 to SP 800-53 informative references (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), showing a subset.
-3. **Evidence.** Interviews with the process owners at both plants; review of HACCP plans, SSOPs, hazard analyses, validation files, recall procedures, the Listeria program, PSM and RMP program documents, contracts, and the two food defense plans; configuration exports of historians, HMIs, the records application, and remote access paths; the two plant walkthroughs.
+3. **Evidence.** The intake evidence in the [evidence register](../step-00_P00_intake/evidence-register.csv): HACCP plans, hazard analyses and validation files (EV-038), SSOPs (EV-039), recall procedures (EV-040), the Listeria program (EV-041), the two food defense plans (EV-042), PSM and RMP program documents (EV-043, EV-044), contracts (EV-048, EV-051), and configuration exports of historians, HMIs, the records application and remote access paths (EV-007, EV-009, EV-016, EV-017, EV-025). P03 fieldwork added the gap analysis interviews (EV-067), the two plant walkthroughs (EV-062, EV-063), and the samples in step 4 (EV-064 to EV-066).
 4. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population, sized with the co-sourced internal audit firm's attribute sampling table:
    - CCP monitoring records: 60 production days (30 per plant);
    - pre-operational and SSOP records: 60 days (30 per plant);
@@ -58,7 +60,7 @@ The registration rule does not apply to "Facilities that are regulated exclusive
    - Listeria hold-and-test events: all 7 in 2026 H1; environmental results: 40;
    - temporary worker orientation records: 30;
    - HR emails containing personal information: 20.
-   Each `evidence` cell names the sample and its result.
+   Each `evidence` cell names the sample and its evidence ID: food safety record samples and the retrieval test in EV-064, OT change, management of change and alarm test samples in EV-065, and the HR email sample in EV-066. Populations come from the intake exports (EV-027, EV-038 to EV-041, EV-044).
 5. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gaps were rated on the P01 risk scale and linked to P01 risk IDs.
 
 ## 3. Results summary

@@ -43,7 +43,7 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 | Vice President of Sales and Customer Service | Customer notices; business owner of the customer traceability portal and EDI services |
 | Director of Communications | Staff, customer, and media statements |
 | Internal audit (co-sourced firm) | Annual IT audit; independent P07 assessment |
-| Managed security service provider (MSSP) | 24x7 EDR and SIEM monitoring of IT systems. OT is not monitored by the MSSP today |
+| Managed security service provider (MSSP) | 24x7 EDR and SIEM monitoring; contract terms and log sources are in EV-024 |
 | External parties | Plant 1 controls integrator; Plant 2 controls integrator (inherited from the prior owner); two refrigeration contractors (one per plant); cold-chain monitoring SaaS vendor; AI vision inspection vendor; cyber insurer (breach hotline; panel counsel and an OT-capable forensic firm); outside counsel |
 
 ## 3. Systems

@@ -1,0 +1,28 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS/PaaS: landing zone, data platform, SYS-M5, recipe library, SYS-D3",SYS-G3; SYS-M5; SYS-M3; SYS-D3,Food safety records; formulations; 3PL customer data; personal information,Customer agreement,SOC 2 Type 2,EV-016; EV-029,Group
+V-02,Cloud provider B,SYS-R2 hosting; DR replicas; immutable backup vault,SYS-G3; SYS-R2,Consumer personal information; backups of all provider A workloads,Customer agreement,SOC 2 Type 2,EV-016; EV-020; EV-029,Group
+V-03,Identity SaaS vendor,"Single sign-on, MFA, identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-028; EV-029,Group
+V-04,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs,Subscription terms,None on file,EV-028; EV-011,Group
+V-05,ERP SaaS vendor,Group ERP,SYS-G4,"Financial, supplier and order data",Subscription agreement with a 1-hour RPO,SOC 2 Type 2,EV-030; EV-029,Group
+V-06,Cold-chain monitoring vendor,"Cold-chain monitoring SaaS, sensors and gateways",SYS-G6,Temperature readings and alarms for all divisions,SaaS contract with group security terms (2025),"SOC 2 Type 2, 2025-04-01 to 2026-03-31, with bridge letter (received 2026-08-12); last review before that in 2024",EV-027; EV-098,Group. Requested at intake (open request)
+V-07,OT monitoring and remote access gateway vendor,SYS-G5 gateway and passive monitoring,SYS-G5,OT session and traffic data,Subscription terms,None on file,EV-028; EV-023,Group
+V-08,Carriers and colocation provider,"WAN links, cellular failover, colocation data center",SYS-G3,Encrypted traffic; hosted equipment,Carrier and colocation agreements,None on file,EV-028; EV-017,Group
+V-09,HR SaaS and payroll vendors,HR system and payroll,SYS-HR,Employee personal information,Service agreements,None on file,EV-028; EV-002,Group
+V-10,Staffing agencies,Agency temporary workers,SYS-G1 (agency worker accounts),Agency worker records,Staffing contracts requiring group rules,None on file,EV-028; EV-052,Group and Meat Processing
+V-11,Cyber insurer and forensic panel firm,Cyber insurance; breach hotline; forensic investigation,n/a,Incident facts when engaged,Policy in force for 2026; panel retainer through the insurer,n/a,EV-035; EV-028,Group
+V-12,Enterprise AI assistant vendor,Workforce generative AI assistant (pilot),AI-008,Internal documents,Contract terms prohibiting training on group data,None on file,EV-037; EV-028,Group
+V-13,Controls integrator (Plants 2 and 5),"SCADA, PLC and MES support under a legacy contract",SYS-M1; SYS-M2; SYS-M3,OT engineering access,Legacy contract with no security terms,None on file,EV-052; EV-051; EV-028,Meat Processing. Shared always-on VPN account
+V-14,Refrigeration contractors,Ammonia refrigeration service,SYS-M4,OT engineering access,Service contracts with no security terms,None on file,EV-052; EV-051; EV-028,Meat Processing (cellular modem at Plant 5) and DC-1 and DC-3
+V-15,AI vision inspection vendor,"Vision models, edge servers and model training",SYS-M6,"Product, label and incidental worker images",Contract with no image retention or reuse terms,None on file,EV-052; EV-058; EV-028,"Meat Processing. Always-on remote tool at Plants 1, 3 and 4"
+V-16,MES vendor,Plant MES software,SYS-M3,Formulations and batch records (support access),Software and support agreement,None on file,EV-028,Meat Processing
+V-17,WMS vendor,Warehouse management SaaS,SYS-D1,"Inventory, orders, lot and 3PL customer records",Subscription agreement,SOC 2 Type 2 (reviewed each year),EV-028; EV-029,Food Distribution
+V-18,DC automation vendor,"Conveyors, sortation and automated freezer storage support",SYS-D1,Automation server access,Service agreement,None on file (no review recorded),EV-028; EV-064,"Food Distribution. Own remote tool at DC-2, DC-4 and DC-5"
+V-19,TMS and telematics vendors,Transportation management and trailer telematics,SYS-D2,Routes; reefer data; driver location (2 years held by the vendor),Subscription terms,None on file (no review recorded),EV-028; EV-065,Food Distribution
+V-20,EDI network provider,EDI transport for 3PL and supplier messages,SYS-D3,Orders and advance ship notices,Service agreement,None on file,EV-028; EV-069,Food Distribution
+V-21,Payment processor and acquirer,Card authorization; hosted payment fields; acquiring,SYS-R1; SYS-R2,Cardholder data,Merchant and processing agreements requiring an annual ROC,Processor attestation of compliance,EV-075; EV-070; EV-028,Grocery Retail
+V-22,P2PE solution provider,Validated point-to-point encryption terminals and key management,SYS-R1,Cardholder data at the terminal,Solution agreement,P2PE provider attestation,EV-075; EV-073,Grocery Retail
+V-23,QSA firm,Annual PCI DSS Report on Compliance,SYS-R1; SYS-R2,Assessment evidence,Engagement letter,n/a (the assessor),EV-070; EV-028,Grocery Retail
+V-24,E-commerce and loyalty platform vendors,"E-commerce, mobile app and loyalty platform; offer model",SYS-R2; AI-006,Consumer personal information,Subscription terms,None on file,EV-028; EV-077,Grocery Retail
+V-25,Delivery partners (3),Home delivery of online orders,SYS-R2,"Customer names, addresses and orders",Contracts with confidentiality terms,None on file,EV-028; EV-077,Grocery Retail
+V-26,Camera analytics vendor,Loss-prevention video analytics (pilot),AI-005,CCTV video of shoppers and workers (30 days in the vendor cloud),Pilot agreement,None on file (no security review recorded),EV-028; EV-078,Grocery Retail
+V-27,Workforce management SaaS vendor,Store scheduling engine,AI-007,Employee availability and time data,Subscription terms,None on file,EV-028; EV-037,Grocery Retail

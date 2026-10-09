@@ -3,6 +3,7 @@
 **Organization:** Cris Santos Company, Inc. | **Tier:** Mid-Market | **Provider:** Vendor-agnostic public cloud (see section 4), plus SaaS
 **System:** Plant Production and Cold-Chain Monitoring System (PPCM), as defined in the SSP (P02), and the landing zone it shares with the Customer Traceability and EDI Services (P09) | **Prepared:** 2026-07-24 by the Security Manager with the IT Director; updated 2026-09-15 with P07 results
 **Control map:** `cloud-control-map.csv` (57 rows, 23 components)
+**Sources:** the cloud organization export (EV-020), backup and restore records (EV-021, EV-023), identity provider policy (EV-002), portal and EDI records (EV-052), and provider and vendor assurance (EV-049, EV-050), listed in the intake [evidence register](../step-00_P00_intake/evidence-register.csv). Components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 1. Diagram
 
