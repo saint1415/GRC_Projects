@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022) |
 | Scoping | Per division (section 1). One readiness report: the ticketing platform service line of Ticketing and Streaming (`soc2-readiness.csv`). Live Venues, Hotels and Restaurants, and the streaming service are out of scope, with reasons |
 | Categories in scope | Security, Availability, Confidentiality |
-| Report | Existing annual Type 2. Last report: 12 months ending 2026-06-30, issued 2026-08-21, unqualified with no exceptions. Next period: 2026-07-01 to 2027-06-30 |
+| Report | Existing annual Type 2. Last report: 12 months ending 2026-06-30, issued 2026-08-21, unqualified with no exceptions (EV-105; the prior report, for the 12 months ending 2025-06-30, is EV-062). Next period: 2026-07-01 to 2027-06-30 |
 | Prepared | 2026-09-15 by the Group Chief Risk Officer's assurance team with the Ticketing and Streaming security and compliance lead |
 
 ## 1. Scoping decisions per division

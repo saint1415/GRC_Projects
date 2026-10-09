@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads, coordinated by the Group PCI program director and the Group Chief Privacy Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Three PCI DSS roles in one group
 PCI SSC sets no size tiers. Merchant levels and validation methods come from the card brands and each acquirer. Visa's *What To Do If Compromised* (v10.0, effective 2026-06-25) lists Visa merchant levels by annual Visa transactions: **Level 1, more than 6,000,000; Level 2, 1,000,001 to 6,000,000; Level 3, 1 to 1,000,000**. Other brands' levels were not verified; each acquirer applies them.
 
@@ -73,10 +75,20 @@ Option B costs about $1.4 million (fictional), mainly devices and installation. 
 1. **Requirements.** PCI DSS was broken into its 12 principal requirements and requirement groups (for example 8.2). Requirements that decide scope or carry the largest risk were taken to the defined-requirement level (6.4.1, 6.4.2, 6.4.3, 11.6.1), and the service-provider-only requirements were added for the TVOP (for example 3.6.1.1, 11.4.6, 11.4.7, 11.5.1.1, 12.4.2, 12.5.2.1, 12.9.1, 12.9.2). Labels are short topics written for this analysis, not PCI SSC text, because PCI DSS is copyrighted; read the requirement text in the group's licensed copy of v4.0.1. No newer PCI DSS version was found on the PCI SSC standards page as of 2026-09-26.
 2. **Law rows** cite text read on uscode.house.gov (15 U.S.C. 45, 45c), the eCFR as of 2026-09-23 (16 CFR Part 464, 28 CFR 36.302(f)), and the Florida Legislature's 2026 statutes. SOC 2 rows list criterion IDs only.
 3. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. **This is an author mapping.** No official NIST mapping from PCI DSS v4.0.1, Part 464, or the AICPA criteria to CSF 2.0 or SP 800-53 was used.
-4. **Evidence.** Interviews; document review (2025 ROC, 2026 service provider ROC and AOC, acquirer letters, client agreements, scope documents, SOC 2 report); configuration exports; a checkout scan of all tenants on 2026-07-21; card data discovery scans at the acquired theaters on 2026-07-22; hotel mailbox scans on 2026-07-20; channel audits of hotel rates; pricing logs for 40 sampled events; and P07 test results.
+4. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-074: configuration exports, the 2025 ROC, the 2026 service provider ROC and AOC, acquirer letters, client agreements, scope documents, and the SOC 2 report), gap analysis interviews with each division (EV-087 Live Venues, EV-088 Hotels and Restaurants, EV-089 Ticketing and Streaming), hotel network walks (EV-085), the Live Venues supplement v2026 (EV-086), the TVOP scope confirmation and QSA comments (EV-090), channel audits of hotel rates (EV-091), price display and on-sale captures (EV-092, EV-093), the acquired theater POS review (EV-094), the July segmentation test (EV-095), hotel mailbox scans on 2026-07-20 (EV-096, with the purge record EV-099), a checkout scan of all tenants on 2026-07-21 (EV-097), card data discovery scans at the acquired theaters on 2026-07-22 (EV-098), pricing logs for 40 sampled events and on-sale tests from the P10 fieldwork (EV-101, EV-102), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale.
 
 ## 4. Results
+### 4.0 Group gaps
+Seven gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 7 across this sample.
+1. **Checkout script control at platform scale.** The hosted checkout loads platform scripts and the tags tenants add through the tag manager. The script inventory and change-and-tamper detection cover the 14 platform scripts only; tenant-added tags (23 on group venue checkout pages, and tags on the payment pages of 641 client tenants) are not inventoried, authorized, or monitored (EV-049, EV-065, EV-097; P07 CM-8, SI-7).
+2. **Acquired theaters.** The 8 theaters acquired in 2025-10 still run the seller's ticketing system and a POS with about 410 non-P2PE terminals on flat networks, outside the group PCI scope document, the SOC, and SYS-G1. Migration is due 2027-03-31 (EV-044, EV-050, EV-094, EV-098; P07 SC-7).
+3. **Patron data platform purpose and minimization.** SYS-G4 combines ticketing, hotel, dining, and streaming profiles. Purposes and notices differ by division, the nightly hotel export copies identity document numbers that no use needs, and a TVOP feed brings all tenants' purchaser data for model training (EV-037, EV-038, EV-039, EV-055).
+4. **AI in pricing and access decisions.** Dynamic pricing and bot detection run for group venues and client tenants without group AI approval, accessible seating parity controls, or bias measurement, and the face-based express entry pilot started at 2 amphitheaters without a privacy review (EV-035, EV-072, EV-084; P10 EV-101 to EV-103).
+5. **Shared incident notification.** A TVOP incident triggers duties as a service provider to clients, as a merchant in three roles, card brand clocks, state breach laws, and SEC disclosure. The single notification matrix has not been exercised, and client notice terms vary (EV-025, EV-026, EV-063).
+6. **Common control inheritance.** Documented for the ticketing platform and Live Venues, but not for Hotels and Restaurants, whose PMS uses local accounts outside SYS-G1 (EV-017, EV-054, EV-058).
+7. **Division supplement drift.** The Hotels and Restaurants standards were last aligned to group policy in 2024 (EV-058).
+
 ### 4.1 Live Venues (`gap-analysis.csv`)
 | Area | Met | Partially met | Not met | N/A | Total |
 |---|---|---|---|---|---|
@@ -131,7 +143,7 @@ Of the 25 rows with gaps, 2 are High, 20 Moderate, and 3 Low. **Not met:** front
 Of the 24 rows with gaps, 3 are High, 17 Moderate, and 4 Low. The CDE itself is strong: tokenization, HSM key management, segmentation tested every six months, and covert channel detection are all met. **Not met:** 6.4.3 and 11.6.1 for every tenant's payment page. The scope document of 2026-06-30 treats tenant tags as the client's responsibility, but the platform serves the page and its content security policy allows the tags (TS-G26); the QSA has already questioned this. Client agreements are the other weak area: 212 pre-2024 agreements lack the 12.9.1 acknowledgment and CCPA service provider terms, and the training feed uses all tenants' purchaser data.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Tenant tags on payment pages (1) | All, and 1,150 clients | PCI DSS 6.4.3, 11.6.1, 12.5.2.1, 12.9.2 | High | Block tags in every checkout step; inventory, authorization, and tamper detection for all tenants; revised scope and responsibility matrix | Chief Technology Officer | 2026-11-30 |
 | 2 | Acquired theaters outside scope and controls (2) | LV | PCI DSS 1.3, 3.2, 5.2, 12.5 | High | Option B interim fix; migration to the TVOP | Group PCI program director | 2026-11-15 (interim); 2027-03-31 |

@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standard, the division use-case inventory, and the rules that apply to three priority use cases: dynamic ticket pricing (AI-001), bot detection and virtual queue (AI-002), and the face-based express entry pilot (AI-006) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (AI 600-1) for AI-007 and AI-009 only |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), fieldwork 2026-08-17 to 2026-08-28; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 application list and the TVOP module register (EV-035), module and platform configuration records (EV-038, EV-059, EV-072, EV-074), the face entry pilot records (EV-084), and the P10 fieldwork tests (EV-101 to EV-104). Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 | Related | P01 GR-04, GR-10, GR-11, GR-17, LV-003, LV-010, LV-011, TS-003, TS-011, TS-013, HO-008; P03 G-071, G-072, G-076, G-077, TS-G37; P06 POL-01 4.12 and 4.14, POL-04 4.6 and 4.7, POL-05 4.7; P07 POAM-020, POAM-022, POAM-026 |
 
 ## 1. GOVERN (group program)
@@ -22,7 +22,7 @@
 | Group General Counsel | Price display standard (16 CFR Part 464), ADA ticketing, client contract terms |
 | Group internal audit | Includes High-tier AI controls in the annual assessment from 2027 |
 
-### 1.2 Group AI Standard (adopted 2026-06, under POL-01 4.14)
+### 1.2 Group AI Standard (adopted 2026-06, under POL-01 4.14; EV-100)
 1. **Register before use.** Every AI use case that sets or changes prices, controls access to purchases or venues, uses patron, guest, or subscriber data, or interacts with customers is registered before deployment or material change.
 2. **Tier with the repository rubric** (`00_universal-framework/projects/step-10_P10_ai-governance/README.md`), **plus a group rule:** any use case that processes biometric data is High, whatever the rubric says. High tier: council approval, a pre-deployment impact assessment, bias testing, notice to affected people, and quarterly monitoring.
 3. **Price rules are product rules.** Any AI that sets a price must keep accessible seating at or below the price of other seats in the same section (28 CFR 36.302(f)(3)), respect contractual caps, and feed only total prices to displays (16 CFR 464.2).
@@ -31,7 +31,7 @@
 6. **Change gate.** A material change (new model, new input type, new decision role, new client offering) triggers re-assessment before release.
 7. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after AI-001, AI-002, and AI-006 were live. Dynamic pricing was offered to clients without the parity safeguard, the bot challenge's accessible alternative was off by default for new on-sales, and the face entry pilot started without a privacy review (scenario gap 4). All three are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after AI-001, AI-002, and AI-006 were live. Dynamic pricing was offered to clients without the parity safeguard, the bot challenge's accessible alternative was off by default for new on-sales, and the face entry pilot started without a privacy review (group gap 4). All three are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

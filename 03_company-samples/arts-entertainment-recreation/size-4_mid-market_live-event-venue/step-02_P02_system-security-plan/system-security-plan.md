@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-15
 
 ## 1. System Name and Identifier
-Ticketing and Venue Operations Platform (**TVOP**), identifier CSC-TVOP-01. The TVOP is the company's major system. It is the set of company-managed components and company configuration of vendor services that sell tickets, take ticket payments, admit attendees, and hold patron data (`../00_company-facts.md` section 3).
+Ticketing and Venue Operations Platform (**TVOP**), identifier CSC-TVOP-01. The TVOP is the company's major system. It is the set of company-managed components and company configuration of vendor services that sell tickets, take ticket payments, admit attendees, and hold patron data, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The TVOP supports every ticketing, entry, settlement, and patron communication process in the BIA (P05) at the Amphitheater, the Music Hall, and the Club, and from 2027-07-01 at the County Performing Arts Center (County PAC). It serves 600 employees, about 1,400 event-day workers, and about 1.1 million patron accounts, and it carries about 600,000 ticket orders a year under the ticketing merchant account (MID-T).
@@ -35,7 +35,7 @@ The food, beverage, and merchandise POS (SYS-03) is a separate vendor system und
 | Contract | County PAC management agreement (from 2027-07-01) | Contract | SOC 2 Type 1 and Type 2 commitments; 48-hour incident notice (P09) |
 | Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-09 | P06 | Policy basis for every control |
 
-Not applicable:
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)):
 - **Gaming rules in the vertical profile** (N71-R01 to N71-R03): the company has no casino, gaming, or wagering.
 - **COPPA** (N71-R06): the website, ticketing pages, and the mobile ticket app are not directed to children, and patron accounts require age 18 or older.
 - **SEC cybersecurity disclosure:** the company is privately held.
@@ -113,6 +113,8 @@ Information types are the closest analogs in NIST SP 800-60 Vol. 2 Rev. 1 (writt
 
 **PCI DSS scope relationship.** The cardholder data environment today includes the virtual terminal laptops and the corporate segment they share, plus the website systems that serve pages embedding the payment form (they can affect the security of the payment page). The planned move of the virtual terminal channel to validated P2PE devices removes the laptops and the corporate segment from the cardholder data environment. The scope document required by PCI DSS 12.5.2 is owned by the Security Manager (P03 row G-064).
 
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The counts are the systems of record's own totals: 520 laptops and PCs and 64 tablets from the endpoint console (EV-013), 180 scanners from the ticketing platform's device list (EV-014), 186 venue users from the ticketing user export (EV-006), 26 virtual terminal users from the payment partner portal (EV-010), and 18 box office P2PE devices from the payment partner's device list (EV-019).
+
 The diagram is in P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
@@ -175,7 +177,7 @@ The 4 Planned controls are CP-4 (restore testing), IR-3 (incident response testi
 | Hybrid | 33 | Ticketing vendor, payment partner, identity vendor, cloud provider, MSSP |
 | Common/Inherited | 11 | Identity vendor (for example IA-2(8), IA-11), cloud provider (CP-6), ticketing vendor (AC-12, IA-8), payment partner (SC-13), MSSP (IR-7) |
 
-The Partially implemented statements trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake and gap analysis observations cited in the `evidence` column of `control-implementation.csv` (for example EV-006, EV-027 and EV-068) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). The QSA performs the PCI DSS ROC from 2026-11-02 to 2026-11-13. Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -187,7 +189,7 @@ The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-
 - **Patrons.** Patrons create accounts on the ticketing vendor's platform under the vendor's sign-in controls. That is governed by the vendor and outside this boundary (P01 R-049 tracks patron account takeover).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

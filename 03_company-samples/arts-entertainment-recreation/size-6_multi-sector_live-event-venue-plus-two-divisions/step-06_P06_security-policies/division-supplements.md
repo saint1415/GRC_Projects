@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Live Venues | v2026 | 2026-06-20 (to the 2026 draft group policies) | Aligned; needs an acquisitions section for the 8 theaters (POL-01 4.9) and the tag rule (POL-01 4.13) | Update by 2026-12-30 (90 days after the effective date) |
-| Hotels and Restaurants | v2024 | 2024-04 | **Drifted** (scenario gap 7); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-013) |
+| Hotels and Restaurants | v2024 | 2024-04 | **Drifted** (group gap 7); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-013) |
 | Ticketing and Streaming | v2025 | 2025-10 | Aligned, but missing the client notice register and the tag rule for client tenants | Add by 2026-11-30 (POAM-004, POAM-006) |
 
 ## 3. What each supplement adds

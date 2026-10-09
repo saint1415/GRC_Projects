@@ -1,0 +1,32 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider A,"IaaS/PaaS: corporate hub, the TVOP with its CDE account and managed HSMs, SYS-G4, hotel cloud workloads",SYS-G3; SYS-D3; SYS-G4,Cardholder data; personal information,Customer agreement,SOC 2 report,EV-018; EV-034,Group
+V-02,Public cloud provider B,"TVOP disaster recovery, streaming, immutable backup vault",SYS-G3; SYS-D3; SYS-D4,Cardholder data (replicas); personal information,Customer agreement,SOC 2 report,EV-018; EV-034,Group
+V-03,Identity SaaS vendor,"Workforce SSO, MFA, PAM, identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 report,EV-006; EV-034,Group
+V-04,Customer identity service vendor,"Patron, client user, and subscriber sign-in",SYS-D3; SYS-D4,Patron credentials,Subscription terms,SOC 2 report,EV-067; EV-034; EV-062,Ticketing and Streaming. Carved out of the SOC 2 report
+V-05,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs,Subscription terms (tier 1),Annual tier 1 review,EV-011; EV-013; EV-033,Group
+V-06,Acquirers and gateways (3),Card authorization and settlement for all tenants and the three merchant roles,SYS-D3,Card data,Processing agreements,Current AOCs,EV-064; EV-034; EV-005,Group and all divisions
+V-07,P2PE solution provider,"Validated P2PE devices, device keys, and decryption",SYS-D1-P2PE; SYS-D2-RPOS,Card data (encrypted at the device),P2PE solution agreement with a 4-hour restoration term,Current AOC,EV-045; EV-034,Live Venues; Hotels and Restaurants. One provider for all integrated venues
+V-08,CDN provider,"Content delivery for event pages, checkout, and streaming",SYS-D3; SYS-D4,Page content; video,Service terms,Current AOC,EV-034; EV-018,Ticketing and Streaming
+V-09,HSM provider (managed HSMs in provider A),Hardware security modules for the token vault,SYS-D3,Token vault keys,Provider terms,Named on the TVOP provider list,EV-033; EV-021,Ticketing and Streaming
+V-10,Tag management vendor,Tag container that tenants load on event and checkout pages,SYS-D3,Code that runs in patrons' browsers on payment pages,Subscription terms without security terms,None on file,EV-033; EV-034; EV-065,Ticketing and Streaming. Not on the TVOP provider list
+V-11,Other script vendors (3),Analytics and advertising scripts on checkout pages,SYS-D3,Code that runs in patrons' browsers on payment pages,Contracts without security terms,None on file,EV-033; EV-034,Ticketing and Streaming. Not on the TVOP provider list
+V-12,Hotel PMS vendor,Property management system (SaaS),SYS-D2-PMS,Card data; identity documents; reservations,Service agreement (90-day log retention; 15-minute RPO),Current AOC,EV-055; EV-034,Hotels and Restaurants
+V-13,Hotel channel manager,Online travel agency and partner channel connections,SYS-D2-CRS,Virtual cards; reservations; rates,Contract with a breach notice clause,No AOC on file,EV-034; EV-033,Hotels and Restaurants. Not on the provider list
+V-14,Booking engine vendor,Hotel online booking,SYS-D2-CRS,Card data; reservations,Service terms,Current AOC,EV-034; EV-059,Hotels and Restaurants
+V-15,Hotel payment gateway,Front desk terminal authorization,SYS-D2-FD,Card data,Processing agreement,Current AOC,EV-034; EV-056,Hotels and Restaurants
+V-16,Revenue management SaaS vendor,Rate forecasting and publishing (AI-003),SYS-D2-CRS,Aggregate booking data,Subscription terms,None on file,EV-035; EV-059,Hotels and Restaurants
+V-17,Door lock vendors,Door lock servers and key encoders,SYS-D2-LOCK,Key encoding data,Support contracts,None on file,EV-014; EV-033,Hotels and Restaurants
+V-18,Guest Wi-Fi vendor,Guest internet and in-room services,SYS-D2-WIFI,Guest traffic,Managed service agreement,None on file,EV-056; EV-033,Hotels and Restaurants
+V-19,Venue security integrators,CCTV and door access support,SYS-D1-SEC,Video; access logs,Integrator contracts (persistent tunnels at 6 venues),None on file,EV-047,Live Venues
+V-20,Staffing contractors,"About 22,000 event-day workers (stands, doors, security)",SYS-D1-P2PE; SYS-D1-SCAN,Card devices and patron contact at stands and doors,Staffing agreements,None on file,EV-002; EV-031,Live Venues
+V-21,Seller's legacy ticketing vendor,Ticketing SaaS for the 8 acquired theaters,SYS-D1-ACQ,Ticket orders; patron data; card data,"Contract assigned at acquisition, without security terms",No AOC reviewed,EV-050; EV-044,Live Venues. Not on the TPSP list
+V-22,Legacy POS vendor,Integrated POS at the acquired theaters,SYS-D1-ACQ,Card data (stored),Contract assigned at acquisition,Vendor statement only,EV-051; EV-050,Live Venues
+V-23,Face matching vendor,Face-based express entry pilot (AI-006),AI-006,Face templates; ticket data,Contract with no template retention period stated,None on file,EV-084; EV-103,Live Venues. Found in P01 fieldwork
+V-24,Third-party model provider (hosted large language model service),Generative support assistant (AI-007),AI-007,Patron questions; order details,"No-training, zero-retention terms",None on file,EV-035,Ticketing and Streaming
+V-25,Enterprise generative AI vendor,Workforce assistant pilot (AI-009),AI-009,Internal and Public data,No-training terms,None on file,EV-035,Group
+V-26,Software testing contractor,Testing staff in the United States and India,SYS-D3-CI,Synthetic test data only,Contract barring access from countries of concern,Due diligence file,EV-041,Ticketing and Streaming
+V-27,"Assessors and responders (QSA firm, SOC 2 service auditor, independent testing firm, forensic retainer)","ROCs, SOC 2 report, penetration and segmentation tests, incident response",SYS-D3; SYS-G2,As needed for each engagement,Engagement letters; retainer agreement,n/a,EV-061; EV-062; EV-015; EV-025,Group
+V-28,Carriers,WAN links and cellular failover,NET-WAN,Encrypted traffic,Carrier contracts,None on file,EV-020,Group
+V-29,ERP vendor; filing agent,Finance system; SEC filing agent,SYS-ERP,Financial data,Subscription and service terms,None on file,EV-003; EV-033,Group
+V-30,HR SaaS vendor; payroll provider; background check vendor,"HR, payroll, and screening",SYS-HR,Workforce personal information,Service agreements,None on file,EV-002; EV-032,Group
+V-31,Support tool vendor; source hosting vendor,Client support desk; TVOP source hosting and build pipeline,SYS-D3; SYS-D3-CI,Client contact data; source code,Subscription terms,None on file,EV-063; EV-070; EV-033,Ticketing and Streaming

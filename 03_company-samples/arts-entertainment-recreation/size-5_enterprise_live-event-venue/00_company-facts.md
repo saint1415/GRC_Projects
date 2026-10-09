@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Arts, Entertainment, and Recreation | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a law, regulation, standard, or card brand rule, the citation is given. Facts about the acquirer, the processors, the merchant agreement, clients, and vendors are fictional.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a law, regulation, standard, or card brand rule, the citation is given. Facts about the acquirer, the processors, the merchant agreement, clients, and vendors are fictional.
 
 ## 1. The organization
 | Item | Fact |
@@ -12,11 +12,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce | 12,000 employees: about 4,100 full-time (corporate, ticketing technology, venue management) and about 7,900 part-time and seasonal event staff (box office, ushers, food and beverage, guest services). Contracted security and crowd management staff are not employees |
 | Revenue | About $4.8 billion a year (fictional): event promotion and own-event ticket sales $2.4 billion; ticketing service fees $0.9 billion; food, beverage, and merchandise $0.8 billion; sponsorship and premium seating $0.5 billion; venue management fees and other $0.2 billion. Not small under the SBA standard for NAICS 711310 ($40.0 million; 13 CFR 121.201) |
 | Patrons | About 41 million patron accounts on the platform, about 16 million active in the last 24 months, and about 11 million active mobile app installs. Accounts require age 18 or older |
-| Card acceptance and PCI DSS | **Merchant:** about 49 million card transactions a year for the company's own events and venues (about 18 million ticket orders and about 31 million food, beverage, and merchandise sales); Visa is about 52% (about 25 million). **Service provider:** the platform's payment service transmits card data for about 15 million client ticket orders a year (Visa about 7.8 million), for which client venues are the merchants of record. Visa defines a Level 1 merchant as one with more than 6 million Visa transactions a year and a Level 1 service provider as one that stores, processes, or transmits more than 300,000 Visa transactions a year (Visa Account Information Security program page and *What To Do If Compromised* v10.0, effective 2026-06-25). The company is therefore a **Level 1 merchant** (annual Report on Compliance by a QSA and an attestation of compliance) and a **Level 1 service provider** (annual on-site assessment and an AOC signed by the company and the QSA, submitted to Visa). PCI DSS v4.0.1 applies by contract; it is not law |
-| Payment design | Online and app checkouts (own brand and client white-label sites) collect card data in payment fields served by the company's **payment service** from a dedicated payment domain. The payment service sends card data to a third-party tokenization and vault provider and to two processors, and keeps only tokens and truncated card numbers. Box office and stand sales use a PCI-listed validated P2PE solution at 30 venues; the 6 acquired venues still use legacy card readers on Windows POS terminals. Phone sales are keyed by contact center agents into an agent payment page |
+| Card acceptance and PCI DSS | **Merchant:** about 49 million card transactions a year for the company's own events and venues (about 18 million ticket orders and about 31 million food, beverage, and merchandise sales); Visa is about 52% (about 25 million). **Service provider:** the platform's payment service transmits card data for about 15 million client ticket orders a year (Visa about 7.8 million), for which client venues are the merchants of record. Visa defines a Level 1 merchant as one with more than 6 million Visa transactions a year and a Level 1 service provider as one that stores, processes, or transmits more than 300,000 Visa transactions a year (Visa Account Information Security program page and *What To Do If Compromised* v10.0, effective 2026-06-25). The company is therefore a **Level 1 merchant** (annual Report on Compliance by a QSA and an attestation of compliance) and a **Level 1 service provider** (annual on-site assessment and an AOC signed by the company and the QSA, submitted to Visa), determined in the intake obligations register (N71-R04) from the card volume report (EV-051). PCI DSS v4.0.1 applies by contract; it is not law |
+| Payment design | Online and app checkouts (own brand and client white-label sites) collect card data in payment fields served by the company's **payment service** from a dedicated payment domain. The payment service sends card data to a third-party tokenization and vault provider and to two processors, and keeps only tokens and truncated card numbers. Box office and stand sales use a PCI-listed validated P2PE solution at 30 venues; the 6 acquired venues still use legacy card readers on Windows POS terminals (EV-053). Phone sales are keyed by contact center agents into an agent payment page |
 | SEC status | Publicly traded; files Form 10-K (fiscal year ends December 31). Form 8-K Item 1.05 and Regulation S-K Item 106 apply. SOX IT general controls are tested annually |
-| Not in scope | **Gaming** (Nevada Reg. 5.260, NIGC MICS, casino BSA/AML): the company runs no casino, gaming, or wagering. **COPPA:** websites and the app are general audience and accounts require age 18 or older. **HIPAA:** first aid is provided by contracted ambulance services. **Federal contracts:** none |
-| Added at this size | Level 1 merchant and Level 1 service provider PCI DSS validation; SEC cybersecurity disclosure; SOX IT general controls; two service lines offered to business clients (P09); growth by acquisition (a 6-venue regional operator acquired on 2026-02-02) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): **Gaming** (Nevada Reg. 5.260, NIGC MICS, casino BSA/AML): the company runs no casino, gaming, or wagering. **COPPA:** websites and the app are general audience and accounts require age 18 or older. **HIPAA:** first aid is provided by contracted ambulance services. **Federal contracts:** none (EV-059) |
+| Added at this size | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): Level 1 merchant and Level 1 service provider PCI DSS validation; SEC cybersecurity disclosure; SOX IT general controls; two service lines offered to business clients (P09); growth by acquisition (a 6-venue regional operator acquired on 2026-02-02) |
 
 ## 2. People (role titles only)
 | Role | Duties |
@@ -33,48 +33,30 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | Form 8-K materiality decisions (General Counsel chairs) |
 
 ## 3. Systems
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
 | SYS-01 | Ticketing platform (built in-house, cloud-native, on Cloud provider A) | Event and seat-map setup, inventory, web and white-label checkout, patron accounts, mobile app back end, digital tickets and access control scanning, transfer and resale, **dynamic pricing service**, **bot defense and virtual queue**. About 9,400 client user accounts at about 340 clients |
 | SYS-02 | Payment service (in-house, separate cardholder data environment accounts on Cloud provider A) | Payment fields, agent payment page, tokenization and vault provider, two processors. Stores tokens and truncated card numbers only |
-| SYS-03 | Venue point of sale | Box office devices and food, beverage, and merchandise POS. Validated P2PE at 30 venues; legacy non-P2PE readers on Windows POS terminals at the 6 acquired venues |
-| SYS-04 | Identity platform (SSO, MFA, privileged access management, identity governance) | Workforce identities; the 6 acquired venues are still on a legacy directory |
+| SYS-03 | Venue point of sale | Box office devices and food, beverage, and merchandise POS. Validated P2PE at 30 venues; legacy non-P2PE readers on Windows POS terminals at the 6 acquired venues (EV-011, EV-053) |
+| SYS-04 | Identity platform (SSO, MFA, privileged access management, identity governance) | Workforce identities; the 6 acquired venues are still on a legacy directory (EV-001, EV-006) |
 | SYS-05 | Multi-cloud estate (two public cloud providers, vendor-agnostic) plus 2 colocation data centers | Cloud A: ticketing and payments. Cloud B: data warehouse, marketing customer data platform, analytics and AI services. DC-1 (Florida) and DC-2 (Georgia): network core, legacy venue systems, offline backup copies |
 | SYS-06 | Venue networks and operational technology | SD-WAN to 36 venues; temporary festival networks; public Wi-Fi; building management, turnstile and access control, and CCTV (about 8,600 cameras) |
 | SYS-07 | Endpoints | About 13,000 workstations and laptops, about 7,500 handheld scanners and POS handhelds, about 2,000 managed phones and tablets |
 | SYS-08 | ERP, payroll, and human capital management (SaaS) | SOX-relevant |
 | SYS-09 | Contact centers | In-house center in Florida (about 380 seats) and an outsourced overflow center (about 220 seats) on a cloud contact center platform with call recording |
 | SYS-10 | Marketing technology | Email and SMS services, tag manager, advertising pixels, customer data platform (Cloud B) |
-| SYS-11 | Third parties | About 1,450 vendors; 230 handle patron, card, or employee data |
-| SYS-12 | AI portfolio (13 use cases) | Governed by an AI governance committee formed in 2025 |
+| SYS-11 | Third parties | About 1,450 vendors; 230 handle patron, card, or employee data (EV-036) |
+| SYS-12 | AI portfolio (13 use cases) | Governed by an AI governance committee formed in 2025 (EV-055) |
 
 **SSP system (P02):** the *Ticketing and Venue Operations Platform (TVOP)*: the ticketing platform (SYS-01) and the payment service (SYS-02) on Cloud provider A, the box office and access control channel at all 36 venues (box office devices in SYS-03 and scanners in SYS-07), and the contact center agent payment page (SYS-09), inheriting common controls from the enterprise identity, cloud, security operations, network, endpoint, facilities, human resources, third-party risk, and GRC programs.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
-**In place today:**
-- A security program aligned to CSF 2.0 and integrated with ERM (NIST IR 8286)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- 24x7 SOC with an MSSP for overflow
-- Privileged access management and phishing-resistant MFA for administrators
-- Quarterly access certification for the cardholder data environment
-- Immutable backups and annual disaster recovery tests for tier-1 systems
-- 2025 PCI DSS Reports on Compliance (merchant and service provider) with a Compliant result; passing quarterly ASV scans
-- Tokenization by design: no stored card numbers in platform databases
-- Validated P2PE at 30 of 36 venues
-- Edge bot management and a virtual queue for high-demand on-sales
-- SOC 2 Type 2 report for the white-label ticketing service line (SL-1) since 2025
-- Tiered third-party risk program
-- Item 106 disclosure in the Form 10-K and a standing disclosure committee
-
-**Targeted gaps:**
-1. **Acquired venues.** The 6 venues acquired on 2026-02-02 (AV-01 to AV-06) run legacy non-P2PE card readers and Windows POS terminals on flat networks with local administrator accounts and a legacy directory. They entered the merchant cardholder data environment on day one. Migration is due 2027-03-31.
-2. **Payment page scripts on client templates.** Script authorization and change detection (PCI DSS 6.4.3 and 11.6.1) cover the company's own-brand checkout, but white-label client templates let clients load their own tag containers on the checkout page shell.
-3. **Card numbers in unexpected places.** Full card numbers sit in contact center case notes and in call recordings at the outsourced overflow contact center, which has no keypad (DTMF) masking.
-4. **Client and service accounts.** MFA is optional for client users of the platform, client integration API keys are long-lived, and data warehouse service accounts use passwords without network restrictions.
-5. **Third parties.** 58 of 230 data-handling vendors are overdue for reassessment; marketing tag vendors are outside the third-party risk program; the outsourced contact center's PCI DSS AOC has expired.
-6. **Venue operational technology.** Building management, turnstile controllers, and CCTV share network segments with venue corporate networks at 14 venues, and the venue OT inventory is about 70% complete.
-7. **AI.** 13 AI use cases, but only 8 have completed AI governance committee review. Dynamic pricing has not been tested for accessible seating price parity at every venue, and the bot challenge has not been tested with assistive technology.
-8. **Materiality for service-provider incidents.** The materiality playbook does not cover incidents where the company is a service provider to client venues, and the disclosure committee has not exercised a payment card breach scenario.
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across the business units, the 2025 PCI DSS Reports on Compliance and QSA files, SOX and Internal Audit records, contracts with service providers, clients and public owners, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against PCI DSS v4.0.1 and the other applicable rules** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -88,12 +70,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and regulatory gap analysis (including the PCI DSS pre-assessment) |
-| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line) |
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | BIA interviews and dependency review |
+| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and regulatory gap analysis (including the PCI DSS pre-assessment; gap analysis evidence sampling completed 2026-08-14) |
+| 2026-06-22 to 2026-07-10 | 2026 revision of POL-01 to POL-05 drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line): operating tests of controls in force under the current policy set; design review of the draft 2026 policy revisions |
 | 2026-08-17 to 2026-08-28 | SOC 2 readiness review and AI governance committee review |
-| 2026-09-10 | Results to the audit committee and the risk committee of the board |
+| 2026-09-10 | Results to the audit committee and the risk committee of the board; 2026 policy revisions approved (effective 2026-10-01) |
 | 2026-10-19 to 2026-11-25 | QSA fieldwork for the 2026 merchant and service provider Reports on Compliance (planned) |
 | 2026-12-31 | 2026 Reports on Compliance and AOCs due to the acquirer and Visa (fictional dates) |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 policy revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
@@ -129,24 +115,24 @@ These facts were added while building the deliverables. They do not change secti
 
 **Disclosure committee (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Last tabletop 2025-10-21 (ransomware).
 
-**Acquired venues.** AV-01 to AV-06 are 4 theaters and 2 clubs in Georgia, Tennessee, and North Carolina, acquired 2026-02-02 (about 640 employees). They sell online through the platform since 2026-04 but keep about 150 legacy POS terminals and card readers (31 readers were missing from any inventory), local POS servers backed up nightly to local disks, single internet carriers, legacy site VPNs, and a legacy directory managed by a local IT support firm. AV employees move to enterprise payroll on 2026-12-31. A reachability test at AV-03 reached POS terminals from an office PC. 7 of 10 AV terminations in a 60-item sample were disabled late; 23 stale AV accounts were found.
+**Acquired venues.** AV-01 to AV-06 are 4 theaters and 2 clubs in Georgia, Tennessee, and North Carolina, acquired 2026-02-02 (about 640 employees). They sell online through the platform since 2026-04 but keep about 150 legacy POS terminals and card readers (31 readers were missing from any inventory), local POS servers backed up nightly to local disks, single internet carriers, legacy site VPNs, and a legacy directory managed by a local IT support firm (EV-053, EV-006; missing readers EV-087, EV-CM-8). AV employees move to enterprise payroll on 2026-12-31 (EV-005). A reachability test at AV-03 reached POS terminals from an office PC (EV-SC-7). 7 of 10 AV terminations in a 60-item sample were disabled late; 23 stale AV accounts were found (EV-AC-2).
 
-**Platform and payments.** About 140 microservices; about 3,900 open-source dependencies; about 1,100 engineers; about 2,900 workforce TVOP accounts; 312 privileged and CDE accounts; about 2,900 P2PE devices (about 430 at box offices); about 7,500 scanners; about 900 turnstile controllers and access control devices. About 340 client templates, 212 with sales in the last 30 days; 61 scripts on client checkout templates, 14 unauthorized on 37 templates; 41 templates show face value before the total price. Client users: about 9,400, 38% with MFA, 1,130 inactive over 90 days, 14 client organizations sharing logins; 127 client API keys older than 12 months. The tokenization provider's AOC is dated 2026-03. The acquirer letter of 2026-02-15 confirms the company is not a designated entity. The 2025 ROCs (merchant and service provider) were Compliant. Service provider scope was last confirmed in 2025-10.
+**Platform and payments.** About 140 microservices; about 3,900 open-source dependencies; about 1,100 engineers (EV-066); about 2,900 workforce TVOP accounts (EV-001); 312 privileged and CDE accounts (EV-003); about 2,900 P2PE devices (about 430 at box offices); about 7,500 scanners; about 900 turnstile controllers and access control devices (EV-011). About 340 client templates, 212 with sales in the last 30 days; 61 scripts on client checkout templates, 14 unauthorized on 37 templates (EV-084); 41 templates show face value before the total price (EV-090). Client users: about 9,400, 38% with MFA (EV-007), 1,130 inactive over 90 days (EV-AC-2(3)), 14 client organizations sharing logins (EV-IA-8); 127 client API keys older than 12 months (EV-008, EV-085). The tokenization provider's AOC is dated 2026-03 (EV-040). The acquirer letter of 2026-02-15 confirms the company is not a designated entity (EV-058). The 2025 ROCs (merchant and service provider) were Compliant (EV-027). Service provider scope was last confirmed in 2025-10 (EV-029).
 
-**Contact centers.** About 6.5 million contacts a year; the outsourced overflow center handles about 35% with about 220 agents (40 without training records). Data discovery on 2026-07-08 found about 41,000 full card numbers in about 6.5 million case notes; 22 of 60 sampled overflow recordings (from about 1.1 million in 12 months) captured spoken card numbers and security codes. The overflow center's PCI DSS AOC expired on 2026-05-31.
+**Contact centers.** About 6.5 million contacts a year; the outsourced overflow center handles about 35% with about 220 agents (EV-033; 40 without training records, EV-086). Data discovery on 2026-07-08 found about 41,000 full card numbers in about 6.5 million case notes (EV-082); 22 of 60 sampled overflow recordings (from about 1.1 million in 12 months) captured spoken card numbers and security codes (EV-083). The overflow center's PCI DSS AOC expired on 2026-05-31 (EV-036, EV-086).
 
-**Data warehouse.** Holds about 41 million patron records with 10 years of order history against a 7-year schedule (about 6.3 million records past retention) and approximate app check-in locations for about 2.3 million patrons. 14 service accounts use passwords without key-pair authentication or network policies.
+**Data warehouse.** Holds about 41 million patron records with 10 years of order history against a 7-year schedule (EV-034, EV-035; about 6.3 million records past retention, EV-091) and approximate app check-in locations for about 2.3 million patrons. 14 service accounts use passwords without key-pair authentication or network policies (EV-034).
 
-**Tests and operations (2025-2026).** Regional failover test 2026-04-25 (3.2 hours against a 2-hour RTO); processor routing failover 2026-03-11; tier-1 DR test 2026-05-16; Cloud B test 2026-06-20; offline scanning drills at 21 of 36 venues (2026-05); penetration test 2026-03; segmentation tests 2025-11 and 2026-05. In 2026 H1: 241 security incidents (9 at AV venues and festivals), 1,940 PAM elevations to CDE accounts, 212 payment service changes (31 emergency), 1,904 critical and high findings, 248 security patches, 1,236 terminations with TVOP access (88 at AV venues), and 1,240 privacy rights requests. 58 of 230 data-handling vendors are overdue for reassessment; 31 service providers have PCI DSS impact; 9 marketing tag vendors run scripts on checkout templates.
+**Tests and operations (2025-2026).** Regional failover test 2026-04-25 (3.2 hours against a 2-hour RTO); processor routing failover 2026-03-11; tier-1 DR test 2026-05-16 (EV-022); Cloud B test 2026-06-20 (EV-077); offline scanning drills at 21 of 36 venues (2026-05; EV-079); penetration test 2026-03; segmentation tests 2025-11 and 2026-05 (EV-016). In 2026 H1 (P07 and P03 populations): 241 security incidents (9 at AV venues and festivals; EV-IR-4), 1,940 PAM elevations to CDE accounts (EV-AC-6), 212 payment service changes (31 emergency; EV-CM-3), 1,904 critical and high findings (EV-RA-5), 248 security patches (EV-SI-2), 1,236 terminations with TVOP access (88 at AV venues; EV-AC-2), and 1,240 privacy rights requests (EV-086). 58 of 230 data-handling vendors are overdue for reassessment; 31 service providers have PCI DSS impact (EV-036); 9 marketing tag vendors run scripts on checkout templates (EV-084).
 
-**Venue OT.** OT shares segments with corporate networks at 14 venues (3 of them SL-2 managed venues); 4 building management integrators have remote access outside PAM at 9 venues. P07 testing (reported 2026-08-12) found vendor default credentials on 14 turnstile controllers at 2 venues and a building management interface at a third venue.
+**Venue OT.** OT shares segments with corporate networks at 14 venues (3 of them SL-2 managed venues; EV-012); 4 building management integrators have remote access outside PAM at 9 venues (EV-013). P07 testing (reported 2026-08-12; EV-IA-5) found vendor default credentials on 14 turnstile controllers at 2 venues and a building management interface at a third venue.
 
-**Contract terms (fictional).** Acquirer notice within 24 hours of a suspected card compromise; notice to SL-1 clients within 72 hours of suspicion; clients notify the company within 24 hours; notice to SL-2 owners within 72 hours.
+**Contract terms (fictional).** Acquirer notice within 24 hours of a suspected card compromise (EV-058); notice to SL-1 clients within 72 hours of suspicion; clients notify the company within 24 hours; notice to SL-2 owners within 72 hours (EV-039).
 
-**Risk program.** Board risk appetite approved 2026-02; 8 enterprise risks (ER-01 to ER-08) with tolerance thresholds (P01 section 1); about $7.2 million of treatment funded for 2026 Q4 to 2027 Q2. Policy exceptions EXC-2026-011, -017, -020, and -023 (P06).
+**Risk program.** Board risk appetite approved 2026-02; 8 enterprise risks (ER-01 to ER-08) with tolerance thresholds (EV-025, EV-026; P01 section 1); about $7.2 million of treatment funded for 2026 Q4 to 2027 Q2. Policy exceptions EXC-2026-011, -017, -020, and -023 (P06).
 
-**AI portfolio.** 13 use cases; AI governance committee formed 2025 and chaired by the Vice President, Data and AI. AI-001 prices reserved-seat events at 11 own venues (about 1,900 events in 2026 H1) and for 52 SL-1 clients that opted in. AI-002 protected 12 on-sales in the 2026 H1 sample (about 2.4 million queue entrants, about 610,000 sessions blocked and 380,000 challenged). AI-005 (facial recognition entry pilot at 2 venues) paused 2026-07-31; AI-006 crowd analytics pilot at 3 arenas; AI-010 applicant ranking disabled 2026-06-30. The support assistant (AI-007) gave 3 incorrect answers in a 200-answer sample.
+**AI portfolio.** 13 use cases; AI governance committee formed 2025 and chaired by the Vice President, Data and AI (EV-055). AI-001 prices reserved-seat events at 11 own venues (about 1,900 events in 2026 H1) and for 52 SL-1 clients that opted in (EV-055, EV-089). AI-002 protected 12 on-sales in the 2026 H1 sample (about 2.4 million queue entrants, about 610,000 sessions blocked and 380,000 challenged; EV-089). AI-005 (facial recognition entry pilot at 2 venues) paused 2026-07-31; AI-006 crowd analytics pilot at 3 arenas; AI-010 applicant ranking disabled 2026-06-30. The support assistant (AI-007) gave 3 incorrect answers in a 200-answer sample (EV-093).
 
-**SOC 2.** SL-1 reports for 2025 (no exceptions) and 2026; the 2027 period adds Processing Integrity and Privacy. SL-2's first Type 2 period is 2027-04-01 to 2027-09-30, with the report expected 2027-11. The 8 managed venues have an owner portal and a settlement application on Cloud provider B.
+**SOC 2.** SL-1 reports for 2025 (no exceptions; EV-041) and 2026; the 2027 period adds Processing Integrity and Privacy. SL-2's first Type 2 period is 2027-04-01 to 2027-09-30, with the report expected 2027-11. The 8 managed venues have an owner portal and a settlement application on Cloud provider B.
 
 **Worked incident example (P08, fictional future dates).** Tamper alert on 37 client templates on 2027-03-02; warehouse export of 9.2 million patron records on 2027-02-20 found on 2027-03-03; materiality determined 2027-03-04.

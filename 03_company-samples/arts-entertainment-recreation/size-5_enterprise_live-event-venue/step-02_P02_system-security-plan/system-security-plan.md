@@ -35,7 +35,7 @@ Users: about 2,900 workforce accounts (platform engineering, ticketing operation
 | Contract | Client agreements (SL-1); SOC 2 Type 2 | P09 | Availability, confidentiality, processing integrity, and privacy commitments to clients |
 | Internal | POL-01 to POL-05 and standards | P06 | Enterprise policy hierarchy |
 
-Not applicable: N71-R01 to N71-R03 (no gaming, wagering, or casino operations); N71-R06 COPPA (general-audience sites and app; accounts require age 18 or older). P03 section 1 records the reasoning.
+Not applicable: N71-R01 to N71-R03 (no gaming, wagering, or casino operations); N71-R06 COPPA (general-audience sites and app; accounts require age 18 or older). The intake [obligations register](../step-00_P00_intake/obligations-register.csv) and P03 section 1 record the reasoning.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -82,6 +82,8 @@ Information types are described in the company's terms, with NIST SP 800-60 Vol.
 **Documented controls.** `control-implementation.csv` documents **142 controls**: 137 from the Moderate baseline and 5 PCI DSS-driven High-baseline supplements. The remaining Moderate-baseline controls and enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are documented in the enterprise privacy program. The `regulatory_driver` column maps each control to PCI DSS requirements (author mapping; no official mapping from PCI DSS v4.0.1 to SP 800-53 was used).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 and its components, SYS-02, SYS-03, SYS-03-AV and the scanners in SYS-01-ACS) and the prior SSP version 1.1 (EV-064), with PCI DSS scope taken from the 2026 scope document (EV-029).
+
 **Inside the boundary:** the ticketing platform workload accounts and the CDE accounts in Cloud provider A (both regions); the checkout and client templates; the admin and client consoles; the access control service, scanners, and turnstile integrations; box office devices at all 36 venues (P2PE devices at 30 venues; legacy POS terminals and readers at AV-01 to AV-06); and the contact center agent payment page.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -91,7 +93,7 @@ Information types are described in the company's terms, with NIST SP 800-60 Vol.
 - Tokenization and vault provider, two processors, edge and bot management provider, P2PE solution provider (service providers with their own AOCs)
 - Data warehouse and customer data platform (Cloud provider B), contact center platform, outsourced overflow contact center, client systems
 
-**PCI DSS scope note.** The P2PE devices at 30 venues reduce the scope of those box offices to the device controls in the P2PE instruction manual. The AV-01 to AV-06 terminals and their flat networks are in full scope until POAM-001 closes. The data warehouse is out of CDE scope only while it holds no card numbers; the 2026 data discovery confirmed none there, but found card numbers in contact center case notes (POAM-003).
+**PCI DSS scope note.** The P2PE devices at 30 venues reduce the scope of those box offices to the device controls in the P2PE instruction manual. The AV-01 to AV-06 terminals and their flat networks are in full scope until POAM-001 closes. The data warehouse is out of CDE scope only while it holds no card numbers; the 2026 data discovery confirmed none there, but found card numbers in contact center case notes (EV-082; POAM-003).
 
 ```mermaid
 flowchart LR
@@ -209,7 +211,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Patrons:** email-verified accounts with risk-based step-up (one-time codes) for new devices, payment method changes, and ticket transfers. Patrons never reach the consoles.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis and PCI DSS pre-assessment (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ticketing platform breach runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 and AI-002 (P10), TVOP contingency plan v3, PCI DSS scope document 2026, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis and PCI DSS pre-assessment (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ticketing platform breach runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 and AI-002 (P10), TVOP contingency plan v3 (EV-023), PCI DSS scope document 2026 (EV-029), enterprise common control catalog (EV-063). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

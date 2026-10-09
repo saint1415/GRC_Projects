@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the General Manager (Moderate and below) and the majority owner (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Ticketing and Venue Operations Platform (TVOP) defined in the SSP (P02), both merchant accounts (MID-T and MID-F), the business processes in the BIA (P05), and the vendors that hold patron or card data for the company (`../00_company-facts.md` section 3).
+**Scope.** The Ticketing and Venue Operations Platform (TVOP) defined in the SSP (P02), both merchant accounts (MID-T and MID-F), the business processes in the BIA (P05), and the vendors that hold patron or card data for the company ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the gap analysis (P03), interviews with the Director of Ticketing, Controller, Marketing Director, and Operations Director, and observation of an on-sale (2026-07-17) and a show night (2026-07-18).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews with the Director of Ticketing, Controller, Marketing Director, and Operations Director (EV-050), and observation of an on-sale (2026-07-17, EV-052) and a show night (2026-07-18, EV-053). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, module settings, the document request, contracts, observations and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, contractual and regulatory, attendee safety, reputation).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -52,7 +52,7 @@ R-005 is a business risk rather than a security event, but it is rated High beca
 
 R-021 is not a card data risk. It is included because a venue pays artists and promoters large settlements after each show, and those payment instructions arrive by email.
 
-R-019 was added on 2026-08-07 after control assessment testing (P07) found the integrator's default passwords on the CCTV recorder and the door access controller.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-019 was added on 2026-08-07 after testing found the integrator's default passwords on the CCTV recorder and the door access controller (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 budget, $41,000, fictional):**

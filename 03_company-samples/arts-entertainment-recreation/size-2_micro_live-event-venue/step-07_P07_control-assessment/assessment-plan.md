@@ -37,6 +37,17 @@ Micro tier scope: 10-15 controls. **13 controls, 91 determination statements.** 
   - a second browser capture of an event page, compared with the P03 capture of 2026-07-21
   - a repeat card-number search of the mailboxes and the back-office PC
 
+### What each test could show
+The new policies (P06) were drafted from 2026-07-27 to 2026-08-07 and were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested on records, samples or live systems | 40 |
+| Design | The control exists only in a draft policy (POL-02 B.9 password rules; POL-03 4.2 incident reporting); its design was reviewed. Operation is tested at the 2027-02 follow-up | 3 |
+| Not implemented | Nothing existed to test | 48 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the ticketing accounts were compared with the 7 employees and the March 2026 departure in EV-001 and the 9 accounts in EV-004, and the computers come from the MSP device list in EV-019).
+
 ### MSP evidence requested
 The MSP operates most technical controls, so evidence came from it. Requested on 2026-08-03 with a one-week deadline:
 

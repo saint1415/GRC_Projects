@@ -4,14 +4,14 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (live event venue operator with ticketing; private equity-backed; three Florida venues) |
 | Tier / Vertical | Mid-Market / Arts, Entertainment, and Recreation |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. The registry use case (dynamic ticket pricing and bot detection) is the core: AI-001 and AI-002 |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the department heads survey, the identity provider app list, the accounts payable vendor master and the settings of the ticketing platform, VMS and marketing platform (EV-058, EV-042, EV-007, EV-017, EV-062). The survey reached department heads, not individual staff, so whether staff use general-purpose AI assistants outside these tools was not established; this assessment treats it as unknown. The registry use case (dynamic ticket pricing and bot detection) is the core: AI-001 and AI-002 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook, with the Generative AI Profile (NIST AI 600-1) for AI-003 and AI-005 |
 | Assessors / date | vCISO (lead) and Security Manager (security), General Counsel (privacy and legal), Vice President of Ticketing and Vice President of Marketing and Digital (business), Director of Safety and Security (AI-004), 2026-08-24 to 2026-09-04 |
 | Decision | Chief Operating Officer, 2026-09-15; the High-tier decision (AI-004) noted by the CEO |
 | Related | P01 R-014 to R-017, R-029 to R-033; P03 G-075, G-076, G-077, G-081, G-083, G-084; P06 POL-01 4.9, 4.11, 4.14, POL-04 4.6, 4.9, POL-05 4.8, STD-05; P07 POAM-026, POAM-027; P08 runbooks; P09 VEN-09 |
 
 ## 1. Summary
-All five AI uses were switched on by departments without a security, privacy, or legal review (gap 12). None is out of control, but four need conditions before they grow:
+All five AI uses were switched on by departments without a security, privacy, or legal review (EV-058). None is out of control, but four need conditions before they grow:
 - **AI-001, dynamic pricing:** priced accessible seating above parity on 2 of 14 shows reviewed and went above artist price caps on 3 shows.
 - **AI-002, bot detection:** blocks screen reader users at the challenge and does not enforce the posted limit across linked accounts.
 - **AI-003, the chatbot:** told patrons that accessible seating requires proof of disability, which the ADA ticketing rules forbid, and revealed order details on an order number alone.

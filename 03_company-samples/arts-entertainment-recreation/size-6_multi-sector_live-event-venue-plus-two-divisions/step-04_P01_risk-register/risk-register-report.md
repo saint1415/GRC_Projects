@@ -13,13 +13,13 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that stores, processes, or transmits card data or patron, guest, or subscriber data in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), the group cloud platform and WAN (SYS-G3), and the patron data platform (SYS-G4). Division systems are SYS-D1 to SYS-D4 (`../00_company-facts.md` section 3). The 8 acquired theaters are in scope even though they are not yet on group systems.
+**Scope.** Every system that stores, processes, or transmits card data or patron, guest, or subscriber data in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), the group cloud platform and WAN (SYS-G3), and the patron data platform (SYS-G4). Division systems are SYS-D1 to SYS-D4 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). The 8 acquired theaters are in scope even though they are not yet on group systems.
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Live Venues, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services or the shared ticketing platform, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back. Group risks are rated on their own group-level likelihood and impact, not on the highest division rating.
 
-**Risk tolerance and who can accept risk** (also in `../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (from the board risk committee's acceptance levels, EV-028):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,11 +30,13 @@
 Crowd-safety and guest-safety risks rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the 2026 service provider ROC, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the intake evidence ([evidence register](../step-00_P00_intake/evidence-register.csv)), the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the 2026 service provider ROC (EV-061), and risk interviews with group and division leadership (EV-080 to EV-083).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, scans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: card brand investigations across three PCI roles, client contract exposure across 1,150 clients, several regulators at once, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service or the shared ticketing platform, or needs a group decision.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including P07 results available by then (for example the seasonal account test of 2026-07-06, EV-C-AC2, cited for LV-007). P07 testing continued to 2026-08-31; it confirmed existing risks and added none, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 
@@ -73,7 +75,7 @@ Crowd-safety and guest-safety risks rated High may not be accepted. They must be
 
 ### What the results say
 The program is defined and mostly sound. There are no Very High risks. Identity, monitoring, backups, tokenization, and P2PE at the integrated venues all work, and the ticketing platform holds a current service provider AOC. The High risks cluster around **what the group shares and what it has not yet absorbed**:
-1. **The shared checkout** (GR-01). One platform serves three internal merchant roles and 1,150 clients, and the checkout trusts code that tenants and script vendors control (scenario gap 1). This is the scenario of the P08 runbook.
+1. **The shared checkout** (GR-01). One platform serves three internal merchant roles and 1,150 clients, and the checkout trusts code that tenants and script vendors control (group gap 1). This is the scenario of the P08 runbook.
 2. **Card-present channels outside P2PE** (GR-09). The acquired theaters and the hotel front desks are the group's remaining card data on its own networks (gap 2).
 3. **Data and pricing practices** (GR-10, GR-11, GR-04). The patron data platform takes more data than its uses need (gap 3), price displays outside the checkout omit fees, and the pricing and bot modules run without group AI approval (gap 4). These are FTC Act and fee rule exposures, not only security ones.
 4. **Shared-service incidents** (GR-02, and the Moderate risk GR-03) would trigger client, card brand, state, and SEC duties at once (gap 5).

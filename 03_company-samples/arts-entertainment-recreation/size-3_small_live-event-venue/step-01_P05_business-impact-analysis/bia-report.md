@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (live event venue operator with ticketing) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Lead) with the Director of Ticketing, Operations Director, Food and Beverage Manager, and Controller | **Approved:** General Manager, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-14 (EV-049), FY2025 revenue report (EV-045), FY2025 show settlement summary (EV-046), acquirer statements (EV-024), backup job reports (EV-019), and the ticketing vendor's SOC 2 system description (EV-026). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the General Manager.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,12 +12,12 @@ This BIA identifies which business processes the company depends on, how long ea
 - PCI DSS v4.0.1 Requirement 12.10 (the incident response plan must cover business recovery and continuity) (N71-R04).
 
 ## 2. System and business description
-The company runs one Florida venue building with two rooms, about 260 shows a year on about 200 event days, and about 400,000 attendees. Ticketing runs on a vendor SaaS platform with the company as merchant of record. Food, beverage, and merchandise sales are card-only through a cloud POS with validated P2PE readers. See `../00_company-facts.md` sections 1 and 3.
+The company runs one Florida venue building with two rooms, about 260 shows a year on about 200 event days, and about 400,000 attendees. Ticketing runs on a vendor SaaS platform with the company as merchant of record. Food, beverage, and merchandise sales are card-only through a cloud POS with validated P2PE readers. See `../00_company-facts.md` section 1 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 **What makes a venue different:** the most time-critical window is not the business day but **the 60 to 90 minutes before doors**, when thousands of people arrive at once. An outage then is a crowd safety problem before it is a revenue problem. The same outage on a dark day costs almost nothing.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $24.0 million in annual revenue. An average Hall show brings in about $95,000 on the night (tickets sold on the night, food and beverage, merchandise commission).
+Dollar values are scaled to $24.0 million in annual revenue (EV-045). An average Hall show brings in about $95,000 on the night (tickets sold on the night, food and beverage, merchandise commission), from the FY2025 show settlement summary (EV-046).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

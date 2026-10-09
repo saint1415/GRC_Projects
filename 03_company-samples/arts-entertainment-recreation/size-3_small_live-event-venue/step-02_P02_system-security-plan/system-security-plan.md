@@ -29,7 +29,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | State | Florida Information Protection Act (breach notification and reasonable measures) | Fla. Stat. 501.171 |
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
-Not applicable: the gaming rules in the vertical profile (N71-R01 to R03, no gaming), and COPPA (N71-R06, services not directed to children).
+Not applicable, as decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv): the gaming rules in the vertical profile (N71-R01 to R03, no gaming), and COPPA (N71-R06, services not directed to children).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -70,7 +70,7 @@ Information types are the closest analogs in NIST SP 800-60 Vol. 2 Rev. 1 (writt
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems.
 
 ## 7. Authorization Boundary Description
-The boundary contains company-managed components and the company's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains company-managed components and the company's configuration of vendor services:
 - **Inside:** the company's tenant configuration in the ticketing platform (34 venue users, pricing and bot mitigation settings, marketing and checkout settings, API keys); the 6 box office PCs and 4 box office card readers; the cloud tenant (patron database, settlement app, export function, backup vault); the identity provider tenant; the venue network (firewall, switches, Wi-Fi); 42 other PCs and laptops that share the corporate segment; and the 24 ticket scanners.
 - **Outside (external services, interconnected):** the ticketing vendor's platform and hosted checkout, the payment partner's gateway, the acquirer, the POS and its P2PE solution (SYS-03), the productivity suite (SYS-07), CCTV and door access (SYS-10), the website and email service (SYS-11), and finance and payroll (SYS-12).
 
@@ -119,7 +119,7 @@ Workforce users of email, the cloud console, and accounting authenticate through
 Patrons create accounts on the ticketing vendor's platform with the vendor's own sign-in controls. That is governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

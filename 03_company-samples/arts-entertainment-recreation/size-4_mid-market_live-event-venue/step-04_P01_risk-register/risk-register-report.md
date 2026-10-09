@@ -11,7 +11,7 @@
 | Approved | 2026-09-15: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, and the risk appetite); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (the three venues, ticketing and the call center, food and beverage, premium seating and group sales, marketing and digital, booking, finance, HR, and the County PAC services that start in 2027), the Ticketing and Venue Operations Platform (TVOP, P02), both merchant accounts (MID-T and MID-F), and the vendors and agencies that hold patron or card data. Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units (the three venues, ticketing and the call center, food and beverage, premium seating and group sales, marketing and digital, booking, finance, HR, and the County PAC services that start in 2027), the Ticketing and Venue Operations Platform (TVOP, P02), both merchant accounts (MID-T and MID-F), and the vendors and agencies that hold patron or card data, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -36,8 +36,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $250,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews with every process owner and the three venue General Managers, observation of a high-demand on-sale (2026-07-15) and an Amphitheater show night (2026-07-18), the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, risk interviews with the process owners, the three venue General Managers, the IT Director, the Security Manager and the MSSP service lead (EV-064), observation of a high-demand on-sale (2026-07-15, EV-065) and an Amphitheater show night (2026-07-18, EV-066), the gap analysis (P03), and the control assessment (P07). The gap analysis ran in the same fieldwork window, and the two shared findings. The control assessment added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident queue (EV-033), scan results (EV-020, EV-021), phishing results (EV-036), configuration exports, the walk-throughs, the gap analysis samples and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, contractual and regulatory, attendee safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -76,6 +76,8 @@ Cyber insurance ($10 million limit, $250,000 retention, $1 million sublimit for 
 - **Event-day resilience is uneven (R-018 to R-020, R-050).** The Amphitheater has a drilled manual entry procedure; the Music Hall and the Club do not. This is the second P08 scenario.
 - **Consumer protection rules reach the pricing stack (R-014 to R-017).** Fee display, accessible seating parity, and posted limits are pricing and marketing risks with security-style controls (change control, monitoring). P10 covers them.
 - **New finding from testing (R-029).** The control assessment found the integrator's default administrator password on the crowd analytics server installed in April 2026. The password was changed on 2026-08-14 and the risk was added the same day.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-029 was added on 2026-08-14 after testing found the integrator's default administrator password on the Music Hall crowd analytics server, reachable from the corporate segment (EV-IA-5, EV-SC-7). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 **Funded in the FY2027 security plan (approved by the CEO 2026-09-15, $584,000 one-time and $255,000 a year, fictional):**

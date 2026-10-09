@@ -11,15 +11,17 @@
 | Approved | Chief Compliance Officer and CISO, 2026-08-21; roadmap reviewed by the risk committee of the board, 2026-09-10 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with counsel's review (EV-057). This section restates the results for the rules analyzed here.
+
 ### 1.1 PCI DSS: two roles, two validations
 PCI SSC sets no size tiers; validation levels come from the card brands and the acquirer. Visa's Account Information Security program page (checked 2026-10-06) and *What To Do If Compromised* v10.0 (effective 2026-06-25) define the levels used here.
 
 | Role | Basis | Visa level | 2026 validation |
 |---|---|---|---|
-| **Merchant** (own events, venue box offices, stands) | About 25 million Visa transactions a year across all channels | **Level 1** (more than 6 million Visa transactions a year) | Annual Report on Compliance (ROC) by a QSA, or an internal resource if signed by an officer, plus an attestation of compliance (AOC). The company uses a QSA. Passing quarterly ASV scans (Requirement 11.3.2) |
-| **Service provider** (payment service and checkout for about 340 client venues) | Transmits about 7.8 million Visa transactions a year for clients | **Level 1** (more than 300,000 Visa transactions a year) | Annual on-site assessment and an AOC signed by the company and the QSA, submitted to Visa. Visa requires QSA validation before a service provider can be listed on its Global Registry of Service Providers, where client venues check the company's status. Service provider-only requirements apply (for example 11.4.6, 12.4.2, 12.5.2.1, 12.9) |
+| **Merchant** (own events, venue box offices, stands) | About 25 million Visa transactions a year across all channels (EV-051) | **Level 1** (more than 6 million Visa transactions a year) | Annual Report on Compliance (ROC) by a QSA, or an internal resource if signed by an officer, plus an attestation of compliance (AOC). The company uses a QSA. Passing quarterly ASV scans (Requirement 11.3.2) |
+| **Service provider** (payment service and checkout for about 340 client venues) | Transmits about 7.8 million Visa transactions a year for clients (EV-051) | **Level 1** (more than 300,000 Visa transactions a year) | Annual on-site assessment and an AOC signed by the company and the QSA, submitted to Visa. Visa requires QSA validation before a service provider can be listed on its Global Registry of Service Providers, where client venues check the company's status. Service provider-only requirements apply (for example 11.4.6, 12.4.2, 12.5.2.1, 12.9) |
 
-Other brands' level definitions were not verified; the acquirer applies them. The 2025 merchant and service provider ROCs were both Compliant. The 2026 ROCs and AOCs are due 2026-12-31 (fictional acquirer date).
+Other brands' level definitions were not verified; the acquirer applies them. The 2025 merchant and service provider ROCs were both Compliant (EV-027). The 2026 ROCs and AOCs are due 2026-12-31 (fictional acquirer date).
 
 **Scope reduction already in place.** Tokenization means the platform stores no card numbers by design, and validated P2PE devices reduce 30 venues' box offices and stands to the P2PE device controls. **Scope this analysis added:** the AV-01 to AV-06 venues (in full scope since 2026-02-02) and the contact center platform and outsourced overflow center, where card data was found (G-010, G-011, G-062).
 
@@ -28,23 +30,23 @@ Other brands' level definitions were not verified; the acquirer applies them. Th
 ### 1.2 Other rules
 | Rule | Applies? | Basis |
 |---|---|---|
-| SEC Form 8-K Item 1.05 and Reg S-K Item 106 | **Yes** | Publicly traded SEC registrant, not a smaller reporting company |
+| SEC Form 8-K Item 1.05 and Reg S-K Item 106 | **Yes** | Publicly traded SEC registrant, not a smaller reporting company (EV-043) |
 | FTC Act Section 5, 15 U.S.C. 45(a), (n) (N71-R05) | **Yes** | For-profit corporation; no size threshold |
 | FTC Rule on Unfair or Deceptive Fees, 16 CFR Part 464 (N71-R05) | **Yes** | "Covered good or service" includes live-event tickets (464.1); effective 2025-05-12 (90 FR 2066, rule text at 2166). Applies to every display the company makes, including client templates it renders |
 | ADA Title III ticketing, 28 CFR 36.302(f) | **Yes** | Concert halls, stadiums, and other places of exhibition or entertainment are places of public accommodation (28 CFR 36.104); the rules reach pricing, sale stages, and purchase limits that AI-001 and AI-002 enforce |
 | BOTS Act, 15 U.S.C. 45c | **No compliance duty** | The company is a ticket issuer the Act protects; its bot defense records are evidence for FTC or state attorney general cases |
 | State breach notification laws | **Yes** | Patrons in all 50 states. The company is a covered entity for its own patrons and a third-party agent for client venues (Florida worked example: Fla. Stat. 501.171(6)) |
 | State comprehensive consumer privacy laws | **Yes, where thresholds are met** | 19 laws in effect as of 2026-09-25 (cross-sector file); counsel keeps the state list. Florida's Digital Bill of Rights does not apply: the company exceeds $1 billion in revenue but meets none of the three additional tests (G-098) |
-| Gaming rules (N71-R01 to R03) | **No** | No gaming license, wagering, or casino operations |
-| COPPA (N71-R06) | **No** | General-audience sites and app; accounts require age 18 or older |
+| Gaming rules (N71-R01 to R03) | **No** | No gaming license, wagering, or casino operations (EV-059) |
+| COPPA (N71-R06) | **No** | General-audience sites and app; accounts require age 18 or older (EV-060) |
 | CIRCIA | **Not in force** | Final rule not published as of 2026-09-25; reporting is voluntary. Under the proposed rule, an entity in a critical infrastructure sector above its SBA size standard would be covered; the company is above the standard and in the Commercial Facilities Sector, so it is tracked as a watch item |
 | SOX Section 404 | Separate program | IT general controls over ERP and payroll are tested by the SOX program and not repeated here |
 
 ## 2. Method
 1. **Decompose.** PCI DSS as described in section 1.1. Other rules were broken into citation-level duties from the primary text: 16 CFR Part 464 and 28 CFR 36.302 (eCFR, versions of 2026-09-23), 17 CFR 229.106 (eCFR), 15 U.S.C. 45c (govinfo), the SEC's Item 1.05 compliance guide and Release 33-11216, and Fla. Stat. 501.171 (Florida Legislature site).
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. **All mappings are author mappings**; no official NIST mapping exists from PCI DSS v4.0.1, the FTC rules, or the ADA rules to CSF 2.0 or SP 800-53.
-3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics; recurring reviews used 5 weekly or 2 quarterly occurrences. Selections were random. **38 rows were tested by sampling or full-population analytics; 22 found exceptions.**
-4. **Browser and data evidence.** Browser captures of 212 client checkout templates (2026-07-20 to 2026-07-24), a card-number discovery scan of the contact center platform and case notes (2026-07-08), and a listening sample of 60 overflow center recordings.
+3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration and account data were checked in full with analytics; recurring reviews used 5 weekly or 2 quarterly occurrences. Selections were random. **38 rows were tested by sampling or full-population analytics; 22 found exceptions.** Current state was established from the intake evidence (exports, documents and records from the enterprise systems of record, EV-001 to EV-074), gap analysis interviews with control owners (EV-081), the samples and analytics (EV-085 to EV-087), the external TLS scan (EV-088), the on-sale, pricing and fee display reviews (EV-089, EV-090), the retention query (EV-091), counsel's Florida memo (EV-092), and, where Internal Audit had already tested a control, its P07 results (for example EV-AC-2, EV-SC-7 and EV-CM-3). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+4. **Browser and data evidence.** Browser captures of 212 client checkout templates (2026-07-20 to 2026-07-24; EV-084), a card-number discovery scan of the contact center platform and case notes (2026-07-08; EV-082), and a listening sample of 60 overflow center recordings (EV-083).
 5. **Rate.** Met, Partially met, Not met, or Not applicable. Each gap is rated with the P01 scale and carries an owner and date. Very High and High gaps are in the P01 register and the P07 POA&M.
 
 ## 3. Results summary

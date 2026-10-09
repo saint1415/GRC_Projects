@@ -82,7 +82,7 @@ Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_un
 - **PaaS:** the provider also runs the operating system and runtime. The customer keeps application code, configuration, identities, secrets, and data.
 - **SaaS:** the provider also owns the application. The customer keeps users, access, settings, data, and devices.
 
-**The ticketing platform needs its own split,** because PCI DSS applies to it. The vendor's service provider AOC covers the checkout page code, card data handling, and its infrastructure. The vendor's responsibility matrix (fictional) assigns to the customer: venue user accounts and MFA enforcement, admin roles, API keys, and **anything the customer adds to event or checkout pages through marketing settings**. That last item is where the P08 scenario starts.
+**The ticketing platform needs its own split,** because PCI DSS applies to it. The vendor's service provider AOC covers the checkout page code, card data handling, and its infrastructure. The vendor's responsibility matrix (fictional; EV-025) assigns to the customer: venue user accounts and MFA enforcement, admin roles, API keys, and **anything the customer adds to event or checkout pages through marketing settings**. That last item is where the P08 scenario starts.
 
 ## 4. Findings from the mapping
 1. **The company can change the vendor's payment page (CM-7, SI-7).** Marketing settings let the agency place scripts on the checkout page. The vendor's PCI DSS controls do not cover those scripts. Fix: remove all company-added scripts from checkout, limit marketing settings to event pages, and ask the vendor for alerts on setting changes. Tracked as P01 R-002 and P07 POAM-007 and POAM-008.

@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (live event venue operator with ticketing; one music club) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Venue Manager (Security and Privacy Lead) with the Owner and General Manager, the Box Office and Ticketing Manager, the Bar Manager, the Bookkeeper, and the MSP account technician, 2026-07-13 to 2026-07-24 | **Approved:** Owner and General Manager, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-17 (EV-044), FY2025 financial statements and show settlement summary (EV-036), ticket sales and attendance reports (EV-007), the Owner's description of settlements and payments (EV-037), suite backup job report (EV-025), MSP service contract (EV-018), and the venue walk-through (EV-040). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner and General Manager.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the club, how long each can be down, and how much data each can lose. It supports:
 - the availability rating in the SSP (P02);
@@ -13,12 +15,12 @@ This BIA lists every business function of the club, how long each can be down, a
 No law sets contingency planning duties for a privately held music club. The drivers are the merchant agreements, artist agreements, attendee safety, and the cost of a cancelled show.
 
 ## 2. System and business description
-One leased Florida building with one room (650 standing), about 150 shows a year on about 140 event nights, and about 42,000 attendees. Nearly everything runs in vendor SaaS: the ticketing platform (SYS-01) and its payment partner (SYS-02), the bar POS (SYS-03), the productivity suite (SYS-05), the website (SYS-07), and email marketing (SYS-08). On site are 5 office computers, 2 door tablets, and 3 scanners (SYS-04), the venue network (SYS-06), CCTV (SYS-10), and standalone production consoles (SYS-12). An MSP runs the office computers, network, and suite. See `../00_company-facts.md` sections 1, 3, and 7.
+One leased Florida building with one room (650 standing), about 150 shows a year on about 140 event nights, and about 42,000 attendees. Nearly everything runs in vendor SaaS: the ticketing platform (SYS-01) and its payment partner (SYS-02), the bar POS (SYS-03), the productivity suite (SYS-05), the website (SYS-07), and email marketing (SYS-08). On site are 5 office computers, 2 door tablets, and 3 scanners (SYS-04), the venue network (SYS-06), CCTV (SYS-10), and standalone production consoles (SYS-12). An MSP runs the office computers, network, and suite. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What makes a club different:** the critical window is not the business day but **the hour after doors open**, when several hundred people arrive at once. An outage then is a crowd safety problem before it is a revenue problem. The same outage on a dark night costs almost nothing.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $7,300 per show (tickets, fees, and bar).
+Dollar values are scaled to about $1.1 million in annual revenue, about $7,300 per show (tickets, fees, and bar) (EV-036).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 46 determination stateme
 - **Test (2026-07-29):** sign-ins to each administrator login from a new browser; a card-number search of the mailbox, phone, laptop, and cloud storage (run 2026-07-28 and repeated on the laptop on 2026-07-29); a sharing report for cloud storage; a payout-change alert test in SYS-01; the router's administrator login and firewall settings; the website and SYS-01 user and connected-app lists.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork (EV-027). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The first risk assessment (P01) was completed on 2026-07-31, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, network and vendor records | 22 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the July 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 18 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the 5 administrator logins (EV-002, EV-008, EV-011, EV-014, EV-016), the shared door login (EV-001), the laptop and 3 phones (EV-017 to EV-019), the 2 PCI DSS service providers and the contractors (EV-022, EV-044, EV-045), and the mailbox, phone, laptop and cloud storage searched for card numbers (EV-040). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No testing during on-sales or show hours. No patron or card data copied off any system; screenshots were cropped to settings, and card numbers found in the search were counted, not copied.
 - The IT consultant worked only in sessions the owner started and watched.

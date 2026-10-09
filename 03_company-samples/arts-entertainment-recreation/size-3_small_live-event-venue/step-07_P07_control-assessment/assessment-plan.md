@@ -39,6 +39,17 @@ Small tier scope: 15-25 controls. **21 controls, 140 determination statements.**
   - log retention on 3 box office PCs
   - a second capture of the checkout page to compare scripts
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31. They were reviewed as drafts for design only: a control that a draft policy introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 49 |
+| Design | The control comes from a draft policy (POL-03 incident handling and reporting); its design was reviewed. Operation is tested at the 2027-02 follow-up | 3 |
+| Not implemented | Nothing existed to test | 88 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 6 sampled terminations come from the 9 departures in EV-005, and the account reconciliation covers all 34 venue users in EV-001).
+
 ## 3. Rules of engagement
 - No testing during an on-sale or during doors. Network tests ran on a dark day (2026-08-04).
 - No real card data was entered, copied, or photographed. The phone-order slips were photographed with card numbers covered, then locked in the Controller's safe pending shredding.

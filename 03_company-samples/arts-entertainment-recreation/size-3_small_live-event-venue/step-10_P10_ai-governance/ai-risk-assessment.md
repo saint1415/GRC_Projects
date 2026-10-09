@@ -7,7 +7,7 @@
 | AI use cases | AI-001: dynamic ticket pricing module (in production since March 2026). AI-002: bot detection and virtual queue (in production since 2024). Both are modules of the ticketing platform (SYS-01) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. The Generative AI Profile (AI 600-1) is not used because neither module is generative AI |
 | Assessor / date | Director of Ticketing (business owner) with the IT Manager (Information Security Lead), fieldwork 2026-08-17 to 2026-08-21 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the ticketing platform's module settings and change history, the vendor's SOC 2 system description, and the fieldwork tests in section 4 (EV-032, EV-026, EV-062). Whether staff use public AI tools with company data was not established (intake open request) |
 | Related | P01 R-013, R-014, R-015, R-016; P03 G-071 to G-076; P06 POL-01 4.11 and 4.12, POL-04 4.6, POL-05 4.8; P07 POAM-003 and POAM-010; P08 runbook; P09 vendor report review |
 
 ## 1. GOVERN
@@ -18,7 +18,7 @@
   - POL-04 4.6: new uses of patron data, including new AI features, require a P10 review before go-live
   - POL-05 4.8: only AI tools on the approved tools list may be used with company data
 - **Approved tools list:** kept by the IT Manager. Today it lists AI-001 and AI-002 only, both as vendor modules inside SYS-01. No general-purpose AI tool is approved for company data. Public AI tools may be used only with Public data (POL-04).
-- **What went wrong in March 2026:** the dynamic pricing module was switched on by a ticketing administrator after a vendor webinar. Nobody reviewed total-price display, price-change disclosures, artist price caps, or accessible seating prices (scenario-facts gap 12; P09 CC3.4). This assessment is the review that should have happened first.
+- **What went wrong in March 2026:** the dynamic pricing module was switched on by a ticketing administrator after a vendor webinar. Nobody reviewed total-price display, price-change disclosures, artist price caps, or accessible seating prices (EV-032 settings history; EV-035 document request; P09 CC3.4). This assessment is the review that should have happened first.
 - **Scale for a Small company:** there is no AI committee. The Director of Ticketing, the Marketing Director, the IT Manager, and the Controller review both use cases quarterly and before any new module or setting that changes how prices or purchase access are decided.
 
 ## 2. MAP

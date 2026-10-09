@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (independent event promoter with one leased room) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner, 2026-07-28, with the on-call IT consultant | **Adopted:** Owner, 2026-08-31
+**Sources:** the owner's BIA worksheet, reviewed with the IT consultant on 2026-07-28 (EV-034), the 2025 Schedule C (EV-024), the 2025 income by category (EV-025), the ticketing platform's sales report (EV-005), and the ticketing vendor's SOC 2 system description and product documentation (EV-031, EV-032). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the business depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the business depends on, how
 - the recovery order in the incident runbook (P08).
 
 ## 2. Business description
-The owner promotes about 60 public shows a year in the Room, a leased 280-person room in Florida, and rents it for about 15 private events. The business has no employees. Tickets are sold on a ticketing platform (SYS-01) with an integrated payment processor (SYS-02). Marketing runs on a website builder (SYS-03), email, and social media, with a freelance marketing assistant. Door staff come from a crowd management contractor. See `../00_company-facts.md` sections 1 to 3.
+The owner promotes about 60 public shows a year in the Room, a leased 280-person room in Florida, and rents it for about 15 private events. The business has no employees. Tickets are sold on a ticketing platform (SYS-01) with an integrated payment processor (SYS-02). Marketing runs on a website builder (SYS-03), email, and social media, with a freelance marketing assistant. Door staff come from a crowd management contractor. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in gross receipts, or about $2,500 in tickets per show.
+Dollar values are scaled to about $180,000 in gross receipts (EV-024), or about $2,500 in tickets per show (about $146,000 in ticket face value across about 60 public shows a year, EV-005 and EV-025).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,9 +34,9 @@ Dollar values are scaled to about $180,000 in gross receipts, or about $2,500 in
 | BP-04 Booking and artist settlement | Moderate | 72 h | 24 h | 24 h |
 | BP-05 Finance and administration | Low | 120 h | 72 h | 24 h |
 
-**What drives the values:** a show cannot be moved once doors are set, so BP-01 has the shortest limit. The scanner app works offline with the attendee list downloaded before doors, which is why a 1-hour RTO is achievable even if the internet fails. The RPO of 0 for BP-01 and BP-02 depends on the ticketing vendor, which holds every order and payment; its SOC 2 report states its recovery commitments (P09). On-sale days are the exception inside BP-02: an outage of more than 2 hours on an on-sale day loses most first-day sales, so the owner postpones and re-announces rather than letting fans fail at checkout.
+**What drives the values:** a show cannot be moved once doors are set, so BP-01 has the shortest limit. The scanner app works offline with the attendee list downloaded before doors, which is why a 1-hour RTO is achievable even if the internet fails. The RPO of 0 for BP-01 and BP-02 depends on the ticketing vendor, which holds every order and payment; its SOC 2 report states its recovery commitments (EV-031; reviewed in P09). On-sale days are the exception inside BP-02: an outage of more than 2 hours on an on-sale day loses most first-day sales, so the owner postpones and re-announces rather than letting fans fail at checkout.
 
-**Single-person dependency (the key finding).** The owner is the only person who can run settlement, the guest list, pricing, payouts, refunds, and the processor portal. Every credential and the only authenticator app are on the owner's phone, and the marketing assistant works today only because it shares the owner's own logins (a gap, P01 R-001). If the owner is ill, injured, or without the phone on a show night, BP-01 exceeds its MTD within hours and nobody else can settle with the artist or refund fans. Actions (P01 R-009, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner is the only person who can run settlement, the guest list, pricing, payouts, refunds, and the processor portal. Every credential and the only authenticator app are on the owner's phone (EV-018, EV-034), and the marketing assistant works today only because it shares the owner's own logins (EV-028; a gap, P01 R-001). If the owner is ill, injured, or without the phone on a show night, BP-01 exceeds its MTD within hours and nobody else can settle with the artist or refund fans. Actions (P01 R-009, due 2026-12-31):
 1. Create named SYS-01 sub-users with limited roles for the marketing assistant and the door contractor's lead, so another person can run doors without the owner's login (2026-09-15).
 2. Keep recovery codes and a one-page emergency access sheet in a sealed envelope held by the owner's attorney (done 2026-07-31 for email, the processor portal, and accounting; add the ticketing platform and website after MFA is on).
 3. Write a one-page show-night card for the door contractor's lead: download the attendee list before doors, print it, hand count at capacity, and whom to call.

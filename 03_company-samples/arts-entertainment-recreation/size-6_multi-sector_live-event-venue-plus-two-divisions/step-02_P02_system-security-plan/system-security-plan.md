@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Ticketing and Venue Operations Platform**, because it is the one system all three divisions depend on (P05), it carries card data and patron data for the group and its clients, it inherits most of its controls from corporate (SYS-G1 to SYS-G3), and it carries the group's top risk (P01 GR-01). The other division systems (SYS-D1 venue estate, SYS-D2 hotel systems, SYS-D4 streaming) keep division plans that inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Ticketing and Venue Operations Platform (**TVOP**), identifier CSCH-SYS-D3-TVOP. It is SYS-D3 in `../00_company-facts.md`, plus the venue edge components at the 30 integrated group venues.
+Ticketing and Venue Operations Platform (**TVOP**), identifier CSCH-SYS-D3-TVOP. It is SYS-D3 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), plus the venue edge components at the 30 integrated group venues.
 
 ## 2. System Overview
 The TVOP sells and delivers tickets and admits patrons. It supports:
@@ -45,7 +45,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | Contracts | Client agreements; SOC 2 commitments; card brand rules | 2024 client agreement; SOC 2 (Security, Availability, Confidentiality); Visa What To Do If Compromised v10.0 | Client notice terms (24 or 72 hours); 99.95% availability; card brand compromise clocks |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
 
-Not applicable: Nevada Reg. 5.260, NIGC MICS, and casino BSA/AML (N71-R01 to R03), because no division conducts gaming; COPPA (N71-R06, N51-R02), because the platform is general audience and accounts require age 18 or older; FedRAMP (N51-R07), because there are no federal customers.
+Not applicable: Nevada Reg. 5.260, NIGC MICS, and casino BSA/AML (N71-R01 to R03), because no division conducts gaming; COPPA (N71-R06, N51-R02), because the platform is general audience and accounts require age 18 or older; FedRAMP (N51-R07), because there are no federal customers. Applicability for each division and the group is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -96,7 +96,7 @@ Other High-baseline controls are fully inherited from the cloud providers (for e
 - **Outside, inherited (common control providers):** SYS-G1 identity platform, SYS-G2 SOC, SIEM, and EDR, and the SYS-G3 landing zones and WAN.
 - **Outside, interconnected:** acquirers and gateways; the P2PE solution provider; client systems through ticketing APIs; the hotel PMS (package room releases); the patron data platform (SYS-G4); the streaming service (SYS-D4) for purchases; the tag management vendor and other script vendors whose code runs in patrons' browsers on checkout pages.
 
-The diagram is in P04 `cloud-architecture.md` (the TVOP subgraph).
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-D3 and the venue edge, and the shared services it inherits from) and the platform exports EV-061 and EV-064 to EV-071. The diagram is in P04 `cloud-architecture.md` (the TVOP subgraph).
 
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
@@ -140,13 +140,13 @@ See `control-implementation.csv` (171 controls) and `common-control-catalog.csv`
 | System-specific | 43 |
 
 **The 19 partially implemented controls** cluster in four places:
-- **Checkout scripts added by tenants** (scenario gap 1): AC-22, CM-3, CM-7, CM-8, SA-9, SC-18, SI-7, SR-6, AU-6.
+- **Checkout scripts added by tenants** (group gap 1): AC-22, CM-3, CM-7, CM-8, SA-9, SC-18, SI-7, SR-6, AU-6.
 - **Access for people outside the core team:** AC-2 (seasonal box office accounts), AC-6 (support impersonation role), IA-8 (client administrators without MFA).
 - **Data purpose** (gap 3): PT-2, PT-3.
 - **Cross-division response and AI** (gaps 4 and 5): IR-3, IR-6, IR-8, AT-3, SA-11.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 127 controls that corporate provides (or passes through from the cloud providers) fully (106) or in part (21). Inheritance is **documented for Live Venues** (2025 inheritance matrix, which does not cover the 8 acquired theaters), for **Ticketing and Streaming** (its service provider ROC and SOC 2 system description carve in the group services), and for the TVOP (this plan). It is **not documented for Hotels and Restaurants** (scenario gap 6). Until POAM-014 closes, the hotels division cannot show its acquirer which PCI DSS requirements group controls meet, and its PMS sits outside SYS-G1 and the SIEM.
+The common control catalog lists 127 controls that corporate provides (or passes through from the cloud providers) fully (106) or in part (21). Inheritance is **documented for Live Venues** (2025 inheritance matrix, which does not cover the 8 acquired theaters), for **Ticketing and Streaming** (its service provider ROC and SOC 2 system description carve in the group services), and for the TVOP (this plan). It is **not documented for Hotels and Restaurants** (group gap 6). Until POAM-014 closes, the hotels division cannot show its acquirer which PCI DSS requirements group controls meet, and its PMS sits outside SYS-G1 and the SIEM.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and TVOP and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`. The QSA's 2026 service provider ROC (AOC 2026-03-31) is separate evidence for the CDE.
@@ -157,7 +157,7 @@ Common controls were assessed once, and TVOP and division controls sampled, from
 - **Patrons** use email and password with breached-password screening and optional MFA, plus step-up checks for account changes. An email and password together are personal information under Fla. Stat. 501.171(1)(g)1.b, which shapes the incident runbook (P08).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)
