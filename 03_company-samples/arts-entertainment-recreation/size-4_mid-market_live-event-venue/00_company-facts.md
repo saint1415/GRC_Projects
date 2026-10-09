@@ -109,7 +109,7 @@ This file says who the company is. It does not say how well its security works. 
 | 2026-07-27 to 2026-07-31 | 2026 policy set (POL-01 to POL-05), the standards index, and the P08 runbooks drafted from the gaps |
 | 2026-08-03 to 2026-08-21 | Control assessment by the co-sourced internal audit firm: operating tests of controls already in place; design review of the draft policies, standards, and runbooks |
 | 2026-08-24 to 2026-09-04 | SOC 2 readiness, vendor report reviews, and AI assessment |
-| 2026-09-15 | Deliverables, policies, and runbooks approved (Chief Operating Officer; High risks and the risk appetite by the Chief Executive Officer); results to the audit committee |
+| 2026-09-15 | Deliverables approved (Chief Operating Officer; High risks and the risk appetite by the Chief Executive Officer); results to the audit committee |
 | 2026-10-01 | 2026 policies take effect |
 | 2026-11-02 to 2026-11-13 | QSA ROC fieldwork |
 | 2026-12-15 | ROC, AOCs, SAQ P2PE, and ASV scan reports due to the acquirer |

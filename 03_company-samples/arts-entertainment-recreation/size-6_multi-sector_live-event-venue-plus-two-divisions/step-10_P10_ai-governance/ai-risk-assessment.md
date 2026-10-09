@@ -22,7 +22,7 @@
 | Group General Counsel | Price display standard (16 CFR Part 464), ADA ticketing, client contract terms |
 | Group internal audit | Includes High-tier AI controls in the annual assessment from 2027 |
 
-### 1.2 Group AI Standard (adopted 2026-06, under POL-01 4.14)
+### 1.2 Group AI Standard (adopted 2026-06, under POL-01 4.14; EV-100)
 1. **Register before use.** Every AI use case that sets or changes prices, controls access to purchases or venues, uses patron, guest, or subscriber data, or interacts with customers is registered before deployment or material change.
 2. **Tier with the repository rubric** (`00_universal-framework/projects/step-10_P10_ai-governance/README.md`), **plus a group rule:** any use case that processes biometric data is High, whatever the rubric says. High tier: council approval, a pre-deployment impact assessment, bias testing, notice to affected people, and quarterly monitoring.
 3. **Price rules are product rules.** Any AI that sets a price must keep accessible seating at or below the price of other seats in the same section (28 CFR 36.302(f)(3)), respect contractual caps, and feed only total prices to displays (16 CFR 464.2).
