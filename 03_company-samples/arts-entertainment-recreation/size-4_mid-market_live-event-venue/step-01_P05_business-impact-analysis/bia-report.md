@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (live event venue operator with ticketing; three Florida venues) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and the GRC Analyst with the process owners named in `bia.csv` and the three venue General Managers | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-063), FY2025 revenue report by line and venue (EV-055), ticketing sales and attendance report (EV-056), card transaction volumes (EV-041), POS sales by hour (EV-057), the ticketing vendor's SOC 2 report (EV-044), backup reports (EV-026), the Amphitheater manual entry procedure (EV-035), the network and circuit inventory (EV-015) and the County PAC agreement (EV-050). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: venue operations at the Amphitheater, the Music Hall, and the Club; ticketing, box offices, and the call center; food and beverage; premium seating and group sales; marketing and digital; booking; finance; HR; and the County Performing Arts Center (County PAC) services that start on 2027-07-01. It rates 15 business processes and quantifies what an outage costs in money, operations, contractual and regulatory exposure, and attendee safety.
@@ -14,12 +15,12 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment for the County PAC agreement (P09).
 
 ## 2. System and business description
-The company runs about 410 shows a year for about 1.55 million attendees across three Florida venues. Ticketing runs on a white-label SaaS platform, with the company as merchant of record; the checkout form is embedded in the company's own website. Box offices and all food, beverage, and merchandise sales use validated P2PE devices. The central box office, call center, premium sales, finance, and IT sit at headquarters. Systems are described in `../00_company-facts.md` section 3.
+The company runs about 410 shows a year for about 1.55 million attendees across three Florida venues. Ticketing runs on a white-label SaaS platform, with the company as merchant of record; the checkout form is embedded in the company's own website. Box offices and all food, beverage, and merchandise sales use validated P2PE devices. The central box office, call center, premium sales, finance, and IT sit at headquarters. Systems are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 **What makes venues different:** the most time-critical window is not the business day but **the 60 to 90 minutes before doors**, when up to 19,500 people arrive at the Amphitheater at once. An outage then is a crowd safety problem before it is a revenue problem. The same outage on a dark day costs little. The values in this BIA are therefore **event-day values** for the event-day processes (BP-01 to BP-04, BP-08, BP-09, BP-14).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $100.0 million in annual revenue. The worst single loss event is a cancelled Amphitheater headliner, which costs about $1.2 million (about $780,000 of ticket refunds, $305,000 of food and beverage sales, $40,000 of sponsor make-goods, and $75,000 of staff and contractor costs).
+Dollar values are scaled to $100.0 million in annual revenue (EV-055). Revenue per day for each process comes from the same report and the volume reports named in `bia.csv`: for example, an Amphitheater show sells about $305,000 of food and beverage (EV-055), and online ticket sales run at about $125,000 a day (ticket revenue in EV-055, with about 1,400 online orders a day in EV-056). The worst single loss event is a cancelled Amphitheater headliner, which costs about $1.2 million (about $780,000 of ticket refunds, $305,000 of food and beverage sales, $40,000 of sponsor make-goods, and $75,000 of staff and contractor costs; EV-063, EV-055).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -29,7 +30,7 @@ Dollar values are scaled to $100.0 million in annual revenue. The worst single l
 | Attendee safety | Crowd pressure at gates or loss of the command post's view of egress | Reduced monitoring covered by extra staff | None |
 | Reputation | Regional media coverage, an artist or promoter lost, or the County PAC relationship damaged | Patron complaints and social media | Internal only |
 
-**How loss at MTD was estimated.** Loss is revenue that is not recovered plus extra costs (overtime, refunds, penalties) over the MTD, for the worst common case (an Amphitheater show night for event-day processes). Owners estimated recovery rates: most online, phone, and premium sales shift to later rather than being lost, while food and beverage sales missed during a show are lost.
+**How loss at MTD was estimated.** Loss is revenue that is not recovered plus extra costs (overtime, refunds, penalties) over the MTD, for the worst common case (an Amphitheater show night for event-day processes). Owners estimated recovery rates (EV-063): most online, phone, and premium sales shift to later rather than being lost, while food and beverage sales missed during a show are lost.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -61,11 +62,11 @@ Dollar values are scaled to $100.0 million in annual revenue. The worst single l
 - **An RPO of 0 or 15 minutes** for BP-01, BP-03, and BP-05 is met by the vendors (the ticketing platform, the POS vendor, and the payment partner keep the transactions), not by company backups.
 
 ## 5. Key findings
-1. **The ticketing vendor's recovery commitments meet sales, not entry.** The vendor's SOC 2 system description states RTO 4 hours and RPO 15 minutes, which meets BP-04 and BP-05 but **not BP-01** (RTO 0.5 hours). BP-01 depends on scanners working offline from a manifest downloaded before doors. That download is a checklist step only at the Amphitheater (P01 R-018).
-2. **The manual entry procedure exists at one venue of three.** The Amphitheater wrote and drilled its procedure in 2025 after it opened under the company. The Music Hall and the Club have none (P01 R-018; P08 event-day runbook).
-3. **Offline card acceptance is unconfirmed.** Whether the POS vendor's P2PE solution allows offline acceptance is governed by its P2PE Instruction Manual. The Director of Food and Beverage must confirm with the POS vendor before relying on it for BP-03 (P01 R-019).
-4. **Company-managed recovery is unproven.** The settlement application (BP-07, BP-15) and the patron data platform (BP-10) are backed up to the separate backup account, but neither has ever been restored (gap 9). Their RTOs are targets, not demonstrated capabilities (P01 R-022; P07 CP-4).
-5. **The Club has one internet connection.** The Amphitheater and the Music Hall have two internet providers; the Club has one plus a cellular backup that has never carried the scanners and POS together (P01 R-020).
+1. **The ticketing vendor's recovery commitments meet sales, not entry.** The vendor's SOC 2 system description states RTO 4 hours and RPO 15 minutes (EV-044), which meets BP-04 and BP-05 but **not BP-01** (RTO 0.5 hours). BP-01 depends on scanners working offline from a manifest downloaded before doors. That download is a checklist step only at the Amphitheater (EV-035; P01 R-018).
+2. **The manual entry procedure exists at one venue of three.** The Amphitheater wrote and drilled its procedure in 2025 after it opened under the company. The Music Hall and the Club have none (EV-035; P01 R-018; P08 event-day runbook).
+3. **Offline card acceptance is unconfirmed.** Whether the POS vendor's P2PE solution allows offline acceptance is governed by its P2PE Instruction Manual. The Director of Food and Beverage must confirm with the POS vendor before relying on it for BP-03 (EV-063; P01 R-019).
+4. **Company-managed recovery is unproven.** The settlement application (BP-07, BP-15) and the patron data platform (BP-10) are backed up to the separate backup account, but neither has ever been restored (EV-026, EV-030). Their RTOs are targets, not demonstrated capabilities (P01 R-022; P07 CP-4).
+5. **The Club has one internet connection.** The Amphitheater and the Music Hall have two internet providers; the Club has one plus a cellular backup that has never carried the scanners and POS together (EV-015; P01 R-020).
 6. **Urgent notices depend on two vendors.** Weather holds at the Amphitheater go out through the marketing platform and the ticketing platform. Neither vendor's contract states a delivery commitment for these messages; the ticketing vendor renewal (P09 VEN-01) and the next marketing platform review will add one.
 
 ## 6. Resource requirements

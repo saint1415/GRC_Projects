@@ -9,7 +9,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. The Generative AI Profile (AI 600-1) is not used because the module is not generative AI |
 | Assessor / date | Box Office and Ticketing Manager (business owner) with the Venue Manager (Security and Privacy Lead), 2026-08-17 to 2026-08-21 |
 | Decision | Owner and General Manager, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is listed for completeness) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is listed for completeness), built from the ticketing platform settings, the card statements and a question to the 7 employees (EV-009, EV-032, EV-041). The question did not reach the contractor workers, and what the Marketing Coordinator enters into public chatbots rests on that person's own answer; neither was established further |
 | Related | P01 R-016, R-017, R-018, R-014; P03 G-071 to G-076; P06 POL-02 A.8, A.10, POL-04 4.7; P07 POAM-001 and POAM-003 |
 
 ## 1. GOVERN
@@ -22,7 +22,7 @@
 - **Approved-tools list:** kept by the Venue Manager in POL-04 4.7. It has one entry, AI-001, under the conditions in section 6.
 - **Scale for a Micro company:** there is no AI committee. The Owner, the Box Office and Ticketing Manager, and the Venue Manager review AI-001 at the monthly security meeting.
 
-**How it started.** The Box Office and Ticketing Manager switched the module on after a vendor webinar, because it came at no extra cost with the platform. Nobody reviewed total-price display, price-change disclosure, artist price caps, or accessible ticket prices first (scenario facts gap 15). This assessment is the review that should have happened first.
+**How it started.** The Box Office and Ticketing Manager switched the module on after a vendor webinar, because it came at no extra cost with the platform. Nobody reviewed total-price display, price-change disclosure, artist price caps, or accessible ticket prices first (EV-009; EV-038). This assessment is the review that should have happened first.
 
 ## 2. MAP
 ### 2.1 Price recommendations
@@ -64,7 +64,7 @@
 **Re-tier to High and reassess if:** price recommendations use any patron-level data; prices are applied automatically without a person accepting them; the module is extended to fees or to accessible tickets without the parity control in section 5; or bot screening is used to cancel completed orders or ban accounts automatically.
 
 ## 4. MEASURE
-Fieldwork 2026-08-17 to 2026-08-21. Price recommendations: all 31 recommendations on the 9 shows, with the vendor's price-change log. Bot screening: vendor reports for the 2 most recent protected on-sales (including 2026-07-21), a post-sale order check, and box office mailbox complaints.
+Fieldwork 2026-08-17 to 2026-08-21. Price recommendations: all 31 recommendations on the 9 shows, with the vendor's price-change log (EV-064). Bot screening: vendor reports for the 2 most recent protected on-sales (including 2026-07-21), a post-sale order check, and box office mailbox complaints (EV-065).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|
