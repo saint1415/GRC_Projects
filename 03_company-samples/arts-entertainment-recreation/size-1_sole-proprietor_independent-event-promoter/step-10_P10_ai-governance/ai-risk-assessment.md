@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company (independent event promoter with one leased room) |
 | Tier / Vertical | Sole Proprietorship / Arts, Entertainment, and Recreation |
-| AI use case | AI-001: the ticketing platform's smart pricing and bot protection features (SYS-01). Smart pricing ran in auto-apply mode on 8 shows from 2026-05-01 to 2026-07-31 (37 price changes); bot protection runs on every on-sale |
+| AI use case | AI-001: the ticketing platform's smart pricing and bot protection features (SYS-01). Smart pricing ran in auto-apply mode on 8 shows from 2026-05-01 to 2026-07-31 (37 price changes; EV-037); bot protection runs on every on-sale (EV-004) |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form. AI 600-1 is not used for AI-001, which is not generative AI |
 | Assessor and decision | Owner, 2026-08-12, with the IT consultant; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is a consumer chatbot for drafting posts, Low tier) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is a consumer chatbot for drafting posts, Low tier), built at intake from the ticketing platform's feature settings and documentation, the bank and card statements, and the marketing assistant's written answers (EV-004, EV-032, EV-023, EV-033). With no staff, the only person asked about AI tools was the marketing assistant. Not established: how the smart pricing and bot protection models work, which the owner cannot see, and what the chatbot provider kept from the pasted complaint email; deleting the conversation (EV-050) does not show what the provider retains |
 
 ## 1. What it does (Map)
-**Smart pricing** watches sales speed, tickets left, days to the show, and page views, and suggests or (in auto-apply mode) makes price changes per price level. The vendor states that no patron-level data is used, so every buyer sees the same price at the same moment; the owner cannot see or change the model. **Bot protection** scores each session at an on-sale using device, browser, network, and timing signals, then allows, challenges, or blocks it. On the 2 sold-out on-sales of 2026 it blocked 610 sessions; 3 fans emailed that they were blocked, and they had no route to appeal except emailing the owner. The owner turned smart pricing on after a vendor webinar, without any review (`../00_company-facts.md` section 4, gap 12).
+**Smart pricing** watches sales speed, tickets left, days to the show, and page views, and suggests or (in auto-apply mode) makes price changes per price level. The vendor states that no patron-level data is used (EV-032), so every buyer sees the same price at the same moment; the owner cannot see or change the model. **Bot protection** scores each session at an on-sale using device, browser, network, and timing signals, then allows, challenges, or blocks it. On the 2 sold-out on-sales of 2026 it blocked 610 sessions; 3 fans emailed that they were blocked, and they had no route to appeal except emailing the owner (EV-049). The owner turned smart pricing on after a vendor webinar, without any review (EV-028).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -25,17 +25,17 @@
 **Tier: Medium.** Ticket prices and access to an on-sale are not consequential decisions in the rubric's categories, and smart pricing sets the same price for every buyer. It is not Low because both features act directly on the public, prices are regulated by the fee rule and the ADA ticketing rules, and in auto-apply mode no human looks before a price changes. **Re-tier to High** if pricing ever uses patron-level data (history, location, device), if fees are priced by the model, or if bot protection is used to cancel orders or ban accounts automatically.
 
 ## 4. Data-sharing rules (Govern)
-1. No patron data, card data, or credentials go into any AI tool, including AI-002 (POL-01 9.5). The 2026-06 paste of a complaint email was deleted from the chatbot history on 2026-08-12, and the assistant was briefed.
+1. No patron data, card data, or credentials go into any AI tool, including AI-002 (POL-01 9.5). The 2026-06 paste of a complaint email was deleted from the chatbot history on 2026-08-12, and the assistant was briefed (EV-050).
 2. Smart pricing may use only event-level data. The owner keeps the vendor's statement on file and re-checks it with each SOC 2 review (P09).
 3. Bot protection session data stays with the vendor; the owner exports only the records of sessions blocked at an on-sale and keeps them 12 months for a possible BOTS Act or Fla. Stat. 817.36(5) referral, then deletes them (POL-01 8.6).
 
 ## 5. Human review of outputs and testing (Measure and Manage)
 | Check | Result in the review (8 shows, 2 on-sales) | Rule from 2026-09-01 |
 |---|---|---|
-| Prices within artist caps | 1 show went 12% above the artist's agreed cap for 4 days | Suggest-only mode: the owner approves each change; the artist cap is entered as the ceiling |
-| Accessible seating parity (seated shows) | Parity held on all 5 seated shows, but no setting enforces it | Accessible price level excluded from changes; checked against the same section before each on-sale and weekly |
-| Advertised prices | 17 of 20 posts and all 6 flyers showed "$X plus fees" | Posts link to the live event page and show the current total price |
-| Blocked fans | 3 complaints, no appeal route | Appeal address on the event page; the owner reviews each appeal within 1 business day and releases genuine fans |
+| Prices within artist caps | 1 show went 12% above the artist's agreed cap for 4 days (EV-037) | Suggest-only mode: the owner approves each change; the artist cap is entered as the ceiling |
+| Accessible seating parity (seated shows) | Parity held on all 5 seated shows, but no setting enforces it (EV-037, EV-004) | Accessible price level excluded from changes; checked against the same section before each on-sale and weekly |
+| Advertised prices | 17 of 20 posts and all 6 flyers showed "$X plus fees" (EV-046) | Posts link to the live event page and show the current total price |
+| Blocked fans | 3 complaints, no appeal route (EV-049) | Appeal address on the event page; the owner reviews each appeal within 1 business day and releases genuine fans |
 | Bot protection fairness | Block rates by access type cannot be measured at this size (vendor report shows totals only) | After each sold-out on-sale, count appeals and confirm the vendor's accessible challenge option (audio) is on; ask the vendor for block rates by network type at the annual review |
 
 ## 6. Decision: approve with conditions (2026-08-31)

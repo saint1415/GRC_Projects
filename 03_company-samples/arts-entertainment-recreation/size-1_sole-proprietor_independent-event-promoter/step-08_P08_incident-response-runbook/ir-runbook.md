@@ -23,7 +23,7 @@ Keep a printed copy in the office and at home. Assume the ticketing and website 
 | Business bank fraud line | Try to recall any diverted payout; watch for more transfers | Hour 0-2 if payout details changed |
 | FBI (IC3 online report) and local police | Report number for the bank and processor; supports a law enforcement delay if needed | Day 1 |
 | Marketing assistant and door contractor's lead | Stop using shared logins; do not post or change anything; report what they saw | Hour 0-1 |
-| Insurer | No cyber policy; general liability excludes breach costs. Budget for counsel and any forensic firm comes from the business | n/a |
+| Insurer | No cyber policy (EV-023, EV-030); general liability excludes breach costs (EV-036). Budget for counsel and any forensic firm comes from the business | n/a |
 
 ## 2. Declare (Detect)
 Declare an incident when any of these happens: an SYS-01 payout-change alert or activity log entry the owner did not make; an unknown user, export, or price change in SYS-01; an unknown script or page change on the website; fans reporting a strange payment form or fraud after buying; the processor reporting a common point of purchase. **Write down the date and time** in the incident log (POL-01 10.2). The processor's 24-hour clock starts at suspicion. Florida's 30-day clock runs from the determination of a breach or reason to believe one occurred (Fla. Stat. 501.171(4)(a)).

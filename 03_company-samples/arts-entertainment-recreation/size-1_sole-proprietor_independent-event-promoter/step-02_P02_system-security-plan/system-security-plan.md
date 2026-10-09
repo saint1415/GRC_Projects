@@ -7,7 +7,7 @@
 Ticketing and Venue Operations Platform (**TVOP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The TVOP is everything the owner uses to book, sell, market, and run about 60 public shows a year in the Room: the ticketing platform (SYS-01) with its integrated payment processor (SYS-02), the website (SYS-03), email and files (SYS-04), email marketing and social media (SYS-05), accounting (SYS-06), the laptop and phones (SYS-07), and the Room's Wi-Fi (SYS-08). Components are listed in `../00_company-facts.md` section 3. One person, the owner, runs it, with contractors who need limited access. There is no server and no IaaS. Card payments are entered only in the hosted checkout, so most card security is **inherited from the ticketing vendor and the processor**. The owner is responsible for identities, website content, data exports, devices, the Room's network, and vendor oversight (P04).
+The TVOP is everything the owner uses to book, sell, market, and run about 60 public shows a year in the Room: the ticketing platform (SYS-01) with its integrated payment processor (SYS-02), the website (SYS-03), email and files (SYS-04), email marketing and social media (SYS-05), accounting (SYS-06), the laptop and phones (SYS-07), and the Room's Wi-Fi (SYS-08). Components are SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). One person, the owner, runs it, with contractors who need limited access. There is no server and no IaaS. Card payments are entered only in the hosted checkout, so most card security is **inherited from the ticketing vendor and the processor**. The owner is responsible for identities, website content, data exports, devices, the Room's network, and vendor oversight (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -48,6 +48,7 @@ Operational. Planned changes: payment links replace keyed phone orders (2026-09-
 **Baseline:** SP 800-53B Moderate, tailored to 28 controls that a one-person promoter can run and that carry the PCI DSS, FTC, and Florida duties (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: AOCs and the ticketing vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The bar concessionaire's POS and merchant account belong to a separate business (EV-026) and are outside it.
 - **Inside:** the owner's accounts, settings, users, and data in SYS-01 to SYS-06; the website's pages and scripts; the laptop, the owner's phone, and the two scanning phones; the Room's router and Wi-Fi.
 - **Outside (external services):** the ticketing vendor's platform and checkout, the processor's payment fields and systems, the other SaaS platforms, the bar concessionaire's POS, the landlord's building network, and patrons' own devices.
 
@@ -101,7 +102,7 @@ Self-assessed 2026-07-27 to 2026-07-31 with the IT consultant. See P07.
 Email, the processor portal, and accounting require a password and an authenticator app on the owner's phone, which fits a Moderate categorization. The SYS-01 and website administrator logins use a password only until MFA is turned on (2026-09-15); until then they are the weakest point in the system (P01 R-001 and R-002). Patrons sign in to the vendor's ticketing accounts under the vendor's own identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)
