@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Group Workforce Platform**, the shared payroll and applicant tracking platform, because every division hires, credentials, and pays its workers on it, it holds the group's most sensitive personal data (SSNs, bank accounts, Form I-9 records, consumer reports, clinician medical screening files), it inherits most of its controls from corporate (SYS-G1 to SYS-G3), and it carries the group's top risk (P01 GR-01). Division systems (SYS-D1 to SYS-D3) keep division SSPs that inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Group Workforce Platform (**GWP**), identifier CSCH-SYS-G4. SYS-G4 in `../00_company-facts.md`.
+Group Workforce Platform (**GWP**), identifier CSCH-SYS-G4. Listed as SYS-G4, with its components SYS-G4-ATS to SYS-G4-DR, in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The GWP runs the worker lifecycle for the whole group:
@@ -38,12 +38,14 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | N56-R02 | FCRA employment background checks | 15 U.S.C. 1681b(b) | Disclosure and authorization forms and consumer reports stored in onboarding |
 | N56-R01 | FTC/FACTA Disposal Rule | 16 CFR 682.3 | Disposal of consumer report information |
 | ADA | Confidential medical files | 29 CFR 1630.14(b)(1) | Post-offer physicals and medical screening results in credentialing must be kept on separate forms in separate, confidential medical files |
-| N62-R01, N62-R02, N62-R03 | HIPAA Security, Privacy, and Breach Notification Rules | 45 CFR Part 164 | Workers' own employment records are not PHI (45 CFR 160.103 excludes employment records held by a covered entity as employer). But the Home Health visit-pay feed puts **patient** names and addresses in the GWP, so corporate acts as Home Health's business associate for that data (scenario gap 1) |
+| N62-R01, N62-R02, N62-R03 | HIPAA Security, Privacy, and Breach Notification Rules | 45 CFR Part 164 | Workers' own employment records are not PHI (45 CFR 160.103 excludes employment records held by a covered entity as employer). But the Home Health visit-pay feed puts **patient** names and addresses in the GWP, so corporate acts as Home Health's business associate for that data (group gap 1) |
 | State law | State breach and data security laws | Each state where affected individuals reside; Florida worked example Fla. Stat. 501.171 | The GWP holds personal information (SSNs, driver license and passport numbers) for workers in every state the group operates in |
 | CCPA | California Consumer Privacy Act | Cal. Civ. Code 1798.100 et seq. | Employee and applicant data of California residents is in scope; CPPA ADMT rules apply to the AI ranking add-on from 2027-01-01 (P10) |
 | N56-R08 | NYC Local Law 144 | NYC Admin. Code 20-870 et seq. | The AI ranking add-on is used for NYC requisitions |
 | SEC | Reg S-K Item 106; Form 8-K Item 1.05 | 17 CFR 229.106 | A GWP incident may be material to the group (P08); payroll is in SOX scope |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
+
+Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -75,10 +77,10 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 (human resourc
 
 | Information type | Confidentiality | Integrity | Availability | Rationale |
 |---|---|---|---|---|
-| Payroll management and pay delivery | **High** | **High** | Moderate | SSNs and bank accounts for about 3.4 million current and former workers; altered bank data diverts pay at scale (scenario gap 2); repeat-payroll workaround holds about 48 hours (P05 BP-G04) |
+| Payroll management and pay delivery | **High** | **High** | Moderate | SSNs and bank accounts for about 3.4 million current and former workers; altered bank data diverts pay at scale (group gap 2); repeat-payroll workaround holds about 48 hours (P05 BP-G04) |
 | Staff recruitment and employment (candidates, onboarding, Form I-9, consumer reports) | **High** | Moderate | Moderate | Identity documents and consumer reports for millions of people; Form I-9 deadlines (P05 BP-G05) |
 | Personnel medical screening (clinician credentialing) | **High** | Moderate | Moderate | Confidential medical files (29 CFR 1630.14(b)(1)); clinicians cannot work without verified credentials |
-| Health care delivery services (Home Health visit records in visit-pay data) | Moderate | Low | Low | Patient names, addresses, dates, and visit type; should not be in the GWP at all (gap 1) |
+| Health care delivery services (Home Health visit records in visit-pay data) | Moderate | Low | Low | Patient names, addresses, dates, and visit type; should not be in the GWP at all (group gap 1) |
 | Information security (keys, tokenization vault, logs) | High | High | Moderate | Compromise would expose every data store |
 | **GWP category (high-water mark)** | **High** | **High** | **Moderate** | Overall **High** |
 
@@ -94,7 +96,7 @@ Other High-baseline controls are either fully inherited from the cloud providers
 - **Outside, inherited (common control providers):** SYS-G1 identity platform, SYS-G2 SOC, SIEM, and EDR, and the SYS-G3 landing zone (network hub, logging account, guardrails).
 - **Outside, interconnected:** SYS-D1 (Staffing time capture and VMS feeds), SYS-D2 (Consulting timesheets), SYS-D3 (Home Health visit records), the two background screening providers, DHS E-Verify (used by named users through its own website), two ACH originating banks, and the paycard program manager.
 
-The diagram is in P04 `cloud-architecture.md` (the GWP subgraph).
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-G4 and its components, and the shared services SYS-G1 to SYS-G3 it inherits from) and the platform exports EV-027 to EV-036. The diagram is in P04 `cloud-architecture.md` (the GWP subgraph).
 
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
@@ -139,13 +141,13 @@ See `control-implementation.csv` (120 controls) and `common-control-catalog.csv`
 | System-specific | 18 |
 
 **The 18 partially implemented controls** cluster in four places:
-- **Home Health patient data and purpose** (scenario gap 1): AC-4, AC-6, CM-12, PT-2, PT-3, RA-8, SI-12.
-- **Associate self-service and bank changes** (gap 2): IA-2(2), AU-6.
-- **Accounts, secrets, and the I-9 archive** (gap 8): AC-2, IA-5, AU-12.
-- **Governance across divisions and vendors** (gaps 4, 5, and 6): CA-2, PL-2, IR-3, IR-8, CP-4, SA-9.
+- **Home Health patient data and purpose** (group gap 1): AC-4, AC-6, CM-12, PT-2, PT-3, RA-8, SI-12.
+- **Associate self-service and bank changes** (group gap 2): IA-2(2), AU-6.
+- **Accounts, secrets, and the I-9 archive** (group gap 8): AC-2, IA-5, AU-12.
+- **Governance across divisions and vendors** (group gaps 4, 5, and 6): CA-2, PL-2, IR-3, IR-8, CP-4, SA-9.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 102 controls provided wholly or partly by corporate. Inheritance is **documented for Staffing** (2025 inheritance matrix), for **Consulting** (2026 matrix, including the Federal Solutions enclave), and for the GWP (this plan). It is **not documented for Home Health** (scenario gap 6). Until POAM-021 closes, Home Health cannot show which HIPAA safeguards are met by group controls, and P07 found CA-2 statements other than satisfied for this reason.
+The common control catalog lists 102 controls provided wholly or partly by corporate. Inheritance is **documented for Staffing** (2025 inheritance matrix), for **Consulting** (2026 matrix, including the Federal Solutions enclave), and for the GWP (this plan). It is **not documented for Home Health** (group gap 6; EV-009). Until POAM-021 closes, Home Health cannot show which HIPAA safeguards are met by group controls, and P07 found CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and GWP and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -158,7 +160,7 @@ Common controls were assessed once, and GWP and division controls sampled, from 
 - **Service accounts** should use workload identity with short-lived tokens; 41 still use static secrets (POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **ATS:** applicant tracking system

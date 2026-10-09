@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 core employees plus about 230,000 temporary associates a week) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 | **Approved:** board risk committee, 2026-09-10
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-070 group, EV-071 Staffing, EV-072 Consulting, EV-073 Home Health), FY2025 revenue by division (EV-003), the payroll calendar (EV-004), hiring, clinician, client and census volumes (EV-045, EV-050, EV-056, EV-062), backup, replication and DR records (EV-024, EV-035, EV-060), and vendor recovery terms (EV-040, EV-066). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -14,12 +15,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share four corporate services (SYS-G1 to SYS-G4). Division systems are SYS-D1 (Staffing front office, time capture, contact center, and the Managed Workforce Solutions VMS tenant), SYS-D2 (Consulting engagement systems and the Federal Solutions enclave), and SYS-D3 (the Home Health EHR, tablets, scheduling and EVV, and billing). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share four corporate services (SYS-G1 to SYS-G4). Division systems are SYS-D1 (Staffing front office, time capture, contact center, and the Managed Workforce Solutions VMS tenant), SYS-D2 (Consulting engagement systems and the Federal Solutions enclave), and SYS-D3 (the Home Health EHR, tablets, scheduling and EVV, and billing). They are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 The group's business is people. A day without hiring, credentialing, time capture, or pay is a day Staffing cannot fill orders, Home Health cannot staff visits, and associates stop reporting to work. That is why the GWP processes rank so high below, even though no patient care runs on them directly.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Staffing about $37 million per calendar day, Consulting about $10.4 million per business day, and Home Health about $4.9 million per calendar day.
+Dollar values use FY2025 revenue by division (EV-003): Staffing about $13.5 billion over 365 days, or about $37 million per calendar day; Consulting about $2.7 billion over about 260 business days, or about $10.4 million per business day; and Home Health about $1.8 billion over 365 days, or about $4.9 million per calendar day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -73,12 +74,12 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | GWP onboarding and credentialing | Group | Staffing fills; Home Health hires; Consulting hires | One platform hires about 640,000 people a year for all divisions |
 | GWP payroll | Group | Every W-2 worker | Pays associates, consultants, and caregivers; a breach exposes all three divisions' workers (P08) |
 | Time capture (BP-ST02) and visit records (BP-HH02) | Staffing; Home Health | GWP payroll | Without approved time and visit records, payroll repeats the prior week |
-| Visit-pay records | Home Health | GWP | The feed carries patient names and addresses into payroll (scenario gap 1). It is not needed for pay calculation beyond visit date and type |
+| Visit-pay records | Home Health | GWP | The feed carries patient names and addresses into payroll (group gap 1). It is not needed for pay calculation beyond visit date and type |
 | Per diem clinicians (BP-ST04) | Staffing | Home Health visits (BP-HH01) | About 1,100 Staffing clinicians a week cover Home Health visits |
 | SOC facts | Group | Every notice in P08; SEC filing | Every notice clock depends on the SOC establishing what happened |
 | Client BAA notices (BP-CN04) | Consulting | About 160 hospital clients | 72-hour notice for 23 clients |
 
-**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly); one payroll engine instance for all workers (DR in provider B tested once a year, P01 GR-02); E-Verify itself (an outage is documented, not avoided); one VMS vendor for all 48 Managed Workforce Solutions clients (P01 ST-019).
+**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly, EV-070); one payroll engine instance for all workers (DR in provider B tested once a year, P01 GR-02); E-Verify itself (an outage is documented, not avoided); one VMS vendor for all 48 Managed Workforce Solutions clients (P01 ST-019).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -90,7 +91,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | SYS-D1 front office, time capture, VMS tenant | BP-ST01 to BP-ST07 | Vendor SaaS recovery commitments; time clock local buffering for 72 hours |
 | SYS-D2 Federal Solutions enclave (provider B) | BP-CN02 | Snapshots every 4 hours; immutable daily backups |
 | SYS-D3 Home Health EHR (vendor-hosted) | BP-HH01 to BP-HH05 | Vendor replication (RPO 15 minutes per contract); offline tablet documentation |
-| People | All | Cross-trained payroll and onboarding centers in two states; remote work for 85% of payroll and onboarding staff |
+| People | All | Cross-trained payroll and onboarding centers in two states; remote work for 85% of payroll and onboarding staff (EV-070) |
 
 ## 7. Recovery priorities
 Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
@@ -107,6 +108,6 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 ## 8. Key findings
 1. **The GWP is the group's real single point of failure.** It is Moderate or High in every division's BIA because no division can hire, credential, or pay without it. Its availability rating in P02 is Moderate only because the weekly payroll workaround (repeat the prior payroll) holds for about 48 hours.
 2. **The payroll DR path is tested once a year** (P01 GR-02). The 12-hour RTO has been met once, in a planned test, not after ransomware.
-3. **The GWP is Moderate for availability but High for confidentiality and integrity** (P02). It holds SSNs and bank accounts for about 3.4 million current and former workers, Form I-9 records, consumer reports, clinician medical screening files, and (scenario gap 1) Home Health patient names and addresses.
+3. **The GWP is Moderate for availability but High for confidentiality and integrity** (P02). It holds SSNs and bank accounts for about 3.4 million current and former workers, Form I-9 records, consumer reports, clinician medical screening files, and (group gap 1) Home Health patient names and addresses.
 4. **Notification capacity is itself a process** (BP-G02, BP-CN04, BP-G07). If the SOC or a contact center is down during an incident, the E-Verify, HIPAA, state, client, and SEC clocks keep running. The P08 runbook uses out-of-band channels for this reason.
 5. **Home Health's emergency plan assumes the EHR is available.** The priority patient list (BP-HH05) is printed weekly, which covers a hurricane but not a cyber outage that starts mid-week. The P08 runbook and the Home Health supplement (P06) add a daily print during declared emergencies.
