@@ -13,7 +13,7 @@
 | Approved | 2026-09-15 by the board risk committee (group register, all High and Very High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system in the three divisions that runs or records food production, storage, or transport, holds personal or payment card data, or supports a division's core service, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and colocation, SYS-G4 ERP, SYS-G5 OT security services, and SYS-G6 cold-chain monitoring (`../00_company-facts.md` section 3).
+**Scope.** Every system in the three divisions that runs or records food production, storage, or transport, holds personal or payment card data, or supports a division's core service, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and colocation, SYS-G4 ERP, SYS-G5 OT security services, and SYS-G6 cold-chain monitoring ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What makes these registers different from an office IT register.** Many risks here end in adulterated or temperature-abused food, not in lost data. Impact ratings therefore weigh consumer health, product holds and recalls, and FSIS or FDA action as well as downtime, cost, and breach duties (P05 impact categories).
 
@@ -21,7 +21,7 @@
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Meat Processing, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each of those division risks points back to it. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-034; acceptance records, EV-033):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -32,8 +32,8 @@
 Risks that could put adulterated product into commerce may not be accepted at High or Very High. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, SP 800-82 Rev. 3, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the Plant 6 food defense plan, and interviews with plant, DC, and store leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, SP 800-82 Rev. 3, the group and division BIAs (P05), the intake evidence, the Plant 6 food defense plan (EV-056), interviews with group, plant, DC, and store leadership (EV-084 group, EV-085 Meat Processing, EV-086 Food Distribution, EV-087 Grocery Retail), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, record samples, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the P05 impact categories, which include a food safety category. Group impact reflects enterprise consequences: several divisions at once, several regulators, brand-wide recalls, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -70,6 +70,8 @@ Risks that could put adulterated product into commerce may not be accepted at Hi
 | MT-007 | High | CIP chemical routed into the Plant 6 plant-based brine system | Hardwired interlock; actionable process step in the reanalysis | Plant 6 plant manager | 2026-11-30 |
 | MT-017 | High | Cloud administrator compromise used to change formulations in the recipe library | Separate library administration; change alerts; signed releases | Division controls engineering manager | 2026-12-31 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): MT-030 was added on 2026-08-15 after testing found manufacturer default passwords on OT devices (EV-C-IA5). The `assessment_pass` column shows which pass produced each risk. Other P07 findings confirmed existing risks and were tracked in the POA&M against them.
+
 **The Very High risk.** MT-030 was added on 2026-08-15 after P07 testing found manufacturer default passwords on three packaging HMIs at Plant 2 and on the Plant 5 refrigeration controller. The board risk committee was informed on 2026-09-15; it may not be accepted, and the credential sweep was due 2026-09-30.
 
 ### Other division risks rated High
@@ -81,10 +83,10 @@ Risks that could put adulterated product into commerce may not be accepted at Hi
 
 ### What the results say
 The program is defined and most common controls work: a 24x7 SOC, MFA, PAM, immutable cloud backups, and an OT gateway at four plants. The High risks cluster around **what the group shares and what it acquired**:
-1. **The corporate directory reaches OT at two acquired plants and the DC automation** (GR-01, scenario gaps 1 and 7). One identity compromise can stop lines in Meat Processing and shipping in Food Distribution, which then empties store shelves.
-2. **One cold-chain alert path serves every division** (GR-02, gap 2). Its failure is not a data problem; it is a food safety problem at 6 plants, 5 DCs, 900 trailers, and 120 stores at once.
-3. **Food defense through the control system** (GR-09, gaps 3 and 4). Shared operator logins and an unreanalyzed Plant 6 plan leave formulation and CIP paths that cannot be attributed or stopped.
-4. **Vendor remote access at acquired sites** (GR-12, gaps 1 and 9).
+1. **The corporate directory reaches OT at two acquired plants and the DC automation** (GR-01, group gaps 1 and 7). One identity compromise can stop lines in Meat Processing and shipping in Food Distribution, which then empties store shelves.
+2. **One cold-chain alert path serves every division** (GR-02, group gap 2). Its failure is not a data problem; it is a food safety problem at 6 plants, 5 DCs, 900 trailers, and 120 stores at once.
+3. **Food defense through the control system** (GR-09, group gaps 3 and 4). Shared operator logins and an unreanalyzed Plant 6 plan leave formulation and CIP paths that cannot be attributed or stopped.
+4. **Vendor remote access at acquired sites** (GR-12, group gaps 1 and 9).
 
 Grocery Retail is the most mature division because the annual PCI DSS ROC forces scope and testing discipline; its two High risks come from that testing (RT-002) and from terminals not yet replaced (RT-001). Food Distribution's governance gaps (drifted standards and undocumented inheritance) are Moderate at group level (GR-05, GR-06), but they hide whether its controls operate, which is why P07 sampled it on governance.
 

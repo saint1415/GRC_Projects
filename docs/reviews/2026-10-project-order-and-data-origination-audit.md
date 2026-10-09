@@ -66,3 +66,17 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market crop farm):** the SSP's backup evidence says 30 of 30 days, P07 says 31 of 31; training completion is 94% in the SSP and 96% in P07; personnel-share readers are 48 in the SSP and R-003 but 46 in P03.
 - **Size 5 (enterprise crop farm):** P03 cites board minutes and a budget approval dated after its own approval; the facts say up to 7,300 seasonal accounts while the deliverables count 3,840.
 - **Size 6 (crop farm plus two divisions):** the cloud map says the food defense repository is limited to qualified individuals, while the facts and P01 say 140 plant staff can read it.
+
+### Food and Agriculture (critical infrastructure), 2026-10-09
+
+Six samples, 549 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 27 minutes.
+
+Fixes made during this batch:
+- **Size 6 (meat processor plus two divisions):** three P07 evidence IDs had lost their parentheses (EV-C-AC23, EV-C-AC65, EV-C-IA21). Renamed to EV-C-AC2(3), EV-C-AC6(5) and EV-C-IA2(1). MT-030's `last_reviewed` moved to 2026-08-15 to match its pass-2 date.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **Size 2 (micro meat processor):** P07 says the delivery driver was given accounting access, while the facts list three named accounting users; G-046 rests on that later P07 test.
+- **Size 3 (small meat processor):** P09, dated 2026-08-21, cites policies published on 2026-09-07 and items approved on 2026-09-04.
+- **Size 4 (mid-market meat processor):** the same 23 of 41 Plant 2 OT change records are cited as P03 evidence (EV-065) and as a P07 test sample.
+- **Size 5 (enterprise meat processor):** G-045 cites a P01 transmittal dated 2026-09-08, after P03 was approved on 2026-08-21.
+- **Size 6 (meat processor plus two divisions):** the Plant 6 walkthrough on 2026-07-14 falls inside the P07 window but is kept as P03 fieldwork; the P04 cloud map's "limited to qualified individuals" wording, logged for Agriculture size 6, does not occur here.

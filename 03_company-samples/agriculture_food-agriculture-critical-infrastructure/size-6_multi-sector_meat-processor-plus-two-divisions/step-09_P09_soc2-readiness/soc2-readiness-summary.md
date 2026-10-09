@@ -60,7 +60,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 - **A1.3:** SYS-D3 has never been failed over to provider B as a whole system. P07 proved the data restores; it did not prove the service.
 
 **Partially ready (18):**
-- *Food Distribution governance (scenario gap 7):* CC1.3, CC2.1, CC2.2, CC5.3 (POAM-016, POAM-017).
+- *Food Distribution governance (group gap 7):* CC1.3, CC2.1, CC2.2, CC5.3 (POAM-016, POAM-017).
 - *Portal and data isolation:* CC6.2 (7 of 25 sampled portal users had left their companies), CC7.1 (authorization tests only at major releases, FD-004), CC3.4 (changes and onboarding not risk-assessed).
 - *Shared group weaknesses that reach the DCs:* CC6.3 (service accounts outside PAM, POAM-012), CC6.6 (DC automation on the corporate domain, GR-01), CC7.2 (30-day logs, POAM-019; cold-chain events not in the SOC, POAM-010), CC7.4 (notification matrix never exercised, POAM-011), CC7.5 (DC automation backups untested, POAM-018).
 - *Third parties:* CC6.7 (EDI credentials, FD-005), CC9.2 (cold-chain vendor CUEC gaps, POAM-006).

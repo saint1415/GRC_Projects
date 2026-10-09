@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Meat Processing | v2025 | 2025-10 (to the 2025 group policies) | Aligned; needs the v2026 additions (HMI sign-in deadline, OT change sign-off, restart validation) by 2026-12-30 (90 days after the effective date) | Update and attest |
-| Food Distribution | Standards v2023 | 2023-04 | **Drifted** (scenario gap 7); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-016) |
+| Food Distribution | Standards v2023 | 2023-04 | **Drifted** (group gap 7); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-016) |
 | Grocery Retail | v2026 | 2026-06 (to the 2026 draft group policies) | Aligned; maintained with the PCI DSS program | Confirm alignment with the final 2026 policies |
 
 ## 3. What each supplement adds
@@ -66,7 +66,7 @@ The 2023 Food Distribution standards were written before the 2025 group policies
 | Vendor remote access | Vendor tools allowed with a firewall rule | Only through SYS-G5 (POL-02 4.10) | Automation vendor access outside the gateway at three DCs (P01 FD-006) |
 | Incident severity | Three-level DC scale | One group scale (POL-03 4.2) | Inconsistent escalation |
 | Temperature record review | Monthly | Within 7 working days (POL-04 4.4; 21 CFR 117.206(a)(4)(iii)) | Late reviews (POAM-025) |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 7 (POAM-017) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Group gap 7 (POAM-017) |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.12) | Forecasting and routing models unregistered until P10 |
 
 **Why the drift happened.** The 2024 reorganization moved DC IT under the Group CISO, but the standards had no named owner or review date. **Fix:** POL-01 4.5 now requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office tracks supplement versions in the policy register.

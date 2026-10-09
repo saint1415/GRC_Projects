@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads and the Group Chief Food Safety and Quality Officer | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-080 group shared services, EV-081 Meat Processing, EV-082 Food Distribution, EV-083 Grocery Retail), FY2025 revenue by division (EV-003), workforce (EV-002), backup and recovery records (EV-010, EV-020, EV-026, EV-048), the cold-chain platform configuration (EV-025), and ERP recovery terms (EV-030). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,12 +16,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating of the PPCM in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Six plants, five DCs with a refrigerated fleet, and 120 stores share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and colocation, SYS-G4 ERP, SYS-G5 OT security services, and SYS-G6 cold-chain monitoring. Division systems are SYS-M1 to SYS-M6 (plants), SYS-D1 to SYS-D3 (distribution), and SYS-R1 to SYS-R3 (stores). See `../00_company-facts.md` sections 1, 3, and 7.
+Six plants, five DCs with a refrigerated fleet, and 120 stores share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and colocation, SYS-G4 ERP, SYS-G5 OT security services, and SYS-G6 cold-chain monitoring. Division systems are SYS-M1 to SYS-M6 (plants), SYS-D1 to SYS-D3 (distribution), and SYS-R1 to SYS-R3 (stores). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What is different about a food supply chain.** Downtime is not only lost revenue. Product that sits in a smokehouse, cooler, trailer, or display case while controls or monitoring are down may have to be held, evaluated, and possibly destroyed, and plant product cannot ship without complete CCP records (9 CFR 417.5(c)). Recovery objectives are set so that product can be protected, not only so that systems come back.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 1: Meat Processing about $28 million per production day (250 days), Food Distribution about $16 million per day, and Grocery Retail about $16.5 million per day.
+Dollar values use FY2025 revenue by division (EV-003): Meat Processing about $7.0 billion in external sales over about 250 production days, or about $28 million per production day; Food Distribution about $5.0 billion, or about $16 million per day; and Grocery Retail about $6.0 billion, or about $16.5 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -79,14 +80,14 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Lot data across the chain | All divisions | Traceability and recall (BP-M07) | A recall needs plant lots, DC shipments, and store receiving records together |
 | SOC facts (SYS-G2) | Group | FSIS, FDA, state breach, acquirer, and SEC notices | Every clock in P08 depends on the SOC establishing what happened |
 
-**Single points of failure found:** the cold-chain alert integration server (no tested failover; P01 GR-02); the corporate directory for OT at Plants 2 and 5 and DC automation (P01 GR-01); one controls integrator for Plants 2 and 5 (P01 MT-006).
+**Single points of failure found:** the cold-chain alert integration server (no tested failover, EV-026; P01 GR-02); the corporate directory for OT at Plants 2 and 5 and DC automation (P01 GR-01); one controls integrator for Plants 2 and 5 (P01 MT-006).
 
 ## 6. Resource requirements
 | Resource | Supports | Recovery method |
 |---|---|---|
-| SYS-G1 directory and SSO | All | Directory restore from offline system-state backups (tested once, 2025); cloud SSO vendor multi-region service |
+| SYS-G1 directory and SSO | All | Directory restore from offline system-state backups (tested once, 2025, EV-010); cloud SSO vendor multi-region service |
 | SYS-G6 cold-chain platform | BP-G04, BP-M01, BP-D01, BP-D03, BP-R02 | Vendor SaaS; gateways buffer 24 hours locally; integration server rebuilt from code (**no tested failover**) |
-| SYS-M1, SYS-M2 plant OT | BP-M02 to BP-M04 | PLC program repository and offline OT backups at Plants 1, 3, 4, and 6 (restored quarterly); **Plants 2 and 5 back up to domain-joined storage, never restore-tested** |
+| SYS-M1, SYS-M2 plant OT | BP-M02 to BP-M04 | PLC program repository and offline OT backups at Plants 1, 3, 4, and 6 (restored quarterly); **Plants 2 and 5 back up to domain-joined storage, never restore-tested** (EV-048) |
 | SYS-M3 MES and recipe master library | BP-M03, BP-M04 | Library replicated to provider B; signed paper formulation masters at each plant |
 | SYS-M5 food safety records | BP-M05 | Provider A database with immutable backups in provider B |
 | SYS-D1 WMS and DC automation | BP-D02, BP-D05 | WMS vendor SaaS; automation server images (DC-1 and DC-3) |
