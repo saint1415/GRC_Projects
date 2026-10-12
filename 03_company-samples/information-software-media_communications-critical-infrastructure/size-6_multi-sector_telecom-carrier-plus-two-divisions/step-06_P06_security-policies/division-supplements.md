@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Telecom Carrier | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; update for the final 2026 policies (service-impact gate, Item 1.05(d) step) due by 2026-12-30 | Confirm alignment |
 | Network Engineering Services | v2026-03 | 2026-03 | Aligned, but its remote access standard still permits persistent tunnels, which POL-02 4.9 now prohibits | Update the remote access standard by 2026-12-31 (POAM-024) |
-| Tower and Fiber Infrastructure | v2023 | 2023-09 (standards of the acquired tower company) | **Drifted** (scenario gap 9); conflicts in section 4 | Re-issue by 2026-12-31 (POAM-020) |
+| Tower and Fiber Infrastructure | v2023 | 2023-09 (standards of the acquired tower company) | **Drifted** (group gap 9; EV-014); conflicts in section 4 | Re-issue by 2026-12-31 (POAM-020) |
 
 ## 3. What each supplement adds
 ### 3.1 Telecom Carrier supplement (telecommunications carrier; interconnected VoIP provider; CALEA carrier)

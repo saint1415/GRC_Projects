@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the Carrier's **OSS/BSS**, because it holds the group's largest CPNI stores (BSS, CDR store), it manages the network that carries 911 calls, and its service assurance platform is in practice a **shared system**: the Engineering Managed Network Operations tenant (SYS-E1) and the Tower Alarm Monitoring Center tenant (SYS-T2) run on it. It inherits most of its controls from corporate (SYS-G1 to SYS-G3). Engineering's SYS-E1 and Tower's SYS-T2 keep division plans that inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Network Operations and Customer Billing Platform (**OSS/BSS**), identifier CSCH-SYS-C1-C5. It covers SYS-C1 to SYS-C5 in `../00_company-facts.md`.
+Network Operations and Customer Billing Platform (**OSS/BSS**), identifier CSCH-SYS-C1-C5. It covers SYS-C1 to SYS-C5 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The OSS/BSS runs the Carrier's customer and network operations in 14 states:
@@ -39,7 +39,7 @@ The cloud components are described by service category and are vendor-agnostic (
 | Contracts | Enterprise CPNI contracts; Engineering MNO customer contracts; outsourced contact center contracts | 47 CFR 64.2010(g); contracts | Enterprise authentication terms; tenant data of Engineering customers on the service assurance platform |
 | Internal | Group policies POL-01 to POL-05 and the Carrier supplement | P06 | All components |
 
-**Not applicable:** CMRS-only CPNI rules (64.2010(h); no wireless service); submarine cable rules (C-COMMUNICATIONS-R04; no cable landing); the EAS cybersecurity order (no video or broadcast service). Broadband usage data is not CPNI after *Ohio Telecom Ass'n v. FCC* (6th Cir. 2025), but POL-04 protects the whole customer account record to the CPNI standard (P03 section 1).
+**Not applicable:** CMRS-only CPNI rules (64.2010(h); no wireless service); submarine cable rules (C-COMMUNICATIONS-R04; no cable landing); the EAS cybersecurity order (no video or broadcast service). Broadband usage data is not CPNI after *Ohio Telecom Ass'n v. FCC* (6th Cir. 2025), but POL-04 protects the whole customer account record to the CPNI standard (P03 section 1). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -90,6 +90,8 @@ Information types are the closest matches in NIST SP 800-60 Vol. 2 Rev. 1. Impac
 Other High-baseline controls are either fully inherited from the cloud providers (for example, most PE controls for cloud-hosted components, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, AC-18 wireless access controls for which group endpoint standards apply).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-C1 to SYS-C5 and the shared services they inherit from) and the configuration exports EV-016, EV-040 to EV-044 and EV-052.
+
 - **Inside:** SYS-C1 (OSS and the service assurance platform, including the platform layer under all three tenants), SYS-C2 (BSS, including the legacy billing system in the acquired regions), SYS-C3 (mediation and CDR store), SYS-C4 (portal, app back end, API gateway), and SYS-C5 (management plane in 6 regional NOC data centers).
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SYS-G3 landing zones, and the cloud providers' facilities and hardware.
 - **Outside, interconnected:** SYS-C6 voice core and SYS-C7 IP and access network (managed through SYS-C5); SYS-C9 contact center; SYS-C10 AI chatbot and voice agent (vendor SaaS calling the API gateway); SYS-E1 remote access gateways and collectors (Engineering); SYS-T2 RMUs and smart locks (Tower); the NG911 system service providers, signaling hubs, bill print vendor, and payment processor.
@@ -142,7 +144,7 @@ See `control-implementation.csv` (134 controls) and `common-control-catalog.csv`
 | System-specific | 32 |
 
 **The 21 partially implemented controls** cluster in four places:
-- **Management plane in the acquired regions** (scenario gaps 1, 3, and 7): AC-2, IA-2, AC-17, SC-7, SI-2, RA-5, AU-6, SI-4.
+- **Management plane in the acquired regions** (group gaps 1, 3, and 7): AC-2, IA-2, AC-17, SC-7, SI-2, RA-5, AU-6, SI-4.
 - **The shared service assurance platform and affiliate use of CPNI** (gap 2): AC-3, AC-6, AC-21, PT-2, PT-3, AT-3, CA-3.
 - **Customer authentication and CPNI evidence** (gap 4 and P08 readiness): IA-8, AU-12.
 - **Cross-division incident and supply chain governance** (gaps 8 and 10): IR-4, IR-8, CP-4, SR-3.
@@ -150,7 +152,7 @@ See `control-implementation.csv` (134 controls) and `common-control-catalog.csv`
 **The planned control** is CM-12 (information location): a CPNI data map across all platforms and tenants, due 2027-03-31.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 102 controls provided by corporate. Inheritance is **documented for the Carrier** (2025 inheritance matrix), **for Engineering** (2026-03 inheritance matrix, which also carves the group services into the planned SOC 2 report, P09), and for the OSS/BSS (this plan). It is **not documented for the Tower division** (scenario gap 9). Until POAM-021 closes, the Tower division cannot show which of its safeguards for SYS-T1 to SYS-T3 are met by group controls; P07 found its CA-2 statements other than satisfied for this reason.
+The common control catalog lists 102 controls provided by corporate. Inheritance is **documented for the Carrier** (2025 inheritance matrix), **for Engineering** (2026-03 inheritance matrix, which also carves the group services into the planned SOC 2 report, P09), and for the OSS/BSS (this plan). It is **not documented for the Tower division** (group gap 9). Until POAM-021 closes, the Tower division cannot show which of its safeguards for SYS-T1 to SYS-T3 are met by group controls; P07 found its CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and OSS/BSS and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -162,7 +164,7 @@ Common controls were assessed once, and OSS/BSS and division controls sampled, f
 - **Customers** are non-organizational users. The CPNI rules set the floor: authentication "without the use of readily available biographical information, or account information" before online access, then a password (47 CFR 64.2010(c), (e)), and immediate notice of changes to passwords, backup authentication, online accounts, or the address of record (64.2010(f)). The portal and app meet this; the chatbot account recovery pilot did not and is disabled (POAM-012). The target recovery design uses a one-time code sent to the telephone number or email address of record.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), CALEA SSI policies (8 current; 2 being refiled).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), CALEA SSI policies (8 current; 2 being refiled; EV-036).
 
 ## 13. Acronym List and Glossary
 - **AAA:** authentication, authorization, and accounting (TACACS+ and RADIUS for network devices)
