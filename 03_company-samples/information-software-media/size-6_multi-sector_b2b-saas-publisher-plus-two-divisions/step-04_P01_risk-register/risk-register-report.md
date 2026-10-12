@@ -13,7 +13,7 @@
 | Approved | 2026-09-17 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds customer, worker, client, cardholder, or payroll data in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform and CI/CD, and SYS-G4 corporate SaaS. Division systems are SYS-D1 (WCP), SYS-D2 (consulting delivery systems), SYS-D3 (payroll engine), and SYS-D4 (payments platform) (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that holds customer, worker, client, cardholder, or payroll data in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform and CI/CD, and SYS-G4 corporate SaaS. Division systems are SYS-D1 (WCP), SYS-D2 (consulting delivery systems), SYS-D3 (payroll engine), and SYS-D4 (payments platform) ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Cloud Software, the focus division, has the most detailed register.
@@ -30,11 +30,11 @@
 Risks that could leave workers unpaid or expose payroll data (Social Security numbers and bank details) at High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), the cloud mapping (P04), and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, interviews with each division's leadership (EV-078 group, EV-080 Cloud Software, EV-081 Technology Consulting, EV-082 Payments and Payroll), the cloud mapping (P04), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses (P03) followed in August and used these registers.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, interviews and early test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators and contract counterparties at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
-5. **Close the loop with P07.** Two Cloud Software risks were added from the control assessment and carry a review date of 2026-08-28: SW-014 (the 2025 handoff delay that was never corrected) and SW-028 (HR case-note text reaching a non-HR manager in a test tenant).
+5. **Close the loop with P07 (two passes).** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28, and pass 2 added two Cloud Software risks with a review date of 2026-08-28: SW-014 (the 2025 handoff delay that was never corrected, EV-W-CP4) and SW-028 (HR case-note text reaching a non-HR manager in a test tenant, EV-W-SA11). The `assessment_pass` column shows which pass produced each risk.
 6. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
 
 ## 3. Results

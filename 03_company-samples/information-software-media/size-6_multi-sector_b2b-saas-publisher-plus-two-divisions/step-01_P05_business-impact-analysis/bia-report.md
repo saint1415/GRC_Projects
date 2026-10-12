@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-17
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-074 group, EV-075 Cloud Software, EV-076 Technology Consulting, EV-077 Payments and Payroll), FY2025 net revenue by division (EV-003), customer, worker and program volumes (EV-039, EV-041, EV-054, EV-063), backup, contingency and recovery records (EV-023, EV-050, EV-070), and contract and sponsor bank terms (EV-039, EV-063). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
+
 ## 1. Overview and purpose
 This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on (identity, SOC, cloud landing zones and keys, CI/CD, the group data platform, finance, and HR).
@@ -15,12 +17,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform (landing zones in providers A and B, CI/CD, secrets, data platform), and SYS-G4 corporate SaaS. Division systems are SYS-D1 (the Workforce Cloud Platform, WCP), SYS-D2 (consulting delivery systems), SYS-D3 (payroll engine), and SYS-D4 (payments platform). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform (landing zones in providers A and B, CI/CD, secrets, data platform), and SYS-G4 corporate SaaS. Division systems are SYS-D1 (the Workforce Cloud Platform, WCP), SYS-D2 (consulting delivery systems), SYS-D3 (payroll engine), and SYS-D4 (payments platform). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 The divisions are closely linked. Workforce Cloud captures the hours and direct deposit details that Payments and Payroll pays out, and consultants implement most new Workforce Cloud tenants. An outage or breach in one division usually reaches another.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Cloud Software about $24.7 million per day, Technology Consulting about $14.8 million per day, and Payments and Payroll about $9.9 million per day.
+Dollar values use FY2025 net revenue by division (EV-003) spread over 365 days: Cloud Software about $9.0 billion, or about $24.7 million per day; Technology Consulting about $5.4 billion, or about $14.8 million per day; and Payments and Payroll about $3.6 billion, or about $9.9 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -109,7 +111,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 11. to 26. APIs, payroll tax, customer support, health-system integrations, CI/CD, tenant provisioning, implementation projects, merchant onboarding, the data platform, federal delivery, financial close, the workforce assistant, group payroll and HR, attrition-risk insights, consultant billing, and disputes.
 
 ## 8. Key findings
-1. **RTOs for shared services are shorter than any division's, as they must be.** Group identity (RTO 1 hour) met its target in both 2026 failover tests.
+1. **RTOs for shared services are shorter than any division's, as they must be.** Group identity (RTO 1 hour) met its target in both 2026 failover tests (EV-074).
 2. **Payroll depends on the WCP more than either division's continuity plan admits.** The payroll engine has its own recovery design, but without the WCP handoff it has no current hours or bank details. The two continuity plans were written separately (P07 CP-2 finding; POAM-024).
 3. **The export service is High for availability and High for confidentiality.** Its recovery is urgent, and so is its protection: the handoff files are the most sensitive data in the WCP (gap 2; P01 SW-003; the P08 scenario).
 4. **Notification capacity is itself a process** (BP-SW05, BP-G02, BP-G06). If the SOC or the support desk is down during an incident, the 48-hour and 72-hour customer clocks keep running. The P08 runbook uses out-of-band channels for this reason.

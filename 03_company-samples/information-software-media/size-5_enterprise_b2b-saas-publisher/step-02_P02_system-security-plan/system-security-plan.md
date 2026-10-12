@@ -77,6 +77,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1, used as a model. Impac
 **Documented controls.** `control-implementation.csv` documents **178 controls**: 168 from the Moderate baseline and 10 supplements. The remaining Moderate-baseline enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are documented in the enterprise privacy program.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 and its components SYS-01-CELL, SYS-01-CIS, SYS-01-SRCH, SYS-01-TAT, SYS-01-EXP and SYS-01-AIO) and the prior SSP version 2.1 (EV-020).
+
 **Inside the boundary:** the 14 cells and their standby stacks, the shared platform services (customer identity service, API gateway, tenant routing, search cluster, notification service, file storage, AI Assist orchestration), the export service, the tenant access tool, and the OCP production accounts in the Cloud provider A landing zone.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -189,7 +191,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Machine clients:** OAuth client credentials scoped to one tenant, with rotation; long-lived keys are being removed from internal pipelines (POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), cloud credential compromise runbook (P08), SOC 2 readiness for SL-1 (P09), AI portfolio including AI-001 AI Assist (P10), OCP contingency plan v7, tenant isolation test suite, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), cloud credential compromise runbook (P08), SOC 2 readiness for SL-1 (P09), AI portfolio including AI-001 AI Assist (P10), OCP contingency plan v7 (EV-056), tenant isolation test suite (EV-026), enterprise common control catalog (EV-040), identity platform exports (EV-001 to EV-004). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **Cell:** an isolated stack of OCP services and data stores serving a fixed set of tenants

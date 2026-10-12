@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the rules that apply to each. Priority use cases: the generative **workforce assistant** embedded in Workforce Cloud (AI-001, the registry use case), **attrition-risk insights** (AI-002), and group HR's **resume screening** pilot (AI-009). The payments models (AI-004, AI-005) and the consulting delivery assistant (AI-006) are assessed more briefly |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook; risk tiers from the repository rubric (`00_universal-framework/projects/step-10_P10_ai-governance/README.md`) |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-04; presented to the board risk committee 2026-09-17 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list and model registries (EV-031), product and division configuration records (EV-048, EV-061, EV-072), risk interviews (EV-078, EV-080) and the 2026-08-31 enablement and pilot reports (EV-093, EV-094). Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure

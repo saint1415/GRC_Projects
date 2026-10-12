@@ -45,8 +45,8 @@
 Risks under ER-05 (product security and tenant isolation) or ER-06 (regulatory, contractual, and disclosure) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the SaaS threat picture (credential and token theft, software supply chain, tenant isolation failures, cloud provider and DNS outages), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the SaaS threat picture (credential and token theft, software supply chain, tenant isolation failures, cloud provider and DNS outages) in the SOC's threat intelligence (EV-070), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-033), and risk workshops with the SOC, Product Security, Identity, Cloud Platform Engineering, the Integration Management Office, Customer Support, Third-Party Risk Management, Privacy, Legal, Finance and AI platform engineering (EV-076). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, coverage and configuration exports from the enterprise systems of record, the AQ-01 records, contract and vendor records, the workshops, the gap analysis samples, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). Because one failure can reach thousands of customers, any event that could expose many tenants is rated Very High.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -68,6 +68,8 @@ By threat source type: Adversarial 24, Structural 26, Accidental 11, Environment
 By treatment: Mitigate 55, Accept 7, Avoid 2.
 By status: In progress 35, Open 21, Closed (accepted) 7, Closed (avoided) 1.
 **25 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-058 was added on 2026-08-28 after testing found the publicly readable AQ-01 CI build log bucket with a static access key in one log (EV-CM-6), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -106,12 +108,12 @@ By status: In progress 35, Open 21, Closed (accepted) 7, Closed (avoided) 1.
 | R-058 | Secrets in publicly readable AQ-01 CI build logs are harvested | High | ER-04 | Apply landing zone guardrails to the AQ-01 organization; scan all AQ-01 storage (POAM-019) | Vice President, Integration Management Office | 2026-11-15 |
 
 ## 6. Themes from the 2026 analysis
-1. **Acquisition integration (ER-04).** AQ-01 runs outside the landing zone with static keys, unfederated identities, logs outside the SIEM, and a broad cross-account role over the shared export. Internal Audit found its CI build logs publicly readable, one with a live key (R-058). Treatment: minimize the export, guardrails, key removal, federation, and log onboarding, all due by 2027-03-31. Going forward, deal approvals must include security diligence and integration funding (R-061).
+1. **Acquisition integration (ER-04).** AQ-01 runs outside the landing zone with static keys, unfederated identities, logs outside the SIEM, and a broad cross-account role over the shared export. Internal Audit found its CI build logs publicly readable, one with a live key (R-058; EV-CM-6). Treatment: minimize the export, guardrails, key removal, federation, and log onboarding, all due by 2027-03-31. Going forward, deal approvals must include security diligence and integration funding (R-061).
 2. **Credentials and secrets (ER-02, ER-05).** Non-human identities and long-lived keys are now the main path to customer data (R-001, R-007, R-030). Treatment: short-lived workload credentials everywhere and automatic revocation of found secrets.
-3. **Support access and public statements (ER-02, ER-06).** The tenant access tool works as designed for restricted tenants, but the trust page promises more than the tool delivers for everyone else (R-004, R-020). The statement is corrected first; the tool follows.
+3. **Support access and public statements (ER-02, ER-06).** The tenant access tool works as designed for restricted tenants, but the trust page promises more than the tool delivers for everyone else (R-004, R-020; EV-007, EV-008, EV-048). The statement is corrected first; the tool follows.
 4. **Commitments the company cannot yet prove (ER-06).** Deletion within 90 days (R-022, R-023), 24-hour and 48-hour notices (R-018), and the bank service provider notice (R-019) all depend on processes that were never reconciled against the contracts.
 5. **AI (ER-08).** AI Assist is generally available to about 2,300 customers; prompt injection (R-026) and AQ-01's pooled training (R-021) are the main issues; the portfolio is reviewed in P10.
-6. **Resilience (ER-01).** 13 of 14 cells meet the RTO; Cell 4 does not (R-008). The single DNS provider (R-016) is now the largest availability exposure.
+6. **Resilience (ER-01).** 13 of 14 cells meet the RTO; Cell 4 does not (R-008; EV-016). The single DNS provider (R-016) is now the largest availability exposure.
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q2), about $9.4 million:** AQ-01 landing zone migration and identity federation ($2.6M), non-human identity and secrets program ($1.8M), tenant access tool rebuild and behavioral analytics ($1.2M), Cell 4 split and restore automation ($1.1M), secondary DNS provider ($0.4M), CCPA cybersecurity audit readiness and external auditor ($0.9M), contract obligations register ($0.5M), AI Assist prompt-injection hardening ($0.6M), and outside counsel for the disclosure tabletop ($0.3M). Items map to the POA&M in P07.
