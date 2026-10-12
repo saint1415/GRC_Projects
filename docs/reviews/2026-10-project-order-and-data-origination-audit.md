@@ -221,3 +221,23 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (hotel operator):** the revenue management vendor's report is SOC 2 Type 2 in the SSP and Type 1 in P09 and the facts; P07 RA-3 calls the risk assessment approved before it was; IR-08d is Satisfied while IR-08b says the plan was not distributed.
 - **Size 5 (enterprise hotel operator):** firewall rule reviews are six-monthly in G-002 and quarterly in P09; the facts say emailed card forms while G-041 says printed; P02 says POS accounts are vaulted while G-037 says hardcoded; the chatbot result "9 of 20" appears for both the July and August tests.
 - **Size 6 (hotel operator plus two divisions):** the P03 method samples 60 adverse action notices while the rows and P10 say 50; P08 says association agreements require 5-day notice while P09 says they have no notice commitment; G-004 and P07 CA-3 disagree on whether interconnection terms exist.
+
+### Information, Software and Media, 2026-10-12
+
+Six samples, 567 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 28 minutes. (A first launch stopped at the usage limit before any edits and was rerun.)
+
+Fixes made during this batch:
+- **Sizes 1, 2, 3 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-5-7, EV-SA-3-2, EV-C-SC281 and others) renamed to the parenthesis form.
+- **Size 1 (independent SaaS developer):** a website capture and home office walk-through dated inside the P03 window but used as starting-state evidence were moved to intake dates.
+- **Size 2 (micro SaaS publisher):** three risks added after P10 and P09 work carry "Pass 2 (2026-09-04, from P10 testing)" and "from the P09 readiness work" rather than claiming P07.
+- **Size 4 (mid-market SaaS publisher):** P03 section 1.5 pointed to a facts section that never listed PADFA; it now points to the obligations register.
+- **Size 6 (SaaS publisher plus two divisions):** the P01 method listed the August gap analyses as a source of July pass-1 risks; it now says P03 followed and used the registers.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in sizes 2, 5 and 6 the P08 matrix) cites regulatory checks dated after approval.
+- **Size 1:** the BIA relies on a restore test two days after it was prepared; P04 and SSP CM-6 both claim the same discovery.
+- **Size 2:** administrators are "five" in six places while only four people and a CI key are named; P07 calls the root vault entry and password-only admin console new findings that P03 already recorded.
+- **Size 3 (workforce scheduling SaaS):** the P07 plan says AC-6, AC-6(9) and AU-11 had nothing in place while their rows show tested settings; P09 counts 60 of 60 2025 acknowledgments including 2026 joiners; the facts cite an AI tools list under POL-05 before its approval.
+- **Size 4:** P07 SA-9 and SR-6 cite P09 vendor reviews that ran after fieldwork; 61 terminated tenants is given for two different windows.
+- **Size 5 (enterprise SaaS publisher):** P07 findings test against 2026 policy numbering while the plan says controls ran under the 2025 set; R-005 says about 400 services while G-013 counts 412.
+- **Size 6:** handoff files "kept 400+ days" date back about 390 days at the test; the BIA and SSP quote an opt-in count as of 2026-08-31; PY-G23 and PY-G25 disagree on whether the division plan has the FTC notice step.
