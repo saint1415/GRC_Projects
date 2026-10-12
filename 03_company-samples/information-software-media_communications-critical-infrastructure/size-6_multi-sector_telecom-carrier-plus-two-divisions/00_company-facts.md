@@ -85,7 +85,7 @@ This file says who the company is. It does not say how well its security works. 
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-03-30 to 2026-04-24 | Intake: evidence requests, exports, walk-throughs, inventories, obligations register |
+| 2026-03-30 to 2026-04-24 | Intake: evidence requests, exports, documents, inventories, obligations register |
 | 2026-05-04 to 2026-07-31 | Group and division BIAs, risk analyses, and gap analyses |
 | 2026-06-01 to 2026-06-26 | Group policies v2026 drafted from the gaps found so far (P06); the Carrier supplement was aligned to the drafts on 2026-06-30 |
 | 2026-07-06 to 2026-08-28 | Common control assessment (group internal audit) plus division samples: operating tests of controls already in place; design review of the draft v2026 policies |
