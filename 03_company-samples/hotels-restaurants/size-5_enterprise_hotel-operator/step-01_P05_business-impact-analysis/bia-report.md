@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded hotel franchisor, manager, and owner: 750 hotels in 33 states and DC) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners, 2026-06-01 to 2026-07-15 | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** risk committee of the board, 2026-09-10
+**Sources:** process owner interviews 2026-06-01 to 2026-07-10 (EV-071, EV-072), dependency and contract review (EV-073), portfolio and site register (EV-055), FY2025 revenue report (EV-053), operational volume and card volume reports (EV-054, EV-043), DR test and backup records (EV-023, EV-022), third-party recovery terms and test records (EV-024), and the resort transition services agreement and integration status (EV-025, EV-026). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties, franchisees, and the resorts acquired in 2025. It feeds:
@@ -14,12 +15,12 @@ This enterprise-wide BIA identifies the business processes the company depends o
 **Results in one line:** 17 processes were analyzed; 7 are High criticality, 9 Moderate, and 1 Low. 8 processes need recovery within 4 hours. The dependency map (`dependency-map.csv`) lists 26 dependencies, 15 of them single points of failure (overall or per hotel) and 9 never tested.
 
 ## 2. System and business description
-Cris Santos Company franchises, manages, and owns 750 hotels (about 96,000 rooms) under four brands: 38 owned or leased, 72 managed for third-party owners, and 640 franchised. The 110 owned, leased, and managed hotels are company-operated and employ about 9,900 of the company's 12,000 employees. Annual revenue is about $4.8 billion, about $13.2 million per calendar day. The technology estate is described in `../00_company-facts.md` section 3: the central reservation system (SYS-01), the brand cloud PMS (SYS-02), the tokenization service and card vault (SYS-03), the POS estate (SYS-04), the managed property network (SYS-05), digital channels (SYS-06), loyalty (SYS-07), channel connectivity (SYS-08), and about 1,100 vendors (SYS-15). Fourteen resorts were acquired in 2025-06; nine are still on the seller's systems under a transition services agreement.
+Cris Santos Company franchises, manages, and owns 750 hotels (about 96,000 rooms) under four brands: 38 owned or leased, 72 managed for third-party owners, and 640 franchised. The 110 owned, leased, and managed hotels are company-operated and employ about 9,900 of the company's 12,000 employees. Annual revenue is about $4.8 billion, about $13.2 million per calendar day (EV-053). The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): the central reservation system (SYS-01), the brand cloud PMS (SYS-02), the tokenization service and card vault (SYS-03), the POS estate (SYS-04), the managed property network (SYS-05), digital channels (SYS-06), loyalty (SYS-07), channel connectivity (SYS-08), and about 1,100 vendors (SYS-15). Fourteen resorts were acquired in 2025-06; nine are still on the seller's systems under a transition services agreement.
 
 **What makes a hotel company different:** many of the processes below serve hotels the company does not own. A CRS or PMS outage hits 640 franchised hotels and 180 independent distribution clients at once, so service credits, franchisee claims, and brand reputation weigh as much as the company's own room revenue.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-053) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

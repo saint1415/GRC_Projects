@@ -76,6 +76,8 @@ Information types are modeled on NIST SP 800-60 Vol. 2 Rev. 1 and rated with FIP
 **Documented controls.** `control-implementation.csv` documents **145 controls**: 135 from the Moderate baseline and 10 High-baseline supplements. The remaining Moderate-baseline controls (mostly enhancements for AC, AU, CM, CP, IA, SC, and SI) are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are documented in the enterprise privacy program.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-02, SYS-03, SYS-04-C, SYS-04-L, SYS-04-FD and the payment segments of SYS-05), the cardholder data flow diagram and PCI DSS scope document (EV-012), and the prior PPP SSP (EV-064).
+
 **Inside the boundary:** the card vault and tokenization service (cardholder data environment account, Cloud provider A); the payment gateway connector; the company's configuration, roles, users, and interfaces of the brand PMS tenant; the cloud POS configuration and P2PE device estate at company-operated hotels; the legacy POS servers and workstations at 41 hotels; the payment and POS network segments and hotel firewalls at the 110 company-operated hotels; front desk PCs and payment terminals at company-operated hotels.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -198,7 +200,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Guests** do not use the PPP directly. Loyalty member sign-in belongs to the loyalty platform (SYS-07) and is assessed in P01 and P03.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), POS and reservation compromise runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio (P10), PPP contingency plan v3, cardholder data flow diagram v7, PCI DSS responsibility matrix for franchisees, 2025 merchant ROC, 2026 service provider ROC, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), POS and reservation compromise runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio (P10), PPP contingency plan v3 (EV-064), cardholder data flow diagram v7 (EV-012), PCI DSS responsibility matrix for franchisees, 2025 merchant ROC and 2026 service provider ROC (EV-030), enterprise common control catalog (EV-064). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)
