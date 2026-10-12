@@ -1,0 +1,32 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,"Corporate shared services (parent company, intercompany)","Identity, SOC, cloud, ERP, email, the PDPP and the CUI enclave for all divisions",SYS-G1; SYS-G2; SYS-G3; SYS-G4; SYS-G5; SYS-G6; SYS-PDPP,FCI; CUI (enclave only); payment and personal data,Intercompany agreements,Common control assessment by group internal audit,EV-001; EV-011; EV-008,Internal external service provider in CMMC terms (same corporate family)
+V-02,Public cloud provider A,"Commercial landing zone, PDPP integration services, digital twin, TSSI platform",SYS-G3; SYS-PDPP; SYS-D2; SYS-D5-DT; SYS-EST,FCI; client data; personal information,Customer agreement,SOC 2 Type 2,EV-020; EV-030,Group
+V-03,Public cloud provider B,DR and immutable backup vault,SYS-G3,Backups of all commercial workloads,Customer agreement,SOC 2 Type 2,EV-023; EV-030,Group
+V-04,Government-community cloud provider,CUI enclave (FedRAMP Moderate authorized),SYS-G6,CUI,Contract with incident reporting commitments,FedRAMP Moderate authorization package,EV-048,"Group, for Construction and A&E"
+V-05,Identity SaaS vendor,"Single sign-on, MFA, PAM, identity governance",SYS-G1,Workforce identities,Subscription terms,Vendor documentation,EV-012; EV-029,Group
+V-06,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs,Subscription terms,Annual critical vendor assessment,EV-015; EV-017; EV-029,Group
+V-07,Productivity suite vendor,"Commercial email, files, chat",SYS-G5,Email and files (FCI; personal information),Subscription terms,None on file,EV-027,Group
+V-08,ERP SaaS vendor; filing agent,ERP and payment factory; SEC filing agent,SYS-G4,Financial and payment data,Subscription and service terms,None on file,EV-025; EV-029,Group
+V-09,Banks,"Bank connectivity, positive pay, lockbox",SYS-G4; SYS-D3,Payment files,Treasury service agreements,None on file,EV-025; EV-063,Group and Property
+V-10,Payroll SaaS vendor,Payroll and certified payroll,SYS-HR,Employee personal information,Service agreement with notice terms,None on file,EV-029,Group
+V-11,Project management SaaS vendor,"PDPP tenant (documents, workflows, pay applications, portals)",SYS-PDPP,FCI; project and payment data,"SaaS contract with 72-hour breach notice, audit rights and data return",SOC 2 Type 2 (complementary user entity controls listed),EV-041; EV-086,Construction (platform business owner); all divisions
+V-12,E-signature vendor,Pay applications and lien waivers,SYS-PDPP,Pay applications; signatures,Subscription terms,None on file,EV-039; EV-041,Construction
+V-13,AI estimating SaaS vendor,AI estimating and bid assistant,SYS-D6; AI-001,Drawings; historical costs; bids,Enterprise terms barring training on group data,SOC 2 Type 1 only,EV-059; EV-030,Construction and A&E. Pooled pricing feature enabled
+V-14,Remote access platform vendor,TSSI managed service remote access,SYS-D2,Client system sessions,Subscription terms,Vendor file,EV-054,Construction (TSSI)
+V-15,Equipment distributors,"Cameras, recorders, access control and BAS equipment for TSSI installs",SYS-D2,Submittals,Purchase orders with FAR 52.204-25 terms,Distributor declarations,EV-053; EV-052,Construction (TSSI)
+V-16,Telematics vendor,Equipment location and engine data,SYS-D1,Equipment locations,Subscription terms,Vendor review,EV-060; EV-029,Construction
+V-17,Jobsite camera service and safety software vendors,"Jobsite cameras, safety analytics, permits and inspections",SYS-D1; AI-002,Jobsite video; safety records,Subscription terms,None on file,EV-035; EV-060,Construction
+V-18,Prequalification service vendor,Subcontractor prequalification,SYS-PDPP,Subcontractor company data,Service terms,None on file,EV-052,Construction
+V-19,Property management SaaS vendor,"Lease administration, tenant portal, property accounting",SYS-D3,Tenant contacts; payments; vendor bank details,Subscription terms,None on file,EV-061; EV-063,Property
+V-20,"BAS, access control and video integrators (11 firms)","Installation, maintenance and remote support of building systems",SYS-D4,Building system access; controller configurations,Integrator contracts,None on file,EV-065; EV-064,Property. Persistent remote access outside group PAM; integrators hold controller backups
+V-21,Parking technology service provider,Pay stations and mobile parking app; card processing,SYS-D4-PARK,Cardholder data,Service agreement; responsibility matrix in draft,PCI DSS attestation of compliance,EV-066,Property
+V-22,Acquirer,Parking card acquiring,SYS-D4-PARK,Card transaction data,Merchant agreement,n/a,EV-066,Property
+V-23,Design collaboration service vendor,Commercial design collaboration,SYS-D5,Client designs (commercial only),Subscription terms,Vendor file (not FedRAMP authorized),EV-069,A&E
+V-24,"Design software, code checking and BAS analytics vendors","Generative design, code compliance checking, energy optimization",AI-004; AI-005; AI-007,Designs; building telemetry,Subscription terms,None on file,EV-035,A&E and Property
+V-25,"Applicant tracking, lease abstraction and enterprise AI assistant vendors","AI resume screening, lease abstraction, enterprise assistant",AI-003; AI-006; AI-009,Applicant data; leases; internal documents,Subscription terms (no-training terms for the enterprise assistant),None on file,EV-035,Group and Property
+V-26,IT asset disposition vendor,Certified wipe and destruction of devices,SYS-D1; SYS-G5,Data on retired devices,Service agreement,Certificates of destruction,EV-056,Group
+V-27,Forensic retainer firm,Incident response support,SYS-G2,As needed during an incident,Retainer agreement,None on file,EV-016,Group
+V-28,Penetration testing firm,Annual penetration test of the PDPP tenant configuration and portals,SYS-PDPP,Test results,Engagement letter,Report dated 2025,EV-019,Group
+V-29,Cyber insurer and surety,Cyber insurance tower; performance and payment bonds,n/a,Incident facts when a claim or notice is made,Policy; general indemnity agreement,n/a,EV-031,Group
+V-30,Carriers,"WAN, office and jobsite links",NET-WAN,Encrypted traffic,Carrier contracts,None on file,EV-020,Group
+V-31,Outside government contracts counsel,Affirmation and clause reviews,n/a,Assessment results; contract files,Engagement letter,n/a,EV-096,Group

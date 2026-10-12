@@ -96,7 +96,7 @@ The plan documents 47 controls: those that implement the 15 FAR 52.204-21 requir
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with in-house IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains company-managed components and the company's configuration of vendor services. It is drawn to match where FCI lives (32 CFR 170.19(b)).
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains company-managed components and the company's configuration of vendor services, and it is drawn to match where FCI lives (32 CFR 170.19(b)).
 - **Inside:**
   - the SYS-01, SYS-02, and SYS-03 tenant configurations, users, and roles
   - the productivity suite tenant (SYS-04)
@@ -171,7 +171,7 @@ Push MFA is **not** adequate for the payment roles. An adversary-in-the-middle p
 External subcontractor users of SYS-01 sign in with the vendor's own sign-in and optional MFA. That is governed by the vendor and outside this boundary. SYS-01 permissions limit each external user to their own project.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House (electronic bank payments)

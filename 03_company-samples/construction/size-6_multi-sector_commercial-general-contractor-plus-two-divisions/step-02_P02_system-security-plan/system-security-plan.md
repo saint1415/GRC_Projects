@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **PDPP**, a shared corporate system, because all three divisions use it (A&E issues design-build revisions in it, Construction runs projects and pay applications in it, and Property approves tenant improvement work and intercompany pay applications in it), it moves about $1.18 billion of billings a month, it is the group's CMMC Level 1 assessment scope, and it carries two of the group's top risks: payment fraud (P01 GR-02) and CUI landing where it must not be (P01 GR-01). The CUI enclave (SYS-G6) keeps its own SSP, as NIST SP 800-171 R2 requirement 3.12.4 and 32 CFR 170.19(c) require; it is assessed in P03 and P07.
 
 ## 1. System Name and Identifier
-Project Delivery and Payment Platform (**PDPP**), identifier CSCH-PDPP-01. A shared corporate system owned by corporate shared services. See `../00_company-facts.md` section 3.
+Project Delivery and Payment Platform (**PDPP**), identifier CSCH-PDPP-01. A shared corporate system owned by corporate shared services; listed as SYS-PDPP in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PDPP is the system of record for project delivery and the front end of the billing cycle. It supports:
@@ -30,7 +30,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 |---|---|---|---|
 | N23-R01 | FAR Basic Safeguarding | 48 CFR 52.204-21 | The PDPP processes FCI for 212 federal contracts. All 15 requirements apply |
 | N23-R04 | CMMC Program and DFARS CMMC clause | 32 CFR Part 170; DFARS 252.204-7021 | The PDPP is the CMMC Level 1 (Self) assessment scope (Final status date 2026-01-20; annual affirmation due 2027-01-20). Under 252.204-7021(d)(2), FCI may be processed only on systems with the required status |
-| N23-R03 | DFARS Safeguarding Covered Defense Information | 48 CFR 252.204-7012 | **The PDPP must not hold CUI.** It is not FedRAMP Moderate authorized or equivalent (252.204-7012(b)(2)(ii)(D)). The 2026-07-14 scan found 1,140 CUI-marked files in it (scenario gap 1) |
+| N23-R03 | DFARS Safeguarding Covered Defense Information | 48 CFR 252.204-7012 | **The PDPP must not hold CUI.** It is not FedRAMP Moderate authorized or equivalent (252.204-7012(b)(2)(ii)(D)). The 2026-07-14 scan found 1,140 CUI-marked files in it (EV-087; group gap 1) |
 | N23-R02 | Section 889 | 48 CFR 52.204-25 | Not a direct PDPP requirement; submittal screening for installed equipment runs in the PDPP workflow (P03) |
 | FAR 52.232-33 | Payment by EFT, System for Award Management | 48 CFR 52.232-33 | Remittance details on federal pay applications must match SAM; the PDPP must not let anyone redirect payments |
 | N53-R05 | SEC cybersecurity disclosure | Reg S-K Item 106; Form 8-K Item 1.05 | A PDPP incident (for example a large payment diversion) goes to the disclosure committee (P08) |
@@ -38,7 +38,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | Contracts | Owner prime contracts; subcontracts; SaaS vendor contract | Contract terms | Owner confidentiality and notice terms; flowdowns of FAR 52.204-21(c) and DFARS 252.204-7012(m) |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
 
-Not applicable: HIPAA (no PHI); PCI DSS (no card data in the PDPP; parking card payments are in SYS-D4); FedRAMP (the group does not operate a federal information system for an agency).
+Not applicable: HIPAA (no PHI); PCI DSS (no card data in the PDPP; parking card payments are in SYS-D4); FedRAMP (the group does not operate a federal information system for an agency). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -87,6 +87,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 The other Moderate-baseline controls are either fully inherited from the cloud providers and the SaaS vendor (for example most PE and MP controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, wireless and media controls for a system with no group-owned wireless or media). Where NIST's CSF 2.0 to SP 800-53 crosswalk lists no CSF subcategory for a control (for example AC-8, AC-21, PS-3, MA-4), the `csf2_subcategories` value is an author mapping.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-PDPP and the shared services it inherits from) and the PDPP exports EV-036 to EV-041.
+
 - **Inside:** the project management SaaS tenant (configuration, roles, and data the group controls), the integration and payment-instruction services and the API gateway in the PDPP accounts on provider A, the nightly export and its backups in the provider B vault, and the e-signature service account.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SYS-G3 landing zone and network, SYS-G4 ERP and payment factory, SYS-G5 email.
 - **Outside, interconnected:** SYS-G4 (billing and payments), the estimating database, SYS-D6 (AI estimating assistant, read-only connector to cost history only), and the CUI enclave gateway (one-way notices only; no CUI may flow into the PDPP).
@@ -98,7 +100,7 @@ The diagram is in P04 `cloud-architecture.md` (section 2.2).
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
 | SYS-G4 ERP and payment factory | Bidirectional (hourly) | Pay application totals, change orders, cost codes; verified remittance details (outbound from SYS-G4) | Interface catalog; group data owner approval |
-| Owners (external) | Bidirectional | Pay applications, lien waivers, approvals | Prime contracts; terms of use. **Gap:** many owners have not been told the group's remittance verification procedure (scenario gap 3) |
+| Owners (external) | Bidirectional | Pay applications, lien waivers, approvals | Prime contracts; terms of use. **Gap:** many owners have not been told the group's remittance verification procedure (group gap 3) |
 | Subcontractors and suppliers (external) | Bidirectional | Bid packages, submittals, pay requests, lien waivers | Subcontracts with FAR 52.204-21(c) flowdown on federal work |
 | A&E design teams | Bidirectional | Design revisions and RFI responses on commercial and non-CUI work | Intercompany agreement |
 | Property (owner role) | Bidirectional | Tenant improvement and capital project approvals; intercompany pay applications | Intercompany agreement |
@@ -135,15 +137,15 @@ See `control-implementation.csv` (166 controls) and `common-control-catalog.csv`
 | System-specific | 22 |
 
 **The 18 partially implemented controls** cluster in four places:
-- **CUI in the wrong system** (scenario gap 1): AC-4, AC-21, CM-8, CM-12, SI-4, AT-3.
+- **CUI in the wrong system** (group gap 1): AC-4, AC-21, CM-8, CM-12, SI-4, AT-3.
 - **External user lifecycle and authentication:** AC-2, AC-2(3), IA-8, PS-7, SA-9 (the SaaS vendor's complementary user entity controls).
-- **Payment-instruction integrity** (scenario gap 3): AC-5, SI-10, AU-6.
-- **Cross-division incident handling and recovery** (scenario gap 7): IR-3, IR-6, IR-8, CP-4.
+- **Payment-instruction integrity** (group gap 3): AC-5, SI-10, AU-6.
+- **Cross-division incident handling and recovery** (group gap 7): IR-3, IR-6, IR-8, CP-4.
 
 **The CUI spill, in short.** The scan on 2026-07-14 found 1,140 CUI-marked files from 9 DoD projects. The group treated the spill as a cyber incident under DFARS 252.204-7012 and reported it on 2026-07-16 (within 72 hours of discovery). The files were restricted to project administrators the same day and are being purged under POAM-006. Until then the PDPP is a CUI asset in fact, which affects the CMMC Level 2 scope for the enclave (P03).
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 142 controls provided by corporate. Inheritance is **documented for Construction** (2025 inheritance matrix, used for the CMMC Level 1 scope), **for A&E** (2026 inheritance matrix), and **for the PDPP** (this plan). The CUI enclave inherits governance, HR, and SOC monitoring only; it provides its own identity, network, and email inside its FedRAMP Moderate authorized boundary. Inheritance is **not documented for Property** (scenario gap 4). Until POAM-021 closes, Property cannot show which group controls protect its building systems and property accounting, and P07 found 4 CA-2 determination statements other than satisfied for this reason. Property also does not inherit the payment factory's bank-change controls, because its accounts payable runs on SYS-D3 (scenario gap 3).
+The common control catalog lists 142 controls provided by corporate. Inheritance is **documented for Construction** (2025 inheritance matrix, used for the CMMC Level 1 scope), **for A&E** (2026 inheritance matrix), and **for the PDPP** (this plan). The CUI enclave inherits governance, HR, and SOC monitoring only; it provides its own identity, network, and email inside its FedRAMP Moderate authorized boundary. Inheritance is **not documented for Property** (group gap 4). Until POAM-021 closes, Property cannot show which group controls protect its building systems and property accounting, and P07 found 4 CA-2 determination statements other than satisfied for this reason. Property also does not inherit the payment factory's bank-change controls, because its accounts payable runs on SYS-D3 (group gap 3).
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and PDPP, enclave, and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -154,7 +156,7 @@ Common controls were assessed once, and PDPP, enclave, and division controls sam
 - **Changing remittance details** requires step-up re-authentication (IA-11) and, once POAM-009 closes, can only select a bank account already verified in SYS-G4.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10). The CUI enclave SSP (v2.3, under revision; POAM-016) is a separate document.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10). The CUI enclave SSP (v2.3, under revision; POAM-016) is a separate document.
 
 ## 13. Acronym List and Glossary
 - **CUI:** controlled unclassified information

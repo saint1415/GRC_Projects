@@ -9,7 +9,7 @@ Project Delivery and Payment Platform (**PDPP**), identifier CSC-SYS-PDPP-001. T
 ## 2. System Overview
 The PDPP is how the company runs projects and moves money. Project teams manage drawings, RFIs, submittals, daily logs, and pay app workflows in the project management platform. The ERP turns approved schedules of values into about 300 owner pay apps a month (about $400 million) and turns approved subcontractor invoices into about 10,500 ACH payments a month (about $300 million). The payment hub sends approved payment files to three treasury banks.
 
-**Why payment integrity matters most.** The largest single-event loss the company faces is a diverted payment. In 2026 the company lost $157,000 net when a supplier bank change was accepted by email at AQ-1 (EV-2026-04). The PDPP's job is to make sure that money goes only to verified accounts, that no one person can change a payee and release a payment, and that the record of each change is complete and attributable.
+**Why payment integrity matters most.** The largest single-event loss the company faces is a diverted payment. In 2026 the company lost $157,000 net when a supplier bank change was accepted by email at AQ-1 (INC-2026-04; EV-024). The PDPP's job is to make sure that money goes only to verified accounts, that no one person can change a payee and release a payment, and that the record of each change is complete and attributable.
 
 **Major components:**
 - Enterprise project management platform (SYS-01): vendor SaaS with about 9,200 workforce and 41,000 external users
@@ -34,7 +34,7 @@ The PDPP is how the company runs projects and moves money. Project teams manage 
 | Contract | Owner contracts and subcontracts | Prime contract notice clauses; subcontract flowdowns | Owners require notice of compromised payment channels |
 | Internal | POL-01 to POL-05 and standards | P06 | Enterprise policy hierarchy |
 
-Not applicable to the PDPP: SP 800-171 Rev. 2 and CMMC Level 2 (they apply to the FPCE, which has its own SSP; see P03), HIPAA, and PCI DSS (`../00_company-facts.md` section 1).
+Not applicable to the PDPP: SP 800-171 Rev. 2 and CMMC Level 2 (they apply to the FPCE, which has its own SSP; see P03), HIPAA, and PCI DSS (intake [obligations register](../step-00_P00_intake/obligations-register.csv); EV-060).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -78,6 +78,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Documented controls.** `control-implementation.csv` documents **140 controls**: 135 from the Moderate baseline and 5 High-baseline payment integrity supplements. The remaining Moderate-baseline controls and enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here. CSF 2.0 subcategories come from the official CSF 2.0 to SP 800-53 Rev. 5.2.0 reference (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`); enhancements use their base control's mapping, and 16 controls have no mapped subcategory.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-06, SYS-06-BV, SYS-06-ES and SYS-07-INT) and the prior SSP version 1.1 (EV-036).
+
 **Inside the boundary:** the SYS-01 tenant configuration and its data, the ERP application and database in the PDPP workload account (Cloud provider A), the integration platform flows for the PDPP, the payment hub and payment file transfer gateway, and the PDPP configuration in the bank account validation and e-signature services.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -189,7 +191,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **External SYS-01 users:** vendor accounts tied to company email addresses, MFA enforced by the platform. Their identity is vouched for by the subcontract or design contract. External users never reach the ERP or payment hub.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), BEC runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), PDPP contingency plan v3, bank connectivity agreements, FPCE SSP (separate, CMMC Level 2), enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), BEC runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), PDPP contingency plan v3 (EV-017), bank connectivity agreements (EV-022), FPCE SSP (separate, CMMC Level 2; EV-041), enterprise common control catalog (EV-036). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each implementation statement.
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House

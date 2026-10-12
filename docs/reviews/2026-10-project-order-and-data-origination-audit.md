@@ -116,3 +116,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market venue):** CM-07a says 31 third-party scripts while its evidence shows 33; P09 (2026-09-04) cites minutes and risk appetite of 2026-09-15; P09 says vendor reviews ended 2026-09-11, the calendar says 2026-09-04; P09 says quarterly committee reporting began 2026-09 while the facts say it is quarterly.
 - **Size 5 (enterprise venue):** P03 cites P10 tests that ran after its sampling ended; the BIA cites P01, POA&M and P08 items approved later; P07 findings cite policy sections approved after the report; DEP-19 gives the last MSSP tabletop as 2026-03-19 while the facts and P08 say 2025-10-21.
 - **Size 6 (venue plus two divisions):** LV-021 says group venues use rotating barcodes while the facts say 3 still use static ones; GR-05 lists policies effective 2026-10-01 as an existing control in a register prepared 2026-07-31.
+
+### Construction, 2026-10-12
+
+Six samples, 588 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 28 minutes. (A first launch on 2026-10-09 stopped at the usage limit before any edits and was rerun.)
+
+Fixes made during this batch:
+- **Validator:** a risk whose `assessment_pass` is Pass 2 may not have a `last_reviewed` date earlier than its Pass 2 date. **Size 6:** PRP-006 and PRP-018 moved from 2026-07-31 to 2026-08-12 to meet it.
+- **Sizes 1 to 3 and 6:** trailing-hyphen P07 IDs (EV-IA-2-1, EV-C-AC2-3 and others) renamed to the parenthesis form.
+- **Size 5 (enterprise contractor):** payment fraud events EV-2026-04 and EV-2026-06 relabelled INC-2026-04 and INC-2026-06, so incident numbers are not read as evidence IDs.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 cites regulatory text checks dated after its approval.
+- **Size 1 (sole-proprietor contractor):** the P03 header says only G-006 changed after P07 testing, but four more rows cite P07 results; G-028 places the doorbell camera off a work network that does not exist until 2026-09-30; the BIA cites a P09 vendor review dated two days later.
+- **Size 2 (micro contractor):** SYS-01 has three administrators in the facts and P07 AC-2 but two in the SSP, P04 and P07 IA-2(1); the BIA and P04 cite reviews and tests dated after they were prepared; R-021 is said to close on 2026-08-31 while its last review is 2026-07-31.
+- **Size 3 (small contractor):** P03 G-001 cites a P07 result from August, and G-027 and G-029 cite follow-ups after the P03 update date; G-015 confirms protection on all 20 tablets from a sweep of 2 jobsites; deliverables disagree on which vendor SOC 2 reports are on file.
+- **Size 4 (mid-market contractor):** pass-1 R-002 and R-039 quote August P07 samples; R-007 says 45 SP 800-171 requirements are not fully met while P03 says 40; the SSP cites P07 results for AC-6(2), which P07 did not test; P04 and P03 name different reviewers of the enclave log.
+- **Size 5 (enterprise contractor):** P03 G-087 and G-146 disagree on whether the enclave SSP maps the provider's responsibility matrix, and G-001 and G-035 disagree on whether the plotters are enrolled; the BIA, P03, P09 and P04 cite POA&M IDs and P07 results issued 2026-09-04.
+- **Size 6 (contractor plus two divisions):** pass-1 GR-06 and AE-006 cite P07 findings from August; the P01 report still says CMMC Phase 2 "just begins"; the facts and the findings disagree on whether superintendents use enclave desktops; P03 G-026 samples 30 subcontract awards where P07 SR-6 samples 25.

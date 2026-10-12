@@ -83,7 +83,7 @@ flowchart LR
   VDI --> CS
   CS -->|allow-listed domains| AE["A&E subcontractor, Army Corps"]
   ELOG -.->|weekly manual review| SIEM
-  PM -. "CUI spill (gap 1)" .-> CS
+  PM -. "CUI spill (EV-029)" .-> CS
 ```
 
 There is no network path between the commercial landing zone and the CPE. The dotted line from SYS-01 to the CPE shows the CUI that was found in the commercial project platform. The dotted line from the CPE log store shows that CPE logs are reviewed by hand, not forwarded.
@@ -154,10 +154,10 @@ The design is independent of the provider. This table gives each provider's name
 - **SaaS** (project platform, ERP, identity, suites, SIEM): the provider also owns the application. The customer keeps identities, roles, workflows, audit review, and data.
 
 ## 6. Findings from the mapping
-1. **The weak point is the field, not the cloud.** The landing zone and the CPE are well separated, but jobsite routers (7 of 22 with internet-facing administration), 40 unmanaged tablets, and offline drawing sets sit outside every cloud control (gap 6; P01 R-011, R-012). Fix: router baseline and central management by 2027-01-31; enroll or retire the 40 tablets by 2026-11-30.
+1. **The weak point is the field, not the cloud.** The landing zone and the CPE are well separated, but jobsite routers (7 of 22 with internet-facing administration), 40 unmanaged tablets, and offline drawing sets sit outside every cloud control (EV-010, EV-011; P01 R-011, R-012). Fix: router baseline and central management by 2027-01-31; enroll or retire the 40 tablets by 2026-11-30.
 2. **The commercial project platform cannot hold CUI.** SYS-01 has no FedRAMP authorization and the vendor could not show FedRAMP Moderate equivalence, so CUI in SYS-01 fails DFARS 252.204-7012(b)(2)(ii)(D) (P03 G-111). Fix: section 3 design; remove the 1,140 CUI items by 2026-10-31.
 3. **CPE monitoring and backup depend on manual work and provider retention.** Weekly manual log review and provider versioning are not enough for a 2027 C3PAO assessment (P03 G-030, G-109; P01 R-016, R-017). Fix: in-cloud monitoring service and independent backup (section 3).
-4. **SaaS logs that matter most for fraud are not collected.** SYS-01 audit logs and SYS-02 vendor-master changes would show a compromised Project Manager or a changed bank record, but neither reaches the SIEM (gap 5; P01 R-001, R-002). Fix: API collection by 2026-12-31.
+4. **SaaS logs that matter most for fraud are not collected.** SYS-01 audit logs and SYS-02 vendor-master changes would show a compromised Project Manager or a changed bank record, but neither reaches the SIEM (EV-020; P01 R-001, R-002). Fix: API collection by 2026-12-31.
 5. **Recovery is isolated but incomplete.** Corporate backups are in a separate account and region with write-once retention and separate credentials. There is no company copy of SYS-01 or SYS-02 data and no tested MBSS rebuild (P05 findings 1, 3, 4). Fix: nightly exports into the vault; MBSS rebuild test by 2027-03-31.
 6. **Boundary check.** Every in-scope component in the SSP (P02 section 9) appears in the diagram. Every cloud component has at least one row in the control map, and each account has controls from at least 2 of the AC, AU, CM, IA, SC, and SI families or inherits them.
 7. **Inherited controls rely on third-party evidence.** Controls marked Provider or Shared for commercial SaaS depend on SOC 2 Type 2 reports and their complementary user entity controls (reviewed each year in P09 `vendor-soc2-review.csv`). CPE controls depend on the FedRAMP authorization and the CRM.

@@ -1,0 +1,16 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Project management platform vendor,Project management platform and subcontractor portal,SYS-01,"FCI (drawings, submittals, pay apps); external user identities",Subscription agreement,"SOC 2 Type 2, 12 months ending 2026-04-30",EV-028; EV-030,Stated RTO 4 hours and RPO 1 hour
+V-02,ERP vendor,Construction ERP and accounting,SYS-02,Pay apps; vendor bank details,Subscription agreement with no FCI-handling terms,None reviewed,EV-028; EV-029,
+V-03,Payroll and HR vendor,"Payroll, HR and certified payroll reporting",SYS-03,Employee PII; certified payrolls,Vendor contract,SOC 2 report on file,EV-028; EV-030,
+V-04,Identity provider vendor,Single sign-on and MFA,SYS-04,Workforce identities,Subscription terms,SOC 2 report on file,EV-028; EV-030,
+V-05,Productivity suite vendor,"Email, file storage, chat",SYS-05,FCI; payment correspondence,Subscription terms,None reviewed,EV-028,
+V-06,Public cloud provider,"IaaS/PaaS for the BIM/CAD file server, estimating database, file-transfer portal and backups",SYS-06,FCI; client facility security details,Customer agreement,SOC 2 report and shared responsibility documentation from the provider portal,EV-028; EV-030,
+V-07,Managed service provider (MSP),"Help desk, patching, endpoint protection console, backup monitoring",SYS-06; SYS-07; SYS-08,Administrative access to endpoints and cloud workloads,Service agreement with confidentiality terms and no FCI-handling terms,None on file,EV-028; EV-029,Business hours plus on-call; remote management tool reaches every managed endpoint
+V-08,Bank,"Treasury portal (ACH, wires, positive pay)",SYS-09,Payment instructions,Treasury agreement,None reviewed,EV-007; EV-028,
+V-09,Telematics vendor,Equipment telematics,SYS-10,Equipment location and engine data,Subscription terms,None reviewed,EV-028; EV-035,
+V-10,Jobsite camera rental service,Temporary cellular cameras,SYS-11,Jobsite video,Rental terms,None reviewed,EV-028; EV-037,Offers a PPE-detection feature (not enabled); camera manufacturer not confirmed for Section 889
+V-11,Time-clock kiosk service,Jobsite time capture,SYS-11,Time punches,Service terms,None reviewed,EV-028,
+V-12,Drone photo service,Progress photography,SYS-11,Progress photos,Service terms,None reviewed,EV-028,
+V-13,AI estimating vendor,AI estimating and bid assistant,SYS-12,FCI (uploaded drawings); bid pricing; subcontractor bids,Standard terms that allow customer data to be used to improve models,None on file,EV-028; EV-029; EV-037,Pilot started May 2026 with 4 seats
+V-14,Cyber insurer,Cyber insurance,n/a,Incident information on a claim,"Policy with a $250,000 social engineering sublimit",n/a,EV-028; EV-033,
+V-15,Security and network equipment distributors,"Cameras, recorders, access control and switches for client installations",Client systems,Product orders,Purchase terms with no Section 889 terms,None reviewed,EV-028; EV-038,Private-label products are invoiced under the distributor's brand

@@ -53,6 +53,17 @@ Small tier scope: 15-25 controls. **23 controls, 153 determination statements.**
   - a single-file backup restore
   - a Section 889 check of 5 closed or active federal submittals against the covered entities in FAR 52.204-25
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-08-31. They were therefore reviewed as drafts, for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operating effectiveness. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples, live systems or site walkthroughs | 85 |
+| Design | The control is new (draft POL-03 and the draft P08 runbook); its design was reviewed. Operation is tested at the 2027-02 follow-up | 6 |
+| Not implemented | Nothing existed to test | 62 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled field terminations come from the terminations in EV-003 and the disable tickets in EV-004).
+
 ## 3. Rules of engagement
 - No testing against production identities beyond sign-in tests. The phishing relay test used a separate test tenant with a test account.
 - No FCI or payroll data was copied off-site. Screenshots were redacted.

@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Construction | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Add trailer visitor log and field CUI rules (sections 3.1) |
-| Property | v2024 | 2024-04 | **Drifted** (scenario gap 4); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-026) |
+| Property | v2024 | 2024-04 | **Drifted** (group gap 4); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-026) |
 | A&E | v2026 | 2026-05-29 | Aligned; missing the subconsultant status check required by POL-01 4.8 | Add by 2026-12-31 (POAM-020) |
 
 ## 3. What each supplement adds

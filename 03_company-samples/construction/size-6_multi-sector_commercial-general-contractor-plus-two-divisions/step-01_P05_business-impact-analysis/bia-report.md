@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-072 group, EV-073 Construction, EV-074 Property, EV-075 A&E), FY2025 revenue by division (EV-004), payment and billing volumes (EV-025, EV-057, EV-061, EV-071), backup and recovery records (EV-023, EV-040), and client commitments (EV-054, EV-068). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,10 +16,10 @@ It supports:
 - the availability commitments of the two services in SOC 2 scope (P09: the TSSI managed service and the A&E digital twin service).
 
 ## 2. System and business description
-Corporate shared services run SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP and payment factory, SYS-G5 commercial email and files, and SYS-G6, the CUI enclave. The PDPP is the shared project management and pay application platform used by all three divisions. Division systems are SYS-D1 and SYS-D2 (Construction field systems and TSSI tools), SYS-D3 and SYS-D4 (Property management platform and building systems), SYS-D5 (A&E design platform), and SYS-D6 (AI estimating and bid assistant). See `../00_company-facts.md` sections 3 and 7.
+Corporate shared services run SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP and payment factory, SYS-G5 commercial email and files, and SYS-G6, the CUI enclave. The PDPP is the shared project management and pay application platform used by all three divisions. Division systems are SYS-D1 and SYS-D2 (Construction field systems and TSSI tools), SYS-D3 and SYS-D4 (Property management platform and building systems), SYS-D5 (A&E design platform), and SYS-D6 (AI estimating and bid assistant). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 1: Construction about $39 million of billings a day, Property about $5.8 million a day, and A&E about $4.7 million a day.
+Dollar values use FY2025 revenue by division (EV-004) spread over 365 days: Construction about $14.2 billion, or about $39 million of billings a day; Property about $2.1 billion, or about $5.8 million a day; and A&E about $1.7 billion, or about $4.7 million a day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -75,10 +76,10 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 |---|---|---|---|
 | Sign-in (SYS-G1) | Group | Every process | A group identity outage stops all three divisions at once. Break-glass accounts per critical system are the fallback |
 | PDPP document control and pay applications | Construction (platform business owner) | A&E design-build revisions; Property tenant improvement and capital projects | The divisions exchange drawings and approve intercompany pay applications in one platform |
-| CUI enclave (BP-G09) | Group | A&E federal design (BP-A02); Construction DoD field use | CUI drawings must flow from A&E to the field through the enclave gateway, not the PDPP. The current workaround breaks this rule (gap 1) |
-| Payment factory (BP-G04) | Group | Construction and A&E payments | Bank-change verification is strong here. Property accounts payable runs outside it (gap 3) |
+| CUI enclave (BP-G09) | Group | A&E federal design (BP-A02); Construction DoD field use | CUI drawings must flow from A&E to the field through the enclave gateway, not the PDPP. The current workaround breaks this rule (group gap 1) |
+| Payment factory (BP-G04) | Group | Construction and A&E payments | Bank-change verification is strong here. Property accounts payable runs outside it (group gap 3) |
 | SOC facts (BP-G02) | Group | All divisions; DoD report; SEC decision | Every notice clock in P08 depends on the SOC establishing what happened |
-| TSSI installations | Construction | Property access control and video at 12 properties | Same Section 889 screening should apply to both; it does not today (gap 5) |
+| TSSI installations | Construction | Property access control and video at 12 properties | Same Section 889 screening should apply to both; it does not today (group gap 5) |
 | Digital twin service (BP-A04) | A&E | Property facility data for 22 owned buildings | Property maintenance planning depends on A&E's service |
 | Email (BP-G07) | Group | Owner, tenant, and subcontractor correspondence | The main fraud channel (P08) |
 
@@ -111,8 +112,8 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 Email (BP-G07) is deliberately not first. In a payment fraud incident, restoring email before identity is secured hands the channel back to the attacker (P08).
 
 ## 8. Key findings
-1. **RTOs for shared services are shorter than any division's**, as they must be. The group identity RTO of 1 hour was met in two tests in 2026.
-2. **The PDPP depends on one SaaS vendor.** The nightly independent export (added in 2025) has been restore-tested once. A second test with the project teams is planned for 2026-12 (P01 CON-012).
-3. **The CUI enclave has no lawful workaround.** Its availability target is set by contract schedules, and the BIA records that field teams must not fall back to commercial tools. Today they do so even when the enclave is up (gap 1), which is a confidentiality failure, not an availability one.
-4. **Property building systems recover locally, but nobody else can see them.** Their controller backups are held by integrators, not by Property, and the group SOC cannot see them (gap 4). Recovery after a ransomware event at an integrator is unproven.
+1. **RTOs for shared services are shorter than any division's**, as they must be. The group identity RTO of 1 hour was met in two tests in 2026 (EV-072).
+2. **The PDPP depends on one SaaS vendor.** The nightly independent export (added in 2025) has been restore-tested once (EV-040). A second test with the project teams is planned for 2026-12 (P01 CON-012).
+3. **The CUI enclave has no lawful workaround.** Its availability target is set by contract schedules, and the BIA records that field teams must not fall back to commercial tools. Today they do so even when the enclave is up (group gap 1), which is a confidentiality failure, not an availability one.
+4. **Property building systems recover locally, but nobody else can see them.** Their controller backups are held by integrators, not by Property, and the group SOC cannot see them (group gap 4). Recovery after a ransomware event at an integrator is unproven.
 5. **Notification capacity is itself a process** (BP-G02, BP-C08, BP-G08). If the SOC or the compliance office is down during an incident, the DoD 72-hour clock keeps running. The P08 runbook uses out-of-band channels for this reason.

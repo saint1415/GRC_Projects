@@ -48,8 +48,8 @@
 Risks to federal eligibility (ER-03) and safety (ER-07) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the construction threat picture (business email compromise and payment fraud, ransomware, supply chain, insider fraud), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the construction threat picture (business email compromise and payment fraud, ransomware, supply chain, insider fraud) in the SOC's threat intelligence (EV-062), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-031), the payment fraud case files (EV-024, EV-071), and risk workshops with Treasury and Payment Operations, the SOC, the Integration Management Office, the Federal Group and CMMC Program Office, BTS, Preconstruction, Procurement, Human Resources, Finance and Equipment and Prefabrication (EV-070). The gap analysis (P03), including the FPCE readiness check, ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-016), coverage and configuration exports from the enterprise systems of record, contract, vendor and SPRS records, the workshops, the P03 fieldwork, and, for risks updated in the second pass, the P07 test results.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). A single diverted payment above $1 million, or loss of federal award eligibility, is Very High.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -72,6 +72,8 @@ By treatment: Mitigate 52, Accept 11, Avoid 2.
 By status: In progress 52, Closed (accepted) 11, Open 2.
 **18 risks are outside tolerance** and each has a dated treatment plan. All 18 are board reported.
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-062 was added on 2026-08-28 after testing found the vendor default password on the payment file transfer gateway console (EV-IA-5), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
+
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -86,11 +88,11 @@ By status: In progress 52, Closed (accepted) 11, Open 2.
 | ER-09 | Responsible use of AI | Strategic | 6 | 0 | 1 | 5 | 0 | **High** | Moderate | 1 |
 
 **Reading the profile:**
-- **ER-01 (payment fraud)** has the most High risks. The 2026-04 loss at AQ-1 (R-003) and the adversary-in-the-middle phishing path that bypasses push MFA (R-002) are the drivers.
+- **ER-01 (payment fraud)** has the most High risks. The 2026-04 loss at AQ-1 (R-003; EV-024) and the adversary-in-the-middle phishing path that bypasses push MFA (R-002; EV-002) are the drivers.
 - **ER-02 (project delivery)** carries the only Very High risk, enterprise ransomware during the pay app window (R-009). The AQ-1 network (R-042, ER-06) is the main reason its likelihood is not lower.
-- **ER-03 (federal eligibility)** is outside tolerance because CUI was found on the commercial project management platform (R-018) and because the enclave drifted before its C3PAO assessment (R-019, R-020). Several drifted requirements cannot be placed on a CMMC POA&M (32 CFR 170.21(a)(2)), so they must be fixed, not planned.
-- **ER-07 (client building systems)** has the lowest tolerance because BTS controls access and cameras in about 420 client buildings (R-046).
-- **ER-08 (disclosure)** is outside tolerance because the materiality playbook has no payment fraud scenario and no rule for related occurrences (R-051). 17 CFR 229.106(a) defines a cybersecurity incident to include "a series of related unauthorized occurrences", so repeated small frauds must be considered together.
+- **ER-03 (federal eligibility)** is outside tolerance because CUI was found on the commercial project management platform (R-018; EV-074) and because the enclave drifted before its C3PAO assessment (R-019, R-020; EV-078, EV-041). Several drifted requirements cannot be placed on a CMMC POA&M (32 CFR 170.21(a)(2)), so they must be fixed, not planned.
+- **ER-07 (client building systems)** has the lowest tolerance because BTS controls access and cameras in about 420 client buildings (R-046; EV-046).
+- **ER-08 (disclosure)** is outside tolerance because the materiality playbook has no payment fraud scenario and no rule for related occurrences (R-051; EV-025). 17 CFR 229.106(a) defines a cybersecurity incident to include "a series of related unauthorized occurrences", so repeated small frauds must be considered together.
 
 ## 5. Top risks (Very High and High)
 | Risk ID | Risk | Level | Enterprise risk | Treatment | Owner | Due |
@@ -115,7 +117,7 @@ By status: In progress 52, Closed (accepted) 11, Open 2.
 2. **CUI outside the enclave (ER-03).** Design firms and subcontractors uploaded CUI-marked drawings to the commercial project management platform on 2 DoD projects (R-018). The platform is not FedRAMP authorized, so this is a DFARS 252.204-7012(b)(2)(ii)(D) and 252.204-7021(d)(2) issue, not just a policy breach (P03).
 3. **CMMC drift (ER-03).** The FPCE achieved Final Level 2 (Self) on 2026-02-27, but the July readiness check found 8 requirements no longer fully met, mostly in the jobsite plan rooms that the SSP never described (R-019, R-021). With the voluntary C3PAO assessment on 2027-01-25 and the annual affirmation due 2027-02-27, the window is short, even though CMMC Phase 2 is suspended.
 4. **Acquisitions (ER-06).** AQ-1 is still on its own ERP, email, directory, and VPN (R-042 to R-044). AQ-2 holds FCI under its own Level 1 status (R-025).
-5. **Disclosure (ER-08).** The disclosure committee reviewed EV-2026-04 and recorded it as not material, but without a written rule for related occurrences (R-051).
+5. **Disclosure (ER-08).** The disclosure committee reviewed INC-2026-04 and recorded it as not material, but without a written rule for related occurrences (R-051).
 6. **AI (ER-09).** The AI bid assistant's pooled pricing feature (R-056) and takeoff errors (R-057) are the main AI risks; computer vision for discipline was avoided (R-059).
 
 ## 7. Treatment summary

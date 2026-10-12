@@ -81,9 +81,21 @@ Internal Audit used **attribute sampling** for controls that operate on a popula
 Random selections used the audit software's seeded random number generator; seeds and selections are in the workpapers (EV references).
 
 ## 3. Methods and objects
-- **Examine:** policies, standards, and procedures (P06), the SSP (P02), identity governance and PAM records, ERP role catalog and SoD reports, vendor master change logs and call-back records, payment hub hashing and gateway logs, change tickets, backup and DR test reports, vulnerability scans, the vendor register and SOC report reviews, the incident response plan and materiality procedure (PRC-03.2), disclosure committee minutes of 2026-05-06, and the EV-2026-04 and EV-2026-06 case files.
+- **Examine:** policies, standards, and procedures (P06), the SSP (P02), identity governance and PAM records, ERP role catalog and SoD reports, vendor master change logs and call-back records, payment hub hashing and gateway logs, change tickets, backup and DR test reports, vulnerability scans, the vendor register and SOC report reviews, the incident response plan and materiality procedure (PRC-03.2), disclosure committee minutes of 2026-05-06, and the INC-2026-04 and INC-2026-06 case files.
 - **Interview:** Vice President, Project Controls and Systems; Vice President, Treasury; Director of Payment Operations; Director of ERP Applications; Director of Security Operations; Director of Identity and Access Management; Director of Network Engineering; General Counsel; CFO; CISO; the AQ-1 controller and AP manager; 20 randomly selected payment-role staff.
 - **Test:** separation of duties analytics; external-account and inactivity analytics; test alerts for BEC use cases; a network reachability test from an AQ-1 site network to the integration platform; default-credential tests on appliance consoles (with the vendor present); TLS and SFTP configuration review of bank connections; a restore observation; tablet inventory tracing at 6 jobsites.
+
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set and its standards, which were in force (EV-029), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 263 (233 Satisfied, 30 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test | 0 |
+| **Total** | | **263** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005, the vendor master change log, EV-023, and the change records, EV-063) and were refreshed to 2026-06-30 at kickoff.
 
 ## 4. Rules of engagement
 - No test could initiate, alter, or delay a real payment. Payment hub tests ran in the test environment; production evidence was read-only.

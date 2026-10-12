@@ -3,9 +3,9 @@
 
 > Cris Santos Company is a one-person business: Cris Santos owns and runs it alone as a sole proprietorship, operating as a commercial general contractor.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -39,13 +39,14 @@ General Services Administration / federal contracting agencies (FAR); Department
 | [DFARS 252.204-7012 Safeguarding Covered Defense Information and Cyber Incident Reporting](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012 (MAY 2024) | No small-business exemption; flowdown required to subcontracts involving CDI/operationally critical support, including commercial products/services. |
 | [CMMC Program rule (32 CFR Part 170) + DFARS CMMC acquisition rule (DFARS 252.204-7021)](https://www.federalregister.gov/documents/2025/09/10/2025-17359/defense-federal-acquisition-regulation-supplement-assessing-contractor-implementation-of) | 32 CFR Part 170 (FR Doc. 2024-22905, Oct. 15, 2024); 48 CFR 204.75 and 252.204-7021 (NOV 2025) (FR Doc. 2025-17359, Sep. 10, 2025, DFARS Case 2019-D041) | No size exemption. Applies to solicitations/contracts above the micro-purchase threshold, except those exclusively for COTS items (32 CFR 170.3(c)). Level set by DoD per contract (FCI -> L1; CUI -> L2; high-priority CUI -> L3). Conditional status valid 180 days; final L1 1 year, L2/L3 3 years. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | The owner's records: vendor portals; bank and card statements; the email inbox; the insurer questionnaire. Short evidence list; a one-page inventory of devices; accounts and vendors; applicability of each candidate rule. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | 3-5 business functions (e.g. client delivery; billing; communications). MTD/RTO/RPO by function; single-person dependency called out. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | The owner's core SaaS stack as one system boundary. Short-form plan: boundary; data types; key safeguards per CSF Function. System: Project Management and Payment Application System (PMPAS). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS tenants only (no IaaS). SaaS shared responsibility; customer-side controls only (identity; data; endpoints). | P02: the system boundary and its controls |

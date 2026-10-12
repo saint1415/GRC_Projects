@@ -30,6 +30,16 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 41 determination statem
 - **Test (2026-07-21):** sign-ins to SYS-01, SYS-02, and SYS-03 from a new browser; download of a standard antivirus test file; encryption status on each device; sign-in to the router with the manufacturer's default password; an external check of whether the router's remote administration port answered from the internet.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen.
 
+### What each test could show
+No written security policy existed before this work (EV-029). POL-01's draft rules were written from the gap analysis on 2026-07-17, before the control tests, but POL-01 was completed and adopted on 2026-08-31, after fieldwork. Its drafts were therefore reviewed as drafts for design only, and none of the new rules it introduces (the call-back rule for bank changes, the monthly sign-in check, the approved places for FCI, the Section 889 purchase check) had operated or was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or condition existed before the assessment and was tested or examined on the live accounts, devices, network and vendor records | 27 |
+| Not implemented | Nothing existed to test | 14 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-IA-5 and so on), with the populations each test covered: the SaaS accounts (EV-001, EV-002, EV-004, EV-007), the laptop and phone (EV-018, EV-019), the router (EV-020), and the vendors in the intake vendor register. Controls that POL-01 introduces are tested for operation at the 2027-01 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No test touched the bank portal or a live payment.
 - No client or federal documents were copied off the systems; screenshots were cropped to settings only.

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (commercial and institutional building general contractor) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner, 2026-07-14, with the on-call IT technician reviewing systems on 2026-07-15 | **Adopted:** Owner, 2026-08-31
+**Sources:** the owner's BIA worksheet, written 2026-07-13 to 2026-07-14 and reviewed with the IT technician on 2026-07-15 (EV-032), the 2025 Schedule C (EV-006), the accounting SaaS billing and payables reports (EV-005), the FC-1 contract (EV-012), the bank, SAM and phone settings (EV-015, EV-014, EV-019), the laptop and SYS-01 settings (EV-018, EV-002), and the project management vendor's SOC 2 system description (EV-003). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the company depends on, how long each can be down, and how much data each can lose. It feeds:
@@ -12,10 +13,10 @@ This one-page BIA lists the five business functions the company depends on, how 
 No federal rule requires this BIA. FAR 52.204-21 has no contingency requirement. The owner does it because one lost phone, one locked account, or one diverted payment can stop the whole business.
 
 ## 2. Business description
-One owner runs 2 to 4 small renovation jobs at a time from a home office in Florida and subcontracts all trade work. Billing is about $15,000 in a typical month. One job (FC-1) is a VA clinic renovation that brings federal payment, wage, and safeguarding clauses. Everything runs on SaaS (project management and pay apps, accounting, email), one laptop, one phone, and a home network. See `../00_company-facts.md` sections 1 to 3.
+One owner runs 2 to 4 small renovation jobs at a time from a home office in Florida and subcontracts all trade work. Billing is about $15,000 in a typical month. One job (FC-1) is a VA clinic renovation that brings federal payment, wage, and safeguarding clauses. Everything runs on SaaS (project management and pay apps, accounting, email), one laptop, one phone, and a home network. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual receipts. Much of each payment passes through to subcontractors, so the owner's own margin on a $15,000 month is small.
+Dollar values are scaled to about $180,000 in annual receipts (EV-006), or about $15,000 billed in a typical month (EV-005). Much of each payment passes through to subcontractors (about $9,000 paid out in a typical month, EV-005), so the owner's own margin on a $15,000 month is small.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -35,12 +36,12 @@ Dollar values are scaled to about $180,000 in annual receipts. Much of each paym
 | BP-05 Business administration and federal compliance | Low | 168 h | 72 h | 24 h |
 
 **What drives the values:**
-- **Jobsites set the shortest clock.** Subcontractor crews need current drawings and answers to RFIs every working day, so BP-03 has a 24-hour MTD. The 4-hour RPO depends on the project management vendor's backups (confirmed in its SOC 2 report, P09).
+- **Jobsites set the shortest clock.** Subcontractor crews need current drawings and answers to RFIs every working day, so BP-03 has a 24-hour MTD. The 4-hour RPO depends on the project management vendor's backups (confirmed in its SOC 2 report, EV-003; reviewed in P09).
 - **Payments are about integrity more than downtime.** Billing and payables can wait a few days. The real harm is a payment sent to the wrong account, which is almost never recovered. That is why P01 rates business email compromise as the top risk even though BP-01 and BP-02 tolerate 120 hours of downtime.
-- **Federal clocks.** On FC-1, subcontractors must be paid within 7 days of the Government's payment (FAR 52.232-27(c)), and certified payrolls are due weekly (FAR 52.222-8(b)(1)).
-- **Gap.** The 24-hour RPO for BP-04 is **not supported today**: estimates, scanned lien waivers, and W-9 forms on the laptop have no backup (P01 R-012).
+- **Federal clocks.** On FC-1, subcontractors must be paid within 7 days of the Government's payment (FAR 52.232-27(c)), and certified payrolls are due weekly (FAR 52.222-8(b)(1)) (EV-012).
+- **Gap.** The 24-hour RPO for BP-04 is **not supported today**: estimates, scanned lien waivers, and W-9 forms on the laptop have no backup (EV-018; P01 R-012).
 
-**Single-person dependency (the key finding).** The owner is the only estimator, superintendent, biller, payer, bank signer, and SAM Entity Administrator. Every second factor (email text codes, bank app, government sign-in authenticator) is on one phone. A jobsite injury or a lost phone puts every function past its MTD at once, and nobody else can pay subcontractors or reach the clients. Actions (P01 R-010, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner is the only estimator, superintendent, biller, payer, bank signer, and SAM Entity Administrator. Every second factor (email text codes, bank app, government sign-in authenticator) is on one phone (EV-019, EV-015, EV-014, EV-032). A jobsite injury or a lost phone puts every function past its MTD at once, and nobody else can pay subcontractors or reach the clients. Actions (P01 R-010, due 2026-12-31):
 1. Sign a standby agreement with another small general contractor to keep active jobsites supervised for up to 2 weeks.
 2. Store recovery codes and a one-page emergency access sheet in a sealed envelope held by the owner's attorney.
 3. Ask the bank to add a trusted family member as a limited authorized signer, or record why not.

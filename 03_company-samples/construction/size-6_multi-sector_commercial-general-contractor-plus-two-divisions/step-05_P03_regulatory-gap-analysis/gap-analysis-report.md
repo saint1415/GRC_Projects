@@ -12,8 +12,10 @@
 | Approved | 2026-09-15 by the board risk committee (with the P01 registers) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who holds which obligation
-Each operating subsidiary contracts in its own name, so obligations attach to the entity, not to the holding company (`../00_company-facts.md` section 7).
+Each operating subsidiary contracts in its own name, so obligations attach to the entity, not to the holding company (entity register and SAM records, EV-001).
 
 | Entity | Federal contract position | CMMC position | Basis |
 |---|---|---|---|
@@ -26,7 +28,7 @@ Each operating subsidiary contracts in its own name, so obligations attach to th
 **No size exemption applies.** FAR 52.204-21, FAR 52.204-25, DFARS 252.204-7012, and the CMMC rule apply regardless of size. The group is far above the SBA size standard (`../README.md`).
 
 ### 1.2 Why the analysis escalates from Level 1 to Level 2
-FAR 52.204-21 sets 15 basic requirements for any system that holds FCI. The PDPP holds FCI on all federal jobs, so its CMMC Level 1 (Self) status is what DoD relies on. CUI is different: DFARS 252.204-7012(b)(2) requires NIST SP 800-171 on covered contractor information systems, (b)(2)(ii)(D) requires FedRAMP Moderate or equivalent for cloud services that store CUI, and DFARS 252.204-7021(d)(2) allows CUI only on systems with the required CMMC status. The group built the enclave for that purpose. The analysis therefore covers both scopes, and the most important finding is that CUI crossed from the Level 2 scope into the Level 1 scope (scenario gap 1).
+FAR 52.204-21 sets 15 basic requirements for any system that holds FCI. The PDPP holds FCI on all federal jobs, so its CMMC Level 1 (Self) status is what DoD relies on. CUI is different: DFARS 252.204-7012(b)(2) requires NIST SP 800-171 on covered contractor information systems, (b)(2)(ii)(D) requires FedRAMP Moderate or equivalent for cloud services that store CUI, and DFARS 252.204-7021(d)(2) allows CUI only on systems with the required CMMC status. The group built the enclave for that purpose. The analysis therefore covers both scopes, and the most important finding is that CUI crossed from the Level 2 scope into the Level 1 scope (group gap 1).
 
 ### 1.3 Excluded requirements, with reasons
 - **NIST SP 800-171 R2 3.8.6 and 3.13.5** in the enclave: not applicable (no digital CUI media transported; no publicly accessible enclave components). Both are recorded with reasons, as 32 CFR 170.24 expects.
@@ -61,10 +63,21 @@ FAR 52.204-21 sets 15 basic requirements for any system that holds FCI. The PDPP
 ## 3. Method
 1. **Requirements.** FAR and DFARS clauses and 32 CFR Part 170 were read from the eCFR (current through 2026-09-23). The 110 NIST SP 800-171 R2 requirements and their basic or derived type come from NIST's dataset in the Cybersecurity and Privacy Reference Tool. PCI DSS rows list requirement numbers with short topic labels in the author's own words; the standard's text is not reproduced.
 2. **Crosswalk.** For the 15 FAR requirements and the 110 enclave requirements the mapping is **official** where NIST provides it: FAR to SP 800-171 R2 through 32 CFR 170.15 Table 2, R2 to Rev. 3 through NIST's withdrawal notes, CSF 2.0 through NIST's CSF 2.0 to SP 800-171 Rev. 3 mapping, and SP 800-53 through the Rev. 3 source controls. Where NIST lists no CSF 2.0 subcategory, the row says so and uses an author mapping. All other rows carry an **author mapping**, labeled in the `crosswalk_source` column.
-3. **Evidence.** Interviews, document review, configuration exports, the 2026-07-14 CUI discovery scan, contract and subcontract samples, and P07 test results. Enclave rows use group internal audit's independent pre-assessment against every NIST SP 800-171A objective.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, inventories, and the A&E plan room walk-through of 2026-04-14), gap analysis interviews (EV-080 Construction, EV-081 A&E, EV-082 Property, EV-083 group), fieldwork documents and samples (EV-084 to EV-096, including the 2026-07-14 CUI discovery scan, EV-087), and P07 test results. Enclave rows use group internal audit's independent pre-assessment against every NIST SP 800-171A objective (evidence IDs EV-E-AC4 to EV-E-PE17 in the evidence register). The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. For CMMC purposes a requirement is MET only if every objective is met, so "Partially met" is scored as NOT MET in the enclave score (32 CFR 170.24).
 
 ## 4. Results
+### 4.0 Group gaps
+Eight gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 8 across this sample.
+1. **CUI outside the enclave.** Design-build field teams copy CUI-marked drawings from the enclave into the commercial PDPP and commercial email so that superintendents and subcontractors can use them. The 2026-07-14 scan found 1,140 CUI-marked files from 9 DoD projects in the PDPP and 212 in commercial mailboxes (EV-045, EV-087; P07 AC-4).
+2. **Self-assessment and Level 2 readiness.** The independent pre-assessment by group internal audit (2026-07) found requirements scored MET in the March 2026 Level 2 self-assessment that do not meet every NIST SP 800-171A objective, and the enclave SSP was not updated for the 2026 virtual desktop expansion (EV-043, EV-042; P07 PL-2).
+3. **Uneven payment-instruction controls.** The payment factory verifies bank changes, but Property accounts payable (SYS-D3) accepts vendor and tenant-refund bank changes with one approver, A&E invoices carry remittance details in emailed PDFs, and owners and tenants have not all been told how the group will (and will not) change its remittance details (EV-025, EV-063, EV-071, EV-057).
+4. **Property building systems.** BAS, access control, video, and parking pay stations sit on flat building networks at 41 of 64 properties; 11 integrators keep persistent remote access; these systems are not monitored by the group SOC; Property's inheritance of group common controls is not documented, and its supplement was last aligned in 2024 (EV-064, EV-065, EV-015, EV-011, EV-010).
+5. **Section 889 screening is not group-wide.** The TSSI unit screens its submittals, but A&E specifications and Property procurement are not screened, and there is no group approved-manufacturer list (EV-053, EV-070, EV-010).
+6. **AI governance lags use.** The AI estimating and bid assistant grew from a 4-person pilot to about 640 Construction estimators and 85 A&E cost estimators in 2026, including on federal bids; A&E also uses a generative design assistant, and Group HR is piloting AI resume screening for craft hiring (EV-035, EV-059).
+7. **Cross-division incident notification not exercised.** One incident can trigger DoD reporting, state breach notices, owner and tenant notices, the surety and insurer, and an SEC materiality decision; the group notification matrix has not been exercised across divisions (EV-032, EV-006).
+8. **Subcontractor CMMC verification.** Subcontract templates carry the FAR 52.204-21, FAR 52.204-25, DFARS 252.204-7012, and DFARS 252.204-7021 flowdowns (2025), but nobody checks a subcontractor's CMMC status before award, as DFARS 252.204-7021(f)(2) requires (EV-052, EV-091).
+
 ### 4.1 Construction (`gap-analysis.csv`)
 | Regulation | Met | Partially met | Not met | N/A | Rows |
 |---|---|---|---|---|---|
@@ -168,7 +181,7 @@ Open rows by risk: 3 Moderate, 1 Low. The materiality process exists but has nev
 | **Total** | **204** | **140** | **38** | **12** | **14** |
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | CUI outside the enclave (1) | Construction, A&E | 252.204-7012(b)(2)(ii)(D); 252.204-7021(d)(2); SP 800-171 3.1.3, 3.1.20 | High | Purge and block CUI in the PDPP and commercial email; remove the field release role; enclave desktops in jobsite trailers; CUI training for field staff | Group CISO | 2026-12-31 (POAM-006, POAM-011, POAM-015) |
 | 2 | Level 2 readiness and affirmation accuracy (2) | Construction, A&E | 32 CFR 170.17, 170.21(a)(2), 170.22; SP 800-171 3.12.4, 3.4.8 | High | Counsel decision on the January and March affirmations; rewrite the enclave SSP; close the four blocking requirements; independent re-test; C3PAO assessment | Group General Counsel; Group CISO | 2027-02-28 (POAM-016, POAM-030) |

@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (security and compliance lead) with the Project Manager and Estimator, 2026-08-26; counsel consulted on FAR 52.203-2 |
 | Decision | Owner and President, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the card statements, the AI tool's account, terms and project list, the field interviews and a staff survey (EV-019, EV-032, EV-044, EV-045). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Project Manager and Estimator. **Decision authority:** the Owner, who also signs every bid.
@@ -18,7 +18,7 @@
   - POL-02 C.3: no company data in public AI chatbots
 - **Approved-tools list:** kept by the Office Manager with the inventory. Today it lists AI-001 only, only for the Project Manager, and only under the conditions in section 6.
 - **Scale for a Micro company:** there is no AI committee. The Owner, the Office Manager, and the Project Manager review AI use at the monthly POA&M meeting and re-assess AI-001 every quarter.
-- **How it started.** The Project Manager signed up on a company credit card after a trade show. No one checked the terms. That is the first finding: a new tool that holds company data must go through POL-02 A.5 before use.
+- **How it started.** The Project Manager signed up on a company credit card after a trade show (EV-019, EV-032). No one checked the terms. That is the first finding: a new tool that holds company data must go through POL-02 A.5 before use.
 
 ## 2. MAP
 | Item | Description |
@@ -32,7 +32,7 @@
 
 **Is the data FCI?** It depends on the stage.
 - Public solicitation documents posted for all bidders are *not* FCI. FAR 52.204-21(a) excludes "information provided by the Government to the public". The DoD solicitation, when issued, can be estimated in the tool before award.
-- Drawings and change-order packages on an **awarded** federal contract *are* FCI. The Project Manager uploaded FC-1 change-order drawings in June and July 2026. That put FCI on an external system the company does not control (P03 G-003, G-024).
+- Drawings and change-order packages on an **awarded** federal contract *are* FCI. The Project Manager uploaded FC-1 change-order drawings in June and July 2026 (EV-032). That put FCI on an external system the company does not control (P03 G-003, G-024).
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
@@ -41,7 +41,7 @@
 | DFARS 252.204-7021(d)(2) | **Yes** once a DoD contract with the clause is awarded | FCI may be processed only on systems with the required CMMC status. The tool must either be in the Level 1 scope or never receive FCI |
 | FAR 52.203-2, Certificate of Independent Price Determination | **Yes** on federal bids that include it | The offeror certifies that its prices were arrived at independently, without "any consultation, communication, or agreement with any other offeror or competitor" about prices or "the methods or factors used to calculate the prices", and that its prices have not been "knowingly disclosed" to another offeror or competitor before bid opening or award. A vendor feature that pools customers' pricing into shared market suggestions puts that certification at risk |
 | FAR 15.403-4 (certified cost or pricing data) | No at this size | The threshold is at least $2.5 million (15.403-4(a)(1)); FC-1 and the DoD job are far below it. Recheck if the company ever negotiates a larger action |
-| Owner contract confidentiality clauses | **Yes** | The medical office owner's contract limits sharing of its drawings to parties working on the project. The hospital system's questionnaire asks whether drawings go to AI services |
+| Owner contract confidentiality clauses | **Yes** | The medical office owner's contract limits sharing of its drawings to parties working on the project. The hospital system's questionnaire asks whether drawings go to AI services (EV-031) |
 | Sherman Act Section 1 (15 U.S.C. 1) | Indirectly | Bid rigging and price-fixing are illegal. Counsel reviews any vendor feature that shares or aggregates pricing across contractors |
 | FTC Act Section 5 | Indirectly | Applies to the vendor's accuracy claims. The claims the company relied on are kept in the procurement file |
 | State AI laws (for example Colorado SB26-189) | No | The company operates in Florida, and AI-001 does not make consequential decisions about individuals |

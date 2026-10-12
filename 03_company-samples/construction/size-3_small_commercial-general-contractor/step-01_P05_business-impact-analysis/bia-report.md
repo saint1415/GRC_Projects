@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (commercial and institutional building general contractor) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager with the Accounting Manager, VP Operations, and Director of Preconstruction | **Approved:** CFO, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-040), FY2025 financial and billing reports (EV-034), accounts payable payment volume (EV-023), backup job reports (EV-016), the project management platform vendor's SOC 2 report (EV-030). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CFO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -20,10 +21,10 @@ The company builds commercial, institutional, and federal facilities from one Fl
 - a cloud tenant (BIM/CAD file server, estimating database, file-transfer portal, backups)
 - the main office network, jobsite cellular routers, and endpoints
 
-See `../00_company-facts.md` sections 3-4.
+See `../00_company-facts.md` section 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $27.0 million in annual revenue, about $108,000 per business day.
+Dollar values are scaled to $27.0 million in annual revenue (EV-034), about $108,000 per business day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -51,7 +52,7 @@ Dollar values are scaled to $27.0 million in annual revenue, about $108,000 per 
 - **Federal rules drive BP-02 and BP-05.** On federal jobs, subcontractors must be paid within 7 days of the company's receipt of payment (FAR 52.232-27(c)(1)). Certified payrolls are due weekly (FAR 52.222-8(b)(1)).
 - **Cash drives BP-01.** Billing is monthly, so a 3-day outage is survivable if it is not pay app week. Integrity is the real exposure. The FAR places the loss on the contractor when a federal payment goes to incorrect EFT information in SAM that the contractor supplied (FAR 52.232-33(e)(2)).
 
-**Key finding.** The project management platform vendor's contracted recovery commitments must meet the 8-hour RTO and 4-hour RPO for BP-03. Its SOC 2 report (reviewed in P09) states an RTO of 4 hours and an RPO of 1 hour, which meets the BIA. The company-managed backups for the estimating database and file server have **never been restore-tested**, so the 4-hour RTO for BP-04 in bid weeks is unproven (P01 R-006).
+**Key finding.** The project management platform vendor's contracted recovery commitments must meet the 8-hour RTO and 4-hour RPO for BP-03. Its SOC 2 report (EV-030, reviewed in P09) states an RTO of 4 hours and an RPO of 1 hour, which meets the BIA. The company-managed backups for the estimating database and file server have **never been restore-tested** (EV-016), so the 4-hour RTO for BP-04 in bid weeks is unproven (P01 R-006).
 
 ## 5. Resource requirements
 | Resource | Description | Supports |

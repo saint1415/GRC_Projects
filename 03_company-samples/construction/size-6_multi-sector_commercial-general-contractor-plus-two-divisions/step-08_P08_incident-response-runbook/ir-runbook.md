@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; POL-01 4.15 payment instructions; division supplements (P06) |
 | Runbook owner | Group CISO; payment response owned by the Group Treasurer; notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO, the Group Chief Financial Officer, and the Group General Counsel |
-| Last tested | Technical BEC playbook tested 2026-06 (single division). **The cross-division notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
+| Last tested | Technical BEC playbook tested 2026-06 (single division). **The cross-division notification matrix has not been exercised** (group gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. It is set before the CUI purge under POAM-006 is complete. Amounts are illustrative.
@@ -17,7 +17,7 @@ An exercise scenario, not a real event. It is set before the CUI purge under POA
 | Thread | What happens | Division | Money or data at risk |
 |---|---|---|---|
 | **A. Owner pays the attacker** | An adversary-in-the-middle phishing page captures a Construction project executive's session despite number-matching MFA (P01 CON-027). The attacker reads the mailbox for 3 weeks, hides replies with inbox rules, and sends a hospital owner "updated remittance instructions" from the real mailbox. The owner pays a monthly pay application to the attacker | Construction | $2.4 million |
-| **B. Property pays the attacker** | From the mailbox the attacker learns that a mechanical subcontractor also works on a Property tenant improvement project. A spoofed email asks Property accounts payable to change the subcontractor's bank account. One approver processes it in SYS-D3, outside the payment factory (scenario gap 3) | Property | $380,000 |
+| **B. Property pays the attacker** | From the mailbox the attacker learns that a mechanical subcontractor also works on a Property tenant improvement project. A spoofed email asks Property accounts payable to change the subcontractor's bank account. One approver processes it in SYS-D3, outside the payment factory (group gap 3) | Property | $380,000 |
 | **C. Tenants pay the attacker** | The attacker registers a lookalike of a property brand domain and mails rent "remittance change" letters to tenants at 3 properties. 3 tenants pay | Property | $610,000 in rent |
 | **D. Data in the mailbox** | The mailbox holds 47 CUI-marked drawings from a DoD design-build project (part of the 212 messages found on 2026-07-14) and 31 subcontractor certified payroll files with names and full Social Security numbers of about 1,860 craft workers (about 1,240 in Florida, about 620 in 3 other states) | Construction (prime on the DoD contract) | DoD reporting; state breach notices |
 
