@@ -9,7 +9,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Playbook |
 | Assessor / date | Center Director (Information Security Coordinator) with the Director of Tutoring, 2026-08-20 |
 | Decision | Owner, 2026-08-28 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the platform's AI module settings and the vendor release note, the platform terms, the card and bank statements, and the intake and risk interviews (EV-033, EV-022, EV-021, EV-035, EV-040). How many tutors use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Director of Tutoring, who uses the scores. **Decision authority:** the Owner.
@@ -22,14 +22,14 @@
 - **Approved-tools list:** kept by the Center Director in POL-04 4.6.
 - **Scale for a Micro company:** there is no AI committee. The Owner, Center Director, and Director of Tutoring review AI use at the monthly security meeting, and the Director of Tutoring reads each vendor release note for new AI features.
 
-**How the use started.** The vendor added the module in its May 2026 release and turned it on by default. Nobody at the company approved it, assessed it, or told parents or the district. The Director of Tutoring found the scores useful and began using them for district program placement and in parents' monthly progress reports (P01 R-008, R-009; P03 G-002, G-017, G-018).
+**How the use started.** The vendor added the module in its May 2026 release and turned it on by default. Nobody at the company approved it, assessed it, or told parents or the district (EV-033; EV-045). The Director of Tutoring found the scores useful and began using them for district program placement and in parents' monthly progress reports (P01 R-008, R-009; P03 G-002, G-017, G-018).
 
 ## 2. MAP
 | Item | Description |
 |---|---|
 | Purpose and intended use | Flag students at risk of falling behind (red, yellow, green) and suggest how many sessions a week would help, so tutors can step in early |
 | Users | Director of Tutoring; Lead Tutors can see the flags |
-| How it was actually used | (1) District program: students flagged red were moved into the "intensive" group (3 sessions a week instead of 2). (2) Private-pay families: 31 monthly progress reports in June and July included the line "our progress system recommends 3 sessions per week"; 12 families then added sessions |
+| How it was actually used | (1) District program: students flagged red were moved into the "intensive" group (3 sessions a week instead of 2). (2) Private-pay families: 31 monthly progress reports in June and July included the line "our progress system recommends 3 sessions per week"; 12 families then added sessions (EV-050) |
 | Affected people | About 210 students scored since May 2026 (about 90 district students and about 120 private-pay students), most of them under 13, and their parents |
 | Data | Inputs: practice exercise accuracy and time on task, session attendance, session count, grade level, platform assessment scores, and, for district students, the district's assessment scores from the roster. Outputs: flag color, risk score, recommended sessions per week |
 | Build or buy | Buy: vendor feature inside the tutoring platform. The model is the vendor's; the company cannot see its design or training data |
@@ -54,7 +54,7 @@
 **What would allow re-tiering to Medium:** placement decided on documented tutor judgment, with the flag as one input among several; no use in sales messages to parents; and a passing fairness test.
 
 ## 4. MEASURE
-The Director of Tutoring and the Center Director compared flags from May and June with the students' July platform assessments for 120 students with enough data (2026-08-20).
+The Director of Tutoring and the Center Director compared flags from May and June with the students' July platform assessments for 120 students with enough data (2026-08-20, EV-050).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|

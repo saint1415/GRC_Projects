@@ -12,7 +12,7 @@
 | Approved | 2026-08-28 by the Owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole company and its key vendors. That covers every system that collects, stores, or sends students' and families' information (SYS-01 to SYS-08 in `../00_company-facts.md`), the learning center, the district program sites as far as the company's own work goes, and the parties that handle children's information for the company: the tutoring platform vendor, the scheduling platform vendor, the productivity suite vendor, the MSP and its backup subcontractor, and the 14 contractor tutors.
+**Scope.** The whole company and its key vendors. That covers every system that collects, stores, or sends students' and families' information (SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the learning center, the district program sites as far as the company's own work goes, and the parties that handle children's information for the company: the tutoring platform vendor, the scheduling platform vendor, the productivity suite vendor, the MSP and its backup subcontractor, and the 14 contractor tutors ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Center Director may accept.
@@ -22,8 +22,8 @@
 This is the company's first risk assessment. It is also the first of the annual assessments that 16 CFR 312.8(b)(2) requires, which the company should have had in place by the April 22, 2026 compliance date.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), and interviews with the Owner, the Center Director, the Director of Tutoring, the Enrollment and Billing Coordinator, 2 Lead Tutors, 3 contractor tutors, and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, and interviews with the Owner, the Center Director, the Director of Tutoring, the Enrollment and Billing Coordinator, 2 Lead Tutors, 3 contractor tutors, and the MSP lead technician (2026-07-13 to 2026-07-24, EV-040). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the payroll records and roster, the contracts folder, the walk-through, the account comparison of 2026-07-15 (EV-041) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a company with about $3,700 of billing per operating day, about 250 children under 13, and a district contract worth about 16 percent of revenue, theft of evaluation reports or loss of the district contract is rated High, and harm to a child is rated Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,9 +51,11 @@ Status: 10 In progress, 11 Open, 3 Closed (R-024 treated; R-020 and R-023 accept
 **The common theme is that children's information is spread wider than the company knew.** It sits in the platform behind single-factor logins (R-003), in a shared folder anyone on staff can open (R-002), on contractors' personal computers (R-005), and in records nobody ever deletes (R-007). The treatments for these four also reduce R-001, R-004, R-015, and R-022, and they shrink what a breach would expose.
 
 **Risks found or fixed during the work:**
-- R-004: three former contractor tutors' platform accounts were disabled on 2026-07-15, the day they were found. The platform log showed no sign-ins after each tutor's last session, so the Center Director documented that no unauthorized access occurred. The process gap remains open.
+- R-004: three former contractor tutors' platform accounts were disabled on 2026-07-15, the day the account comparison found them (EV-041). The platform log showed no sign-ins after each tutor's last session, so the Center Director documented that no unauthorized access occurred. The process gap remains open.
 - R-008: the Owner had the vendor turn off the AI progress insights module on 2026-08-28 until the P10 conditions are met.
-- R-024: added on 2026-08-06 after P07 testing found the firewall management page open to the internet. The MSP turned it off the same week; the risk is closed.
+- R-024: added on 2026-08-06 after P07 testing found the firewall management page open to the internet (EV-SC-7). The MSP turned it off the same week (EV-049); the risk is closed.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-024 was added on 2026-08-06 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $3,900 one-time and $3,600 a year):**

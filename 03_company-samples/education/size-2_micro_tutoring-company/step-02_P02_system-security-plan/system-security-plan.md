@@ -72,7 +72,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the company controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the company controls or pays someone to control on its behalf:
 - **Inside:** the company's tutoring platform tenant, its settings and roles (SYS-01); the scheduling platform account (SYS-02); the suite tenant and shared drive (SYS-03); 18 company devices (SYS-04); the center network (SYS-05); the backup subscription (SYS-06); the website account (SYS-08).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers; the payment processor reached through SYS-02; the district's systems; the MSP's remote management platform; and **contractor tutors' personal computers (SYS-07)**. SYS-07 is outside the boundary because the company does not own or manage it, but it handles children's information, so AC-20 and POL-02 B.9 set the rules for it.
 
@@ -114,10 +114,10 @@ By responsibility: 21 system-specific (the company), 19 hybrid (the company with
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Tutoring platform vendor | Platform security, encryption (SC-8, SC-28), backups (CP-9), session timeout (AC-12), lockout (AC-7), logging (AU-2) | SOC 2 Type 2 report reviewed 2026-08-18 (P09) | Complementary user entity controls: account provisioning and removal, role assignment, MFA enforcement, review of user access and export logs, retention settings |
-| Scheduling platform vendor | Application security, hosted payment fields, encryption in transit, backups | Standard terms and documentation only (no SOC 2 report) | Account management; MFA on the administrator login when offered; weekly schedule export |
-| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout, logging | Vendor documentation | Account management, MFA settings, sharing and forwarding settings, alert configuration, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve exceptions, read reports monthly, annual MSP security review (P01 R-013) |
+| Tutoring platform vendor | Platform security, encryption (SC-8, SC-28), backups (CP-9), session timeout (AC-12), lockout (AC-7), logging (AU-2) | SOC 2 Type 2 report (EV-038) reviewed 2026-08-18 (P09) | Complementary user entity controls: account provisioning and removal, role assignment, MFA enforcement, review of user access and export logs, retention settings |
+| Scheduling platform vendor | Application security, hosted payment fields, encryption in transit, backups | Standard terms and documentation only (no SOC 2 report) (EV-023) | Account management; MFA on the administrator login when offered; weekly schedule export |
+| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout, logging | Vendor documentation (EV-024) | Account management, MFA settings, sharing and forwarding settings, alert configuration, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports (EV-011; EV-048); P07 evidence requests | Oversight: approve exceptions, read reports monthly, annual MSP security review (P01 R-013) |
 | Backup service (MSP subcontractor) | Storage of suite copies (CP-9) | None yet; restore test due 2026-09-30 | Confirm through the MSP who the subcontractor is and its security terms (312.8(c)) |
 
 **Inherited does not mean done.** Three of the platform vendor's complementary user entity controls are open gaps at the company: account removal (AC-2, PS-4), MFA enforcement (IA-2(1)), and retention settings (SI-12).
@@ -129,7 +129,7 @@ Assessed 2026-08-03 to 2026-08-05 by an independent consultant. See P07 `assessm
 Staff sign in to the suite with a password and a second factor (phone authenticator app). The same is required for the tutoring platform, the scheduling platform administrator, and every MSP-held administrator login by 2026-10-31 (POL-02 B.3). Children sign in to the student portal with a user name and password that the platform issues; younger children use a picture password on center tablets. Children's accounts give access only to their own work, so the company accepts single-factor sign-in for them. Parents use the scheduling platform's parent portal with its own sign-in, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and platform vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and platform vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **COPPA:** Children's Online Privacy Protection Act and the FTC's COPPA Rule (16 CFR Part 312)

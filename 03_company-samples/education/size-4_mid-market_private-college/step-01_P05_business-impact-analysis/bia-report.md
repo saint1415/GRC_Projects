@@ -2,12 +2,13 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed private, for-profit college) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Information Security Manager with the vCISO (Qualified Individual), the process owners named in `bia.csv`, and the Campus Directors | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Information Officer, 2026-09-17 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-061), FY2025 receipts report by division (EV-053), Title IV and student accounts report (EV-054), enrollment report (EV-055), SaaS vendor SOC 2 reports (EV-045), backup job reports (EV-026), employer partner agreements (EV-049) and the emergency notification records (EV-018). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Information Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: the 3 campuses, the online division, student financial services (financial aid and student accounts), enrollment management, academic affairs, student affairs (including campus safety and counseling), corporate partnerships, and enterprise support (IT, HR, finance). It rates 16 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and student safety and welfare.
 
 The results feed:
-- the recovery part of the written incident response plan required by 16 CFR 314.4(h)(2), and the IT disaster recovery plan due 2026-12-31 (gap 5);
+- the recovery part of the written incident response plan required by 16 CFR 314.4(h)(2), and the IT disaster recovery plan due 2026-12-31 (no plan was found at intake, EV-031);
 - the Clery Act emergency notification procedures (34 CFR 668.46(g), section 7 below);
 - the FIPS 199 availability rating and contingency controls in the SSP (P02);
 - impact ratings and exposure estimates in the risk register (P01);
@@ -15,10 +16,10 @@ The results feed:
 - the Availability criteria in the SOC 2 readiness assessment for the employer education services (P09).
 
 ## 2. System and business description
-The college serves about 7,800 students (4,300 at 3 Florida campuses and 3,500 fully online, living in 41 states) with 600 employees. Student business runs on the Student Information and Learning Platform (SILP) described in the SSP (P02): the SaaS SIS and LMS, the SaaS financial aid management system (FAMS), SAIG access to the Department of Education, the identity provider, the 4-account cloud landing zone (integration platform, data warehouse, employer partner portal, file services, backups), and the MSSP-operated SIEM. Campus safety systems (door access control, CCTV, and a SaaS emergency notification service) sit outside the SILP but depend on the same identity provider and campus networks. About 90 vendors handle student data (see `../00_company-facts.md` sections 3, 4, and 7).
+The college serves about 7,800 students (4,300 at 3 Florida campuses and 3,500 fully online, living in 41 states) with 600 employees. Student business runs on the Student Information and Learning Platform (SILP) described in the SSP (P02): the SaaS SIS and LMS, the SaaS financial aid management system (FAMS), SAIG access to the Department of Education, the identity provider, the 4-account cloud landing zone (integration platform, data warehouse, employer partner portal, file services, backups), and the MSSP-operated SIEM. Campus safety systems (door access control, CCTV, and a SaaS emergency notification service) sit outside the SILP but depend on the same identity provider and campus networks. About 90 vendors handle student data (intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $100 million in annual receipts over about 250 business days, or about $400,000 a day: online division about $152,000, Campus 1 about $120,000, Campus 2 about $76,000, and Campus 3 about $52,000. Title IV draws run about $1.2 million per business day during term-start peaks.
+Dollar values are scaled to about $100 million in annual receipts over about 250 business days (EV-053), or about $400,000 a day: online division about $152,000, Campus 1 about $120,000, Campus 2 about $76,000, and Campus 3 about $52,000. Title IV draws run about $1.2 million per business day during term-start peaks (EV-054).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -28,7 +29,7 @@ Dollar values are scaled to about $100 million in annual receipts over about 250
 | Student safety and welfare | Students or staff physically at risk, or students left without living funds | Students inconvenienced or delayed in a way that is later made whole | None |
 | Reputation | Regional media coverage, accreditor inquiry, loss of an employer partner, or a visible drop in starts | Student complaints or online reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is receipts that are not recovered plus extra labor and remediation cost, over the MTD. The process owners supplied the assumptions: about 2% of new online starts are lost if admissions stops for 3 days near a start date; exam rescheduling and term extensions cost about $150 per affected online student; refund and aid delays mostly delay cash rather than lose it. For BP-04 the delayed Title IV cash is shown separately, because it is recovered once disbursement resumes.
+**How loss at MTD was estimated.** Estimated loss is receipts that are not recovered plus extra labor and remediation cost, over the MTD. The process owners supplied the assumptions (EV-061): about 2% of new online starts are lost if admissions stops for 3 days near a start date; exam rescheduling and term extensions cost about $150 per affected online student; refund and aid delays mostly delay cash rather than lose it. For BP-04 the delayed Title IV cash is shown separately, because it is recovered once disbursement resumes.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -61,12 +62,12 @@ Dollar values are scaled to about $100 million in annual receipts over about 250
 - **Credit balance refunds have a legal clock.** A Title IV credit balance must be paid no later than 14 days after it occurs (34 CFR 668.164(h)(2)). The 72-hour MTD for BP-05 leaves time to catch up within that deadline, except during the first 3 weeks of a term (finding 4).
 
 ## 5. Key findings
-1. **SIS vendor recovery objectives do not meet the BIA.** The SIS vendor's SOC 2 system description states RTO 24 hours and RPO 4 hours. BP-01 needs RTO 8 hours and RPO 1 hour. Printed rosters keep classes running, but lost grade, attendance, and add/drop entries must be re-keyed. Action: negotiate recovery terms at the 2027 renewal and add a nightly read-only roster and enrollment extract to the file service (P01 R-013; P09 vendor review).
-2. **College-managed recovery is unproven.** The integration platform (BP-01, BP-04, BP-05, BP-06), data warehouse (BP-10, BP-15), and employer partner portal (BP-12) have never been restore-tested, and there is no IT disaster recovery plan (gap 5). Their RTOs of 8 to 120 hours are targets, not demonstrated capabilities (P01 R-014 to R-016; P07 CP-4).
-3. **Emergency notification has a single point of failure.** The emergency notification console is reached only through SSO, with no break-glass account, so an identity provider outage or ransomware that forces a password reset could delay a Clery emergency notification beyond the 30-minute RTO (gap 7; section 7).
+1. **SIS vendor recovery objectives do not meet the BIA.** The SIS vendor's SOC 2 system description states RTO 24 hours and RPO 4 hours (EV-045). BP-01 needs RTO 8 hours and RPO 1 hour. Printed rosters keep classes running, but lost grade, attendance, and add/drop entries must be re-keyed. Action: negotiate recovery terms at the 2027 renewal and add a nightly read-only roster and enrollment extract to the file service (P01 R-013; P09 vendor review).
+2. **College-managed recovery is unproven.** The integration platform (BP-01, BP-04, BP-05, BP-06), data warehouse (BP-10, BP-15), and employer partner portal (BP-12) have never been restore-tested, and there is no IT disaster recovery plan (EV-026, EV-031). Their RTOs of 8 to 120 hours are targets, not demonstrated capabilities (P01 R-014 to R-016; P07 CP-4).
+3. **Emergency notification has a single point of failure.** The emergency notification console is reached only through SSO, with no break-glass account, so an identity provider outage or ransomware that forces a password reset could delay a Clery emergency notification beyond the 30-minute RTO (EV-018; section 7).
 4. **The refund clock is tight at term start.** About 1,800 refunds can fall due in a term-start week. A 72-hour outage then pushes some refunds close to the 14-day deadline. A documented paper-check procedure from the last reconciled refund file is needed (P01 R-018).
-5. **Campus 3 is fragile.** Its flat network carries staff, lab, and campus safety devices, so malware in a lab could also take door controllers and cameras offline (gap 7; P01 R-003).
-6. **The LMS vendor just meets BP-02.** Its RTO of 6 hours equals the BIA RTO, with no margin during exam weeks. The proctoring vendor (AI-005) has no stated recovery objectives.
+5. **Campus 3 is fragile.** Its flat network carries staff, lab, and campus safety devices, so malware in a lab could also take door controllers and cameras offline (EV-016, EV-050; P01 R-003).
+6. **The LMS vendor just meets BP-02.** Its RTO of 6 hours (EV-045) equals the BIA RTO, with no margin during exam weeks. The proctoring vendor (AI-005) has no stated recovery objectives.
 
 ## 6. Resource requirements
 | Resource | Description | Supports | Backup or replication method |

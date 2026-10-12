@@ -1,0 +1,26 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,SIS vendor,Student information system and student portal,SYS-01,Customer information; education records,Contract,"SOC 2 Type 2, 12 months ending 2026-03-31 (RTO 24 h, RPO 4 h)",EV-043; EV-045,
+V-02,LMS vendor,Learning management system,SYS-02,Education records,Contract,"SOC 2 Type 2 (RTO 6 h, RPO 1 h)",EV-043; EV-045,
+V-03,FAMS vendor,Financial aid management system and student aid portal,SYS-03,Customer information; education records,Contract,SOC 2 (Security only; no stated recovery objectives),EV-043; EV-045,
+V-04,Identity provider vendor,Single sign-on and MFA,SYS-06,Identities,Subscription agreement,SOC 2 Type 2,EV-042; EV-045,
+V-05,Email and productivity suite vendor,"Email, files, chat",SYS-07,Customer information and education records (incidental),Contract,SOC 2 Type 2,EV-042; EV-043; EV-045,
+V-06,Public cloud provider,IaaS and PaaS for the landing zone,SYS-08,Customer information; education records,Customer agreement,SOC 2 Type 2 and shared responsibility documentation,EV-042; EV-045,
+V-07,Managed security service provider (MSSP),24x7 EDR and SIEM monitoring,SYS-11; SYS-14,Security logs; privileged EDR agents on endpoints,Contract with confidentiality terms; 30-minute high-severity call,SOC 2 Type 2,EV-027; EV-043; EV-045,Service provider under 16 CFR 314.4(f)
+V-08,vCISO consulting firm,Qualified Individual services,All,Program records,Consulting contract with security schedule,None on file,EV-033; EV-043,Contract requires the firm to maintain its own program (EV-033)
+V-09,Financial aid third-party servicer,Verification support and Direct Loan default prevention,SYS-03,Customer information; education records,"Servicer contract (34 CFR 668.25) with FERPA school-official, confidentiality, Title IV compliance and fraud referral terms; no MFA or incident notice term",None on file,EV-010; EV-043,8 local FAMS accounts (EV-010)
+V-10,Admissions CRM vendor,Inquiry and application management; applicant scoring (AI-001),SYS-05,Applicant data; aid estimates,Contract with FERPA school-official and security terms,None on file,EV-042; EV-043; EV-057,
+V-11,ERP vendor,Finance and HR,SYS-09,Employee data,Subscription agreement,None on file,EV-042,
+V-12,Bank,Refund payments and returns,SYS-08 (integration platform),Refund payments; student bank details,Bank agreement,None on file,EV-042; EV-043,
+V-13,Payment plan vendor and hosted payment page,Tuition payment plans and card payments,SYS-08 (integration platform),Customer information (payment plan data),Contract,Vendor PCI DSS attestation,EV-024; EV-042; EV-059,No written interconnection terms for its interface (EV-024)
+V-14,Emergency notification service vendor,"Text, email and voice emergency notification",SYS-13,"Directory data (names, phone numbers, emails)",Contract,None on file,EV-018; EV-024; EV-042,No written interconnection terms for the contact sync (EV-024)
+V-15,Access control and video vendor,Door controllers and video recorders,SYS-13,Door events; video,Service agreement,None on file,EV-017; EV-042,
+V-16,Online proctoring vendor,Proctored exams with AI flags (AI-005),SYS-02,"Education records (recordings, ID images)",Contract with FERPA school-official and security terms,SOC 2 Type 2,EV-042; EV-043; EV-057,
+V-17,AI tutor vendor,LMS AI tutor pilot (AI-004),SYS-02,Education records (prompts and drafts),Vendor's online terms (card purchase),None on file,EV-046; EV-057,One of the 22 vendors without FERPA school-official terms
+V-18,Website and portal assistant vendor,Generative AI assistant (AI-003),SYS-01 (signed-in mode),"Questions; SIS balance, holds and aid status in signed-in mode",Vendor's online terms (card purchase),None on file,EV-046; EV-057,One of the 22 vendors without FERPA school-official terms
+V-19,Counseling records application vendor,SaaS counseling treatment records,SYS-15,Counseling treatment records,Contract,None on file,EV-042; EV-058,
+V-20,Telehealth counseling vendor,Telehealth counseling sessions,SYS-15,Counseling sessions,Contract,None on file,EV-042; EV-058,
+V-21,Employer partner portal contractor,Partner portal development,SYS-08,None in production (development),2026 statement of work with security requirements and code review,None on file,EV-042; EV-049,
+V-22,Disposal vendor and copier lessor,Drive destruction; copier and multifunction printer leases,SYS-11,Stored documents on drives,Service agreement; lease,Certificates of destruction for staff drives,EV-042; EV-052,No sanitization certificate for 4 copier returns (EV-052)
+V-23,Co-sourced internal audit firm,Annual IT audit and P07 assessment,All,Audit evidence,Engagement letter,n/a,EV-042,
+V-24,Cyber insurer,Cyber insurance with breach hotline and panel firms,n/a,Incident information,Policy,n/a,EV-047,
+V-25,Other vendors with student data (summary row),"E-resources, tutoring, textbooks, surveys and other services",SYS-15,Education records (varies),Contracts,Varies,EV-043; EV-044,"The about 90 student-data vendors in EV-043 are V-01 to V-07, V-09, V-10, V-12 to V-14 and V-16 to V-20 (17 vendors) and about 73 others. 68 contracts have FERPA school-official and security terms and 22 do not, including V-17 and V-18"

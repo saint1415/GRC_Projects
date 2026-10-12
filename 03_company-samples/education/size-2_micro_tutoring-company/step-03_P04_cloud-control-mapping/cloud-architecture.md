@@ -4,7 +4,7 @@
 **System:** Tutoring Operations Platform (TOP), as defined in the SSP (P02) | **Prepared:** 2026-07-24 by the Center Director with the MSP lead technician | **Approved:** Owner, 2026-08-28
 
 ## 1. Diagram
-The company runs no servers and no IaaS tenant. Its "cloud" is a set of SaaS services plus one cloud workload that the MSP operates for it: the SaaS-to-SaaS backup of suite email and the shared drive (SYS-06).
+The company runs no servers and no IaaS tenant. Its "cloud" is a set of SaaS services plus one cloud workload that the MSP operates for it: the SaaS-to-SaaS backup of suite email and the shared drive (SYS-06). The components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); the `evidence_source` column in `cloud-control-map.csv` cites the evidence ID behind each placement.
 
 ```mermaid
 flowchart LR
