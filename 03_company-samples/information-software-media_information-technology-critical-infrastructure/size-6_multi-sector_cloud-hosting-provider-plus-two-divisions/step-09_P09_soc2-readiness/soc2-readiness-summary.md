@@ -71,7 +71,7 @@ Payment Processing still benefits from this work: the SL-1 platform controls and
 
 **Why many criteria are Ready for a first report:** governance, risk assessment, HR, physical, and general IT controls come from group common controls already evidenced for the SL-1 report.
 **Not ready:** CC2.3 (no system description; inconsistent commitments), CC6.3 (one RMM tenant for all clients, access kept after transfers, agents on other divisions' systems), and CC7.2 (RMM logs kept 90 days and not monitored).
-**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.3, CC7.4, CC8.1, CC9.2, A1.3, and C1.1. Most trace to the RMM (group gap 2), the legacy identity tenant (gap 8), and undocumented inheritance (gap 9).
+**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.3, CC7.4, CC8.1, CC9.2, A1.3, and C1.1. Most trace to the RMM (group gap 2), the legacy identity tenant (group gap 8), and undocumented inheritance (group gap 9).
 
 ## 4. Remediation plan and evidence calendar
 | Quarter | Division | Criteria | Evidence to collect |
