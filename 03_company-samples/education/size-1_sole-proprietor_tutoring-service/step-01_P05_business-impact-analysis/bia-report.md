@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (tutoring and educational support service) | **Tier:** Sole Proprietorship (owner-tutor only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-tutor, 2026-07-14, with the on-call IT technician (under a confidentiality and data-handling agreement since 2026-07-08) | **Adopted:** Owner-tutor, 2026-07-31
+**Sources:** the owner's BIA worksheet, 2026-07-13 to 2026-07-14 (EV-029), the 2025 Schedule C (EV-024), the client-management SaaS session and invoice reports (EV-001, EV-002), the student folder listing and sync settings (EV-005, EV-006), the portal member list and pages (EV-010, EV-011), and the client-management SaaS vendor's SOC 2 system description (EV-022). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-07-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the tutoring business depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the tutoring business depend
 - the contingency rules in the consolidated policy (POL-01 section 11).
 
 ## 2. Business description
-One owner-tutor works with about 55 active students (36 under 13, 19 teens), about 32 session hours a week in the school year. About 60% of sessions are online; the rest are in students' homes or a library study room. There are no employees and no substitute tutor. The business runs on SaaS: an email and files suite (SYS-01), a client-management SaaS for scheduling and billing (SYS-02), a website-builder site with a student practice portal (SYS-03), a video platform (SYS-04), and an accounting SaaS (SYS-08), reached from one laptop (SYS-05), one personal phone (SYS-06), and the home network (SYS-07). See `../00_company-facts.md` sections 1 to 3.
+One owner-tutor works with about 55 active students (36 under 13, 19 teens), about 32 session hours a week in the school year. About 60% of sessions are online; the rest are in students' homes or a library study room. There are no employees and no substitute tutor. The business runs on SaaS: an email and files suite (SYS-01), a client-management SaaS for scheduling and billing (SYS-02), a website-builder site with a student practice portal (SYS-03), a video platform (SYS-04), and an accounting SaaS (SYS-08), reached from one laptop (SYS-05), one personal phone (SYS-06), and the home network (SYS-07). See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $700 of sessions per weekday.
+Dollar values are scaled to about $180,000 in annual revenue (EV-024), or about $700 of sessions per weekday (EV-002).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,9 +34,9 @@ Dollar values are scaled to about $180,000 in annual revenue, or about $700 of s
 | BP-03 Student practice portal and progress tracking | Moderate | 168 h | 72 h | 24 h |
 | BP-04 Billing and payments | Moderate | 336 h | 72 h | 24 h |
 
-**What drives the values:** families must hear about a cancelled or moved session the same day, so BP-02 has the shortest MTD. Sessions (BP-01) can be moved within a week, but SAT and ACT students have fixed test dates and families leave after repeated cancellations. Billing (BP-04) has the longest MTD because most families prepay 10-session packages. BP-05 is rated High because the student folders hold IEP and 504 plans and evaluations: losing them disrupts sessions, and exposing them triggers Florida notice (Fla. Stat. 501.171). The 24-hour RPO for BP-05 is **not supported today**. The only copy outside the laptop is cloud storage with desktop sync, so ransomware would sync encrypted files to the cloud, and version history lasts only 30 days (P01 R-001).
+**What drives the values:** families must hear about a cancelled or moved session the same day, so BP-02 has the shortest MTD. Sessions (BP-01) can be moved within a week, but SAT and ACT students have fixed test dates and families leave after repeated cancellations. Billing (BP-04) has the longest MTD because most families prepay 10-session packages. BP-05 is rated High because the student folders hold IEP and 504 plans and evaluations: losing them disrupts sessions, and exposing them triggers Florida notice (Fla. Stat. 501.171). The 24-hour RPO for BP-05 is **not supported today**. The only copy outside the laptop is cloud storage with desktop sync (EV-005), so ransomware would sync encrypted files to the cloud, and version history lasts only 30 days (P01 R-001).
 
-**Single-person dependency (the key finding).** The owner-tutor is the only tutor, the only administrator of every account, and the only person families know. The second factor for the client-management SaaS and the accounting SaaS is on the owner's one phone. If the owner is ill, injured, or without the phone, BP-01 and BP-02 exceed their MTD within two days, and nobody else can tell 55 families what is happening. Actions (P01 R-012, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner-tutor is the only tutor, the only administrator of every account, and the only person families know. The second factor for the client-management SaaS and the accounting SaaS is on the owner's one phone (EV-003, EV-015). If the owner is ill, injured, or without the phone, BP-01 and BP-02 exceed their MTD within two days, and nobody else can tell 55 families what is happening. Actions (P01 R-012, due 2026-12-31):
 1. Write a one-page emergency sheet (how to send one message to all families from the client-management SaaS, and which families have SAT or ACT test dates soon) and give it, in a sealed envelope with account recovery codes, to a trusted family member designated as the emergency contact. The envelope is for notifying families only, not for reading student records.
 2. Agree in writing with another independent tutor to take urgent SAT and ACT students for up to four weeks if the owner cannot teach.
 3. Store recovery codes for every account (SYS-01 to SYS-04, SYS-08) in that envelope and in the password manager, so a lost phone does not lock the owner out.

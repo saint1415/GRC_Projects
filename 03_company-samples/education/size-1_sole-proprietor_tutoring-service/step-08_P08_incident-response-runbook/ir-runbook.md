@@ -24,7 +24,7 @@ Keep a printed copy at home and in the teaching bag. Assume the laptop and the e
 | Designated emergency contact (family member) | Only if the owner is unable to act: message families from the sealed emergency sheet | As needed |
 | Backup tutor | Urgent SAT and ACT students if sessions stop for more than two days (P05) | Day 2 |
 
-There is **no cyber insurance**: the general liability policy does not cover data breach costs, so counsel and the IT technician are paid directly. Contact numbers are kept on the printed copy only, not in this file.
+There is **no cyber insurance** (EV-023, EV-026; the quote request is open): the general liability policy does not cover data breach costs, so counsel and the IT technician are paid directly. Contact numbers are kept on the printed copy only, not in this file.
 
 ## 2. Declare (Detect)
 Declare a ransomware incident when any of these happens: a ransom note or renamed files on the laptop; the antivirus reports ransomware; the email suite shows a mass of changed files; a message claims to have student data; the email suite warns of a sign-in the owner did not make. **Write down the date and time.** Florida's 30-day clock runs from the determination of the breach or reason to believe a breach occurred (Fla. Stat. 501.171(4)(a)), so treat the moment you see a ransom note as the start unless counsel says otherwise.

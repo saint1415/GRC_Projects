@@ -7,10 +7,10 @@
 | AI use case | AI-001: a free consumer AI assistant (SYS-09) used since March 2026 to rate each student's "support level", recommend SAT boot camp starting levels, and draft parent progress reports. Adapted from the registry default ("AI admissions and student-success risk scoring"): a tutor has no admissions, and this is the equivalent scoring use |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-tutor, 2026-07-24; decision 2026-07-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases). AI-001 was found at intake from the assistant's account settings and chat history, its terms, the bank and card statements, and the vendor folder (EV-018, EV-019, EV-023, EV-021); AI-002 is the planned use decided in section 6. With no staff, there was no survey to run. Not established: what the vendor still holds from the chats, and whether it used them for training. The deletion request in section 6 is the first step to find out |
 
 ## 1. What it does (Map)
-For 31 students in the spring term the owner pasted first names, grades, assessment and portal assignment scores, and accommodations (for example "504 plan, extended time, ADHD") into the assistant and asked it to rate each student's support level (low, medium, high). In June 2026 it recommended starting levels for 12 SAT boot camp students, and in May 2026 it drafted about 45 parent progress reports. The account is a free personal one: the terms allow the vendor to use prompts to improve its models, and chat history was on. No parent was told or asked.
+For 31 students in the spring term the owner pasted first names, grades, assessment and portal assignment scores, and accommodations (for example "504 plan, extended time, ADHD") into the assistant and asked it to rate each student's support level (low, medium, high). In June 2026 it recommended starting levels for 12 SAT boot camp students, and in May 2026 it drafted about 45 parent progress reports. The account is a free personal one: the terms allow the vendor to use prompts to improve its models, and chat history was on. No parent was told or asked (EV-018, EV-019, EV-004).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -24,7 +24,7 @@ For 31 students in the spring term the owner pasted first names, grades, assessm
 ## 3. Risk tier (repository rubric)
 **AI-001: High.** The output was a substantial factor in an education decision about a child: the owner kept 27 of 31 support levels and all 12 boot camp placements as the assistant gave them. Disability information was an input. **AI-002 (de-identified drafting only): Medium.** It shapes what parents read, but the owner makes every judgment and writes every score.
 
-## 4. Measure (tests on 2026-07-16)
+## 4. Measure (tests on 2026-07-16; EV-032)
 | Characteristic | Test | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Owner re-placed the 12 boot camp students with the publisher's diagnostic rubric | 3 of 12 placements differed by one level | No |
