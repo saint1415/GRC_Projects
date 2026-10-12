@@ -19,8 +19,8 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Hotels | v2026 | 2026-06-20 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after effective date) | Confirm alignment |
-| Attractions | v2025 | 2025-09 | Aligned on payments, but **does not cover ride and show control networks** or the COPPA program (scenario gaps 7 and 4) | Add the rows marked "new" in section 3.2 by 2026-12-31 (POAM-016, POAM-025) |
-| Vacation Ownership | None; division follows its pre-acquisition **2023 standards** | Never aligned | **Drifted** (scenario gap 7); conflicts in section 4 | Issue a supplement mapped to 16 CFR 314.4 by 2026-11-30 (POAM-024) |
+| Attractions | v2025 | 2025-09 | Aligned on payments, but **does not cover ride and show control networks** or the COPPA program (group gaps 7 and 4) | Add the rows marked "new" in section 3.2 by 2026-12-31 (POAM-016, POAM-025) |
+| Vacation Ownership | None; division follows its pre-acquisition **2023 standards** | Never aligned | **Drifted** (group gap 7); conflicts in section 4 | Issue a supplement mapped to 16 CFR 314.4 by 2026-11-30 (POAM-024) |
 
 ## 3. What each supplement adds
 ### 3.1 Hotels supplement (merchant and service provider; manager of 58 hotels)
@@ -71,7 +71,7 @@ The 2023 standards were written before the acquisition. Where they conflict, **g
 | Incident severity | Division 3-level scale | One group scale (POL-03 4.2) | Inconsistent escalation (P07 IR-04d.[01]) |
 | FTC notice | Not addressed (written before 314.4(j) took effect on 2024-05-13) | FTC notice step (POL-03 4.6) | POAM-023 |
 | Vendor reviews | At contract signing only | Risk-tiered reassessment (POL-01 4.8) | 12 of 31 providers unassessed (POAM-022) |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 7 (POAM-027) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Group gap 7 (POAM-027) |
 
 **Why the drift happened.** The 2024 integration plan moved finance, HR, and sales systems first and left security policy for "phase 2," which had no owner or date. **Fix:** POL-01 4.5 now requires an acquired business to adopt group policy or an aligned supplement within 6 months of closing, and the Group CISO's policy office tracks supplement versions in the policy register.
 

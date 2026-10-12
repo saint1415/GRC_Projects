@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the Hotels, Attractions, and Vacation Ownership continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-10
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-070 group, EV-071 Hotels, EV-072 Attractions, EV-073 Vacation Ownership), FY2025 revenue by division (EV-003), volume and channel records (EV-041, EV-053, EV-060), backup, restore and failover records (EV-023, EV-063), and vendor recovery terms (EV-044, EV-046). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
+
 ## 1. Overview and purpose
 This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on: identity (SYS-G1), the SOC (SYS-G2), the cloud platform and network (SYS-G3), group payment services (SYS-G4), the guest identity and loyalty platform (SYS-G5), finance, and HR.
@@ -20,10 +22,10 @@ Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cl
 - **Attractions:** ticketing and gate access (SYS-A1), park POS (SYS-A2), the park app (SYS-A3), and ride and show control (SYS-A4).
 - **Vacation Ownership:** sales (SYS-V1), loan origination and servicing (SYS-V2), owner services and association management (SYS-V3), and inventory forecasting (SYS-V4).
 
-The SSP system (P02) is the Hotels division's Property Management and Point-of-Sale Platform (PMPS), which covers BP-H01, BP-H03, and the payment side of BP-H02. See `../00_company-facts.md` sections 1 and 3.
+The SSP system (P02) is the Hotels division's Property Management and Point-of-Sale Platform (PMPS), which covers BP-H01, BP-H03, and the payment side of BP-H02. The systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 1: Hotels about $20 million per day, Attractions about $15 million per day (much higher on peak days), and Vacation Ownership about $14 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Hotels about $7.45 billion, or about $20 million per day; Attractions about $5.60 billion, or about $15 million per day (much higher on peak days); and Vacation Ownership about $4.95 billion, or about $14 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -72,15 +74,15 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 - **Safety drives ride control and door locks.** A ride with a suspect control system stays closed until engineers verify it (BP-A04). Door locks keep working offline, but new keys cannot be encoded safely without the lock server (BP-H04).
 - **Hotels run 24 hours.** Front desks can work from printed downtime reports for about 8 hours before arrivals, folios, and night audit become unmanageable (BP-H01).
 - **Vacation Ownership runs on longer cycles.** Owner stays are booked weeks ahead, loan payments run in ACH cycles, and association billing is annual, so its MTDs are 24 to 120 hours. Its High rating comes from owners arriving at resorts (BP-V01) and the payment cycle with customer information under the FTC Safeguards Rule (BP-V04).
-- **The guest profile hub is Moderate for availability but High for confidentiality.** Hotels and parks keep operating without loyalty recognition (BP-G06), but the hub holds 52 million profiles and owners' bank data (gap 2), so its protection cannot wait (P02, P01 GR-02).
+- **The guest profile hub is Moderate for availability but High for confidentiality.** Hotels and parks keep operating without loyalty recognition (BP-G06), but the hub holds 52 million profiles and owners' bank data (group gap 2), so its protection cannot wait (P02, P01 GR-02).
 
 ## 5. Cross-division dependencies and shared services
 | Dependency | From | To | Why it matters |
 |---|---|---|---|
-| Sign-in (SYS-G1) | Group | Hotels, Attractions, corporate | A group identity outage stops two divisions at once. Vacation Ownership is outside SYS-G1 until 2027-03-31, which spares it in an outage but leaves it without group MFA and PAM (gap 3) |
+| Sign-in (SYS-G1) | Group | Hotels, Attractions, corporate | A group identity outage stops two divisions at once. Vacation Ownership is outside SYS-G1 until 2027-03-31, which spares it in an outage but leaves it without group MFA and PAM (group gap 3) |
 | Group payment services (SYS-G4) | Group | All three divisions | One CDE account serves the CRS, ticket store, park app, and owner portal; all three PCI DSS validations include it |
-| Legacy POS vendor | Hotels and Attractions | Both | The same legacy integrated POS and the same vendor remote support tool at 23 hotels and 2 Florida theme parks (gap 1). One vendor compromise reaches both divisions (P08) |
-| Guest profile hub (SYS-G5) | Group | All three divisions | Loyalty lookups from PMS and POS, park app sign-in, owner portal sign-in, and tour marketing leads. Its payment preferences table holds owners' bank data (gap 2) |
+| Legacy POS vendor | Hotels and Attractions | Both | The same legacy integrated POS and the same vendor remote support tool at 23 hotels and 2 Florida theme parks (group gap 1). One vendor compromise reaches both divisions (P08) |
+| Guest profile hub (SYS-G5) | Group | All three divisions | Loyalty lookups from PMS and POS, park app sign-in, owner portal sign-in, and tour marketing leads. Its payment preferences table holds owners' bank data (group gap 2) |
 | CRS (SYS-H2) | Hotels | Attractions (packages); Vacation Ownership (rentals) | Park packages and owner inventory rentals are sold through the CRS |
 | Tour leads | Hotels and Attractions | Vacation Ownership sales (BP-V02) | About 46% of tours come from hotel guests and park visitors |
 | SOC facts (BP-G02) | Group | Every notice | Card brand, FTC, state, owner, and SEC clocks all depend on the SOC establishing what happened |
@@ -124,5 +126,5 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 1. **Shared services set the floor.** Group payment services (BP-G05) and identity (BP-G01) have shorter RTOs than any division process, as they must. Both met their RTOs in the 2026 failover tests.
 2. **The legacy POS vendor is a shared single point of failure for two divisions.** It is also the top group risk for confidentiality (P01 GR-01).
 3. **Vacation Ownership recovery is unproven.** SYS-V3 and the loan origination database sit in the legacy data center with one restore test in 2025 and none in 2026 (P01 VO-10; POAM-019).
-4. **Ride control recovery is an engineering process, not an IT restore.** The offline image library works, but gap 9 means a park business network compromise could reach ride control at 2 parks. That is a safety risk, not only an availability risk (P01 ATT-02).
+4. **Ride control recovery is an engineering process, not an IT restore.** The offline image library works, but group gap 9 means a park business network compromise could reach ride control at 2 parks. That is a safety risk, not only an availability risk (P01 ATT-02).
 5. **Notification capacity is itself a process** (BP-G02, BP-H07, BP-G07). If the SOC, owner relations, or finance cannot work during an incident, card brand, owner, FTC, and SEC clocks keep running. The P08 runbook uses out-of-band channels for this reason.

@@ -1,0 +1,39 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider A,"IaaS/PaaS: landing zone, SYS-G4 CDE account, SYS-G5, CRS, park app back end, owner portal, PMPS interface services",SYS-G3; SYS-G4; SYS-G5; SYS-H2; SYS-A3; SYS-V3,"Cardholder data (vault); guest, visitor and owner data",Customer agreement,SOC 2 Type 2,EV-034; EV-035; EV-020,Group
+V-02,Public cloud provider B,"Immutable backup vault, disaster recovery replicas, inventory model",SYS-G3; SYS-V4,Backups of all divisions,Customer agreement,SOC 2 Type 2,EV-034; EV-035; EV-020,Group
+V-03,Colocation provider,Two colocation hubs for the SD-WAN,SYS-G3,Network traffic,Service agreement,SOC 2 Type 2,EV-035; EV-021,Group
+V-04,Identity SaaS vendor,"SSO, MFA, PAM and identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-035; EV-007,Group
+V-05,SIEM and EDR vendors,SIEM service and endpoint detection and response,SYS-G2,Security logs,Subscription terms,SOC 2 Type 2,EV-035; EV-012,Group
+V-06,Managed security service provider (MSSP),Overflow monitoring for the SOC,SYS-G2,Security logs,Service agreement,Third-party risk register entry,EV-034; EV-012,Group
+V-07,Payment gateway,"Authorizations, settlement and fraud scoring (AI-009)",SYS-G4,Cardholder data,Contract with PCI DSS clauses,AOC,EV-034; EV-035,Group
+V-08,"Acquirers A, B and C","Merchant acquiring for Hotels, Attractions and Vacation Ownership",SYS-G4,Card transactions,Merchant agreements (validation method; notice within 24 hours of a suspected compromise),n/a (acquirers set validation),EV-004,One acquirer per division
+V-09,P2PE solution provider,Validated P2PE devices and keys,SYS-H3; SYS-A2; front desk terminals,Card data (encrypted at the device),Solution agreement; P2PE Instruction Manual,PCI-listed P2PE solution,EV-043; EV-035,Hotels and Attractions
+V-10,PMS vendor,Cloud PMS for all 88 hotels,SYS-H1,Reservations; guest register; identity document numbers; card tokens,Subscription with PCI DSS clauses; 15-minute RPO; vendor alternate site,SOC 2 Type 2; AOC,EV-035; EV-046,Hotels. In the PMPS
+V-11,Cloud POS vendor,Cloud POS back office for hotel outlets and parks,SYS-H3; SYS-A2,Card tokens; sales,Subscription with PCI DSS clauses,AOC,EV-035; EV-043,Hotels and Attractions
+V-12,Legacy POS vendor,"Legacy integrated POS software, server management and remote support",LEG-POS; SYS-H3; SYS-A2,Card data in POS memory; full administrative access,Support contract: always-on vendor remote tool; vendor anti-malware only; quarterly patching,AOC for the POS software only; none for the remote support service,EV-044; EV-035; EV-009,Shared by Hotels and Attractions; outside group PAM
+V-13,Door lock vendors (two),Lock servers and key encoding,SYS-H4,Guest names and stay dates,Service agreements,Third-party risk register entry,EV-048; EV-009,One vendor uses its own always-on remote tool; the other connects through group PAM
+V-14,"Other property-system vendors (IPTV, guest Wi-Fi, building controls)",Property technology support,SYS-H4,Guest Wi-Fi usage; device data,Service agreements with access terms,Third-party risk register entry,EV-009; EV-021,"11 of 13 property-system vendors, including the two above, connect through group PAM"
+V-15,Tone-masking provider,Contact center card capture,SYS-H2,Cardholder data (masked from agents),Service agreement,AOC reviewed each year,EV-035; EV-051,Hotels
+V-16,Contact center overflow provider,Overflow reservation calls,SYS-H2,Guest reservation data,Service agreement,Third-party risk register entry,EV-051,Hotels
+V-17,Revenue-management vendor,Rate recommendations and publishing (AI-001),SYS-H5,Rates and occupancy; no personal data,Subscription; no bar on pooling group data,SOC 2 Type 2,EV-049; EV-035,Hotels
+V-18,Chatbot vendor,Guest chatbot (AI-002),SYS-H5,Guest questions; reservation lookups,Subscription,Third-party risk register entry,EV-050; EV-034,Hotels
+V-19,Ticketing and gate vendor,"Ticketing, passes, gate access, finger-scan matching (AI-008) and dynamic pricing module (AI-003)",SYS-A1,Visitor and passholder data; finger-scan templates,Contract with no deletion after pass expiry and no annual assurance review,Third-party risk register entry,EV-054; EV-034,Attractions
+V-20,Bot management vendor,Ticket bot detection (AI-004),SYS-A1,Device and behavior signals,Subscription,Third-party risk register entry,EV-036; EV-034,Attractions
+V-21,Marketing analytics vendor (kids' club),Analytics on kids' club game activity,SYS-A3,Children's game activity,Service agreement,No written security and confidentiality assurances (16 CFR 312.8(c)),EV-055; EV-056,Attractions
+V-22,Ticket microsite agency,3 park ticket microsites that embed the SYS-G4 form,SYS-A3-WEB,None stored; pages host the payment form,Statements of work,No AOC,EV-057; EV-035,Attractions
+V-23,App platform vendor,Park mobile app platform,SYS-A3,Visitor and child profile data,Service agreement,Third-party risk register entry,EV-055; EV-034,Attractions
+V-24,Ride manufacturers and controls integrator,Ride controller maintenance through the vendor jump host,SYS-A4,None (operational technology),Maintenance agreements,Third-party risk register entry,EV-058,Attractions
+V-25,Marketing analytics vendor (tour lead scoring),Tour lead scoring model on SYS-G5 data (AI-011),SYS-G5,Hotel stay and park visit history; contact data,Service agreement,Third-party risk register entry,EV-036; EV-025,Vacation Ownership
+V-26,Loan servicing vendor,Loan servicing (SaaS),SYS-V2,Customer information,Contract requiring Red Flags procedures; evaluated at signing,No review since the acquisition,EV-065,Vacation Ownership (finance subsidiary)
+V-27,ACH bank,Loan and maintenance-fee autopay,SYS-V2; SYS-V3,Bank account data,Bank agreement,Third-party risk register entry,EV-060; EV-065,Single bank for all autopay
+V-28,"Lockbox, print and mail, and collections providers",Association billing and collections,SYS-V3,Owner billing data,Service agreements,Third-party risk register entry,EV-065; EV-067,Vacation Ownership
+V-29,Consumer reporting agency,Consumer reports for credit decisions,SYS-V2,Consumer reports; Social Security numbers,Subscriber agreement,Third-party risk register entry,EV-065; EV-066,Vacation Ownership (finance subsidiary)
+V-30,CRM and e-signature vendors,"Sales platform for tours, contracts and closings",SYS-V1,Buyer data,Subscriptions,Third-party risk register entry,EV-065,Vacation Ownership
+V-31,Enterprise AI assistant provider,Enterprise generative AI assistant (AI-010),n/a,Internal documents,No training on group data; 30-day retention,Third-party risk register entry,EV-036,Group
+V-32,Recruiting software vendor (proposed),Seasonal applicant screening (AI-005),n/a,Applicant data (if approved),None (not contracted),None,EV-036,Proposed; not approved
+V-33,Background screening vendor,Background checks for hiring,SYS-G6,Consumer reports on applicants,Service agreement,Third-party risk register entry,EV-033,Holds the background reports
+V-34,Certified destruction vendor,Destruction of media with guest or card data,n/a,Media with guest or card data,Service agreement,Certificates of destruction,EV-038,Group
+V-35,Independent testing firm,Penetration and segmentation tests,All divisions,Test results,Statement of work (2026),n/a,EV-016; EV-069,Group
+V-36,QSA firm,Reports on Compliance for Hotels and Attractions,All PCI DSS scopes,Cardholder data environment evidence,Engagement letters,Independence stated in the engagement letters,EV-005,Group
+V-37,Internal audit co-source firm,Supports group internal audit,All divisions,Assessment evidence,Co-source agreement,n/a,EV-031,Group
+V-38,Forensic firm on retainer (insurer panel),Incident forensics,All divisions,Incident evidence,Retainer through the cyber insurance policy,n/a,EV-040,Group

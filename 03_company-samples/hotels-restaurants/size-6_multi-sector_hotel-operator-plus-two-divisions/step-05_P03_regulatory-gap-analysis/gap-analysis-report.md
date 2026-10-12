@@ -13,6 +13,8 @@
 | Approved | Group CISO and Group General Counsel, 2026-09-08; roadmap reviewed by the board risk committee, 2026-09-10 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what under PCI DSS
 PCI SSC sets no size tiers. Card brands and acquirers set merchant levels and validation methods; their thresholds were not verified from a card brand primary source, so no level number is stated. Each division validates under its own acquirer agreement:
 
@@ -37,7 +39,7 @@ The Safeguards Rule applies to financial institutions under FTC jurisdiction, wh
 The **Red Flags Rule** (16 CFR 681.1) applies because consumer timeshare loans are covered accounts, and **Regulation B** (12 CFR 1002.9) applies to the credit decisions of the AI credit model. CCPA rights do not reach loan data subject to GLBA (Civ. Code 1798.145(e)), but the CCPA still applies to the group's other California personal information.
 
 ### 1.3 COPPA: the Junior Explorers kids' club
-The park app's kids' club is an online service directed to children, and Cris Santos Parks and Attractions, LLC is its operator (312.2). The amended rule took effect 2025-06-23 with compliance required by 2026-04-22, including the written children's information security program (312.8(b)) and the written retention policy (312.10). The club launched in 2025-11, before the compliance date, and was not updated (scenario gap 4).
+The park app's kids' club is an online service directed to children, and Cris Santos Parks and Attractions, LLC is its operator (312.2). The amended rule took effect 2025-06-23 with compliance required by 2026-04-22, including the written children's information security program (312.8(b)) and the written retention policy (312.10). The club launched in 2025-11, before the compliance date, and was not updated (group gap 4).
 
 ### 1.4 Other applicability decisions
 | Regulation | Applies? | Basis |
@@ -76,10 +78,25 @@ The park app's kids' club is an online service directed to children, and Cris Sa
 ## 3. Method
 1. **Requirements.** PCI DSS was broken into its requirement groups, with 14 defined requirements on their own rows because they are service-provider-only or carry the largest risk, plus the appendices. **Labels are short topics written for this analysis, not PCI SSC text**, because PCI DSS is copyrighted; read the requirement text in the group's licensed copy of v4.0.1. Attractions and Vacation Ownership rows cover the requirements where their evidence differs from Hotels; every other requirement relies on the same group common controls (P02 common control catalog). Safeguards Rule, COPPA, Red Flags, Regulation B, and Part 464 rows were read from the eCFR (versions as of 2026-09-23); Florida rows from the Florida Legislature's 2026 statutes; SEC rows from 17 CFR 229.106 and Form 8-K Item 1.05.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. **This is an author mapping.** No official NIST mapping from PCI DSS, the Safeguards Rule, or COPPA was used.
-3. **Evidence.** Interviews, document review, configuration exports, the 2026 penetration and segmentation tests, a mailbox discovery scan (2026-06), price display and chatbot tests, a sample of 60 adverse action notices, and the P07 assessment results.
+3. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-068: configuration exports, the 2025 ROCs and the 2026 service provider ROC, merchant and management agreements, policies, plans, inventories, and vendor files), the 2026 penetration and segmentation test report received as an intake follow-up (EV-069), gap analysis interviews with each division and the group (EV-078 Hotels, EV-079 Attractions, EV-080 Vacation Ownership, EV-081 group), a mailbox discovery scan (2026-06, EV-082), the payment device count (EV-083), the card-display review (EV-084), 2026 Q2 patch and PCI program records (EV-085, EV-086), price display, feed, and call tests (EV-087, EV-088, EV-090), kids' club consent and dashboard tests (EV-089), a sample of 60 adverse action notices (EV-091), the P10 chatbot test (EV-093), and the P07 assessment results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 scale and given an owner and a date. Where a gap matches a P01 risk, the gap carries the same level.
 
 ## 4. Results
+### 4.0 Group gaps
+The twelve gaps below are the main gaps found across the group and its divisions. They are numbered here and cited as group gaps 1 to 12 across this sample.
+1. **Legacy POS and its vendor.** 72 hotel outlets at 23 hotels and 96 park kiosks and carts at the 2 Florida theme parks run the same legacy integrated POS. Card data is in clear text in POS memory before it reaches the gateway. The POS vendor's always-on remote support tool reaches every legacy POS server outside group PAM, and the vendor's support terms do not allow EDR on those servers. P2PE replacement is 61% complete and due 2027-06-30 (EV-043, EV-044, EV-045, EV-009, EV-011; P07 AC-17, MA-4).
+2. **Guest profile hub mixes division data.** SYS-G5 holds hotel guests, park visitors, and owners in one store. A "payment preferences" table synced from SYS-V3 in 2025 holds full bank account and routing numbers for about 212,000 owners enrolled in autopay. The CRS integration service account used by PMS and POS loyalty lookups can read the whole hub. Hotel and park guest data feed vacation ownership tour marketing although the hotel and park privacy notices do not say so clearly (EV-025, EV-027, EV-047, EV-060; P07 AC-6, EV-P-AC6).
+3. **Vacation Ownership Safeguards Rule program.** The division still runs its own directory and email; 340 sales gallery and loan processing users reach the loan origination platform without MFA and without the Qualified Individual's written approval of an equivalent control (16 CFR 314.4(c)(5)); the legacy loan document archive (about 3.1 million scanned contracts and credit applications) is not encrypted at rest (314.4(c)(3)); 12 of 31 service providers with customer information have not been assessed (314.4(f)); the incident response plan has no FTC notification step (314.4(j)); the 2026 penetration test excluded the legacy data center (EV-062, EV-063, EV-064, EV-065, EV-016, EV-069).
+4. **Kids' club (COPPA).** The Junior Explorers kids' club (about 96,000 child profiles) has no written children's information security program as required since 2026-04-22 (16 CFR 312.8(b)) and no written retention policy (312.10). Parents consent once by email, and the same consent covers sharing game activity with a marketing analytics vendor (EV-018, EV-055, EV-056, EV-089).
+5. **Biometric gate data.** About 640,000 passholders and multi-day ticket holders at the 3 Florida parks have finger-scan templates held in the gate vendor's cloud with no deletion after the pass expires. Biometric data is personal information under Fla. Stat. 501.171(1)(g)1.a.(VI) (EV-054).
+6. **Managed hotel agreements.** 31 of 58 management agreements were signed before 2020 and do not assign security responsibilities or incident notice duties to owners. Owners have not all received the PCI DSS responsibility matrix (Requirement 12.9) (EV-041, EV-042).
+7. **Division supplements and inheritance.** Vacation Ownership still follows its pre-acquisition (2023) standards, and its inheritance of group common controls is not documented. Attractions' supplement does not cover ride control networks (EV-018, EV-019, EV-064).
+8. **Shared incident notification.** A cross-division incident may trigger three acquirers and the card brands, managed hotel owners, FTC Safeguards Rule notice, state breach laws, and an SEC materiality decision. The multi-regulator matrix has not been exercised (EV-004, EV-014, EV-028, EV-041).
+9. **Ride control networks.** The 2026-05 penetration test found that ride and show control networks at 2 of 7 parks are reachable from the park business network through a vendor maintenance jump host (EV-058, EV-069).
+10. **AI governance.** 11 AI use cases; 6 reviewed by the Group AI council since it formed in 2026-03. The hotel guest chatbot quotes nightly rates without the mandatory resort fee at 6 resort hotels; the Vacation Ownership credit model's adverse action reasons are not always specific (12 CFR 1002.9(b)(2)); the inventory forecasting model keeps no decision records (Fla. Stat. 721.13(12)(c)) (EV-036, EV-050, EV-066, EV-091, EV-093).
+11. **Third parties.** About 1,400 vendors; 140 are high risk. Vacation Ownership's vendor reviews lapsed after the acquisition (EV-034, EV-065).
+12. **Retention.** The guest profile hub keeps all 52 million profiles indefinitely, including about 7.9 million with identity document numbers (EV-025, EV-037).
+
 ### 4.1 Hotels and group-wide obligations (`gap-analysis.csv`)
 | Regulation / section | Met | Partially met | Not met | N/A | Rows |
 |---|---|---|---|---|---|
@@ -147,7 +164,7 @@ The governance elements are in place: a Qualified Individual, a written risk ass
 Gap risk levels: 3 High (314.4(c)(1), (c)(3), (c)(5)), 22 Moderate, 5 Low.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Legacy POS vendor access, no EDR, late patches (1) | Hotels, Attractions | PCI 5.2, 6.3, 8.2, 8.4, 8.4.2, 12.8; 45(a)(1), 45(n) | High | Vendor through PAM by 2026-12-31; revalidate compensating controls; P2PE replacement by 2027-06-30 | Group CISO | 2027-06-30 |
 | 2 | Guest profile hub credential and owners' bank data (2) | All | PCI 8.6; 314.4(c)(1); 45(n) | High | Least privilege for the CRS integration account; 90-day rotation; bank data out of the hub (POAM-003, POAM-013) | Group Chief Privacy Officer | 2026-12-31 |

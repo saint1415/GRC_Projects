@@ -13,13 +13,13 @@
 | Approved | 2026-09-10 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments and the finance subsidiary board approved the Safeguards Rule remediation plan the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that stores, processes, or transmits card data, guest, visitor, or owner personal information, children's information, or loan customer information in the three divisions, plus the corporate shared services they depend on: identity (SYS-G1), the SOC (SYS-G2), the cloud platform and network (SYS-G3), group payment services (SYS-G4), the guest identity and loyalty platform (SYS-G5), and ERP and HR (SYS-G6). Division systems are SYS-H1 to SYS-H5, SYS-A1 to SYS-A4, and SYS-V1 to SYS-V4 (`../00_company-facts.md` section 3). Ride and show control (SYS-A4) is in scope for safety as well as security.
+**Scope.** Every system that stores, processes, or transmits card data, guest, visitor, or owner personal information, children's information, or loan customer information in the three divisions, plus the corporate shared services they depend on: identity (SYS-G1), the SOC (SYS-G2), the cloud platform and network (SYS-G3), group payment services (SYS-G4), the guest identity and loyalty platform (SYS-G5), and ERP and HR (SYS-G6). Division systems are SYS-H1 to SYS-H5, SYS-A1 to SYS-A4, and SYS-V1 to SYS-V4 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). Ride and show control (SYS-A4) is in scope for safety as well as security.
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Hotels, the focus division, has the most detailed register (26 risks).
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact, not on the highest division rating. Four group risks (GR-11, GR-12, GR-16, GR-17) have no division counterpart because they exist only at group level.
 
-**Risk tolerance and who can accept risk** (added to `../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (from the board risk committee's acceptance levels, EV-029):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead (Group CISO for group risks) |
@@ -30,11 +30,13 @@
 Two kinds of risk at High may not be accepted at all and must be treated: **guest, visitor, or rider safety** (ride control, door locks) and **card data compromise** (the acquirer agreements do not allow the group to carry a known card data exposure). For the finance subsidiary, the Qualified Individual must also report every High risk to the finance subsidiary board in the annual written report (16 CFR 314.4(i)).
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the 2026 penetration and segmentation tests (2026-04-27 to 2026-05-08), the gap analyses (P03), the common control assessment (P07), and interviews with each division's leadership, the Qualified Individual, and the Group Director of Payments and PCI Compliance.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, the 2026 penetration and segmentation tests (2026-04-27 to 2026-05-08; EV-069), the gap analyses (P03), the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window, and interviews with each division's leadership, the Qualified Individual, and the Group Director of Payments and PCI Compliance (EV-074 group, EV-075 Hotels, EV-076 Attractions, EV-077 Vacation Ownership).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, tests, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05: cost, operations, regulatory and contractual, safety, reputation). Group impact reflects enterprise consequences: card brand action across three acquirers, several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads proposed roll-ups. The Group Chief Risk Officer decided which risks become group risks with three tests: the risk crosses divisions, sits in a shared service, or needs a group decision or group funding.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including the first P07 results (the guest profile hub test of 2026-07-22, EV-P-AC6, and the lock server check of 2026-07-24, EV-H-CM6). P07 testing continued to 2026-08-28. No risk was added after it, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 
@@ -73,13 +75,13 @@ Two kinds of risk at High may not be accepted at all and must be treated: **gues
 
 ### What the results say
 There are no Very High risks. The group's shared controls are strong: one identity platform with PAM, a 24x7 SOC, tokenization in one card vault, immutable backups, and annual QSA Reports on Compliance for Hotels and Attractions. The High risks cluster in three places:
-1. **What the divisions share** (GR-01, GR-02, GR-05). The same legacy POS vendor reaches hotel and park POS (scenario gap 1), and the guest profile hub holds all three divisions' customers behind one over-broad credential (gap 2). One incident in either place would trigger card brand, FTC, state, owner, and SEC duties at once. That is the P08 scenario.
-2. **The acquired division** (GR-06, VO-01, VO-02, VO-03). Vacation Ownership has not reached the group baseline two years after the acquisition. Its gaps map directly to named Safeguards Rule elements: encryption at rest, MFA, and service provider oversight (gap 3).
-3. **Safety and building systems** (GR-09, ATT-02, HTL-04). A ride control bridge (gap 9) and a default door lock password are rated High because the impact is physical harm or unsecured rooms, not data loss. Neither may be accepted.
+1. **What the divisions share** (GR-01, GR-02, GR-05). The same legacy POS vendor reaches hotel and park POS (group gap 1), and the guest profile hub holds all three divisions' customers behind one over-broad credential (group gap 2). One incident in either place would trigger card brand, FTC, state, owner, and SEC duties at once. That is the P08 scenario.
+2. **The acquired division** (GR-06, VO-01, VO-02, VO-03). Vacation Ownership has not reached the group baseline two years after the acquisition. Its gaps map directly to named Safeguards Rule elements: encryption at rest, MFA, and service provider oversight (group gap 3).
+3. **Safety and building systems** (GR-09, ATT-02, HTL-04). A ride control bridge (group gap 9) and a default door lock password are rated High because the impact is physical harm or unsecured rooms, not data loss. Neither may be accepted.
 
-AI governance (GR-04, gap 10) is High at group level even though no single division AI risk is High. Eight division risks, from chatbot fee quotes to credit model reasons, share one cause: AI use cases went live before the Group AI council existed.
+AI governance (GR-04, group gap 10) is High at group level even though no single division AI risk is High. Eight division risks, from chatbot fee quotes to credit model reasons, share one cause: AI use cases went live before the Group AI council existed.
 
-The kids' club (ATT-03, ATT-04) and biometric gate data (ATT-05) are Moderate. Their likelihood is low because both sit with vendors that have not had incidents, but they carry concrete regulatory gaps (16 CFR 312.8(b), 312.5(a)(2), 312.10; gap 4) that P03 rates High as compliance gaps.
+The kids' club (ATT-03, ATT-04) and biometric gate data (ATT-05) are Moderate. Their likelihood is low because both sit with vendors that have not had incidents, but they carry concrete regulatory gaps (16 CFR 312.8(b), 312.5(a)(2), 312.10; group gap 4) that P03 rates High as compliance gaps.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** legacy POS vendor access through PAM and P2PE replacement (GR-01; POAM-001); guest profile hub least privilege and bank data removal (GR-02; POAM-013); Vacation Ownership migration to SYS-G1, group EDR, and SIEM (GR-05, GR-06; POAM-006, POAM-020); ride control bridge removal (GR-09; POAM-016); group AI governance program (GR-04; P10).

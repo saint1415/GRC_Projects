@@ -3,10 +3,10 @@
 **Organization:** Cris Santos Company Holdings, Inc. (Hotels division, Cris Santos Hotels, LLC; inherits group common controls) | **Tier:** Multi-Sector | **Vertical:** Accommodation and Food Services
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-10
 
-> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Hotels division's PMPS** because Hotels is the focus division, the PMPS carries most of the group's card transactions on the hotel side and every hotel's guest register, and it is where the shared legacy POS vendor (scenario gap 1) and the guest profile hub link (gap 2) meet. The PMPS inherits most of its controls from the group common control catalog (`common-control-catalog.csv`). The Attractions ticketing and gate platform (SYS-A1 and SYS-A2) and the Vacation Ownership loan platform (SYS-V2) keep division SSPs that inherit from the same catalog.
+> **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Hotels division's PMPS** because Hotels is the focus division, the PMPS carries most of the group's card transactions on the hotel side and every hotel's guest register, and it is where the shared legacy POS vendor (group gap 1) and the guest profile hub link (group gap 2) meet. The PMPS inherits most of its controls from the group common control catalog (`common-control-catalog.csv`). The Attractions ticketing and gate platform (SYS-A1 and SYS-A2) and the Vacation Ownership loan platform (SYS-V2) keep division SSPs that inherit from the same catalog.
 
 ## 1. System Name and Identifier
-Hotel Property Management and Point-of-Sale Platform (**PMPS**), identifier CSCH-HTL-PMPS. It covers SYS-H1, SYS-H3, and the property payment network segments of SYS-H4 in `../00_company-facts.md`.
+Hotel Property Management and Point-of-Sale Platform (**PMPS**), identifier CSCH-HTL-PMPS. It covers SYS-H1, SYS-H3, and the property payment network segments of SYS-H4 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PMPS runs hotel operations and card acceptance at **88 hotels**: 30 owned or leased and 58 managed for third-party owners. It supports:
@@ -36,7 +36,7 @@ The design is described by service category and is vendor-agnostic (P04).
 | N53-R03 | CCPA and CPPA regulations | Cal. Civ. Code 1798.100 et seq.; 11 CCR 7120-7124 | The group is a CCPA "business" (5 California hotels; revenue above $26,625,000). Guest data in the PMPS is in scope of the group's privacy program and its first cybersecurity audit (report due 2028-04-01) |
 | N53-R05 | SEC cybersecurity disclosure | Reg S-K Item 106; Form 8-K Item 1.05 | A PMPS incident may be material to the group (P08) |
 | N72-R06 | CIRCIA (proposed) | Proposed 6 CFR Part 226 | Tracked only. Not in effect; the group exceeds the SBA size standard, so it would be covered by the proposed size-based criterion if the rule is finalized as proposed |
-| Contracts | Management agreements; merchant agreement with Acquirer A | Fictional terms | 31 of 58 management agreements predate 2020 and assign no security responsibilities or incident notice duties (gap 6; POAM-026) |
+| Contracts | Management agreements; merchant agreement with Acquirer A | Fictional terms | 31 of 58 management agreements predate 2020 and assign no security responsibilities or incident notice duties (group gap 6; POAM-026) |
 | Internal | Group policies POL-01 to POL-05 and the Hotels supplement | P06 | |
 
 Not applicable: Illinois BIPA (N72-R05; no Illinois hotels); HIPAA; gaming rules.
@@ -88,6 +88,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adjusted f
 Other High-baseline controls are either fully inherited from the cloud providers and SaaS vendors (for example, most PE controls, evidenced by their SOC 2 Type 2 reports and AOCs) or tailored out with a reason in the group tailoring register (for example, controls for facilities the group does not operate). Where the CSF 2.0 to SP 800-53 crosswalk has no entry for a control (AC-8, AC-11, AU-8, IR-2, MA-4, MP-4, MP-6, PL-4, PS-3, PS-4, SR-9), the CSF subcategory in the CSV is an **author mapping**.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-H1 and its interface services, SYS-H3 including the legacy POS servers, and the property payment segments of SYS-H4) and the exports EV-043 to EV-047.
 - **Inside:** the cloud PMS tenant configuration, roles, and interfaces; cloud POS back office configuration and P2PE devices; legacy POS servers and workstations at 23 hotels; property payment segments (edge firewalls, payment VLANs, front desk and outlet workstations) at 88 hotels.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SIEM, and EDR, SYS-G3 cloud platform and network hubs, and SYS-G4 group payment services (tokenization, vault, gateway).
 - **Outside, interconnected:** SYS-H2 CRS and contact center, SYS-G5 guest profile hub, SYS-H4 door lock servers, SYS-H5 revenue management, and owners' corporate networks at 9 managed hotels.
@@ -136,13 +137,13 @@ See `control-implementation.csv` (114 controls) and `common-control-catalog.csv`
 | System-specific | 23 |
 
 **The 22 partially implemented controls** cluster in four places:
-- **The legacy POS and its vendor** (gap 1): AC-17, MA-4, PS-7, SA-9, SA-22, SC-8(1), SI-2, SI-3, IR-4, AU-6, SR-9, AT-3.
-- **Accounts and access** (gap 2): AC-2, AC-2(12), AC-6, IA-5, IA-8.
-- **Owners and notification** (gaps 6 and 8): CA-3, IR-3, IR-6.
-- **Inventory and retention** (gap 12): CM-8, SI-12.
+- **The legacy POS and its vendor** (group gap 1): AC-17, MA-4, PS-7, SA-9, SA-22, SC-8(1), SI-2, SI-3, IR-4, AU-6, SR-9, AT-3.
+- **Accounts and access** (group gap 2): AC-2, AC-2(12), AC-6, IA-5, IA-8.
+- **Owners and notification** (group gaps 6 and 8): CA-3, IR-3, IR-6.
+- **Inventory and retention** (group gap 12): CM-8, SI-12.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 91 controls provided or partly provided by corporate. Inheritance is **documented for Hotels** (2025 inheritance matrix and the ROC responsibility matrices) and **for Attractions** (2026-02 matrix), except ride and show control networks, which the catalog does not cover. It is **not documented for Vacation Ownership** (scenario gap 7). Vacation Ownership does not inherit SYS-G1 controls at all until its directory migration on 2027-03-31, so its Safeguards Rule access and MFA controls are division-operated today (P03; POAM-020, POAM-027).
+The common control catalog lists 91 controls provided or partly provided by corporate. Inheritance is **documented for Hotels** (2025 inheritance matrix and the ROC responsibility matrices) and **for Attractions** (2026-02 matrix), except ride and show control networks, which the catalog does not cover. It is **not documented for Vacation Ownership** (group gap 7). Vacation Ownership does not inherit SYS-G1 controls at all until its directory migration on 2027-03-31, so its Safeguards Rule access and MFA controls are division-operated today (P03; POAM-020, POAM-027).
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and PMPS and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`. The QSA assesses the PMPS for the 2026 merchant ROC from 2026-10-19.
@@ -154,7 +155,7 @@ Common controls were assessed once, and PMPS and division controls sampled, from
 - **Guests** do not access the PMPS directly; they sign in to SYS-G5, outside the boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), 2025 merchant ROC and 2026 service provider ROC (QSA).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), 2025 merchant ROC and 2026 service provider ROC (QSA).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance
