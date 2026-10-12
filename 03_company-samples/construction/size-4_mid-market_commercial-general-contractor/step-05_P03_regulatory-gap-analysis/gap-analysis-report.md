@@ -13,6 +13,8 @@
 | Approved | Chief Operating Officer, 2026-09-17; G-123 (Very High) approved for treatment by the Chief Executive Officer |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **FAR 52.204-21 applies now, to every system that holds FCI.** The clause is in FC-1 to FC-4. Drawings, submittals, schedules, daily logs, certified payrolls, and pay apps prepared for these contracts are FCI. There is no size exemption. At this size the clause is mostly met on corporate systems, so it is one summary row (G-128) plus the flowdown row (G-129), not 17 rows as in the Small sample.
 
 **DFARS 252.204-7012 applies now, and its duties have been triggered.** FC-3 and FC-4 include the clause. On FC-4 the Government furnished CUI-marked drawings and the A&E subcontractor creates CUI design packages, so the company holds covered defense information (252.204-7012(a)). The clause requires "adequate security" on every covered contractor information system, including NIST SP 800-171 (252.204-7012(b)(2)(i)), FedRAMP Moderate equivalent security for any external cloud service that holds CDI ((b)(2)(ii)(D)), reporting within 72 hours of discovery of a cyber incident ((c)(1)(ii) and the definition of "rapidly report" in (a)), a medium assurance certificate ((c)(3)), image preservation for 90 days ((e)), and flowdown to subcontracts that involve CDI, including commercial products or services ((m)(1)). There is no small-business or size exemption. FC-3 holds no CDI, so the clause has no effect there today.
@@ -37,13 +39,14 @@
 ## 2. Method
 1. **Requirements.** The 110 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and the point value from the CMMC Scoring Methodology (32 CFR 170.24(c)(2)). Requirement text is quoted from the public-domain NIST publication. The 24 clause and regulation rows cite the paragraph of each clause or section as checked on eCFR (version date 2026-09-23).
 2. **Crosswalk.** CSF 2.0 and SP 800-53 Rev. 5 mappings are derived from NIST's official mappings through the SP 800-171 Rev. 3 counterpart of each requirement (the Rev. 2 to Rev. 3 change analysis, the SP 800-171r3 CUI overlay, and the CSF 2.0 to SP 800-171r3 mapping in `00_universal-framework/crosswalks/csf2_to_sp800-171r3.csv`). The route through Rev. 3 is the author's; the `crosswalk_source` column says so for each row. Clause rows use author mappings.
-3. **Evidence sampling.** Each requirement was rated on sampled evidence, not on documents alone:
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, and the walk-throughs of headquarters, the yard, and the FC-4 trailer on 2026-06-24 to 2026-06-26, EV-052), gap analysis interviews (EV-062), the samples below (EV-063 to EV-065), the FedRAMP Marketplace check and the SYS-01 vendor's response (EV-066), and, where sampling ran into the P07 walkthroughs, the P07 evidence (for example EV-MP-2, EV-PE-3 and EV-PE-8). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+4. **Evidence sampling.** Each requirement was rated on sampled evidence, not on documents alone, drawn from the populations collected at intake (for example the 286 terminations in EV-003, the 52 CPE accounts in EV-023, and the 15 FC-4 subcontracts in EV-030):
    - accounts: all 52 CPE accounts; 25 of 286 terminations; 15 of 38 transfers involving FC-4; the SYS-01 permission export for FC-4 folders;
    - data location: a content search of SYS-01 for CUI markings (1,140 items found); a sweep of all 26 FC-4 tablets; 20 A&E design sheets for markings;
    - change control: 20 CPE change tickets;
    - physical: walkthroughs of the FC-4 trailer and the headquarters project office; the July 2026 trailer visitor log against the installation gate record (41 visitors);
    - subcontractors: all 15 FC-4 subcontracts and their SPRS records.
-4. **Status.** Met, Partially met, Not met, or Not applicable. For CMMC scoring, a requirement is NOT MET if any objective is not satisfied (32 CFR 170.24(b)(2)), so every Partially met row counts as NOT MET in the score. The `points_deducted` column shows the value subtracted.
+5. **Status.** Met, Partially met, Not met, or Not applicable. For CMMC scoring, a requirement is NOT MET if any objective is not satisfied (32 CFR 170.24(b)(2)), so every Partially met row counts as NOT MET in the score. The `points_deducted` column shows the value subtracted.
 
 ## 3. Results summary
 

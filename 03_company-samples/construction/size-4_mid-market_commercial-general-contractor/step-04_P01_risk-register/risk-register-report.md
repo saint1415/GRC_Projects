@@ -11,7 +11,7 @@
 | Approved | 2026-09-17: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, risk appetite); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units in the BIA (P05), the Project Delivery and Payment Platform and its CUI Project Enclave (P02), the cloud environment (P04), the MBSS platform, about 210 vendors and about 450 subcontractors and suppliers, and the 6 AI uses (P10). Impact values come from the BIA; vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units in the BIA (P05), the Project Delivery and Payment Platform and its CUI Project Enclave (P02), the cloud environment (P04), the MBSS platform, about 210 vendors and about 450 subcontractors and suppliers, and the 6 AI uses (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Impact values come from the BIA; vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,8 +35,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $250,000 insurance retention are tolerable. Scenarios above $1 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Construction overlay (business email compromise and payment fraud, federal contract obligations), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Construction overlay (business email compromise and payment fraud, federal contract obligations), the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the IT Director, the Security Manager and the MSSP service lead (EV-061). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings and samples. The control assessment (P07) added two risks in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-037), scan results (EV-014), configuration exports, the walk-throughs, the gap analysis samples (EV-063 to EV-065) and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, contract and regulatory, safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -68,6 +68,8 @@ Cyber insurance ($10 million limit, $1 million social engineering sublimit, $250
 | R-008 | SPRS score or affirmation overstates implementation (False Claims Act exposure) | High | Corrected score (-23) by 2026-09-30 with counsel review; independent reperformance | General Counsel | 2026-09-30 |
 | R-016 | Stolen enclave session used to steal CUI without detection | High | Monitoring service inside the government-community cloud; correlation with corporate identities | Security Manager | 2027-01-31 |
 | R-021 | MBSS remote access used to control a client's access control or cameras | High | All sites through the company gateway with named, recorded sessions | Director of Technology and Security Systems | 2026-12-31 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-051 was added on 2026-08-14 after testing found 6 rented private-label cameras from a covered manufacturer at the FC-2 jobsite (EV-SR-3), and R-052 on 2026-08-19 after testing found a departed A&E employee's CPE guest account active for 47 days (EV-AC-2). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **Money moves by email (R-001, R-002, R-025, R-026, R-033, R-040, R-041).** The company has good payment approvals, but the chain still starts with an email that can be faked or sent from a hijacked mailbox. The fixes are phishing-resistant MFA, out-of-band verification that cannot be overridden, and telling owners and subcontractors how the company will and will not change bank details.

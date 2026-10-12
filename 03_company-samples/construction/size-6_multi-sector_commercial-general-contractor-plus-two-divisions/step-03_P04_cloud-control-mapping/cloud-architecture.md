@@ -70,7 +70,7 @@ flowchart TB
   EID --> VDI
   VDI --> EFS
   EFS --> GW
-  VDI -.->|"field release export (gap 1)"| PM
+  VDI -.->|"field release export (group gap 1)"| PM
   PDPPB --> LOG
   CON --> LOG
   AE --> LOG

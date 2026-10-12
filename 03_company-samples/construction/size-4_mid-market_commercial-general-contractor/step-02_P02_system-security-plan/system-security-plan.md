@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 
 ## 1. System Name and Identifier
-Project Delivery and Payment Platform (**PDPP**), identifier CSC-PDPP-01. It has one documented subsystem, the **CUI Project Enclave (CPE)**, identifier CSC-PDPP-01-CPE. The PDPP comprises SYS-01, SYS-02, SYS-04, SYS-05, SYS-06 (except the MBSS account), SYS-07, SYS-08, SYS-09, and SYS-12 in `../00_company-facts.md`.
+Project Delivery and Payment Platform (**PDPP**), identifier CSC-PDPP-01. It has one documented subsystem, the **CUI Project Enclave (CPE)**, identifier CSC-PDPP-01-CPE. The PDPP comprises SYS-01, SYS-02, SYS-04, SYS-05, SYS-06 (except the MBSS account), SYS-07, SYS-08, SYS-09, and SYS-12 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 This plan serves three purposes:
 - the company's system security plan for its major system, on the NIST SP 800-53B Moderate baseline with tailoring;
@@ -108,6 +108,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1, plus two company-defin
 The CEO and COO approved this tailoring decision on 2026-09-17. The CPE uses the same Moderate baseline, which is also the basis of the SP 800-171 requirements.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts are the endpoint management console totals (EV-009) plus the 40 unmanaged rugged tablets on the tablet register (EV-010); the 22 jobsite routers are from the router register and the carrier portal (EV-010, EV-011); the CPE account count is from the CPE export (EV-023).
+
 ### 7.1 Corporate PDPP (FCI scope)
 **Inside:** the SYS-01 and SYS-02 tenant configurations and roles; the identity provider and productivity suite tenants; the 4 corporate cloud accounts (security and identity, shared services, corporate workloads, backup); headquarters, regional office, and yard networks and the 22 jobsite cellular routers; 420 laptops and desktops, 380 smartphones, 150 rugged tablets, and 12 commissioning laptops; the company's SIEM tenant and use cases.
 
@@ -137,10 +139,10 @@ The diagrams are in P04 `cloud-architecture.md`.
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
-| Owners (private, state and local, federal) | Outbound pay apps; inbound payments | Pay apps, lien waivers, remittance details | Prime contracts. **Private owners have no agreed out-of-band method for remittance changes (gap 4)** |
+| Owners (private, state and local, federal) | Outbound pay apps; inbound payments | Pay apps, lien waivers, remittance details | Prime contracts. **Private owners have no agreed out-of-band method for remittance changes (EV-043)** |
 | Subcontractors and suppliers (about 450) | Bidirectional via SYS-01 and email | Drawings (FCI), invoices, bank details | Subcontracts with FAR 52.204-21 and 52.204-25 substance (2025 templates) |
 | FC-4 A&E subcontractor | Bidirectional through CPE guest accounts (8 users) | CUI design packages | Subcontract with DFARS 252.204-7012 |
-| FC-4 trade subcontractors (14) | Outbound CUI drawings | CUI | **No DFARS 252.204-7012 flowdown (gap 3); CUI sent through SYS-01 (gap 1)** |
+| FC-4 trade subcontractors (14) | Outbound CUI drawings | CUI | **No DFARS 252.204-7012 flowdown (EV-030); CUI sent through SYS-01 (EV-029)** |
 | Army Corps of Engineers | Bidirectional | CUI drawings, submittals, invoices | FC-4 contract |
 | Payroll and HR SaaS (SYS-03) | Outbound hours; inbound certified payroll reports | Personal information, payroll | Vendor contract; SOC 2 on file |
 | Bank portal (SYS-10) | Outbound ACH files from SYS-02 | Payment instructions | Treasury agreement; dual approval |
@@ -208,7 +210,7 @@ The diagrams are in P04 `cloud-architecture.md`.
 | Hybrid | 30 | Government-community cloud provider (16), MSSP (13), identity provider vendor (6), commercial cloud provider (5), and one each for the ERP vendor, project platform vendor, and destruction vendor (a control can name more than one provider) |
 | Common/Inherited | 11 | Government-community cloud provider (for example AC-12, SC-12), identity provider vendor (AC-7, IA-2(1)), commercial cloud provider (CP-6), MSSP (AU-3, AU-9) |
 
-The Partially implemented and Planned statements trace to the 12 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. Most are partial because a control works in the corporate environment or the CPE, but not at the FC-4 jobsite or on field devices.
+The Partially implemented and Planned statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-011, EV-020 and EV-029) and to the P07 findings. Most are partial because a control works in the corporate environment or the CPE, but not at the FC-4 jobsite or on field devices.
 
 **CSF 2.0 mapping.** The `csf2_subcategories` column uses NIST's CSF 2.0 to SP 800-53 Rev. 5 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`) at the base-control level. Where NIST lists no subcategory (AC-11, AC-12, MA-2, MA-4, PE-8, SA-22), the mapping is the author's.
 
@@ -223,7 +225,7 @@ The Partially implemented and Planned statements trace to the 12 known gaps in `
 - **External users** of SYS-01 (about 2,600) authenticate with the vendor's sign-in and optional MFA, governed by the vendor and outside this boundary. Project permissions limit each external user to assigned projects. A&E guest users in the CPE use the enclave's phishing-resistant MFA.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis, SPRS score, and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis, SPRS score, and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **A&E:** architecture and engineering (the FC-4 design subcontractor)

@@ -39,7 +39,7 @@ Mid-Market tier scope: 25-40 controls. **34 controls, 214 determination statemen
 | SA-4 | Subcontract and vendor terms; DFARS 252.204-7012(m); R-004 (High) | Focused | Comprehensive for FC-4 (all 15 subcontracts) |
 | SR-3 | Section 889 supply chain; FAR 52.204-25(b); R-010 | Focused | Focused (FC-1 to FC-4 submittals and FC-2 rentals) |
 
-**Not selected this year, with reasons.** Strong areas tested in 2025 (SI-3 endpoint protection, SC-28 encryption at rest in the corporate tenant) and areas fully inherited from providers (data center PE controls) were not retested. They will be in the C3PAO readiness check in 2027-03 (POAM-009).
+**Not selected this year, with reasons.** Strong areas tested in 2025 (SI-3 endpoint protection, SC-28 encryption at rest in the corporate tenant; 2025 internal IT audit, EV-039) and areas fully inherited from providers (data center PE controls) were not retested. They will be in the C3PAO readiness check in 2027-03 (POAM-009).
 
 ## 2. Sampling approach
 The firm used its attribute sampling table: 25 items for controls that operate many times a year, 5 to 15 for weekly or monthly controls, and the full population where it was small or the risk was Very High. Populations were extracted in the assessors' presence and samples chosen at random.
@@ -87,6 +87,18 @@ The firm used its attribute sampling table: 25 items for controls that operate m
   - a restore of one BIM folder from the backup account
   - inventory traces at 3 jobsites and the yard
   - reperformance of the P03 SPRS score calculation (32 CFR 170.24)
+
+### What each test could show
+The 2026 policies (POL-01 to POL-05) and STD-04 (P06) were drafts during fieldwork. They were approved on 2026-09-17, and the policies take effect on 2026-10-01. The other new and updated standards stay in draft until their issue dates in the P06 standards index. The 2024 policies and standards were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 177 |
+| Design | The requirement comes from a 2026 draft (quarterly access reviews in POL-02, yearly recovery tests in STD-07, monthly scanning in STD-01); its design was reviewed. Operation is tested at the 2027-03 readiness check | 3 |
+| Not implemented | Nothing existed to test | 34 |
+| **Total** | | **214** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and FC-4 transfers from the HR report (EV-003), CPE accounts from the CPE export (EV-023), SYS-01 external users from EV-006 and EV-029, bank-detail changes from the ERP change log (EV-042), FC-4 tablets from EV-016, jobsite routers from EV-010 and EV-011, CPE weekly reviews from EV-022, MFA resets from EV-008, critical and high findings from the scan reports (EV-014), incident tickets from EV-037, FC-4 subcontracts and IT and SaaS contracts from EV-030 and EV-045, rental agreements from EV-059, and staff from EV-003.
 
 ## 4. Rules of engagement
 - **CUI handling.** Assessors viewed CUI only inside the CPE, through time-limited accounts approved by the FC-4 Project Executive. Workpapers record locations, counts, and markings, not CUI content. No CUI left company or enclave systems.

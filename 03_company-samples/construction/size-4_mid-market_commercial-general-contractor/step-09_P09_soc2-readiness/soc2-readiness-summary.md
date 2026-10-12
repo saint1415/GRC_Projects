@@ -85,7 +85,7 @@ For this service, the company's controls directly affect the security of its cli
 **Status reporting.** The Director of Technology and Security Systems reports readiness monthly to the COO, and the vCISO reports it quarterly to the audit committee and the two clients.
 
 ## 5. Vendor assurance review program (Part B)
-The company relies on vendors for many of its controls: in the SSP (P02), 11 controls are Common/Inherited and 30 are Hybrid. The program in `vendor-soc2-review.csv` makes that reliance evidence-based. It is the core of the vendor and subcontractor security standard (STD-03) and replaces the old practice of reading 9 SaaS SOC 2 reports a year without tiering (gap 12).
+The company relies on vendors for many of its controls: in the SSP (P02), 11 controls are Common/Inherited and 30 are Hybrid. The program in `vendor-soc2-review.csv` makes that reliance evidence-based. It is the core of the vendor and subcontractor security standard (STD-03) and replaces the old practice of reading 9 SaaS SOC 2 reports a year without tiering (EV-046).
 
 **Tiering approach:**
 | Tier | Criteria | Assurance required | Frequency |

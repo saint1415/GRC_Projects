@@ -13,13 +13,13 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that processes FCI, CUI, payment instructions, personal information, client facility security details, or building controls in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP and payment factory, SYS-G5 email, SYS-G6 CUI enclave, and the PDPP (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that processes FCI, CUI, payment instructions, personal information, client facility security details, or building controls in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP and payment factory, SYS-G5 email, SYS-G6 CUI enclave, and the PDPP ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Construction, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact. They are not simply the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk strategy, EV-009):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,8 +30,8 @@
 High risks to life safety (jobsite safety systems, building life-safety interfaces) and to federal contract eligibility may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment and enclave pre-assessment (P07), the 2026-07-14 CUI discovery scan, and interviews with each division's leadership and finance teams.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, interviews with each division's leadership and finance teams (EV-076 group, EV-077 Construction, EV-078 Property, EV-079 A&E), the gap analyses (P03), the 2026-07-14 CUI discovery scan (EV-087), and the first results of the common control assessment and enclave pre-assessment (P07), which began on 2026-07-06 inside the fieldwork window.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, samples, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: loss of DoD eligibility, several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -74,14 +74,14 @@ High risks to life safety (jobsite safety systems, building life-safety interfac
 
 ### What the results say
 The program is mature in most places. There are no Very High risks. Identity, the SOC, backups, and the payment factory's bank-change controls are strong. The High risks cluster around **what the divisions share and hand to each other**:
-1. **The handoff of CUI from design to the field** (GR-01). A&E produces CUI in the enclave, and Construction needs it on jobsites. The current workaround moves CUI into commercial systems (scenario gap 1).
-2. **Federal eligibility** (GR-03). The group's CMMC statuses rest on a self-assessment that independent testing did not fully support (gap 2), just as Phase 2 begins.
-3. **Money moving between the group, owners, tenants, and subcontractors** (GR-02). Controls are strong where payments run through the payment factory and weak where they do not: the pay application remittance block, Property accounts payable, and A&E invoices (gap 3).
-4. **Buildings the group owns** (GR-06). Property's building systems are outside group monitoring and depend on integrators (gap 4).
+1. **The handoff of CUI from design to the field** (GR-01). A&E produces CUI in the enclave, and Construction needs it on jobsites. The current workaround moves CUI into commercial systems (group gap 1).
+2. **Federal eligibility** (GR-03). The group's CMMC statuses rest on a self-assessment that independent testing did not fully support (group gap 2), just as Phase 2 begins.
+3. **Money moving between the group, owners, tenants, and subcontractors** (GR-02). Controls are strong where payments run through the payment factory and weak where they do not: the pay application remittance block, Property accounts payable, and A&E invoices (group gap 3).
+4. **Buildings the group owns** (GR-06). Property's building systems are outside group monitoring and depend on integrators (group gap 4).
 
 Governance gaps (Section 889 screening, AI governance, subcontractor CMMC checks, policy drift) are Moderate at group level (GR-07, GR-08, GR-09, GR-12). They matter because each is a place where one division does the work well and the others do not.
 
-**New risk from the control assessment.** P07 testing on 2026-08-12 found default credentials on 14 building controllers at 3 properties and covered cameras at 2 federally leased properties. These were added as PRP-018 and PRP-006.
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): testing on 2026-08-12 found default credentials on 14 building controllers at 3 properties (EV-D-IA5) and covered cameras at 2 federally leased properties (EV-D-CM8). These were added as PRP-018 and PRP-006. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** enclave field access and PDPP CUI blocking (GR-01); payment-instruction service and Property AP migration (GR-02); Level 2 (C3PAO) readiness (GR-03); building network segmentation and SIEM onboarding (GR-06); Section 889 approved-manufacturer list (GR-07).

@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the rules specific to each division's regulators and contracts. Priority use case: **AI-001, the AI estimating and bid assistant** (Construction, also used by A&E cost estimators). Deeper review of the four High-tier use cases (AI-002, AI-003, AI-005, AI-007) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-04; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 4 High, 5 Medium, 0 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 4 High, 5 Medium, 0 Low), built from AI tool discovery across procurement, SaaS discovery and the SYS-G1 app assignments (EV-035), the AI estimating assistant's tenant settings and vendor file (EV-059), division system records (EV-060, EV-064, EV-025) and the P07 content scan of the AI estimating tenant (EV-D-AC20). Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Change gate.** A material change (new model, new vendor feature, new data class, new decision role) triggers re-assessment before release. Vendor features that pool data across customers are off by default.
 6. **Approved tools only** for workforce generative AI (POL-05 4.8).
 
-**Where the program fell short in 2026.** The standard was adopted after AI-001 grew from a 4-person pilot to about 725 users, after the resume screening pilot started, and after the generative design assistant was in use (scenario gap 6; P01 GR-08). P07 then found a CUI-marked specification in AI-001's tenant (POAM-025). The decisions in section 6 bring these use cases under the standard.
+**Where the program fell short in 2026.** The standard was adopted after AI-001 grew from a 4-person pilot to about 725 users, after the resume screening pilot started, and after the generative design assistant was in use (group gap 6; P01 GR-08). P07 then found a CUI-marked specification in AI-001's tenant (POAM-025). The decisions in section 6 bring these use cases under the standard.
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

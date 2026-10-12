@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed commercial and institutional building general contractor) |
 | Tier / Vertical | Mid-Market / Construction |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry use case, AI-001 (AI estimating and bid assistant), gets the deepest review in section 3.1 |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`, built from the intake AI tool discovery (identity provider app list, accounts payable vendor master, productivity suite and SaaS admin settings, and a department heads survey; EV-058, EV-045) and the business owner reviews (EV-070). Whether other subscribed products have AI features switched on was not established beyond the survey and the admin settings reviewed (intake open request). The registry use case, AI-001 (AI estimating and bid assistant), gets the deepest review in section 3.1 |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001 and AI-003 |
 | Assessors / date | vCISO and Security Manager (security), General Counsel (legal), each business owner, and the GRC analyst (risk method), 2026-08-24 to 2026-09-12 |
 | Decision | Chief Operating Officer, 2026-09-17; High-tier decisions (AI-005, AI-006) noted by the CEO the same day |
 
 ## 1. Summary
-All six AI uses were adopted by departments without a security, privacy, or bias review (gap 11). None is out of control, but each needs conditions:
+All six AI uses were adopted by departments without a security, privacy, or bias review (EV-058). None is out of control, but each needs conditions:
 - **AI-001, estimating:** works well for new construction, poorly for renovations, and its subcontractor ranking pushes first-time bidders down. It must never receive CUI.
 - **AI-002, jobsite video analytics:** went live with no written notice to workers and no retention limit.
 - **AI-003, the productivity suite assistant:** was switched on for every user in 2026-04 and surfaces files that were overshared long before AI arrived.
