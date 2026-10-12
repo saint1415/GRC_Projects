@@ -78,7 +78,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a close 
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems.
 
 ## 7. Authorization Boundary Description
-The boundary contains hotel-managed components and the hotel's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains hotel-managed components and the hotel's configuration of vendor services:
 - **Inside:** PMS tenant configuration, users, and roles; the front desk terminals; the restaurant POS stations and P2PE devices (physical custody and inspection); the staff network, firewall, and staff Wi-Fi; 34 PCs and laptops and 12 tablets; the lock server and encoders; the identity provider tenant; the cloud tenant (4 workloads and the backup vault).
 - **Outside (external services, interconnected):** the PMS vendor's platform and card vault, the payment gateway, the P2PE solution provider, the booking engine, the channel manager, the productivity suite, the revenue-management system, the chatbot, the guest Wi-Fi and TV networks, and the cloud provider's infrastructure.
 
@@ -127,7 +127,7 @@ Staff sign in to email and the cloud console through the identity provider with 
 Guests use the booking engine's own accounts, which are governed by the vendor and outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis and SAQ decision (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 benchmark and PMS vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis and SAQ decision (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 benchmark and PMS vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the General Manager (Moderate and below) and the majority owner (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Property Management and Point-of-Sale Platform (PMPS) defined in the SSP (P02), the business processes in the BIA (P05), and the vendors that store, process, or transmit card or guest data for the hotel (`../00_company-facts.md` section 3). That covers both merchant accounts (MID-1 Rooms and MID-2 Food and beverage), the guest data in the PMS and the cloud guest-marketing hub, the door lock system, and the two AI systems in P10.
+**Scope.** The Property Management and Point-of-Sale Platform (PMPS) defined in the SSP (P02), the business processes in the BIA (P05), and the vendors that store, process, or transmit card or guest data for the hotel ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). That covers both merchant accounts (MID-1 Rooms and MID-2 Food and beverage), the guest data in the PMS and the cloud guest-marketing hub, the door lock system, and the two AI systems in P10.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 This is the hotel's first documented risk assessment since it left the brand's franchise program in 2021. Before then, the brand's PCI program set most controls.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews (General Manager, Controller, Front Office Manager, Revenue Manager, Director of Sales and Marketing, Chief Engineer, MSP lead technician), the gap analysis (P03), and the allegations in *FTC v. Wyndham Worldwide Corp.*, 799 F.3d 236 (3d Cir. 2015), which describe how hotel PMS environments were breached.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews (General Manager, Controller, Front Office Manager, Revenue Manager, Director of Sales and Marketing, Chief Engineer, MSP lead technician; EV-048), the gap analysis (P03), which ran in the same fieldwork window and shared its findings, and the allegations in *FTC v. Wyndham Worldwide Corp.*, 799 F.3d 236 (3d Cir. 2015), which describe how hotel PMS environments were breached.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, vendor files and contracts, the walkthrough, the mailbox search, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05).
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -52,7 +52,7 @@ These gaps closely match the practices alleged in *FTC v. Wyndham* (clear-text c
 
 The fifth High risk, R-015, is physical: a Gulf Coast hurricane could destroy the ground-floor lock server and network equipment, and nobody has planned how to rebuild them.
 
-R-007 was added on 2026-08-07 after control assessment testing (P07) found the lock vendor's default administrator password on the lock server.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-007 was added on 2026-08-07 after testing found the lock vendor's default administrator password on the lock server (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $71,000):**
