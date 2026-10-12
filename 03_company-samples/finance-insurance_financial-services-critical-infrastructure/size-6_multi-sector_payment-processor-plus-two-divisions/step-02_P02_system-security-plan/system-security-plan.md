@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Payment Processing Platform**, the focus division's cardholder data environment, because it is the system the BIA ranks highest (P05: authorization and the token vault have 2-hour MTDs), it carries the group's top risks (P01 GR-01 and GR-02), and it is where the group's common controls meet a division's own regulators: the card brands and the four sponsor banks. The Software division describes its systems in its SOC 2 system description and gateway ROC, which inherit from the same common control catalog (`common-control-catalog.csv`). Merchant Consulting has no system of its own in the CDE; its users work inside this one.
 
 ## 1. System Name and Identifier
-Payment Processing Platform (**PPP**), identifier CSCH-PP-CDE-01. It is made up of SYS-P1 to SYS-P6 in `../00_company-facts.md` section 3, with SYS-P7 as a connected-to system.
+Payment Processing Platform (**PPP**), identifier CSCH-PP-CDE-01. It is made up of SYS-P1 to SYS-P6, listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), with SYS-P7 as a connected-to system.
 
 ## 2. System Overview
 The PPP authorizes, clears, and settles card payments for about 920,000 merchants: about 80 million authorizations a day, about $1.4 trillion a year, and about $3.8 billion in merchant funding files a day to four sponsor banks.
@@ -34,7 +34,7 @@ About 8,900 workforce users reach the PPP (including the 2,400 consulting disput
 | State law | Breach notification laws | Each state where affected individuals reside (Fla. Stat. 501.171 worked example) | For cardholder data the division is usually its merchants' third-party agent (501.171(6)) |
 | Internal | Group policies POL-01 to POL-05 and the Payment Processing supplement | P06 | |
 
-Not applicable: NYDFS Part 500, SEC Regulation SCI, NCUA 12 CFR 748.1(c) (see `../00_company-facts.md` section 1). CIRCIA (C-FINANCIAL-R06) is a proposed rule only and is tracked, not applied.
+Not applicable: NYDFS Part 500, SEC Regulation SCI, NCUA 12 CFR 748.1(c). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). CIRCIA (C-FINANCIAL-R06) is a proposed rule only and is tracked, not applied.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -86,6 +86,8 @@ Other High-baseline controls are tailored out in the division tailoring register
 - **Outside, inherited (common control providers):** SYS-G1, SYS-G2, and SYS-G3 data centers, landing zone, and backup vault.
 - **Outside, interconnected:** card networks, sponsor banks, the Software division gateway (SYS-S2), six unaffiliated processors (through SYS-S2 only), the group data platform (SYS-G4, tokens only), and the Merchant Consulting tenant (SYS-M1, federated identity).
 
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-P1 to SYS-P7, the PAM jump hosts, and the shared services they inherit from) and the exports EV-007, EV-018, EV-029, EV-031 and EV-045.
+
 The diagrams are in P04 `cloud-architecture.md` (the PPP subgraph).
 
 ## 8. Information Exchanges Summary
@@ -132,14 +134,14 @@ See `control-implementation.csv` (170 controls) and `common-control-catalog.csv`
 | System-specific | 40 |
 
 **The 17 partially implemented controls** cluster in three places:
-- **Merchant Consulting users inside the CDE** (scenario gaps 1 and 2): AC-2, AC-2(12), AC-4, AC-6, AT-3, CM-8, IA-2(2), PL-2, PS-4, SI-4, SI-12.
-- **Notification and cross-division response** (gaps 4 and 7): IR-3, IR-6, IR-8, CP-2.
-- **Oversight of affiliates and models** (gap 6): SA-9, CA-7.
+- **Merchant Consulting users inside the CDE** (group gaps 1 and 2): AC-2, AC-2(12), AC-4, AC-6, AT-3, CM-8, IA-2(2), PL-2, PS-4, SI-4, SI-12.
+- **Notification and cross-division response** (group gaps 4 and 7): IR-3, IR-6, IR-8, CP-2.
+- **Oversight of affiliates and models** (group gap 6): SA-9, CA-7.
 
 The PPP's own technical core (tokenization, keys, segmentation, active-active recovery, logging) is fully implemented. The gaps arrive with the people and services of other divisions.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 130 controls that corporate provides in full (101) or in part (29). Inheritance is **documented for the Payment Processing division** (PCI DSS responsibility matrix, 2025, and this plan) and **for the Software division** (its SOC 2 system description carves in the group services). It is **not documented for Merchant Consulting** (scenario gap 2). Until POAM-010 closes, the group cannot show which consulting safeguards are met by group controls and which still depend on SYS-M1. The P07 assessment found CA-2 and PL-2 statements other than satisfied for this reason.
+The common control catalog lists 130 controls that corporate provides in full (101) or in part (29). Inheritance is **documented for the Payment Processing division** (PCI DSS responsibility matrix, 2025, and this plan) and **for the Software division** (its SOC 2 system description carves in the group services). It is **not documented for Merchant Consulting** (group gap 2). Until POAM-010 closes, the group cannot show which consulting safeguards are met by group controls and which still depend on SYS-M1. The P07 assessment found CA-2 and PL-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and PPP and division controls sampled, from 2026-07-01 to 2026-08-31 by group internal audit (P07 `assessment-results.csv` and `poam.csv`). The QSA's 2026 ROC fieldwork runs 2026-11-02 to 2026-12-11.
@@ -151,7 +153,7 @@ Common controls were assessed once, and PPP and division controls sampled, from 
 - **Service identities** use workload identity or secrets held in the secret store, rotated at least every 90 days.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC readiness (P09), AI governance (P10), the 2025 ROC and AOC, and the PCI DSS responsibility matrix.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud architecture and control map (P04), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC readiness (P09), AI governance (P10), the 2025 ROC and AOC, and the PCI DSS responsibility matrix.
 
 ## 13. Acronym List and Glossary
 - **AOC / ROC:** Attestation of Compliance / Report on Compliance (PCI DSS)

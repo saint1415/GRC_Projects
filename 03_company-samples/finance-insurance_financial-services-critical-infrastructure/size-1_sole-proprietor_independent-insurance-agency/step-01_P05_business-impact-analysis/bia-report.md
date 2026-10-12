@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (independent insurance agency) | **Tier:** Sole Proprietorship (owner-agent only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-agent, 2026-08-03, with the on-call IT consultant (services agreement since 2026-07-27) | **Adopted:** Owner-agent, 2026-09-14
+**Sources:** the owner's BIA worksheet, 2026-08-03 (EV-030), the 2025 Schedule C (EV-025), the AMS book of business report (EV-003), the premium trust account statements (EV-017), the 2026-07-08 near miss (EV-008), the email retention and AMS export settings (EV-005, EV-002), and the AMS vendor's SOC 2 system description (EV-027). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-09-14.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the agency depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the agency depends on, how l
 - the records duty in Fla. Stat. 626.748 (policy records readily accessible for 5 years after expiration) and the premium trust fund duty in 626.561.
 
 ## 2. Business description
-One licensed agent sells and services property and casualty insurance for about 510 households and 130 small businesses from a home office in Florida. The insurers underwrite, bill most policies, and pay claims; the agency quotes, binds within its authority, services policies, helps with claims, and invoices about 60 commercial policies through its premium trust account. Records live in a SaaS agency management system (AMS, SYS-01); everything else runs through email, insurer portals, a laptop, and a phone. See `../00_company-facts.md` sections 1 to 3.
+One licensed agent sells and services property and casualty insurance for about 510 households and 130 small businesses from a home office in Florida. The insurers underwrite, bill most policies, and pay claims; the agency quotes, binds within its authority, services policies, helps with claims, and invoices about 60 commercial policies through its premium trust account. Records live in a SaaS agency management system (AMS, SYS-01); everything else runs through email, insurer portals, a laptop, and a phone. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual commissions, or about $720 per business day.
+Dollar values are scaled to about $180,000 in annual commissions (EV-025), or about $720 per business day across about 250 business days.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -34,9 +35,9 @@ Safety is marked N/A: the agency's outages delay service but do not create physi
 | BP-04 New business and renewals | Moderate | 120 h | 72 h | 24 h |
 | BP-05 Agency administration and records | Low | 168 h | 120 h | 24 h |
 
-**What drives the values:** BP-01 and BP-02 are High because a client closing on a house or reporting storm damage cannot wait days, and the agent is the client's first call. BP-03 has a longer MTD but the most severe cost impact: a single redirected payment (the 2026-07-08 near miss was $18,400) is about 25 business days of commissions and leaves a client's policy unpaid. The 4-hour RPO for BP-01 depends on the AMS vendor's backups (P09 vendor review). The 24-hour RPO for BP-05 is **met only while the AMS vendor holds the data**: no export exists, and email and files keep only 30 days (P01 R-013, R-014).
+**What drives the values:** BP-01 and BP-02 are High because a client closing on a house or reporting storm damage cannot wait days, and the agent is the client's first call. BP-03 has a longer MTD but the most severe cost impact: a single redirected payment (the 2026-07-08 near miss was $18,400, EV-008) is about 25 business days of commissions and leaves a client's policy unpaid. The 4-hour RPO for BP-01 depends on the AMS vendor's backups (EV-027; P09 vendor review). The 24-hour RPO for BP-05 is **met only while the AMS vendor holds the data**: no export exists, and email and files keep only 30 days (EV-002, EV-005; P01 R-013, R-014).
 
-**Single-person dependency (the key finding).** The owner is the only licensed person, the only person who can bind or change coverage (Fla. Stat. 626.112(1) bars unlicensed people from soliciting or advising), and the only holder of the AMS, email, insurer portal, and banking credentials. The AMS and email second factors are on one phone. If the owner is injured, evacuated, or without the phone after a hurricane, BP-01 and BP-02 exceed their MTD at the moment clients need them most. Actions (P01 R-009, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner is the only licensed person, the only person who can bind or change coverage (Fla. Stat. 626.112(1) bars unlicensed people from soliciting or advising), and the only holder of the AMS, email, insurer portal, and banking credentials. The AMS and email second factors are on one phone (EV-001, EV-012). If the owner is injured, evacuated, or without the phone after a hurricane, BP-01 and BP-02 exceed their MTD at the moment clients need them most. Actions (P01 R-009, due 2026-12-31):
 1. Sign a written emergency servicing arrangement with another licensed independent agent, and confirm with each insurer how that agent can serve the agency's clients.
 2. Store the AMS, email, and banking recovery codes and a one-page emergency access sheet in a sealed envelope held by the owner's attorney.
 3. Send clients a contact card listing each insurer's 24-hour claims line and service center.

@@ -11,7 +11,7 @@
 | Approved | 2026-09-15: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, and the risk appetite); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (Merchant Processing, Integrated Payments, Settlement and Treasury Operations, Risk, Fraud, and Compliance, Merchant Services, and Corporate), the Payment Processing Platform (PPP; SSP in P02) across Cloud A, Cloud B, and both colocation cages, the 34 PCI DSS service providers and the 41 vendors inherited from the acquisition, and the AI portfolio (P10). Processes and impact values come from the BIA (P05); vulnerabilities come from the cloud mapping (P04), the gap analysis (P03), and the control assessment (P07).
+**Scope.** All business units (Merchant Processing, Integrated Payments, Settlement and Treasury Operations, Risk, Fraud, and Compliance, Merchant Services, and Corporate), the Payment Processing Platform (PPP; SSP in P02) across Cloud A, Cloud B, and both colocation cages, the 34 PCI DSS service providers and the 41 vendors inherited from the acquisition, and the AI portfolio (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the cloud mapping (P04), the gap analysis (P03), and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -25,7 +25,7 @@
 **Why the Safeguards Rule matters here.** 16 CFR 314.4(b)(1) requires the risk assessment to be written and to include criteria for evaluating and categorizing risks, criteria for assessing confidentiality, integrity, and availability, and requirements for how risks will be mitigated or accepted. Sections 1 and 2 of this report are those criteria.
 
 ### Risk appetite statements
-Approved by the Chief Executive Officer and noted by the audit committee on 2026-09-15. They were written for the first time this year (gap 14 in `../00_company-facts.md`).
+Approved by the Chief Executive Officer and noted by the audit committee on 2026-09-15. They were written for the first time this year: no earlier statements were found in the board materials or the GRC folder (EV-038, EV-032).
 
 | Area | Appetite | Statement and measure |
 |---|---|---|
@@ -39,11 +39,13 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $5 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the cloud mapping (P04), interviews with every process owner, the gap analysis (P03), the control assessment (P07), Visa's What To Do If Compromised guidance on common compromise patterns, and the two P08 scenarios.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the cloud mapping (P04), the intake evidence, risk interviews and a threat workshop with the process owners, the VP Platform Engineering, the Director of Integrated Payments Engineering, the Head of Data Science, the Contact Center Manager and the MSSP service lead (EV-061), Visa's What To Do If Compromised guidance on common compromise patterns, and the two P08 scenarios. The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-041), scan and patch results (EV-017, EV-018), phishing results (EV-042), recovery test reports (EV-027), configuration exports, the gap analysis samples and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, merchant operations, regulatory and card brand, reputation). A card data compromise on either platform is rated Very High: card brand assessments, forensic costs, notices across many states, and possible loss of a sponsor bank.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-050 was added on 2026-08-14 after testing found vendor default credentials on the management interfaces of 6 of the 12 settlement servers (EV-CM-7, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 3. Results
 | Risk level | Count |

@@ -8,10 +8,10 @@
 | Why not the vertical default | The registry's "transaction fraud-detection model" does not fit: the agency processes no transactions; insurers and banks run fraud scoring |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks (data privacy, confabulation, information security) |
 | Assessor and decision | Owner-agent, 2026-08-21; decision 2026-09-14 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the chatbot account settings, chat history and terms, the AMS release notes, assistant setting and AI terms, and the agreements folder (EV-028, EV-029, EV-004, EV-020), and checked in the AI use review on 2026-08-19 (EV-033). With no staff, there was no survey to run. Not established: what the vendor kept from the pasted chats, and whether it used them to train its models |
 
 ## 1. What it does (Map)
-The owner pasted declarations pages, applications, and quote printouts into a general-purpose chatbot and asked it to compare coverages, deductibles, and exclusions between insurers, and to draft coverage summaries and renewal emails. Inputs included client names, addresses, vehicle identification numbers, prior claims, and, for 7 clients, driver license numbers. No Social Security numbers were found in the chat history. The owner accepted consumer click-through terms, which **let the vendor use chats to improve its models unless the user opts out**; the owner had not opted out. The outputs shaped advice the licensed agent gives clients.
+The owner pasted declarations pages, applications, and quote printouts into a general-purpose chatbot and asked it to compare coverages, deductibles, and exclusions between insurers, and to draft coverage summaries and renewal emails. Inputs included client names, addresses, vehicle identification numbers, prior claims, and, for 7 clients, driver license numbers. No Social Security numbers were found in the chat history (EV-028). The owner accepted consumer click-through terms, which **let the vendor use chats to improve its models unless the user opts out**; the owner had not opted out (EV-028, EV-029). The outputs shaped advice the licensed agent gives clients.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -24,7 +24,7 @@ The owner pasted declarations pages, applications, and quote printouts into a ge
 ## 3. Risk screen (repository rubric)
 **Tier: Medium.** The tool influenced advice to consumers about insurance, but the licensed agent made every recommendation. The tier does not change the decision below, because **no tier allows client information to go to a vendor without written terms** (POL-01 6.1, 10.4).
 
-Generative AI risks from NIST AI 600-1 that showed up here: **data privacy** (client data retained and possibly trained on), **confabulation** (one coverage comparison sent in July 2026 stated the wrong windstorm deductible; caught before binding), and **information security** (chats kept in a consumer account protected only by a password).
+Generative AI risks from NIST AI 600-1 that showed up here: **data privacy** (client data retained and possibly trained on), **confabulation** (one coverage comparison sent in July 2026 stated the wrong windstorm deductible; caught before binding; EV-033), and **information security** (chats kept in a consumer account protected only by a password).
 
 ## 4. Data-sharing rules (Govern)
 1. No Restricted or Confidential data (POL-01 9.1) goes into any AI tool without a written P10 assessment, contract terms that bar training on agency data and set a deletion period, and the owner's approval.
@@ -42,4 +42,4 @@ For any AI-drafted coverage comparison or summary: the agent checks every limit,
 4. Any future standalone AI tool needs a new assessment under section 4 before first use; until then AI-002 is the only approved AI tool.
 
 ## 7. AI-002: AMS built-in assistant (screened, approved with conditions)
-The AMS vendor added an assistant in its 2026-06 release, on by default. It drafts emails and summarizes notes inside the AMS. The vendor's AI terms say customer data is not used to train shared models and prompts are kept 30 days, and the data stays under the existing AMS contract. **Tier: Medium; approved 2026-09-14** on three conditions: Restricted data is never typed into prompts; the owner edits and sends every draft; and the owner asks whether the next SOC 2 report covers the assistant (P09 vendor review).
+The AMS vendor added an assistant in its 2026-06 release, on by default. It drafts emails and summarizes notes inside the AMS. The vendor's AI terms say customer data is not used to train shared models and prompts are kept 30 days (EV-004), and the data stays under the existing AMS contract. **Tier: Medium; approved 2026-09-14** on three conditions: Restricted data is never typed into prompts; the owner edits and sends every draft; and the owner asks whether the next SOC 2 report covers the assistant (P09 vendor review).

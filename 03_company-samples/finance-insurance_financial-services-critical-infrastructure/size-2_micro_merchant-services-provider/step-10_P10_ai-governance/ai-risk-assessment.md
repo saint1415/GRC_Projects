@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1); NIST AI 600-1 Generative AI Profile for AI-002 and AI-003 |
 | Assessor / date | Onboarding and Risk Specialist with the Operations Manager, 2026-08-25 |
 | Decision | Owner, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the gateway fraud filter settings and documentation, the CRM settings, the card statements and vendor invoices, the sales materials and a staff survey (EV-004, EV-006, EV-010, EV-031, EV-045, EV-046). How many staff used public chatbots, and exactly what they pasted, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Onboarding and Risk Specialist for AI-001 and AI-003; the Operations Manager for AI-002. **Decision authority:** the Owner. The related risks in P01 are Moderate (R-013) and Low (R-014), within the Owner's authority under POL-02 A.4.
@@ -16,7 +16,7 @@
   - POL-04 4.6: approved AI tools only; nothing Restricted in any AI tool.
   - POL-04 4.9: every change to fraud filter settings is recorded in the change log.
   - POL-02 C.2 and C.3: no merchant or card data in public AI tools.
-- **Approved-tools list:** kept by the Operations Manager in POL-04 4.6. It did not exist before this assessment (gap 14 in `../00_company-facts.md`).
+- **Approved-tools list:** kept by the Operations Manager in POL-04 4.6. It did not exist before this assessment (EV-045).
 - **Scale for a Micro company:** there is no AI committee. The Owner, the Operations Manager, and the Onboarding and Risk Specialist review AI use at the quarterly PCI review (POL-02 A.5).
 
 **How AI-001 started.** When the gateway added fraud scoring in 2024, the company set default thresholds for all its e-commerce merchants: automatic decline at a score of 80 or above, and merchant review between 60 and 79. Nobody has looked at the results since. 104 of the 120 merchants still use the company's defaults.

@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads with the Group Chief Compliance Officer's team, coordinated by the Group Chief Risk Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 Applicability was decided first, rule by rule and division by division, before any gap was rated. Federal text was read from the eCFR (point-in-time text for 2026-09-23) and the U.S. Code; card brand rules from Visa's public site.
 
 ### 1.1 Which GLBA safeguards rule applies
@@ -20,7 +22,7 @@ No group entity is a bank or is supervised by a federal banking agency, so the F
 |---|---|---|---|
 | Payment Processing (Cris Santos Payments, LLC) | **Yes** | Data processing and transmission of financial data is listed in 12 CFR 225.28(b)(14), which 314.1(b) incorporates through 12 U.S.C. 1843(k). Card processing is the whole business | Rule applies in full. The rule covers customer information of other institutions' customers that the division holds (314.1(b)): cardholders. The 314.6 exception does not apply |
 | Payments Software Platform (Cris Santos Commerce Software, LLC) | **Treated as yes** (conservative) | Its gateway transmits payment transaction data for about 410,000 merchants and 1,900 ISVs (225.28(b)(14)); gateway fees are a material share of revenue | Covered by the group program; division gaps are in `gap-analysis-software.csv` |
-| Merchant Consulting (Cris Santos Merchant Advisory, LLC) | **No** | Advisory, integration, PCI readiness, and dispute services are not listed financial activities, so the division is not "significantly engaged" in financial activities (314.2(h)(3)(iv)). Group legal recorded this on 2026-06-12 | Not a financial institution. It is a **service provider** (314.2(r)) to the Payment Processing division for dispute services, so the processor must oversee it and bind it by contract (314.4(f)) |
+| Merchant Consulting (Cris Santos Merchant Advisory, LLC) | **No** | Advisory, integration, PCI readiness, and dispute services are not listed financial activities, so the division is not "significantly engaged" in financial activities (314.2(h)(3)(iv)). Group legal recorded this on 2026-06-12 (EV-078) | Not a financial institution. It is a **service provider** (314.2(r)) to the Payment Processing division for dispute services, so the processor must oversee it and bind it by contract (314.4(f)) |
 
 **The Qualified Individual is employed by an affiliate.** The Group CISO is employed by the holding company and serves as Qualified Individual for both financial-institution divisions. 314.4(a) allows this, but then each division must retain responsibility, designate a senior member of its own personnel to direct and oversee the Qualified Individual, and require the affiliate to maintain a compliant program (314.4(a)(1)-(3)). The division presidents do this in practice; it is not yet written down (G-083, Low).
 
@@ -80,12 +82,23 @@ The Interagency Guidelines (C-FINANCIAL-R02) apply to the sponsor banks and reac
    - PCI DSS was decomposed at the requirement level (1.1 to 12.10), with every service-provider-only sub-requirement as its own row, plus the appendices. PCI DSS is copyrighted, so rows give the requirement number and a short topic label in our own words. Read the full text in the PCI SSC document library.
    - The Safeguards Rule was decomposed to the paragraphs of 16 CFR 314.4 (with 314.4(a)(1)-(3) for the affiliate Qualified Individual) and 314.6; the bank service provider rules to their paragraphs; SOC 2 rows list criterion IDs with short labels in our own words.
 2. **Crosswalk.** Each row maps to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. These are **author mappings**: no official NIST mapping from PCI DSS v4.0.1, 16 CFR 314, or the bank notice rules to CSF 2.0 or SP 800-53 was used.
-3. **Evidence.** Interviews with each division's leadership; the 2025 ROCs and AOCs; sponsor agreements and intercompany agreements; configuration exports from SYS-G1, SYS-M1, SYS-P6, and the SIEM; PAN discovery scans; the P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (the 2025 ROCs and AOCs, sponsor agreements and intercompany agreements, configuration exports from SYS-G1, SYS-M1, SYS-P6, and the SIEM, and the walk-through of the primary data center on 2026-04-14), gap analysis interviews and samples with each division's leadership (EV-075 Payment Processing, EV-076 Payments Software Platform, EV-077 Merchant Consulting), the group legal memo on the Safeguards Rule (EV-078), the gateway PAN event record and scope reconfirmation (EV-079), the merchant insights assistant release record (EV-080), the PAN discovery scan of SYS-M1 (EV-081), the 2026-Q2 quarterly review (EV-082), SOC detection tests (EV-083), the hosted payment page browser capture (EV-084), and the P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale; a High gap would likely produce a "not in place" ROC finding or leaves a High P01 risk untreated.
 
 This is a gap analysis, not a PCI DSS assessment. Only the QSA's ROC can conclude on compliance.
 
 ## 4. Results
+### 4.0 Group gaps
+Eight gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 8 across this sample.
+1. **Merchant Consulting access to the CDE.** About 2,400 dispute analysts and 1,500 integration consultants sign in through the acquired firm's identity provider (SYS-M1) with SMS one-time codes and no privileged access management. The tenant is federated to SYS-G1 for the dispute platform (SYS-P6) and the Software division's ISV support console. Merchants email dispute evidence containing full card numbers to consulting mailboxes; a 2026-07 scan found about 380,000 messages with PAN. Migration to SYS-G1 and SYS-G5 is planned for 2027-03-31 (EV-062, EV-063, EV-065, EV-081).
+2. **Division supplement and inheritance drift.** The Merchant Consulting supplement is the acquired firm's 2024 policy set, never aligned to group policy. Common control inheritance is documented for the Payment Processing division (PCI DSS responsibility matrix, 2025) and in the Software division's SOC 2 system description, but not for Merchant Consulting (EV-017, EV-018).
+3. **Storefront scripts and third-party apps.** About 180,000 online storefronts on SYS-S1 embed the gateway's hosted payment fields. The app marketplace lists about 1,100 third-party apps, about 260 of which can add scripts to storefront pages. Script inventory and tamper-detection cover the standard checkout template only, not merchant-customized themes (EV-057).
+4. **Bank service provider notices across four sponsor banks.** Bank-designated points of contact are on file for Banks A and C only. The 4-hour determination procedure (53.4, 225.303, 304.24) covers incidents inside SYS-P1 to SYS-P3 but not incidents that start in a shared service, the gateway, or another division, and it has never been exercised (EV-041, EV-075).
+5. **PAN outside the CDE.** A Software division gateway debug log field wrote full PANs (with expiry dates, no names or security codes) into the group data platform (SYS-G4) from 2026-05-08 to 2026-06-18. A weekly PAN discovery scan found it on 2026-06-18; the data was purged on 2026-06-20 (EV-079).
+6. **AI governance behind deployment.** The fraud-detection model (AI-001) is monitored for drift but not for decline rates by cardholder segment. The Software division launched the merchant insights assistant on 2026-05-12 without updating its SOC 2 system description or merchant terms. Consulting staff paste client data into public generative AI chatbots (EV-049, EV-080, EV-039, EV-066).
+7. **Cross-division incident notification not exercised.** One incident can trigger card brand notices, three different bank service provider rules, an FTC notice, state third-party agent duties, ISV and merchant contract notices, SOC 2 customer communications, and a Form 8-K decision. The group notification matrix has never been exercised across divisions (EV-023, EV-024).
+8. **Gateway resilience.** The gateway (SYS-S2) runs active in one provider B region with a warm standby. Failover was last tested in 2025-04. An outage longer than 4 hours stops about 70% of the e-commerce traffic that flows into the processor from software merchants and ISVs (EV-058, EV-054).
+
 ### 4.1 Payment Processing (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A | Rows |
 |---|---|---|---|---|---|
@@ -143,7 +156,7 @@ Of the 30 gaps (Partially met or Not met), 6 are rated High, 19 Moderate, and 5 
 **Not met:** no safeguards clause in the 2025 intercompany agreement (MC-G02); PAN in email (MC-G05, MC-G13); no PCI DSS acknowledgment or responsibility matrix for clients (MC-G10, MC-G11); supplement and inheritance (MC-G16, MC-G17). The division is a year into integration. Its technical gaps sit where the acquired firm's identity provider and email still run; its governance gaps are the documents the group never re-papered.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Consulting identity, MFA bypass, and account life cycle inside the CDE (1) | MC, PP | PCI DSS 8.2, 8.4, 8.5; 314.4(c)(1), (c)(5) | High | Remove the trusted-location rule now; block SMS for CDE access by 2026-12-31; SYS-G1 migration | Group identity director | 2027-03-31 |
 | 2 | PAN in consulting mailboxes and dispute files (1) | MC, PP | PCI DSS 3.2, 3.4, 3.5; 314.4(c)(3), (c)(6) | High | Evidence upload portal; masking on upload; purge | Merchant Consulting dispute services director | 2027-01-31 |

@@ -169,3 +169,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (regional bank):** POAM-009's portal log review is due 2026-09-30 while P07 and R-049 already state its result; P07 SR-6 cites P09 vendor reviews dated after fieldwork.
 - **Size 5 (super-regional bank):** P03 and the BIA quote the Q2 asset averages before the Q2 reports were filed; P04 says phishing-resistant MFA is applied to client-service staff while R-005 puts it in its treatment; the facts say 12 AI uses were reviewed at intake while the dates show 11.
 - **Size 6 (diversified financial group):** P03 says Colorado SB26-189 deployer duties are under review for the bank while P10 says it does not apply; the SSP says support console views go to the SIEM while P07 says those logs are not collected; P10 cites POL-01 4.13 for the Group AI Standard, which first appears in v2026.
+
+### Financial Services (critical infrastructure), 2026-10-12
+
+Six samples, 583 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 31 minutes.
+
+Fixes made during this batch:
+- **Sizes 1, 2 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-2, EV-IA-2-1, EV-C-AC23, EV-M-IA22 and others) renamed to the parenthesis form.
+- **Size 1 (insurance agency):** the garage walk-through dated inside the self-assessment window was re-cited to the intake walk-through; G-008 cited an AMS export that was never taken and now cites the intake record.
+- **Size 2 (merchant services provider):** P03, P04 and the SSP cited a console audit log sample from before P07, but the facts say the log was first opened in P07; P03 and P04 now cite the gateway's audit log documentation and the SSP cites the P07 test.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 cites regulatory checks dated after its approval.
+- **Size 1:** facts section 7 says the mailbox showed no unknown sign-ins in 30 days of history, while the old posture and P07 AU-6 say the history was never reviewed.
+- **Size 2:** P07 SI-2 tested one spare laptop but reports on both; spare terminals are about 40 in the facts, 44 in the spreadsheet and 41 in P07; P04 (2026-07-24) cites a P07 export from August.
+- **Size 3 (small payment processor):** four artifacts carry two dates across deliverables (TLS scan, token list, ticket sample, SIEM samples); P02 and P03 disagree on the year of the last developer training; G-057 says no scan followed the March migration while citing Q2 scans.
+- **Size 4 (mid-market payment processor):** pass-1 R-009, R-021 and R-023 cite P07 results and a September date; July is counted as 30 days in the backup and reconciliation evidence; the facts list two-person change approval as compensating while P03 and P07 found 4 of 15 changes approved by their authors.
+- **Size 5 (enterprise payment processor):** P09 (prepared 2026-08-28) cites the P07 report issued 2026-09-04; R-032 rests on a P07 packet capture but is not listed as added after P07; one population is "2,340 account events" in P07 and "2,340 access grants" in P03.
+- **Size 6 (payment processor plus two divisions):** P10 says AI-001 to AI-005 were live before the Group AI Standard while AI-004 launched after it; the SSP names PL-2 where P07 assessed PL-1; POAM-024 is closed with a milestone due 2026-12-31.

@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Payment Processing | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 | Confirm alignment |
 | Payments Software Platform | v2025 | 2025-11 | Aligned, but missing the product and AI change gate (POL-01 4.12) and a storefront script standard | Add both by 2026-10-31 (POAM-015, POAM-017) |
-| Merchant Consulting | v2024 (acquired firm's policy set) | **Never aligned** | **Drifted** (scenario gap 2); conflicts listed in section 4. The 180-day adoption rule in POL-01 4.5 is new; it would have required alignment by 2025-09-28 | Re-issue by 2026-11-30 (POAM-011) |
+| Merchant Consulting | v2024 (acquired firm's policy set) | **Never aligned** | **Drifted** (group gap 2); conflicts listed in section 4. The 180-day adoption rule in POL-01 4.5 is new; it would have required alignment by 2025-09-28 | Re-issue by 2026-11-30 (POAM-011) |
 
 ## 3. What each supplement adds
 ### 3.1 Payment Processing supplement (PCI DSS Level 1 service provider; bank service provider; financial institution)
@@ -65,7 +65,7 @@ The 2024 policies of the acquired firm were never replaced. Where they conflict,
 | Retention | Keep client files 7 years | Retention schedule; customer information disposed within 2 years of last use unless needed (POL-04 4.5) | Mailboxes back to 2019 |
 | Generative AI | Not addressed | Approved tools only (POL-05 4.6) | Client data in public chatbots (MC-004) |
 | Incident severity and notice | Firm's 3-level scale; client notice by engagement lead | One group scale (POL-03 4.2); matrix owned by counsel (POL-03 4.6) | Inconsistent escalation |
-| Common control inheritance | Not addressed | Division documents inheritance (POL-01 4.6) | Gap 2 (POAM-010) |
+| Common control inheritance | Not addressed | Division documents inheritance (POL-01 4.6) | Group gap 2 (POAM-010) |
 
 **Why the drift happened.** The 2025 integration plan covered identity federation, EDR, and email security, but no one owned the policy set and there was no deadline for adopting group policy. **Fix:** POL-01 4.5 now requires adoption within 180 days of closing for any future acquisition, and the Group CISO's policy office tracks supplement versions in the policy register.
 

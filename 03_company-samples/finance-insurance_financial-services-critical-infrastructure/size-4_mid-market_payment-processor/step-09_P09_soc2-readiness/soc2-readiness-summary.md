@@ -33,7 +33,7 @@ The company **is a service organization**: it performs authorization, clearing, 
 | Services | Card authorization (both platforms), hosted payment page and hosted payment fields, token vaults and recurring billing, clearing and settlement, merchant funding, reconciliation, chargebacks, merchant and partner portals |
 | Infrastructure | The Payment Processing Platform (P02): the Cloud A landing zone (P04), Cloud B, and both colocation cages |
 | Software | Authorization switch and gateways, Integrated Payments gateway, settlement and funding engine, managed file transfer, portals, fraud model serving |
-| People | 600 employees; key roles in `../00_company-facts.md` section 2; the MSSP |
+| People | 600 employees (HR roster, EV-003); key roles in `../00_company-facts.md`; the MSSP |
 | Data | Account data (encrypted in both token vaults and the settlement database), transaction and settlement records, funding files, merchant owner information, security logs |
 | Procedures | POL-01 to POL-05 and the standards index (P06), both P08 runbooks, settlement and reconciliation procedures |
 | Subservice organizations (carve-out) | Cloud A provider (including the payment HSM service), Cloud B provider, both colocation providers, the MSSP, the identity and PAM vendor, the content delivery service. Their controls are covered by their own reports and the complementary subservice organization controls listed in the company's system description |

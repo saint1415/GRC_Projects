@@ -9,7 +9,7 @@
 | Review cycle | Each standard is reviewed at least annually by its owner, and when a platform is added or migrated |
 
 ## 1. Why this index exists
-The 2024 policies stated intent, but the supporting standards were thin and were written for the core platform only. The acquired Integrated Payments gateway (Cloud B) follows none of them (gap 15 in `../00_company-facts.md`; P03 rows 1.1, 2.1, 6.1, 10.1; P01 R-040 and R-047). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. Every standard applies to Cloud A, Cloud B, the colocation cages, and SaaS unless it says otherwise.
+The 2024 policies stated intent, but the supporting standards were thin and were written for the core platform only. The acquired Integrated Payments gateway (Cloud B) follows none of them (EV-031; P03 rows 1.1, 2.1, 6.1, 10.1; P01 R-040 and R-047). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. Every standard applies to Cloud A, Cloud B, the colocation cages, and SaaS unless it says otherwise.
 
 ## 2. How standards work
 - **Hierarchy:** policy (POL) → standard (STD) → procedure or runbook. A standard may not weaken its parent policy.

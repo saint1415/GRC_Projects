@@ -1,0 +1,18 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,"Cloud tenant: containers, managed database, message queue, payment HSM service, data warehouse, logging, web application firewall",SYS-01; SYS-02; SYS-03; SYS-04; SYS-09; SYS-13,Account data; key material; customer information,Customer agreement and service terms; no PCI DSS responsibility matrix,SOC 2 Type 2 (12 months ending 2026-03-31); AOC dated 2026-02-15; bridge letter through 2026-06-30,EV-047; EV-049; EV-051,Service provider list
+V-02,Identity provider vendor,Workforce single sign-on and MFA,SYS-05,Workforce identities,Subscription terms,Not collected at intake,EV-047,
+V-03,Productivity suite vendor,"Email, files, chat",SYS-10,Incidental account data in email,Subscription terms,Not collected at intake,EV-047,
+V-04,SIEM service vendor,Log management and SIEM,SYS-07,Security logs,Subscription terms,Not collected at intake,EV-047,
+V-05,EDR vendor,Endpoint detection and response,SYS-06; SYS-07,Endpoint telemetry,Subscription terms,Not collected at intake,EV-047,
+V-06,Code hosting vendor,Source code repository and CI/CD pipeline,SYS-08,Source code; deployment credentials,Subscription terms,Not collected at intake,EV-047,Can change CDE code
+V-07,CRM and onboarding SaaS provider,Merchant onboarding and CRM,SYS-11,Merchant owner SSNs and bank accounts,Subscription terms,Provider security documentation (storage encryption),EV-047; EV-050,
+V-08,Ticketing SaaS provider,Merchant support ticketing,SYS-12,"Tickets, including card numbers pasted by merchants",Subscription terms,Provider security documentation (storage encryption),EV-047; EV-050,
+V-09,Content delivery service,Delivery and DDoS protection for the hosted payment page and API,SYS-04,Payment page files and traffic,Service terms,No current AOC,EV-017; EV-047; EV-048,Service provider list
+V-10,Fraud analytics vendor,Licensed fraud-detection model; quarterly retraining,SYS-09,"Quarterly training extract (tokens, features, labels, cardholder name and billing address)",License agreement with no use limits or deletion terms; no PCI DSS responsibility matrix,No current AOC,EV-035; EV-047; EV-048; EV-051,Service provider list
+V-11,Identity verification service,Merchant owner verification,SYS-11,Merchant owner identity data,Subscription terms,Not collected at intake,EV-047,
+V-12,Payroll provider,Payroll,n/a,Employee payroll data,Service agreement,Not collected at intake,EV-047,
+V-13,QSA firm,Annual PCI DSS Report on Compliance,n/a,Assessment evidence,Engagement letter,"2025 ROC and AOC (Compliant, 2025-12-01)",EV-047; EV-056,Independent of remediation work
+V-14,Approved Scanning Vendor (ASV),Quarterly external scans,SYS-01; SYS-03; SYS-04,External scan results,Service agreement,Quarterly scan reports,EV-024; EV-047,
+V-15,Penetration testing firm,"Annual external, internal and segmentation tests",SYS-01; SYS-06,Test results,Engagement letter,Report of January 2026,EV-025; EV-047,
+V-16,Cyber insurer,Cyber insurance with an incident response panel,n/a,Incident information on a claim,Insurance policy,n/a,EV-047; EV-057,
+V-17,Sponsor bank (national bank),Card network membership; originating depository institution for merchant funding,SYS-01,Clearing files; merchant funding ACH files; settlement reports,"Sponsor agreement (2023, renewed 2026-01-01)",n/a (the company is the bank's service provider),EV-052; EV-053,"Counterparty, not a supplier"

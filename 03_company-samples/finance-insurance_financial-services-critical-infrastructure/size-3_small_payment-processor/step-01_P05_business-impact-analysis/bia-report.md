@@ -2,10 +2,11 @@
 
 **Organization:** Cris Santos Company, LLC (payment processor serving merchants) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Lead) with the CTO, CFO, Settlement Operations Manager, Merchant Support Manager, and Risk and Fraud Manager, during fieldwork 2026-07-13 to 2026-07-24 | **Approved:** COO, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-067), FY2025 receipts report (EV-061), processing volume report (EV-062), sponsor agreement (EV-052), merchant agreement template (EV-055), backup configuration export (EV-066). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the COO.
 
 ## 1. Overview and purpose
 This BIA identifies the business processes the processor depends on, how long each can be down, and how much data it can lose. It feeds:
-- the platform recovery runbook and failover test that do not exist yet (gap 15 in `../00_company-facts.md`);
+- the platform recovery runbook and failover test that do not exist yet (the intake document request returned neither, EV-045);
 - the incident response plan's recovery order (POL-03 and the P08 runbook), including PCI DSS 12.10.1, which requires the plan to cover business recovery and continuity procedures;
 - the availability rating in the SSP (P02);
 - impact ratings in the risk register (P01, especially R-006 and R-008);
@@ -21,7 +22,7 @@ The processor authorizes, clears, and settles card payments for about 4,200 merc
 - The sponsor agreement requires the clearing files and the daily merchant funding file to reach the sponsor bank by its daily cutoff. These are the covered services under the Bank Service Company Act (12 U.S.C. 1867(c)) named in the agreement.
 
 ## 3. Impact categories and values
-Dollar values are scaled to the processor's own receipts ($28.2 million a year, about $77,000 a day), not to the merchant sales it carries (about $18.6 million a day).
+Dollar values are scaled to the processor's own receipts ($28.2 million a year, about $77,000 a day, EV-061), not to the merchant sales it carries (about $18.6 million a day).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -51,7 +52,7 @@ Totals: 11 processes; 4 High, 5 Moderate, 2 Low.
 **What drives the values:**
 - **Authorization (BP-01) is real time.** There is no manual workaround for card-not-present sales. After about 4 hours, large merchants switch to backup processors, and the outage becomes a reportable event for the sponsor bank if it also delays settlement or funding.
 - **Settlement and funding (BP-03, BP-04) run on a daily cycle.** A missed cutoff delays money for every merchant. Both are covered services for the sponsor bank, so an incident that disrupts them for four or more hours triggers the 12 CFR 53.4 notice.
-- **Security monitoring (BP-09) is High for regulatory reasons, not revenue.** PCI DSS requires logs to be collected and reviewed without gaps. The 9-day log forwarding failure in May 2026 is the example (gap 7).
+- **Security monitoring (BP-09) is High for regulatory reasons, not revenue.** PCI DSS requires logs to be collected and reviewed without gaps. The 9-day log forwarding failure in May 2026 is the example (EV-029).
 - **Fraud scoring (BP-06) has a fallback.** When the model is down, the authorization switch applies fallback rules, so authorizations continue at higher fraud risk.
 
 **Key findings:**

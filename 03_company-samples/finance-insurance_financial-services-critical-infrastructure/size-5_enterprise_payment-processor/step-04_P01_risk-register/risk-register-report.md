@@ -11,7 +11,7 @@
 | Approved | Executive risk committee (chaired by the Chief Risk Officer), 2026-09-08; reviewed by the board risk and technology committee, 2026-09-10 |
 
 ## 1. Scope and risk framing
-**Scope.** All systems that store, process, or transmit cardholder data, merchant data, or funding instructions, or that support tier-1 processes: the Cloud A and Cloud B estates, DC-1 and DC-2, SaaS, the payouts subsidiary, and about 1,400 vendors (96 of them PCI DSS service providers). Business processes and impact values come from the enterprise BIA (P05). The Core Payment Processing Platform is also covered at system level in the SSP (P02).
+**Scope.** All systems that store, process, or transmit cardholder data, merchant data, or funding instructions, or that support tier-1 processes: the Cloud A and Cloud B estates, DC-1 and DC-2, SaaS, the payouts subsidiary, and about 1,400 vendors (96 of them PCI DSS service providers), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business processes and impact values come from the enterprise BIA (P05). The Core Payment Processing Platform is also covered at system level in the SSP (P02).
 
 **Three lines.** Risk owners in the business and technology (first line) own and treat risks. The GRC team and the Chief Risk Officer (second line) run this method and roll risks up into the enterprise risk register. Internal Audit (third line) tests controls independently (P07).
 
@@ -46,8 +46,8 @@
 Risks under ER-04 and ER-06 at Moderate or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the financial sector threat picture (payment card theft, ransomware, file transfer product exploitation, third-party compromise, fraud), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the financial sector threat picture (payment card theft, ransomware, file transfer product exploitation, third-party compromise, fraud) in the Cyber Fusion Center's threat intelligence (EV-045), the BIA (P05), the intake evidence, the 2025 enterprise risk analysis (EV-028), and risk workshops with the Cyber Fusion Center, Settlement Systems, Settlement and Treasury Operations, Integrated Payments, Fraud and Risk Management, Third-Party Risk, Compliance, the General Counsel's office and Data and Analytics (EV-075). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the case history (EV-018), coverage and configuration exports from the enterprise systems of record, DR and test records, contract and vendor records, the workshops, the gap analysis samples, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -55,6 +55,8 @@ Risks under ER-04 and ER-06 at Moderate or above cannot be accepted without a da
    - Each row is normalized into one of **8 enterprise risks (ER-01 to ER-08)** in the Chief Risk Officer's enterprise risk register, with an ERM category (operational, compliance, financial, strategic).
    - **Aggregation rule:** an enterprise risk's exposure equals its highest constituent risk level, and the profile also reports how many constituent risks sit outside tolerance. This keeps one severe risk from being averaged away.
    - The enterprise risk profile (section 4) is what the board risk and technology committee sees each quarter.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-058 was added after testing found batch scheduler credentials in plain text in settlement job scripts (EV-IA-5; stop-and-notify on 2026-08-12), and 26 other risks were reviewed again on 2026-08-28 (their `last_reviewed` date); where the P07 results, the gap analysis samples or the AI and model risk committee's portfolio review bear on a risk, its `likelihood_basis` cites that evidence. The `assessment_pass` column shows which pass produced each risk.
 
 ## 3. Results
 | Risk level | Count |

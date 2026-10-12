@@ -41,6 +41,17 @@ This is not a PCI DSS assessment. The SAQ and AOC signed by the Owner are the co
   - a harmless antivirus test file on 1 laptop
   - a search of support mailboxes for card numbers and Social Security numbers (results reported as counts only)
 
+### What each test could show
+The new policies (P06) were drafted from 2026-07-27 to 2026-07-31 and were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 35 |
+| Design | The control is new: the draft POL-03 and P08 runbook were reviewed for design. Operation is tested at the 2027-02 follow-up | 12 |
+| Not implemented | Nothing existed to test | 55 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees in EV-001 and the agent roster in EV-002, the spare terminals were counted against the spreadsheet in EV-024, the 120 hosted payment pages come from EV-005, and the 9 laptops from the MSP device list in EV-015).
+
 ### MSP evidence requested
 The MSP operates most laptop and network controls, so evidence came from it. Requested on 2026-07-27 with a one-week deadline:
 

@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-15
 
 ## 1. System Name and Identifier
-Payment Processing Platform (**PPP**), identifier CSC-PPP-01. The PPP is the company's major system and its PCI DSS cardholder data environment (CDE), plus the connected-to and security-impacting systems that PCI DSS brings into scope. It comprises SYS-01 to SYS-07, SYS-09 to SYS-12, and SYS-16 in `../00_company-facts.md`, and the administrative access path from SYS-08.
+Payment Processing Platform (**PPP**), identifier CSC-PPP-01. The PPP is the company's major system and its PCI DSS cardholder data environment (CDE), plus the connected-to and security-impacting systems that PCI DSS brings into scope. It comprises SYS-01 to SYS-07, SYS-09 to SYS-12, and SYS-16 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), and the administrative access path from SYS-08.
 
 ## 2. System Overview
 The PPP authorizes, clears, and settles card payments for about 31,000 merchants: about 820 million transactions and $38 billion a year. It serves 600 workforce members, about 64,000 core merchant portal users, about 15,000 Integrated Payments partner and merchant portal users, 420 ISV partners, and the consumers who pay on merchants' e-commerce sites.
@@ -45,7 +45,7 @@ The cloud is described by service category and is vendor-agnostic (see P04).
 | Contract | ISV partner agreements; merchant agreements | Contracts | 99.95% availability; security schedules for the 20 largest partners (gap, CA-3) |
 | Internal | Security policies POL-01 to POL-05 and supporting standards | P06 | Policy basis for every control |
 
-Not applicable (see `../00_company-facts.md` section 1 and P03):
+Not applicable (see the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and P03):
 - NYDFS 23 NYCRR Part 500 (C-FINANCIAL-R05): no New York license, registration, or charter.
 - SEC Regulation SCI (C-FINANCIAL-R04): not an SCI entity; the company is not an SEC registrant.
 - NCUA 12 CFR 748.1(c) (C-FINANCIAL-R03): not a credit union and serves none.
@@ -102,6 +102,8 @@ Information types were matched to NIST SP 800-60 Vol. 2 Rev. 1 where a close typ
 **Why High and not Moderate.** The Mid-Market tier guide expects a Moderate-impact major system. The PPP categorizes High for confidentiality and integrity for the same reasons as the Small sample, and more strongly at this volume: one compromise exposes card data across 31,000 merchants, and funding file integrity protects about $104 million a day. The plan therefore starts from the High baseline and tailors it, instead of starting from Moderate and adding controls.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The 136 administrator endpoints are the PAM administrators (110, EV-006) and the Cloud B administrators (26, EV-007), out of about 720 endpoints in the endpoint console (EV-011).
+
 The boundary contains company-managed components and the company's configuration of provider services.
 
 **Inside the boundary:**
@@ -186,7 +188,7 @@ CSF 2.0 subcategories in the CSV come from `00_universal-framework/crosswalks/cs
 | Hybrid | 54 | Cloud A and Cloud B providers, colocation providers, identity provider, MSSP, content delivery service, source code SaaS |
 | Common/Inherited | 5 | Identity provider (AC-7, IA-2(8)), cloud and colocation time and visitor controls (AU-8, PE-8), content delivery service (SC-5) |
 
-The Partially implemented statements trace to the 16 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. 49 of the 69 name the Integrated Payments gateway (Cloud B) or the acquisition as a reason, which is why its integration leads the planned modifications in section 4.3.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-007, EV-028 and EV-046) and to the P07 findings. 49 of the 69 name the Integrated Payments gateway (Cloud B) or the acquisition as a reason, which is why its integration leads the planned modifications in section 4.3.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee. Independent PCI DSS validation is the QSA's combined 2026 ROC.
@@ -199,7 +201,7 @@ The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-
 - **Consumers** paying through the hosted payment page or hosted payment fields are not account holders and do not authenticate to the PPP. Card brand authentication programs run through the issuers.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); 2025 AOCs; 2026-01 penetration test report.
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); 2025 AOCs; 2026-01 penetration test report.
 
 ## 13. Acronym List and Glossary
 - **AOC:** Attestation of Compliance

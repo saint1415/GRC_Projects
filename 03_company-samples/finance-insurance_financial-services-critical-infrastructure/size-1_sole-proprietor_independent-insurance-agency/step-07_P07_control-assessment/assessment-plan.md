@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 41 determination stateme
 - **Test (2026-08-05):** sign-ins from a new browser to every portal; a count of saved and reused passwords; a 30-day sample of sent and received email for attachments with Restricted data; a review of phone messages for ID photos; a boot of the retired laptop; the printer-scanner's stored-jobs menu.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen. The bookkeeper was interviewed by phone about banking access.
 
+### What each test could show
+No written policy existed during fieldwork (EV-023). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-09-14, so none of its new rules had operated yet and none was tested here. The first risk assessment (P01) was completed on 2026-08-07, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, banking access and vendor records | 21 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the August 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 14 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the owner's AMS, email, insurer and partner portal, e-signature and banking accounts (EV-001, EV-005, EV-009, EV-010, EV-016), the laptop, phone, printer-scanner and retired laptop (EV-011 to EV-014), and the vendors in the [vendor register](../step-00_P00_intake/vendor-register.csv) (EV-020). Controls that POL-01 introduces are tested for operation at the 2027-03 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No testing during client appointments. No client data copied off any device; screenshots were cropped to settings, and the email sample was reviewed on screen without export.
 - The IT consultant worked only under the 2026-07-27 agreement, in sessions the owner started and watched.

@@ -2,12 +2,13 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed payment processor serving merchants) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Director of Information Security with the vCISO, the process owners named in `bia.csv`, and the VP Platform Engineering | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the board audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-060), the revenue report by business line (EV-051), the Q2 2026 processing volume report (EV-052), settlement procedures and daily reports (EV-053), the sponsor agreements (EV-035), the merchant and ISV agreement templates (EV-047), recovery test reports (EV-027) and backup reports (EV-026). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Merchant Processing, Integrated Payments, Settlement and Treasury Operations, Risk, Fraud, and Compliance, Merchant Services, and Corporate. It rates 17 business processes and quantifies what an outage costs in money, merchant operations, and regulatory and card brand exposure.
 
 The results feed:
-- the recovery runbooks and failover tests (gap 8 in `../00_company-facts.md`);
+- the recovery runbooks and failover tests (EV-027);
 - both incident runbooks in P08 and their recovery order, including PCI DSS 12.10.1, which requires the incident response plan to cover business recovery and continuity procedures;
 - the availability rating and contingency controls in the SSP (P02);
 - impact ratings and exposure estimates in the risk register (P01);
@@ -23,14 +24,14 @@ The company authorizes, clears, and settles card payments for about 31,000 merch
 - bank connectivity servers that send funding files to both sponsor banks (SYS-16);
 - the acquired Integrated Payments gateway in Cloud B (SYS-06).
 
-About 600 staff work from the Florida headquarters, the acquired office, and remotely. See `../00_company-facts.md` sections 1, 3, and 7.
+About 600 staff work from the Florida headquarters, the acquired office, and remotely. Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **Contract commitments that set the numbers:**
 - Merchant agreements promise 99.95% monthly availability for authorization (about 22 minutes of downtime a month). ISV partner agreements promise the same for the Integrated Payments API.
 - Each sponsor agreement requires the clearing files and the daily merchant funding file by the bank's cutoff (Bank A 03:00, Bank B 04:00 Eastern). These services are named in both agreements as subject to the Bank Service Company Act (12 U.S.C. 1867(c)), which makes them covered services under 12 CFR 53.2(b)(5) and 304.22(b)(5).
 
 ## 3. Impact categories and values
-Dollar values are scaled to the company's own receipts ($100.0 million a year, about $274,000 a day: about $186,000 from Merchant Processing, $66,000 from Integrated Payments, and $22,000 from other fees), not to the merchant sales it carries (about $104 million a day).
+Dollar values are scaled to the company's own receipts ($100.0 million a year in the revenue report, EV-051; about $274,000 a day: about $186,000 from Merchant Processing, $66,000 from Integrated Payments, and $22,000 from other fees), not to the merchant sales it carries (about $104 million a day; EV-052).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -40,7 +41,7 @@ Dollar values are scaled to the company's own receipts ($100.0 million a year, a
 | Safety | Not applicable: no process affects physical safety | | |
 | Reputation | Loss of a sponsor bank, a top-20 ISV partner, or many merchants; trade press coverage | Merchant complaints and social media | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is lost fee revenue plus contractual service credits, overtime, interchange downgrades, and an attrition reserve for merchants and ISVs that move volume away, over the MTD. The process owners supplied the assumptions: service credits under the merchant and ISV agreements; about 0.6% of affected merchants moving to another processor after a 2-hour authorization outage; and interchange downgrades on transactions presented a day late. Delayed merchant funding is shown separately, because it is the merchants' cash, not the company's.
+**How loss at MTD was estimated.** Estimated loss is lost fee revenue plus contractual service credits, overtime, interchange downgrades, and an attrition reserve for merchants and ISVs that move volume away, over the MTD. The process owners supplied the assumptions (EV-060): service credits under the merchant and ISV agreements; about 0.6% of affected merchants moving to another processor after a 2-hour authorization outage; and interchange downgrades on transactions presented a day late. Delayed merchant funding is shown separately, because it is the merchants' cash, not the company's.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -77,11 +78,11 @@ Dollar values are scaled to the company's own receipts ($100.0 million a year, a
 - **Fraud scoring (BP-09) has a fallback.** When the model is down, the switch applies fallback rules, so authorizations continue at higher fraud and false-decline rates.
 
 ## 5. Key findings
-1. **Authorization failover does not meet the MTD.** The 2025-11 failover test to the secondary Cloud A region took 2 hours 40 minutes against a 1-hour RTO and a 2-hour MTD. Most of the time went to manual database promotion and DNS changes (P01 R-006; P07 CP-4).
-2. **Settlement recovery does not meet the funding cutoff.** The 2026-02-21 disaster recovery test of the settlement engine at the DR cage took 11 hours against an 8-hour RTO. Run at night, it would have missed both banks' funding cutoffs (P01 R-007). Neither sponsor bank took part in the test.
-3. **The Integrated Payments gateway has no warm standby.** It runs in one Cloud B region with database snapshots only. Its actual RTO for a region failure is unknown (P01 R-008).
-4. **Payment HSMs are a single point of failure for settlement.** The colocation HSMs are paired within each cage, but the key ceremony to load the DR cage HSMs after a key rotation was last done in 2025-08. Every later key rotation must be replicated before a failover can work (P05 resource table; P01 R-017).
-5. **Monitoring does not cover Cloud B** (gap 1). An attack on the gateway would not be seen by the MSSP, which is why BP-15 is High and why the P08 scenario starts there.
+1. **Authorization failover does not meet the MTD.** The 2025-11 failover test (EV-027) to the secondary Cloud A region took 2 hours 40 minutes against a 1-hour RTO and a 2-hour MTD. Most of the time went to manual database promotion and DNS changes (P01 R-006; P07 CP-4).
+2. **Settlement recovery does not meet the funding cutoff.** The 2026-02-21 disaster recovery test of the settlement engine at the DR cage took 11 hours against an 8-hour RTO (EV-027). Run at night, it would have missed both banks' funding cutoffs (P01 R-007). Neither sponsor bank took part in the test.
+3. **The Integrated Payments gateway has no warm standby.** It runs in one Cloud B region with database snapshots only (EV-026). Its actual RTO for a region failure is unknown (P01 R-008).
+4. **Payment HSMs are a single point of failure for settlement.** The colocation HSMs are paired within each cage, but the key ceremony to load the DR cage HSMs after a key rotation was last done in 2025-08 (EV-023). Every later key rotation must be replicated before a failover can work (P05 resource table; P01 R-017).
+5. **Monitoring does not cover Cloud B** (EV-028, EV-030). An attack on the gateway would not be seen by the MSSP, which is why BP-15 is High and why the P08 scenario starts there.
 
 ## 6. Resource requirements
 | Resource | Description | Supports |
@@ -106,7 +107,7 @@ Both sponsor agreements name clearing, settlement, reconciliation, and merchant 
 | Rule element (verified text, summarized) | What this BIA supplies | Status |
 |---|---|---|
 | Notify at least one bank-designated point of contact at each affected banking organization customer as soon as possible after determining that a computer-security incident has materially disrupted or degraded, or is reasonably likely to, covered services for four or more hours (53.4(a); 304.24(a)) | The covered processes (BP-05 to BP-07), their MTDs, and which bank each file serves. Funding (BP-06) has a 12-hour MTD, but a 4-hour disruption is reportable well before the MTD | Decision step written into both P08 runbooks |
-| Use the bank-designated contact; if none was provided, notify the CEO and CIO or two individuals of comparable responsibilities (53.4(a)(1)-(2); 304.24(a)(1)-(2)) | Contacts per bank | Bank A contacts on file; **Bank B contacts not on file (gap 7)**, due 2026-10-15 |
+| Use the bank-designated contact; if none was provided, notify the CEO and CIO or two individuals of comparable responsibilities (53.4(a)(1)-(2); 304.24(a)(1)-(2)) | Contacts per bank | Bank A contacts on file; **Bank B contacts not on file (EV-036)**, due 2026-10-15 |
 | Scheduled maintenance, testing, or software updates previously communicated to the bank are excluded (53.4(b); 304.24(b)) | Disaster recovery tests and maintenance windows must be announced to both banks in advance | Added to the change calendar |
 | Authorization (BP-01 to BP-03) | Not named as a covered service in either agreement; an authorization outage alone does not trigger the notice, but one that also delays clearing or funding does | Recorded in P08 |
 

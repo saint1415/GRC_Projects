@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed payment processor serving merchants) |
 | Tier / Vertical | Mid-Market / Financial Services |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005); inventory in `ai-use-case-inventory.csv`. Primary use case: AI-001 transaction fraud-detection model |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005); inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, the model registry and a department heads survey (EV-045, EV-054), with the data platform configuration (EV-057). Whether staff also use public generative AI sites, and how many, was not established (intake open request); R-023 treats it as unknown. Primary use case: AI-001 transaction fraud-detection model |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-003, AI-004, and AI-005 |
 | Assessors / date | Chief Risk and Compliance Officer (model risk), Director of Fraud and Merchant Risk, Head of Data Science (developer input, not an approver), Director of Information Security, and the General Counsel, 2026-08-17 to 2026-09-04; independent challenge by an outside model risk firm for AI-001 |
 | Decision | Chief Operating Officer, 2026-09-15, on the recommendation of the AI and model risk committee; High-tier decisions reported to the CEO and the audit committee the same day |
 
 ## 1. Summary
-The company built its own fraud model in 2025 and adopted four other AI tools without a security, privacy, or model risk review (gap 13 in `../00_company-facts.md`). None is out of control, but two make or drive decisions about people at scale and need model risk controls the company does not yet have:
+The company built its own fraud model in 2025 and adopted four other AI tools without a security, privacy, or model risk review (EV-054). None is out of control, but two make or drive decisions about people at scale and need model risk controls the company does not yet have:
 - **AI-001, the fraud model**, declines consumer purchases automatically on both platforms. The people who built it also validate it, and the first fairness test (2026-08-20) flagged one group.
 - **AI-002, the merchant risk scoring service**, sets approval and reserves for merchants, including sole proprietors. No one has validated it or tested it for bias, and underwriters do not see its reason codes.
 - **AI-003 and AI-004** are generative AI tools that touch dispute and merchant data; **AI-005** writes code that can reach the CDEs.

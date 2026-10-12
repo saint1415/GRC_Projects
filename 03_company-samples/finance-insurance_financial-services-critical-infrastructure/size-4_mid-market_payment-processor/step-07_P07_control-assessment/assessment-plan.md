@@ -74,6 +74,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - a restore of one token vault table into an isolated account
   - benchmark configuration scans of 10 cage servers and 5 Cloud B images
 
+### What each test could show
+The 2026 policies (P06), the standards index and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and take effect on 2026-10-01. The 2024 policies and standards and the 2025 incident response plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 171 |
+| Design | The requirement comes from the 2026 drafts (the plan content in POL-03 and the P08 runbooks that adds Integrated Payments, crisis management and Bank B notices); its design was reviewed. Operation is tested at the 2027-03 follow-up | 10 |
+| Not implemented | Nothing existed to test | 26 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Most sample populations in section 2 come from intake exports: terminations and transfers from the HR report (EV-003), Cloud B IAM users from EV-007, privileged users from EV-006 and EV-007, service accounts from EV-008, cage and settlement servers from EV-016, critical findings from the scan reports (EV-017), service providers from EV-046, cage visits from EV-049, call recordings and pre-2025 tickets from EV-055, incidents from EV-041 and staff from EV-003. Production changes, July 2026 backup days and payment page scripts were extracted during fieldwork.
+
 ## 4. Rules of engagement
 - No testing in production that could affect authorization, clearing, or funding. Payment page and agent tests ran in staging. Management interface tests ran in the 2026-08-12 maintenance window with the VP Platform Engineering present.
 - No card data left the company's environments. Recording and ticket results were reported as counts and masked samples (BIN and last four).
@@ -124,7 +135,7 @@ Other than satisfied statements by risk: 1 Very High, 30 High, 28 Moderate, 5 Lo
 | SI-4 | 9 | 3 | High | POAM-003 |
 | SI-7 | 2 | 4 | High | POAM-001, POAM-020 |
 
-**Fully satisfied (4 controls):** CP-9 (all 30 backup days succeeded and the isolated restore worked), IA-2(1) (MFA required on every sampled privileged account on both platforms), IA-8, and RA-3. These confirm the strengths listed in the scenario facts.
+**Fully satisfied (4 controls):** CP-9 (all 30 backup days succeeded and the isolated restore worked), IA-2(1) (MFA required on every sampled privileged account on both platforms), IA-8, and RA-3. These confirm what the intake evidence showed (EV-001, EV-006, EV-009, EV-026, EV-032).
 
 **Fully other than satisfied (6 controls):** AC-6, AU-5, CA-8, CP-10, SA-22, and SC-28.
 

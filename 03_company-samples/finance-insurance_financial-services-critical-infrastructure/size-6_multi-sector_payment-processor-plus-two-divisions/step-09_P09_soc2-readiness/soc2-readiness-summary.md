@@ -29,7 +29,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 ### 2.1 Payments Software Platform
 - **Services:** cloud point of sale, about 180,000 online storefronts, invoicing, the payment gateway and developer platform, device management, and the app marketplace; the "merchant insights assistant" generative AI feature for about 58,000 merchants (launched 2026-05-12).
 - **Infrastructure and software:** SYS-S1 to SYS-S3 on cloud provider B; group identity (SYS-G1) and SOC (SYS-G2) carved in as internal shared services.
-- **Subservice organizations (carve-out):** cloud provider B; the content delivery service; **the third-party model provider** (not yet in the description, scenario gap 6).
+- **Subservice organizations (carve-out):** cloud provider B; the content delivery service; **the third-party model provider** (not yet in the description, group gap 6).
 - **Data:** merchant data and merchants' customers' order data; cardholder data in the gateway CDE (separately validated under PCI DSS).
 - **Complementary user entity controls:** merchants manage their own users and MFA, their storefront theme changes, and the apps they install; ISVs protect their API credentials.
 

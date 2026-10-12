@@ -38,7 +38,7 @@ The company owns almost no infrastructure. This plan says, for each control, wha
 | Contract | ISO agreement: annual validation, 24-hour compromise notice, indemnity | ISO agreement (renewed 2025-01-01) |
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 |
 
-Not applicable (see P03 section 1):
+Not applicable (see the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and P03 section 1):
 - 12 CFR 53.4 bank service provider notice (C-FINANCIAL-R01): no covered services performed for the sponsor bank.
 - Interagency Guidelines (C-FINANCIAL-R02): bind the sponsor bank; reach the company only through the ISO agreement.
 - NCUA 12 CFR 748.1(c) (C-FINANCIAL-R03), SEC Regulation SCI (C-FINANCIAL-R04), NYDFS Part 500 (C-FINANCIAL-R05): not a credit union, SCI entity, or New York licensee.
@@ -87,7 +87,7 @@ Information types were matched to NIST SP 800-60 Vol. 2 Rev. 1 where a close typ
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration change boards and separate development environments). These are tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the company controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the company controls or pays someone to control on its behalf:
 - **Inside:** the company's console accounts and the gateway settings it manages for merchants (SYS-01), its portal accounts (SYS-02), the CRM tenant (SYS-03), the suite tenant (SYS-04), the phone system account and its recordings (SYS-05), the 9 laptops (SYS-06), the office network (SYS-07), the website hosting account and storage bucket (SYS-08), the spare terminals (SYS-09), and the backup subscription (SYS-10).
 - **Outside (external services, interconnected):** the processor partner's gateway, authorization, and settlement platform; the sponsor bank and card networks; the vendors' own platforms and data centers; the MSP's remote management platform; the outside agents' own devices (they reach only the CRM and the console sales view).
 
@@ -152,7 +152,7 @@ Assessed 2026-08-03 to 2026-08-05 by an independent consultant. See P07 `assessm
 - **Merchant users** of the gateway are the processor partner's users. The processor partner enforces their sign-in rules; the company only requests their creation.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and CRM vendor report review (P09), AI assessment (P10), 2025 SAQ D and AOC, ASV scan reports.
+Company facts (`../00_company-facts.md`); intake [evidence register](../step-00_P00_intake/evidence-register.csv), [asset inventory](../step-00_P00_intake/asset-inventory.csv), [vendor register](../step-00_P00_intake/vendor-register.csv) and [obligations register](../step-00_P00_intake/obligations-register.csv) (P00); BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and CRM vendor report review (P09), AI assessment (P10), 2025 SAQ D and AOC (EV-033), ASV scan reports (EV-034).
 
 ## 13. Acronym List and Glossary
 - **AOC:** Attestation of Compliance

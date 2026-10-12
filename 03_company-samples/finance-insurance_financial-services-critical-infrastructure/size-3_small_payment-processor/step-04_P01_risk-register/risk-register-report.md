@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the COO (Moderate and below) and the majority owner and CEO (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Payment Processing Platform (PPP) and every business process in the BIA (P05). That covers the cardholder data environment (CDE) in the cloud tenant, the systems that can change or watch it (identity provider, pipeline, SIEM), the systems where card data turned up unexpectedly (support ticketing, data warehouse), merchant owner data in onboarding, and the service providers listed in `../00_company-facts.md` section 3.
+**Scope.** The Payment Processing Platform (PPP) and every business process in the BIA (P05). That covers the cardholder data environment (CDE) in the cloud tenant, the systems that can change or watch it (identity provider, pipeline, SIEM), the systems where card data turned up unexpectedly (support ticketing, data warehouse), merchant owner data in onboarding, and the service providers that handle account data or can change the CDE ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 **Why the Safeguards Rule matters here.** 16 CFR 314.4(b)(1) requires the risk assessment to be written and to include criteria for evaluating and categorizing risks, criteria for assessing confidentiality, integrity, and availability, and requirements for how risks will be mitigated or accepted. Sections 1 and 2 of this report are those criteria.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the P03 gap analysis, interviews with the CTO, Platform Engineering Lead, Settlement Operations Manager, Merchant Support Manager, and Risk and Fraud Manager, and the scenario incident for P08 (compromise of the payment processing environment).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) and likelihood of adverse impact were rated separately, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the P03 gap analysis, interviews with the CTO, Platform Engineering Lead, Settlement Operations Manager, Merchant Support Manager, and Risk and Fraud Manager (EV-068), and the scenario incident for P08 (compromise of the payment processing environment). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) and likelihood of adverse impact were rated separately, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the alert and log records (EV-028, EV-029), the document request (EV-045), fieldwork samples and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3** with the BIA impact categories (cost, merchant operations, regulatory and card brand, reputation). A card data compromise across many merchants is rated Very High: card brand non-compliance assessments, forensic costs, and possible loss of the sponsor bank relationship.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,7 +51,7 @@ The High risks share two themes:
 
 Fixing R-001 to R-003 also reduces five Moderate risks (R-005, R-009, R-011, R-013, R-016).
 
-R-031 was added on 2026-08-07 after control assessment testing (P07) found full card numbers in a data warehouse table. The table was purged on 2026-08-07. Whether the exposure is a reportable event is analyzed in P08 section 6: the warehouse is inside the company's cloud tenant, access was limited to 11 authorized staff, and access logs show no access from outside that group.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-031 was added on 2026-08-07 after testing found full card numbers in a data warehouse table (EV-SC-28). The table was purged on 2026-08-07 (EV-083). The `assessment_pass` column shows which pass produced each risk. Whether the exposure is a reportable event is analyzed in P08 section 6: the warehouse is inside the company's cloud tenant, access was limited to 11 authorized staff, and access logs show no access from outside that group.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 budget, $214,000):**

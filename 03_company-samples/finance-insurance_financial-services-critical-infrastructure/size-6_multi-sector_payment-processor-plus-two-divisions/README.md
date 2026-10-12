@@ -3,9 +3,9 @@
 
 > Cris Santos Company Holdings, Inc. is a publicly traded, diversified enterprise with 45,000 employees in three divisions. The focus of this sample is its payment processing division (Financial Services). The other divisions are payments software platform (NAICS 51) and merchant consulting services (NAICS 54). Why this combination: Processor with software and services arms.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -41,13 +41,14 @@ Sector Risk Management Agency: Department of the Treasury; Federal banking agenc
 | [NYDFS Cybersecurity Regulation (Second Amendment)](https://www.dfs.ny.gov/system/files/documents/2023/12/rf23_nycrr_part_500_amend02_20231101.pdf) | 23 NYCRR Part 500 | Limited exemption (500.19(a)): < 20 employees and independent contractors (incl. affiliates); OR < $7,500,000 gross annual revenue in each of last 3 fiscal years from NY operations; OR < $15,000,000 year-end total assets (incl. affiliates) -> exempt from 500.4, 500.5, 500.6, 500.8, 500.10, portions of 500.14, 500.15 and 500.16. 'Class A company' = >= $20M NY revenue and (> 2,000 employees or > $1B gross revenue) in each of last 2 fiscal years -> extra duties (independent audit, EDR, PAM, password controls). |
 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Group and division systems of record; shared-service inventories; intercompany agreements. Evidence register per division; group inventories; obligations register per division and for the group. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Payment Processing Platform (PPP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. | P02: the system boundary and its controls |
