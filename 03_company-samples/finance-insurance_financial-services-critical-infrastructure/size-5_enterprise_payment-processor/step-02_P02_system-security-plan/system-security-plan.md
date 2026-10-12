@@ -86,6 +86,8 @@ Information types are modeled on NIST SP 800-60 Vol. 2 Rev. 1 (financial managem
 **Tailoring.** No High-baseline control was removed. Physical and environmental controls for Cloud A are inherited from the cloud provider (shared responsibility, P04 section 3), and for the DC-2 building from the colocation provider, under their AOCs.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-04 and SYS-10 rows) and the prior SSP v2.0 (EV-065).
+
 **Inside the boundary:** the authorization platform and token vault in the Cloud A CDE accounts (both regions), the portals and hosted payment pages, the mainframe and midrange settlement servers in DC-1 and DC-2, the payment HSMs, the MFT appliances, card network interface processors, and treasury workstations.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -215,7 +217,7 @@ Row counts include Hybrid rows that name the provider. The other 38 rows are Sys
 - **Cardholders** do not authenticate to the CPPP. Card authentication (3-D Secure, PIN) is handled under network rules and the PCI PIN program.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), incident runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 fraud model (P10), CPPP contingency plan v6, cryptographic architecture document (PCI DSS 3.6.1.1), data-flow diagrams, 2025 ROC and AOC, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), incident runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 fraud model (P10), CPPP contingency plan v6, cryptographic architecture document (PCI DSS 3.6.1.1), data-flow diagrams, 2025 ROC and AOC, enterprise common control catalog.
 
 ## 13. Acronym List and Glossary
 - **AOC / ROC:** PCI DSS Attestation of Compliance / Report on Compliance

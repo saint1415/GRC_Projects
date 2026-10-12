@@ -83,6 +83,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Senior Vice President, Core Payment Platforms; Director of Settlement Systems; Director of Authorization Platform Engineering; Director of Cryptographic Services; Director of Security Operations; Director of Identity and Access Management; Director of Data Center and Network Engineering; Senior Vice President, Settlement and Treasury Operations; General Counsel; CFO; CISO; Chief Compliance Officer.
 - **Test:** negative access tests with test accounts; event generation for logging; secret scanning of job scripts; configuration scans; a reachability test from the DC-1 management subnet; TLS scans and a packet capture inside DC-1; payment page and FIM test changes; a restore observation.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork. The executive risk committee approved POL-02 to POL-05 on 2026-09-08 and the board risk and technology committee approved POL-01 on 2026-09-10; all take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy set, standards and procedures in force (EV-027), and reviewed the draft 2026 statements as drafts, for design only. Any statement the 2026 revisions add has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 272 (247 Satisfied, 25 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: the weekly review of emergency settlement changes (CM-03f.[02]), file-level monitoring of the MFT appliances (SI-04c.01), replacement of and alternative support for the 12 unsupported midrange servers (SA-22a., SA-22b.), and a procedure for sharing contingency information with the sponsor banks (CP-02a.06) | 5 |
+| **Total** | | **277** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance, PAM and HR records, EV-003 to EV-005, the CMDB, EV-009, and the change records, EV-016) and were refreshed to 2026-06-30 before sampling (EV-077).
+
 ## 4. Rules of engagement
 - No testing could affect authorization, clearing, or funding. Tests on the settlement platform ran outside the nightly batch window with the Director of Settlement Systems' approval.
 - The reachability test used an audit-owned virtual machine in the DC-1 management subnet, pre-approved by the CISO; it sent connection probes only and carried no card data.

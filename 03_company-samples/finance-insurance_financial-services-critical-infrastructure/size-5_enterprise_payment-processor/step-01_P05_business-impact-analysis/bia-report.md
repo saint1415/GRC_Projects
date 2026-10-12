@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, Inc. (publicly traded merchant payment processor; about 410,000 merchants in all 50 states) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners, 2026-06-01 to 2026-07-15 | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-09-08 | **Reported to:** board risk and technology committee, 2026-09-10
 
+**Sources:** process owner interviews 2026-06-01 to 2026-06-26 (EV-072, EV-073), dependency and contract review (EV-074), FY2025 revenue report (EV-052), processing volume report (EV-053), sponsor bank and customer agreements (EV-049, EV-050), DR test, backup and contingency records (EV-024, EV-025, EV-026), and the AI inventory (EV-058). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
+
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company depends on, how long each can be down, how much data each can lose, and what each depends on, including the sponsor banks, card networks, cloud providers, and other third parties. It feeds:
 - the enterprise business continuity and disaster recovery plans, including the PCI DSS incident response plan's business recovery and continuity procedures (PCI DSS 12.10.1);
@@ -16,7 +18,7 @@ This enterprise-wide BIA identifies the business processes the company depends o
 **Results in one line:** 18 processes were analyzed; 9 are High criticality, 7 Moderate, and 2 Low. 7 processes need recovery within 4 hours. 10 processes are covered services under at least one sponsor agreement, so a disruption of 4 or more hours triggers bank service provider notices. The dependency map (`dependency-map.csv`) lists 26 dependencies (23 on third parties), 16 of them single points of failure and 4 never tested (including all three sponsor banks, which have never joined a recovery test).
 
 ## 2. System and business description
-Cris Santos Company authorizes, clears, and settles about 13.8 billion card transactions a year (about $780 billion in processed volume) for about 410,000 merchants. It has 12,000 employees and about $4.8 billion in annual receipts. The technology estate is described in `../00_company-facts.md` section 3:
+Cris Santos Company authorizes, clears, and settles about 13.8 billion card transactions a year (about $780 billion in processed volume) for about 410,000 merchants. It has 12,000 employees and about $4.8 billion in annual receipts. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the suppliers in the [vendor register](../step-00_P00_intake/vendor-register.csv):
 - **Cloud A:** the authorization platform, token vault, portals, and hosted payment pages (SYS-01, SYS-04), active-active in two regions, and the data and AI platform (SYS-11).
 - **DC-1 (Florida) and DC-2 (another state):** the clearing, settlement, and merchant funding platform on a mainframe and 46 midrange batch servers (SYS-02), the payment HSMs (SYS-03), and card network and bank connectivity (SYS-10).
 - **Cloud B:** the Integrated Payments platform (SYS-05) and the payouts platform of Cris Santos Payouts, LLC (SYS-06).
@@ -25,7 +27,7 @@ Cris Santos Company authorizes, clears, and settles about 13.8 billion card tran
 Three sponsor banks (A, B, and C) hold the card network memberships and originate the merchant funding ACH files the company prepares. Each sponsor agreement names authorization, clearing, settlement, reconciliation, and merchant funding file services as services performed for the bank under the Bank Service Company Act (12 U.S.C. 1867(c)).
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the materiality framework in the disclosure committee's playbook (P08 section 6). Values are per 24 hours of outage unless stated. Payment processing has no direct physical safety impact, so the Safety category is rated N/A for every process; critical infrastructure effects are captured under Operations.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 receipts, EV-052) and to the materiality framework in the disclosure committee's playbook (P08 section 6). Values are per 24 hours of outage unless stated. Payment processing has no direct physical safety impact, so the Safety category is rated N/A for every process; critical infrastructure effects are captured under Operations.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -69,12 +71,12 @@ Listed in recovery priority order.
 ## 5. Dependency mapping and third parties
 The full map is in `dependency-map.csv`. Key findings:
 
-1. **Settlement recovery is the largest gap (DEP-03, DEP-04, DEP-13, DEP-14).** The 2026-04-25 disaster recovery test restored the settlement platform in DC-2 in 9.5 hours against a 6-hour RTO, mainly because of manual batch scheduler restarts and a 22-minute replication lag. In a real event that would have missed Bank A's 03:00 funding cutoff and triggered notices to all three banks. This is P01 risk R-004 and POA&M item POAM-006.
-2. **The sponsor banks have never joined a recovery test (DEP-06 to DEP-08).** Each bank can hold its ACH window open for up to 2 hours by agreement, but the procedure has never been rehearsed. Bank C (sponsor since 2026-03-01) has not yet given designated contacts for 225.303 notices that are loaded in the incident tooling (P01 R-013; POAM-007). A joint exercise is planned (POAM-016).
-3. **Managed file transfer is a single-vendor dependency on the settlement path (DEP-09).** Every clearing and funding file passes through the MFT appliances. They cannot run the company's EDR agent, and the manual fallback (secure upload to bank and network portals) has been drilled only with Bank A. File transfer products have been a repeated target of mass exploitation campaigns, so this is the initial access path in the P08 scenario (P01 R-003; POAM-009).
-4. **Cloud concentration (DEP-01).** Cloud A carries all Merchant Acquiring authorization, about 70% of all authorization volume. The two-region active-active design met its 15-minute target in the 2026-02-21 failover test, but it does not protect against a provider-wide control plane failure. The exit plan is a document only (P01 R-008).
-5. **Hosted payment fields at ISV partners (DEP-23).** Tamper-detection covers 64% of ISV integrations, so a script attack in a partner checkout could go unseen (POAM-021).
-6. **People (DEP-25).** 5 of the 18 mainframe and settlement batch engineers are eligible to retire by 2028 (P01 R-024).
+1. **Settlement recovery is the largest gap (DEP-03, DEP-04, DEP-13, DEP-14).** The 2026-04-25 disaster recovery test restored the settlement platform in DC-2 in 9.5 hours against a 6-hour RTO, mainly because of manual batch scheduler restarts and a 22-minute replication lag (EV-025). In a real event that would have missed Bank A's 03:00 funding cutoff and triggered notices to all three banks. This is P01 risk R-004 and POA&M item POAM-006.
+2. **The sponsor banks have never joined a recovery test (DEP-06 to DEP-08).** Each bank can hold its ACH window open for up to 2 hours by agreement, but the procedure has never been rehearsed (EV-025, EV-049). Bank C (sponsor since 2026-03-01) has not yet given designated contacts for 225.303 notices that are loaded in the incident tooling (P01 R-013; POAM-007). A joint exercise is planned (POAM-016).
+3. **Managed file transfer is a single-vendor dependency on the settlement path (DEP-09).** Every clearing and funding file passes through the MFT appliances. They cannot run the company's EDR agent, and the manual fallback (secure upload to bank and network portals) has been drilled only with Bank A (EV-026). File transfer products have been a repeated target of mass exploitation campaigns, so this is the initial access path in the P08 scenario (P01 R-003; POAM-009).
+4. **Cloud concentration (DEP-01).** Cloud A carries all Merchant Acquiring authorization, about 70% of all authorization volume. The two-region active-active design met its 15-minute target in the 2026-02-21 failover test (EV-025), but it does not protect against a provider-wide control plane failure. The exit plan is a document only (P01 R-008).
+5. **Hosted payment fields at ISV partners (DEP-23).** Tamper-detection covers 64% of ISV integrations (EV-019), so a script attack in a partner checkout could go unseen (POAM-021).
+6. **People (DEP-25).** 5 of the 18 mainframe and settlement batch engineers are eligible to retire by 2028 (EV-005; P01 R-024).
 7. **Industry-wide dependencies (DEP-05, DEP-19).** The card networks and instant payment rails are single points of failure the company cannot remove; workarounds are procedural (network stand-in processing; next-day funding).
 
 ## 6. Resource requirements

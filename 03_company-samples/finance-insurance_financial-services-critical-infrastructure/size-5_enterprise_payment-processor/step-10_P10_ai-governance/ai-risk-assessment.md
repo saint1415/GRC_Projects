@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, Inc. (publicly traded merchant payment processor) and Cris Santos Payouts, LLC |
 | Tier / Vertical | Enterprise / Financial Services |
 | Scope | Enterprise AI portfolio (12 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001, the transaction fraud-detection model, in section 7 |
+| Inventory | `ai-use-case-inventory.csv` (12 use cases), built from the AI and model risk committee inventory (EV-058), the accounts payable vendor master (EV-048), Model Risk Management records (EV-059, EV-085) and the inventory refresh for the 2026-08-19 committee meeting, which reviewed vendor feature settings and business unit pilot records (EV-084). The `source_evidence` column names the source of each row. Not established: AI features inside vendor products that neither the inventory nor the refresh surfaced (intake open request), and workforce use of public AI tools from personal devices outside the web proxy |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI and model risk committee (chaired by the Chief Risk Officer), meeting of 2026-08-19; GRC team and Model Risk Management prepared the portfolio review |
 | Decision | Executive risk committee, 2026-09-08 (section 9) |
