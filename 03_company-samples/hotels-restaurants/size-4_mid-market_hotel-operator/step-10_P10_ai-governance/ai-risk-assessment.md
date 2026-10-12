@@ -10,7 +10,7 @@
 | Decision | Chief Operating Officer, 2026-09-15 (AI-004, the High-tier use case, noted by the CEO); Medium and Low decisions by the AI review group the same day |
 
 ## 1. Summary
-Five of the six tools (AI-001 to AI-005) went live without a security, privacy, or legal review (gap 11 in the company facts). None is out of control, but four have problems that need dated conditions:
+Five of the six tools (AI-001 to AI-005) went live without a security, privacy, or legal review (EV-053). None is out of control, but four have problems that need dated conditions:
 - **AI-001, pricing:** publishes resort rates automatically with no floor, ceiling, or emergency rule. A back-test of a 2025 declared state of emergency showed rates 41% above the 30-day average at Resort 2 (Fla. Stat. 501.160). The contract lets the vendor pool the company's non-public data into a shared benchmark.
 - **AI-002, chatbot:** quotes nightly rates without the $40 resort fee (16 CFR 464.2) and keeps transcripts, 61 of them with card numbers, indefinitely.
 - **AI-003, call recording and scoring:** transferred and outbound calls are recorded without an announcement (Fla. Stat. 934.03(2)(d)), and recordings and transcripts hold spoken card numbers and security codes.

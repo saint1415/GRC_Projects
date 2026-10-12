@@ -10,7 +10,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1); the Generative AI Profile (AI 600-1) applies to AI-002 if it is ever enabled |
 | Assessor / date | Assistant Manager (Security and Privacy Lead) with the Owner-Manager, 2026-08-20 to 2026-08-21 |
 | Decision | Owner-Manager, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounting SaaS vendor payments, the pricing tool settings, the PMS vendor's add-on offer and a staff question (EV-024, EV-032, EV-033, EV-034). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner and decision authority:** the Owner-Manager, who subscribed to the tool and sets rates. A conflict exists: the person who benefits from higher rates also approves the pricing rules. It is compensated by written rules (section 5), the Assistant Manager's monthly review of the change log, and the yearly independent assessment.
@@ -35,7 +35,7 @@
 | Contract | Subscription terms: the vendor uses only the motel's own data and public listed rates for the motel's recommendations; no pooling of the motel's non-public data with other customers (terms read 2026-08-20) |
 
 ### AI-002 AI guest messaging assistant (proposed)
-The PMS vendor offers an add-on that answers guest texts and OTA messages with a generative AI model, quotes availability and rates, and drafts replies. The Owner-Manager was offered a free trial in July 2026 and did not start it. It is not enabled.
+The PMS vendor offers an add-on that answers guest texts and OTA messages with a generative AI model, quotes availability and rates, and drafts replies. The Owner-Manager was offered a free trial in July 2026 and did not start it. It is not enabled (EV-033).
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
@@ -58,7 +58,7 @@ The PMS vendor offers an add-on that answers guest texts and OTA messages with a
 **AI-002: Medium if enabled** (interacts directly with guests and makes price statements; no decisions about individuals). **AI-003: Low** when used only with public information; prohibited for anything else.
 
 ## 4. MEASURE
-The Assistant Manager back-tested the tool's change log from 2025-03-01 to 2026-07-31 and ran rate checks on 2026-08-20.
+The Assistant Manager back-tested the tool's change log from 2025-03-01 to 2026-07-31 and ran rate checks on 2026-08-20 (EV-060), reviewed the vendor's terms, questionnaire and interface field list (EV-061), and checked the price on each channel on 2026-08-21 (EV-062).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|

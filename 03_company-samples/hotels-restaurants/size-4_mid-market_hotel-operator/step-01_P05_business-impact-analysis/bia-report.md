@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (Florida hotel owner and operator: 2 independent resorts and 4 franchised select-service hotels) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and GRC Analyst with the vCISO and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-06 to 2026-07-31 (walkthroughs at all 6 hotels, 2026-07-13 to 2026-07-24) | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-056), FY2025 revenue report by hotel and department (EV-046), operating statistics report (EV-047), card acceptance report (EV-031), SYS-01 vendor SOC 2 report and contract (EV-036), franchise agreements (EV-039), backup and lock server settings (EV-020, EV-021) and the hurricane plans and downtime procedures (EV-045). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Resort 1, Resort 2, the 4 franchised select-service hotels (Hotels 3 to 6), the central reservations office (CRO), and the corporate shared services. It rates 16 business processes and puts a dollar value on what an outage costs, along with its operational, regulatory, guest safety, and reputational effects.
@@ -15,10 +16,10 @@ The results feed:
 - the IT sections of the hotels' hurricane plans (section 7).
 
 ## 2. System and business description
-The company runs 1,160 rooms in 6 Florida hotels, about 147,000 stays a year, and about 1.05 million card transactions a year under 10 merchant accounts. Guest-facing and payment work runs on the Property Management and Point-of-Sale Platform (PMPS) described in the SSP (P02): the resort PMS (SaaS), payment gateways and devices, the resort outlet POS systems, the SD-WAN and property networks, 520 PCs and 180 tablets and phones, the door lock systems, the identity provider, the 4-account cloud landing zone, and the MSSP-operated SIEM. Hotels 3 to 6 also depend on the franchisor's PMS, central reservation system, and loyalty platform (SYS-02), which the company does not control (see `../00_company-facts.md` sections 3, 4, and 7).
+The company runs 1,160 rooms in 6 Florida hotels, about 147,000 stays a year, and about 1.05 million card transactions a year under 10 merchant accounts. Guest-facing and payment work runs on the Property Management and Point-of-Sale Platform (PMPS) described in the SSP (P02): the resort PMS (SaaS), payment gateways and devices, the resort outlet POS systems, the SD-WAN and property networks, 520 PCs and 180 tablets and phones, the door lock systems, the identity provider, the 4-account cloud landing zone, and the MSSP-operated SIEM. Hotels 3 to 6 also depend on the franchisor's PMS, central reservation system, and loyalty platform (SYS-02), which the company does not control (see the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $100 million in annual revenue, about $274,000 a day: Resort 1 about $114,000 (rooms $82,000; food, beverage, and other $32,000), Resort 2 about $91,000 (rooms $66,000; other $25,000), and Hotels 3 to 6 about $69,000 together.
+Dollar values are scaled to about $100 million in annual revenue, about $274,000 a day (FY2025 revenue report, EV-046): Resort 1 about $114,000 (rooms $82,000; food, beverage, and other $32,000), Resort 2 about $91,000 (rooms $66,000; other $25,000), and Hotels 3 to 6 about $69,000 together.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -28,7 +29,7 @@ Dollar values are scaled to about $100 million in annual revenue, about $274,000
 | Guest safety | Guests cannot secure or reach their rooms, or cannot be accounted for during an evacuation | Delayed service with a safe workaround | None |
 | Reputation | Regional media, a wave of online reviews, loss of online travel agency ranking, or franchisor or REIT intervention | Individual complaints and reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra cost (guest compensation, walked guests, overtime, and security staffing) over the process's MTD. The process owners supplied the recovery assumptions: about 30% of bookings missed during a distribution outage and about 40% of lost CRO and outlet sales are not recovered. Payments delayed by an outage are shown as revenue at risk, not as loss, because most are collected later.
+**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra cost (guest compensation, walked guests, overtime, and security staffing) over the process's MTD. The process owners supplied the recovery assumptions (EV-056): about 30% of bookings missed during a distribution outage and about 40% of lost CRO and outlet sales are not recovered. Payments delayed by an outage are shown as revenue at risk, not as loss, because most are collected later.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -62,11 +63,11 @@ Dollar values are scaled to about $100 million in annual revenue, about $274,000
 - **Contracts, not law, drive most regulatory ratings.** The merchant agreement, the franchise agreements, and (from 2027) the REIT management agreement carry the notice and recovery duties. The guest register (Fla. Stat. 509.101(2)) is the main statutory record.
 
 ## 5. Key findings
-1. **The resort PMS vendor's recovery objectives are not in the contract.** Its SOC 2 report states RTO 4 hours and RPO 15 minutes. That meets the 4-hour RTO for payments and distribution (BP-03, BP-04) but **not the 2-hour RTO for check-in (BP-01)**. The printed lists every 4 hours and emergency key cards cover the difference. Action: write the objectives into the contract at renewal (P01 R-014; P09 vendor review).
-2. **Hotels 3 to 6 depend on the franchisor for check-in, payments, and distribution.** The franchise agreements state no recovery objectives and give the company no say over recovery order. The brand's own continuity plan has not been shared (P01 R-016).
-3. **Company-managed recovery is unproven.** The resort lock servers are backed up weekly to a local disk only and have never been restored. The data warehouse and CRM restores have never been tested. The RTOs for BP-02, BP-12, and BP-15 are targets, not demonstrated capabilities (P01 R-015, R-017; P07 CP-4).
+1. **The resort PMS vendor's recovery objectives are not in the contract.** Its SOC 2 report states RTO 4 hours and RPO 15 minutes (EV-036). That meets the 4-hour RTO for payments and distribution (BP-03, BP-04) but **not the 2-hour RTO for check-in (BP-01)**. The printed lists every 4 hours and emergency key cards cover the difference. Action: write the objectives into the contract at renewal (P01 R-014; P09 vendor review).
+2. **Hotels 3 to 6 depend on the franchisor for check-in, payments, and distribution.** The franchise agreements state no recovery objectives and give the company no say over recovery order. The brand's own continuity plan has not been shared (EV-039; P01 R-016).
+3. **Company-managed recovery is unproven.** The resort lock servers are backed up weekly to a local disk only and have never been restored (EV-021). The data warehouse and CRM restores have never been tested (EV-020). The RTOs for BP-02, BP-12, and BP-15 are targets, not demonstrated capabilities (P01 R-015, R-017; P07 CP-4).
 4. **Resort 2's legacy POS has no tested fallback.** If its on-premises server fails, outlets fall back to paper checks with no way to take cards except loaner P2PE devices, which have not been set up (P01 R-019).
-5. **IT is missing from the hurricane plans at Hotels 3 to 6.** The resorts' plans cover moving the lock server and network equipment; the select-service hotels' plans do not (P01 R-018).
+5. **IT is missing from the hurricane plans at Hotels 3 to 6.** The resorts' plans cover moving the lock server and network equipment; the select-service hotels' plans do not (EV-045; P01 R-018).
 
 ## 6. Resource requirements
 | Resource | Description | Supports |
