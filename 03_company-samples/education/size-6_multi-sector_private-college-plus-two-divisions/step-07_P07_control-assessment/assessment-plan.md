@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The SRLP's** system-specific controls were assessed because it is the SSP system and carries the college's top risk on the warehouse (HE-002, GR-05).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Student Health was sampled on governance controls (CA-2, PL-1) because its inheritance is undocumented and its standards predate the acquisition (scenario gap 4), and on identity and backups because its legacy domain sits outside SYS-G1.
+Student Health was sampled on governance controls (CA-2, PL-1) because its inheritance is undocumented and its standards predate the acquisition (group gap 4), and on identity and backups because its legacy domain sits outside SYS-G1.
 
 ## 2. Controls selected
 **38 control assessments** (34 distinct controls; AC-6, IA-2, IA-5, and CP-9 were assessed in two scopes), **236 determination statements**.
@@ -25,12 +25,12 @@ Student Health was sampled on governance controls (CA-2, PL-1) because its inher
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5 | 44 | Every division's access control; GR-07, GR-14 | Focused / Comprehensive (all federated divisions sampled) |
 | Common control (Group HR with SYS-G1; Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-15; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-03, GR-15; group gap 7 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-8, SC-12, CM-6 | 21 | GR-02; immutable backups and guardrails | Focused / Focused |
-| SRLP (P02 system) | AC-3, AC-4, AC-6, PT-3, CM-8, CP-4 | 20 | HE-002 and GR-05 (High); scenario gap 2 | Comprehensive / Comprehensive |
-| Division sample: Higher Education | SA-9, CA-8, SI-2, AU-6, IA-5 | 30 | HE-003, HE-005, HE-018; scenario gaps 3 and 8 | Focused / Focused (2 of 6 legacy campuses) |
-| Division sample: Education Software | AC-6, SA-11, CM-4, SI-12 | 16 | ES-001, ES-003 (High); scenario gaps 1 and 6 | Focused / Focused |
-| Division sample: Student Health | CA-2, PL-1, IA-2, CP-9 | 36 | SH-001, SH-004, SH-005; scenario gap 4 | Focused / Focused (6 of 96 clinics) |
+| SRLP (P02 system) | AC-3, AC-4, AC-6, PT-3, CM-8, CP-4 | 20 | HE-002 and GR-05 (High); group gap 2 | Comprehensive / Comprehensive |
+| Division sample: Higher Education | SA-9, CA-8, SI-2, AU-6, IA-5 | 30 | HE-003, HE-005, HE-018; group gaps 3 and 8 | Focused / Focused (2 of 6 legacy campuses) |
+| Division sample: Education Software | AC-6, SA-11, CM-4, SI-12 | 16 | ES-001, ES-003 (High); group gaps 1 and 6 | Focused / Focused |
+| Division sample: Student Health | CA-2, PL-1, IA-2, CP-9 | 36 | SH-001, SH-004, SH-005; group gap 4 | Focused / Focused (6 of 96 clinics) |
 | **Total** | **38** | **236** | | |
 
 ## 3. Methods and objects
@@ -47,6 +47,17 @@ Student Health was sampled on governance controls (CA-2, PL-1) because its inher
   - local administrator password checks on 31 servers at 2 legacy campuses;
   - walk-throughs of sign-in practice at 6 clinics.
 
+### What each test could show
+The group policies v2026 (P06), including POL-03, the updated group incident response plan, the P08 runbook and the notification matrix were drafts during fieldwork; the board risk committee approved them on 2026-09-15, effective 2026-10-01. Controls that the 2025 group policies, the division standards and existing configurations already required were tested for operation. Statements that rest on the drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before 2026 under the 2025 group policies or the division standards and was tested on samples, configurations, or live systems | 205 |
+| Design | The statement rests on a draft (IR-8: the incident response plan and P08 runbook; IR-6: the notification matrix and POL-03 v2026); its design was reviewed. Operation is tested at the 2027-04 follow-up | 19 |
+| Not implemented | Nothing existed to test (purposes for warehouse data sets and purpose review of processing changes, PT-3; an end-to-end test of the SRLP plan and its manual workarounds, CP-4; security requirements, oversight and monitoring for the Campus Platform, SA-9; privacy assessment, red-team and safety testing for the AI tutor, SA-11; confirmation of the controls Student Health inherits, CA-2; a restore of clinic file server backups, CP-9) | 12 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-007, the 6 analyst roles from the warehouse grants export in EV-053, the 61 support accounts from the support console account list in EV-059, and the 212 former districts from the tenant list in EV-062).
+
 ## 4. Rules of engagement
 - No testing that could affect instruction, aid disbursement, clinical care, or software customers. Tests ran in test tenants where possible; the warehouse egress test used synthetic data.
 - No student, patient, or customer data left group systems. Screenshots were redacted.
@@ -62,14 +73,14 @@ Student Health was sampled on governance controls (CA-2, PL-1) because its inher
 | Division sample: Student Health | 27 | 9 | 36 |
 | **Total** | **190** | **46** | **236** |
 
-**Common controls are strong.** 121 of 134 common statements were satisfied. Identity for people (IA-2, IA-2(1), AC-2(3), AC-6(5)), terminations (PS-4), training (AT-2), cloud protection (CP-9, SC-7, SC-8, SC-12, CM-6), and vulnerability management (RA-5) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **monitoring coverage** for warehouse exports and the support console (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 7.
+**Common controls are strong.** 121 of 134 common statements were satisfied. Identity for people (IA-2, IA-2(1), AC-2(3), AC-6(5)), terminations (PS-4), training (AT-2), cloud protection (CP-9, SC-7, SC-8, SC-12, CM-6), and vulnerability management (RA-5) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **monitoring coverage** for warehouse exports and the support console (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8), which is group gap 7.
 
-**The SRLP is where the college's risk is.** AC-3, AC-4, and AC-6 were fully other than satisfied, and 3 of 6 PT-3 statements failed. Test queries under 4 of 6 analyst roles reached every student's records and the clinic utilization tables (scenario gap 2).
+**The SRLP is where the college's risk is.** AC-3, AC-4, and AC-6 were fully other than satisfied, and 3 of 6 PT-3 statements failed. Test queries under 4 of 6 analyst roles reached every student's records and the clinic utilization tables (group gap 2).
 
 **Division samples:**
-- *Higher Education:* no security requirements, oversight, or monitoring for the Campus Platform as a service provider (SA-9, gap 3); penetration test scope (CA-8); late patching at legacy campuses (SI-2); FAMS logs not reviewed (AU-6). **New finding:** one local administrator password shared by all 31 servers at the 2 sampled legacy campuses, unchanged since 2023 (IA-5). It was added to the risk register as HE-021.
-- *Education Software:* standing cross-tenant support access, with 19 of 30 sampled reads lacking customer approval (AC-6, gap 1); the AI tutor launched without privacy impact analysis or safety testing (CM-4, SA-11, gap 6); retention of 212 former districts' data (SI-12).
-- *Student Health:* inheritance undocumented (CA-2) and standards not reviewed since 2023 (PL-1), both gap 4; incomplete and untested file server backups (CP-9). **New finding:** shared front desk logins at 3 clinics on the legacy domain (IA-2).
+- *Higher Education:* no security requirements, oversight, or monitoring for the Campus Platform as a service provider (SA-9, group gap 3); penetration test scope (CA-8); late patching at legacy campuses (SI-2); FAMS logs not reviewed (AU-6). **New finding:** one local administrator password shared by all 31 servers at the 2 sampled legacy campuses, unchanged since 2023 (IA-5). It was added to the risk register as HE-021.
+- *Education Software:* standing cross-tenant support access, with 19 of 30 sampled reads lacking customer approval (AC-6, group gap 1); the AI tutor launched without privacy impact analysis or safety testing (CM-4, SA-11, group gap 6); retention of 212 former districts' data (SI-12).
+- *Student Health:* inheritance undocumented (CA-2) and standards not reviewed since 2023 (PL-1), both group gap 4; incomplete and untested file server backups (CP-9). **New finding:** shared front desk logins at 3 clinics on the legacy domain (IA-2).
 
 **Controls fully other than satisfied** (every statement failed): IR-3 (common), AC-3, AC-4, and AC-6 (SRLP), CA-8 (Higher Education), and AC-6 (Education Software). Each has only one determination statement.
 

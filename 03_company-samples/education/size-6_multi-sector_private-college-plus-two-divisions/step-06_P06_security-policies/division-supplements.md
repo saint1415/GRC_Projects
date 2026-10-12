@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Higher Education | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Add the support access review (POL-02 4.10) and data-sharing approval steps (POL-04 4.4) |
 | Education Software | v2025 | 2025-10 | Aligned, but missing the AI and children's privacy change gate and the customer access rule required by POL-01 4.12 and POL-02 4.10 | Add both by 2026-11-30 (POAM-001, POAM-014) |
-| Student Health | v2023 (pre-acquisition standards) | Never aligned to group policy | **Drifted** (scenario gap 4); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-018) |
+| Student Health | v2023 (pre-acquisition standards) | Never aligned to group policy | **Drifted** (group gap 4); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-018) |
 
 ## 3. What each supplement adds
 ### 3.1 Higher Education supplement (Title IV institution; FERPA)
@@ -68,9 +68,9 @@ The 2023 Student Health standards were written by the clinic operator before the
 | Authentication | Passwords only on clinic workstations | MFA for all workforce (POL-02 4.3) | About 40% of users without MFA (POAM-017) |
 | Shared logins | Front desk logins allowed | Unique identity for everyone (POL-02 4.1) | Shared logins found at 3 clinics (P07) |
 | Termination | Next business day | Within 4 hours (POL-02 4.5) | Longer exposure window |
-| Data sharing | Clinic manager approves exports | Data-sharing approval by both data owners and the Privacy Officer (POL-04 4.4) | The 2025 utilization extract (scenario gap 2) |
+| Data sharing | Clinic manager approves exports | Data-sharing approval by both data owners and the Privacy Officer (POL-04 4.4) | The 2025 utilization extract (group gap 2) |
 | Backups | Nightly backup, no test requirement | Quarterly restore tests (supplement section 3.3) | Untested backups (POAM-019) |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 4 (POAM-016) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Group gap 4 (POAM-016) |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.12) | AI scribe pilot without required consent field |
 
 **Why the drift happened.** The acquisition integration plan covered identity and network migration but assigned no owner to policy alignment. **Fix:** the Student Health security and compliance lead owns the re-issue (due 2026-11-30), and the Group CISO's policy office now tracks supplement versions in the policy register.

@@ -7,7 +7,7 @@
 | AI use cases | **AI-001:** student-success early-alert risk scoring, piloted in 2 programs since the May 2026 term (full assessment). **AI-002:** admissions applicant scoring in the CRM, available but not approved (screening assessment) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook. AI 600-1 is not used because neither use case is generative |
 | Assessor / date | Director of Student Success with the Director of Institutional Effectiveness, the Registrar, and the IT Director, 2026-08-18 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the SIS analytics module configuration, the CRM configuration, the integration field mapping and the accounts payable list (EV-046, EV-047, EV-010, EV-032). Staff use of general-purpose AI tools with student data was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Student Success for AI-001; Director of Admissions for AI-002. The Director of Institutional Effectiveness configures the AI-001 model and runs the bias tests.

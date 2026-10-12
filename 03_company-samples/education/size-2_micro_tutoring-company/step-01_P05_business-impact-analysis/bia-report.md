@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (K-12 tutoring and learning center) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Center Director (Information Security Coordinator) with the Owner, the Director of Tutoring, the Enrollment and Billing Coordinator, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** Owner, 2026-08-28
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-039), FY2025 revenue and cash report (EV-034), session, billing and payment report (EV-018), district contract (EV-027), suite backup job report (EV-014), tutoring platform vendor SOC 2 report (EV-038), scheduling platform vendor terms (EV-023), MSP service contract (EV-025). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It supports:
@@ -14,10 +15,10 @@ This BIA lists every business function of the company, how long each can be down
 No federal rule sets recovery times for a tutoring company. The targets below are business decisions, approved by the Owner.
 
 ## 2. System and business description
-One Florida learning center, 7 employees, 14 contractor tutors, about 420 students in the last 12 months (about 250 under 13), and about 300 sessions a week. Nearly everything runs in vendor SaaS: the tutoring and learning platform (SYS-01), the scheduling, enrollment, and billing platform (SYS-02), and the productivity suite (SYS-03). On site are 7 laptops, 1 front-desk desktop, and 10 student tablets (SYS-04) and the center network (SYS-05). The MSP runs IT and the suite backup (SYS-06). Contractor tutors teach online from their own computers (SYS-07). See `../00_company-facts.md` sections 1 and 3.
+One Florida learning center, 7 employees, 14 contractor tutors, about 420 students in the last 12 months (about 250 under 13), and about 300 sessions a week. Nearly everything runs in vendor SaaS: the tutoring and learning platform (SYS-01), the scheduling, enrollment, and billing platform (SYS-02), and the productivity suite (SYS-03). On site are 7 laptops, 1 front-desk desktop, and 10 student tablets (SYS-04) and the center network (SYS-05). The MSP runs IT and the suite backup (SYS-06). Contractor tutors teach online from their own computers (SYS-07). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $3,700 per operating day.
+Dollar values are scaled to about $1.1 million in annual revenue, about $3,700 billed per operating day (EV-034).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -48,10 +49,10 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,700 p
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 Tutoring and learning platform (SaaS) | Online classroom, lesson materials, practice exercises, session notes, assessments, progress reports, recordings | Vendor backups and replication (vendor SOC 2 report: RTO 8 h, RPO 1 h; see P09). **The company has never exported its own copy** | BP-02, BP-03, BP-04, BP-05 |
-| SYS-02 Scheduling, enrollment, and billing platform (SaaS) | Schedule, family accounts, enrollment agreements and consent records, invoices, payments | Vendor's standard terms state daily backups; **no stated RTO or RPO and no SOC 2 report** | BP-01, BP-07 |
+| SYS-01 Tutoring and learning platform (SaaS) | Online classroom, lesson materials, practice exercises, session notes, assessments, progress reports, recordings | Vendor backups and replication (vendor SOC 2 report: RTO 8 h, RPO 1 h, EV-038; see P09). **The company has never exported its own copy** | BP-02, BP-03, BP-04, BP-05 |
+| SYS-02 Scheduling, enrollment, and billing platform (SaaS) | Schedule, family accounts, enrollment agreements and consent records, invoices, payments | Vendor's standard terms state daily backups; **no stated RTO or RPO and no SOC 2 report** (EV-023) | BP-01, BP-07 |
 | SYS-03 Productivity suite (SaaS) | Email, shared drive ("Student files" folder, district rosters, HR files), calendar, video meetings | Vendor service resilience; email and shared drive copied nightly to SYS-06 | BP-01, BP-03, BP-04, BP-06, BP-08 |
-| SYS-06 Suite backup (SaaS, MSP-operated) | Nightly copy of email and the shared drive, 30 days of versions | **Never restore-tested** | BP-06, BP-08 |
+| SYS-06 Suite backup (SaaS, MSP-operated) | Nightly copy of email and the shared drive, 30 days of versions | **Never restore-tested** (EV-014) | BP-06, BP-08 |
 | SYS-04 Endpoints | 7 laptops, 1 front-desk desktop, 10 student tablets | No local data by design; the front-desk desktop caches downloaded files | All |
 | SYS-05 Center network | Firewall, staff Wi-Fi, student and guest Wi-Fi, one internet line | Firewall configuration backed up by the MSP | BP-01, BP-02 |
 | SYS-07 Contractor tutors' computers | Personal computers used for online sessions | Not managed; tutors can switch to another device and sign in | BP-03, BP-04 |
@@ -60,10 +61,10 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,700 p
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Data protection terms | Evidence of recovery capability |
 |---|---|---|---|
-| Tutoring platform vendor | BP-02 (partly), BP-03, BP-04, BP-05 | Standard terms; data processing addendum available but not signed (P03) | SOC 2 Type 2 report reviewed 2026-08-18 (P09): RTO 8 h does **not** meet the 4-hour RTO for BP-03; RPO 1 h meets every RPO |
+| Tutoring platform vendor | BP-02 (partly), BP-03, BP-04, BP-05 | Standard terms; data processing addendum available but not signed (P03) | SOC 2 Type 2 report (EV-038) reviewed 2026-08-18 (P09): RTO 8 h does **not** meet the 4-hour RTO for BP-03; RPO 1 h meets every RPO |
 | Scheduling and billing platform vendor | BP-01, BP-07 | Standard terms | None beyond "daily backups" in the terms |
 | Productivity suite vendor | BP-01, BP-03 (fallback), BP-06, BP-08 | Standard business terms | Vendor service commitments |
-| MSP | Recovery of every company device; operates the suite backup | Service contract (no security terms) | 4-business-hour response time; no recovery commitment |
+| MSP | Recovery of every company device; operates the suite backup | Service contract (no security terms) | 4-business-hour response time; no recovery commitment (EV-025) |
 | Backup service (MSP subcontractor) | Restore of email and the shared drive | Through the MSP | None until the first restore test |
 | Internet provider | BP-01 and BP-02 at the center; contractor tutors use their own home lines | Not applicable | None; single line |
 | School district | BP-04 (sites, rosters) | Data privacy agreement | Not applicable |

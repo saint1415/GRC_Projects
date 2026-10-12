@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads with the university registrar, the Student Health Privacy Officer, and Education Software privacy counsel, coordinated by the Group Chief Privacy Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what
 | Entity | Role under the main rules | Basis |
 |---|---|---|
@@ -19,10 +21,10 @@
 | Student Health | **HIPAA covered entity** (bills health plans electronically); for students, a party acting for the college or a contracting college, so their records are those institutions' FERPA records | 45 CFR 160.103; 34 CFR 99.3; HHS and ED Joint Guidance (December 2019) |
 | Corporate shared services | Business associate of Student Health (intercompany BAA, 2024); provider of common controls to all divisions | Intercompany agreements |
 
-**The college's Safeguards Rule obligations apply in full.** The college holds customer information on about 1.4 million consumers, far above the 5,000-consumer threshold in 16 CFR 314.6, so the written risk assessment, penetration testing and vulnerability assessments, written incident response plan, and annual board report all apply. 314.4(a)(1)-(3) do not apply because the Qualified Individual is a college employee.
+**The college's Safeguards Rule obligations apply in full.** The college holds customer information on about 1.4 million consumers (EV-037), far above the 5,000-consumer threshold in 16 CFR 314.6, so the written risk assessment, penetration testing and vulnerability assessments, written incident response plan, and annual board report all apply. 314.4(a)(1)-(3) do not apply because the Qualified Individual is a college employee.
 
 ### 1.2 FERPA or HIPAA: the clinic records decision
-The scenario's hardest applicability question is which law governs Student Health's records. The decision, confirmed by group legal on 2026-08-14:
+The scenario's hardest applicability question is which law governs Student Health's records. The decision, confirmed by group legal on 2026-08-14 (EV-092):
 - **Students seen at the 22 campus clinics:** Student Health runs these clinics on behalf of Cris Santos College. Their records are the college's **education records** or **treatment records** under FERPA (34 CFR 99.3), and the HIPAA definition of PHI excludes both (45 CFR 160.103, paragraphs (2)(i) and (ii)). The HHS and ED Joint Guidance (December 2019 update, questions 3 and 4) says the same for clinics run on behalf of a university.
 - **Students seen at the 58 contract clinics:** the same reasoning applies, but the records belong to the 37 contracting institutions, not to Cris Santos College.
 - **Nonstudent patients** (employees, family members, community patients) and **all patients at the 16 community urgent care sites:** PHI under HIPAA.
@@ -60,10 +62,21 @@ Consequences used throughout this sample: Student Health is one covered entity (
 ## 3. Method
 1. **Requirements.** Higher Education rows are each paragraph of 16 CFR 314.3 and 314.4 at the most granular level the regulation uses, reused from the verified Small education sample and re-checked for this size, plus FERPA and Title IV rows. Education Software rows follow 16 CFR 312.8 and 312.10 (eCFR, current through 2026-09-23) and the contract and SOC 2 commitments. Student Health rows select the HIPAA specifications where its evidence differs from the group's common controls, plus Privacy, Breach Notification, and FERPA rows. Summaries paraphrase public-domain regulatory text; contract rows describe the company's own commitments.
 2. **Crosswalk.** Every row carries an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5. No official NIST mapping exists for 16 CFR 314 or 312. HIPAA rows are consistent with the Health Care crosswalk in `02_industry-rules/health-care/`, itself an author mapping.
-3. **Evidence.** Interviews with each division's security, privacy, academic, clinical, and legal leads; document review; configuration exports; and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts and configuration records, EV-001 to EV-076), gap analysis interviews with each division's security, privacy, academic, clinical, and legal leads (EV-085 Higher Education, EV-086 Education Software, EV-087 Student Health), fieldwork documents (EV-088 to EV-090), documents received after fieldwork (EV-091 to EV-096), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable.
 
 ## 4. Results
+### 4.0 Group gaps
+Eight gaps cross divisions or sit where divisions meet. They are numbered here and cited as group gaps 1 to 8 across this sample.
+1. **Support access across tenants.** Education Software support engineers hold standing read access to every customer tenant on SYS-E1 and SYS-E2, including the college's tenant, through the support console (SYS-E3). Access is not tied to a ticket or a time limit (EV-059; P07 AC-6).
+2. **Student data warehouse mixes divisions and purposes.** A clinic utilization extract added in 2025 sent Student Health visit data to the college's student data warehouse for the student-success model. It included records of nonstudent patients (PHI) and of students of contracted colleges, and warehouse analysts have access beyond any legitimate educational interest (34 CFR 99.31(a)(1)(ii); 45 CFR 164.502) (EV-088, EV-053; P07 AC-3).
+3. **Intercompany service provider oversight.** The college treats Education Software as an internal department. The 2021 intercompany service agreement has no safeguards, incident notice, or right-to-assess terms, and the college has never assessed the Campus Platform as a service provider (16 CFR 314.4(f)) (EV-004, EV-041, EV-031).
+4. **Student Health integration.** Division standards still date from before the 2024 acquisition. About 40% of Student Health users sign in through the legacy identity domain (SYS-S2) without MFA for on-site clinical workstations, and common control inheritance is not documented for the division (EV-070, EV-069, EV-018).
+5. **College AI governance.** The admissions applicant scoring model has run since 2025 without bias testing, applicant notice, or a review against Colorado SB26-189 (effective 2027-01-01) for online applicants in Colorado (EV-049, EV-038).
+6. **Education Software AI and COPPA.** The K-12 AI tutoring assistant launched as a pilot in 140 districts in January 2026 without a children's privacy review, a SOC 2 system description update, or district contract updates. Data from 212 former district customers is still retained past contract end, contrary to the written retention policy (312.10) (EV-063, EV-094, EV-062, EV-061).
+7. **Multi-regulator notification.** The notification matrix covers FSA, the FTC, HIPAA, customer contracts, state law, and the SEC, but it has never been exercised across divisions, and district contract notice terms vary (EV-016, EV-057).
+8. **Legacy campuses.** The 6 campuses acquired in 2023 run a legacy SIS and file servers on flat networks with local administrator accounts. The 2026 penetration test covered the Campus Platform tenant but not these campuses (314.4(d)(2)) (EV-048, EV-015).
+
 ### 4.1 Higher Education: Safeguards Rule, FERPA, and Title IV (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -109,16 +122,16 @@ Of the 25 partially met rows, 7 are rated **High**, 16 **Moderate**, and 2 **Low
 | Section 1557, state recording laws, Part 2, FTC HBNR | 0 | 1 | 1 | 2 |
 | **Total (32)** | **12** | **13** | **5** | **2** |
 
-The selected Security Rule rows focus on specifications where Student Health's evidence differs from the group's. All other specifications rely on group common controls, which is why documenting inheritance (scenario gap 4) matters.
+The selected Security Rule rows focus on specifications where Student Health's evidence differs from the group's. All other specifications rely on group common controls, which is why documenting inheritance (group gap 4) matters.
 
 **Not met:** 164.502(a) (the utilization extract disclosed nonstudent PHI to the college warehouse without a permission); 34 CFR 99.33(a) (contract-college student records went to the same warehouse); 164.308(a)(7)(ii)(D) (file server restores never tested); 164.316(b)(2)(iii) (standards not updated since 2023); and 45 CFR 92.210 (no decision support tool inventory).
 
-**The extract was assessed as a possible breach.** P03 fieldwork identified the utilization extract on 2026-07-22. Student Health opened a four-factor risk assessment under 164.402 on 2026-07-24 for about 41,000 nonstudent patients whose visit data reached the college warehouse, revoked warehouse access to the tables on 2026-08-07, and completed the assessment on 2026-09-11, inside the 60-day outer limit counted from 2026-07-22. The extract held record numbers, birth years, ZIP codes, visit dates, clinics, and diagnosis categories, but no names; 6 college analysts ran aggregate queries only; and each signed an attestation that no copies exist. The Privacy Officer and counsel concluded a **low probability of compromise**, so no breach notice is required, and the file is kept for 6 years (SH-G22). The disclosure itself was still impermissible (SH-G20, Not met). The 3 affected contracting colleges are being told so they can record the disclosure under 99.32 and make their own decisions.
+**The extract was assessed as a possible breach.** P03 fieldwork identified the utilization extract on 2026-07-22 (EV-088). Student Health opened a four-factor risk assessment under 164.402 on 2026-07-24 for about 41,000 nonstudent patients whose visit data reached the college warehouse, revoked warehouse access to the tables on 2026-08-07, and completed the assessment on 2026-09-11 (EV-096), inside the 60-day outer limit counted from 2026-07-22. The extract held record numbers, birth years, ZIP codes, visit dates, clinics, and diagnosis categories, but no names; 6 college analysts ran aggregate queries only; and each signed an attestation that no copies exist. The Privacy Officer and counsel concluded a **low probability of compromise**, so no breach notice is required, and the file is kept for 6 years (SH-G22). The disclosure itself was still impermissible (SH-G20, Not met). The 3 affected contracting colleges are being told so they can record the disclosure under 99.32 and make their own decisions.
 
 **MFA is a policy gap, not a HIPAA gap today.** 164.312(d) requires verifying identity, which passwords can do. The group policy requires MFA, and the HIPAA Security Rule NPRM would require it, so the legacy domain is tracked as POAM-017 but rated Met for the current rule.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Standing cross-tenant support access (1) | ES, HE | 314.4(c)(1); 99.31(a)(1)(i)(B); 312.8(b)(3); FTC Act Section 5 | High | Ticket-bound, customer-approved, time-limited access; correct the trust page now | Education Software CISO | 2026-12-31 |
 | 2 | Clinic extract into the warehouse (2) | SH, HE | 164.502(a); 99.3; 99.33(a); 99.31(a)(1)(ii) | High | Purge (the 164.402 assessment is complete); notify 3 colleges; warehouse role redesign and purpose tags | Group Chief Privacy Officer | 2026-10-31 (purge); 2027-03-31 (roles) |

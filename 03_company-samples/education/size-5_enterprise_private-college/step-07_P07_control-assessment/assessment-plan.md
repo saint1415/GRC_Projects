@@ -84,6 +84,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Enterprise Applications; SIS Application Manager; University Registrar; Vice President, Financial Aid; Vice President, Student Finance; Chief Data and Analytics Officer; Director of Academic Technology; Director of Security Operations; Director of Identity and Access Management; General Counsel; CFO; CISO; 20 randomly selected staff.
 - **Test:** access tests with audit test accounts; a bulk report export test (50,000 test records); a refund bank-change flow test with an audit test student account; default-credential tests on scanners (with vendor approval, after hours); a reachability test from the integration subnet to the SAIG servers; TLS scans; a log deletion attempt; a restore observation.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-027), and reviewed the draft 2026 statements for design only. The P08 runbook, approved on the same date, was also a draft; IR-8 was scored against the incident response plan in force (EV-035). Any statement the 2026 revisions add has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 263 (232 Satisfied, 31 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: detection of bulk exports and mass record views (AC-02(12)(a), SI-04b.), monitoring of new data uses against the data use register (PT-03d.[01]), and disposal of former students' data and SIS report exports (SI-12[02], SI-12[04]) | 5 |
+| **Total** | | **268** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-006, help desk resets, EV-005, the CMDB, EV-014, change records, EV-070, and SOC case records, EV-022) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect registration, aid processing, refunds, or SAIG transmissions. SAIG reachability tests used only management ports and ran outside transmission windows with the Vice President, Financial Aid's approval.
 - The refund flow test used an audit test student account with no real bank details and no payment.

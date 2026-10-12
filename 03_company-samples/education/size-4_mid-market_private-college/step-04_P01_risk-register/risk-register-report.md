@@ -11,7 +11,7 @@
 | Approved | 2026-09-17: Chief Information Officer (Moderate and below), President and Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (3 campuses, the online division, student financial services, enrollment management, academic and student affairs, corporate partnerships, and enterprise support), the Student Information and Learning Platform (SILP, the SSP system in P02), the campus safety systems, the about 90 vendors with student data (SYS-15), and the AI tools (SYS-16). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and control assessment (P07).
+**Scope.** All business units (3 campuses, the online division, student financial services, enrollment management, academic and student affairs, corporate partnerships, and enterprise support), the Student Information and Learning Platform (SILP, the SSP system in P02), the campus safety systems, the about 90 vendors with student data (SYS-15), and the AI tools (SYS-16), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **How this meets 314.4(b)(1).** The rule requires a written risk assessment with (i) criteria for evaluating and categorizing risks, (ii) criteria for assessing confidentiality, integrity, and availability, including the adequacy of existing controls, and (iii) requirements for how risks will be mitigated or accepted. Section 2 gives (i) and (ii); the tolerance table below and section 4 give (iii).
 
@@ -38,8 +38,8 @@ Approved by the President and CEO and noted by the audit committee on 2026-09-17
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $150,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Educational Services overlay (ransomware with student record exposure, account takeover, fraudulent applicants, third-party compromise), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood (criteria for evaluating risks, 314.4(b)(1)(i)).** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Educational Services overlay (ransomware with student record exposure, account takeover, fraudulent applicants, third-party compromise), the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the CIO, the Information Security Manager and the MSSP (EV-062). The gap analysis (P03) ran in the same fieldwork window and shared its interviews and samples (EV-063 to EV-068). The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood (criteria for evaluating risks, 314.4(b)(1)(i)).** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the refund and applicant fraud records (EV-038, EV-039), the incident queue (EV-037), scan results (EV-019), phishing results (EV-040), configuration exports, the walk-throughs, the gap analysis samples and the interviews.
 3. **Rate impact (confidentiality, integrity, and availability criteria, 314.4(b)(1)(ii)).** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, student safety and welfare, reputation). Existing controls are listed for each risk and were weighed in the likelihood of adverse impact.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -53,6 +53,8 @@ Approved by the President and CEO and noted by the audit committee on 2026-09-17
 | Low | 9 |
 | Very Low | 0 |
 | **Total** | **52** |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-038 was added on 2026-08-14 after testing found the access control vendor's always-on remote tool on the Campus 3 network (EV-AC-17). The `assessment_pass` column shows which pass produced each risk.
 
 Treatments: 47 Mitigate, 4 Accept (R-043, R-044, R-047, R-048), and 1 Share/Transfer (R-051). Status: 38 Open, 10 In progress, 4 Accepted.
 

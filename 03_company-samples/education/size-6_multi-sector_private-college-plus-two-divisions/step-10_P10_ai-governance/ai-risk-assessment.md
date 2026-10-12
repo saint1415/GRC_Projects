@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for the priority use cases. These are the college's admissions applicant scoring (AI-001) and student-success risk scoring (AI-002), which split the registry default; Education Software's K-12 AI tutoring assistant (AI-004) and its analytics products sold to schools (AI-005, AI-006); and Student Health's clinic AI tools (AI-007 to AI-009) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1) for generative use cases, and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27. Presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (11 use cases: 3 High, 7 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (11 use cases: 3 High, 7 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list and model registries (EV-032), division configuration and release records (EV-049, EV-050, EV-053, EV-063, EV-067, EV-075) and the P03 review of the clinic utilization extract (EV-088). Not established: workforce use of public generative AI tools outside the approved tools (intake open request), and which decision support tools the clinic EHR contains (no inventory, P03 SH-G29) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -37,7 +37,7 @@
    - COPPA, district contracts, and SOC 2 commitments for Education Software;
    - HIPAA, FERPA treatment records, Section 1557, and recording consent for Student Health.
 
-**Where the program fell short in 2026.** The standard was adopted after admissions scoring (2025), proctoring flags, and the AI tutor (2026-01) were already live (P01 GR-04, High). Admissions scoring has never been bias tested and applicants get no notice (scenario gap 5). The tutor launched without a children's privacy review, a SOC 2 description update, or district contract updates (scenario gap 6). Both are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after admissions scoring (2025), proctoring flags, and the AI tutor (2026-01) were already live (P01 GR-04, High). Admissions scoring has never been bias tested and applicants get no notice (group gap 5). The tutor launched without a children's privacy review, a SOC 2 description update, or district contract updates (group gap 6). Both are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
@@ -79,7 +79,7 @@ About 380,000 applications went through the model in the 2025-26 cycle. Inputs i
 |---|---|
 | FERPA, 34 CFR 99.31(a)(1)(ii) | Advisors may see scores only for students on their caseload. Warehouse analysts building the model need an approved project (POAM-005) |
 | HEA sec. 483 (FSA Handbook Vol. 2 Ch. 7; POL-04 4.6) | **Pell eligibility and other FAFSA-derived fields are model inputs today and must be removed.** They are being restricted to the financial aid role by 2026-11-30 (POAM-007; P03 G-061) |
-| 45 CFR 164.502(a); 34 CFR 99.33(a) | **Clinic visit counts from the utilization extract were model features until 2026-08-07.** They included nonstudent PHI and contract-college student records (scenario gap 2). The features have been removed, the tables are being purged (POAM-006), and any future health-related input is prohibited without council approval |
+| 45 CFR 164.502(a); 34 CFR 99.33(a) | **Clinic visit counts from the utilization extract were model features until 2026-08-07.** They included nonstudent PHI and contract-college student records (group gap 2). The features have been removed, the tables are being purged (POAM-006), and any future health-related input is prohibited without council approval |
 | Civil rights laws (as in 2.1) | Scores route outreach, not decisions, but unequal flagging can lead to unequal treatment |
 | Colorado SB26-189 | Not covered as designed, because outreach is not a consequential decision. It would be covered if scores were used for admission, aid, standing, or placement |
 

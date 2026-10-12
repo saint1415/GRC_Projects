@@ -7,7 +7,7 @@
 Core Business SaaS Stack (**CBSS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The CBSS is everything the business uses to tutor about 55 active students and keep records on about 265 children: scheduling and billing, student folders, the student practice portal, online sessions, and the devices and home network used to reach them. One person, the owner-tutor, uses and runs it. Components are SYS-01 to SYS-09 in `../00_company-facts.md` section 3: an email and files suite, a client-management SaaS, a website-builder site with a members-only student portal, a video platform, a laptop, a personal phone, the home network, an accounting SaaS, and a consumer AI assistant (use narrowed in P10). There is no server and no IaaS. Most platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts, data handling, devices, the home network, and vendor terms (P04).
+The CBSS is everything the business uses to tutor about 55 active students and keep records on about 265 children: scheduling and billing, student folders, the student practice portal, online sessions, and the devices and home network used to reach them. One person, the owner-tutor, uses and runs it. Components are SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): an email and files suite, a client-management SaaS, a website-builder site with a members-only student portal, a video platform, a laptop, a personal phone, the home network, an accounting SaaS, and a consumer AI assistant (use narrowed in P10). There is no server and no IaaS. Most platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts, data handling, devices, the home network, and vendor terms (P04).
 
 The portal makes the business an **operator of an online service directed to children** under the COPPA Rule (16 CFR 312.2), so the plan is also the written information security program that 16 CFR 312.8(b) requires, together with POL-01.
 
@@ -19,7 +19,7 @@ The portal makes the business an **operator of an online service directed to chi
 | State | Consent to record online sessions | Fla. Stat. 934.03(2)(d) |
 | Internal | Information Security Policy | POL-01 (P06) |
 
-Not applicable (reasons in P03 section 1): FERPA (N61-R01; no Department of Education funds, 34 CFR 99.1), GLBA Safeguards Rule (N61-R02; no Title IV participation), CIPA (N61-R04; no E-Rate), HIPAA (N61-R05; not a covered entity), and CIRCIA (N61-R06; proposed only).
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); reasons in P03 section 1): FERPA (N61-R01; no Department of Education funds, 34 CFR 99.1), GLBA Safeguards Rule (N61-R02; no Title IV participation), CIPA (N61-R04; no E-Rate), HIPAA (N61-R05; not a covered entity), and CIRCIA (N61-R06; proposed only).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -47,6 +47,7 @@ Operational. Planned changes: password manager and MFA on every account (2026-08
 **Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the COPPA security program and Florida duties for a one-person business (`control-implementation.csv`). PT-4 and PT-5 come from the SP 800-53B privacy baseline because COPPA is mainly a notice and consent rule. Other Moderate controls are either inherited from the SaaS vendors (evidence: the client-management SaaS SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the owner's account settings and member lists in SYS-01 to SYS-04 and SYS-08, the AI assistant account (SYS-09), the laptop, the phone, the home router settings, and paper worksheets and notes at home.
 - **Outside (external services):** the vendors' platforms, the payment processor's hosted page, the internet service provider's network, the library's network, the personal photo cloud linked to the phone (being removed from business use), and the tax preparer.
 
@@ -103,7 +104,7 @@ Self-assessed 2026-07-13 to 2026-07-17 with the IT technician; tests on 2026-07-
 The client-management SaaS requires a password and a second factor on the owner's phone, which is appropriate for administrator access to children's records at a Moderate categorization. The email suite, website-builder administrator, and video platform use a password only until MFA is turned on (2026-08-14). Students sign in to the portal with a user name and password; from 2026-08-14 parents set the password at account creation, and the owner no longer keeps a list of them. Parents use the client-management SaaS parent login, which the vendor runs.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **CBSS:** Core Business SaaS Stack

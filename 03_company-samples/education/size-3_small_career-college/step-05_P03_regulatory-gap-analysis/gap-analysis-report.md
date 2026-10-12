@@ -10,6 +10,8 @@
 | Assessor | IT Director (Qualified Individual) with the Registrar and the Director of Financial Aid |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **The Safeguards Rule applies.** Each institution that participates in Title IV has agreed in its Program Participation Agreement to comply with 16 CFR Part 314. FSA reviews compliance in the annual compliance audit and treats information security safeguards as part of administrative capability under 34 CFR 668.16(c) (FSA Electronic Announcement GENERAL-23-09, Feb. 9, 2023). For GLBA purposes FSA defines customer information as information obtained as a result of providing a financial service to a student, past or present, such as administering Title IV aid.
 
 **The small-institution exception does not apply.** 16 CFR 314.6 exempts institutions that maintain customer information on fewer than five thousand consumers from 314.4(b)(1), (d)(2), (h), and (i). The college's FAMS and SIS aid records cover about **6,400 consumers**: current aid recipients, former students within the Title IV record retention period, and parent borrowers. So every element of 314.4 applies, including the written risk assessment, penetration testing and vulnerability assessments, the written incident response plan, and the annual written report to the Board.
@@ -27,7 +29,7 @@
 1. **Requirements.** Each row is a paragraph of 16 CFR 314.3 or 314.4, or of 34 CFR Part 99, at the most granular level the regulation uses (for example, 314.4(h)(1) to (h)(7)). Summaries paraphrase public-domain regulatory text.
 2. **Requirement type.** The Safeguards Rule has no required/addressable split. Its elements are mandatory ("shall"), with two built-in alternatives: encryption may be replaced by compensating controls the Qualified Individual reviews and approves (314.4(c)(3)), and MFA may be replaced by equivalent controls the Qualified Individual approves in writing (314.4(c)(5)). Neither alternative has been approved today.
 3. **Crosswalk.** Each row was mapped to CSF 2.0 and SP 800-53 Rev. 5. These are **author mappings**; no official NIST mapping for 16 CFR Part 314 was used.
-4. **Evidence.** Interviews (Campus President, IT Director, Director of Financial Aid, Registrar, Business Office Manager, Dean of Academic Affairs), document review (WISP, contracts, Board minutes, training records), and configuration exports.
+4. **Evidence.** Current state was established from the intake evidence (configuration exports, documents such as the WISP, contracts, Board minutes and training records, and the campus walk-through on 2026-06-30), gap analysis interviews with the Campus President, IT Director, Director of Financial Aid, Registrar, Business Office Manager and Dean of Academic Affairs from 2026-07-07 to 2026-07-09 (EV-049), and a mail flow review on 2026-07-10 (EV-050). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable, as of the end of fieldwork (2026-07-17). Remediation that has since been completed (for example, POL-03 and the P08 runbook, approved 2026-08-21) is shown in the remediation columns, not as a changed status.
 
 ## 3. Results summary

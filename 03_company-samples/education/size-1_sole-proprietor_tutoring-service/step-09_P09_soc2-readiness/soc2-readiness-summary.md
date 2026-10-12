@@ -8,7 +8,7 @@
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None. A self-check and a self-attestation, not a SOC 2 examination |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the client-management SaaS vendor's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the client-management SaaS vendor's SOC 2 Type 2 report, received at intake (EV-022; `vendor-soc2-review.csv`) |
 | Prepared | 2026-07-15 (Part B) and 2026-07-17 (Part A) by the owner-tutor with the IT technician; adopted 2026-07-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

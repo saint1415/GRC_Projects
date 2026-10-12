@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 
 ## 1. System Name and Identifier
-Student Information and Learning Platform (**SILP**), identifier CSC-SILP-01. The SILP is the college's major system. It comprises SYS-01, SYS-02, SYS-03, SYS-04, SYS-06, SYS-08, and SYS-14, plus the staff side of SYS-10 and SYS-11, in `../00_company-facts.md`.
+Student Information and Learning Platform (**SILP**), identifier CSC-SILP-01. The SILP is the college's major system. It comprises SYS-01, SYS-02, SYS-03, SYS-04, SYS-06, SYS-08, and SYS-14, plus the staff side of SYS-10 and SYS-11, in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The SILP supports the college's core student business in the BIA (P05): registration and academic records, online and campus instruction, Title IV aid processing and disbursement, student accounts and credit balance refunds, and employer partner reporting. It serves 600 employees, about 7,800 current students, former students whose records the college retains, and Parent PLUS borrowers. It holds nearly all of the college's **customer information** under the FTC Safeguards Rule (16 CFR 314.2(d)), about 41,000 consumers, and most of its **education records** under FERPA.
@@ -90,6 +90,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Confidentiality was considered for High.** The SILP holds SSNs and financial data for about 41,000 consumers. The team kept Moderate because the harm, while serious for individuals, would not cause a severe or catastrophic loss of the college's mission capability, and the high-water mark already drives encryption, MFA, and monitoring. To compensate, the baseline adds the identity proofing and re-authentication controls in section 10.1.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint count (780) is the endpoint console total (EV-014); the cloud accounts and workloads come from the landing zone export (EV-023), and the 28 Department system accounts and 3 SAIG workstations from the financial aid records (EV-013).
+
 **Inside the boundary:**
 - the college's SIS, LMS, and FAMS tenant configurations, roles, and integrations;
 - the identity provider tenant;
@@ -168,7 +170,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 30 | SIS, LMS, FAMS, and identity vendors; cloud provider; MSSP |
 | Common/Inherited | 8 | Identity vendor (AC-2(1), AC-7, IA-2(1), IA-2(8)); cloud provider (CP-6, SC-12, SC-13); MSSP (IR-7) |
 
-The Partially implemented and Planned statements trace to the 12 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented and Planned statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-001, EV-024 and EV-031) and to the P07 findings.
 
 **CSF 2.0 mapping.** The `csf2_subcategories` column takes up to 3 subcategories from the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/`. Where the crosswalk has no entry for a control enhancement, the parent control's mapping is used (13 rows). Where it has no entry for a base control, the subcategories are an author mapping (13 rows: AC-11, AC-21, CA-6, CP-3, IR-2, MA-4, MP-6, PL-4, PS-3, PS-4, PS-5, PS-8, PT-3).
 
@@ -184,7 +186,7 @@ The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-
 - **Department systems.** Access to the Department's systems uses Department-issued credentials governed by the Department, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); WISP (2023, updated 2025).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), including the identity provider, SaaS, endpoint and landing zone exports (EV-001 to EV-029); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); WISP (2023, updated 2025; EV-030).
 
 ## 13. Acronym List and Glossary
 - **FAMS:** financial aid management system

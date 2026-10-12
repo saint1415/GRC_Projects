@@ -47,6 +47,17 @@ The MSP operates most technical controls, so evidence came from it. Requested on
 | Technician list with access to the company, and MFA on the remote management platform | SA-9, PS-7 | Not received by fieldwork end; follow-up in POAM-007 |
 | Name of the backup subcontractor and its security terms | SA-9 (312.8(c)) | Not received by fieldwork end; follow-up in POAM-007 |
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-28, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 25 |
+| Design | The control is new (the first risk assessment, a draft policy, or the draft P04 responsibility table); its design was reviewed. Operation is tested at the next annual review (the risk assessment and its review rules) or the 2027-02 follow-up (the other draft policy items and the responsibility table) | 11 |
+| Not implemented | Nothing existed to test | 51 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees and 14 contractor tutors in EV-001 and EV-002, and the 3 contractor tutors interviewed are 3 of the 14 on the roster in EV-002). The MSP evidence received on 2026-07-31 is EV-048.
+
 ## 3. Rules of engagement
 - No testing that could disrupt sessions. On-site tests ran on 2026-08-04 before the center opened at 2:30 pm. No configuration was changed by the assessor.
 - No student information left the company. Screenshots were redacted before they went into the evidence folder, and contractor tutors showed their downloads folders on screen; no files were copied.

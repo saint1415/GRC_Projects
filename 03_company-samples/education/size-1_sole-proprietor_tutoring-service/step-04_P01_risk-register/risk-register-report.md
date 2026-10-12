@@ -12,7 +12,7 @@
 | Approved | 2026-07-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-09, paper worksheets and notes at home, the old laptop in storage, and the contracted helpers (IT technician, tax preparer). Processes come from the BIA (P05). The register covers all student and parent information, not only what COPPA reaches: records parents hand over (report cards, IEP and 504 plans, evaluations) are protected under Fla. Stat. 501.171(2) and the enrollment agreement.
+**Scope.** The whole business as one system: SYS-01 to SYS-09, paper worksheets and notes at home, the old laptop in storage, and the contracted helpers (IT technician, tax preparer), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05). The register covers all student and parent information, not only what COPPA reaches: records parents hand over (report cards, IEP and 504 plans, evaluations) are protected under Fla. Stat. 501.171(2) and the enrollment agreement.
 
 **Risk tolerance.** The owner-tutor owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules (POL-01 4.4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Never accepted as they are. Any risk that exposes children's information and is rated High must have its free fixes in place before the next term starts.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the COPPA requirements (P03), and a walk through the laptop, phone, router, and each SaaS account with the IT technician on 2026-07-14 and 2026-07-15.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the COPPA requirements (P03), and a walk through the laptop, phone, router, and each SaaS account with the IT technician on 2026-07-14 and 2026-07-15 (EV-030). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and router reviews (EV-005, EV-009, EV-013 to EV-016), the folder and portal exports (EV-006, EV-010), the AI and vendor records (EV-018, EV-019, EV-022), the document search (EV-025), and the walk-through (EV-030). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3). Harm to children (exposure of disability information, contact by a stranger) counts at the Regulatory and Reputation levels.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -43,6 +43,8 @@
 | R-005 | FTC COPPA finding: no notice, uninformed consent, no retention policy | Moderate | Online notice, new direct notice and fresh consent, retention schedule | Owner-tutor | 2026-08-14 |
 | R-006 | Student information in a consumer AI assistant | Moderate | Stop; deletion request; narrowed use (P10) | Owner-tutor | 2026-08-14 |
 | R-007 | Over-retention widens any breach | Moderate | Retention schedule and first purge | Owner-tutor | 2026-09-30 |
+
+**One pass.** The register was completed on 2026-07-17 from intake and self-assessment evidence. The control tests ran on 2026-07-16, inside the same week, so this pass already reflects them: R-003 cites the collaborator account finding (EV-AC-2). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The four High risks share one cause: **children's information sits in three SaaS accounts protected only by passwords and on an unencrypted laptop the family also uses.** Four settings that cost nothing (MFA on three accounts and disk encryption) and one separate family account reduce R-001 to R-004 before the fall term starts on 2026-08-17. Deleting what is no longer needed (R-007) then shrinks every breach scenario: today a laptop theft would reach about 265 children, while under the retention schedule it would reach about 55 current students and those in their first year after stopping.
 

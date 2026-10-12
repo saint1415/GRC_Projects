@@ -1,0 +1,29 @@
+obligation_id,obligation,citation,applies,basis,source_evidence,analyzed_in
+N61-R01,FERPA,20 U.S.C. 1232g; 34 CFR Part 99,Yes,"The college receives funds under Department of Education programs through its Program Participation Agreement, so FERPA applies to its education records (34 CFR 99.1)",EV-048,P03; P02; P10
+N61-R02,GLBA Safeguards Rule (Title IV institutions),16 CFR Part 314,Yes,"Under its PPA the college agreed to comply with 16 CFR Part 314, which FSA enforces (Electronic Announcement GENERAL-23-09). It holds customer information on about 41,000 consumers, so the 314.6 exception for fewer than 5,000 consumers does not apply",EV-048; EV-056,P03
+N61-R03,COPPA Rule,15 U.S.C. 6501-6506; 16 CFR Part 312,No,No online services are directed to children under 13; the minimum age at admission is 17,EV-055,n/a
+N61-R04,CIPA (E-Rate),47 U.S.C. 254(h); 47 CFR 54.520,No,The college receives no E-Rate discounts,EV-059,n/a
+N61-R05,HIPAA Security Rule,"45 CFR Part 164, Subpart C",No,"The counseling and wellness center does not bill for services, so the college is not a covered entity. Counseling treatment records fall under the FERPA treatment records exclusion (34 CFR 99.3), and HIPAA excludes education records and those treatment records from protected health information (45 CFR 160.103)",EV-058,n/a
+N61-R06,CIRCIA (proposed),6 U.S.C. 681-681g; proposed 6 CFR Part 226 (89 FR 23644),No (proposed only),"Not a final rule. The proposed rule would cover every Title IV institution regardless of size, so it is tracked",EV-048,P03 (pending changes); P08
+TIV-SAIG,SAIG Enrollment Agreement: breach notice to FSA,SAIG Enrollment Agreement (per DCL GEN-15-18),Yes (contractual),The college holds a SAIG Enrollment Agreement and uses SAIG for ISIRs and disbursement records,EV-013; EV-048,P03; P08
+TIV-668.16,Title IV administrative capability: separation of duties and referral of fraud to the Office of Inspector General,"34 CFR 668.16(c), (g)",Yes,Title IV participant,EV-048,P03
+TIV-668.24,Title IV record retention,34 CFR 668.24,Yes,Title IV participant,EV-048,P03; P05
+TIV-668.25,Third-party servicer contracts,34 CFR 668.25(c),Yes,A contracted servicer performs verification support and default prevention,EV-043; EV-048,P03
+TIV-668.164,Title IV credit balance refunds within 14 days,34 CFR 668.164(h)(2),Yes,"The college pays about 9,000 credit balance refunds a year",EV-054,P05; P03
+TIV-668.71,Misrepresentation rules for Title IV institutions,34 CFR 668.71-668.73,Yes,Title IV participant; the website and portal assistant speaks to prospective and current students,EV-048; EV-057,P10
+HEA-483,HEA limits on the use of FAFSA data,"HEA section 483 (FSA Handbook, Vol. 2, Ch. 7)",Yes,The college receives ISIRs through SAIG,EV-013; EV-048,P03; P10
+CLERY-668.46(g),Clery Act emergency response and evacuation procedures,34 CFR 668.46(g),Yes (cyber-relevant paragraphs),The college publishes an annual security report; the emergency notification service depends on the identity provider and SIS contact data,EV-018; EV-048,P05; P03
+CLERY-668.46(h),Clery missing student notification,34 CFR 668.46(h),No,No on-campus student housing,EV-059,n/a
+FTC-5,FTC Act Section 5 (unfair or deceptive practices),15 U.S.C. 45,Yes,The college is a for-profit (proprietary) institution within FTC jurisdiction,EV-048,P10
+CIVIL-RIGHTS,"Title VI, Title IX, Section 504 and the Age Discrimination Act",42 U.S.C. 2000d; 20 U.S.C. 1681; 29 U.S.C. 794; 42 U.S.C. 6101 et seq.,Yes,The college receives federal financial assistance through Title IV,EV-048,P10
+FAR-52.204,"Federal contract clauses (FAR 52.204-21, -23, -25)","48 CFR 52.204-21, 52.204-23, 52.204-25",No,No federal contracts or subcontracts,EV-059,n/a
+FAR-PART40,FAR Part 40 class deviation clause numbers (FAR 52.240-93 and 52.240-91),FAR Part 40 class deviations,No (background only),No federal contracts or subcontracts; recorded as background in the facts file and not scored,EV-059,n/a
+CUI,Controlled unclassified information and export-controlled research,32 CFR Part 2002; export control regulations,No,No sponsored research and no federal contracts,EV-059,n/a
+PCI-DSS,Payment Card Industry Data Security Standard,PCI DSS (contractual),No (noted only),Tuition card payments are taken on a vendor-hosted payment page and by the payment plan vendor,EV-059,P01 (R-051)
+FSA-800-171,FSA encouragement to adopt NIST SP 800-171,"FSA Electronic Announcements (Dec. 18, 2020; GENERAL-23-09)",No (guidance only),"Guidance, not a requirement; tracked",n/a,P03 (pending changes)
+FL-501.171,Florida Information Protection Act (breach notification),Fla. Stat. 501.171,Yes,"The college holds personal information of Florida residents (campus students and about 1,925 online students)",EV-055,P08
+STATE-BREACH,Breach notification laws of other states,Each state where affected individuals reside,Yes (when residents are affected),Online students live in 41 states,EV-055,P08
+CO-SB26-189,Colorado automated decision-making technology law,Colorado SB26-189 (effective 2027-01-01),Under counsel review,About 110 online students live in Colorado; AI-001 and AI-005 influence decisions about applicants and students,EV-055; EV-057,P10; P01 (R-052)
+CA-CPPA-ADMT,California CPPA automated decision-making technology regulations,11 CCR 7200 et seq.,Under counsel review,About 240 online students live in California; whether the college is a CCPA business has not been determined,EV-055; EV-057,P10
+CON-PARTNER,Employer partner agreements: availability commitment and SOC 2 Type 2 report,Contracts with 9 employer partners,Yes (contractual),99.5% monthly portal availability and restoration within 24 hours; 2 hospital-system partners require a SOC 2 Type 2 report before their 2027-12-31 renewals,EV-049,P05; P09
+CON-CYBER,Cyber insurance policy notice conditions,Insurance policy (contract),Yes (contractual),Notice through the carrier hotline is required before incident vendors are engaged,EV-047,P08

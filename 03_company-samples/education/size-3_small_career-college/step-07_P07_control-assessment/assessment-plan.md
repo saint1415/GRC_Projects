@@ -48,6 +48,17 @@ Small tier scope: 15-25 controls. **24 controls, 164 determination statements.**
   - a TLS scan of the SIS, FAMS, LMS, and VPN endpoints;
   - a file inspection of the aid export folder.
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-21. A control that a draft policy introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 68 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy); its design was reviewed. Incident response items are tested at the 2026-11-30 tabletop, other new controls at the 2027-02 follow-up | 27 |
+| Not implemented | Nothing existed to test | 69 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled terminations come from the 5 staff terminations and 9 adjunct contract ends in EV-003 and EV-004, and the 10 sampled lab PCs from the 150 in EV-011).
+
 ## 3. Rules of engagement
 - No testing during the registration week or on disbursement days. No changes to production data.
 - No customer information or education records left the campus. Screenshots were redacted, and the file inspection counted files without copying them.

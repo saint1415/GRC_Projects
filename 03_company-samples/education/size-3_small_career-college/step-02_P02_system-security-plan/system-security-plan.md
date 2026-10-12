@@ -73,7 +73,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 Four controls outside the Moderate baseline were added by tailoring because the Safeguards Rule calls for them: PM-2 (Qualified Individual), PM-9 (risk strategy and Board reporting), CA-8 (annual penetration testing, 314.4(d)(2)(i)), and PT-3 (HEA limits on FAFSA and tax data). The `csf2_subcategories` column is filled from the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/`; it is blank where that crosswalk lists no reference for the control.
 
 ## 7. Authorization Boundary Description
-The boundary contains college-managed components and the college's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains college-managed components and the college's configuration of vendor services:
 - **Inside:** the SIS and FAMS tenant configurations and roles, the identity provider tenant, the cloud tenant (3 workloads and the backup vault), the 2 SAIG workstations and the college's Department system accounts, the campus firewall, VPN, and staff VLAN, and 70 staff endpoints.
 - **Outside (external services, interconnected):** the SIS and FAMS vendors' platforms, the cloud provider's infrastructure, the Department of Education's systems, the LMS (SYS-02), the admissions CRM (SYS-05), the email suite (SYS-07), and the financial aid servicer (SYS-12). Lab computers (SYS-11) sit on a separate VLAN outside the boundary; the firewall between them is a boundary control (SC-7).
 
@@ -122,7 +122,7 @@ All staff authenticate through the identity provider with a password and a secon
 Two exceptions do not meet it today and are tracked in the POA&M: the financial aid servicer's local FAMS accounts, and students, for whom MFA is optional. Access to the Department's systems uses Department-issued accounts governed by the Department, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10), written information security program (2023, superseded in part by P06).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10), written information security program (2023, superseded in part by P06).
 
 ## 13. Acronym List and Glossary
 - **FAMS:** financial aid management system

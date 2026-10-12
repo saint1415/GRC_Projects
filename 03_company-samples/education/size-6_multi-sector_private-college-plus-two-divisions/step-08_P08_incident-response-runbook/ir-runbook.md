@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06). For the college, POL-03 and this runbook are the written incident response plan required by 16 CFR 314.4(h) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The cross-division notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
+| Last tested | Technical playbooks tested quarterly. **The cross-division notification matrix has not been exercised** (group gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-004) |
 
 **Where this plan meets 16 CFR 314.4(h) for the college:**
 

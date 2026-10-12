@@ -1,0 +1,15 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,SIS vendor,"SIS, student self-service portal, student-success analytics module",SYS-01,Customer information; education records,"Contract with security, confidentiality and FERPA school-official clauses","None on file at intake; SOC 2 Type 2 for the 12 months ending 2026-03-31 obtained in 2026-08 (P09)",EV-032; EV-033; EV-034; EV-053,The contract does not address vendor use of college records to improve its models
+V-02,LMS vendor,Learning management system,SYS-02,Education records,"Contract with security, confidentiality and FERPA school-official clauses","None on file at intake; SOC 2 Type 2 for the 12 months ending 2026-05-31 obtained in 2026-08 (P09)",EV-032; EV-033; EV-034; EV-054,
+V-03,FAMS vendor,Financial aid management system and student aid portal,SYS-03,Customer information; education records,"Contract with security, confidentiality and FERPA school-official clauses",None on file; SOC 2 report requested in 2026-08 (P09),EV-032; EV-033; EV-034,
+V-04,Admissions CRM vendor,Admissions CRM,SYS-05,Applicant records; limited applicant financial information,Contract,None on file,EV-032; EV-033; EV-034,Applicant scoring feature available and turned off
+V-05,Identity provider vendor,Single sign-on and MFA,SYS-06,Staff and student identities,Subscription terms,None on file,EV-032; EV-036,
+V-06,Productivity suite vendor,"Email, files, chat",SYS-07,Customer information and education records (incidental),Subscription terms,None on file,EV-032,
+V-07,Public cloud provider,"IaaS/PaaS for the integration server, reporting database, file server and backups",SYS-08,Customer information; education records,Customer agreement,SOC 2 report and shared responsibility documentation from the provider portal,EV-032; EV-035,
+V-08,Financial aid servicer,Verification and packaging support; administers the student-facing aid portal in the FAMS,SYS-03; SYS-12,Customer information; education records,Third-party servicer contract with general confidentiality language,None on file,EV-007; EV-032; EV-033; EV-034,Holds 6 local FAMS administrator accounts; receives aid spreadsheets by email (EV-018)
+V-09,Payroll provider,Payroll,Payroll SaaS,Employee personal information,Not reviewed at intake,None on file,EV-032,
+V-10,Text alert service,Emergency and weather notifications,n/a,Staff and student phone numbers,Not reviewed at intake,None on file,EV-032,Alternate channel for BP-07
+V-11,Paper shredding vendor,Paper destruction,n/a,Customer information on paper,Service agreement,Certificates of destruction,EV-031; EV-032,
+V-12,Tuition payment page provider,Vendor-hosted card payment page,n/a,Card payments,Not reviewed at intake,None on file,EV-032,Outside the systems listed in the asset inventory
+V-13,Cyber insurer,"Cyber insurance, breach hotline, breach counsel and forensic panel",n/a,Incident information if a claim is made,Insurance policy,n/a,EV-032; EV-037,Used in P08
+V-14,Internet provider,Campus internet service,SYS-09,Network traffic,Not reviewed at intake,None on file,EV-013; EV-032,Single provider

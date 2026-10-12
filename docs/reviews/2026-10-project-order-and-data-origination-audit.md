@@ -134,3 +134,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market contractor):** pass-1 R-002 and R-039 quote August P07 samples; R-007 says 45 SP 800-171 requirements are not fully met while P03 says 40; the SSP cites P07 results for AC-6(2), which P07 did not test; P04 and P03 name different reviewers of the enclave log.
 - **Size 5 (enterprise contractor):** P03 G-087 and G-146 disagree on whether the enclave SSP maps the provider's responsibility matrix, and G-001 and G-035 disagree on whether the plotters are enrolled; the BIA, P03, P09 and P04 cite POA&M IDs and P07 results issued 2026-09-04.
 - **Size 6 (contractor plus two divisions):** pass-1 GR-06 and AE-006 cite P07 findings from August; the P01 report still says CMMC Phase 2 "just begins"; the facts and the findings disagree on whether superintendents use enclave desktops; P03 G-026 samples 30 subcontract awards where P07 SR-6 samples 25.
+
+### Education, 2026-10-12
+
+Six samples, 555 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 27 minutes.
+
+Fixes made during this batch:
+- **Validator:** an evidence register ID may not use a hyphen for a control enhancement (EV-IA-2-1); it must be EV-IA-2(1). **Health Care size 4** still had EV-IA-2-1 in three files; renamed.
+- **Sizes 1 and 3:** EV-IA-2-1 and EV-IA-2-2 renamed. **Size 6:** EV-C-AC23, EV-C-AC65 and EV-C-IA21 renamed to the parenthesis form; HE-021's `last_reviewed` moved to its Pass 2 date, 2026-08-19.
+- **Sizes 1 and 3:** walk-throughs and reviews that the sample dated inside the P07 window but used as evidence of the starting state were re-dated to intake.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 cites regulatory text checks dated after its approval.
+- **Size 1 (tutoring service):** P04 is mapped a day before the P07 results it cites; R-014 says vendor commitments meet the BIA while the vendor review says the 12-hour RTO misses BP-02's 8 hours; POAM-002 cites G-037 rather than G-028.
+- **Size 2 (micro tutoring company):** the SSP cites POL-02 A.2 and A.6 where the clauses are A.3 and A.7; the facts say families pay by card while about 20 pay by bank debit; P07 AC-2 counts 21 users across systems where the suite has 7.
+- **Size 3 (career college):** P03 G-012 and G-053 describe stale adjunct accounts P07 says it found first; P07 samples termination tickets for adjunct contract ends, which AC-02h says are not sent to IT.
+- **Size 4 (private college):** pass-1 R-007, R-012, R-025, R-041 and R-042 quote sample results the SSP credits to P07; G-032 and P07 SR-6 cite P09 vendor reviews dated September; BP-06 lists an identity verification vendor the SSP plans for 2027.
+- **Size 5 (enterprise college):** P03 cites the Qualified Individual's report of 2026-09-10, after its approval; the facts say 10 of 16 AI uses were reviewed at intake while the P10 dates show 8; R-001 gives EDR on 98% of endpoints while the SSP says all.
+- **Size 6 (college plus two divisions):** SSP AC-6(7) says service accounts are certified while P07 found them excluded; the SSP and P09 disagree on the proctoring contract's notice term; pass-1 SH-001 and GR-06 cite August findings.
