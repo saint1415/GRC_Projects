@@ -33,7 +33,7 @@ At a carrier this size, "OSS" and "BSS" are not large platforms. The BSS is a ve
 | Benchmark | NIST CSF 2.0 (voluntary) | P03 rows G-047 to G-054 | Used to define "reasonable measures" under 64.2010(a) |
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 | All components |
 
-**Not applicable** (reasons in P03 section 1): SEC disclosure rules (C-COMMUNICATIONS-R06; privately held), submarine cable rules (C-COMMUNICATIONS-R04), CMRS-only CPNI rules (64.2010(h)), Emergency Alert System rules (no video or broadcast). Broadband usage data is not CPNI after *Ohio Telecom Ass'n v. FCC* (6th Cir. 2025), but POL-04 protects the whole customer account record at the CPNI level.
+**Not applicable** (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); reasons in P03 section 1): SEC disclosure rules (C-COMMUNICATIONS-R06; privately held), submarine cable rules (C-COMMUNICATIONS-R04), CMRS-only CPNI rules (64.2010(h)), Emergency Alert System rules (no video or broadcast). Broadband usage data is not CPNI after *Ohio Telecom Ass'n v. FCC* (6th Cir. 2025), but POL-04 protects the whole customer account record at the CPNI level.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -77,6 +77,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 (closest match
 - **Tailored out** for this tier where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration control boards and separate development environments). These are tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-10) and [vendor register](../step-00_P00_intake/vendor-register.csv).
+
 - **Inside:** the company's BSS tenant and portal configuration (SYS-01), its voice platform account and numbers (SYS-02), the OLTs, ONTs, and aggregation switch (SYS-03), the edge router and hut servers (SYS-04), the monitoring service account (SYS-05), the productivity suite tenant (SYS-06), 10 endpoints (SYS-07), the office network (SYS-08), and the backup subscription (SYS-09).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers; the middle-mile and transit provider; the voice platform's 911 routing network and the county 911 center; the CALEA TTP and any collection equipment it places; the AI assistant (SYS-10, assessed in P10); the answering service; the payment processor.
 
@@ -141,7 +143,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 - **Customers:** the CPNI rules set the minimum for customer access to call detail: a password not prompted by readily available biographical or account information, set up without such information, with notices of changes to the telephone number or address of record (47 CFR 64.2010(b), (c), (e), (f)). The portal does not meet this today (IA-8; P03 G-021 to G-026). The planned design: password reset by a one-time code sent to the telephone number or email of record, a required account PIN for phone release of call detail, and change notices.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and BSS vendor report review (P09), AI assessment (P10), CALEA SSI policies (filed 2017; under revision).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and BSS vendor report review (P09), AI assessment (P10), CALEA SSI policies (filed 2017, EV-032; under revision).
 
 ## 13. Acronym List and Glossary
 - **BSS / OSS:** business support system / operations support system

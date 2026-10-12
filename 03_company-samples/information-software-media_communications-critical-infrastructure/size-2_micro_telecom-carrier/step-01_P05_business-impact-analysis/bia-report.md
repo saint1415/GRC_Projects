@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (rural fiber broadband and voice carrier) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (security and compliance lead) with the Network Operations Lead, both Customer Service Representatives, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** Owner and General Manager, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-20 to 2026-07-21 (EV-047), FY2025 revenue and cash report (EV-042), BSS account summary (EV-023), dedicated circuit contracts (EV-037), voice platform, TTP and other service contracts (EV-034, EV-035), BSS vendor SOC 2 report (EV-036), monitoring capacity graphs and the generator service record (EV-016, EV-040), the configuration backup list (EV-014), and the NORS and outage records (EV-041). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner and General Manager.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It supports:
 - the availability rating in the SSP (P02);
@@ -13,10 +15,10 @@ This BIA lists every business function of the company, how long each can be down
 No FCC rule requires a carrier of this size to write a BIA or a contingency plan. The FCC outage rules (47 CFR Part 4) set **reporting** clocks, not recovery targets, but they shape this BIA: an outage must be noticed, measured against the thresholds, and reported on time (BP-03).
 
 ## 2. System and business description
-One office building in a rural Florida town, one network hut about a mile away, about 140 route miles of passive fiber, and 7 employees. The company serves about 1,420 accounts: about 1,385 broadband subscribers, about 440 telephone numbers of interconnected VoIP voice, and 6 dedicated internet access circuits for local business and public customers. All internet traffic leaves over one leased 10 Gbps middle-mile circuit. Voice runs on a wholesale hosted voice platform; billing, the portal, and the AI assistant run on the BSS vendor's SaaS. The MSP runs office IT; the company runs its own network with help from a network engineering consultant. See `../00_company-facts.md` sections 1 and 3.
+One office building in a rural Florida town, one network hut about a mile away, about 140 route miles of passive fiber, and 7 employees. The company serves about 1,420 accounts: about 1,385 broadband subscribers, about 440 telephone numbers of interconnected VoIP voice, and 6 dedicated internet access circuits for local business and public customers. All internet traffic leaves over one leased 10 Gbps middle-mile circuit. Voice runs on a wholesale hosted voice platform; billing, the portal, and the AI assistant run on the BSS vendor's SaaS. The MSP runs office IT; the company runs its own network with help from a network engineering consultant. See `../00_company-facts.md` section 1 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a day.
+Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a day (EV-042).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

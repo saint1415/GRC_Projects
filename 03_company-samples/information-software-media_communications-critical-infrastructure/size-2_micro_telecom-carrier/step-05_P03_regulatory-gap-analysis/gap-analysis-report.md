@@ -13,6 +13,7 @@
 | Approved | 2026-08-31 by the Owner and General Manager |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result, with the legal reasoning, for the rules analyzed here.
 
 ### 1.1 The CPNI rules apply, through the voice service
 The CPNI rules bind "telecommunications carriers," and for this subpart the term "shall include an entity that provides interconnected VoIP service" (47 CFR 64.2003(o)). The company sells interconnected VoIP under its own brand to about 390 accounts. It buys the softswitch from a wholesale hosted voice platform, but it is the provider to the customer, so the duties are the company's, not the platform's.
@@ -55,7 +56,7 @@ No FCC rule sets general cybersecurity controls for a carrier's network. The CPN
 ## 2. Method
 1. **Requirements.** Each paragraph of 47 CFR 64.2005-64.2011 that imposes, permits, or limits conduct became one row, cited to the paragraph (public-domain text; short quotes only). 47 U.S.C. 222(a) is the statutory duty (G-001). The CALEA and Part 4 rows follow the same method. The CPNI row set is the same as the Small sample's, so the two can be compared.
 2. **Crosswalk.** Each regulatory row was mapped to CSF 2.0 and SP 800-53 Rev. 5. This is an **author mapping**; NIST has published no mapping for 47 CFR Parts 1, 4, or 64. The benchmark rows use NIST's CSF 2.0 to SP 800-53 reference mapping (a selection).
-3. **Documentary evidence.** Each status rests on a named document or test: the filed CPNI certifications (2024 to 2026), the 2017 CALEA SSI filing and the 2022 intercept record, BSS and voice platform user lists and settings, a live test of the portal reset and the AI assistant on 2026-07-24, a sample of 10 call detail requests in BSS tickets on 2026-07-27, the NORS account and the 2025 outage ticket, and the walkthrough of the office and hut on 2026-07-22. Interviews covered all 7 employees.
+3. **Documentary evidence.** Each status rests on a named document or test in the [evidence register](../step-00_P00_intake/evidence-register.csv). From intake: the filed CPNI certifications (2024 to 2026, EV-031), the 2017 CALEA SSI filing (EV-032), BSS and voice platform user lists and settings (EV-002 to EV-006), the scripts (EV-024), the contracts (EV-034, EV-035, EV-037), and the NORS account and the 2025 outage ticket (EV-041). From this step's fieldwork: interviews with all 7 employees (EV-052), a live test of the portal reset and the AI assistant on 2026-07-24 (EV-053), a sample of 10 call detail requests in BSS tickets on 2026-07-27 (EV-054), and the 2022 intercept record (EV-055). The walkthrough of the office and hut on 2026-07-22 (EV-049) was shared with the risk assessment. The `evidence` column in `gap-analysis.csv` cites the ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable **as of the end of fieldwork (2026-07-31)**. Later actions (for example, personalized offers off on 2026-08-14) appear in the remediation column but do not change the status. Gap risk uses the P01 scale.
 
 ## 3. Results summary

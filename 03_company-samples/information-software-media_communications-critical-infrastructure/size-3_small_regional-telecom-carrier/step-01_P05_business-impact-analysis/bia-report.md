@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (regional broadband and wired telecommunications carrier) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager with the NOC Manager, Director of Customer Operations, and Billing Manager | **Approved:** COO, 2026-09-04
+**Sources:** process owner interviews 2026-07-20 to 2026-07-21 (EV-055), FY2025 receipts report (EV-051), subscriber and line counts (EV-052), NOC outage procedure and PSAP contacts (EV-039, EV-040), configuration and cloud backup records (EV-020, EV-019), BSS vendor SOC 2 report (EV-047). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the COO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -13,10 +14,10 @@ This BIA identifies which business processes the company depends on, how long ea
 For a carrier, some downtime drivers are regulatory clocks, not only revenue. An outage that affects 911 must be reported to the affected PSAP within 30 minutes and to the FCC within 120 minutes (47 CFR 4.9(h)(4) and 4.9(f)). Those clocks keep running during a cyber incident.
 
 ## 2. System and business description
-The company serves about 64,000 accounts in three Florida counties from two central offices and 42 remote cabinets: broadband for about 61,000 subscribers, 23,400 voice lines, and dedicated Ethernet for business and government customers. Operations run on the Network Operations and Customer Billing Platform (OSS/BSS): a SaaS billing and care system, a cloud tenant hosting the OSS, mediation, and customer portal, an identity provider, and the network management plane. See `../00_company-facts.md` sections 1 and 3.
+The company serves about 64,000 accounts in three Florida counties from two central offices and 42 remote cabinets: broadband for about 61,000 subscribers, 23,400 voice lines, and dedicated Ethernet for business and government customers. Operations run on the Network Operations and Customer Billing Platform (OSS/BSS): a SaaS billing and care system, a cloud tenant hosting the OSS, mediation, and customer portal, an identity provider, and the network management plane. See `../00_company-facts.md` sections 1 and 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $92.4 million in annual receipts, about $253,000 per day.
+Dollar values are scaled to $92.4 million in annual receipts, about $253,000 per day (EV-051).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
