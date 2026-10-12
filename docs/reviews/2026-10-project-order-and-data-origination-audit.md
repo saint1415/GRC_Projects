@@ -187,3 +187,20 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market payment processor):** pass-1 R-009, R-021 and R-023 cite P07 results and a September date; July is counted as 30 days in the backup and reconciliation evidence; the facts list two-person change approval as compensating while P03 and P07 found 4 of 15 changes approved by their authors.
 - **Size 5 (enterprise payment processor):** P09 (prepared 2026-08-28) cites the P07 report issued 2026-09-04; R-032 rests on a P07 packet capture but is not listed as added after P07; one population is "2,340 account events" in P07 and "2,340 access grants" in P03.
 - **Size 6 (payment processor plus two divisions):** P10 says AI-001 to AI-005 were live before the Group AI Standard while AI-004 launched after it; the SSP names PL-2 where P07 assessed PL-1; POAM-024 is closed with a milestone due 2026-12-31.
+
+### Management of Companies and Enterprises (holding companies), 2026-10-12
+
+Six samples, 565 evidence rows in all. Agent cost: about 2.6 million tokens; the longest sample took 29 minutes.
+
+Fixes made during this batch:
+- **Sizes 1 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-1, EV-C-AC65, EV-S-AC67 and others) renamed to the parenthesis form.
+- **Size 4 (mid-market holding company):** the SSP's AC-21 cited a P07 data loss prevention test with no results row; it is now registered as P07 fieldwork evidence (EV-072) without adding a result.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes the P08 matrix) cites regulatory checks dated after approval.
+- **Size 1 (owner of several small businesses):** deliverables say seven SaaS services while six are named; routers are three in the SSP and P04 and two plus home Wi-Fi in the facts; P07 calls two items new findings that the old posture already listed; about 670 people with Florida personal information against 665 by addition.
+- **Size 2 (family holding office):** P03 and P02 state the bill pay and vault admin issues that P07 reports as new findings; R-023 stays Open after dual approval was turned on 2026-09-04; P02 and P09 count a family vault user whose account was created 2026-08-20.
+- **Size 3 (small holding company):** P01 R-024, R-025 and R-005 cite the wrong BIA processes; BP-01 says approvals use hardware tokens while R-016 says app-based; P09 (2026-09-18) cites minutes and designations of 2026-09-25.
+- **Size 4:** July backups are 30 of 30 days in P04 and 31 of 31 in P03 and P07; G-115 says servicing access is reviewed twice a year while P07 says only the ERP is; G-132 counts an intercompany schedule signed after P03 and P07; the facts present the plan Security Official as in place before the 2026-09-22 designation.
+- **Size 5 (enterprise holding company):** the facts say the health plan amendment covers 164.314(b) while section 7 and G-056 say it does not; DEP-11 cites R-039 where the field-service risk is R-022; R-042 cites a change dated after its last review.
+- **Size 6 (holding company plus two divisions):** P10 cites POL-01 4.14 for a standard adopted before v2026 was approved; HCS-013 and HCS-014 are Closed with a due date after their last review; G-015 and P01 disagree on when the budget was approved.
