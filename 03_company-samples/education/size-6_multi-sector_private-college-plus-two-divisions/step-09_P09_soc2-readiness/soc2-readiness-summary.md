@@ -39,7 +39,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
   - group identity (SYS-G1), SOC (SYS-G2), and the backup vault (SYS-G3) carved in as internal shared services.
 - **Subservice organizations (carve-out):**
   - cloud provider B;
-  - **the third-party model provider for the AI tutor.** It was missing from the 2026 description and must be added for the current period (scenario gap 6).
+  - **the third-party model provider for the AI tutor.** It was missing from the 2026 description and must be added for the current period (group gap 6).
 - **People:** about 8,500 Education Software employees, plus the group SOC and identity teams.
 - **Data:** about 6.5 million college student records on the Campus Platform and about 22 million K-12 student users on the District Platform (about 8 million under 13). This covers education records, customer information of Title IV colleges, and children's personal information.
 - **Complementary user entity controls:** customer SSO and MFA, provisioning and removal of customer users, approval of support access requests (new, POAM-001), review of audit and support access reports, and protection of integration credentials.
@@ -82,7 +82,7 @@ The Safeguards Rule requires the college to oversee its service providers and as
 | VR-04 | Online proctoring vendor | Unqualified, 1 remediated exception | Meets | Consistent flag review (HE-029); verified deletion each term (HE-013) |
 
 **What the reviews show:**
-1. **The college had never read its most important vendor's report.** The Campus Platform report was first reviewed by the college on 2026-08-21, although the college has relied on the platform since 2021 (P03 G-032; scenario gap 3).
+1. **The college had never read its most important vendor's report.** The Campus Platform report was first reviewed by the college on 2026-08-21, although the college has relied on the platform since 2021 (P03 G-032; group gap 3).
 2. **A clean report does not mean the college is protected.** A vendor's controls only work if the customer runs the complementary user entity controls. The college does not yet run 4 of them: support access approval, support access report review, integration credentials, and FAMS activity review.
 3. **SOC 2 does not answer the AI questions.** The CRM and proctoring reports cover security, not whether models are accurate or fair, or whether the vendor trains on college data. Those questions are handled in contracts and P10.
 4. **Incident notice terms are uneven.** The intercompany agreement has none (the revised agreement sets 24 hours, POAM-009), and the proctoring contract says "without undue delay" (the target is 72 hours at the 2027 renewal).

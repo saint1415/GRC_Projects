@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the college's **Student Records and Learning Platform**, the registry's primary system (SIS and LMS), because it holds the college's education records and most of its GLBA customer information, it is the college's most critical system (P05 BP-HE01 to BP-HE03), and it shows the group's inheritance model at its most complex: controls come from **three places**, corporate common controls (SYS-G1 to SYS-G3), the Education Software division's Campus Platform (SYS-E1), and the college itself. Education Software keeps its own platform security documentation (its SOC 2 system description, P09), and Student Health keeps a division SSP for the clinic EHR that inherits from the same common control catalog.
 
 ## 1. System Name and Identifier
-Student Records and Learning Platform (**SRLP**), identifier CSCH-HE-SRLP. It covers SYS-H1 in `../00_company-facts.md` plus the college integration hub and student data warehouse on SYS-G3.
+Student Records and Learning Platform (**SRLP**), identifier CSCH-HE-SRLP. It covers SYS-H1 plus the college integration hub and student data warehouse on SYS-G3, listed as SYS-H1, SYS-G3-HUB and SYS-G3-DW in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The SRLP is the college's system of record for students and the place where teaching happens online. It supports:
@@ -32,13 +32,13 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | N61-R02 | FTC Safeguards Rule, applied to Title IV institutions through the PPA and enforced by FSA | 16 CFR Part 314 | Student financials and aid data are customer information. The college holds it on about 1.4 million consumers, so every element of 314.4 applies (314.6 exception not available). This plan is part of the written information security program (314.3(a)) |
 | N61-R01 | FERPA | 20 U.S.C. 1232g; 34 CFR Part 99 | Education records in the SIS, LMS, and warehouse. "Reasonable methods" so school officials reach only records in which they have a legitimate educational interest (99.31(a)(1)(ii)); disclosure records (99.32); conditions for outsourced school officials such as Education Software and Student Health (99.31(a)(1)(i)(B)) |
 | Title IV | Program Participation Agreement; SAIG Enrollment Agreement; 34 CFR 668.16(c); HEA sec. 483 | Program rules | Immediate breach notice to FSA; administrative capability; FAFSA data used only for aid administration |
-| N62-R01, N62-R02 | HIPAA Security and Privacy Rules (Student Health only) | 45 CFR Part 164 | The SRLP is not a HIPAA system. It must not receive PHI of Student Health's nonstudent patients. The 2025 clinic utilization extract did (scenario gap 2; section 8) |
+| N62-R01, N62-R02 | HIPAA Security and Privacy Rules (Student Health only) | 45 CFR Part 164 | The SRLP is not a HIPAA system. It must not receive PHI of Student Health's nonstudent patients. The 2025 clinic utilization extract did (group gap 2; section 8) |
 | N61-R06 | CIRCIA (proposed, not in force) | Proposed 6 CFR Part 226 | Tracked only. The proposed rule would cover every Title IV institution |
 | N51-R08 | SEC cybersecurity disclosure | Reg S-K Item 106; Form 8-K Item 1.05 | An SRLP incident may be material to the group (P08) |
 | State law | State breach notification laws | Each state where affected individuals reside (Florida worked example: Fla. Stat. 501.171) | Online students live in all 50 states |
 | Internal | Group policies POL-01 to POL-05 and the Higher Education supplement | P06 | |
 
-Not applicable: COPPA (the college enrolls no children under 13); CIPA (no E-Rate funds); DFARS 252.204-7012 (no CUI). HIPAA does not apply to the college as an entity: it performs no covered functions.
+Not applicable: COPPA (the college enrolls no children under 13); CIPA (no E-Rate funds); DFARS 252.204-7012 (no CUI). HIPAA does not apply to the college as an entity: it performs no covered functions. Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -87,6 +87,7 @@ Other High-baseline controls are either fully inherited from the cloud providers
 The `csf2_subcategories` column uses the official CSF 2.0 to SP 800-53 Rev. 5 reference (`00_universal-framework/crosswalks/`). It is left blank for 13 controls that the official reference does not map (for example AC-21, PS-4, PT-3).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-H1, SYS-G3-HUB, SYS-G3-DW and the shared services they inherit from) and the exports EV-042, EV-043 and EV-053 to EV-056.
 - **Inside:** the college's SIS and LMS tenants with student financials (configuration, roles, data); the integration hub and student data warehouse accounts in provider A; their disaster recovery replica and backups in provider B.
 - **Outside, inherited:** SYS-G1 identity, SYS-G2 SOC, the SYS-G3 landing zone (network hub, log archive, guardrails, keys), and the Campus Platform's shared infrastructure (SYS-E1: application code, multi-tenant database, platform identity service, warm standby).
 - **Outside, interconnected:** SYS-H2 financial aid management system and SAIG, SYS-H3 admissions CRM, SYS-H5 proctoring service, SYS-S1 clinic EHR (enrollment and immunization checks), the legacy SIS at 6 campuses (SYS-H4, nightly loads until retirement).
@@ -96,7 +97,7 @@ The diagram is in P04 `cloud-architecture.md` (section 2.2).
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
-| SYS-E1 Campus Platform (Education Software) | Hosting | All SIS, LMS, and student financials data | Intercompany service agreement (2021). **No safeguards, notice, or assessment terms** (scenario gap 3; POAM-009) |
+| SYS-E1 Campus Platform (Education Software) | Hosting | All SIS, LMS, and student financials data | Intercompany service agreement (2021). **No safeguards, notice, or assessment terms** (group gap 3; POAM-009) |
 | SYS-H2 FAMS and SAIG | Two-way, nightly and on demand | ISIR data, awards, disbursements | FAMS vendor contract with safeguards and 72-hour notice; SAIG Enrollment Agreement |
 | SYS-H3 admissions CRM | Inbound | Admitted applicants, application data | CRM vendor contract |
 | SYS-H5 proctoring service | Two-way | Rosters, exam sessions, integrity flags | Proctoring vendor contract; FERPA school-official terms |
@@ -145,13 +146,13 @@ See `control-implementation.csv` (125 controls) and `common-control-catalog.csv`
 | **Total** | **108** |
 
 **The 21 partially implemented controls** cluster in four places:
-- **Warehouse purpose limits** (scenario gap 2): AC-3, AC-4, AC-6, AC-21, PT-2, PT-3, CM-8, SI-12, AT-3.
-- **Cross-tenant support access** (gap 1): AC-2, AU-6.
-- **Service provider oversight of the Campus Platform** (gap 3): SA-4, SA-9, CA-3, IR-6.
+- **Warehouse purpose limits** (group gap 2): AC-3, AC-4, AC-6, AC-21, PT-2, PT-3, CM-8, SI-12, AT-3.
+- **Cross-tenant support access** (group gap 1): AC-2, AU-6.
+- **Service provider oversight of the Campus Platform** (group gap 3): SA-4, SA-9, CA-3, IR-6.
 - **Monitoring, credentials, and testing coverage:** AC-2(12), SI-4(4), IA-5, CA-8, CP-4, IR-3.
 
 ### 10.2 Inheritance from three providers
-1. **Corporate common controls.** The common control catalog lists 98 controls. Inheritance is **documented for Higher Education** (2025 inheritance matrix), for Education Software (its SOC 2 system description carves in the group services), and for the SRLP (this plan). It is **not documented for Student Health** (scenario gap 4; POAM-016).
+1. **Corporate common controls.** The common control catalog lists 98 controls. Inheritance is **documented for Higher Education** (2025 inheritance matrix), for Education Software (its SOC 2 system description carves in the group services), and for the SRLP (this plan). It is **not documented for Student Health** (group gap 4; POAM-016).
 2. **Campus Platform controls.** Ten controls are inherited from SYS-E1 (for example AU-3, CP-7, SC-28, SA-8, IA-8). The college relies on Education Software's SOC 2 Type 2 report as evidence. Until 2026-08 no one at the college had read that report, and the intercompany agreement gives the college no right to assess or to be told of incidents (POAM-009).
 3. **College controls.** Seventeen controls are system-specific, mostly roles, data flows, and purpose limits that only the college can decide.
 
@@ -165,7 +166,7 @@ Common controls were assessed once, and SRLP and division controls sampled, from
 - **Education Software support engineers** reach the tenant through the support console with their SYS-G1 identity, but without a college approval or ticket link (POAM-001).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and vendor reviews (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness and vendor reviews (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **FAMS:** financial aid management system

@@ -13,13 +13,13 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds education records, customer information (16 CFR 314.2), children's personal information, or PHI in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), and the group cloud and data platform (SYS-G3). Division systems are SYS-H1 to SYS-H5, SYS-E1 to SYS-E3, and SYS-S1 to SYS-S2 (`../00_company-facts.md` section 3).
+**Scope.** Every system that holds education records, customer information (16 CFR 314.2), children's personal information, or PHI in the three divisions, plus the corporate shared services they depend on: the group identity platform (SYS-G1), the group SOC (SYS-G2), and the group cloud and data platform (SYS-G3). Division systems are SYS-H1 to SYS-H5, SYS-E1 to SYS-E3, and SYS-S1 to SYS-S2 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. Higher Education, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact. They are not simply the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (from the group risk management strategy, EV-019):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,8 +30,8 @@
 Risks of harm to children or of harm to a student's access to education rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, interviews with each division's leadership (EV-081 group, EV-082 Higher Education, EV-083 Education Software, EV-084 Student Health), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, records, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once (FSA, FTC, HHS, state attorneys general), customer contracts across about 6,300 schools, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -72,14 +72,14 @@ Risks of harm to children or of harm to a student's access to education rated Hi
 
 ### What the results say
 The program is defined and largely sound. There are no Very High risks, and the common controls are strong: a 24x7 SOC, PAM, quarterly access certification, immutable backups, and MFA for every federated user and every student. The High risks cluster **where divisions meet**, not in any one division's basics:
-1. **One division's tool can open every other's data.** The support console (GR-01) gives Education Software staff standing read access to the college's tenant and about 6,300 customer tenants (scenario gap 1).
-2. **Data crossed a legal line between divisions.** The clinic utilization extract (GR-05) moved nonstudent PHI and contract-college student records into the college's warehouse (scenario gap 2). Student Health must now run a HIPAA breach risk assessment under 45 CFR 164.402 for the nonstudent records (SH-002).
-3. **AI governance trails deployment** in all three divisions (GR-04; scenario gaps 5 and 6).
-4. **On-premises systems at acquired sites** are the most likely ransomware path into shared services (GR-02; scenario gaps 4 and 8).
+1. **One division's tool can open every other's data.** The support console (GR-01) gives Education Software staff standing read access to the college's tenant and about 6,300 customer tenants (group gap 1).
+2. **Data crossed a legal line between divisions.** The clinic utilization extract (GR-05) moved nonstudent PHI and contract-college student records into the college's warehouse (group gap 2). Student Health must now run a HIPAA breach risk assessment under 45 CFR 164.402 for the nonstudent records (SH-002).
+3. **AI governance trails deployment** in all three divisions (GR-04; group gaps 5 and 6).
+4. **On-premises systems at acquired sites** are the most likely ransomware path into shared services (GR-02; group gaps 4 and 8).
 
-Governance gaps 3 and 7 (intercompany oversight and the unexercised notification matrix) are Moderate at group level (GR-06, GR-03). They matter because they decide whether the college learns of a platform incident in time to meet FSA's immediate notice and the FTC's 30-day clock (P08).
+Group gaps 3 and 7 (intercompany oversight and the unexercised notification matrix) are Moderate at group level (GR-06, GR-03). They matter because they decide whether the college learns of a platform incident in time to meet FSA's immediate notice and the FTC's 30-day clock (P08).
 
-**Fed back from P07.** The control assessment found one shared local administrator password on 31 legacy campus servers. It was added as HE-021 and rolled into GR-02.
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07), which continued to 2026-08-28: the control assessment found one shared local administrator password on 31 legacy campus servers (EV-H-IA5). It was added as HE-021 on 2026-08-19 and rolled into GR-02. The `assessment_pass` column shows which pass produced each risk; other test findings were tracked in the POA&M and linked to existing risks (`related_risk_ids` in `poam.csv`).
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** support access redesign (GR-01); legacy campus segmentation and retirement, and Student Health identity migration (GR-02, GR-09); warehouse purge, role redesign, and purpose tags (GR-05); group AI governance program (GR-04); egress detection (GR-15).

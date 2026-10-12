@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-077 group, EV-078 Higher Education, EV-079 Education Software, EV-080 Student Health), FY2025 revenue by division (EV-003), enrollment, aid and patient volumes (EV-038, EV-037, EV-068), backup and recovery records (EV-026, EV-056, EV-064, EV-071), and contract notice terms (EV-057). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,10 +16,10 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, and SYS-G3 cloud, network, and the group data platform. The college's student information system (SIS) and learning management system (LMS) run as a tenant on Education Software's Campus Platform (SYS-H1 on SYS-E1). This is the most important cross-division dependency in the group: **the college cannot teach online, register students, or disburse aid when the Campus Platform is down.** Other division systems are the financial aid management system and SAIG access (SYS-H2), the admissions CRM (SYS-H3), campus networks and legacy campus systems (SYS-H4), online proctoring (SYS-H5), the District Platform (SYS-E2), the support console and pipeline (SYS-E3), and the clinic EHR (SYS-S1) with Student Health's legacy domain (SYS-S2). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, and SYS-G3 cloud, network, and the group data platform. The college's student information system (SIS) and learning management system (LMS) run as a tenant on Education Software's Campus Platform (SYS-H1 on SYS-E1). This is the most important cross-division dependency in the group: **the college cannot teach online, register students, or disburse aid when the Campus Platform is down.** Other division systems are the financial aid management system and SAIG access (SYS-H2), the admissions CRM (SYS-H3), campus networks and legacy campus systems (SYS-H4), online proctoring (SYS-H5), the District Platform (SYS-E2), the support console and pipeline (SYS-E3), and the clinic EHR (SYS-S1) with Student Health's legacy domain (SYS-S2). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Higher Education about $26 million per day, Education Software about $16 million per day, and Student Health about $7 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Higher Education about $9.6 billion, or about $26 million per day; Education Software about $5.8 billion, or about $16 million per day; and Student Health about $2.6 billion, or about $7 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -75,11 +76,11 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Sign-in (SYS-G1) | Group | Every federated process | A group identity outage stops all three divisions at once. Break-glass accounts per critical system are the fallback |
 | Campus and clinic network (BP-G04) | Group | Campus safety, on-campus instruction, 96 clinics | Campus clinics share campus networks |
 | SOC facts (BP-G02) | Group | FSA, FTC, HIPAA, customer, and SEC notices | Every notice clock in P08 depends on the SOC establishing what happened |
-| Support console (BP-ES03, SYS-E3) | Education Software | The college tenant and about 6,300 other customer tenants | Standing cross-tenant read access (scenario gap 1) makes one support account a group-wide exposure |
-| Enrollment and immunization feeds (BP-SH05) | Higher Education and Student Health | Each other | Two-way feed through the integration hub; the 2025 utilization extract to the warehouse used the same interface (scenario gap 2) |
+| Support console (BP-ES03, SYS-E3) | Education Software | The college tenant and about 6,300 other customer tenants | Standing cross-tenant read access (group gap 1) makes one support account a group-wide exposure |
+| Enrollment and immunization feeds (BP-SH05) | Higher Education and Student Health | Each other | Two-way feed through the integration hub; the 2025 utilization extract to the warehouse used the same interface (group gap 2) |
 | Student data warehouse (BP-G05) | Group | College advising, institutional research | Not needed in real time (Moderate), but it holds the largest copy of college data outside SYS-E1 |
 
-**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly); the Campus Platform's single production region in provider B for the college tenant (warm standby exists for the platform, but the college's integration hub has no standby, P01 HE-014); one central financial aid office for SAIG transmissions (accepted, because SAIG access can be rebuilt on clean workstations within the 24-hour RTO).
+**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly, EV-077); the Campus Platform's single production region in provider B for the college tenant (warm standby exists for the platform, but the college's integration hub has no standby, P01 HE-014); one central financial aid office for SAIG transmissions (accepted, because SAIG access can be rebuilt on clean workstations within the 24-hour RTO).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -108,7 +109,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 
 ## 8. Key findings
 1. **The college's most critical systems are run by another division.** The college has no recovery capability of its own for its SIS and LMS. It relies on Education Software's warm standby, which is tested twice a year for the platform but has never been tested end to end with the college's integration hub and FAMS interfaces (P01 HE-014; P07 CP-4).
-2. **Shared-service RTOs are shorter than any division's**, as they must be. Group identity met its 1-hour RTO in two 2026 tests.
-3. **Student Health is the least recoverable division.** Its legacy file servers (SYS-S2) have been backed up to the group vault only since March 2026 and have never been restore-tested (P01 SH-004).
-4. **The data warehouse is Moderate for availability but High for confidentiality.** Its recovery can wait; its protection cannot (P02, scenario gap 2).
+2. **Shared-service RTOs are shorter than any division's**, as they must be. Group identity met its 1-hour RTO in two 2026 tests (EV-077).
+3. **Student Health is the least recoverable division.** Its legacy file servers (SYS-S2) have been backed up to the group vault only since March 2026 and have never been restore-tested (EV-071; P01 SH-004).
+4. **The data warehouse is Moderate for availability but High for confidentiality.** Its recovery can wait; its protection cannot (P02, group gap 2).
 5. **Notification capacity is itself a process** (BP-ES03, BP-G02, BP-G07). If the SOC or the support desk is down during an incident, the FSA, FTC, customer, and SEC clocks keep running. The P08 runbook uses out-of-band channels for this reason.
