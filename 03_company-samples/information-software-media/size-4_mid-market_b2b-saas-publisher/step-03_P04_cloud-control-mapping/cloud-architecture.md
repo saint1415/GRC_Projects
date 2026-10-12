@@ -2,7 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. | **Tier:** Mid-Market | **Provider:** Vendor-agnostic public cloud provider A (primary), a SaaS data platform on cloud provider B, plus SaaS services (see section 4)
 **System:** Customer Engagement Platform (CEP), as defined in the SSP (P02) | **Prepared:** 2026-08-07 by the VP Platform Engineering and the Director of Security; updated 2026-09-29 with P07 results
-**Control map:** `cloud-control-map.csv` (56 rows, 23 components)
+**Control map:** `cloud-control-map.csv` (56 rows, 23 components) | **Sources:** the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), [vendor register](../step-00_P00_intake/vendor-register.csv) and configuration exports (EV-006 to EV-010, EV-014, EV-019, EV-023, EV-027)
 
 ## 1. Diagram
 
@@ -52,7 +52,7 @@ flowchart LR
       DEV["Synthetic data only<br/>SA-3(2)"]
     end
     subgraph DATA["Data analytics account"]
-      LOAD["Warehouse loader job<br/>(long-lived key, gap 1)"]
+      LOAD["Warehouse loader job<br/>(long-lived key, EV-008)"]
     end
   end
   WH[("SYS-11 Data warehouse on cloud provider B<br/>AC-6, IA-5")]
@@ -89,11 +89,11 @@ The landing zone separates duties across 10 core accounts (subscriptions or proj
 | **Log archive** | Cloud audit logs from every account | Security team (read: 3 people) | Write-once retention for 1 year. Nobody in a workload account can delete logs |
 | **Network hub** | Egress firewall, DNS, inter-account routing | Platform engineering | All workload egress passes the hub. Production, healthcare, and development have no routes to each other |
 | **Production** | SYS-01: the multi-tenant platform for about 2,350 customers | Platform engineering, through just-in-time access | Private subnets; ingress only through the edge; company-managed keys |
-| **Healthcare production** | SYS-02: the healthcare cell for 46 customers | Platform engineering, through just-in-time access | Separate keys, database, storage, and search. Egress only to sub-processors under BAAs (2 exceptions, gap 8) |
+| **Healthcare production** | SYS-02: the healthcare cell for 46 customers | Platform engineering, through just-in-time access | Separate keys, database, storage, and search. Egress only to sub-processors under BAAs (2 exceptions, EV-042) |
 | **DR** | SYS-03: replicas, images, 35-day backups in a second U.S. region | Platform engineering | Pilot light today; warm standby planned |
 | **Staging** | Pre-production testing | Engineering | Synthetic data only; snapshot sharing from production blocked |
 | **Development** | Shared development and CI runners | Engineering | No production credentials reachable |
-| **Data analytics** | Export staging and the warehouse loader | Data team | Loader uses a long-lived key into production and pushes to cloud provider B (gaps 1 and 3) |
+| **Data analytics** | Export staging and the warehouse loader | Data team | Loader uses a long-lived key into production and pushes to cloud provider B (EV-008, EV-023) |
 
 ## 3. Layers and shared responsibility per service
 | Layer | Components | Key controls | Service model | Responsibility |

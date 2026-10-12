@@ -11,6 +11,8 @@
 | Approved | Chief Technology Officer and General Counsel, 2026-09-29 |
 
 ## 1. Applicability
+Which rules apply was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section records the analysis behind the rules analyzed here and the applicability checks.
+
 **Primary business line:** subscription sales of a multi-tenant customer service platform (NAICS 513210) to about 2,400 U.S. businesses, including 46 healthcare customers and 9 community banks.
 
 | Regulation | Applies? | Basis |
@@ -51,7 +53,7 @@ Several state comprehensive consumer privacy laws place duties on processors tha
 28 CFR Part 202 restricts covered data transactions that give countries of concern or covered persons access to bulk U.S. sensitive personal data. The platform holds far more than the bulk thresholds for covered personal identifiers (100,000 U.S. persons) and personal health data (10,000, in the healthcare cell). The company has **no** covered data transactions identified today: hosting is in the United States, all 14 sub-processors are U.S.-based or process in the United States, and the engineering contractor in Poland (not a country of concern) has no access to customer data. The gap is screening: there is no Data Security Program attestation or check for contractor personnel or sub-processors (P01 R-033).
 
 ### 1.5 Not applicable
-COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), and PADFA (N51-R05) do not apply; reasons are in `../00_company-facts.md` section 1. The FTC Health Breach Notification Rule does not apply because PHI is handled as a HIPAA business associate. The bank service provider notification rule (12 CFR 53.4) and state breach laws are handled in P08.
+COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), and PADFA (N51-R05) do not apply; reasons are in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). The FTC Health Breach Notification Rule does not apply because PHI is handled as a HIPAA business associate. The bank service provider notification rule (12 CFR 53.4) and state breach laws are handled in P08.
 
 **Excluded HIPAA Security Rule rows (7), with reasons:**
 - **164.308(a)(4)(ii)(A)** (isolating clearinghouse functions): the company is not a health care clearinghouse.
@@ -61,7 +63,7 @@ COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08)
 ## 2. Method
 1. **Requirements.** FTC guidance practices are cited by guide, lesson, and practice heading (FTC guidance is a U.S. government work). Each company commitment became one deception row. HIPAA Security Rule requirements and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 (the 69 rows of the repository's Health Care crosswalk). One crosswalk citation, 164.314(a)(3)(i), is shown with its current eCFR location, 164.314(a)(2)(i)(C). Breach notification rows were decomposed from the eCFR text (2026-09-23 version, checked through the eCFR API).
 2. **Crosswalk.** Each row is mapped to CSF 2.0, SP 800-53 Rev. 5, and SOC 2 criterion IDs. All mappings are **author mappings**: no official NIST or FTC mapping of the FTC guidance exists, and NIST's official CSF 2.0 mapping of the HIPAA Security Rule is not yet published. SOC 2 criteria are listed by ID only (the AICPA text is copyrighted).
-3. **Evidence.** Interviews with the CTO, VP Platform Engineering, VP Engineering, Director of Security, VP Customer Support, VP Product, Director of IT, and the Associate General Counsel, Privacy; configuration exports; the SOC 2 Type 2 report; contracts; and the trust center as captured on 2026-07-20.
+3. **Evidence.** The intake evidence (EV-001 to EV-058), including configuration exports, the SOC 2 Type 2 report (EV-038) and the contracts (EV-044); interviews with the CTO, VP Platform Engineering, VP Engineering, Director of Security, VP Customer Support, VP Product, Director of IT, and the Associate General Counsel, Privacy (EV-061); the trust center as captured on 2026-07-20 (EV-062); fieldwork exports, walk-throughs and scans (EV-063 to EV-073); samples and contract reviews (EV-074 to EV-077); and, for the refresh through 2026-09-04, P07 evidence (EV-AC-2, EV-CP-9).
 4. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population, sized with the co-sourced internal audit firm's attribute sampling table:
    - terminations: 25 of 96; transfers: 25 of 58; new hires: 25;
    - healthcare cell just-in-time sessions: 25 of 312 (Q2 2026); healthcare role grants: 15;
@@ -77,7 +79,7 @@ COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08)
    - sub-processor contracts: 14 of 14; BAAs: 46 of 46;
    - laptop wipe certificates: 10 of 31;
    - Answer Bot replies: 400 (P10 evaluation).
-   Each `evidence` cell names the sample and its result.
+   Each `evidence` cell names the sample and its result. Populations come from intake exports: terminations and transfers (EV-003), just-in-time sessions (EV-006), support view sessions (EV-009), terminated tenants (EV-024), incidents (EV-034), sub-processors and BAAs (EV-041, EV-042).
 5. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale.
 
 **Addressable is not optional.** For each addressable HIPAA specification, the company must implement it, implement an equivalent alternative, or document why neither is reasonable and appropriate (164.306(d)(3)). Every addressable gap below is being implemented.
