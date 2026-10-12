@@ -13,11 +13,11 @@
 ## 1. Why SOC 2 for this organization
 A community credit union is **not** a SOC 2 service organization. It serves its members; it does not provide services to other businesses. The Trust Services Criteria are used here for three practical reasons.
 
-**A. Answering the cyber insurer.** The cyber policy renews on 2026-11-01 and the renewal questionnaire is due 2026-10-31. Its questions on governance, access, MFA, backups, incident response, and vendor oversight follow the Trust Services Criteria. The credit union will answer with this self-assessment and the POA&M (P07), and name the ISO as the security contact.
+**A. Answering the cyber insurer.** The cyber policy renews on 2026-11-01 and the renewal questionnaire is due 2026-10-31 (EV-036). Its questions on governance, access, MFA, backups, incident response, and vendor oversight follow the Trust Services Criteria. The credit union will answer with this self-assessment and the POA&M (P07), and name the ISO as the security contact.
 
 **B. Structuring the board report.** Appendix A III.F asks for an annual report on the program's status. The criteria give the volunteer board a familiar, complete checklist.
 
-**C. Relying on the core processor.** The core processor carries most of the credit union's inherited controls (P02 section 10.2). Its SOC reports are the evidence for those controls, and reviewing them is part of the service provider monitoring in Appendix A III.D.3, which says the credit union should review audits, summaries of test results, or equivalent evaluations of its service providers.
+**C. Relying on the core processor.** The core processor carries most of the credit union's inherited controls (P02 section 10.2). Its SOC reports (EV-029) are the evidence for those controls, and reviewing them is part of the service provider monitoring in Appendix A III.D.3, which says the credit union should review audits, summaries of test results, or equivalent evaluations of its service providers.
 
 **Assurance alternatives in this vertical.** Regulators do not ask a credit union for a SOC 2 report. NCUA examinations and the annual supervisory committee audit (Part 715) are the credit union's own assurance; SOC 1 and SOC 2 reports from the core processor and other providers are the assurance over vendors. **The credit union will not get a SOC 2 audit.** Nobody has asked for one, and most controls were defined in August 2026, far short of the operating period a Type 2 report needs.
 

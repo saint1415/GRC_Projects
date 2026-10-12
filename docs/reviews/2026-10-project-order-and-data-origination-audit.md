@@ -152,3 +152,20 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (private college):** pass-1 R-007, R-012, R-025, R-041 and R-042 quote sample results the SSP credits to P07; G-032 and P07 SR-6 cite P09 vendor reviews dated September; BP-06 lists an identity verification vendor the SSP plans for 2027.
 - **Size 5 (enterprise college):** P03 cites the Qualified Individual's report of 2026-09-10, after its approval; the facts say 10 of 16 AI uses were reviewed at intake while the P10 dates show 8; R-001 gives EDR on 98% of endpoints while the SSP says all.
 - **Size 6 (college plus two divisions):** SSP AC-6(7) says service accounts are certified while P07 found them excluded; the SSP and P09 disagree on the proctoring contract's notice term; pass-1 SH-001 and GR-06 cite August findings.
+
+### Finance and Insurance, 2026-10-12
+
+Six samples, 545 evidence rows in all. Agent cost: about 2.6 million tokens; the longest sample took 28 minutes.
+
+Fixes made during this batch:
+- **Sizes 1, 2 and 6:** trailing-hyphen P07 IDs (EV-IA-2-1, EV-SC-28-1, EV-AT-2-3, EV-C-AC2-3 and others) renamed to the parenthesis form.
+- **Sizes 1 and 3:** walk-throughs and reviews dated inside the P07 window but used as evidence of the starting state were re-cited to intake rows.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in sizes 2 to 4 the P08 notification matrix) cites regulatory checks dated after approval.
+- **Size 1 (investment adviser):** P07 SA-9 covers "all 10 vendors" while the vendor register lists 14; the facts and R-006 say statements were pasted into the chatbot through 2026-07-15, after the export behind them.
+- **Size 2 (credit union):** the SSP says the requirement list has no NCUA Part 748 row, which N52-R09 now provides; P04 (2026-07-24) relies on a P07 test and a mailbox change from August; POL-04 and POL-05 refer to P10 conditions decided after their approval.
+- **Size 3 (community bank):** P04 and P03 cite P07 AC-2 results; P09 (2026-08-20) cites committee minutes, policies and runbooks dated later; R-030 says policies were adopted 2026-08-27 while it was last reviewed 2026-07-24.
+- **Size 4 (regional bank):** POAM-009's portal log review is due 2026-09-30 while P07 and R-049 already state its result; P07 SR-6 cites P09 vendor reviews dated after fieldwork.
+- **Size 5 (super-regional bank):** P03 and the BIA quote the Q2 asset averages before the Q2 reports were filed; P04 says phishing-resistant MFA is applied to client-service staff while R-005 puts it in its treatment; the facts say 12 AI uses were reviewed at intake while the dates show 11.
+- **Size 6 (diversified financial group):** P03 says Colorado SB26-189 deployer duties are under review for the bank while P10 says it does not apply; the SSP says support console views go to the SIEM while P07 says those logs are not collected; P10 cites POL-01 4.13 for the Group AI Standard, which first appears in v2026.

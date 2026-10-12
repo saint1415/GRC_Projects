@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Community Federal Credit Union (member-owned federal credit union) | **Tier:** Micro (7 employees; $60.0 million in total assets) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Operations Manager (Information Security Officer) with the President and CEO, the Accounting and Compliance Officer, the Lending Manager, the Senior Member Service Representative, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** President and CEO, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-047), FY2025 financial statements (EV-044), member and activity report (EV-045), core processor and digital banking provider SOC reports (EV-029, EV-030), core contract and offline teller procedures (EV-028, EV-043), wire service agreement (EV-032), MSP contract (EV-033), imaging server export (EV-013). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the President and CEO.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the credit union, how long each can be down, and how much data each can lose. It supports:
@@ -11,10 +12,10 @@ This BIA lists every business function of the credit union, how long each can be
 - the availability rating in the SSP (P02), impact ratings in the risk register (P01), and the recovery order in the incident response runbook (P08).
 
 ## 2. System and business description
-One Florida office, 7 employees, about 6,400 members, and $60.0 million in total assets. Almost everything runs at vendors: the core processing system at a core processor (SYS-01), online and mobile banking at a digital banking provider (SYS-02), the wire portal at the corporate credit union (SYS-03), the productivity suite (SYS-04), card processing (SYS-07), and the loan origination system (SYS-08). On site are 8 desktops, 3 laptops, and 2 check scanners (SYS-05) and the office network and phones (SYS-06). The MSP runs IT and the document imaging server in a cloud tenant (SYS-09). See `../00_company-facts.md` sections 3 and 7.
+One Florida office, 7 employees, about 6,400 members, and $60.0 million in total assets. Almost everything runs at vendors: the core processing system at a core processor (SYS-01), online and mobile banking at a digital banking provider (SYS-02), the wire portal at the corporate credit union (SYS-03), the productivity suite (SYS-04), card processing (SYS-07), and the loan origination system (SYS-08). On site are 8 desktops, 3 laptops, and 2 check scanners (SYS-05) and the office network and phones (SYS-06). The MSP runs IT and the document imaging server in a cloud tenant (SYS-09). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million a year in net revenue (fictional), about $4,400 per business day.
+Dollar values are scaled to about $1.1 million a year in net revenue (fictional) across about 250 business days, about $4,400 per business day (EV-044).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -49,15 +50,15 @@ Totals: 8 processes, 4 High, 3 Moderate, 1 Low.
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 Core processing system | Member accounts, shares, loans, general ledger, teller, ACH, BSA module | Core processor replication between two data centers (SOC 2 system description: RPO 15 minutes) | BP-01, BP-03, BP-04, BP-05, BP-08 |
-| SYS-02 Online and mobile banking | Vendor-hosted; integrated with the core | Provider replication (SOC 2 report: RTO 4 h, RPO 15 min) | BP-02 |
+| SYS-01 Core processing system | Member accounts, shares, loans, general ledger, teller, ACH, BSA module | Core processor replication between two data centers (SOC 2 system description: RPO 15 minutes, EV-029) | BP-01, BP-03, BP-04, BP-05, BP-08 |
+| SYS-02 Online and mobile banking | Vendor-hosted; integrated with the core | Provider replication (SOC 2 report: RTO 4 h, RPO 15 min, EV-030) | BP-02 |
 | SYS-03 Wire portal | Corporate credit union web service with hardware tokens | Corporate credit union records; alternate phone-initiated wire | BP-03 |
 | SYS-04 Productivity suite | Email, the shared Member Services mailbox, shared files | Vendor service resilience and deleted-item retention; **no separate backup** | BP-03, BP-07, BP-08 |
 | SYS-05 Endpoints | 8 desktops, 3 laptops, 2 check scanners | No local data by design, except the nightly offline-teller balance file and scans cached at teller stations | All |
 | SYS-06 Network and phones | Firewall, Wi-Fi, VoIP phones, one internet line | Firewall configuration backed up by the MSP | All |
 | SYS-07 Card processing and ATM | Card processor; one lobby ATM | Card processor stand-in authorization | BP-04 |
 | SYS-08 Loan origination system | Vendor SaaS with the AI scoring add-on | Vendor backups (SOC 2 report requested, not yet received) | BP-06 |
-| SYS-09 Document imaging server | Virtual server in a cloud IaaS tenant, run by the MSP | Daily snapshots in the same cloud account, 14 days kept; **never restore-tested** | BP-07 |
+| SYS-09 Document imaging server | Virtual server in a cloud IaaS tenant, run by the MSP | Daily snapshots in the same cloud account, 14 days kept; **never restore-tested** (EV-013, EV-014) | BP-07 |
 | People | 7 employees | Cross-training: the Operations Manager and the Accounting and Compliance Officer can both approve wires and work the teller line | All |
 
 **Vendor dependencies:**
@@ -65,9 +66,9 @@ Totals: 8 processes, 4 High, 3 Moderate, 1 Low.
 |---|---|---|
 | Core processor | BP-01, BP-03, BP-04 (partly), BP-05, BP-08 | SOC 2 Type 2: RTO 8 h, RPO 15 min. **The 8-hour RTO exceeds the 4-hour RTO for BP-01.** Offline teller mode covers the gap for up to one business day |
 | Digital banking provider | BP-02 | SOC 2 Type 2: RTO 4 h and RPO 15 min, which meet this BIA |
-| Corporate credit union | BP-03, BP-05 settlement | Service agreement states wire service availability; alternate phone wire never tested |
+| Corporate credit union | BP-03, BP-05 settlement | Service agreement states wire service availability; alternate phone wire never tested (EV-032) |
 | Card processor | BP-04 | Stand-in authorization when the core is down |
-| MSP | Recovery of endpoints, network, and the imaging server | No written recovery commitment; the contract has only a 4-business-hour response time |
+| MSP | Recovery of endpoints, network, and the imaging server | No written recovery commitment; the contract has only a 4-business-hour response time (EV-033) |
 | Cloud IaaS provider (through the MSP's tenant) | BP-07 (imaging) | Provider platform commitments; the snapshots sit in the same account as the server |
 | Productivity suite vendor | BP-03 (wire requests by email), BP-07 | Vendor service commitments (standard terms) |
 | Internet provider | Every office function, including phones | None; single line |

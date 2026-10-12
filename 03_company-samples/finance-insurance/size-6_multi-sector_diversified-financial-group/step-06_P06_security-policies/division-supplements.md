@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Banking | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after effective date) | Confirm alignment |
 | Financial Software | v2025 | 2025-11 | Aligned, but missing the 4-hour determination step (POL-03 4.5), the tenant-scoped support rule (POL-02 4.2), and a change gate for the data service (POL-01 4.13) | Add by 2026-12-31 (POAM-005, POAM-008, POAM-014) |
-| Commercial Real Estate | The acquired company's 2023 policy set | Never | **Not aligned** (scenario gap 2); conflicts listed in section 4 | Re-issue as a group supplement by 2026-11-30 (POAM-017) |
+| Commercial Real Estate | The acquired company's 2023 policy set | Never | **Not aligned** (group gap 2); conflicts listed in section 4 | Re-issue as a group supplement by 2026-11-30 (POAM-017) |
 
 ## 3. What each supplement adds
 ### 3.1 Banking supplement (national bank; OCC covered bank)
@@ -66,7 +66,7 @@ The acquired company's 2023 policies were never replaced. Where they conflict, *
 | Incident reporting | Report to the division IT manager | Group SOC within 15 minutes for payment fraud (POL-03 4.1) | Slower escalation |
 | Email retention | Keep closing email indefinitely for loan files | Records schedule; closing packages in the loan system (POL-04 4.4) | Guarantor data sprawl (P01 RR-004) |
 | Service providers | Title and escrow agents on an approved list | Due diligence and contract terms (POL-01 4.8) | No security terms for agents |
-| Control inheritance | Not addressed | Division documents inheritance (POL-01 4.7) | Gap 2 (POAM-018) |
+| Control inheritance | Not addressed | Division documents inheritance (POL-01 4.7) | Group gap 2 (POAM-018) |
 
 **Why the drift happened.** The 2024 integration plan covered identity and email migration and stopped there. **Fix:** POL-01 4.14 now requires full integration within 12 months of any acquisition, and the Group CISO's policy office tracks supplement versions in the policy register.
 

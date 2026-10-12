@@ -54,7 +54,7 @@ flowchart LR
   RESP["18 respondent institutions"]
   CUST["Customers (web and mobile)"]
 
-  CUST -->|"MFA: SMS or app codes (gap 3)"| OLB
+  CUST -->|"MFA: SMS or app codes (EV-034)"| OLB
   RESP -->|"customer identity service + MFA"| EDGE
   EDGE --> CP
   EP -->|SSO + MFA| IDP
@@ -85,8 +85,8 @@ flowchart LR
   LOGA --> SIEM
   POST --> SIEM
   IDP --> SIEM
-  PH -.->|"not yet forwarded (gap 7)"| SIEM
-  CORE -.->|"security reports not reviewed (gap 7)"| SIEM
+  PH -.->|"not yet forwarded (EV-020)"| SIEM
+  CORE -.->|"security reports not reviewed (EV-004)"| SIEM
 ```
 
 ## 2. Landing zone design
@@ -145,10 +145,10 @@ The design is independent of the provider. This table gives each provider's name
 
 ## 5. Findings from the mapping
 1. **Payments resilience is designed but unproven (CP-10).** Cross-region failover of the payments database and hub exists on paper; the 2025 test took 9 hours against a 4-hour RTO, mostly because DNS changes, the Federal Reserve connection, and reconciliation of in-flight wires were manual. Fix: scripted failover, a pre-approved second-region connection, a reconciliation runbook, and a retest by 2027-03-31 (P01 R-004).
-2. **Payments events are invisible to the SIEM (AU-2, SI-4).** The payments hub, correspondent portal, and core security reports are not forwarded, so a beneficiary, limit, or contact-information change cannot be correlated with a suspicious sign-in (gap 7; R-013). Fix: onboard these sources and write change-anomaly use cases by 2027-01-31.
+2. **Payments events are invisible to the SIEM (AU-2, SI-4).** The payments hub, correspondent portal, and core security reports are not forwarded, so a beneficiary, limit, or contact-information change cannot be correlated with a suspicious sign-in (EV-020; R-013). Fix: onboard these sources and write change-anomaly use cases by 2027-01-31.
 3. **Vendor support is a standing path into production (MA-4).** The payments hub vendor keeps an always-on VPN into the production account. Fix: move it behind PAM with per-session approval and recording (R-048).
 4. **A default-pattern account was found in the portal (IA-5).** P07 found 2 vendor-created generic administrator accounts in the correspondent portal. They were disabled on 2026-08-14 and added to P01 as R-049.
 5. **Isolation of backups is the strongest control.** The backup account is in a second region with write-once retention and separate credentials (CP-9, CP-6). Full restores of the payments database have not been tested (CP-9(1)).
-6. **Customer authentication is a bank setting, not a provider gap (IA-8).** The digital banking provider supports app-based push and passkeys; the bank chose SMS codes for consumers (gap 3; R-002, R-016).
+6. **Customer authentication is a bank setting, not a provider gap (IA-8).** The digital banking provider supports app-based push and passkeys; the bank chose SMS codes for consumers (EV-034; R-002, R-016).
 7. **Boundary check.** Every in-scope component in the SSP (P02 section 9) appears in the diagram, every cloud account has at least one row in the control map, and each account has controls from at least 2 of the AC, AU, CM, IA, SC, and SI families or inherits them.
 8. **Inherited controls rely on SOC reports.** Controls marked Provider or Shared for the core processor, the digital banking provider, the cloud provider, the identity vendor, and the MSSP depend on their SOC reports and the CUECs the bank operates, reviewed each year in P09 `vendor-soc2-review.csv`.

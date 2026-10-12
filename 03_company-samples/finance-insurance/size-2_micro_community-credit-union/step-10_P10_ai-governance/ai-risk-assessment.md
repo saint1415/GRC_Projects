@@ -8,12 +8,12 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook |
 | Assessor / date | Lending Manager and the ISO, with the Accounting and Compliance Officer (fair lending), 2026-08-21 |
 | Decision | President and CEO, 2026-08-31, after the board was briefed on 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-001 assessed here in full) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-001 assessed here in full), built from the LOS configuration and add-on terms, the accounts payable list, the online banking admin console and a staff survey (EV-034, EV-037, EV-004, EV-046). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Lending Manager. **Fair lending review:** Accounting and Compliance Officer. **Security and vendor terms:** ISO. **Decision authority:** President and CEO; the board is briefed because the tier is High.
 - **Policies that apply:**
-  - POL-04 4.5: the ISO approves any new vendor feature that touches member information before it is switched on. **The add-on was switched on by the LOS vendor at the Lending Manager's request in April 2026, before that rule existed and with no review** (gap 11 in the scenario facts; P03 G-028).
+  - POL-04 4.5: the ISO approves any new vendor feature that touches member information before it is switched on. **The add-on was switched on by the LOS vendor at the Lending Manager's request in April 2026, before that rule existed and with no review** (EV-034; EV-025; P03 G-028).
   - POL-02 A.5: vendor due diligence and contract terms apply to the model vendor.
   - POL-04 4.6: the add-on is the only AI tool approved for member information, and only under the conditions in section 6.
 - **Inventory:** the ISO keeps the AI inventory. AI-001 was added on 2026-08-21, with AI-002 and AI-003.
@@ -24,7 +24,7 @@
 |---|---|
 | Purpose and intended use | Score online applications for consumer auto and personal loans up to $25,000, recommend approve, refer, or decline, and give up to 4 reason codes. The goal is faster decisions for members who apply online after hours |
 | Users / operators | Lending Manager; the LOS applies auto-approvals without a person |
-| Affected people | Applicants (members and people joining to borrow). Pilot from 2026-04-06 to 2026-08-14: **212 scored applications.** 97 were approved automatically. 115 were referred to the Lending Manager (the model recommended decline on 52 and refer on 63); of those, 61 were approved, 45 declined, and 9 withdrawn or incomplete |
+| Affected people | Applicants (members and people joining to borrow). Pilot from 2026-04-06 to 2026-08-14: **212 scored applications** (EV-059). 97 were approved automatically. 115 were referred to the Lending Manager (the model recommended decline on 52 and refer on 63); of those, 61 were approved, 45 declined, and 9 withdrawn or incomplete |
 | Data | Inputs: credit report attributes, stated income and debts, employment length, membership tenure, share balances and 6 months of deposit cash flow from the core, vehicle value for auto loans, and vendor "digital identity" signals (age of the email address, phone line type, and whether the phone and email match other records). Outputs: a score, a recommendation, and reason codes stored in the LOS |
 | Build or buy | Configure: a vendor-built machine learning model inside the vendor's SaaS LOS. The credit union sets the approve and decline cutoffs and the loan types |
 | Human role | The model makes approvals by itself above the cutoff. For declines, the Lending Manager followed the model's decline recommendation in 43 of 49 decided cases (88%), so the model is a **substantial factor** in declines |
@@ -57,8 +57,8 @@
 | Safe | Limits held: loans up to $25,000, online only, no automatic declines | Limits held on all 212 applications | Yes |
 | Secure and resilient | Vendor SOC 2 report; MFA on LOS staff accounts; model version change notice | MFA on for both LOS users; SOC 2 report requested, not yet received; no change notice term | Partial |
 | Accountable and transparent | Named owner; inventory entry; overrides recorded | Owner and inventory in place since 2026-08-21; override reasons not recorded before August | Partial |
-| Explainable and interpretable | Reason codes specific enough for 1002.9(b)(2) | **9 of 45 decline notices** gave "insufficient model score" as a principal reason, which is insufficient | **No** |
-| Privacy-enhanced | Contract bars secondary use; data minimization | The add-on terms let the vendor use "de-identified application data" to improve its models; digital identity signals come from a third-party data source the credit union has not reviewed | **No** |
+| Explainable and interpretable | Reason codes specific enough for 1002.9(b)(2) | **9 of 45 decline notices** (EV-059) gave "insufficient model score" as a principal reason, which is insufficient | **No** |
+| Privacy-enhanced | Contract bars secondary use; data minimization | The add-on terms let the vendor use "de-identified application data" to improve its models (EV-034); digital identity signals come from a third-party data source the credit union has not reviewed | **No** |
 | Fair, with harmful bias managed | Approval-rate ratio by estimated ethnicity and by age 62 and over; auto-approval rate by group; proxy review of inputs | Of 203 decided applications, 158 were approved. Hispanic-estimated applicants: 38 of 58 approved (65.5%); non-Hispanic white-estimated: 102 of 121 (84.3%); ratio **0.78**, below the 0.80 flag. Auto-approval: 17 of 58 (29%) versus 68 of 121 (56%). Digital identity signals were among the top 4 reasons in 13 of the 20 declines of Hispanic-estimated applicants. Age 62 and over: 25 of 31 approved (80.6%) versus 133 of 172 under 62 (77.3%); no flag | **No.** Flag raised; sample is small |
 
 **Bias finding.** The sample is too small for statistical conclusions, but the flag, the gap in auto-approvals, and the reason-code pattern point to the digital identity signals as a possible proxy for national origin (for example, prepaid phone lines and recently created email addresses). The credit union will have the vendor turn those signals off for its members and re-test on the pilot applications before any expansion.

@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Bank, N.A. (regional commercial bank), subsidiary of Cris Santos Company, Inc. |
 | Tier / Vertical | Mid-Market / Finance and Insurance |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`; AI-001 assessed in full |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the model inventory, the identity provider app list, accounts payable and the digital banking configuration (EV-042, EV-034). Whether staff use public generative AI sites, and what they enter, was not established (intake open request); AI-001 assessed in full |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook, with the Generative AI Profile (NIST AI 600-1) for AI-004 and AI-005 |
 | Assessors / date | Model Risk Manager (lead), Chief Credit Officer and Fair Lending Officer (AI-001), BSA/AML Officer (AI-002), ISO (security), Chief Compliance Officer (consumer compliance), 2026-08-24 to 2026-09-04 |
 | Decision | Chief Risk Officer and Chief Operating Officer, 2026-09-18; the High-tier decision on AI-001 approved by the President and CEO, reviewed by the Board Risk Committee on 2026-09-15 |
 
 ## 1. Summary
-The bank has a model risk management policy (2023) and a model inventory, so AI did not arrive ungoverned. The gap is that the policy was written for traditional models (asset-liability, credit loss, BSA rules) and was not applied with the same depth to AI (gap 9):
+The bank has a model risk management policy (2023) and a model inventory, so AI did not arrive ungoverned. The gap is that the policy was written for traditional models (asset-liability, credit loss, BSA rules) and was not applied with the same depth to AI (EV-042):
 - **AI-001, the small business credit model,** had a conceptual review before production but no outcomes validation on the bank's own applicants, fair lending testing used only the vendor's national data, and 9 of 40 sampled adverse action notices gave a reason that Regulation B treats as insufficient.
 - **AI-004 and AI-005** (a generative assistant pilot and a customer chatbot) started without model risk or compliance review.
 - **AI-002 and AI-003** are vendor-embedded models that are validated annually but whose suppressed or held outcomes are not sampled often enough.

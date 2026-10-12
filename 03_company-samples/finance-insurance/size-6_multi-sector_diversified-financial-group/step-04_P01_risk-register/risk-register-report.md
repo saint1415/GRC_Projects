@@ -13,7 +13,7 @@
 | Approved | 2026-09-10 by the holding company board risk committee (group register and all High risks) and the bank board risk committee (bank register); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds or processes customer information, payment instructions, or client institution data in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 hybrid infrastructure, and SYS-G4 email and collaboration. Division systems are SYS-B1 to SYS-B4, SYS-S1 and SYS-S2, and SYS-R1 and SYS-R2 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that holds or processes customer information, payment instructions, or client institution data in the three divisions, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 hybrid infrastructure, and SYS-G4 email and collaboration. Division systems are SYS-B1 to SYS-B4, SYS-S1 and SYS-S2, and SYS-R1 and SYS-R2 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. Each division security and compliance lead maintains one. Banking, the focus division, has the most detailed register.
@@ -21,7 +21,7 @@
 
 **Three lines.** Risk owners are first-line executives. The Head of Technology and Cyber Risk (second line, reporting to the Group Chief Risk Officer) challenged every High rating and every acceptance. Group internal audit (third line) did not rate risks; its P07 findings were inputs.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-021):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -32,8 +32,8 @@
 The bank's risk appetite statement (12 CFR 30 App. D II.E) sets two cyber limits that this register is measured against: no High cyber risk may remain untreated for more than two quarters, and annual fraud losses from payment-instruction fraud must stay under $25 million. Customer-harm and payment-integrity risks rated High may not be accepted; they must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), and interviews with each division's leadership. Sector threats come from the vertical overlay: business email compromise and payment fraud lead the list.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, the gap analyses (P03), the first results of the common control assessment (P07), which began on 2026-07-01 inside the fieldwork window, and interviews with each division's leadership (EV-076 group, EV-077 Banking, EV-078 Financial Software, EV-079 Commercial Real Estate). Sector threats come from the vertical overlay: business email compromise and payment fraud lead the list.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once, client institutions, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -71,12 +71,14 @@ The bank's risk appetite statement (12 CFR 30 App. D II.E) sets two cyber limits
 | FS-008 | Financial Software | The cash-flow data service drives client credit decisions without developer documentation or fairness testing | Financial Software data services lead | 2026-12-31 |
 | RR-001 | Commercial Real Estate | A loan is funded to an attacker's account on spoofed or compromised-mailbox instructions | Director of loan closing and funding | 2026-11-30 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-31 and added no risk, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
+
 ### What the results say
 The bank's own program is mature. It has only 2 High risks, and its payment controls (dual control, callbacks to independently verified numbers, a fraud model) are strong. The High risks cluster around **what the group shares and what the newer divisions do differently**:
 1. **Shared identity and email** (GR-02). One stolen session reaches every division's systems for up to 12 hours, including a support console that can read every platform tenant (FS-001).
-2. **Payment-instruction fraud outside the bank's controls** (GR-01). The bank's callback standard does not bind CRE Lending, an affiliate that funds loans on emailed instructions (RR-001, scenario gap 1). When CRE Lending is fooled, the bank's controls see a legitimate customer request.
-3. **Concentration in one platform** (GR-04). The bank and 310 client institutions share SYS-S1, so a platform event is both a bank notification incident question and a bank service provider notice event (scenario gaps 3 and 6).
-4. **AI in credit decisions** (GR-05). The bank's model and the data service sold to client banks share the same cash-flow attributes and the same weakness: reason codes and documentation lag the model (scenario gap 4).
+2. **Payment-instruction fraud outside the bank's controls** (GR-01). The bank's callback standard does not bind CRE Lending, an affiliate that funds loans on emailed instructions (RR-001, group gap 1). When CRE Lending is fooled, the bank's controls see a legitimate customer request.
+3. **Concentration in one platform** (GR-04). The bank and 310 client institutions share SYS-S1, so a platform event is both a bank notification incident question and a bank service provider notice event (group gaps 3 and 6).
+4. **AI in credit decisions** (GR-05). The bank's model and the data service sold to client banks share the same cash-flow attributes and the same weakness: reason codes and documentation lag the model (group gap 4).
 
 Governance gaps (division drift, affiliate oversight, cross-division notification) are Moderate at group level (GR-03, GR-08, GR-09). They matter because they hide whether controls in the newer divisions actually operate, which is why P07 sampled Commercial Real Estate even though it has not been assessed before.
 

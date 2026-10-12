@@ -1,0 +1,32 @@
+obligation_id,obligation,citation,applies,basis,source_evidence,analyzed_in
+N52-R01,Gramm-Leach-Bliley Act privacy and safeguards,15 U.S.C. 6801-6809,Yes,"Federally insured federal credit union. GLBA section 501(b) is implemented for federally insured credit unions by NCUA Part 748 and its Appendix A, and the deliverables cite Part 748 under this ID. No size exemption; Appendix A II.A affects how, not whether",EV-020,P03; P02; P06
+N52-R02,Interagency Guidelines Establishing Information Security Standards,12 CFR 30 App. B; 12 CFR 208 App. D-2 and 225 App. F; 12 CFR 364 App. B,No,"The Guidelines cover national banks, federal savings associations, state member and nonmember banks and bank holding companies; a credit union is none of these",EV-020,n/a
+N52-R03,FTC Safeguards Rule (GLBA),16 CFR Part 314,No,Reaches non-federally insured credit unions; this credit union is federally insured and supervised by NCUA,EV-020,n/a
+N52-R04,NYDFS Cybersecurity Regulation,23 NYCRR Part 500,No,Not New York-chartered or licensed; one Florida office,EV-020,n/a
+N52-R05,SEC Regulation S-P,17 CFR 248.30,No,"No broker-dealer, investment adviser or other SEC-registered business",EV-020,n/a
+N52-R06,SEC Regulation S-ID,17 CFR 248.201,No,No SEC-registered business; the identity theft program for a federal credit union is 12 CFR 717.90 (NCUA-717.90),EV-020,n/a
+N52-R07,NAIC Insurance Data Security Model Law #668,NAIC Model #668,No,The credit union holds no insurance license,EV-020,n/a
+N52-R08,SEC public-company cybersecurity disclosure,17 CFR 229.106; Form 8-K Item 1.05,No,A member-owned credit union is not an SEC registrant,EV-020,n/a
+N52-R09,NCUA security program and cyber incident notification,"12 CFR Part 748 (748.0, 748.1(c), Appendices A and B)",Yes,"748.0 applies to each federally insured credit union, with no size threshold. The deliverables cite Part 748 under N52-R01 and 748.1(c) under C-FINANCIAL-R03. Federal charter, so NCUA is the only supervisor",EV-020,P03; P02; P08
+N52-R10,OCC heightened standards for large banks,"12 CFR Part 30, Appendix D",No,Applies to OCC-supervised banks with $50 billion or more in assets; this is a $60.0 million credit union,EV-020; EV-044,n/a
+C-FINANCIAL-R01,Computer-Security Incident Notification Rule,12 CFR Part 53; 12 CFR 225 Subpart N; 12 CFR 304 Subpart C,No,"Applies to banking organizations, not credit unions; the NCUA 72-hour rule (C-FINANCIAL-R03) applies instead",EV-020,P08 (listed as not applicable)
+C-FINANCIAL-R02,Interagency Guidelines Establishing Information Security Standards,12 CFR 30 App. B; 12 CFR 208 App. D-2 and 225 App. F; 12 CFR 364 App. B,No,Same as N52-R02,EV-020,n/a
+C-FINANCIAL-R03,NCUA cyber incident reporting,12 CFR 748.1(c),Yes,"Federally insured credit union; report to NCUA within 72 hours, in force since 2023-09-01",EV-020,P03; P08
+C-FINANCIAL-R04,SEC Regulation SCI,17 CFR 242.1000-242.1007,No,"Not an exchange, clearing agency, alternative trading system or other SCI entity",EV-020,n/a
+C-FINANCIAL-R05,NYDFS Cybersecurity Regulation,23 NYCRR Part 500,No,Same as N52-R04,EV-020,n/a
+C-FINANCIAL-R06,CIRCIA (pending rule),6 U.S.C. 681b; proposed 6 CFR Part 226,No (proposed only),Final rule not published; tracked for planning,n/a,P08 (pending)
+NCUA-748.1(b),Catastrophic act report,12 CFR 748.1(b),Yes,Federally insured credit union; report to the regional director within 5 business days of a disaster that interrupts vital member services,EV-020,P05; P03; P08
+NCUA-748.1(d),Suspicious activity reports,12 CFR 748.1(d); 31 CFR 1020.320,Yes,Federally insured credit union; SARs are filed by the BSA Officer,EV-020; EV-042,P03; P08
+NCUA-717.83,Disposal of consumer information (federal credit unions),12 CFR 748.0(c); 12 CFR 717.83,Yes,Federal credit union that holds consumer report information for lending,EV-020; EV-034,P03
+NCUA-717.90,Identity Theft Prevention Program (federal credit unions),12 CFR 717.90,Yes,Federal credit union with consumer accounts that permit multiple payments or transactions,EV-020,P01; P03
+NCUA-749,Vital records preservation program,12 CFR Part 749,Yes,Federally insured credit union; Part 749 rewritten effective 2026-07-16,EV-020; EV-022,P05; P03
+NCUA-713,Fidelity bond coverage,12 CFR Part 713,Yes,Federally insured credit union; the board reviews the bond each year,EV-017; EV-036,P08
+NCUA-715,Supervisory committee audit,12 CFR Part 715,Yes,Federal credit union; the Supervisory Committee engages an outside CPA firm,EV-039,P09; P02
+REG-B,Equal Credit Opportunity Act and Regulation B,15 U.S.C. 1691; 12 CFR Part 1002,Yes,The credit union makes consumer loans and sends adverse action notices; the AI scoring add-on is used in credit decisions,EV-034; EV-045,P10
+FCRA-1681m,FCRA adverse action notice,15 U.S.C. 1681m(a),Yes,Loan decisions rely in part on consumer reports,EV-034; EV-037,P10
+REG-E,Electronic Fund Transfer Act and Regulation E,12 CFR Part 1005,Yes (not for wires),"Applies to consumer electronic fund transfers (debit cards, ACH, online transfers); consumer wires sent through Fedwire or a similar wire system are excluded (12 CFR 1005.3(c)(3))",EV-020; EV-045,P02; P08; P10
+FL-670,Funds transfers (UCC Article 4A as enacted in Florida),Fla. Stat. 670.202 and 670.204,Yes,The credit union sends outgoing wires for members; liability for an unauthorized wire turns on Article 4A,EV-032; EV-045,P02; P08
+FL-501.171,Florida Information Protection Act (breach notification),Fla. Stat. 501.171,Yes,The credit union holds personal information of Florida residents,EV-020; EV-045,P08
+STATE-BREACH,Other state breach notification laws,State breach notification statutes,Yes (by residency),Some members may live outside Florida; residency is checked for each affected member at the time of an incident,EV-045,P08
+CO-SB26-189,Colorado AI law,Colorado SB26-189 (effective 2027-01-01),No,Field of membership is one Florida county and loans are made to Florida residents; state AI laws outside Florida are out of scope by decision,EV-020,P10
+PCI-DSS,Payment Card Industry Data Security Standard,PCI DSS (card network rules),"Noted, not assessed",Debit cards are issued and processed by the card processor; card network obligations reach the credit union through the card processing agreement,EV-031,n/a

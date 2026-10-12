@@ -56,8 +56,8 @@ flowchart LR
 All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM) agree on the SaaS split: the provider runs the application, the platform, and the facilities; **the customer always keeps its identities and accounts, its data, and its devices.** That is why 13 of the 16 rows in the control map are the owner's alone. A custodian's fraud checks or a vendor's SOC 2 report never covers those layers. No IaaS provider equivalents table is needed, because the adviser runs no infrastructure.
 
 ## 4. Findings from the mapping
-1. **The weakest link is the money movement path, not the custodian.** The custodian portal has strong MFA, but a forged request can reach it through a client's compromised email and a signing link sent to that same address. Only a callback to a known phone number breaks that chain (P01 R-001; the 2026-06-18 near miss).
-2. **MFA is off where it is free to turn on** on five services, including the email tenant administrator account and the CRM that holds SSNs. Tracked as P01 R-002 and R-003.
-3. **The USB drive is the least protected copy of everything.** It holds every client folder, unencrypted, in an unlocked drawer (R-004).
-4. **Provider resilience is not the adviser's backup.** The email suite keeps 30 days of versions; the custodian keeps the records of account but not the adviser's own records (R-008, R-011).
-5. **A consumer AI plan is a service provider without safeguards.** Its terms allow model training; use is paused (R-006; P10).
+1. **The weakest link is the money movement path, not the custodian.** The custodian portal has strong MFA, but a forged request can reach it through a client's compromised email and a signing link sent to that same address. Only a callback to a known phone number breaks that chain (P01 R-001; the 2026-06-18 near miss, EV-005).
+2. **MFA is off where it is free to turn on** on five services, including the email tenant administrator account and the CRM that holds SSNs (EV-006, EV-009, EV-010, EV-014, EV-015). Tracked as P01 R-002 and R-003.
+3. **The USB drive is the least protected copy of everything.** It holds every client folder, unencrypted, in an unlocked drawer (EV-019, EV-021; R-004).
+4. **Provider resilience is not the adviser's backup.** The email suite keeps 30 days of versions; the custodian keeps the records of account but not the adviser's own records (EV-010, EV-003; R-008, R-011).
+5. **A consumer AI plan is a service provider without safeguards.** Its terms allow model training (EV-023); use is paused (R-006; P10).

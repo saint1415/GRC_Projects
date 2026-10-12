@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The CDBP's** system-specific controls were assessed because it is the SSP system and carries top group risks (GR-02, GR-04).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Commercial Real Estate was sampled for the first time. Its inheritance is undocumented and its policies have drifted (scenario gap 2), so internal audit chose governance and funding controls (PL-1, CA-2, AT-3, AU-6).
+Commercial Real Estate was sampled for the first time. Its inheritance is undocumented and its policies have drifted (group gap 2), so internal audit chose governance and funding controls (PL-1, CA-2, AT-3, AU-6).
 
 ## 2. Controls selected
 **40 control assessments** (36 distinct controls: SA-9 was assessed in three scopes, and AT-3 and AU-6 in two), **269 determination statements**.
@@ -25,12 +25,12 @@ Commercial Real Estate was sampled for the first time. Its inheritance is undocu
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-5, AC-12 | 45 | Every division's access; GR-02 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, IR-3, RA-5 | 54 | GR-02, GR-03; scenario gap 5 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, IR-3, RA-5 | 54 | GR-02, GR-03; group gap 5 | Focused / Comprehensive |
 | Common control (SYS-G3 infrastructure) | CP-9, SC-7, SC-8, SC-12, SC-28, CM-6 | 22 | GR-06; immutable backups and guardrails | Focused / Focused |
-| CDBP (SSP system) | AC-3, AC-5, AC-6, IA-8, AU-6, CP-4, SA-9 | 19 | GR-04, FS-001 (High); scenario gaps 3 and 6 | Comprehensive / Comprehensive |
+| CDBP (SSP system) | AC-3, AC-5, AC-6, IA-8, AU-6, CP-4, SA-9 | 19 | GR-04, FS-001 (High); group gaps 3 and 6 | Comprehensive / Comprehensive |
 | Division sample: Banking | RA-3, CP-2, AT-3, SA-9 | 47 | BR-003, BR-013; risk appetite link (App. D II.E) | Focused / Focused (2 operations centers, 3 contact centers) |
-| Division sample: Financial Software | CM-3, CM-4, SA-11, SA-9 | 27 | FS-008 (High); scenario gap 4 | Focused / Focused |
-| Division sample: Commercial Real Estate | PL-1, CA-2, AT-3, AU-6 | 40 | RR-001 (High); scenario gaps 1 and 2 | Focused / Focused (2 closing offices, 30 funding files) |
+| Division sample: Financial Software | CM-3, CM-4, SA-11, SA-9 | 27 | FS-008 (High); group gap 4 | Focused / Focused |
+| Division sample: Commercial Real Estate | PL-1, CA-2, AT-3, AU-6 | 40 | RR-001 (High); group gaps 1 and 2 | Focused / Focused (2 closing offices, 30 funding files) |
 | **Total** | **40** | **269** | | |
 
 ## 3. Methods and objects
@@ -47,6 +47,18 @@ Commercial Real Estate was sampled for the first time. Its inheritance is undocu
   - a TLS scan of 80 endpoints including the payment path, and an external exposure scan;
   - a sample of 60 bank wires (callbacks and dual control) and 30 CRE fundings (instruction source and callback number).
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; they were approved on 2026-09-10, effective 2026-10-01. Internal audit therefore tested each control as it operated under the 2025 group policies, standards and plans, which were in force (EV-017, EV-024), and reviewed the draft v2026 statements for design only. Any statement the v2026 policies add has not operated yet; its operation is tested at the 2027-04 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, configurations, or live systems | 260 (230 Satisfied, 30 Other than satisfied) |
+| Design | The control is new (a draft v2026 policy statement); only its design was reviewed. Operation is tested at the 2027-04 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: the bank's oversight of the affiliate platform (SA-09b.[01], SA-09c.), developer documentation for client banks (SA-11c.[02]), payment-fraud role training for closers (AT-03a.01[01], AT-03a.01[03], AT-03c.), an assessment plan and earlier assessments of Commercial Real Estate controls (CA-02b.01, CA-02d.[01]), and review of funding-instruction changes and closer inbox rules (AU-06a.) | 9 |
+| **Total** | | **269** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from: the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records (EV-002, EV-007), the service accounts and keys from EV-007 and EV-035, the support roles from EV-056, the 60 bank wires from the wire operations records (EV-042), and the 30 CRE funding files from the closings in EV-064 and EV-065.
+
 ## 4. Rules of engagement
 - No testing that could affect payments, customers, or client institutions. Platform tests ran in test tenants; the session replay and detection tests used test accounts and were time-boxed with the SOC.
 - No customer information left group systems. Screenshots were redacted.
@@ -62,13 +74,13 @@ Commercial Real Estate was sampled for the first time. Its inheritance is undocu
 | Division sample: Commercial Real Estate | 30 | 10 | 40 |
 | **Total** | **230** | **39** | **269** |
 
-**Common controls are strong.** 119 of 136 common statements were satisfied. MFA and federation (IA-2, IA-2(1)), privileged access (AC-6(5)), account disabling (AC-2(3)), terminations (PS-4), training (AT-2), vulnerability management (RA-5), backups (CP-9), boundaries and encryption (SC-7, SC-8, SC-12, SC-28) had no findings. The common findings are about **sessions and service accounts** (AC-12, AC-2, IA-5), **detection across identity, email, and consoles** (SI-4), and **cross-division incident handling and notices** (IR-3, IR-4, IR-6, IR-8), which is scenario gap 5.
+**Common controls are strong.** 119 of 136 common statements were satisfied. MFA and federation (IA-2, IA-2(1)), privileged access (AC-6(5)), account disabling (AC-2(3)), terminations (PS-4), training (AT-2), vulnerability management (RA-5), backups (CP-9), boundaries and encryption (SC-7, SC-8, SC-12, SC-28) had no findings. The common findings are about **sessions and service accounts** (AC-12, AC-2, IA-5), **detection across identity, email, and consoles** (SI-4), and **cross-division incident handling and notices** (IR-3, IR-4, IR-6, IR-8), which is group gap 5.
 
 **The CDBP is sound at its core and weak at its edges.** Separation of duties (AC-5) held in all 60 sampled wires; tenant isolation (AC-3) held in every cross-tenant attempt. The failures are the support console's reach (AC-6), no review of support activity (AU-6), untested gateway and region failover (CP-4), and the bank's missing oversight of the affiliate that runs the platform (SA-9). IA-8 was satisfied as written (every end user is uniquely identified and authenticated); the 41 client tenants without business payment MFA are tracked from P03 as POAM-009.
 
 **Division samples:**
 - *Banking:* the risk assessment (RA-3), role-based training (AT-3), and oversight of outside vendors (SA-9) met every statement. The only finding is a contingency plan that does not cover a deliberate suspension of digital payment initiation (CP-2).
-- *Financial Software:* the cash-flow data service changes outside configuration control (CM-3, CM-4) and without fairness testing or client-ready documentation (SA-11), which is scenario gap 4. Its oversight of its own providers (SA-9) met every statement.
+- *Financial Software:* the cash-flow data service changes outside configuration control (CM-3, CM-4) and without fairness testing or client-ready documentation (SA-11), which is group gap 4. Its oversight of its own providers (SA-9) met every statement.
 - *Commercial Real Estate:* policies not disseminated or updated since the acquisition (PL-1), no prior assessment (CA-2), no payment-fraud role training for closers (AT-3), and no review of funding-instruction changes (AU-6). In the 30 funding files, 9 callbacks went to numbers taken from the closing package.
 
 **Controls fully other than satisfied** (every statement failed): AC-12 (common), IR-3 (common), and AC-6 (CDBP). Each has only one determination statement.

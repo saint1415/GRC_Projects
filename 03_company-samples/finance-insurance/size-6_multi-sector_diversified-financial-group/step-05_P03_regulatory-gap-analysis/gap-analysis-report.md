@@ -12,6 +12,8 @@
 | Assessors | Division security and compliance leads with the Group Chief Compliance Officer's team, coordinated by the Head of Technology and Cyber Risk (second line); reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Which GLBA safeguards rule applies to which entity
 GLBA section 505(a) (15 U.S.C. 6805(a)) decides which agency enforces the safeguards standard for each kind of institution. The answer drives everything below.
 
@@ -22,7 +24,7 @@ GLBA section 505(a) (15 U.S.C. 6805(a)) decides which agency enforces the safegu
 | Financial Software and Data Services (nonbank subsidiary) | Federal Reserve (6805(a)(1)(B)) | 12 CFR 225 App. F, through the group program | Its customers are institutions; client institutions' customers are not its consumers (12 CFR 1016.3(e)(2)(v)) |
 | Commercial Real Estate: CRE Lending and Group Property Management (nonbank subsidiaries) | Federal Reserve (6805(a)(1)(B)) | 12 CFR 225 App. F, through the group program | Borrowers and guarantors obtain credit for business purposes, so few records are GLBA customer information (1016.3(e)(1)) |
 
-**Decision on the FTC Safeguards Rule (the question the brief asked).** The FTC Safeguards Rule (16 CFR Part 314) does **not** apply to the Commercial Real Estate division, or to any group entity. Section 314.1(b) limits the rule to financial institutions "not otherwise subject to the enforcement authority of another regulator under section 505", and 6805(a)(1)(B) places bank holding companies and their nonbank subsidiaries under the Federal Reserve. CRE Lending is a "financial institution" in the ordinary sense (lending is listed in 12 CFR 225.28(b)(1)), but its safeguards duty runs through the holding company's program under 12 CFR 225 App. F. Group legal recorded this decision on 2026-06-12 (`gap-analysis-commercial-real-estate.csv`, RE-G01). The Safeguards Rule's elements are still useful as a benchmark, and group policy already meets most of them.
+**Decision on the FTC Safeguards Rule (the question the brief asked).** The FTC Safeguards Rule (16 CFR Part 314) does **not** apply to the Commercial Real Estate division, or to any group entity. Section 314.1(b) limits the rule to financial institutions "not otherwise subject to the enforcement authority of another regulator under section 505", and 6805(a)(1)(B) places bank holding companies and their nonbank subsidiaries under the Federal Reserve. CRE Lending is a "financial institution" in the ordinary sense (lending is listed in 12 CFR 225.28(b)(1)), but its safeguards duty runs through the holding company's program under 12 CFR 225 App. F. Group legal recorded this decision on 2026-06-12 (EV-084; `gap-analysis-commercial-real-estate.csv`, RE-G01). The Safeguards Rule's elements are still useful as a benchmark, and group policy already meets most of them.
 
 **Why Group Property Management can exist inside a bank holding company.** It holds and operates only premises used by the bank and manages foreclosed property for the bank (Bank Holding Company Act section 4(c)(1)(A) and (C), 12 U.S.C. 1843(c)(1)). It does not manage property for outside owners, because the permissible servicing activity in 12 CFR 225.28(b)(2)(vi) excludes real property management. This scope decision also keeps the division out of residential tenant screening and fair housing questions.
 
@@ -66,12 +68,21 @@ GLBA section 505(a) (15 U.S.C. 6805(a)) decides which agency enforces the safegu
 ## 3. Method
 1. **Requirements.** Each paragraph of App. B sections II and III is one row; III.C.1.a has two parts and gets two rows. Supplement A's response-program and customer-notice paragraphs were added because III.C.1.g requires a response program. App. D, Part 53, 225 Subpart N, App. F, and the Bank Service Company Act rows were read from the eCFR and the U.S. Code. SOC 2 rows list Trust Services Criteria IDs with short topic labels in our own words (the AICPA text is not reproduced).
 2. **Crosswalk.** Each row maps to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. This is an **author mapping**: no official NIST mapping of these Guidelines or rules was found.
-3. **Evidence.** Interviews with each division's leadership; board and committee minutes; contracts and intercompany agreements; configuration exports; the P07 test results; a sample of 60 bank wires and 30 CRE loan fundings.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, board and committee minutes, contracts and intercompany agreements, and the walk-through of the primary data center and an operations center on 2026-04-14 to 2026-04-16), gap analysis interviews with each division's leadership (EV-081 Banking, EV-082 Financial Software, EV-083 Commercial Real Estate), the group legal memo on the FTC Safeguards Rule (EV-084), the draft 2026 annual report (EV-085), and the P07 test results, including the sample of 60 bank wires and 30 CRE loan fundings (EV-P-AC5, EV-R-AT3). The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 **The FFIEC IT Examination Handbook** is how examiners assess the Guidelines. The ffiec.gov site could not be reached from this environment, so its examination procedures are not quoted; the FFIEC Cybersecurity Assessment Tool was retired on 2025-08-31. This is why the analysis maps to CSF 2.0 and SP 800-53.
 
 ## 4. Results
+### 4.0 Group gaps
+Six gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 6 across this sample.
+1. **Commercial Real Estate funding controls.** CRE Lending (acquired in 2024) funds loan closings on disbursement instructions received by email. Its callback step lets closers call the number in the closing package rather than an independently verified number, and its closers are not in the bank's payment-fraud training (EV-065, EV-026; P07 EV-R-AT3).
+2. **Division supplements and inheritance.** The Commercial Real Estate supplement is the acquired company's 2023 policy set, never aligned to group policy. Common control inheritance is documented for the bank (2025 matrix) and in the Financial Software division's SOC system descriptions, but not for Commercial Real Estate (EV-018, EV-019).
+3. **Bank service provider duties.** The Financial Software division holds a bank-designated point of contact (12 CFR 53.4(a)(1)) for only 151 of its 212 client banks. The bank treats the division as an affiliate and has not mapped the division's complementary user entity controls or reviewed its SOC reports as it does for outside vendors (12 CFR 30 App. B III.D) (EV-053, EV-029, EV-005).
+4. **AI in credit decisions.** The Financial Software division sells a cash-flow data service (attributes and a score) to 64 client banks without developer documentation for them, and the service is not in its SOC 2 system description. The bank's AI credit underwriting model uses the same attributes; its validation found adverse action reasons that do not match the model's cash-flow drivers (EV-052, EV-054, EV-059, EV-047; P10 EV-086).
+5. **Cross-division incident notification.** One incident can trigger OCC notice (12 CFR 53.3), Federal Reserve notice (225.302), client bank notices (53.4, 225.303, 304.24), SARs, state breach notices, and a Form 8-K decision. The bank's notification matrix does not cover the other two divisions, and no cross-division exercise has been run (EV-024, EV-025).
+6. **Client tenant MFA.** The digital banking platform lets each tenant decide whether business users need MFA to initiate payments. The bank requires it; 41 of 310 client tenants do not (EV-055, EV-048).
+
 ### 4.1 Banking (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -124,7 +135,7 @@ The bank is mature: its own controls meet the Guidelines. Every gap sits where t
 **Not met:** funding instructions accepted by email with callbacks to numbers in the closing package (RE-G06, High: 9 of 30 sampled fundings); and no payment-fraud training for closers and funding staff (RE-G13, High). App. F III.E expressly names mergers and acquisitions as a trigger for adjusting the program; the 2024 integration covered identity and email but not policies, funding controls, or retention (RE-G16).
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | CRE funding on emailed instructions; no closer training (1) | CRE, Bank | App. F III.C.1.a, III.C.2 | High | Group callback standard; bank verified-instruction service; training | Director of loan closing and funding | 2026-11-30 |
 | 2 | Shared sessions and support console reach (6, and P07) | All | App. B III.C.1.a; SOC 2 CC6.1, CC6.3 | High | Device-bound sessions; tenant-scoped support access | Group CISO; Head of Digital Banking Platform | 2026-12-31 |

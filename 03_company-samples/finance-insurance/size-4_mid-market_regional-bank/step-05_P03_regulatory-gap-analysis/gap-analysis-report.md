@@ -11,6 +11,8 @@
 | Approved | Chief Risk Officer, 2026-09-18 (reviewed by the Board Risk Committee on 2026-09-15) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** commercial banking (deposits, lending, payments, and treasury management), including correspondent payment services for 18 respondent institutions.
 
 | Rule | Applies? | Basis (verified on eCFR, 2026-09-23 version, unless noted) |
@@ -40,7 +42,7 @@
 ## 2. Method
 1. **Requirements.** Each paragraph of Appendix B sections II and III is one row; III.C.1.a has two parts (authentication and access; fraudulent means). Supplement A's response-program and customer-notice paragraphs were added. Part 53, 225.302, 41.90, 21.11, and the Regulation B provisions were decomposed from the eCFR text. Row types: Required (shall), Consider (III.C.1), Guidance (Supplement A), Rule (must), Supervisory guidance, and State statute.
 2. **Crosswalk.** Each row is mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. This is an **author mapping**: no official NIST mapping of these rules was found.
-3. **Evidence.** Interviews with the process owners and 8 Branch Managers, board and committee minutes, contracts and vendor files, system exports, and walkthroughs of the headquarters campus, the Georgia regional office, and 4 branches (FL-01, FL-07, FL-15, GA-03).
+3. **Evidence.** Current state was established from the intake evidence (system exports, board and committee minutes, contracts and vendor files, and the walk-throughs of the headquarters campus, the Georgia regional office, and 4 branches (FL-01, FL-07, FL-15, GA-03) on 2026-06-16 to 2026-06-18, EV-043), interviews with the process owners and 8 Branch Managers (EV-051), General Counsel's working view on correspondent services (EV-052), the TLS and encryption scan (EV-058), and the samples below (EV-053 to EV-057). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Evidence sampling.** Where a requirement operates many times, a sample was tested. Samples were drawn at random from system-generated populations, using the co-sourced IT audit firm's attribute sampling table (25 items for a control that operates many times a year; more where the population is small and risk is high):
    - business contact-information changes (April to June 2026): 40 of about 1,100;
    - non-face-to-face wire requests (June 2026): 25 of about 1,900;

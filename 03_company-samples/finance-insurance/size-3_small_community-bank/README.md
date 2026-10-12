@@ -3,9 +3,9 @@
 
 > Cris Santos Bank, N.A. is a small business with 120 employees, operating as a community bank.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -45,13 +45,14 @@ OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law 
 | [NCUA security program and cyber incident notification](https://www.ecfr.gov/current/title-12/chapter-VII/subchapter-A/part-748) | 12 CFR Part 748 (748.0, 748.1(c), Appendices A and B) | No size threshold |
 | [OCC heightened standards for large banks](https://www.ecfr.gov/current/title-12/chapter-I/part-30/appendix-Appendix%20D%20to%20Part%2030) | 12 CFR Part 30, Appendix D | Average total consolidated assets of $50 billion or more (OCC proposal 90 FR 61084, 2025-12-30, would raise the threshold; not final) |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Identity provider and endpoint exports; HR roster and terminations; vendor and contract lists; prior assessments; incident log. Dated evidence register; full asset; data and vendor inventories; obligations register with legal basis. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business processes. MTD/RTO/RPO; resource and dependency mapping. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One major system with a defined boundary. Full SSP outline per SP 800-18 Rev. 2; control implementation statements. System: Wire and Digital Banking Platform (WDBP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | One cloud environment (IaaS/PaaS) plus SaaS. Control-by-component mapping; shared responsibility by service. | P02: the system boundary and its controls |

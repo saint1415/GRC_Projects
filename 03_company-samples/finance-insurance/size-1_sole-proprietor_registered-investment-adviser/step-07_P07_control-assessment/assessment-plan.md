@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 33 determination stateme
 - **Test (2026-07-15):** sign-ins from a new browser to all seven SaaS services; encryption status on each device and the USB drive; restore of 3 files from the USB drive; a search of mailbox rules and connected apps.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork beyond one generic paragraph in the compliance manual (EV-026, EV-027). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The first risk assessment (P01) was completed on 2026-07-17, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, backup copy and vendor records | 13 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the July 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 14 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the 7 custodian and SaaS accounts (EV-001, EV-006, EV-009, EV-010, EV-013 to EV-015), the laptop, phone and USB drive (EV-017 to EV-019), and the 10 vendors that hold or receive customer information (EV-025; vendor register V-01 to V-10). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No testing during market hours. No client data copied off the devices; screenshots were cropped to settings only.
 - The IT consultant worked only in sessions the owner started and watched, under the 2026-07-10 services agreement.

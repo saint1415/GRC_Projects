@@ -7,7 +7,7 @@
 Advisory Practice Systems Profile (**APSP**), identifier CSC-SYS-001. This is the "core business SaaS stack" named in the scenario brief.
 
 ## 2. System Overview
-The APSP is everything the adviser uses to manage about $19 million for about 70 client households: trading and money movement at the custodian, portfolio models and fee billing, client records, email and files, financial planning, e-signature, and bookkeeping. One person, the owner-adviser, uses and runs it. Components are SYS-01 to SYS-10 in `../00_company-facts.md` section 3. There is no server and no IaaS. Most technical safeguards are **inherited from the custodian and the SaaS vendors**; the owner is responsible for identities and MFA, where client data is kept, the devices and home network, and vendor contracts (P04).
+The APSP is everything the adviser uses to manage about $19 million for about 70 client households: trading and money movement at the custodian, portfolio models and fee billing, client records, email and files, financial planning, e-signature, and bookkeeping. One person, the owner-adviser, uses and runs it. Components are SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). There is no server and no IaaS. Most technical safeguards are **inherited from the custodian and the SaaS vendors**; the owner is responsible for identities and MFA, where client data is kept, the devices and home network, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -43,9 +43,10 @@ Operational. Planned changes: MFA on every SaaS account (2026-09-15); encrypted 
 | Books and records | Low | Moderate | Low | Must be complete and producible to the OFR (Fla. Stat. 517.121) |
 | **APSP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the Safeguards Rule elements for a one-person adviser (`control-implementation.csv`). Other Moderate controls are either inherited from the custodian and SaaS vendors (evidence: the portfolio platform's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the Safeguards Rule elements for a one-person adviser (`control-implementation.csv`). Other Moderate controls are either inherited from the custodian and SaaS vendors (evidence: the portfolio platform's SOC 2 report, EV-008; reviewed in P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the owner's accounts and settings in SYS-01 to SYS-06, SYS-09, and SYS-10; the laptop, phone, and USB drive; the home network as used for business; paper client files in the locked cabinet.
 - **Outside (external services):** the custodian's platform, each SaaS vendor's platform, the internet provider, the IT consultant's and compliance consultant's own systems, and clients' email accounts.
 
@@ -101,7 +102,7 @@ Self-assessed 2026-07-13 to 2026-07-17 with the IT consultant. See P07.
 The custodian portal requires a password and an authenticator app on the owner's phone, which is appropriate for access that can move client money. The email suite, CRM, portfolio platform, e-signature, and accounting services use a password only until MFA is turned on (2026-09-15); 16 CFR 314.4(c)(5) requires MFA for any individual accessing any information system unless the Qualified Individual approves an equivalent control in writing, and no such approval is appropriate here. Clients use the custodian's own client site and its identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **APSP:** Advisory Practice Systems Profile

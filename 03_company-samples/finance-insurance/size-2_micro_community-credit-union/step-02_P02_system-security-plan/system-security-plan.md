@@ -38,7 +38,7 @@ The credit union owns almost no infrastructure. The core processor, the digital 
 Not applicable:
 - **The OCC, Federal Reserve, and FDIC Interagency Guidelines (N52-R02) and the 36-hour notification rule (12 CFR Part 53 and parallels):** they apply to banks and bank holding companies. A federal credit union follows NCUA's Part 748 instead.
 - **FTC Safeguards Rule (N52-R03):** it reaches non-federally insured credit unions, not this one.
-- **NYDFS Part 500, SEC Regulation S-P and S-ID, NAIC Model #668, SEC cybersecurity disclosure (N52-R04 to N52-R08):** the reasons are in `../00_company-facts.md` section 1.
+- **NYDFS Part 500, SEC Regulation S-P and S-ID, NAIC Model #668, SEC cybersecurity disclosure (N52-R04 to N52-R08):** the reasons are in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 Consumer wires sent through Fedwire or a similar wire system are excluded from Regulation E's definition of electronic fund transfer (12 CFR 1005.3(c)(3)). Liability for an unauthorized wire therefore turns on UCC Article 4A as enacted in Florida, not on Regulation E.
 
@@ -79,7 +79,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the credit union controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the credit union controls or pays someone to control on its behalf:
 - **Inside:** the credit union's users, role profiles, and settings in the core (SYS-01), the online banking admin console (SYS-02), and the wire portal (SYS-03); the productivity suite tenant (SYS-04); 8 desktops, 3 laptops, and 2 check scanners (SYS-05); the office network and phones (SYS-06); and the document imaging server and its snapshots (SYS-09).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers; the card processor and lobby ATM (SYS-07); the loan origination system and its AI scoring add-on (SYS-08, assessed in P10); the Federal Reserve payment services reached through the corporate credit union; and the MSP's remote management platform.
 
@@ -121,11 +121,11 @@ By responsibility: 20 system-specific (the credit union), 23 hybrid (the credit 
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the credit union relies on | Evidence | What the credit union must still do |
 |---|---|---|---|
-| Core processor | Platform security, replication and backup (CP-9), lockout (AC-7), session timeout (AC-12), audit records (AU-2) | SOC 1 Type 2 and SOC 2 Type 2 reports; SOC 2 reviewed 2026-08-18 (P09) | Complementary user entity controls: user setup and removal, role assignment, review of user and exception reports, office IP allowlist |
-| Digital banking provider | Platform security, member sign-in service (IA-8), encryption (SC-8), audit logging | SOC 2 Type 2 report (review due 2026-11-30) | Admin console users and MFA, member authentication settings, alerts, log review |
-| Corporate credit union | Wire portal security, maker-checker enforcement (AC-5), hardware tokens | Service agreement; audit summary requested | Maker and approver assignment, token custody, callback before keying |
-| Productivity suite vendor | Platform security, encryption, lockout, audit logging | Vendor documentation | Account management, MFA, mailbox rules and forwarding settings, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), imaging server operation and snapshots (CP-9) | Monthly MSP reports; P07 evidence requests | Oversight: approve changes, review reports monthly, annual MSP security review (P01 R-014) |
+| Core processor | Platform security, replication and backup (CP-9), lockout (AC-7), session timeout (AC-12), audit records (AU-2) | SOC 1 Type 2 and SOC 2 Type 2 reports (EV-029); SOC 2 reviewed 2026-08-18 (P09) | Complementary user entity controls: user setup and removal, role assignment, review of user and exception reports, office IP allowlist |
+| Digital banking provider | Platform security, member sign-in service (IA-8), encryption (SC-8), audit logging | SOC 2 Type 2 report (EV-030; review due 2026-11-30) | Admin console users and MFA, member authentication settings, alerts, log review |
+| Corporate credit union | Wire portal security, maker-checker enforcement (AC-5), hardware tokens | Service agreement (EV-032); audit summary requested | Maker and approver assignment, token custody, callback before keying |
+| Productivity suite vendor | Platform security, encryption, lockout, audit logging | Vendor documentation (EV-038) | Account management, MFA, mailbox rules and forwarding settings, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), imaging server operation and snapshots (CP-9) | Monthly MSP reports (EV-010); P07 evidence requests | Oversight: approve changes, review reports monthly, annual MSP security review (P01 R-014) |
 
 **Inherited does not mean done.** Two of the core processor's complementary user entity controls are open gaps at the credit union: account removal (AC-2, PS-4) and review of user and exception reports (AU-6).
 
@@ -136,7 +136,7 @@ Assessed 2026-08-04 to 2026-08-06 by an independent IT audit consultant. See P07
 Staff sign in to the suite, the admin console, and the wire portal with a password and a second factor (authenticator app or hardware token). The core offers no MFA for teller users; access is limited to the office IP address as a compensating control. Members sign in to online banking with a password and a text code at new-device registration only. That is weak for accounts that can move money, and member MFA at sign-in and for sensitive changes is planned (P01 R-003). Member identity proofing at account opening follows the customer identification program (748.2(b)(2)) and is outside this plan.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and core processor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and core processor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BEC:** business email compromise

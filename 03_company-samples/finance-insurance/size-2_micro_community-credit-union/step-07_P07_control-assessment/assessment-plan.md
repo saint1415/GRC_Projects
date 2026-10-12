@@ -32,7 +32,18 @@ Micro tier scope: 10-15 controls. **13 controls, 86 determination statements.** 
   - user lists compared against the staff roster in each system
   - sign-in to the cloud console and the Member Services mailbox without a second factor (with the MSP present and the MSR who normally signs in)
   - portal role check: can one user both add a maker and approve (checked in the portal's role screen, not by sending a wire)
-  - a review of 10 wire files from July 2026 for callback evidence (supports P03 G-025)
+  - a review of 10 wire files from July 2026 for callback evidence (supports P03 G-025; EV-057)
+
+### What each test could show
+The new policies (P06) were drafts during fieldwork; the board approved them on 2026-08-25, effective 2026-09-01, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples, records or live systems | 41 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy); its design was reviewed. Operation is tested at the next annual review (risk assessment, 5 statements) or the 2027-02 follow-up (draft policy, 6 statements) | 11 |
+| Not implemented | Nothing existed to test | 34 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees and the March 2026 termination in EV-001, and the July 2026 wire files are EV-057).
 
 ### MSP evidence requested
 The MSP operates most technical controls, so evidence came from it. Requested on 2026-07-28 with a one-week deadline:
@@ -65,7 +76,7 @@ The MSP operates most technical controls, so evidence came from it. Requested on
 1. The former MSR's core account was still enabled 5 months after her departure (AC-02f.[04], AC-02i.01). Core sign-in logs showed no use after her last day. Disabled on 2026-08-05. P01 R-004 updated; POAM-001.
 2. The Member Services mailbox and the MSP's cloud console accepted a password alone (IA-02(02), IA-02(01)). The mailbox was converted to delegated access on 2026-08-12 (POAM-004); the cloud console is POAM-003.
 3. The Operations Manager can administer the wire portal and approve wires (AC-05b.). POAM-002.
-4. Of 10 July 2026 wire files, 6 were requested by email and 1 of those had a callback note. This confirms P03 G-025.
+4. Of 10 July 2026 wire files, 6 were requested by email and 1 of those had a callback note (EV-057). This confirms P03 G-025.
 
 All 13 controls have at least one weakness and a POA&M item in `poam.csv`: 4 High (POAM-004, POAM-006, POAM-010, POAM-013), 7 Moderate, and 2 Low. The High items match the P01 themes: trust in email and trust in vendors.
 

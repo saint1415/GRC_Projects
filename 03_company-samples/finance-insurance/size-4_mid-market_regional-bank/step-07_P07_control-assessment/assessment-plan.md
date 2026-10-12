@@ -25,7 +25,7 @@ Mid-Market tier scope: 25-40 controls. **35 controls, 244 determination statemen
 | AC-17, MA-4 | Vendor standing VPN; R-048 | Focused | Focused (10 vendor sessions) |
 | AT-2, AT-3 | Fraud training for contact-change and callback roles; III.C.2; 41.90(e)(3); R-001, R-028 | Focused | Focused |
 | AU-6, AU-11, SI-4 | Payments events not monitored; III.C.1.f; R-013 | Focused | Focused |
-| CM-6, CM-8 | Configuration and inventory; gap 11 | Basic | Focused (10 servers; 20 components) |
+| CM-6, CM-8 | Configuration and inventory; no configuration standard (EV-026) | Basic | Focused (10 servers; 20 components) |
 | CP-2, CP-4, CP-9, CP-10 | Payments hub recovery; III.C.1.h; R-004 (High) | Comprehensive | Comprehensive |
 | IA-2(1), IA-5 | Administrator MFA and authenticators; R-049 | Focused | Focused (25 of 41 privileged accounts) |
 | IA-8, IA-12 | Customer authentication and contact-change verification; II.B.3; 41.90(d)(2); R-001, R-002 (High) | Focused | Focused (40 contact changes) |
@@ -85,6 +85,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - a simulated impossible-travel sign-in to test MSSP escalation
   - benchmark configuration scans of 10 servers
 
+### What each test could show
+The 2026 policies (P06) and the P08 runbooks were drafts during fieldwork. The policies were approved on 2026-09-15 and take effect on 2026-10-01; the runbooks were approved on 2026-09-18. The 2024 policies, the 2024 incident response plan and the 2025 business continuity plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems or the documents in force | 208 |
+| Design | The requirement comes from a draft (the bank's role as a service provider and the notification incident criteria in the P08 runbooks; the measurable tolerances in P01); its design was reviewed. Operation is tested at the 2027-03 follow-up | 3 |
+| Not implemented | Nothing existed to test | 33 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR workforce activity report (EV-009), teller and universal banker users from the core export (EV-004), new accounts from the identity provider export (EV-001), privileged accounts and the core security and payments hub administrators from EV-003 and EV-005, payments hub limit changes and infrastructure changes from the change records and configuration log (EV-022), contact-information changes from the core maintenance report (EV-032), critical findings from the scan reports (EV-013), servers from the server inventory (EV-011), incidents from the incident register (EV-028), staff from the HR roster (EV-007), and critical vendors from the third-party inventory and contract register (EV-035, EV-036). Vendor support sessions for July 2026 were drawn from the VPN logs during fieldwork (EV-MA-4).
+
 ## 4. Rules of engagement
 - No live wires, ACH files, or customer changes were created. Payments and online banking tests used the providers' test environments or bank test customers, with the Director of Payments Operations present.
 - The contact center test call was pre-approved by the Contact Center Director and the COO, and stopped before any change was saved.
@@ -138,7 +149,7 @@ Other than satisfied statements by risk: 27 High, 49 Moderate, 8 Low.
 | SI-4 | 8 | 4 | High | POAM-005 |
 | SR-6 | 0 | 1 | Moderate | POAM-015 |
 
-**Fully satisfied (6 controls):** CM-8, CP-9 (write-once backups; a production administrator could not delete a test backup), IA-2(1) (hardware-key MFA on all 25 sampled privileged sign-ins), RA-3, SC-7 (the teller segment could not reach the payments segment), and SI-3 (EDR quarantined every test file within 4 minutes). These confirm the strengths in the scenario facts.
+**Fully satisfied (6 controls):** CM-8, CP-9 (write-once backups; a production administrator could not delete a test backup), IA-2(1) (hardware-key MFA on all 25 sampled privileged sign-ins), RA-3, SC-7 (the teller segment could not reach the payments segment), and SI-3 (EDR quarantined every test file within 4 minutes). These confirm the intake observations (EV-016, EV-002, EV-012, EV-010).
 
 **Fully other than satisfied (8 controls):** AC-6, AC-6(5), AU-6, AU-11, CP-10, IA-8, SA-22, and SR-6.
 

@@ -1,0 +1,19 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Core processor,"Core banking hosting, AML monitoring module, disaster recovery",SYS-01,Customer information (NPI) for all accounts,"Contract signed 2019, renewal due 2027; confidentiality and security provisions; no incident notice time frame or recovery time terms","SOC 1 Type 2 and SOC 2 Type 2, 12 months ending 2026-03-31",EV-027; EV-037; EV-038; EV-039; EV-040,Bank service provider (12 CFR 53.4)
+V-02,Digital banking provider,Online and mobile banking; embedded fraud scoring,SYS-02,Customer information (NPI); customer credentials,Contract signed 2021; confidentiality and security provisions; no incident notice time frame,SOC 2 Type 2 for 2025,EV-037; EV-038; EV-039; EV-041,Bank service provider (12 CFR 53.4)
+V-03,Payments service provider,Wire and ACH origination platform,SYS-03,Wire and ACH instructions; customer information (NPI),Contract with GLBA confidentiality clauses; no incident notice time frame,"SOC 2 Type 2, 12 months ending 2026-03-31 (received after intake, EV-059)",EV-037; EV-038; EV-059,
+V-04,Card processor,"Debit card authorization, ATM driving, card fraud monitoring",SYS-11; SYS-08,Card data; customer information,Contract with GLBA confidentiality clauses; no incident notice time frame,SOC reports filed each year,EV-037; EV-038; EV-039,"Bank service provider (12 CFR 53.4); PCI DSS obligations noted, not assessed"
+V-05,LOS vendor,Loan origination system,SYS-04,Customer information (NPI); credit reports,Subscription agreement,None in the vendor file,EV-037; EV-050,
+V-06,Identity provider vendor,Single sign-on and MFA,SYS-05,Workforce identities,Subscription terms,SOC 2 report from the vendor's trust portal,EV-037; EV-042,
+V-07,Public cloud provider,"IaaS/PaaS for the decisioning service, data warehouse, log archive and backups",SYS-06,Customer information (NPI),Customer agreement,SOC 2 report from the provider's compliance portal,EV-037; EV-042,
+V-08,Productivity suite vendor,"Email, files, chat",SYS-09,Customer information (incidental),Subscription terms,None in the vendor file,EV-037; EV-051,
+V-09,AI model vendor,Small business credit underwriting model (bank-deployed),SYS-10,Scoring files from the credit decisioning service,Vendor agreement (2026) with no clause on the vendor's use of bank data,None in the vendor file,EV-037; EV-038; EV-052,Pilot since May 2026
+V-10,Managed security service provider (MSSP),24x7 monitoring of EDR and firewall alerts and cloud management events,SYS-06; SYS-07,Security logs and alerts,Service agreement; vulnerability scanning not in scope,None in the vendor file,EV-015; EV-016; EV-037,
+V-11,ATM maintenance vendor,ATM service and inspections,SYS-08,Physical access to ATMs,Service agreement,None in the vendor file,EV-037; EV-046,
+V-12,Outsourced internal audit firm (CPA firm),Annual independent IT audit; testing of key controls,n/a,Access to bank records during audits,Engagement letter,n/a,EV-028; EV-037,Independent of IT operations
+V-13,Penetration testing firm,Annual external penetration test,SYS-07 (internet-facing perimeter),Test results,Engagement letter,n/a,EV-029; EV-037,
+V-14,Paper shredding vendor,On-site paper destruction,n/a,Customer information on paper,Service agreement,Certificates of destruction,EV-037; EV-047,
+V-15,Payroll provider,Payroll SaaS,Payroll SaaS,Employee data,Service agreement,None in the vendor file,EV-037,
+V-16,Credit bureaus,Consumer and business credit reports,SYS-04,Applicant identifiers,Subscriber agreements,n/a,EV-037; EV-050,
+V-17,Phone and circuit carriers,"Phone lines, SD-WAN and private circuits",SYS-07,Network traffic (IPsec to the core processor),Carrier agreements,n/a,EV-014; EV-037,
+V-18,Federal Reserve Banks,Wire and ACH payment services,SYS-03,Wire messages; ACH files,Federal Reserve operating circulars and the bank's access agreement,n/a,EV-013; EV-038,Not an accounts payable supplier

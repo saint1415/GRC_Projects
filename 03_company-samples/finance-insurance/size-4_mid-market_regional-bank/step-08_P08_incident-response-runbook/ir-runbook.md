@@ -145,7 +145,7 @@ A BEC incident rarely takes systems down. Recovery means restoring safe service 
 ## 9. Worked example (tabletop script)
 | Time | Event | Clock or decision |
 |---|---|---|
-| Day -9, 14:10 | An email "from" a construction company's controller asks relationship manager staff to update the company's phone number "after a carrier change". A branch processes it without verification (gap 2) | Red flag missed; no customer alert sent |
+| Day -9, 14:10 | An email "from" a construction company's controller asks relationship manager staff to update the company's phone number "after a carrier change". A branch processes it without verification (EV-032) | Red flag missed; no customer alert sent |
 | Day 0, 10:05 | Email from the controller's real (compromised) address asks for a $486,000 wire to a new beneficiary for "steel delivery", marked urgent | Red flags: new beneficiary, urgency |
 | Day 0, 10:40 | Wire room calls back the number on file, which is now the attacker's; the "controller" confirms. Wire keyed and approved (maker-checker) and sent at 11:15 | Security procedure followed on its face, defeated upstream |
 | Day 1, 09:20 | The real controller calls about an unknown wire; branch reports within 15 minutes | **Initial detection: SAR clock starts** |

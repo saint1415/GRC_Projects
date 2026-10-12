@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the President and CEO (High and below); reviewed by the Audit and Risk Committee 2026-08-27 |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that stores, processes, or transmits customer information, and the business processes in the BIA (P05). That covers the core banking system hosted by the core processor, online and mobile banking, the wire and ACH platform, the loan origination system and the AI credit model, the identity provider, the cloud tenant, six branch networks with teller workstations, and the ATMs (`../00_company-facts.md` section 3). Fraud risks that run through these systems, such as business email compromise and account takeover, are in scope because the Guidelines require access controls that stop employees from giving customer information or funds to people who obtain them "through fraudulent means" (III.C.1.a).
+**Scope.** Every system that stores, processes, or transmits customer information, and the business processes in the BIA (P05). That covers the core banking system hosted by the core processor, online and mobile banking, the wire and ACH platform, the loan origination system and the AI credit model, the identity provider, the cloud tenant, six branch networks with teller workstations, and the ATMs ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). Fraud risks that run through these systems, such as business email compromise and account takeover, are in scope because the Guidelines require access controls that stop employees from giving customer information or funds to people who obtain them "through fraudulent means" (III.C.1.a).
 
 **Risk tolerance and who can accept risk (proposed as the board's risk appetite):**
 - Low and Very Low: the Information Security Officer may accept.
@@ -19,11 +19,11 @@
 - High: only the President and CEO may accept, temporarily and with a dated treatment plan, and each acceptance is reported to the Audit and Risk Committee.
 - Very High: only the board may accept.
 
-**Why this matters now.** The bank has performed an annual risk assessment since 2021, but the board has never approved a risk appetite, so no one could say whether residual risk was acceptable (gap 1 in the scenario facts; R-008). The acceptance levels above, with the tolerance measures in section 4, go to the board for adoption on 2026-10-15.
+**Why this matters now.** The bank has performed an annual risk assessment since 2021, but the board has never approved a risk appetite, so no one could say whether residual risk was acceptable (EV-020, EV-022; R-008). The acceptance levels above, with the tolerance measures in section 4, go to the board for adoption on 2026-10-15.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were taken from SP 800-30 Appendices D and E, the vertical's critical systems, the BIA, interviews with the COO, Deposit Operations Manager, Treasury Management Officer, Chief Credit Officer, BSA/AML Officer, and all six Branch Managers, and the gap analysis (P03).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events were taken from SP 800-30 Appendices D and E, the vertical's critical systems, the BIA, the intake evidence, and interviews with the COO, Deposit Operations Manager, Treasury Management Officer, Chief Credit Officer, BSA/AML Officer, and all six Branch Managers (EV-055). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings, including the branch wire callback sample (EV-057).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, contracts and vendor files, fraud records, the walk-through, the wire sample and interviews.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (financial loss, operations, regulatory, customer harm, reputation).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -50,7 +50,7 @@
 
 Three of the five High risks share one theme: **payment fraud through customer channels.** A customer email account is taken over (R-001), a customer online banking password is stolen (R-002), or an insider abuses the wire room (R-019). In each case a control exists on paper (the callback standard, optional MFA, maker-checker) but is not enforced consistently. The other two High risks are about dependence on the core processor (R-003) and recovery from ransomware (R-004). Treating R-001 and R-002 also lowers four related Moderate risks: R-009, R-025, R-026, and R-029.
 
-R-005 was updated on 2026-08-07 after control assessment testing (P07) found four enabled core accounts belonging to former employees. R-011 and R-012 were updated after the AI credit model assessment on 2026-08-25 (P10).
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence, and all 32 risks come from it. Pass 2 followed the control assessment (P07): R-005 was updated on 2026-08-07 after testing found four enabled core accounts belonging to former employees (EV-AC-2). R-011 and R-012 were updated after the AI credit model assessment on 2026-08-25 (P10; EV-060). The `assessment_pass` column shows the pass for each risk, and `last_reviewed` shows the date of each update.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $96,000):**

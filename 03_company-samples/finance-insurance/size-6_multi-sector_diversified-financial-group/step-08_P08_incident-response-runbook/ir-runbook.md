@@ -10,7 +10,7 @@
 | Regulatory basis | 12 CFR 30 App. B III.C.1.g and Supplement A; 12 CFR 225 App. F III.C.1.g; 12 CFR 53.3, 53.4, 225.302, 225.303, 304.24; 12 CFR 21.11 and 225.4(f); Form 8-K Item 1.05; state breach laws (Fla. Stat. 501.171 worked example) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-10 by the Group CISO and the Group General Counsel |
-| Last tested | BEC playbooks for bank wire operations tested quarterly. **The multi-regulator matrix has not been exercised across divisions** (scenario gap 5); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-006) |
+| Last tested | BEC playbooks for bank wire operations tested quarterly (EV-025). **The multi-regulator matrix has not been exercised across divisions** (group gap 5); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-006) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Amounts and counts are illustrative. Day 0 is a Tuesday.

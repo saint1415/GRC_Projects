@@ -78,6 +78,18 @@ Internal Audit used **attribute sampling** for controls that operate on a popula
 
 Random selections used the audit software's seeded random number generator; seeds and selections are in the workpapers (EV references).
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork. The board risk committee approved POL-01 on 2026-09-15 and the executive risk committee approved POL-02 to POL-05 on 2026-09-18; all take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-026), and reviewed the draft 2026 statements for design only. Any statement the 2026 revisions add has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 269 (242 Satisfied, 27 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test | 0 |
+| **Total** | | **269** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example the identity governance and HR records, EV-003 and EV-005, the change records, EV-059, and the service identity register, EV-007) and were refreshed to 2026-06-30 during fieldwork.
+
 ## 3. Methods and objects
 - **Examine:** policies and standards (P06), the SSP (P02), identity governance and PAM records, mainframe entitlement exports, SIEM source inventory and review records, change tickets, backup and DR test reports, vulnerability data, vendor register and SOC report reviews, the incident response plan and materiality playbook, case management records.
 - **Interview:** Head of Core Banking Technology; Head of Digital Banking Technology; Director of Identity and Access Management; Director of Data Center and Mainframe Operations; Director of Cyber Defense; Director of Enterprise Resilience; Head of Payments Operations; Director of Third-Party Risk Management; BSA/AML Officer; General Counsel; CISO; 20 randomly selected operations and branch staff.

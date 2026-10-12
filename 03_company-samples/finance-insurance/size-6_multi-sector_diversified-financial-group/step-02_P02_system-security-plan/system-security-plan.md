@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared system. The group chose the **Core and Digital Banking Platform**, a system shared by two divisions: the bank's core banking system (SYS-B1) and the multi-tenant digital banking platform (SYS-S1) that the Financial Software division runs for the bank and 310 client institutions. It is the scenario's primary system ("core banking and online banking platform"), it carries the group's top risks (P01 GR-01, GR-02, GR-04), and it shows the multi-sector problem in one boundary: the same components answer to the OCC as the bank's system and to 310 client institutions as a bank service provider's product. Other division systems keep their own plans and inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Core and Digital Banking Platform (**CDBP**), identifier CSCH-CDBP-01. It covers SYS-B1 and SYS-S1 in `../00_company-facts.md`, joined by the payment initiation gateway to SYS-B2.
+Core and Digital Banking Platform (**CDBP**), identifier CSCH-CDBP-01. It covers SYS-B1 and SYS-S1, listed with the payment initiation gateway in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), joined by the gateway to SYS-B2.
 
 ## 2. System Overview
 The CDBP is how the bank's customers, and the customers of 310 client institutions, see and move their money. It supports:
@@ -39,7 +39,7 @@ Services are described by category and are vendor-agnostic (see P04).
 | N52-R08 | SEC cybersecurity disclosure | Form 8-K Item 1.05; Reg S-K Item 106 | A CDBP incident can be material to the group (P08) |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
 
-Not applicable: FTC Safeguards Rule (16 CFR Part 314), because the bank is under the OCC and the division is under the Federal Reserve (15 U.S.C. 6805(a)(1)); NYDFS Part 500 (no New York-licensed entity); PCI DSS for the CDBP (card data stays at the card processor; the platform shows masked card numbers only).
+Not applicable: FTC Safeguards Rule (16 CFR Part 314), because the bank is under the OCC and the division is under the Federal Reserve (15 U.S.C. 6805(a)(1)); NYDFS Part 500 (no New York-licensed entity); PCI DSS for the CDBP (card data stays at the card processor; the platform shows masked card numbers only). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -85,6 +85,7 @@ Information types are organization-defined, informed by NIST SP 800-60. Impact l
 Other High-baseline controls are either fully inherited from the cloud providers or the data center buildings (for example, most PE controls) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the platform does not use).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-B1, SYS-S1, the payment initiation gateway, and the shared services they inherit from) and the exports EV-032, EV-043, EV-055 and EV-056.
 - **Inside:** SYS-B1 core application and database cluster (both data centers); SYS-S1 accounts in provider A (primary and warm standby regions), including the customer identity service and all consoles; the payment initiation gateway; platform backups in the provider B vault.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SIEM, EDR and email gateway, SYS-G3 data center and landing-zone infrastructure, SYS-G4 email and collaboration, and the data center buildings run by Group Property Management.
 - **Outside, interconnected:** SYS-B2 payments hub (and through it the Federal Reserve payment services), the card processor (masked card data and card controls), credit bureaus (for SYS-B3, not the CDBP itself), and the 310 client institutions' cores and payment systems.
@@ -133,13 +134,13 @@ See `control-implementation.csv` (128 controls) and `common-control-catalog.csv`
 
 **The 18 partially implemented controls** cluster in five places:
 - **Workforce sessions and identity hygiene** (the root of the P08 scenario): AC-2, AC-2(12), AC-12, IA-5, IA-11, SI-4.
-- **Tenant and support console access:** AC-6, AU-6, IA-8 (scenario gap 6), AT-3. (AC-3 itself is implemented: tenant isolation holds; the problem is how broad the support role is.)
+- **Tenant and support console access:** AC-6, AU-6, IA-8 (group gap 6), AT-3. (AC-3 itself is implemented: tenant isolation holds; the problem is how broad the support role is.)
 - **Resilience of the payment path:** CP-2, CP-4.
-- **Cross-division incident handling and bank service provider notices** (gaps 3 and 5): IR-3, IR-4, IR-6, IR-8.
-- **Oversight of the affiliate service provider** (gap 3): SA-4, SA-9.
+- **Cross-division incident handling and bank service provider notices** (group gaps 3 and 5): IR-3, IR-4, IR-6, IR-8.
+- **Oversight of the affiliate service provider** (group gap 3): SA-4, SA-9.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 100 controls provided by corporate. Inheritance is **documented for the bank** (2025 inheritance matrix), for the **Financial Software division** (its SOC 1 and SOC 2 system descriptions carve in group services), and for the CDBP (this plan). It is **not documented for Commercial Real Estate** (scenario gap 2). Until POAM-018 closes, Commercial Real Estate cannot show which of its safeguards are met by group controls, and P07 found CA-2 determination statements other than satisfied for this reason.
+The common control catalog lists 100 controls provided by corporate. Inheritance is **documented for the bank** (2025 inheritance matrix), for the **Financial Software division** (its SOC 1 and SOC 2 system descriptions carve in group services), and for the CDBP (this plan). It is **not documented for Commercial Real Estate** (group gap 2). Until POAM-018 closes, Commercial Real Estate cannot show which of its safeguards are met by group controls, and P07 found CA-2 determination statements other than satisfied for this reason.
 
 ### 10.3 What client institutions must do (complementary user entity controls)
 The division's SOC reports list the controls each client must operate: approve and remove its own administrators; set business user entitlements and limits; **require MFA for business payment users** (41 client tenants have not); review the tenant audit reports; and give the division a bank-designated point of contact for incident notices. The platform can enforce only some of these; POAM-009 changes the default so that business payment MFA can no longer be switched off.
@@ -154,7 +155,7 @@ Common controls were assessed once, and CDBP and division controls sampled, from
 - **Service accounts** should use workload identity with short-lived credentials; 21 still use static keys older than 1 year (POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **CDBP:** Core and Digital Banking Platform
