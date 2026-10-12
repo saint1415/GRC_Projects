@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (managed cloud hosting provider) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Lead Systems Engineer (Information Security Lead) with the Operations Manager, both Systems Engineers, and one Support Engineer, 2026-07-20 to 2026-07-31 | **Approved:** Owner, 2026-09-15
 
+**Sources:** process owner interviews 2026-07-20 to 2026-07-22 (EV-040), revenue and cash report (EV-020), customer and service list (EV-021), MSA and bank contracts (EV-024, EV-022), backup job reports and settings (EV-009), DNS account (EV-014), RMM tool (EV-004), MDR contract (EV-016). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It supports:
 - the availability rating in the SSP (P02) and the Availability criteria in the SOC 2 readiness check (P09);
@@ -12,12 +14,12 @@ This BIA lists every business function of the company, how long each can be down
 - the "measures to protect against destruction, loss, or damage ... due to ... technological failures" that both bank contracts flow down from the Interagency Guidelines (12 CFR Part 30, App. B, III.C.1.h).
 
 ## 2. System and business description
-Seven people run managed hosting for about 70 business customers. About 260 customer VMs run on six hypervisor hosts and one storage array in two racks at a single Florida colocation facility (DC-1). The customer portal runs in a public cloud tenant. The company also patches about 310 customer servers through a SaaS RMM tool and hosts about 190 customer DNS zones with a SaaS DNS provider. Two community banks are customers. See `../00_company-facts.md` sections 1 and 3.
+Seven people run managed hosting for about 70 business customers. About 260 customer VMs run on six hypervisor hosts and one storage array in two racks at a single Florida colocation facility (DC-1). The customer portal runs in a public cloud tenant. The company also patches about 310 customer servers through a SaaS RMM tool and hosts about 190 customer DNS zones with a SaaS DNS provider. Two community banks are customers. See `../00_company-facts.md` section 1 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
-The MSA makes customers responsible for their own VM backups unless they buy the backup add-on (145 of about 260 VMs). That split drives the RPO values below.
+The MSA makes customers responsible for their own VM backups unless they buy the backup add-on (145 of about 260 VMs) (EV-024; EV-021). That split drives the RPO values below.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue: about $3,000 a day and $92,000 a month.
+Dollar values are scaled to about $1.1 million in annual revenue: about $3,000 a day and $92,000 a month (EV-020).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

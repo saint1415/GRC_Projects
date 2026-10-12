@@ -38,6 +38,17 @@ Micro tier scope: 10 to 15 controls. **13 controls, 83 determination statements.
   - default-password check of every DC-1 device's management interface;
   - review of cloud account roles to see who can delete the backup copy.
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-09-15, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 43 |
+| Design | The control is new (a draft policy, or the 2026 P04 responsibility mapping); its design was reviewed. Operation is tested at the 2027-02 follow-up | 8 |
+| Not implemented | Nothing existed to test | 32 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 people and the 2026-03-13 termination in EV-001 and EV-031, and the RMM accounts come from the technician list in EV-004).
+
 ### MDR and vendor evidence requested
 The MDR provider runs the company's monitoring, and SaaS vendors run several controls. Evidence was requested on 2026-08-10 with a one-week deadline:
 

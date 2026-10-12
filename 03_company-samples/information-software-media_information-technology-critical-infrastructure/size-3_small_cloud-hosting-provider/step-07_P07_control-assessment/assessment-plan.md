@@ -50,6 +50,17 @@ PE-3 was added to confirm the controls inherited from the colocation providers.
   - backup deletion permission check with a cloud administrator role, dry run only
   - a harmless test script run through the RMM tool against a lab server set up as a customer, to see if the SIEM detects it
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-09-25. They were therefore reviewed as drafts, for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operating effectiveness. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, records or live systems | 97 |
+| Design | The RMM usage restrictions (draft POL-02 4.9) and the incident response plan (draft POL-03), reviewed as drafts. Operation is tested at the 2027-01 follow-up | 2 |
+| Not implemented | Nothing existed to test | 86 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled new hires, 12 terminations and 3 transfers come from the HR report and tickets in EV-003 and EV-005, the RMM accounts from the user list in EV-010, and the 24 sampled BMCs from the 96 hosts in EV-014).
+
 ## 3. Rules of engagement
 - No test that could disrupt customer workloads. BMC tests used read-only sign-in checks; no host was rebooted.
 - No customer data was viewed or copied. Screenshots were redacted.

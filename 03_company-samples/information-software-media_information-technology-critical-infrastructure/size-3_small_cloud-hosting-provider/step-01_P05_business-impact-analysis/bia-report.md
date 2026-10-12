@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (cloud hosting and managed infrastructure provider) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Officer) with the Director of Platform Engineering, the Engineering Manager (Control Plane), the NOC and Support Manager, and the Managed Services Lead | **Approved:** Chief Operating Officer, 2026-09-25
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-048), MSA service levels and credit tiers (EV-039), FY2025 revenue report (EV-044), customer and usage report (EV-045), replication report (EV-017), backup job reports (EV-018). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the COO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -12,12 +13,12 @@ This BIA identifies which business processes the company depends on, how long ea
 - the 4-hour threshold in the bank service provider notification rule (12 CFR 53.4(a); 225.303(a); 304.24(a)).
 
 ## 2. System and business description
-The company hosts about 2,300 customer virtual machines on company-owned hypervisor clusters in two colocation facilities (DC-1 in Florida, DC-2 in another state). It also runs managed services for 58 customers through an RMM tool, and authoritative DNS for hosted domains. Customers manage their services through the Hosting Control Plane and Customer Portal (HCP), which runs in a public cloud tenant. See `../00_company-facts.md` sections 1 and 3.
+The company hosts about 2,300 customer virtual machines on company-owned hypervisor clusters in two colocation facilities (DC-1 in Florida, DC-2 in another state). It also runs managed services for 58 customers through an RMM tool, and authoritative DNS for hosted domains. Customers manage their services through the Hosting Control Plane and Customer Portal (HCP), which runs in a public cloud tenant. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 The MSA makes customers responsible for backing up their own VM data unless they buy the replication tier (about 30% of VMs). That split drives the RPO values below.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $24.0 million in annual revenue, about $66,000 per day and $2.0 million per month.
+Dollar values are scaled to $24.0 million in annual revenue, about $66,000 per day and $2.0 million per month (EV-044).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -48,9 +49,9 @@ Dollar values are scaled to $24.0 million in annual revenue, about $66,000 per d
 - **Customer data recovery is shared.** The company commits to a 15-minute RPO only for replicated VMs. For the other 70%, the RPO is whatever the customer's own backups provide. Account managers must make this clear at renewal.
 
 **Key findings:**
-1. **The control plane RPO is not met.** Nightly backups give a 24-hour RPO against the 1-hour target, and they have never been restore-tested, so the 4-hour RTO is unproven (gap 9; risk R-005 in P01).
+1. **The control plane RPO is not met.** Nightly backups give a 24-hour RPO against the 1-hour target, and they have never been restore-tested, so the 4-hour RTO is unproven (EV-018; risk R-005 in P01).
 2. **A DC-1 loss would strand about 70% of customer VMs.** Only replicated VMs can fail over to DC-2. DC-1 is in Florida and exposed to hurricanes (risk R-018).
-3. **Break-glass access is missing.** If the workforce identity provider fails, nobody can reach the hypervisor managers except with the shared root credentials in the vault, which is itself a gap (gap 4).
+3. **Break-glass access is missing.** If the workforce identity provider fails, nobody can reach the hypervisor managers except with the shared root credentials in the vault, which is itself a gap (EV-008, EV-009).
 
 ## 5. Resource requirements
 | Resource | Description | Supports |

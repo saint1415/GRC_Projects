@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (AI 600-1) because the platform writes AI-generated alert summaries |
 | Assessor / date | Lead Systems Engineer (Information Security Lead) with the Operations Manager, 2026-08-24 to 2026-08-28; MDR provider's service manager interviewed 2026-08-25 |
 | Decision | Owner, 2026-09-15 (section 6) |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the MDR console and contract, the card statements, the PSA feature settings and a staff survey (EV-015, EV-016, EV-035, EV-012, EV-038). Which staff use public chatbots, and what they enter, was not established (intake open request) |
 
 **Why the registry use case was adapted.** The registry default is "AI-driven security operations (alert triage)". A 7-person company does not run its own security operations center or its own AI. It buys 24x7 monitoring from an MDR provider, whose platform uses AI to triage alerts and act on its own. So this assessment covers a **third-party AI service the company relies on**: the company cannot see or retrain the model, but it can set what the model may close or act on, demand evidence, and change the contract.
 
@@ -53,7 +53,7 @@
 **Path to Medium.** Once the section 6 conditions are in place, every alert in the protected categories gets a human review before closing, and suspensions of on-call staff need a call first. The AI then influences, but does not make, the decisions that matter. Re-tier to Medium after 3 consecutive monthly samples with no missed true positive in a protected category and an overall miss rate under 1%.
 
 ## 4. MEASURE
-The tests used the MDR's July 2026 alert export and automated-action log (received 2026-08-14 for P07), plus 3 months of escalation summaries.
+The tests used the MDR's July 2026 alert export and automated-action log (received 2026-08-14 for P07), plus 3 months of escalation summaries (EV-051).
 
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|

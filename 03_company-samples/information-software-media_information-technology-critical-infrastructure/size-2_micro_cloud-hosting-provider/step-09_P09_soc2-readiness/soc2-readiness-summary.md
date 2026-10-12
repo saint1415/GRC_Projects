@@ -15,8 +15,8 @@
 **The company is a service organization.** It hosts about 260 customer VMs, patches about 310 customer servers, and serves about 190 customer DNS zones. Its controls are part of its customers' own control environments, which is exactly what a SOC 2 report is meant to describe.
 
 **Who is asking:**
-- **Bank A and Bank B.** Each bank's vendor management program sent a 2026 due diligence questionnaire, due **2026-10-30**. The questions follow the Trust Services Criteria and the Interagency Guidelines. Both banks will accept a self-assessment with a dated remediation plan this year. Bank A's questionnaire says it expects an independent report "within a reasonable period."
-- **Larger prospects.** Two prospects in 2026 asked for a SOC 2 report; neither made it a condition yet.
+- **Bank A and Bank B.** Each bank's vendor management program sent a 2026 due diligence questionnaire, due **2026-10-30** (EV-039). The questions follow the Trust Services Criteria and the Interagency Guidelines. Both banks will accept a self-assessment with a dated remediation plan this year. Bank A's questionnaire says it expects an independent report "within a reasonable period."
+- **Larger prospects.** Two prospects in 2026 asked for a SOC 2 report; neither made it a condition yet (EV-039).
 
 **Why not an examination now.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months. Most of the company's controls were defined in September 2026, and the main access-control weaknesses close by 2026-12-31. A Type 1 now would report exceptions in the areas customers care about most. The self-assessment gives the banks an honest picture now at almost no cost.
 
@@ -96,6 +96,8 @@ What the company can send the banks now, and what it starts collecting for a fut
 | Training and phishing simulation records | CC1.4, CC2.2 | Yearly module only | From 2026-11 |
 
 ## 5. Findings from the colocation report (Part B)
+The report reviewed is the one received on 2026-08-24 in answer to an intake request (EV-050); the folder held only a 2024 copy at intake (EV-026).
+
 - **Opinion:** Type 2, unqualified, 12 months ending 2026-06-30. One exception at the provider (a quarterly customer access list confirmation not sent once), since remediated.
 - **Availability:** redundant power, generators, and cooling support the BIA's 4-hour hosting MTD for facility failures. They do not cover loss of the facility. A hurricane that takes DC-1 offline for days remains risk R-009, handled through the degraded-mode recovery plan.
 - **Controls the company must run.** The report lists complementary user entity controls. Two were not being run:

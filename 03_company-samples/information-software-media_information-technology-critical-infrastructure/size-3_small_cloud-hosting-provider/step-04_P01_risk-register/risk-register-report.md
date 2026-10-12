@@ -11,7 +11,7 @@
 | Approved | 2026-09-25 by the COO (Moderate and below) and the CEO (High and Very High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Hosting Control Plane and Customer Portal (HCP) defined in the SSP (P02), the private cloud platform it manages (SYS-05), the edge network and DNS (SYS-09), and the business processes in the BIA (P05). Vendors that operate parts of the service (colocation providers, the public cloud provider, the RMM and SIEM vendors) are in scope as sources of risk.
+**Scope.** The Hosting Control Plane and Customer Portal (HCP) defined in the SSP (P02), the private cloud platform it manages (SYS-05), the edge network and DNS (SYS-09), and the business processes in the BIA (P05). Vendors that operate parts of the service (colocation providers, the public cloud provider, the RMM and SIEM vendors) are in scope as sources of risk ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What makes this business different.** A hosting provider's tools reach into hundreds of customer environments. One compromised administrative tool can harm every customer at once, so the register rates impact against all customers, not just the company.
 
@@ -23,8 +23,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews with the platform, control plane, NOC, and managed services leads, the FedRAMP readiness gap analysis (P03), and the vertical's incident scenario (compromise of provider tooling affecting downstream customers).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews with the platform, control plane, NOC, and managed services leads (EV-049), and the vertical's incident scenario (compromise of provider tooling affecting downstream customers). The FedRAMP readiness gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports (identity provider, cloud IAM, RMM, hypervisor managers, SIEM), the incident and change tickets, contracts, documents and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Harm to many customers at once is rated Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -53,7 +53,7 @@ This is the company's first documented risk assessment.
 
 **Recovery is the second theme.** R-004 and R-018 show that the company could not recover the control plane or DC-1 within the BIA targets today (P05 findings 1 and 2).
 
-R-026 was added on 2026-08-18 after control assessment testing (P07) found manufacturer default administrator accounts enabled on 2 BMCs at DC-2. The accounts were disabled on 2026-08-19; the status stays In progress until all 96 hosts are checked by 2026-09-30.
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-026 was added on 2026-08-18 after testing found manufacturer default administrator accounts enabled on 2 BMCs at DC-2 (EV-IA-5). The accounts were disabled on 2026-08-19; the status stays In progress until all 96 hosts are checked by 2026-09-30. The `assessment_pass` column shows which pass produced each risk.
 
 **Very High acceptance.** The CEO accepted R-001 temporarily on 2026-09-25 with the dated plan above. Shared RMM accounts are to be retired by 2026-10-15, the first milestone (P07 POAM-002).
 

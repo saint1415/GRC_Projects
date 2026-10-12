@@ -11,6 +11,8 @@
 | Sources checked | fedramp.gov (2026 rules, important dates, certification path, Rev5 rulesets), retrieved 2026-09-26; eCFR 12 CFR 53.2, 53.3, 53.4, 225.303, 304.24 (as of 2026-09-23) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 ### 1.1 FedRAMP: does not apply yet
 FedRAMP governs cloud services that federal agencies use. It has no size threshold or small-business exemption (C-IT-R01); it applies because of the customer, not the provider's size. **The company has no federal customer today**, so no FedRAMP rule binds it now.
 
@@ -42,7 +44,7 @@ The company performs hosting and managed services for 14 community banks, and th
    - **Five rows for the bank rule** (G-225 to G-229), cited to section and paragraph.
 2. **Crosswalk.**
    - Control rows use NIST's CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 where one exists (135 rows, labeled "Official"). The other 45 control rows, and all rule and bank rows, are author mappings.
-3. **Evidence.** Current state was established by interviews, configuration exports (identity provider, cloud IAM, RMM, firewalls, SIEM), document review, the DC-1 and DC-2 walkthroughs, and the P07 control tests.
+3. **Evidence.** Current state was established from the intake evidence (configuration exports from the identity provider, cloud IAM, RMM, hypervisor managers, firewalls and SIEM; documents; contracts), gap analysis interviews (EV-050), sign-in page screenshots and a portal review (EV-051), a SIEM walk-through (EV-052), a TLS scan (EV-053), a pull-request sample (EV-054), the bank contact list (EV-055) and the FedRAMP advisor's review (EV-056). The statuses updated on 2026-09-25 also rest on the DC-1 colocation SOC 2 report (EV-057), the DC-1 and DC-2 walkthroughs (EV-058) and the P07 control tests (EV-AC-2 and so on). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 The control statements in this table are the same ones in the SSP (P02), so the two documents cannot drift apart.

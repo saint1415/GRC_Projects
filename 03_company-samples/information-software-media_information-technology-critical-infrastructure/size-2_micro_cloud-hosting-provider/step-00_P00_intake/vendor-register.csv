@@ -1,0 +1,17 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Colocation provider (DC-1),"Two racks, power, cooling, internet bandwidth with basic DDoS filtering, remote hands",SYS-03; SYS-05,Physical access to company hardware that holds customer data,Colocation contract and service order,SOC 2 Type 2: 2024 copy in the folder at intake; report for 12 months ending 2026-06-30 received 2026-08-24,EV-025; EV-026; EV-027; EV-050,The company keeps its authorized-person list with the provider
+V-02,Public cloud provider,"IaaS tenant for the portal, database and backup copy",SYS-01; SYS-04,Portal data; backup copies of customer VMs,Provider customer agreement,Audit reports offered on request; published shared responsibility model,EV-010; EV-025; EV-036,
+V-03,RMM vendor,Remote monitoring and management,SYS-06,"Agent access to about 310 customer servers, including both banks' servers",Vendor terms with no security or incident notice clause,None on file,EV-004; EV-025; EV-035,
+V-04,PSA vendor,Ticketing and documentation vault,SYS-09,Tickets; customer contacts; customer server passwords,Subscription terms,Vendor security documentation only,EV-012; EV-025; EV-036,
+V-05,SaaS DNS provider,Managed DNS (resold),SYS-08,Customer DNS zones,Reseller terms,Published service commitment,EV-014; EV-025; EV-036,
+V-06,Identity provider and productivity suite vendor,"Single sign-on, MFA, email, files, team chat",SYS-07,Workforce identities; email; HR files and contracts,Subscription terms,None on file,EV-002; EV-025; EV-035,
+V-07,MDR provider,"24x7 monitoring, EDR response, AI alert triage",SYS-10; SYS-11,EDR telemetry; identity provider sign-ins; firewall and VPN logs,MDR service contract (from November 2025),None on file,EV-015; EV-016; EV-035,Contract allows use of de-identified telemetry to improve its models
+V-08,Portal software vendor,Licensed hosting automation and billing software,SYS-01,None (the company operates the software),License,None on file,EV-011; EV-025; EV-035,
+V-09,Backup software vendor,Backup software license,SYS-05,None (the company operates the software),License,None on file,EV-009; EV-025; EV-035,
+V-10,Hardware vendor,Next-business-day parts for the hosts and the storage array,SYS-03,Failed drives returned under warranty,Support contract,None on file,EV-018; EV-025; EV-035,
+V-11,Password manager vendor,Team password vault,OTH-01,Shared credentials and MFA seeds,Subscription terms,None on file,EV-013; EV-035,
+V-12,Training vendor,Annual security awareness module,n/a,Staff names and completion records,Subscription terms,None on file,EV-032; EV-035,
+V-13,Payroll service,Payroll,n/a,Employee personal information,Service agreement,None on file,EV-001; EV-035,
+V-14,Payment processor,Hosted payment page for customer invoices,SYS-01 (billing module),Card data entered on the processor's page,Merchant agreement,None on file,EV-020; EV-035,
+V-15,Cyber insurer,"Cyber liability policy, 24x7 breach hotline, panel breach counsel and forensics",n/a,Incident details when a claim is made,Insurance policy,n/a,EV-028; EV-035,
+V-16,Phone carrier,Office phone service and call forwarding to the on-call mobile,n/a,Call records,Service account,None on file,EV-035,

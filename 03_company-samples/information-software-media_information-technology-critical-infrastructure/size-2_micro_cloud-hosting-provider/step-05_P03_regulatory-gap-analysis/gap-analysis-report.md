@@ -12,11 +12,13 @@
 | Approved | 2026-09-15 by the Owner |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 ### 1.1 FedRAMP: does not apply
-FedRAMP covers cloud services that federal agencies use. It has no size threshold or small-business exemption (C-IT-R01). It applies because of the customer, not the provider's size. **The company has no federal customer.** In April 2026 a regional federal office asked through a reseller whether the company could host a small application. The Owner declined, because the service has no FedRAMP authorization and the cost of getting one is out of reach for a 7-person company. Row G-001 records the finding. If a federal opportunity returns, the Owner will reassess before signing anything that ends with an agency as the user.
+FedRAMP covers cloud services that federal agencies use. It has no size threshold or small-business exemption (C-IT-R01). It applies because of the customer, not the provider's size. **The company has no federal customer.** In April 2026 a regional federal office asked through a reseller whether the company could host a small application. The Owner declined, because the service has no FedRAMP authorization and the cost of getting one is out of reach for a 7-person company (EV-034). Row G-001 records the finding. If a federal opportunity returns, the Owner will reassess before signing anything that ends with an agency as the user.
 
 ### 1.2 What binds the company today: its two bank customers
-**Bank A** is a national bank (OCC-supervised). It has 6 hosted VMs holding loan document images and a file server, and the company patches its 8 branch servers through the RMM tool. **Bank B** is a state-chartered nonmember bank (FDIC-supervised). The company patches and checks backups on its 9 servers through the RMM tool. Both vendor contracts treat these services as subject to the Bank Service Company Act. Three sets of rules follow from that.
+**Bank A** is a national bank (OCC-supervised). It has 6 hosted VMs holding loan document images and a file server, and the company patches its 8 branch servers through the RMM tool. **Bank B** is a state-chartered nonmember bank (FDIC-supervised). The company patches and checks backups on its 9 servers through the RMM tool. Both vendor contracts treat these services as subject to the Bank Service Company Act (EV-022). Three sets of rules follow from that.
 
 **A. Bank service provider notification rule (C-IT-R05). Applies by law.**
 - A **bank service provider** is a bank service company or other person that performs covered services, meaning services subject to the Bank Service Company Act (12 CFR 53.2(b)(2) and (5); 12 CFR 304.22(b)(2) and (5)).
@@ -56,7 +58,7 @@ FedRAMP covers cloud services that federal agencies use. It has no size threshol
    - G-037: Bank Service Company Act examination.
    - G-038 to G-042: Fla. Stat. 501.171 third-party agent duties.
 2. **Crosswalk.** Every row is mapped to CSF 2.0 and SP 800-53 Rev. 5. All mappings are **author mappings**; NIST publishes no official mapping for these rules.
-3. **Documentary evidence.** Each status rests on a named document or record: the two bank contracts and their security exhibits, the MSA, the bank contact file, the maintenance mailing list, identity provider, RMM, and hypervisor manager user lists, the PSA vault permission report, storage and backup settings, the MDR data source list and July report, the 2025 training report, HR files, warranty return tickets, and the contract folder. Interviews covered all 7 staff.
+3. **Evidence.** Each status rests on a named document or record from intake (EV-001 to EV-039): the two bank contracts and their security exhibits, the MSA, the bank contact file, identity provider, RMM, and hypervisor manager user lists, the PSA vault permission report, storage and backup settings, the MDR data source list, the 2025 training report, warranty return tickets, and the contract folder. Fieldwork added the maintenance mailing list export (EV-045), the TLS scan (EV-046), the portal configuration review (EV-047), the HR file check (EV-048), the consultant engagement letter (EV-049), and gap analysis interviews with all 7 staff (EV-044). The July 2026 MDR report and backup job report are cited from the P07 evidence (EV-SI-4, EV-CP-9). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable, **as of the end of fieldwork (2026-07-31)**. Work completed since then (policies and the P08 runbook approved 2026-09-15, the P07 assessment) is noted in the remediation column but does not change the status.
 5. **Gap risk** uses the P01 scale (Very Low to Very High).
 
