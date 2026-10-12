@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (B2B SaaS software publisher) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (security and compliance lead) with the Platform Engineering Lead, Engineering Manager, Customer Support Manager, and COO | **Approved:** CTO, 2026-09-22
+**Sources:** process owner interviews 2026-08-10 to 2026-08-12 (EV-048), FY2025 revenue report (EV-043), customer and usage report (EV-044), MSA and DPA terms (EV-038), backup configuration (EV-015), January 2026 restore test record (EV-016), mobile and kiosk app design documents (EV-022). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CTO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company and its customers depend on, how long each can be down, and how much data each can lose. It covers all 10 business processes in `bia.csv`. It supports:
@@ -14,12 +15,12 @@ This BIA identifies which business processes the company and its customers depen
 No federal or state law sets recovery times for this company. The drivers are customer contracts (SLA and service credits), customers' payroll deadlines, and the SOC 2 availability commitments.
 
 ## 2. System and business description
-The company sells the Workforce Scheduling Platform (WSP), a multi-tenant SaaS platform used by about 310 customer organizations and about 140,000 workers in 46 states. Workers clock in and out, view schedules, and swap shifts; managers approve timesheets that become payroll export files for customers' payroll systems. The WSP runs in one public-cloud production account in one primary region (SYS-01), built and deployed by a SaaS CI/CD pipeline (SYS-03), with workforce access through the identity provider (SYS-04). See the SSP (P02) and `../00_company-facts.md` sections 3 and 4.
+The company sells the Workforce Scheduling Platform (WSP), a multi-tenant SaaS platform used by about 310 customer organizations and about 140,000 workers in 46 states. Workers clock in and out, view schedules, and swap shifts; managers approve timesheets that become payroll export files for customers' payroll systems. The WSP runs in one public-cloud production account in one primary region (SYS-01), built and deployed by a SaaS CI/CD pipeline (SYS-03), with workforce access through the identity provider (SYS-04). See the SSP (P02) and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 Customer usage peaks at shift changes (about 05:00 to 08:00 and 14:00 to 16:00 local time across four U.S. time zones), and payroll exports peak on Monday and Tuesday mornings.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $28.2 million in annual receipts, about $77,000 per calendar day.
+Dollar values are scaled to $28.2 million in annual receipts, about $77,000 per calendar day (EV-043).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

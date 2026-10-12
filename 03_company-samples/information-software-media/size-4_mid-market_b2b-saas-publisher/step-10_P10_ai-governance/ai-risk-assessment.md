@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed B2B SaaS publisher of a multi-tenant customer service platform) |
 | Tier / Vertical | Mid-Market / Information |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. The registry use case, the generative AI feature embedded in the product, is AI-001 and AI-002 |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the product launch records, the model provider agreement and endpoint configuration, the approved tools list, the identity provider app list and the accounts payable vendor master (EV-055, EV-046, EV-056, EV-040). Use of AI tools by staff that do not sign in through the identity provider or appear in accounts payable was not established (intake open request). The registry use case, the generative AI feature embedded in the product, is AI-001 and AI-002 |
 | Company role | **Developer and provider** of AI-001, AI-002, and AI-003, which customers (the deployers) turn on for their own agents and end consumers. **Deployer** of AI-004 and AI-005 for its own staff |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-002, AI-004, and AI-005 |
 | Assessors / date | VP Product and the Director of Machine Learning (product), Director of Security (security), Associate General Counsel, Privacy (privacy and legal), VP Customer Support (support operations), 2026-09-08 to 2026-09-18 |
@@ -12,7 +12,7 @@
 | Related items | P01 R-019 to R-023, R-045, R-046; P03 G-019, G-033, G-045; P07 POAM-015, POAM-016, POAM-019, POAM-021; P09 V-06 |
 
 ## 1. Summary
-AI Assist (AI-001) and Answer Bot (AI-002) shipped after a product security review only (gap 7). Neither had an AI risk assessment, an evaluation suite, or adversarial testing. The portfolio is not out of control, but three problems need fixing before the features grow:
+AI Assist (AI-001) and Answer Bot (AI-002) shipped after a product security review only (EV-055). Neither had an AI risk assessment, an evaluation suite, or adversarial testing. The portfolio is not out of control, but three problems need fixing before the features grow:
 - **AI-002, Answer Bot:** answers end consumers with no human in the loop, sometimes from outside the customer's knowledge base. That contradicts the product page claim.
 - **AI-001 and AI-002:** the model provider keeps Standard tenants' prompts for 30 days, which contradicts the trust center.
 - **AI-005, the call summarizer:** joins calls automatically and does not reliably get consent from everyone on the call.

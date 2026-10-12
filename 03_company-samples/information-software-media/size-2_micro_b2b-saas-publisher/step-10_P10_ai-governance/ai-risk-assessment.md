@@ -9,18 +9,18 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1) |
 | Assessor / date | CTO with the Software Engineer, Customer Success Manager, and Operations and Finance Manager, 2026-08-31 to 2026-09-04 |
 | Decision | CTO and Chief Executive Officer, 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the repository design documents, the model provider account and terms, the card statements and invoices, the AI coding assistant terms and a staff survey (EV-009, EV-017, EV-020, EV-027, EV-026). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 | Related items | P01 R-005, R-015, R-016, R-020; P03 G-003, G-019, G-034, G-036; P07 POAM-010, POAM-012; P09 V-02 |
 
 ## 1. GOVERN
 - **Accountable owner:** the CTO. **Decision authority:** the Chief Executive Officer, because the feature touches every customer and a public claim.
-- **Why this assessment is late.** The CTO built the feature in March 2026 and released it to all customers on 2026-04-20 under the model provider's click-through API terms. There was no risk review, no accuracy testing, no sub-processor notice, and the product page claimed "99% accuracy" (scenario gap 15). POL-02 A.2 and A.5 and POL-04 4.6 and 4.7 now require all of these before any AI feature or provider goes live.
+- **Why this assessment is late.** The CTO built the feature in March 2026 and released it to all customers on 2026-04-20 under the model provider's click-through API terms (EV-009, EV-017). There was no risk review, no accuracy testing, no sub-processor notice, and the product page claimed "99% accuracy" (EV-024, EV-012, EV-016, EV-013). POL-02 A.2 and A.5 and POL-04 4.6 and 4.7 now require all of these before any AI feature or provider goes live.
 - **Policies that apply:**
   - POL-02 A.4: every AI performance claim verified by the CTO and approved by the Chief Executive Officer
   - POL-02 A.5 and POL-04 4.6: no customer data to a vendor without a written agreement, sub-processor listing, and 30 days' notice
   - POL-04 4.3 and 4.7: Social Security numbers masked before AI; approved AI tools list (AI-001 and AI-002 are approved with conditions; AI-003 is prohibited)
 - **Scale for a Micro company:** there is no AI committee. The CTO, the Chief Executive Officer, and the Customer Success Manager review AI use at the monthly security review, and before any new AI feature or model change.
-- **Model provider:** bought through an API (SYS-06). The company does not train or fine-tune models. The provider's SOC 2 report was reviewed on 2026-09-03 (P09 V-02); it does not cover the zero-retention option.
+- **Model provider:** bought through an API (SYS-06). The company does not train or fine-tune models. The provider's SOC 2 report (EV-045) was reviewed on 2026-09-03 (P09 V-02); it does not cover the zero-retention option.
 
 ## 2. MAP
 | Item | Description |
@@ -29,7 +29,7 @@
 | Users | Customer reviewers (compliance coordinators and project managers) at all 45 customers; the Customer Success Manager for onboarding |
 | Affected people | About 41,000 vendors, many of them small businesses and sole proprietors. A vendor wrongly marked non-compliant can be held off a job site or lose work; one wrongly marked compliant can leave a customer exposed to an uninsured loss. About 9,800 sole proprietors' Social Security numbers pass through the feature |
 | Inputs | Full document images and text sent to the model provider, including full taxpayer identification numbers on W-9s |
-| Outputs | Extracted fields marked "AI-filled" on the reviewer screen, a confidence score per field, and a draft summary. With **auto-accept** on (31 of 45 customers), extracted fields are saved and can change a vendor's status with no human review |
+| Outputs | Extracted fields marked "AI-filled" on the reviewer screen, a confidence score per field, and a draft summary. With **auto-accept** on (31 of 45 customers, EV-008), extracted fields are saved and can change a vendor's status with no human review |
 | Build or buy | Company-built feature on a bought model |
 | Not intended | Deciding which vendors a customer hires; reading documents other than the three types above; any use of vendor data to train or improve models. Adding any of these requires a new assessment |
 
@@ -51,7 +51,7 @@
 **Re-tier and reassess if:** auto-accept is re-enabled for dates, limits, or status; new document types are added (for example, bank letters or identity documents); the model or model provider changes; or customers start using status to rank or select vendors.
 
 ## 4. MEASURE
-The Customer Success Manager and the Software Engineer labeled a test set of 400 documents from 12 customers (250 certificates, 100 W-9s, 50 licenses) and ran it through the production prompts on 2026-09-02. Tests used copies inside the production account; no new data went to any vendor.
+The Customer Success Manager and the Software Engineer labeled a test set of 400 documents from 12 customers (250 certificates, 100 W-9s, 50 licenses) and ran it through the production prompts on 2026-09-02 (EV-047). Tests used copies inside the production account; no new data went to any vendor.
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|

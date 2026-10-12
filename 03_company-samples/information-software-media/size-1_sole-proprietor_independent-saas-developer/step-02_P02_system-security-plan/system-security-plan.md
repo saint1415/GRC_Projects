@@ -7,7 +7,7 @@
 Multi-tenant Booking Platform (**MBP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The MBP is the online booking and appointment-reminder service that about 240 small businesses (salons, barbershops, pet groomers, home-cleaning services) use to take bookings from about 88,000 end clients. One person, the owner-developer, builds, deploys, operates, and supports it, with a freelance support contractor for about 10 hours a week. Components are SYS-01 to SYS-09 in `../00_company-facts.md` section 3: the production platform on a managed application platform and managed database (PaaS), the source repository and CI/CD pipeline, messaging providers, a generative AI model API (Smart Replies), a payment processor, error and uptime monitoring, help desk and chat, back office SaaS (email, files, accounting, password manager, domain registrar), and one laptop and one phone. There are no servers, virtual machines, or networks to manage; the hosting provider runs the platform layer. The owner is responsible for the application code, identities, secrets, data, configuration, and vendor contracts (P04).
+The MBP is the online booking and appointment-reminder service that about 240 small businesses (salons, barbershops, pet groomers, home-cleaning services) use to take bookings from about 88,000 end clients. One person, the owner-developer, builds, deploys, operates, and supports it, with a freelance support contractor for about 10 hours a week. Components are SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the production platform on a managed application platform and managed database (PaaS), the source repository and CI/CD pipeline, messaging providers, a generative AI model API (Smart Replies), a payment processor, error and uptime monitoring, help desk and chat, back office SaaS (email, files, accounting, password manager, domain registrar), and one laptop and one phone. There are no servers, virtual machines, or networks to manage; the hosting provider runs the platform layer. The owner is responsible for the application code, identities, secrets, data, configuration, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation | How it applies |
@@ -17,7 +17,7 @@ The MBP is the online booking and appointment-reminder service that about 240 sm
 | State | Florida breach notification, third-party agent duties | Fla. Stat. 501.171(6) | Notice to subscribers no later than 10 days after determination of a breach (P08). Other states: each state where affected individuals reside |
 | Internal | Information Security Policy | POL-01 (P06) | Consolidated policy for a one-person business |
 
-Checked and not applicable at this size (P03 section 1): CCPA (N51-R03; the company is not a "business" under Cal. Civ. Code 1798.140(d)), COPPA (N51-R02), DOJ Data Security Program (N51-R04), PADFA (N51-R05), FCC CPNI (N51-R06), FedRAMP (N51-R07), and SEC disclosure (N51-R08).
+Checked and not applicable at this size (intake [obligations register](../step-00_P00_intake/obligations-register.csv); P03 section 1): CCPA (N51-R03; the company is not a "business" under Cal. Civ. Code 1798.140(d)), COPPA (N51-R02), DOJ Data Security Program (N51-R04), PADFA (N51-R05), FCC CPNI (N51-R06), FedRAMP (N51-R07), and SEC disclosure (N51-R08).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -46,6 +46,7 @@ Operational since 2023. Planned changes: secrets moved out of the laptop and rot
 **Baseline:** SP 800-53B Moderate, tailored to 29 controls that carry the safeguards a one-person software business can operate and check (`control-implementation.csv`). One control outside the Moderate baseline, IA-5(7), was added because the top risk (P01 R-001) is plaintext secrets on the laptop. Other Moderate controls are either inherited from the hosting provider (evidence: its SOC 2 Type 2 report, reviewed 2026-09-09 in P09) or tailored out because they assume staff, facilities, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the owner's hosting account (application, job worker, admin console, database, photo storage, settings), the source repository and CI configuration, the owner's accounts and settings in every SaaS service (SYS-03 to SYS-08), the domain and DNS records, the laptop and the phone, and the secrets that connect them.
 - **Outside (external services):** the hosting provider's platform and data centers, the messaging providers, the AI model provider, the payment processor and its hosted checkout, the error monitoring and help desk platforms, and the subscribers' own devices and staff.
 
@@ -101,7 +102,7 @@ Self-assessed 2026-08-24 to 2026-08-28, with tests on 2026-08-27 run with the co
 The owner's administrator accounts use a password plus an authenticator app, which suits remote administration of a Moderate system. Two exceptions remain until MFA is added: the domain registrar (2026-10-15) and the product's admin console (2026-11-30). Subscriber staff sign in with a password only; offering MFA to subscriber admins is planned with the admin console change. End clients do not sign in; they book through public booking pages.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 cloud control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and hosting provider report review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 cloud control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and hosting provider report review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **CI/CD:** continuous integration and continuous delivery (the build and deploy pipeline)

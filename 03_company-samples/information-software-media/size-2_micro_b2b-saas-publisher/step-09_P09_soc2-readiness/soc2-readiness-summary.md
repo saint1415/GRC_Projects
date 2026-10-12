@@ -22,7 +22,7 @@ The company is a service organization in the SOC 2 sense: 45 businesses keep the
 
 **How this file relates to P03.** P03 tests the FTC's Section 5 expectations and the company's own statements. This file checks each Trust Services criterion and does not repeat the P03 analysis. Where the same weakness appears in both, both point to the same POA&M item in P07.
 
-**A correction comes first.** Questionnaire answers have said the company is "SOC 2 compliant." It has no SOC 2 report. Corrected answers go to every recipient by 2026-10-15 (P03 G-040). Until the Type 1 report is issued, the company says only that a Type 1 audit is planned for 2027.
+**A correction comes first.** Questionnaire answers have said the company is "SOC 2 compliant" (EV-014). It has no SOC 2 report. Corrected answers go to every recipient by 2026-10-15 (P03 G-040). Until the Type 1 report is issued, the company says only that a Type 1 audit is planned for 2027.
 
 ## 2. System description (scope)
 - **Services:** the Vendor Compliance Platform (VCP): document intake, AI extraction, expiry tracking, compliance status, and reports.
@@ -71,7 +71,7 @@ What the company can show now, and what it will start collecting:
 
 | Evidence | Criteria | Available now | Start collecting |
 |---|---|---|---|
-| Designation letter; POL-02, POL-03, POL-04 | CC1.3, CC2.2, CC5.3 | Yes | Signed acknowledgments (2026-10) |
+| Designation letter (EV-029); POL-02, POL-03, POL-04 | CC1.3, CC2.2, CC5.3 | Yes | Signed acknowledgments (2026-10) |
 | Risk register (P01) and assessment results with POA&M (P07) | CC3.2, CC4.1, CC4.2 | Yes | Monthly review notes (from 2026-09) |
 | Cloud provider and model provider report reviews | CC9.2 | Yes (Part B) | Remaining sub-processors (2026-12) |
 | Corrected website, product page, and questionnaire answers; approved answer library | CC2.3 | No | 2026-10 |
@@ -92,7 +92,7 @@ Four reviews were completed from 2026-09-02 to 2026-09-04; two more are schedule
 
 | Result | Vendors |
 |---|---|
-| SOC 2 Type 2 reviewed, current | V-01 cloud provider, V-02 AI model provider, V-03 error tracking and log management |
+| SOC 2 Type 2 reviewed, current | V-01 cloud provider (EV-021), V-02 AI model provider (EV-045), V-03 error tracking and log management (EV-046) |
 | Questionnaire and contract review (no audit report) | V-04 MSP |
 | Scheduled by 2026-12-31 | V-05 email delivery, V-06 support desk |
 

@@ -1,0 +1,17 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Hosting provider,"Managed application platform, managed database, object storage",SYS-01,All subscriber and end-client data,Online terms with DPA,"SOC 2 Type 2 (Security and Availability), 12 months ending 2026-03-31",EV-021; EV-023; EV-029; EV-020,On the public sub-processor list; data center operators carved out
+V-02,Source repository and CI service,Code hosting and CI/CD,SYS-02,Source code and CI secrets,Standard online terms,None on file,EV-008; EV-023,
+V-03,Transactional email service,Confirmation and reminder emails,SYS-03,"Client names, emails, appointment details",Standard terms; DPA accepted online,None on file,EV-021; EV-020; EV-023,On the public sub-processor list
+V-04,SMS provider,Confirmation and reminder texts,SYS-03,"Client names, phone numbers, appointment details",Standard online terms,None on file,EV-021; EV-020; EV-023,On the public sub-processor list
+V-05,Generative AI model provider,Model API for Smart Replies,SYS-04; AI-001,"Client first names, messages, appointment details, service notes",Standard API terms; no DPA,None on file,EV-021; EV-032; EV-020; EV-023,Not on the public sub-processor list; used since 2026-06-15
+V-06,Payment processor,Subscription billing; subscribers' connected accounts and hosted checkout,SYS-05,Subscriber billing contacts,Standard online terms,None on file,EV-021; EV-024,Card details stay on the processor's hosted checkout page
+V-07,Error and uptime monitoring service,"Error reports, uptime checks and status page",SYS-06,"Request data in errors, including some client names and phone numbers",Standard online terms,None on file,EV-021; EV-009; EV-010; EV-023,Error monitoring is on the public sub-processor list
+V-08,Help desk vendor,Help desk tickets and live chat,SYS-07,Subscriber questions; incidental client details,Standard online terms,None on file,EV-021; EV-012; EV-023,On the public sub-processor list
+V-09,Business email and file suite provider,Email and file storage,SYS-08,"Email, including export attachments",Standard online terms,None on file,EV-013; EV-023,
+V-10,Accounting SaaS vendor,Bookkeeping,SYS-08,Business financial data,Standard online terms,None on file,EV-013; EV-023,The CPA firm has its own user account
+V-11,Password manager vendor,Owner credential vault,SYS-08,Owner credentials,Standard online terms,None on file,EV-013; EV-023,
+V-12,Domain registrar and DNS provider,Company domain and DNS,SYS-08,DNS records,Standard online terms,None on file,EV-023,
+V-13,AI coding assistant vendor,Coding assistant in the code editor,AI-002,Source code,Paid individual plan terms,None on file,EV-033; EV-023,
+V-14,Freelance support contractor,"Help desk, live chat and subscriber setup, about 10 hours a week",SYS-07; SYS-01 (admin console),Subscriber accounts and client records through the admin console,Freelance agreement with a confidentiality clause; no security terms,None,EV-022; EV-023; EV-003; EV-012,Signs in to the admin console with the owner's account (EV-003)
+V-15,Contract security consultant,"Hourly review: secret scan, configuration review, restore test witness, self-review challenge",None (sessions started and watched by the owner),Settings and test results seen on screen,Engagement letter with a nondisclosure agreement,None,EV-022,No standing access
+V-16,Outside accountant (CPA firm),Taxes and bookkeeping review,SYS-08 (accounting SaaS),Business financial data,Engagement terms,None,EV-013; EV-023,

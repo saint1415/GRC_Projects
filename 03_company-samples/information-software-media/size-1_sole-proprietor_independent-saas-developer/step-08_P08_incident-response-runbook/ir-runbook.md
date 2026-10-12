@@ -19,7 +19,7 @@ Keep a copy of this runbook, the notification matrix, and the contact sheet **ou
 | Contract security consultant | Second pair of hands: evidence capture, log review, persistence check | Hour 0 |
 | Breach counsel (privacy and data security attorney; to be identified by 2026-10-15) | Notice decisions, state-by-state analysis, wording of subscriber notices, extortion questions | Hours 0-4 |
 | Hosting provider support (security or abuse line) | Help confirm the token's activity, preserve logs, act on attacker infrastructure | Hours 1-4 |
-| Cyber insurer | **None today.** If the quoted policy is bought, call its hotline before hiring any outside firm | Hours 0-4 |
+| Cyber insurer | **None today** (EV-023, EV-030). If the quoted policy is bought, call its hotline before hiring any outside firm | Hours 0-4 |
 | Support contractor | Pause admin console use; route subscriber questions to an approved holding reply | Hour 1 |
 | Two negotiated-DPA subscribers (48-hour clock) | Initial notice as soon as the incident is confirmed | Within 48 hours of confirmation |
 | FBI (IC3 online report) | Voluntary report; also the law enforcement consultation Florida requires before any "no harm" determination (Fla. Stat. 501.171(4)(c)) | Day 1 |

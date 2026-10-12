@@ -7,13 +7,14 @@
 | Primary analysis | FTC Act Section 5 data security expectations (15 U.S.C. 45(a)), measured against the FTC's own business guidance, plus the security and data-use statements the company makes on its website, in its Terms of Service and DPA, and in questionnaire answers. Rows also carry SOC 2 criterion IDs so the same work prepares for a future SOC 2 examination (P09) |
 | Applicability checks only | CCPA/CPRA (N51-R03); COPPA (N51-R02); DOJ Data Security Program (N51-R04); PADFA, FCC CPNI, FedRAMP, SEC (N51-R05 to N51-R08) |
 | Assessment dates | 2026-08-24 to 2026-08-28 (self-assessment; tests on 2026-08-27 with the contract security consultant) |
-| Assessor | Owner-developer. Evidence is self-attested, checked on screen with the consultant where possible |
+| Assessor | Owner-developer. Evidence is the intake record and the owner's self-review (EV-038), checked on screen with the consultant where possible |
 | Adopted | 2026-09-25 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
 
 ### 1.1 FTC Act Section 5 applies
-Section 5(a) declares "unfair or deceptive acts or practices in or affecting commerce" unlawful (15 U.S.C. 45(a)(1)). The company is a for-profit software business selling to subscribers in 11 states. It is not in any statutory carve-out (banks, savings and loans, federal credit unions, common carriers, air carriers), and **there is no size threshold** (N51-R01). A one-person business is covered the same way a large one is. Both FTC theories matter here:
+Section 5(a) declares "unfair or deceptive acts or practices in or affecting commerce" unlawful (15 U.S.C. 45(a)(1)). The company is a for-profit software business selling to subscribers in 11 states (EV-005, EV-024). It is not in any statutory carve-out (banks, savings and loans, federal credit unions, common carriers, air carriers), and **there is no size threshold** (N51-R01). A one-person business is covered the same way a large one is. Both FTC theories matter here:
 - **Unfairness:** a practice is unfair if it "causes or is likely to cause substantial injury to consumers which is not reasonably avoidable by consumers themselves and not outweighed by countervailing benefits to consumers or to competition" (15 U.S.C. 45(n)). The 88,000 end clients whose names, phone numbers, and service notes sit in the platform cannot protect that data themselves.
 - **Deception:** a material representation, omission, or practice likely to mislead a consumer acting reasonably. The website security page, the Smart Replies release note, the DPA, and questionnaire answers are representations to subscribers.
 
@@ -44,7 +45,7 @@ SOC 2 is not a law. The company has no SOC 2 report, and a sole proprietor rarel
 ## 2. Method
 1. **Requirements.** Each practice in the three FTC guides became one row, cited by guide, lesson, and practice heading (FTC guidance is a U.S. government work, so headings are quoted). Each public statement or contract promise became one deception row.
 2. **Crosswalk.** Each row maps to CSF 2.0, SP 800-53 Rev. 5, and related SOC 2 criterion IDs. This is an **author mapping**; no official NIST or FTC mapping of this guidance exists.
-3. **Evidence.** Self-attested by the owner and checked on screen where possible: account and role lists, the secret scan and configuration review on 2026-08-27, the website captured on 2026-08-25, the uptime monitor report, vendor terms, and the Terms of Service and DPA.
+3. **Evidence.** Current state was established from the intake evidence (account and role lists, the laptop and phone reviews, the website captured on 2026-08-18, the uptime monitor report, vendor terms, the Terms of Service and DPA, and the home office walk-through on 2026-08-19), the owner's code review and deletion test on 2026-08-26 (EV-036, EV-037), and the owner's written self-review, checked on screen with the consultant on 2026-08-27 (EV-038). The secret scan and configuration review on 2026-08-27 (EV-IA-5(7), EV-039) are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

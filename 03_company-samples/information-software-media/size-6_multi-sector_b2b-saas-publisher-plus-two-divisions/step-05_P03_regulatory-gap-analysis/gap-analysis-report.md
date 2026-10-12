@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads, the Payments and Payroll Qualified Individual, and the consulting federal contracts compliance officer, coordinated by the Group Chief Privacy Officer; reviewed by group internal audit and outside counsel (sections 1 and 6) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 The first question at this tier is not "what does the rule say?" but "which entity does it bind, and in what role?" The group has three legal subsidiaries with different roles toward the same data.
 
 ### 1.1 Role of each division
@@ -81,10 +83,24 @@ FAR 52.204-21 applies to the 14 federal contracts because consultants' systems h
 ## 3. Method
 1. **Requirements.** FTC guidance rows reuse the practice headings of the three FTC guides (U.S. government works, quoted). FAR and CFR rows were read from the eCFR (current through 2026-09-23): 48 CFR 52.204-21, 16 CFR 314.2, 314.4, and 314.6, 31 CFR 1010.100(ff)(5), 12 CFR 53.2 and 53.4, and 45 CFR 164 sections as cited. PCI DSS rows list requirement numbers with short labels in our own words, checked against the PCI SSC v4.0.1 documents; the standard's text is not reproduced.
 2. **Crosswalk.** Each row maps to CSF 2.0, SP 800-53 Rev. 5, and (for the focus division) SOC 2 criterion IDs. These are **author mappings**: no official NIST mapping exists for the FTC guidance, 16 CFR Part 314, or PCI DSS to CSF 2.0. NIST maps the FAR basic safeguarding controls to SP 800-171, not to CSF 2.0.
-3. **Evidence.** Interviews with each division's security, privacy, product, legal, and compliance leads; configuration exports; contract registers; the trust center and product pages captured on 2026-08-12; the 2026 PCI DSS Report on Compliance; and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, contract registers, plans and the AI tool discovery, EV-001 to EV-072), the 2026 PCI DSS Report on Compliance (EV-073), gap analysis interviews with each division's security, privacy, product, legal, and compliance leads (EV-083 Cloud Software, EV-084 Technology Consulting, EV-085 Payments and Payroll), fieldwork documents and scans (EV-086 to EV-092, including the trust center and product pages captured on 2026-08-12, EV-087), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale. The `related_risk_ids` column links each gap to the registers.
 
 ## 4. Results
+### 4.0 Group gaps
+Eleven gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 11 across this sample.
+1. **Long-lived machine credentials.** About 1,140 static cloud access keys exist across group cloud accounts; 212 are older than 1 year. The consulting data migration toolkit uses 37 static keys that can read the WCP export bucket for any tenant (EV-020, EV-057; P07 IA-5).
+2. **Payroll handoff data sprawl.** Nightly payroll handoff files (names, Social Security numbers, bank routing and account numbers, pay data) stay in the WCP export bucket for more than 400 days instead of 7. The bucket uses provider-managed keys and has no object-level read logging, and neither division has documented that it owns this data (EV-044, EV-086, EV-045; P07 SI-12, AU-12, SC-28(1)).
+3. **Consultant access to customer tenants.** About 3,800 consultants hold implementation-partner access to customer tenants. Access is granted per project but not removed at project close, and client data is copied into the project collaboration workspace without a retention rule (EV-046, EV-089, EV-056; P07 AC-6).
+4. **AI ahead of governance.** The workforce assistant (launched 2026-03-02) and attrition-risk insights went live before the Group AI Standard (adopted 2026-06-15). Attrition-risk insights has no bias testing and no developer documentation for customers ahead of Colorado SB26-189, and group HR is piloting resume screening without a CCPA ADMT assessment (EV-031, EV-079, EV-048, EV-047, EV-078).
+5. **Affiliate service provider oversight.** The WCP processes Payments and Payroll customer information (the handoff files) without an intercompany service agreement that carries 16 CFR 314.4(f) safeguards terms, and the division's written risk assessment does not cover that flow (EV-037, EV-065, EV-066; P07 SA-9, RA-3).
+6. **PCI DSS scope maintenance.** The six-monthly segmentation penetration test (11.4.6) was missed in the first half of 2026 after a network change, and the payment page script inventory (6.4.3) is incomplete for 2 of 5 hosted checkout pages (EV-067, EV-082; P07 CA-8, CM-8).
+7. **Notification matrix.** The group matrix does not include FTC Safeguards notices, bank service provider notices for about 420 bank and credit union customers (256 have given a designated contact), or the 48-hour terms of about 1,240 enterprise customers, and it has never been exercised across divisions (EV-014, EV-040, EV-039, EV-013; P07 IR-6, IR-8).
+8. **CCPA cybersecurity audit readiness.** The group meets the cybersecurity audit criteria; the first audit period starts 2027-01-01, and no auditor or audit scope has been selected (EV-036, EV-003).
+9. **Acquired consulting firm.** The 2,600 consultants from the 2025 acquisition still use a separate identity provider and endpoint stack (migration due 2027-03-31); their access is not in quarterly certification and their laptops are not in the group EDR (EV-058, EV-008, EV-011; P07 AC-2, SI-3, PS-4).
+10. **Common control inheritance.** Inheritance is documented for Workforce Cloud (SOC 2 system description) and Payments and Payroll (PCI DSS responsibility matrix) but not for Technology Consulting (EV-018, EV-042, EV-068; P07 CA-2).
+11. **Federal contract information.** FCI from the 14 federal contracts is stored in the general project collaboration workspace without verification of the FAR 52.204-21(b)(1) controls, and 9 of 22 subcontracts lack the 52.204-21(c) flowdown (EV-056, EV-055, EV-054).
+
 ### 4.1 Cloud Software (`gap-analysis.csv`)
 | Requirement set | Rows | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|---|
@@ -125,7 +141,7 @@ Of the 20 gaps, 5 are High, 13 Moderate, and 2 Low.
 **Not met:** 16 CFR 314.4(f)(2) (no contract binding the affiliate that stores the handoff files) and PCI DSS 11.4.6 (segmentation test missed in 2026 H1). **High:** 314.4(c)(1) and (c)(8) (who can read the handoff files, and whether anyone would know), 314.4(f)(2), and PCI DSS 6.4.3 and 11.6.1 (2 of 5 checkout pages without complete script controls).
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Static keys and the shared handoff bucket (1, 2) | CS, TC, PP | FTC Start with Security 2, 3, 5; 16 CFR 314.4(c)(1), (c)(8) | High | Workload identity; dedicated handoff channel with 7-day retention, customer-managed keys, read logging | Group CISO | 2026-12-31 |
 | 2 | Untrue or unsubstantiated statements (3, 4) | CS | 15 U.S.C. 45(a) (deception): G-034, G-040, G-042 | High | Correct the trust center and product page now; tell the SOC 2 service auditor about G-040 | Cloud Software division CISO; chief product officer | 2026-10-31 |

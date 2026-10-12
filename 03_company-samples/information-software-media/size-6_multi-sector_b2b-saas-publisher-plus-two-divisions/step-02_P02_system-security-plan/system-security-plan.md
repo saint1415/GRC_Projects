@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Workforce Cloud Platform**, the focus division's multi-tenant SaaS production platform, because it holds the most personal data in the group (about 21 million worker profiles), it carries data that belongs to another division (the payroll handoff files of Payments and Payroll), consultants from the third division work inside its customer tenants, and it carries the group's top risk (P01 GR-01). It inherits most of its controls from corporate (SYS-G1 to SYS-G3). The payroll engine (SYS-D3) and the payments platform (SYS-D4) keep division plans that inherit from the same common control catalog (`common-control-catalog.csv`); the payments platform also has its PCI DSS documentation.
 
 ## 1. System Name and Identifier
-Workforce Cloud Platform (**WCP**), identifier CSCH-SYS-D1-WCP. SYS-D1 in `../00_company-facts.md`.
+Workforce Cloud Platform (**WCP**), identifier CSCH-SYS-D1-WCP. SYS-D1 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), with the export service and bucket listed as SYS-D1-EXP.
 
 ## 2. System Overview
 The WCP is the production environment of *Workforce Cloud*, a workforce management and HR SaaS. It serves about 38,000 customer organizations and about 21 million worker profiles in all 50 states. Customers use it for scheduling, time and attendance, HR records, and an employee self-service mobile app (about 14 million monthly active workers). Two optional AI features run inside it: the generative **workforce assistant** (6,200 opt-in customers) and **attrition-risk insights** (about 9,800 customers).
@@ -38,7 +38,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | State law | Breach notification | Each state where affected individuals reside; Florida worked example: Fla. Stat. 501.171 | The division is a third-party agent for its customers under Florida law (notice to the customer within 10 days) (P08) |
 | Internal | Group policies POL-01 to POL-05 and the Cloud Software supplement | P06 | |
 
-Not applicable: FedRAMP (no government edition), COPPA (not directed to children), HIPAA (no PHI in the WCP; the consulting division's health-system integrations pass only staffing counts into WCP tenants), PCI DSS (no account data in the WCP; checkout posts directly to SYS-D4). The WCP pages that embed checkout are in the payments division's PCI DSS scope reviews; the review after the March 2026 network change is overdue (POAM-021).
+Not applicable: FedRAMP (no government edition), COPPA (not directed to children), HIPAA (no PHI in the WCP; the consulting division's health-system integrations pass only staffing counts into WCP tenants), PCI DSS (no account data in the WCP; checkout posts directly to SYS-D4). The WCP pages that embed checkout are in the payments division's PCI DSS scope reviews; the review after the March 2026 network change is overdue (POAM-021). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -82,6 +82,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 (human resourc
 Other High-baseline controls are fully inherited from the cloud providers (most PE controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for data centers the group does not operate). CSF 2.0 subcategories in the CSV come from the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/`; where that crosswalk has no row for a control, the subcategory is an author mapping.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-D1, SYS-D1-EXP and the shared services they inherit from) and the WCP exports and documents EV-041 to EV-052.
+
 - **Inside:** the WCP accounts in provider A (front ends, API gateway, application services, tenant databases, export service and export bucket, AI services, support and admin console) and the WCP backups in the provider B vault.
 - **Outside, inherited (common control providers):** SYS-G1 identity platform, SYS-G2 SOC, SIEM, and EDR, and SYS-G3 (landing zone, hub network, log archive, key management, CI/CD).
 - **Outside, interconnected:** SYS-D3 payroll engine (reads handoff files), SYS-D4 payments platform (checkout), SYS-D2 consulting migration toolkit (writes tenant data loads; holds static keys, gap 1), the third-party model provider, about 9,000 third-party payroll providers chosen by customers, and customer identity providers.
@@ -149,7 +151,7 @@ Common controls were assessed once, and WCP and division controls sampled, from 
 - **Customer users** sign in through their own identity provider or WCP accounts. MFA is required for customer administrators and offered to workers. Direct deposit changes require re-authentication (IA-11).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **CDE:** cardholder data environment (in SYS-D4, outside this boundary)

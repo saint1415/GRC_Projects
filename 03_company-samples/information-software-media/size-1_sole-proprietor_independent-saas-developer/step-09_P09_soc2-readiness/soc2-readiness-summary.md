@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022). Criteria are cited by ID with short topic labels in our own words |
 | Categories in scope | Security (CC1 to CC9) only |
 | Part A | Owner's readiness self-check (`soc2-readiness.csv`) |
-| Part B | Review of the hosting provider's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the hosting provider's SOC 2 Type 2 report, downloaded at intake (EV-029; `vendor-soc2-review.csv`) |
 | Prepared | 2026-09-08 to 2026-09-10 by the owner-developer (Part B reviewed 2026-09-09); adopted 2026-09-25 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report yet

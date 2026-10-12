@@ -85,6 +85,18 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - benchmark configuration scans of 10 cloud resources
   - secret scanning of the contractor's repositories
 
+### What each test could show
+The 2026 policies (P06) were drafts during fieldwork; they were approved on 2026-09-29 and take effect on 2026-10-01. The 2023 policies, the 2025 incident response plan and the existing standards were in force, so controls built on them were tested for operation. The drafts, and the draft regional DR plan, were reviewed for design only, because a requirement that only a draft introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems or records | 191 |
+| Design | The contingency plan for a regional loss exists only as a draft (CP-2); its content was reviewed for design. Operation is tested at the 2027-04 follow-up | 20 |
+| Not implemented | Nothing existed to test (for example no documented logging rationale, no after-the-fact review of emergency changes, no privacy assessment of the AI features, no data-plane monitoring) | 13 |
+| **Total** | | **224** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), new accounts from the provisioning logs (EV-004), privileged accounts from EV-006, long-lived keys from EV-008, support view sessions from EV-009, changes from the deployment log (EV-013), data stores from EV-014, terminated tenants from EV-024, laptops from EV-030, incidents from EV-034 and sub-processors from EV-041.
+
 ## 4. Rules of engagement
 - No testing that could affect customers. The simulated download used a synthetic test tenant and a purpose-made key that was deleted afterwards. No customer content was viewed.
 - Evidence was stored in the firm's encrypted workpaper system under its confidentiality agreement and a BAA for any healthcare cell metadata.
@@ -140,7 +152,7 @@ Other than satisfied statements by risk: 4 Very High, 37 High, 30 Moderate, 4 Lo
 | SI-12 | 2 | 2 | Moderate | POAM-017 |
 | SR-6 | 0 | 1 | Moderate | POAM-006 |
 
-**Fully satisfied (4 controls):** CA-8 (annual independent penetration test), IA-2(1) (security keys on all 25 sampled privileged sign-ins), SA-3(2) (no live data in pre-production; the guardrail blocked the snapshot share test), and SC-28 (all 9 data stores and 30 sampled laptops encrypted). These confirm the strengths in the scenario facts and support the trust center's encryption statement (P03 G-032).
+**Fully satisfied (4 controls):** CA-8 (annual independent penetration test), IA-2(1) (security keys on all 25 sampled privileged sign-ins), SA-3(2) (no live data in pre-production; the guardrail blocked the snapshot share test), and SC-28 (all 9 data stores and 30 sampled laptops encrypted). These confirm the intake observations (EV-001, EV-010, EV-014, EV-030) and support the trust center's encryption statement (P03 G-032).
 
 **Fully other than satisfied (8 controls):** AC-3, AC-6, AC-6(5), AC-6(9), AU-11, CP-10, IA-5(7), and SR-6.
 

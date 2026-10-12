@@ -4,15 +4,15 @@
 |---|---|
 | Organization | Cris Santos Company (independent B2B SaaS software publisher) |
 | Tier / Vertical | Sole Proprietorship / Information |
-| AI use case | AI-001: Smart Replies, a generative AI feature embedded in the booking product, built on one third-party model API (SYS-04). Beta since 2026-06-15 with 30 opt-in subscribers; about 4,100 drafts through 2026-09-04 |
+| AI use case | AI-001: Smart Replies, a generative AI feature embedded in the booking product, built on one third-party model API (SYS-04). Beta since 2026-06-15 with 30 opt-in subscribers; about 4,100 drafts through 2026-09-04 (EV-007, EV-040) |
 | Company role | **Developer and provider** of the feature. Subscribers decide whether to turn it on and send the replies to their own clients |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-developer, 2026-09-08 to 2026-09-10; decision 2026-09-25 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is the owner's coding assistant, Low tier) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is the owner's coding assistant, Low tier), built at intake from the feature flag settings and prompt template, the model provider account, the card statements, and the coding assistant's plan terms (EV-007, EV-032, EV-023, EV-033). With no staff, there was no survey to run. Not established: whether the support contractor uses any AI tool with subscriber data on the contractor's own device, and whether the model provider account's training setting matches its terms page (EV-042). The DPA required in section 6 is the step to settle the second |
 | Related items | P01 R-009, R-010, R-011; P03 G-003, G-036, G-037; P07 POAM-006 |
 
 ## 1. What it does (Map)
-When an end client sends a message through the booking page ("Can I move my Saturday cut to 3?"), the job worker sends a prompt to the model provider's API with the client's first name, the message, upcoming appointments, open slots, and **the client's full free-text service notes**. The model returns a draft reply, labeled "AI draft" in the subscriber's inbox. Staff edit and send it. **6 of the 30 beta subscribers turned on "auto-send for booking confirmations"**, so those drafts reach clients with no human review. The model provider is on its standard API terms, which state that inputs are not used for training by default and are kept for a limited period for abuse monitoring. There is **no signed DPA**, the provider is **not on the public sub-processor list**, and subscribers got **no 14-day notice**. The release note promised "your data is never used to train AI".
+When an end client sends a message through the booking page ("Can I move my Saturday cut to 3?"), the job worker sends a prompt to the model provider's API with the client's first name, the message, upcoming appointments, open slots, and **the client's full free-text service notes** (EV-007). The model returns a draft reply, labeled "AI draft" in the subscriber's inbox. Staff edit and send it. **6 of the 30 beta subscribers turned on "auto-send for booking confirmations"**, so those drafts reach clients with no human review (EV-007, EV-040). The model provider is on its standard API terms, which state that inputs are not used for training by default and are kept for a limited period for abuse monitoring (EV-042). There is **no signed DPA** (EV-021), the provider is **not on the public sub-processor list** (EV-020), and subscribers got **no 14-day notice** (EV-028). The release note promised "your data is never used to train AI" (EV-025).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -38,7 +38,7 @@ When an end client sends a message through the booking page ("Can I move my Satu
 - **Every draft is reviewed by subscriber staff before sending.** Auto-send is removed for all subscribers.
 - Drafts that mention a time, date, or price are checked by code against the calendar and the subscriber's price list before display; a mismatch is flagged in the draft.
 - Client messages are treated as data, not instructions: the prompt template fences them off, and drafts that offer discounts or refunds are blocked.
-- **Measure:** the owner samples 50 drafts a month for wrong times or prices, repeated service notes, and tone. Target: no draft with a wrong time or price reaches a client. During the beta, the owner found 3 drafts in a sample of 50 that offered a slot already taken; in all 3, staff caught the error before sending.
+- **Measure:** the owner samples 50 drafts a month for wrong times or prices, repeated service notes, and tone. Target: no draft with a wrong time or price reaches a client. During the beta, the owner found 3 drafts in a sample of 50 that offered a slot already taken; in all 3, staff caught the error before sending (EV-041).
 - A harmful reply that reaches clients is handled as an incident under POL-01 section 10, with the feature flag turned off first.
 
 ## 6. Decision: approved with conditions (2026-09-25)

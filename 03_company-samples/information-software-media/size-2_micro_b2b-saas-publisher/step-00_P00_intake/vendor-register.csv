@@ -1,0 +1,19 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,IaaS/PaaS for the production environment,SYS-01,All customer data,Provider customer agreement and DPA,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-016; EV-020; EV-021,On the published sub-processor list
+V-02,Generative AI model provider,API for AI document extraction,SYS-06,"Full document images and text, including Social Security numbers",Click-through API terms; no DPA,None on file at intake; SOC 2 Type 2 for the period ending 2026-06-30 received 2026-09-01,EV-016; EV-017; EV-020; EV-045,Not on the published sub-processor list; processing since 2026-04-20
+V-03,Error tracking and log management vendor,Error tracking and log management,SYS-05,"Error payloads with incidental vendor data, including some TINs",DPA (sub-processor),None on file at intake; SOC 2 Type 2 for the period ending 2025-12-31 received 2026-09-01,EV-010; EV-016; EV-046,On the published sub-processor list
+V-04,Managed service provider (MSP),"Laptop management, productivity suite administration, help desk",SYS-03; SYS-08,Incidental (suite email and files; laptop contents),MSP service contract,None on file,EV-002; EV-011; EV-018,Holds 2 suite global administrator accounts; no access to the production cloud account
+V-05,Email delivery service,Transactional email to vendors,SYS-04,"Vendor contact names, emails, upload links",DPA (sub-processor),None on file,EV-016; EV-020,On the published sub-processor list
+V-06,Support desk SaaS,Customer support tickets,SYS-07,Tickets and customer screenshots,DPA (sub-processor),None on file,EV-016; EV-020,On the published sub-processor list
+V-07,Source repository and CI/CD host,"Code hosting, CI/CD",SYS-02,Source code; CI secrets,Standard terms,None on file,EV-004; EV-020,
+V-08,Productivity suite vendor,"Email, files, chat, single sign-on",SYS-03,Staff email and files (incidental customer data),Standard terms (subscription through the MSP),None on file,EV-002; EV-020,
+V-09,CRM vendor,Sales pipeline and questionnaire records,SYS-07,Sales contacts,Standard terms,None on file,EV-014; EV-020,
+V-10,Accounting SaaS vendor,Bookkeeping,SYS-07,Company financial records,Standard terms,None on file,EV-020; EV-022,
+V-11,Payment processor,Customer billing on a hosted payment page,SYS-07,Customer billing contacts; card data entered on its own page,Standard terms,None on file,EV-020; EV-023,The company stores no card data
+V-12,Payroll service,Biweekly payroll,n/a,Employee payroll data,Standard terms,None on file,EV-001; EV-020,
+V-13,AI coding assistant vendor,Business AI coding assistant,AI-CODE,Source code,Business terms with no training on inputs,None on file,EV-020; EV-027,
+V-14,Uptime monitoring and status page vendor,External uptime checks and public status page,SVC-01,None,Standard terms,None on file,EV-020; EV-028,
+V-15,Password manager vendor,Team password manager,SVC-02,Staff credentials (encrypted vault),Standard terms,None on file,EV-020,
+V-16,"Contract developer (individual, U.S.-based)",Part-time feature development,SYS-01; SYS-02; SYS-08,Production access; database extracts on a personal laptop,Contractor agreement with a confidentiality clause and no security terms,n/a,EV-001; EV-016; EV-024,Works on a personal laptop not managed by the company
+V-17,Cyber insurer,Cyber liability policy with breach hotline and panel vendors,n/a,Incident details if a claim is made,Policy bound February 2026,n/a,EV-019; EV-020,
+V-18,Outside counsel,MSA and DPA templates (2024); breach advice as needed,n/a,Contract and incident details as needed,Engagement as needed,n/a,EV-015; EV-020,

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (B2B SaaS software publisher, Vendor Compliance Platform) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** CTO (security and compliance lead) with the Senior Software Engineer, Customer Success Manager, Operations and Finance Manager, and the MSP lead technician, 2026-07-27 to 2026-08-07 | **Approved:** Chief Executive Officer, 2026-09-15
+**Sources:** process owner interviews 2026-07-27 to 2026-07-29 (EV-030), FY2025 financial statements and June 2026 cash report (EV-022), customer subscription list (EV-023), customer MSA, DPA and security exhibit (EV-015), cloud configuration and backup settings (EV-006), infrastructure code coverage (EV-007), MSP service contract (EV-018), cloud provider SOC 2 report (EV-021). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Executive Officer.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It covers all 8 business processes in `bia.csv`. It supports:
@@ -13,12 +14,12 @@ This BIA lists every business function of the company, how long each can be down
 No federal or state law sets recovery times for this company. The drivers are customer contracts, customers' need to check vendors before work starts on a site, and the promises the company has made in writing.
 
 ## 2. System and business description
-The company sells the Vendor Compliance Platform (VCP) to 45 mid-size property management companies and general contractors. About 900 customer users track about 41,000 vendors and about 165,000 stored documents (certificates of insurance, W-9s, licenses). The VCP runs in one public-cloud account in one region (SYS-01) and is deployed by a SaaS CI/CD pipeline (SYS-02). Staff sign in through the productivity suite's identity service (SYS-03), which the MSP administers. See `../00_company-facts.md` sections 1 and 3.
+The company sells the Vendor Compliance Platform (VCP) to 45 mid-size property management companies and general contractors. About 900 customer users track about 41,000 vendors and about 165,000 stored documents (certificates of insurance, W-9s, licenses). The VCP runs in one public-cloud account in one region (SYS-01) and is deployed by a SaaS CI/CD pipeline (SYS-02). Staff sign in through the productivity suite's identity service (SYS-03), which the MSP administers. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 Use peaks on weekday mornings (about 06:00 to 09:00 Eastern), when project managers confirm that subcontractors arriving on site are insured. Monthly compliance reports run in the first week of each month.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual receipts, about $3,000 per calendar day. One average customer pays about $24,000 a year, so losing one customer is a Moderate cost and losing an anchor customer is Severe.
+Dollar values are scaled to about $1.1 million in annual receipts, about $3,000 per calendar day (EV-022). One average customer pays about $24,000 a year (EV-023), so losing one customer is a Moderate cost and losing an anchor customer is Severe.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -65,11 +66,11 @@ Totals: 2 High, 4 Moderate, and 2 Low processes.
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Contract | Evidence of recovery capability |
 |---|---|---|---|
-| Cloud provider | BP-01, BP-02, BP-03, BP-06 | Provider's standard terms and DPA | SOC 2 Type 2 report reviewed 2026-09-02 (P09 V-01). Regional outages are the provider's risk; restoring the company's own data and configuration is the company's job |
+| Cloud provider | BP-01, BP-02, BP-03, BP-06 | Provider's standard terms and DPA | SOC 2 Type 2 report (EV-021) reviewed 2026-09-02 (P09 V-01). Regional outages are the provider's risk; restoring the company's own data and configuration is the company's job |
 | AI model provider | AI extraction in BP-02 only | Click-through API terms (no DPA yet; P10) | Not needed for recovery; manual queue |
 | Email delivery service | BP-03 reminders and BP-02 upload links | DPA (sub-processor) | Vendor's published commitments |
 | Source repository and CI/CD SaaS | BP-05 | Standard terms | Local clones of the code |
-| Productivity suite vendor and MSP | Staff access to everything (single sign-on) | Suite standard terms; MSP contract with a 4-business-hour response time and no recovery commitment | No written recovery commitment from the MSP |
+| Productivity suite vendor and MSP | Staff access to everything (single sign-on) | Suite standard terms; MSP contract with a 4-business-hour response time and no recovery commitment (EV-018) | No written recovery commitment from the MSP |
 | Support desk SaaS | BP-04 | DPA (sub-processor) | Vendor's published commitments; shared mailbox as fallback |
 | Payment processor and payroll service | BP-08 | Standard terms | Prior payroll can be repeated |
 

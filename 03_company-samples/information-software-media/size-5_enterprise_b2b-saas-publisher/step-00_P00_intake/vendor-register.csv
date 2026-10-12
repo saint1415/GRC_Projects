@@ -1,0 +1,27 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS and PaaS for the OCP, the landing zone and the Government Edition (government regions)",SYS-01; SYS-03; LZ-AB,Customer data; federal agency data,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-049; EV-012,Subservice organization for SL-1
+V-02,Cloud provider B,IaaS and PaaS for the Data Cloud and AQ-01,SYS-02; SYS-09; LZ-AB,Customer data,Customer agreement,SOC 2 Type 2,EV-049; EV-017; EV-028,Subservice organization for SL-2 and SL-3
+V-03,Source hosting and CI service vendor,"Source hosting, CI pipelines",SYS-05,Source code; pipeline secrets,Subscription agreement,SOC 2 Type 2 reviewed,EV-049; EV-022,Single vendor for all code
+V-04,SIEM and observability vendor,"SIEM, log search, AI alert triage feature",SYS-06; AI-011,Security logs,Sub-processor agreement,SOC 2 Type 2,EV-049; EV-018; EV-061,No secondary log pipeline
+V-05,EDR vendor,Endpoint and server detection,SYS-06; SYS-08,Endpoint telemetry,Subscription agreement,Per vendor register,EV-043; EV-010,Updates released in staged rings
+V-06,Generative AI model providers (three),Model inference for AI Assist and internal AI tools,SYS-01-AIO; AI-001; AI-002; AI-006; AI-013; AI-015,Prompts with case content of the same tenant,Sub-processor agreements with no-training and zero-retention terms,Per vendor register (SOC report reviews tracked),EV-043; EV-046; EV-045; EV-060,Added as sub-processors in 2026; one provider per AI Assist feature
+V-07,Managed DNS provider,Public DNS for all product domains,EXT-DNS,DNS records,Service agreement,Per vendor register,EV-013; EV-043,Single provider; no secondary
+V-08,CDN and DDoS protection service,"Edge delivery, WAF and DDoS protection",EXT-CDN,Web and API traffic,Service agreement,Per vendor register,EV-013; EV-043,
+V-09,Support ticketing SaaS vendor,Support case management,SAAS-SUP; SYS-01-TAT,Customer data in tickets and attachments,Sub-processor agreement,SOC 2 Type 2,EV-049; EV-057,
+V-10,Contact center telephony provider,Support phone lines,SAAS-SUP,Call audio and metadata,Service agreement,Per vendor register,EV-057; EV-043,Single provider; mobile forwarding fallback
+V-11,Follow-the-sun support vendor,Support agents in two countries that are not countries of concern,SAAS-SUP; SYS-01-TAT,Customer data seen in support work,"Services agreement restricting subcontracting, with confidentiality and security terms",Subcontractor list requested; not received at intake,EV-044; EV-057; EV-043,About 30% of support volume outside U.S. business hours; open request
+V-12,"Email delivery, SMS and push notification providers",Case notifications,SYS-01,Notifications with case references,Sub-processor agreements,SOC 2 Type 2,EV-049; EV-043; EV-052,Secondary email provider configured; two SMS and push providers
+V-13,Mapping and routing service,Field service routing,SYS-01,Job locations,Service agreement,Per vendor register,EV-043,Daily route cache
+V-14,"AQ-01 telephony carrier, speech-to-text provider and model provider","Voice channel, transcription and model inference for virtual agents",SYS-09; AI-007,Conversation recordings and transcripts,AQ-01 agreements,Per vendor register,EV-028; EV-043,
+V-15,Productivity suite and chat vendor,"Email, files, chat and AI assistant",SYS-07; AI-010,Internal documents,Subscription agreement,Per vendor register,EV-071; EV-045; EV-061,
+V-16,"ERP, billing SaaS and payment processor","Finance, invoicing and customer payments",SYS-07,Financial and billing data,Subscription and processing agreements,Per vendor register,EV-045; EV-066; EV-034,The platform stores no card numbers
+V-17,HR and payroll SaaS vendor,"HR, payroll and recruiting (including the resume matching feature)",SYS-07; AI-012,Employee and applicant data,Subscription agreement,SOC 1 and SOC 2,EV-049; EV-006; EV-061,HR events drive identity governance
+V-18,CRM and marketing automation vendor,"CRM, marketing database and lead scoring",SYS-07; AI-014,Business contacts (about 3.4 million),Subscription agreement,Per vendor register,EV-053; EV-061; EV-045,
+V-19,Enterprise coding assistant vendor,Code suggestions,AI-009,Source code (no customer data),License agreement,Per vendor register,EV-061; EV-045,
+V-20,Filing agent,SEC filing support,n/a,Draft filings,Retainer,n/a,EV-036,
+V-21,Outside counsel and forensics firm,Incident response retainer,n/a,Incident information,Retainer agreements,n/a,EV-019; EV-064,
+V-22,Penetration test firm,Annual third-party penetration test,SYS-01,Test results,Engagement letter,Independent of the OCP team and the SOC 2 service auditor,EV-025,Last test 2026-03
+V-23,SOC 2 service auditor and ISO/IEC 27001 certification body,Assurance reports and certification,SYS-01; SYS-02,Audit evidence,Engagement letters,n/a,EV-041,
+V-24,Bug bounty platform,Vulnerability reports from researchers,SYS-01,Vulnerability reports,Platform agreement,Per vendor register,EV-025,
+V-25,Certified media destruction vendor,Laptop and drive destruction,SYS-08,Data on retired media,Service agreement,Certificates of destruction,EV-063,
+V-26,Cyber insurer,Cyber insurance,n/a,Incident information when notified,Policy,n/a,EV-069,

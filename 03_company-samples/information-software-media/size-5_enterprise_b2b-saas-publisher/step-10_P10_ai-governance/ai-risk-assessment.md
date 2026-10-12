@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, Inc. (publicly traded B2B SaaS software publisher) |
 | Tier / Vertical | Enterprise / Information |
 | Scope | Enterprise AI portfolio (16 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001 AI Assist, the generative AI feature embedded in the Operations Cloud, in section 7 |
+| Inventory | `ai-use-case-inventory.csv` (16 use cases), built from the AI governance council register (EV-058), the AQ-01 model registry and customer terms (EV-047), the AI Assist enablement and model routing records (EV-060), the SSO application catalog and vendor feature settings (EV-061), the accounts payable vendor master (EV-045) and the sub-processor register (EV-043). The `source_evidence` column names the source of each row. Not established at intake: AI features embedded in other vendors' products beyond the catalog and feature settings reviewed (intake open request), and workforce use of public AI tools from personal devices |
 | Company role | **Developer and provider** for product AI (AI-001 to AI-008), where customers are the deployers; **deployer** for internal AI (AI-009 to AI-016) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI governance council (chaired by the Chief Data and AI Officer), meeting of 2026-08-19; GRC team prepared the portfolio review; red-team and evaluation results from the AI platform engineering team |

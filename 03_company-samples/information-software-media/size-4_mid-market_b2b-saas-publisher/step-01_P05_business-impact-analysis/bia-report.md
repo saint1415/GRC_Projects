@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed B2B SaaS publisher of a multi-tenant customer service platform) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** GRC Manager with the Director of Security, the VP Platform Engineering, and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-13 to 2026-08-07 | **Approved:** Chief Technology Officer, 2026-09-29 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-13 to 2026-07-24 (EV-059), the 2025 revenue report and 2026 billing (EV-052), the Q2 2026 usage and capacity report (EV-026), the MSA, DPA, BAA and bank contract terms (EV-044), the backup and failover records (EV-019, EV-020), the SOC 2 Type 2 report (EV-038) and the warehouse load job (EV-023). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Technology Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: platform operations (the customer-facing service), the healthcare cell, engineering, security, customer support, customer success, finance, sales, people, and corporate IT. It rates 17 business processes and quantifies what an outage costs in service credits, lost revenue, operations, and regulatory or contractual exposure.
@@ -21,10 +22,10 @@ The company sells a customer service platform to about 2,400 business customers.
 - the 10-account landing zone (SYS-04);
 - the CI/CD pipeline (SYS-05), the identity provider (SYS-06), the admin console (SYS-07), and monitoring (SYS-08).
 
-Messaging delivery (SYS-09), the AI model provider (SYS-10), and the data warehouse on a second cloud provider (SYS-11) are external services. See `../00_company-facts.md` sections 3 and 7.
+Messaging delivery (SYS-09), the AI model provider (SYS-10), and the data warehouse on a second cloud provider (SYS-11) are external services. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-A subscription business does not lose revenue by the hour the way a store does. What it loses in an outage is **service credits**, which step up at fixed availability thresholds, then **customers**. Values come from the MSA credit schedule in `../00_company-facts.md` section 7: Enterprise plan revenue about $5.0 million a month and Standard plan about $3.33 million a month.
+A subscription business does not lose revenue by the hour the way a store does. What it loses in an outage is **service credits**, which step up at fixed availability thresholds, then **customers**. Values come from the MSA credit schedule (EV-044) and the revenue report (EV-052): Enterprise plan revenue about $5.0 million a month and Standard plan about $3.33 million a month, out of $100.0 million a year (about $274,000 a calendar day).
 
 | Outage of the core service (30-day month) | Enterprise credit | Standard credit | Total credits |
 |---|---|---|---|
@@ -42,7 +43,7 @@ A subscription business does not lose revenue by the hour the way a store does. 
 | Safety (end consumers) | Plausible harm to people (for example, patients unable to reach a clinic about urgent symptoms) | Delayed but safe service | None |
 | Reputation | Public status page incident over 4 hours, press coverage, or an Enterprise termination right | Customer complaints, social media posts | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is service credits for the share of revenue affected, plus extra labor or lost usage revenue, over the MTD. The share of customers affected comes from product usage data: all customers use the agent workspace and email ingestion, about 70% use chat, and about 65% use the API. Churn is not included, because it cannot be estimated reliably. It is discussed under the enterprise-wide scenario.
+**How loss at MTD was estimated.** Estimated loss is service credits for the share of revenue affected, plus extra labor or lost usage revenue, over the MTD. The share of customers affected comes from product usage data (EV-026): all customers use the agent workspace and email ingestion, about 70% use chat, and about 65% use the API. Churn is not included, because it cannot be estimated reliably. It is discussed under the enterprise-wide scenario.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -80,11 +81,11 @@ A subscription business does not lose revenue by the hour the way a store does. 
 - **Recovery dependencies** drive BP-15 and BP-10.
 
 ## 5. Key findings
-1. **Regional recovery does not meet the BIA.** The platform survives the loss of a data center within the region (multi-zone design), but the loss of the primary region is a different event. The February 2026 failover test took 9 hours against a 4-hour objective, which is also SOC 2 exception 4. For the core processes (BP-01 to BP-04), a 9-hour event reaches the 25% credit cap and the bank notice threshold. Action: warm standby in the DR region with automated failover (P01 R-006; P07 CP-4, CP-10; POAM-010).
-2. **Search is the long pole.** Search indexes are not replicated to the DR region and take about 20 hours to rebuild. The agent workspace works without search, but agents cannot find prior tickets, so BP-01 stays degraded long after its RTO. Action: cross-region index snapshots every 15 minutes (P01 R-006).
-3. **Backups can be deleted by a production administrator.** Backups sit in the DR account without write-once retention. A destructive attack with stolen administrator credentials could remove both production and backups (P01 R-007; P08 runbook 2).
-4. **The identity provider is a single point of failure for recovery.** Break-glass accounts exist for the cloud organization, but root credentials for 3 accounts use software MFA, and the break-glass procedure was last tested in 2025 (P01 R-024; POAM-005).
-5. **The company's own support runs on the platform it supports.** In a platform outage, the support desk also goes down. The backup mailbox and the status page are the only channels, and security contacts are on file for only 71% of customers (gap 14).
+1. **Regional recovery does not meet the BIA.** The platform survives the loss of a data center within the region (multi-zone design), but the loss of the primary region is a different event. The February 2026 failover test took 9 hours against a 4-hour objective, which is also SOC 2 exception 4 (EV-020, EV-038). For the core processes (BP-01 to BP-04), a 9-hour event reaches the 25% credit cap and the bank notice threshold. Action: warm standby in the DR region with automated failover (P01 R-006; P07 CP-4, CP-10; POAM-010).
+2. **Search is the long pole.** Search indexes are not replicated to the DR region and take about 20 hours to rebuild (EV-020). The agent workspace works without search, but agents cannot find prior tickets, so BP-01 stays degraded long after its RTO. Action: cross-region index snapshots every 15 minutes (P01 R-006).
+3. **Backups can be deleted by a production administrator.** Backups sit in the DR account without write-once retention (EV-019). A destructive attack with stolen administrator credentials could remove both production and backups (P01 R-007; P08 runbook 2).
+4. **The identity provider is a single point of failure for recovery.** Break-glass accounts exist for the cloud organization, but root credentials for 3 accounts use software MFA, and the break-glass procedure was last tested in 2025 (EV-007; P01 R-024; POAM-005).
+5. **The company's own support runs on the platform it supports.** In a platform outage, the support desk also goes down. The backup mailbox and the status page are the only channels, and security contacts are on file for only 71% of customers (EV-045).
 6. **The healthcare cell limits blast radius but shares recovery weaknesses.** It has its own account, keys, and database, so an incident in the main production account does not reach it. It uses the same pilot-light DR design, so its availability safeguards under the BAA have the same 9-hour weakness (section 7).
 
 ## 6. Resource requirements

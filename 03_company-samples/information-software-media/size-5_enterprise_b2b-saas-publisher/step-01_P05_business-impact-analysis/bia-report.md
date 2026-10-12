@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded B2B SaaS software publisher) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners and Site Reliability Engineering, 2026-06-01 to 2026-07-15 | **Approved:** Chief Technology Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** cybersecurity and risk committee of the board, 2026-09-10
+**Sources:** process owner interviews 2026-06-01 to 2026-07-10 (EV-072, EV-073), dependency and contract review (EV-074), Data Cloud failover and EDR ring test records (EV-075), FY2025 revenue report (EV-050), customer and segment report (EV-051), platform operational metrics (EV-052), MSA, DPA and AQ-01 contract terms (EV-046, EV-047), and the backup and DR test records (EV-015, EV-016, EV-017). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Technology Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company and its customers depend on, how long each can be down, how much data each can lose, and what each depends on, including third parties and the acquired company AQ-01. It feeds:
@@ -14,10 +15,10 @@ This enterprise-wide BIA identifies the business processes the company and its c
 **Results in one line:** 17 processes were analyzed; 7 are High criticality, 9 Moderate, and 1 Low. 8 processes need recovery within 4 hours. The dependency map (`dependency-map.csv`) lists 24 dependencies, 17 of them single points of failure and 4 never tested.
 
 ## 2. System and business description
-Cris Santos Company sells B2B SaaS to about 9,800 business customers from its Florida headquarters. The technology estate is described in `../00_company-facts.md` section 3: the Operations Cloud production platform in 14 cells on Cloud provider A (SYS-01), the Data Cloud on Cloud provider B (SYS-02), the Government Edition in Cloud provider A government regions (SYS-03), the identity platform (SYS-04), the software factory (SYS-05), the security operations stack (SYS-06), corporate SaaS and ERP (SYS-07), about 14,500 endpoints (SYS-08), the acquired AQ-01 Conversational AI platform (SYS-09), and about 1,450 vendors (SYS-10). Because customers run their own operations on the platform, an outage harms about 9,800 other businesses at once, which is why contract commitments, not internal convenience, set most of the objectives below.
+Cris Santos Company sells B2B SaaS to about 9,800 business customers from its Florida headquarters. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): the Operations Cloud production platform in 14 cells on Cloud provider A (SYS-01), the Data Cloud on Cloud provider B (SYS-02), the Government Edition in Cloud provider A government regions (SYS-03), the identity platform (SYS-04), the software factory (SYS-05), the security operations stack (SYS-06), corporate SaaS and ERP (SYS-07), about 14,500 endpoints (SYS-08), the acquired AQ-01 Conversational AI platform (SYS-09), and about 1,450 vendors (SYS-10). Because customers run their own operations on the platform, an outage harms about 9,800 other businesses at once, which is why contract commitments, not internal convenience, set most of the objectives below.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-050) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -58,9 +59,9 @@ Dollar thresholds are scaled to about $13.2 million of revenue per calendar day 
 ## 5. Dependency mapping and third parties
 The full map is in `dependency-map.csv`. Key findings:
 
-1. **Cell 4 recovery (DEP-01).** In the 2026-05-16 DR tests, 13 cells failed over within 4 hours, but Cell 4 (about 1,240 tenants, the largest) took 6.5 hours because its database restore and cache warm-up do not scale with tenant count. This is P01 risk R-008 and POA&M item POAM-007.
-2. **AQ-01 (DEP-03, DEP-16).** AQ-01 runs outside the landing zone, on its own identity provider and on-call rotation, and its regional recovery has never been tested. The shared export bucket that feeds AQ-01 is a confidentiality single point of failure for 1,150 customers (P01 R-002, R-003; POAM-001 to POAM-003).
-3. **Single managed DNS provider (DEP-06).** Every product domain resolves through one provider with no secondary and no tested fallback. A provider outage would make all products unreachable even though the platform is healthy (P01 R-016).
+1. **Cell 4 recovery (DEP-01).** In the 2026-05-16 DR tests, 13 cells failed over within 4 hours, but Cell 4 (about 1,240 tenants, the largest) took 6.5 hours because its database restore and cache warm-up do not scale with tenant count. This is P01 risk R-008 and POA&M item POAM-007 (EV-016).
+2. **AQ-01 (DEP-03, DEP-16).** AQ-01 runs outside the landing zone, on its own identity provider and on-call rotation, and its regional recovery has never been tested (EV-031). The shared export bucket that feeds AQ-01 is a confidentiality single point of failure for 1,150 customers (P01 R-002, R-003; POAM-001 to POAM-003).
+3. **Single managed DNS provider (DEP-06).** Every product domain resolves through one provider with no secondary and no tested fallback. A provider outage would make all products unreachable even though the platform is healthy (P01 R-016; EV-013, EV-074).
 4. **AI model providers (DEP-08).** Each AI Assist feature depends on one model provider, and switching providers has never been tested. The feature flag limits the outage to the AI features (P01 R-041).
 5. **Software factory (DEP-09).** If the source hosting and CI service is down, the break-glass path can redeploy existing signed builds but has only been walked through in a tabletop.
 6. **Industry lessons applied (DEP-12).** EDR updates are rolled out in rings after the industry-wide faulty security-agent update in 2024 showed how one vendor update can take down many endpoints at once.

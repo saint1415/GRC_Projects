@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Information | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation, the citation is given; regulatory facts were checked against primary sources on the dates shown in P03.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation, the citation is given; regulatory facts were checked against primary sources on the dates shown in P03.
 
 ## 1. The organization
 | Item | Fact |
@@ -11,12 +11,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce | 12,000 employees: about 4,300 engineering and product, 2,100 customer support and success, 2,900 sales and marketing, 1,200 professional services, 1,500 general and administrative |
 | Customers | About 9,800 business customers (Operations Cloud), 3,100 of which also buy the Data Cloud and about 1,150 the Conversational AI service. About 1.9 million named users. Customer tenants hold about 310 million end-customer (consumer) records. Notable segments: about 140 banking organizations, about 1,100 health care organizations (the terms of service prohibit protected health information; no business associate agreements are signed), about 260 state and local government bodies (commercial edition), and 45 federal civilian agencies (Government Edition only; no Department of Defense customers) |
 | Revenue | About $4.8 billion a year (fictional), 94% subscription. About $13.2 million per calendar day. Not small under the SBA standard for NAICS 513210 ($47.0 million) |
-| Role under privacy and breach laws | For customer data: a **service provider / processor** acting on customers' instructions under the Data Processing Addendum (DPA); a **third-party agent** under Fla. Stat. 501.171(6). For its own employees, customer contacts, and about 3.4 million marketing contacts (about 420,000 California residents): the **business / controller** that owns the data |
-| Customer commitments (MSA, DPA, trust page) | 99.95% monthly availability for Enterprise-tier customers (99.9% standard) with service credits; notice of a security incident affecting customer data without undue delay and within 48 hours of confirmation (standard DPA since 2024; about 2,600 older contracts say 72 hours and about 310 negotiated contracts say 24 hours); 30 days' notice of new sub-processors with a right to object; deletion of customer data within 30 days after termination from production and within 90 days from backups; customer data never used to train AI models shared across customers; current SOC 2 Type 2 report and ISO/IEC 27001 certificate available under NDA |
-| Public statements | The trust page states that "customer data is never accessed by our staff without customer permission," that "all administrative access is logged and recorded," and that "we never use your data to train AI models for other customers" |
-| Assurance | Operations Cloud: annual SOC 2 Type 2 (Security, Availability, Confidentiality) since 2019, period October 1 to September 30; ISO/IEC 27001 certificate. Data Cloud: SOC 2 Type 2 (Security only) since 2025. Conversational AI service: no SOC 2 report yet. Government Edition: FedRAMP Moderate authorization (agency sponsored, granted 2024) with continuous monitoring. SOX Section 404 IT general controls over financial systems are tested by the SOX program |
-| Added at this size | SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106); SOX IT general controls; FedRAMP for the Government Edition; bank service provider notification (12 CFR 53.4, 225.303, 304.24) for banking customers; CCPA cybersecurity audit; DOJ Data Security Program diligence; growth by acquisition |
-| Not in scope | HIPAA (no business associate agreements; protected health information prohibited by contract), COPPA (not directed to children; customers are the operators of any child-directed service), FCC CPNI rules (not a carrier or interconnected VoIP provider), PADFA (not a data broker), PCI DSS for the platform (customer billing runs through a payment processor; the platform does not store card numbers), DFARS 252.204-7012 and CMMC (no Department of Defense contracts). Non-U.S. laws that may apply to non-U.S. customers are outside the scope of these deliverables |
+| Role under privacy and breach laws | Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (N51-R03, FL-501.171). For customer data: a **service provider / processor** acting on customers' instructions under the Data Processing Addendum (DPA); a **third-party agent** under Fla. Stat. 501.171(6). For its own employees, customer contacts, and about 3.4 million marketing contacts (about 420,000 California residents): the **business / controller** that owns the data |
+| Customer commitments (MSA, DPA, trust page) | 99.95% monthly availability for Enterprise-tier customers (99.9% standard) with service credits; notice of a security incident affecting customer data without undue delay and within 48 hours of confirmation (standard DPA since 2024; about 2,600 older contracts say 72 hours and about 310 negotiated contracts say 24 hours); 30 days' notice of new sub-processors with a right to object; deletion of customer data within 30 days after termination from production and within 90 days from backups; customer data never used to train AI models shared across customers; current SOC 2 Type 2 report and ISO/IEC 27001 certificate available under NDA (EV-046) |
+| Public statements | The trust page states that "customer data is never accessed by our staff without customer permission," that "all administrative access is logged and recorded," and that "we never use your data to train AI models for other customers" (EV-048) |
+| Assurance | Operations Cloud: annual SOC 2 Type 2 (Security, Availability, Confidentiality) since 2019, period October 1 to September 30; ISO/IEC 27001 certificate. Data Cloud: SOC 2 Type 2 (Security only) since 2025. Conversational AI service: no SOC 2 report yet (EV-041). Government Edition: FedRAMP Moderate authorization (agency sponsored, granted 2024) with continuous monitoring (EV-042). SOX Section 404 IT general controls over financial systems are tested by the SOX program (EV-034) |
+| Added at this size | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106); SOX IT general controls; FedRAMP for the Government Edition; bank service provider notification (12 CFR 53.4, 225.303, 304.24) for banking customers; CCPA cybersecurity audit; DOJ Data Security Program diligence; growth by acquisition |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): HIPAA (no business associate agreements; protected health information prohibited by contract), COPPA (not directed to children; customers are the operators of any child-directed service), FCC CPNI rules (not a carrier or interconnected VoIP provider), PADFA (not a data broker), PCI DSS for the platform (customer billing runs through a payment processor; the platform does not store card numbers), DFARS 252.204-7012 and CMMC (no Department of Defense contracts). Non-U.S. laws that may apply to non-U.S. customers are outside the scope of these deliverables |
 
 ## 2. People (role titles only)
 | Role | Duties |
@@ -34,46 +34,29 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | 8-K materiality decisions (General Counsel chairs) |
 
 ## 3. Systems
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
-| SYS-01 | Operations Cloud production platform (commercial, multi-tenant) | Cloud provider A, two U.S. regions plus a recovery region; 14 cells (each cell is an isolated stack of application services and databases serving a set of tenants); about 9,800 tenants |
-| SYS-02 | Data Cloud (analytics and customer data platform) | Cloud provider B; about 3,100 tenants; monthly snapshots kept 13 months |
-| SYS-03 | Government Edition | Separate environment in Cloud provider A government regions; FedRAMP Moderate boundary with its own SSP and continuous monitoring; 45 agencies, about 38,000 users |
-| SYS-04 | Identity platform (workforce SSO, MFA, privileged access management, identity governance) and the customer identity service | About 46,000 non-human identities (service accounts, workload roles, API keys) across the clouds |
-| SYS-05 | Software factory: source hosting, CI/CD pipelines, artifact registry, build signing | About 3,800 repositories; 9 legacy pipelines still deploy with long-lived static cloud keys |
-| SYS-06 | Security operations stack: SIEM, EDR, cloud security posture management, secret scanning | 24x7 SOC |
-| SYS-07 | Corporate SaaS, ERP and finance (SOX-relevant), CRM and marketing database | CRM holds about 3.4 million business contacts |
-| SYS-08 | Endpoints | About 14,500 company laptops and test devices |
-| SYS-09 | AQ-01 Conversational AI platform (acquired 2025-08) | Cloud provider B, in AQ-01's own cloud organization outside the enterprise landing zone; AQ-01's own identity provider; integrates with SYS-01 through a shared export bucket |
-| SYS-10 | Third parties | About 1,450 vendors; 58 sub-processors listed on the public sub-processor page |
-| SYS-11 | AI portfolio | 16 use cases governed by the AI governance council formed in 2025 |
+| SYS-01 | Operations Cloud production platform (commercial, multi-tenant) | Cloud provider A, two U.S. regions plus a recovery region; 14 cells (each cell is an isolated stack of application services and databases serving a set of tenants); about 9,800 tenants (EV-052) |
+| SYS-02 | Data Cloud (analytics and customer data platform) | Cloud provider B; about 3,100 tenants; monthly snapshots kept 13 months (EV-017) |
+| SYS-03 | Government Edition | Separate environment in Cloud provider A government regions; FedRAMP Moderate boundary with its own SSP and continuous monitoring; 45 agencies, about 38,000 users (EV-042) |
+| SYS-04 | Identity platform (workforce SSO, MFA, privileged access management, identity governance) and the customer identity service | About 46,000 non-human identities (service accounts, workload roles, API keys) across the clouds (EV-005) |
+| SYS-05 | Software factory: source hosting, CI/CD pipelines, artifact registry, build signing | About 3,800 repositories; 9 legacy pipelines still deploy with long-lived static cloud keys (EV-022) |
+| SYS-06 | Security operations stack: SIEM, EDR, cloud security posture management, secret scanning | 24x7 SOC (EV-019) |
+| SYS-07 | Corporate SaaS, ERP and finance (SOX-relevant), CRM and marketing database | CRM holds about 3.4 million business contacts (EV-053) |
+| SYS-08 | Endpoints | About 14,500 company laptops and test devices (EV-010) |
+| SYS-09 | AQ-01 Conversational AI platform (acquired 2025-08) | Cloud provider B, in AQ-01's own cloud organization outside the enterprise landing zone; AQ-01's own identity provider; integrates with SYS-01 through a shared export bucket (EV-028, EV-029) |
+| SYS-10 | Third parties | About 1,450 vendors; 58 sub-processors listed on the public sub-processor page (EV-043) |
+| SYS-11 | AI portfolio | 16 use cases governed by the AI governance council formed in 2025 (EV-058) |
 
 **SSP system (P02):** the *Operations Cloud Production Platform (OCP)*: the commercial multi-tenant production environment (SYS-01) with its cells, shared platform services, and the support "tenant access" tool, inheriting common controls from the identity platform (SYS-04), the software factory (SYS-05), the security operations stack (SYS-06), and the Cloud provider A landing zone; the Data Cloud, the Government Edition, and AQ-01 are interconnected systems outside the boundary.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
-**In place today:**
-- A mature program aligned to NIST CSF 2.0, with a policy hierarchy of policies, standards, procedures, and exceptions
-- Annual enterprise risk analysis integrated with ERM (NIST IR 8286)
-- 24x7 in-house SOC; EDR on 99% of company endpoints
-- Phishing-resistant MFA for all workforce sign-ins; privileged access management with just-in-time elevation for production
-- Infrastructure as code and guardrails in the Cloud provider A and B landing zones
-- Encryption at rest and in transit, with customer-managed key options for Enterprise customers
-- Annual SOC 2 Type 2 and ISO/IEC 27001 for the Operations Cloud; FedRAMP Moderate for the Government Edition
-- Annual disaster recovery tests per cell; immutable backups in separate accounts
-- A product security program (threat modeling, code scanning, bug bounty, annual third-party penetration tests)
-- SEC Item 106 disclosure in the annual report; a disclosure committee that ran a tabletop in 2025
-
-**Targeted gaps:**
-1. **Acquisition integration (AQ-01).** AQ-01 runs in its own cloud organization outside the landing zone, on its own identity provider. Its CI pipelines use 31 long-lived static cloud access keys older than one year, its cloud audit logs do not reach the SIEM, and a cross-account role lets its integration service read the whole shared export bucket of Operations Cloud transcripts and case exports for all 1,150 shared customers.
-2. **Non-human identities and secrets.** About 17% of the 46,000 non-human identities have permissions unused for 90 days; secret scanning found 212 live secrets in repositories in 2026 H1; 9 legacy pipelines deploy with long-lived keys.
-3. **Support access to customer tenants.** The "tenant access" tool requires a ticket and manager approval, but customer approval only for tenants that opted into "restricted access" (about 9% of tenants). Session recording covers 82% of sessions; the legacy console path is not recorded. This contradicts the trust page statements.
-4. **Third parties.** 14 of 58 sub-processor SOC report reviews are overdue; three AI model providers were added in 2026; the follow-the-sun support vendor's subcontractors have not been checked for Data Security Program purposes.
-5. **AI.** 16 AI use cases; 11 have completed council review. AI Assist is generally available to about 2,300 customers. Red-team testing found indirect prompt injection through case content. AQ-01 still uses customer transcripts to improve its models under AQ-01's pre-acquisition terms, which conflicts with the "never train for other customers" statement for customers who bought both products.
-6. **Notification readiness.** Contract notice terms (24, 48, and 72 hours) are not in a searchable obligations register, and the incident runbook does not yet include the bank service provider notice or the FedRAMP incident communications steps.
-7. **CCPA cybersecurity audit.** The company meets the 7120 criteria; its first audit covers 2027-01-01 to 2028-01-01 with the report due 2028-04-01. Readiness work has not started, and the in-house IT audit team helped design the control framework in 2025, which raises an independence question under 7122(a)(2).
-8. **Data retention against commitments.** Data Cloud monthly snapshots are kept 13 months, longer than the 90-day backup deletion commitment; the Operations Cloud tenant offboarding job failed silently for 23 terminated tenants.
-9. **Resilience.** In the 2026 DR tests, the largest cell (Cell 4, about 1,240 tenants) took 6.5 hours to fail over to the recovery region against a 4-hour RTO.
-10. **Government Edition.** 6 FedRAMP POA&M items are past their remediation dates (reported to the agencies in monthly continuous monitoring).
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record (identity, cloud, SIEM, software factory, tenant access tool, contract repository, vendor register), prior Internal Audit and SOX workpapers, the FedRAMP package, SEC filings, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against the applicable rules and the company's own commitments** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -87,14 +70,18 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | BIA interviews and dependency review |
 | 2026-06-01 to 2026-07-31 | Enterprise risk analysis and regulatory gap analysis (evidence sampling completed 2026-08-14) |
-| 2026-07-13 to 2026-08-28 | Control assessment fieldwork (Internal Audit) |
+| 2026-06-22 to 2026-07-10 | 2026 annual revision of POL-01 to POL-05 and the policy hierarchy drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment fieldwork (Internal Audit): operating tests of controls in force under the 2025 policy set; design review of the draft 2026 revisions |
 | 2026-08-19 | AI governance council portfolio review |
 | 2026-09-04 | Internal Audit report issued |
 | 2026-09-08 | Executive risk committee approvals |
-| 2026-09-10 | Results to the cybersecurity and risk committee and the audit committee of the board |
+| 2026-09-10 | Results to the cybersecurity and risk committee and the audit committee of the board; 2026 policy revisions approved (effective 2026-10-01) |
 | 2026-10-01 | SL-1 SOC 2 period 2026-10-01 to 2027-09-30 starts |
 | 2026-11-12 | Disclosure committee tabletop on the P08 scenario |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 policy revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1 to 6.
@@ -127,10 +114,10 @@ These facts were added while building the deliverables. They do not change secti
 | Director of Endpoint Engineering | Laptops, EDR, and endpoint baselines |
 | Vice President, Workplace and Facilities | Office physical security |
 
-**Cells and volumes.** The OCP runs 14 cells in two U.S. regions (cells 1 to 8 in region 1, cells 9 to 14 in region 2), each with a warm standby in the recovery region. Cell 4 is the largest (about 1,240 tenants). The OCP handles about 2.4 billion API calls and about 6 million new cases a day. Revenue of about $4.8 billion a year is about $13.2 million per calendar day and about $19.2 million per business day. About 4.6 million SLA-eligible tenant-hours a year are tracked for service credits.
+**Cells and volumes.** The OCP runs 14 cells in two U.S. regions (cells 1 to 8 in region 1, cells 9 to 14 in region 2), each with a warm standby in the recovery region. Cell 4 is the largest (about 1,240 tenants). The OCP handles about 2.4 billion API calls and about 6 million new cases a day (EV-052). Revenue of about $4.8 billion a year is about $13.2 million per calendar day and about $19.2 million per business day (EV-050). About 4.6 million SLA-eligible tenant-hours a year are tracked for service credits.
 
-**AQ-01.** AQ-01 was acquired in 2025-08 with about 420 employees. Its identity provider is not federated with the identity platform (planned 2027-01-31). The shared export bucket (in AQ-01's cloud organization) receives nightly exports of case transcripts and conversation records for the 1,150 shared customers so AQ-01 models can answer customer questions.
+**AQ-01.** AQ-01 was acquired in 2025-08 with about 420 employees. Its identity provider is not federated with the identity platform (planned 2027-01-31; EV-031). The shared export bucket (in AQ-01's cloud organization) receives nightly exports of case transcripts and conversation records for the 1,150 shared customers so AQ-01 models can answer customer questions.
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Privacy Officer, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel.
 
-**Employee and marketing data.** About 1,100 employees live in California. The CRM marketing database holds about 3.4 million business contacts, about 420,000 of them California residents, which is why the CCPA cybersecurity audit criteria in Cal. Code Regs. tit. 11, 7120(b)(2)(A) are met.
+**Employee and marketing data.** About 1,100 employees live in California. The CRM marketing database holds about 3.4 million business contacts, about 420,000 of them California residents, which is why the CCPA cybersecurity audit criteria in Cal. Code Regs. tit. 11, 7120(b)(2)(A) are met (EV-006, EV-053; obligations register N51-R03).

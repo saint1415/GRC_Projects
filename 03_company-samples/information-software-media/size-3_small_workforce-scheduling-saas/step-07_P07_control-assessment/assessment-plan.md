@@ -29,6 +29,17 @@ Small tier scope: 15-25 controls. **23 controls, 164 determination statements.**
 | SI-12 | 90-day deletion promise: R-011; P03 G-037 | Basic | Focused |
 | AT-3 | No secure coding training: P03 G-017 | Basic | Basic |
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-09-22. They were therefore reviewed as drafts, for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operating effectiveness. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork (including under the December 2025 policy set) and was tested on samples, records or live systems | 95 |
+| Design | The customer notice step in the incident response plan; its design was reviewed against the DPA terms. Operation is tested at the 2026-11-18 tabletop | 1 |
+| Not implemented | Nothing existed to test | 68 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled leavers come from the joiner and leaver report and tickets in EV-003 and EV-004, and the CI keys from the cloud IAM export in EV-005).
+
 ## 2. Methods and objects
 - **Examine:** identity provider, cloud IAM, database, and repository account exports; the vault checkout log; logging, retention, backup, and encryption settings; CI configuration and branch protection; the January 2026 penetration test and restore test records; sub-processor contracts and the AI model provider's API terms; the SOC 2 Type 1 report; incident tickets and training records.
 - **Interview:** CTO, IT Manager, Platform Engineering Lead, Engineering Manager, COO, Customer Support Manager, People Operations Manager, and 8 randomly selected staff (incident reporting awareness).

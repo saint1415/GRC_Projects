@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-29
 
 ## 1. System Name and Identifier
-Customer Engagement Platform (**CEP**), identifier CSC-CEP-01. The CEP is the company's major system and the product it sells. It comprises SYS-01 to SYS-08 in `../00_company-facts.md`.
+Customer Engagement Platform (**CEP**), identifier CSC-CEP-01. The CEP is the company's major system and the product it sells. It comprises SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The CEP is a multi-tenant customer service platform. About 2,400 business customers and their 88,000 agents use it to answer end consumers by email, chat, messaging, and a public help center, with APIs for their own systems and two generative AI features. It supports every customer-facing process in the BIA (P05 BP-01 to BP-08) and holds about 92 million end-consumer contact records, including about 1.3 million patients' records in the healthcare cell.
@@ -24,6 +24,8 @@ The CEP is a multi-tenant customer service platform. About 2,400 business custom
 Messaging delivery (SYS-09), the AI model provider (SYS-10), and the data warehouse on cloud provider B (SYS-11) connect as external services (section 8).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Which rules apply was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv).
+
 | ID | Requirement | Citation | How it affects the CEP |
 |---|---|---|---|
 | N51-R01 | FTC Act Section 5 | 15 U.S.C. 45(a) | Reasonable security for customer and end-consumer data (unfairness), and truthful security, privacy, and AI statements (deception). Main driver in `control-implementation.csv` |
@@ -92,6 +94,8 @@ Information types are company-defined and rated with FIPS 199, following the SP 
 **Availability was considered for High.** Most credit exposure falls in the first hour, and the 9 bank customers must be notified at 4 hours. The team kept availability at Moderate because the harm is financial and contractual and is recoverable, not severe or catastrophic. To compensate, the CP controls are tailored to the BIA's 1-hour RTO for the core service (section 10.1).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The 640 laptops are the device management count (EV-030); the 14 sub-processors come from the DPA register (EV-041).
+
 **Inside the boundary:**
 - the production, healthcare production, and DR accounts and all workloads in them;
 - the management, security tooling, log archive, network hub, staging, and development accounts;
@@ -115,13 +119,13 @@ The diagram is in P04 `cloud-architecture.md`.
 |---|---|---|---|
 | Customer systems (API, webhooks, single sign-on) | Bidirectional | Tickets, users, events | MSA; DPA; API terms |
 | Email delivery service | Outbound and inbound | Replies, notifications, inbound mail | DPA; subcontractor BAA |
-| SMS provider | Outbound | Notifications and replies, including healthcare cell messages | DPA; **no subcontractor BAA (gap 8)** |
+| SMS provider | Outbound | Notifications and replies, including healthcare cell messages | DPA; **no subcontractor BAA (EV-042)** |
 | Social messaging connector provider | Bidirectional | Messages | DPA |
 | AI model provider | Outbound prompts, inbound completions | Ticket text, knowledge base passages | DPA; BAA for the zero-retention endpoint only |
-| Data warehouse on cloud provider B | Outbound nightly | Usage, billing, ticket metadata including healthcare cell subject lines | DPA with the data platform; **not covered by a BAA or a data flow approval (gap 3)** |
-| Logging SaaS and error-tracking SaaS | Outbound | Application logs and errors that can contain personal data | DPA; subcontractor BAA for logging; **none for error tracking (gap 8)** |
+| Data warehouse on cloud provider B | Outbound nightly | Usage, billing, ticket metadata including healthcare cell subject lines | DPA with the data platform; **not covered by a BAA or a data flow approval (EV-023)** |
+| Logging SaaS and error-tracking SaaS | Outbound | Application logs and errors that can contain personal data | DPA; subcontractor BAA for logging; **none for error tracking (EV-042)** |
 | MDR provider | Inbound telemetry; response actions | Endpoint and identity events | Contract; DPA |
-| Engineering services contractor (Poland) | Virtual desktops to source code | Source code; no customer data | Services agreement; **no Data Security Program screening (gap 15)** |
+| Engineering services contractor (Poland) | Virtual desktops to source code | Source code; no customer data | Services agreement; **no Data Security Program screening (EV-047)** |
 
 ## 9. System Component Inventory
 | Component | Type | Location / provider | Owner |
@@ -167,7 +171,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 32 | Cloud provider A, identity provider vendor, source hosting and CI vendor, MDR provider, SIEM provider, content delivery provider, sub-processors |
 | Common/Inherited | 9 | Identity provider vendor (AC-2(1), AC-7, IA-2, IA-2(1), IA-2(2)), cloud provider A (CP-6, MP-6, PE-3, SC-13) |
 
-The Partially implemented statements trace to the 15 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-008, EV-018 and EV-023) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 36 controls from 2026-08-17 to 2026-09-04 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee. The SOC 2 service auditor tests the same controls for the Type 2 report (P09).
@@ -179,7 +183,7 @@ The co-sourced internal audit firm assessed 36 controls from 2026-08-17 to 2026-
 - **End consumers.** They do not sign in. They are identified by email address or chat session, and the platform does not expose account data to them beyond their own conversations.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

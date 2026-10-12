@@ -25,7 +25,7 @@ Technology Consulting was sampled on access, endpoint, and governance controls b
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5 | 42 | Every division's access; GR-01 (static keys) | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-01, GR-03; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-01, GR-03; group gap 7 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-12, SC-28, SC-28(1), CM-6 | 23 | GR-01, GR-02; keys, backups, guardrails | Focused / Focused |
 | Workforce Cloud Platform (SSP system) | AC-3, AC-4, AC-6, SC-4, AU-12, SI-12, CM-4, RA-8, SA-11, PT-3, SA-9, CP-4 | 43 | SW-001, SW-002, SW-003, SW-006 (High); gaps 2, 3, 4 | Comprehensive / Comprehensive |
 | Division sample: Technology Consulting | AC-2, SI-3, AC-17, MP-6, CA-2 | 53 | IC-001, IC-004, IC-005; gaps 3, 9, 10, 11 | Focused / Focused (20 acquired-firm laptops; 50 partner roles) |
@@ -44,6 +44,18 @@ Technology Consulting was sampled on access, endpoint, and governance controls b
   - 50 implementation-partner roles checked against project end dates;
   - restores of 2 WCP tenant databases and 1 payroll engine dataset from the provider B vault;
   - a browser capture of all 5 hosted checkout pages to compare loaded scripts with the inventory.
+
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-17, effective 2026-10-01. The draft policies were reviewed as drafts, for design only, and no determination statement in `assessment-results.csv` rests on them: every statement was tested against the controls in force under the 2025 group policies and standards and the division supplements on file at intake (EV-017), the incident response plan v2025 and the group notification matrix (EV-014). The `test_type` column says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before fieldwork and was tested on samples, configurations, interviews, or live systems | 262 |
+| Design | The statement rests on a draft whose design was reviewed; operation is tested at the 2027-04 follow-up | 0 |
+| Not implemented | Nothing existed to test: privacy impact analysis and assessment before the AI feature launches (CM-4, RA-8), a privacy assessment plan for the AI features (SA-11), monitoring of the model provider and an internal arrangement for consultants in customer tenants (SA-9, 2 statements), oversight of the WCP as an affiliate service provider (Payments and Payroll SA-9, 4 statements), documented inheritance for consulting (CA-2), and documented requirements and authorization for the acquired-firm VPN (AC-17, 2 statements) | 12 |
+| **Total** | | **274** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 60 terminations come from the HR roster and identity governance records in EV-002 and EV-007, the 50 partner roles from the tenant access records in EV-046, the 20 acquired-firm laptops from the acquired firm's endpoint export in EV-058, and the 5 checkout pages from the PCI DSS records in EV-067).
 
 ## 4. Rules of engagement
 - No testing that could affect customers, payroll runs, or payment authorization. Tests ran in test tenants and test accounts; the bulk-read test used synthetic files.

@@ -10,6 +10,7 @@
 | Assessor | IT Manager (security and compliance lead) with the COO (privacy lead); outside privacy counsel reviewed sections 1 and 5 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules and commitments analyzed here.
 
 ### 1.1 FTC Act Section 5 applies
 Section 5(a) declares "unfair or deceptive acts or practices in or affecting commerce" unlawful (15 U.S.C. 45(a)(1)). The company is a for-profit software publisher selling across state lines. It is not in any of the statutory carve-outs (banks, savings and loans, federal credit unions, common carriers, air carriers), and there is no size threshold (N51-R01). The FTC uses two theories in data security cases, and both are relevant here:
@@ -43,12 +44,12 @@ By decision (vertical profile, 2026-09-26), the CCPA stays an applicability chec
 28 CFR Part 202 restricts covered data transactions (data brokerage, vendor, employment, and investment agreements) that give countries of concern or covered persons access to bulk U.S. sensitive personal data. The platform's roughly 140,000 worker profiles could exceed the 100,000-person bulk threshold for covered personal identifiers, depending on which data elements qualify. The company has **no** covered data transactions today: no offshore staff or hosting, and all 6 sub-processors are U.S.-based. Action: add a Data Security Program question to sub-processor reviews (P01 R-034, P09).
 
 ### 1.5 Not applicable
-COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), and PADFA (N51-R05) do not apply; reasons are in `../00_company-facts.md` section 1. The FTC Health Breach Notification Rule does not apply because the platform holds no health records. State breach laws are handled in P08.
+COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), and PADFA (N51-R05) do not apply; reasons are in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). The FTC Health Breach Notification Rule does not apply because the platform holds no health records. State breach laws are handled in P08.
 
 ## 2. Method
 1. **Requirements.** Each practice in the three FTC guides became one row, cited by guide, lesson, and practice heading (FTC guidance is a U.S. government work, so headings are quoted). Each commitment the company makes publicly or by contract became one deception row.
 2. **Crosswalk.** Each row was mapped to CSF 2.0, SP 800-53 Rev. 5, and related SOC 2 criterion IDs. This is an **author mapping**: no official NIST or FTC mapping of this guidance exists. SOC 2 criteria are listed by ID only (the AICPA text is copyrighted).
-3. **Evidence.** Interviews (CTO, Platform Engineering Lead, Engineering Manager, Customer Support Manager, COO, Director of Product), configuration exports, the SOC 2 Type 1 report, contracts, the website security page captured on 2026-08-12, and an office walkthrough on 2026-08-13.
+3. **Evidence.** Current state was established from the intake evidence (configuration exports, the SOC 2 Type 1 report, contracts and documents), the website security page captured on 2026-08-12 (EV-049), the TLS scan (EV-050), an office walkthrough on 2026-08-13 (EV-052), the tenant list (EV-053), a code review walk-through (EV-054), and gap analysis interviews with the CTO, Platform Engineering Lead, Engineering Manager, Customer Support Manager, COO, and Director of Product (EV-055). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

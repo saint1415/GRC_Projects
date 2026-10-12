@@ -18,7 +18,7 @@
 Set up the company's security program, make sure only authorized people and systems reach customer data and production, and only as far as their job requires, and tell everyone who works for the company how to use company systems.
 
 ## 2. Scope
-All employees, the contract developer, and anyone else given access to company systems, including MSP staff. It covers every system that stores or processes customer data or company data: the production cloud account, the repository and CI/CD pipeline, the productivity suite, the internal admin console, the SaaS tools in `../00_company-facts.md` section 3, and every laptop used for company work.
+All employees, the contract developer, and anyone else given access to company systems, including MSP staff. It covers every system that stores or processes customer data or company data: the production cloud account, the repository and CI/CD pipeline, the productivity suite, the internal admin console, the SaaS tools in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), and every laptop used for company work.
 
 ## 3. Roles and responsibilities
 | Role | Responsibility |
