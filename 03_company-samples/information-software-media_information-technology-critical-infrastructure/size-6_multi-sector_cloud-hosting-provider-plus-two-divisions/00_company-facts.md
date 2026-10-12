@@ -34,7 +34,7 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 | Group AI council | Approves High-tier AI use cases under the Group AI Standard (P10) |
 | Group internal audit | Independent of the teams it assesses (reports to the board audit committee). Assesses common controls once and samples division controls (P07) |
 | Disclosure committee | SEC materiality determinations (Form 8-K Item 1.05) |
-| External assurance | FedRAMP Recognized independent assessment service (annual G1 assessment); SOC 2 service auditor (independent CPA firm); PCI Qualified Security Assessor (QSA); ISO/IEC 27001 certification body. A CMMC Third-Party Assessment Organization (C3PAO) is not yet engaged (voluntary while CMMC Phase 2 is suspended) |
+| External assurance | FedRAMP Recognized independent assessment service (annual G1 assessment); SOC 2 service auditor (independent CPA firm); PCI Qualified Security Assessor (QSA); ISO/IEC 27001 certification body. A CMMC Third-Party Assessment Organization (C3PAO) is not yet engaged (voluntary while CMMC Phase 2 is suspended; EV-063) |
 
 **Where roles overlap and how it is compensated:** each division CISO both runs the division's controls and reports on them, and the Group SOC director both operates the AI triage service and owns its risk. The group compensates with group internal audit (independent of operations), the external assessors above, and the Group AI council, which approves High-tier AI use cases that the SOC proposes.
 
