@@ -35,7 +35,7 @@ Operational. Planned changes: pay-by-link for phone bookings and a front desk ro
 |---|---|---|
 | System owner, security and privacy lead, PCI contact, risk acceptor | Owner-innkeeper | Every role (POL-01 section 3) |
 | Backup operator | Relief innkeeper (unpaid family member) | Check-ins and bookings on weekends; named account planned |
-| Technical support | On-call IT consultant (confidentiality agreement since 2026-07-17) | Laptop, router, and lock help on request; no standing access |
+| Technical support | On-call IT consultant (confidentiality agreement since 2026-07-17, EV-027) | Laptop, router, and lock help on request; no standing access |
 | Service providers | Innkeeping software vendor, payment facilitator, OTAs, lock vendor | Operate inherited controls |
 
 ## 6. System Information Types and System Categorization

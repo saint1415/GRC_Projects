@@ -6,7 +6,7 @@
 | System assessed | Inn Business Systems Profile (IBSP), per the system profile (P02) |
 | Tier / Vertical | Sole Proprietorship / Accommodation and Food Services |
 | Procedures | NIST SP 800-53A Rev. 5, Release 5.2.0 (determination statements from NIST OSCAL content) |
-| Assessor(s) and independence | The owner-innkeeper (self-assessment), assisted by the on-call IT consultant under a confidentiality agreement signed 2026-07-17. **Independence is limited**: the owner designed, operates, and assessed these controls. The consultant helped run the tests and read the settings but also supports the laptop and router |
+| Assessor(s) and independence | The owner-innkeeper (self-assessment), assisted by the on-call IT consultant under a confidentiality agreement signed 2026-07-17 (EV-027). **Independence is limited**: the owner designed, operates, and assessed these controls. The consultant helped run the tests and read the settings but also supports the laptop and router |
 | Assessment window | 2026-07-20 to 2026-07-24 (tests on 2026-07-23) |
 | Also supports | PCI DSS v4.0.1 evidence for the 2026 SAQs (N72-R01); "reasonable measures" under Fla. Stat. 501.171(2) (N72-R04) |
 
