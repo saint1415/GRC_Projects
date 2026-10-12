@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-18
 
 ## 1. System Name and Identifier
-Core and Online Banking Platform (**COBP**), identifier CSB-COBP-01. The COBP is the bank's major system. It is built from SYS-01, SYS-02, SYS-03, SYS-05, SYS-06, SYS-07 (part), SYS-10 (hosting only), and SYS-12 in `../00_company-facts.md`.
+Core and Online Banking Platform (**COBP**), identifier CSB-COBP-01. The COBP is the bank's major system. It is built from SYS-01, SYS-02, SYS-03, SYS-05, SYS-06, SYS-07 (part), SYS-10 (hosting only), and SYS-12 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The COBP is how the bank keeps its books and how customers, respondent institutions, and staff move money. It supports every High-criticality process in the BIA (P05): wires for bank customers (BP-01) and for 18 respondent institutions (BP-02), branch services (BP-03), online and mobile banking (BP-04), and ACH (BP-05). It serves about 107,500 deposit customers, 77,000 online banking users, 600 workforce members, and handles about 380 outgoing wires (about $165 million) a day.
@@ -28,16 +28,16 @@ The AI credit decisioning service (SYS-10) runs in the production account. The C
 | N52-R01 | Gramm-Leach-Bliley Act, section 501(b) safeguards | 15 U.S.C. 6801(b) | Basis for the safeguards standards below |
 | N52-R02 | Interagency Guidelines Establishing Information Security Standards (OCC) | 12 CFR Part 30, Appendix B, with Supplement A | Primary control requirement; mapped in `control-implementation.csv` |
 | Rule | Computer-Security Incident Notification | 12 CFR Part 53 (bank); 12 CFR 225 Subpart N (holding company) | 36-hour regulator notice; inbound notices from bank service providers; outbound notices to bank respondents (P08) |
-| Rule | Identity Theft Red Flags | 12 CFR 41.90 | Account opening and contact-information changes on covered accounts (gap 2) |
+| Rule | Identity Theft Red Flags | 12 CFR 41.90 | Account opening and contact-information changes on covered accounts (EV-032) |
 | Rule | Suspicious activity reports | 12 CFR 21.11; 31 CFR 1020.320 | Fraud cases through the platform (P08) |
 | Guidance | FFIEC Authentication and Access to Financial Institution Services and Systems (August 2021; Federal Reserve SR 21-14) | Supervisory guidance, not regulation | Examiners expect MFA or controls of equivalent strength for high-risk activities such as adding beneficiaries and sending wires (section 11) |
 | Guidance | FFIEC Information Technology Examination Handbook | Supervisory guidance, not regulation | How examiners assess the Guidelines |
 | State | Funds-transfer liability and security procedures (UCC Article 4A) | Fla. Stat. 670.202 and 670.204 | The callback is part of the agreed security procedure in funds transfer agreements |
 | State | Breach notification | Fla. Stat. 501.171 (worked example); the law of each state where affected individuals reside | Customer notices (P08) |
-| Contract | Respondent institution agreements | Contract | Correspondent service commitments (gap 12; P09) |
+| Contract | Respondent institution agreements | Contract | Correspondent service commitments (EV-036; P09) |
 | Internal | Security policies POL-01 to POL-05 and the standards index | P06 | Policy basis for every control |
 
-Not applicable (reasons in `../00_company-facts.md` section 1): the OCC heightened standards (12 CFR Part 30, Appendix D), the FTC Safeguards Rule (N52-R03), NYDFS Part 500 (N52-R04), SEC Regulation S-P and S-ID (N52-R05, N52-R06), NAIC Model #668 (N52-R07), and SEC cybersecurity disclosure (N52-R08). Consumer wire transfers sent through Fedwire are excluded from Regulation E's definition of electronic fund transfer (12 CFR 1005.3(c)(3)); Regulation E error resolution governs consumer ACH and bill payments, which are outside this plan's security scope.
+Not applicable (decided, with reasons, in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)): the OCC heightened standards (12 CFR Part 30, Appendix D), the FTC Safeguards Rule (N52-R03), NYDFS Part 500 (N52-R04), SEC Regulation S-P and S-ID (N52-R05, N52-R06), NAIC Model #668 (N52-R07), and SEC cybersecurity disclosure (N52-R08). Consumer wire transfers sent through Fedwire are excluded from Regulation E's definition of electronic fund transfer (12 CFR 1005.3(c)(3)); Regulation E error resolution governs consumer ACH and bill payments, which are outside this plan's security scope.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -86,6 +86,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 **Baseline:** the NIST SP 800-53B **Moderate** baseline, tailored for a $2.5 billion bank as described in section 10.1.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - the bank's configuration of the core (users, roles, parameters it controls) and of online banking (admin console entitlements, limits, security settings);
 - the payments hub and correspondent portal application stack in the production account, and the landing zone accounts that host and protect it;
@@ -110,7 +112,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Core processor (SYS-01) | Bidirectional (private circuits; API from the payments hub) | Balances, holds, postings, customer profile | Core processor contract (no incident notice time frame or recovery terms; **gap**, renewal 2027) |
 | Digital banking provider (SYS-02) | Bidirectional | Customer sessions, transfers, wire and ACH requests to the payments hub | Provider contract; 53.4 contact sent 2026-03 |
 | Federal Reserve payment services | Outbound and inbound | Wire messages; ACH files | Federal Reserve operating circulars and the bank's access agreement |
-| Respondent institutions (18) | Inbound payment orders; outbound settlement statements | Wire and ACH orders for respondents' customers | Respondent agreements (2019 template; **no security or notice terms**, gap 12) |
+| Respondent institutions (18) | Inbound payment orders; outbound settlement statements | Wire and ACH orders for respondents' customers | Respondent agreements (2019 template; **no security or notice terms**, EV-036) |
 | Business customers | Inbound | Wire and ACH requests through online banking or relationship managers | Treasury management and funds transfer agreements (callback and dual approval as the security procedure) |
 | AML monitoring provider (SYS-13) | Outbound nightly | Transactions from the core and the payments hub | Provider contract (**no 53.4 contact yet**) |
 | MSSP | Outbound | Security logs and alerts | MSSP contract |
@@ -156,7 +158,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 36 | Core processor, digital banking provider, cloud provider, identity vendor, MSSP, payments hub vendor |
 | Common/Inherited | 8 | Identity vendor (AC-7, IA-2(1), IA-2(2), IA-2(8)), providers (AC-12, SC-5, SC-13), MSSP and insurer panel (IR-7) |
 
-The Partially implemented statements trace to the 12 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the observations in the intake [evidence register](../step-00_P00_intake/evidence-register.csv) and to the P07 findings; the `evidence` column in `control-implementation.csv` cites the evidence ID behind each statement.
 
 ### 10.2 Control assessment status
 The co-sourced IT audit firm assessed 35 controls (244 determination statements) from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the Audit Committee.
@@ -169,7 +171,7 @@ The co-sourced IT audit firm assessed 35 controls (244 determination statements)
 - **Respondent institutions.** Respondent users sign in to the correspondent portal through the customer identity service with app-based MFA. The 2 vendor-created generic administrator accounts found in P07 were disabled on 2026-08-14 (R-049).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House
