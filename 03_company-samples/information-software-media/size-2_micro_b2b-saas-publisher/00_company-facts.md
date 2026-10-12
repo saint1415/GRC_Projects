@@ -29,8 +29,8 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 | Software Engineer | Application development, code review |
 | Customer Success Manager | Customer onboarding and support; uses the internal admin console; customer communications during incidents |
 | Account Executive | Sales; answers customer security questionnaires (from 2026-09-15 only with CTO approval) |
-| Contract developer (part-time, U.S.-based) | Feature development under a contractor agreement with a confidentiality clause and no security terms |
-| Managed service provider (MSP) | Manages the 7 company laptops (device management, disk encryption, antivirus, patching), administers the productivity suite (users, MFA policy, email security), and runs the help desk. Holds 2 global administrator accounts in the suite. No access to the production cloud account |
+| Contract developer (part-time, U.S.-based) | Feature development under a contractor agreement with a confidentiality clause and no security terms (EV-016) |
+| Managed service provider (MSP) | Manages the 7 company laptops (device management, disk encryption, antivirus, patching), administers the productivity suite (users, MFA policy, email security), and runs the help desk. Holds 2 global administrator accounts in the suite. No access to the production cloud account (EV-002; EV-011; EV-018) |
 | Outside counsel (as needed) | Wrote the MSA and DPA templates in 2024; advises on breach notification together with the cyber insurer's panel counsel |
 | Independent security consultant | Performed the P07 control assessment under a fixed-fee engagement; not involved in the risk or gap analysis or in operating any control; will not be the SOC 2 auditor |
 

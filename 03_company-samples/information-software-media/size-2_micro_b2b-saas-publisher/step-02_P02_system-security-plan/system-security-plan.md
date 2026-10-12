@@ -31,7 +31,7 @@ The cloud account is described by service category and is vendor-agnostic (see P
 | State | Florida Information Protection Act (reasonable measures; third-party agent notice) | Fla. Stat. 501.171(2), (6) | Applies to the company as a third-party agent for customers. Notice duties in P08; other states handled generically |
 | Internal | Security policies POL-02, POL-03, POL-04 | P06 | |
 
-Not applicable (see `../00_company-facts.md` section 1): COPPA (N51-R02), PADFA (N51-R05, the company is not a data broker), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), HIPAA, and PCI DSS.
+Not applicable (see the intake [obligations register](../step-00_P00_intake/obligations-register.csv)): COPPA (N51-R02), PADFA (N51-R05, the company is not a data broker), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), HIPAA, and PCI DSS.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -71,6 +71,7 @@ Information types were chosen with reference to NIST SP 800-60 Vol. 2 Rev. 1 (cl
 - **Not selected at this tier**, recorded as a tailoring decision, where the control serves federal program management or organizations with dedicated security staff (for example, separate configuration control boards).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the production cloud account and everything in it (SYS-01), the repository and CI/CD configuration (SYS-02), the suite identity service as it controls staff access (SYS-03), the error tracking and log management configuration (SYS-05), and the 7 company laptops used to administer the VCP (SYS-08).
 - **Outside but in scope as a gap:** the contract developer's personal laptop. It holds a copy of the CI key and database extracts, but the company does not manage it (PS-7, SA-3(2)). It must be brought under control or stop holding company data (POAM-011, POAM-014).
 - **Outside (external services, interconnected):** the cloud provider's infrastructure, the email delivery service (SYS-04), the AI model provider (SYS-06), the support desk and other business SaaS (SYS-07), and the MSP's remote management platform.
@@ -117,11 +118,11 @@ By responsibility: 22 system-specific (the company), 23 hybrid (the company with
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Cloud provider | Data center security (PE-3), key management (SC-12), storage encryption (SC-28), backup features (CP-9), management event logging (AU-2), network services (SC-7) | SOC 2 Type 2 report reviewed 2026-09-02 (P09 V-01) | Complementary user entity controls: protect access keys and administrator accounts, configure logging, backups, and network rules, manage its own users (AC-2, AC-6, IA-5, AU-2, CP-9) |
-| Productivity suite vendor (through the MSP) | Staff sign-in, MFA, lockout (IA-2, IA-2(1), AC-7) | Vendor documentation; MSP configuration report | Tell the MSP about joiners and leavers on time; review the MSP's administrator accounts |
-| MSP | Laptop encryption, antivirus, patching, screen lock, wiping (SC-28, SI-3, SI-2, AC-11, MP-6) | Monthly MSP report; P07 evidence requests | Oversight: review reports monthly; add security terms to the contract (PS-7) |
-| Error tracking and log management SaaS | Log storage and access control (AU-11) | Vendor documentation; assurance report reviewed in P09 (V-03) | Stop sending tax IDs in error payloads (R-005) |
-| Repository host | Branch protection, dependency alerts (CM-3, RA-5) | Vendor documentation | Enforce protection for administrators; act on alerts |
+| Cloud provider | Data center security (PE-3), key management (SC-12), storage encryption (SC-28), backup features (CP-9), management event logging (AU-2), network services (SC-7) | SOC 2 Type 2 report (EV-021) reviewed 2026-09-02 (P09 V-01) | Complementary user entity controls: protect access keys and administrator accounts, configure logging, backups, and network rules, manage its own users (AC-2, AC-6, IA-5, AU-2, CP-9) |
+| Productivity suite vendor (through the MSP) | Staff sign-in, MFA, lockout (IA-2, IA-2(1), AC-7) | Vendor documentation; MSP configuration report (EV-002) | Tell the MSP about joiners and leavers on time; review the MSP's administrator accounts |
+| MSP | Laptop encryption, antivirus, patching, screen lock, wiping (SC-28, SI-3, SI-2, AC-11, MP-6) | Monthly MSP report (EV-011); P07 evidence requests | Oversight: review reports monthly; add security terms to the contract (PS-7) |
+| Error tracking and log management SaaS | Log storage and access control (AU-11) | Vendor documentation (EV-010); assurance report (EV-046) reviewed in P09 (V-03) | Stop sending tax IDs in error payloads (R-005) |
+| Repository host | Branch protection, dependency alerts (CM-3, RA-5) | Vendor documentation; repository settings (EV-004) | Enforce protection for administrators; act on alerts |
 
 **Inherited does not mean done.** The cloud provider's controls protect customer data only if the company runs its side. Today the company's own gaps (the static administrator key, five full administrators, no data-level logging, backups in the same account) are exactly the controls the provider's report says the customer must operate.
 
@@ -134,7 +135,7 @@ Staff sign in to the suite with a password and an authenticator app; the suite's
 Customer users sign in with platform accounts (MFA optional) or their own single sign-on (3 customers). Customer administrators can see every vendor's W-9 in their tenant, so MFA will be required for customer administrators from 2026-12-31 (R-014).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor reviews (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **CI/CD:** continuous integration and continuous delivery
