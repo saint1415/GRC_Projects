@@ -40,6 +40,17 @@ Small tier scope: 15-25 controls. **22 controls, 155 determination statements.**
   - a file read test on the SFTP server with an IT administrator account
   - a search of the IT team's files for stored secrets
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-09-25, after fieldwork ended. They were reviewed as drafts, for design only. A control that a draft policy introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 58 |
+| Design | The control is new (the 2026 group risk assessment, or a draft policy or runbook); its design was reviewed. Operation is tested at the 2027-03 follow-up or the next annual risk assessment | 29 |
+| Not implemented | Nothing existed to test | 68 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled leavers and 3 sampled transfers come from the 13 terminations and 3 transfers in EV-005 and the disable tickets in EV-007).
+
 ## 3. Rules of engagement
 - The CFO approved the social engineering call and the after-hours test in writing. The MSP account owner was told after the call.
 - No production backup was deleted; the deletion test used a test vault with the same policy.

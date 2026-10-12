@@ -8,11 +8,11 @@
 | Framework | NIST AI RMF 1.0 (NIST AI 100-1) and the Generative AI Profile (NIST AI 600-1) |
 | Assessor / dates | IT Manager (Qualified Individual for Finance) with the CFO and HR Director. Fieldwork 2026-08-17 to 2026-08-28, with the risk assessment (P01). Tests run 2026-08-24 to 2026-08-27 |
 | Decision | Approve with conditions, 2026-09-25 (section 6) |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
-| Related | P01 R-006, R-019, R-020, R-030; POL-01 4.12, POL-04 4.3 and 4.7, POL-05 4.3 and 4.9; P07 POAM-003, POAM-012, POAM-014, POAM-019; scenario-facts gap 15 |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the AI pilot license and configuration export, the SaaS purchase approvals and expense review, and the risk interviews (EV-029, EV-046, EV-043, EV-062). Whether the 5 public chatbot users entered Restricted data was not established |
+| Related | P01 R-006, R-019, R-020, R-030; POL-01 4.12, POL-04 4.3 and 4.7, POL-05 4.3 and 4.9; P07 POAM-003, POAM-012, POAM-014, POAM-019; intake EV-029 and EV-030 |
 
 ## 1. GOVERN
-**Why this assessment exists.** The pilot started on 2026-07-06 without an approved-use policy, a data-access review, or an approved-tools list (gap 15). Five weeks later, on 2026-08-12, the assistant showed a Finance loan document to a Supply user. The assistant did not break any permission. It found a file on a site that every group employee could already open. That is the central lesson for a holding company: **the assistant makes every existing over-sharing mistake across the four companies easy to find.**
+**Why this assessment exists.** The pilot started on 2026-07-06 without an approved-use policy, a data-access review, or an approved-tools list (EV-029, EV-030). Five weeks later, on 2026-08-12, the assistant showed a Finance loan document to a Supply user. The assistant did not break any permission. It found a file on a site that every group employee could already open. That is the central lesson for a holding company: **the assistant makes every existing over-sharing mistake across the four companies easy to find.**
 
 - **Accountable owner:** CFO (owner of shared services and the group security program).
 - **Operational owner:** IT Manager. Keeps the approved-tools list (POL-05 section 3), runs the tests in section 4, and reports results.
@@ -57,7 +57,7 @@
 | ECOA and Regulation B, 12 CFR Part 1002 | **Only if** the assistant is used in credit | Finance must not discriminate on a prohibited basis in any aspect of a credit transaction (1002.4(a)) or discourage applicants on a prohibited basis in advertising or otherwise (1002.4(b)). Adverse action reasons must be "specific" and give the principal reasons (1002.9(b)(2)). POL-05 prohibits AI in credit decisions. AI-drafted Finance marketing and Home Services financing mentions need review against 1002.4(b) |
 | Federal employment discrimination law (e.g., Title VII, 42 U.S.C. 2000e-2; ADEA) | **Only if** the assistant is used in employment decisions | The statutes apply to employment decisions whatever tool is used. EEOC's AI technical assistance on Title VII has been removed from its website, but the statutes did not change (`00_universal-framework/cross-sector/`, Part B4). POL-05 prohibits AI in hiring, discipline, and pay decisions |
 | FTC Act Section 5, 15 U.S.C. 45(a) | Indirectly | Statements to customers drafted with AI must be accurate. The group makes no public claims about its AI use |
-| HIPAA | **No** for this use case | The holding company, as plan sponsor, receives only enrollment and summary health information (scenario facts, section 1). Enrollment exports are still Restricted under POL-04 |
+| HIPAA | **No** for this use case | The holding company, as plan sponsor, receives only enrollment and summary health information (EV-057; obligations register N55-R06). Enrollment exports are still Restricted under POL-04 |
 | State AI laws (e.g., Colorado SB26-189, effective 2027-01-01) | **No** | The group operates only in Florida, and the assistant is not used in consequential decisions. No Florida statute on private-sector AI use was identified in this review. Recheck at each annual review |
 
 ## 3. Risk tier
@@ -88,14 +88,14 @@
 The other five AI 600-1 risks (CBRN Information or Capabilities; Dangerous, Violent, or Hateful Content; Environmental Impacts; Information Integrity; Obscene, Degrading, and/or Abusive Content) were judged low for internal business drafting and rely on the provider's content filters.
 
 ## 4. MEASURE
-Tests ran from 2026-08-24 to 2026-08-27, after the loan archive was fixed on 2026-08-13. The IT Manager ran them with the business owners named in each row.
+Tests ran from 2026-08-24 to 2026-08-27 (EV-064), after the loan archive was fixed on 2026-08-13 (EV-028). The IT Manager ran them with the business owners named in each row.
 
 | Trustworthy characteristic | Test / metric and threshold | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | 40 pilot outputs (10 per entity) checked against their sources by the data owners. Threshold: material errors (wrong amount, date, name, or a fact not in the source) in no more than 5% of outputs | 4 of 40 (10%) had a material error, including a wrong invoice total in a spreadsheet summary and a wrong payoff amount in a Finance draft reply (caught by the reviewer before sending) | **No** |
 | Safe | 10 technical questions on heating, air conditioning, gas, and refrigerant work posed by the Home Services service manager, compared with manufacturer instructions. Threshold: every answer complete and correct on safety steps | 3 of 10 answers left out or misstated a safety step | **No.** Confirms the prohibition on technical work instructions; technicians stay out of scope |
-| Secure and resilient | (a) Access only through SSO with MFA, licensed to enrolled users only. (b) Indirect prompt injection: 5 test emails with hidden instructions summarized by a test user. Threshold: 0 of 5 followed. (c) Assistant activity logged and kept 1 year | (a) Met. (b) 1 of 5 summaries repeated a planted link as a "recommended action." (c) Activity is logged but kept only 30 days (gap 6, POAM-012) | **Partial** |
-| Accountable and transparent | Named owner, approved-tools list, written rules, and user training before use | The pilot started with none of these (gap 15). Owner named and POL-05 4.9 approved 2026-09-25 (effective 2026-10-01); AI training module not yet built (POAM-019) | **Partial** |
+| Secure and resilient | (a) Access only through SSO with MFA, licensed to enrolled users only. (b) Indirect prompt injection: 5 test emails with hidden instructions summarized by a test user. Threshold: 0 of 5 followed. (c) Assistant activity logged and kept 1 year | (a) Met. (b) 1 of 5 summaries repeated a planted link as a "recommended action." (c) Activity is logged but kept only 30 days (EV-026, POAM-012) | **Partial** |
+| Accountable and transparent | Named owner, approved-tools list, written rules, and user training before use | The pilot started with none of these (EV-030). Owner named and POL-05 4.9 approved 2026-09-25 (effective 2026-10-01); AI training module not yet built (POAM-019) | **Partial** |
 | Explainable and interpretable | 20 answers that cited source files. Threshold: at least 95% of citations support the statement | 17 of 20 (85%). 3 cited a file that did not support the claim | **No.** Users must open the cited file before relying on an answer |
 | Privacy-enhanced | Cross-entity data-access test: 4 standard test accounts (one per entity), 12 standard queries each (for example "loan," "social security," "salary," "bank account," "acquisition," "termination"). Threshold: 0 results from another company's Restricted data. Provider terms: no training on group data | The Supply and Home Services test accounts still retrieved Restricted content from the two remaining all-employee sites: benefits enrollment exports with employee SSNs on the group HR site, and vendor bank-detail forms on the group accounting site. No Finance loan documents were returned. No-training term is in the enterprise terms | **No** |
 | Fair, with harmful bias managed | Bias testing plan below (tests B1 to B3 run; B4 starts 2026-12-31) | B1 met; B2 met only because of human review; B3 not met | **Partial** |

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (holding company with three operating subsidiaries) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager with the CFO, Controller, HR Director, and the three subsidiary Presidents | **Approved:** CEO, 2026-09-25
+**Sources:** process owner interviews 2026-08-17 to 2026-08-19 (EV-060), FY2025 consolidated financial statements (EV-053), loan portfolio report (EV-054), backup job reports (EV-021), ERP vendor SOC 2 report (EV-047). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CEO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the group depends on, how long each can be down, and how much data each can lose. Because the holding company runs shared services, one outage of the shared platform can stop work at every subsidiary at once. The BIA therefore covers the holding company's own processes and the subsidiary processes that depend on the shared platform.
@@ -14,10 +15,10 @@ It supports:
 - Finance's incident response plan, which must cover recovery from security events affecting customer information (16 CFR 314.4(h)).
 
 ## 2. System and business description
-The group has 60 employees at three Florida sites: HQ (holding company and Finance), the Supply warehouse, and the Home Services shop. Shared services run on the Shared Corporate Services Platform (SCSP): a cloud ERP, one identity provider, one productivity suite, a cloud tenant (integration service, reporting database, bank file transfer server, backup vault), an HRIS and payroll service, endpoints, and site networks. Each subsidiary also runs its own SaaS line-of-business system (SYS-10 to SYS-12). See `../00_company-facts.md` sections 3-4.
+The group has 60 employees at three Florida sites: HQ (holding company and Finance), the Supply warehouse, and the Home Services shop. Shared services run on the Shared Corporate Services Platform (SCSP): a cloud ERP, one identity provider, one productivity suite, a cloud tenant (integration service, reporting database, bank file transfer server, backup vault), an HRIS and payroll service, endpoints, and site networks. Each subsidiary also runs its own SaaS line-of-business system (SYS-10 to SYS-12). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $27.3 million in consolidated receipts, about $105,000 per business day.
+Dollar values are scaled to $27.3 million in consolidated receipts across about 260 business days, about $105,000 per business day (EV-053).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -50,7 +51,7 @@ Dollar values are scaled to $27.3 million in consolidated receipts, about $105,0
 
 **Key findings:**
 1. **The identity provider is a single point of failure for almost every process.** Every SaaS system except SYS-11 signs in through it, so only Home Services' dispatch system keeps running without it, and only because SYS-11 uses local accounts (a security gap; see P01 R-009). Break-glass accounts do not exist yet (P01 R-031).
-2. **The 24-hour RPO for BP-08 is not achievable today.** Email and files have no independent backup (gap 8; P01 R-005).
+2. **The 24-hour RPO for BP-08 is not achievable today.** Email and files have no independent backup (EV-025; P01 R-005).
 3. **The cloud tenant backups have never been restore-tested**, so the 8-hour RTO for the bank file transfer server (BP-01, BP-05) and the 72-hour RTO for the integration service and reporting database (BP-09) are unproven (P01 R-004).
 4. **Vendor recovery commitments must match the BIA.** The ERP vendor's SOC 2 system description states a 4-hour RTO and 1-hour RPO, which meets BP-03 and BP-09 (P09). The distribution system vendor must support BP-04's 1-hour RPO; its contract has not been checked (action for the Supply President, 2026-12-31).
 

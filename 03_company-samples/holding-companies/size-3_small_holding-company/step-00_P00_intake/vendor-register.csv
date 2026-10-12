@@ -1,0 +1,17 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,ERP vendor,Multi-entity cloud ERP,SYS-01,Financial reporting data; vendor bank details; employee expense data,Vendor contract with confidentiality terms,"SOC 2 Type 2, 12 months ending 2026-06-30",EV-043; EV-044; EV-047,
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,None on file,EV-043,
+V-03,Productivity suite provider,"Email, files, chat, device management, AI assistant add-on",SYS-03; SYS-13,"All categories, including Finance customer information",Subscription terms; enterprise AI terms,Published SOC 2 report from the provider portal,EV-029; EV-043; EV-050,
+V-04,Public cloud provider,"IaaS/PaaS for the integration service, reporting database, SFTP server and backups",SYS-04,ACH files; consolidated financials; backups,Customer agreement,Published SOC 2 report from the provider portal,EV-043; EV-050,
+V-05,HRIS and payroll vendor,"HRIS, payroll and benefits enrollment",SYS-05,"Employee SSNs, bank accounts and enrollment data",Vendor contract with confidentiality terms,"SOC 2 Type 2, period ending 2026-03-31",EV-044; EV-048,
+V-06,Operating bank,"Treasury portals, wires, ACH origination, positive pay, SFTP file exchange, line of credit",SYS-06; SYS-04 (SFTP server),ACH files with consumer bank account numbers; payment instructions,Treasury services agreement; credit agreement,None on file,EV-010; EV-044; EV-056,
+V-07,Board portal vendor,Board portal,SYS-07,Board materials; acquisition information,Vendor contract,None on file,EV-043; EV-044,
+V-08,Distribution system vendor,Supply distribution and warehouse management,SYS-10,Contractor customer accounts and orders,Vendor contract,None on file,EV-043; EV-044,Recovery commitments requested at intake (open request)
+V-09,Field-service system vendor,Home Services dispatch and field service,SYS-11,Consumer contact and service records,Subscription terms,None on file,EV-043; EV-046,
+V-10,Loan servicing vendor,Finance loan origination and servicing,SYS-12,Finance customer information,Contract with confidentiality and safeguards terms,"SOC 2 Type 2, period ending 2025-12-31",EV-044; EV-049,
+V-11,Co-managed IT provider (MSP),After-hours help desk; firewall and server patching,SYS-02; SYS-04; SYS-08; SYS-09,Administrative access to systems holding all categories,MSP contract with no security requirements,None on file,EV-003; EV-017; EV-019; EV-044,Holds 2 global administrator accounts; remote tool reaches every endpoint
+V-12,Card processor,Point-to-point encrypted terminals and hosted payment page,n/a,Card data (held by the processor),Merchant agreements,None on file,EV-058,
+V-13,Drive destruction vendor,Destruction of retired drives,n/a,Data on retired drives,Service terms,Certificates of destruction,EV-052,
+V-14,Former payroll provider,Payroll (replaced in 2024),n/a,Employee data still held,Contract with no data return or deletion terms,None on file,EV-044,Account still holds employee data
+V-15,Benefits carrier and broker,Fully insured group health plan,SYS-05 (exports),Enrollment and payroll exports,Plan documents; broker agreement,None on file,EV-057,Exports sent by email
+V-16,Cyber insurer,Group cyber policy and breach hotline,n/a,Incident information when a claim is made,Policy from 2026-04-01,n/a,EV-041,
