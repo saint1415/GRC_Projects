@@ -1,22 +1,68 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company Holdings | Finance and Insurance | Multi-Sector
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company Holdings, Inc. (bank holding company; Banking, Financial Software and Data Services, and Commercial Real Estate divisions; corporate shared services) |
+| Intake window | 2026-03-30 to 2026-04-24 |
+| Collected by | Group GRC team (Group CISO's office), with the three division security and compliance leads and the Head of Technology and Cyber Risk |
+| Approved | Holding company board risk committee and bank board risk committee, 2026-09-10, with the other deliverables |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the group's own records before any assessment work began on 2026-05-01. It covers the legal entities, the systems that hold or process customer information, payment instructions or client institution data in each division and in corporate shared services, the suppliers and affiliates that touch them, and the rules that may bind each entity. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Items are grouped by division: the title of each row starts with Group, Banking, Financial Software or Commercial Real Estate. Later steps add their own fieldwork evidence (interviews, document reviews, tests) to the same register, so one list backs every deliverable.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analyses (P03) and the control assessment (P07).
 
 ## 2. Sources collected
-| Area | Evidence IDs | System of record | As of |
-|---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Division | Area | Evidence IDs | System of record | As of |
+|---|---|---|---|---|
+| Group | Entities, workforce, revenue, assets and intercompany agreements | EV-001 to EV-005 | Entity management system; HR system; ERP and Form 10-K; Call Report and FR Y-9C; legal contract system | 2025-12-31 to 2026-03-31 |
+| Group | Identity and access (SYS-G1) | EV-006 to EV-010 | Identity platform, identity governance and PAM consoles; endpoint and zero-trust consoles | 2026-03-31 |
+| Group | Security operations (SYS-G2) | EV-011 to EV-016 | SIEM; case management; EDR; scanner, patch and guardrail consoles; penetration test report; email security consoles | 2026-03-13 to 2026-03-31 |
+| Group | Program, policies, governance, risk, audit, disclosure and incident response | EV-017 to EV-025 | Policy repository; GRC tool; corporate secretary; internal audit; SEC filings; SOC document library | 2026-01-15 to 2026-03-31 |
+| Group | Workforce, vendors, AI and records | EV-026 to EV-031 | Learning system; HR system; vendor master and third-party risk tool; vendor portals; model inventory and procurement; records management | 2026-03-31 to 2026-04-15 |
+| Group | Infrastructure (SYS-G3), facilities and the enterprise data platform | EV-032 to EV-040 | CMDB and cloud consoles; guardrail service; firewall management; key management and HSMs; backup vault; TLS scanner; access control system; data center walk-through; data platform | 2026-03-27 to 2026-04-14 |
+| Banking | Volumes, payments, core, risk governance, continuity, vendors, AI model, tenant settings, BSA/AML and procedures | EV-041 to EV-051 | Core and digital banking reporting; payments hub; core admin console; independent risk management; continuity library; vendor management; model risk management; BSA/AML case system | 2026-03-31 to 2026-04-20 |
+| Financial Software | Clients and contracts, notices, SOC reports, platform, support console, continuity, pipeline, data service, conversions, examination, vendors and marketing | EV-052 to EV-063 | Contract management; CRM; client assurance office; platform consoles and architecture repository; build pipeline; data services records; conversion workspace; regulatory affairs | 2025-09-30 to 2026-03-31 |
+| Commercial Real Estate | Portfolio, funding, loan system, integration history, mailboxes, property systems and vendors | EV-064 to EV-070 | CRE loan system; funding procedures and case log; integration office; email admin console; lease and building systems; vendor records | 2026-03-31 to 2026-04-10 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Entities and scale.** The holding company is a bank holding company and an SEC registrant. Cris Santos Bank, N.A. is a national bank; Cris Santos Financial Technology, LLC is a nonbank subsidiary of the holding company; CRE Lending and Servicing (acquired in 2024) and Group Property Management are nonbank subsidiaries. The register lists no broker-dealer, investment adviser, insurance licensee, credit union, telecommunications carrier or New York-licensed entity (EV-001). The workforce is 45,000: Banking about 31,000, Financial Software about 5,500, Commercial Real Estate about 3,000, corporate about 5,500 (EV-002). FY2025 revenue was about $18.0 billion: Banking $15.2 billion, Financial Software $1.6 billion, Commercial Real Estate $1.2 billion, over about 250 business days (EV-003). Average total consolidated assets are about $212 billion for the bank and $226 billion for the holding company (EV-004). The 2021 intercompany services agreement for the platform sets no incident notice time and no audit rights; CRE Lending services loans for the bank with no written agreement (EV-005).
+
+**Group identity and access.** All 45,000 workforce identities use number-matching MFA; administrators use hardware keys. Single sign-on sessions last 12 hours and are not bound to a device, and no re-authentication is set for sensitive console actions (EV-006). Identity governance runs joiner-mover-leaver workflows and quarterly certification; 37 gateway and pipeline service accounts sit in a separate spreadsheet outside certification (EV-007, EV-009). Privileged access is just in time through PAM with session recording (EV-008). Remote access goes through zero-trust access with device checks (EV-010).
+
+**Group security operations.** The SOC runs 24x7 with correlation across identity, endpoint, network, core and platform logs. No use case covers replayed sessions, support console activity, or inbox-rule creation in Commercial Real Estate mailboxes (EV-011). Cases are tracked in one system; the playbooks do not name who may suspend platform functions for all tenants, and Commercial Real Estate cases appear from 2026 (EV-012). EDR covers every server, workstation and container node (EV-013). Scans run weekly (EV-014); the 2026 external penetration test covered the platform and core interfaces (EV-015). Inbox-rule alerts are not enabled for all mailboxes, and no rule purges mailbox content (EV-016).
+
+**Program, policies and governance.** One group program aligned to CSF 2.0 (POL-01 to POL-05, 2025 versions) is approved by the holding company board and adopted by the bank board (EV-017, EV-020). The Banking and Financial Software supplements are aligned to the 2025 policies; Commercial Real Estate still uses the acquired company's 2023 policy set (EV-018). The common control catalog lists 100 controls; inheritance is documented for the bank and in the Financial Software SOC descriptions, and no matrix exists for Commercial Real Estate (EV-019). The risk management strategy sets acceptance authority by level, and the quarterly pack consolidates cyber risk data by hand (EV-021). Internal audit plans its first Commercial Real Estate sample for 2026 (EV-022). The disclosure committee charter covers cybersecurity incidents (EV-023). The group incident response plan v5 (2025) has a Part 53 determination step; the notification matrix covers the bank only, and no exercise has combined the three divisions (EV-024, EV-025).
+
+**Workforce, vendors, AI and records.** Annual training completion is 98.9%, with quarterly social engineering exercises. The payment-fraud role module is assigned to bank wire, treasury and contact center staff and to platform support staff, and has no vendor-impersonation content; Commercial Real Estate closers are assigned general training only (EV-026). Terminations trigger access removal under a 4-hour standard (EV-027). The vendor register does not list the Financial Software division or CRE Lending as service providers to the bank, and vendor exit plans have no test records (EV-028). SOC reviews are on file for outside critical vendors, with no review of the Financial Software division's reports (EV-029). AI discovery found ten use cases, including the bank's AI credit model, the cash-flow data service sold to 64 client banks, a contact center assistant used by 600 agents and an enterprise assistant piloted with 8,000 users (EV-030). The data inventory lists Commercial Real Estate closing files, servicing records and tenant records (EV-031).
+
+**Infrastructure and facilities.** Core and payments run in two group data centers with synchronous replication; the platform runs in provider A with a warm standby region; backups go to an immutable vault in provider B. The payment initiation gateway is one cluster in the primary data center with a cold standby (EV-032). Guardrails, deny-by-default firewalls, per-tenant keys and TLS 1.2 or higher are configured (EV-033 to EV-035, EV-037). 21 gateway and pipeline service keys are static and older than 1 year (EV-035). Backups are restore-tested each quarter (EV-036). Data center entry uses badge plus biometric controls, mantraps, guards and video, confirmed on the walk-through of 2026-04-14 to 2026-04-16 (EV-038, EV-039). Platform extracts to the enterprise data platform carry bank-tenant data only (EV-040).
+
+**Banking.** About 6.2 million consumer and 540,000 business customers; 4.1 million consumer and 310,000 business users on the platform (EV-041). About 26,000 outgoing wires a day, each with maker-checker, and callbacks to independently verified numbers for new beneficiaries over $1 million (EV-042). The core operating system upgrade was completed in 2026-04 (EV-043). The risk appetite statement sets two cyber limits, and the reliance assessment was shared with the OCC in 2026-03 (EV-044). Core failover is tested twice a year; no gateway failover test is recorded (EV-045). Outside vendor contracts carry the group security schedule (EV-046). The AI credit model's reason code mapping is dated before the 2026-03 cash-flow attributes were added (EV-047). The bank requires MFA for business payment users; SMS codes are still accepted for consumers (EV-048). Commercial Real Estate fraud cases are handled informally by the bank's BSA team (EV-049).
+
+**Financial Software.** 310 client institutions (212 banks, 98 credit unions) and about 19 million end users; 88 contracts require 24-hour incident notice; 64 client banks buy the cash-flow data service, 3 in Colorado (EV-052). Bank-designated notice contacts are on file for 151 of 212 client banks, and the notice procedure has no timer (EV-053). The SOC 1 and SOC 2 Type 2 reports for the period ending 2025-09-30 were issued 2025-12-12 and do not describe the cash-flow data service (EV-054). Each tenant can switch off business payment MFA; 41 of 310 client tenants have done so (EV-055). 460 support staff hold standing read access to every tenant through the support console (EV-056). The last full region failover test was in 2025-03 (EV-057). Data service attribute and model changes are released through release notes, outside the change scope (EV-058); no developer documentation or fairness test records exist for the service (EV-059). 2025 conversion files remain in staff mailboxes (EV-060).
+
+**Commercial Real Estate.** About 1,900 closings a year averaging about $14 million, $19.4 billion serviced, and about 2,400 guarantors (EV-064). Closings are funded on emailed disbursement instructions, and the callback step lets closers call the number in the closing package; two attempted funding frauds in 2025 were stopped by title agents (EV-065). The loan system records funding instruction changes but produces no report of them (EV-066). The 2024 integration plan covered identity and email only, and no earlier control assessment is recorded (EV-067). Closer mailboxes hold years of guarantor financial statements (EV-068). Group Property Management runs about 820 branches, 6 operations centers and 2 data center buildings and collects rent by ACH (EV-069). Title and escrow agents' agreements carry no security terms (EV-070).
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| The bank's due diligence file and monitoring plan for the Financial Software division as a service provider | Head of Technology and Cyber Risk | 2026-04-06 | None exists; tested in P07 (SA-9) and tracked as POAM-012 |
+| Written servicing agreement between CRE Lending and the bank | Group General Counsel | 2026-04-02 | None exists; analyzed in P03 (RE-G20) |
+| Inheritance matrix for Commercial Real Estate | Commercial Real Estate security and compliance lead | 2026-04-06 | None exists; documented in P02 and tracked as POAM-018 |
+| Fairness and stability test records and client documentation for the cash-flow data service | Financial Software data services lead | 2026-04-10 | None exist; carried into P07 (SA-11) and P10 |
+| Workforce use of public generative AI tools outside the approved tools | Group CISO | 2026-04-20 | Not established at intake; P10 treats it as unknown |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Revenue by division (EV-003), customer, wire, client and loan volumes (EV-041, EV-042, EV-052, EV-064), data center, backup and recovery records (EV-032, EV-036, EV-045, EV-057), and dependencies from the asset and vendor registers |
+| P02 SSP | The CDBP boundary from the asset inventory; as-found configuration from EV-006 to EV-016, EV-032 to EV-037, EV-042, EV-043, EV-048 and EV-055 to EV-058; common controls from EV-019 |
+| P04 Cloud mapping | Cloud, data center and platform components (EV-032 to EV-036, EV-055, EV-059, EV-066, EV-069) and provider assurance (EV-029) |
+| P01 Risk registers | Likelihood inputs from configuration exports, inventories, contracts and plans in all four registers (the `likelihood_basis` column) |
+| P03 Gap analyses | The obligations register (which rules apply to which entity) and every observation above, compared with the requirements |
+| P06 Policies | The 2025 group policies and standards (EV-017) and the division supplements, including the 2023 Commercial Real Estate set (EV-018) |
+| P07 Control assessment | Populations to sample from (EV-002, EV-007, EV-035, EV-042, EV-056, EV-064, EV-065) |
+| P08 IR runbook | Notification duties per entity from the obligations register; the incident plan and binder (EV-024); client notice terms and contacts (EV-052, EV-053) |
+| P09 SOC 2 | The Financial Software SOC reports (EV-054), client commitments (EV-052) and outside vendor reports (EV-029) |
+| P10 AI governance | AI use cases found (EV-030), model and data service records (EV-047, EV-059) |
