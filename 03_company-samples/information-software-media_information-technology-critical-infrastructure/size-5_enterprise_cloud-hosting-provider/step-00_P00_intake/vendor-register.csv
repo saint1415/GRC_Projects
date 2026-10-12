@@ -1,0 +1,23 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Legacy RMM vendor (AQ-1),"SaaS RMM for AQ-1 managed servers, with an AI script generator feature",SYS-10; AI-014,Customer server configuration and remote sessions,Contract without security or incident notice terms,No SOC report review on file at intake,EV-008; EV-040; EV-043,Open request at intake
+V-02,Cloud provider X,"Status page, out-of-band recovery vault, security data lake copy, corporate analytics",SYS-14,Encrypted control plane state; status content; aggregates,Contract with security and incident notice terms,Provider's own FedRAMP authorization; SOC 2 Type 2,EV-043; EV-044,Subservice organization (carve-out) for P09
+V-03,Colocation providers (5),"Building space, power and physical security for 41 edge PoPs",SYS-06; FAC-01,Cached content (no customer data at rest beyond cache),Colocation agreements; subcontractor BAAs,SOC 2 reports,EV-042; EV-044; EV-047,Tier 1
+V-04,Server manufacturers (2),Hosts for all regions and G1; drive and host telemetry feature,SYS-04; SYS-04-G1; AI-005,Hardware telemetry,Supply agreements with secure shipping terms,Per vendor register,EV-010; EV-041; EV-050,About 85% of hosts
+V-05,HSM manufacturer,HSMs and firmware for every region,SYS-07; SYS-07-G1,None (on-site service under escort),Support agreement,Per vendor register,EV-043; EV-019,Single manufacturer
+V-06,Hypervisor software vendor,Hypervisor software and support,SYS-04; SYS-04-G1,None,Support agreement,Per vendor register,EV-010; EV-041,R3 release support ends 2027-03-31
+V-07,Storage array vendor,Storage arrays and remote diagnostics through PAM,SYS-05-G1,Diagnostics,Support agreement,Per vendor register,EV-003; EV-043,
+V-08,Carriers,Transit and dark fiber; priority service,SYS-06,Customer traffic in transit,Carrier contracts (two per G1 site),Per vendor register,EV-043; EV-049,
+V-09,Electric utilities and fuel suppliers,Utility feeds; diesel delivery,FAC-01,None,"Utility service; fuel delivery contracts (R1: one contracted, one spot)",n/a,EV-043; EV-049,
+V-10,Domain registrar and public certificate authority,Company domains; console and API TLS certificates,SYS-01; SYS-06,None,Registrar account with registry lock; CA accounts (second pre-validated),n/a,EV-013; EV-019,One registrar
+V-11,EDR vendor,EDR detection cloud and console,SYS-11,Endpoint telemetry,Subscription agreement,SOC report,EV-009; EV-044,
+V-12,AI triage model vendor,Alert scoring model (AI-001),SYS-11; AI-001,Security telemetry (G1 alerts stay in the company instance),Contract prohibiting training on company data,Vendor review on file,EV-018; EV-041; EV-044,Tier 1
+V-13,Ticketing and CRM SaaS vendor,"Support cases, customer contacts, lead scoring feature",SYS-12; AI-013,Customer contacts and case content,Subscription agreement; subcontractor BAA,SOC report,EV-042; EV-044; EV-045,
+V-14,ERP and payroll SaaS vendors,Finance and payroll,SYS-13,Financial and employee data,Subscription agreements,SOC reports,EV-041; EV-044,SOX-relevant
+V-15,HR SaaS vendor,"Recruiting, including resume ranking feature",AI-012,Applicant personal data,Subscription agreement,Per vendor register,EV-041,
+V-16,Enterprise generative AI service vendor,"Workforce assistant, support assistant and documentation chatbot",AI-002; AI-003; AI-015,Company documents; case summaries,Subscription with no-training terms,Per vendor register,EV-041; EV-055,
+V-17,Coding assistant vendor,AI coding assistant,AI-007,Source code,Subscription with no-training terms,Per vendor register,EV-041; EV-055,
+V-18,Email security vendor,Spam and phishing filtering,SYS-12; AI-009,Corporate email,Subscription agreement,Per vendor register,EV-015; EV-041,
+V-19,Telephony and out-of-band messaging provider,Incident bridges and SMS paging,SYS-11,Incident communications,Service agreement,Per vendor register,EV-043,Single provider
+V-20,FedRAMP Recognized assessment service,Annual FedRAMP independent assessments; Class D assessment booked for 2027-04,SYS-01-G1; SYS-02-G1,Assessment evidence,Statement of work,n/a,EV-030; EV-065,
+V-21,Payment processor,Card and bank payments,SYS-13,Payment data,Processor agreement,Per vendor register,EV-041,Collections only
+V-22,Cyber insurer,Cyber insurance,n/a,Incident information when notified,Policy,n/a,EV-061,Approval needed before any ransom payment

@@ -11,6 +11,8 @@
 | Sources checked | fedramp.gov Consolidated Rules for 2026 (ruleset pages, Rev5 control list, important dates, changelog through the 2026-09-22 release), retrieved 2026-10-05; eCFR as of 2026-09-23: 12 CFR 53.2-53.4, 225.301, 225.303, 304.22, 304.24; 48 CFR 252.204-7012, 52.204-21; 32 CFR 170.16 |
 
 ## 1. Applicability
+Which requirements apply was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the agency authorizations, the GSA Schedule contract, the defense customer contracts, the bank addendum and the MSA (EV-029, EV-041, EV-040, EV-039, EV-038). This section records the reasoning for the primary business line.
+
 ### 1.1 FedRAMP: applies, and the rules are changing under the company
 The Government Cloud has held a FedRAMP Rev5 **Moderate** agency authorization since 2024-05-20, sponsored by a civilian agency and reused by 6 more agencies. FedRAMP has no size threshold (C-IT-R01); it applies because federal agencies use the service.
 
@@ -50,7 +52,7 @@ The Government Cloud has held a FedRAMP Rev5 **Moderate** agency authorization s
    - **The Rev5 Class C control list** (G-091 to G-270): 180 base controls, one row each, with the Class C enhancements in the citation column. These statements are the same as in the SSP (P02), so the two documents cannot drift apart.
    - **17 rows for the other requirements** (G-271 to G-287): bank rule 5, DFARS 6, FAR 4, DOJ 1, Florida 1, cited to section and paragraph.
 2. **Crosswalk.** Control rows use NIST's official CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 where one exists (134 rows, labeled "Official"). The other 46 control rows and all rule and other rows are author mappings, labeled as such.
-3. **Evidence and sampling.** Current state came from interviews, configuration exports (identity provider, cloud accounts, PAM, hypervisor managers, firewalls, SIEM, RMM), document review, the DC-1 and DC-2 walkthroughs, and the legacy FedRAMP package. Samples: 25 of 74 terminations, 25 of 41 transfers, 40 changes from the SOC 2 period, 20 drive destruction records, 30 days of backup reports, 10 bank contacts called, and the 2026-04 FedRAMP Emergency Test record. The co-sourced internal audit firm re-performed the samples for the 40 controls in P07.
+3. **Evidence and sampling.** Current state came from the intake evidence in the [evidence register](../step-00_P00_intake/evidence-register.csv): configuration exports (identity provider EV-001 and EV-002, cloud accounts EV-018, PAM EV-007, hypervisor managers EV-008, firewalls EV-013, SIEM EV-025, RMM EV-027), document review (EV-028 to EV-035), the DC-1 and DC-2 walk-throughs at intake on 2026-06-24 and 2026-06-26 (EV-050), and the legacy FedRAMP package (EV-029). Fieldwork added interviews (EV-064), sign-in screens (EV-065), a TLS scan (EV-066), contract review (EV-070) and the July 2026 legacy POA&M (EV-071). Samples: 25 of 74 terminations and 25 of 41 transfers (EV-067), 40 changes from the SOC 2 period, 20 drive destruction records and 30 days of backup reports (EV-068), 10 bank contacts called (EV-069), and the 2026-04 FedRAMP Emergency Test record (EV-033). The co-sourced internal audit firm re-performed the samples for the 40 controls in P07.
 4. **Status and risk.** Each row was rated Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

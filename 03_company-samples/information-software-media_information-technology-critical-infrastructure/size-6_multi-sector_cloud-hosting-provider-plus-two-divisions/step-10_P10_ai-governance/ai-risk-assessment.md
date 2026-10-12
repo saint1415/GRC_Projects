@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for four priority use cases: the SOC's AI-driven alert triage and automated response (AI-001, the registry default), Managed IT's AI runbook automation agent (AI-005), and Payment Processing's fraud and merchant underwriting models (AI-007, AI-008) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-04; presented to the board risk committee 2026-09-17 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 4 High, 3 Medium, 3 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 4 High, 3 Medium, 3 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 app list and division model registers (EV-029), SOC and RMM configuration records (EV-013, EV-068), Payment Processing model documentation (EV-079), risk interviews (EV-088), and the 2026-05 to 2026-08 monitoring and red-team results (EV-098 to EV-100). Not established: use of public generative AI tools by the workforce outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Regulator overlays.** Each division supplement adds its own rules: FedRAMP and DFARS for Cloud Hosting, CMMC and client terms for Managed IT, card network and FTC rules for Payment Processing.
 6. **Change gate.** A material change (new model, new provider, new action class, new data source) triggers re-assessment before release.
 
-**Where the program fell short in 2026.** Three High-tier use cases were live before the standard was adopted: the SOC's AI triage (2025-11), the runbook automation agent (2026-03), and the fraud model (2024). None had been approved by the owners of the environments it acts in (scenario gap 4).
+**Where the program fell short in 2026.** Three High-tier use cases were live before the standard was adopted: the SOC's AI triage (2025-11), the runbook automation agent (2026-03), and the fraud model (2024). None had been approved by the owners of the environments it acts in (group gap 4).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
@@ -81,7 +81,7 @@ The service sits in SYS-G2 and sees every division's logs. It ranks alerts, auto
 **Re-tier triggers:** letting AI-001 act on customer-owned resources (not only group systems); letting AI-005 run any runbook without technician approval again; using AI-008 to set pricing; AI-004 suspending paying accounts without human review.
 
 ## 4. MEASURE
-Results are from monitoring and tests between 2026-05 and 2026-08.
+Results are from monitoring and tests between 2026-05 and 2026-08 (EV-098 to EV-100; the seeded test is P07 evidence EV-C-SI4).
 
 ### 4.1 SOC alert triage and automated response (AI-001)
 | Characteristic | Test / metric | Result | Pass? |

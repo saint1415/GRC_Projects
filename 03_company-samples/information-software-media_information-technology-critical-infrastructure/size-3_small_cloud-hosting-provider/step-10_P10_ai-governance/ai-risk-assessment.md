@@ -8,10 +8,10 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1), because the feature writes generative summaries |
 | Assessor / date | IT Manager (Information Security Officer) with the NOC and Support Manager and the HR Manager, 2026-08-24 to 2026-09-04 |
 | Decision | Approved with conditions by the COO, 2026-09-25 (section 6) |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the identity provider app list and a staff survey, the accounts payable list and the SIEM settings export (EV-046, EV-036, EV-021). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
-- **Accountable owner:** the IT Manager, who owns the SIEM and every AI setting in it. A platform engineer enabled the feature in April 2026 during a trial, with no review or approval. From now on, AI settings may change only through the change process (POAM-015).
+- **Accountable owner:** the IT Manager, who owns the SIEM and every AI setting in it. A platform engineer enabled the feature in April 2026 during a trial, with no review or approval (EV-046). From now on, AI settings may change only through the change process (POAM-015).
 - **Decision authority:** the COO approves High-tier AI use cases, with the Information Security Officer's recommendation. Moderate-risk items in P01 (R-016) sit at the same level.
 - **Policies that apply:**
   - POL-04 4.9: no Restricted or Confidential data in AI tools unless approved and covered by contract terms
@@ -28,7 +28,7 @@
 | Affected people | **Customers:** a missed attack on the company's tools can harm about 430 customers, including 14 banks. **Employees:** user-behavior alerts can lead to questions or investigations of named staff |
 | Data | Inputs: identity provider, cloud tenant, and EDR logs, which include workforce and customer user IDs, IP addresses, and tenant names. Outputs: scores, summaries, and auto-close decisions stored in the SIEM. The vendor's terms allow use of "de-identified telemetry" to improve the service; **the scope of that use has not been reviewed** |
 | Build or buy | Configure: a vendor feature in the SaaS SIEM. The company cannot see or retrain the model, but it sets the thresholds, auto-close rules, and categories |
-| Volume | July 2026: about 9,800 alerts, **71% auto-closed** with no human review (P07 AU-6 finding) |
+| Volume | July 2026: about 9,800 alerts, **71% auto-closed** with no human review (P07 AU-6 finding, EV-AU-6) |
 | Not in scope today | Hypervisor, BMC, network, and RMM logs are not in the SIEM yet (POAM-010). Once they are, the model will score those alert types, which it has never seen from this environment |
 
 **Applicable laws and rules:**

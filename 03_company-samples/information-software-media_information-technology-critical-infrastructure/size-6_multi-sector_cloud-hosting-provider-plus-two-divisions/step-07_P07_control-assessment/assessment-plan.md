@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The HCP's** system-specific controls were assessed because it is the SSP system and carries the top group risk (GR-01). The sample was weighted toward the partner-operator path and the FedRAMP 2026 transition.
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Managed IT was sampled more heavily on governance (PL-1, CA-2) because its inheritance is undocumented (scenario gap 9) and its standards have drifted (gap 8). Payment Processing was sampled on the affiliate paths into its scope (gap 6), not on its own CDE controls, which its QSA tested in April 2026.
+Managed IT was sampled more heavily on governance (PL-1, CA-2) because its inheritance is undocumented (group gap 9) and its standards have drifted (group gap 8). Payment Processing was sampled on the affiliate paths into its scope (group gap 6), not on its own CDE controls, which its QSA tested in April 2026.
 
 ## 2. Controls selected
 **40 control assessments** (33 distinct controls; AC-2, AC-6, AU-6, AU-11, CM-8, IR-6, and SA-9 were assessed in two scopes), **257 determination statements**.
@@ -25,11 +25,11 @@ Managed IT was sampled more heavily on governance (PL-1, CA-2) because its inher
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-6(5), IA-2(1) | 28 | Every division's access; GR-01 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1; Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-3, IR-8, AU-6 | 48 | GR-03, GR-04; scenario gaps 4 and 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-3, IR-8, AU-6 | 48 | GR-03, GR-04; group gaps 4 and 7 | Focused / Comprehensive |
 | Common control (SYS-G3) | CP-9, AU-9, AU-11, SC-12 | 11 | GR-07; immutable backups and log protection | Focused / Focused |
-| HCP (SSP system) | AC-3, AC-6, AC-12, AU-2, CM-3, CM-8, CA-5, CA-7, RA-5, SC-13, SA-9, SI-7, CP-4 | 66 | GR-01, GR-05 (High); gaps 1 and 3 | Comprehensive / Comprehensive |
-| Division sample: Managed IT | AC-2, AC-17, CM-5, AU-11, PL-1, CA-2, IR-6 | 67 | GR-02, GR-06; MS-001, MS-002 (High); gaps 2, 5, 8, 9 | Focused / Focused |
-| Division sample: Payment Processing | SA-9, CM-8, SC-7, AU-6, AC-6 | 22 | PY-001 (High); GR-08; gap 6 | Focused / Focused (10 of 140 connected-to servers) |
+| HCP (SSP system) | AC-3, AC-6, AC-12, AU-2, CM-3, CM-8, CA-5, CA-7, RA-5, SC-13, SA-9, SI-7, CP-4 | 66 | GR-01, GR-05 (High); group gaps 1 and 3 | Comprehensive / Comprehensive |
+| Division sample: Managed IT | AC-2, AC-17, CM-5, AU-11, PL-1, CA-2, IR-6 | 67 | GR-02, GR-06; MS-001, MS-002 (High); group gaps 2, 5, 8, 9 | Focused / Focused |
+| Division sample: Payment Processing | SA-9, CM-8, SC-7, AU-6, AC-6 | 22 | PY-001 (High); GR-08; group gap 6 | Focused / Focused (10 of 140 connected-to servers) |
 | **Total** | **40** | **257** | | |
 
 ## 3. Methods and objects
@@ -47,6 +47,18 @@ Managed IT was sampled more heavily on governance (PL-1, CA-2) because its inher
   - an RMM test job across 12 sandbox clients, to test the approval rule;
   - an outbound connection test and local administrator review on 10 Payment Processing connected-to servers.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-17, effective 2026-10-01. The draft policies were reviewed as drafts, for design only. Every other statement was tested against the controls in force during fieldwork: the 2025 group policies and standards and the division supplements on file at intake (EV-018, EV-062), the group incident response plan (2026 edition, EV-015) and the division notification procedures (EV-016). The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before fieldwork and was tested on samples, configurations, interviews, or live systems | 232 |
+| Design | The statement rests on a draft whose design was reviewed: the Managed IT supplement v2024 compared with the draft group policies v2026 (PL-1). Operation is tested at the 2027-04 follow-up, after the re-issued supplement has run for a quarter | 17 |
+| Not implemented | Nothing existed to test: oversight of the third-party model service (HCP SA-9, 2 statements), documented inheritance for Managed IT (CA-2, 1 statement), a usage restriction and owner authorization for RMM agents in regulated environments (Managed IT AC-17, 2 statements), and binding, oversight and review of the two affiliates as Payment Processing service providers (SA-9, 3 statements) | 8 |
+| **Total** | | **257** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 75 joiner-mover-leaver events and 25 terminations come from the HR roster and identity governance records in EV-002 and EV-007, the partner-operator transfers from the role export in EV-047, and the 10 connected-to servers from the 140 listed in EV-061 and EV-072).
+
 ## 4. Rules of engagement
 - No testing that could affect customers, agencies, clients, or card transactions. HCP tests ran in test tenants; RMM tests ran in a sandbox; the connected-to server review was read-only.
 - No customer data, federal customer data, CUI, or account data left its environment. Screenshots were redacted.
@@ -62,12 +74,12 @@ Managed IT was sampled more heavily on governance (PL-1, CA-2) because its inher
 | Division sample: Payment Processing | 14 | 8 | 22 |
 | **Total** | **212** | **45** | **257** |
 
-**Common controls are strong where they are fully in group hands.** 88 of 102 common statements were satisfied. PAM (AC-6(5)), administrator MFA (IA-2(1)), training (AT-2), backups (CP-9), log protection and retention (AU-9, AU-11), and key management (SC-12) had no findings. The common findings are about **the Managed IT legacy tenant** (AC-2, PS-4), **the AI triage service** (SI-4, IR-4, AU-6, IR-8), and **cross-division incident consistency and notification** (IR-3, IR-6, IR-8), which is scenario gap 7.
+**Common controls are strong where they are fully in group hands.** 88 of 102 common statements were satisfied. PAM (AC-6(5)), administrator MFA (IA-2(1)), training (AT-2), backups (CP-9), log protection and retention (AU-9, AU-11), and key management (SC-12) had no findings. The common findings are about **the Managed IT legacy tenant** (AC-2, PS-4), **the AI triage service** (SI-4, IR-4, AU-6, IR-8), and **cross-division incident consistency and notification** (IR-3, IR-6, IR-8), which is group gap 7.
 
-**The HCP is sound except for one path and one transition.** Tenant isolation (AC-3: 120 of 120 cross-tenant attempts denied), signing (SI-7), logging (AU-2), and the POA&M process (CA-5) were satisfied. AC-6 and AC-12 failed because of the partner-operator path: a partner-operator account ran a command in a tenant outside its client team, and a copied token worked from an unmanaged device (scenario gap 1). Five findings are about the FedRAMP 2026 transition: change types (CM-3), offering inventory (CM-8), reporting (CA-7), remediation by PAIN rating (RA-5), and module documentation (SC-13). Two are about the third-party model service (SA-9), and one about contingency testing (CP-4).
+**The HCP is sound except for one path and one transition.** Tenant isolation (AC-3: 120 of 120 cross-tenant attempts denied), signing (SI-7), logging (AU-2), and the POA&M process (CA-5) were satisfied. AC-6 and AC-12 failed because of the partner-operator path: a partner-operator account ran a command in a tenant outside its client team, and a copied token worked from an unmanaged device (group gap 1). Five findings are about the FedRAMP 2026 transition: change types (CM-3), offering inventory (CM-8), reporting (CA-7), remediation by PAIN rating (RA-5), and module documentation (SC-13). Two are about the third-party model service (SA-9), and one about contingency testing (CP-4).
 
 **Division samples:**
-- *Managed IT:* RMM accounts and approvals (AC-2, CM-5), RMM reach into other divisions (AC-17), log retention (AU-11), supplement drift (PL-1, gap 8), undocumented inheritance and a CUI enclave not assessed since 2024 (CA-2, gaps 5 and 9), and DIBNet reporting resilience (IR-6).
+- *Managed IT:* RMM accounts and approvals (AC-2, CM-5), RMM reach into other divisions (AC-17), log retention (AU-11), supplement drift (PL-1, group gap 8), undocumented inheritance and a CUI enclave not assessed since 2024 (CA-2, group gaps 5 and 9), and DIBNet reporting resilience (IR-6).
 - *Payment Processing:* all five controls had findings, and all trace to the affiliates: no intercompany oversight (SA-9, four statements), the RMM path missing from scope (CM-8), an unlisted outbound connection (SC-7), RMM actions outside log review (AU-6), and RMM administrator rights (AC-6).
 
 **Controls fully other than satisfied** (every statement failed): IR-3 (common), AC-6 and AC-12 (HCP), AU-11 (Managed IT), and AC-6 (Payment Processing). Each has only one determination statement.

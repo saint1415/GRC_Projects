@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (cloud hosting and managed infrastructure provider) |
 | Tier / Vertical | Mid-Market / Information Technology |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. The registry default use case, AI-driven security operations (alert triage), is AI-001 and gets the deepest review |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, the SIEM, ITSM and applicant tracking settings, and the platform engineering model repository (EV-044, EV-059). The coding assistant vendor's data retention terms and the resume screening vendor's model were not established at intake (intake open requests). The registry default use case, AI-driven security operations (alert triage), is AI-001 and gets the deepest review |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-002, and AI-003 |
 | Assessors / date | Director of Security and the Security Operations Manager (security), General Counsel (legal), HR Director (AI-005), VP Platform Engineering (AI-004), with the GRC Manager, 2026-08-24 to 2026-09-11 |
 | Decision | Chief Technology Officer, 2026-09-22; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-All five tools went into use without a security, legal, or bias review (gap 11 in `../00_company-facts.md`). Two need firm conditions before they continue:
+All five tools went into use without a security, legal, or bias review (EV-059). Two need firm conditions before they continue:
 - **AI-001, SIEM alert triage:** auto-closed 68% of commercial-partition alerts in July 2026 with no human review, including privileged-access alerts. It decides which security events nobody looks at, on a platform that hosts federal agencies and 38 banks.
 - **AI-005, resume screening:** ranks applicants with an undisclosed vendor model and no adverse impact testing. Employment is a consequential decision under the repository rubric and under several state laws.
 

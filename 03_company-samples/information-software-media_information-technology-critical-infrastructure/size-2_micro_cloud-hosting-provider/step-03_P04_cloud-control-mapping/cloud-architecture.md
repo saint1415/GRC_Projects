@@ -4,7 +4,7 @@
 **System:** Hosting Control Plane and Customer Portal (HCP), as defined in the SSP (P02) | **Prepared:** 2026-07-31 by the Lead Systems Engineer with a Systems Engineer | **Approved:** Owner, 2026-09-15
 
 ## 1. Diagram
-The company is a cloud provider to its own customers, but it is also a cloud customer. Its hosting platform is company-owned hardware in a colocation facility. Its single cloud workload is one IaaS tenant that runs the customer portal and holds the off-site backup copy. Everything else it uses to run the business is SaaS.
+The company is a cloud provider to its own customers, but it is also a cloud customer. Its hosting platform is company-owned hardware in a colocation facility. Its single cloud workload is one IaaS tenant that runs the customer portal and holds the off-site backup copy. Everything else it uses to run the business is SaaS. The components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); the `evidence_source` column in `cloud-control-map.csv` cites the evidence ID behind each placement.
 
 ```mermaid
 flowchart LR

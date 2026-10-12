@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Cloud Hosting | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 | Confirm alignment; add the FedRAMP 2026 rules as each ruleset is adopted |
-| Managed IT | v2024 | 2024-05 | **Drifted** (scenario gap 8); conflicts in section 4 | Re-issue by 2026-11-30 (POAM-016) |
+| Managed IT | v2024 | 2024-05 | **Drifted** (group gap 8); conflicts in section 4 | Re-issue by 2026-11-30 (POAM-016) |
 | Payment Processing | v2026 | 2026-04 (after the PCI DSS assessment) | Aligned, but missing the intercompany service rules in POL-01 4.8 | Add affiliate oversight by 2026-12-31 (POAM-018) |
 
 ## 3. What each supplement adds
@@ -66,9 +66,9 @@ The 2024 Managed IT standards were written before the 2026 group policies and be
 | Script approval | One approver for any script | Two-person approval for multi-client or regulated-environment jobs (POL-02 4.9) | One phished or careless technician can reach many clients (GR-02) |
 | RMM log retention | Vendor default (90 days) | Logging standard: 1 year searchable (POL-03 4.9 for incidents) | Investigations limited to 90 days (POAM-015) |
 | Termination | Next business day in the legacy tenant | Within 4 hours (POL-02 4.6) | Longer exposure window |
-| Agents on other divisions' systems | Not addressed | Prohibited in regulated environments without owner approval (POL-01 4.14) | Agents on CDE connected-to and enclave servers (gap 2) |
+| Agents on other divisions' systems | Not addressed | Prohibited in regulated environments without owner approval (POL-01 4.14) | Agents on CDE connected-to and enclave servers (group gap 2) |
 | AI use | Not addressed | Registration and approval (POL-01 4.13) | AI runbook automation went live without review (P10 AI-005) |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Gap 9 (POAM-017) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Group gap 9 (POAM-017) |
 
 **Why the drift happened.** Managed IT kept its own identity tenant and standards after the 2022 group consolidation, and the supplement had no owner after a 2025 reorganization. **Fix:** the Managed IT division security and compliance lead owns the supplement, the Group CISO's policy office tracks versions in the policy register, and POL-01 4.5 requires re-alignment within 90 days of any group change and an annual attestation.
 

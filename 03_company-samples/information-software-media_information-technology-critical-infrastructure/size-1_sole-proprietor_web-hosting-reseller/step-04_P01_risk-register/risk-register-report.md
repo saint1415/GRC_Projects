@@ -12,7 +12,7 @@
 | Approved | 2026-09-28 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the Hosting Control Plane and Customer Portal (SYS-01 to SYS-07), the consumer AI chat assistant (SYS-09), the freelance developer's access, and the upstream provider and SaaS vendors the business depends on. Processes come from the BIA (P05).
+**Scope.** The whole business as one system: the Hosting Control Plane and Customer Portal (SYS-01 to SYS-07), the consumer AI chat assistant (SYS-09), the freelance developer's access, and the upstream provider and SaaS vendors the business depends on, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **What makes this business different.** A reseller's tools reach every customer at once. One stolen administrator login can change 120 websites or redirect 230 domains in minutes. Impact is therefore rated on the harm to customers and their shoppers, not only on the company's own revenue.
 
@@ -22,8 +22,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. A risk that could reach many customers' sites at once is never accepted above Moderate.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the control map (P04), the 2025 and 2026 incidents, and a walk through every control plane tool with the consultant.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the control map (P04), the 2025 and 2026 incidents (EV-010, EV-009), and the owner's walk-through of every control plane tool, written on 2026-08-18 and challenged by the consultant on 2026-08-19 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the control plane exports (EV-001, EV-006, EV-033), the credential reviews (EV-012, EV-013), the vulnerability report and incident records (EV-008 to EV-010), the device reviews (EV-014, EV-015), the website and questionnaire answers (EV-019, EV-020), the AI records (EV-007, EV-032), the owner's self-review (EV-036) and, for risks reviewed in pass 2, the control tests. A one-person business keeps no incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -49,6 +49,8 @@
 The Very High and High risks share one cause: **the tools that reach every customer are protected less well than the owner's own email.** Two free settings (MFA on the portal administrator login and on the freelancer's dashboard account) cut R-001 and R-002 within two weeks of adoption. The other two High risks (R-004, R-009) are about who does what when the owner is not watching: hosting-only customers who never patch, and a business with no second operator.
 
 **New risk from the control assessment (P07).** R-012 (forgotten contractor account) was added after P07 testing on 2026-08-19 found a former freelance designer's dashboard account still active nine months after the engagement ended. It was disabled the same day.
+
+**Two passes.** Pass 1 was completed on 2026-08-18 from intake evidence, the BIA worksheet (EV-034) and the owner's walk-through (EV-035). Pass 2 followed the control tests on 2026-08-19: R-012 was added from P07 testing (EV-AC-2), and every risk was reviewed again when the register was completed on 2026-08-21, which is the `last_reviewed` date throughout. The `assessment_pass` column records the pass for each risk.
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-10-15):** portal and dashboard MFA, freelancer role reduction, AI triage settings, correcting the website claims (R-006), and stopping customer data in the consumer AI tool (R-011, by 2026-09-30).

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (cloud hosting and managed infrastructure provider) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** GRC Manager with the Director of Security, the process owners named in `bia.csv`, and the data center operations managers | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Technology Officer, 2026-09-22 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-14 (EV-061), FY2025 revenue report by service line (EV-057), Q2 2026 customer and service volume report (EV-058), the MSA and bank addendum (EV-038, EV-039), the VM placement and replication report (EV-011), and the restore test records (EV-023). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Technology Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: managed private cloud, Government Cloud, managed services, backup and disaster recovery (DR) services, DNS and edge, the NOC and customer support, software engineering, security, and the corporate functions (sales, finance, HR, corporate IT). It rates 16 business processes and puts a dollar value on what an outage costs, using the service level agreement (SLA) credit tiers in the master services agreement (MSA) and the revenue of each service line.
@@ -15,14 +16,14 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company hosts about 24,000 commercial VMs and about 2,100 Government Cloud VMs on 540 company-owned hypervisor hosts in 16 clusters across three colocation data centers: DC-1 (Florida, commercial only), DC-2 (Mid-Atlantic, commercial and government), and DC-3 (Southwest, commercial and government). Customers manage their services through the Hosting Control Plane and Customer Portal (HCP), which runs in a 10-account public cloud landing zone, with separate commercial and government partitions (P02, P04). The company also runs managed services for 410 customers through a remote monitoring and management (RMM) tool, managed backup for 620 customers, and authoritative DNS for hosted domains. See `../00_company-facts.md` sections 1 and 3.
+The company hosts about 24,000 commercial VMs and about 2,100 Government Cloud VMs on 540 company-owned hypervisor hosts in 16 clusters across three colocation data centers: DC-1 (Florida, commercial only), DC-2 (Mid-Atlantic, commercial and government), and DC-3 (Southwest, commercial and government). Customers manage their services through the Hosting Control Plane and Customer Portal (HCP), which runs in a 10-account public cloud landing zone, with separate commercial and government partitions (P02, P04). The company also runs managed services for 410 customers through a remote monitoring and management (RMM) tool, managed backup for 620 customers, and authoritative DNS for hosted domains. Systems are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and suppliers in the [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 Two facts shape the recovery values:
-- **Data protection is shared.** The MSA makes commercial customers responsible for their own VM backups unless they buy the replication tier (about 35% of commercial VMs) or the backup service. Every Government Cloud VM is replicated between DC-2 and DC-3.
+- **Data protection is shared.** The MSA makes commercial customers responsible for their own VM backups unless they buy the replication tier (about 35% of commercial VMs) or the backup service (EV-038, EV-011). Every Government Cloud VM is replicated between DC-2 and DC-3.
 - **DC-1 concentrates risk.** DC-1 holds about 13,000 commercial VMs (54%) and sits in a hurricane-exposed region.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $100 million in annual revenue, about $274,000 a day company-wide. Monthly fees are about $3.83 million for the commercial private cloud and about $1.17 million for the Government Cloud.
+Dollar values are scaled to about $100 million in annual revenue, about $274,000 a day company-wide (EV-057). Monthly fees are about $3.83 million for the commercial private cloud and about $1.17 million for the Government Cloud.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -32,7 +33,7 @@ Dollar values are scaled to about $100 million in annual revenue, about $274,000
 | Safety | Not rated. The company does not operate safety systems; customers' safety impacts are in their own BIAs | | |
 | Reputation | Trade press coverage, loss of bank or agency customers, or an agency questioning FedRAMP reuse | Complaints or churn of a few accounts | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is the SLA credit the outage would trigger, plus lost usage revenue and extra labor, for an outage that lasts the full MTD. The MSA gives 10% of monthly fees below 99.95% monthly availability (about 22 minutes of outage), 25% below 99.0% (about 7.3 hours), and 50% below 95.0% (about 36.5 hours). For example, a 4-hour outage of all commercial hosting costs about 10% of $3.83 million plus 4 hours of revenue, about $404,000. Churn is not included in the per-process figures; it is estimated separately in the enterprise scenario below.
+**How loss at MTD was estimated.** Estimated loss is the SLA credit the outage would trigger, plus lost usage revenue and extra labor, for an outage that lasts the full MTD. The MSA gives 10% of monthly fees below 99.95% monthly availability (EV-038) (about 22 minutes of outage), 25% below 99.0% (about 7.3 hours), and 50% below 95.0% (about 36.5 hours). For example, a 4-hour outage of all commercial hosting costs about 10% of $3.83 million plus 4 hours of revenue, about $404,000. Churn is not included in the per-process figures; it is estimated separately in the enterprise scenario below.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -66,7 +67,7 @@ Dollar values are scaled to about $100 million in annual revenue, about $274,000
 - **FedRAMP reporting is about cadence, not hours.** Missing a monthly deliverable by a few days is a deficiency; missing several threatens the certification. The 1-hour FedRAMP incident report clock depends on BP-10, not BP-11.
 
 ## 5. Key findings
-1. **The commercial control plane does not meet its RTO.** Its only restore test (2025) took 9 hours against a 4-hour RTO. The government partition met its 4-hour RTO in its 2026-06 quarterly test. The difference is practice: the government runbook is rehearsed quarterly, the commercial one is not (gap 8; P01 R-005).
+1. **The commercial control plane does not meet its RTO.** Its only restore test (2025) took 9 hours against a 4-hour RTO. The government partition met its 4-hour RTO in its 2026-06 quarterly test. The difference is practice: the government runbook is rehearsed quarterly, the commercial one is not (EV-023, EV-024; P01 R-005).
 2. **DC-1 is the largest single loss.** It holds 54% of commercial VMs, and 65% of those have no replica. A 5-day loss costs about $1.0 million immediately and risks churn (P01 R-018; P08 `ir-runbook-dc1-site-loss.md`).
 3. **DNS is the highest-cost minute.** A 2-hour DNS or edge outage costs more than a 4-hour hosting outage because it hits every customer at once (P01 R-012).
 4. **Bank customers raise the stakes on both hosting and backup.** 38 banks use hosting, managed services, or backup. A failure of the backup service during a bank's own incident would delay that bank's recovery (BP-08).

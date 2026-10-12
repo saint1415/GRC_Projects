@@ -11,7 +11,7 @@
 | Approved | 2026-09-22: Chief Technology Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units and the 16 processes in the BIA (P05); the Hosting Control Plane and Customer Portal (HCP) in both partitions (P02); the RMM tool, backup platform, and corporate systems (SYS-08, SYS-10, SYS-12, SYS-13); about 260 vendors (SYS-15); and the AI tools in P10. Impact values come from the BIA; vulnerabilities come from the FedRAMP transition and regulatory gap analysis (P03), the cloud control map (P04), and the control assessment (P07).
+**Scope.** All business units and the 16 processes in the BIA (P05); the Hosting Control Plane and Customer Portal (HCP) in both partitions (P02); the RMM tool, backup platform, and corporate systems (SYS-08, SYS-10, SYS-12, SYS-13); about 260 vendors (SYS-15); and the AI tools in P10, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Impact values come from the BIA; vulnerabilities come from the intake evidence, the FedRAMP transition and regulatory gap analysis (P03), the cloud control map (P04), and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,8 +35,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $3 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Information Technology overlay (cloud control planes, identity providers, software supply chain, MSP RMM tools, DNS), CISA advisories on attacks against managed service providers, the BIA, interviews with process owners, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Information Technology overlay (cloud control planes, identity providers, software supply chain, MSP RMM tools, DNS), CISA advisories on attacks against managed service providers, the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the security leads, the data center operations managers and the MDR partner (EV-062). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident records (EV-036), scan and KEV results (EV-014, EV-015), the July 2026 SIEM case export (EV-063), the RMM, PAM and SIEM configuration exports (EV-027, EV-007, EV-025), the SOC 2 exceptions (EV-046), the walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory and contractual, reputation). Risks that reach many customers at once through shared tooling were rated Very High impact.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range built from the BIA values (for example the SLA credit tiers and the DC-1 scenario), used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -78,7 +78,9 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 - **Tools that reach many customers (R-001, R-002, R-011, R-016, R-026).** The RMM tool, the control plane, the template pipeline, and the SIEM triage all have reach across customers. These carry the highest impact ratings.
 - **The FedRAMP transition (R-023, R-030, R-031, R-035, R-036, R-039).** The certification is in place, but the 2026 rules change how it is maintained. The first deadlines (VDR and VER, 2026-12-07) are close.
 - **Recovery at scale (R-004, R-005, R-018).** Backups are isolated and immutable. What is missing is proof of commercial recovery within the RTO and a plan for losing DC-1.
-- **AI adopted without governance (R-016, R-040 to R-043).** Five tools went live or into pilot without review. P10 addresses them.
+- **AI adopted without governance (R-016, R-040 to R-043).** Five tools went live or into pilot without review (EV-059). P10 addresses them.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-026 was added on 2026-08-14 after testing found a 2024 deploy token with write access to the government partition's deployment repository, no expiry, and no inventory record (EV-AC-2, EV-CM-5, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 **Funded in the FY2027 security plan (approved by the CEO 2026-09-22, $2.6 million one-time and $1.05 million a year):**

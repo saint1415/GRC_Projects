@@ -21,7 +21,7 @@
 - High and Very High: must be treated with a dated plan. A risk that could put unsafe product in a customer's home is never accepted at High.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk-through of the shop, the devices, and each SaaS account with the IT technician on 2026-07-28 and 2026-07-29 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk-through of the shop, the devices, and each SaaS account with the IT technician on 2026-07-28 and 2026-07-29 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and router reviews (EV-001, EV-006, EV-008, EV-019), the alert settings and the vendor's SOC 2 report (EV-002, EV-005), the shop walk-through (EV-020), the records (EV-011, EV-012, EV-023), the chatbot records (EV-024, EV-025, EV-033), and the owner's self-review (EV-032). A one-person shop keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.

@@ -16,8 +16,8 @@ Keep a printed copy at home and a copy in the emergency envelope (POL-01 7.6). A
 | Who | Why | When |
 |---|---|---|
 | Contract security consultant | Second pair of hands: preserve evidence, analyze the plugin, help clean sites | Hour 0 |
-| Breach counsel | **None retained today.** The owner names a data breach attorney by 2026-10-31 (P01 R-007) and writes the number on the printed copy. Counsel confirms each breach determination and notice | Hours 0-4 |
-| Cyber insurer | **None today.** A technology errors and omissions policy with a cyber endorsement is quoted; decision by 2026-12-31. If bought, call the carrier's hotline *before* hiring any outside firm | Hours 0-4 |
+| Breach counsel | **None retained today** (EV-029). The owner names a data breach attorney by 2026-10-31 (P01 R-007) and writes the number on the printed copy. Counsel confirms each breach determination and notice | Hours 0-4 |
+| Cyber insurer | **None today** (EV-024). A technology errors and omissions policy with a cyber endorsement is quoted (EV-028); decision by 2026-12-31. If bought, call the carrier's hotline *before* hiring any outside firm | Hours 0-4 |
 | Dashboard vendor support | Confirm whether the vendor's platform itself is compromised; freeze the account; preserve the activity log beyond its 30 days | Hours 0-2 |
 | Upstream hosting provider (abuse and support) | Tell them first, so they treat the company as the victim and do not suspend the whole reseller account for malware (P01 R-004); ask for access logs and pre-incident backups | Hours 1-2 |
 | Freelance web developer (by phone) | Ask whether the developer noticed phishing, a new sign-in, or malware; stop use of the personal laptop; do not wipe it | Hours 1-4 |

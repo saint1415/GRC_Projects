@@ -9,7 +9,7 @@ Hosting Control Plane and Customer Portal (**HCP**), identifier CSC-SYS-001.
 ## 2. System Overview
 The HCP is everything the owner uses to sell, run, and support hosting for about 150 small business customers: about 270 websites, 410 mailboxes, and 230 domains. It is the "control plane" of a one-person reseller. Whoever controls it can create, suspend, or delete any customer's hosting account, change any domain's DNS, sign in to any customer control panel, and push code to the 120 care-plan sites.
 
-Components are SYS-01 to SYS-07 in `../00_company-facts.md` section 3:
+Components are SYS-01 to SYS-07 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv):
 - the customer portal and billing automation (SaaS), which stores the API credentials for the reseller console and the registrar;
 - the upstream provider's reseller console and customer control panels;
 - the registrar reseller account and DNS;
@@ -21,6 +21,8 @@ Components are SYS-01 to SYS-07 in `../00_company-facts.md` section 3:
 The company runs no servers, so most infrastructure safeguards are **inherited from the upstream hosting provider**. The owner is responsible for identities, credentials, contractor access, customer-facing settings, backups beyond the provider's 7 days, and vendor oversight (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv) and restated in P03 section 1.
+
 | ID | Requirement | Citation | Status here |
 |---|---|---|---|
 | FTC Act | Unfair or deceptive acts or practices (reasonable security; truthful security claims) | 15 U.S.C. 45(a), 45(n) | **Applies.** Main requirement set for P03 |
@@ -31,7 +33,7 @@ The company runs no servers, so most infrastructure safeguards are **inherited f
 | C-IT-R04 | DOJ Data Security Program | 28 CFR Part 202 | Does not apply on current facts (P03 section 1.3) |
 | C-IT-R05 | Bank service provider notification | 12 CFR 53.4; 225.303; 304.24 | Does not apply: no bank customers |
 | C-IT-R06 | CIRCIA (proposed only, not in force) | 6 U.S.C. 681b; proposed 6 CFR Part 226 | Tracked only |
-| Contract | Terms of Service; payment processor merchant agreement (annual PCI DSS self-assessment) | Contracts | Applies |
+| Contract | Terms of Service; payment processor merchant agreement (annual PCI DSS self-assessment) | Contracts (EV-018, EV-026) | Applies |
 | Internal | Information Security Policy | POL-01 (P06) | Adopted 2026-09-28 |
 
 ## 4. System Status
@@ -58,9 +60,10 @@ Operational. Planned changes: customer credentials moved into a shared password 
 | Customer account and billing records | Moderate | Low | Low | Contact data and portal sign-ins; billing can wait 72 h (P05) |
 | **HCP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the reasonable-security expectations for a one-person reseller (`control-implementation.csv`). Other Moderate controls are inherited from the upstream provider and the SaaS vendors (evidence: the upstream SOC 2 report, P09) or tailored out because they assume staff, owned networks, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the reasonable-security expectations for a one-person reseller (`control-implementation.csv`). Other Moderate controls are inherited from the upstream provider and the SaaS vendors (evidence: the upstream SOC 2 report, EV-039, reviewed in P09) or tailored out because they assume staff, owned networks, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The accounting SaaS and payment processor (SYS-08) and the consumer AI chat assistant (SYS-09) are outside it.
 - **Inside:** the owner's administrator accounts and settings in SYS-01 to SYS-06, the freelance developer's dashboard account, the customer password spreadsheet and password manager, and the owner's laptop and phone.
 - **Outside (external services):** the upstream provider's servers, network, and data centers; the SaaS vendors' platforms; customers' own site content and site administrator accounts; the freelance developer's personal laptop (a gap: it reaches the dashboard but is outside the owner's control, P01 R-001).
 
@@ -116,7 +119,7 @@ Self-assessed 2026-08-17 to 2026-08-21, with tests on 2026-08-19 run with the co
 - **Customers:** a password with optional MFA in the portal and control panel. MFA will be required for customers who run online stores or hold mailboxes with Social Security numbers, and encouraged for the rest.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and upstream report review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and upstream report review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **API:** application programming interface

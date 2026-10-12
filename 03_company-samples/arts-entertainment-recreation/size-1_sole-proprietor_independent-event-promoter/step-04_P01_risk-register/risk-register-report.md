@@ -20,7 +20,7 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. Any risk to card data is never accepted above Low.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through every SaaS account, the laptop, the phones, and the Room's network with the IT consultant (2026-07-27 to 2026-07-31, EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through every SaaS account, the laptop, the phones, and the Room's network with the IT consultant (2026-07-27 to 2026-07-31, EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and network settings (EV-001, EV-002, EV-011, EV-017 to EV-020), the PCI portal and merchant agreement (EV-009, EV-010, EV-047), the owner's intake account (EV-028), and the searches and reviews run during the self-assessment (EV-040, EV-042, EV-046). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.

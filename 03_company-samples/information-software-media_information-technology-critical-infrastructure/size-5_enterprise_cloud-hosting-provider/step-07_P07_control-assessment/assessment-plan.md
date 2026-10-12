@@ -86,6 +86,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Senior Vice President, Government Cloud; Director of Government Cloud Engineering; Vice President, Software Supply Chain; Vice President, Control Plane Engineering; Director of Security Operations; Director of Identity and Access Management; Director of Key Management and PKI; Director of FedRAMP Compliance; General Counsel; Chief Financial Officer; CISO.
 - **Test:** data analytics over release, grant, session, and alert populations; a deletion attempt on the log archive; a reachability test from the corporate jump zone; a credential test on G1 network and out-of-band devices (with change approval); TLS scans; physical traces of 60 components at both G1 sites; a restore observation.
 
+### What each test could show
+POL-01 to POL-05 (P06) were drafts during fieldwork: POL-02 to POL-05 were approved by the executive risk committee on 2026-09-08 and POL-01 by the risk and technology committee on 2026-09-10, all effective 2026-10-01. Internal Audit therefore tested each control as it operated under the policy hierarchy in force (EV-027), and reviewed the draft policy statements for design only. Any statement the new policies add has not operated yet; its operation is tested at the 2027-01 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 277 (255 Satisfied, 22 Other than satisfied) |
+| Design | The document examined was a draft during fieldwork and was approved on 2026-09-08: the incident response plan v7 (IR-8, 17 statements) and SSP v3.0 (PL-2, 8 statements). Its content was reviewed; its operation is tested at the 2027-01 follow-up. The draft policy statements were reviewed against the policy text and not scored as determination statements | 25 (23 Satisfied, 2 Other than satisfied) |
+| Not implemented | Nothing existed to test: approver signatures on release approvals (AU-10), Ongoing Certification Reports and Quarterly Reviews (CA-07g.[01]), an automated response to unauthorized changes in the release pipeline (SI-07b.[01]), and tamper-evidence checks at G1 receiving (SR-03b.) | 4 |
+| **Total** | | **306** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-006; the fleet automation release records, EV-024; the G1 change records, EV-026; and the vulnerability records, EV-014) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No test could change production or customer resources. Data analytics ran on read-only exports. The reachability test used an audit-owned host in the jump zone with the CISO's written approval.
 - The credential test on out-of-band devices ran in an approved change window with a G1 network engineer present.

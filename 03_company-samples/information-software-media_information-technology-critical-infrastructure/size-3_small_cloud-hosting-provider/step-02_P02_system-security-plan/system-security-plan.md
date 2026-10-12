@@ -14,7 +14,7 @@ The HCP is the set of systems that lets the company sell, run, and manage its th
 - About 2,600 customer user accounts from about 430 business customers, including 14 community banks.
 - 60 employees. Privileged users are the 12 platform engineers, 10 software engineers, 6 managed services engineers, 2 IT staff, and the NOC's 16 staff (limited operator rights).
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-01:** customer portal and public API (company-built)
 - **SYS-02:** control plane orchestration services: provisioning engine, job queue, tenant database, metering
 - **SYS-03:** workforce identity provider (SaaS) with hardware security keys
@@ -37,7 +37,7 @@ The public cloud tenant is described by service category and is vendor-agnostic 
 | Contract | Master services agreement (MSA) | Availability (99.95% private cloud, 99.9% portal); confidentiality; incident notice within 72 hours of confirmation | Applies to every customer |
 | Internal | Security policies POL-01 to POL-05 | P06 | Approved 2026-09-25 |
 
-**Not applicable, with reasons:**
+**Not applicable, with reasons** (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)):
 - **C-IT-R02 (CMMC) and C-IT-R03 (DFARS 252.204-7012):** the MSA prohibits covered defense information and CUI, and no DoD contract clauses have been flowed down to the company.
 - **C-IT-R04 (DOJ Data Security Program, 28 CFR Part 202):** no vendor, employment, or investment agreement gives a country of concern or covered person access to customer data, and all staff and contractors are U.S.-based. The Controller rechecks this at each new vendor contract.
 - **HIPAA:** the MSA prohibits PHI and the company signs no business associate agreements.
@@ -85,6 +85,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adjusted f
 **Baseline:** the FedRAMP Rev5 Class C control list, which FedRAMP aligns with Moderate. It contains **180 base controls and 142 enhancements**. 176 of the base controls are in the NIST SP 800-53B Moderate baseline. Four (CA-8, IR-9, SC-45, SI-6) are FedRAMP additions. The Moderate baseline control CA-5 is not in the Class C list; the company keeps a POA&M anyway (P07). Every base control is documented in `control-implementation.csv`, with enhancements recorded in the base control's row.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - The customer portal, public API, and control plane services, and their databases, build runners, and backups in the public cloud tenant
 - The workforce identity provider tenant configuration
@@ -159,7 +161,7 @@ Assurance levels follow NIST SP 800-63.
 - **Identity proofing:** workforce identities are verified by HR at hire with background checks. Customer administrators are not proofed today. The target is address or account confirmation for new customer administrators. Agency users would be proofed by their agency and would sign in with federal credentials (IA-2(12), IA-8(1); planned).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), FedRAMP readiness gap analysis (P03), cloud control map and diagram (P04), BIA (P05), policies POL-01 to POL-05 (P06), control assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI risk assessment for SIEM triage (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), FedRAMP readiness gap analysis (P03), cloud control map and diagram (P04), BIA (P05), policies POL-01 to POL-05 (P06), control assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI risk assessment for SIEM triage (P10).
 
 ## 13. Acronym List and Glossary
 - **API:** application programming interface

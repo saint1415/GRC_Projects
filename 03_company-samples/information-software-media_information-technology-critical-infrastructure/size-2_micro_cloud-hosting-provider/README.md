@@ -3,9 +3,9 @@
 
 > Cris Santos Company, LLC is a micro business with 7 employees, operating as a cloud hosting provider.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -41,13 +41,14 @@ Sector Risk Management Agency: Department of Homeland Security (CISA); GSA FedRA
 | [Bank service provider notification rule](https://www.ecfr.gov/current/title-12/part-53) | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) | None. |
 | [CIRCIA (pending rule)](https://www.federalregister.gov/documents/2026/05/26/2026-10417/town-hall-meetings-to-provide-input-on-cyber-incident-reporting-for-critical-infrastructure-act) | 6 U.S.C. 681b; proposed 6 CFR Part 226 (89 FR 23644, Apr 4, 2024) | Proposed rule included size-based criteria tied to SBA small-business standards plus sector-based criteria; final scope TBD. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Vendor admin consoles; payroll provider; MSP reports; contracts folder; insurer questionnaire. Evidence register; asset and vendor inventories; obligations register. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business functions (5-10). MTD/RTO/RPO; vendor dependencies. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | Core business system(s) run by the MSP and SaaS vendors. Standard SSP outline with inherited controls from MSP/SaaS noted. System: Hosting Control Plane and Customer Portal (HCP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | SaaS plus any single cloud workload. Customer vs provider responsibility; MSP responsibilities called out. | P02: the system boundary and its controls |

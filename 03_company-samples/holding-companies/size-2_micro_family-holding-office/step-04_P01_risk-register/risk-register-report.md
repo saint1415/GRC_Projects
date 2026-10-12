@@ -24,7 +24,7 @@
 This is the office's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), the March 2026 payment fraud attempt (EV-037), and interviews with all 7 staff and the MSP lead technician (2026-08-03 to 2026-08-14, EV-047). The gap analysis ran in the same fieldwork window, and the two shared findings.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), the March 2026 payment fraud attempt (EV-037), and interviews with all 7 staff and the MSP lead technician (2026-08-03 to 2026-08-14, EV-047). The gap analysis ran in the same fieldwork window, and the two steps shared findings.
 2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the productivity suite, vault, bank and MSP exports, the contracts and insurance policy, the March 2026 request, the guest account comparison of 2026-08-05 (EV-048), and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Theft of every family member's identity documents is rated Very High because of the identity theft, extortion, and personal safety harm.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.

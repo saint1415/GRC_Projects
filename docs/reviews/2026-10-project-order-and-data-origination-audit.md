@@ -259,3 +259,22 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4:** pass-1 R-050 quotes an August P07 result; P07 SA-9 and SR-6 cite P09 reviews dated after fieldwork; P09 cites a shared-administrator finding P07 never made; the SBC upgrade is "ordered", "not yet scheduled" and "due 2026-12-15" in three places.
 - **Size 5 (enterprise telecom carrier):** R-007 says monthly IT scanning while G-073 says weekly; P03 and P09 cite 2026 policies and later deliverables; P09 marks an SL-2 criterion Ready on a system description that PI1.1 says does not exist; the policy hierarchy says 38 statements were tested in 2026 while P07 reviewed the 2026 drafts for design only.
 - **Size 6 (telecom carrier plus two divisions):** P01 and P07 state RMU password changes finished by 2026-09-30, after their approval; P10 cites a 911 rule added in 2026-09 in an August assessment; G-020 faults a CPNI certificate for omitting a pilot that started after it was filed.
+
+### Information Technology (critical infrastructure), 2026-10-12
+
+Six samples, 576 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 26 minutes.
+
+Fixes made during this batch:
+- **All converted samples (65 P01 reports):** the identify step read "The gap analysis (P03) ran in the same fieldwork window, and the two shared findings." The sentence had lost its verb in the pilot reference and was copied into every converted sample. It now reads "and the two steps shared findings". Sizes 4 and 5 of this batch copied the old wording before the fix and were corrected too.
+- **Sizes 1 and 2:** EV-IA-2-1 renamed EV-IA-2(1).
+- **Size 1 (web hosting reseller):** four labels dated inside the fieldwork window but used as starting-state evidence (sign-up form, console account list, laptop downloads, website capture) now cite intake rows.
+- **Size 6 (cloud host plus two divisions):** the P01 method said P03 fed risk identification although P03 ran after P01; it now says P03 followed and used the registers.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in several sizes the SSP or P08 matrix) cites regulatory checks dated after approval.
+- **Size 1:** R-010 cites an upstream SOC 2 review dated after the register; the BIA cites a restore test from the next day; G-004 counts 10 stores on care plans against 9 elsewhere.
+- **Size 2 (micro cloud host):** P03 rates status as of 2026-07-31 but cites July reports received in August; P04 (2026-07-31) cites August tests; P09 lists August MDR reports as available while it was being prepared in August.
+- **Size 3 (small cloud host):** the P07 plan says AC-6, AC-17, IA-2, CM-6 and SC-28 had nothing in place while its own findings show working controls; P04 and P09 cite items dated after them; the BIA's 25% credit tier is about $350K against about $500K of monthly billing.
+- **Size 4 (mid-market cloud host):** pass-1 R-017 quotes the 11% drift figure from the August scan; P07 examined "STD-04 (2026-09)" during August; two P09 vendor reviews are dated after P09 fieldwork.
+- **Size 5 (enterprise cloud host):** P07 examined IR plan v7 and SSP v3.0 approved after fieldwork; DEP-11 says the RMM vendor's SOC report was reviewed while P04 says it was not; DEP-23 counts about 1,050 AQ-1 staff against about 180 technicians in the facts; P02 AC-21 is Implemented through a trust center that is not live.
+- **Size 6:** pass-1 GR-04 and CH-005 cite August items; P10 (2026-09-04) reports approvals "since 2026-10-01"; P07 says the enclave was not assessed since 2024 while P03 cites a "2026 internal review".

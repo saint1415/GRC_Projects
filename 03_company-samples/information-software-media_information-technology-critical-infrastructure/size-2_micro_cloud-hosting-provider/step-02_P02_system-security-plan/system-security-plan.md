@@ -15,7 +15,7 @@ The HCP is everything the company uses to run and reach customer workloads. Cust
 
 At this size the "control plane" is not company-built code. It is a commercial hosting automation and billing product, the hypervisor manager, and a SaaS RMM tool, held together by service accounts. Most of the platform underneath belongs to vendors: the colocation provider, the public cloud provider, and the SaaS vendors. For each control, this plan says what the company does itself, what an outside provider does for it, and what it inherits.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-01:** customer portal and billing (commercial software on one cloud VM)
 - **SYS-02:** hypervisor manager and host baseboard management controllers (BMCs) on the DC-1 management network
 - **SYS-03 (management interfaces only):** 6 hypervisor hosts, 1 storage array, 2 switches, 2 firewalls, 1 backup appliance
@@ -89,6 +89,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adjusted f
 - **Tailored out** at this tier where the control assumes a federal program or a larger staff (for example, a configuration control board or a separate development environment). These are tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - The customer portal VM, its database, and the backup copy in the cloud tenant
 - The hypervisor manager, BMCs, management network, VPN, and the management interfaces of the hosts, storage array, switches, firewalls, and backup appliance at DC-1
@@ -158,7 +160,7 @@ Assurance levels follow NIST SP 800-63.
 - **Identity proofing:** workforce identities are verified by the Operations Manager at hire with background checks. New customer administrators are confirmed by the account owner named in the customer's contract.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), regulatory gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and colocation report review (P09), AI risk assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), regulatory gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and colocation report review (P09), AI risk assessment (P10). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **BMC:** baseboard management controller (out-of-band hardware management interface)

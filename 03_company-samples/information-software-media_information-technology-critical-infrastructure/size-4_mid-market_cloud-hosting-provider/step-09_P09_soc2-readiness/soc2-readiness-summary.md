@@ -6,7 +6,7 @@
 | Tier / Vertical | Mid-Market / Information Technology |
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022) |
 | Categories in scope | Security (CC1-CC9), Availability (A1), Confidentiality (C1), Processing Integrity (PI1, backup service) |
-| Current report | SOC 2 Type 2 (Security, Availability) for the commercial private cloud and the backup service; period 2025-07-01 to 2026-06-30; unqualified opinion with 3 exceptions |
+| Current report | SOC 2 Type 2 (Security, Availability) for the commercial private cloud and the backup service; period 2025-07-01 to 2026-06-30; unqualified opinion with 3 exceptions (EV-060; exception summary EV-046) |
 | Target report | SOC 2 **Type 2** with expanded scope, observation period **2027-01-01 to 2027-09-30** (9 months), report expected by 2027-11-30 |
 | Part A | Company readiness assessment (`soc2-readiness.csv`) |
 | Part B | Vendor SOC 2 review program (`vendor-soc2-review.csv`) |
@@ -83,7 +83,7 @@ The company relies on vendor controls for many inherited controls (P02: 16 Commo
 | **Tier 2** | Limited customer data, no privileged access, supports Moderate or Low processes | Security questionnaire; SOC 2 if available | Every 2 years |
 | **Tier 3** | No customer data and no system access | Contract terms only | At contract renewal |
 
-Of about 260 vendors, 34 have access to customer data or production systems and 14 are Tier 1. The CSV holds all 14 Tier 1 vendors: **9 reviews complete** (one with follow-up open) and **5 overdue**, scheduled by 2026-11-30 (POAM-013).
+Of about 260 vendors, 34 have access to customer data or production systems and 14 are Tier 1 (EV-043; intake [vendor register](../step-00_P00_intake/vendor-register.csv)). The CSV holds all 14 Tier 1 vendors: **9 reviews complete** (one with follow-up open) and **5 overdue**, scheduled by 2026-11-30 (POAM-013).
 
 **Key findings:**
 1. **RMM vendor (VEN-07):** unqualified opinion with 2 exceptions on its own administrator access reviews, never followed up before this review. The contract has no incident notice terms. Combined with the company's own RMM gaps, this is why R-001 is Very High.

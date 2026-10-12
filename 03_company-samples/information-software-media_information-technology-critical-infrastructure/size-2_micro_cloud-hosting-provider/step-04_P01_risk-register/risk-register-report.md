@@ -12,7 +12,7 @@
 | Approved | 2026-09-15 by the Owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business and its key vendors: every system in `../00_company-facts.md` section 3 (SYS-01 to SYS-11), the DC-1 racks, and the vendors that hold or reach customer data: the colocation, public cloud, RMM, PSA, DNS, identity, and MDR providers. Customer VMs and customer servers are not company assets, but the company's tools reach them, so harm to them is counted as impact on the company.
+**Scope.** The whole business and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-11), the DC-1 racks, and the vendors in the [vendor register](../step-00_P00_intake/vendor-register.csv) that hold or reach customer data: the colocation, public cloud, RMM, PSA, DNS, identity, and MDR providers. Customer VMs and customer servers are not company assets, but the company's tools reach them, so harm to them is counted as impact on the company.
 
 **Risk tolerance and who can accept risk:**
 - Very Low and Low: the Information Security Lead (Lead Systems Engineer) may accept.
@@ -22,8 +22,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the cloud mapping (P04), CISA advisories on attacks against managed service providers, and interviews with all 7 staff (2026-07-20 to 2026-07-31).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the cloud mapping (P04), CISA advisories on attacks against managed service providers (EV-043), and interviews with all 7 staff (2026-07-20 to 2026-07-31, EV-041). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the console and configuration exports, the ticket history (EV-018), the contracts folder, the document request (EV-029), the account comparison (EV-042) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a company with about $3,000 of revenue a day, an event that reaches every customer at once, or a bank's covered services, is rated Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,10 +51,12 @@ Status: 16 Open, 6 In progress, 3 Closed (R-010, R-022, and R-023 accepted).
 
 **The common theme is concentration.** A few credentials and tools reach everything: the RMM tool reaches 310 customer servers (R-001), one hypervisor account reaches 260 VMs (R-003), the portal's service account reaches the same VMs from the internet (R-004), and one cloud account holds both the portal and the off-site backups (R-002). At 7 people the company cannot add many people, so the treatments remove shared accounts, split accounts, and add a second approval where one mistake or one stolen password would reach every customer.
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-024 was added on 2026-08-19 after testing found the backup appliance's default administrator password (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
+
 **Risks found or changed during the work:**
-- R-007: the former Support Engineer's VPN account was disabled on 2026-07-22, the day it was found. VPN logs (90 days, back to late April) showed no sign-in after he left; RMM logs only cover 30 days, so use of the shared RMM account before late June cannot be ruled out. The shared RMM password was rotated on 2026-07-23. P07 then found him still on the colocation access list; he was removed on 2026-08-18.
-- R-024: added on 2026-08-19 after P07 testing found the backup appliance still using the vendor's default administrator password. The password was changed the next day.
-- R-013: updated on 2026-08-28 with the P10 test results on the MDR's AI triage.
+- R-007: the former Support Engineer's VPN account was disabled on 2026-07-22, the day it was found (EV-042). VPN logs (90 days, back to late April) showed no sign-in after he left; RMM logs only cover 30 days, so use of the shared RMM account before late June cannot be ruled out. The shared RMM password was rotated on 2026-07-23. P07 then found him still on the colocation access list; he was removed on 2026-08-18 (EV-AC-2).
+- R-024: added on 2026-08-19 (pass 2) after P07 testing found the backup appliance still using the vendor's default administrator password (EV-IA-5). The password was changed the next day.
+- R-013: updated on 2026-08-28 with the P10 test results on the MDR's AI triage (EV-051).
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1, approved by the Owner; about $8,700 one-time and $7,800 a year):**

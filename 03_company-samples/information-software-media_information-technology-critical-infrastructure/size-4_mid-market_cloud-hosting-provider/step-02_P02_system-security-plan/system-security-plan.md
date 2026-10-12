@@ -13,9 +13,9 @@ The HCP is the set of systems that lets the company sell, run, and manage its fi
 **Users:**
 - About 19,000 customer user accounts (about 3,400 customer administrators) from about 2,300 business customers, including 7 federal civilian agencies, 19 defense contractors, and 38 community and regional banks.
 - About 4,000 agency and defense users of the government partition, who sign in with federal credentials or their organization's identity provider through federation.
-- 600 employees and about 40 U.S.-based contractors. **214 engineers hold privileged roles** (86 platform, 58 managed services, 34 site reliability, 22 software engineers with production deploy rights, 14 security). NOC staff hold limited operator rights.
+- 600 employees and about 40 U.S.-based contractors (EV-001, EV-003). **214 engineers hold privileged roles** (86 platform, 58 managed services, 34 site reliability, 22 software engineers with production deploy rights, 14 security; EV-007). NOC staff hold limited operator rights.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 | ID | Component | Hosting and service model | Partition |
 |---|---|---|---|
 | SYS-01 | Customer portal and public API (company-built) | Containers in SYS-04 | Commercial and government deployments |
@@ -92,6 +92,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adjusted f
 **Availability was considered for High.** The BIA gives hosting and DNS 2- to 4-hour MTDs, and 38 banks depend on the platform. The team kept availability at Moderate because agencies run their own continuity plans, government VMs are replicated between DC-2 and DC-3, and no agency has designated the service as supporting a High-impact system. A move to High would need FedRAMP High controls and is not planned.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The host count (540 in 16 clusters) is the CMDB total (EV-010); the 2024 boundary it replaces is in the legacy package (EV-029).
+
 **Inside the boundary:**
 - both deployments of SYS-01 and SYS-02, in the commercial and government production accounts;
 - all 10 accounts of the cloud landing zone (SYS-04), including the CI/CD build, log archive, security tooling, and backup accounts;
@@ -150,7 +152,7 @@ The CMDB holds the full inventory (CM-8). Summary by component class:
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
 **Baseline and tailoring.** The HCP uses the FedRAMP Rev5 Class C control list (rule FRC-CSF-BSL): **180 base controls** and **142 Class C enhancements**. `control-implementation.csv` has one row per base control, with the Class C enhancements listed in each statement and covered by it. 176 of the 180 base controls are in the NIST SP 800-53B Moderate baseline; 4 are FedRAMP additions (CA-8, IR-9, SC-45, SI-6).
-- **One baseline, two partitions.** Every statement says where the government partition and the commercial partition differ. The gaps are mostly in the commercial partition and DC-1 (gap 1, "two-speed security").
+- **One baseline, two partitions.** Every statement says where the government partition and the commercial partition differ. The gaps are mostly in the commercial partition and DC-1 ("two-speed security": EV-006, EV-007, EV-008, EV-016, EV-025).
 - **Organization-defined parameters** are those of the 2024 FedRAMP package. They must be re-assigned under the 2026 rules (FRC-CSF-ACP) and recorded in the Security Decision Record (PL-11; P03).
 - **Not applicable (3):** AC-18 (no wireless inside the boundary), PE-5 (no output devices in the cages), SC-15 (no collaborative computing devices). Each has a written justification.
 - **Mapping to CSF 2.0:** 134 rows use NIST's official CSF 2.0 informative references to SP 800-53 Rev. 5.2.0 (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`); the other 46 rows use an author mapping because NIST gives no CSF reference for those controls.
@@ -172,7 +174,7 @@ The CMDB holds the full inventory (CM-8). Summary by component class:
 
 Inherited controls are evidenced by each provider's FedRAMP package or SOC 2 Type 2 report, reviewed each year (P09 `vendor-soc2-review.csv`).
 
-**Where the 55 Partially implemented controls cluster:** contingency planning (5 of 9 CP controls), incident response (5 of 9 IR), supply chain (5 of 9 SR), and access, audit, and identification in the commercial partition. They trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+**Where the 55 Partially implemented controls cluster:** contingency planning (5 of 9 CP controls), incident response (5 of 9 IR), supply chain (5 of 9 SR), and access, audit, and identification in the commercial partition. They trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-008, EV-025 and EV-027) and to the P07 findings.
 
 ### 10.2 Control assessment status
 - **Co-sourced internal audit firm:** assessed 40 controls (the 34 base controls in the Rev5 Class C annual independent assessment list, IVV-CSF-AIA, plus 6 enhancements tied to top risks) and 185 determination statements from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, `poam.csv`).
@@ -185,7 +187,7 @@ Inherited controls are evidenced by each provider's FedRAMP package or SOC 2 Typ
 - **Defense contractor and commercial customer users.** Government partition customer administrators must use MFA, enforced by the portal. Commercial customer administrator MFA is optional and only 58% are enrolled. That is below the company's standard for accounts that can delete VMs or change DNS, and is tracked as P01 R-007, with MFA required by 2027-03-31. The FedRAMP Secure Configuration Guide (SCG rules) already requires the company to document the secure defaults for privileged customer accounts, and the government partition's guide does.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); FedRAMP transition and regulatory gap analysis (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); the 2024 FedRAMP SSP and its attachments (legacy secure repository); the Government Cloud administrator guide (2025).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); FedRAMP transition and regulatory gap analysis (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); the 2024 FedRAMP SSP and its attachments (legacy secure repository); the Government Cloud administrator guide (2025).
 
 ## 13. Acronym List and Glossary
 - **ATO:** authorization to operate

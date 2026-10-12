@@ -1,0 +1,23 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,DC-1 colocation provider,"Colocation: cage space, power, cooling, physical security, remote hands",SYS-05; SYS-06; SYS-09,None (physical hosting),Colocation contract (no priority-of-service term),Prior-period SOC 2 Type 2 (review notes 2024); current report received 2026-08-07,EV-035; EV-036; EV-037; EV-043; EV-057,Carved-out subservice organization (P09)
+V-02,DC-2 colocation provider,Colocation for the secondary site,SYS-05; SYS-06; SYS-09,None (physical hosting),Colocation contract (no priority-of-service term),Prior-period SOC 2 Type 2 (review notes 2024),EV-035; EV-036; EV-037; EV-043,Current report requested at intake; not received
+V-03,Public cloud provider,"IaaS/PaaS for the portal, control plane, build runners and backups",SYS-04; SYS-01; SYS-02,Tenant metadata; customer credentials; backups,Provider customer agreement,Public shared responsibility documentation; SOC 2 report not reviewed,EV-006; EV-036,
+V-04,Identity provider vendor,Workforce single sign-on and MFA,SYS-03,Workforce identities,Subscription terms,Not reviewed,EV-001; EV-036,
+V-05,Code hosting vendor,Source repository and CI/CD service,SYS-07,Source code; pipeline secrets,Subscription terms,Not reviewed,EV-023; EV-036,
+V-06,RMM vendor,Remote monitoring and management tool,SYS-08,"Agent access to about 1,900 customer servers; technician sessions; audit logs",Vendor terms with no security or incident notice terms,None on file; no review record,EV-010; EV-035; EV-036; EV-037,Audit logs kept 90 days by default
+V-07,SIEM vendor,SIEM with AI-assisted alert triage,SYS-11,Security logs with workforce and customer user IDs and tenant names,"Order form: 90-day retention, U.S. data residency, de-identified telemetry clause",None on file; no review record,EV-021; EV-035; EV-036; EV-037,See P10 AI-001
+V-08,EDR vendor,Endpoint detection and response,SYS-12,Endpoint telemetry,Subscription terms,Not reviewed,EV-022; EV-036,
+V-09,"Ticketing, productivity suite and status page vendors","Tickets, email, chat, files; public status page",SYS-10,Customer tickets and contacts (incidental),Subscription terms,Not reviewed,EV-027; EV-036; EV-047,
+V-10,DDoS scrubbing service,Volumetric attack mitigation; secondary DNS,SYS-09,Customer traffic during mitigation; DNS zones,Service contract,Not reviewed,EV-028; EV-036; EV-037,
+V-11,Upstream carriers (two per site),Internet transit,SYS-09,Customer traffic in transit,Carrier contracts (no priority-of-service terms),Not reviewed,EV-012; EV-036; EV-037,
+V-12,Hardware maintenance vendor,Hardware support with 4-hour replacement,SYS-05; SYS-09,None (escorted cage access),Maintenance contract,Not reviewed,EV-036; EV-037; EV-043,Visits not recorded by the company
+V-13,Authorized hardware resellers,"Server, storage and network hardware",SYS-05; SYS-06; SYS-09,None,Purchase terms,Not reviewed,EV-036; EV-038,
+V-14,Enterprise coding assistant vendor,AI coding assistant (pilot),AI-002,Source code in prompts,Enterprise agreement,Not reviewed,EV-036; EV-046,4 seats; see P10 AI-002
+V-15,Payroll provider,Payroll,HR,Employee payroll data,Subscription terms,Not reviewed,EV-003; EV-036,
+V-16,Payment processor,Card and ACH collection on a hosted page,SYS-13,Customer payment details held by the processor,Processor terms,Not reviewed,EV-036; EV-044,No card data held by the company
+V-17,E-signature vendor,Contract signature,SYS-10,Contracts,Subscription terms,Not reviewed,EV-036,
+V-18,FedRAMP advisor,FedRAMP readiness advisory service,n/a,Security documentation,Engagement letter,n/a,EV-036; EV-042,Not an independent assessor
+V-19,Penetration test firm,Annual external penetration test,SYS-01,Test results,Engagement terms,n/a,EV-026; EV-036,Last test 2026-03
+V-20,Cyber insurer,Cyber insurance; incident response panel,n/a,Incident information,Insurance policy,n/a,EV-034; EV-036,
+V-21,Outside counsel,"Contract, breach and government contracting advice",n/a,Incident and contract information,Retainer,n/a,EV-036,
+V-22,Contract engineers (2),Engineering staff augmentation,SYS-03; SYS-07,Company systems access,"Contractor agreements: confidentiality, U.S. work locations, no security requirements or termination notice",n/a,EV-001; EV-037,

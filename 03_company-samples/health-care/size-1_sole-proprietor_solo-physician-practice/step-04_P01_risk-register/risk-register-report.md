@@ -20,7 +20,7 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. Any risk to patient safety rated High is never accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through the laptop, phone, and SaaS accounts with the IT consultant on 2026-07-21 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through the laptop, phone, and SaaS accounts with the IT consultant on 2026-07-21 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account and device reviews (EV-004, EV-007, EV-008), the vendor records, the AI scribe records, and the owner's self-review (EV-032). A one-person practice keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.

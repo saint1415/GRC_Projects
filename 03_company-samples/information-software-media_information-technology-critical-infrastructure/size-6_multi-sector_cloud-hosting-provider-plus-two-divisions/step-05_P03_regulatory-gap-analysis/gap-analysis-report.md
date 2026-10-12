@@ -12,6 +12,8 @@
 | Sources checked | fedramp.gov Consolidated Rules for 2026 (Important Dates; Updating to 2026 Rules; Rev5 Deadlines; Rev5 rulesets), retrieved 2026-10-05; eCFR (current through 2026-09-23): 12 CFR 53.2, 53.4, 225.301, 225.303, 304.22, 304.24; 16 CFR 314.2 and 314.4; 32 CFR 170.3, 170.4, 170.19, 170.21; 48 CFR 252.204-7012 and 252.204-7019 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 At this tier the first question is not "what does the rule say?" but "which subsidiary does it bind, and in what role?"
 
 ### 1.1 Role of each division
@@ -65,7 +67,7 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
 
 ### 1.4 Payment Processing: FTC Safeguards Rule and PCI DSS
 - **FTC Safeguards Rule.** A financial institution is any institution significantly engaged in activities that are financial in nature under section 4(k) of the Bank Holding Company Act (16 CFR 314.2(h)(1)). Group legal decided in 2023 that the division's money movement for merchants, billers, and consumers is such an activity and applies Part 314 to all consumer and cardholder information it handles. The 314.6 exceptions do not apply (about 14 million enrolled consumers). The FTC notice in 314.4(j) applies to notification events involving at least 500 consumers, no later than 30 days after discovery.
-- **The key finding is about affiliates.** The Cloud Hosting division (SL-1 hosts the CDE) and the Managed IT division (RMM agents on connected-to servers) are service providers to the division. 314.4(f) requires the division to select capable providers, bind them by contract, and assess them periodically. PCI DSS Requirement 12.8 requires the same management of third-party service providers, affiliates included. Neither is in place (scenario gap 6).
+- **The key finding is about affiliates.** The Cloud Hosting division (SL-1 hosts the CDE) and the Managed IT division (RMM agents on connected-to servers) are service providers to the division. 314.4(f) requires the division to select capable providers, bind them by contract, and assess them periodically. PCI DSS Requirement 12.8 requires the same management of third-party service providers, affiliates included. Neither is in place (group gap 6).
 - **PCI DSS is contractual,** through sponsor bank A and the card network rules. Rows list requirement numbers with short labels in our own words; the standard's text is not reproduced.
 - **Money transmission.** The division holds state money transmitter licenses where its bill-pay service requires them and none in New York. Incident notice duties vary by license and are not yet mapped (PY-G46). This analysis treats state licensing generically.
 
@@ -73,7 +75,7 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
 | Requirement | Result |
 |---|---|
 | SEC Reg S-K Item 106 and Form 8-K Item 1.05 | **Applies** to the holding company (P08 disclosure step) |
-| DOJ Data Security Program (28 CFR Part 202) | **Applies to all divisions.** G1 holds government-related data (no volume threshold); SL-1 customers and Payment Processing hold bulk personal financial data (more than 10,000 U.S. persons) and covered personal identifiers (more than 100,000). No covered data transactions are known, but vendor screening misses covered-person status (G-068; scenario gap 10) |
+| DOJ Data Security Program (28 CFR Part 202) | **Applies to all divisions.** G1 holds government-related data (no volume threshold); SL-1 customers and Payment Processing hold bulk personal financial data (more than 10,000 U.S. persons) and covered personal identifiers (more than 100,000). No covered data transactions are known, but vendor screening misses covered-person status (G-068; group gap 10) |
 | CIRCIA | **Not in force.** No final rule as of 2026-09-25. If finalized as proposed, the group would likely be covered as an entity above the SBA size standard in a critical infrastructure sector. Tracked only |
 | State breach notification laws | Each state where affected individuals reside. Florida worked example: Fla. Stat. 501.171, including the 10-day third-party agent notice (G-067) |
 | FTC Act Section 5 | Applies to all divisions' security and AI claims (P10) |
@@ -106,10 +108,23 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
    - CFR rows were read from the eCFR and cite section and paragraph. NIST SP 800-171 Rev. 2 rows are one per family, citing the requirement numbers not fully met.
    - PCI DSS rows list requirement numbers with short labels in our own words, as in the industry's other samples.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5 as an **author mapping**. No official NIST mapping exists from the FedRAMP 2026 rules, 16 CFR Part 314, or PCI DSS to CSF 2.0. For SP 800-171 Rev. 2, the mapping is informed by its Appendix D.
-3. **Evidence.** Interviews; configuration exports; the G1 package and the 2026-03-20 FedRAMP assessment report; contract registers; the 2026-04-30 PCI DSS Report on Compliance; the 2024 SP 800-171 self-assessment; and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, contract registers, plans, the G1 package and the 2026-03-20 FedRAMP assessment report (EV-040), and the 2024 SP 800-171 self-assessment (EV-063), EV-001 to EV-079), the 2026-04-30 PCI DSS Report on Compliance and the SL-1 SOC 2 report for the period ending 2026-06-30 (EV-080, EV-082, intake follow-up), gap analysis interviews with each division (EV-091 Cloud Hosting, EV-095 Managed IT, EV-097 Payment Processing), fieldwork documents and searches (EV-092 to EV-094, EV-096), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale. The `related_risk_ids` column links each gap to the registers.
 
 ## 4. Results
+### 4.0 Group gaps
+Ten gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 10 across this sample.
+1. **Cross-division privileged tooling.** The HCP partner-operator role lets about 1,900 Managed IT engineers run commands on the virtual machines of about 4,100 managed-hosting tenants. The access is standing, not just in time, and it is federated from the Managed IT legacy identity tenant, which accepts push MFA and 12-hour sessions instead of SYS-G1 phishing-resistant MFA and PAM. Run-command actions are logged but there is no alert on volume across tenants (EV-047, EV-060, EV-012; P07 AC-2, AC-6, AC-12, SI-4).
+2. **RMM reach into other divisions.** One RMM tenant (SYS-M1) serves all clients and internal uses. It has agents on 140 Payment Processing settlement-support servers in the CDE's connected-to segment and on the management servers of the DoD CUI enclave (SYS-M2). A script can be sent to many clients with one approver (EV-061, EV-063, EV-072; P07 AC-17, CM-5, SC-7, AC-6).
+3. **FedRAMP 2026 rules transition (G1).** VDR and VER must be followed by 2026-12-07; IEC, SCN, CMU, and others by 2027-01-01. G1 still uses the legacy POA&M model, has no tested incident procedure based on the PAIN rating, no machine-readable Security Decision Record, and no FedRAMP-compatible trust center. The shared corporate services that handle G1 logs and identities (SYS-G1, SYS-G2 and its AI triage service) are not documented as information resources of the offering (EV-039, EV-041, EV-045, EV-093; P07 CM-8, CA-7, RA-5).
+4. **AI alert triage autonomy.** The SOC's AI triage service auto-closes about 64% of alerts and can run 7 SOAR containment actions without a human, across all divisions, including CDE and G1 logs. Its auto-close accuracy has never been validated by division, and it sends alert context to a third-party hosted model service (EV-013; P07 SI-4, IR-4, AU-6, SA-9).
+5. **CMMC Level 2 readiness.** The Managed IT division's own NIST SP 800-171 basic self-assessment in SPRS dates from 2024-02-12, 14 of the 110 requirements are not fully met in the CUI enclave, and its responsibilities as an External Service Provider to about 150 DIB clients are not documented in a responsibility matrix (EV-063, EV-095, EV-058; P07 CA-2). Section 1.3 gives the status of CMMC Phase 2.
+6. **Payment Processing affiliate oversight.** The CDE runs on SL-1 and relies on the Cloud Hosting and Managed IT divisions, but no intercompany agreement carries 16 CFR 314.4(f) safeguards terms or a PCI DSS responsibility matrix (Requirements 12.8 and 12.9) for either affiliate, and the RMM-managed connected-to servers are not in the 2026 PCI DSS scope description (EV-033, EV-071, EV-072; P07 SA-9, CM-8).
+7. **Notification matrix.** No single group matrix covers FedRAMP IEC reports, DFARS 72-hour reports, bank service provider notices (designated contacts on file for 70% of Cloud Hosting's and 64% of Managed IT's bank customers), HIPAA business associate notices, sponsor bank and card network notices, FTC Safeguards notices, and SEC materiality. It has never been exercised across divisions (EV-016, EV-037, EV-059, EV-014; P07 IR-3, IR-6, IR-8).
+8. **Division supplement drift.** The Managed IT supplement was last aligned in 2024. It allows push MFA for technicians, 12-hour sessions, and 90-day RMM log retention, which conflict with 2026 group policy (EV-062; P07 PL-1).
+9. **Common control inheritance.** Documented for Cloud Hosting (FedRAMP package and SOC 2 system description) and Payment Processing (PCI DSS responsibility matrix for group services), but not for Managed IT (EV-019; P07 CA-2).
+10. **DOJ Data Security Program screening.** Two follow-the-sun support vendors with access to support tickets and logs are screened against sanctions lists but not for covered-person ownership or control under 28 CFR Part 202 (EV-027).
+
 ### 4.1 Cloud Hosting (`gap-analysis.csv`)
 | Requirement set | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -159,7 +174,7 @@ The 14 Not met rows are all FedRAMP rows with future maintain dates; none is pas
 
 Of the 27 gaps, 8 are High, 15 Moderate, and 4 Low.
 
-**SP 800-171 status: 96 of 110 requirements fully met.** The 14 not fully met are 3.1.5, 3.1.11, 3.1.12, 3.1.15, 3.2.2, 3.3.1, 3.3.5, 3.4.5, 3.5.10, 3.6.3, 3.11.2, 3.12.1, 3.12.4, and 3.13.1. Most trace to one cause: **RMM agents from the shared tenant on the enclave's management servers** (scenario gap 2). Removing them fixes 3.1.12, 3.1.15, 3.4.5, 3.13.1, and part of 3.1.5 at once. 3.12.4 must be fixed regardless, because it may not be on a POA&M.
+**SP 800-171 status: 96 of 110 requirements fully met.** The 14 not fully met are 3.1.5, 3.1.11, 3.1.12, 3.1.15, 3.2.2, 3.3.1, 3.3.5, 3.4.5, 3.5.10, 3.6.3, 3.11.2, 3.12.1, 3.12.4, and 3.13.1. Most trace to one cause: **RMM agents from the shared tenant on the enclave's management servers** (group gap 2). Removing them fixes 3.1.12, 3.1.15, 3.4.5, 3.13.1, and part of 3.1.5 at once. 3.12.4 must be fixed regardless, because it may not be on a POA&M.
 
 **Not met:** 32 CFR 170.3(e)(2) (no C3PAO assessment planned for the 2027 option periods; with Phase 2 suspended, this is now a voluntary step) and 170.19(c)(2) as an ESP (no responsibility matrix for DIB clients).
 
@@ -177,7 +192,7 @@ Of the 19 gaps, 5 are High, 11 Moderate, and 3 Low.
 **Not met:** 16 CFR 314.4(f)(2) and PCI DSS 12.8, both because the two affiliates are not managed as service providers. **High:** 314.4(c)(1) and PCI DSS Requirement 1 (RMM path into the connected-to segment), and 314.4(f)(1). The division's own controls are strong (its 2026 ROC had no open items); its gaps are about what its sister divisions do inside its scope.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | FedRAMP 2026 transition for G1 (3) | CH | VDR and VER (G-017 to G-028); MAS (G-007 to G-010); IEC (G-011 to G-016); CCM, CPO, SDR, CDS | High | Program by ruleset date; MAS before 2027-02-08 | Government Cloud compliance director | 2026-12-07 to 2027-08-01 |
 | 2 | RMM reach into other divisions (2) | MI, PP | PCI DSS 1, 7, 10, 12.5.2.1; 16 CFR 314.4(c)(1); SP 800-171 3.1.12, 3.1.15, 3.13.1; 32 CFR 170.19(c)(1) | High | Remove agents; separate internal tooling; two-person approval | Managed IT chief operating officer | 2027-01-31 |
