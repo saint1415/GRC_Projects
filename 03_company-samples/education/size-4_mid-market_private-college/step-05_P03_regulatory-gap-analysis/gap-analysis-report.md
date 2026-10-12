@@ -11,6 +11,8 @@
 | Approved | Chief Information Officer, 2026-09-17 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the Program Participation Agreement and SAIG Enrollment Agreement (EV-048), the consumer count (EV-056), the counseling center records (EV-058) and the funding, contracts and facilities summary (EV-059). This section restates the result for the rules analyzed here.
+
 **Primary business line:** postsecondary education (campus and online) funded largely through the federal student aid programs.
 
 | Regulation | Applies? | Basis |
@@ -35,8 +37,8 @@
 1. **Requirements.** Each row is a paragraph of 16 CFR 314.3 or 314.4 at the most granular level the rule uses, or a security-relevant paragraph of 34 CFR Part 99, Part 668, or the SAIG agreement. Summaries paraphrase public-domain regulatory text verified on eCFR (2026-09-23 version) through the eCFR API.
 2. **Requirement type.** The Safeguards Rule has no required/addressable split. Its elements are mandatory ("shall"), with two built-in alternatives: compensating controls for encryption approved by the Qualified Individual (314.4(c)(3)), and reasonably equivalent controls in place of MFA approved by the Qualified Individual in writing (314.4(c)(5)). Neither alternative has been approved today. 314.4(a)(1)-(3) are typed Conditional, because they apply only when the Qualified Individual works for a service provider or affiliate.
 3. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. These are **author mappings**; no official NIST mapping exists for 16 CFR Part 314, FERPA, or 34 CFR Part 668.
-4. **Evidence.** Interviews (CIO, vCISO, Chief Compliance Officer, Registrar, Director of Financial Aid, Bursar, Vice President of Enrollment Management, Dean of Online Learning, Director of Campus Safety, Director of Corporate Partnerships), document review, configuration exports, and walkthroughs at Campus 1 and Campus 3.
-5. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population, using the co-sourced internal audit firm's attribute sampling table (25 items for a moderate-risk control operating many times a year; fewer for small populations):
+4. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-060: configuration exports, documents, and the walk-throughs at Campus 1 and Campus 3 on 2026-06-23 and 2026-06-24, EV-050), gap analysis interviews with the CIO, vCISO, Chief Compliance Officer, Registrar, Director of Financial Aid, Bursar, Vice President of Enrollment Management, Dean of Online Learning, Director of Campus Safety and Director of Corporate Partnerships (EV-063), the samples below (EV-064 to EV-066), the consumer count (EV-067), the AI-003 signed-in mode test (EV-068) and the TLS scan (EV-069). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+5. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were drawn from the populations collected at intake (for example the 142 terminations and 58 transfers in EV-003, the 44 incidents in EV-037 and the about 90 vendor contracts in EV-043), using the co-sourced internal audit firm's attribute sampling table (25 items for a moderate-risk control operating many times a year; fewer for small populations):
    - terminations: 25 of 142; transfers: 25 of 58;
    - refund bank changes: 30 of about 2,400 (2025-26 award year);
    - vendor contracts: 20 of about 90; servicer accounts: 8 of 8;

@@ -82,6 +82,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - restore of a file-service folder from the backup account (passed) and of one integration platform server image (failed)
   - a scope review of the November 2025 penetration test against the risk register
 
+### What each test could show
+The 2026 policies (P06), the standards index, the P08 runbooks and the BIA (P05) were drafts during fieldwork; they were approved on 2026-09-17, and the policies take effect on 2026-10-01. The 2023 policies, standards and plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 175 |
+| Design | The requirement comes from a 2026 draft (the semiannual access review in POL-02; the recovery content of the BIA; the FTC, FSA and state notification criteria in the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 8 |
+| Not implemented | Nothing existed to test | 50 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). The sample populations in section 2 come from intake exports: terminations and transfers from the HR report (EV-003), new accounts from the provisioning logs (EV-004), local LMS accounts from EV-009, servicer accounts from EV-010, administrator accounts from EV-006, applicant files from EV-039, service desk resets from EV-012, SIS and integration changes from EV-021, critical findings from the scan reports (EV-019), vendor contracts from EV-043, and incidents from EV-037.
+
 ## 4. Rules of engagement
 - No testing against real student accounts or live refund files. A test student account with a test bank account was created by the Registrar and Bursar for the step-up and credential stuffing tests and removed afterward.
 - No customer information or education records left college systems. Screenshots were redacted, and evidence was stored in the firm's encrypted workpaper system under its confidentiality agreement.
@@ -133,7 +144,7 @@ Other than satisfied statements by risk: 50 High, 49 Moderate, 7 Low.
 | SI-4 | 8 | 4 | High | POAM-006 |
 | SR-6 | 0 | 1 | High | POAM-020 |
 
-**Fully satisfied (1 control):** CP-9 (daily, encrypted, write-once backups in a separate account and region; 30 of 30 jobs succeeded and the file-service restore passed). It confirms the strongest control listed in the scenario facts.
+**Fully satisfied (1 control):** CP-9 (daily, encrypted, write-once backups in a separate account and region; 30 of 30 jobs succeeded and the file-service restore passed). It confirms the backup design recorded at intake (EV-026).
 
 **Fully other than satisfied (7 controls):** AC-6, CA-8, CP-4, IA-2(2), IA-11, SC-8, and SR-6. Most are single-statement controls where one clear gap decides the result.
 

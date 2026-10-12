@@ -82,6 +82,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Documented controls.** `control-implementation.csv` documents **140 controls**: 129 from the Moderate baseline, 8 High-baseline supplements, and 3 tailored additions. The remaining Moderate-baseline controls and enhancements are fully inherited from the common control catalog (section 10.3) or from the cloud and SaaS providers' SOC 2 reports, and are listed there rather than repeated here. The `csf2_subcategories` column is filled from the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/`; it is blank for control enhancements, which that crosswalk does not list.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-03, SYS-04, SYS-08-INT and SYS-10-FA) and the prior SSP version 1.1 (EV-075).
+
 **Inside the boundary:** the SIS application servers and database in the SRLP workload account (Cloud provider A), the student portal and mobile app back end, the two SAIG transmission servers, the SRLP routes on the shared integration platform, the College LMS tenant configuration and roles, and the financial aid processing center workstations and scanners that capture verification documents.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -196,7 +198,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **SL-1 employer users:** identity is vouched for by the employer administrator under the client agreement; MFA is required and enforced.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-003 (P10), SRLP contingency plan v3, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-003 (P10), SRLP contingency plan v3 (EV-024), interface agreement register (EV-075), enterprise common control catalog (EV-037). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

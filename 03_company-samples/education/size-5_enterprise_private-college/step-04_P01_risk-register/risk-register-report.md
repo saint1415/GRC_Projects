@@ -47,8 +47,8 @@
 Risks to Title IV eligibility (ER-04) or fraud against students (ER-05) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the education sector threat picture (ransomware against colleges, refund fraud, synthetic-identity enrollment), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the education sector threat picture (ransomware against colleges, refund fraud, synthetic-identity enrollment) in the SOC's threat intelligence (EV-076), the BIA (P05), the intake evidence, the 2025 risk assessment (EV-030), the fraud records (EV-077), and risk workshops with the SOC, Identity and Access Management, Student Finance, Financial Aid, Enrollment, the Registrar, Academic Technology, Third-Party Risk, Data and Analytics, Clinical Placements, Marketing and Finance (EV-081). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The Internal Audit assessment (P07) and the AI portfolio review (P10) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-022), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the fraud records, the workshops, and, for risks updated in the second pass, the P07 test results and the P10 tests. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -70,6 +70,8 @@ By threat source type: Adversarial 31, Structural 25, Accidental 8, Environmenta
 By treatment: Mitigate 52, Accept 12, Avoid 2.
 By status: In progress 44, Open 10, Closed (accepted) 12.
 **24 risks are outside tolerance** and each has a dated treatment plan. All 24 are reported to the board risk committee.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-021 was added on 2026-08-28 after testing found vendor default administrator passwords on 4 scanners in the financial aid processing center (EV-IA-5), and the risks that P07 tested or that the AI governance committee reviewed on 2026-08-25 were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 or P10 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

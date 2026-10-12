@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Educational Services | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation or standard, the citation is given.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation or standard, the citation is given.
 
 ## 1. The organization
 | Item | Fact |
@@ -12,19 +12,19 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Students | About 285,000 enrolled: about 238,000 online and 47,000 at the 23 campuses. Adult learners (minimum age 17 at enrollment); no users under 13. About 3.4 million academic records of former students are kept permanently (transcripts) |
 | Revenue | About $4.8 billion a year in receipts (fictional), about $13.2 million per calendar day. Not small under the SBA standard for NAICS 611310 ($34.5 million; 13 CFR 121.201) |
 | Title IV | Participates in the federal student aid programs (Pell Grants and Direct Loans, including Parent PLUS). About 74% of students receive Title IV aid; about $3.2 billion of Title IV funds are disbursed each year. Has a **Program Participation Agreement (PPA)** and a **Student Aid Internet Gateway (SAIG) Enrollment Agreement** with the U.S. Department of Education. Annual Title IV compliance audit and audited financial statements by an independent auditor |
-| Safeguards Rule status | Subject to the FTC Standards for Safeguarding Customer Information (16 CFR Part 314) through its PPA, enforced by Federal Student Aid (FSA Electronic Announcement GENERAL-23-09). The company maintains customer information on about **2.3 million consumers** (current students, former students within the record retention period, parent borrowers, and customers of institutional payment plans and a small institutional loan program), so the 16 CFR 314.6 exception for fewer than 5,000 consumers **does not apply** |
-| FERPA status | An institution that receives funds under Department of Education programs, so FERPA (34 CFR Part 99) applies to education records. The company is also a school official for 14 partner institutions under the SL-2 service line (section 5) |
-| HIPAA status | **Not a covered entity.** The College runs no health care component that bills electronically; nursing programs use simulation labs and external clinical sites. Student wellness counseling is provided by a contracted telehealth vendor; the College receives referral and utilization data, which are education records. PHI excludes health information in education records covered by FERPA (45 CFR 160.103). The employee group health plan is a separate covered entity handled by the benefits program and is outside these deliverables |
-| SEC status | Publicly traded; not a smaller reporting company. Form 8-K Item 1.05 and Regulation S-K Item 106 apply. SOX IT general controls are tested annually for ERP, payroll, and the student billing and revenue systems |
-| Not in scope | COPPA (no users under 13); CIPA (not an E-Rate recipient; E-Rate serves K-12 schools and libraries); CUI and federal contracts (none held; FAR clauses checked in P08); research data (no sponsored research). Payment cards: tuition card payments run through a payment processor's hosted pages under a separate PCI DSS program, noted only |
-| Added at this size | SEC cybersecurity disclosure; SOX IT general controls; two service lines offered to other organizations (SL-1 and SL-2); multi-state operations; an enterprise AI portfolio with a governance committee |
+| Safeguards Rule status | Subject to the FTC Standards for Safeguarding Customer Information (16 CFR Part 314) through its PPA, enforced by Federal Student Aid (FSA Electronic Announcement GENERAL-23-09). The company maintains customer information on about **2.3 million consumers** (current students, former students within the record retention period, parent borrowers, and customers of institutional payment plans and a small institutional loan program), so the 16 CFR 314.6 exception for fewer than 5,000 consumers **does not apply**. Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (N61-R02; EV-056, EV-057) |
+| FERPA status | An institution that receives funds under Department of Education programs, so FERPA (34 CFR Part 99) applies to education records. The company is also a school official for 14 partner institutions under the SL-2 service line (section 5). Determined in the intake obligations register (N61-R01; EV-056, EV-046) |
+| HIPAA status | **Not a covered entity.** The College runs no health care component that bills electronically; nursing programs use simulation labs and external clinical sites. Student wellness counseling is provided by a contracted telehealth vendor; the College receives referral and utilization data, which are education records. PHI excludes health information in education records covered by FERPA (45 CFR 160.103). The employee group health plan is a separate covered entity handled by the benefits program and is outside these deliverables. Determined in the intake obligations register (N61-R05; EV-059, EV-061) |
+| SEC status | Publicly traded; not a smaller reporting company. Form 8-K Item 1.05 and Regulation S-K Item 106 apply. SOX IT general controls are tested annually for ERP, payroll, and the student billing and revenue systems. Determined in the intake obligations register (SEC-8K-1.05, SEC-SK-106, SOX-404; EV-034, EV-031) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): COPPA (no users under 13); CIPA (not an E-Rate recipient; E-Rate serves K-12 schools and libraries); CUI and federal contracts (none held; FAR clauses checked in P08); research data (no sponsored research). Payment cards: tuition card payments run through a payment processor's hosted pages under a separate PCI DSS program, noted only |
+| Added at this size | Rules decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): SEC cybersecurity disclosure; SOX IT general controls. Also: two service lines offered to other organizations (SL-1 and SL-2); multi-state operations; an enterprise AI portfolio with a governance committee |
 
 ## 2. People (role titles only)
 | Role | Security and privacy duties |
 |---|---|
 | Board of directors, with an audit committee and a risk and compliance committee ("board risk committee") | Cyber oversight (Item 106 disclosure). The board risk committee receives the **Qualified Individual's written report** (16 CFR 314.4(i)) and quarterly cyber reporting; the full board is briefed after it |
 | Chief Executive Officer; Chief Financial Officer | Accept Very High risk; take part in materiality determinations with the disclosure committee |
-| Chief Information Security Officer (CISO) | Program owner and **Qualified Individual** under 16 CFR 314.4(a), designated in writing by the board risk committee in February 2024 |
+| Chief Information Security Officer (CISO) | Program owner and **Qualified Individual** under 16 CFR 314.4(a), designated in writing by the board risk committee in February 2024 (EV-028) |
 | Director of Security Operations | Runs the 24x7 SOC (in-house, with managed security service provider overflow); incident commander |
 | Chief Privacy Officer | Privacy program owner; FERPA compliance with the University Registrar; breach determinations |
 | Chief Risk Officer | Enterprise risk management (ERM); owns the enterprise risk register |
@@ -35,52 +35,33 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | Form 8-K Item 1.05 materiality decisions (General Counsel chairs) |
 
 ## 3. Systems
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
 | SYS-01 | Student information system (SIS): commercial higher-education SIS, customer-managed on Cloud provider A. Modules: matriculated admissions records, registration, academic records and transcripts, degree audit, student financials (bursar), and financial aid (ISIR import, packaging, origination, disbursement) | System of record for about 285,000 active and 3.4 million former students. Holds customer information (SSNs, ISIR data, awards, bank details for refunds) and education records |
-| SYS-02 | Learning management system (LMS): vendor SaaS, multi-tenant | The College's tenant (about 9,000 course sections per term) plus 14 partner institution tenants (SL-2). Contract RTO 24 hours |
+| SYS-02 | Learning management system (LMS): vendor SaaS, multi-tenant | The College's tenant (about 9,000 course sections per term) plus 14 partner institution tenants (SL-2). Contract RTO 24 hours (EV-025) |
 | SYS-03 | Student portal and mobile app (company-built) | Cloud provider A managed containers. Registration, grades, account balance, aid offers, refund bank details |
 | SYS-04 | Department of Education connections | Two SAIG transmission servers in Cloud provider A running Department-provided software; individually issued accounts for about 640 financial aid staff in the Department's web-based systems |
-| SYS-05 | Identity platform: workforce SSO, MFA, privileged access management (PAM), identity governance; separate student identity tenant | MFA required for workforce. **Student MFA is optional** except for viewing aid offers |
+| SYS-05 | Identity platform: workforce SSO, MFA, privileged access management (PAM), identity governance; separate student identity tenant | MFA required for workforce (EV-002). **Student MFA is optional** except for viewing aid offers (EV-007) |
 | SYS-06 | Admissions CRM and enrollment marketing platform (SaaS) | About 1.6 million inquiries a year; includes the CRM vendor's inquiry and applicant scoring (AI-002) |
-| SYS-07 | Data and analytics platform on Cloud provider B | Data lake, warehouse, and machine learning platform; hosts the company-built student-success risk model (AI-003). **Receives a nightly copy of ISIR-derived fields** (see gaps) |
+| SYS-07 | Data and analytics platform on Cloud provider B | Data lake, warehouse, and machine learning platform; hosts the company-built student-success risk model (AI-003). **Receives a nightly copy of ISIR-derived fields** (EV-065) |
 | SYS-08 | Multi-cloud estate and colocation | Cloud provider A (SIS, portal, integration, SAIG servers), Cloud provider B (data platform, AI services), and one colocation data center in Florida hosting the legacy document imaging system, the contact-center telephony core, and an offline backup copy |
-| SYS-09 | Enterprise network | SD-WAN for headquarters, 23 campuses, and 4 student support centers; campus Wi-Fi; network access control (NAC) at 18 of 28 sites |
+| SYS-09 | Enterprise network | SD-WAN for headquarters, 23 campuses, and 4 student support centers; campus Wi-Fi; network access control (NAC) at 18 of 28 sites (EV-015) |
 | SYS-10 | Endpoints | About 15,500 workforce laptops and desktops; about 6,800 campus lab and classroom computers |
 | SYS-11 | ERP, HR, and payroll (SaaS) | SOX-relevant; adjunct faculty contracts and pay |
 | SYS-12 | Online proctoring and assessment platform (SaaS) | Webcam-proctored exams for online courses |
 | SYS-13 | Campus safety systems | Physical access control at 23 campuses, a SaaS emergency notification service, CCTV |
-| SYS-14 | Third parties | About 1,100 vendors; 260 handle student records or customer information. Includes a Title IV third-party servicer (verification support and default prevention), a tuition payment plan servicer, the LMS and CRM vendors, a contact-center overflow vendor, and the telehealth counseling vendor |
+| SYS-14 | Third parties | About 1,100 vendors; 260 handle student records or customer information (EV-041). Includes a Title IV third-party servicer (verification support and default prevention), a tuition payment plan servicer, the LMS and CRM vendors, a contact-center overflow vendor, and the telehealth counseling vendor |
 | SYS-15 | AI portfolio (16 use cases) | Governed by an AI governance committee formed in 2025 |
 
 **SSP system (P02):** the *Student Records and Learning Platform (SRLP)*: SYS-01 (SIS, including the student financials and financial aid modules), the College's SYS-02 LMS tenant configuration, SYS-03, SYS-04, and the integration services that connect them, inheriting common controls from the identity platform, the Cloud provider A landing zone, security operations, the network, and endpoint engineering.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
-**In place today:**
-- A mature program aligned to CSF 2.0 that serves as the written information security program (16 CFR 314.3(a))
-- The CISO designated in writing as Qualified Individual; written reports to the board risk committee since 2024
-- Annual enterprise risk assessment tied to ERM (NIST IR 8286)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- 24x7 SOC with SIEM and endpoint detection and response (EDR)
-- MFA for all workforce access; PAM for administrators; quarterly access certification for workforce accounts
-- Immutable backups in separate accounts; annual disaster recovery tests for tier-1 systems
-- Annual external penetration test and quarterly authenticated vulnerability scans
-- Tiered third-party risk program
-- Separation of duties between awarding aid and disbursing funds (34 CFR 668.16(c)(2))
-- Annual SOC 2 Type 2 report for the SL-1 employer platform since 2024
-- SEC Item 106 disclosure in the Form 10-K
-
-**Targeted gaps:**
-1. **Adjunct and partner identity lifecycle.** Adjunct accounts are disabled from a nightly HR contract feed that misses non-renewals between terms. Partner institutions administer their own faculty accounts in their LMS tenants with no attestation.
-2. **Student account takeover and refund fraud.** Student MFA is optional, and refund bank details can be changed in the student portal with email confirmation only. 212 refund redirection cases (about $0.9 million) were confirmed in the 2025-26 award year. Synthetic-identity ("ghost student") applications target the online programs.
-3. **Third-party oversight.** 37 of 260 vendors that handle student data have no current assurance review, and 19 legacy contracts lack Safeguards Rule (314.4(f)(2)) and FERPA direct-control terms.
-4. **FAFSA-derived data in analytics.** ISIR-derived fields are copied nightly to the data platform (SYS-07) and used as model features and in marketing analytics, outside aid administration (HEA section 483 limits).
-5. **AI.** 16 AI use cases, but only 10 have completed committee review. The admissions scoring feature (AI-002) runs in production with fairness testing done only by the vendor and no applicant notice.
-6. **Materiality.** The materiality playbook does not cover Title IV consequences (FSA breach report, corrective action plan, administrative capability) and has not been exercised since the General Counsel and CFO changed in 2026.
-7. **Legacy document imaging.** The colocation imaging system (about 14 million scanned aid verification and tax documents) runs an unsupported operating system with local accounts and sends no logs to the SIEM.
-8. **FERPA reasonable methods at scale.** All 2,100 enrollment advisors can read the academic and account records of every student, not only their applicants (34 CFR 99.31(a)(1)(ii)).
-9. **Recovery.** The SIS met its RPO but recovered in 11.5 hours against an 8-hour RTO in the 2026-04-25 DR test. The LMS contract RTO (24 hours) is longer than the BIA RTO for online instruction (8 hours).
-10. **Retention.** SSNs and aid documents of former students are kept indefinitely; no secure disposal under 16 CFR 314.4(c)(6).
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across the College's administrative units, prior Internal Audit, SOX and Title IV compliance audit workpapers, regulator correspondence, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against the Safeguards Rule, FERPA, Title IV and the other applicable rules** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -94,7 +75,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-06-01 to 2026-07-31 | Enterprise BIA update, risk assessment, and gap analysis (GRC team, second line) |
-| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line) |
-| 2026-09-10 | Results and the Qualified Individual's annual written report to the board risk committee |
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | Enterprise BIA update: interviews and dependency review |
+| 2026-06-01 to 2026-07-31 | Enterprise risk assessment and gap analysis (GRC team, second line; gap analysis evidence sampling completed 2026-08-14) |
+| 2026-06-22 to 2026-07-10 | 2026 annual revision of POL-01 to POL-05 and the policy hierarchy drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line): operating tests of controls in force under the 2025 policy set; design review of the draft 2026 revisions |
+| 2026-09-10 | Results and the Qualified Individual's annual written report to the board risk committee; 2026 policy revisions approved (effective 2026-10-01) |
 | 2026-09-14 | SRLP SSP approved; conditional authorization decision |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 revisions and POA&M items introduced, after at least one quarter of operation |
