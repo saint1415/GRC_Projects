@@ -31,6 +31,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 47 determination statem
 - **Test (2026-07-23):** sign-ins to each SaaS account from a new browser; a sign-in to the router administrator page with the label password; a review of every account in the lock app; download of a standard antivirus test file; encryption status on each device.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork (EV-019). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, paper records and vendor records | 22 |
+| Design | The control is new; only its design could be reviewed | 0 |
+| Not implemented | Nothing existed to test | 25 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-IA-2(1) and so on), with the population each test covered: the five SaaS accounts (EV-002, EV-010, EV-011, EV-023), the laptop and phone (EV-013, EV-015), the router (EV-016), the lock app (EV-017), the paper pad and mailbox (EV-012, EV-018), and the providers in the [vendor register](../step-00_P00_intake/vendor-register.csv). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - Tests run between 10:00 and 14:00, after checkouts and before arrivals. No guest data copied off the devices; screenshots were cropped to settings only. Card numbers found in email were counted, not opened in full.
 - The IT consultant worked only in sessions the owner started and watched.

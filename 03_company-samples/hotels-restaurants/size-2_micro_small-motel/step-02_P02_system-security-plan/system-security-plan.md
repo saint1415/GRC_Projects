@@ -22,6 +22,8 @@ The motel owns almost no infrastructure. Most of the MPPS is vendor SaaS, and a 
 - **SYS-09:** cloud backup of the back office PC and the suite (SaaS, operated by the MSP)
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv).
+
 | ID | Requirement | Citation |
 |---|---|---|
 | N72-R01 | PCI DSS v4.0.1 (contractual, through the merchant agreement) | PCI SSC standard. 2026 validation: SAQ P2PE plus SAQ A after the redesign (P03) |
@@ -74,7 +76,7 @@ SP 800-60's information types describe federal missions and do not fit a motel c
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration change boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the motel controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the motel controls or pays someone to control on its behalf:
 - **Inside:** the motel's PMS tenant configuration and users (SYS-01), the 2 P2PE terminals and the gateway merchant portal (SYS-02), 5 company devices (SYS-03), the motel network (SYS-04), the suite tenant (SYS-05), the lock system (SYS-06), CCTV (SYS-07), and the backup subscription (SYS-09).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers, the gateway and P2PE provider's systems, the OTAs, the MSP's remote management platform, the lock vendor's remote support service, the accounting and payroll services (SYS-08), and the dynamic pricing tool (SYS-10, assessed in P10).
 - **Personal device:** the Owner-Manager's phone runs the PMS, email, and CCTV apps. It is outside the boundary but must follow POL-02 (passcode, MFA apps, no card data).
@@ -120,11 +122,11 @@ By responsibility: 19 system-specific (the motel), 23 hybrid (the motel with a v
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the motel relies on | Evidence | What the motel must still do |
 |---|---|---|---|
-| PMS vendor | Platform security, card vault encryption (SC-28), backups (CP-9), lockout (AC-7), activity logs (AU-2, AU-11) | SOC 2 Type 2 report reviewed 2026-08-20 (P09); PCI DSS service provider AOC (2026-02) | Complementary user entity controls: user provisioning and removal, least-privilege roles, MFA, activity report review, workstation protection |
-| Payment gateway and P2PE provider | Encryption at the terminal, tokenization, processing (SC-8) | Gateway AOC (2026-01); P2PE solution listing confirmed 2026-07-15; P2PE Instruction Manual | Follow the Instruction Manual: device list, inspections, approved key entry only |
-| Productivity suite vendor | Platform security, encryption, lockout, sign-in logs | Vendor documentation | Accounts, MFA, mailbox sharing, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve changes, review reports monthly, yearly MSP security review (P01 R-020) |
-| Door lock vendor | Lock software support | None | Written remote access and incident notice terms (P01 R-001) |
+| PMS vendor | Platform security, card vault encryption (SC-28), backups (CP-9), lockout (AC-7), activity logs (AU-2, AU-11) | SOC 2 Type 2 report (EV-028) reviewed 2026-08-20 (P09); PCI DSS service provider AOC (2026-02, EV-028) | Complementary user entity controls: user provisioning and removal, least-privilege roles, MFA, activity report review, workstation protection |
+| Payment gateway and P2PE provider | Encryption at the terminal, tokenization, processing (SC-8) | Gateway AOC (2026-01) and P2PE Instruction Manual (EV-052); P2PE solution listing confirmed 2026-07-15 (EV-048) | Follow the Instruction Manual: device list, inspections, approved key entry only |
+| Productivity suite vendor | Platform security, encryption, lockout, sign-in logs | Vendor documentation (EV-029) | Accounts, MFA, mailbox sharing, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), device lock (AC-11) | Monthly MSP reports (EV-012); MSP service contract (EV-017); P07 evidence requests (EV-057) | Oversight: approve changes, review reports monthly, yearly MSP security review (P01 R-020) |
+| Door lock vendor | Lock software support | None (support invoices only, EV-041) | Written remote access and incident notice terms (P01 R-001) |
 
 **Inherited does not mean done.** All five of the PMS vendor's complementary user entity controls are open gaps at the motel: account removal (AC-2, PS-4), least privilege (AC-6), MFA for all users (IA-2(1)), activity review (AU-6), and protection of the workstations that reach the PMS (SI-3, SC-7).
 
@@ -135,7 +137,7 @@ Assessed 2026-08-03 to 2026-08-05 by an independent consultant. See P07 `assessm
 PMS administrators, the two manager mailboxes, and the backup console use a password and a phone authenticator app. Front office users sign in to the PMS with a password only, and the shared front desk mailbox and Windows login are shared. That is not acceptable for users who can display card numbers. Single sign-in with MFA for every PMS user and named accounts for every clerk are due 2026-10-31 (P01 R-002, R-005, R-007). Guests use the PMS vendor's booking engine; their identity is outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and PMS vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and PMS vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

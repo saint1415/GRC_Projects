@@ -7,13 +7,14 @@
 | Primary standard | PCI DSS v4.0.1 (PCI Security Standards Council, published 2024-06-11). A contractual standard that reaches the inn through the payment facilitator's sub-merchant agreement, **not law** (N72-R01) |
 | Short checks | FTC Act Section 5, 15 U.S.C. 45(a) and (n), with the FTC Rule on Unfair or Deceptive Fees, 16 CFR Part 464 (N72-R02); Fla. Stat. 509.101(2), 501.171(2) and (8) (N72-R04); FTC Disposal Rule 16 CFR 682.3 (N72-R03, not applicable) |
 | Assessment dates | 2026-07-20 to 2026-07-24 (self-assessment) |
-| Assessor | Owner-innkeeper, with the on-call IT consultant (under a confidentiality agreement since 2026-07-17). Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner-innkeeper, with the on-call IT consultant (under a confidentiality agreement since 2026-07-17). Evidence is the intake record and the owner's self-review (EV-035), checked on screen where possible |
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
 
 ### 1.1 Does PCI DSS reach a one-person inn?
-**Yes, by contract.** PCI DSS is not a law, and PCI SSC sets no size exemption. The inn accepts cards as a **sub-merchant of a payment facilitator** built into its innkeeping software. The facilitator's sub-merchant agreement (fictional terms) requires the inn to comply with PCI DSS, to validate every year by self-assessment questionnaire (SAQ) in the facilitator's portal, and to report a suspected compromise within 24 hours. The inn has never validated, and the facilitator has charged a $19.95 monthly non-compliance fee since March 2024. Card-brand merchant levels are set by the brands and were not verified here, so no level number is stated; the facilitator decides how the inn validates.
+**Yes, by contract.** PCI DSS is not a law, and PCI SSC sets no size exemption. The inn accepts cards as a **sub-merchant of a payment facilitator** built into its innkeeping software. The facilitator's sub-merchant agreement (fictional terms) requires the inn to comply with PCI DSS, to validate every year by self-assessment questionnaire (SAQ) in the facilitator's portal, and to report a suspected compromise within 24 hours (EV-009). The inn has never validated, and the facilitator has charged a $19.95 monthly non-compliance fee since March 2024 (EV-007). Card-brand merchant levels are set by the brands and were not verified here, so no level number is stated; the facilitator decides how the inn validates.
 
 **Independent, not franchised.** No brand mandates the inn's systems or runs a PCI program for it. *FTC v. Wyndham Worldwide Corp.*, 799 F.3d 236 (3d Cir. 2015), affirmed that the FTC may treat unreasonable cybersecurity as an unfair practice under 15 U.S.C. 45(a); the practices alleged there (card data in clear text, default passwords, no network separation, weak incident response) appear in this inn today at a much smaller scale (row G-068).
 
@@ -22,15 +23,15 @@ PCI SSC's v4 SAQ family includes SAQ A, A-EP, B, B-IP, C-VT, C, P2PE, SPoC, and 
 
 | Channel | Today's design | SAQ tested | Result |
 |---|---|---|---|
-| Booking engine | Vendor-hosted page on the innkeeping vendor's own address; the website only links to it; token returned | SAQ A | Fits on its own |
-| Card-present | Mobile reader in a PCI-listed validated P2PE solution (listing checked 2026-07-21) | SAQ P2PE | Fits on its own, if the P2PE Instruction Manual is followed |
-| Phone bookings | Keyed into the innkeeping payment screen on the family laptop, or written on a paper pad first | SAQ C-VT | **Not eligible:** the laptop is a general-purpose family device, and card data is kept on paper with security codes |
-| Card authorization forms | Emailed forms kept in the consumer email account | Any SAQ short of D | **Not eligible:** card data stored electronically |
-| OTA virtual cards | Full numbers displayed in the innkeeping software and OTA portals | SAQ A | **Not eligible while numbers are displayed on inn devices** |
+| Booking engine | Vendor-hosted page on the innkeeping vendor's own address; the website only links to it; token returned (EV-005) | SAQ A | Fits on its own |
+| Card-present | Mobile reader in a PCI-listed validated P2PE solution (listing checked 2026-07-21, EV-036) | SAQ P2PE | Fits on its own, if the P2PE Instruction Manual is followed |
+| Phone bookings | Keyed into the innkeeping payment screen on the family laptop, or written on a paper pad first (EV-013, EV-018, EV-020) | SAQ C-VT | **Not eligible:** the laptop is a general-purpose family device, and card data is kept on paper with security codes |
+| Card authorization forms | Emailed forms kept in the consumer email account (EV-012) | Any SAQ short of D | **Not eligible:** card data stored electronically |
+| OTA virtual cards | Full numbers displayed in the innkeeping software and OTA portals (EV-001, EV-003, EV-010) | SAQ A | **Not eligible while numbers are displayed on inn devices** |
 
 **Result for the current design: SAQ D for Merchants.** That is the full merchant questionnaire for a six-room inn, including vulnerability scans and penetration testing (rows G-051, G-052). The rows below assess the inn against that full scope so that every gap is visible.
 
-**Decision: change the design, then validate.** By 2026-10-31 the inn (a) sends phone guests and third-party payers a pay-by-link from the facilitator instead of keying or writing card numbers, (b) shreds the pad pages and purges the email forms, (c) charges OTA virtual cards by token without displaying them, and (d) keeps the booking engine fully outsourced and card-present on the P2PE reader. The inn then validates for 2026 on **SAQ A plus SAQ P2PE**. The facilitator agreed by email on 2026-08-14 (fictional), and the attestations are due 2026-12-31. This removes the laptop, the router, and most of the 62 gap rows from card data scope rather than fixing them one by one. The rows that remain are answered from the official SAQ A and SAQ P2PE forms.
+**Decision: change the design, then validate.** By 2026-10-31 the inn (a) sends phone guests and third-party payers a pay-by-link from the facilitator instead of keying or writing card numbers, (b) shreds the pad pages and purges the email forms, (c) charges OTA virtual cards by token without displaying them, and (d) keeps the booking engine fully outsourced and card-present on the P2PE reader. The inn then validates for 2026 on **SAQ A plus SAQ P2PE**. The facilitator agreed by email on 2026-08-14 (fictional; EV-040), and the attestations are due 2026-12-31. This removes the laptop, the router, and most of the 62 gap rows from card data scope rather than fixing them one by one. The rows that remain are answered from the official SAQ A and SAQ P2PE forms.
 
 ### 1.3 Short checks
 - **FTC Act Section 5** applies with no size threshold. Broken privacy or security promises can be deceptive (45(a)(1)); unreasonable security can be unfair when it causes or is likely to cause substantial injury that consumers cannot reasonably avoid and that is not outweighed by benefits (45(n)).
@@ -44,7 +45,7 @@ PCI SSC's v4 SAQ family includes SAQ A, A-EP, B, B-IP, C-VT, C, P2PE, SPoC, and 
 1. **Requirements.** PCI DSS was broken into its 12 principal requirements and their requirement groups, plus the appendices, with 3.3.1, 6.4.3, and 11.6.1 at the defined-requirement level because they decide scope or carry the largest risk. Labels are short topics written for this analysis, not PCI SSC text, because PCI DSS is copyrighted. Read the requirement text in the official standard.
 2. **FTC, Part 464, and Florida rows** cite the text verified on uscode.house.gov, eCFR (2026-09-23), the Federal Register, and the Florida Senate's 2026 statutes.
 3. **Crosswalk.** CSF 2.0 and SP 800-53 columns are an **author mapping**. No official NIST mapping from PCI DSS v4.0.1 was used.
-4. **Evidence.** Self-attested by the owner and checked on screen with the IT consultant: router and device settings, user lists, the facilitator portal and fee statements, AOCs, a desk drawer review and house walkthrough (2026-07-21), and a mailbox search (2026-07-22).
+4. **Evidence.** Current state was established from the intake evidence (portal exports, account, device, router and lock settings, the facilitator portal and fee statements, the sub-merchant agreement, the office review on 2026-07-15, and the owner's and relief innkeeper's written answers), the AOCs received on 2026-07-22 (EV-031, EV-032), and the owner's written self-review, checked on screen with the IT consultant from 2026-07-20 to 2026-07-22 (EV-035). Fieldwork added the desk drawer review and house walkthrough (2026-07-21, EV-034), the P2PE listing check (EV-036), a mailbox search (2026-07-22, EV-037), and the fee display screenshots (EV-038). Where the control tests had run (2026-07-23), their results are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

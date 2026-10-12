@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-11, the paper reservation pad and binder, the house and its door locks, and the contracted services (cleaning service, bookkeeper, IT consultant) and key vendors. Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-11, the paper reservation pad and binder, the house and its door locks, and the contracted services (cleaning service, bookkeeper, IT consultant) and key vendors, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as they are. Any risk to guest safety (room access) rated High is never accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), current attacks on lodging (fake OTA messages and payment links), and a walk through the house, the laptop, the phone, and each SaaS account with the IT consultant on 2026-07-21.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, current attacks on lodging (fake OTA messages and payment links), and a walk through the house, the laptop, the phone, and each SaaS account with the IT consultant on 2026-07-21 (EV-034). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and router reviews (EV-002, EV-010, EV-011, EV-013 to EV-016), the facilitator's records (EV-007), the stored card data (EV-012, EV-018), the written intake answers (EV-020, EV-021), and the walk-through (EV-034). A one-person inn keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,7 +51,9 @@ The three High risks share one cause: **the inn's most valuable accounts are pro
 - **Design and contract actions by 2026-12-31:** SAQ A plus SAQ P2PE validation (R-003), relief innkeeper account and sealed recovery codes (R-010), AI add-on conditions (R-013, by 2026-10-15).
 - **Accepted (Low):** R-011 (innkeeping outage; vendor recovery objectives meet the BIA) and R-012 (hurricane; the SaaS systems are reachable from anywhere).
 
-**Loop from the control assessment (P07).** Testing on 2026-07-23 found two things the walkthrough had missed: the lock installer's administrator account was still active in the lock app (disabled the same day; added to R-005), and the router's internet-side remote management was on (turned off the same day; added to R-006).
+**Loop from the control assessment (P07).** Testing on 2026-07-23 found two things the walkthrough had missed: the lock installer's administrator account was still active in the lock app (disabled the same day; added to R-005; EV-SA-9), and the router's internet-side remote management was on (turned off the same day; added to R-006; EV-CM-6).
+
+**One pass.** The register was completed on 2026-07-24 from intake and self-assessment evidence. The control tests ran on 2026-07-23, inside the same week, so this pass already reflects them in R-005 and R-006. No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 ## 5. Approval
 Owner-innkeeper, 2026-08-31: approved all treatment plans and the two acceptances. Next full review July 2027, or sooner after a new system or vendor, a change in how payments are taken, or an incident.

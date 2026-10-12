@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (independent 38-unit roadside motel) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Assistant Manager (Security and Privacy Lead) with the Owner-Manager, the Night Auditor, the Head Housekeeper, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** Owner-Manager, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-045), FY2025 profit and loss (EV-026), PMS occupancy and stay statistics (EV-027), gateway transaction report (EV-008), backup console history (EV-015), PMS vendor SOC 2 report (EV-028), MSP service contract (EV-017), internet service contract (EV-038). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner-Manager.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the motel, how long each can be down, and how much data each can lose. It supports:
@@ -13,10 +14,10 @@ This BIA lists every business function of the motel, how long each can be down, 
 No law requires a motel to keep a contingency plan. PCI DSS v4.0.1 asks for an incident response plan that covers business recovery and continuity (requirement group 12.10), and the merchant agreement expects card payments to be taken only in approved ways during an outage. Those, and the motel's own cash flow, are the drivers here.
 
 ## 2. System and business description
-One Florida motel beside an interstate exit: 38 units, 7 employees, a front desk open 24 hours, about 5,900 stays a year, and about 30% of room-nights from work crews. Nearly everything runs in vendor SaaS: the all-in-one cloud PMS with its booking engine, channel manager, point-of-sale module, and card vault (SYS-01), the payment gateway (SYS-02), the productivity suite (SYS-05), and the accounting and payroll services (SYS-08). On site are the front desk and back office PCs, a laptop, and 2 tablets (SYS-03), the office and guest networks (SYS-04), the door lock system (SYS-06), and CCTV (SYS-07). The MSP runs IT. See `../00_company-facts.md` sections 3 and 7.
+One Florida motel beside an interstate exit: 38 units, 7 employees, a front desk open 24 hours, about 5,900 stays a year, and about 30% of room-nights from work crews. Nearly everything runs in vendor SaaS: the all-in-one cloud PMS with its booking engine, channel manager, point-of-sale module, and card vault (SYS-01), the payment gateway (SYS-02), the productivity suite (SYS-05), and the accounting and payroll services (SYS-08). On site are the front desk and back office PCs, a laptop, and 2 tablets (SYS-03), the office and guest networks (SYS-04), the door lock system (SYS-06), and CCTV (SYS-07). The MSP runs IT. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a day.
+Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a day (EV-026).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -46,15 +47,15 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
 |---|---|---|---|
-| SYS-01 Cloud PMS (SaaS) | Reservations, profiles, folios, register, booking engine, channel manager, point-of-sale module, card vault | PMS vendor's replication and backups (SOC 2 report states RPO 15 minutes and RTO 4 hours; see P09) | BP-01 to BP-07 |
+| SYS-01 Cloud PMS (SaaS) | Reservations, profiles, folios, register, booking engine, channel manager, point-of-sale module, card vault | PMS vendor's replication and backups (SOC 2 report states RPO 15 minutes and RTO 4 hours, EV-028; see P09) | BP-01 to BP-07 |
 | SYS-02 Payment gateway and 2 P2PE terminals | Card authorization and settlement | Transactions held at the gateway; terminals can run in standalone mode | BP-01, BP-03, BP-06, BP-07 |
 | SYS-03 Endpoints | Front desk PC, back office PC, laptop, 2 tablets | No local business data by design, except the lock database on the back office PC | All |
 | SYS-04 Motel network and internet | Firewall, office network, staff and guest Wi-Fi, one internet line | Firewall configuration backed up by the MSP | All |
 | SYS-05 Productivity suite (SaaS) | Email, shared front desk mailbox, files | Vendor resilience; nightly copy to SYS-09 | BP-06, BP-08 |
-| SYS-06 Door lock system | Lock software and database on the back office PC; USB encoder at the front desk | **Excluded from the nightly backup until 2026-08-12** (found in P07 testing on 2026-08-04); never restore-tested. Rebuilding from the lock vendor takes 1 to 2 days | BP-01 |
+| SYS-06 Door lock system | Lock software and database on the back office PC; USB encoder at the front desk | **Excluded from the nightly backup until 2026-08-12** (found in P07 testing on 2026-08-04, EV-CP-9; added 2026-08-12, EV-058); never restore-tested. Rebuilding from the lock vendor takes 1 to 2 days | BP-01 |
 | SYS-07 CCTV | 10 cameras and a recorder | 21 days on the recorder; not backed up | Property security |
 | SYS-08 Accounting SaaS and payroll service | Books, payroll, PIN time clock | Vendor-hosted | BP-08 |
-| SYS-09 Cloud backup (MSP-operated) | Nightly copy of the back office PC and the suite, 30 days of versions | **No restore test since setup in 2024** | BP-06, BP-08 |
+| SYS-09 Cloud backup (MSP-operated) | Nightly copy of the back office PC and the suite, 30 days of versions | **No restore test since setup in 2024** (EV-015) | BP-06, BP-08 |
 | People | 7 employees; Owner-Manager lives on site | Cross-training: the Owner-Manager and Assistant Manager can work every front desk shift | All |
 
 **Vendor dependencies:**
@@ -62,9 +63,9 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 a
 |---|---|---|
 | PMS vendor | BP-01 to BP-07 | SOC 2 Type 2 report reviewed (P09): RTO 4 h and RPO 15 min meet BP-02 and BP-03 but **not the 2-hour RTO of BP-01**. Paper arrivals and offline key encoding cover the gap |
 | Payment gateway and P2PE solution provider | BP-03 (and card payments in BP-01, BP-06, BP-07) | Service provider AOC (2026-01); standalone terminal mode; no availability commitment in the merchant agreement |
-| MSP | Recovery of every on-site system; operates the backup | Contract has a 4-business-hour response time and **no recovery time commitment** |
+| MSP | Recovery of every on-site system; operates the backup | Contract has a 4-business-hour response time and **no recovery time commitment** (EV-017) |
 | Door lock vendor | Key encoding if the lock software or database is lost | Remote support only; no written recovery commitment |
-| Internet service provider | Every SaaS function and the terminals | One line; no failover |
+| Internet service provider | Every SaaS function and the terminals | One line; no failover (EV-038) |
 | Productivity suite vendor | BP-06 (crew correspondence), BP-08 | Vendor service commitments (standard terms) |
 | 3 OTAs | About half of transient bookings | OTA extranets reachable from any phone |
 

@@ -1,0 +1,29 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Resort PMS vendor,Resort PMS with card vault,SYS-01,Guest data; card data (vault),Contract with no recovery commitments; PCI DSS responsibility matrix,"PCI DSS service provider AOC dated 2026-02; SOC 2 Type 2 (Security and Availability), 12 months ending 2026-03-31",EV-035; EV-036,SOC 2 system description states RTO 4 hours and RPO 15 minutes
+V-02,Franchisor (national hotel brand),"Brand PMS, central reservation system, loyalty, gateway and property firewalls for Hotels 3 to 6",SYS-02; SYS-03; SYS-06,Guest and loyalty data; card authorizations,4 franchise agreements; no PCI DSS responsibility matrix,Summary letter on its PCI DSS compliance; no AOC,EV-037; EV-039,Brand's network vendor holds standing access to the property firewalls; brand continuity plan not provided
+V-03,Resort payment gateway and P2PE solution provider,"Front desk authorizations, tokens and settlement",SYS-03,Card data,Merchant agreement; PCI DSS responsibility matrix; P2PE Instruction Manual,Service provider AOC dated 2026-03; validated P2PE solution listing,EV-029; EV-032; EV-035; EV-037,
+V-04,Resort 1 cloud POS and P2PE provider,Outlet POS at Resort 1,SYS-04,Card data (encrypted at the device),Contract,Service provider AOC dated 2026-03; SOC 2 Type 2,EV-032; EV-037,
+V-05,Resort 2 legacy POS vendor,POS support and remote access at Resort 2,SYS-04,Card data (administrative access to the POS server),Service contract,None on file,EV-014; EV-037; EV-042,Always-on remote tool with shared vendor logins and no MFA
+V-06,Booking engine vendor,Direct bookings and payment form,SYS-05,Card data; guest data,Contract,Service provider AOC dated 2026-01; SOC 2 Type 1,EV-037; EV-051,Payment form embedded by iframe on the resort websites
+V-07,Channel manager vendor,Online travel agency connectivity and virtual cards,SYS-05,Card data (virtual cards); reservations,Contract,Service provider AOC dated 2025-04; no SOC 2 report,EV-037,
+V-08,Door lock vendor,Resort lock servers support; cloud lock service for Hotels 3 to 6,SYS-08,Guest names and room assignments,Service contract,Not established at intake,EV-014; EV-042,Always-on remote tool with shared vendor logins and no MFA
+V-09,SD-WAN managed service provider,SD-WAN at 7 sites,SYS-06,Network traffic,Contract,Not established at intake,EV-012; EV-034,
+V-10,Identity provider vendor,Single sign-on and MFA,SYS-09,Workforce identities,Subscription terms,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-034; EV-038,
+V-11,Public cloud provider,IaaS and PaaS for the landing zone,SYS-10,Guest CRM; data warehouse; call recordings; backups,Customer agreement,"SOC 2 Type 2, 6 months ending 2026-03-31; service provider AOC",EV-034; EV-038,
+V-12,Productivity suite vendor,"Email, files, chat and the enterprise AI assistant (AI-006)",SYS-11,"Email and files, including card forms in mailboxes",Subscription terms,Not established at intake,EV-034; EV-050; EV-053,
+V-13,Managed security service provider (MSSP),24x7 EDR and SIEM monitoring,SYS-12; SYS-07,Security logs,"Contract: 24x7 monitoring, call within 30 minutes on high severity",SOC 2 Type 2,EV-022; EV-035,
+V-14,Revenue-management system vendor,Pricing forecasts and rate publishing (AI-001),SYS-13,Aggregated stay data; guest names in the extract today,Contract allows pooling into a vendor benchmark,SOC 2 report (type reviewed in P09),EV-034; EV-042; EV-053,
+V-15,Guest chatbot vendor,Chatbot (AI-002),SYS-14,"Guest questions, contact details, transcripts",Contract with no transcript retention or card-masking terms,Not established at intake,EV-034; EV-042; EV-053,
+V-16,Contact center platform vendor,"CRO calls, recording capture and AI transcription (AI-003)",SYS-15,Call audio including spoken card data,Contract,SOC 2 Type 2; no AOC,EV-037; EV-042; EV-049,
+V-17,"HR, payroll and applicant tracking vendor","HR, payroll, time clocks and applicant screening (AI-004)",SYS-16,Employee data; Social Security numbers; finger templates; applications,Contract,SOC 2 report,EV-034; EV-035; EV-054,
+V-18,Video management software vendor,CCTV and video analytics (AI-005),SYS-17,Video,License and support terms,Not established at intake,EV-034; EV-053,Facial recognition feature available but disabled
+V-19,Guest Wi-Fi and TV vendor,Guest internet and in-room entertainment,Guest Wi-Fi and TV networks,Guest network traffic,Contract,Annual network separation letter,EV-012; EV-042,
+V-20,Web agency,Resort website builds and releases,SYS-10 websites,Website content and code,Contract with no secure development terms,None on file,EV-042; EV-051,
+V-21,Email service vendor,Marketing email campaigns,SYS-10 CRM,Guest contact details,Contract,Not established at intake,EV-034,
+V-22,Staffing companies (2),"About 260 housekeeping, valet and security workers",SYS-07 tablets,Guest property access,Contracts requiring background checks,No confirmation of background checks on file,EV-042,
+V-23,Shredding vendor,Paper destruction,n/a,Paper records,Service agreement,Monthly certificates of destruction,EV-034; EV-044,
+V-24,Copier lessor,Leased copiers,n/a,Scan images stored on copiers,Lease,Lease return records,EV-034; EV-044,2 copiers returned in 2026
+V-25,Acquirer,Card acceptance for 10 merchant accounts,SYS-03; SYS-04; SYS-05,Card transactions,Merchant agreement,n/a,EV-029; EV-031,2026 SAQ D due 2026-12-31
+V-26,Cyber insurance carrier,Cyber policy and incident response panel,n/a,Incident information,"Policy: $10 million limit, $250,000 retention",n/a,EV-041,Hotline notice before incident vendors are engaged
+V-27,Co-sourced internal audit firm,Annual IT audit; P07 assessment,n/a,Evidence under engagement,Engagement letter with independence statement,n/a,EV-025; EV-042,
+V-28,QSA firm,2026 SAQ D support and scoping review,n/a,Evidence under engagement,Engagement letter,n/a,EV-042,
