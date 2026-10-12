@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed private, for-profit college) |
 | Tier / Vertical | Mid-Market / Educational Services |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. AI-001 and AI-002 are the registry's "AI admissions and student-success risk scoring" use case |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the intake AI tool discovery (identity provider app list, accounts payable, purchasing cards, the LMS integration register and a department heads survey; EV-057), the card spend report (EV-046) and the data warehouse feature list (EV-025). Whether staff or students use other AI tools, and what data they enter, was not established at intake (open request); the inventory covers the 5 tools found. AI-001 and AI-002 are the registry's "AI admissions and student-success risk scoring" use case |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for AI-003 and AI-004 |
 | Assessors / date | Provost and Chief Academic Officer (academic), Director of Institutional Research (bias testing), vCISO and Information Security Manager (security), Chief Compliance Officer and General Counsel (privacy and legal), 2026-08-24 to 2026-09-11 |
 | Decision | Chief Information Officer and Provost, 2026-09-17; High-tier decisions approved by the President and CEO |
 
 ## 1. Summary
-All five tools were adopted by departments without a security, privacy, or bias review (gap 9). None is out of control, but each needs conditions:
+All five tools were adopted by departments without a security, privacy, or bias review (EV-057). None is out of control, but each needs conditions:
 - **AI-001, admissions scoring:** decides whom admissions calls first, and it pushes older applicants and applicants from lower-income ZIP codes down the queue.
 - **AI-002, early alert:** uses FAFSA-derived fields, which the HEA does not allow for this purpose.
 - **AI-003, the website and portal assistant:** gave wrong aid and transfer-credit answers, and in testing its signed-in mode showed one student another student's balance.
