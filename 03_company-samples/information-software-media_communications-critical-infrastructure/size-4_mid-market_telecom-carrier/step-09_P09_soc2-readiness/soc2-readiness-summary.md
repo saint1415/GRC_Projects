@@ -10,12 +10,12 @@
 | Target report | SOC 2 **Type 2**, observation period 2027-04-01 to 2027-09-30 (6 months), report expected by 2027-11-30; interim Type 1 as of 2027-03-31 |
 | Part A | Readiness assessment (`soc2-readiness.csv`), which also serves as the evidence map |
 | Part B | Vendor SOC 2 review program (`vendor-soc2-review.csv`, an added file) |
-| Prepared | 2026-09-04 by the vCISO, the Security Manager, and the Director of Business Services, using P02, P05, P06, and P07 evidence; accepted by the COO 2026-09-17 |
+| Prepared | 2026-09-04 by the vCISO, the Security Manager, and the Director of Business Services, using the intake evidence ([step-00](../step-00_P00_intake/evidence-register.csv)) and P02, P05, P06, and P07 evidence; accepted by the COO 2026-09-17 |
 
 ## 1. Why SOC 2 for this organization
 **Most of the company is not a SOC 2 service organization.** Residential and business customers buy transmission (voice, broadband, data circuits). They rely on SLAs and the FCC rules, not on a SOC report, and the obligations that bind those services are regulatory (P03).
 
-**Business Services is different.** About 600 business customers run their phone systems on the company's hosted voice platform, about 1,900 customer sites are configured and monitored through the managed SD-WAN service, and colocation customers place equipment in the CO-1 data hall. Those customers rely on the company's controls for their own operations, and several (a regional hospital system, two county governments, a school district, and three credit unions) asked for a SOC 2 Type 2 report in 2026 RFPs and renewals. For these services the company is a service organization, and SOC 2 is the right assurance tool. P01 R-044 records the commercial risk: about $2 million to $6 million of annual Business Services revenue depends on it.
+**Business Services is different.** About 600 business customers run their phone systems on the company's hosted voice platform, about 1,900 customer sites are configured and monitored through the managed SD-WAN service, and colocation customers place equipment in the CO-1 data hall. Those customers rely on the company's controls for their own operations, and several (a regional hospital system, two county governments, a school district, and three credit unions) asked for a SOC 2 Type 2 report in 2026 RFPs and renewals (EV-047). For these services the company is a service organization, and SOC 2 is the right assurance tool. P01 R-044 records the commercial risk: about $2 million to $6 million of annual Business Services revenue depends on it.
 
 **Categories.**
 - **Security (required) and Availability** were requested by every customer; the 99.99% SLA is a service commitment.

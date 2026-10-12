@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-08, the four tower sites, paper sign-up forms in the home office, and the contracted services (upstream fiber provider, wholesale VoIP provider, billing vendor, network consultant, tower contractor, bookkeeper). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-08, the four tower sites, paper sign-up forms in the home office, and the contracted services (upstream fiber provider, wholesale VoIP provider, billing vendor, network consultant, tower contractor, bookkeeper), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner-operator owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. A High risk to 911 calling or to CPNI is never accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), an external port check of the network's public addresses, and a walk through the SaaS accounts, laptop, router, and SITE-1 and SITE-3 with the network consultant.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the gap analysis self-review (EV-031), and a walk through the SaaS accounts, laptop, router, and SITE-1 and SITE-3 with the network consultant on 2026-07-21 (EV-030). The external port check of the network's public addresses and the other control tests (P07, 2026-07-23) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the portal, controller and router exports (EV-006, EV-009 to EV-011), the laptop review (EV-013), the agreements folder and document search (EV-017, EV-026), the AI assistant records (EV-004, EV-032, EV-033), the owner's self-review (EV-031) and, for risks reviewed in pass 2, the control tests. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -45,7 +45,9 @@
 
 Two of the three High risks share one cause: **the two places CPNI can be reached from outside (the router and the VoIP portal) were protected by a password alone.** Both fixes cost little: a firmware update and filter change in one maintenance window, and turning on MFA the vendor already offers. The third High risk (R-009) is about availability, not security. It costs real money, so its due date is set for after the next budget year, and the generator's automatic transfer switch comes first.
 
-**New risk from the control assessment.** R-015 (vendor-default credentials) came from the P07 test on 2026-07-23, which found a SITE-3 access point with the default password and SNMP community string. The owner changed them the same day; the remaining work is checking every device.
+**New risk from the control assessment.** R-015 (vendor-default credentials) came from the P07 test on 2026-07-23, which found a SITE-3 access point with the default password and SNMP community string (EV-IA-5). The owner changed them the same day; the remaining work is checking every device.
+
+**Two passes.** Pass 1 was completed on 2026-07-22 from intake evidence, the BIA worksheet (EV-029), the risk walk-through (EV-030), the gap analysis self-review (EV-031) and the AI assistant test records (EV-032, EV-033). Pass 2 followed the control tests on 2026-07-23: R-015 was added on 2026-07-24 from P07 testing, and every risk was reviewed again that day, which is the `last_reviewed` date throughout. The `assessment_pass` column records the pass for each risk.
 
 ## 4. Treatment summary
 - **Free or low-cost fixes first (by 2026-09-30):** VoIP portal MFA, router firmware and filters, deleting old CDR exports, adopting the P08 runbook and locating the FCC reporting facility.

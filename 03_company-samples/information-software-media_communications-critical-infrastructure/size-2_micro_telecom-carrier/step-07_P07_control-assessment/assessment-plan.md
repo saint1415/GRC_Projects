@@ -37,6 +37,17 @@ Micro tier scope: 10-15 controls. **13 controls, 93 determination statements.** 
   - a review of 10 BSS tickets where a customer asked for call detail
   - a restore of one OLT configuration to the spare chassis in the warehouse
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 38 |
+| Design | The control is new (a draft policy); its design was reviewed. Operation is tested at the 2027-02 follow-up | 2 |
+| Not implemented | Nothing existed to test | 53 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 staff and the March 2026 termination in EV-001, and the network accounts with the OLT and EMS account list in EV-009).
+
 ### MSP and consultant evidence requested
 The MSP runs office IT and the consultant configures the network, so evidence came from them. Requested on 2026-08-03 with a one-week deadline:
 

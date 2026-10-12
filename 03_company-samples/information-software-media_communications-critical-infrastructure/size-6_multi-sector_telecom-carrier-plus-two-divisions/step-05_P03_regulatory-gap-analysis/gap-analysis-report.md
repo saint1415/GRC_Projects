@@ -13,6 +13,7 @@
 | Sources checked | eCFR full text (point in time 2026-09-23) for 47 CFR 64.2003-64.2011, 1.50007, 17.6, 17.47-17.49, and FAR 52.204-21, -23, -24, -25, -26; Federal Register API through 2026-10-05; govinfo for 47 U.S.C. 222, 15 U.S.C. 1681a and 1681m, and SEC Release 33-11216 (88 FR 51896) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
 
 ### 1.1 Telecom Carrier: the CPNI rules apply, through the voice services
 The CPNI rules bind "telecommunications carriers," defined by reference to 47 U.S.C. 153, and "shall include an entity that provides interconnected VoIP service" (47 CFR 64.2003(o)). The Carrier's 9 ILECs provide local exchange and toll service as common carriers, and the CLEC and ILECs provide interconnected VoIP (about 1.1 million lines). There is **no size threshold** in 64.2001-64.2011. The only carve-outs are service-specific: 64.2010(h) applies only to CMRS providers (no wireless service).
@@ -84,10 +85,23 @@ Submarine cable landing license rules (C-COMMUNICATIONS-R04; no cable or SLTE); 
 ## 3. Method
 1. **Requirements.** Each paragraph of 47 CFR 64.2005-64.2011, 1.20000-1.20006, 4.9, 4.18, 1.50007, 17.6, 17.47-17.49, and FAR 52.204-21, -23, and -25 that imposes, permits, or limits conduct became one row, cited to the paragraph (public-domain text; short quotes only). Contract and state-law rows summarize the duty in plain words.
 2. **Crosswalk.** Regulatory rows carry an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5; NIST has published no official mapping for these rules. Benchmark rows (G-048 to G-061) use NIST's official CSF 2.0 to SP 800-53 reference mapping (a selection of the listed controls).
-3. **Evidence.** Interviews across the three divisions; configuration exports; live tests of the portal, the chatbot (2026-07-22), and the legacy billing portal (2026-07-23); a sample of 120 recorded care calls (2026-07-09); CPNI certifications and CALEA filings; FAR clause and subcontract review; RMU inventory and alarm center records; and P07 results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts and filings, EV-001 to EV-063, including the CPNI certifications and CALEA filings, EV-034 and EV-036, and the RMU inventory and alarm center records, EV-059 and EV-060), gap analysis interviews in each division (EV-072 Carrier, EV-073 Engineering, EV-074 Tower), fieldwork documents and tests (EV-075 to EV-084: the Engineering campaign file, EV-075; a sample of 120 recorded care calls on 2026-07-09, EV-076; live tests of the chatbot on 2026-07-22, EV-079, and of the legacy billing portal on 2026-07-23, EV-080; the FAR subcontract review, EV-082; and the 2026 lighting records, EV-083), and P07 results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale (Very Low to Very High). Where a rule applies to several operating companies, a row is Met only if it is met for all of them.
 
 ## 4. Results
+
+### 4.0 Group gaps
+Ten gaps cross divisions or sit in shared services or acquired operations. They are numbered here and cited as group gaps 1 to 10 across this sample.
+1. **Network management plane in the acquired regions.** The 2 operating companies acquired in 2024 still manage about 38% of their access-network elements (OLTs, DSLAMs, cabinet switches) and 22 SBCs with shared local administrator accounts. TACACS+ with MFA covers only core routers there, and network element logs from these regions do not reach the SIEM (EV-041, EV-008; P07 IA-2, SI-4, AU-6).
+2. **Shared service assurance platform.** The Carrier's service assurance platform also hosts the Engineering MNO tenant and the Tower Alarm Monitoring Center tenant. About 410 Engineering operators and 60 Tower operators hold a legacy role that can read Carrier trouble tickets, which contain CPNI. No intercompany CPNI agreement limits affiliate access, and a 2026 Engineering sales campaign used Carrier enterprise customer service data without a CPNI approval check or a campaign record (EV-040, EV-030, EV-075; P07 AC-3, AC-6, AC-21, PT-3).
+3. **Edge device patching.** 9 of 140 SBCs run releases past vendor support. The 14-day target for known exploited vulnerabilities on internet-facing devices was met for 81% of network devices in 2026, against 97% for IT assets (EV-043, EV-011; P07 SI-2, RA-5).
+4. **CPNI online authentication in the chatbot.** An "account recovery in chat" feature piloted from 2026-06-02 let customers who could not sign in reach account details after giving the account number and the last 4 digits of the SSN (64.2010(c), (e)). It was disabled on 2026-08-07 (EV-079, EV-086; P07 IA-8).
+5. **CALEA filings after the 2024 acquisition.** The 2 acquired operating companies' SSI policies were not refiled within 90 days of the merger (1.20005), and their senior officer appendix still names a former employee (EV-036; P07 PL-2).
+6. **Tower lighting monitoring.** About 1,100 legacy RMUs from the 2023 tower portfolio acquisition use cellular modems with public IP addresses. There is no written fallback to daily observation (17.47(a)(1)) if the monitoring platform is down, and the outage record (17.49) is kept in spreadsheets (EV-059, EV-060; P07 CP-2, IA-5, CM-8).
+7. **Managed Network Operations remote access.** SYS-E1 keeps persistent site-to-site tunnels into 64 customer networks and into the Carrier management plane in the acquired regions, and its remote access gateways use 6 shared administrator accounts. 37 customers require a SOC 2 Type 2 report by the end of 2027 (EV-054, EV-053; P07 AC-17, IA-5, SC-7).
+8. **Multi-regulator notification not exercised.** One incident could trigger CPNI law enforcement and customer notices (with the 7-business-day hold), state breach notices, an SEC materiality decision, CALEA compromise reports, NORS and 911 special facility notices, FAA lighting outage reports, and Engineering customer contract notices. The group matrix has never been exercised (EV-021, EV-009; P07 IR-6, IR-8).
+9. **Division supplement drift and inheritance.** The Tower division still follows standards from its 2023 acquisition, last aligned to group policy in 2023. Common control inheritance is documented for the Carrier and Engineering but not for the Tower division (EV-014, EV-015; P07 PL-1, CA-2).
+10. **Supply chain screening.** Covered equipment screening (FCC Covered List; FAR 52.204-25) for equipment that Engineering buys for the Carrier, its customers, and federal projects is a manual check on the purchase requisition, with no record of the result (EV-029; P07 SR-3).
 
 ### 4.1 Telecom Carrier (`gap-analysis.csv`)
 | Requirement set | Rows | Met | Partially met | Not met | N/A |
@@ -128,10 +142,10 @@ Of the 12 gaps, 1 is **High** (NE-G26, remote access terms), 9 Moderate, and 2 L
 | Group policy alignment | 1 | 0 | 0 | 1 | 0 |
 | **Total** | **15** | **4** | **7** | **1** | **3** |
 
-Of the 8 gaps, 1 is **High** (TF-G02, integrity of the automatic alarm system and the missing fallback), 6 Moderate, and 1 Low. **Not met:** TF-G15 (supplement drift and undocumented inheritance, scenario gap 9).
+Of the 8 gaps, 1 is **High** (TF-G02, integrity of the automatic alarm system and the missing fallback), 6 Moderate, and 1 Low. **Not met:** TF-G15 (supplement drift and undocumented inheritance, group gap 9).
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Affiliate access to and use of Carrier CPNI (2) | Carrier, Engineering, Tower | 64.2005(a)(2); 64.2007(b); 64.2009(c); 222(c)(1) | High | Remove the legacy role; intercompany CPNI agreement; affiliate campaigns through the Carrier tool with opt-in; register | Carrier Senior Vice President, Regulatory and Compliance | 2026-12-31 |
 | 2 | Management plane and remote access in the acquired regions and SYS-E1 (1, 3, 7) | Carrier, Engineering | 64.2010(a); CSF PR.AA-01, PR.IR-01, PR.PS-02; customer contracts | High | Named AAA accounts with MFA; SBC replacement; brokered SYS-E1 sessions; SIEM onboarding | Group CISO | 2027-03-31 |

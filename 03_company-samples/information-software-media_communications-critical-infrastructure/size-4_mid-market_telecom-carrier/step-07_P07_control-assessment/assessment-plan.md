@@ -70,6 +70,18 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - an EICAR test file on 5 endpoints (all quarantined)
   - a BSS query of call detail views without a matching care ticket
 
+### What each test could show
+The 2026 policies (P06) and the P08 runbooks were drafts during fieldwork. They were approved on 2026-09-17, and the policies take effect on 2026-10-01. The 2024 policies and the 2024 incident response plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 191 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the PSAP, NORS and CALEA compromise steps in the P08 runbooks); its design was reviewed. Operation is tested at the 2027 Q3 second independent assessment | 2 |
+| Not implemented | Nothing existed to test | 41 |
+| **Total** | | **234** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). The sample populations in section 2 come from intake exports where they existed before fieldwork: terminations and transfers from the HR report (EV-003), new BSS accounts from EV-006, privileged accounts from EV-005, access elements and cabinet switches from the OSS inventory (EV-009), changes from EV-016, incidents from EV-024, critical findings from the scan reports (EV-012), and vendors with access from the vendor access register (EV-043).
+
 ## 4. Rules of engagement
 - **No service impact.** Network tests ran only in approved maintenance windows with the NOC watching. No test touched 911 trunks, the voice core call path, or SYS-10. Login tests used read-only commands.
 - **No CPNI left company systems.** Screenshots were redacted, and evidence was stored in the firm's encrypted workpaper system.

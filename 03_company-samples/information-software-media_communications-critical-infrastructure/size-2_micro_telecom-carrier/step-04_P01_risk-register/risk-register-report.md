@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner and General Manager |
 
 ## 1. Scope and risk framing
-**Scope.** The whole company and its key vendors: every system in `../00_company-facts.md` section 3 (SYS-01 to SYS-10), the office, the network hut, and the fiber plant, and the vendors that hold CPNI or run part of the network: the BSS vendor (which also runs the AI assistant), the hosted voice platform provider, the middle-mile provider, the network engineering consultant, the MSP, the monitoring service, the answering service, and the CALEA trusted third party.
+**Scope.** The whole company and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-10), the office, the network hut, and the fiber plant, and the vendors in the [vendor register](../step-00_P00_intake/vendor-register.csv) that hold CPNI or run part of the network: the BSS vendor (which also runs the AI assistant), the hosted voice platform provider, the middle-mile provider, the network engineering consultant, the MSP, the monitoring service, the answering service, and the CALEA trusted third party.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
@@ -22,8 +22,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), a walkthrough of the office and the hut on 2026-07-22, and interviews with all 7 employees, the MSP lead technician, and the network engineering consultant (2026-07-20 to 2026-07-31).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence ([evidence register](../step-00_P00_intake/evidence-register.csv)), the gap analysis (P03), a walkthrough of the office and the hut on 2026-07-22 (EV-049), and interviews with all 7 employees, the MSP lead technician, and the network engineering consultant (2026-07-20 to 2026-07-31, EV-048).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the configuration exports and version records (EV-006, EV-009 to EV-012), the outage records (EV-041), the filings (EV-031, EV-032), the walkthrough and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a carrier with about $3,000 of revenue a day and about 1,420 accounts, theft of all call detail or a multi-day loss of service is rated High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,10 +53,12 @@ Status: 9 In progress, 13 Open, 2 Closed (R-021 and R-022 accepted).
 **Availability risks are structural.** The single middle-mile circuit (R-011) and the hurricane exposure (R-013) cannot be fixed with settings. A diverse circuit is a 2027 budget decision for the Owner and General Manager; until then the contingency plan covers customer 911 messaging and business number forwarding.
 
 **Risks fixed or found during the work:**
-- R-001: the Network Operations Lead removed internet access to the EMS web page on 2026-08-03. The router firmware is still out of date, so the risk stays High until 2026-09-20.
-- R-005: the shared OLT and EMS password was changed on 2026-07-23, the day after the walkthrough found that a Field Technician who left in March 2026 still knew it. Device logs only go back about 14 days, so earlier use cannot be ruled out; no sign of misuse was found in the configurations. The shared-account gap remains.
+- R-001: the Network Operations Lead removed internet access to the EMS web page on 2026-08-03 (EV-051). The router firmware is still out of date, so the risk stays High until 2026-09-20.
+- R-005: the shared OLT and EMS password was changed on 2026-07-23 (EV-050), the day after the walkthrough found that a Field Technician who left in March 2026 still knew it. Device logs only go back about 14 days, so earlier use cannot be ruled out; no sign of misuse was found in the configurations. The shared-account gap remains.
 - R-018: the AI assistant's guest verification was turned off on 2026-08-14.
-- R-024: added on 2026-08-12 after P07 testing found a vendor default SNMP read-write string on the aggregation switch.
+- R-024: added on 2026-08-12 after P07 testing found a vendor default SNMP read-write string on the aggregation switch (EV-IA-5).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-024 was added on 2026-08-12 from the SNMP test (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner and General Manager; about $6,900 one-time and $3,300 a year):**

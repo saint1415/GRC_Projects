@@ -22,7 +22,7 @@ Keep a printed copy at home and in the SITE-1 shed. Assume the router, the lapto
 | Upstream fiber provider | Check for unusual traffic; help block attacker addresses | Hours 1-4 |
 | FBI field office (and IC3 report) | Voluntary early contact; supports the later 64.2011 notice and any CALEA report | Day 1 |
 | CISA (voluntary report) | No CIRCIA duty yet; voluntary report | Day 1-2 |
-| Cyber insurer | **None.** The general liability policy has no cyber coverage, so the owner pays counsel and the consultant directly | n/a |
+| Cyber insurer | **None.** The general liability policy has no cyber coverage (EV-027, EV-018), so the owner pays counsel and the consultant directly | n/a |
 
 Contact numbers are kept on the printed copy only, not in this file.
 

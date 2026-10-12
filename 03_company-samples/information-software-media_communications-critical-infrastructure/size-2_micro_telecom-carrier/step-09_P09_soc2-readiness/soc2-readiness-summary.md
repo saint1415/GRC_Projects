@@ -13,7 +13,7 @@
 ## 1. Why SOC 2 for this organization
 A micro carrier is **not** a SOC 2 service organization in the usual sense. It carries traffic; it does not process data that its customers rely on for their own controls. The Trust Services Criteria are used here for two practical reasons.
 
-**A. Answering a questionnaire.** The community bank branch in town buys one of the company's 6 dedicated internet circuits. Under its own vendor management program, the bank sent a security and availability questionnaire in July 2026 organized around the Trust Services Criteria. The company will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30, and the town hall has said it will ask the same questions at its contract renewal.
+**A. Answering a questionnaire.** The community bank branch in town buys one of the company's 6 dedicated internet circuits. Under its own vendor management program, the bank sent a security and availability questionnaire in July 2026 organized around the Trust Services Criteria (EV-045). The company will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-09-30, and the town hall has said it will ask the same questions at its contract renewal.
 
 **The company will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the company's controls were defined in August 2026. The bank's questionnaire instructions accept a self-assessment from a vendor of this size.
 

@@ -13,6 +13,8 @@
 | Approved | Chief Compliance Officer and CISO, 2026-08-21; roadmap reviewed by the risk and technology committee of the board, 2026-09-10 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with counsel's review (EV-070). This section restates the results for the rules analyzed here.
+
 ### 1.1 Regulations that apply
 | Regulation | Applies? | Basis |
 |---|---|---|
@@ -40,7 +42,7 @@ A CPNI breach can also be a material cybersecurity incident. Section 64.2011(a) 
 ## 2. Method
 1. **Decompose.** Each paragraph of 47 CFR 64.2005-64.2011 that imposes, permits, or limits conduct became one row, cited to the paragraph (public-domain text; short quotes only), with 47 U.S.C. 222(a) as the statutory duty (G-001). CALEA, Part 4, SEC, Florida, and FAR rows follow the same method from the retrieved text. The benchmark rows use the CSF 2.0 outcomes most relevant to the P08 intrusion scenario.
 2. **Crosswalk.** Regulatory rows are mapped to CSF 2.0 and SP 800-53 Rev. 5 as **author mappings**; NIST has published no official mapping for 47 CFR Parts 1, 4, or 64, the SEC rules, the FAR clauses, or state statutes. Benchmark rows use NIST's official CSF 2.0 to SP 800-53 reference mapping (a selection of the listed controls).
-3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items per stratum (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls used 25 to 40 items; contact records, entitlements, and element data were checked in full with analytics. Selections were random. **26 rows were tested by sampling or full-population analytics; 10 found exceptions.**
+3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key controls with large populations used 60 items per stratum (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls used 25 to 40 items; contact records, entitlements, and element data were checked in full with analytics. Selections were random. **26 rows were tested by sampling or full-population analytics; 10 found exceptions.** Current state was established from the intake evidence (exports, documents and records from the enterprise systems of record, EV-001 to EV-082), gap analysis interviews with control owners (EV-090), the samples and analytics (EV-091 to EV-095), the AQ-03 CALEA filing check on 2026-08-14 (EV-096), and, where Internal Audit had already tested a control, its P07 results (for example EV-IA-8 and EV-PT-4). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Rate.** Met, Partially met, Not met, or Not applicable. Each gap is rated with the P01 scale and carries an owner and date. High gaps are in the P01 register and the P07 POA&M.
 
 ## 3. Results summary

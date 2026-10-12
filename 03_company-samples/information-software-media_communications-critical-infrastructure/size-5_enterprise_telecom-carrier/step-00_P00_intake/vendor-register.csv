@@ -1,0 +1,33 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS and PaaS for the BSS, OSS, mediation, portal and SL-1 orchestration",SYS-01; SYS-02; SYS-03; SYS-04; SYS-11; SYS-11-SL1,CPNI; customer personal information,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-051; EV-047,Tier 1; subservice organization for SL-1
+V-02,Cloud provider B,IaaS and PaaS for the SL-2 platform and the data and AI platform,SYS-11-UC; SYS-11-DAI,CPNI; SL-2 customer content,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-051; EV-047,Tier 1; subservice organization for SL-2
+V-03,BSS software vendor,Commercial billing software and support,SYS-01,Support access as granted,License and support agreement,Per vendor register,EV-047; EV-049,Customer-managed deployment
+V-04,Identity platform vendor,"SSO, MFA, PAM, identity governance",SYS-05,Workforce identities,Subscription agreement,Per vendor register,EV-047; EV-048,Tier 1
+V-05,CCaaS vendor,"Contact center routing, IVR, recording, agent assist (AI-002)",SYS-10,CPNI; call recordings,Contract with CPNI terms,SOC 2 Type 2,EV-051; EV-049; EV-031,Second-region failover observed 2026-03-05
+V-06,Chatbot vendor,Customer-service chatbot (AI-001),SYS-10; AI-001,CPNI; chat transcripts,"Contract with 72-hour incident notice, no-training terms and 90-day transcript deletion",Per vendor register,EV-049; EV-066; EV-047,
+V-07,Care vendor CV-1,Outsourced customer care,SYS-01; SYS-10,CPNI,Contract with CPNI and training terms,Per vendor register,EV-049; EV-046; EV-006,
+V-08,Care vendor CV-2,Outsourced customer care (about 17% of care calls),SYS-01; SYS-10,CPNI,Contract with CPNI and training terms; 72-hour incident notice,Per vendor register,EV-049; EV-046; EV-006,
+V-09,Care vendor CV-3,Outsourced customer care,SYS-01; SYS-10,CPNI,Contract with CPNI and training terms; 72-hour incident notice,Per vendor register,EV-049; EV-046; EV-006,
+V-10,SD-WAN and firewall vendors (cloud controllers),Controllers for SL-1 managed SD-WAN and firewalls,SYS-11-SL1,SL-1 customer configurations,Vendor agreements,SOC 2 reports reviewed annually (last 2026-04-08),EV-051; EV-055,Subservice organizations for SL-1
+V-11,UC platform software vendor,UC platform software and the AI transcription feature (AI-011),SYS-11-UC,SL-2 customer content (support access),License and support agreement,Per vendor register,EV-047; EV-065,
+V-12,Telephone number and messaging partners,Numbers and messaging for SL-2,SYS-11-UC,Call and message routing data,Partner agreements,Per vendor register,EV-047,Subservice organizations for SL-2
+V-13,Payment processor,Card and bank payment processing and tokenization,SYS-01; SYS-04,Payment tokens,Processor agreement,SOC 2 report,EV-049; EV-051; EV-079,No tested alternate; lockbox for mailed payments
+V-14,Bill print and mail vendors,Paper bills (primary vendor; second vendor under a dormant contract),SYS-01,Bill images including toll call detail,Contracts with confidentiality terms,Per vendor register,EV-049; EV-079,Dormant contract never exercised
+V-15,Number portability administration,Industry number portability service,SYS-02,Port requests,Industry agreement,Industry service,EV-080,Industry dependency
+V-16,NG911 system service providers (state and regional),911 call routing to PSAPs,SYS-06,911 call data,Interconnection arrangements,n/a,EV-019; EV-020; EV-067,Joint failover tested only with the Florida provider
+V-17,Internet transit and peering providers (4),Internet transit and peering,SYS-07,Customer traffic in transit,Transit and peering agreements,n/a,EV-020; EV-021,Largest carries 41% of traffic
+V-18,CALEA trusted third party,Intercept delivery for AQ-02 and AQ-03 and overflow,SYS-09,Intercept content and call-identifying information,Trusted third party agreement,Last security review 2023,EV-068; EV-047; EV-049,
+V-19,Network and voice core equipment vendors,"Routers, OLTs, DSLAMs, SBCs, IMS and intercept equipment, with support",SYS-06; SYS-07; SYS-09,Support access as granted,Supply and support agreements,Vendor consultation letters for CALEA,EV-047; EV-068,
+V-20,TDM third-party maintenance provider,Spares and maintenance for 61 TDM switches past vendor support,SYS-06,None routinely,Maintenance contract,Per vendor register,EV-016; EV-049,
+V-21,Identity verification vendor,Identity verification and risk scoring at account opening (AI-005),SYS-01; AI-005,Applicant identity data,Subscription agreement,Per vendor register,EV-048; EV-075; EV-065,
+V-22,Network analytics and automation platform vendors,Anomaly detection (AI-003) and closed-loop remediation (AI-004),SYS-08; AI-003; AI-004,Network telemetry,License agreements,Per vendor register,EV-047; EV-064,
+V-23,Enterprise generative AI service vendor,Workforce generative AI assistant (AI-009),AI-009,Workforce prompts and documents,Subscription with data protection terms,Per vendor register,EV-048; EV-065,
+V-24,SIEM vendor,SIEM and alert triage assistant (AI-010),SYS-11; AI-010,Security logs,Subscription agreement,Per vendor register,EV-047; EV-011,
+V-25,ERP vendor,ERP and financial reporting,SYS-13,Financial records,Subscription agreement,SOC 2 report,EV-051; EV-078,SOX-relevant
+V-26,Payroll service provider,Payroll for all entities except AQ-03,SYS-13,Employee personal information,Service agreement,SOC 2 report,EV-051; EV-078; EV-079,Continuity test 2026-01-15
+V-27,Productivity suite vendor,"Email, files and chat",SAAS-PROD,Incidental customer personal information,Subscription agreement,SOC 2 Type 2,EV-051; EV-077,
+V-28,Seller's managed IT provider (AQ-03),AQ-03 IT and legacy billing under the transition services agreement,SYS-01-AQ; SYS-05-L; SYS-08-AQ,CPNI; customer personal information,Transition services agreement to 2027-09-30 with administrator rights,None on file,EV-049; EV-007; EV-010,Standing VPN access
+V-29,AQ-02 and AQ-03 legacy system and inherited vendors,"Legacy billing, workforce, HR and payables vendors",SYS-01-AQ; AI-008,CPNI; customer and employee personal information,Inherited contracts without CPNI terms,None on file,EV-049; EV-047; EV-063,
+V-30,Certified media destruction vendor,Media destruction,n/a,Data on retired media,Service agreement,Certificates of destruction,EV-058,
+V-31,Penetration testing firm,Annual independent penetration tests,SYS-04; SYS-08; SYS-11-UC,Test access,Engagement letter,n/a,EV-015,
+V-32,Cyber insurer,"Cyber insurance, breach counsel and forensics panel",n/a,Incident information when a claim is made,Policy,n/a,EV-071,Approval needed before any ransom payment

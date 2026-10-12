@@ -14,6 +14,8 @@
 
 ## 1. Applicability
 
+Which rules bind the company was first recorded in the intake [obligations register](../step-00_P00_intake/obligations-register.csv), from the service lines, filings, contracts and 911 records (EV-036 to EV-041, EV-046, EV-051, EV-052). This section gives the legal reasoning behind those entries.
+
 ### 1.1 The CPNI rules apply, through the voice services
 The CPNI rules bind "telecommunications carriers," defined by reference to 47 U.S.C. 153, and include "an entity that provides interconnected VoIP service" (47 CFR 64.2003(o)). The company is covered three ways: local exchange and toll service over copper (a telecommunications service), interconnected VoIP over fiber (54,500 lines), and the hosted voice seats in Business Services, which are interconnected VoIP. The merged CLEC's voice customers billed in SYS-18 are covered too.
 
@@ -53,7 +55,7 @@ No FCC rule sets general cybersecurity controls for a wireline carrier's network
 ## 2. Method
 1. **Requirements.** Each paragraph of 47 CFR 64.2005-64.2011 that imposes, permits, or limits conduct became one row, cited to the paragraph (public-domain text; short quotes only). The CALEA, Part 4, Part 9, caller ID authentication, and Secure Networks Act rows follow the same method, limited to the paragraphs that apply to the company.
 2. **Crosswalk.** Each regulatory row is mapped to CSF 2.0 and SP 800-53 Rev. 5. This is an **author mapping**; NIST has published no official mapping for 47 CFR Parts 1, 4, 9, or 64. The benchmark rows use NIST's official CSF 2.0 to SP 800-53 reference mapping (a selection of the listed controls).
-3. **Evidence.** Interviews with every rule owner (Vice President of Regulatory Affairs, CTO, Vice President of Network Operations, NOC Director, Director of Network Engineering, Director of Customer Operations, Marketing Director, Billing Director, Director of Business Services, HR Director); configuration exports; filings; live tests of the portal, the chatbot, and the SYS-18 reset (2026-07-22 and 2026-07-23); walkthroughs of CO-1, CO-4, CO-6, POP-A, and 4 cabinets (2026-07-21 to 2026-07-23).
+3. **Evidence.** The intake evidence (EV-001 to EV-055: configuration exports, filings, contracts, registers and logs from the systems of record); interviews with every rule owner (Vice President of Regulatory Affairs, CTO, Vice President of Network Operations, NOC Director, Director of Network Engineering, Director of Customer Operations, Marketing Director, Billing Director, Director of Business Services, HR Director; EV-058, EV-059, EV-061, EV-062, EV-071); document reviews (EV-060, EV-063, EV-064); live tests of the portal, the chatbot, and the SYS-18 reset (2026-07-22 and 2026-07-23; EV-065, EV-066); walkthroughs of CO-1, CO-4, CO-6, POP-A, and 4 cabinets (2026-07-21 to 2026-07-23; EV-067); and the samples below (EV-068 to EV-070). Each row's `evidence` cell names its sources by evidence ID.
 4. **Evidence sampling.** Where a requirement operates many times, a random sample was tested from a system-generated population, using the co-sourced internal audit firm's attribute sampling table (25 items for a control operating many times a year; all items for small populations):
 
 | Population | Size | Sample | Rows | Result |
@@ -73,7 +75,7 @@ No FCC rule sets general cybersecurity controls for a wireline carrier's network
 | Generator full-load tests at PSAP-serving offices, 2026 | 5 | 5 | G-049 | 4 of 5 passed |
 | Traceback requests, 12 months | 18 | 18 | G-055 | 16 of 18 within 24 hours |
 
-Each `evidence` cell names the sample and its result.
+Each `evidence` cell names the sample and its result. The populations come from the systems of record behind the intake evidence (EV-031, EV-032, EV-036 to EV-040, EV-046), and the sample results are recorded as EV-068 to EV-070.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale (Very Low to Very High).
 
 ## 3. Results summary

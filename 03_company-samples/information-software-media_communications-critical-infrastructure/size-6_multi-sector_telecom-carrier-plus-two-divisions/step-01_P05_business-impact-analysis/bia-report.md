@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-17
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-064 group, EV-065 Telecom Carrier, EV-066 Network Engineering Services, EV-067 Tower and Fiber Infrastructure), FY2025 revenue by division (EV-003), customer and line counts (EV-035), backup, DR and continuity records (EV-019, EV-042, EV-045, EV-060), NOC outage procedures (EV-046), and customer contract terms (EV-053). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -17,12 +18,12 @@ It supports:
 For this group, several downtime limits are set by **regulatory clocks, not revenue**. A 911-affecting outage must be reported to the affected PSAPs within 30 minutes and to the FCC within 120 minutes for wireline service (47 CFR 4.9(h)(4) and 4.9(f)). A tower obstruction light outage not corrected within 30 minutes must be reported to the FAA immediately (47 CFR 17.48(a)). Those clocks keep running during a cyber incident, including one where the group's own containment causes the outage.
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform, and SYS-G4 ERP. The Carrier runs the OSS and BSS (SYS-C1 to SYS-C5), the voice core and IP network (SYS-C6, SYS-C7), lawful intercept (SYS-C8), the contact center (SYS-C9), and the AI chatbot (SYS-C10). Engineering runs the Managed Network Operations platform (SYS-E1) and design systems (SYS-E2). Tower runs lease management (SYS-T1), lighting and site monitoring (SYS-T2), and fiber route records (SYS-T3). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud platform, and SYS-G4 ERP. The Carrier runs the OSS and BSS (SYS-C1 to SYS-C5), the voice core and IP network (SYS-C6, SYS-C7), lawful intercept (SYS-C8), the contact center (SYS-C9), and the AI chatbot (SYS-C10). Engineering runs the Managed Network Operations platform (SYS-E1) and design systems (SYS-E2). Tower runs lease management (SYS-T1), lighting and site monitoring (SYS-T2), and fiber route records (SYS-T3). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 The single most important cross-division fact: **the Carrier's service assurance platform (part of SYS-C1) also hosts the Engineering Managed Network Operations tenant and the Tower Alarm Monitoring Center tenant.** It is shared infrastructure in practice, though it is owned by one division.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Carrier about $34 million per day, Tower about $9 million per day, and Engineering about $6.3 million per day of external revenue.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: the Carrier about $12.4 billion, or about $34 million per day; Tower about $3.3 billion, or about $9 million per day; and Engineering about $2.3 billion of external revenue, or about $6.3 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

@@ -41,6 +41,17 @@ Small tier scope: 15-25 controls. **20 controls, 140 determination statements.**
   - TLS scan of external endpoints
   - chatbot upsell prompt with an opted-out test account
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-09-04. They were reviewed as drafts, for design only. A control that a draft introduces has not operated yet, so its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples or live systems | 88 |
+| Design | The control is new in a draft policy or the draft runbook; its design was reviewed. Operation is tested at the 2027-03 follow-up | 4 |
+| Not implemented | Nothing existed to test | 48 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 terminations and 5 transfers come from EV-003 and EV-004, and the 64 overflow agent accounts from EV-005).
+
 ## 3. Rules of engagement
 - No test could interrupt voice, 911, or broadband service. Network element tests ran in the 00:00 to 04:00 maintenance window with the NOC Manager's approval and a rollback plan. SNMP tests were read-only.
 - No test touched the lawful-intercept system (SYS-10). Its path was confirmed from routing tables only.

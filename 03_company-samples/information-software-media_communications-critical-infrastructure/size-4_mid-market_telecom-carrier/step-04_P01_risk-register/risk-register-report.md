@@ -11,7 +11,7 @@
 | Approved | 2026-09-17: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, and the risk appetite); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units, the OSS/BSS platform defined in the SSP (P02), the voice and broadband network it manages (SYS-07, SYS-08), the lawful-intercept system (SYS-10), the Business Services platform (SYS-15), the customer channels (SYS-11, SYS-12), the 34 vendors with CPNI, PII, or network access (SYS-17), and the AI tools in P10. Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units, the OSS/BSS platform defined in the SSP (P02), the voice and broadband network it manages (SYS-07, SYS-08), the lawful-intercept system (SYS-10), the Business Services platform (SYS-15), the customer channels (SYS-11, SYS-12), the 34 vendors with CPNI, PII, or network access (SYS-17), and the AI tools in P10, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,8 +35,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, public reporting on intrusions into U.S. carriers (the FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures"; 90 FR 58006), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, public reporting on intrusions into U.S. carriers (the FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures"; 90 FR 58006), the BIA, the intake evidence, and risk interviews and a threat workshop with every process owner, the CTO, the Director of Network Engineering, the Security Manager, the vCISO and the MDR service lead (EV-057). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The control assessment (P07) added two risks in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-024), scan and patch records (EV-012, EV-013), phishing results (EV-025), configuration exports, the regulatory records, the walkthroughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, public safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -50,6 +50,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Low | 10 |
 | Very Low | 0 |
 | **Total** | **51** |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 and R-051 were added on 2026-08-14 after testing found default SNMP community strings on 9 of 25 sampled cabinet switches (EV-CM-6, EV-IA-5) and the OLT and SBC vendors' shared VPN account with standing access (EV-AC-17, EV-MA-4). The `assessment_pass` column shows which pass produced each risk.
 
 Treatments: 45 Mitigate, 5 Accept (R-029, R-033, R-034, R-035, R-046), 1 Share/Transfer (R-028). Status: 28 In progress, 18 Open, 5 Accepted.
 

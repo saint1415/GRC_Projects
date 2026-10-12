@@ -1,0 +1,24 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,BSS vendor,Billing and customer care SaaS,SYS-01,CPNI; subscriber PII; account passwords,"Contract with security, audit and breach notice terms","SOC 2 Type 2, 12 months ending 2026-03-31; bridge letter through 2026-06-30",EV-045; EV-047; EV-049; EV-046,Report reviewed each year
+V-02,Identity provider vendor,Workforce single sign-on and MFA,SYS-05,Workforce identities,Subscription terms,SOC 2 report from the provider portal,EV-045; EV-048,
+V-03,Productivity suite vendor,"Email, files, chat",SYS-06,Incidental,Subscription terms,Vendor security documentation,EV-045; EV-048,
+V-04,Public cloud provider,"IaaS/PaaS for the OSS, mediation, portal, data warehouse and backups",SYS-13,CPNI; CDRs; subscriber PII,Customer agreement,SOC 2 report and shared responsibility documentation,EV-045; EV-048,
+V-05,Contact center (CCaaS) vendor,"ACD, IVR and call recording",SYS-11,Account data; call recordings; payment tokens,Contract with no CPNI or 24-hour incident notice terms,None on file,EV-045; EV-049; EV-046,
+V-06,AI chatbot vendor,Customer-service chatbot on a large language model platform,SYS-12,CPNI; account data; chat transcripts,"Contract with no CPNI, security review or model-training exclusion terms",None on file,EV-045; EV-049; EV-046; EV-025,Pilot since 2026-04-06
+V-07,Overflow call center vendor (U.S.-based),After-hours overflow care agents,SYS-01 (agent desktop); SYS-11,CPNI; account data,Contract with confidentiality terms; no CPNI training or incident notice terms,None on file,EV-045; EV-036; EV-046,64 agent accounts in the BSS (EV-005)
+V-08,CALEA trusted third party (TTP),Intercept order validation and delivery,SYS-10,Intercept content; court orders,TTP contract,None on file,EV-045; EV-038; EV-046,24x7 intake line
+V-09,SS7 hub provider,SS7 signaling,SYS-07,Signaling and call setup data,Hub contract; signaling filtering placed with the provider,None on file,EV-045; EV-042; EV-046,
+V-10,NG911 system service provider,911 call delivery,SYS-07,Caller number and location,911 trunk agreement,None on file,EV-045; EV-042,
+V-11,Upstream transit providers (2),Internet transit; DDoS scrubbing on request,SYS-08,Customer traffic in transit,Transit contracts,None on file,EV-045; EV-042,
+V-12,Long distance wholesale carrier,Resold long distance,SYS-07,Toll call routing data,Not reviewed at intake,None on file,EV-045,
+V-13,Number porting clearinghouse,Number porting,SYS-01; SYS-02,Subscriber numbers and porting data,Not reviewed at intake,None on file,EV-045,
+V-14,Payment processor,Hosted payment pages and IVR tokenization,SYS-04; SYS-11,Payment card data (tokens returned to the company),Processor agreement,None on file,EV-045; EV-049,PCI DSS duties are contractual
+V-15,Bill print vendor,Bill printing and mailing,SYS-01,Bill images with toll call detail,Contract with confidentiality terms,None on file,EV-045; EV-049,
+V-16,Direct-mail agency,Marketing mailings,n/a,CPNI-based mailing lists (opt-out approval),Agency contract with confidentiality terms,None on file,EV-045; EV-049; EV-029,
+V-17,Notice mail vendor,Biennial CPNI opt-out notice mailings,n/a,Customer names and addresses,Not reviewed at intake,Mailing affidavit for 2023,EV-045; EV-028,
+V-18,External scanning vendor,Quarterly external vulnerability scans,SYS-08 (edge); SYS-13,External addresses; scan results,Service agreement (external scope only),None on file,EV-045; EV-014,
+V-19,Certified destruction vendor,Destruction of drives and retired network elements,n/a,Data on retired media,Service agreement,Certificates of destruction,EV-045; EV-044,
+V-20,Payroll provider,Payroll SaaS,Payroll SaaS,Employee PII,Not reviewed at intake,None on file,EV-045,
+V-21,SBC and softswitch support vendor,Remote maintenance of the voice core,SYS-07,Administrative access to the voice core,Support agreement,None on file,EV-045; EV-018; EV-013,Connects through the company VPN with named accounts
+V-22,Outside telecommunications regulatory counsel,"CPNI, CALEA, outage and breach advice",n/a,Regulatory and incident information,Retainer,n/a,EV-045,
+V-23,Cyber insurer,Cyber insurance; breach hotline and response panel,n/a,Incident information when a claim is made,Insurance policy,n/a,EV-045; EV-050,

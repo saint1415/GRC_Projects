@@ -7,9 +7,9 @@
 ISP Operations Systems Profile (**IOSP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The IOSP is everything the owner uses to run internet and home phone service for about 310 rural accounts: billing and the customer portal, the VoIP reseller portal, the cloud radio controller, email and files, accounting, the AI support assistant, the owner's laptop and phone, and the management plane of the owner-operated network (edge router, core switch, access points, and customer radios). One person, the owner-operator, uses and runs it. Components are SYS-01 to SYS-08 in `../00_company-facts.md` section 3.
+The IOSP is everything the owner uses to run internet and home phone service for about 310 rural accounts: billing and the customer portal, the VoIP reseller portal, the cloud radio controller, email and files, accounting, the AI support assistant, the owner's laptop and phone, and the management plane of the owner-operated network (edge router, core switch, access points, and customer radios). One person, the owner-operator, uses and runs it. Components are SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
-The tier default for this size is "the owner's core SaaS stack". The boundary adds the network management plane because, for a WISP, the network is the service and the router is the most likely way into CPNI (P01 R-001). There is no server room and no IaaS. Most SaaS safeguards are **inherited from the vendors**; the owner is responsible for identities, data handling, devices, network devices, and vendor terms (P04).
+The tier default for this size is "the owner's core SaaS stack". The boundary adds the network management plane because, for a WISP, the network is the service and the router is the most likely way into CPNI (P01 R-001). The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The general-purpose AI chat service the owner uses for drafting (AI-002) holds no customer data and is outside it. There is no server room and no IaaS. Most SaaS safeguards are **inherited from the vendors**; the owner is responsible for identities, data handling, devices, network devices, and vendor terms (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -22,7 +22,7 @@ The tier default for this size is "the owner's core SaaS stack". The boundary ad
 | State | Breach notification | Fla. Stat. 501.171 |
 | Internal | Information Security Policy | POL-01 (P06) |
 
-Not applicable: SEC rules (C-COMMUNICATIONS-R06), submarine cable rules (C-COMMUNICATIONS-R04), and CMRS-only CPNI rules (64.2010(h)). Broadband usage data is not CPNI while broadband is an information service (P03 section 1).
+Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). Not applicable: SEC rules (C-COMMUNICATIONS-R06), submarine cable rules (C-COMMUNICATIONS-R04), and CMRS-only CPNI rules (64.2010(h)). Broadband usage data is not CPNI while broadband is an information service (P03 section 1).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -106,7 +106,7 @@ Self-assessed 2026-07-20 to 2026-07-24 with the network consultant. See P07.
 The owner's email, billing platform admin, and radio controller accounts require a password and a second factor on the owner's phone, which is appropriate for administrative access to CPNI at a Moderate categorization. The VoIP reseller portal uses a password only until MFA is turned on (2026-09-15). Customers authenticate to the portal with passwords set through a link to the email of record, which meets 47 CFR 64.2010(c) and (e). The AI support assistant may show CPNI only inside an authenticated portal session (POL-01 7.8).
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **ATA:** analog telephone adapter (connects a home phone to the VoIP service)

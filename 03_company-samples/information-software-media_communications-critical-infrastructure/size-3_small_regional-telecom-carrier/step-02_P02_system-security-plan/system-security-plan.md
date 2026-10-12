@@ -73,7 +73,7 @@ Information types are the closest matches in NIST SP 800-60 Vol. 2 Rev. 1. Impac
 - **Out of scope for this tier**, recorded as a tailoring decision where the control's purpose applies only to federal systems.
 
 ## 7. Authorization Boundary Description
-The boundary contains company-managed components and the company's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains company-managed components and the company's configuration of vendor services:
 - **Inside:** the BSS tenant configuration, user roles, and CPNI flags; the identity provider tenant; the cloud tenant (OSS, mediation and CDR archive, portal and app back end, API gateway, data warehouse, backup vault); the network management plane at CO-1 (monitoring, element managers, TACACS+, syslog, configuration backup server, jump hosts); and the endpoints of users who administer these components.
 - **Outside (interconnected):** the BSS vendor's platform and the cloud provider's infrastructure (inherited controls); the voice core and access network (managed through SYS-09); the contact center platform and the chatbot (vendor SaaS that call the BSS API); the CALEA TTP, the SS7 hub, the NG911 system service provider, the bill print vendor, and the payment processor.
 - **Excluded:** the lawful-intercept system (SYS-10), covered by the CALEA SSI plan. **Boundary weakness:** SYS-10 is reachable over the same management network path (P01 R-013); the segmentation work will place it on an isolated path.
@@ -126,7 +126,7 @@ An independent assessor tested 20 of these controls from 2026-08-10 to 2026-08-1
 - immediate notice to the customer of any password, backup authentication, online account, or address-of-record change (64.2010(f)).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), gap analysis (P03), cloud control map and diagram (P04), BIA (P05), policies POL-01 to POL-05 (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 self-benchmark and BSS vendor review (P09), chatbot AI assessment (P10), CALEA SSI policies (filed 2014; rewrite due 2026-10-30).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), gap analysis (P03), cloud control map and diagram (P04), BIA (P05), policies POL-01 to POL-05 (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 self-benchmark and BSS vendor review (P09), chatbot AI assessment (P10), CALEA SSI policies (filed 2014; rewrite due 2026-10-30).
 
 ## 13. Acronym List and Glossary
 - **BSS / OSS:** business support system (billing and care) / operations support system (network inventory, provisioning, tickets)

@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the regulator-specific rules for three priority use cases: the Carrier's customer-service chatbot with account access (AI-001, the focus use case), the Carrier's deposit decision model (AI-003), and Engineering's MNO alarm triage (AI-006) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board risk committee 2026-09-17 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 1 High, 6 Medium, 3 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 1 High, 6 Medium, 3 Low), built from the intake AI tool discovery (procurement records, SaaS discovery and the SYS-G1 app list, and the model registry, EV-031), the chatbot and deposit model records (EV-047, EV-048), and the Group AI council's registrations to 2026-08 (EV-085). Workforce use of generative AI tools outside the approved tools was not established (intake open request) and is treated as unknown |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Regulator overlays.** Each division supplement adds its rules: CPNI and FCRA for the Carrier, customer contracts and SOC 2 commitments for Engineering, antenna structure duties for the Tower division.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7). Lawful-intercept information, FCI, and CPNI may never be entered into general assistants.
 
-**Where the program fell short in 2026.** The standard was adopted in April, after the chatbot (2025-11) and the deposit model were live. The chatbot's account recovery feature launched on 2026-06-02 without council review, though it changed authentication (scenario gap 4). The Tower inspection imagery pilot started without registration. Both are under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted in April, after the chatbot (2025-11) and the deposit model were live. The chatbot's account recovery feature launched on 2026-06-02 without council review, though it changed authentication (group gap 4; EV-079, EV-085). The Tower inspection imagery pilot started without registration. Both are under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
@@ -53,7 +53,7 @@
 | 47 CFR 64.2007(b); 64.2009(a) | Approval before using CPNI to market communications-related services; approval status checked before use | Plan suggestions check the BSS approval flag (in place since 2026-03) |
 | 47 CFR 64.2011 | Law enforcement notice and hold before customer notice for a breach | The Carrier CPNI compliance officer reviewed the 23,000 recovery sessions with counsel: 61 sessions came from devices and locations never seen on the account, and 9 of those accounts later reported unrecognized changes. Counsel's determination is recorded in the incident register; this assessment does not restate it |
 | FTC Act Section 5 | Truthful claims | Section 5 excludes common carriers subject to the Communications Act (15 U.S.C. 45(a)(2)); counsel reads the exclusion as limited to common carrier services, so chatbot statements about broadband must be accurate |
-| State AI laws (Colorado, Texas, Utah) | Various | Not identified as applicable: no customers in those states (`../00_company-facts.md` section 7). The chatbot still discloses that it is AI at the start of every chat |
+| State AI laws (Colorado, Texas, Utah) | Various | Not identified as applicable: no customers in those states (EV-001; intake [obligations register](../step-00_P00_intake/obligations-register.csv)). The chatbot still discloses that it is AI at the start of every chat |
 
 ### 2.2 Deposit decision model (AI-003): FCRA
 | Rule | What it requires | Implication |
@@ -89,7 +89,7 @@
 - AI-007: using the model to reduce physical inspections required by Part 17 or tenant leases.
 
 ## 4. MEASURE
-Results are from monitoring and tests between 2026-05 and 2026-08.
+Results are from monitoring and tests between 2026-05 and 2026-08 (EV-087), with the chatbot recovery session review (EV-086).
 
 ### 4.1 Customer-service chatbot (AI-001)
 | Characteristic | Test / metric | Result | Pass? |

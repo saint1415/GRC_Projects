@@ -60,8 +60,8 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 The owner-operated network sits outside every cloud model. Its rows (SC-7, SI-2) are listed so the map shows the full path an attacker would take to CPNI (P08).
 
 ## 4. Findings from the mapping
-1. **The SaaS account that holds the most CPNI has the weakest login.** The VoIP reseller portal holds call detail for all 58 lines, has MFA turned off, and its password is saved in the laptop browser. Tracked as P01 R-002.
-2. **The customer-facing AI assistant had a weaker login than the portal it sits on.** On the text line it accepted account number and ZIP code, which the CPNI rules do not allow before online access to CPNI (64.2010(c)). Found in testing on 2026-07-22. Tracked as R-003 and in P10.
-3. **CPNI leaves the SaaS boundary every month.** The CDR export lands on the laptop and in email, where no vendor control applies. Tracked as R-007.
-4. **The VoIP provider is a key vendor with no assurance report** and no security terms in the reseller agreement. Tracked as R-013.
-5. **A shared contractor login on the radio controller** means changes to customer radios cannot be traced to a person. Tracked as R-004.
+1. **The SaaS account that holds the most CPNI has the weakest login.** The VoIP reseller portal holds call detail for all 58 lines, has MFA turned off, and its password is saved in the laptop browser (EV-006, EV-013). Tracked as P01 R-002.
+2. **The customer-facing AI assistant had a weaker login than the portal it sits on.** On the text line it accepted account number and ZIP code, which the CPNI rules do not allow before online access to CPNI (64.2010(c)). The add-on settings collected at intake showed the text-line check (EV-004), and the test on 2026-07-22 showed call history (EV-032). Tracked as R-003 and in P10.
+3. **CPNI leaves the SaaS boundary every month.** The CDR export lands on the laptop and in email, where no vendor control applies (EV-013, EV-015). Tracked as R-007.
+4. **The VoIP provider is a key vendor with no assurance report** and no security terms in the reseller agreement (EV-008). Tracked as R-013.
+5. **A shared contractor login on the radio controller** means changes to customer radios cannot be traced to a person (EV-009). Tracked as R-004.

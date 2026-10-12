@@ -9,7 +9,7 @@
 | Review cycle | Each standard is reviewed at least annually by its owner |
 
 ## 1. Why this index exists
-The 2024 policies stated intent, but staff, network engineers, and vendors had few measurable rules for configuration, logging, network elements, and vendors (gap 15 in `../00_company-facts.md`; P01 R-042, R-043; P07 CM-2, CM-6). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. This index is an added file for the Mid-Market tier, which calls for policies plus standards for key domains.
+The 2024 policies stated intent, but staff, network engineers, and vendors had few measurable rules for configuration, logging, network elements, and vendors (EV-022; P01 R-042, R-043; P07 CM-2, CM-6). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. This index is an added file for the Mid-Market tier, which calls for policies plus standards for key domains.
 
 ## 2. How standards work
 - **Hierarchy:** policy (POL) to standard (STD) to procedure or runbook. A standard may not weaken its parent policy.

@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (owner-operated wireless internet service provider) | **Tier:** Sole Proprietorship (owner-operator only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-operator, 2026-07-21, with the on-call network consultant | **Adopted:** Owner-operator, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-20 to 2026-07-21 (EV-029), the 2025 Schedule C (EV-024), the billing platform's subscriber and revenue reports (EV-022, EV-023), the VoIP reseller portal and reseller agreement (EV-006, EV-008), the SITE-1 walk-through (EV-012), the laptop's configuration copy folder (EV-013), and the billing vendor's SOC 2 system description (EV-021). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -13,10 +14,10 @@ This one-page BIA lists the five business functions the company depends on, how 
 No regulation requires a BIA from this business. The CPNI rules require "reasonable measures" to protect CPNI (47 CFR 64.2010(a)), and knowing which systems hold CPNI and how fast they must come back is part of that.
 
 ## 2. Business description
-One owner-operator runs a fixed wireless internet service for about 310 rural accounts in Florida from a home office, with the network core in a locked shed at the base of the owner's tower (SITE-1) and access points on three more towers (SITE-2 to SITE-4). 52 accounts also buy a home phone add-on (58 interconnected VoIP lines) that the company sells under its own name from a wholesale VoIP platform. The company has no employees. The subscriber billing platform, the VoIP reseller portal, the cloud radio controller, email, and accounting are SaaS. The network itself is owner-operated equipment. See `../00_company-facts.md` sections 1 to 3.
+One owner-operator runs a fixed wireless internet service for about 310 rural accounts in Florida from a home office, with the network core in a locked shed at the base of the owner's tower (SITE-1) and access points on three more towers (SITE-2 to SITE-4). 52 accounts also buy a home phone add-on (58 interconnected VoIP lines) that the company sells under its own name from a wholesale VoIP platform. The company has no employees. The subscriber billing platform, the VoIP reseller portal, the cloud radio controller, email, and accounting are SaaS. The network itself is owner-operated equipment. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $490 per day.
+Dollar values are scaled to about $180,000 in annual revenue (EV-024; EV-023 by product), or about $490 per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -35,9 +36,9 @@ Dollar values are scaled to about $180,000 in annual revenue, or about $490 per 
 | BP-04 Billing and payments | Moderate | 120 h | 72 h | 24 h |
 | BP-05 Installations, field service, and tower work | Low | 120 h | 72 h | 24 h |
 
-**What drives the values:** every subscriber depends on BP-01 at once, and the home phone lines (BP-02) ride on it, so a network outage is also a 911 outage for 52 households. Billing (BP-04) can wait several days because autopay can be rerun. The 24-hour RPO for BP-02 and BP-04 is met by the wholesale VoIP platform's and billing vendor's backups (the billing vendor's is confirmed in its SOC 2 report, P09). **The 24-hour RPO for BP-01 is not supported today:** the last saved router and switch configuration is 4 months old, and nobody has tested a restore (P01 R-011).
+**What drives the values:** every subscriber depends on BP-01 at once, and the home phone lines (BP-02) ride on it, so a network outage is also a 911 outage for 52 households. Billing (BP-04) can wait several days because autopay can be rerun. The 24-hour RPO for BP-02 and BP-04 is met by the wholesale VoIP platform's and billing vendor's backups (the billing vendor's is confirmed in its SOC 2 report, EV-021; reviewed in P09). **The 24-hour RPO for BP-01 is not supported today:** the last saved router and switch configuration is 4 months old, and nobody has tested a restore (EV-013; P01 R-011).
 
-**Single-person dependency (the key finding).** The owner-operator is the only network engineer, the only person with the router, VoIP portal, billing, and radio controller credentials, the only support contact, and the officer for the CPNI and CALEA duties. The second factor for every SaaS account is on the owner's one phone. If the owner is ill, injured, or without the phone during an outage, BP-01 and BP-02 pass their 8-hour MTD and nobody can tell customers why. Actions (P01 R-010, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner-operator is the only network engineer, the only person with the router, VoIP portal, billing, and radio controller credentials, the only support contact, and the officer for the CPNI and CALEA duties. The second factor for every SaaS account is on the owner's one phone (EV-014). If the owner is ill, injured, or without the phone during an outage, BP-01 and BP-02 pass their 8-hour MTD and nobody can tell customers why. Actions (P01 R-010, due 2026-12-31):
 1. Store an emergency access sheet (router and portal recovery steps, MFA recovery codes, vendor support numbers) in a sealed envelope with the owner's attorney, for release to the on-call network consultant.
 2. Sign a short standby agreement with the network consultant to restore service if the owner cannot.
 3. Record a voicemail and text-line message that points customers to the website outage banner.

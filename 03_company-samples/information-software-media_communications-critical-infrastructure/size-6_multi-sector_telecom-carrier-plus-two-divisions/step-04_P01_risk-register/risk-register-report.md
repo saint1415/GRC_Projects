@@ -13,13 +13,13 @@
 | Approved | 2026-09-17 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds CPNI, subscriber or landowner personal information, federal contract information, or network and lighting control functions in the three divisions, plus the corporate shared services they depend on (SYS-G1 to SYS-G4). Division systems are SYS-C1 to SYS-C10, SYS-E1 and SYS-E2, and SYS-T1 to SYS-T3 (`../00_company-facts.md` section 3). Business processes are those in the BIA (P05).
+**Scope.** Every system that holds CPNI, subscriber or landowner personal information, federal contract information, or network and lighting control functions in the three divisions, plus the corporate shared services they depend on (SYS-G1 to SYS-G4). Division systems are SYS-C1 to SYS-C10, SYS-E1 and SYS-E2, and SYS-T1 to SYS-T3 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). Business processes are those in the BIA (P05).
 
 **Two levels of register.**
 - **Division registers** hold risks that a division owns and can treat itself. Each division security and compliance lead maintains one. The Carrier, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services (including the Carrier-owned service assurance platform that all three divisions use), or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to it. Group risks are rated on their own group-level likelihood and impact, not simply copied from the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-023):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -30,11 +30,12 @@
 Risks to 911 call completion, tower obstruction lighting, or lawful-intercept confidentiality rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), interviews with each division's leadership, and public reporting on intrusions into U.S. carriers. The FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures" (90 FR 58006). That pattern shaped GR-01 and the P08 scenario.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, interviews with each division's leadership (EV-068 group, EV-069 Telecom Carrier, EV-070 Network Engineering Services, EV-071 Tower and Fiber Infrastructure), the gap analyses (P03), the common control assessment (P07), and public reporting on intrusions into U.S. carriers. The FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures" (90 FR 58006). That pattern shaped GR-01 and the P08 scenario.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, interviews and fieldwork tests. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (cost, operations, regulatory, safety, reputation). Group impact reflects enterprise consequences: several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
-5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+5. **Close the loop with P07 (two passes).** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28, and pass 2 added one Tower risk on 2026-08-31: TF-014 (legacy RMUs that accept the default password, EV-T-IA5). The `assessment_pass` column shows which pass produced each risk.
+6. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
 
 ## 3. Results
 
@@ -83,7 +84,7 @@ The program is mature where the group built it once: identity, the SOC, the clou
 
 Governance gaps (policy drift and undocumented Tower inheritance, GR-10; notification coordination, GR-04) are Moderate at group level. They matter because they hide whether Tower controls actually operate, which is why P07 sampled the Tower division on governance controls.
 
-**New finding from testing.** TF-014 was added on 2026-08-31 after P07 testing on 2026-08-19 found 212 legacy RMUs that accept the manufacturer's default web password. Passwords on all 212 were changed by 2026-09-30 under POAM-022; the risk stays open until web administration is blocked from the internet and the units are replaced.
+**New finding from testing (pass 2).** TF-014 was added on 2026-08-31 after P07 testing on 2026-08-19 found 212 legacy RMUs that accept the manufacturer's default web password (EV-T-IA5). Passwords on all 212 were changed by 2026-09-30 under POAM-022; the risk stays open until web administration is blocked from the internet and the units are replaced.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** management plane remediation in the acquired regions and SBC replacement (GR-01); tenant partitioning of the service assurance platform (GR-02); offline configuration backups (GR-03); group AI program conditions (GR-05); SYS-C8 isolation (GR-06); SIEM onboarding of network elements, gateways, and RMUs (GR-09); legacy RMU replacement (TF-001, TF-014).

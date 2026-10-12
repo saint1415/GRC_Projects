@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI council (chaired by the Chief Data Officer), meeting of 2026-08-19; GRC team prepared the portfolio review; data science lead ran the fairness tests |
 | Decision | Executive risk committee, 2026-09-10 (section 8) |
+| Inventory | `ai-use-case-inventory.csv` (12 use cases), built from the AI council register (EV-064), a SaaS and AI feature discovery review of the SSO application catalog, vendor feature settings and procurement records at intake (EV-065), the accounts payable vendor master (EV-048), the chatbot operating reports (EV-066), and the inventory sweep of 2026-08-19 (EV-098). Discovery at intake surfaced AI-005, AI-008 and AI-011, which were not in the register; the sweep surfaced AI-012. Not established: AI features embedded in other vendors' products that neither review surfaced (intake open request), and workforce use of public AI tools from personal devices |
 
 ## 1. Portfolio summary
 | Measure | Result |
@@ -102,7 +103,7 @@ Rubric: `00_universal-framework/projects/step-10_P10_ai-governance/README.md` (r
 ### 6.3 Risk tier
 Medium (section 4). Escalation triggers (re-tier to High and re-assess): any authentication or address-of-record change through chat; deciding credits, deposits, payment arrangement eligibility, or suspensions; a spoken voice channel; CPNI-based marketing through the chatbot at scale.
 
-### 6.4 MEASURE (2026-05 to 2026-07; tests 2026-08-04 to 2026-08-12)
+### 6.4 MEASURE (2026-05 to 2026-07; tests 2026-08-04 to 2026-08-12; EV-099)
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Monthly sample of 200 transcripts graded against the knowledge base and BSS data; incorrect billing or policy answers under 3% | 600 transcripts: 4.9% incorrect overall (mostly late fee and payment arrangement rules) | **No** |

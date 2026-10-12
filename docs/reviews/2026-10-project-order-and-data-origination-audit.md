@@ -241,3 +241,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4:** P07 SA-9 and SR-6 cite P09 vendor reviews that ran after fieldwork; 61 terminated tenants is given for two different windows.
 - **Size 5 (enterprise SaaS publisher):** P07 findings test against 2026 policy numbering while the plan says controls ran under the 2025 set; R-005 says about 400 services while G-013 counts 412.
 - **Size 6:** handoff files "kept 400+ days" date back about 390 days at the test; the BIA and SSP quote an opt-in count as of 2026-08-31; PY-G23 and PY-G25 disagree on whether the division plan has the FTC notice step.
+
+### Communications (critical infrastructure), 2026-10-12
+
+Six samples, 577 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 30 minutes.
+
+Fixes made during this batch:
+- **Sizes 4 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-1, EV-C-AC23, EV-C-AC65, EV-C-IA21) renamed to the parenthesis form.
+- **Size 2 (micro telecom carrier):** P09 CC1.2 cited meeting notes from a later month; relabelled "None yet (meeting notes from 2026-09)".
+- **Size 4 (mid-market telecom carrier):** the facts said badge access covers "the POPs" while P07 PE-3 found POP-B on mechanical keys; the intake badge list follows P07.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in several sizes the SSP or P08 matrix) cites regulatory checks dated after approval.
+- **Size 1 (wireless internet provider):** a VoIP questionnaire dated 2026-08-12 is cited by P04, P01, P07 and P03 from July; the SSP says no restore was ever tested while P07 attempted one; P10's language split gives about 5% English errors while it states 7%.
+- **Size 2:** P01, P03 and P04 dated 2026-07-31 cite August events and P07 results; P10's language split adds to 5 of 40 against the stated 3 of 40; P07 AC-2 counts 9 named accounts against 7 plus 4 elsewhere.
+- **Size 3 (regional telecom carrier):** P03 cites P07, P09 and POL-01 items dated after its fieldwork; P10 says a review was recorded in an incident register that P03 and the SSP say does not exist; P04 counts four administrator roles where P01 and P02 count three administrators.
+- **Size 4:** pass-1 R-050 quotes an August P07 result; P07 SA-9 and SR-6 cite P09 reviews dated after fieldwork; P09 cites a shared-administrator finding P07 never made; the SBC upgrade is "ordered", "not yet scheduled" and "due 2026-12-15" in three places.
+- **Size 5 (enterprise telecom carrier):** R-007 says monthly IT scanning while G-073 says weekly; P03 and P09 cite 2026 policies and later deliverables; P09 marks an SL-2 criterion Ready on a system description that PI1.1 says does not exist; the policy hierarchy says 38 statements were tested in 2026 while P07 reviewed the 2026 drafts for design only.
+- **Size 6 (telecom carrier plus two divisions):** P01 and P07 state RMU password changes finished by 2026-09-30, after their approval; P10 cites a 911 rule added in 2026-09 in an August assessment; G-020 faults a CPNI certificate for omitting a pilot that started after it was filed.

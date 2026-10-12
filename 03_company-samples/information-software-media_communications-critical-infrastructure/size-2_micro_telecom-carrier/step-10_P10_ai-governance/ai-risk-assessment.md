@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (security and compliance lead) with one Customer Service Representative and the telecom regulatory consultant, 2026-08-25 |
 | Decision | Owner and General Manager, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the BSS add-on order, terms and settings, the accounts payable list, the monitoring service configuration, and a question put to staff at intake (EV-025, EV-038, EV-016, EV-046). How many staff use public chatbots, and what they paste, was not established (intake open request). Whether the monitoring service's learned thresholds use customer data awaits the vendor's answer |
 
 ## 1. GOVERN
 - **Accountable owner:** the Office Manager, who turned the assistant on and administers the BSS. **Decision authority:** the Owner and General Manager.
@@ -27,13 +27,13 @@
 |---|---|
 | Purpose and intended use | Answer common questions (outages, prices, troubleshooting, bills) and handle simple account tasks after hours, so customers do not wait for the next business day |
 | Users / operators | Customers using portal or website chat; the Office Manager (configuration); representatives (who receive hand-offs the next business day) |
-| Affected people | About 1,420 account holders and anyone who opens the chat. About 1,150 chat sessions from 2026-05-04 to 2026-08-14 |
+| Affected people | About 1,420 account holders and anyone who opens the chat. About 1,150 chat sessions from 2026-05-04 to 2026-08-14 (EV-056) |
 | Data | Inputs: customer messages; account data from the BSS (balance, plan, bill lines including itemized toll calls, recent call detail for voice accounts, open tickets). Outputs: answers, bill explanations, ticket creation, setting changes. Transcripts kept by the vendor for 180 days. **The add-on terms allow the vendor to use de-identified chat data to improve its models; no term excludes it** |
 | Build or buy | Buy: a BSS vendor add-on built on a third-party large language model platform. Configured with the company's knowledge articles |
 | Account actions allowed today | Show balance, bills, plan, and recent calls; open a repair ticket; switch paperless billing; **change the email address on the account** |
 | Not intended | Password or PIN changes; service changes or disconnection; credits; payment arrangements; number porting. None of these is enabled. Enabling any requires re-assessment |
 
-**What went wrong (found 2026-07-24, P03):**
+**What went wrong (found 2026-07-24, P03; EV-053):**
 1. **Guest verification** (vendor default) showed the balance and the last 3 calls after the account number and service address, both printed on every bill. That is account information the CPNI rules forbid as an authenticator for online access (64.2010(c)). It was used in 210 sessions and was turned off on 2026-08-14. The Office Manager and counsel reviewed those sessions: no complaint and no sign of use by someone other than the account holder was found, so no breach was determined. The review is in the incident register.
 2. **Personalized offers** (vendor default) suggested faster broadband plans using the account's services and bill lines, including voice usage. Using voice CPNI to market broadband needs approval (64.2007(b); P03 G-007). Turned off on 2026-08-14.
 3. **Email address change in chat** lets a signed-in user change the email of record with no notice to the old address. If an account is taken over, the attacker can lock the customer out of reset messages, and the change notice rule is not met (64.2010(f)).

@@ -11,7 +11,7 @@
 | Approved | 2026-09-04 by the COO (Moderate and below) and the Chief Executive Officer (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Network Operations and Customer Billing Platform (OSS/BSS) defined in the SSP (P02), the voice and broadband network it manages (SYS-07, SYS-08), the lawful-intercept system (SYS-10), the contact center and chatbot (SYS-11, SYS-12), and the vendors that handle CPNI (`../00_company-facts.md` section 3). The business processes are those in the BIA (P05).
+**Scope.** The Network Operations and Customer Billing Platform (OSS/BSS) defined in the SSP (P02), the voice and broadband network it manages (SYS-07, SYS-08), the lawful-intercept system (SYS-10), the contact center and chatbot (SYS-11, SYS-12), and the vendors that handle CPNI ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). The business processes are those in the BIA (P05).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 This is the company's first documented security risk assessment. Earlier reviews covered storm and network availability only.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, public reporting on intrusions into U.S. carriers (the FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures"; 90 FR 58006), the BIA, the gap analysis (P03), and interviews with the NOC, customer operations, and regulatory staff.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, public reporting on intrusions into U.S. carriers (the FCC's 2025 order on reconsideration describes the "Salt Typhoon" campaign that "exploited publicly known common vulnerabilities and exposures"; 90 FR 58006), the BIA, the intake evidence, the gap analysis (P03), and interviews with the NOC, customer operations, regulatory, and network engineering staff (EV-056). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the backup and scan records, the walkthrough, the portal and chatbot tests, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the P05 impact categories (cost, operations, regulatory, public safety, reputation).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,7 +51,7 @@ The six High risks share one theme: **the network's management plane and CPNI st
 
 Fixing the management plane (segmentation, named accounts, monitoring) also reduces six Moderate risks (R-009, R-010, R-019, R-020, R-025, R-032) and one Low risk (R-026).
 
-R-032 was added on 2026-08-13 after control assessment testing (P07) found vendor-default SNMP community strings on 11 cabinet switches.
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-08-13 after testing found vendor-default SNMP community strings on 11 cabinet switches (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1, $318,000 approved by the Chief Executive Officer):**

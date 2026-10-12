@@ -7,7 +7,7 @@
 | AI use case | AI-001: customer-service chatbot on the web portal and app, with read and update access to customer accounts through an API to the BSS. Pilot since 2026-04-06 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | IT Manager with the Director of Customer Operations and the Regulatory Affairs Manager, 2026-08-24 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the accounts payable list, the chatbot configuration, the vendor contract and a staff survey with the identity provider app list (EV-045, EV-025, EV-049, EV-054). How many staff use public generative AI services, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Customer Operations (business owner). **Decision authority:** COO (Medium tier). The Chief Executive Officer decides if the use case is re-tiered High.

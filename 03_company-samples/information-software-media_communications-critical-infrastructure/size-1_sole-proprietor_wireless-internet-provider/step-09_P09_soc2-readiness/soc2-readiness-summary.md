@@ -8,7 +8,7 @@
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None. Self-check only; no SOC 2 examination planned |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the billing platform vendor's SOC 2 Type 2 report, plus the wholesale VoIP provider's security questionnaire (`vendor-soc2-review.csv`, added at this tier) |
+| Part B | Review of the billing platform vendor's SOC 2 Type 2 report, received at intake (EV-021), plus the wholesale VoIP provider's security questionnaire (EV-035) (`vendor-soc2-review.csv`, added at this tier) |
 | Prepared | 2026-07-23 (Part B, billing vendor), 2026-07-24 (Part A), and 2026-08-12 (VoIP questionnaire) by the owner-operator with the network consultant; adopted 2026-08-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

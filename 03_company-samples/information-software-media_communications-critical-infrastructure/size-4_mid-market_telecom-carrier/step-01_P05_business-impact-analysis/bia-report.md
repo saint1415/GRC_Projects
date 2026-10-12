@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (regional broadband and wired telecommunications carrier) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and the GRC analyst with the vCISO and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-17 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-056), FY2025 revenue report by service line (EV-051), Q2 2026 subscriber and operating volume report (EV-052), contract register (EV-046), BSS vendor SOC 2 report (EV-044), backup and test records (EV-018, EV-019), outage, 911 and power records (EV-037, EV-038, EV-039) and the Business Services platform records (EV-054). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Network Operations, Business Services, Customer Operations, Field Operations, Billing and Finance, Sales and Marketing, Regulatory and Legal, and corporate functions. It rates 16 business processes and quantifies what an outage costs in money, operations, regulatory exposure, public safety, and reputation.
@@ -17,10 +18,10 @@ The results feed:
 - the IT contingency plan the company is writing (P07 POAM-010).
 
 ## 2. System and business description
-The company serves about 205,000 accounts in parts of 11 Florida counties from 9 central offices, 2 metro POPs, and 268 remote cabinets: broadband for about 197,000 subscribers, about 74,000 voice lines, protected business data circuits for 3,400 sites, and Business Services (hosted voice, managed SD-WAN, colocation) for about 600 business customers. Operations run on the Network Operations and Customer Billing Platform (OSS/BSS) described in the SSP (P02): the SaaS BSS, the legacy CLEC billing system, the OSS, mediation, and portal in a 5-account cloud landing zone, the identity provider, the SIEM, and the network management plane. See `../00_company-facts.md` sections 1, 3, and 7.
+The company serves about 205,000 accounts in parts of 11 Florida counties from 9 central offices, 2 metro POPs, and 268 remote cabinets: broadband for about 197,000 subscribers, about 74,000 voice lines, protected business data circuits for 3,400 sites, and Business Services (hosted voice, managed SD-WAN, colocation) for about 600 business customers. Operations run on the Network Operations and Customer Billing Platform (OSS/BSS) described in the SSP (P02): the SaaS BSS, the legacy CLEC billing system, the OSS, mediation, and portal in a 5-account cloud landing zone, the identity provider, the SIEM, and the network management plane. Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $318 million in annual receipts, about $871,000 per day: residential broadband about $411,000, business data services about $197,000, voice about $126,000, Business Services about $104,000, and other about $33,000.
+Dollar values are scaled to $318 million in annual receipts, about $871,000 per day (EV-051): residential broadband about $411,000, business data services about $197,000, voice about $126,000, Business Services about $104,000, and other about $33,000.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -66,10 +67,10 @@ Processes that share a priority number are recovered in parallel by different te
 - **BP-15 has a 24-hour MTD** because robocall traceback requests must be answered within 24 hours (47 CFR 64.6305(a)(2)).
 
 ## 5. Key findings
-1. **The network side is engineered for availability; the IT side is not proven.** Voice has two geo-redundant core nodes, protected rings carry business circuits, and the NOC can move to CO-4. But cloud restores have been tested only for the OSS. The RTOs for mediation (BP-13), the portal (BP-09), and the data warehouse (BP-14) are targets, not demonstrated capabilities (gap 9; P01 R-026; P07 CP-4).
+1. **The network side is engineered for availability; the IT side is not proven.** Voice has two geo-redundant core nodes, protected rings carry business circuits, and the NOC can move to CO-4. But cloud restores have been tested only for the OSS. The RTOs for mediation (BP-13), the portal (BP-09), and the data warehouse (BP-14) are targets, not demonstrated capabilities (EV-019; P01 R-026; P07 CP-4).
 2. **Network element recovery at scale is untested.** Nightly configuration backups exist for every element, with a copy at CO-4, but no one has restored more than a handful of devices at once. A destructive attack on the 268 cabinet switches (P01 R-004) would rely on that untested capability (P01 R-027).
-3. **911 facilities have two known single points of failure.** Two of 14 legacy 911 circuit pairs share a fiber segment, and the CO-6 generator failed its full-load test in 2026-05 (gap 11; P01 R-014, R-015). Both affect BP-02 directly.
-4. **The BSS vendor's recovery objectives do not meet the BIA.** The vendor's SOC 2 system description states RTO 12 hours and RPO 1 hour. Customer care (BP-09) needs RTO 8 hours. The hourly offline account report covers authentication and balances, so care can run in a reduced mode, but not for 12 hours of peak outage traffic (P01 R-025; P09 vendor review).
+3. **911 facilities have two known single points of failure.** Two of 14 legacy 911 circuit pairs share a fiber segment, and the CO-6 generator failed its full-load test in 2026-05 (EV-038, EV-039; P01 R-014, R-015). Both affect BP-02 directly.
+4. **The BSS vendor's recovery objectives do not meet the BIA.** The vendor's SOC 2 system description states RTO 12 hours and RPO 1 hour (EV-044). Customer care (BP-09) needs RTO 8 hours. The hourly offline account report covers authentication and balances, so care can run in a reduced mode, but not for 12 hours of peak outage traffic (P01 R-025; P09 vendor review).
 5. **Hosted voice has the tightest data objective.** Customers change call routing many times a day, so the RPO is 15 minutes. The standby cluster node replicates continuously, but backups of the cluster configuration run nightly and have never been restored (P09 A1.3).
 
 ## 6. Resource requirements

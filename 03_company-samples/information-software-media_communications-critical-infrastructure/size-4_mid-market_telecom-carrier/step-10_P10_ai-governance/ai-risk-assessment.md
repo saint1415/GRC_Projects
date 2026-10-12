@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed regional broadband and wired telecommunications carrier) |
 | Tier / Vertical | Mid-Market / Communications |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv` |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. AI-001 to AI-004 were found at intake from the identity provider app list, the accounts payable vendor master, the OSS and contact center configuration and a department heads survey (EV-055, EV-042); AI-005 is the enterprise assistant pilot proposed during this assessment (EV-072). How many staff use public generative AI tools, and what they enter, was not established (intake open request); R-040 treats it as unknown |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-002, and AI-005 |
 | Assessors / date | Vice President of Regulatory Affairs (CPNI and legal), vCISO and Security Manager (security), NOC Director (AI-003), Data Analytics Manager (AI-004 technical review), 2026-08-24 to 2026-09-04 |
 | Decision | Chief Operating Officer, 2026-09-17; the High-tier decision (AI-003) taken jointly with the CTO and noted by the CEO |
 
 ## 1. Summary
-Four of the five tools reached production before any security or CPNI review (gap 13 in `../00_company-facts.md`): the chatbot had a limited review, and agent assist, the churn model, and the NOC tool were adopted by departments. Staff were also using public generative AI tools. None is out of control, but each needs conditions:
+Four of the five tools reached production before any security or CPNI review (EV-055): the chatbot had a limited review, and agent assist, the churn model, and the NOC tool were adopted by departments. Staff were also using public generative AI tools. None is out of control, but each needs conditions:
 - **AI-001, the chatbot with account access:** its "verify me" fallback accepted SSN4 and service address, which the CPNI rules forbid for online access (47 CFR 64.2010(c)). Disabled 2026-07-24.
 - **AI-002, agent assist:** transcribes every care call through a subprocessor the CCaaS vendor's SOC 2 report carves out; the recording notice does not mention AI transcription.
 - **AI-003, NOC alarm correlation:** can group or down-rank an alarm on a 911-tagged circuit, which could delay the 30-minute PSAP notice. It is the only High-tier use case.
