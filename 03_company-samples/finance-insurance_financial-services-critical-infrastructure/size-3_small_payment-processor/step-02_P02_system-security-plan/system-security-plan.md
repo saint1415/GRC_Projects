@@ -37,7 +37,7 @@ The cloud is described by service category and is vendor-agnostic (see P04).
 | Card brand | Visa What To Do If Compromised (supplemental requirements, v10.0, effective 2026-06-25) and other brands' incident rules through the sponsor bank | Visa Core Rules and supplements |
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
-Not applicable (see `../00_company-facts.md` section 1 and P03):
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); see P03):
 - NYDFS 23 NYCRR Part 500 (C-FINANCIAL-R05): no New York license, registration, or charter.
 - SEC Regulation SCI (C-FINANCIAL-R04): not an SCI entity.
 - NCUA 12 CFR 748.1(c) (C-FINANCIAL-R03): not a credit union and serves none.
@@ -85,7 +85,7 @@ Information types were matched to NIST SP 800-60 Vol. 2 Rev. 1 where a close typ
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems. Examples are most PM-series program controls other than PM-2 and PM-9.
 
 ## 7. Authorization Boundary Description
-The boundary contains company-managed components and the company's configuration of provider services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains company-managed components and the company's configuration of provider services:
 - **Inside:**
   - the cloud tenant (SYS-01 to SYS-04, SYS-09, SYS-13, the bastion, and the network, IAM, logging, and key management configuration)
   - the identity provider tenant (SYS-05)
@@ -150,7 +150,7 @@ Internal control assessment 2026-08-03 to 2026-08-07. See P07 `assessment-result
 - **Consumers** paying on the hosted payment page are not account holders and do not authenticate to the PPP. Card brand authentication programs run through the issuers.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), BIA (P05), gap analysis (P03), cloud control map (P04), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10), 2025 AOC, 2026-01 penetration test report.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), BIA (P05), gap analysis (P03), cloud control map (P04), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10), 2025 AOC, 2026-01 penetration test report.
 
 ## 13. Acronym List and Glossary
 - **AOC:** Attestation of Compliance

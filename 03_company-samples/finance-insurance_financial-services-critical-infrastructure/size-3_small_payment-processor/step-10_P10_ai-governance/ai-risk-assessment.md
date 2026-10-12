@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1); NIST AI 600-1 Generative AI Profile for AI-002 |
 | Assessor / date | Risk and Fraud Manager with the IT Manager and Compliance and Risk Manager, 2026-08-25 |
 | Approved | COO, 2026-08-31 (conditions in section 6) |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the accounts payable list, the fraud model documentation, the identity provider app list and a staff survey (EV-047, EV-035, EV-065). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Risk and Fraud Manager for AI-001; IT Manager for AI-002.
@@ -17,7 +17,7 @@
   - POL-04 4.8: training extracts must be token-only, minimized, and covered by use limits and deletion terms
   - POL-05 4.7: approved generative AI tools only; no Restricted or Confidential data in public chatbots
   - POL-01 4.8: service provider due diligence and annual review (the fraud analytics vendor)
-- **Inventory and approved-tools list:** kept by the IT Manager. It did not exist before this assessment (gap 14 in `../00_company-facts.md`).
+- **Inventory and approved-tools list:** kept by the IT Manager. It did not exist before this assessment (EV-045).
 - **Scale for a Small processor:** there is no AI committee. The Risk and Fraud Manager, IT Manager, Compliance and Risk Manager, and CTO review AI use cases every quarter, timed with the vendor's quarterly model update.
 
 ## 2. MAP (AI-001)

@@ -53,6 +53,17 @@ This is not a PCI DSS assessment. Only the QSA's ROC can conclude on PCI DSS com
   - an unauthorized change to a staging copy of the payment page (tamper-detection)
   - PAN discovery scans of the data warehouse and 200 support tickets
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; the COO approved them on 2026-08-31. They were reviewed as drafts, for design only: a control that a draft policy introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples, records or live systems | 107 |
+| Design | The control is introduced by draft POL-03 (external notice assignments, reportable incidents, information sharing with the sponsor bank, card brands and merchants); its design was reviewed. Operation is tested at the 2027-02 follow-up | 3 |
+| Not implemented | Nothing existed to test | 20 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled termination tickets come from the 11 in EV-005, and the merchant user test draws on the 11,500 accounts in EV-009).
+
 ## 3. Rules of engagement
 - No testing in production that could affect authorizations. Payment page and log agent tests ran in staging. The DNS test used a domain owned by the assessor, with the Platform Engineering Lead present.
 - No card data left the tenant. PAN discovery results were reported as counts and masked samples (BIN and last four).

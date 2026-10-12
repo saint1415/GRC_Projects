@@ -11,7 +11,7 @@
 | Approved | COO, 2026-08-31 |
 
 ## 1. Applicability
-Applicability was decided first, one rule at a time, before any gap was rated. Regulatory text comes from the eCFR and the U.S. Code; card brand rules come from Visa's public site. (Library note: every citation in this section was re-verified against those primary sources on 2026-09-26, using the eCFR point-in-time text for 2026-09-23.)
+Applicability was decided at intake, one rule at a time, in the [obligations register](../step-00_P00_intake/obligations-register.csv), before any gap was rated. This section restates the result for the rules analyzed here. Regulatory text comes from the eCFR and the U.S. Code; card brand rules come from Visa's public site. (Library note: every citation in this section was re-verified against those primary sources on 2026-09-26, using the eCFR point-in-time text for 2026-09-23.)
 
 ### 1.1 PCI DSS v4.0.1: applies, as a service provider (primary)
 - **Why it applies.** PCI DSS is not a law. It binds the company by contract: the sponsor agreement and the card brands' rules require every entity that stores, processes, or transmits cardholder data for a brand member to comply. The company does all three for its merchants, so PCI DSS calls it a **service provider**. The QSA assessed it that way in 2025.
@@ -57,10 +57,10 @@ These sections impose the same bank service provider notice. They apply only if 
    - PCI DSS was decomposed at the requirement level (1.1 to 12.10), with every service-provider-only sub-requirement as its own row, plus the appendices. PCI DSS is copyrighted, so rows give the requirement number and a short topic label in our own words. Read the full text in the PCI SSC document library.
    - The Safeguards Rule was decomposed to the paragraph level of 16 CFR 314.4, and 12 CFR 53.4 to its paragraphs.
 2. **Crosswalk.** Each row is mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. These are **author mappings**: no official NIST mapping from PCI DSS v4.0.1 or 16 CFR 314 to CSF 2.0 or SP 800-53 was used.
-3. **Evidence.**
-   - Interviews: COO, CTO, IT Manager, Platform Engineering Lead, Compliance and Risk Manager, Settlement Operations Manager, Merchant Support Manager, HR Manager.
-   - Documents: policies, the 2025 ROC and AOC, the sponsor agreement, and service provider contracts.
-   - Technical: configuration exports from the cloud tenant, identity provider, SIEM, and pipeline, and a browser capture of the hosted payment page (2026-07-22).
+3. **Evidence.** Each row's `evidence` column cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind its status.
+   - Intake evidence (EV-001 to EV-066, collected 2026-06-29 to 2026-07-10): configuration exports from the cloud tenant, identity provider, SIEM, and pipeline; policies, the 2025 ROC and AOC, the sponsor agreement, and service provider contracts.
+   - Interviews: COO, CTO, IT Manager, Platform Engineering Lead, Compliance and Risk Manager, Settlement Operations Manager, Merchant Support Manager, HR Manager (EV-069).
+   - Technical fieldwork: network rule export and denied-path test, cloud IAM export and repository token report (EV-070 to EV-072), payment page source review (EV-073), TLS scan (EV-074), log samples (EV-075), support ticket sample (EV-076), secrets scan, MFA enrollment report and data discovery scan (EV-077 to EV-079), screen observation (EV-080), change sample (EV-081), and a browser capture of the hosted payment page (2026-07-22, EV-082).
 4. **Status.** Each row is rated Met, Partially met, Not met, or Not applicable.
 5. **Gap risk.** Each gap is rated with the P01 risk scale. High gaps are the ones that would likely produce a "not in place" finding at the 2026 ROC, or that leave a High risk in P01 untreated.
 
