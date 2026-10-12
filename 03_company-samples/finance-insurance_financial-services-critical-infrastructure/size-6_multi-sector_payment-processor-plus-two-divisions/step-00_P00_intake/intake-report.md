@@ -1,22 +1,68 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company Holdings | Financial Services | Multi-Sector
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company Holdings, Inc. (publicly traded holding company; Payment Processing, Payments Software Platform, and Merchant Consulting divisions; corporate shared services) |
+| Intake window | 2026-03-30 to 2026-04-24 |
+| Collected by | Group GRC team (Group CISO's office), with the three division security and compliance leads |
+| Approved | Board risk committee, 2026-09-10, with the other deliverables |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the group's own records before any assessment work began on 2026-05-01. It covers the legal entities, the systems that store, process, or transmit cardholder data or other customer information in each division and in corporate shared services, the suppliers and affiliates that touch them, and the rules that may bind each entity. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Items are grouped by division: the title of each row starts with Group, Payment Processing, Software, or Merchant Consulting. Later steps add their own fieldwork evidence (interviews, scans, tests) to the same register, so one list backs every deliverable.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analyses (P03) and the control assessment (P07).
 
 ## 2. Sources collected
-| Area | Evidence IDs | System of record | As of |
-|---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Division | Area | Evidence IDs | System of record | As of |
+|---|---|---|---|---|
+| Group | Entities, workforce, revenue and intercompany agreements | EV-001 to EV-004 | Entity management system; HR system; ERP and Form 10-K; legal contract system | 2025-12-31 to 2026-03-31 |
+| Group | Identity and access (SYS-G1) and endpoints | EV-005 to EV-009 | Identity platform, identity governance, PAM and secret store consoles; endpoint and zero-trust consoles | 2026-03-31 |
+| Group | Security operations (SYS-G2) | EV-010 to EV-015 | SIEM and case management; logging standard and archive; EDR; email gateway and PAN discovery tool; scanners and ASV portal; penetration test reports | 2026-03-20 to 2026-03-31 |
+| Group | Program, policies, governance, risk, audit, disclosure, incident response and workforce | EV-016 to EV-026 | Policy repository; GRC tool; corporate secretary; internal audit; SEC filings; SOC document library; learning and HR systems | 2026-01-15 to 2026-03-31 |
+| Group | Vendors, infrastructure, facilities, data platform and AI | EV-027 to EV-031, EV-033 to EV-039 | Vendor master and third-party risk tool; vendor portals; CMDB and cloud consoles; guardrail service; firewall management; backup vaults; TLS scanner; access control system; data center walk-through; data platform; AI council records; web gateway reports | 2026-03-27 to 2026-04-15 |
+| Payment Processing | Keys, sponsor banks, PCI DSS program, scope, volumes, access, dispute platform, portal, recovery, models, assurance and operations | EV-032, EV-040 to EV-053 | HSM consoles and ceremony records; contracts; bank relationship records; PCI DSS library; switch and settlement reporting; role catalogs; SYS-P6 and SYS-P5 consoles; DR records; model risk library; SOC library | 2025-09-30 to 2026-04-18 |
+| Payments Software Platform | Volumes and agreements, SOC 2, gateway ROC, storefronts and marketplace, recovery, support console, pipeline, privacy records | EV-054 to EV-061 | CRM and gateway reporting; client assurance office; PCI DSS library; storefront platform and tamper-detection service; DR library; support console; build pipeline; privacy office | 2025-12-12 to 2026-03-31 |
+| Merchant Consulting | Identity provider, mailboxes, clients and contracts, integration plan, intake interview | EV-062 to EV-066 | SYS-M1 identity and email consoles; consulting contract records; integration office; interview | 2026-03-31 to 2026-04-09 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Entities and scale.** The holding company is an SEC registrant and holds no bank charter. The register lists no credit union, SCI entity, insurance licensee, telecommunications carrier, or New York-licensed entity. Merchant Consulting was acquired on 2025-04-01 (EV-001). The workforce is about 45,000: Payment Processing about 24,000, Software about 9,500, Merchant Consulting about 6,500, corporate about 5,000 (EV-002). FY2025 revenue was about $18.0 billion: Payment Processing about $13.0 billion, Software about $3.4 billion, Merchant Consulting about $1.6 billion (EV-003). The gateway services agreement (2023) and the consulting dispute services agreement (2025) have no PCI DSS responsibility matrix, and the 2025 agreement has no safeguards clause (EV-004).
+
+**Group identity and access.** SYS-G1 users sign in with number-matching MFA; administrators use hardware keys (EV-005). Joiner-mover-leaver workflows and quarterly certification cover Payment Processing, Software division and corporate users; SYS-M1 is not a source for either (EV-006). Privileged access is just in time through PAM with session recording, and CDE privileged commands run only from PAM jump hosts (EV-007). About 860 service identities hold secrets under a 90-day rotation policy (EV-008). Only managed, encrypted devices with EDR reach CDE administration, through zero-trust access and PAM (EV-009).
+
+**Group security operations.** The SOC runs 24x7 with correlation across every division, DNS and egress detection on every CDE, and alerts on log-source failure. SYS-M1 sign-in logs have been onboarded since 2025-09; SYS-P6 application events and consulting mailbox access logs are not in the source list (EV-010, EV-011). EDR covers every server, CDE host, administration workstation and consulting laptop (EV-012). Weekly PAN discovery scans of SYS-G4 and SYS-G5 have run since 2026-03; SYS-M1 mailboxes are not in scope (EV-013). Quarterly ASV scans passed from 2025-Q2 to 2026-Q1 (EV-014). Penetration and segmentation tests ran in 2026-03 (EV-015).
+
+**Program, policies and governance.** One group program aligned to CSF 2.0 and designed to meet 16 CFR 314.4, with POL-01 to POL-05 (2025 versions) approved by the board risk committee (EV-016). The Software supplement was last aligned in 2025-11; Merchant Consulting still uses the acquired firm's 2024 policy set, never aligned to group policy (EV-017). The common control catalog lists 130 controls; inheritance is documented for Payment Processing (PCI DSS responsibility matrix, 2025) and in the Software division's SOC 2 system description, and no inheritance document exists for Merchant Consulting (EV-018). The Group CISO was designated Qualified Individual in 2025-06 and last reported to the board risk committee on 2025-12-10 (EV-019). Risk acceptance authority is set by level (EV-020). Internal audit plans its first Merchant Consulting sample for July and August 2026 (EV-021). The disclosure committee charter covers cybersecurity incidents (EV-022). The incident response plan v2025 names the OCC rule only and has no steps for incidents that start in the Software or Merchant Consulting divisions (EV-023). No exercise has combined divisions, the notification matrix, or a covered-services determination (EV-024). Merchant Consulting dispute analysts take the acquired firm's general training, not the group's PCI DSS role training (EV-025). Consulting terminations reach SYS-M1 through a ticket opened by the engagement lead (EV-026).
+
+**Vendors, infrastructure and data.** The vendor register does not list the gateway or Merchant Consulting as service providers to the processor, and vendor screening checks sanctions, not 28 CFR Part 202 covered persons (EV-027, EV-028). SYS-P1 to SYS-P3 run active-active in both group data centers; the gateway runs in one provider B region with a warm standby (EV-029, EV-058). Guardrails, signed builds, deny-by-default segmentation, HSM-held keys, immutable cross-provider backups and TLS 1.2 or higher are configured (EV-030 to EV-034). Data center entry uses badge and biometric controls with mantraps and cages, seen on the walk-through of 2026-04-14 (EV-035, EV-036). SYS-G4 is designed for tokens only, with a PAN block on processor feeds; its raw log zone also receives gateway logs (EV-037).
+
+**AI tools.** The Group AI Standard and council date from 2026-03-02. The register lists the fraud-detection and underwriting models, the dispute evidence classifier, gateway abuse detection, a coding assistant, and two assistants in pilot (EV-038). Consulting laptops reach public generative AI chatbots, and consulting staff report pasting client documents into them (EV-039, EV-066).
+
+**Payment Processing.** Four sponsor agreements name clearing, settlement, reconciliation and funding file services as subject to examination under 12 U.S.C. 1867(c) and require 24-hour compromise notice (EV-040). Bank-designated contacts are on file for Banks A and C; the determination procedure covers incidents inside SYS-P1 to SYS-P3 and names 12 CFR 53.4 only (EV-041). The 2025 AOC is Compliant, dated 2026-01-22 (EV-042). The 2026-04 scope confirmation lists no SYS-M1 mailboxes (EV-043). About 29 billion transactions a year; about 640 million PANs in the vault; about $3.8 billion in funding files a day (EV-044). About 8,900 users reach the PPP, including about 2,400 consulting dispute analysts, and the SYS-P6 case export permission is assigned to the dispute analyst role (EV-045). SYS-P6 keeps case files with card images for 14 months (EV-046). The merchant portal requires MFA for refund, funding account and virtual terminal roles (EV-047). The 2026-04-18 failover moved authorization and the vault in 22 minutes (EV-048). The fraud model is validated each year and monitored weekly for drift, with no daily decline-rate view by segment (EV-049). The sponsor banks' 2026 due diligence asks for a SOC 2 report (EV-050).
+
+**Payments Software Platform.** About 410,000 merchants, 180,000 storefronts and 1,900 ISVs; about 70% of gateway traffic goes to the processor (EV-054). The SOC 2 Type 2 report for the period ending 2025-09-30 was issued 2025-12-12 (EV-055); the gateway AOC is dated 2026-03-31 (EV-056). About 260 of about 1,100 marketplace apps can add scripts; script inventory and tamper-detection cover the standard checkout template (EV-057). The last gateway failover test record is dated 2025-04 (EV-058). ISV keys are shown in clear in the support console, where consulting integration consultants hold standing access (EV-059).
+
+**Merchant Consulting.** Consulting staff sign in through SYS-M1 with SMS one-time codes and no PAM; SYS-M1 is federated to SYS-G1 for SYS-P6 and the ISV support console (EV-062). Merchants email dispute evidence with card images to consulting mailboxes, which have no retention rule (EV-063). About 620 of 3,800 clients do not process with the group; engagement letters carry a 72-hour notice clause and no security or AI terms (EV-064). Migration to SYS-G1 and SYS-G5 is planned for 2027-03-31 (EV-065).
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| Bank-designated points of contact for Banks B and D | Head of bank and network relationships | 2026-04-02 | Not on file; analyzed in P03 (G-102, G-105) and tracked as POAM-005 |
+| PCI DSS responsibility matrix for the gateway and dispute services agreements | Group General Counsel | 2026-04-02 | None exists; analyzed in P03 (G-075, MC-G02) and tracked as POAM-009 |
+| Volume of PAN in SYS-M1 mailboxes, which are outside the weekly PAN discovery scans | Merchant Consulting dispute services director | 2026-04-03 | Not established at intake; measured by the P03 scan in 2026-07 (EV-081) |
+| Inheritance document for Merchant Consulting | Merchant Consulting security and compliance lead | 2026-04-06 | None exists; tested in P07 (CA-2) and tracked as POAM-010 |
+| Gateway failover test record later than 2025-04 | Software division chief technology officer | 2026-04-07 | None exists; tested in P07 (CP-4) and tracked as POAM-019 |
+| Number of consulting staff using public chatbots, and what they paste | Merchant Consulting security and compliance lead | 2026-04-09 | Not established at intake; measured by the P10 endpoint survey in 2026-07 (EV-087) |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Revenue by division (EV-003), volumes (EV-044, EV-054, EV-064), contract commitments (EV-040, EV-054), recovery records (EV-033, EV-048, EV-058), and dependencies from the asset and vendor registers |
+| P02 SSP | The PPP boundary from the asset inventory; as-found configuration from EV-005 to EV-015, EV-029 to EV-035 and EV-045 to EV-048; common controls from EV-018 |
+| P04 Cloud mapping | Cloud, data center and platform components (EV-029 to EV-033, EV-057 to EV-060) and provider assurance (EV-028, EV-055) |
+| P01 Risk registers | Likelihood inputs from configuration exports, inventories, contracts and plans in all four registers (the `likelihood_basis` column) |
+| P03 Gap analyses | The obligations register (which rules apply to which entity) and every observation above, compared with the requirements |
+| P06 Policies | The 2025 group policies and standards (EV-016) and the division supplements, including the 2024 consulting set (EV-017) |
+| P07 Control assessment | Populations to sample from (EV-002, EV-006, EV-008, EV-045, EV-057, EV-062) |
+| P08 IR runbook | Notification duties per entity from the obligations register; the incident plan (EV-023); sponsor bank contacts and contract notice terms (EV-040, EV-041, EV-054, EV-064) |
+| P09 SOC 2 | The Software division's SOC 2 report (EV-055), the processor's SOC 1 report and sponsor bank requests (EV-050, EV-051), and vendor reports (EV-028) |
+| P10 AI governance | AI use cases found (EV-038, EV-039), model records (EV-049) and the consulting interview (EV-066) |
