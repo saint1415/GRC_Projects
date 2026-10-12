@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel; card brand and bank notices run by the head of bank and network relationships |
 | Approved | 2026-09-10 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The multi-regulator notification matrix and a covered-services determination have never been exercised across divisions** (scenario gap 7); the first cross-division tabletop is on 2026-12-15 (POAM-006) |
+| Last tested | Technical playbooks tested quarterly (EV-024). **The multi-regulator notification matrix and a covered-services determination have never been exercised across divisions** (group gap 7); the first cross-division tabletop is on 2026-12-15 (POAM-006) |
 
 ## Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

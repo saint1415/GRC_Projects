@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator- and brand-specific rules for the priority use cases: the transaction fraud-detection model (AI-001, focus), the merchant underwriting model (AI-002), the merchant insights assistant (AI-004), and Merchant Consulting's use of generative AI (AI-007) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27, with independent validation input from the Head of Model Risk Management; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low), built from the Group AI use-case register (EV-038), the web proxy report and consulting interview on generative AI use (EV-039, EV-066), model documentation and validation records (EV-049), the merchant insights assistant release record (EV-080), and the 2026 monitoring, test and survey results (EV-085 to EV-087). The `source_evidence` column names the source of each row. Not established: what client data consulting staff had already submitted to public chatbots before the 2026-07 survey (intake open request; the survey measured use on laptops, not the volume of data submitted) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Change gate.** A material change (new model version, new provider, new feature that changes how customer data is processed, new decision role) triggers re-assessment before release.
 6. **Approved tools only** for workforce generative AI (POL-05 4.6).
 
-**Where the program fell short in 2026.** The standard was adopted after AI-001 to AI-005 were already live. The council's first inventory found that AI-001 is not monitored by cardholder segment, the Software division launched AI-004 without the change gate (scenario gap 6), and consulting staff use public chatbots with client data (AI-007).
+**Where the program fell short in 2026.** The standard was adopted after AI-001 to AI-005 were already live. The council's first inventory found that AI-001 is not monitored by cardholder segment, the Software division launched AI-004 without the change gate (group gap 6), and consulting staff use public chatbots with client data (AI-007).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
@@ -118,7 +118,7 @@ Results are from monitoring, validation, and tests between 2026-05 and 2026-08.
 | Who | Fraud analytics runs it; the head of merchant risk and fraud signs off; model risk management reviews it independently each quarter; the Group AI council sees the results each quarter |
 | Records | Kept for at least 5 years with the model version and thresholds (POL-01 4.11) |
 
-**2026-08-20 results** (Q2 2026 transactions, labels matured through July):
+**2026-08-20 results** (Q2 2026 transactions, labels matured through July; EV-085):
 - **Prepaid cards:** false positive rate 2.2% vs 0.9% overall (2.4 times). **Flagged.** Prepaid fraud rates are 1.5 times the average, which does not justify 2.4 times the false positives. Mitigation: route prepaid transactions in the 800 to 949 band to step-up instead of decline where the merchant supports it, and retrain without the card-type interaction term; retest before the November release.
 - **Lowest-income ZIP code quintile:** 1.3% vs 0.9% (1.44 times, 0.4 points). Not flagged (below the 0.5-point floor); watched monthly.
 - **International BINs:** 2.1% vs 0.9%. Not flagged as unjustified: international fraud rates are 3.3 times the domestic rate on the same merchants, documented by the head of merchant risk and fraud.
@@ -141,7 +141,7 @@ Results are from monitoring, validation, and tests between 2026-05 and 2026-08.
 | Human-AI configuration | Answers labeled and linked to source reports | In place | Yes |
 
 ### 4.4 Other use cases
-- **AI-007 (consulting):** an endpoint survey in 2026-07 found public chatbot use on 38% of consulting laptops, including pasted dispute letters. **No.**
+- **AI-007 (consulting):** an endpoint survey in 2026-07 found public chatbot use on 38% of consulting laptops, including pasted dispute letters (EV-087). **No.**
 - **AI-003, AI-005, AI-008:** validation and monitoring in place; AI-008 pilot hands off to a person in 22% of chats and has no access to account changes.
 
 ## 5. MANAGE

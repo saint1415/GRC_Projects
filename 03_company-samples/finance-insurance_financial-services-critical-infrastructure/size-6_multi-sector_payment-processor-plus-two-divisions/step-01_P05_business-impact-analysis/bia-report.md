@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 | **Approved:** board risk committee, 2026-09-10
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-27 (EV-067 group, EV-068 Payment Processing, EV-069 Payments Software Platform, EV-070 Merchant Consulting), FY2025 revenue by division (EV-003), volumes (EV-044, EV-054, EV-064), contract commitments (EV-040, EV-054), and recovery records (EV-029, EV-033, EV-048, EV-058). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
+
 ## 1. Overview and purpose
 This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on (identity, SOC, data centers and network, cloud landing zones, the group data platform, email, finance, HR).
@@ -16,16 +18,16 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Corporate runs SYS-G1 identity, SYS-G2 SOC, SYS-G3 (two group data centers, landing zones in providers A and B, and the network), SYS-G4 the group data platform, and SYS-G5 email. The processor's CDE (SYS-P1 to SYS-P6) runs active-active in both data centers, with its e-commerce, portal, and dispute services in provider A. The Software division runs the commerce SaaS (SYS-S1), the gateway (SYS-S2), and device management (SYS-S3) in provider B. Merchant Consulting works mostly in the processor's dispute platform (SYS-P6), its own engagement tenant (SYS-M1), and clients' environments. See `../00_company-facts.md` sections 1, 3, and 7.
+Corporate runs SYS-G1 identity, SYS-G2 SOC, SYS-G3 (two group data centers, landing zones in providers A and B, and the network), SYS-G4 the group data platform, and SYS-G5 email. The processor's CDE (SYS-P1 to SYS-P6) runs active-active in both data centers, with its e-commerce, portal, and dispute services in provider A. The Software division runs the commerce SaaS (SYS-S1), the gateway (SYS-S2), and device management (SYS-S3) in provider B. Merchant Consulting works mostly in the processor's dispute platform (SYS-P6), its own engagement tenant (SYS-M1), and clients' environments. The full list, with the evidence behind each entry, is in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **Commitments that set the numbers:**
-- Merchant agreements promise 99.95% monthly availability for authorization. Card network rules also expect continuous availability.
-- Each sponsor agreement requires clearing and merchant funding files by the bank's daily cutoff. These are the covered services under the Bank Service Company Act (12 U.S.C. 1867(c)).
-- Software terms promise 99.9% monthly availability for the gateway and point of sale; ISVs build their own commitments on top.
+- Merchant agreements promise 99.95% monthly availability for authorization (EV-040). Card network rules also expect continuous availability.
+- Each sponsor agreement requires clearing and merchant funding files by the bank's daily cutoff. These are the covered services under the Bank Service Company Act (12 U.S.C. 1867(c)) (EV-040).
+- Software terms promise 99.9% monthly availability for the gateway and point of sale (EV-054); ISVs build their own commitments on top.
 - Consulting dispute work must meet card network response windows that are counted in days.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue in `../00_company-facts.md` section 7: Payment Processing about $35.6 million per calendar day, the Software division about $9.3 million per calendar day, and Merchant Consulting about $6.4 million per business day.
+Dollar values use FY2025 revenue by division (EV-003): Payment Processing about $35.6 million per calendar day, the Software division about $9.3 million per calendar day, and Merchant Consulting about $6.4 million per business day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -82,19 +84,19 @@ Dollar values use the fictional revenue in `../00_company-facts.md` section 7: P
 | Dependency | From | To | Why it matters |
 |---|---|---|---|
 | Sign-in (SYS-G1) | Group | Every process | A group identity outage stops administration and operations in all three divisions. Authorization keeps running without workforce sign-in; break-glass accounts cover recovery |
-| Data centers and card network links (SYS-G3) | Group | Processor CDE | Active-active design; the semiannual failover test passed on 2026-04-18 |
+| Data centers and card network links (SYS-G3) | Group | Processor CDE | Active-active design; the semiannual failover test passed on 2026-04-18 (EV-048) |
 | Gateway traffic (SYS-S2) | Software | Processor authorization (BP-PP01) | About 70% of gateway transactions route to the processor; a gateway outage is a processor revenue outage |
 | Hosted payment fields (SYS-P4) | Processor | Software storefronts (BP-SW03) | Storefronts for processor merchants cannot take cards without them |
 | Payment HSMs (SYS-P2) | Processor | Software device management (BP-SW04) | Device keys are loaded through the processor's HSMs |
 | Dispute platform (SYS-P6) | Processor | Merchant Consulting dispute services (BP-MC01) | 2,400 consulting analysts work inside the processor's CDE |
 | Dispute adjustments | Merchant Consulting and processor | Merchant funding (BP-PP04) | Late or wrong adjustments change the funding file a sponsor bank receives |
-| SYS-M1 federation | Merchant Consulting | SYS-G1 and the CDE | The acquired firm's identity provider is a path into the CDE (scenario gap 1) |
+| SYS-M1 federation | Merchant Consulting | SYS-G1 and the CDE | The acquired firm's identity provider is a path into the CDE (group gap 1; EV-062) |
 | SOC facts (SYS-G2) | Group | Every notice in P08 | Every clock depends on the SOC establishing what happened |
 
 **Single points of failure found:**
-- **The gateway runs active in one provider B region** (scenario gap 8). The warm standby has not been failed over since 2025-04, so its 1-hour RTO is unproven (P01 SW-004).
+- **The gateway runs active in one provider B region** (group gap 8; EV-058). The warm standby has not been failed over since 2025-04, so its 1-hour RTO is unproven (P01 SW-004).
 - **SYS-M1 is outside the group identity platform.** If it is compromised, the attacker inherits federated access to SYS-P6 (P01 MC-001, GR-02).
-- **Sponsor bank contacts.** Notice to Banks B and D depends on fallback contacts because designated contacts are missing (scenario gap 4).
+- **Sponsor bank contacts.** Notice to Banks B and D depends on fallback contacts because designated contacts are missing (group gap 4; EV-041).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -122,7 +124,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 
 ## 8. Key findings
 1. **Shared services set the floor.** Identity, data centers, and landing zones have RTOs equal to or shorter than any division process that depends on them, as they must.
-2. **The gateway's recovery is unproven** (gap 8). Its RTO of 1 hour depends on a failover not tested since 2025-04 (P01 SW-004; POAM-019).
-3. **The processor's own recovery is proven.** Authorization and the token vault failed over between data centers within 22 minutes in the 2026-04-18 test, inside the 30-minute RTO.
+2. **The gateway's recovery is unproven** (group gap 8). Its RTO of 1 hour depends on a failover not tested since 2025-04 (P01 SW-004; POAM-019).
+3. **The processor's own recovery is proven.** Authorization and the token vault failed over between data centers within 22 minutes in the 2026-04-18 test (EV-048), inside the 30-minute RTO.
 4. **A consulting outage becomes a funding issue.** Dispute adjustments made by consulting analysts feed the funding files; the four-hour test in 12 CFR 53.4 and its parallels can be triggered by containment actions in another division (P08 scenario).
 5. **Notification capacity needs out-of-band channels.** The P08 runbook uses a crisis line and printed contact lists because email and chat may be watched by an attacker.

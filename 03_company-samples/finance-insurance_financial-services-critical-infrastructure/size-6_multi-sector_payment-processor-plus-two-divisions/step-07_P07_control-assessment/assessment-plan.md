@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The Payment Processing Platform's** system-specific controls were assessed because it is the SSP system and carries the top group risks (GR-01, GR-02).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Merchant Consulting was sampled most heavily, on identity and governance controls (IA-2(2), AC-2, PL-1, CA-2, AT-3), because its inheritance is undocumented (scenario gap 2), its supplement has drifted, and its users work inside the processor's CDE (gap 1). The Software division was sampled on storefront integrity, its AI feature, and gateway recovery (gaps 3, 6, and 8).
+Merchant Consulting was sampled most heavily, on identity and governance controls (IA-2(2), AC-2, PL-1, CA-2, AT-3), because its inheritance is undocumented (group gap 2), its supplement has drifted, and its users work inside the processor's CDE (group gap 1). The Software division was sampled on storefront integrity, its AI feature, and gateway recovery (group gaps 3, 6, and 8).
 
 ## 2. Controls selected
 **39 control assessments** (36 distinct controls; AC-2, CM-8, and CP-4 were assessed in two scopes), **260 determination statements**.
@@ -25,11 +25,11 @@ Merchant Consulting was sampled most heavily, on identity and governance control
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5, AC-17 | 46 | Every division's access to every CDE; GR-02, GR-07 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, AU-6, IR-3, IR-4, IR-6, IR-8, RA-5 | 57 | GR-03; scenario gaps 4 and 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, AU-6, IR-3, IR-4, IR-6, IR-8, RA-5 | 57 | GR-03; group gaps 4 and 7 | Focused / Comprehensive |
 | Common control (SYS-G3) | CP-9, SC-7, SC-8, CM-6, CP-7 | 23 | GR-06; segmentation, backups, data center failover | Focused / Focused |
 | Payment Processing Platform | AC-3, AC-4, AC-6, SC-12, SC-28, CA-8, CP-4, SI-12, CM-8 | 22 | GR-02, GR-09; PP-001, PP-010 (High); PCI DSS core | Comprehensive / Comprehensive |
-| Division sample: Payments Software Platform | SI-7, CM-8, SA-9, CP-4, CM-3 | 33 | SW-001, SW-002, SW-004 (High); gaps 3, 6, 8 | Focused / Focused (30 storefronts sampled) |
-| Division sample: Merchant Consulting | IA-2(2), AC-2, PL-1, CA-2, AT-3 | 64 | MC-001 (High); gaps 1 and 2 | Focused / Comprehensive (all SYS-M1 users reconciled) |
+| Division sample: Payments Software Platform | SI-7, CM-8, SA-9, CP-4, CM-3 | 33 | SW-001, SW-002, SW-004 (High); group gaps 3, 6, 8 | Focused / Focused (30 storefronts sampled) |
+| Division sample: Merchant Consulting | IA-2(2), AC-2, PL-1, CA-2, AT-3 | 64 | MC-001 (High); group gaps 1 and 2 | Focused / Comprehensive (all SYS-M1 users reconciled) |
 | **Total** | **39** | **260** | | |
 
 ## 3. Methods and objects
@@ -45,6 +45,18 @@ Merchant Consulting was sampled most heavily, on identity and governance control
   - restores of a settlement database copy and a dispute platform backup from the immutable vault;
   - browser captures of 30 sampled storefronts to compare loaded scripts with the inventory.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-10, effective 2026-10-01. Internal audit therefore tested each control as it operated under the 2025 group policies, standards and plans, which were in force (EV-016, EV-023), and reviewed the draft v2026 statements for design only. Any statement the v2026 policies add has not operated yet; its operation is tested at the 2027-04 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, configurations, or live systems | 255 (221 Satisfied, 34 Other than satisfied) |
+| Design | The control is new (a draft v2026 policy statement); only its design was reviewed. Operation is tested at the 2027-04 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: ongoing monitoring of the model provider and script-capable marketplace apps (SA-09c.), certification of SYS-M1 accounts (AC-02j., Merchant Consulting), an assessment plan and earlier assessments of Merchant Consulting controls (CA-02b.01, CA-02d.[01]), and PCI DSS role training for dispute analysts (AT-03a.01[01]) | 5 |
+| **Total** | | **260** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from: the 60 joiner-mover-leaver events and the 40 terminations come from the HR roster and identity governance records (EV-002, EV-006), the SYS-M1 reconciliation from the SYS-M1 user list (EV-062), the 860 service identities from the secret store report (EV-008), the SYS-P6 roles from the PPP role export (EV-045), and the 30 storefronts from the storefront list (EV-057).
+
 ## 4. Rules of engagement
 - No testing that could affect authorization, settlement, funding, or the gateway. Tests ran in non-production tenants where possible; the SYS-P6 export test used synthetic case files.
 - No real PAN left group systems. Screenshots were redacted.
@@ -59,7 +71,7 @@ Merchant Consulting was sampled most heavily, on identity and governance control
 | Division sample: Merchant Consulting | 52 | 12 | 64 |
 | **Total** | **221** | **39** | **260** |
 
-**Common controls are strong.** 128 of 141 common statements were satisfied. Privileged access (AC-6(5)), administrator MFA (IA-2(1)), remote access (AC-17), training (AT-2), vulnerability management (RA-5), and every SYS-G3 control (CP-9, SC-7, SC-8, CM-6, CP-7) had no findings. The common findings are about **people from other divisions** (AC-2 certification of cross-division console users, PS-4 consulting terminations), **monitoring coverage of SYS-P6** (SI-4, AU-6), **cross-division incident response and notification** (IR-3, IR-4, IR-6, IR-8; scenario gaps 4 and 7), and service identity secret rotation (IA-5).
+**Common controls are strong.** 128 of 141 common statements were satisfied. Privileged access (AC-6(5)), administrator MFA (IA-2(1)), remote access (AC-17), training (AT-2), vulnerability management (RA-5), and every SYS-G3 control (CP-9, SC-7, SC-8, CM-6, CP-7) had no findings. The common findings are about **people from other divisions** (AC-2 certification of cross-division console users, PS-4 consulting terminations), **monitoring coverage of SYS-P6** (SI-4, AU-6), **cross-division incident response and notification** (IR-3, IR-4, IR-6, IR-8; group gaps 4 and 7), and service identity secret rotation (IA-5).
 
 **The Payment Processing Platform's core passed.** Key management (SC-12), encryption at rest (SC-28), access enforcement in the vault (AC-3), penetration and segmentation testing (CA-8), and failover testing (CP-4) were fully satisfied. The five findings are all at the dispute edge: the flow of evidence through consulting mailboxes (AC-4), the bulk export permission (AC-6), retention of case files (SI-12), and the data inventory (CM-8).
 
@@ -77,4 +89,4 @@ Merchant Consulting was sampled most heavily, on identity and governance control
 **Before the ROC.** POAM-003, POAM-005, and POAM-008 close by 2026-10-31, and the interim steps of POAM-001, POAM-002, and POAM-007 (weekly reconciliation, trusted-location removal, SYS-M1 in scope with PAN blocking) are in place before QSA fieldwork starts on 2026-11-02.
 
 ## 7. Deliverables and acceptance
-`assessment-results.csv` (260 rows, with an `assessment_scope` column), `poam.csv` (25 items), and this plan and summary. Results were presented to the board risk committee and accepted by the Group CISO and the Group Chief Risk Officer on 2026-09-10. Division presidents accepted their division findings the same week.
+`assessment-results.csv` (260 rows, with `test_type` and `assessment_scope` columns), `poam.csv` (25 items), and this plan and summary. Results were presented to the board risk committee and accepted by the Group CISO and the Group Chief Risk Officer on 2026-09-10. Division presidents accepted their division findings the same week.

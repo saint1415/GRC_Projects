@@ -13,7 +13,7 @@
 | Approved | 2026-09-10 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that stores, processes, or transmits cardholder data or other customer information in the three divisions, the systems that can affect their security, and the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 data centers and landing zones, SYS-G4 data platform, and SYS-G5 email (`../00_company-facts.md` section 3).
+**Scope.** Every system that stores, processes, or transmits cardholder data or other customer information in the three divisions, the systems that can affect their security, and the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 data centers and landing zones, SYS-G4 data platform, and SYS-G5 email ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. Each division security and compliance lead keeps one. Payment Processing, the focus division, has the most detailed register.
@@ -21,7 +21,7 @@
 
 **Written criteria (16 CFR 314.4(b)(1)).** The likelihood and impact scales, the tables below, and the acceptance rules are the evaluation and categorization criteria the Safeguards Rule asks for. Impact is scaled to the P05 BIA categories.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group risk management strategy, EV-020):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -32,8 +32,8 @@
 A High risk of cardholder data compromise may not be accepted. It must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the gap analyses (P03), the control assessment (P07), card brand and sector threat intelligence, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analyses (P03), the first results of the control assessment (P07), which began on 2026-07-01 inside the fieldwork window, card brand and sector threat intelligence, and interviews with each division's leadership (EV-071 group, EV-072 Payment Processing, EV-073 Payments Software Platform, EV-074 Merchant Consulting).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, scans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories. Group impact reflects enterprise consequences: card brand and sponsor bank actions, several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -71,11 +71,13 @@ A High risk of cardholder data compromise may not be accepted. It must be treate
 
 ### What the results say
 The program is mature where the group built it: there are no Very High risks, and the processor's own technical core (segmentation, tokenization, HSM key management, active-active recovery) produces only Moderate and Low risks. The High risks sit at **the edges between divisions**:
-1. **The browser around the payment fields** (GR-01). The processor protects the fields; the Software division owns the storefront page around them and covers only the standard template (scenario gap 3).
-2. **People and pages from other divisions inside the CDE** (GR-02). The acquired consulting firm's identity provider, with SMS codes, is federated into the CDE, and every dispute analyst can bulk export case files (gap 1).
-3. **Shared infrastructure** (GR-06, GR-08). The data centers and the gateway serve more than one division, so one failure or one ransomware event hits several revenue lines and several notice duties at once (gaps 7 and 8).
+1. **The browser around the payment fields** (GR-01). The processor protects the fields; the Software division owns the storefront page around them and covers only the standard template (group gap 3).
+2. **People and pages from other divisions inside the CDE** (GR-02). The acquired consulting firm's identity provider, with SMS codes, is federated into the CDE, and every dispute analyst can bulk export case files (group gap 1).
+3. **Shared infrastructure** (GR-06, GR-08). The data centers and the gateway serve more than one division, so one failure or one ransomware event hits several revenue lines and several notice duties at once (group gaps 7 and 8).
 
 Notification (GR-03), AI governance (GR-04), supplement drift (GR-05), and PAN outside the CDE (GR-09) are Moderate at group level. They matter because each one would turn a contained incident into a regulatory, card brand, or sponsor bank problem, which is why the P07 assessment sampled Merchant Consulting and the notification controls more heavily.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including the first P07 results. P07 testing continued to 2026-08-31 and added no risk, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** consulting identity migration and SMS removal (GR-02); storefront script control and marketplace review (GR-01); gateway failover and active-active design (GR-08); administration tiering per data center (GR-06); evidence upload portal and PAN purge (GR-09); group AI governance program (GR-04).
