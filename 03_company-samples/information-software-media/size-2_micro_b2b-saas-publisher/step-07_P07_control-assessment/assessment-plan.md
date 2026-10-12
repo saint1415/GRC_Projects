@@ -39,6 +39,17 @@ Micro tier scope: 10-15 controls. **14 controls, 85 determination statements.** 
   - a customer user's view of W-9 fields in a test tenant (full Social Security numbers shown)
   - a file listing of the contractor's personal laptop, with consent, looking for company data and keys
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-09-15, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the 2026 work and was tested on samples or live systems | 33 |
+| Design | The control is new (a draft policy); its design was reviewed. Operation is tested at the 2027-02 follow-up | 2 |
+| Not implemented | Nothing existed to test | 50 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the account lists were compared with the 7 employees, the contract developer and the March 2026 departure in EV-001, and the 7 company laptops come from the MSP device report in EV-011).
+
 ### MSP and contractor evidence requested
 The MSP operates the laptop controls and the suite, and the contractor holds company data on a personal device, so evidence came from both. Requested on 2026-08-14 with a one-week deadline:
 
@@ -68,7 +79,7 @@ The MSP operates the laptop controls and the suite, and the contractor holds com
 This is the expected result for a 7-person company assessed for the first time: good cloud and SaaS defaults, and almost no written process or evidence around them.
 
 **New findings from testing:**
-1. The contractor's personal laptop held the CI key and 3 production extracts with vendor tax IDs, the newest from 2026-07-14 (SA-03(02)a.[03], IA-05g.). The extracts were deleted on 2026-08-28, confirmed in writing. The key is retired under POAM-004.
+1. The contractor's personal laptop held the CI key and 3 production extracts with vendor tax IDs, the newest from 2026-07-14 (SA-03(02)a.[03], IA-05g.). The extracts were deleted on 2026-08-28, confirmed in writing (EV-044). The key is retired under POAM-004.
 2. The internal admin console accepted a password alone (IA-02(01)). POAM-003.
 3. The root account password is in a vault entry shared with all engineers and the contractor, and has not changed since 2024 (AC-02k.[02], IA-05i.). Added to the risk register as R-025.
 4. The former Customer Success Manager's admin console and support desk accounts were still active 5 months after departure, and the Account Executive kept admin console access after moving to sales in 2025 (AC-02f.[03], AC-02f.[04]). Both removed 2026-08-26. The support desk's sign-in history showed no use after the former employee left, but the admin console records no sign-ins, so use there cannot be ruled out (an AU-2 finding).

@@ -12,7 +12,7 @@
 | Approved | 2026-09-15 by the Chief Executive Officer |
 
 ## 1. Scope and risk framing
-**Scope.** The whole company and its key vendors: the Vendor Compliance Platform (VCP) defined in the SSP (P02), the laptops that administer it, the contract developer's personal laptop, the sub-processors that receive customer data, the MSP, and the business processes in the BIA (P05). See `../00_company-facts.md` sections 3 and 4.
+**Scope.** The whole company and its key vendors: the Vendor Compliance Platform (VCP) defined in the SSP (P02), the laptops that administer it, the contract developer's personal laptop, the sub-processors that receive customer data, the MSP, and the business processes in the BIA (P05). The systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What the company protects.** About 41,000 vendor records and 165,000 documents that belong to 45 customers, including about 9,800 W-9s that show an individual's Social Security number. A breach of those documents would trigger the DPA's 72-hour customer notice, Florida's third-party-agent notice, and customers' own notices to individuals in about 21 states. For a company with about $1.1 million in revenue and two anchor customers, losing customer trust is an existential impact, so it is rated Very High.
 
@@ -24,8 +24,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical's critical systems (multi-tenant platforms, identity, CI/CD pipelines), the BIA, the gap analysis (P03), and interviews with the CTO, both engineers, the contract developer, the Customer Success Manager, the Account Executive, the Operations and Finance Manager, and the MSP lead technician (2026-07-27 to 2026-08-07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical's critical systems (multi-tenant platforms, identity, CI/CD pipelines), the BIA, the gap analysis (P03), the intake evidence, and interviews with the CTO, both engineers, the contract developer, the Customer Success Manager, the Account Executive, the Operations and Finance Manager, and the MSP lead technician (2026-07-27 to 2026-08-07, EV-031).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the cloud, repository and suite exports, the MSP reports, the contracts and statements, the gap analysis exports and walkthroughs (EV-033 to EV-042), and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3** using the BIA impact categories. Very High is reserved for events that could expose most customers' vendor data or let an attacker take full control of the production account.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -56,9 +56,11 @@ Status: 11 In progress, 12 Open, 2 Closed (R-021 and R-022, both Low, accepted).
 **The second theme is saying more than is true.** R-006 is High because the company has told customers and prospects things that are not so: that tax IDs never leave the platform, that penetration tests happen every year, that backups are kept 30 days, and that the company is "SOC 2 compliant." Under FTC Act Section 5 a false security claim is a deception risk on its own, whether or not a breach happens (P03 G-032 to G-040).
 
 **Risks found or changed during the work:**
-- R-025: added on 2026-08-26 after P07 testing found the root account password in a vault entry shared with all engineers and the contractor.
-- R-010: the former Customer Success Manager's support desk and admin console accounts, found active during P07, were disabled on 2026-08-26. The support desk's sign-in history showed no use after the departure date; the admin console keeps no sign-in history, so use there cannot be ruled out. The process gap remains open.
+- R-025: added on 2026-08-26 after P07 testing found the root account password in a vault entry shared with all engineers and the contractor (EV-IA-5).
+- R-010: the former Customer Success Manager's support desk and admin console accounts, found active during P07, were disabled on 2026-08-26 (EV-AC-2). The support desk's sign-in history showed no use after the departure date; the admin console keeps no sign-in history, so use there cannot be ruled out. The process gap remains open.
 - R-015, R-020, and R-023: added on 2026-09-04 from the AI risk assessment (P10) and the SOC 2 readiness self-assessment (P09).
+
+**Two passes.** Pass 1 was completed on 2026-08-07 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-025 was added on 2026-08-26 from P07 testing. R-015 and R-020 (from the P10 tests, EV-047) and R-023 (from the P09 readiness work) were added on 2026-09-04. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 to 2027 Q1, approved by the Chief Executive Officer; about $33,000 one-time and $11,700 a year):**

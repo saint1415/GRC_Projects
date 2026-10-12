@@ -4,7 +4,7 @@
 **System:** Vendor Compliance Platform (VCP), as defined in the SSP (P02) | **Prepared:** 2026-08-07 by the CTO with the Senior Software Engineer and the MSP lead technician | **Approved:** Chief Executive Officer, 2026-09-15
 
 ## 1. Diagram
-The company runs one cloud workload, its own production account (SYS-01), and buys everything else as SaaS. The MSP manages the laptops and the productivity suite but has no access to the production account.
+The company runs one cloud workload, its own production account (SYS-01), and buys everything else as SaaS. The MSP manages the laptops and the productivity suite but has no access to the production account. The components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); the `evidence_source` column in `cloud-control-map.csv` cites the evidence ID behind each placement.
 
 ```mermaid
 flowchart LR
@@ -88,4 +88,4 @@ Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_un
 2. **The company cannot see who read which file (AU-2, SI-4).** Only management events are logged, for 90 days. After a key leak the company could not tell customers which documents were taken, so it would have to assume all of them were. Fix: object read logging on the bucket, database audit logging, provider threat detection, and a 1-year archive in a separate account (R-001, POAM-005, due 2026-11-30).
 3. **Backups share a blast radius with production (CP-9).** Snapshots live in the production account, and the bucket has no versioning. A compromised administrator or a faulty script could delete customer data and its recovery points. Fix: versioning, and copies in a separate backup account with write-once retention of 35 days, which also meets the 30-day promise in the security exhibit (R-007, POAM-007).
 4. **Customer data leaves the boundary in three uncontrolled ways (SA-3(2), SA-9, SI-12).** Database extracts on laptops, full W-9 text (with Social Security numbers) sent to the AI model provider, and tax IDs in error payloads. None of these is in the DPA's description of processing, and the website says tax IDs never leave the platform (P03 G-032). Fix: stop extracts, redact before sending, and sign a DPA with the model provider (R-003, R-005, R-016).
-5. **The provider side is strong; the company side is the weak layer.** The cloud provider's SOC 2 report (P09 V-01) evidences the inherited controls. The gaps are in what the provider's report assigns to the customer: keys, roles, logging, backups, and network rules.
+5. **The provider side is strong; the company side is the weak layer.** The cloud provider's SOC 2 report (EV-021; P09 V-01) evidences the inherited controls. The gaps are in what the provider's report assigns to the customer: keys, roles, logging, backups, and network rules.
