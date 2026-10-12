@@ -16,7 +16,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 2. **The OSS/BSS's** system-specific controls were assessed because it is the SSP system, it holds the largest CPNI stores, and its service assurance platform is shared by all three divisions (P01 GR-02).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-The Tower division was sampled on governance controls (PL-1, CA-2) because its inheritance is undocumented (scenario gap 9) and its standards have drifted, and on its device fleet (CM-8, IA-5, CP-2) because lighting alarms are a safety function (gap 6).
+The Tower division was sampled on governance controls (PL-1, CA-2) because its inheritance is undocumented (group gap 9) and its standards have drifted, and on its device fleet (CM-8, IA-5, CP-2) because lighting alarms are a safety function (gap 6).
 
 ## 2. Controls selected
 **41 control assessments** (38 distinct controls; IA-5 was assessed in three scopes and CP-9 in two), **297 determination statements**.
@@ -24,10 +24,10 @@ The Tower division was sampled on governance controls (PL-1, CA-2) because its i
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5, PS-4 | 47 | Every division's access control; GR-08, GR-12 | Focused / Comprehensive (all divisions and both vendors sampled) |
-| Common control (SYS-G2 SOC) | SI-4, AU-6, IR-4, IR-6, IR-8, RA-5 | 56 | GR-01, GR-04, GR-09; scenario gaps 3 and 8 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, AU-6, IR-4, IR-6, IR-8, RA-5 | 56 | GR-01, GR-04, GR-09; group gaps 3 and 8 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-28, CM-6 | 19 | GR-03; immutable backups and guardrails | Focused / Focused |
 | Common control (group functions) | AT-2, SR-3 | 14 | Awareness for 47,000 users; GR-07 (gap 10) | Focused / Focused |
-| OSS/BSS (P02 SSP system) | AC-3, AC-6, AC-21, IA-2, IA-8, SI-2, CP-4, AU-12, PT-3 | 31 | GR-01, GR-02 (High); scenario gaps 1 to 4 | Comprehensive / Comprehensive |
+| OSS/BSS (P02 SSP system) | AC-3, AC-6, AC-21, IA-2, IA-8, SI-2, CP-4, AU-12, PT-3 | 31 | GR-01, GR-02 (High); group gaps 1 to 4 | Comprehensive / Comprehensive |
 | Division sample: Telecom Carrier | AT-3, SA-9, CP-9, PL-2 | 33 | TC-007, TC-008, TC-012, TC-014; CPNI training; CALEA SSI policies | Focused / Focused (both acquired regions; 12 PL-2 statements applied to the SSI policies) |
 | Division sample: Network Engineering Services | AC-17, IA-5, CA-3, MP-6, PE-8 | 29 | NE-001, NE-002 (gap 7); FAR 52.204-21(b)(1)(vii), (ix) | Focused / Focused (6 project offices) |
 | Division sample: Tower and Fiber Infrastructure | CM-8, IA-5, CP-2, PL-1, CA-2 | 68 | TF-001, TF-002, TF-006; gaps 6 and 9 | Focused / Comprehensive (300 RMUs credential-tested; 120 sites field-checked) |
@@ -47,6 +47,18 @@ The Tower division was sampled on governance controls (PL-1, CA-2) because its i
   - portal, app, chatbot, and legacy billing portal authentication tests;
   - route tests from the SYS-E1 aggregation account toward the Carrier management plane.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-17, effective 2026-10-01. The draft policies were reviewed as drafts, for design only. Determination statements were tested against the controls in force under the 2025 group policies and standards (EV-013), the division supplements and standards on file at intake (EV-014), and the incident response plan v2025 and group notification matrix (EV-021). The `test_type` column says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before fieldwork and was tested on samples, configurations, interviews, or live systems | 289 |
+| Design | The statement rests on a draft whose design was reviewed; operation is tested at the 2027-04 follow-up | 0 |
+| Not implemented | Nothing existed to test: an agreement that lets staff check affiliate access against CPNI restrictions (AC-21, 1 statement), Carrier authorization of the SYS-E1 tunnels into its management plane (AC-17, 1), an interconnection or tenant agreement for the SYS-E1 tunnels and the MNO tenant (CA-3, 3), documented and confirmed Tower inheritance of common controls (CA-2, 2), and a lighting fallback to daily observation in the Tower contingency plan (CP-2, 1) | 8 |
+| **Total** | | **297** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 75 joiner-mover-leaver events from the HR roster and identity governance records in EV-002 and EV-005, the 25 terminations from EV-026, the 40 requisitions from EV-029, the 12 network elements and 20 SBCs from EV-041 and EV-043, and the 300 legacy RMUs from the RMU inventory in EV-059).
+
 ## 4. Rules of engagement
 - No testing that could affect calling, 911, broadband, customer networks, or tower lighting. Network element and RMU tests ran in maintenance windows with the NOC and the Alarm Monitoring Center on the bridge.
 - No CPNI, intercept information, or FCI left group systems. Screenshots were redacted. Lawful-intercept systems were examined by document review and interview only.
@@ -62,7 +74,7 @@ The Tower division was sampled on governance controls (PL-1, CA-2) because its i
 | Division sample: Tower and Fiber Infrastructure | 54 | 14 | 68 |
 | **Total** | **233** | **64** | **297** |
 
-**Common controls are strong.** 118 of 136 common statements were satisfied. Identity for IT systems (AC-2(3), AC-6(5), IA-2(1), PS-4), cloud protection (CP-9, SC-28, CM-6), and awareness (AT-2) had no findings. The common findings are about **outsourced agent leavers** (AC-2), **integration secrets** (IA-5), **coverage of non-IT device fleets** (SI-4, AU-6, RA-5), **cross-division incident coordination and notification** (IR-4, IR-6, IR-8; scenario gap 8), **one hub route** that lets Engineering reach the Carrier management plane (SC-7), and **supply chain screening** (SR-3; gap 10).
+**Common controls are strong.** 118 of 136 common statements were satisfied. Identity for IT systems (AC-2(3), AC-6(5), IA-2(1), PS-4), cloud protection (CP-9, SC-28, CM-6), and awareness (AT-2) had no findings. The common findings are about **outsourced agent leavers** (AC-2), **integration secrets** (IA-5), **coverage of non-IT device fleets** (SI-4, AU-6, RA-5), **cross-division incident coordination and notification** (IR-4, IR-6, IR-8; group gap 8), **one hub route** that lets Engineering reach the Carrier management plane (SC-7), and **supply chain screening** (SR-3; gap 10).
 
 **The OSS/BSS is where the risk is.** AC-3, AC-6, AC-21, and IA-8 were fully other than satisfied. Test queries under the Engineering and Tower operator roles returned Carrier tickets with customer names, addresses, and call detail (gap 2). Shared accounts in the acquired regions (IA-2), unsupported SBCs (SI-2), the untested three-tenant failover (CP-4), missing CDR read logging (AU-12), and undocumented CPNI purposes (PT-3) complete the picture.
 
