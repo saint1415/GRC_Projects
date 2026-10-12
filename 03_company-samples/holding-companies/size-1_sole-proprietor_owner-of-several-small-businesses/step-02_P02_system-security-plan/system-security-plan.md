@@ -7,7 +7,7 @@
 Shared Back-Office Platform (**SBP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The SBP is the set of SaaS tools the owner uses to run the back office for four legal entities: the sole proprietorship and its three LLCs (Storage, Rentals, Laundry). It holds email and files for four domains, the books for four companies, four bank accounts, payroll for two employers, and the owner's administrator access to each LLC's own system. Components are SYS-01 to SYS-04, SYS-08, and SYS-10, plus the owner's administrator access to SYS-05 to SYS-07 and the site devices in SYS-09 (`../00_company-facts.md` section 3). There is no server and no IaaS.
+The SBP is the set of SaaS tools the owner uses to run the back office for four legal entities: the sole proprietorship and its three LLCs (Storage, Rentals, Laundry). It holds email and files for four domains, the books for four companies, four bank accounts, payroll for two employers, and the owner's administrator access to each LLC's own system. Components are SYS-01 to SYS-04, SYS-08, and SYS-10, plus the owner's administrator access to SYS-05 to SYS-07 and the site devices in SYS-09, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). There is no server and no IaaS.
 
 **Why one system for four entities.** The LLCs are separate legal entities with separate bank accounts, books, and contracts, but they share one identity: the owner's email account is the administrator and recovery address for every system. A failure in the SBP is a failure in all three LLCs at once. That is the holding company risk at this size, and it is why the plan treats the shared platform, not each LLC, as the system. Most safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, and vendor contracts (P04).
 
@@ -21,7 +21,7 @@ The SBP is the set of SaaS tools the owner uses to run the back office for four 
 | Contract | Card processor merchant terms (Storage, Laundry) | Merchant agreements |
 | Internal | Information Security Policy | POL-01 (P06) |
 
-**Not applicable (vertical requirements):** N55-R01 to N55-R03 (SEC Regulation S-K Item 106, Form 8-K Item 1.05, SOX section 404): no securities registered and not an issuer. N55-R04 and N55-R05 (Federal Reserve): not a bank holding company. N55-R06 (HIPAA group health plan): no plan is sponsored. N55-R07 (CIRCIA): proposed only. Reasons in P03 section 1. Because none of the vertical requirement IDs applies, `regulatory_driver` columns cite Fla. Stat. 501.171, the Rentals rules, or the CSF 2.0 subcategory directly.
+**Not applicable (vertical requirements):** N55-R01 to N55-R03 (SEC Regulation S-K Item 106, Form 8-K Item 1.05, SOX section 404): no securities registered and not an issuer. N55-R04 and N55-R05 (Federal Reserve): not a bank holding company. N55-R06 (HIPAA group health plan): no plan is sponsored. N55-R07 (CIRCIA): proposed only. Reasons in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and P03 section 1. Because none of the vertical requirement IDs applies, `regulatory_driver` columns cite Fla. Stat. 501.171, the Rentals rules, or the CSF 2.0 subcategory directly.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -52,6 +52,8 @@ Operational. Planned changes: password manager and app-based MFA (2026-09-15); b
 ## 7. Authorization Boundary Description
 - **Inside:** the suite tenant and its settings, the four accounting company files, the online banking profile, the payroll accounts, the owner's administrator access to the three LLC systems, the AI assistant add-on, the owner's laptop and phone, the Storage office desktop, the Laundry POS tablet, the routers at the three sites, the gate controller, and paper move-in forms.
 - **Outside (external services):** the vendors' platforms and hosting, the bank, the payment processors, the consumer reporting agency behind the property management platform, the bookkeeper's and CPA firm's own systems, and the internet providers.
+
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 Diagram: P04 `cloud-architecture.md`.
 
@@ -105,7 +107,7 @@ Self-assessed 2026-07-27 to 2026-07-31 with the IT technician. See P07.
 The administrator accounts reach the Florida personal information of about 670 people (Storage about 610, Rentals applicants 47, LLC employees 8) and four bank accounts, so phishing-resistant or app-based MFA is appropriate. Today the accounting and payroll services enforce authenticator-app MFA, the suite and property management accounts use text-message codes, and the storage system and laundry platform use passwords only. Target by 2026-09-15: authenticator-app MFA everywhere, and a hardware security key for the suite and banking (a second key kept in the sealed envelope). Tenants and customers use each vendor's own portal and identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **LLC:** limited liability company (Storage, Rentals, and Laundry are single-member LLCs)

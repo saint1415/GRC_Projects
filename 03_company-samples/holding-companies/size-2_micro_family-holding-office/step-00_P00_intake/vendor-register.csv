@@ -1,0 +1,19 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Accounting system vendor,Multi-entity accounting and consolidation,SYS-01,Ledgers; payee bank details,Standard subscription terms,"SOC 2 Type 2, 12 months ending 2025-12-31 (no review record)",EV-023; EV-028; EV-029,Review planned by 2027-03-31 (P09)
+V-02,Productivity suite vendor,"Email, files, chat, identity, AI assistant add-on",SYS-02; SYS-10,All categories,Standard terms with general security commitments,Vendor security documentation,EV-023; EV-028; EV-031,
+V-03,Bill pay vendor,Family bill pay,SYS-03,Family members' bank account numbers; payees,Standard terms,Vendor security documentation,EV-010; EV-028; EV-031,
+V-04,Payroll service,Office and household payroll,SYS-04,"Employees' SSNs, bank accounts, pay data",Standard terms,Vendor security documentation,EV-001; EV-028; EV-031,
+V-05,Banks (2),"Accounts, wires, ACH, dual approval, hardware tokens",SYS-05,Payment instructions; account access,Account agreements; delegated-access forms,None on file,EV-013; EV-023,
+V-06,Custodians (2),"Custody, trading, data feeds to SYS-06",SYS-05; SYS-06,Positions; trade instructions; account numbers,Account agreements; data feed authorizations signed by each family client,None on file,EV-011; EV-013; EV-023,One custodian sent a due diligence questionnaire in August 2026 (EV-054)
+V-07,Investment platform vendor,Investment reporting and aggregation,SYS-06,"Positions, transactions and account numbers for every family account",Standard terms,"SOC 2 Type 2, 12 months ending 2026-06-30 (Security, Availability, Confidentiality); reviewed in P09",EV-028; EV-030,
+V-08,Document vault vendor,Family document vault and client portal,SYS-07,"Estate, tax, identity and insurance documents",Standard terms,Vendor security documentation,EV-012; EV-028; EV-031,
+V-09,Public cloud provider,IaaS for SYS-11,SYS-11,Capital accounts; partners' SSNs,Customer agreement,Provider compliance documentation and shared responsibility description,EV-019; EV-028; EV-031,
+V-10,Managed service provider (MSP),"Help desk, device management, patching, antivirus, firewall and Wi-Fi, SYS-11 administration",SYS-02 (shared global administrator account); SYS-08; SYS-09; SYS-11,Administrative access to all office systems,Service contract with no security terms,None on file,EV-003; EV-022; EV-028,Technician and subcontractor lists not provided (open request)
+V-11,Internet provider,One business internet line,SYS-09,Data in transit (conduit),Service agreement,None,EV-018; EV-028,
+V-12,Outside CPA firm,Family and entity tax returns,SYS-07 (share links),Tax documents with SSNs,Engagement letter with no security terms,None on file,EV-012; EV-023; EV-028,
+V-13,Outside counsel,Advisers Act and Safeguards Rule advice; holds originals of estate plans and health care directives,SYS-07 (share links),Estate and trust documents,Engagement letter,None on file,EV-023; EV-028; EV-046,
+V-14,Cyber insurer and panel vendors,Cyber policy; breach hotline; panel breach counsel and forensics,n/a,Information shared only during an incident,Insurance policy,n/a,EV-028; EV-032,Prompt notice through the hotline before outside firms are hired
+V-15,Awareness video vendor,Yearly security awareness video,n/a,Staff names and completion records,Subscription,None,EV-028; EV-034,
+V-16,Shredding service,Locked bin emptied monthly,n/a,Paper records,Service agreement,Monthly receipts,EV-028; EV-042,
+V-17,Group health insurer,Fully insured small-group plan,n/a,Enrollment information for the 7 office employees,Group policy,n/a,EV-001; EV-033,Administers the plan
+V-18,Alarm company,Monitored after-hours alarm,n/a,None,Alarm contract,n/a,EV-028; EV-041,

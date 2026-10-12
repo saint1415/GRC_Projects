@@ -3,9 +3,9 @@
 
 > Cris Santos Company, Inc. is a publicly traded enterprise with 12,000 employees, operating as a holding company.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -42,13 +42,14 @@ Securities and Exchange Commission (SEC) Cyber disclosure for public registrants
 | [HIPAA (sponsored group health plans)](https://www.ecfr.gov/current/title-45/part-164/subpart-E) | 45 CFR Part 164, Subpart E (164.500-164.534) | A plan with fewer than 50 participants that is administered by the employer itself is excluded from 'group health plan' (45 CFR 160.103). |
 | [CIRCIA (proposed)](https://www.federalregister.gov/documents/2024/04/04/2024-06526/cyber-incident-reporting-for-critical-infrastructure-act-circia-reporting-requirements) | 6 U.S.C. 681-681g; proposed 6 CFR 226 (89 FR 23644) | Size-based prong: exceeds the SBA size standard for its NAICS code. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Enterprise systems of record across business units; prior audits and exams; internal audit workpapers. Evidence register by business unit; reconciled inventories; obligations register reviewed by counsel. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | Enterprise-wide BIA. Quantified impact; dependency mapping; third parties. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | A high-value system (Moderate or High impact). Full SSP; common control provider inheritance. System: Shared Corporate Services Platform (SCSP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Multi-cloud enterprise architecture. Platform; landing zone; workload; SaaS layers; common controls. | P02: the system boundary and its controls |

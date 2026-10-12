@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Family Office Director (Qualified Individual) with the Investment Director and the Office Manager, 2026-09-08 |
 | Decision | Principal, 2026-09-18 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the productivity suite license report, the accounts payable list, the investment platform settings, the pilot pause notice and a staff survey (EV-007, EV-028, EV-011, EV-038, EV-039). Whether staff or other family members use public chatbots for office information, and what they enter, was not established (intake open request) |
 
 ## Why this use case
 This is the registry's "enterprise generative AI assistant across subsidiaries" at Micro size. The assistant is licensed only to office staff, but it works inside the one tenant that holds the subsidiaries' board packs and monthly financial packages and every family's records. Whatever a user can open, the assistant can read, summarize, and repeat. So the question is less about the model and more about what each user can reach.
@@ -22,7 +22,7 @@ This is the registry's "enterprise generative AI assistant across subsidiaries" 
 - **Scale for a Micro office:** there is no AI committee. The Family Office Director, Investment Director, and Office Manager review AI use at the monthly security meeting, and the Principal decides.
 - **Safeguards Rule hooks.** The assistant is an externally developed application that accesses customer information, so the office must have a procedure to evaluate its security (16 CFR 314.4(c)(4)). Its vendor is a service provider the office must oversee (314.4(f)). Access to customer information must be limited to what each user needs (314.4(c)(1)(ii)).
 
-**How the pilot started and stopped.** The Office Manager turned on the add-on for 4 users on 2026-06-15 after a vendor promotion. Nobody reviewed what the users could reach. On 2026-07-22 the Executive Assistant asked it to "summarize this week's family updates", and the answer included a trust distribution memo for one adult child that the Executive Assistant had no need to see. The memo was in the Family site, which every staff member can open. The Family Office Director paused the pilot on 2026-07-23 (P01 R-004).
+**How the pilot started and stopped.** The Office Manager turned on the add-on for 4 users on 2026-06-15 after a vendor promotion (EV-007). Nobody reviewed what the users could reach (EV-043). On 2026-07-22 the Executive Assistant asked it to "summarize this week's family updates", and the answer included a trust distribution memo for one adult child that the Executive Assistant had no need to see. The memo was in the Family site, which every staff member can open. The Family Office Director paused the pilot on 2026-07-23 (EV-038; P01 R-004).
 
 ## 2. MAP
 | Item | Description |
@@ -50,7 +50,7 @@ This is the registry's "enterprise generative AI assistant across subsidiaries" 
 **Re-tier to High and reassess if:** it is used for any decision about subsidiary or household employees; it drafts recommendations sent to family members without review; agents or connectors are enabled to act (send email, move files, touch bill pay); or it is extended to subsidiary guests.
 
 ## 4. MEASURE
-The Family Office Director and the Investment Director ran 24 test prompts on 2026-09-04 in a test account set up with the planned need-to-know permissions, and compared results with the same prompts from a pilot account with the old, broad permissions. Results map to the AI 600-1 risk categories.
+The Family Office Director and the Investment Director ran 24 test prompts on 2026-09-04 (EV-059) in a test account set up with the planned need-to-know permissions, and compared results with the same prompts from a pilot account with the old, broad permissions. Results map to the AI 600-1 risk categories.
 
 | Trustworthy characteristic (AI 600-1 risk) | Test or metric | Result | Pass? |
 |---|---|---|---|

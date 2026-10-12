@@ -14,6 +14,8 @@
 | File | `gap-analysis.csv` (82 rows) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for each candidate requirement and the reasoning behind it.
+
 A holding company's cyber obligations come mostly from what it is and from what it does. This office is two things at once: the parent of three operating companies, and the family's investment and administrative office. Each candidate requirement was checked against its primary text.
 
 | Requirement | Applies? | Basis |
@@ -49,7 +51,7 @@ A holding company's cyber obligations come mostly from what it is and from what 
 ## 2. Method
 The profile follows the five steps in CSF 2.0 section 3.1 and NIST SP 1301.
 1. **Scope.** One Organizational Profile for the office and the Family Office Shared Services Platform, covering all threat types and the office's oversight of the subsidiaries. The Family Office Director owns it; the Principal sets expectations for the target.
-2. **Gather information.** P01 risk register, P05 BIA, the SSP (P02), contracts, configuration exports from SYS-02, SYS-03, SYS-07, and SYS-11, the March 2026 fraud attempt, and interviews with all 7 staff, two Subsidiary Presidents (by phone), and the MSP lead technician.
+2. **Gather information.** Each status rests on a named record from intake (2026-07-20 to 2026-07-31): the SYS-02 user, guest, administrator, sign-in, audit and site permission exports (EV-002 to EV-008), the accounting, bill pay, investment platform and vault exports (EV-009 to EV-012), the bank and custodian entitlement reports (EV-013), the MSP device, encryption, antivirus, firewall and SYS-11 exports and ticket history (EV-015 to EV-020), the document request response (EV-021), the contracts, client and ownership records (EV-022 to EV-026), the vendor list and SOC 2 reports (EV-028 to EV-030), the March 2026 fraud attempt (EV-037), and the intake interviews (EV-043), plus the July MSP report received on 2026-08-04 (EV-045). Fieldwork added the P01 risk register, the P05 BIA, the SSP (P02), interviews with all 7 staff, the Principal, two Subsidiary Presidents (by phone), and the MSP lead technician (EV-049), the walkthrough of the SYS-02 sites on 2026-08-06 (EV-050), counsel's memo of 2026-08-12 (EV-051), the profile screenshots (EV-052), the designation letter (EV-053), the custodian questionnaire (EV-054), and a personnel file review (EV-055). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 3. **Create the profile.** SP 1301 step 3b allows including the outcomes that apply to the use case with a rationale. **This first cycle includes 41 subcategories:** 18 from Govern (organizational context, risk strategy, roles, policy, oversight, and supplier risk) and 23 from the other five Functions that bear on the P01 risks. Each row records current practices (`current_state`, `evidence`), a **rating** on a 1-5 scale, a **priority** (High or Medium), and the target (`remediation_action`).
 
    Rating scale (author-defined, as SP 1301 allows): 1 = not performed; 2 = informal or partial; 3 = defined and performed; 4 = consistent and evidenced; 5 = measured and improving. Status maps from the rating: 1 = Not met, 2-3 = Partially met, 4-5 = Met.

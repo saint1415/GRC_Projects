@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (the owner's management business for three wholly owned LLCs) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-manager, 2026-07-28, with the on-call IT technician | **Adopted:** Owner-manager, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-27 to 2026-07-28 (EV-028), the FY2025 profit and loss by company (EV-022), the Storage occupancy and rent report (EV-024), the Laundry sales report (EV-025), the Rentals rent roll (EV-008), the payroll schedule (EV-006), the gate installer's records (EV-012), and the accounting service's SOC 2 system description (EV-020). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the owner runs for the four entities (the sole proprietorship and its three LLCs), how long each can be down, and how much data each can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the owner runs for the four 
 - the CSF 2.0 outcomes on business continuity in the gap analysis (P03: ID.AM-05, ID.IM-04, RC.RP-01).
 
 ## 2. Business description
-The owner runs the back office for three small Florida LLCs from a home office: **Storage** (a 180-unit self-storage facility with one part-time manager), **Rentals** (12 residential units in six duplexes), and **Laundry** (a laundromat with wash-and-fold service and two part-time attendants). Everything is SaaS: one productivity suite tenant for email and files, a multi-company accounting service, online banking for four accounts, a payroll service, and one line-of-business system per LLC. The owner holds every administrator account. See `../00_company-facts.md` sections 1 to 3.
+The owner runs the back office for three small Florida LLCs from a home office: **Storage** (a 180-unit self-storage facility with one part-time manager), **Rentals** (12 residential units in six duplexes), and **Laundry** (a laundromat with wash-and-fold service and two part-time attendants). Everything is SaaS: one productivity suite tenant for email and files, a multi-company accounting service, online banking for four accounts, a payroll service, and one line-of-business system per LLC. The owner holds every administrator account (EV-003). The systems are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the vendors in the [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to the LLCs' combined revenue of about $750,000 a year (about $2,050 a day), because an outage hurts the LLCs before it hurts the management fees.
+Dollar values are scaled to the LLCs' combined revenue of about $750,000 a year (about $2,050 a day; EV-022), because an outage hurts the LLCs before it hurts the management fees.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -35,7 +36,7 @@ Dollar values are scaled to the LLCs' combined revenue of about $750,000 a year 
 
 **What drives the values.** BP-01 comes first even though it earns nothing by itself: the owner's mailbox is the administrator and recovery address for every other system, so no other function can be restored without it. BP-02 is set by the gate: existing codes keep working while the cloud system is down, but new tenants cannot get in and autopay stops. BP-03 is set by payroll (every second Friday) and by payment fraud, where hours matter for a recall. BP-04 has a coin fallback. BP-05 can wait days, because rent is monthly and tenants can pay by check.
 
-**RPO gaps.** The 24-hour RPO for BP-01 is **not supported today**: email and files have no backup beyond the vendor's 30-day deleted-item retention, and the 47 rental application files exist only there (P01 R-008). The RPOs for BP-02 to BP-05 rely on each vendor's own backups, which the owner has confirmed only for the accounting service (its SOC 2 report, P09).
+**RPO gaps.** The 24-hour RPO for BP-01 is **not supported today**: email and files have no backup beyond the vendor's 30-day deleted-item retention (EV-002), and the 47 rental application files exist only there (P01 R-008). The RPOs for BP-02 to BP-05 rely on each vendor's own backups, which the owner has confirmed only for the accounting service (its SOC 2 report, EV-020; reviewed in P09).
 
 **Single-person dependency (the key finding).** The owner is the only person who can sign in as administrator anywhere, release a payment, issue a gate code remotely, approve an applicant, or answer a vendor's security notice, for four legal entities at once. The second factor for the email account arrives by text message on the owner's one phone. The successor manager named in each LLC operating agreement has the legal authority to step in but no way to reach any system. If the owner is ill, injured, or loses the phone, all five functions pass their MTD within three days. Actions (P01 R-010, due 2026-12-31):
 1. Write a one-page access sheet per entity (systems, account names, vendor support numbers, bank contact) and store it with recovery codes in a sealed envelope held by the business attorney, released to the successor manager under the operating agreements.

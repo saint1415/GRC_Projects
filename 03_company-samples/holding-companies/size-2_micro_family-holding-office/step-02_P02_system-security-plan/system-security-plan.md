@@ -76,6 +76,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 **Baseline.** The high-water mark is High for confidentiality and integrity. For a 7-person office, the plan starts from the NIST SP 800-53B **Moderate** baseline and adds the High-impact protections that matter most for these two information types: phishing-resistant MFA, separation of duties on payments, and a second-person check on payee changes. That is a documented tailoring decision, not a gap. The plan documents 44 controls (see `control-implementation.csv`). Other Moderate-baseline controls are either **inherited** from the SaaS vendors, banks, and custodians (physical, platform, and application controls) or **tailored out** for this tier because they address federal program management or organizations with in-house development and IT staff.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the office controls or pays someone to control on its behalf:
 - **Inside:** the office's tenant configuration, users, and data in SYS-01 to SYS-04, SYS-06, SYS-07, and SYS-10; the office's users, tokens, and entitlements in SYS-05; the devices in SYS-08; the network in SYS-09; and the SYS-11 virtual machine, its snapshots, and its cloud firewall rules.
 - **Outside (external services, interconnected):** the vendors' platforms and data centers; the banks' and custodians' systems; each subsidiary's own accounting, point-of-sale, and IT systems and their IT providers; the outside CPA firm and counsel; the MSP's remote management platform.
 
@@ -119,12 +120,12 @@ By responsibility: 22 system-specific (the office), 19 hybrid (the office with a
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the office relies on | Evidence | What the office must still do |
 |---|---|---|---|
-| Productivity suite vendor | Platform security, sign-in and MFA service, encryption (SC-8, SC-28), lockout (AC-7), audit records (AU-2) | Vendor documentation | Accounts and guests, MFA strength, sharing settings, log review, backup |
-| Banks and custodians | Dual approval (AC-5), hardware tokens, payment records, fraud monitoring | Account agreements; entitlement reports | Decide who approves; verify payees by callback; remove leavers' tokens |
-| Accounting system and investment platform vendors | Platform security and backups (CP-9) | SOC 2 Type 2 reports (investment platform reviewed in P09) | Complementary user entity controls: user access, MFA, access review |
-| Bill pay, payroll, and vault vendors | Platform security and backups | Vendor documentation | Roles (the bill pay approval gap, AC-5), family user MFA |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall (SC-7), screen lock (AC-11), laptop encryption (SC-28), SYS-11 administration | Monthly MSP report; P07 evidence | Direct the work, receive evidence, approve exceptions, annual review (R-010) |
-| Cloud provider (SYS-11) | Physical and hypervisor security, default disk encryption | Provider shared responsibility documentation | Everything inside the virtual machine, its firewall rules, and its snapshots (P04) |
+| Productivity suite vendor | Platform security, sign-in and MFA service, encryption (SC-8, SC-28), lockout (AC-7), audit records (AU-2) | Vendor documentation (EV-031) | Accounts and guests, MFA strength, sharing settings, log review, backup |
+| Banks and custodians | Dual approval (AC-5), hardware tokens, payment records, fraud monitoring | Account agreements; entitlement reports (EV-013, EV-023) | Decide who approves; verify payees by callback; remove leavers' tokens |
+| Accounting system and investment platform vendors | Platform security and backups (CP-9) | SOC 2 Type 2 reports (EV-029, EV-030; investment platform reviewed in P09) | Complementary user entity controls: user access, MFA, access review |
+| Bill pay, payroll, and vault vendors | Platform security and backups | Vendor documentation (EV-031) | Roles (the bill pay approval gap, AC-5), family user MFA |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall (SC-7), screen lock (AC-11), laptop encryption (SC-28), SYS-11 administration | Monthly MSP report (EV-045); MSP contract (EV-022); P07 evidence | Direct the work, receive evidence, approve exceptions, annual review (R-010) |
+| Cloud provider (SYS-11) | Physical and hypervisor security, default disk encryption | Provider shared responsibility documentation (EV-031) | Everything inside the virtual machine, its firewall rules, and its snapshots (P04) |
 
 **Inherited does not mean done.** The vendors' reports assume the customer manages its own users and MFA. Those are the office's weakest areas today (AC-2, AC-6, IA-2(1)).
 
@@ -135,7 +136,7 @@ Assessed 2026-08-31 to 2026-09-02 by an independent consultant. See P07 `assessm
 Staff and subsidiary guests sign in to SYS-02 with a password and authenticator app push, and SYS-02 provides single sign-on to SYS-01, SYS-03, SYS-04, and SYS-06. Push approval can be relayed by an adversary-in-the-middle phishing page, which is the office's top risk (R-001). Because the confidentiality and integrity impact is High, the office will require **phishing-resistant authenticators** (hardware security keys) for all staff by 2026-12-31 and for administrators first. Bank and custodian portals use bank-issued hardware tokens. Family members use the vault's own sign-in; SMS codes are being replaced by an authenticator app (R-009).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **FOSSP:** Family Office Shared Services Platform

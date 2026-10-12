@@ -36,6 +36,17 @@ Micro tier scope: 10-15 controls. **13 controls, 89 determination statements.** 
   - a test edit of a dummy payee under the Senior Accountant role in the bill pay platform, with the Controller present (deleted afterwards)
   - file date sampling in the Family site and the vault, and a review of active vault share links
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-09-18, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 23 |
+| Design | The control is new (the draft P08 runbook, version 0.9); its design was reviewed. Operation is tested at the 2027-03 follow-up | 17 |
+| Not implemented | Nothing existed to test | 49 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the account lists were compared with the 7 staff on the payroll roster in EV-001 and the 8 current subsidiary contacts in EV-044, and the devices come from the MSP device list in EV-015).
+
 ### MSP evidence requested
 The MSP operates most technical controls, so evidence came from it. Requested on 2026-08-24 with a one-week deadline:
 

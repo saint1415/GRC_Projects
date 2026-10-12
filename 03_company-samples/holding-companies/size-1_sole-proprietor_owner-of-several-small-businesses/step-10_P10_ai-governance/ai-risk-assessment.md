@@ -7,10 +7,10 @@
 | AI use case | AI-001: the generative AI assistant add-on to the productivity suite (SYS-10), turned on 2026-06-01 for the owner's account only |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-manager, 2026-07-30 (with the P01 risk assessment); decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the suite's add-on settings and the assistant's activity history, the vendor's business terms, the property management platform's screening reports, and the bank statements (EV-027, EV-019, EV-026, EV-018). The add-on license is assigned to the owner's account only (EV-001). Not established: whether the LLC staff use any AI tool on their own devices, whether the vendor's no-training term is followed in practice, and the basis of the screening partner's recommendation |
 
 ## 1. What it does and what it can reach (Map)
-The assistant drafts and summarizes email and documents, and answers questions about anything in the owner's mailbox and files. Because the owner's account is the back office for all four entities, **the assistant can read every LLC's mail and files at once**: rental applications with SSNs and screening reports, Storage driver license scans, new-hire forms, leases, and the books. It is a business-plan add-on from the suite vendor; the vendor's business terms say prompts and files are not used to train its models (a contract term the owner has read, not tested). Uses so far (the owner's own account of six weeks):
+The assistant drafts and summarizes email and documents, and answers questions about anything in the owner's mailbox and files. Because the owner's account is the back office for all four entities, **the assistant can read every LLC's mail and files at once**: rental applications with SSNs and screening reports, Storage driver license scans, new-hire forms, leases, and the books. It is a business-plan add-on from the suite vendor; the vendor's business terms say prompts and files are not used to train its models (a contract term the owner has read, not tested). Uses so far (the owner's own account of six weeks, matching the assistant's activity history, EV-027):
 - drafting Storage delinquency reminders, laundromat signs, and rental listings;
 - summarizing leases and vendor contracts;
 - **on 2026-07-14, summarizing six rental applications for unit 4B, including their screening reports, and asking which applicant to choose.** The owner chose an applicant two days later.
@@ -28,7 +28,7 @@ The assistant drafts and summarizes email and documents, and answers questions a
 **As it was used on 2026-07-14: High.** Choosing a tenant is a housing decision, a consequential decision under the rubric, and the assistant was asked to be a factor in it.
 **As it will be used under the conditions below: Medium.** It drafts messages that reach tenants and customers, but makes and influences no decision about a person, and every output is read before use.
 
-**Unit 4B check (2026-07-30).** The owner wrote tenant selection criteria (income, rental history, screening result) and re-checked the 4B decision against them. The chosen applicant met all three; the two declined applicants each failed the screening criterion and received the platform's adverse action notice on 2026-07-16. The owner saved the assistant's answer to the unit 4B file in the property management platform, to be kept with the declined applications for 2 years (POL-01 8.7). **No evidence of a prohibited basis was found, but the practice stops now.**
+**Unit 4B check (2026-07-30, EV-035).** The owner wrote tenant selection criteria (income, rental history, screening result) and re-checked the 4B decision against them. The chosen applicant met all three; the two declined applicants each failed the screening criterion and received the platform's adverse action notice on 2026-07-16. The owner saved the assistant's answer to the unit 4B file in the property management platform, to be kept with the declined applications for 2 years (POL-01 8.7). **No evidence of a prohibited basis was found, but the practice stops now.**
 
 ### Generative AI risks (NIST AI 600-1) that apply
 | Risk | How it shows up here | Control |

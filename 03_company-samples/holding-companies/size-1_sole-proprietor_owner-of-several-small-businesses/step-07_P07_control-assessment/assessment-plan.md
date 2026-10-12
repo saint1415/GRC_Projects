@@ -30,6 +30,29 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 56 determination stateme
 - **Test (2026-07-30):** administrator and staff sign-ins from a new browser for every service; a sign-in attempt on the gate controller with the installer's default password; a check of the browser password store for reuse; encryption status on each device; disabling the former storage assistant's account.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen. The Storage manager and the Laundry attendants were asked two questions each (whom they would call about a suspicious email; whether they share a PIN).
 
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. None of the 9 controls in scope was new at the time of fieldwork, so no statement was assessed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested on the live accounts, devices, settings and vendor records | 27 |
+| Design | A new control whose design was reviewed before it had operated | 0 |
+| Not implemented | Nothing existed to test | 29 |
+
+| Control | Operating effectiveness | Not implemented |
+|---|---|---|
+| AC-2 | 13 | 13 |
+| IA-2(1) | 1 | 0 |
+| IA-2(2) | 1 | 0 |
+| IA-5 | 7 | 3 |
+| SC-28 | 1 | 0 |
+| CP-9 | 3 | 3 |
+| SA-9 | 1 | 5 |
+| AU-6 | 0 | 3 |
+| IR-6 | 0 | 2 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2, EV-IA-2(1) and so on), with the population each test covered: the accounts in each service (EV-001, EV-004 to EV-009), the 4 devices (EV-010, EV-011), and the vendors and contractors (EV-016, EV-018, EV-020). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - Tests ran outside Storage office hours and at the laundromat's quiet time. No tenant or applicant data was copied; screenshots were cropped to settings only.
 - The IT technician worked only under the agreement signed 2026-07-24, in sessions the owner started and watched.

@@ -19,7 +19,7 @@ Keep a printed copy at the home office and in the car. Assume the attacker can r
 | Outside bookkeeper | Stop: no payee changes or payments from any email request until the owner calls back | Hour 0 |
 | On-call IT technician | Help lock out the attacker, check the laptop, preserve logs | Hour 0-1 |
 | Breach counsel (privacy attorney referred by the business attorney) | Privilege; which LLC must notify whom; notice letters; any extortion demand | Hours 1-4 |
-| Each LLC's general liability carrier | Ask whether any coverage applies **before** hiring outside firms (no cyber policy today) | Hours 1-4 |
+| Each LLC's general liability carrier | Ask whether any coverage applies **before** hiring outside firms (no cyber policy today, EV-021) | Hours 1-4 |
 | Vendor support: storage system, property management, laundry platform, accounting, payroll | Confirm no password resets or new users; pull access logs for the owner's accounts | Hours 1-8 |
 | Storage manager; Laundry attendants | Ignore any email "from the owner" about payments, codes, or passwords until told otherwise by phone | Hours 1-2 |
 | FBI Internet Crime Complaint Center | Report the payment fraud attempt; supports the bank's recall | Day 1 |
