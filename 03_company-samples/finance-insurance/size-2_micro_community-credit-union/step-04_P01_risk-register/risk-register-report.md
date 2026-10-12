@@ -12,18 +12,18 @@
 | Approved | President and CEO, 2026-08-31; presented to the board with the annual report on 2026-08-25 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole credit union and its key vendors: every member information system in `../00_company-facts.md` section 3 (SYS-01 to SYS-09), the office, and the vendors that hold or reach member information: the core processor, the digital banking provider, the corporate credit union, the card processor, the LOS vendor, the productivity suite vendor, the cloud IaaS provider, and the MSP.
+**Scope.** The whole credit union and its key vendors: every member information system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-09), the office, and the vendors that hold or reach member information ([vendor register](../step-00_P00_intake/vendor-register.csv)): the core processor, the digital banking provider, the corporate credit union, the card processor, the LOS vendor, the productivity suite vendor, the cloud IaaS provider, and the MSP.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Operations Manager (ISO) may accept.
 - Moderate: only the President and CEO may accept, with a treatment plan or a written reason.
 - High and Very High: not accepted by management. The board approves a dated treatment plan and hears progress each month until the risk is reduced.
 
-This is the credit union's first documented risk assessment since a 2019 template questionnaire, which did not rate likelihood or impact and is not relied on. The 2025 NCUA examination recommended an update.
+This is the credit union's first documented risk assessment since a 2019 template questionnaire (EV-018), which did not rate likelihood or impact and is not relied on. The 2025 NCUA examination recommended an update (EV-019).
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the 2025 account takeover, and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the 2025 account takeover (EV-007), and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24, EV-048). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the core, admin console, wire portal, suite and MSP exports, the contracts and SOC report folder, the June 2026 wire file sample (EV-051), and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a credit union with about $4,400 of net revenue per business day and about 6,400 members, a fraudulent wire, a breach of member documents, or a multi-day closure is rated High or Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -51,9 +51,11 @@ Status: 10 In progress, 11 Open, 2 Closed (R-022 and R-023 accepted).
 **The common theme is trust in email and in vendors.** The credit union moves member money on emailed instructions without an independent check (R-001), keeps member documents in a shared mailbox (R-002), and depends on a core processor and an MSP whose contracts do not say how fast they must tell it about an incident (R-006, R-014). The treatments for R-001 and R-002 also reduce R-004, R-018, and R-019.
 
 **Risks that changed during the work:**
-- R-002 and R-001: the MSP converted the Member Services mailbox to a delegated shared mailbox on 2026-08-12, so each MSR now reaches it through their own account with MFA. The stored documents remain, so R-002 stays High until they are moved.
-- R-004: P07 testing on 2026-08-05 found the former MSR's core account still enabled. It was disabled the same day. Core sign-in logs showed no use after her last day, so the ISO documented that no member information was accessed. The process gap remains open.
-- R-010: P07 testing confirmed the MSP's cloud console login accepts a password alone.
+- R-002 and R-001: the MSP converted the Member Services mailbox to a delegated shared mailbox on 2026-08-12 (EV-058), so each MSR now reaches it through their own account with MFA. The stored documents remain, so R-002 stays High until they are moved.
+- R-004: P07 testing on 2026-08-05 found the former MSR's core account still enabled (EV-AC-2). It was disabled the same day. Core sign-in logs showed no use after her last day, so the ISO documented that no member information was accessed. The process gap remains open.
+- R-010: P07 testing confirmed the MSP's cloud console login accepts a password alone (EV-IA-2(1)).
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence, and all 23 risks come from it. Pass 2 followed the control assessment (P07): R-004 and R-010 were updated on 2026-08-06 with P07 test results (EV-AC-2, EV-IA-2(1)). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the President and CEO and reported to the board; about $13,900 one-time and $5,660 a year):**

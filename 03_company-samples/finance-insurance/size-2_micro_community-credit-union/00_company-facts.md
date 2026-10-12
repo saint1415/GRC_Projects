@@ -28,7 +28,7 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 | Board of Directors (7 volunteers) | Approves the written information security program (App. A III.A) and the Identity Theft Prevention Program (717.90(e)); receives the annual information security report (App. A III.F); reviews fidelity bond coverage each year (713.2); is told of every SAR filed (748.1(d)(4)); accepts High risks |
 | Supervisory Committee (3 volunteers) | Obtains the annual supervisory committee audit (Part 715); engages and receives the independent control assessment (P07) |
 | President and CEO | Managing official. Files the annual Part 748 compliance certification in the Credit Union Profile (748.1(a)); accepts Moderate risks; decides on NCUA notices; approves the deliverables |
-| Operations Manager | **Information Security Officer (ISO) and Privacy Officer**, designated in writing by the board on 2026-08-25. Also the vendor manager, the MSP contact, and the primary wire approver |
+| Operations Manager | **Information Security Officer (ISO) and Privacy Officer**, designated in writing by the board on 2026-08-25 (EV-060). Also the vendor manager, the MSP contact, and the primary wire approver |
 | Accounting and Compliance Officer | **BSA Officer** (748.2(c)(3)); files SARs; Regulation B and privacy notice compliance; general ledger; backup wire approver |
 | Lending Manager | Owner of the loan origination system; business owner of the AI credit scoring model (P10) |
 | Senior Member Service Representative | Takes and keys wire requests (maker); works the shared Member Services mailbox; ATM balancing |
@@ -47,7 +47,7 @@ The full inventory, with the evidence behind each entry, is in [`step-00_P00_int
 | SYS-01 | Core processing system (member accounts, shares, loans, general ledger, teller, ACH, BSA monitoring module) | Hosted by a core processor (service provider) | Yes | System of record. Reached over the internet with TLS from the office's fixed IP address only; teller logins use passwords (the core offers no MFA for teller users). SOC 1 Type 2 and SOC 2 Type 2 reports received each year (EV-002; EV-029) |
 | SYS-02 | Online and mobile banking (bill pay, transfers, e-statements) | Vendor-hosted by a digital banking provider, integrated with SYS-01 | Yes | Member MFA is a text code at new-device registration only. Staff admin console uses MFA (EV-004) |
 | SYS-03 | Wire transfer portal | Web service of the credit union's corporate credit union | Yes | Maker-checker dual control with hardware tokens for every outgoing wire (EV-005) |
-| SYS-04 | Productivity suite (email, files) | SaaS | Yes | MFA on named accounts. The shared **Member Services mailbox** signed in with a password only at intake (EV-006) |
+| SYS-04 | Productivity suite (email, files) | SaaS | Yes | MFA on named accounts. The shared **Member Services mailbox** signs in with a password only (EV-006) |
 | SYS-05 | 8 desktops, 3 laptops, 2 check scanners | MSP-managed | Yes (cached) | Laptops encrypted; desktops not (EV-008; EV-009) |
 | SYS-06 | Office network: firewall, staff Wi-Fi, guest Wi-Fi, VoIP phones | On-premises, MSP-managed | In transit | One internet line; guest Wi-Fi separated (EV-012; EV-035) |
 | SYS-07 | Debit card processing and the lobby ATM | Card processor; ATM serviced by an ATM vendor | Yes | Outside the SSP boundary (EV-031) |

@@ -4,7 +4,7 @@
 **System:** Core and Digital Banking Platform (CDBP), as defined in the SSP (P02) | **Prepared:** 2026-07-24 by the Operations Manager (ISO) with the MSP lead technician | **Approved:** President and CEO, 2026-08-31
 
 ## 1. Diagram
-The credit union runs no servers of its own. Its "cloud" is a set of vendor-hosted financial services and SaaS, plus one cloud workload that the MSP operates for it: the document imaging server in a public cloud IaaS tenant (SYS-09).
+The credit union runs no servers of its own. Its "cloud" is a set of vendor-hosted financial services and SaaS, plus one cloud workload that the MSP operates for it: the document imaging server in a public cloud IaaS tenant (SYS-09). The components come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv); the `evidence_source` column in `cloud-control-map.csv` cites the evidence ID behind each placement.
 
 ```mermaid
 flowchart LR
