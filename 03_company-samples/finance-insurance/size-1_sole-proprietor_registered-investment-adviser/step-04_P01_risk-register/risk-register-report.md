@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-10, the paper files in the locked cabinet, and the contracted services (custodian, SaaS vendors, IT consultant, compliance consultant). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-10, the paper files in the locked cabinet, and the contracted services (custodian, SaaS vendors, IT consultant, compliance consultant), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner-adviser owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. Any risk that can move client money without the client's authority is never accepted at High.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), the 2026-06-18 near miss, and a walk through the laptop, phone, and SaaS accounts with the IT consultant on 2026-07-15.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence (including the 2026-06-18 near miss, EV-005), the BIA, and a walk through the laptop, phone, and SaaS accounts with the IT consultant on 2026-07-15 (EV-033). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the custodian and near-miss records (EV-004, EV-005), the account and device reviews (EV-006, EV-009, EV-010, EV-016, EV-017, EV-019), the vendor records (EV-025), the AI assistant records (EV-022, EV-023), and the owner's self-review (EV-034). A one-person adviser keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (including client financial harm).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -42,6 +42,8 @@
 | R-004 | Loss of the unencrypted USB backup drive | Moderate | Encrypted drive in the home safe; wipe the old one | Owner-adviser | 2026-09-30 |
 | R-006 | Client statements in a consumer AI assistant | Moderate | Avoid: do not resume; delete history; business plan only (P10) | Owner-adviser | 2026-09-30 |
 | R-005 | Owner-adviser unavailable (single point of failure) | Moderate | Successor adviser arrangement; sealed recovery codes; hardware key | Owner-adviser | 2026-12-31 |
+
+**One pass.** The register was completed on 2026-07-17 from intake and self-assessment evidence. The control tests ran on 2026-07-15, inside the same week, so this pass already reflects them: R-002 cites the forwarding rule finding (EV-AU-6). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks share one cause: **the adviser trusts email.** Money movement requests are accepted by email, and the email account and the other SaaS accounts that hold client data are protected only by a reused password. Two free changes reduce all three within two weeks of adoption: turn on MFA everywhere, and call the client at the number on file before acting on any request to move money. The 2026-06-18 near miss was stopped by the custodian, not by the adviser; the callback rule makes the adviser the first line of defense.
 

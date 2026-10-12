@@ -8,10 +8,10 @@
 | Why not the brief's use case | The generated brief names an "AI credit underwriting model". A one-person adviser makes no credit decisions; the Sole Proprietorship scope is "one third-party AI tool the owner uses", which is this assistant |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-adviser, 2026-08-24; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the AI assistant's account settings and chat history, its terms, the video meeting service settings, and the agreements folder (EV-022, EV-023, EV-024, EV-025). With no staff, there was no survey to run. Not established: what the vendor kept from the pasted statements, and whether it used them to train its models |
 
 ## 1. What it does (Map)
-The owner pasted or uploaded custodian statements and meeting notes into the assistant and asked for a plain-language summary of performance and changes, then edited the draft into a review letter. Statements for about 25 client households went in, some with full account numbers; no SSNs were found in the chat history on review. It is a consumer plan: the owner accepted click-through terms, and those terms **allow the vendor to use chats to improve its models** unless the user turns that off. Nothing drafted by the assistant makes a decision about a client; the owner decides what to send.
+The owner pasted or uploaded custodian statements and meeting notes into the assistant and asked for a plain-language summary of performance and changes, then edited the draft into a review letter. Statements for about 25 client households went in, some with full account numbers; no SSNs were found in the chat history on review (EV-022). It is a consumer plan: the owner accepted click-through terms, and those terms **allow the vendor to use chats to improve its models** unless the user turns that off (EV-023). Nothing drafted by the assistant makes a decision about a client; the owner decides what to send.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -33,7 +33,7 @@ The owner pasted or uploaded custodian statements and meeting notes into the ass
 3. The approved tool is listed in POL-01 Appendix A; everything else is prohibited for client work.
 
 ## 5. Human review of outputs (Measure and Manage)
-For any approved tool: the owner checks **every figure** in an AI-assisted letter against the custodian statement before it is sent, reads the whole letter for statements the owner would not make, and keeps the source statement with the letter. Each quarter the owner re-checks 3 sent letters against the statements and records the result. One material error (wrong return, wrong fee, wrong holding) stops use until the cause is understood. **No accuracy testing was done during the consumer use**; the owner re-checked 5 letters sent in June and found one rounded return shown as 6.4% instead of 6.1%, corrected in a follow-up note to that client.
+For any approved tool: the owner checks **every figure** in an AI-assisted letter against the custodian statement before it is sent, reads the whole letter for statements the owner would not make, and keeps the source statement with the letter. Each quarter the owner re-checks 3 sent letters against the statements and records the result. One material error (wrong return, wrong fee, wrong holding) stops use until the cause is understood. **No accuracy testing was done during the consumer use**; the owner re-checked 5 letters sent in June and found one rounded return shown as 6.4% instead of 6.1%, corrected in a follow-up note to that client (EV-035).
 
 **Bias and fairness plan:** not needed for AI-001, which makes no decision about people. If a future tool suggests client portfolios or suitability, re-run this assessment and compare suggestions across age and account size before use.
 

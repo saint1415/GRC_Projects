@@ -23,7 +23,7 @@ A client's real email address sends a friendly message in an existing thread: th
 | On-call IT consultant | Check the owner's mailbox, devices, and SaaS accounts; preserve evidence | Hour 0-1 |
 | Breach and securities counsel | Privilege, breach determination, notices, repayment questions, OFR questions | Hours 0-4 |
 | FBI (IC3 online report) | A fast report can help freeze funds; supports any law enforcement delay | Hours 1-4 |
-| Errors and omissions insurer, **if coverage exists** | Check for a social engineering or cyber endorsement *before* hiring any outside firm | Hours 0-4 |
+| Errors and omissions insurer, **if coverage exists** | No cyber policy today (EV-029, EV-031; the endorsement question is an open intake request). Check for a social engineering or cyber endorsement *before* hiring any outside firm | Hours 0-4 |
 | Compliance consultant | Records to keep; whether any OFR filing or Form ADV update is needed | Day 1 |
 | Email suite and CRM vendor support | Lock accounts; export sign-in and audit logs before they roll over (30 days) | Hours 1-4 |
 

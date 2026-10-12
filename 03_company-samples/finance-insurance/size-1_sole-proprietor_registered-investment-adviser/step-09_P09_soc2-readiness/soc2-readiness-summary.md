@@ -8,7 +8,7 @@
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None. No SOC 2 examination is planned (section 1) |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the portfolio and billing platform vendor's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the portfolio and billing platform vendor's SOC 2 Type 2 report, received at intake (EV-008; `vendor-soc2-review.csv`) |
 | Prepared | 2026-07-16 (Part B) and 2026-07-17 (Part A) by the owner-adviser with the IT consultant; adopted 2026-08-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report
