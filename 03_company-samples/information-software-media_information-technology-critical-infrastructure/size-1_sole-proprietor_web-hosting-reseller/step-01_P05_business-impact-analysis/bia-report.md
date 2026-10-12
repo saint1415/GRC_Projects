@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (web hosting reseller) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner, 2026-08-18, challenged by the contract security consultant on 2026-08-19 | **Adopted:** Owner, 2026-09-28
+**Sources:** the owner's BIA worksheet, 2026-08-18, challenged by the consultant on 2026-08-19 (EV-034), the portal billing report (EV-025), the customer and site counts (EV-002, EV-003, EV-006), the Terms of Service uptime promise (EV-018), and the upstream reseller terms on backups (EV-004). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-09-28.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the company depends on, how long each can be down, and how much data it can lose. It feeds:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the company depends on, how 
 - the contingency rules in POL-01 section 11 (P06).
 
 ## 2. Business description
-One person resells shared hosting, business email, and domains from one upstream wholesale hosting provider, and keeps 120 customer websites updated and scanned under care plans. About 150 small business customers depend on the company for about 270 websites and 410 mailboxes. Everything runs in SaaS tools and in the upstream provider's data centers. The company owns no servers. See `../00_company-facts.md` sections 1 to 3.
+One person resells shared hosting, business email, and domains from one upstream wholesale hosting provider, and keeps 120 customer websites updated and scanned under care plans. About 150 small business customers depend on the company for about 270 websites and 410 mailboxes. Everything runs in SaaS tools and in the upstream provider's data centers. The company owns no servers. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $490 per calendar day.
+Dollar values are scaled to about $180,000 in annual revenue, or about $490 per calendar day (portal billing report, EV-025).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -34,15 +35,15 @@ Dollar values are scaled to about $180,000 in annual revenue, or about $490 per 
 | BP-05 Business administration | Low | 120 h | 72 h | 24 h |
 
 **What drives the values:**
-- **BP-01** is the business. If the upstream platform or DNS fails, every customer's website and email stop together, and the 99.9% uptime guarantee allows only about 43 minutes a month. The 8-hour RTO depends on the upstream provider; the owner's part is DNS, account settings, and escalation. The 24-hour RPO is the upstream provider's nightly backup.
+- **BP-01** is the business. If the upstream platform or DNS fails, every customer's website and email stop together, and the 99.9% uptime guarantee allows only about 43 minutes a month. The 8-hour RTO depends on the upstream provider; the owner's part is DNS, account settings, and escalation. The 24-hour RPO is the upstream provider's nightly backup (EV-004).
 - **BP-02** has the shortest RTO because customers need a person during an outage or a compromise, and the Florida 10-day third-party agent clock (P03, P08) keeps running even when the owner is busy restoring.
 - **BP-04** can wait 72 hours. A compromised site management dashboard is more dangerous than an unavailable one, so pausing it is an acceptable first step in P08.
 
 **Gaps against these targets (not supported today):**
-- **RPO for BP-01.** The upstream backups are the only copy for 235 sites. They are kept 7 days with the same provider and are deleted when an account is terminated, so a provider failure or a malicious account deletion could lose everything (P01 R-005).
+- **RPO for BP-01.** The upstream backups are the only copy for 235 sites. They are kept 7 days with the same provider and are deleted when an account is terminated, so a provider failure or a malicious account deletion could lose everything (EV-004; P01 R-005).
 - **The owner's own restore time is unknown.** The first restore test was run on 2026-08-19 (P07 CP-9).
 
-**Single-person dependency (the key finding).** The owner is the only person who can run support, change DNS, restore a site, renew domains, or deal with the upstream provider. Every second factor is on one phone, and the recovery codes are not stored offline. If the owner is ill, injured, or without the phone, BP-01 and BP-02 exceed their 24-hour MTD and nobody can act for customers. The freelance developer works about 8 hours a week and has dashboard access only. Actions (P01 R-009, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner is the only person who can run support, change DNS, restore a site, renew domains, or deal with the upstream provider. Every second factor is on one phone, and the recovery codes are not stored offline (EV-015). If the owner is ill, injured, or without the phone, BP-01 and BP-02 exceed their 24-hour MTD and nobody can act for customers. The freelance developer works about 8 hours a week and has dashboard access only. Actions (P01 R-009, due 2026-12-31):
 1. Store recovery codes and a one-page emergency access sheet (accounts, upstream provider and registrar support numbers, customer contact export) in a sealed envelope held by the owner's attorney.
 2. Sign a written backup-operator arrangement with the freelance developer or another local hosting professional, covering outage communication, renewals, and restores, with access granted only when the envelope is opened.
 3. Ask the upstream provider and the registrar how a designated person can act on the reseller account if the owner is incapacitated, and record the answer.

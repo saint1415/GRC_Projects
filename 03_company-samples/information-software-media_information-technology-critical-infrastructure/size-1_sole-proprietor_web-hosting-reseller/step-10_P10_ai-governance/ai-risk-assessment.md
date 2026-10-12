@@ -6,9 +6,9 @@
 | Tier / Vertical | Sole Proprietorship / Information Technology |
 | AI use case | AI-001: the AI alert triage feature in the website security service (SYS-05). The vendor turned it on for the owner's plan on 2026-05-04, and the owner left it on. Registry default "AI-driven security operations (alert triage)", adapted to the one third-party tool the owner actually uses. AI-002 (consumer chat assistant) is in section 7 |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for the generated explanations |
-| Assessor / date | Owner, 2026-09-10, using the P07 sample of 50 dismissed findings (2026-08-19) |
+| Assessor / date | Owner, 2026-09-10, using the P07 sample of 50 dismissed findings (2026-08-19, EV-SI-4) |
 | Decision | Approved with conditions by the owner, 2026-09-28 (section 6) |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the security service's settings and July findings report, the consumer chat assistant's account history and terms, the card statements and the vendor terms folder (EV-007, EV-032, EV-024, EV-023). With no staff, there was no survey to run. Not established: where the security service vendor stores site files and findings, and whether its terms let it train models on them (an open intake request; P03 G-039), and whether the freelance developer uses any AI tool with customer data on the developer's own laptop |
 
 ## 1. GOVERN
 - **Accountable owner:** the owner, who controls every setting in the security service.
@@ -23,7 +23,7 @@
 | Affected people | About 150 customers, and the shoppers, tenants, and clients whose data sits on their sites. A missed compromise is the harm |
 | Data | Inputs: site files and file changes on all 270 sites, scan findings, visitor IP addresses, site user names. Outputs: scores, explanations, dismissals. **Unknown:** where the vendor stores this data, and whether its terms let it train models on customer site files (P03 G-039) |
 | Build or buy | Configure: a vendor feature. The owner cannot see or retrain the model, but can turn off auto-dismiss, by category where the vendor allows |
-| Volume | July 2026: 412 findings, **239 (58%) auto-dismissed** with no human review |
+| Volume | July 2026: 412 findings, **239 (58%) auto-dismissed** with no human review (EV-007) |
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
@@ -40,7 +40,7 @@
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | Random sample of 50 dismissed findings (P07). Target: under 1% real, none in protected categories | 1 of 50 (2%) real: the web shell. 1 new administrator user needed a check with the customer and was legitimate | **No** |
-| Valid and reliable (generated explanations) | 20 explanations checked against the raw finding. Target: none wrong about what changed | 2 of 20 called a changed executable file a "routine plugin update". This is confabulation, a risk named in AI 600-1 | **No** |
+| Valid and reliable (generated explanations) | 20 explanations checked against the raw finding. Target: none wrong about what changed | 2 of 20 called a changed executable file a "routine plugin update" (EV-040). This is confabulation, a risk named in AI 600-1 | **No** |
 | Safe | No auto-dismiss for new administrator users or changed executable files | Auto-dismiss applies to all categories | **No** |
 | Secure and resilient | Security service account protected by MFA; only the owner can change AI settings | MFA on (P07); owner is the only user | Yes |
 | Accountable and transparent | Feature approved before use; claims to customers accurate | Turned on by the vendor with no review; website overstates protection | **No** (improving) |
@@ -69,4 +69,4 @@
 5. By 2026-12-31: written vendor answers on data location and training use of site files (POAM-006). If training cannot be turned off, decommission.
 
 ## 7. AI-002: consumer AI chat assistant (SYS-09)
-The owner pasted server log excerpts with shopper emails and IP addresses, suspicious files, and one configuration file with a database password into a free consumer chat account. The consumer terms allow use of inputs to improve the service. **Decision: stop.** No customer data, logs, site files, or credentials go into it (POL-01 9.4). The exposed database password is rotated, and laptop copies are deleted, by 2026-09-30 (P01 R-011). A business-tier tool with no-training terms may be assessed later, and redacted excerpts with no customer identifiers are the only permitted input even then.
+The owner pasted server log excerpts with shopper emails and IP addresses, suspicious files, and one configuration file with a database password into a free consumer chat account. The consumer terms allow use of inputs to improve the service (EV-032). **Decision: stop.** No customer data, logs, site files, or credentials go into it (POL-01 9.4). The exposed database password is rotated, and laptop copies are deleted, by 2026-09-30 (P01 R-011). A business-tier tool with no-training terms may be assessed later, and redacted excerpts with no customer identifiers are the only permitted input even then.

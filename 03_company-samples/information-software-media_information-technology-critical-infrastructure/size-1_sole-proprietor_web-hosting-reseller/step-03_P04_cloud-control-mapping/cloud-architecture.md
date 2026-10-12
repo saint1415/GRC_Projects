@@ -66,8 +66,8 @@ That is why 10 of the 18 rows in the control map are the company's alone. The up
 No provider equivalents table is needed, because the company runs no infrastructure of its own.
 
 ## 4. Findings from the mapping
-1. **The portal is the master key.** It stores API credentials that can terminate any hosting account and redirect any domain, yet its administrator login had no MFA. This is a bigger exposure than the reseller console itself, which does use MFA. Tracked as P01 R-002.
-2. **The dashboard is a code-push channel to 120 sites.** The freelance developer's administrator account had no MFA and was used from a personal laptop. A former contractor's account was still active (found in P07). Tracked as R-001 and R-012.
-3. **Backups are not independent.** The only copy for 235 sites sits with the provider that runs production and is deleted with the account. Found while mapping CP-9: the provider's reseller terms state the deletion rule. Tracked as R-005.
-4. **Nobody owns patching for hosting-only sites.** The provider patches servers, the company patches care-plan sites, and the gap in between holds 64 vulnerable sites. Tracked as R-004.
-5. **Credentials live outside the password manager.** The spreadsheet and emailed passwords bypass the one control the owner uses well. Tracked as R-003.
+1. **The portal is the master key.** It stores API credentials that can terminate any hosting account and redirect any domain, yet its administrator login had no MFA (EV-001). This is a bigger exposure than the reseller console itself, which does use MFA. Tracked as P01 R-002.
+2. **The dashboard is a code-push channel to 120 sites.** The freelance developer's administrator account had no MFA and was used from a personal laptop (EV-006, EV-038). A former contractor's account was still active (found in P07, EV-AC-2). Tracked as R-001 and R-012.
+3. **Backups are not independent.** The only copy for 235 sites sits with the provider that runs production and is deleted with the account. Found while mapping CP-9, from the reseller terms collected at intake (EV-004), which state the deletion rule. Tracked as R-005.
+4. **Nobody owns patching for hosting-only sites.** The provider patches servers, the company patches care-plan sites, and the gap in between holds 64 vulnerable sites (EV-008). Tracked as R-004.
+5. **Credentials live outside the password manager.** The spreadsheet and emailed passwords (EV-012, EV-013) bypass the one control the owner uses well. Tracked as R-003.

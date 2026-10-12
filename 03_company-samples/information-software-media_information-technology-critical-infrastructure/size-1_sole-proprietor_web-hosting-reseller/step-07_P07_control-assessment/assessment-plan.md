@@ -37,6 +37,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 43 determination statem
   - a review of 50 findings the AI triage had auto-dismissed.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the consultant challenged each answer against what was on screen.
 
+### What each test could show
+POL-01 was a working draft during fieldwork and was adopted on 2026-09-28, so it was reviewed as a draft for design only. None of its new rules had operated yet, and no determination statement rests on it. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested on the live accounts, sites, backups and vendor records | 20 |
+| Design | A new control whose design was reviewed but which had not yet operated | 0 |
+| Not implemented | Nothing existed to test | 23 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-IA-2(1) and so on), with the population each test covered: the control plane accounts (EV-001, EV-003, EV-005 to EV-007, EV-011), the 270 sites and the 64 flagged hosting-only sites (EV-008), and the 5 vendors that hold customer data (EV-023). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No changes to customer sites during tests, except the restore, which went to a separate test account and was deleted the same day.
 - The consultant signed a confidentiality agreement before the session, worked only in sessions the owner started and watched, and kept no credentials or customer data.

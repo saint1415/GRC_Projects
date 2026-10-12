@@ -8,21 +8,23 @@
 | Requirement set analyzed | FTC Act Section 5 (15 U.S.C. 45(a), 45(n)) measured against the FTC's own business guidance; Fla. Stat. 501.171 duties of a third-party agent and covered entity; the company's own public statements, Terms of Service, and questionnaire answers |
 | Applicability checks only | C-IT-R01 to C-IT-R06 (FedRAMP, CMMC, DFARS, DOJ Data Security Program, bank service provider rule, CIRCIA); CCPA |
 | Assessment dates | 2026-08-17 to 2026-08-21 (self-assessment; tests on 2026-08-19 with the contract security consultant) |
-| Assessor | Owner. Evidence is self-attested, checked on screen with the consultant where possible |
+| Assessor | Owner. Evidence is the intake record, the owner's written self-review checked on screen with the consultant (EV-036), and the tests on 2026-08-19 |
 | Sources checked | FTC "Start with Security" headings re-read on ftc.gov on 2026-10-05; Fla. Stat. 501.171 (2026) read on leg.state.fl.us; vertical requirements file (verified 2026-09-25) |
 | Adopted | 2026-09-28 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for each rule checked here.
+
 ### 1.1 The vertical's primary regulation does not apply at this size
 | ID | Requirement | Applies? | Why |
 |---|---|---|---|
-| C-IT-R01 | FedRAMP (44 U.S.C. 3607-3616) | **No** | FedRAMP governs cloud services that federal agencies use. It has no size threshold; it applies because of the customer. The company has no federal customer and resells another provider's platform. If an agency ever asked, the upstream provider's own FedRAMP status would decide what is possible, not the reseller's |
+| C-IT-R01 | FedRAMP (44 U.S.C. 3607-3616) | **No** | FedRAMP governs cloud services that federal agencies use. It has no size threshold; it applies because of the customer. The company has no federal customer (EV-002) and resells another provider's platform. If an agency ever asked, the upstream provider's own FedRAMP status would decide what is possible, not the reseller's |
 | C-IT-R02 | CMMC (32 CFR Part 170) | **No** | No DoD contracts or subcontracts. If a customer discloses that it handles federal contract information or CUI in its hosted mailboxes, recheck before renewing that customer |
 | C-IT-R03 | DFARS 252.204-7012 | **No** | No covered defense information; no clause flowed down |
-| C-IT-R04 | DOJ Data Security Program (28 CFR Part 202) | **No, on current facts** | The rule restricts covered data transactions that give countries of concern or covered persons access to bulk U.S. sensitive personal data. The company has none: the freelancer is U.S.-based and the upstream servers are in U.S. data centers. The shopper data (about 38,000 accounts) is mostly contact data and is below the 100,000-person bulk threshold for covered personal identifiers in `requirements.csv`. Recheck when adding any vendor with access to customer data (G-039 asks two vendors where data is stored) |
+| C-IT-R04 | DOJ Data Security Program (28 CFR Part 202) | **No, on current facts** | The rule restricts covered data transactions that give countries of concern or covered persons access to bulk U.S. sensitive personal data. The company has none: the freelancer is U.S.-based (EV-021) and the upstream servers are in U.S. data centers (EV-004). The shopper data (about 38,000 accounts, EV-027) is mostly contact data and is below the 100,000-person bulk threshold for covered personal identifiers in `requirements.csv`. Recheck when adding any vendor with access to customer data (G-039 asks two vendors where data is stored) |
 | C-IT-R05 | Bank service provider notification (12 CFR 53.4; 225.303; 304.24) | **No** | No bank customers. If a bank becomes a customer and its contract treats the hosting as a covered service, the "as soon as possible" notice for incidents disrupting covered services for four or more hours would apply |
 | C-IT-R06 | CIRCIA | **Not in force** | No final rule as of 2026-09-25. Tracked in section 5 |
-| n/a | CCPA (Cal. Civ. Code 1798.140(d)) | **No** | The company's revenue (about $180,000) is far below the $26,625,000 threshold, it does not buy, sell, or share personal information of 100,000 or more consumers, and it earns nothing from selling personal information |
+| n/a | CCPA (Cal. Civ. Code 1798.140(d)) | **No** | The company's revenue (about $180,000, EV-025) is far below the $26,625,000 threshold, it does not buy, sell, or share personal information of 100,000 or more consumers, and it earns nothing from selling personal information |
 
 ### 1.2 What does apply
 **FTC Act Section 5.** Section 5(a) declares unfair or deceptive acts or practices in or affecting commerce unlawful (15 U.S.C. 45(a)(1)). The company is a for-profit business selling to customers in six states, outside the statutory carve-outs, and **there is no size threshold**. Two theories matter:
@@ -44,7 +46,7 @@ Section 5 lists no controls, so the requirement set is the FTC's own business gu
 ## 2. Method
 1. **Requirements.** Each practice in the three FTC guides became one row, cited by guide, lesson, and practice heading (FTC guidance is a U.S. government work). Each Florida duty became one row cited by subsection. Each public statement or contract promise became one deception row.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. This is an **author mapping**; no official NIST or FTC mapping of this guidance exists.
-3. **Evidence.** Self-attested by the owner and checked on screen where possible: account lists, the spreadsheet and email review on 2026-08-19, the website captured on 2026-08-17, the security service report of 2026-08-18, vendor terms, and calls to three customers about what their sites and mailboxes hold.
+3. **Evidence.** Current state was established from the intake evidence (portal, console, registrar, dashboard and security service exports, the website captured on 2026-08-12, the Terms of Service, the questionnaire answers, vendor terms, statements and the device reviews), the owner's written self-review checked on screen with the consultant on 2026-08-19 (EV-036), the freelance developer's interview (EV-038), and calls to three customers on 2026-08-18 about what their sites and mailboxes hold (EV-037). Where the tests had run (2026-08-19), their results are cited too: the spreadsheet and sent-mail search (EV-IA-5) and the security service report of 2026-08-18 (EV-SI-2). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

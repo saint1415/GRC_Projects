@@ -8,11 +8,11 @@
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None. No SOC 2 examination is planned at this size (section 1) |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the upstream hosting provider's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the upstream hosting provider's SOC 2 Type 2 report, received 2026-09-03 (EV-039; `vendor-soc2-review.csv`) |
 | Prepared | 2026-09-09 (Part B) and 2026-09-10 (Part A) by the owner; adopted 2026-09-28 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report
-A hosting reseller **is** a service organization: about 150 businesses rely on its systems for their websites, mail, and domains. In 2026 the two law firms and the property management company sent security questionnaires. That is the demand a SOC 2 report answers. A SOC 2 examination by a CPA firm would still cost more than the company earns in several months, so it is not planned at about $180,000 a year in revenue. The vertical's other assurance paths (FedRAMP authorization, ISO/IEC 27001 certification) fit even less: there is no federal customer, and certification needs a formal management system.
+A hosting reseller **is** a service organization: about 150 businesses rely on its systems for their websites, mail, and domains. In 2026 the two law firms and the property management company sent security questionnaires (EV-020). That is the demand a SOC 2 report answers. A SOC 2 examination by a CPA firm would still cost more than the company earns in several months, so it is not planned at about $180,000 a year in revenue. The vertical's other assurance paths (FedRAMP authorization, ISO/IEC 27001 certification) fit even less: there is no federal customer, and certification needs a formal management system.
 
 The Security criteria are still useful in two ways:
 - **A. Owner's self-check.** The CC series is a structured list of the questions customers ask. It also produces a **maintained answer document** for questionnaires (POL-01 12.2), so the owner stops answering from memory. Two 2026 answers were wrong (P03 G-042).
