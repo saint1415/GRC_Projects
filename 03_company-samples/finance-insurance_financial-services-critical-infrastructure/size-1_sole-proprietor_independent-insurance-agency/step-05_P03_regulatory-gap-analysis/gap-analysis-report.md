@@ -9,11 +9,11 @@
 | Yardstick | **16 CFR 314.3-314.4** (FTC Safeguards Rule elements), used as a **benchmark only** to judge "reasonable measures" under 501.171(2) and the addenda's "consistent with GLBA 501(b)" clause. Text read from eCFR (point in time 2026-09-23) |
 | Regulation named in the scenario brief | PCI DSS v4.0.1 (vertical default for a payment processor). **Does not apply**: the agency accepts no payment cards (section 1.5) |
 | Assessment dates | 2026-08-03 to 2026-08-07 (self-assessment) |
-| Assessor | Owner-agent, with the on-call IT consultant (services agreement since 2026-07-27). Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner-agent, with the on-call IT consultant (services agreement since 2026-07-27). Evidence is the intake record and the owner's self-review (EV-032), checked on screen where possible |
 | Adopted | 2026-09-14 |
 
 ## 1. Applicability
-Applicability was decided first, one rule at a time, before any gap was rated.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), one rule at a time, before any gap was rated. This section restates the result and the reasoning for the rules analyzed here.
 
 ### 1.1 Is the agency a "financial institution", and who regulates its safeguards?
 - **Yes, it is a financial institution under GLBA.** 12 U.S.C. 1843(k)(4)(B) lists "insuring, guaranteeing, or indemnifying against loss ... and acting as principal, agent, or broker for purposes of the foregoing" as financial in nature.
@@ -23,13 +23,13 @@ Applicability was decided first, one rule at a time, before any gap was rated.
 
 ### 1.2 Fla. Stat. 501.171 applies (primary)
 - **Covered entity.** 501.171(1)(b) defines a covered entity as "a sole proprietorship, partnership, corporation ... or other commercial entity that acquires, maintains, stores, or uses personal information". There is no size threshold.
-- **Personal information held.** Names with driver license numbers (auto applications), Social Security numbers (some applications and workers compensation owners), and claim details about injuries ("medical history, mental or physical condition"), all listed in 501.171(1)(g)1.a. Bank account and routing numbers on draft forms count only "in combination with any required security code, access code, or password", so most draft forms alone are not personal information under 501.171; they are still nonpublic personal information under Rule 69O-128 and are protected the same way (POL-01).
+- **Personal information held.** Names with driver license numbers (auto applications), Social Security numbers (some applications and workers compensation owners), and claim details about injuries ("medical history, mental or physical condition"), all listed in 501.171(1)(g)1.a. (EV-003, EV-007). Bank account and routing numbers on draft forms count only "in combination with any required security code, access code, or password", so most draft forms alone are not personal information under 501.171; they are still nonpublic personal information under Rule 69O-128 and are protected the same way (POL-01).
 - **Encryption matters.** Information that is "encrypted, secured, or modified ... [so it is] unusable" is not personal information (501.171(1)(g)2.). An encrypted lost laptop is not a breach; plain email attachments in a taken-over mailbox are.
 - **Third-party agent, both ways.** The agency's vendors are its third-party agents (501.171(1)(h), (6)). Under some agency agreements the agency may also be an insurer's third-party agent; counsel confirms per agreement, and the agency plans to the shorter 72-hour addendum clock (G-013, G-047).
 - **No federal deemed-compliance path.** 501.171(4)(g) deems notice under a "primary or functional federal regulator's" rules compliant. The agency has no federal regulator, so Florida's own notice rules apply directly (G-010).
 
 ### 1.3 Insurer data security addenda apply by contract
-4 of the 9 agency agreements carry an addendum: GLBA 501(b)-consistent safeguards, MFA, 72-hour incident notice, and an annual questionnaire. The 16 CFR 314.4 elements were chosen as the yardstick because the addenda point to GLBA 501(b), and because 501.171(2) gives no structure of its own. Where 16 CFR 314.6 would excuse an institution with customer information on fewer than 5,000 consumers (the agency has about 1,900 individuals), the row says so; the owner kept the written risk assessment and incident plan anyway.
+4 of the 9 agency agreements carry an addendum (EV-021): GLBA 501(b)-consistent safeguards, MFA, 72-hour incident notice, and an annual questionnaire. The 16 CFR 314.4 elements were chosen as the yardstick because the addenda point to GLBA 501(b), and because 501.171(2) gives no structure of its own. Where 16 CFR 314.6 would excuse an institution with customer information on fewer than 5,000 consumers (the agency has about 1,900 individuals; EV-003), the row says so; the owner kept the written risk assessment and incident plan anyway.
 
 ### 1.4 The vertical's requirement list
 | ID | Requirement | Decision |
@@ -52,7 +52,7 @@ Applicability was decided first, one rule at a time, before any gap was rated.
 ## 2. Method
 1. **Requirements.** 501.171 was decomposed by subsection, with (6)(a) split into the inbound duty (vendors to the agency) and the outbound duty (agency to an insurer). Florida Insurance Code duties were added where they carry a security or records obligation. Each paragraph of 16 CFR 314.3(a) and 314.4 became one benchmark row, using the rule's own numbering. The addenda's two clauses that add duties beyond the benchmark became 2 rows. 48 rows in total.
 2. **Crosswalk.** CSF 2.0 and SP 800-53 columns are an **author mapping**; no official NIST mapping of these sources exists.
-3. **Evidence.** Self-attested by the owner and checked on screen with the IT consultant: account security pages and sign-in tests (2026-08-05), the browser password store, bank user settings, the contracts folder, the retired laptop, and a garage walkthrough (2026-08-03).
+3. **Evidence.** Current state was established from the intake evidence (the AMS, email, portal, e-signature and banking settings, the mailbox review on 2026-07-28, the device and router settings and the home office and garage walk-through on 2026-07-29, the agreements folder and addenda, statements, the license records, and the questionnaire) and the owner's written self-review, checked on screen with the IT consultant on 2026-08-06 and 2026-08-07 (EV-032). Where the self-assessment tests had run (2026-08-05), their results are cited too (EV-IA-2, EV-IA-2(2), EV-IA-5 and the other P07 IDs). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

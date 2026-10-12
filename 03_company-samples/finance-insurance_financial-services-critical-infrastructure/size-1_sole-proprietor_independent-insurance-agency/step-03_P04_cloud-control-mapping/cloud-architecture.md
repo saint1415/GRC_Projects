@@ -59,8 +59,8 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 The same split applies to the bank and the insurers even though they are not "cloud vendors": the bank secures its platform, but **who signs in as the owner is the owner's responsibility.** Sharing the owner's banking identity with the bookkeeper moves the premium trust account's main protection outside the agency's control.
 
 ## 4. Findings from the mapping
-1. **Every path to client money runs through email or a shared login.** Invoices with trust account details go out by email (no out-of-band check), and the bookkeeper signs in to banking as the owner with a texted code. Tracked as P01 R-001, R-002, and R-005.
-2. **The strongest MFA protects the least exposed system.** The AMS uses an authenticator app; email, where invoices and attachments live, uses text codes. Moving email to an authenticator app or security key is free. Tracked with R-001.
-3. **Client documents bypass the protected channel.** The AMS client upload portal is paid for but unused, so applications and ID photos arrive by plain email and text (R-003). This was found during the mapping.
-4. **Records depend on one vendor.** Fla. Stat. 626.748 requires policy records for 5 years after expiration, but the only copy is inside the AMS, and email keeps 30 days (R-013, R-014).
-5. **Inherited AMS controls depend on the vendor's SOC 2 report** and on the owner operating the complementary user entity controls (MFA device protection, prompt user changes, log review) listed in P09.
+1. **Every path to client money runs through email or a shared login.** Invoices with trust account details go out by email (no out-of-band check; EV-007, EV-008), and the bookkeeper signs in to banking as the owner with a texted code (EV-012, EV-016). Tracked as P01 R-001, R-002, and R-005.
+2. **The strongest MFA protects the least exposed system.** The AMS uses an authenticator app; email, where invoices and attachments live, uses text codes (EV-001, EV-005). Moving email to an authenticator app or security key is free. Tracked with R-001.
+3. **Client documents bypass the protected channel.** The AMS client upload portal is paid for but unused, so applications and ID photos arrive by plain email and text (EV-002, EV-007, EV-012; R-003). This was found during the mapping.
+4. **Records depend on one vendor.** Fla. Stat. 626.748 requires policy records for 5 years after expiration, but the only copy is inside the AMS, and email keeps 30 days (EV-002, EV-005; R-013, R-014).
+5. **Inherited AMS controls depend on the vendor's SOC 2 report** and on the owner operating the complementary user entity controls (MFA device protection, prompt user changes, log review) listed in P09 (EV-027).

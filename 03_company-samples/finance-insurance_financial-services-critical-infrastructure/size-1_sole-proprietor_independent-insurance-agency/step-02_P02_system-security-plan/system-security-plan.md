@@ -7,7 +7,7 @@
 Agency Systems Profile (**ASP**), identifier CSC-ASP-001.
 
 ## 2. System Overview
-The ASP is everything the agency uses to sell and service about 1,150 policies for about 640 client accounts: quoting, binding, policy service, claims help, invoicing agency-billed policies, and the premium trust account. One person, the owner-agent, uses and runs it. Components are SYS-01 to SYS-08 in `../00_company-facts.md` section 3: the agency management system (AMS, SaaS), a business email and file suite, insurer and partner portals, an e-signature service, accounting SaaS and online banking, a laptop, phone, and printer-scanner, the home office network, and a consumer generative AI chatbot (paused; see P10). There is no server and no IaaS. Most safeguards inside each service are **inherited from the SaaS vendors and insurers**; the owner is responsible for identities, data handling, devices, the home network, and vendor contracts (P04).
+The ASP is everything the agency uses to sell and service about 1,150 policies for about 640 client accounts: quoting, binding, policy service, claims help, invoicing agency-billed policies, and the premium trust account. One person, the owner-agent, uses and runs it. Components are SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the agency management system (AMS, SaaS), a business email and file suite, insurer and partner portals, an e-signature service, accounting SaaS and online banking, a laptop, phone, and printer-scanner, the home office network, and a consumer generative AI chatbot (paused; see P10). There is no server and no IaaS. Most safeguards inside each service are **inherited from the SaaS vendors and insurers**; the owner is responsible for identities, data handling, devices, the home network, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | Source | Requirement | Citation |
@@ -18,7 +18,7 @@ The ASP is everything the agency uses to sell and service about 1,150 policies f
 | Benchmark | Elements of an information security program, used to judge "reasonable measures" and the addenda | 16 CFR 314.4 (benchmark only; the rule does not bind an insurance agency) |
 | Internal | Information Security Policy | POL-01 (P06) |
 
-Not applicable: the FTC Safeguards Rule as law (15 U.S.C. 6805(a)(6)-(7); 16 CFR 314.1(b)), the vertical's bank, credit union, and SEC rules (C-FINANCIAL-R01 to R04), NYDFS Part 500 (C-FINANCIAL-R05; no New York license), and CIRCIA (C-FINANCIAL-R06; proposed only). Reasons are in P03 section 1.
+Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). Not applicable: the FTC Safeguards Rule as law (15 U.S.C. 6805(a)(6)-(7); 16 CFR 314.1(b)), the vertical's bank, credit union, and SEC rules (C-FINANCIAL-R01 to R04), NYDFS Part 500 (C-FINANCIAL-R05; no New York license), and CIRCIA (C-FINANCIAL-R06; proposed only). Reasons are in P03 section 1.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -43,9 +43,10 @@ Operational. Planned changes: authenticator app or security key for email and ba
 | Financial management (premium trust account, invoices, commissions) | Moderate | Moderate | Low | A changed bank detail redirects trust funds; remittances can wait days (P05 MTD 72 h) |
 | **ASP category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the agency's duties for a one-person business (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the AMS vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
+**Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the agency's duties for a one-person business (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the AMS vendor's SOC 2 report, EV-027; reviewed in P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the owner's AMS, email, insurer portal, rater, e-signature, accounting, and banking accounts and settings; the laptop, phone, and printer-scanner; the retired laptop; the home office network; paper in the office and the garage.
 - **Outside (external services):** the AMS vendor's platform, the email suite platform, insurer and partner platforms, the bank, the bookkeeper's own computer, and the AI chatbot vendor.
 
@@ -98,7 +99,7 @@ Self-assessed 2026-08-03 to 2026-08-07 with the IT consultant. See P07.
 The AMS requires a password and an authenticator app code, which is appropriate for remote access to client personal information at a Moderate categorization. Email and online banking use a text message code, which defeats password-only attacks but not phishing pages that relay codes or SIM swaps; both move to an authenticator app or security key by 2026-09-30. Two insurer portals and the rater use a password only until MFA is available or turned on. Clients use each insurer's own portal and identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **AMS:** agency management system

@@ -12,7 +12,7 @@
 | Approved | 2026-09-14 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-08, paper in the office and the garage, the premium trust account, and the contracted services (bookkeeper, IT consultant, insurers, wholesale broker, premium finance company). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-08, paper in the office and the garage, the premium trust account, and the contracted services (bookkeeper, IT consultant, insurers, wholesale broker, premium finance company), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner-agent owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. Any risk that can move client premium (trust funds) to the wrong account is treated, whatever its rating.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the 2026-07-08 near miss, the lead insurer's questionnaire, the gap analysis (P03), and a walk through the laptop, phone, router, and SaaS accounts with the IT consultant.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence (including the 2026-07-08 near miss, EV-008, and the lead insurer's questionnaire, EV-022), the BIA, and a walk through the laptop, phone, router, SaaS accounts, and invoicing with the IT consultant on 2026-08-04 (EV-031). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the near miss and invoicing records (EV-007, EV-008), the account, device, network and banking reviews (EV-005, EV-009, EV-011, EV-012, EV-015, EV-016), the agreements (EV-020), the AI chatbot records (EV-028, EV-029), and the owner's self-reviews (EV-030 to EV-032). A one-person agency keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (cost, operations, regulatory, reputation).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -42,6 +42,8 @@
 | R-015 | Insurer or regulator action because no written program existed | Moderate | Questionnaire answered with this program and the POA&M | Owner-agent | 2026-09-30 |
 | R-004 | Client information in a consumer AI chatbot | Moderate | Avoid: do not resume; delete; counsel review (P10) | Owner-agent | 2026-09-30 |
 | R-009 | Owner unavailable (single point of failure) | Moderate | Emergency servicing arrangement; sealed recovery codes | Owner-agent | 2026-12-31 |
+
+**One pass.** The register was completed on 2026-08-07 from intake and self-assessment evidence. The control tests ran on 2026-08-05, inside the same week, so this pass already reflects them: R-006 cites the saved-password count (EV-IA-5). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks share one cause: **the agency's money and mail move on trust, not on checks.** The mailbox that sends invoices is protected by a text code an attacker can relay, clients have no way to tell a real invoice from a fake one, and the bank sees the bookkeeper as the owner. Each fix is free or nearly free and is due before the questionnaire goes back to the lead insurer on 2026-09-30.
 

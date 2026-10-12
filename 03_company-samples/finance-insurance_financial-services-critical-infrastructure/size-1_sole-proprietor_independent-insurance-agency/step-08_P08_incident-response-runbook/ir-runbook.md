@@ -16,11 +16,11 @@ Keep a printed copy in the office and in the evacuation kit. Assume the attacker
 | Who | Why | When |
 |---|---|---|
 | Bank fraud line (premium trust and operating accounts) | Stop or recall outgoing transfers; freeze new payees; confirm no account changes | Hour 0 if money moved; otherwise hour 1 |
-| E&O insurer claims line | The cyber and social engineering endorsement requires notice as soon as practicable and use of its panel vendors (breach counsel, forensics) **before** hiring anyone | Hours 0-2 |
+| E&O insurer claims line | The cyber and social engineering endorsement (EV-026) requires notice as soon as practicable and use of its panel vendors (breach counsel, forensics) **before** hiring anyone | Hours 0-2 |
 | Breach counsel (from the E&O panel) | Privilege, breach determination under 501.171, notices, insurer contract duties | Hours 1-4 |
 | On-call IT consultant | Lock down the mailbox, preserve logs, check other accounts and devices | Hour 0 |
 | Agency-billed clients with open invoices | Warn them by phone, at the number on file, not to pay any invoice with new bank details | Hours 0-4 |
-| Affected insurers (addenda contacts) | 72-hour contractual notice; warn of fraudulent change requests on their policies | Within 72 hours of discovery |
+| Affected insurers (addenda contacts) | 72-hour contractual notice (EV-021); warn of fraudulent change requests on their policies | Within 72 hours of discovery |
 | Bookkeeper | Watch the trust account for unexpected activity; confirm the bookkeeper's own email is not the source | Hours 1-4 |
 | FBI IC3 (online complaint) | Voluntary report; supports any attempt to stop a transfer | Same day |
 | Emergency servicing agent | Client service if the owner is tied up (P05) | As needed |
