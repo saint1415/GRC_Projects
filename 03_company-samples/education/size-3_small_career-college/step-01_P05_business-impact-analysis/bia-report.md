@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (private career college) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Director (Qualified Individual) with the Registrar, Director of Financial Aid, Business Office Manager, and Dean of Academic Affairs | **Approved:** Campus President, 2026-08-21
+**Sources:** process owner interviews 2026-07-06 to 2026-07-08 (EV-048), FY2025 receipts report (EV-040), enrollment report (EV-041), backup job reports (EV-016), and the recovery objectives in the SIS and LMS vendors' SOC 2 reports (EV-053, EV-054). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Campus President.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the college depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This BIA identifies which business processes the college depends on, how long ea
 - the recovery order in the incident response runbook (P08).
 
 ## 2. System and business description
-The college serves about 900 students from one Florida campus and online, with 60 employees. Student business runs on the Student Information and Financial Aid Platform (SIFAP): a SaaS SIS, a SaaS financial aid management system (FAMS), access to the Department of Education's student aid systems through SAIG, an identity provider, and a cloud tenant (integration server, reporting database, file server, backups). Teaching runs on a SaaS LMS and 5 campus labs. See `../00_company-facts.md` sections 3-4.
+The college serves about 900 students from one Florida campus and online, with 60 employees. Student business runs on the Student Information and Financial Aid Platform (SIFAP): a SaaS SIS, a SaaS financial aid management system (FAMS), access to the Department of Education's student aid systems through SAIG, an identity provider, and a cloud tenant (integration server, reporting database, file server, backups). Teaching runs on a SaaS LMS and 5 campus labs. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $20.7 million in annual receipts, about $80,000 per business day.
+Dollar values are scaled to $20.7 million in annual receipts, about $80,000 per business day (EV-040).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

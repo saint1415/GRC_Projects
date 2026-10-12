@@ -11,7 +11,7 @@
 | Approved | 2026-08-21 by the Campus President (Moderate and below) and the Board chair (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Student Information and Financial Aid Platform (SIFAP) defined in the SSP (P02), the systems connected to it (LMS, admissions CRM, email, lab computers), the contracted financial aid servicer, and the business processes in the BIA (P05). See `../00_company-facts.md` section 3.
+**Scope.** The Student Information and Financial Aid Platform (SIFAP) defined in the SSP (P02), the systems connected to it (LMS, admissions CRM, email, lab computers), the contracted financial aid servicer, and the business processes in the BIA (P05), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What is being protected.** Two overlapping kinds of information:
 - **Customer information** under the Safeguards Rule (16 CFR 314.2(d)): information obtained in providing a financial service to a student, such as Title IV aid administration. The college holds it for about 6,400 consumers.
@@ -22,11 +22,11 @@
 - Moderate: the Campus President may accept, with a treatment plan or a documented reason.
 - High and Very High: only the Board chair may accept, and only temporarily with a dated treatment plan. Risks that could put Title IV eligibility at stake are not accepted at High.
 
-The last risk assessment was dated June 2024. This one replaces it and meets the 314.4(b)(1) content requirements: criteria for rating risks (section 2), criteria for assessing confidentiality, integrity, and availability and the adequacy of existing controls (the `existing_controls` and rating columns), and how each risk will be mitigated or accepted (the treatment columns).
+The last risk assessment was dated June 2024 (EV-023). This one replaces it and meets the 314.4(b)(1) content requirements: criteria for rating risks (section 2), criteria for assessing confidentiality, integrity, and availability and the adequacy of existing controls (the `existing_controls` and rating columns), and how each risk will be mitigated or accepted (the treatment columns).
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews with the Director of Financial Aid, Registrar, Business Office Manager, Dean of Academic Affairs, and Lab Coordinator, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, and interviews with the Director of Financial Aid, Registrar, Business Office Manager, Dean of Academic Affairs, and Lab Coordinator (EV-051). The gap analysis (P03) ran in the same fieldwork window and was also an input.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the ticket history (EV-025), the scan report (EV-026), configuration exports, the walk-through (EV-014) and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, regulatory, student harm, reputation).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -52,7 +52,7 @@ The last risk assessment was dated June 2024. This one replaces it and meets the
 
 The four High risks share one theme: **student financial aid data is easy to reach and hard to recover.** Unencrypted exports sit on a file server (R-002), a vendor's administrators can reach the aid portal with a password alone (R-004), there is no detection capability (R-001), and the backups would not survive an attack (R-019). Closing these also reduces six related Moderate risks (R-003, R-009, R-011, R-012, R-013, R-032).
 
-R-007 was added on 2026-07-31 after control assessment testing (P07) found 11 active LMS accounts belonging to former adjunct faculty.
+**Two passes.** Pass 1 was completed on 2026-07-17 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-007 was added on 2026-07-31 after testing found 11 active LMS accounts belonging to former adjunct faculty (EV-AC-2). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026-27 budget, $61,000):**
