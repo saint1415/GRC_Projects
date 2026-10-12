@@ -87,9 +87,9 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 This table only helps the owner read each provider's documentation. The company's actual hosting provider is described by category, not by name.
 
 ## 4. Findings from the mapping
-1. **One stolen secret reaches everything (IA-5, IA-5(7)).** The long-lived hosting API token can deploy code, read settings (including the database password), and delete backups. A copy sits in a plaintext `.env` file on the laptop. This is the entry point in the P08 scenario (P01 R-001).
-2. **The admin console is the weakest door (AC-6(5), AU-2).** It can open and export any subscriber's data, uses a password only, is shared with the contractor, and records nothing (R-003).
-3. **Backups share a blast radius with production (CP-9).** All database backups live in the production account, and photos have no backup at all. The website promises "automatic backups every day" (R-007; P03 G-033).
-4. **Found during this mapping:** photos are served through public links that never expire, and the database accepts connections from any address with a password (CM-6, AC-3). Both are configuration changes the owner can make without cost.
-5. **Data leaves the platform in three unplanned ways:** service notes in AI prompts (SA-9; P10), client names and phone numbers in error reports (SI-12), and CSV exports sent by email (SC-8).
-6. **The domain registrar has no MFA (IA-2(1)).** Whoever controls the domain controls every booking link and the company's email (R-012).
+1. **One stolen secret reaches everything (IA-5, IA-5(7)).** The long-lived hosting API token can deploy code, read settings (including the database password), and delete backups. A copy sits in a plaintext `.env` file on the laptop (EV-002, EV-014). This is the entry point in the P08 scenario (P01 R-001).
+2. **The admin console is the weakest door (AC-6(5), AU-2).** It can open and export any subscriber's data, uses a password only, is shared with the contractor, and records nothing (EV-003, EV-AC-6(5); R-003).
+3. **Backups share a blast radius with production (CP-9).** All database backups live in the production account, and photos have no backup at all. The website promises "automatic backups every day" (EV-001, EV-025; R-007; P03 G-033).
+4. **Found during this mapping:** photos are served through public links that never expire, and the database accepts connections from any address with a password (CM-6, AC-3; EV-039). Both are configuration changes the owner can make without cost.
+5. **Data leaves the platform in three unplanned ways:** service notes in AI prompts (SA-9; P10), client names and phone numbers in error reports (SI-12), and CSV exports sent by email (SC-8) (EV-007, EV-009, EV-028).
+6. **The domain registrar has no MFA (IA-2(1)).** Whoever controls the domain controls every booking link and the company's email (EV-IA-2(1); R-012).

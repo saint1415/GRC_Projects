@@ -31,6 +31,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 35 determination statem
 - **Test (2026-08-27):** sign-ins from a new browser to each administrator account; the consultant's secret scan of the laptop and of every repository, including history; a point-in-time restore of the database to a scratch instance, timed and checked; encryption status on each device and storage service.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the consultant challenged each answer. The support contractor was interviewed on 2026-08-26 about how the admin console is used.
 
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-09-25, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, platform settings, repositories and vendor records | 20 |
+| Design | A new control whose design was reviewed but which had not yet operated | 0 |
+| Not implemented | Nothing existed to test | 15 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-IA-2(1) and so on), with the population each test covered: the administrator accounts (EV-002, EV-003, EV-008, EV-013; the registrar account was added during testing), the laptop and phone (EV-014, EV-015), and the 6 service providers that receive subscriber data (EV-020, EV-021). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - Tests ran outside subscribers' business hours. No subscriber data was copied off the platform; the restore went to a scratch instance in the same account and was deleted the same day; screenshots were cropped to settings only.
 - The consultant worked under a nondisclosure agreement, in sessions the owner started and watched, with no credentials of its own.

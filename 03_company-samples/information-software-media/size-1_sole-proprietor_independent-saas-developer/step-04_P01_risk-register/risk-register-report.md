@@ -12,7 +12,7 @@
 | Approved | 2026-09-25 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the Multi-tenant Booking Platform (SYS-01 to SYS-09), the support contractor's access, and the sub-processors that receive subscriber data. Processes come from the BIA (P05).
+**Scope.** The whole business as one system: the Multi-tenant Booking Platform (SYS-01 to SYS-09), the support contractor's access, and the sub-processors that receive subscriber data. These are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner-developer owns and accepts every risk. Because the same person proposes and approves, the owner applies fixed rules (POL-01 4.4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -21,8 +21,8 @@
 - Any risk that would break a promise made to subscribers in the Terms of Service, DPA, or website is treated, whatever its level.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the cloud mapping (P04), and the consultant's secret scan and configuration review on 2026-08-27.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the owner's walk-through of data, secrets and access paths on 2026-08-26 (EV-035), the cloud mapping (P04), and the consultant's secret scan and configuration review on 2026-08-27 (EV-IA-5(7), EV-039). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, laptop and phone reviews (EV-002, EV-014, EV-015), the vendor records (EV-020, EV-021), the uptime and outage history (EV-010, EV-011), and the P07 test results. The only incident history the company keeps is the status page (EV-011), so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories. Very High means an event that could end the business: losing most subscribers or their data at once.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -44,6 +44,8 @@
 | R-003 | Shared super-admin login used by the support contractor | Moderate | Named support role with MFA; admin action log | Owner-developer | 2026-11-30 |
 | R-007 | Data loss with a restore slower than the BIA allows | Moderate | Backups outside the account; photo versioning; restore tests | Owner-developer | 2026-12-31 |
 | R-011 | Public statements that do not match practice (FTC deception) | Moderate | Correct the website and release note now | Owner-developer | 2026-10-15 |
+
+**One pass.** The register was completed on 2026-08-28 from intake and self-assessment evidence. The control tests ran on 2026-08-27, inside the same week, so this pass already reflects them: R-001 cites the secret scan (EV-IA-5(7)) and R-012 the registrar sign-in test (EV-IA-2(1)). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three highest risks share one cause: **everything depends on one person and a handful of secrets that person carries on one laptop and one phone.** The cheapest fixes come first: rotating secrets, deleting the `.env` file and the local data copy, and turning on registrar MFA cost nothing and cut R-001 and R-012 within weeks.
 

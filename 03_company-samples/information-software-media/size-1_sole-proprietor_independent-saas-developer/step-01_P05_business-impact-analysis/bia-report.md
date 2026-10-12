@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (independent B2B SaaS software publisher) | **Tier:** Sole Proprietorship (owner-developer only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-developer, 2026-08-25 | **Adopted:** Owner-developer, 2026-09-25
+**Sources:** the owner's BIA worksheet, 2026-08-24 to 2026-08-25 (EV-034), the payment processor's billing report (EV-024), the subscriber counts (EV-005), the status page and cancellation records for the March 2026 outage (EV-011), and the hosting backup settings (EV-001). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-09-25.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the company depends on, how long each can be down, and how much data each can lose. It feeds:
@@ -13,10 +14,10 @@ This one-page BIA lists the five business functions the company depends on, how 
 No regulation requires this BIA. It exists because the company sells an always-on service to about 240 small businesses, its website promises "99.9% uptime", and its two largest subscribers ask about recovery in their annual security questionnaires.
 
 ## 2. Business description
-One owner-developer builds and runs a multi-tenant online booking and appointment-reminder application for small salons, barbershops, pet groomers, and home-cleaning services. The product runs on a managed application platform and managed database from one hosting provider (SYS-01) and depends on SaaS services for code and deployment, messaging, AI drafting, payments, monitoring, and support (SYS-02 to SYS-08). The owner works from a home office on one laptop and one phone (SYS-09). See `../00_company-facts.md` sections 1 to 3.
+One owner-developer builds and runs a multi-tenant online booking and appointment-reminder application for small salons, barbershops, pet groomers, and home-cleaning services. The product runs on a managed application platform and managed database from one hosting provider (SYS-01) and depends on SaaS services for code and deployment, messaging, AI drafting, payments, monitoring, and support (SYS-02 to SYS-08). The owner works from a home office on one laptop and one phone (SYS-09). See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $490 per calendar day. Most cost comes from subscribers who cancel after an outage, not from lost daily revenue.
+Dollar values are scaled to about $180,000 in annual revenue (EV-024), or about $490 per calendar day. Most cost comes from subscribers who cancel after an outage, not from lost daily revenue.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
