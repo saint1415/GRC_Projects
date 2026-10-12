@@ -9,7 +9,7 @@ Project Delivery and Payment Platform (**PDPP**), identifier CSC-SYS-PDPP-001. T
 ## 2. System Overview
 The PDPP is how the company runs projects and moves money. Project teams manage drawings, RFIs, submittals, daily logs, and pay app workflows in the project management platform. The ERP turns approved schedules of values into about 300 owner pay apps a month (about $400 million) and turns approved subcontractor invoices into about 10,500 ACH payments a month (about $300 million). The payment hub sends approved payment files to three treasury banks.
 
-**Why payment integrity matters most.** The largest single-event loss the company faces is a diverted payment. In 2026 the company lost $157,000 net when a supplier bank change was accepted by email at AQ-1 (EV-2026-04). The PDPP's job is to make sure that money goes only to verified accounts, that no one person can change a payee and release a payment, and that the record of each change is complete and attributable.
+**Why payment integrity matters most.** The largest single-event loss the company faces is a diverted payment. In 2026 the company lost $157,000 net when a supplier bank change was accepted by email at AQ-1 (INC-2026-04). The PDPP's job is to make sure that money goes only to verified accounts, that no one person can change a payee and release a payment, and that the record of each change is complete and attributable.
 
 **Major components:**
 - Enterprise project management platform (SYS-01): vendor SaaS with about 9,200 workforce and 41,000 external users

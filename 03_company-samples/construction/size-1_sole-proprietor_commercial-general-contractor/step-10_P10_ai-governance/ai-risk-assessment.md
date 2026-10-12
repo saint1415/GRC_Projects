@@ -7,10 +7,10 @@
 | AI use case | AI-001: AI estimating and bid assistant, an individual subscription (SYS-09) used since March 2026 for about 20 bids and change orders |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; AI 600-1 for generative AI risks |
 | Assessor and decision | Owner, 2026-08-24; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (1 use case) |
+| Inventory | `ai-use-case-inventory.csv` (1 use case), built at intake from the AI tool's account settings and project history, its terms, and the bank and card statements (EV-021, EV-022, EV-016). With no staff, there was no survey to run. Not established: whether the vendor has already used the uploaded FC-1 and client drawings to improve its service, and what it still keeps from them. The deletion request in section 6 is the first step to find out |
 
 ## 1. What it does (Map)
-The owner uploads drawings and specifications. The tool counts quantities (doors, fixtures, wall area, flooring), suggests unit prices from its own market data, and drafts the proposal letter. The owner copies the results into the estimate spreadsheet. It is an individual plan accepted by click-through. Until 2026-07-17 the setting "use my content to improve the service" was on (the default). In June 2026 the owner uploaded **FC-1 change-order drawings**, which are FCI.
+The owner uploads drawings and specifications. The tool counts quantities (doors, fixtures, wall area, flooring), suggests unit prices from its own market data, and drafts the proposal letter. The owner copies the results into the estimate spreadsheet. It is an individual plan accepted by click-through. Until 2026-07-17 the setting "use my content to improve the service" was on (the default; EV-021, EV-022). In June 2026 the owner uploaded **FC-1 change-order drawings**, which are FCI (EV-021).
 
 **Is the data FCI?** Public solicitation documents are not FCI: FAR 52.204-21(a) excludes "information provided by the Government to the public". Drawings and change-order packages on the **awarded** FC-1 contract are FCI. Private clients' drawings are not FCI, but most client contracts make them confidential.
 
@@ -33,7 +33,7 @@ The owner uploads drawings and specifications. The tool counts quantities (doors
 3. Public solicitation documents and the owner's own past prices may be used now, with model improvement turned off.
 
 ## 5. Accuracy check and human review (Measure and Manage)
-Back-test on 3 completed jobs (dental build-out, church hall, one retail repair), comparing the tool's takeoff with the owner's final takeoff:
+Back-test on 3 completed jobs (dental build-out, church hall, one retail repair), comparing the tool's takeoff with the owner's final takeoff (EV-043, 2026-08-24):
 
 | Item | Result | Acceptable? |
 |---|---|---|

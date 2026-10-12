@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner and President |
 
 ## 1. Scope and risk framing
-**Scope.** The business and its key vendors. That covers every system in the Project and Payment System (SYS-01 to SYS-07 in `../00_company-facts.md`), the payment path from pay app to cash receipt and from invoice to subcontractor payment, the federal contract duties, and the vendors that hold company data or run its IT: the SYS-01, accounting, payroll, and productivity suite vendors, the MSP and its backup vendor, the bank, and the AI tool vendor.
+**Scope.** The business and its key vendors. That covers every system in the Project and Payment System (SYS-01 to SYS-07 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the payment path from pay app to cash receipt and from invoice to subcontractor payment, the federal contract duties, and the vendors that hold company data or run its IT: the SYS-01, accounting, payroll, and productivity suite vendors, the MSP and its backup vendor, the bank, and the AI tool vendor ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
@@ -23,8 +23,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), and interviews with all 5 staff who use systems and with the MSP lead technician (2026-07-20 to 2026-07-31). Business email compromise was weighted heavily: the FBI's IC3 reports it in all 50 states (PSA I-091124-PSA), and the company had a near miss in May 2026.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), and interviews with all 5 staff who use systems and with the MSP lead technician (2026-07-20 to 2026-07-31, EV-048). The gap analysis ran in the same fieldwork window, and the two shared findings. Business email compromise was weighted heavily: the FBI's IC3 reports it in all 50 states (PSA I-091124-PSA), and the company had a near miss in May 2026 (EV-040).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the bank portal and SAM records, the contracts folder, the walk-throughs, the account comparison of 2026-07-21 (EV-049) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05). One misdirected owner payment of up to $78,000 is close to a year of the company's profit, so it rates Very High. Losing the DoD award (about 29% of a year's revenue) rates High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -56,8 +56,10 @@ Status: 11 In progress, 12 Open, 1 Closed (R-021 accepted).
 The second High risk (R-006) is a contract-eligibility risk. CMMC Level 1 allows no POA&Ms (32 CFR 170.21(a)(1)). Every FAR 52.204-21 requirement must be met before the Owner can affirm in SPRS, and the affirmation must be in SPRS before award (32 CFR 170.15(b)). Most of the work that closes R-006 is the same work in P03 and P07.
 
 **Risks found or changed during the work:**
-- R-008 was re-rated on 2026-07-28 after the gap analysis found a covered manufacturer's network video recorder in an approved FC-1 submittal. The likelihood of initiation moved to High because it had already happened once. The equipment was never delivered; the submittal was rejected and a compliant one approved on 2026-08-07.
-- R-011: the departed Superintendent's SYS-01 and suite accounts were disabled on 2026-07-21, the day they were found. The sign-in logs showed no use after the termination date. The process gap remains open.
+- R-008 was re-rated on 2026-07-28 after the gap analysis found a covered manufacturer's network video recorder in an approved FC-1 submittal (EV-058). The likelihood of initiation moved to High because it had already happened once. The equipment was never delivered; the submittal was rejected and a compliant one approved on 2026-08-07 (EV-060).
+- R-011: the departed Superintendent's SYS-01 and suite accounts were disabled on 2026-07-21, the day they were found (EV-049). The sign-in logs showed no use after the termination date. The process gap remains open.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 follows the control assessment (P07) and adds any risk that testing finds; this register has no pass 2 entries. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $8,900 one-time and $1,630 a year):**

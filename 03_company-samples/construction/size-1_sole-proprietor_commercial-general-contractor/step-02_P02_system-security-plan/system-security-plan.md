@@ -7,7 +7,7 @@
 Project Management and Payment Application System (**PMPAS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The PMPAS is everything the owner uses to run jobs and move money: drawings, RFIs, submittals, daily logs, pay apps, subcontractor invoices and lien waivers, payments, and the federal paperwork for FC-1. One person, the owner, uses and runs it. Components are SYS-01 to SYS-06 in `../00_company-facts.md` section 3: the project management and pay app SaaS, the accounting SaaS, the business email and file account, one laptop, one phone, and the home office network. The bank portal (SYS-07), the federal portals (SYS-08), and the AI bid assistant (SYS-09) are external services it connects to. There is no server and no IaaS. Most platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, the home network, and vendor terms (P04).
+The PMPAS is everything the owner uses to run jobs and move money: drawings, RFIs, submittals, daily logs, pay apps, subcontractor invoices and lien waivers, payments, and the federal paperwork for FC-1. One person, the owner, uses and runs it. Components are SYS-01 to SYS-06 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the project management and pay app SaaS, the accounting SaaS, the business email and file account, one laptop, one phone, and the home office network. The bank portal (SYS-07), the federal portals (SYS-08), and the AI bid assistant (SYS-09) are external services it connects to. There is no server and no IaaS. Most platform safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, data handling, devices, the home network, and vendor terms (P04).
 
 The PMPAS is also the **proposed CMMC Level 1 assessment scope**: the systems that process, store, or transmit FCI (32 CFR 170.19(b)(1)). This plan is the scope document the owner will use for the Level 1 self-assessment.
 
@@ -22,6 +22,8 @@ The PMPAS is also the **proposed CMMC Level 1 assessment scope**: the systems th
 | Payroll | FAR 52.222-8 | Weekly certified payrolls for FC-1 subcontractors |
 | State | Florida Information Protection Act (breach notification) | Fla. Stat. 501.171 (W-9 forms with Social Security numbers; account credentials) |
 | Internal | Information Security Policy | POL-01 (P06) |
+
+Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv); see also P03 section 1.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -52,6 +54,8 @@ Because one person designs, runs, and checks every control, independence is limi
 **Baseline:** SP 800-53B Moderate, tailored to 27 controls (`control-implementation.csv`). The set covers every FAR 52.204-21 requirement (which the SP 800-171 R2 chain maps to these controls) plus the controls that stop payment fraud (MFA, call-back verification, log review). Other Moderate controls are inherited from the SaaS vendors (evidence: the project management vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): SYS-01 to SYS-06 and the paper records (OTH-02) are inside; SYS-07 to SYS-09, the company website (OTH-01) and the personal photo cloud (OTH-05) are outside.
+
 - **Inside:** the owner's accounts and settings in SYS-01, SYS-02, and SYS-03; the laptop; the phone; the home office network; paper plan sets and files in the home office and truck.
 - **Outside (external services):** the SaaS vendors' platforms, the bank portal, the federal portals, the AI bid assistant, the bookkeeper's own devices, and subcontractors' systems.
 - **Out of scope for CMMC Level 1:** family devices on the home network once they move to a separate guest network (32 CFR 170.19(b)(2)(i)).
@@ -81,6 +85,8 @@ Diagram: P04 `cloud-architecture.md`.
 | SYS-06 Wi-Fi router | Network | Yes, 2026-07-16 | Owner |
 | Carrier-branded mobile hotspot | Network | **Covered manufacturer; removed from use 2026-07-16** | Owner (to be returned to the carrier) |
 
+Manufacturer checks are recorded in the Section 889 inquiry notes (EV-039); the components come from the intake asset inventory (EV-016 to EV-020).
+
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
 See `control-implementation.csv`. Summary of 27 controls:
@@ -107,7 +113,7 @@ Self-assessed 2026-07-20 to 2026-07-22 with the on-call IT technician. See P07. 
 The bank and the government sign-in service enforce MFA. Email uses text-message codes, which do not resist phishing; a security key is planned by 2026-10-31 because the top risk is mailbox takeover (P01 R-001). SYS-01 and SYS-02 use passwords only until app-based MFA is turned on (2026-09-15). FAR 52.204-21(b)(1)(vi) requires authentication but not MFA; the stronger methods are a business decision.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **CMMC:** Cybersecurity Maturity Model Certification (32 CFR Part 170)

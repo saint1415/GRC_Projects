@@ -13,6 +13,8 @@
 | Approved | 2026-08-31 by the Owner and President |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv) (N23-R01 to N23-R04, with the FC-1 contract file and the DoD pre-solicitation notice as evidence, EV-023 and EV-026). This section restates the result for the rules analyzed here.
+
 **FAR 52.204-21 applies now.** The clause is in the company's one federal contract (FC-1, VA). It protects any "covered contractor information system", meaning a contractor-owned or -operated system that "processes, stores, or transmits Federal contract information" (52.204-21(a)). Drawings, submittals, schedules, daily logs, certified payrolls, and pay apps prepared for FC-1 are FCI. Simple transactional information needed to process payments is excluded from the definition. There is **no size exemption**: the only exclusion is for acquisitions of commercially available off-the-shelf (COTS) items, which does not describe a construction contract. The clause must also be flowed down to subcontractors that may hold FCI (52.204-21(c)).
 
 **CMMC Level 1 applies from the next DoD award.**
@@ -42,12 +44,12 @@ Video surveillance equipment from Hytera, Hikvision, and Dahua (and their subsid
    - CSF 2.0 subcategories come from NIST's CSF 2.0-to-SP 800-171 Rev. 3 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-171r3.csv`).
    - SP 800-53 controls come from the SP 800-171 Rev. 3 tailoring tables.
    - Where NIST publishes no CSF mapping (03.01.20, 03.01.22, 03.08.03), and for the CMMC, Section 889, and DFARS rows, the mapping is the author's and is labeled so in `crosswalk_source`.
-3. **Documentary evidence.** Each status rests on a named document or record:
-   - user exports from the productivity suite and SYS-01, and the SYS-02 and bank portal role lists
-   - the MSP's device list, patch report, antivirus console export, firewall rule export, and backup job report
-   - the FC-1 contract, its subcontracts, the subcontract template, and the FC-1 submittal log
-   - the SAM registration record, the website history, and the alarm panel log
-   - a walkthrough of the office and 2 jobsites (2026-07-22), and interviews with all 5 staff who use systems, both Carpenters (visitors and keys), and the MSP lead technician
+3. **Documentary evidence.** Each status rests on a named document or record in the [evidence register](../step-00_P00_intake/evidence-register.csv), and the `evidence` column in `gap-analysis.csv` cites its ID:
+   - user exports from the productivity suite and SYS-01, and the SYS-02 and bank portal role lists (intake: EV-002, EV-005 to EV-007; the account comparison of 2026-07-21, EV-049)
+   - the MSP's device list, patch report, antivirus console export, firewall rule export, and backup job report (intake: EV-010 to EV-015; fieldwork exports and checks of 2026-07-22 and 2026-07-23, EV-053 to EV-055)
+   - the FC-1 contract, its subcontracts, the subcontract template, and the FC-1 submittal log (EV-023 to EV-025; the contract file review, EV-050; the submittal review of 2026-07-28, EV-058)
+   - the SAM registration record, the website history, and the alarm panel log (EV-009, EV-056, EV-042)
+   - a walkthrough of the office and 2 jobsites (2026-07-22, EV-052), and interviews with all 5 staff who use systems, both Carpenters (visitors and keys), and the MSP lead technician (EV-048, EV-051)
 4. **Status.** Each row is rated Met, Partially met, Not met, or Not applicable as of the end of fieldwork (2026-07-31). For CMMC readiness, anything other than Met counts as NOT MET under 170.24(c)(1).
 
 ## 3. Results summary

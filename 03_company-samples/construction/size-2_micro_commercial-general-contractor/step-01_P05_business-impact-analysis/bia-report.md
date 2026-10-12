@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (commercial and institutional building general contractor) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (security and compliance lead) with the Owner, the Project Manager and Estimator, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** Owner and President, 2026-08-31
+**Sources:** process owner interviews 2026-07-20 to 2026-07-22 (EV-046), FY2025 revenue report (EV-037), billing and payments report (EV-038), payroll roster (EV-001), FC-1 contract file (EV-023), DoD pre-solicitation notice (EV-026), backup job report (EV-015), SYS-01 vendor SOC 2 report (EV-022), MSP service contract (EV-020), payroll service call (EV-047). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
 
 ## 1. Overview and purpose
 This BIA lists the company's 7 business functions, how long each can be down, and how much data each can lose. It supports:
@@ -20,10 +21,10 @@ One Florida flex-space office with a tool room and a small yard, 4 active jobsit
 - small-business accounting (SYS-02) and the payroll service (SYS-03)
 - the productivity suite for email and files (SYS-04), with a cloud backup run by the MSP (SYS-07)
 
-On site are 4 laptops, 1 desktop, 5 phones, and 2 tablets (SYS-05) and the office network (SYS-06). Payments leave through the bank portal (SYS-08). See `../00_company-facts.md` sections 3 and 4.
+On site are 4 laptops, 1 desktop, 5 phones, and 2 tablets (SYS-05) and the office network (SYS-06). Payments leave through the bank portal (SYS-08). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 per business day.
+Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 per business day (EV-037).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -68,9 +69,9 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 p
 |---|---|---|
 | SYS-01 vendor | BP-01, BP-03 | SOC 2 Type 2 report reviewed (P09); RTO 4 h and RPO 1 h meet this BIA |
 | Accounting vendor | BP-01, BP-02 | Standard service terms only |
-| Payroll service | BP-05 | Standard service terms; repeat-payroll option confirmed by phone 2026-07-23 |
+| Payroll service | BP-05 | Standard service terms; repeat-payroll option confirmed by phone 2026-07-23 (EV-047) |
 | Productivity suite vendor | Email and files for every function | Standard service commitments |
-| MSP (and its backup subcontractor) | Endpoint and network recovery; restore of email and files | No written recovery commitment; business-hours response only |
+| MSP (and its backup subcontractor) | Endpoint and network recovery; restore of email and files | No written recovery commitment; business-hours response only (EV-020) |
 | Bank | BP-02 | Bank treasury agreement |
 | Internet provider and cellular carrier | Office SaaS access; jobsite tablets | None; one office line |
 

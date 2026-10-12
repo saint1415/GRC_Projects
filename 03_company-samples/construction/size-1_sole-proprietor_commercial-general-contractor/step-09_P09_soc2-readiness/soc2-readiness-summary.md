@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022), criterion IDs only |
 | Categories in scope | Security (CC1-CC9) only |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the project management SaaS vendor's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the project management SaaS vendor's SOC 2 Type 2 report and bridge letter, received at intake (EV-003; `vendor-soc2-review.csv`) |
 | Prepared | 2026-07-16 (Part B) and 2026-07-22 (Part A) by the owner with the IT technician; adopted 2026-08-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

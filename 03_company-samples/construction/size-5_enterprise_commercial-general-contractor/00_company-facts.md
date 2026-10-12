@@ -143,7 +143,7 @@ These facts were added while building the deliverables. They do not change secti
 
 **Disclosure committee membership (P08).** General Counsel (chair), CFO, Chief Accounting Officer, CISO, Chief Risk Officer, Vice President, Investor Relations, and President, Federal Group, advised by outside securities counsel.
 
-**2026 payment fraud events.** EV-2026-04: AQ-1 supplier bank change by email; $612,000 paid, $455,000 recovered, $157,000 net loss; insurance claim under the social engineering sublimit accepted less the retention. The disclosure committee reviewed it on 2026-05-06 and recorded it as not material. EV-2026-06: an owner received false remittance instructions from a lookalike domain; no payment was made.
+**2026 payment fraud events.** INC-2026-04: AQ-1 supplier bank change by email; $612,000 paid, $455,000 recovered, $157,000 net loss; insurance claim under the social engineering sublimit accepted less the retention. The disclosure committee reviewed it on 2026-05-06 and recorded it as not material. INC-2026-06: an owner received false remittance instructions from a lookalike domain; no payment was made.
 
 **Plan rooms.** Each of the 16 installation jobsites has a controlled plan room in the field office trailer with a plotter connected to the FPCE virtual desktops and locked drawing cabinets. The Federal Group plan room procedure requires escorted visitors and a visitor log. The plan rooms hold printed CUI drawing sets for the trades.
 

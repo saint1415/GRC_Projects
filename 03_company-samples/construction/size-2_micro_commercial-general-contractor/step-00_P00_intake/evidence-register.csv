@@ -1,0 +1,2 @@
+evidence_id,title,source_system,artifact_type,owner,as_of_date,collected_date,collected_by,phase,what_it_shows,used_by
+EV-001,[FILL],[FILL],[export|document|report|interview|observation|test],[FILL],[YYYY-MM-DD],[YYYY-MM-DD],[FILL],[Intake|P05 fieldwork|P01 fieldwork|P03 fieldwork|P07 fieldwork],[FILL: observations only],[P05|P02|P04|P01|P03|P06|P07|P08|P09|P10]

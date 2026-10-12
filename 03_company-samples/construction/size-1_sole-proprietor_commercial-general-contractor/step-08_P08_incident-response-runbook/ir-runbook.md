@@ -16,7 +16,7 @@ Keep a printed copy in the truck and the home office. Assume the attacker is rea
 | Variant | What happens | Money at risk |
 |---|---|---|
 | **A. Client pays the attacker** | A phishing page captures the owner's email password and text-message code. The attacker reads the mailbox, hides replies with an inbox rule, and sends a client "updated remittance instructions" just before pay app week | One pay app, typically $10,000 to $25,000 |
-| **B. Owner pays the attacker** | A spoofed or hacked subcontractor mailbox asks the owner to change its bank account "before Friday's payment" (the March 2026 near miss) | One subcontractor payment, typically $3,000 to $15,000 |
+| **B. Owner pays the attacker** | A spoofed or hacked subcontractor mailbox asks the owner to change its bank account "before Friday's payment" (the March 2026 near miss, EV-010) | One subcontractor payment, typically $3,000 to $15,000 |
 | **C. Federal EFT change** | The attacker gets into SAM and changes the company's EFT information, so the FC-1 payment goes elsewhere. Under FAR 52.232-33(e)(2) the loss may fall on the company | One FC-1 payment |
 
 ## 1. Who to call (Govern)
@@ -27,7 +27,7 @@ Keep a printed copy in the truck and the home office. Assume the attacker is rea
 | On-call IT technician | Help lock the mailbox, check the laptop and router, save evidence | Hour 0-2 |
 | FBI IC3 (www.ic3.gov) | Complaint "as soon as possible, regardless of the amount"; may help freeze funds | Hour 0-4 |
 | Business attorney, and a breach attorney through the state bar referral service if personal information was exposed | Who bears the loss; Florida notice decision | Day 0-1 |
-| Insurance agent | No cyber or social engineering coverage today; ask whether any policy responds | Day 0-1 |
+| Insurance agent | No cyber or social engineering coverage today (EV-025, EV-031); ask whether any policy responds | Day 0-1 |
 | FC-1 Contracting Officer and paying office | Variant C, or if a VA payment or FC-1 subcontractor payment is affected | Day 0-1 |
 | Standby general contractor | Keep jobsites supervised while the owner deals with the incident (P05) | As needed |
 

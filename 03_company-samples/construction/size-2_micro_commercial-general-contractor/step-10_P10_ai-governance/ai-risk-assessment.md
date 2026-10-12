@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (security and compliance lead) with the Project Manager and Estimator, 2026-08-26; counsel consulted on FAR 52.203-2 |
 | Decision | Owner and President, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the card statements, the AI tool's account, terms and project list, the field interviews and a staff survey (EV-019, EV-032, EV-044, EV-045). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Project Manager and Estimator. **Decision authority:** the Owner, who also signs every bid.
@@ -18,7 +18,7 @@
   - POL-02 C.3: no company data in public AI chatbots
 - **Approved-tools list:** kept by the Office Manager with the inventory. Today it lists AI-001 only, only for the Project Manager, and only under the conditions in section 6.
 - **Scale for a Micro company:** there is no AI committee. The Owner, the Office Manager, and the Project Manager review AI use at the monthly POA&M meeting and re-assess AI-001 every quarter.
-- **How it started.** The Project Manager signed up on a company credit card after a trade show. No one checked the terms. That is the first finding: a new tool that holds company data must go through POL-02 A.5 before use.
+- **How it started.** The Project Manager signed up on a company credit card after a trade show (EV-019, EV-032). No one checked the terms. That is the first finding: a new tool that holds company data must go through POL-02 A.5 before use.
 
 ## 2. MAP
 | Item | Description |
@@ -32,7 +32,7 @@
 
 **Is the data FCI?** It depends on the stage.
 - Public solicitation documents posted for all bidders are *not* FCI. FAR 52.204-21(a) excludes "information provided by the Government to the public". The DoD solicitation, when issued, can be estimated in the tool before award.
-- Drawings and change-order packages on an **awarded** federal contract *are* FCI. The Project Manager uploaded FC-1 change-order drawings in June and July 2026. That put FCI on an external system the company does not control (P03 G-003, G-024).
+- Drawings and change-order packages on an **awarded** federal contract *are* FCI. The Project Manager uploaded FC-1 change-order drawings in June and July 2026 (EV-032). That put FCI on an external system the company does not control (P03 G-003, G-024).
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
