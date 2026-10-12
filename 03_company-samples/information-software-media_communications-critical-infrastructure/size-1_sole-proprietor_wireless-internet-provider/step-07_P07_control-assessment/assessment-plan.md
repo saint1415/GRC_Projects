@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **9 controls, 45 determination stateme
 - **Test (2026-07-22 and 2026-07-23):** a text to the support line from a phone that was not the number of record, using a test account's number and ZIP code; sign-ins to each SaaS admin account from a new browser; port checks from the internet and from a test subscriber connection; credential checks on 8 of 32 access points and 10 of about 310 customer radios; loading the last router configuration onto the spare router.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the network consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, network and vendor records | 29 |
+| Design | The control is new and only its design could be reviewed. No control was new during fieldwork | 0 |
+| Not implemented | Nothing existed to test | 16 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-SC-7 and so on), with the population each test covered: the SaaS admin accounts (EV-001, EV-006, EV-009, EV-015, EV-016), the router (EV-010), a sample of 8 of the 32 access points and 10 of about 310 customer radios (EV-009), and the vendors and contractors (EV-017). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - Tests ran after 10:00 p.m. or on a Sunday morning to avoid customer impact. No customer traffic was captured and no customer data was copied; screenshots show settings only.
 - The consultant worked only under the terms signed 2026-07-17, through the VPN, in sessions the owner started and watched.

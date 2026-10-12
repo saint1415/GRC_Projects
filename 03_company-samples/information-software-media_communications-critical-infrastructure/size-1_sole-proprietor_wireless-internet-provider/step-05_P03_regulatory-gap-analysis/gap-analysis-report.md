@@ -8,13 +8,15 @@
 | Secondary regulations | CALEA system security and integrity rules, 47 CFR 1.20000-1.20008 (C-COMMUNICATIONS-R03); outage rules for interconnected VoIP, 47 CFR 4.9(g), (h) and 4.18 (C-COMMUNICATIONS-R02) |
 | Voluntary benchmark | 8 NIST CSF 2.0 outcomes, used to judge the CPNI "reasonable measures" duty (64.2010(a)) |
 | Assessment dates | 2026-07-20 to 2026-07-24 (self-assessment) |
-| Assessor | Owner-operator, with the on-call network consultant. Evidence is self-attested and checked on screen where possible. Telecommunications counsel reviewed section 1 and searched the FCC filing systems |
+| Assessor | Owner-operator, with the on-call network consultant. Evidence is the intake record and the owner's written self-review (EV-031), checked on screen where possible. Telecommunications counsel reviewed section 1 and searched the FCC filing systems |
 | Sources checked | eCFR full text (point in time 2026-09-23) for 47 CFR 1.20002-1.20006, 4.3, 4.5, 4.9, 4.18, 8.1, 9.3, 9.11, 64.2003, 64.2009-64.2011; Federal Register API (70 FR 59664; 71 FR 38091; 89 FR 9968; 89 FR 23644; 90 FR 38406; 91 FR 52251), retrieved 2026-10-05 |
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 ### 1.1 The CPNI rules apply, but only because of the home phone add-on
-The CPNI rules bind "telecommunications carriers," and the definition "shall include an entity that provides interconnected VoIP service, as that term is defined in section 9.3" (47 CFR 64.2003(o)). The home phone add-on is real-time two-way voice that needs a broadband connection and IP-compatible equipment (the ATA) and lets users call the public telephone network, which is the 9.3 definition. The company sells it under its own name, sets the price, bills it, and supports it, so the company provides it, even though a wholesale platform does the switching. Counsel agreed with this reading on 2026-07-24.
+The CPNI rules bind "telecommunications carriers," and the definition "shall include an entity that provides interconnected VoIP service, as that term is defined in section 9.3" (47 CFR 64.2003(o)). The home phone add-on is real-time two-way voice that needs a broadband connection and IP-compatible equipment (the ATA) and lets users call the public telephone network, which is the 9.3 definition. The company sells it under its own name, sets the price, bills it, and supports it, so the company provides it, even though a wholesale platform does the switching. Counsel agreed with this reading on 2026-07-24 (EV-034).
 
 **The test is the service, not the size.** There is no size threshold or small-carrier exemption in 64.2001-64.2011. If the company dropped the home phone add-on and sold only broadband, the CPNI rules would not apply at all (section 1.2). Keeping 58 VoIP lines brings every Subpart U duty with it, including the annual officer certification that the company has never filed (G-019).
 
@@ -42,7 +44,7 @@ No FCC rule sets general network security controls for a WISP. The CPNI rules re
 ## 2. Method
 1. **Requirements.** Each paragraph of 47 CFR 64.2005-64.2011 that imposes, permits, or limits conduct is one row, cited to the paragraph (public-domain text; short quotes only). Rows reuse the requirement set verified for this vertical's Small sample. CALEA and Part 4 rows follow the same method.
 2. **Crosswalk.** CSF 2.0 and SP 800-53 columns for the regulatory rows are an **author mapping**; NIST has published no official mapping for 47 CFR Parts 1, 4, or 64. The benchmark rows use NIST's official CSF 2.0 to SP 800-53 reference mapping (a selection of the listed controls).
-3. **Evidence.** Self-attested by the owner and checked on screen with the network consultant: SaaS settings, router configuration, an external port check (2026-07-23), a test of the AI support assistant from a phone that was not the number of record (2026-07-22), and counsel's search of the FCC's CPNI certification docket and CEFS.
+3. **Evidence.** Current state was established from the intake evidence (portal and controller exports, the router configuration, device settings, the agreements folder, statements, website captures, the document search, and the SITE-1 walk-through on 2026-07-15) and the owner's written self-review, checked on screen with the network consultant from 2026-07-20 to 2026-07-22 (EV-031). Fieldwork added a test of the AI support assistant from a phone that was not the number of record (2026-07-22, EV-032), the review of earlier text-line sessions (EV-033), counsel's search of the FCC's CPNI certification docket and CEFS (2026-07-24, EV-034), and, where the control tests had run, their results, such as the external port check (2026-07-23, EV-SC-7). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale (Very Low to Very High).
 
 ## 3. Results summary

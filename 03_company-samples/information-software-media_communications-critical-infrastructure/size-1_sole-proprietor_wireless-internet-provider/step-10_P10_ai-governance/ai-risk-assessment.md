@@ -7,24 +7,24 @@
 | AI use case | AI-001: the billing platform's AI support assistant add-on (SYS-08) on the customer portal chat and the text-message support line, with read access to the customer's account and the ability to open repair tickets. Turned on 2026-05-04. This is the registry's "customer-service chatbot with account access", adapted to the one AI tool a one-person ISP actually uses |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-operator, 2026-08-20; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the billing platform's add-on settings and terms, the bank and card statements, and the owner's AI chat account (EV-004, EV-005, EV-018, EV-028). With no staff, there was no survey to run. Not established: whether the model provider keeps to the stated no-training and 30-day retention terms, because the vendor's written confirmation was still pending (condition 4) |
 
 ## 1. GOVERN
 - **Accountable owner and approver:** the owner-operator (no committee at this size).
 - **Policies that apply:** POL-01 7.8 (CPNI online only after compliant sign-in; account change notices), POL-01 8.3 (no marketing use of CPNI), POL-01 6.1 (vendor terms before CPNI access), POL-01 9.6 (AI tools).
-- **How it started:** the owner switched the add-on on in the billing platform without a review. It was never in the billing vendor's SOC 2 report (P09). This is the first assessment.
+- **How it started:** the owner switched the add-on on in the billing platform without a review. It was never in the billing vendor's SOC 2 report (EV-021; P09). This is the first assessment.
 
 ## 2. MAP
 | Item | Description |
 |---|---|
 | Purpose and intended use | Answer outage, billing, and plan questions at any hour so customers are not waiting for the owner, who is often on a tower |
 | Users / operators | Customers on the portal chat (signed in) and the text line (not signed in); the owner reviews escalations |
-| Affected people | About 310 account holders and anyone who texts the support number. About 620 sessions from 2026-05-04 to 2026-08-14 (380 chat, 240 text) |
-| Data | Inputs: customer messages; account data read through the platform (balance, plan, invoices, outage status, tickets, and for the 52 home phone accounts, recent call history, which is CPNI). Outputs: answers and repair tickets. The add-on terms say customer data is not used to train models; the model provider keeps transcripts 30 days for abuse monitoring (owner asked the vendor to confirm both in writing) |
+| Affected people | About 310 account holders and anyone who texts the support number. About 620 sessions from 2026-05-04 to 2026-08-14 (380 chat, 240 text; EV-036) |
+| Data | Inputs: customer messages; account data read through the platform (balance, plan, invoices, outage status, tickets, and for the 52 home phone accounts, recent call history, which is CPNI). Outputs: answers and repair tickets. The add-on terms say customer data is not used to train models; the model provider keeps transcripts 30 days for abuse monitoring (EV-005; owner asked the vendor to confirm both in writing) |
 | Build or buy | Buy: vendor add-on built on a third-party large language model |
 | Actions allowed | Read the account; open a repair ticket. No payments, plan changes, credits, address or password changes, or disconnections |
 
-**What went wrong (found 2026-07-22, P03).** On the text line the assistant accepted an account number and service ZIP code, both printed on every bill, and then listed the account's recent home phone calls. The CPNI rules forbid authenticating with account information before online access to CPNI (47 CFR 64.2010(c)). The owner turned off the call history skill on the text line that day. A review of all text sessions since launch found 14 that showed call history; the owner called each account holder back at the telephone number of record, all 14 confirmed they had asked, and no breach was determined (incident log, 2026-07-22).
+**What went wrong (found 2026-07-22, P03).** On the text line the assistant accepted an account number and service ZIP code, both printed on every bill, and then listed the account's recent home phone calls. The CPNI rules forbid authenticating with account information before online access to CPNI (47 CFR 64.2010(c)). The owner turned off the call history skill on the text line that day. A review of all text sessions since launch found 14 that showed call history; the owner called each account holder back at the telephone number of record, all 14 confirmed they had asked, and no breach was determined (incident log, 2026-07-22; EV-032, EV-033).
 
 **Rules that apply:**
 | Rule | Applies? | Why |
@@ -38,7 +38,7 @@
 **Tier: Medium** (repository rubric). It talks directly to customers and reads CPNI, but it makes no decision about a person, cannot change the account, and hands everything else to the owner. **Re-tier to High and reassess** if it is ever allowed to change authentication details, decide credits or disconnections, or use CPNI for marketing.
 
 ## 4. MEASURE
-Tests on 2026-07-22 (text line) and 2026-08-14 (transcript sample and prompts).
+Tests on 2026-07-22 (text line, EV-032) and 2026-08-14 (transcript sample and prompts, EV-037).
 
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
