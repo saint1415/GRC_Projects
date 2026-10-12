@@ -9,7 +9,7 @@
 | Review cycle | Each standard is reviewed at least annually by its owner, and after any FedRAMP rules release that changes it |
 
 ## 1. Why this index exists
-The 2024 standards were written for the government partition. The commercial partition and DC-1 followed them loosely or not at all (gap 1, "two-speed security", in `../00_company-facts.md`). The 2026 FedRAMP rules also add measurable duties (PAIN ratings, monthly verification, third-party resource records) that need a home. Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them.
+The 2024 standards were written for the government partition. The commercial partition and DC-1 followed them loosely or not at all ("two-speed security"; intake library review EV-028 and exports EV-006, EV-007, EV-008, EV-016, EV-025). The 2026 FedRAMP rules also add measurable duties (PAIN ratings, monthly verification, third-party resource records) that need a home. Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them.
 
 ## 2. How standards work
 - **Hierarchy:** policy (POL), then standard (STD), then procedure or runbook. A standard may not weaken its parent policy.

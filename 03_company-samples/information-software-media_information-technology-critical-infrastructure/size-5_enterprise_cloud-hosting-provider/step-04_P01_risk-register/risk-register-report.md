@@ -47,8 +47,8 @@
 Risks under ER-03 and ER-06 at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E; the cloud provider threat picture (attacks on provider tooling and managed service providers, isolation escapes, supply chain compromise, DDoS); the BIA (P05); the gap analysis (P03); and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E; the cloud provider threat picture (attacks on provider tooling and managed service providers, isolation escapes, supply chain compromise, DDoS) in the SOC's threat intelligence (EV-059); the BIA (P05); the intake evidence; the 2025 enterprise risk assessment (EV-028); and risk workshops with the SOC, platform, control plane and network engineering, software supply chain, data center operations, the Integration Management Office, third-party risk, the FedRAMP compliance group, customer support, finance and the General Counsel's office (EV-071). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-017), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). Events that reach many tenants at once are rated Very High.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -70,6 +70,8 @@ By threat source type: Adversarial 28, Structural 19, Accidental 16, Environment
 By treatment: Mitigate 57, Accept 6, Avoid 2.
 By status: In progress 48, Open 9, Closed 8 (6 accepted, 2 avoided).
 **16 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): the risks that P07 tested were updated with the results on 2026-08-28, and their `likelihood_basis` cites the P07 evidence ID (for example EV-AC-5 for R-001 and EV-IA-5 for R-020). The `assessment_pass` column shows `Pass 1` for every risk, since the P07 plan selected its controls from pass 1 risk IDs (P07 assessment plan, section 1); all 65 were last reviewed on 2026-08-28.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

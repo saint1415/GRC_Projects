@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded public cloud and managed infrastructure provider) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners, 2026-06-01 to 2026-07-15 | **Approved:** Chief Technology Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** risk and technology committee of the board, 2026-09-10
+**Sources:** process owner interviews 2026-06-01 to 2026-07-10 (EV-067, EV-068), the dependency and contract review (EV-070), the G1 contingency test report (EV-069), the FY2025 Form 10-K and revenue report (EV-036, EV-052), the customer agreement and SLA schedule (EV-042), backup, vault and DR test records (EV-021, EV-022), and the AQ-1 integration records (EV-053). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Technology Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties and the acquired managed services business (AQ-1). For a cloud provider, most processes are also the customers' processes: when the company's data plane stops, about 41,000 customers stop with it. The BIA feeds:
@@ -14,10 +15,10 @@ This enterprise-wide BIA identifies the business processes the company depends o
 **Results in one line:** 18 processes were analyzed; 9 are High criticality, 8 Moderate, and 1 Low. 9 processes need recovery within 2 hours. The dependency map (`dependency-map.csv`) lists 26 dependencies; 17 are single points of failure at some level and 4 have never been tested.
 
 ## 2. System and business description
-Cris Santos Company runs six commercial regions (R1 to R6, each with three company-operated data centers), a Government region (G1, two data centers), and 41 edge points of presence. It has 12,000 employees, about 41,000 business customers, and about $4.8 billion in annual revenue (about $13.2 million a day). The technology estate is described in `../00_company-facts.md` section 3: the console and API (SYS-01), regional control planes (SYS-02), the workforce identity platform (SYS-03), about 249,000 hosts (SYS-04), storage services (SYS-05), the global network and edge (SYS-06), key management and PKI (SYS-07), the software supply chain (SYS-08), the fleet automation service (SYS-09), the legacy AQ-1 RMM tool (SYS-10), security operations (SYS-11), and about 2,600 vendors (SYS-15).
+Cris Santos Company runs six commercial regions (R1 to R6, each with three company-operated data centers), a Government region (G1, two data centers), and 41 edge points of presence. It has 12,000 employees, about 41,000 business customers, and about $4.8 billion in annual revenue (about $13.2 million a day). The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): the console and API (SYS-01), regional control planes (SYS-02), the workforce identity platform (SYS-03), about 249,000 hosts (SYS-04), storage services (SYS-05), the global network and edge (SYS-06), key management and PKI (SYS-07), the software supply chain (SYS-08), the fleet automation service (SYS-09), the legacy AQ-1 RMM tool (SYS-10), security operations (SYS-11), and about 2,600 vendors (SYS-15).
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-036, EV-052) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -62,11 +63,11 @@ Ordered by recovery priority, then RTO.
 The full map is in `dependency-map.csv`. Key findings:
 
 1. **Fleet automation blast radius (DEP-21).** One internal service can push software to every host and every enrolled customer guest. Its recovery is fast (8-hour RTO), but its misuse is the most damaging single event in the register. Guest-agent channel releases lack two-person approval (P01 R-001; POAM-001; the P08 scenario).
-2. **G1 recovery (DEP-19).** The G1 tenant database restore took 3.4 hours in the 2026-06 disaster recovery test against a 2-hour RTO. The commercial regions met their RTOs in 2026-05 (P01 R-011; POAM-009).
+2. **G1 recovery (DEP-19).** The G1 tenant database restore took 3.4 hours in the 2026-06 disaster recovery test against a 2-hour RTO (EV-069). The commercial regions met their RTOs in 2026-05 (EV-022) (P01 R-011; POAM-009).
 3. **AQ-1 dependencies (DEP-11, DEP-23).** The legacy RMM vendor and the legacy directory are single points of failure for 140 customers, have never been tested for recovery, and the RMM contract has no security or incident notice terms (R-002; POAM-022).
 4. **Registrar and HSM concentration (DEP-05, DEP-07).** One registrar for company domains (registry lock enabled, never tested) and one HSM manufacturer (R-024; R-032).
 5. **R1 fuel supply (DEP-02).** Florida's R1 region has generators with 72 hours of fuel but only one contracted fuel supplier during hurricane season (R-040).
-6. **External Cloud provider X (DEP-09).** The status page and out-of-band recovery vault run outside the company cloud on purpose, so customers and staff keep a source of truth during a company-wide outage. The 2026-05 vault restore of control plane state took 1.2 hours.
+6. **External Cloud provider X (DEP-09).** The status page and out-of-band recovery vault run outside the company cloud on purpose, so customers and staff keep a source of truth during a company-wide outage. The 2026-05 vault restore of control plane state took 1.2 hours (EV-022).
 
 ## 6. Resource requirements
 | Resource / component | Description | Supports process |

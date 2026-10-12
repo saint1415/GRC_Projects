@@ -16,7 +16,7 @@ HCP-G is the set of services that lets government customers order, run, secure, 
 
 **Why it is High.** A civilian agency (the "sponsoring agency") plans to move a High-impact workload to G1 and will sponsor a Rev5 Class D Agency Certification. The control plane can reach every tenant resource and holds the keys that protect them, so its categorization follows the most sensitive workload it serves.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-01 (G1 instance):** customer console and public API endpoints for G1, separate from the commercial console
 - **SYS-02 (G1 instance):** regional control plane services: provisioning, placement, metering, the G1 tenant database cluster (spans G1-A and G1-B), and the G1 customer identity and access service
 - **SYS-04 (G1 host management):** hypervisor management for about 9,000 G1 hosts and the out-of-band network for their baseboard management controllers (BMCs)
@@ -99,7 +99,7 @@ Recovery objectives come from the BIA (P05 BP-03): MTD 4 hours, RTO 2 hours, RPO
 
 **Documented controls.** `control-implementation.csv` has **190 rows**, one per base control in the Rev5 Class D list. The list holds 409 controls and enhancements (190 base controls, 219 enhancements); each row names its Class D enhancements in the `class_d_enhancements` column. Enhancements that are in place are covered by the base control statement. Enhancements that are not yet in place are named in the statement with the gap.
 
-**The Class D delta.** Class D adds 87 controls and enhancements to the Class C list (10 base controls, 77 enhancements). Status in G1 (shared with P03):
+**The Class D delta.** Class D adds 87 controls and enhancements to the Class C list (10 base controls, 77 enhancements). Status in G1 (shared with P03; Class D delta review, EV-073):
 
 | Status | Count |
 |---|---|
@@ -112,6 +112,8 @@ Recovery objectives come from the BIA (P05 BP-03): MTD 4 hours, RTO 2 hours, RPO
 The 43 not fully in place drive the POAM-021 Class D program, with the larger items tracked as their own POA&M entries.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01-G1, SYS-02-G1, SYS-04-G1, SYS-05-G1, SYS-07-G1, SYS-09-G1 and SYS-11-G1), the FR-2 certification package (EV-029) and the G1 control plane configuration export (EV-063).
+
 **Inside the boundary:** the G1 instances of the console and API, regional control plane services, host management and BMC networks, storage control services, the G1 key management service and HSMs, the G1 release channel of fleet automation, and the G1 partition of logging. Customer workloads run on G1 hosts inside the boundary; their contents are the customers' responsibility above the hypervisor.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -238,7 +240,7 @@ Common and hybrid controls are inherited from enterprise providers. Each provide
 - **Automation identities:** API tokens for automation are short-lived and scoped. Gap: usage conditions for privileged roles are enforced for console sessions but not for API tokens issued to automation (AC-2(11)).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), enterprise cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis with the Class D delta (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), provider tooling compromise runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-001 (P10), HCP-G contingency plan v5, G1 configuration management plan, enterprise common control catalog, FR-2 FedRAMP certification package.
+Company facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), enterprise cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis with the Class D delta (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), provider tooling compromise runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-001 (P10), HCP-G contingency plan v5 and G1 configuration management plan (EV-023), enterprise common control catalog (EV-039), FR-2 FedRAMP certification package (EV-029), the Class D delta review (EV-073). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **BMC:** baseboard management controller

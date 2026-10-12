@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Technology Officer), portfolio review 2026-08-31 to 2026-09-04 and meeting of 2026-09-02; GRC team prepared the review |
 | Decision | Executive risk committee, 2026-09-08 (section 9) |
+| Inventory | `ai-use-case-inventory.csv` (15 use cases), built from the AI governance committee register (EV-055), the AI triage configuration export (EV-018), the legacy RMM console export (EV-008), the accounts payable vendor master (EV-041) and the portfolio review interviews and AI-001 data (EV-081). The `source_evidence` column names the source of each row. Not established: AI features enabled inside vendor products beyond the committee register (an intake open request), so any such feature is treated as unknown until procurement or change management surfaces it |
 
 ## 1. Portfolio summary
 | Measure | Result |

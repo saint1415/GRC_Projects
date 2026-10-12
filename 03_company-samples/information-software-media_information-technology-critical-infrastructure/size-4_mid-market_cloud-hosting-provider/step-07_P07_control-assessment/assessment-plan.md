@@ -76,10 +76,21 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - 20 malformed API requests against the non-production API
   - benchmark configuration scans of 40 hosts
 
+### What each test could show
+POL-01 to POL-05 and the revised standards (STD-02, STD-03, STD-04, STD-09) were drafts during fieldwork; they were approved on 2026-09-22 and take effect on 2026-10-01. The 2024 policies, standards and plans were in force, so controls built on them were tested for operation. A requirement that only a 2026 draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, configurations or live systems | 180 |
+| Design | The requirement comes from a 2026 draft (the quarterly review of commercial access in POL-02; weekly drift checks for all clusters in STD-03); its design was reviewed and the existing practice examined. Operation is tested at the 2027-01 follow-up | 2 |
+| Not implemented | Nothing existed to test (no conditions for shared account use; no partition or federal data tags in the inventory; no records of third-party information resources) | 3 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), new workforce accounts from the identity provider export (EV-001), privileged accounts from EV-007, hosts from the CMDB (EV-010), commercial volumes from EV-011 and EV-012, incidents from EV-036, critical and high findings from the scan reports (EV-014), Tier 1 vendors from EV-043, and restore tests from EV-023. Auto-closed alerts come from the July 2026 SIEM case export (EV-063).
+
 ## 4. Rules of engagement
 - No testing that could disrupt customer workloads. Template and API tests ran on non-production clusters and accounts. Reachability tests used read-only probes.
 - No customer data left company systems. Evidence was stored in the firm's encrypted workpaper system. Government partition evidence stayed with U.S.-person auditors.
-- Stop-and-notify rule: any critical exposure is reported to the Director of Security the same day. **Used once:** on 2026-08-14 the assessors reported a 2024 deploy token with write access to the government partition's deployment repository, no expiry, and no inventory record. The company revoked it on 2026-08-15, logged P01 R-026, and the Federal Program Director evaluated it as not a FedRAMP reportable incident because the token's audit history showed no use since 2024. This is gap 15 in `../00_company-facts.md`.
+- Stop-and-notify rule: any critical exposure is reported to the Director of Security the same day. **Used once:** on 2026-08-14 the assessors reported a 2024 deploy token with write access to the government partition's deployment repository, no expiry, and no inventory record. The company revoked it on 2026-08-15, logged P01 R-026, and the Federal Program Director evaluated it as not a FedRAMP reportable incident because the token's audit history showed no use since 2024. The evidence is recorded as EV-AC-2, EV-CM-5 and EV-IA-5.
 
 ## 5. Results summary
 | Result | Determination statements |
@@ -133,7 +144,7 @@ Other than satisfied statements by risk: 20 High, 19 Moderate, 3 Low.
 | SI-7(1) | 2 | 1 | Moderate | POAM-015 |
 | CP-9(1) | 2 | 0 | n/a | n/a |
 
-**Fully satisfied (14 controls):** AC-3, AU-3, AU-4, AU-5, AU-8, CM-7, IA-4, SC-8, SC-21, SI-3, SI-6, SI-10, RA-5(5), and CP-9(1). They confirm the strengths in the scenario facts: role-based access, complete audit content, TLS everywhere, EDR, daily security function checks, and tested, immutable backups.
+**Fully satisfied (14 controls):** AC-3, AU-3, AU-4, AU-5, AU-8, CM-7, IA-4, SC-8, SC-21, SI-3, SI-6, SI-10, RA-5(5), and CP-9(1). They confirm what the intake evidence showed (EV-007, EV-017, EV-023, EV-025, EV-066): role-based access, complete audit content, TLS everywhere, EDR, daily security function checks, and tested, immutable backups.
 
 **Fully other than satisfied (7 controls):** AC-6, AU-11, IR-3, SC-28, AC-2(9), AC-6(5), and IA-2(1).
 
