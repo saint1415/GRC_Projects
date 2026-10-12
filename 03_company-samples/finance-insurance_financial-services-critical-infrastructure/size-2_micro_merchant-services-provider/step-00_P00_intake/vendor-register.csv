@@ -1,0 +1,18 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Processor partner,"Gateway, portal, authorization, settlement, hosted payment pages, fraud scoring, terminal deployment and key injection",SYS-01; SYS-02; SYS-09; AI-001,Card data (keyed entry); merchant owner NPI,ISO agreement (renewed 2025-01-01),"PCI DSS AOC as a Level 1 service provider, dated March 2026; no SOC 2 report offered",EV-025; EV-026; EV-024,Pays residuals monthly
+V-02,Sponsor bank (OCC-supervised national bank),Sponsors the company with the card brands; party to the ISO agreement,n/a,Incident notices,ISO agreement,n/a,EV-025,Registers the company with the card brands
+V-03,CRM vendor,CRM and merchant document store; AI writing assistant feature,SYS-03; AI-003,Merchant owner NPI,Vendor standard terms,"SOC 2 Type 2, period ending 2026-03-31",EV-010; EV-028; EV-029; EV-031,
+V-04,Phone vendor,Cloud phone system with call recording,SYS-05,"Calls and recordings, including spoken card data until 2026-08-14",Vendor standard terms,Vendor security documentation; no AOC,EV-013; EV-028; EV-030; EV-031; EV-058,
+V-05,Suite vendor,"Email, files and chat",SYS-04,Merchant owner NPI in email and files,Vendor standard terms,Vendor security documentation,EV-011; EV-028; EV-030; EV-031,
+V-06,Managed service provider (MSP),"Help desk, patching, antivirus, firewall, Wi-Fi, suite administration, backup",SYS-04; SYS-06; SYS-07; SYS-10; EXT-01,"Administrative access to laptops, network and suite",Service contract (no security terms),None on file,EV-027; EV-018; EV-031,Remote management tool reaches every laptop
+V-07,Backup service (through the MSP),Suite backup,SYS-10,Copies of suite data,None with the company; subscription resold by the MSP,Vendor security documentation (through the MSP),EV-021; EV-030; EV-031,
+V-08,Web hosting and storage provider,Virtual server and object storage bucket,SYS-08,Merchant owner NPI in uploads,Vendor standard terms,Provider documentation,EV-023; EV-028; EV-030; EV-031,
+V-09,Freelance web developer,Built the website and form in 2023; administers the hosting account,SYS-08,Administrative access to the website and bucket,2023 engagement letter (no security terms),None,EV-023; EV-028,Holds the only hosting administrator login
+V-10,Outside sales agents (6 contractors),Solicit merchants and collect applications in the company's name,SYS-03; SYS-01 (sales role); SYS-04 (email to the company),Merchant applications and owner NPI,Agent agreements (no security terms),None,EV-002; EV-012,
+V-11,Approved scanning vendor (ASV),Quarterly external scans of the office public IP address,SYS-07,Office IP address and scan results,ASV service contract,Quarterly scan reports,EV-034; EV-031,
+V-12,E-signature service,Electronic signatures,n/a,Documents sent for signature,Vendor standard terms,None on file,EV-028; EV-031,
+V-13,Payroll service,Biweekly payroll,n/a,Employee payroll data,Vendor standard terms,None on file,EV-001; EV-028; EV-031,
+V-14,Accounting SaaS and outside accountant,Bookkeeping; residual reconciliation; commissions,n/a,Financial records,Service subscription,None on file,EV-031; EV-042,
+V-15,Cyber insurer and panel vendors,Cyber policy; breach hotline; panel breach counsel and forensics,n/a,Incident information during an engagement,Insurance policy,n/a,EV-031; EV-032,Policy requires prompt notice and use of panel vendors
+V-16,Shredding service,Collection of the locked shred bin,n/a,Paper with card details or applications,Service receipts,None,EV-031; EV-038,
+V-17,Internet provider,One business internet line,SYS-07,Network traffic (conduit),Service agreement,None,EV-020; EV-031,

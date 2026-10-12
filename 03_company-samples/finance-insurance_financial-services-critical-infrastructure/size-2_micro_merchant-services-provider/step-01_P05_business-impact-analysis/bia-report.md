@@ -3,12 +3,14 @@
 **Organization:** Cris Santos Company, LLC (merchant services provider, an ISO) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Operations Manager (Qualified Individual and security lead) with the Owner, the Merchant Support Lead, the Onboarding and Risk Specialist, the Terminal and Integration Technician, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** Owner, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-24 (EV-047), FY2025 receipts and cash report (EV-042), residual, boarding and dispute reports (EV-009), gateway merchant and keyed-entry report (EV-005), phone call report (EV-014), suite backup job report (EV-021), CRM vendor SOC 2 report (EV-029), processor partner AOC (EV-026), MSP service contract (EV-027), website hosting summary and walk-through (EV-023, EV-055). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It feeds:
 - the availability rating in the SSP (P02);
 - impact ratings in the risk register (P01);
 - the recovery order in the incident response runbook (P08);
-- PCI DSS 12.10.1, which requires the incident response plan to include business recovery and continuity procedures (the company has no plan yet; gap 5 in `../00_company-facts.md`).
+- PCI DSS 12.10.1, which requires the incident response plan to include business recovery and continuity procedures (the company has no plan yet; EV-035).
 
 **What this company does not run.** The company does not authorize, clear, or settle card transactions. The processor partner does, on its own platform. If the processor partner is down, merchants cannot take cards no matter what the company does. This BIA therefore covers the company's own functions: helping merchants, keying backup sales, administering gateway settings, and boarding new merchants.
 
@@ -21,10 +23,10 @@ One Florida office suite and 7 employees serve about 850 merchants. Nearly every
 - the productivity suite (SYS-04) and its backup (SYS-10);
 - the cloud phone system (SYS-05).
 
-On site are 9 MSP-managed laptops (SYS-06), the office network (SYS-07), and about 40 spare terminals (SYS-09). The website and application intake (SYS-08) run on cloud web hosting. Staff can work from home with the same laptops and the phone app. See `../00_company-facts.md` sections 3 and 7.
+On site are 9 MSP-managed laptops (SYS-06), the office network (SYS-07), and about 40 spare terminals (SYS-09). The website and application intake (SYS-08) run on cloud web hosting. Staff can work from home with the same laptops and the phone app. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual receipts, about $4,400 per business day. Merchant attrition is the main cost driver: each merchant is worth about $1,300 a year in residuals.
+Dollar values are scaled to about $1.1 million in annual receipts, about $4,400 per business day (EV-042). Merchant attrition is the main cost driver: each merchant is worth about $1,300 a year in residuals (EV-009).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
