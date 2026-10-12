@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business and its key vendors: every system in `../00_company-facts.md` section 3 (SYS-01 to SYS-10), every process in the BIA (P05), the processor partner, the MSP, the CRM and phone vendors, the web developer, and the 6 outside sales agents.
+**Scope.** The whole business and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-10), every process in the BIA (P05), and, from the [vendor register](../step-00_P00_intake/vendor-register.csv), the processor partner, the MSP, the CRM and phone vendors, the web developer, and the 6 outside sales agents.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Operations Manager may accept.
@@ -23,8 +23,8 @@
 This is the company's first written risk assessment. The 2022 policy template mentioned an annual risk assessment, but none was ever recorded.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the March 2026 deposit change attempt, and interviews with the Owner, all staff, and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), the March 2026 deposit change attempt (EV-008), and interviews with the Owner, all staff, and the MSP lead technician (2026-07-13 to 2026-07-24, EV-048).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the console, portal, SaaS and MSP exports, the contracts folders, the document request, the account comparison of 2026-07-15 (EV-049), the call recording review of 2026-07-21 (EV-056) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a company with about $1.1 million in receipts, anything that could end the ISO agreement (a card data compromise traced to a company account, or a false SAQ) is rated Very High: it would end the business.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -58,6 +58,8 @@ Status: 10 In progress, 10 Open, 2 Closed (R-016 and R-021 accepted).
 - R-003: card data was found in call recordings on 2026-07-21. Recording of the support queue was paused on 2026-07-22, and the recordings with card data were deleted on 2026-08-14 after counsel's review (P08 section 6.5).
 - R-009: the Owner told the processor partner on 2026-08-20 that the 2025 SAQ left out the keyed-entry path.
 - R-022: added on 2026-08-05 after P07 testing found unapproved analytics scripts on 2 merchants' hosted payment pages. Both were removed on 2026-08-12 with the merchants' agreement.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-022 was added on 2026-08-05 from P07 testing (EV-CM-8). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $3,900 one-time and $5,700 a year):**

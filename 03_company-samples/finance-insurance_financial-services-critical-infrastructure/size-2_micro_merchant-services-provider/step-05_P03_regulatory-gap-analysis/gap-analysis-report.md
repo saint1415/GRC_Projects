@@ -12,7 +12,7 @@
 | Approved | Owner, 2026-08-31 |
 
 ## 1. Applicability
-Applicability was decided first, one rule at a time, before any gap was rated. Federal text was checked on the eCFR (point-in-time text for 2026-09-23). Card brand facts come from Visa's public pages, checked 2026-10-06.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), one rule at a time, before any gap was rated. This section restates the result for the rules analyzed here. Federal text was checked on the eCFR (point-in-time text for 2026-09-23). Card brand facts come from Visa's public pages, checked 2026-10-06.
 
 ### 1.1 PCI DSS v4.0.1: applies, as a service provider (primary)
 - **Why it applies.** PCI DSS is not a law. It binds the company through the ISO agreement and the card brands' rules. The PCI DSS glossary treats as a service provider any business that processes, stores, or transmits cardholder data for another entity, or that provides services that control or could affect the security of that data. The company does both:
@@ -60,12 +60,12 @@ Applicability was decided first, one rule at a time, before any gap was rated. F
    - PCI DSS was decomposed at the requirement level (1.1 to 12.10), with each service-provider-only sub-requirement as its own row, plus the appendices. PCI DSS is copyrighted, so rows give the requirement number and a short topic label in the company's own words. Read the full text in the PCI SSC document library.
    - The Safeguards Rule was decomposed to the paragraph level of 16 CFR 314.4, and 12 CFR 53.4 to its paragraphs.
 2. **Crosswalk.** Each row is mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. These are **author mappings**: no official NIST mapping from PCI DSS v4.0.1 or 16 CFR 314 to CSF 2.0 or SP 800-53 was used.
-3. **Documentary evidence.** Each status rests on a named record:
-   - console user, role, and MFA exports; the console audit log; CRM and suite settings;
-   - the phone system administrator settings and a masked sample of recordings (2026-07-21);
-   - the firewall and Wi-Fi exports, the MSP's device, patch, and antivirus reports;
-   - the 2025 SAQ D and AOC, the ASV reports, the ISO agreement, the processor partner's AOC, and vendor contracts;
-   - a walkthrough of the office on 2026-07-16 and interviews with all 7 employees and the MSP lead technician.
+3. **Documentary evidence.** Each status rests on a named record. From intake (2026-06-29 to 2026-07-10):
+   - console user, role, and MFA exports and the gateway documentation (EV-003, EV-004); portal, CRM, suite, and phone settings (EV-007, EV-010 to EV-013);
+   - the firewall and Wi-Fi export and the MSP's device, policy, encryption, monthly, and antivirus reports (EV-015 to EV-020); the website hosting summary and terminal spreadsheet (EV-023, EV-024);
+   - the 2025 SAQ D and AOC (EV-033), the ASV reports (EV-034), the ISO agreement (EV-025), the processor partner's AOC (EV-026), vendor contracts (EV-027, EV-028), and the document request (EV-035).
+
+   Fieldwork added the account comparison of 2026-07-15 (EV-049), interviews with all 7 employees and the MSP lead technician (EV-050), the firewall rule review of 2026-07-14 (EV-051), a walkthrough of the office on 2026-07-16 (EV-052), the settings and remote support checks of 2026-07-16 (EV-053, EV-054), the cloud workload walkthrough of 2026-07-20 (EV-055), a masked sample of recordings (2026-07-21, EV-056), and a mailbox search (2026-07-22, EV-057). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row is rated Met, Partially met, Not met, or Not applicable **as of the end of fieldwork (2026-07-24)**. Actions completed since (for example, the recordings deleted on 2026-08-14) are noted in the remediation column but do not change the status.
 5. **Gap risk.** Each gap is rated with the P01 scale. A gap is High when it would leave a PCI DSS requirement "not in place" on the 2026 SAQ in a way that exposes card data, or when it leaves a High risk in P01 untreated.
 
