@@ -44,7 +44,7 @@ This report records **observations, not findings**. Whether an observation meets
 **Reconciliation across sources.**
 - **Workforce.** The 600 employees on the HR roster each have an identity provider account (EV-001, EV-003).
 - **Privileged users.** The 110 core administrators in PAM and the 26 Cloud B administrators make up the 136 privileged users and 136 administrator endpoints used in the SSP boundary and the P07 population (EV-006, EV-007, EV-011).
-- **Vendors.** 182 vendors in accounts payable, 34 of them PCI DSS service providers and 41 carried over from the acquisition (EV-045, EV-046). The named vendors and the summary rows in [`vendor-register.csv`](vendor-register.csv) add up to the 34 service providers and the 182 vendors.
+- **Vendors.** 182 vendors in accounts payable, 34 of them PCI DSS service providers and 41 carried over from the acquisition (EV-045, EV-046). The named vendors and the summary rows in [`vendor-register.csv`](vendor-register.csv) cover the 34 service providers and the 182 vendors.
 - **AI tools.** The accounts payable vendor master, the model registry and the department survey give the 5 tools in [`asset-inventory.csv`](asset-inventory.csv) (EV-045, EV-054).
 
 ## 4. Open requests
