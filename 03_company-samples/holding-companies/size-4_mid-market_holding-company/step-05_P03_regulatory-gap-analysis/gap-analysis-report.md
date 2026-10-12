@@ -13,6 +13,8 @@
 | Files | `gap-analysis.csv` (221 rows), `subsidiary-profiles.csv` (22 CSF categories x 6 profiles) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 A holding company's cyber obligations come mostly from what it is (public or private, bank holding company or not) and from what its subsidiaries and benefit plans do. Each candidate requirement was checked against its primary text. **The mid-market answer differs from the small-company answer in one place: the group health plan.** At 600 employees the plan is self-funded, so HIPAA reaches the holding company as plan sponsor.
 
 **Primary business line.** The holding company's business is shared services for its subsidiaries (NAICS 551112). The rules that bind those services are the ones that follow the data the shared platform holds: Finance customer information (Safeguards Rule) and plan PHI (HIPAA). Both are analyzed requirement by requirement.
@@ -34,7 +36,7 @@ A holding company's cyber obligations come mostly from what it is (public or pri
 1. **Finance is a financial institution.** 16 CFR 314.2(h)(1) covers institutions significantly engaged in activities that are financial in nature, and 314.1(b) names "finance companies." Finance makes consumer installment loans and is under FTC jurisdiction.
 2. **The small-institution exception does not apply.** 314.6 exempts institutions with customer information on fewer than 5,000 consumers from 314.4(b)(1), (d)(2), (h), and (i). Finance holds customer information on about 34,000 consumers, including declined applicants.
 3. **The holding company is reached in two ways.** It employs Finance's Qualified Individual (314.4(a)(1)-(3)), and it is Finance's service provider because it receives, maintains, and processes customer information through shared services (314.2(r); 314.4(f)). Customer information includes records handled or maintained by or on behalf of Finance or its affiliates (314.2(d)).
-4. **Supply, Home Services, and Fabrication are not financial institutions.** Supply extends trade credit only to businesses. Home Services passes along Finance's application link but does not take, evaluate, or broker applications. Counsel confirmed this treatment on 2026-08-05.
+4. **Supply, Home Services, and Fabrication are not financial institutions.** Supply extends trade credit only to businesses. Home Services passes along Finance's application link but does not take, evaluate, or broker applications. Counsel confirmed this treatment on 2026-08-05 (EV-069).
 5. **No required and addressable split.** Safeguards elements are mandatory, with two alternatives the Qualified Individual may approve: compensating controls where encryption is infeasible (314.4(c)(3)) and equivalent controls in place of MFA, approved in writing (314.4(c)(5)). Neither has been approved.
 
 **Why CSF 2.0 stays the primary benchmark.** No binding rule sets cyber governance for the group as a whole. The parent-level drivers (SEC and the Federal Reserve) do not apply to a private group that owns no bank. The group's real exposure is governance at scale: one shared platform, five companies, an acquisition program, and subsidiaries buying technology on their own. CSF 2.0's Govern function is built for that, and its Organizational Profiles let the group set one target and track each subsidiary against it. The Safeguards Rule and HIPAA are the binding floors for the regulated data the platform holds.
@@ -42,7 +44,7 @@ A holding company's cyber obligations come mostly from what it is (public or pri
 ## 2. Method
 **CSF 2.0 group profile (CSF section 3.1 and SP 1301 steps):**
 1. **Scope the profiles.** A **Group Organizational Profile** covers the holding company and the SCSP, where most outcomes are delivered once for everyone. Five subsidiary profiles at category level (Supply, Home Services South and Central, Home Services North, Fabrication, Finance) inherit group outcomes and add what each does on its own systems. Home Services North has its own profile until it is integrated. The CFO owns the profiles; the CEO set the target.
-2. **Gather information.** P01, P05, P02, the Finance WISP (2025), plan documents, contracts, configuration exports, and interviews and walkthroughs at 6 of 9 sites (HQ, the distribution center, Branch 2, the Central shop, the North shop, and the plant).
+2. **Gather information.** P01, P05, P02, the Finance WISP (2025, EV-026), plan documents (EV-047), contracts (EV-040, EV-044), configuration exports and the other intake evidence (EV-001 to EV-058), walkthroughs at 6 of 9 sites (HQ, the distribution center, Branch 2, the Central shop, the North shop, and the plant; EV-061), gap analysis interviews with the holding company executives, the subsidiary Presidents and the HR and benefits staff (EV-062 to EV-064), the data location review (EV-065), the TLS scan (EV-066), the samples below (EV-067, EV-068), the counsel memo on financial institution status (EV-069), and the P07 test evidence. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 3. **Create the profiles.** All **106 subcategories** are in scope this cycle (the group's first full profile). Each row records current practice (`current_state`, `evidence`), a **rating** on a 1-5 scale, a **priority**, and the target (`remediation_action`). Rating scale (author-defined, as SP 1301 allows): 1 = not performed; 2 = informal or only at some entities; 3 = defined and performed for the shared platform; 4 = consistent across the group; 5 = measured and improving. Status maps from the rating: 1 = Not met, 2-3 = Partially met, 4-5 = Met.
 4. **CSF Tiers.** Current practice is **Tier 2 (Risk Informed)** at the group and Tier 1 (Partial) at Home Services North and Fabrication. The target is **Tier 3 (Repeatable)** for the group by 2027-12-31.
 5. **Analyze gaps and plan.** Each gap has an owner, a date, and a risk level on the P01 scale. High and Moderate gaps feed P01 and the P07 POA&M.
@@ -54,16 +56,16 @@ A holding company's cyber obligations come mostly from what it is (public or pri
 **Traceability.** The vertical requirements list has no row for the Safeguards Rule, so Safeguards rows cite the regulation directly ("16 CFR 314.4(c)(5) (Finance)"). HIPAA rows cite N55-R06 with the section. N55-R06 names Subpart E; because the self-funded plan is a covered entity, Subparts C and D apply to it as well, and those rows are traced to N55-R06 too.
 
 **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population, chosen at random from system-generated populations with sizes from the co-sourced internal audit firm's attribute sampling table (25 for controls that operate many times a year; all items for small populations). Samples shared with P07 were tested once and used in both:
-- terminations: 25 of 142 (12 months to 2026-06-30);
-- transfers between subsidiaries or roles: 25 of 58;
-- changes to Tier 1 systems: 25 of 214;
-- vendor bank-detail changes: 25 of 310;
-- declined Finance applications: 20 (retention test);
-- critical vendor contracts: 22 of 22; Finance service provider contracts: 9 of 9; plan business associates: 3 of 3;
-- collaboration site permissions: 96 of 96 (automated report);
-- backup job days: 31 of 31 (July 2026);
-- security incidents: 10 of 41;
-- staff interviews on incident reporting: 15 across 6 sites.
+- terminations: 25 of 142 (12 months to 2026-06-30; population EV-005; EV-AC-2, EV-PS-4);
+- transfers between subsidiaries or roles: 25 of 58 (EV-005; EV-AC-2);
+- changes to Tier 1 systems: 25 of 214 (EV-035; EV-CM-3);
+- vendor bank-detail changes: 25 of 310 (EV-046; EV-067);
+- declined Finance applications: 20 (retention test; EV-054; EV-067);
+- critical vendor contracts: 22 of 22; Finance service provider contracts: 9 of 9; plan business associates: 3 of 3 (EV-068);
+- collaboration site permissions: 96 of 96 (automated report; EV-009);
+- backup job days: 31 of 31 (July 2026; EV-CP-9);
+- security incidents: 10 of 41 (EV-031; EV-IR-4);
+- staff interviews on incident reporting: 15 across 6 sites (EV-IR-6).
 Each `evidence` cell names the sample and its result where one was used.
 
 ## 3. Results summary
@@ -86,7 +88,7 @@ Each `evidence` cell names the sample and its result where one was used.
 | Group (holding company and SCSP) | 0 | 6 | 16 | Baseline |
 | Supply | 4 | 14 | 4 | Shared counter accounts; unencrypted legacy shares on HQ servers |
 | Home Services (South and Central) | 5 | 10 | 7 | Bought the AI voice agent without review |
-| Home Services North | 22 | 0 | 0 | Outside group controls until integration (gap 2) |
+| Home Services North | 22 | 0 | 0 | Outside group controls until integration (EV-017) |
 | Fabrication | 12 | 10 | 0 | Flat plant network, unsupported controllers, weekly backup drive |
 | Finance | 0 | 8 | 14 | Has a Qualified Individual and WISP; customer information raises its target to 4 in 7 categories |
 

@@ -47,8 +47,8 @@
 Plant-safety risks (ER-07) at High or above cannot be accepted without a dated treatment plan. Risks to Finance customer information are also reported to Finance's Qualified Individual. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E; the holding-company threat picture (shared-services compromise, help desk social engineering, payment fraud, acquisition integration, OT ransomware); the BIA (P05); the gap analysis (P03); and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E; the holding-company threat picture (shared-services compromise, help desk social engineering, payment fraud, acquisition integration, OT ransomware) in the SOC's threat intelligence (EV-055); the BIA (P05); the intake evidence; the 2025 enterprise risk assessment (EV-023); risk workshops with the SOC, Identity and Access Management, Treasury, GBS accounts payable, the Integration Management Office, Manufacturing OT, Finance, Third-Party Risk Management, HR, Corporate Development and the AI governance committee (EV-067); and the Manufacturing OT security review (EV-068). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-020), coverage and configuration exports from the group systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 and P10 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -71,6 +71,8 @@ By threat source type: Adversarial 30, Structural 21, Accidental 11, Environment
 By treatment: Mitigate 50, Accept 12, Avoid 2, Share/Transfer 1.
 By status: In progress 45, Open 8, Closed (accepted) 12.
 **23 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-17 from the intake evidence and the May to July fieldwork. Pass 2 followed the Internal Audit assessment (P07) and the AI tests (P10): the risks they tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 or P10 evidence ID). The `assessment_pass` column shows which pass produced each risk; all 65 risks in the register come from pass 1.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -110,12 +112,12 @@ By status: In progress 45, Open 8, Closed (accepted) 12.
 | R-061 | The directory takes longer to restore than planned after a full directory compromise | High | ER-01 | Annual full forest recovery exercise | Director of Identity and Access Management | 2027-04-30 |
 
 ## 6. Themes from the 2026 analysis
-1. **Identity is the shared-services single point of failure (ER-01).** One directory and one identity provider serve every subsidiary, and the outsourced service desk can reset any credential after knowledge-based checks. The P08 scenario follows exactly this path. Treatment: verified identity proofing by 2026-12-15, phishing-resistant MFA for all 1,180 privileged accounts by 2027-03-31, and directory tiering by 2026-12-31.
+1. **Identity is the shared-services single point of failure (ER-01).** One directory and one identity provider serve every subsidiary, and the outsourced service desk can reset any credential after knowledge-based checks (EV-009; EV-IA-5). The P08 scenario follows exactly this path. Treatment: verified identity proofing by 2026-12-15, phishing-resistant MFA for all 1,180 privileged accounts by 2027-03-31, and directory tiering by 2026-12-31.
 2. **Payment fraud at the edges (ER-03).** The payment hub is well controlled; the exposure is in Home Services branch payables and the three local bank portals outside the hub (R-003, R-050; P07 AC-5, SI-7).
 3. **Disclosure readiness for a group, not just a company (ER-02).** The materiality playbook and the quarterly sub-certifications do not yet capture incidents that start in a subsidiary, in plant OT, or at a vendor, or a series of related incidents across subsidiaries (R-008, R-065).
 4. **Acquisitions (ER-06).** AQ-01 and AQ-02 keep their own directories and ERPs until 2027, with manual consolidation uploads, nightly-only backups, and site VPNs that reach the integration platform (R-007, R-010, R-012, R-020). Going forward, deal approvals must include technical cyber diligence and an integration budget (R-060).
-5. **Plant OT (ER-07).** Inventory is 72% complete, Plant 3 is flat, and two plants allow unmanaged vendor remote access (R-011, R-014, R-039).
-6. **AI (ER-08).** 14 use cases; 8 reviewed. The assistant's reach across subsidiaries (R-015) and the credit model (R-016) are the two that matter most. Unapproved public AI tools are blocked (R-041, Avoid) and the resume ranking feature stays off (R-042, Avoid).
+5. **Plant OT (ER-07).** Inventory is 72% complete, Plant 3 is flat, and two plants allow unmanaged vendor remote access (R-011, R-014, R-039; EV-068, EV-013).
+6. **AI (ER-08).** 14 use cases; 8 reviewed (EV-077). The assistant's reach across subsidiaries (R-015) and the credit model (R-016) are the two that matter most. Unapproved public AI tools are blocked (R-041, Avoid) and the resume ranking feature stays off (R-042, Avoid).
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q2), about $7.4 million:** phishing-resistant keys and identity proofing service ($1.1M), directory tiering and service account vaulting ($0.9M), AQ-01 and AQ-02 identity federation and ERP migration ($2.6M, from the integration budget), Plant 3 segmentation and OT PAM gateway ($1.3M), OT asset discovery ($0.4M), integration middleware upgrade ($0.5M), SIEM onboarding for AQ, OT, and integration logs ($0.4M), and outside counsel for the disclosure tabletop ($0.04M). Two IT auditor positions are in the 2027 Internal Audit budget. Items map to the POA&M in P07.

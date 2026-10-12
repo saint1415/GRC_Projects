@@ -83,6 +83,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Global Business Services; Treasurer; Director of ERP Platform; Director of Identity and Access Management; Director of Security Operations; Director of Third-Party Risk Management; Director of Enterprise Integration; General Counsel; CFO; CISO; the four subsidiary BISOs; 20 randomly selected staff.
 - **Test:** lockout tests with test accounts; two social-engineering test calls to the outsourced service desk (pre-approved by the CISO and the provider's security lead, using a test administrator account); reachability tests from an AQ-02 branch network and the Plant 3 network to the integration platform subnet; malformed journal and bank files in the test environment; a restore observation; a log deletion attempt on the archive.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-14 (POL-01 on 2026-09-17) and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-022), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 272 (242 Satisfied, 30 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: after-the-fact review of emergency changes (CM-03f.[02]), integration platform records of administrator actions and content changes (AU-12c.), and integrity checks on payment files sent through the local bank portals (SI-07a.[03]) | 3 |
+| **Total** | | **275** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HRIS records, EV-005 and EV-006, the service desk reset report, EV-009, and the change records, EV-054) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect payment release, the financial close, or plant production. Network tests ran outside close windows and plant shift changes, with the Treasurer and the plant manager informed.
 - Social-engineering calls targeted only the test administrator account, which had no access to production data; the account was disabled immediately after each call.
@@ -124,7 +136,7 @@ Deliverables: this plan and report, `assessment-results.csv` (275 rows), and `po
 **Finding reported during testing:** both test calls to the outsourced service desk obtained an MFA reset for a test administrator account after knowledge-based questions only (IA-05a.). The CISO moved all privileged and treasury resets to the internal IAM team on 2026-07-30, ahead of the POA&M date (POAM-001).
 
 ## 7. POA&M summary
-`poam.csv` holds 24 items: 20 from this assessment (POAM-001 to POAM-020) and 4 carried from the P03 gap analysis and the P10 AI assessment (POAM-021 to POAM-024), so leadership tracks one list. POAM-014 and POAM-016 also cover findings from the Manufacturing OT security review (2026-06), which Internal Audit confirmed during the CM-8 and AC-17 tests.
+`poam.csv` holds 24 items: 20 from this assessment (POAM-001 to POAM-020) and 4 carried from the P03 gap analysis and the P10 AI assessment (POAM-021 to POAM-024), so leadership tracks one list. POAM-014 and POAM-016 also cover findings from the Manufacturing OT security review (2026-06; EV-068), which Internal Audit confirmed during the CM-8 and AC-17 tests.
 
 | Risk level | Items |
 |---|---|

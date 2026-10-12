@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded holding company with four operating subsidiaries and a shared services organization) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners in every subsidiary, 2026-05-04 to 2026-07-10 | **Approved:** CFO and Chief Risk Officer, 2026-07-24 | **Reported to:** risk committee of the board, 2026-09-17
+**Sources:** process owner interviews 2026-05-04 to 2026-07-10 (EV-064, EV-065), dependency and contract review (EV-066), entity and site register (EV-046), HRIS roster and payroll calendar (EV-006), FY2025 revenue report (EV-044), operational volume report (EV-045), Finance portfolio report (EV-032), treasury payment report (EV-041), contract register (EV-037), Integration Management Office status (EV-047), and backup and DR test records (EV-017, EV-018). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CFO and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This group-wide BIA identifies the business processes the holding company and its subsidiaries depend on, how long each can be down, how much data each can lose, and what each depends on, including the shared services that every subsidiary relies on, third parties, and the two acquired businesses. It feeds:
@@ -16,12 +17,12 @@ This group-wide BIA identifies the business processes the holding company and it
 ## 2. System and business description
 Cris Santos Company is a public holding company headquartered in Florida with operations in six states. It owns four subsidiaries: Building Products (building materials distribution, 72 branches and 4 distribution centers), Home Services (residential HVAC and plumbing, 48 branches), Manufacturing (HVAC equipment, 3 plants), and Finance (consumer installment lending, about 210,000 loans). Global Business Services (GBS) runs accounting, treasury, payroll, procurement, and IT for all of them. The group has 12,000 employees and about $4.8 billion in annual receipts.
 
-The technology estate is in `../00_company-facts.md` section 3. The center of it is the **Shared Corporate Services Platform** (P02): the group ERP (SYS-01), consolidation (SYS-02), treasury management and the payment hub (SYS-03), and the group identity platform (SYS-04). Around it sit the subsidiary systems (SYS-10), plant OT (SYS-11), two clouds and two data centers (SYS-07), and about 2,300 vendors (SYS-14). AQ-01 (acquired 2025-10) and AQ-02 (acquired 2026-03) still run their own directories and ERPs (SYS-15).
+The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The center of it is the **Shared Corporate Services Platform** (P02): the group ERP (SYS-01), consolidation (SYS-02), treasury management and the payment hub (SYS-03), and the group identity platform (SYS-04). Around it sit the subsidiary systems (SYS-10), plant OT (SYS-11), two clouds and two data centers (SYS-07), and about 2,300 vendors (SYS-14). AQ-01 (acquired 2025-10) and AQ-02 (acquired 2026-03) still run their own directories and ERPs (SYS-15).
 
 **What is different about a holding company.** Most processes belong to a subsidiary, but almost all of them depend on the same shared services. A single outage of the identity platform, the payment hub, or the shared virtualization layer stops every subsidiary at once. The BIA therefore rates each subsidiary process and then traces its dependency on shared services.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of receipts per calendar day and to the group's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of receipts per calendar day ($4.8 billion in FY2025 receipts, EV-044) and to the group's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -64,13 +65,13 @@ Rows are in recovery priority order (the `recovery_priority` column).
 ## 5. Dependency mapping and third parties
 The full map is in `dependency-map.csv`. Key findings:
 
-1. **The outsourced service desk (DEP-06) is a hidden single point of failure.** It performs about 61% of all password and MFA resets, including for administrators, after knowledge-based verification only. It is both an availability dependency and the most likely path to a full identity compromise. The internal fallback has never been tested. This is P01 risks R-002 and R-013 and POA&M items POAM-001 and POAM-012.
-2. **Shared virtualization and the directory (DEP-01, DEP-04).** About 420 virtual machines from every subsidiary run on the shared virtualization layer at DC-1 and DC-2, and one directory serves every entity. The tier-1 DR test on 2026-04-25 met the identity RTO, but a ransomware event in this layer would stop all subsidiaries together (R-001, R-046).
-3. **ERP recovery (DEP-02).** The ERP recovered in 9.5 hours against its 8-hour RTO in the 2026-04-25 DR test; the database restore took 3.1 hours of that and the rest was manual reconfiguration of integrations. This is R-019 and POAM-010.
-4. **Acquired businesses (DEP-20, DEP-21).** AQ-01 and AQ-02 keep nightly backups only, so their real RPO is 24 hours against a 1-hour target, and the AQ-02 hosted ERP contract states a 48-hour RTO against the 24-hour BIA RTO. Neither restore has been tested (R-020).
-5. **Vendor recovery times shorter than the BIA (DEP-11).** The field-service SaaS contract states an 8-hour RTO against the 4-hour BIA RTO for BP-03 (R-022). The consolidation fallback (DEP-09) and the EDI network (DEP-24) have never been tested (R-023, R-059).
-6. **Plants (DEP-14, DEP-15).** Only Plant 1 has exercised its MES fallback; integrators reach Plants 2 and 3 through unmanaged remote tools (R-014, POAM-016).
-7. **Bank concentration (DEP-07).** The primary bank carries 64% of payment value; the reroute to the secondary bank was tested on 2026-02-19 and the residual risk is accepted (R-021).
+1. **The outsourced service desk (DEP-06) is a hidden single point of failure.** It performs about 61% of all password and MFA resets, including for administrators, after knowledge-based verification only. It is both an availability dependency and the most likely path to a full identity compromise. The internal fallback has never been tested (EV-009, EV-037, EV-066). This is P01 risks R-002 and R-013 and POA&M items POAM-001 and POAM-012.
+2. **Shared virtualization and the directory (DEP-01, DEP-04).** About 420 virtual machines from every subsidiary run on the shared virtualization layer at DC-1 and DC-2, and one directory serves every entity. The tier-1 DR test on 2026-04-25 met the identity RTO (EV-018), but a ransomware event in this layer would stop all subsidiaries together (R-001, R-046).
+3. **ERP recovery (DEP-02).** The ERP recovered in 9.5 hours against its 8-hour RTO in the 2026-04-25 DR test; the database restore took 3.1 hours of that and the rest was manual reconfiguration of integrations (EV-018). This is R-019 and POAM-010.
+4. **Acquired businesses (DEP-20, DEP-21).** AQ-01 and AQ-02 keep nightly backups only, so their real RPO is 24 hours against a 1-hour target, and the AQ-02 hosted ERP contract states a 48-hour RTO against the 24-hour BIA RTO. Neither restore has been tested (EV-047, EV-037; R-020).
+5. **Vendor recovery times shorter than the BIA (DEP-11).** The field-service SaaS contract states an 8-hour RTO against the 4-hour BIA RTO for BP-03 (EV-037; R-022). The consolidation fallback (DEP-09) and the EDI network (DEP-24) have never been tested (R-023, R-059).
+6. **Plants (DEP-14, DEP-15).** Only Plant 1 has exercised its MES fallback; integrators reach Plants 2 and 3 through unmanaged remote tools (EV-066, EV-068; R-014, POAM-016).
+7. **Bank concentration (DEP-07).** The primary bank carries 64% of payment value; the reroute to the secondary bank was tested on 2026-02-19 and the residual risk is accepted (EV-041; R-021).
 
 ## 6. Resource requirements
 | Resource / component | Description | Supports process |

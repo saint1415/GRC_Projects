@@ -4,11 +4,11 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed holding company with four operating subsidiaries) |
 | Tier / Vertical | Mid-Market / Management of Companies and Enterprises |
-| Scope | Portfolio of 7 AI uses found in the inventory (AI-001 to AI-007), led by the enterprise generative AI assistant across subsidiaries (AI-001); inventory in `ai-use-case-inventory.csv` |
+| Scope | Portfolio of 7 AI uses found in the inventory (AI-001 to AI-007), led by the enterprise generative AI assistant across subsidiaries (AI-001); inventory in `ai-use-case-inventory.csv`, built from the identity provider app list, the suite license report, accounts payable and expense records, a questionnaire to the subsidiary Presidents (EV-056, EV-039) and 30 days of web proxy logs (EV-057). What the 14 public chatbot users entered, including the contents of 2 uploaded spreadsheets, was not established (intake open request) |
 | Framework | NIST AI RMF 1.0 (NIST AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-005, and AI-007 |
 | Assessors / dates | vCISO and Security Manager (security), General Counsel (legal), Finance Compliance Officer (AI-002), VP of Human Resources (AI-003), Home Services President (AI-005); 2026-08-17 to 2026-09-10 |
 | Decision | CFO for Medium and Low; CEO for High (AI-002, AI-003, AI-005), 2026-09-22; reported to the audit committee the same day |
-| Related | P01 R-023 to R-027, R-052; POL-01 4.12 and 4.17; POL-04 4.3 and 4.6; POL-05 4.8 to 4.10; STD-05; P07 POAM-020; scenario-facts gap 12 |
+| Related | P01 R-023 to R-027, R-052; POL-01 4.12 and 4.17; POL-04 4.3 and 4.6; POL-05 4.8 to 4.10; STD-05; P07 POAM-020; intake evidence EV-056 |
 
 ## 1. Summary
 The inventory exercise found more AI than anyone at the holding company knew about. Only the AI assistant (AI-001) was a group decision, and even it went to 180 users without a data-access review. Three uses were adopted by subsidiaries on their own, and **all three affect decisions or safety for real people**: Finance's credit scorecard (AI-002), the recruiting software's applicant ranking (AI-003), and Home Services' after-hours voice agent (AI-005). That is the holding company pattern in AI form: each subsidiary buys what helps it, and the group carries the legal and reputational risk (P01 R-052).
@@ -76,7 +76,7 @@ AI-004 and AI-006 are internal productivity features with a human approving ever
 | State AI laws (for example Colorado SB26-189, effective 2027-01-01) | None today | The group operates only in Florida, and no Florida statute on private-sector AI use in credit or hiring was identified in this review. Recheck before any out-of-state acquisition, because consequential-decision laws such as Colorado's would reach AI-002 and AI-003 |
 
 ## 4. MEASURE (by use case)
-Tests ran from 2026-08-24 to 2026-09-09. Each owner ran or reviewed the tests named below with the Security Manager.
+Tests ran from 2026-08-24 to 2026-09-09 (EV-073 to EV-077). Each owner ran or reviewed the tests named below with the Security Manager.
 
 | Use case | Trustworthy characteristic | Test or metric and threshold | Result (2026-08/09) | Pass? |
 |---|---|---|---|---|

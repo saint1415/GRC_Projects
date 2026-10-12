@@ -81,6 +81,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Documented controls.** `control-implementation.csv` documents **145 controls**: 135 from the Moderate baseline and 10 High-baseline integrity supplements. The remaining Moderate-baseline enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-03, SYS-04 and SYS-04-INT) and the prior SSP version 2.0 (EV-056).
+
 **Inside the boundary:** the ERP application and database servers and the payment hub in the SCSP workload accounts (Cloud provider A); the integration platform; the SCSP tenants of the consolidation and treasury SaaS applications (configuration, users, and data, not the vendors' infrastructure); the directory domain controllers at DC-1 and DC-2; the cloud identity provider tenant; PAM; and identity governance.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -196,12 +198,12 @@ Common and hybrid controls are inherited from the group platform. Each provider 
 
 ## 11. Digital Identity Acceptance Statement
 - **Workforce users:** single sign-on with MFA (authenticator push with number matching, or a FIDO2 security key). Treasury approvers and payment releasers must use FIDO2 keys. This is comparable to NIST SP 800-63 AAL2.
-- **Privileged users:** PAM with MFA. The target is phishing-resistant FIDO2 keys for all 1,180 privileged accounts (AAL3-like protection); 62% are there today (POAM-002, due 2027-03-31).
-- **Account recovery:** the weakest point today. The outsourced service desk resets passwords and MFA after knowledge-based verification only. The required standard is verified identity proofing (live video verification against the HRIS photo, or a manager-approved in-person reset) for every reset (POAM-001, due 2026-12-15).
+- **Privileged users:** PAM with MFA. The target is phishing-resistant FIDO2 keys for all 1,180 privileged accounts (AAL3-like protection); 62% are there today (EV-001; POAM-002, due 2027-03-31).
+- **Account recovery:** the weakest point today. The outsourced service desk resets passwords and MFA after knowledge-based verification only (EV-009, EV-IA-5). The required standard is verified identity proofing (live video verification against the HRIS photo, or a manager-approved in-person reset) for every reset (POAM-001, due 2026-12-15).
 - **External users:** none, apart from external auditor guest accounts with MFA.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), shared-services compromise runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), SCSP contingency plan v5, SOX risk and control matrix, group common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), shared-services compromise runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), SCSP contingency plan v5 (EV-056), SOX risk and control matrix (EV-028), group common control catalog (EV-056). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AAL:** authenticator assurance level (NIST SP 800-63)

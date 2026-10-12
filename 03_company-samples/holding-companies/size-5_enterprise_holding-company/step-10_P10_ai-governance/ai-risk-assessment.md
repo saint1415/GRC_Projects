@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Data and Analytics Officer), meeting of 2026-08-19; the GRC team prepared the portfolio review; AI-001 tests run 2026-08-03 to 2026-08-14 |
 | Decision | Executive risk committee, 2026-09-14 (section 9) |
+| Inventory | `ai-use-case-inventory.csv` (14 use cases), built from the AI governance committee register (EV-048), the SSO application catalog and web filtering settings (EV-049), and an AI inventory review that reconciled the register with the SSO catalog, procurement records and vendor feature settings (EV-077), refreshed for the 2026-08-19 meeting (EV-081). The review listed the 6 use cases without committee review (AI-005, AI-008, AI-010, AI-011, AI-013, AI-014). Not established: AI features embedded in other vendors' products that the review did not surface (intake open request), and workforce use of public AI tools from personal devices |
 | Related | P01 R-015, R-016, R-017, R-041, R-042, R-043, R-044, R-045, R-064 (enterprise risk ER-08); P03 G-031; P06 POL-01 4.13, POL-04 4.3 and 4.10, POL-05 4.6; P07 POAM-021 and POAM-024 |
 
 ## 1. Portfolio summary
