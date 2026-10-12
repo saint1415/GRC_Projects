@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; POL-02 4.4 (identity recovery); division supplements (P06) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-009) |
+| Last tested | Technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (group gap 7; EV-023); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-009) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

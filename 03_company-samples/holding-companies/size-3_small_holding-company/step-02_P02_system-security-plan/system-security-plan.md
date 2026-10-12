@@ -78,7 +78,7 @@ Information types follow the SP 800-60 Vol. 2 Rev. 1 approach. Where the catalog
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems.
 
 ## 7. Authorization Boundary Description
-The boundary contains group-managed components and the group's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains group-managed components and the group's configuration of vendor services:
 - **Inside:** the ERP tenant configuration and roles; the identity provider tenant; the productivity suite tenant, including the AI assistant; the cloud tenant (4 workloads); the HRIS tenant configuration; 50 laptops, 10 desktops, and 16 tablets; and the networks at all three sites.
 - **Outside (external or subsidiary systems, interconnected):** the vendors' platforms under each SaaS service; the cloud provider's infrastructure; the bank portals (SYS-06); the board portal (SYS-07); and the three subsidiary line-of-business systems (SYS-10, SYS-11, SYS-12), which the subsidiaries own and which connect through single sign-on or the integration service.
 
@@ -128,7 +128,7 @@ All workforce users authenticate through the group identity provider with a pass
 Finance's borrowers use the loan servicing vendor's customer portal, with the vendor's own identity proofing and MFA. That is governed by the vendor contract and Finance's program, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), CSF 2.0 group profile and gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), CSF 2.0 group profile and gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House (bank payment network)

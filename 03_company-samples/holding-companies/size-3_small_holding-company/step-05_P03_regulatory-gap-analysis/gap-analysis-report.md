@@ -12,7 +12,7 @@
 | Files | `gap-analysis.csv` (108 rows), `subsidiary-profiles.csv` (22 CSF categories x 4 profiles) |
 
 ## 1. Applicability
-A holding company's cyber obligations mostly come from what it is (public or private, bank holding company or not) and from what its subsidiaries do. Each candidate requirement was checked against its primary text.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here. A holding company's cyber obligations mostly come from what it is (public or private, bank holding company or not) and from what its subsidiaries do. Each candidate requirement was checked against its primary text.
 
 | Requirement | Applies? | Basis |
 |---|---|---|
@@ -33,7 +33,7 @@ A holding company's cyber obligations mostly come from what it is (public or pri
    - It employs Finance's **Qualified Individual** (the IT Manager). 314.4(a) allows that, but Finance must retain responsibility, designate a senior member of its own staff to oversee the Qualified Individual, and **require the affiliate to maintain an information security program that protects Finance** (314.4(a)(1)-(3)).
    - It is Finance's **service provider**: it "receives, maintains, processes, or otherwise is permitted access to customer information" through shared services (314.2(r)). Finance must select, contract with, and periodically assess it (314.4(f)).
    - The rule applies to "all customer information in your possession" (314.1(b)), and customer information includes records "handled or maintained by or on behalf of you or your affiliates" (314.2(d)). Finance customer information in the shared email, file, backup, and bank-file systems is in scope.
-4. **Supply and Home Services are not financial institutions.** Supply extends trade credit only to businesses. Home Services gives customers Finance's application link but does not take, evaluate, or broker applications. Counsel confirmed this treatment on 2026-08-27.
+4. **Supply and Home Services are not financial institutions.** Supply extends trade credit only to businesses. Home Services gives customers Finance's application link but does not take, evaluate, or broker applications. Counsel confirmed this treatment on 2026-08-27 (EV-063).
 5. **The Safeguards Rule has no required and addressable split.** Its elements are mandatory, with two built-in alternatives the Qualified Individual may approve: compensating controls where encryption is infeasible (314.4(c)(3)) and reasonably equivalent controls in place of MFA (314.4(c)(5), approved in writing). Neither has been approved.
 
 **Why CSF 2.0 is the primary benchmark.** The vertical's parent-level drivers (SEC and Federal Reserve) do not apply to a private group that owns no bank. No binding rule sets cyber governance for the group as a whole, but the group's real exposure is governance: one shared platform, four entities, and no one deciding risk for all of them. CSF 2.0's Govern function is built for that question, and its Organizational Profiles let the group set one target and track each subsidiary against it. The Safeguards Rule is the binding floor for the part of the group that holds consumer financial data.
@@ -46,7 +46,7 @@ The group profile follows the five steps in CSF 2.0 section 3.1 and NIST SP 1301
    - three **subsidiary profiles** (Supply, Home Services, Finance) that inherit group outcomes and add what each subsidiary does on its own systems.
 
    Scope includes all threat types and all four entities. The CFO owns the profiles and the CEO sets expectations for the target.
-2. **Gather information.** P01 risk register, P05 BIA, the SSP (P02), Finance's 2023 WISP, contracts, configuration exports, and interviews at all three sites.
+2. **Gather information.** P01 risk register, P05 BIA, the SSP (P02), and the evidence behind them. Current state was established from the intake evidence (configuration exports, Finance's 2023 WISP (EV-031), board records, contracts and SOC 2 reports), gap analysis interviews at all three sites (EV-061), counsel's applicability review (EV-063) and the TLS scan (EV-065). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 3. **Create the profiles.** For each selected outcome, `gap-analysis.csv` records current practices (`current_state`, `evidence`), a **rating** on a 1-5 scale, a **priority** (High, Medium, Low), and the target goal (`remediation_action`). SP 1301 step 3b allows including the outcomes that apply to the use case with a rationale. **This first cycle includes all 31 Govern subcategories and 39 subcategories from the other five Functions** that bear on the shared platform and the P01 risks. The other 36 subcategories are covered at control level in the SSP (P02) and will be added in the 2027 cycle.
 
    Rating scale (author-defined, as SP 1301 allows): 1 = not performed; 2 = informal or only at some entities; 3 = defined and performed for the shared platform; 4 = consistent across the group; 5 = measured and improving. Status maps from the rating: 1 = Not met, 2-3 = Partially met, 4-5 = Met.

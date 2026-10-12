@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (family holding company and single-family office) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Family Office Director with the Controller, Investment Director, Senior Accountant, Office Manager, and the MSP lead technician, 2026-08-03 to 2026-08-14 | **Approved:** Principal, 2026-09-18
+**Sources:** process owner interviews 2026-08-03 to 2026-08-05 (EV-046), FY2025 income statement (EV-027), wire and approval activity (EV-014), bank entitlement reports (EV-013), bill pay history (EV-010), payroll roster (EV-001), investment platform position summary (EV-011), SYS-11 cloud account export (EV-019), MSP service contract (EV-022), and the SOC 2 reports on file (EV-029, EV-030). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Principal.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the office, how long each can be down, and how much data each can lose. It supports:
@@ -15,10 +16,10 @@ No federal rule requires this office to keep a contingency plan. The BIA is done
 ## 2. System and business description
 One Florida office suite with 7 employees. The office oversees three operating subsidiaries (Hospitality, Marine Supply, Properties), manages about $310 million (fictional) of family assets held at two custodians, and runs bill pay, household payroll, accounting, and records for 11 family members and 10 family entities.
 
-Nearly everything runs in vendor SaaS: the accounting system (SYS-01), the productivity suite with identity (SYS-02), bill pay (SYS-03), payroll (SYS-04), the investment platform (SYS-06), and the document vault (SYS-07). Banks and custodians host their own portals (SYS-05). On site are 8 laptops, 1 conference-room PC, and a printer (SYS-08) and the office network (SYS-09). The one cloud workload is the legacy partnership accounting server (SYS-11), run by the MSP. See `../00_company-facts.md` sections 3 and 7.
+Nearly everything runs in vendor SaaS: the accounting system (SYS-01), the productivity suite with identity (SYS-02), bill pay (SYS-03), payroll (SYS-04), the investment platform (SYS-06), and the document vault (SYS-07). Banks and custodians host their own portals (SYS-05). On site are 8 laptops, 1 conference-room PC, and a printer (SYS-08) and the office network (SYS-09). The one cloud workload is the legacy partnership accounting server (SYS-11), run by the MSP. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to the family's exposure, not only the office's $1.1 million of fees: one misdirected wire can exceed the office's monthly revenue.
+Dollar values are scaled to the family's exposure, not only the office's $1.1 million of fees (EV-027): one misdirected wire can exceed the office's monthly revenue.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -51,12 +52,12 @@ Dollar values are scaled to the family's exposure, not only the office's $1.1 mi
 |---|---|---|---|
 | SYS-02 Productivity suite and identity (SaaS) | Email, files, chat, sign-in for every other SaaS system | Vendor service resilience and the vendor's deleted-item retention. **No independent backup** | BP-01, BP-04, BP-08, and sign-in for all |
 | SYS-05 Bank and custodian portals | Payments, approvals, trading instructions | Bank- and custodian-hosted; the banks keep the payment record. Hardware tokens per approver | BP-01, BP-02, BP-03 |
-| SYS-01 Accounting system (SaaS) | Ledgers, consolidation, payee bank details | Vendor backups (SOC 2 report on file, not yet reviewed) | BP-04, BP-05 |
+| SYS-01 Accounting system (SaaS) | Ledgers, consolidation, payee bank details | Vendor backups (SOC 2 report on file, not yet reviewed, EV-029) | BP-04, BP-05 |
 | SYS-03 Bill pay platform (SaaS) | Family bills | Vendor backups; payment history also at the banks | BP-02 |
 | SYS-04 Payroll service (SaaS) | Office and household payroll | Vendor backups; prior payroll can be repeated by phone | BP-02 |
 | SYS-06 Investment platform (SaaS) | Positions and reports | Custodian data can be pulled again | BP-03, BP-07 |
 | SYS-07 Document vault (SaaS) | Family records | Vendor backups; counsel holds originals | BP-05, BP-06 |
-| SYS-11 Legacy partnership accounting server (IaaS) | Capital accounts and K-1 allocations | Daily snapshots in the same cloud account, 14 days kept. **Never restore-tested** | BP-05 |
+| SYS-11 Legacy partnership accounting server (IaaS) | Capital accounts and K-1 allocations | Daily snapshots in the same cloud account, 14 days kept (EV-019). **Never restore-tested** (EV-020) | BP-05 |
 | SYS-08 and SYS-09 Laptops and office network | 8 laptops, 1 conference-room PC, firewall, one internet line | Laptops hold little data by design; staff can work from home | All |
 | People | 7 staff; the Principal as backup bank approver | Cross-coverage: Controller and Family Office Director cover each other; Senior Accountant and Controller cover bill pay | All |
 
@@ -69,7 +70,7 @@ Dollar values are scaled to the family's exposure, not only the office's $1.1 mi
 | Bill pay vendor and payroll service | BP-02 | Vendor service commitments |
 | Investment platform vendor | BP-03, BP-07 | SOC 2 Type 2 report reviewed in P09 |
 | Document vault vendor | BP-06 | Vendor service commitments |
-| MSP | Recovery of laptops, network, and SYS-11 | Contract has a 4-business-hour response time and no recovery time commitment |
+| MSP | Recovery of laptops, network, and SYS-11 | Contract has a 4-business-hour response time and no recovery time commitment (EV-022) |
 | Cloud provider (SYS-11) | K-1 allocations (BP-05) | Provider infrastructure; snapshots are the office's responsibility (P04) |
 | Internet provider | Every SaaS function from the office | None; single line. Staff can work from home |
 | Outside CPA firm | Tax returns (BP-05) | Not a technology dependency; extensions available |

@@ -13,7 +13,7 @@
 ## 1. Why SOC 2 for this organization
 A single-family office is **not** a SOC 2 service organization. It serves only the family and the family's own companies, not outside customers. The Trust Services Criteria are used here for three practical reasons.
 
-**A. Answering a custodian.** In August 2026 one of the two custodians sent a due diligence questionnaire about the office's controls, because the office holds delegated access to family accounts. Its questions follow the Trust Services Criteria for security and confidentiality. The office will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-10-30.
+**A. Answering a custodian.** In August 2026 one of the two custodians sent a due diligence questionnaire (EV-054) about the office's controls, because the office holds delegated access to family accounts. Its questions follow the Trust Services Criteria for security and confidentiality. The office will answer with this self-assessment, the POA&M (P07), and a named security contact. The response is due 2026-10-30.
 
 **B. Reporting to the family.** The Board of Managers asked for a plain measure of readiness it can track year to year. The same checklist serves as an appendix to the Family Office Director's annual written report.
 

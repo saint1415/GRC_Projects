@@ -79,6 +79,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - benchmark configuration scans of 10 servers
   - log retrieval of 11-month-old records from the SIEM and the archive
 
+### What each test could show
+The 2026 policies (P06), the standards index and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-22 and take effect on 2026-10-01. The 2024 policies, the 2024 incident response plan, the 2025 cloud recovery plan and the 2024 standards were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 212 |
+| Design | The requirement comes from a 2026 draft (the cyber strategy and risk appetite, the continuous monitoring strategy, POL-02 4.11 on vendor remote access, and the subsidiary, FTC notice and plan breach coverage in the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 4 |
+| Not implemented | Nothing existed to test | 38 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HRIS report (EV-005), new accounts from the identity provider export (EV-001), privileged accounts from EV-004, service accounts from EV-003, changes from the change tickets (EV-035), servers from EV-013, endpoints from EV-012, retired devices from EV-036, critical findings from the scan reports (EV-023), critical vendors from the vendor register (EV-038), and incidents from the incident log (EV-031).
+
 ## 4. Rules of engagement
 - No testing that could disrupt subsidiary operations. Plant tests ran during a planned maintenance window with the Plant Manager present; no packets were sent to machine controllers beyond a reachability check.
 - No Finance customer information or plan PHI left company systems. Screenshots were redacted, and evidence was stored in the firm's encrypted workpaper system under a confidentiality agreement and, for plan data, a BAA.
@@ -133,7 +144,7 @@ Other than satisfied statements by risk: 23 High, 61 Moderate, 32 Low.
 | SI-4 | 9 | 3 | Moderate | POAM-015 |
 | SR-6 | 0 | 1 | Moderate | POAM-013 |
 
-**Fully satisfied (2 controls):** AU-11 (logs retrievable for 1 year in the SIEM and 3 years in the archive) and RA-3 (the 2026 risk assessment). Strong partial results also confirm the strengths in the scenario facts: EDR detected every test file within 5 minutes (SI-3), the MSSP escalated the simulated alert in 18 minutes (SI-4), cloud backups ran on 31 of 31 days and are isolated (CP-9), and every sampled cloud and identity provider administrator was challenged for MFA (IA-2(1)).
+**Fully satisfied (2 controls):** AU-11 (logs retrievable for 1 year in the SIEM and 3 years in the archive) and RA-3 (the 2026 risk assessment). Strong partial results also confirm strengths recorded at intake (EV-012, EV-019, EV-021, EV-002): EDR detected every test file within 5 minutes (SI-3), the MSSP escalated the simulated alert in 18 minutes (SI-4), cloud backups ran on 31 of 31 days and are isolated (CP-9), and every sampled cloud and identity provider administrator was challenged for MFA (IA-2(1)).
 
 **Fully other than satisfied (7 controls):** AC-6, AC-6(5), CP-10, IA-2(1), MA-4, SC-28, and SR-6.
 

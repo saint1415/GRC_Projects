@@ -1,0 +1,34 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud ERP vendor,ERP; invoice coding feature (AI-004),SYS-01,Financial reporting data; vendor bank details,Subscription agreement,"SOC 2 Type 2 (RTO 12 h, RPO 1 h in the system description)",EV-038; EV-041,Critical
+V-02,Cloud identity provider vendor,"Single sign-on, MFA, conditional access",SYS-02,Workforce identities,Subscription agreement,SOC 2 Type 2,EV-038; EV-041,Critical
+V-03,Productivity suite provider,"Email, files, chat, phones, device management, AI assistant",SYS-03; SYS-16,All categories held in the suite,Subscription agreement,SOC 2 Type 2,EV-038; EV-041; EV-056,Critical
+V-04,Public cloud provider,IaaS and PaaS for the 5-account landing zone,SYS-04,ACH files; consolidated financials; loan-level warehouse data; scanned invoices,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-038; EV-041,Critical
+V-05,"HRIS, payroll and benefits enrollment vendor","HRIS, payroll, benefits enrollment",SYS-05,"Employee SSNs, bank accounts, enrollment data",Subscription agreement,SOC 2 Type 2 (RTO 24 h),EV-038; EV-041,Critical
+V-06,Treasury management system vendor,Treasury management,SYS-06,Bank credentials; payment instructions,Subscription agreement,SOC 2 Type 2 (RTO 8 h),EV-038; EV-041,Critical
+V-07,Operating banks,"Bank portals, wires, ACH, positive pay, bank file transfer",SYS-06; SYS-04,Payment files; ACH collection files,Treasury services agreements,None on file,EV-040; EV-046,
+V-08,Managed security service provider (MSSP),24x7 EDR and SIEM monitoring and response,SYS-11,Security logs; remote response on all endpoints,MSSP contract with security terms,SOC 2 Type 2,EV-021; EV-040; EV-041,Critical; may isolate hosts without approval
+V-09,Loan origination and servicing vendor,"Loan origination, servicing, borrower portal, machine-learning credit scorecard (AI-002)",SYS-14,Finance customer information,Subscription agreement,"SOC 2 Type 2 (RTO 8 h, RPO 1 h)",EV-041; EV-042; EV-056,Critical; Finance service provider
+V-10,Board portal and data room vendor,Board portal and virtual data room,SYS-07,Board materials; deal information,Subscription agreement,None on file,EV-038,
+V-11,"Security tool vendors (EDR, vulnerability scanner, web proxy)",Security tooling,SYS-11,Security telemetry,Subscription agreements,None on file,EV-038,
+V-12,SD-WAN managed service provider and ISPs,"SD-WAN, internet circuits, cellular failover",SYS-09,Network traffic,Service agreements,None on file,EV-014; EV-038,
+V-13,Suite backup vendor,Daily third-party backup of mail and files,SYS-03,All suite data,Subscription agreement,None on file,EV-019; EV-038,
+V-14,Distribution system vendor,"Distribution and warehouse system, contractor portal, demand forecasting (AI-006)",SYS-12,"Contractor accounts, pricing, credit terms",Contract (recovery time 24 h),None (no SOC 2 report),EV-040,Contractor portal accounts without MFA
+V-15,Field-service system vendor (South and Central),Field-service management,SYS-13,"Consumer names, addresses, service history",Subscription agreement,None on file,EV-038,
+V-16,Field-service product vendor (Home Services North),Separate field-service product with local accounts,HSN-01,"Consumer names, addresses, service history",Agreement inherited from the seller,None on file,EV-017,
+V-17,Seller's IT provider (Home Services North),Administration of the Home Services North server and laptops,HSN-01,All Home Services North data,No group contract,None on file,EV-017; EV-040,Holds administrator rights to the North server
+V-18,Machine vendors (Fabrication),Remote maintenance of CNC plasma tables and press brakes,SYS-15,Production programs,No written security terms,None on file,EV-016; EV-040,Always-on remote access tool
+V-19,Group health plan TPA,"Claims administration, TPA portal, high-cost claimant reports",TPA portal,Plan PHI,BAA (2024; 60 days for breach notice),None on file,EV-047; EV-048; EV-011,Business associate of the plan
+V-20,Pharmacy benefit manager (PBM),Drug benefit,TPA and PBM platforms,Plan PHI,BAA (2024; 60 days for breach notice),None on file,EV-047; EV-048,Business associate of the plan
+V-21,Stop-loss carrier,Stop-loss coverage and reimbursement,Benefits files,Plan PHI in claim files,Stop-loss policy,None on file,EV-047,
+V-22,Benefits consultant,Stop-loss renewals,Benefits files; email,Plan PHI (high-cost claimant reports),None located (no BAA),None on file,EV-048,
+V-23,Payroll tax and benefits carriers,Payroll tax filings; enrollment files,SYS-05,Employee personal information,Vendor contracts with security terms (payroll provider),None on file,EV-040; EV-038,
+V-24,Collections agency (Finance),Collections,SYS-14 extracts,Finance customer information,Contract,None on file,EV-042,Finance service provider added with no onboarding review record
+V-25,Document scanning vendor (Finance),Document scanning,Finance files,Finance customer information,Contract,None on file,EV-042,Finance service provider added with no onboarding review record
+V-26,Recruiting software vendor,Applicant tracking and AI ranking (AI-003),Recruiting software,Applicant personal information,Bought by subsidiaries outside procurement,None on file,EV-039; EV-056,
+V-27,AI voice agent vendor,After-hours call answering and emergency triage (AI-005),Home Services phone lines,"Call audio, transcripts, addresses",Bought by Home Services outside procurement,None on file,EV-039; EV-056,
+V-28,Card processor,Point-to-point encrypted terminals and readers; hosted payment page,Supply counters and portal; Home Services technicians,Card data (outside group systems),Merchant agreements,"None reviewed (PCI DSS noted, not assessed)",EV-049,
+V-29,Cyber and crime insurers,"Cyber and crime coverage; carrier panel (breach counsel, forensics)",n/a,Incident information when a claim is made,Insurance policies,n/a,EV-045,
+V-30,Media destruction vendor,Drive destruction,Retired devices,Data on retired drives,Service agreement,Certificates of destruction,EV-036,
+V-31,Co-sourced internal audit firm,IT general controls audit; P07 control assessment,n/a,"Audit evidence, including redacted regulated data",Engagement letter,n/a,EV-029,Reports to the audit committee
+V-32,Penetration testing firm,Annual penetration test,Internet-facing systems; directory (2026),Test results,Statement of work,n/a,EV-024,
+V-33,Other vendors in the vendor register,Various,Various,Various,Per contract (security terms in the template used since 2025),SOC 2 reports on file for 8 critical vendors only (listed above),EV-038; EV-039,The rest of the about 160 vendors with access to group systems or data

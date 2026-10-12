@@ -8,11 +8,13 @@
 | Binding rules checked | Fla. Stat. 501.171 (2026 statute, read 2026-10-06); for Rentals: FCRA user duties (15 U.S.C. 1681b, 1681m), the FTC Disposal Rule (16 CFR 682.3, eCFR as of 2026-09-23), and the Fair Housing Act (42 U.S.C. 3603-3604) |
 | Also recorded | Card processor merchant terms (contract); N55-R01 to N55-R07, all not applicable |
 | Assessment dates | 2026-07-27 to 2026-07-31 (self-assessment) |
-| Assessor | Owner-manager, with the on-call IT technician (under a confidentiality and security agreement since 2026-07-24). Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner-manager, with the on-call IT technician (under a confidentiality and security agreement since 2026-07-24). Evidence is the intake record and the owner's self-review (EV-034), checked on screen where possible |
 | Workbook | `gap-analysis.csv` (124 rows) |
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result and the reasons.
+
 **Step 1 was to find the rule that binds the holding business. None of the vertical's parent-level rules does.** A holding company's cyber duties come from what it is (public or private, bank holding company or not) and from what its companies do.
 
 | Candidate | Applies? | Why (citation) |
@@ -37,7 +39,7 @@
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from `00_universal-framework/frameworks/csf2_core.csv`. Statute and regulation rows cite the 2026 Florida Statutes, the eCFR text current as of 2026-09-23, and the U.S. Code (govinfo, 2023 edition), with short quotes or paraphrases.
 2. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (SRC-OLIR-CSF-53), kept in full in `nist_official_sp800_53r5`; `sp800_53_controls` is a key-control subset chosen by the author. Statute and regulation rows use an **author mapping**.
-3. **Evidence.** Self-attested by the owner, checked on screen with the IT technician where possible: user lists and security settings in all seven SaaS services (2026-07-29), a file listing of the suite (2026-07-29), router and gate settings and a walkthrough of both sites (2026-07-28), and the P07 tests (2026-07-30).
+3. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-027: admin console exports, statements, agreements, device settings, and the owner's walk-through of both sites on 2026-07-22) and the owner's written self-review (EV-034), checked on screen with the IT technician where possible: user lists and security settings in all seven SaaS services (2026-07-29, EV-030), a file listing of the suite (2026-07-29, EV-031), router and gate settings and a walkthrough of both sites (2026-07-28, EV-032 and EV-029), and the P07 tests (2026-07-30). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable, as of fieldwork. Gap risk uses the P01 scale.
 5. **Traceability.** None of the vertical's requirement IDs (N55-R01 to N55-R07) applies, so `regulatory_driver` columns in all deliverables cite the statute or the CSF subcategory directly (for example "Fla. Stat. 501.171(2)" or "CSF 2.0 portfolio profile PR.AA-03 (voluntary)").
 

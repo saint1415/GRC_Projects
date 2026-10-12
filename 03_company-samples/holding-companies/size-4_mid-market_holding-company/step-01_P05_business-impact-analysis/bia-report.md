@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed holding company with four operating subsidiaries) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and the VP of Information Technology, with the vCISO and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-13 to 2026-08-07 | **Approved:** CFO, 2026-09-22 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-13 to 2026-07-17 (EV-059), FY2025 consolidated revenue report (EV-052), Q2 2026 operating volume and cash report (EV-053), Finance portfolio report (EV-054), HRIS workforce report (EV-005), vendor contracts and SOC 2 system descriptions (EV-040, EV-041), backup configuration and job reports (EV-019) and the contingency document request (EV-020). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the CFO.
 
 ## 1. Overview and purpose
 This BIA covers every business unit in the group: the holding company's shared services, Supply, Home Services (including Home Services North), Fabrication, and Finance. It rates 18 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and safety.
@@ -18,10 +19,10 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The group has 600 employees at 9 Florida sites: HQ (holding company and Finance), the Supply distribution center and 3 branches, 3 Home Services shops, and the Fabrication plant. Shared services run on the Shared Corporate Services Platform (SCSP) described in the SSP (P02): a cloud ERP, a hybrid identity service (on-premises directory synchronized to a cloud identity provider), one productivity suite, a 5-account cloud landing zone (integration service, reporting warehouse, bank file transfer server, invoice imaging, backups), the HRIS, the treasury system and bank portals, the board portal, endpoints, site networks on SD-WAN, on-premises servers at HQ and the plant, and the security operations stack. Each subsidiary also runs its own line-of-business system (SYS-12 to SYS-15). See `../00_company-facts.md` sections 3, 4, and 7.
+The group has 600 employees at 9 Florida sites: HQ (holding company and Finance), the Supply distribution center and 3 branches, 3 Home Services shops, and the Fabrication plant. Shared services run on the Shared Corporate Services Platform (SCSP) described in the SSP (P02): a cloud ERP, a hybrid identity service (on-premises directory synchronized to a cloud identity provider), one productivity suite, a 5-account cloud landing zone (integration service, reporting warehouse, bank file transfer server, invoice imaging, backups), the HRIS, the treasury system and bank portals, the board portal, endpoints, site networks on SD-WAN, on-premises servers at HQ and the plant, and the security operations stack. Each subsidiary also runs its own line-of-business system (SYS-12 to SYS-15). The components are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $100 million in consolidated receipts over about 250 business days: about $216,000 of sales per day at Supply, $104,000 at Home Services, and $48,000 at Fabrication. Finance collects about $220,000 a business day, and treasury releases about $3.5 million of payments a business day for the group.
+Dollar values are scaled to about $100 million in consolidated receipts over about 250 business days (EV-052): about $216,000 of sales per day at Supply, $104,000 at Home Services, and $48,000 at Fabrication. Finance collects about $220,000 a business day, and treasury releases about $3.5 million of payments a business day for the group (EV-053).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -31,7 +32,7 @@ Dollar values are scaled to about $100 million in consolidated receipts over abo
 | Safety | Plausible harm to a person (an elderly customer without cooling in summer heat; a gas-smell call without safety instructions; a tampered machine program) | Delayed but safe service | None |
 | Reputation | Loss of the bank partner, a lender's confidence, a key supplier, or regional media coverage | Customer complaints or online reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra labor, over the MTD. Recovery assumptions came from the process owners: about 40% of lost Supply counter sales, 35% of missed Home Services calls, and 25% of delayed Fabrication orders are not recovered. For Finance and treasury, the loss is fee reversals, manual posting overtime, and returned items; the delayed cash is shown separately.
+**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered plus extra labor, over the MTD. Recovery assumptions came from the process owners (EV-059): about 40% of lost Supply counter sales, 35% of missed Home Services calls, and 25% of delayed Fabrication orders are not recovered. For Finance and treasury, the loss is fee reversals, manual posting overtime, and returned items; the delayed cash is shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -66,11 +67,11 @@ Dollar values are scaled to about $100 million in consolidated receipts over abo
 - **Contract dates drive BP-02 and BP-04.** Payroll has a fixed provider deadline, and the credit agreement fixes reporting dates.
 
 ## 5. Key findings
-1. **Identity is the single point of failure for almost every process.** Every SaaS system except Home Services North's field-service product signs in through the cloud identity provider, which is synchronized from the on-premises directory. Two break-glass accounts exist for the cloud identity provider and were tested in 2026-06, but **no one has ever practiced recovering the directory forest** (gap 7; P01 R-004).
-2. **The Fabrication plant cannot meet its RPO.** BP-14 needs a 24-hour RPO, but the plant server is backed up weekly to a removable drive kept in the plant office. A ransomware event or fire would lose up to a week of nesting programs (gap 7; P01 R-016).
-3. **The distribution system vendor's recovery commitment does not meet the BIA.** Its contract states a 24-hour RTO; BP-09 needs 4 hours and BP-10 needs 8 hours. The loan servicing vendor's SOC 2 system description (RTO 8 hours, RPO 1 hour) meets BP-16, and the ERP vendor's (RTO 12 hours, RPO 1 hour) meets BP-03, BP-04, and BP-15 (P09 `vendor-soc2-review.csv`; P01 R-019).
-4. **Home Services North is outside the plan.** Its dispatch runs on a separate field-service product with local accounts, and its recovery depends on the seller's IT provider. Its share of BP-12 has no tested workaround (gap 2; P01 R-007).
-5. **HQ on-premises servers have never been restore-tested.** The scanner management server (BP-10) and the legacy Supply shares (BP-11) are backed up nightly to a NAS in the same server room, which a ransomware attacker could reach (P01 R-001).
+1. **Identity is the single point of failure for almost every process.** Every SaaS system except Home Services North's field-service product signs in through the cloud identity provider, which is synchronized from the on-premises directory. Two break-glass accounts exist for the cloud identity provider and were tested in 2026-06 (EV-001), but **no one has ever practiced recovering the directory forest** (EV-020; P01 R-004).
+2. **The Fabrication plant cannot meet its RPO.** BP-14 needs a 24-hour RPO, but the plant server is backed up weekly to a removable drive kept in the plant office. A ransomware event or fire would lose up to a week of nesting programs (EV-019; P01 R-016).
+3. **The distribution system vendor's recovery commitment does not meet the BIA.** Its contract states a 24-hour RTO; BP-09 needs 4 hours and BP-10 needs 8 hours. The loan servicing vendor's SOC 2 system description (RTO 8 hours, RPO 1 hour) meets BP-16, and the ERP vendor's (RTO 12 hours, RPO 1 hour) meets BP-03, BP-04, and BP-15 (EV-040; EV-041; P09 `vendor-soc2-review.csv`; P01 R-019).
+4. **Home Services North is outside the plan.** Its dispatch runs on a separate field-service product with local accounts, and its recovery depends on the seller's IT provider. Its share of BP-12 has no tested workaround (EV-017; P01 R-007).
+5. **HQ on-premises servers have never been restore-tested.** The scanner management server (BP-10) and the legacy Supply shares (BP-11) are backed up nightly to a NAS in the same server room, which a ransomware attacker could reach (EV-019; EV-020; P01 R-001).
 6. **The after-hours AI voice agent is now part of BP-12.** If it fails, calls roll to the on-call manager. Its emergency triage script is a safety control and is assessed in P10 (AI-005).
 
 ## 6. Resource requirements

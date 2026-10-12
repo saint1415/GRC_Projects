@@ -11,7 +11,7 @@
 | Approved | 2026-09-22: CFO (Moderate and below), CEO (High and Very High), board (risk appetite); presented to the audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** The Shared Corporate Services Platform (SCSP, SYS-01 to SYS-11 and SYS-16) and every business process in the BIA (P05), for the holding company and all four subsidiaries, including Home Services North. The register also covers the subsidiary systems that connect to the shared platform (SYS-12 to SYS-15) and the third parties that support it (SYS-17). Processes and impact values come from the BIA; vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** The Shared Corporate Services Platform (SCSP, SYS-01 to SYS-11 and SYS-16) and every business process in the BIA (P05), for the holding company and all four subsidiaries, including Home Services North. The register also covers the subsidiary systems that connect to the shared platform (SYS-12 to SYS-15) and the third parties that support it (SYS-17), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA; vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Why one register for the group.** The subsidiaries share one identity service, one email and file tenant, one ERP, one cloud landing zone, and one IT and security team. A risk to the shared platform is a risk to every subsidiary at once, so risks are assessed at group level, and each risk names the subsidiary data or process it affects where that differs.
 
@@ -28,7 +28,7 @@ Two extra rules apply because of the group's regulated data:
 - Any risk to Finance customer information rated Moderate or above is reported to Finance's Board of Managers in the Qualified Individual's annual report (16 CFR 314.4(i)(2)), and any risk to plan PHI rated Moderate or above is reported to the Benefits Committee.
 
 ### Risk appetite statements
-Approved by the board on 2026-09-22 on the CEO's recommendation, replacing the one-paragraph 2025 statement (gap 1).
+Approved by the board on 2026-09-22 on the CEO's recommendation, replacing the one-paragraph 2025 statement (EV-028).
 
 | Area | Appetite | Statement and measure |
 |---|---|---|
@@ -43,8 +43,8 @@ Approved by the board on 2026-09-22 on the CEO's recommendation, replacing the o
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $200,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical overlay, the BIA, interviews with every process owner and subsidiary President at 6 of 9 sites, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical overlay, the BIA, the intake evidence, risk interviews with every process owner and subsidiary President at 6 of 9 sites and a threat workshop with the VP of Information Technology, the vCISO and the MSSP (EV-060), the gap analysis (P03), and the control assessment (P07).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-031), scan results (EV-023), phishing results (EV-032), configuration exports, the walkthroughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, safety, reputation). Harm to more than one subsidiary, or to Finance customer information or plan PHI, raised the rating by one level where it was not already High.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each level its SP 800-30 Appendix I value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -60,6 +60,8 @@ Approved by the board on 2026-09-22 on the CEO's recommendation, replacing the o
 | **Total** | **52** |
 
 Treatments: 48 Mitigate, 4 Accept (R-037, R-040, R-044, R-048). Status: 38 Open, 10 In progress, 4 Accepted.
+
+**Two passes.** Pass 1 was completed on 2026-08-07 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-047 and R-050 were added on 2026-08-26 after testing found 3 shared counter accounts at Branch 2 (EV-AC-2, EV-IA-2) and the ACH signing service account password in an IT runbook readable by 14 IT staff (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 Cyber insurance ($10 million limit, $200,000 retention) and the crime policy ($250,000 social engineering sublimit) transfer part of the financial exposure for R-001, R-002, R-005, and R-011. Insurance is not recorded as the treatment for any risk, because it does not lower the likelihood of harm to customers, employees, or operations.
 

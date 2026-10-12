@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The four entities as one system: the Shared Back-Office Platform (SYS-01 to SYS-04, SYS-08, SYS-10), the owner's administrator access to each LLC's system (SYS-05 to SYS-07), the site devices (SYS-09), paper move-in forms, and the contracted services (bookkeeper, IT technician, CPA firm, maintenance contractor). Processes come from the BIA (P05).
+**Scope.** The four entities as one system: the Shared Back-Office Platform (SYS-01 to SYS-04, SYS-08, SYS-10), the owner's administrator access to each LLC's system (SYS-05 to SYS-07), the site devices (SYS-09), paper move-in forms, and the contracted services (bookkeeper, IT technician, CPA firm, maintenance contractor), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Why one register for four entities.** The LLCs are legally separate, but they share one identity, one owner, one bookkeeper, and one set of habits. Every High risk below hits all three LLCs at once. The register names the affected LLC where a risk is local (for example R-005 Storage, R-006 Laundry, R-003 Rentals).
 
@@ -22,8 +22,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. A risk that could stop payroll or lock tenants out for longer than the BIA allows is never accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), and a walk through each system's settings and both sites with the IT technician (2026-07-28 to 2026-07-30).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence (EV-001 to EV-027), the BIA, the gap analysis (P03), and a walk through each system's settings and both sites with the IT technician (2026-07-28 to 2026-07-30; EV-029, EV-030, EV-032).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and site records from intake, the agreements, the AI assistant history, the owner's self-review (EV-034), and the control tests of 2026-07-30. A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (scaled to the LLCs' combined revenue of about $750,000).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -46,6 +46,8 @@
 | R-015 | Reused passwords and no MFA on LLC administrator accounts | Moderate | Password manager; MFA | Owner-manager | 2026-09-15 |
 
 **The pattern.** Two of the three High risks have the same root: **one email account, protected by a text-message code, controls four businesses and their money.** R-001 is the entry point, R-002 is how the attacker gets paid, and R-008 is why recovery would be slow. The third High risk, R-010, is the same concentration seen from the other side: the one person who holds that account is also the only way back in. The holding structure separates liability, not technology.
+
+**One pass.** The register was completed on 2026-07-31 from intake and self-assessment evidence. The control tests ran on 2026-07-30, inside the same week, so this pass already reflects them: R-004 cites the former storage assistant's account (EV-AC-2) and R-007 the gate controller's default password (EV-IA-5). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 ## 4. Treatment summary
 - **Free or low-cost fixes first (by 2026-09-30):** app-based MFA everywhere, a password manager (about $40 a year), the callback rule for payment changes, individual Laundry PINs, the Storage desktop sign-in and encryption, the gate password, AI use rules, and adopting the P08 runbook.

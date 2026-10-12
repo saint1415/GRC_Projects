@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-22
 
 ## 1. System Name and Identifier
-Shared Corporate Services Platform (**SCSP**), identifier CSC-SCSP-01. The SCSP comprises SYS-01 to SYS-11 and SYS-16 in `../00_company-facts.md`.
+Shared Corporate Services Platform (**SCSP**), identifier CSC-SCSP-01. The SCSP comprises SYS-01 to SYS-11 and SYS-16 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The SCSP is the IT platform the holding company runs for itself and its four subsidiaries: CSC Building Supply ("Supply"), CSC Home Services ("Home Services"), CSC Fabrication ("Fabrication"), and CSC Consumer Finance ("Finance"). It delivers the shared services the subsidiaries pay management fees for: accounting and consolidation, treasury and payments, payroll, HR and benefits, email and files, identity, and the integrations that bring subsidiary sales, production, and loan data into the general ledger. It serves 600 employees at 9 Florida sites and supports every process in the BIA (P05).
@@ -100,6 +100,8 @@ Information types follow the NIST SP 800-60 Vol. 2 Rev. 1 approach. Where the ca
 **Confidentiality was considered for High.** A breach of all Finance customer information (about 34,000 consumers) would be serious and expensive, but it would not threaten the group's survival or stop it from operating: the cyber insurance limit covers the expected response cost, and the data is not of the kind (for example, authentication secrets for the banks) that would allow catastrophic loss on its own. The team kept Moderate and compensated with stronger tailoring for access and monitoring of Finance data (AC-6, AU-6, SI-4).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts (430 laptops and desktops, 95 tablets, 120 scanners) are the endpoint console and scanner management server totals (EV-012); Home Services North's systems are listed separately (EV-017).
+
 **Inside the boundary:**
 - the ERP, HRIS, treasury system, and board portal tenant configurations and roles;
 - the on-premises directory forest and the cloud identity provider tenant;
@@ -183,7 +185,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 35 | Identity vendor, cloud provider, suite provider, MSSP, SaaS vendors, SD-WAN provider |
 | Common/Inherited | 10 | Identity vendor (for example AC-7, IA-2(1)), cloud provider (SC-12), MSSP (AU-6(1), IR-7), suite provider (AC-12) |
 
-The Partially implemented statements trace to the 13 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. The 4 Planned controls are CM-12 (data map), CP-3 (recovery training), SI-12 (retention schedule), and SR-2 (supply chain plan).
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-003, EV-017 and EV-021) and to the P07 findings. The 4 Planned controls are CM-12 (data map), CP-3 (recovery training), SI-12 (retention schedule), and SR-2 (supply chain plan).
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 36 controls from 2026-08-17 to 2026-09-04 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee and, for Finance customer information, in the Qualified Individual's annual report.
@@ -195,7 +197,7 @@ The co-sourced internal audit firm assessed 36 controls from 2026-08-17 to 2026-
 - **Finance borrowers and Supply contractors.** Borrowers use the loan servicing vendor's portal, and contractors use the distribution vendor's portal, each with the vendor's own identity proofing. These are governed by the vendor contracts, outside this boundary. P01 R-046 tracks MFA for the contractor portal.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); CSF 2.0 group profile, Safeguards Rule, and HIPAA gap analysis (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); CSF 2.0 group profile, Safeguards Rule, and HIPAA gap analysis (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House (bank payment network)

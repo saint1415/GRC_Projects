@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's business continuity team with the Insurance and Health Care Services continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-06-12 (EV-073 group, EV-074 Insurance, EV-075 Health Care Services), FY2025 revenue by division (EV-003), treasury, insurance and clinic volumes (EV-036, EV-054, EV-063), recovery tests and backups (EV-030, EV-031, EV-057, EV-066, EV-076), and vendor recovery terms (EV-044). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
+
 ## 1. Overview and purpose
 The holding company is the focus of this sample. Its own business is running the shared services that every subsidiary depends on, so its BIA is the group BIA. The analysis works at two levels:
 - **Group BIA (focus):** the corporate shared services on the Shared Corporate Services Platform (SCSP) and the common infrastructure: identity, security operations, cloud and network, integration services, treasury, payroll, the financial close, HR, email, board and disclosure, and the group health plan.
@@ -17,10 +19,10 @@ The BIA feeds:
 - the availability rating in the SSP (P02), impact ratings in the risk registers (P01), the recovery order in the incident runbook (P08), and the availability commitments assessed in P09.
 
 ## 2. System and business description
-Three divisions share corporate services. The SCSP is the SSP system (P02): the group identity platform (SYS-G1), ERP and consolidation (SYS-G4), HCM and payroll (SYS-G5), and the treasury and payments hub (SYS-G6), with their integration services in cloud provider A. Common infrastructure is SYS-G2 (SOC) and SYS-G3 (two cloud providers, the WAN, and one colocation data center). Division systems are SYS-I1 to SYS-I4 for Insurance and SYS-H1 to SYS-H3 for Health Care Services. See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services. The SCSP is the SSP system (P02): the group identity platform (SYS-G1), ERP and consolidation (SYS-G4), HCM and payroll (SYS-G5), and the treasury and payments hub (SYS-G6), with their integration services in cloud provider A. Common infrastructure is SYS-G2 (SOC) and SYS-G3 (two cloud providers, the WAN, and one colocation data center). Division systems are SYS-I1 to SYS-I4 for Insurance and SYS-H1 to SYS-H3 for Health Care Services. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Insurance about $39 million per day and Health Care Services about $10.4 million per day. Treasury releases about $65 million in payments per business day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Insurance about $14.2 billion, or about $39 million per day; Health Care Services about $3.8 billion, or about $10.4 million per day. Treasury releases about $65 million in payments per business day (EV-036).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -80,14 +82,14 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Integration services and treasury (BP-G12, BP-G04) | Group | Insurance claims payments (BP-I02, BP-I03); payroll (BP-G05) | One integration layer carries every division's payment files |
 | HR onboarding (BP-G11) | Group | Catastrophe surge (BP-I04) | 1,500 adjuster accounts in 72 hours after a hurricane |
 | SOC facts (BP-G02) | Group | Every notice in P08; the disclosure committee | Every notice clock depends on the SOC establishing what happened |
-| Work-injury reports (BP-H08) | Health Care Services | Workers' compensation claims (BP-I03) | About 18% of the insurer's injured-worker claims in 4 states are treated in the group's clinics. Adjusters also have direct EHR read access (gap 6) |
+| Work-injury reports (BP-H08) | Health Care Services | Workers' compensation claims (BP-I03) | About 18% of the insurer's injured-worker claims in 4 states are treated in the group's clinics. Adjusters also have direct EHR read access (group gap 6) |
 | Claims to the group health plan (BP-H07) | Health Care Services | Group health plan (BP-G08) | About 9,000 covered lives a year are clinic patients |
 | General ledger feeds (BP-G12) | Insurance and Health Care Services | Financial close (BP-G06) | ICFR depends on complete and accurate feeds from every entity |
 
 **Single points of failure found:**
 - **SYS-G1.** Mitigated by sealed break-glass accounts per critical system, tested quarterly.
-- **The integration services.** The warm standby in provider B took 6 hours to fail over in the 2026-02 test, against a 4-hour RTO (P01 GR-09).
-- **The colocation data center for SYS-I4.** There is no second site; recovery is from the provider B vault onto rebuilt servers, estimated at 36 hours, beyond the 12-hour RTO (P01 INS-007).
+- **The integration services.** The warm standby in provider B took 6 hours to fail over in the 2026-02 test, against a 4-hour RTO (EV-031; P01 GR-09).
+- **The colocation data center for SYS-I4.** There is no second site; recovery is from the provider B vault onto rebuilt servers, estimated at 36 hours, beyond the 12-hour RTO (EV-057; P01 INS-007).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -113,7 +115,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 15. to 29. Disclosure, occupational health portal, telehealth, agent and policyholder portals, payroll, policy and billing, HR records, financial close, work-injury reports, revenue cycle, underwriting, payables, health plan administration, statutory reporting, and fraud scoring.
 
 ## 8. Key findings
-1. **The holding company's shared services set the floor for every division.** No division can recover faster than SYS-G1 and the network hub. Their 1-hour and 2-hour RTOs were met in the two 2026 failover tests.
+1. **The holding company's shared services set the floor for every division.** No division can recover faster than SYS-G1 and the network hub. Their 1-hour and 2-hour RTOs were met in the two 2026 failover tests (EV-031).
 2. **The integration services RTO is not yet achievable.** The 2026-02 test took 6 hours against a 4-hour RTO, and claims payments and payroll both depend on it (P01 GR-09; P07 CP-4 finding).
 3. **The acquired clinics' 24-hour RPO is far from the division's 1-hour target** (BP-H04). Migration to SYS-H1 by 2027-03-31 closes it (P01 HCS-004).
 4. **The workers' compensation platform has no second site.** The estimated 36-hour rebuild exceeds its 12-hour RTO (P01 INS-007).

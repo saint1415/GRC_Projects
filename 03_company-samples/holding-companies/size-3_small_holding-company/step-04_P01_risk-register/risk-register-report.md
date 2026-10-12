@@ -11,7 +11,7 @@
 | Approved | 2026-09-25 by the CFO (Moderate and below), the CEO (High), and the Board of Managers (High-risk treatment plans and budget) |
 
 ## 1. Scope and risk framing
-**Scope.** The Shared Corporate Services Platform (SCSP) and every business process in the BIA (P05), for the holding company and all three subsidiaries: Supply, Home Services, and Finance. The register also covers the subsidiary systems that connect to the shared platform (SYS-10 to SYS-12) and the service providers that support it (`../00_company-facts.md` section 3).
+**Scope.** The Shared Corporate Services Platform (SCSP) and every business process in the BIA (P05), for the holding company and all three subsidiaries: Supply, Home Services, and Finance. The register also covers the subsidiary systems that connect to the shared platform (SYS-10 to SYS-12) and the service providers that support it ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Why one register for the group.** The subsidiaries share one identity tenant, one email and file tenant, one ERP, one cloud tenant, and one IT team. A risk to the shared platform is a risk to every subsidiary at once, so risks are assessed at group level. Each risk names the affected subsidiary data or process where it differs.
 
@@ -25,8 +25,8 @@
 This is the group's first documented risk assessment. Finance's last written risk assessment was in 2023 and covered only Finance's own systems.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the CSF 2.0 group profile and Safeguards Rule gap analysis (P03), and interviews at all three sites with the CFO, Controller, HR Director, Treasury and Payments Analyst, the three subsidiary Presidents, and the MSP.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, and interviews at all three sites with the CFO, Controller, HR Director, Treasury and Payments Analyst, the three subsidiary Presidents, and the MSP (EV-062). The CSF 2.0 group profile and Safeguards Rule gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the 2026-08-12 event record (EV-028), incident records (EV-040), the document request (EV-030) and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Harm to more than one subsidiary, or to Finance customer information, raised the rating by one level where the harm was not already rated High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -53,7 +53,7 @@ The four High risks share one theme: **a single compromise of the shared platfor
 
 R-006 and R-019 come from the same finding. On 2026-08-12 the AI assistant pilot showed a Finance loan document to a Supply user, which exposed all-employee access on three collaboration sites. All-employee access was removed from the loan archive the next day.
 
-R-032 was added on 2026-09-11 after control assessment testing (P07) found a shared generic account on three Supply counter desktops.
+**Two passes.** Pass 1 was completed on 2026-08-28 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-09-11 after testing found a shared generic account on three Supply counter desktops (EV-IA-2). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $61,000):**

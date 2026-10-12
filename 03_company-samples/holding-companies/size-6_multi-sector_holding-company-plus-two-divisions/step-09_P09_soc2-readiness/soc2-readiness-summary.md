@@ -14,7 +14,7 @@ A SOC 2 report covers controls at a **service organization** relevant to the **u
 | Division | Service line | Who relies on it | Decision | Categories | Report |
 |---|---|---|---|---|---|
 | Holding company | Shared Corporate Services Platform (identity, ERP, HCM and payroll, treasury) for the group's subsidiaries | **The insurers, Health Care Services, and the group health plan.** They are affiliates, but the insurers must perform due diligence on the holding company as their Third-Party Service Provider (Model #668 sec. 4F), and Health Care Services must oversee it as a business associate | **In scope as an affiliate assurance report.** A SOC 2 examination by an independent CPA, with the subsidiaries as the specified users. It replaces separate due diligence by each subsidiary (POL-01 4.8(b)) | Security, Availability, Confidentiality, Processing Integrity | Type 2 for 2027-04-01 to 2027-09-30, after readiness by 2027-03-31 |
-| Health Care Services | Occupational health employer portal (SYS-H2) for about 6,200 employer clients | **Employer clients**, which receive work-status reports and manage their own users. 140 larger clients asked for a SOC 2 report in 2026 security questionnaires | **In scope (full).** A true service organization for this line | Security, Availability, Confidentiality | Type 1 as of 2027-06-30, then Type 2 for 2027-07-01 to 2027-12-31 |
+| Health Care Services | Occupational health employer portal (SYS-H2) for about 6,200 employer clients | **Employer clients**, which receive work-status reports and manage their own users. 140 larger clients asked for a SOC 2 report in 2026 security questionnaires (EV-072) | **In scope (full).** A true service organization for this line | Security, Availability, Confidentiality | Type 1 as of 2027-06-30, then Type 2 for 2027-07-01 to 2027-12-31 |
 | Health Care Services | Clinical care in 340 clinics | Patients are not user entities | Out of scope | n/a | n/a |
 | Insurance | Property and casualty and workers' compensation insurance | **No user entities.** Policyholders and employers buy coverage; they do not build their own controls on the insurers' systems | **Out of scope** (reasons below) | n/a | n/a |
 
@@ -51,7 +51,7 @@ A SOC 2 report covers controls at a **service organization** relevant to the **u
 | Processing Integrity (PI1, 5) | 4 | 1 | 0 | 0 |
 | Privacy (P1-P8, 18) | | | | 18 |
 
-**Not ready:** CC2.3. There is no system description and no written security commitment to the subsidiaries; the insurers' 2017 agreement has no security schedule (scenario gap 2).
+**Not ready:** CC2.3. There is no system description and no written security commitment to the subsidiaries; the insurers' 2017 agreement has no security schedule (group gap 2).
 **Partially ready:** CC3.4, CC6.1, CC6.2, CC6.3, CC6.7, CC7.2, CC7.4, CC9.2, A1.3, C1.1, and PI1.2. They map directly to the P07 findings: identity recovery and privilege (POAM-001, POAM-002), ERP superusers (POAM-003, POAM-004), the benefits export (POAM-005), the legacy trust (POAM-006), the integration failover (POAM-007), vendor complementary controls (POAM-008), the notification matrix (POAM-009, POAM-010), labels (POAM-023), and upstream bank-detail verification (POAM-013).
 
 **Processing Integrity is in scope here** because what the subsidiaries most rely on is that payments and payroll are complete, accurate, and timely. PI1.2 is only partially ready because a fraudulent bank detail entered upstream in Insurance passes the SCSP's validation as a valid input.

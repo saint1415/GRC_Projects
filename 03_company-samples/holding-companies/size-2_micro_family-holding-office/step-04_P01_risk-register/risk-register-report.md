@@ -12,7 +12,7 @@
 | Approved | 2026-09-18 by the Principal; High-risk treatment plans approved by the Board of Managers the same day |
 
 ## 1. Scope and risk framing
-**Scope.** The office and its key vendors: every system in the Family Office Shared Services Platform (SYS-01 to SYS-11 in `../00_company-facts.md`), the office suite, and the providers that hold or reach family information: the productivity suite, accounting, bill pay, payroll, investment platform, and vault vendors, the banks and custodians, the cloud provider, the MSP, and the outside CPA firm. The three subsidiaries' own systems are out of scope; the risks they bring to the office through guest access and payment approvals are in (R-018).
+**Scope.** The office and its key vendors: every system in the Family Office Shared Services Platform (SYS-01 to SYS-11 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the office suite, and the providers that hold or reach family information: the productivity suite, accounting, bill pay, payroll, investment platform, and vault vendors, the banks and custodians, the cloud provider, the MSP, and the outside CPA firm ([vendor register](../step-00_P00_intake/vendor-register.csv)). The three subsidiaries' own systems are out of scope; the risks they bring to the office through guest access and payment approvals are in (R-018).
 
 **What the office is protecting.** The office's own revenue is small ($1.1 million). What it protects is much larger: the family's money (about $310 million advised, plus daily payments), the family's privacy and physical safety (addresses, travel plans, minors' details), and the subsidiaries' ability to pay large bills. Impact ratings use the BIA categories in P05, scaled to that exposure.
 
@@ -24,8 +24,8 @@
 This is the office's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the March 2026 payment fraud attempt, and interviews with all 7 staff and the MSP lead technician (2026-08-03 to 2026-08-14).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the gap analysis (P03), the March 2026 payment fraud attempt (EV-037), and interviews with all 7 staff and the MSP lead technician (2026-08-03 to 2026-08-14, EV-047). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the productivity suite, vault, bank and MSP exports, the contracts and insurance policy, the March 2026 request, the guest account comparison of 2026-08-05 (EV-048), and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Theft of every family member's identity documents is rated Very High because of the identity theft, extortion, and personal safety harm.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,11 +53,13 @@ Status: 9 In progress, 11 Open, 3 Closed (R-021 treated; R-019 and R-020 accepte
 **The common theme is email-driven payment fraud.** A small office that moves large sums by email is a prime target for business email compromise. The four High risks share three fixes: stronger sign-in (R-001, R-005), a written and recorded callback rule (R-002, R-015), and less data reachable from any one account (R-003, R-004). These fixes also reduce R-008, R-009, R-018, and R-023.
 
 **Risks that changed during the work:**
-- R-004: the AI assistant surfaced a trust distribution memo to the Executive Assistant on 2026-07-22. Florida law treats good-faith access by an employee as not a breach when the information is not misused (Fla. Stat. 501.171(1)(a)), and nothing left the office, so no notice was due. The access design gap remains.
-- R-008: the former Marine Supply controller's guest account was removed on 2026-08-14. The sign-in log showed no use after February 2026. The process gap remains.
-- R-009: the Principal's spouse got a separate vault account on 2026-08-20.
-- R-021: the MSP updated the printer firmware and locked down the conference PC on 2026-08-21. Closed.
-- R-023: added on 2026-09-02 after P07 testing found that the bill pay platform's dual approval setting was off.
+- R-004: the AI assistant surfaced a trust distribution memo to the Executive Assistant on 2026-07-22 (EV-038). Florida law treats good-faith access by an employee as not a breach when the information is not misused (Fla. Stat. 501.171(1)(a)), and nothing left the office, so no notice was due. The access design gap remains.
+- R-008: the former Marine Supply controller's guest account was removed on 2026-08-14. The sign-in log showed no use after February 2026 (EV-048). The process gap remains.
+- R-009: the Principal's spouse got a separate vault account on 2026-08-20 (EV-056).
+- R-021: the MSP updated the printer firmware and locked down the conference PC on 2026-08-21 (EV-057). Closed.
+- R-023: added on 2026-09-02 after P07 testing found that the bill pay platform's dual approval setting was off (EV-AC-6).
+
+**Two passes.** Pass 1 was completed on 2026-08-14 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-09-02 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Principal; about $7,900 one-time and $6,700 a year):**
