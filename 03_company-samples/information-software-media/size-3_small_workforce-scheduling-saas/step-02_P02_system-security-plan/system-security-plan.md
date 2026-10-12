@@ -29,7 +29,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | State | Florida Information Protection Act (breach notification; third-party agent duties) | Fla. Stat. 501.171 | Notice duties in P08; other states handled generically |
 | Internal | Security policies POL-01 to POL-05 | P06 | |
 
-Not applicable (see `../00_company-facts.md` section 1): COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), PADFA (N51-R05, the company is not a data broker), HIPAA, and PCI DSS.
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)): COPPA (N51-R02), FCC CPNI (N51-R06), FedRAMP (N51-R07), SEC disclosure (N51-R08), PADFA (N51-R05, the company is not a data broker), HIPAA, and PCI DSS.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -66,6 +66,7 @@ Information types were chosen with reference to NIST SP 800-60 Vol. 2 Rev. 1 (cl
 - **Not selected at this tier**, recorded as a tailoring decision, where the control mainly serves federal systems (for example, most PM-series program controls).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the production cloud account (all SYS-01 services), the configuration of the source repository and CI/CD pipeline (SYS-03), the identity provider tenant (SYS-04), the internal admin console, the logging and monitoring configuration (SYS-06), and the company laptops used to administer them (SYS-10).
 - **Connected system in scope for data protection:** the staging account (SYS-02), because it holds unmasked copies of production data until the purge due 2026-10-30.
 - **Outside (external services, interconnected):** the cloud provider's infrastructure, the email and SMS delivery providers (SYS-07), the AI model provider (SYS-08), the support ticketing SaaS, and the payment processor used for customer billing (no worker data).
@@ -121,7 +122,7 @@ All workforce users authenticate through the identity provider with a password a
 Customer users authenticate with platform accounts or their own single sign-on. MFA is enforced for customer administrators, who can see all their workers' data, and is optional for workers, who see only their own schedules. The residual risk of worker account takeover is R-017 in P01.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10), SOC 2 Type 1 report (2026-02-28).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness (P09), AI assessment (P10), SOC 2 Type 1 report (2026-02-28).
 
 ## 13. Acronym List and Glossary
 - **CI/CD:** continuous integration and continuous delivery

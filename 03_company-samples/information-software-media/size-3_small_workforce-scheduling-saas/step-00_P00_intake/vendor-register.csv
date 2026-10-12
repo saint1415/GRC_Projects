@@ -1,0 +1,19 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,IaaS/PaaS for production and staging,SYS-01; SYS-02,All customer worker data,Customer agreement with DPA (sub-processor),"SOC 2 Type 2 report from the provider portal, period ending 2026-03-31",EV-036; EV-039; EV-041,Sub-processor listed in the DPA
+V-02,Logging and monitoring SaaS vendor,"Application logging, monitoring and uptime",SYS-06,Application logs with incidental worker names and phone numbers,DPA signed,None on file,EV-036; EV-039; EV-040,Sub-processor listed in the DPA
+V-03,Email delivery service,Transactional email to workers,SYS-07,"Worker names, email addresses and shift details",DPA signed,None on file,EV-036; EV-039; EV-040,Sub-processor listed in the DPA
+V-04,SMS provider,Text messages to workers,SYS-07,Worker mobile numbers and shift details,DPA signed,None on file,EV-036; EV-039; EV-040,Sub-processor listed in the DPA; single SMS provider
+V-05,Support ticketing and chat SaaS vendor,Customer support tickets and chat,SYS-05,"Tickets, screenshots and attachments from customer administrators",DPA signed,None on file,EV-036; EV-039; EV-040,Sub-processor listed in the DPA
+V-06,Generative AI model provider,Model API for the AI assistant,SYS-08,"Schedule data, availability and worker first names in prompts",Click-through API terms; no DPA,None on file,EV-036; EV-039; EV-040; EV-047,Sub-processor added June 2026; customer notice sent 12 days before it began receiving data
+V-07,Identity provider vendor,Workforce single sign-on and MFA,SYS-04,Workforce identities,Subscription terms,None on file,EV-036; EV-039,Critical vendor; not a sub-processor
+V-08,Source hosting and CI service,Source repository and CI/CD,SYS-03,Source code and CI secrets (no customer data),Subscription terms,None on file,EV-036; EV-039,Critical vendor; not a sub-processor
+V-09,Productivity suite and chat vendor,"Email, files and chat",SYS-09,Company documents; incidental customer contacts,Subscription terms,None on file,EV-036,Not a sub-processor
+V-10,HR information system vendor,HR records and learning records,SYS-09,Company employee records,Subscription terms,None on file,EV-036,Not a sub-processor
+V-11,CRM vendor,Customer and prospect records; questionnaire library,SYS-09,Customer administrator and billing contacts; prospects,Subscription terms,None on file,EV-036,Not a sub-processor
+V-12,Payment processor,Customer billing,SYS-09,Customer billing contacts and payment details held by the processor,Processor terms,None on file,EV-036; EV-045,No payment card data held by the company
+V-13,Enterprise generative AI assistant vendor,Staff drafting and code assistance,AI-STAFF,Internal documents and code,Subscription terms (no training on inputs),None on file,EV-036; EV-037,See P10 AI-003
+V-14,Penetration test firm,Annual external penetration test,SYS-01,Test results,Engagement letter,n/a,EV-019; EV-036,January 2026 test and retest letter
+V-15,SOC 2 service auditor (independent CPA firm),SOC 2 examinations,WSP,Control evidence,Engagement letter,n/a,EV-030; EV-036,Issued the Type 1; engaged for the Type 2
+V-16,Certified electronics recycler,Laptop disposal,SYS-10,Retired laptops,Service agreement,Certificates of destruction,EV-025; EV-036,
+V-17,Outside privacy counsel,Breach notification and contract advice,n/a,Incident and contract information,Retainer,n/a,EV-036,
+V-18,Cyber insurer,Cyber insurance; breach hotline; panel forensic firms,n/a,Incident information,Insurance policy,n/a,EV-036; EV-042,No separate forensic retainer on file

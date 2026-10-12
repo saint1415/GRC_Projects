@@ -11,7 +11,7 @@
 | Approved | 2026-09-22 by the CTO (Moderate and below) and the Chief Executive Officer (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Workforce Scheduling Platform (WSP) defined in the SSP (P02), the staging environment that holds production data copies, the sub-processors that receive customer worker data, and the business processes in the BIA (P05). See `../00_company-facts.md` sections 3 and 4.
+**Scope.** The Workforce Scheduling Platform (WSP) defined in the SSP (P02), the staging environment that holds production data copies, the sub-processors that receive customer worker data, and the business processes in the BIA (P05) ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What the company protects.** About 140,000 worker profiles that belong to about 310 customers. Customers rely on the platform to capture time punches and produce payroll exports, so integrity and availability matter as much as confidentiality.
 
@@ -23,8 +23,8 @@
 This is the company's second risk assessment. The first (December 2025) supported the SOC 2 Type 1 and did not cover staging, sub-processors, or the AI assistant.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical's critical systems (multi-tenant platforms, identity, CI/CD), the three SOC 2 Type 1 exceptions, the P03 gap analysis, the BIA, and interviews with the CTO, Platform Engineering Lead, Engineering Manager, Customer Support Manager, and COO.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, were rated and combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the vertical's critical systems (multi-tenant platforms, identity, CI/CD), the three SOC 2 Type 1 exceptions (EV-030), the BIA, the intake evidence, and interviews with the CTO, Platform Engineering Lead, Engineering Manager, Customer Support Manager, and COO (EV-051). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, were rated and combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the SOC 2 Type 1 report, contracts, documents and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3** using the BIA impact categories. "Very High" is reserved for events that could expose most customers' worker data or stop time capture for all customers.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -55,7 +55,7 @@ No risk rated Very High. Three risks were accepted (R-023, R-025, R-029, all Low
 
 R-002 and R-003 are also SOC 2 Type 1 exceptions 1 and 2, and R-004 is exception 3. They must be closed before the Type 2 observation period starts on 2026-11-01 (P09 readiness gates).
 
-R-015 was added on 2026-09-04 after control assessment testing (P07) found two former contractors with local repository accounts outside single sign-on. The accounts were removed the same day.
+**Two passes.** Pass 1 was completed on 2026-08-21 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-015 was added on 2026-09-04 after testing found two former contractors with local repository accounts outside single sign-on (EV-AC-2). The accounts were removed the same day. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 to 2027 Q1 budget, $78,000):**

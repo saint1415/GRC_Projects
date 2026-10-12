@@ -8,12 +8,12 @@
 | Company role | **Developer and provider** of the AI features. Customers (employers) are the **deployers** who decide how their managers use them |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1) |
 | Assessor / date | Director of Product and the IT Manager, with the Engineering Manager and COO, 2026-09-08 to 2026-09-11 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the vendor spend report, the identity provider app list, the beta release notes and the AI service configuration (EV-036, EV-037, EV-046, EV-047). How many staff use the enterprise assistant, and whether staff use other AI tools outside single sign-on, was not established (intake open request) |
 | Related items | P01 R-019, R-020, R-021, R-022; P03 G-003, G-019, G-033, G-042; P07 POAM-011; P09 vendor review V-06 |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Product. **Decision authority:** the CTO and the Director of Product co-approve AI features. Because AI-002 is rated High (section 3), the Chief Executive Officer also signs its decision.
-- **Why this assessment is late:** the assistant went live in beta without an AI risk assessment, bias testing, or an update to the public data-use statement (scenario gap 13). The same review step is now required by POL-01 4.8 for every new AI feature.
+- **Why this assessment is late:** the assistant went live in beta without an AI risk assessment, bias testing, or an update to the public data-use statement (EV-046, EV-027, EV-049). The same review step is now required by POL-01 4.8 for every new AI feature.
 - **Policies that apply:**
   - POL-01 4.8: security and privacy review in design for AI features; 4.9: sub-processor review and 30-day notice; 4.10: accurate public AI statements
   - POL-04 4.5: customer data used only to provide the service, never to train models, minimum data to the model provider
