@@ -1,0 +1,22 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider A,"IaaS and PaaS for production, the healthcare cell, DR and the landing zone",SYS-01; SYS-02; SYS-03; SYS-04,Customer data; ePHI,DPA; subcontractor BAA,"SOC 2 Type 2, 12 months ending 2026-03-31; shared responsibility documentation",EV-041; EV-042; EV-049,
+V-02,Data platform SaaS on cloud provider B,Data warehouse,SYS-11,"Ticket metadata, including healthcare cell subject lines",DPA,Earlier SOC 2 report on file; no annual review in the last 12 months,EV-023; EV-041; EV-043,Not one of the 6 sub-processors listed as receiving healthcare cell data (EV-041)
+V-03,Content delivery and WAF provider,"Edge, WAF and content delivery",SYS-01,Customer traffic in transit,DPA; subcontractor BAA,Annual SOC 2 review current,EV-041; EV-042; EV-043,
+V-04,Email delivery service,Outbound and inbound email,SYS-09,Customer data; ePHI,DPA; subcontractor BAA,Annual SOC 2 review current,EV-041; EV-042; EV-043,The only email delivery provider
+V-05,SMS provider,SMS notifications and replies,SYS-09,Customer data; ePHI,DPA; no subcontractor BAA located,No annual review in the last 12 months,EV-041; EV-042; EV-043,
+V-06,AI model provider,Generative AI and embeddings API,SYS-10,Customer data; ePHI (zero-retention endpoint),DPA (no training); BAA for the zero-retention endpoint,Annual SOC 2 review current,EV-041; EV-042; EV-043; EV-046,Standard endpoint keeps prompts 30 days (EV-046)
+V-07,Application logging SaaS,Application logs,SYS-08,Logs that can contain personal data; ePHI,DPA; subcontractor BAA,Annual SOC 2 review current,EV-041; EV-042; EV-043,
+V-08,Error-tracking SaaS,Error events,SYS-08,Error payloads that can contain personal data; ePHI,DPA; no subcontractor BAA located,No annual review in the last 12 months,EV-041; EV-042; EV-043,About 1.2 million error events a month (EV-027)
+V-09,Performance monitoring SaaS,Application performance monitoring,SYS-08,Telemetry,DPA,Annual SOC 2 review current,EV-041; EV-043,
+V-10,Status page provider,Public status page,SYS-08,Customer contact emails for status notices,DPA,Security questionnaire,EV-041; EV-043,Added 2025-11 (EV-041)
+V-11,Translation API provider,Ticket translation,SYS-01,Ticket text,DPA,No annual review in the last 12 months,EV-041; EV-043,Added 2026-02 (EV-041)
+V-12,Social messaging connector provider,Social messaging channels,SYS-09,Messages,DPA,Annual SOC 2 review current,EV-041; EV-043,
+V-13,Customer data export service,Customer data exports,SYS-01,Customer data,DPA,No annual review in the last 12 months,EV-041; EV-043,
+V-14,MDR provider,24x7 monitoring of endpoints and the identity provider,SYS-08; SYS-12,Security logs,Contract; DPA,Annual SOC 2 review current,EV-029; EV-041; EV-043,Cloud workloads outside scope (EV-029)
+V-15,Workforce identity provider vendor,"Single sign-on, MFA, just-in-time access",SYS-06,Workforce identities,Subscription terms,SOC 2 report on file,EV-040; EV-043,Not a sub-processor
+V-16,Source hosting and CI vendor,"Source hosting, CI/CD, artifact registry",SYS-05,Source code; pipeline secrets,Subscription terms,SOC 2 report on file,EV-040; EV-043,Not a sub-processor
+V-17,Engineering services contractor (Poland),18 developers through company virtual desktops,SYS-05,Source code; no customer data,Services agreement with security and confidentiality terms,Screening attestation,EV-036; EV-040; EV-047,No DOJ Data Security Program terms (EV-047)
+V-18,AI coding assistant vendor,Enterprise AI coding assistant (AI-004),SYS-05,Source code,Enterprise terms (no training on inputs),None on file,EV-040; EV-056,
+V-19,Meeting and call summarizer vendor,Call summaries (AI-005),SYS-12,Call audio and transcripts,Enterprise terms (no training on inputs),None on file,EV-040; EV-056,
+V-20,"Corporate SaaS vendors (productivity suite, CRM, HR information system and payroll provider, billing SaaS and payment processor)",Corporate systems,SYS-12,Employee data; customer contact data; billing data,Subscription terms,None on file,EV-040,
+V-21,Cyber insurer,Cyber insurance with panel breach counsel and forensics,n/a,Incident information when a claim is made,Policy,n/a,EV-048,
