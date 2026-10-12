@@ -46,8 +46,8 @@
 Risks in ER-06 (regulatory and disclosure) above Low cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the financial sector threat picture (business email compromise, account takeover, ransomware and destructive attacks, third-party concentration), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the financial sector threat picture (business email compromise, account takeover, ransomware and destructive attacks, third-party concentration) in the Cyber Defense Center's threat intelligence (EV-063), the BIA (P05), the intake evidence, the 2025 cyber risk assessment (EV-025), and risk workshops with Cyber Defense, Fraud Strategy, Payments Operations, Treasury Management, Core and Digital Banking Technology, Third-Party Risk Management, the Integration Management Office, Model Risk Management, broker-dealer compliance and Enterprise Resilience (EV-072). The gap analysis (P03) ran in the same fieldwork window, and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, fraud loss and case history (EV-045, EV-016), configuration and coverage exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the gap analysis samples and the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -69,6 +69,8 @@ By threat source type: Adversarial 31, Structural 28, Accidental 5, Environmenta
 By treatment: Mitigate 55, Accept 8, Avoid 2, Share/Transfer 1.
 By status: In progress 53, Open 3, Closed (accepted) 8, Closed (avoided) 2.
 **16 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-10 from the intake evidence and the May to July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-027 was added on 2026-08-14 after testing found an enabled service account from a retired integration with a non-expiring password and query rights to the customer information file (EV-IA-5, EV-AC-2(3)), and 9 risks (R-001, R-007, R-015, R-016, R-017, R-025, R-026, R-031 and R-032) were updated with the P07 results and the gap analysis samples completed in July (their `last_reviewed` date is 2026-08-14; their `likelihood_basis` cites the sample or P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, Inc. (publicly traded bank holding company); Cris Santos Bank, N.A. |
 | Tier / Vertical | Enterprise / Finance and Insurance |
 | Scope | Enterprise AI portfolio (16 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001, the machine learning credit underwriting model for consumer unsecured personal loans and credit cards, in section 7 |
+| Inventory | `ai-use-case-inventory.csv` (16 use cases), built from the AI governance committee register (EV-053), the Model Risk Management model inventory and AI-001 records (EV-054), the web proxy category report and SSO application catalog (EV-055), the accounts payable vendor master (EV-035), and the records of the 2026-08-19 portfolio review (EV-083). The `source_evidence` column names the source of each row. Not established at intake: AI features embedded in vendor products that neither the application catalog nor the invoices show, and workforce use of public AI tools from personal devices |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; NIST AI 600-1 (Generative AI Profile) for generative use cases; SR 26-2 revised model risk management guidance (2026-04-17) for non-generative models; repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Data and Analytics Officer), portfolio review of 2026-08-19; Model Risk Management and the Fair Lending Officer prepared the AI-001 evidence |
 | Decision | Executive risk committee, 2026-09-18 (section 9) |

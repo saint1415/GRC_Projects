@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. (bank holding company) | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's operational resilience team with the three division continuity leads | **Fieldwork:** 2026-05-01 to 2026-07-31 | **Approved:** holding company board risk committee and bank board risk committee, 2026-09-10
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-071 group, EV-072 Banking, EV-073 Financial Software, EV-074 Commercial Real Estate), FY2025 revenue by division (EV-003), customer, wire, client and loan volumes (EV-041, EV-042, EV-052, EV-064), data center, backup and recovery records (EV-032, EV-036, EV-045, EV-057), and the June 2026 core failover test (EV-075). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by both board risk committees.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,10 +16,10 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Shared corporate services are SYS-G1 identity, SYS-G2 SOC, SYS-G3 hybrid infrastructure (two group data centers plus landing zones in cloud providers A and B), and SYS-G4 email and collaboration. Division systems are the bank's core (SYS-B1), payments hub (SYS-B2), lending (SYS-B3), and branch and card platforms (SYS-B4); the Financial Software division's digital banking platform (SYS-S1) and data services platform (SYS-S2); and Commercial Real Estate's loan system (SYS-R1) and property management systems (SYS-R2). The SSP system in P02 is the Core and Digital Banking Platform (SYS-B1 plus SYS-S1). See `../00_company-facts.md` sections 3 and 7.
+Shared corporate services are SYS-G1 identity, SYS-G2 SOC, SYS-G3 hybrid infrastructure (two group data centers plus landing zones in cloud providers A and B), and SYS-G4 email and collaboration. Division systems are the bank's core (SYS-B1), payments hub (SYS-B2), lending (SYS-B3), and branch and card platforms (SYS-B4); the Financial Software division's digital banking platform (SYS-S1) and data services platform (SYS-S2); and Commercial Real Estate's loan system (SYS-R1) and property management systems (SYS-R2). The SSP system in P02 is the Core and Digital Banking Platform (SYS-B1 plus SYS-S1). The full list, with the evidence behind each entry, is in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: the bank earns about $61 million per business day, Financial Software about $6.4 million, and Commercial Real Estate about $4.8 million.
+Dollar values use FY2025 revenue by division (EV-003) spread over about 250 business days: the bank earns about $61 million per business day, Financial Software about $6.4 million, and Commercial Real Estate about $4.8 million.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -105,7 +106,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 14. to 26. Email, treasury management, lending, servicing, BSA/AML, the cash-flow data service, the enterprise data platform, the release pipeline, financial reporting, building operations, payroll, client conversions, and lease billing.
 
 ## 8. Key findings
-1. **Shared services have shorter RTOs than any division process**, as they must. The identity RTO of 1 hour was met in two 2026 tests; the core failover RTO of 4 hours was met in the June 2026 semiannual test (2 hours 50 minutes).
+1. **Shared services have shorter RTOs than any division process**, as they must. The identity RTO of 1 hour was met in two 2026 tests (EV-071); the core failover RTO of 4 hours was met in the June 2026 semiannual test (2 hours 50 minutes, EV-075).
 2. **The platform's 4-hour MTD equals the regulatory notice trigger.** Any SYS-S1 outage or deliberate suspension that reaches 4 hours becomes a client notice event for up to 212 client banks and a notification incident question for the bank. P08 shows that a containment decision can start these clocks.
 3. **The payment initiation gateway is a hidden single point of failure** for digital wires and ACH (P01 BR-004).
 4. **Notification capacity is itself a process** (BP-G02, BP-S02, BP-G06). If the SOC, client support, or finance is down during an incident, notice clocks keep running. The P08 runbook uses out-of-band channels for this reason.

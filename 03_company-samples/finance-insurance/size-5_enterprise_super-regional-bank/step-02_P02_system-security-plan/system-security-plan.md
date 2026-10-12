@@ -78,6 +78,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1 (the closest federal ty
 **Documented controls.** `control-implementation.csv` documents **204 controls**: all 188 base controls of the High baseline, plus 16 control enhancements that carry bank-specific implementation detail (for example IA-2(1), CP-9(3), and SI-7(1)). The remaining High-baseline enhancements are fully inherited from the enterprise common control catalog (section 10.3) and are listed there rather than repeated here. The `csf2_subcategories` column uses the official CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/` and is blank where that crosswalk lists no subcategory for the control.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-02-API and SYS-05-CIAM, with the interfaces to SYS-03, SYS-04 and SYS-11) and the prior SSP version 2.0 (EV-062).
+
 **Inside the boundary:** the core banking software, database, and middleware servers in DC-1 and DC-2; the digital banking services and their data stores in the CBDC workload accounts on Cloud provider A; the API gateway and integration layer; the CIAM service configuration for digital banking; and the teller, platform, and contact center application components that call core services.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -192,7 +194,7 @@ The 31 system-specific rows have no provider.
 - **Red flags:** the identity theft prevention program under 12 CFR 41.90 uses CIAM signals (new device, contact data change followed by a payee add) as red flags.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), BEC and wire fraud runbook (P08), SOC 2 readiness for SL-1 (P09), AI portfolio including AI-001 (P10), CBDC contingency plan v7, core failover test report 2026-04-25, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), BEC and wire fraud runbook (P08), SOC 2 readiness for SL-1 (P09), AI portfolio including AI-001 (P10), CBDC contingency plan v7 (EV-019), core failover test report 2026-04-25 (EV-017), enterprise common control catalog (EV-027), prior SSP version 2.0 (EV-062). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

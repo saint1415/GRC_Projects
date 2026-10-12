@@ -14,7 +14,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 | Division | Service line | Service organization? | Decision | Categories | Report |
 |---|---|---|---|---|---|
 | Financial Software | Digital banking platform (SYS-S1) for 310 client institutions and the bank | **Yes, a true service organization.** Client institutions rely on the platform's controls as part of their own programs (12 CFR 30 App. B III.D.3 for bank clients) | **In scope.** Existing annual Type 2 | Security, Availability, Confidentiality; Processing Integrity planned for the 2027 period | Type 2, 12 months ending September 30; SOC 1 Type 2 as well |
-| Financial Software | Cash-flow data service (SYS-S2) for 64 client banks | **Yes.** Client banks use its outputs in credit decisions | **To be added** to the 2026 description, or excluded with a statement (scenario gap 4) | Same, plus Processing Integrity in 2027 | Same report |
+| Financial Software | Cash-flow data service (SYS-S2) for 64 client banks | **Yes.** Client banks use its outputs in credit decisions | **To be added** to the 2026 description, or excluded with a statement (group gap 4) | Same, plus Processing Integrity in 2027 | Same report |
 | Banking | Deposits, lending, payments, treasury management | **No** for SOC 2. The bank's customers buy banking products; they do not build their controls on the bank's systems | **Out of scope** (reasons below) | n/a | n/a |
 | Commercial Real Estate | CRE lending; loan servicing for the bank and third-party investors; group premises | **Partly.** Loan servicing for third-party investors is a service whose controls affect investors' financial reporting | **Out of scope for SOC 2.** A SOC 1 on loan servicing is to be evaluated in 2027 if investors ask | n/a | n/a |
 
@@ -53,7 +53,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 **Processing Integrity** is planned for the 2027 period because client banks now ask whether payment processing and the cash-flow score are complete and accurate. Payment processing is ready (PI1.2, PI1.3, PI1.5); the score is not (PI1.1, PI1.4).
 
 ## 4. The bank as a user entity of its affiliate (`affiliate-soc-report-review.csv`)
-Until 2026 the bank never reviewed the division's SOC reports, because the division is an affiliate (P03 G-026; scenario gap 3). The first review, completed 2026-09-04 on the reports for the period ending 2025-09-30 plus a bridge letter to 2026-06-30, found:
+Until 2026 the bank never reviewed the division's SOC reports, because the division is an affiliate (P03 G-026; group gap 3). The first review, completed 2026-09-04 on the reports for the period ending 2025-09-30 plus a bridge letter to 2026-06-30, found:
 - unmodified opinions; one SOC 2 exception (CC6.2, late removal of 2 support leavers) with a fix in place;
 - the data service the bank's AI credit model uses is **not covered** by either report;
 - 4 of 6 CUECs mapped to bank controls that operate; the bank never gave the division a designated notice contact, and tenant administrator removal is not tied to bank HR events;

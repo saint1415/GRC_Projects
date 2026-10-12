@@ -3,9 +3,9 @@
 
 > Cris Santos Company Holdings, Inc. is a publicly traded, diversified enterprise with 45,000 employees in three divisions. The focus of this sample is its banking division (Finance and Insurance). The other divisions are financial software and data services (NAICS 51) and commercial real estate lending, with property management limited to the bank's own premises and foreclosed property (NAICS 53). Why this combination: Bank holding company with fintech and real estate lending affiliates; a bank holding company may not manage property for outside owners (12 CFR 225.28(b)(2)(vi)), so property management stays in-house.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -45,13 +45,14 @@ OCC; Federal Reserve Board; FDIC; NCUA; SEC; CFTC; CFPB (consumer financial law 
 | [NCUA security program and cyber incident notification](https://www.ecfr.gov/current/title-12/chapter-VII/subchapter-A/part-748) | 12 CFR Part 748 (748.0, 748.1(c), Appendices A and B) | No size threshold |
 | [OCC heightened standards for large banks](https://www.ecfr.gov/current/title-12/chapter-I/part-30/appendix-Appendix%20D%20to%20Part%2030) | 12 CFR Part 30, Appendix D | Average total consolidated assets of $50 billion or more (OCC proposal 90 FR 61084, 2025-12-30, would raise the threshold; not final) |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | Group and division systems of record; shared-service inventories; intercompany agreements. Evidence register per division; group inventories; obligations register per division and for the group. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | Group and division BIAs. Cross-division dependencies and shared services. | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | One system per division or a shared corporate system. SSP with common controls inherited from corporate. System: Core and Digital Banking Platform (CDBP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Shared corporate cloud platform plus division workloads. Common vs division-specific controls. | P02: the system boundary and its controls |

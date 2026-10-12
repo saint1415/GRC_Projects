@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for three priority use cases: the bank's AI credit underwriting model (AI-001), the Financial Software cash-flow data service (AI-005), and the bank's payment fraud model (AI-002) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1) for generative use cases, and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), with independent validation evidence from model risk management, 2026-08-28; presented to both board risk committees 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 2 High, 6 Medium, 2 Low) |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 2 High, 6 Medium, 2 Low), built from AI use-case discovery across the model inventory, procurement, SaaS discovery and the SYS-G1 app list (EV-030), model, monitoring and data service records (EV-047, EV-049, EV-050, EV-055, EV-059), the Group AI Standard (EV-080), and the 2026 validation and monitoring results for AI-001 (EV-086). The `source_evidence` column names the source of each row. Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -30,7 +30,7 @@
 6. **Developer documentation for products.** Any AI product sold to client institutions ships with documentation of intended uses, limitations, testing results, and human-review guidance.
 7. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after the cash-flow attributes were added to AI-001 (2026-03) and after AI-005 was sold to client banks. The attribute change went through performance validation but not through adverse action reason mapping, and AI-005 shipped without developer documentation (scenario gap 4). Both are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after the cash-flow attributes were added to AI-001 (2026-03) and after AI-005 was sold to client banks. The attribute change went through performance validation but not through adverse action reason mapping, and AI-005 shipped without developer documentation (group gap 4). Both are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
