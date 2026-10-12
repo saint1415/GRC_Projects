@@ -1,22 +1,72 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company Holdings | Management of Companies and Enterprises | Multi-Sector
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company Holdings, Inc. (publicly traded holding company and corporate shared services; Insurance and Health Care Services divisions; the self-insured group health plan) |
+| Intake window | 2026-03-30 to 2026-04-24 |
+| Collected by | Group GRC team (Group CISO's office), with the Insurance information security officer, the Health Care Services HIPAA Security Officer, the Group Chief Privacy Officer and the Group benefits director |
+| Approved | Board risk committee, 2026-09-15, with the other deliverables |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the group's own records before any assessment work began on 2026-05-04. It covers the 64 legal entities, the Shared Corporate Services Platform (SCSP) and the common infrastructure every subsidiary uses, the division systems of the insurers and of Health Care Services, the group health plan, the suppliers that touch them, and the rules that may bind each entity. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Rows are grouped by owner: the title of each row starts with Group, Group health plan, Insurance or Health Care Services. Later steps add their own fieldwork evidence (interviews, document reviews, tests) to the same register, so one list backs every deliverable.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analyses (P03) and the control assessment (P07).
 
 ## 2. Sources collected
-| Area | Evidence IDs | System of record | As of |
-|---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Division | Area | Evidence IDs | System of record | As of |
+|---|---|---|---|---|
+| Group | Entities, workforce, revenue, filings and governance | EV-001 to EV-012 | Entity management system; HCM; ERP and Form 10-K; corporate secretary's records; board portal; policy repository; GRC tool; regulatory filings; internal audit system | 2025-12-31 to 2026-03-31 |
+| Group | Identity (SYS-G1) | EV-013 to EV-018 | Identity platform, identity governance and PAM consoles; service desk knowledge base; directory console; integration route catalog | 2026-03-31 |
+| Group | Security operations (SYS-G2) | EV-019 to EV-025 | SIEM; SOC case system; EDR and email security consoles; scanner and penetration test report; incident library; insurance program files | 2026-03-31 |
+| Group | Cloud, network and recovery (SYS-G3) | EV-026 to EV-033 | Cloud consoles and CMDB; guardrail service; firewall management; key management; backup vault; continuity library; TLS scanner; provider portals | 2026-03-27 to 2026-03-31 |
+| Group | SCSP applications (SYS-G4 to SYS-G6) | EV-034 to EV-039 | ERP, HCM and treasury admin consoles; privacy office records; change system and pipeline; third-party risk tool | 2026-03-31 |
+| Group | Collaboration, workforce, vendors, AI and records | EV-040 to EV-047 | Productivity suite and data room consoles; learning system; HR case system; vendor master and contract register; procurement and SaaS discovery; records management | 2025-12-31 to 2026-04-15 |
+| Group health plan | Plan documents, enrollment and officials | EV-048 to EV-050 | Group benefits records; administrator reporting portal | 2025-12-31 to 2026-03-31 |
+| Insurance | Licenses, laws, programs, volumes, claims, surge, platforms, vendors, AI | EV-051 to EV-062 | Regulatory affairs records; compliance tracker; claims procedures; catastrophe records; Insurance IT records; SYS-I2 and SYS-I3 consoles; vendor management; model registry; SYS-I4 reporting | 2025-12-31 to 2026-04-01 |
+| Health Care Services | Clinics, HIPAA program, EHR, legacy EHR, devices, portal, telehealth, AI | EV-063 to EV-070 | Practice management reporting; compliance office; EHR console; hosting contract; device inventory; SYS-H2 and SYS-H3 records; clinical informatics | 2025-12-31 to 2026-03-31 |
+| Group; Health Care Services | Late answers to intake requests | EV-071, EV-072 | Productivity suite console; occupational health client services | 2026-05-08 to 2026-06-30 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Entities and scale.** The register lists 64 legal entities: the holding company, two Florida-domiciled stock insurers and CSC Health Services; it lists no bank, savings association, credit union, broker-dealer, investment adviser or investment company (EV-001). The workforce is 45,000: holding company about 5,500, Insurance about 20,500, Health Care Services about 19,000; HCM also holds about 60,000 former employee records (EV-002). FY2025 revenue was about $18.0 billion: Insurance about $14.2 billion and Health Care Services about $3.8 billion (EV-003).
+
+**Filings and governance.** The group files as a large accelerated filer; Item 1C of the 2025 Form 10-K describes the program and its oversight, and the auditor's 2025 attestation is unqualified (EV-004). The disclosure committee charter covers cybersecurity incidents; no minutes record a materiality decision using facts from all three divisions (EV-005). The board risk committee approved the program in 2025 and receives a quarterly Group CISO report (EV-006, EV-007). The 2025 policies are aligned to CSF 2.0; the library has no AI standard; the Insurance supplement was last aligned 2025-10 and the Health Care Services supplement 2023-05 (EV-008). The 2025 risk appetite has one cyber limit, and the acceptance matrix names who may accept each level (EV-009). The 2026 enterprise risk report under Fla. Stat. 628.801(2) was filed and describes shared-service cyber risk in general terms (EV-010). 2025 SOX testing found 17 standing ERP superusers and unreviewed emergency access, reported to the audit committee in 2026-02 (EV-012).
+
+**Group identity.** About 52,000 workforce identities, 1,240 service accounts and about 900 federated applications; number-matching MFA for all workforce users and hardware keys for administrators and payment roles (EV-013). Joiner, mover and leaver events run from HCM; 112 service accounts have no named owner, service accounts are outside certification, and 41 static keys are older than 1 year; median time from termination to disablement is 38 minutes (EV-014). 212 accounts hold group-wide identity administration or reset rights, including 61 division help desk agents; directory and cloud administrators use PAM; the 17 ERP superusers do not (EV-015). Help desk resets check an employee ID and the manager's name (EV-016). A two-way trust links the corporate forest with the acquired clinics' local directory, with no entry in the interconnection register (EV-017). The integration route catalog includes a 2025 benefits export to a general HR site, and the claims file exchanges with the insurers list no security requirements (EV-018).
+
+**Group security operations.** The legacy directory and legacy EHR at the 50 acquired clinics are not SIEM data sources, and behavior analytics exclude service account sign-ins and help desk resets (EV-019). The SOC runs 24x7 with playbooks (EV-020); EDR and email security cover the estate (EV-021); scans run weekly and the 2026-03 penetration test reported no critical issues (EV-022). The notification matrix has no rows for insurance commissioners, producers of record or the group health plan, and exercises to date are technical (EV-023). A cyber insurance program and forensic retainer are in place (EV-024).
+
+**Group cloud, network and recovery.** Provider A hosts the hub, the SCSP integration services and the division cloud workloads; provider B holds the immutable vault and the warm standbys; the colocation data center hosts SYS-I4 and directory servers (EV-026). Guardrails apply to every division account (EV-027); the hub denies by default, and the acquired clinics run flat networks (EV-028). Backups are immutable with quarterly restore tests; SYS-I4 restores are tested once a year (EV-030). The integration services failover test on 2026-02-21 took 6 hours against a 4-hour RTO, with no retest scheduled; identity and network tests met their RTOs (EV-031). Endpoints accept TLS 1.2 or higher (EV-032).
+
+**SCSP applications.** The ERP has 3,100 users and 17 standing superuser accounts, 3 for vendor support (EV-034). HCM holds 45,000 employee records; a benefits export reaches an HR site that about 140 staff outside the plan administration unit can open, where plan appeal and stop-loss files also sit (EV-035). Treasury has 260 users at 14 banks and releases about $65 million per business day with dual approval and positive pay (EV-036). The ERP vendor review does not map complementary user entity controls to owners (EV-039).
+
+**Collaboration, workforce, vendors and AI.** No sensitivity labels are configured; deal-room exports have been copied to general sites (EV-040). 2025 training completion was 98%; no module covers social engineering of resets or call center payment-change fraud (EV-042). Intercompany services are not in the vendor inventory (EV-044). The 2017 intercompany agreement with the insurers has no security, service level or incident notice terms; the 2021 BAA with Health Care Services requires breach notice within 10 days (EV-045). AI discovery found ten tools in use or proposed, including the assistant pilot planned for 2026-05-04 and HCM resume screening switched on by the vendor in 2026-03 (EV-046). The pilot began with 6,000 users and no sensitivity labels, and the productivity vendor's BAA does not list the AI add-on (EV-071, received after intake).
+
+**Group health plan.** About 38,000 participants and 92,000 covered lives; about 9,000 covered lives were treated at the group's clinics in 2025 (EV-049). The plan documents were amended in 2014 for 164.504(f) and contain no 164.314(b)(2) terms; the sponsor certification has not been re-signed since 2014 (EV-048). The plan's security official was designated in 2026-02 (EV-050).
+
+**Insurance.** Both insurers are licensed in 6 states and none in New York (EV-051); Alabama, South Carolina and Tennessee (in part) have enacted Model #668, and North Carolina has adopted the NAIC AI bulletin (EV-052). Written programs were updated in 2025; the 2025 board reports do not cover the holding company's services (EV-053). About 3.1 million policies and 6.8 million consumers (EV-054). Bank-detail changes by phone use knowledge questions only, and adjusters may approve payments up to $25,000 alone (EV-055). Surge onboarding targets 1,500 adjusters in 72 hours; 1,180 were onboarded in 2025 (EV-056). SYS-I4 has no second site, a 36-hour rebuild estimate and two servers past vendor support (EV-057). The insurers assume no reinsurance, and the estimating vendor keeps photos 7 years (EV-060). Referral rates of the fraud model by geography are not monitored (EV-061). About 310 workers' compensation adjusters hold read access to the clinic EHR (EV-062).
+
+**Health Care Services.** 340 clinics, 50 of them acquired in 2025-03 and still on a legacy EHR; about 6.1 million visits a year; Medicare and Medicaid; electronic claims through a clearinghouse that carries about 90% of claims (EV-063). The 2025 risk analysis and the 2024 inheritance matrix cover SYS-H1 to SYS-H3 and list the acquired clinics in summary only or not at all (EV-064). The adjuster role opens the full chart, including visits that are not work-related; EHR access is monitored weekly (EV-065). The legacy EHR is backed up nightly and patched quarterly and uses shared front-desk logins (EV-066). About 140 devices run vendor-locked operating systems (EV-067). Portal report templates include free-text visit notes (EV-068). The triage and sepsis alert uses age and sex as inputs, and the AI scribe pilot has no consent workflow (EV-070).
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| AI assistant pilot enrollment and tenant configuration | Group CIO | 2026-04-15 | Received 2026-05-11, after the pilot began (EV-071) |
+| Employer client requests for assurance reports | Health Care Services occupational health vice president | 2026-04-08 | Received 2026-07-02 (EV-072) |
+| Complete device and software list for the 50 acquired clinics | Health Care Services HIPAA Security Officer | 2026-04-08 | Partial list received (EV-067); carried into P03 (G-033) and P07 (SI-2) |
+| Confirmation of each licensed state's enacted Model #668 text, including Tennessee's partial enactment | Insurance chief compliance officer | 2026-04-08 | Rechecked in P03 fieldwork (EV-086); Tennessee text not reviewed (P08 matrix marks it unverified) |
+| Any Florida Office of Insurance Regulation safeguards rule for insurers | Group General Counsel | 2026-04-06 | Not established at intake; counsel confirms (EV-085; P03 INS-G45) |
+| Confirmation that the productivity vendor's BAA covers the AI add-on | Group Chief Privacy Officer | 2026-04-20 | Not received; carried into P01 (GR-10, HCS-016), P07 (POAM-023) and P10 |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Revenue by division (EV-003), treasury volumes (EV-036), insurance and clinic volumes (EV-054, EV-063), recovery tests and backups (EV-030, EV-031, EV-057, EV-066), vendor recovery terms (EV-044), and dependencies from the asset and vendor registers |
+| P02 SSP | The SCSP boundary from the asset inventory (SYS-G1, SYS-G4, SYS-G5, SYS-G6, SCSP-INT); as-found configuration from EV-013 to EV-039; common control providers SYS-G2 and SYS-G3 |
+| P04 Cloud mapping | Cloud and colocation components (EV-026 to EV-033) and provider and vendor assurance (EV-033, EV-039) |
+| P01 Risk registers | Likelihood inputs from configuration exports, procedures, contracts and plans in the group and both divisions (the `likelihood_basis` column) |
+| P03 Gap analyses | The obligations register (which rules apply to which entity) and every observation above, compared with CSF 2.0, the group obligations, Model #668 and HIPAA |
+| P06 Policies | The 2025 group policies and standards and the division supplements (EV-008) |
+| P07 Control assessment | Populations to sample from (EV-002, EV-014, EV-016, EV-020, EV-030, EV-055, EV-056, EV-065) |
+| P08 IR runbook | Notification duties per entity from the obligations register; the current matrix and plan (EV-023); notice terms (EV-045, EV-044) |
+| P09 SOC 2 | Vendor and provider reports (EV-033, EV-039), intercompany agreements (EV-045) and employer client requests (EV-068, EV-072) |
+| P10 AI governance | AI tools found (EV-046, EV-071, EV-061, EV-070) |
