@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (six-room bed-and-breakfast inn) | **Tier:** Sole Proprietorship (owner-innkeeper only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-innkeeper, 2026-07-22, with the on-call IT consultant (under a confidentiality agreement since 2026-07-17) | **Adopted:** Owner-innkeeper, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-20 to 2026-07-22 (EV-033), the 2025 Schedule C (EV-025), the guest register report (EV-004), the payment facilitator's transaction report (EV-008), and the innkeeping vendor's SOC 2 system description (EV-030). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the inn depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the inn depends on, how long
 - the incident response plan's business recovery content that PCI DSS v4.0.1 Requirement 12.10 expects (N72-R01).
 
 ## 2. Business description
-One owner runs a six-room bed-and-breakfast inn in a restored historic house in a small Florida coastal town and lives on site. There are about 600 stays a year. Reservations, payments, guest messages, and door codes all run through the innkeeping software (SYS-01) and the payment facilitator (SYS-02), with two OTA portals feeding bookings. Everything else runs on one laptop and one phone, a consumer email account, an accounting SaaS, and a single router that also serves guest Wi-Fi. See `../00_company-facts.md` sections 1 to 3.
+One owner runs a six-room bed-and-breakfast inn in a restored historic house in a small Florida coastal town and lives on site. There are about 600 stays a year. Reservations, payments, guest messages, and door codes all run through the innkeeping software (SYS-01) and the payment facilitator (SYS-02), with two OTA portals feeding bookings. Everything else runs on one laptop and one phone, a consumer email account, an accounting SaaS, and a single router that also serves guest Wi-Fi. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue: about $490 a day on average and up to about $930 a night when all six rooms are full.
+Dollar values are scaled to about $180,000 in annual revenue (EV-025): about $490 a day on average and up to about $930 a night when all six rooms are full at the average daily rate of about $155 (EV-004).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,7 +34,7 @@ Dollar values are scaled to about $180,000 in annual revenue: about $490 a day o
 | BP-04 Guest communications | Moderate | 24 h | 8 h | 24 h |
 | BP-05 Bookkeeping, taxes, and administration | Low | 120 h | 72 h | 24 h |
 
-**What drives the values:** guest safety drives BP-02, because door codes come from reservation data and guests must be able to enter and lock their rooms at any hour. Double selling through the OTAs drives BP-01. Payments (BP-03) tolerate three days because most deposits are already captured and balances can be taken at departure. The 1-hour RPO for BP-01 and BP-02 depends on the innkeeping vendor's backups (RTO 4 hours and RPO 1 hour in its SOC 2 system description; reviewed in P09). The 24-hour RPO for BP-05 is **not supported today** for laptop files, which have no backup (P01 R-015).
+**What drives the values:** guest safety drives BP-02, because door codes come from reservation data and guests must be able to enter and lock their rooms at any hour. Double selling through the OTAs drives BP-01. Payments (BP-03) tolerate three days because most deposits are already captured and balances can be taken at departure. The 1-hour RPO for BP-01 and BP-02 depends on the innkeeping vendor's backups (RTO 4 hours and RPO 1 hour in its SOC 2 system description, EV-030; reviewed in P09). The 24-hour RPO for BP-05 is **not supported today** for laptop files, which have no backup (EV-013; P01 R-015).
 
 **Single-person dependency (the key finding).** The owner is the only person who knows every password, the only one who receives the sign-in codes on the phone, and the only one who deals with vendors, the payment facilitator, and the OTAs. The relief innkeeper can keep the inn running today only because the owner shares logins, which is itself a security gap (P01 R-005). If the owner is ill, evacuating for a hurricane, or without the phone, BP-01, BP-02, and BP-04 exceed their MTD within a day. Actions (P01 R-010, due 2026-12-31):
 1. Give the relief innkeeper a **named account** with front desk rights in the innkeeping software and OTA-2, so continuity no longer depends on shared passwords.

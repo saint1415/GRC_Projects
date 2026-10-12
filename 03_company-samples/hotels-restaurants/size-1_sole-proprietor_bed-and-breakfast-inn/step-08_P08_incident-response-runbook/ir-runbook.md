@@ -16,11 +16,11 @@ Keep a printed copy in the office and in the owner's apartment. Assume the lapto
 | Who | Why | When |
 |---|---|---|
 | On-call IT consultant | Isolate the laptop, preserve evidence, check the phone and router | Hour 0 |
-| Payment facilitator risk line | **Contract: within 24 hours of suspicion.** Freeze payouts if needed; coordinate card brand reporting | Hours 0-4 |
+| Payment facilitator risk line | **Contract: within 24 hours of suspicion** (EV-009). Freeze payouts if needed; coordinate card brand reporting | Hours 0-4 |
 | Innkeeping software vendor support | End all sessions; pull the activity log; check exports, messages sent, and card displays; pause guest messaging templates | Hours 0-2 |
 | OTA-2 (and OTA-1) partner support | Lock the partner account; warn affected OTA guests through the OTA | Hours 0-2 |
 | Breach counsel | Breach determination, Florida and other-state notices, guest messages | Hours 0-8 |
-| Insurer, **if any** | No standalone cyber policy. Ask whether the business owner's policy has a data breach endorsement *before* hiring outside firms | Hours 0-8 |
+| Insurer, **if any** | No standalone cyber policy (EV-024, EV-026; the endorsement question is an open intake request). Ask whether the business owner's policy has a data breach endorsement *before* hiring outside firms | Hours 0-8 |
 | Email provider account recovery | Lock out the attacker; check forwarding rules and sessions | Hours 0-2 |
 | Relief innkeeper | Run check-ins and breakfast while the owner handles the incident | As needed |
 | U.S. Secret Service or FBI (IC3 online report) | Report the fraud against guests; supports any later law enforcement delay | Day 1 |

@@ -10,6 +10,7 @@
 | Approved | CISO and General Counsel, 2026-08-21; roadmap reviewed by the risk committee of the board, 2026-09-10 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with counsel's review (EV-056). This section restates the results for the rules analyzed here.
 
 ### 1.1 Merchant, service provider, and franchisor
 **PCI DSS applies by contract in two roles.**
@@ -40,7 +41,7 @@
 ## 2. Method
 1. **Decompose.** PCI DSS was broken down into its requirement groups, with 14 defined requirements taken to their own rows because they are service-provider-only or carry the largest risk (3.3.1, 5.4.1, 6.4.3, 8.4.2, 10.4.1.1, 11.4.6, 11.6.1, 12.3.1, 12.4.1, 12.4.2, 12.5.2.1, 12.9.1, 12.9.2, 12.10.7), plus the appendices. **Labels are short topics written for this analysis, not PCI SSC text**, because PCI DSS is copyrighted; read the requirement text in the company's licensed copy of v4.0.1. Other regulations were broken into citation-level duties from the primary text: eCFR (16 CFR Part 464 and 17 CFR 229.106, versions as of 2026-09-23), the SEC's compliance guide for Item 1.05, the Florida Legislature's 2026 statutes, and the CPPA's approved regulation text.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. **This is an author mapping.** No official NIST mapping from PCI DSS v4.0.1 was used.
-3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration, account, contract, and mailbox data were checked in full with analytics. Selections were random. **45 rows were tested by sampling or full-population analytics; 29 found exceptions.**
+3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions. Key controls with large populations used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and populations under 250 used 25 to 40 items; configuration, account, contract, and mailbox data were checked in full with analytics. Selections were random. **45 rows were tested by sampling or full-population analytics; 29 found exceptions.** Current state was established from the intake evidence (exports, documents, and records from the enterprise systems of record, EV-001 to EV-070), gap analysis interviews with control owners (EV-076), the samples, analytics, and walk-throughs of 10 company-operated hotels (EV-077 to EV-081), the 2026-07 price display, fee, and call tests (EV-082), and, where Internal Audit had already tested a control on a shared selection, its P07 results (for example EV-PS-4, EV-RA-5, EV-IA-5, and EV-SC-8). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Rate.** Met, Partially met, Not met, or Not applicable. Each gap is rated with the P01 scale and carries an owner and date. High gaps are in the P01 register and the P07 POA&M.
 
 ## 3. Results summary

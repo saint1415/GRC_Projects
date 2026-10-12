@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022), criterion IDs only |
 | Categories in scope | Security (CC1-CC9) only |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the innkeeping software vendor's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the innkeeping software vendor's SOC 2 Type 2 report, requested at intake and received 2026-07-22 (EV-030; `vendor-soc2-review.csv`) |
 | Prepared | 2026-07-22 (Part B) and 2026-07-24 (Part A) by the owner-innkeeper with the IT consultant; adopted 2026-08-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

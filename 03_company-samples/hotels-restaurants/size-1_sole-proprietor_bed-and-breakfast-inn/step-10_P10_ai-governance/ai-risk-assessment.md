@@ -8,12 +8,12 @@
 | Why this tool | The registry default for this vertical is revenue-management pricing and a guest chatbot. A six-room inn does not buy an enterprise revenue-management system; its innkeeping vendor bundles both features in one add-on, so the tier's "one third-party AI tool" is this add-on |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; AI 600-1 for the generative chat feature |
 | Assessor and decision | Owner-innkeeper, 2026-08-24 to 2026-08-25; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases, one tool) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases, one tool), built at intake from the innkeeping software's add-on settings and transcript screen and the website pages that carry the chat widget (EV-028, EV-029, EV-006). With no staff, there was no survey to run. Not established: the controls the vendor runs around the add-on itself, because the add-on launched after the period of the vendor's SOC 2 report (EV-030), and the vendor's breach notice time (a P09 follow-up) |
 
 ## 1. What it does (Map)
-**AI-001 rate suggestions** forecast demand from the inn's own booking history and public OTA rates, then change nightly rates in the calendar, booking engine, and both OTA channels. **Auto-apply is on, with no floor, ceiling, or daily limit.** The vendor's terms (read 2026-08-24) say suggestions use only the inn's own data plus public rates, and that the inn's non-public data is not shared with other inns. Rates are the same for every guest; the add-on has no personalized pricing feature.
+**AI-001 rate suggestions** forecast demand from the inn's own booking history and public OTA rates, then change nightly rates in the calendar, booking engine, and both OTA channels. **Auto-apply is on, with no floor, ceiling, or daily limit** (EV-028). The vendor's terms (read 2026-08-24, EV-041) say suggestions use only the inn's own data plus public rates, and that the inn's non-public data is not shared with other inns. Rates are the same for every guest; the add-on has no personalized pricing feature.
 
-**AI-002 chat assistant** answers questions on the website (parking, pets, breakfast, check-in) and quotes rates and availability, then links to the booking engine. Transcripts, including guests' names and emails, are kept by the vendor with no deletion period. The owner switched it on without reading the terms.
+**AI-002 chat assistant** answers questions on the website (parking, pets, breakfast, check-in) and quotes rates and availability, then links to the booking engine. Transcripts, including guests' names and emails, are kept by the vendor with no deletion period (EV-029, EV-041). The owner switched it on without reading the terms.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -33,8 +33,8 @@
 
 ## 5. Human review of outputs (Measure and Manage)
 **Checks run on 2026-08-24:**
-- AI-001: the change log for May to August 2026 showed 214 automatic rate changes. The highest applied rate was $289 on a festival weekend, 86% above the $155 average daily rate. No declared emergency occurred in the period, but the add-on has no emergency setting at all.
-- AI-002: 20 test questions. 18 answered correctly (the pet fee and the cancellation window were wrong); 0 of the 8 rate answers included the $15 fee.
+- AI-001: the change log for May to August 2026 showed 214 automatic rate changes (EV-042). The highest applied rate was $289 on a festival weekend, 86% above the $155 average daily rate. No declared emergency occurred in the period, but the add-on has no emergency setting at all.
+- AI-002: 20 test questions (EV-043). 18 answered correctly (the pet fee and the cancellation window were wrong); 0 of the 8 rate answers included the $15 fee.
 
 **Ongoing:** each Monday the owner reviews the week's automatic rate changes and reads 10 chat transcripts. A wrong price published at scale or a chat that collects card data is logged as an incident (POL-01 10.2).
 

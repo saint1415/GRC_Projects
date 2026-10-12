@@ -7,9 +7,9 @@
 Inn Business Systems Profile (**IBSP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The IBSP is everything the inn uses to sell rooms, take payments, let guests in, and keep the books for about 600 stays a year. One person, the owner-innkeeper, runs it; a relief innkeeper uses it on weekends. Components are SYS-01 to SYS-11 in `../00_company-facts.md` section 3: the innkeeping software (SaaS), the payment facilitator's services and mobile reader, two OTA portals, a consumer email and file account, an accounting SaaS, the website, the laptop, the phone, the inn's router, the smart door locks, and the innkeeping software's AI add-on. There is no server and no IaaS. Most technical safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts and passwords, card and guest data handling, the two devices, the router, and vendor choices (P04).
+The IBSP is everything the inn uses to sell rooms, take payments, let guests in, and keep the books for about 600 stays a year. One person, the owner-innkeeper, runs it; a relief innkeeper uses it on weekends. Components are SYS-01 to SYS-11 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): the innkeeping software (SaaS), the payment facilitator's services and mobile reader, two OTA portals, a consumer email and file account, an accounting SaaS, the website, the laptop, the phone, the inn's router, the smart door locks, and the innkeeping software's AI add-on. There is no server and no IaaS. Most technical safeguards are **inherited from the SaaS vendors**; the owner is responsible for accounts and passwords, card and guest data handling, the two devices, the router, and vendor choices (P04).
 
-**Where card data flows today:** booking engine (vendor page; token only), OTA virtual cards (vendor vault; displayable), phone bookings (keyed on the laptop or written on a paper pad), card authorization forms (email), and card-present payments (P2PE reader). The first and last flows keep card data off the inn's systems; the other three put the laptop, the paper pad, and the email account in PCI DSS scope (P03).
+**Where card data flows today:** booking engine (vendor page; token only), OTA virtual cards (vendor vault; displayable), phone bookings (keyed on the laptop or written on a paper pad), card authorization forms (email), and card-present payments (P2PE reader). Sources: EV-005, EV-007, EV-008, EV-010, EV-012, EV-018, EV-020. The first and last flows keep card data off the inn's systems; the other three put the laptop, the paper pad, and the email account in PCI DSS scope (P03).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -35,7 +35,7 @@ Operational. Planned changes: pay-by-link for phone bookings and a front desk ro
 |---|---|---|
 | System owner, security and privacy lead, PCI contact, risk acceptor | Owner-innkeeper | Every role (POL-01 section 3) |
 | Backup operator | Relief innkeeper (unpaid family member) | Check-ins and bookings on weekends; named account planned |
-| Technical support | On-call IT consultant (confidentiality agreement since 2026-07-17) | Laptop, router, and lock help on request; no standing access |
+| Technical support | On-call IT consultant (confidentiality agreement since 2026-07-17, EV-027) | Laptop, router, and lock help on request; no standing access |
 | Service providers | Innkeeping software vendor, payment facilitator, OTAs, lock vendor | Operate inherited controls |
 
 ## 6. System Information Types and System Categorization
@@ -49,6 +49,7 @@ Operational. Planned changes: pay-by-link for phone bookings and a front desk ro
 **Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the PCI DSS and Florida duties for a one-person inn (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the innkeeping vendor's SOC 2 report and the AOCs, P09) or tailored out because they assume staff, servers, or software development. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): SYS-01 to SYS-11 and the paper pad and binder (OTH-01).
 - **Inside:** the owner's accounts and settings in the innkeeping software, OTA portals, payment facilitator portal, email and files, accounting SaaS, website builder, and lock app; the laptop and phone; the mobile reader; the router; the door locks; paper records in the owner's office.
 - **Outside (external services):** the vendors' platforms, the OTAs' systems, the card networks, and the internet service provider's network.
 
@@ -106,7 +107,7 @@ Self-assessed 2026-07-20 to 2026-07-24 with the IT consultant. See P07.
 The accounting SaaS and OTA-1 require a password and a second factor on the owner's phone. The innkeeping software, email, and OTA-2 use a password only until MFA is turned on (2026-09-15). For accounts that can display card numbers and send messages to guests, a password alone is not acceptable at a Moderate categorization. Guests use the booking engine and OTA sites under those vendors' identity controls, outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

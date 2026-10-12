@@ -204,3 +204,20 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4:** July backups are 30 of 30 days in P04 and 31 of 31 in P03 and P07; G-115 says servicing access is reviewed twice a year while P07 says only the ERP is; G-132 counts an intercompany schedule signed after P03 and P07; the facts present the plan Security Official as in place before the 2026-09-22 designation.
 - **Size 5 (enterprise holding company):** the facts say the health plan amendment covers 164.314(b) while section 7 and G-056 say it does not; DEP-11 cites R-039 where the field-service risk is R-022; R-042 cites a change dated after its last review.
 - **Size 6 (holding company plus two divisions):** P10 cites POL-01 4.14 for a standard adopted before v2026 was approved; HCS-013 and HCS-014 are Closed with a due date after their last review; G-015 and P01 disagree on when the budget was approved.
+
+### Hotels and Restaurants, 2026-10-12
+
+Six samples, 574 evidence rows in all. Agent cost: about 2.5 million tokens; the longest sample took 32 minutes.
+
+Fixes made during this batch:
+- **Sizes 1, 3, 4 and 6:** trailing-hyphen P07 IDs (EV-IA-2-1, EV-C-AC2-3, EV-V-IA2-2 and others) renamed to the parenthesis form.
+- **Size 1 (bed and breakfast):** a stray copy of the P01 risk register at the sample root, left from an earlier build and identical to the step-04 file, was removed. No other sample has one.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 cites regulatory checks dated after its approval.
+- **Size 1:** R-003 and P09 Part A cite a facilitator email and a P10 chat review dated after them; P03 cites P10 tests from 2026-08-24.
+- **Size 2 (small motel):** P04 (2026-07-24) cites five items from August; P03 cites a binder count dated 2026-07-15 while the only count is from 2026-08-04; "all 5 front office users" can display card numbers while 2 former staff accounts stayed active.
+- **Size 3 (beachfront hotel):** pass-1 R-031 lists default passwords found by P07; the P07 plan says nothing existed for AC-6, IA-2(1), SC-8 and SC-28 while their own details show those controls tested; 20 PMS users with card access against 22 front office users elsewhere.
+- **Size 4 (hotel operator):** the revenue management vendor's report is SOC 2 Type 2 in the SSP and Type 1 in P09 and the facts; P07 RA-3 calls the risk assessment approved before it was; IR-08d is Satisfied while IR-08b says the plan was not distributed.
+- **Size 5 (enterprise hotel operator):** firewall rule reviews are six-monthly in G-002 and quarterly in P09; the facts say emailed card forms while G-041 says printed; P02 says POS accounts are vaulted while G-037 says hardcoded; the chatbot result "9 of 20" appears for both the July and August tests.
+- **Size 6 (hotel operator plus two divisions):** the P03 method samples 60 adverse action notices while the rows and P10 say 50; P08 says association agreements require 5-day notice while P09 says they have no notice commitment; G-004 and P07 CA-3 disagree on whether interconnection terms exist.

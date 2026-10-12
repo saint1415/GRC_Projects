@@ -7,7 +7,7 @@
 | AI use cases | AI-001: revenue-management pricing (SYS-12, live since 2024). AI-002: guest chatbot (SYS-13, live since March 2026) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) for AI-002 |
 | Assessor / date | IT Manager with the Revenue Manager and the Director of Sales and Marketing, 2026-08-17 to 2026-08-21 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounts payable list, the identity provider app list and productivity suite license report, the vendor consoles and contracts (EV-037, EV-044, EV-041, EV-042, EV-038). Whether staff use consumer AI tools with hotel data outside the identity provider was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owners:** Revenue Manager (AI-001); Director of Sales and Marketing (AI-002). **Decision authority:** General Manager (Medium tier). Majority owner for any use case re-tiered High.
@@ -66,7 +66,7 @@
 
 ## 4. MEASURE
 ### AI-001 Revenue-management pricing
-| Trustworthy characteristic | Test / metric | Result (back-test June 2025 to July 2026) | Pass? |
+| Trustworthy characteristic | Test / metric | Result (back-test June 2025 to July 2026; EV-061) | Pass? |
 |---|---|---|---|
 | Valid and reliable | 14-day occupancy forecast error under 10% | 8.5% average error | Yes |
 | Valid and reliable | Published rates outside a floor and ceiling set by the Revenue Manager | No floor or ceiling existed; 11 days below the Revenue Manager's break-even rate | **No** |
@@ -79,7 +79,7 @@
 | Competition safeguards | No sharing of non-public hotel data with a pooled benchmark | Contract permits pooling; feature active by default | **No** |
 
 ### AI-002 Guest chatbot
-| Trustworthy characteristic | Test / metric | Result (August 2026) | Pass? |
+| Trustworthy characteristic | Test / metric | Result (August 2026; EV-060) | Pass? |
 |---|---|---|---|
 | Valid and reliable | Monthly 50-question test set (policies, amenities, hours); 95% correct | 88% correct (pet fee and cancellation window wrong) | **No** |
 | Valid and reliable (fee rule) | Every rate answer states the total price including the amenity fee, before other pricing | 0 of 20 rate answers included the fee | **No** (16 CFR 464.2) |

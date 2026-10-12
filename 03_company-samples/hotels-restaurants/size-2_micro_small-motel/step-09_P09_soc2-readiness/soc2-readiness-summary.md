@@ -18,9 +18,9 @@
 
 The Trust Services Criteria still appear here for two practical reasons:
 
-**A. Answering a questionnaire.** In July 2026 the motel's largest crew client, a regional utility line contractor (about 18% of room-nights), sent a vendor security questionnaire. It asks how the motel protects the company's corporate card data and its crew rosters (names, phone numbers, and the employee ID numbers the company sends for room assignments), who can see them, and how they are disposed of. Its questions follow the Trust Services Criteria. The response is due 2026-09-30. The client's procurement team accepts a self-assessment with a remediation plan from small lodging vendors; it does not require a SOC 2 report.
+**A. Answering a questionnaire.** In July 2026 the motel's largest crew client, a regional utility line contractor (about 18% of room-nights), sent a vendor security questionnaire (EV-035). It asks how the motel protects the company's corporate card data and its crew rosters (names, phone numbers, and the employee ID numbers the company sends for room assignments), who can see them, and how they are disposed of. Its questions follow the Trust Services Criteria. The response is due 2026-09-30. The client's procurement team accepts a self-assessment with a remediation plan from small lodging vendors; it does not require a SOC 2 report.
 
-**B. Relying on the PMS vendor.** The PMS vendor carries most of the motel's inherited controls (P02 section 10.2). Its SOC 2 Type 2 report, together with its PCI DSS AOC, is the evidence for those controls. Reviewing it each year is part of service provider management (PCI DSS requirement group 12.8; SA-9).
+**B. Relying on the PMS vendor.** The PMS vendor carries most of the motel's inherited controls (P02 section 10.2). Its SOC 2 Type 2 report, together with its PCI DSS AOC (EV-028), is the evidence for those controls. Reviewing it each year is part of service provider management (PCI DSS requirement group 12.8; SA-9).
 
 **Why Confidentiality and not another category.** The client's questions are about keeping its card data and rosters confidential and disposing of them. Availability matters to the motel but is covered by the BIA (P05), and the client did not ask about it. Processing Integrity has no client commitment. Guest privacy duties come from the FTC Act and Florida law, not a SOC 2 commitment.
 

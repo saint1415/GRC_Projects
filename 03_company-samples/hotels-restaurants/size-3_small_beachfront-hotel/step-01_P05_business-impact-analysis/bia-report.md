@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (independent 140-room beachfront hotel) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Lead) with the Front Office Manager, Controller, Chief Engineer, and Food and Beverage Director | **Approved:** General Manager, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-047), FY2025 financial statements (EV-045), PMS statistics (EV-046), backup job reports (EV-020), PMS vendor SOC 2 report (EV-039). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the General Manager.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the hotel depends on, how long each can be down, and how much data it can lose. It supports:
@@ -12,10 +13,10 @@ This BIA identifies which business processes the hotel depends on, how long each
 - the IT section to be added to the hotel's hurricane plan (P01 R-015).
 
 ## 2. System and business description
-One independent full-service hotel on the Florida Gulf Coast: 140 rooms, about 45 arrivals and 45 departures a day, a restaurant, two bars, and meeting space. Work runs on the Property Management and Point-of-Sale Platform (PMPS): a SaaS PMS, a payment gateway with front desk terminals, a restaurant POS with P2PE devices, an on-premises door lock system, the staff network and endpoints, an identity provider, and a cloud tenant. See `../00_company-facts.md` sections 3 and 4.
+One independent full-service hotel on the Florida Gulf Coast: 140 rooms, about 45 arrivals and 45 departures a day, a restaurant, two bars, and meeting space. Work runs on the Property Management and Point-of-Sale Platform (PMPS): a SaaS PMS, a payment gateway with front desk terminals, a restaurant POS with P2PE devices, an on-premises door lock system, the staff network and endpoints, an identity provider, and a cloud tenant. See `../00_company-facts.md` section 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $24.0 million in annual revenue, about $66,000 per day (about $48,000 rooms and $14,500 food and beverage).
+Dollar values are scaled to $24.0 million in annual revenue, about $66,000 per day (about $48,000 rooms and $14,500 food and beverage) (EV-045).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

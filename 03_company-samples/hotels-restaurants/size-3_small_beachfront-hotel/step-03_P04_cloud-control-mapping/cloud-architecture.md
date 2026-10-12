@@ -88,7 +88,7 @@ Shared responsibility sources: SRC-AWS-SRM, SRC-AZURE-SRM, SRC-GCP-SRM in `00_un
 - **PaaS (managed database, serverless):** the provider also runs the operating system and platform runtime. The customer owns code, configuration, access, secrets, and data.
 - **SaaS:** the provider also owns the application. The customer keeps identities, access, data, and devices.
 
-**PCI DSS note.** No card data is stored or processed in the cloud tenant. The reporting database and exports carry guest names and stay data, never card numbers (confirmed by a sample query on 2026-07-21). The tenant is therefore outside PCI scope as long as it has no connection that could affect card data. That is why the chatbot integration reads PMS availability and rates only and has no payment function. PCI responsibility for SaaS payment services is split according to each provider's AOC and responsibility summary (P03 row 12.8).
+**PCI DSS note.** No card data is stored or processed in the cloud tenant. The reporting database and exports carry guest names and stay data, never card numbers (confirmed by a sample query on 2026-07-21, EV-057). The tenant is therefore outside PCI scope as long as it has no connection that could affect card data. That is why the chatbot integration reads PMS availability and rates only and has no payment function. PCI responsibility for SaaS payment services is split according to each provider's AOC and responsibility summary (P03 row 12.8).
 
 ## 4. Findings from the mapping
 1. **Card data sits in a SaaS service not meant for it (SC-28).** The productivity suite encrypts mail at rest, but that does not make stored card numbers acceptable. They must be removed and kept out (POAM-006).

@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-15
 
 ## 1. System Name and Identifier
-Property Management and Point-of-Sale Platform (**PMPS**), identifier CSC-PMPS-01. The PMPS is the company's major system. It comprises SYS-01, SYS-03, SYS-04, SYS-06, SYS-07, SYS-08, SYS-09, SYS-10, and SYS-12 in `../00_company-facts.md`, including the company-managed property side of the 4 franchised hotels.
+Property Management and Point-of-Sale Platform (**PMPS**), identifier CSC-PMPS-01. The PMPS is the company's major system. It comprises SYS-01, SYS-03, SYS-04, SYS-06, SYS-07, SYS-08, SYS-09, SYS-10, and SYS-12 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), including the company-managed property side of the 4 franchised hotels.
 
 ## 2. System Overview
 The PMPS supports every guest-facing and payment process in the BIA (P05): reservations and distribution, central reservations, check-in, key issuance, folios and payments, outlet service, night audit and settlement, guest safety, and guest communications. It serves 600 employees and about 260 contracted workers, about 147,000 stays a year, and about 1.05 million card transactions a year under 10 merchant accounts.
@@ -92,6 +92,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a close 
 **Availability was considered for High.** Room access affects guest safety. The team kept availability at Moderate because existing key cards keep working when lock servers fail, emergency key cards and escorted entry are in place at every hotel, and the MTD of 2 hours can be met with these workarounds. To compensate, the plan adds contingency tailoring for lock servers (CP-2, CP-4, CP-9 statements).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint counts are the endpoint console totals (EV-010), and the payment device counts come from the device lists and the P03 reconciliation (EV-032, EV-066).
+
 **Inside the boundary:**
 - the SYS-01 tenant configuration, users, roles, and interfaces;
 - the payment devices at all 6 hotels (physical custody and inspection);
@@ -115,15 +117,15 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a close 
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
-| Franchisor platform (SYS-02) | Bidirectional (brand interfaces; brand-managed firewalls) | Reservations, guest and loyalty data, card authorizations at Hotels 3 to 6 | Franchise agreements; **no PCI DSS responsibility matrix or interconnection terms (gap, CA-3, SA-9)** |
+| Franchisor platform (SYS-02) | Bidirectional (brand interfaces; brand-managed firewalls) | Reservations, guest and loyalty data, card authorizations at Hotels 3 to 6 | Franchise agreements; **no PCI DSS responsibility matrix or interconnection terms (EV-039; CA-3, SA-9)** |
 | Resort payment gateway and P2PE solution provider | Bidirectional | Authorizations, tokens, settlement | Merchant agreement; gateway AOC 2026-03; P2PE Instruction Manual |
 | Booking engine (SYS-05) | Inbound reservations and tokens | Direct bookings; payment form embedded in the resort websites | Contract; AOC 2026-01 |
-| Channel manager (SYS-05) | Inbound reservations and virtual card numbers | Online travel agency bookings | Contract; **AOC dated 2025-04, more than 12 months old (gap)** |
+| Channel manager (SYS-05) | Inbound reservations and virtual card numbers | Online travel agency bookings | Contract; **AOC dated 2025-04, more than 12 months old (EV-037)** |
 | Revenue-management system (SYS-13) | Outbound stay data; inbound rates | Aggregated data; rates | Contract; SOC 2 Type 2 |
-| Guest chatbot (SYS-14) | Bidirectional through the cloud integration | Availability, rates, guest questions | Contract; **no transcript retention or card-masking terms (gap, P10)** |
-| CRO contact center (SYS-15) | Bidirectional; recordings stored in SYS-10 | Calls and recordings with spoken card data | Contract; **recordings hold card data (gap 2)** |
+| Guest chatbot (SYS-14) | Bidirectional through the cloud integration | Availability, rates, guest questions | Contract; **no transcript retention or card-masking terms (EV-042; P10)** |
+| CRO contact center (SYS-15) | Bidirectional; recordings stored in SYS-10 | Calls and recordings with spoken card data | Contract; **recordings hold card data (EV-064)** |
 | Productivity suite (SYS-11) | Inbound email | Card authorization forms (**to be stopped**) | Service terms |
-| Resort 2 POS vendor and lock vendor remote support | Inbound remote sessions | Administrative access | Service contracts; **no MFA or session approval (gap 5)** |
+| Resort 2 POS vendor and lock vendor remote support | Inbound remote sessions | Administrative access | Service contracts; **no MFA or session approval (EV-014)** |
 | MSSP | Inbound logs; remote response actions | Security logs | Contract; SOC 2 Type 2 |
 | REIT-owned hotels (from 2027-01-01) | Bidirectional | Guest, reservation, and financial data for 2 managed hotels | Management agreement (P09) |
 
@@ -153,7 +155,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a close 
 - **Program management (3):** PM-1, PM-2, and PM-9. They have no baseline but are needed for PCI DSS 12.1 and 12.3 and for the FTC reasonableness standard.
 - **Inherited without separate statements:** the remaining Moderate-baseline physical and environmental controls for cloud and SaaS data centers (for example PE-9 to PE-17) and platform-level SA and SC controls. These are inherited from the SYS-01 vendor, payment providers, the identity vendor, the cloud provider, and the MSSP, and are evidenced by their AOCs and SOC 2 reports, reviewed each year (P09 `vendor-soc2-review.csv`).
 - **Deferred:** the other Moderate controls with no PCI DSS mapping and no Moderate-or-higher risk in P01 (for example SA-11 developer testing and SA-15 development process, because the company does not develop software; the web agency's work is covered by SA-8). They are recorded as tailoring decisions and reviewed each year.
-- **Franchised hotels.** At Hotels 3 to 6, controls on the brand PMS, brand gateway, and brand firewalls are the franchisor's. Until the responsibility matrix is signed (gap 3), the company treats them as Hybrid with the franchisor as provider and records the evidence gap.
+- **Franchised hotels.** At Hotels 3 to 6, controls on the brand PMS, brand gateway, and brand firewalls are the franchisor's. Until the responsibility matrix is signed (EV-039), the company treats them as Hybrid with the franchisor as provider and records the evidence gap.
 
 **Status of the 154 documented controls:**
 | Status | Count |
@@ -170,7 +172,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a close 
 | Hybrid | 38 | SYS-01 vendor, identity vendor, payment gateways, MSSP, cloud provider, SD-WAN provider, franchisor |
 | Common/Inherited | 15 | Identity vendor (for example AC-7, IA-2(8)), cloud provider (CP-6, SC-12), MSSP (IR-7, SI-4(2)), SYS-01 vendor (AC-12) |
 
-The Partially implemented statements trace to the 13 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake and fieldwork observations cited in the `evidence` column of `control-implementation.csv` (for example EV-014, EV-022 and EV-035) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee. The QSA-supported PCI DSS assessment follows from 2026-10-05.
@@ -183,7 +185,7 @@ The co-sourced internal audit firm assessed 32 controls from 2026-08-03 to 2026-
 - **Guests.** Guests use the booking engine's and the brand's own accounts, which are outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis, SAQ scope, and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis, SAQ scope, and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **AOC:** attestation of compliance (PCI DSS)

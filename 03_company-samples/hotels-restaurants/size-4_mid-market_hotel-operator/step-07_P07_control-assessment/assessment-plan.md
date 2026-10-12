@@ -93,6 +93,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - physical inspection of 30 payment devices against the device list
   - browser capture of the booking pages to list scripts
 
+### What each test could show
+The 2026 policies (P06), the new standards and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-15 and take effect on 2026-10-01, so they were reviewed as drafts for design only. The 2024 policies, the 2024 standards (STD-06, STD-08, STD-09 and STD-10) and the 2024 incident response plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 168 |
+| Design | The requirement comes from a 2026 draft (the 6-month SYS-01 access review in POL-02; the event list in STD-02; the card compromise, acquirer and franchisor steps and the distribution of the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 5 |
+| Not implemented | Nothing existed to test | 33 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations and transfers from the HR report (EV-003), SYS-01 users and new accounts from EV-005, brand PMS accounts from EV-007, privileged accounts from EV-008, remote access paths from EV-014, critical and high findings from EV-016, critical patches from EV-017, incidents from the incident log (EV-027, extended to 2026-07-31 for the sample), payment devices from EV-032, card and guest-data vendors from EV-035, recordings from EV-049, and interface credentials from EV-055.
+
 ## 4. Rules of engagement
 - **Guests first.** No test that could stop check-in, key issue, or payments. Lock server, POS, and network tests ran after hours with the Resort Chief Engineer or the Resort Director of Food and Beverage present. Lock servers were not restarted; the restore test used a copy of the backup on lab hardware.
 - **No real card data leaves company systems.** Screenshots were masked to the first 6 and last 4 digits at most. The 60 recordings were sampled inside the contact center system; no audio was exported. Evidence was kept in the firm's encrypted workpaper system.

@@ -46,8 +46,8 @@
 Card data risks (ER-02) at High or above, and guest safety risks at High or above, cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the hospitality threat picture (POS memory scraping, e-skimming, credential stuffing against loyalty programs, ransomware, vendor remote access), the *FTC v. Wyndham* allegations, the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the hospitality threat picture (POS memory scraping, e-skimming, credential stuffing against loyalty programs, ransomware, vendor remote access) in the SOC's threat intelligence (EV-065), the *FTC v. Wyndham* allegations, the BIA (P05), the intake evidence, the 2025 risk analysis (EV-028), and risk workshops with the SOC, Payments, Hotel Technology, Network Engineering, Franchise Technology Compliance, the Integration Management Office, Digital and Loyalty, Revenue Strategy, Third-Party Risk and Finance (EV-074). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-021), coverage and configuration exports from the enterprise systems of record, contract, vendor and franchise records, the workshops, the gap analysis samples, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -69,6 +69,8 @@ By threat source type: Adversarial 36, Structural 19, Accidental 6, Environmenta
 By treatment: Mitigate 53, Accept 8, Avoid 2, Share/Transfer 1.
 By status: In progress 54, Open 2, Closed (accepted) 8.
 **22 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-038 was added on 2026-08-28 after testing found vendor default credentials on legacy POS back-office servers at 3 hotels (EV-IA-5), and R-007 and R-010 were reviewed again on 2026-08-28 (their `last_reviewed` date); R-007's `likelihood_basis` cites the P07 segmentation results (EV-SC-7, EV-CA-8). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

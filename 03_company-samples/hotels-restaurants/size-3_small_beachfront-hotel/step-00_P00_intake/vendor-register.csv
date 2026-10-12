@@ -1,0 +1,22 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,PMS vendor,Property management system and card vault,SYS-01,Guest data; virtual card numbers,Contract with no recovery time or recovery point terms,"PCI DSS service provider AOC dated 2026-03; SOC 2 Type 2, 12 months ending 2026-03-31",EV-036; EV-037; EV-038; EV-039,Reviewed in P09
+V-02,Payment gateway,Card authorization and settlement for MID-1; front desk terminals,SYS-02,Card data,Gateway agreement under MID-1,PCI DSS AOC dated 2025-02,EV-016; EV-036; EV-059,
+V-03,POS vendor,Restaurant and bar POS and cloud back office,SYS-05,Orders; encrypted card data,Contract,None on file,EV-037,
+V-04,P2PE solution provider,Validated P2PE solution for the restaurant and bars,SYS-05,Encrypted card data,Merchant agreement MID-2; P2PE Instruction Manual,PCI-listed validated P2PE solution,EV-016; EV-036,
+V-05,Booking engine vendor,Online booking and payment page,SYS-03,Reservations; card data on the vendor side,Contract,PCI DSS AOC dated 2026-01,EV-036; EV-043,
+V-06,Channel manager vendor,Online travel agency connections,SYS-04,Reservations; virtual card numbers in transit,Contract with a confidentiality clause; no PCI terms,None on file,EV-036; EV-038,
+V-07,Guest Wi-Fi and TV vendor,Guest Wi-Fi and TV networks,SYS-06 (guest networks),Guest network traffic,Contract,Network design document,EV-012; EV-037,
+V-08,Door lock vendor,Lock system software and remote support,SYS-08,Guest names; room assignments; administrative access,Service contract,None on file,EV-008; EV-015; EV-036,Always-on remote support tool
+V-09,Revenue-management vendor,AI pricing,SYS-12,Stay and booking data; guest names in the extract,Contract allowing pooled benchmarking,SOC 2 Type 1,EV-038; EV-041,
+V-10,Chatbot vendor,Generative AI guest chatbot,SYS-13,"Guest questions, contact details and transcripts",Contract with no retention or masking terms,None on file,EV-038; EV-042,
+V-11,Web agency,Website hosting; chatbot integration and guest-marketing hub build,SYS-10; SYS-13,Website content; integration code,Contract with no secure development requirements,None on file,EV-037; EV-040,
+V-12,Background-check company,Background checks on managers and front office hires,n/a,Applicant personal information; consumer reports,Service agreement,None on file,EV-004; EV-037,
+V-13,Staffing company,About 45 room attendants and valet staff,n/a,Assignment details,Staffing contract,None on file,EV-003; EV-037,
+V-14,Managed service provider (MSP),"Help desk, firewall and network management, patching, anti-malware",SYS-06; SYS-07; SYS-08,Administrative access to hotel PCs and the lock server,Contract,None on file,EV-008; EV-025; EV-036,Always-on remote access tool
+V-15,Identity provider vendor,Single sign-on and MFA,SYS-09,Workforce identities,Subscription terms,None on file,EV-037,
+V-16,Productivity suite vendor,"Email, files and the AI assistant add-on",SYS-11; AI-003,"Email, files, card forms in shared mailboxes",Subscription terms,None on file,EV-014; EV-037,
+V-17,Public cloud provider,IaaS/PaaS for the cloud tenant,SYS-10,Guest-marketing profiles; reporting data; backups,Customer agreement,SOC 2 report from the provider compliance portal,EV-021; EV-037,
+V-18,Timekeeping and payroll vendor,Payroll and finger-scan time clocks,SYS-14,Employee data; finger templates,Contract that does not address finger template handling,None on file,EV-018; EV-037; EV-038,
+V-19,Shredding vendor,Locked shredding bins and destruction,n/a,Paper records,Service agreement,Certificates of destruction,EV-030; EV-037,
+V-20,Acquirer,Merchant accounts MID-1 Rooms and MID-2 Food and beverage,SYS-02; SYS-03; SYS-05,Card transactions,Merchant agreements,n/a,EV-032; EV-033; EV-035,Sets PCI DSS validation and the 24-hour compromise notice term (fictional)
+V-21,Cyber insurer,Cyber insurance with breach hotline,n/a,Incident details when claimed,Policy,n/a,EV-031; EV-037,

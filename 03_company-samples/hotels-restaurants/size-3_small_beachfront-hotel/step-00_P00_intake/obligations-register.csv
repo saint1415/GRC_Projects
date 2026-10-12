@@ -1,0 +1,17 @@
+obligation_id,obligation,citation,applies,basis,source_evidence,analyzed_in
+N72-R01,PCI DSS v4.0.1,"PCI Security Standards Council standard (contractual, not law)",Yes (by contract),"Both merchant agreements require PCI DSS compliance. The acquirer requires annual SAQ validation with no Report on Compliance. About 97,000 card transactions a year across MID-1 and MID-2. The SAQ type for each account is decided in P03",EV-032; EV-033; EV-035,P03; P02; P07
+N72-R02,"FTC Act Section 5 (unfair or deceptive practices), with the FTC Rule on Unfair or Deceptive Fees","15 U.S.C. 45(a), (n); 16 CFR Part 464",Yes,"For-profit LLC with no size threshold. It holds guest data and publishes privacy, fee and rate statements. 16 CFR Part 464 covers short-term lodging, and the hotel charges a mandatory $35 per night amenity fee",EV-045; EV-043; EV-046,P03; P10
+N72-R03,FTC Disposal Rule,16 CFR 682.3,Yes,The hotel obtains background-check reports on managers and front office hires,EV-004,P03
+N72-R04,State breach notification laws,"State statutes (all 50 states, DC, territories)",Yes,The hotel holds personal information of guests from many states (profiles and ID scans),EV-046,P08
+FL-501.171,"Florida Information Protection Act (reasonable security, disposal, breach notification)",Fla. Stat. 501.171,Yes,The hotel holds personal information of Florida residents: passport and driver license numbers in ID scans and employee finger templates,EV-046; EV-018,P03; P08
+FL-509.101,Florida guest register,Fla. Stat. 509.101(2),Yes,The hotel is a transient public lodging establishment and keeps its register in the PMS,EV-046,P03
+FL-501.160,Florida unconscionable prices during a declared state of emergency,Fla. Stat. 501.160,"Yes (AI-001, cautious reading)",The hotel publishes room rates automatically through the revenue-management system. The statute names dwelling units and essential services; the hotel treats room rates as covered,EV-041,P10
+N72-R05,Illinois Biometric Information Privacy Act,740 ILCS 14,No,No Illinois operations or employees. The statute text was not verified,EV-003,n/a
+N72-R06,CIRCIA (proposed),6 U.S.C. 681-681g; proposed 6 CFR 226,No (proposed only),"Not a final rule. Revenue of $24.0 million is below the SBA size standard of $40.0 million for NAICS 721110, and lodging has no sector criterion",EV-045,n/a
+FTC-SAFEGUARDS,FTC Safeguards Rule and Red Flags Rule,16 CFR Part 314; 16 CFR Part 681,No,No consumer credit is extended,EV-045,n/a
+CCPA,California Consumer Privacy Act,Cal. Civ. Code 1798.100 et seq.,No,"No California business, and revenue is below $26,625,000",EV-045,n/a
+HIPAA,"HIPAA Privacy, Security and Breach Notification Rules",45 CFR Parts 160 and 164,No,"The hotel is not a health care provider, health plan or clearinghouse",EV-045,n/a
+SEC-CYBER,SEC cybersecurity disclosure rules,17 CFR 229.106; Form 8-K Item 1.05,No,Privately held LLC with no registered securities,EV-045,n/a
+FED-CONTRACTS,Federal contract cybersecurity clauses,48 CFR 52.204-21 and related clauses,No,No federal contracts,EV-045,n/a
+SHERMAN-1,Sherman Act Section 1 (algorithmic pricing),15 U.S.C. 1,Litigation risk (AI-001),The revenue-management contract lets the vendor pool the hotel's non-public rate and occupancy data into a market benchmark,EV-038; EV-041,P10
+STATE-AI,State AI laws (for example Colorado SB26-189),Various state statutes,No,"The hotel operates only in Florida, and room pricing and hotel information are not consequential decisions",EV-041; EV-042,P10

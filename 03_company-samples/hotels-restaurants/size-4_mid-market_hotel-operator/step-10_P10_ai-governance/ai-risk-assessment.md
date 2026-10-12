@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed Florida hotel owner and operator: 2 independent resorts and 4 franchised select-service hotels) |
 | Tier / Vertical | Mid-Market / Accommodation and Food Services |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry default for this vertical (revenue-management pricing and a guest chatbot) is kept as AI-001 and AI-002 and widened, because a mid-market operator runs several AI tools (`../00_company-facts.md` section 5) |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry default for this vertical (revenue-management pricing and a guest chatbot) is kept as AI-001 and AI-002 and widened, because a mid-market operator runs several AI tools (`../00_company-facts.md` section 5). The inventory was built from the intake AI tool discovery (identity provider app list, accounts payable vendor master and a department heads survey), the AI vendor contracts, and the contact center and applicant tracking configuration (EV-053, EV-034, EV-042, EV-049, EV-054). How many staff use public generative AI sites, and what they enter, was not established (intake open request); P01 R-038 treats it as unknown |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-002 and AI-006 |
 | Assessors / date | General Counsel (legal and privacy), vCISO and Security Manager (security), HR Director (AI-004), with each business owner, 2026-08-24 to 2026-09-04 |
 | Decision | Chief Operating Officer, 2026-09-15 (AI-004, the High-tier use case, noted by the CEO); Medium and Low decisions by the AI review group the same day |
 
 ## 1. Summary
-Five of the six tools (AI-001 to AI-005) went live without a security, privacy, or legal review (gap 11 in the company facts). None is out of control, but four have problems that need dated conditions:
+Five of the six tools (AI-001 to AI-005) went live without a security, privacy, or legal review (EV-053). None is out of control, but four have problems that need dated conditions:
 - **AI-001, pricing:** publishes resort rates automatically with no floor, ceiling, or emergency rule. A back-test of a 2025 declared state of emergency showed rates 41% above the 30-day average at Resort 2 (Fla. Stat. 501.160). The contract lets the vendor pool the company's non-public data into a shared benchmark.
 - **AI-002, chatbot:** quotes nightly rates without the $40 resort fee (16 CFR 464.2) and keeps transcripts, 61 of them with card numbers, indefinitely.
 - **AI-003, call recording and scoring:** transferred and outbound calls are recorded without an announcement (Fla. Stat. 934.03(2)(d)), and recordings and transcripts hold spoken card numbers and security codes.

@@ -82,6 +82,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Hotel Technology; Director of Payments and PCI Compliance; PMS Tenant Administration Manager; Payments Platform Engineering Manager; POS Operations Manager; Director of Security Operations; Director of Identity and Access Management; Director of Network Engineering; Director of Third-Party Risk Management; Director of Franchise Technology Compliance; Vice President, Integration Management Office; General Counsel; CFO; CISO; two hotel general managers; 20 randomly selected hotel staff at 4 hotels.
 - **Test:** cross-hotel access tests with test accounts in the PMS; detokenization attempts from unapproved identities; default-credential tests on the 41 legacy POS servers; a reachability test from a franchised hotel segment in the network lab; TLS scans and packet captures at 2 legacy hotels; a log deletion attempt; generation of 6 test event types; a restore observation; SOC alert tests at 2 hotels.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, standards, and exception register, which were in force (EV-027), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations, or live systems | 252 (215 Satisfied, 37 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: a baseline for legacy POS servers and workstations (CM-02a.[01]), EDR on legacy POS workstations (SI-04a.01), integrity monitoring of legacy POS software (SI-07a.[01]), and script inventory and tamper detection on the 3 resort booking microsites (SI-07a.[03]) | 4 |
+| **Total** | | **256** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-006, the PMS and franchise portal export, EV-005, and the change records, EV-063) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No test could interrupt check-in, payments, or room access. Legacy POS tests ran after outlet closing, with the POS vendor and the POS Operations Manager present, and with the hotel general manager's approval.
 - Packet captures used test cards only, during a scheduled test transaction window; captures were destroyed after the finding was confirmed. No real card data entered the workpapers.

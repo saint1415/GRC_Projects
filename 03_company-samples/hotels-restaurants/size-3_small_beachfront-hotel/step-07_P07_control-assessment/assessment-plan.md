@@ -40,6 +40,17 @@ Small tier scope: 15-25 controls. **23 controls, 156 determination statements.**
   - a single-file restore from the cloud backup vault
   - a TLS scan of external services
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31. They were therefore reviewed as drafts, for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operating effectiveness. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples, live systems or the walkthrough | 67 |
+| Design | The control is new (account types in draft POL-02); its design was reviewed. Operation is tested at the 2027-02 follow-up | 2 |
+| Not implemented | Nothing existed to test | 87 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled terminations come from the terminations in EV-003, and the PMS accounts from the user export in EV-006).
+
 ## 3. Rules of engagement
 - No testing that could lock guests out of rooms. The lock server test ran after midnight with the Chief Engineer present and emergency key cards ready.
 - No card data was copied, photographed, or removed. Mailbox search results were counted, not exported. The binder was counted in place.

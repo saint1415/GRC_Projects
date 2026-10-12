@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for the priority use cases. The registry default, **revenue-management pricing and the guest chatbot** (AI-001, AI-002), is kept as the Hotels priority because both run at scale across 88 hotels. Division priorities add the credit model (AI-006) and the inventory forecasting model (AI-007), which carry regulator-specific rules |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), review 2026-08-17 to 2026-08-28, council decision 2026-08-26; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (11 use cases: 2 High, 8 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (11 use cases: 2 High, 8 Medium, 1 Low), built from AI tool discovery across procurement records, SaaS discovery and AI council records (EV-036), division configuration and model records (EV-049, EV-050, EV-054, EV-057, EV-066), and the P10 tests (EV-092 to EV-095). Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -29,7 +29,7 @@
 5. **Change gate.** A material change (new model, new vendor feature, new data source, new decision role) triggers re-assessment before release.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026** (scenario gap 10). Most use cases went live before the council existed. Before this review the council had looked at 6 of 11 use cases (AI-001, AI-002, AI-005, AI-006, AI-007, AI-010). Three live use cases had concrete legal gaps: the chatbot omits the resort fee, the credit model's reasons are not always specific, and the inventory model keeps no records. This assessment covered all 11 at inventory level and the four priority use cases in depth. The other five have council review dates by 2026-12-31.
+**Where the program fell short in 2026** (group gap 10). Most use cases went live before the council existed. Before this review the council had looked at 6 of 11 use cases (AI-001, AI-002, AI-005, AI-006, AI-007, AI-010). Three live use cases had concrete legal gaps: the chatbot omits the resort fee, the credit model's reasons are not always specific, and the inventory model keeps no records. This assessment covered all 11 at inventory level and the four priority use cases in depth. The other five have council review dates by 2026-12-31.
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |
