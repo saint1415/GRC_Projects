@@ -13,7 +13,7 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** The Shared Corporate Services Platform (SCSP: SYS-G1, SYS-G4, SYS-G5, SYS-G6), the common infrastructure (SYS-G2, SYS-G3), the productivity suite and board systems (SYS-G7, SYS-G8), the group health plan, and the division systems SYS-I1 to SYS-I4 and SYS-H1 to SYS-H3 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** The Shared Corporate Services Platform (SCSP: SYS-G1, SYS-G4, SYS-G5, SYS-G6), the common infrastructure (SYS-G2, SYS-G3), the productivity suite and board systems (SYS-G7, SYS-G8), the group health plan, and the division systems SYS-I1 to SYS-I4 and SYS-H1 to SYS-H3 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Why the group register is the focus.** For a holding company, the group register is not a summary of the divisions. It is the register of the holding company's own business: the shared services every subsidiary depends on, the duties it carries as a public registrant, plan sponsor, insurance holding company, and service provider to its subsidiaries, and the risks that cross division lines.
 
@@ -21,7 +21,7 @@
 - **Division registers** hold risks that a division owns and can treat itself.
 - **The group register** holds risks that sit in shared services, cross divisions, or need a group decision or group funding. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating. For example, HCS-001 (adjusters reading non-work visits) is High for Health Care Services, while its group counterpart GR-24 is Moderate, because at group level the fix is a role change that both divisions already agreed.
 
-**Risk tolerance and who may accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who may accept risk** (the group acceptance matrix, EV-009):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead; for group risks, the group security governance director |
@@ -32,11 +32,13 @@
 Patient-safety risks and risks to claimants' benefit payments rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the SSP and cloud mapping (P02, P04), the gap analyses (P03), the control assessment (P07), and interviews with division leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the SSP and cloud mapping (P02, P04), the intake evidence, the gap analyses (P03), the control assessment (P07), which began on 2026-07-06 inside the fieldwork window, and interviews with group and division leadership (EV-077 group, EV-078 Insurance, EV-079 Health Care Services).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all three registers: configuration exports, procedures, contracts, plans, case files and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all three registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk sits in a shared service, crosses divisions, or needs a group decision.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28; it confirmed existing risks and added none, so every risk in the three registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 
@@ -66,12 +68,12 @@ Patient-safety risks and risks to claimants' benefit payments rated High may not
 
 ### What the results say
 The group program is defined and most common controls work: a 24x7 SOC, PAM, hardware keys for administrators, immutable backups, and tested SOX controls. There are no Very High risks. **Four of the five High group risks sit in what the holding company provides to everyone else:**
-1. **The shared identity platform** (GR-01, GR-08). Sign-in is strong; recovery and trust are weak. A help desk reset or the legacy directory trust bypasses the hardware keys (scenario gap 1).
-2. **The payment path** (GR-03). Controls protect a payment once it exists, but not the bank-detail change that comes before it (gap 5).
+1. **The shared identity platform** (GR-01, GR-08). Sign-in is strong; recovery and trust are weak. A help desk reset or the legacy directory trust bypasses the hardware keys (group gap 1).
+2. **The payment path** (GR-03). Controls protect a payment once it exists, but not the bank-detail change that comes before it (group gap 5).
 3. **Shared infrastructure as a ransomware path** (GR-02). One identity platform and one hub connect all three divisions.
-4. **The AI assistant** (GR-10) amplifies every existing over-sharing problem across three regulated divisions at once (gap 9).
+4. **The AI assistant** (GR-10) amplifies every existing over-sharing problem across three regulated divisions at once (group gap 9).
 
-The group's **governance duties** are Moderate but matter for regulators: the insurers cannot yet show oversight of the holding company as their service provider (GR-06, gap 2), the plan sponsor firewall leaks (GR-05, gap 3), and the notification matrix is incomplete (GR-07, gap 7).
+The group's **governance duties** are Moderate but matter for regulators: the insurers cannot yet show oversight of the holding company as their service provider (GR-06, group gap 2), the plan sponsor firewall leaks (GR-05, group gap 3), and the notification matrix is incomplete (GR-07, group gap 7).
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** identity administration redesign (GR-01, GR-08); payment-change verification across Insurance and payables (GR-03); legacy clinic migration and SIEM onboarding (GR-08, GR-18); Group AI Standard conditions (GR-10); integration standby automation (GR-09).

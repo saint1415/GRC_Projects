@@ -62,7 +62,7 @@ The 2023 supplement was written before the 2025 acquisition and the 2026 group p
 |---|---|---|---|
 | Front-desk accounts | Shared front-desk logins allowed with a shift log | Unique accounts only (POL-02 4.1) | Shared logins at acquired clinics (HCS-018) |
 | Cross-division access | Insurer adjuster access approved by the clinic operations director | Owning data owner approves; minimum necessary; reports, not direct access (POL-02 4.2) | Full-chart adjuster role (HCS-001) |
-| Acquisitions | Not addressed | Inventory, risk analysis, and inheritance within 90 days (POL-01 4.6) | Acquired clinics outside the analysis (gap 8) |
+| Acquisitions | Not addressed | Inventory, risk analysis, and inheritance within 90 days (POL-01 4.6) | Acquired clinics outside the analysis (group gap 8) |
 | Log retention | 90 days in the EHR | 1 year online, archived per the logging standard | Investigation limited |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.14) | AI assistant and scribe pilot ungoverned |
 | Termination | Next business day | Within 4 hours (POL-02 4.9) | Longer exposure window |

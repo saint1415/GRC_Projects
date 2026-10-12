@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Shared Corporate Services Platform**, the holding company's own system, because every subsidiary depends on it (P05: identity has a 4-hour MTD for all three divisions), it moves about $65 million a day, it carries the group's financial reporting (SOX 404), and its identity component is the largest common control provider in the group. Division systems keep their own plans (for example, the Health Care Services EHR plan and the insurers' claims system plan) and inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Shared Corporate Services Platform (**SCSP**), identifier CSCH-SCSP-01. It combines SYS-G1, SYS-G4, SYS-G5, and SYS-G6 in `../00_company-facts.md`.
+Shared Corporate Services Platform (**SCSP**), identifier CSCH-SCSP-01. It combines SYS-G1, SYS-G4, SYS-G5, SYS-G6, and the integration services (SCSP-INT), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The SCSP is how the holding company delivers its shared services:
@@ -31,7 +31,7 @@ The SCSP is how the holding company delivers its shared services:
 | Fla. Stat. 501.171 | Florida Information Protection Act (worked example of state law) | 501.171(2) | Reasonable measures to protect personal information of employees, claimants, and patients in SCSP records |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
 
-Not applicable: Federal Reserve Regulation Y Subpart N and 12 CFR Part 225 Appendix F (the group owns no bank); the FTC Safeguards Rule (the insurers are under state insurance authorities, 15 U.S.C. 6805(a)(6), and no group entity is a non-bank lender).
+Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). Not applicable: Federal Reserve Regulation Y Subpart N and 12 CFR Part 225 Appendix F (the group owns no bank); the FTC Safeguards Rule (the insurers are under state insurance authorities, 15 U.S.C. 6805(a)(6), and no group entity is a non-bank lender).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -84,14 +84,14 @@ Other High-baseline controls are either fully inherited from the SaaS vendors an
 - **Outside, inherited (common control providers):** SYS-G2 (SOC, SIEM, EDR) and SYS-G3 (landing zones, network, colocation, backup vault); group HR, risk, governance, and internal audit functions.
 - **Outside, interconnected:** banks; the health plan's third-party administrator; division systems SYS-I1, SYS-I2, SYS-I4, and SYS-H1; the productivity suite SYS-G7.
 
-The diagram is in P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-G1, SYS-G4, SYS-G5, SYS-G6 and SCSP-INT, with the common control providers SYS-G2 and SYS-G3) and the configuration exports EV-013 to EV-039. The diagram is in P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Connected system or party | Direction | Data | Agreement |
 |---|---|---|---|
 | 14 banks | Outbound payment files; inbound statements and confirmations | Payments, beneficiary bank details | Bank agreements; mutual TLS or private links |
 | Health plan third-party administrator | Outbound eligibility feed | Plan enrollment (PHI) | Administrator BAA with the plan |
-| SYS-I2 and SYS-I4 (Insurance) | Inbound claims disbursement files; outbound payment status | Claimant names, amounts, bank details (Nonpublic Information) | 2017 intercompany services agreement (**no security schedule**, scenario gap 2; POAM-016) |
+| SYS-I2 and SYS-I4 (Insurance) | Inbound claims disbursement files; outbound payment status | Claimant names, amounts, bank details (Nonpublic Information) | 2017 intercompany services agreement (**no security schedule**, group gap 2; POAM-016) |
 | SYS-H1 (Health Care Services) | Inbound patient refund files; general ledger feeds | Patient names and refund amounts (ePHI) | 2021 business associate agreement |
 | All division systems | Inbound general ledger feeds; outbound sign-in (SAML or OIDC) | Financial data; authentication | Integration route catalog |
 | SYS-G7 HR collaboration site | Outbound scheduled benefits export | Benefits enrollment and case data (plan PHI) | **None; to be stopped** (POAM-005) |
@@ -129,10 +129,10 @@ See `control-implementation.csv` (174 controls) and `common-control-catalog.csv`
 | System-specific (including the identity controls the SCSP itself provides to the divisions) | 68 |
 
 **The 20 partially implemented controls** cluster in four places:
-- **Identity administration and reset** (scenario gap 1): AC-2, AC-2(12), AC-6, IA-5, IA-12, IA-12(2), AT-2(3), CA-3, SI-4.
-- **ERP privileged access** (gap 4): AC-5, AC-6(5), AC-6(7), SA-9.
-- **Plan sponsor separation** (gap 3): AC-4, PT-3.
-- **Resilience and group coordination** (gaps 2 and 7): CP-4, CP-7, IR-3, IR-6, PM-30.
+- **Identity administration and reset** (group gap 1): AC-2, AC-2(12), AC-6, IA-5, IA-12, IA-12(2), AT-2(3), CA-3, SI-4.
+- **ERP privileged access** (group gap 4): AC-5, AC-6(5), AC-6(7), SA-9.
+- **Plan sponsor separation** (group gap 3): AC-4, PT-3.
+- **Resilience and group coordination** (group gaps 2 and 7): CP-4, CP-7, IR-3, IR-6, PM-30.
 
 ### 10.2 Common control inheritance by division
 The common control catalog lists 94 controls provided once by the group. The SCSP is unusual: its identity component (SYS-G1) is itself the provider of 20 common controls, so for those controls the SCSP is the provider, not an inheritor.
@@ -140,7 +140,7 @@ The common control catalog lists 94 controls provided once by the group. The SCS
 | Division | Inheritance documentation | Status |
 |---|---|---|
 | Insurance | Insurance inheritance matrix (2025), used in the insurers' information security programs | Documented |
-| Health Care Services | 2024 inheritance matrix for SYS-H1 to SYS-H3 | **Not documented for the 50 acquired clinics** (scenario gap 8; POAM-019) |
+| Health Care Services | 2024 inheritance matrix for SYS-H1 to SYS-H3 | **Not documented for the 50 acquired clinics** (group gap 8; POAM-019) |
 | SCSP | This plan | Documented |
 
 ### 10.3 Control assessment status
@@ -152,7 +152,7 @@ Common controls were assessed once, and SCSP and division controls sampled, from
 - **Service accounts** use workload identity where the platform supports it; 112 still lack a named owner (POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **Common control:** a control provided once by the group and inherited by several systems

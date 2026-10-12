@@ -16,20 +16,20 @@ Most safeguards in both divisions come from the holding company. Testing them on
 2. **The SCSP's** system-specific controls were assessed because it is the SSP system and carries the group's payment and financial reporting integrity.
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Health Care Services was sampled more heavily (6 controls) because its acquired clinics sit outside the inheritance matrix and the risk analysis (scenario gap 8), so the group cannot assume common controls reach them.
+Health Care Services was sampled more heavily (6 controls) because its acquired clinics sit outside the inheritance matrix and the risk analysis (group gap 8), so the group cannot assume common controls reach them.
 
 ## 2. Controls selected
 **35 control assessments** (33 distinct controls; SA-9 and CP-9 were assessed in two scopes), **243 determination statements**.
 
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
-| Common control (SCSP identity component SYS-G1) | AC-2, AC-6, AC-6(5), IA-2(1), IA-5 | 39 | Every division's access; GR-01, GR-11; scenario gap 1 | Focused / Comprehensive (all divisions sampled) |
+| Common control (SCSP identity component SYS-G1) | AC-2, AC-6, AC-6(5), IA-2(1), IA-5 | 39 | Every division's access; GR-01, GR-11; group gap 1 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-07, GR-18; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-07, GR-18; group gap 7 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud and network) | CP-9, SC-7, SC-8, SC-12, CM-6 | 21 | GR-02; immutable backups and guardrails | Focused / Focused |
-| SCSP | AC-5, AC-6(7), AC-4, PT-3, CA-3, CP-4, SA-9 | 30 | GR-04, GR-05, GR-08, GR-09, GR-13; scenario gaps 1, 3, 4 | Comprehensive / Comprehensive |
+| SCSP | AC-5, AC-6(7), AC-4, PT-3, CA-3, CP-4, SA-9 | 30 | GR-04, GR-05, GR-08, GR-09, GR-13; group gaps 1, 3, 4 | Comprehensive / Comprehensive |
 | Division sample: Insurance | IA-8, IA-12, CP-2, SA-9 | 36 | INS-001 (High), INS-005, INS-007; P03 sec. 4F gaps | Focused / Focused |
-| Division sample: Health Care Services | AC-3, AU-6, SI-2, CP-9, PL-1, CA-2 | 48 | HCS-001 and HCS-004 (High); scenario gaps 6 and 8 | Focused / Focused (8 of 50 acquired clinics visited) |
+| Division sample: Health Care Services | AC-3, AU-6, SI-2, CP-9, PL-1, CA-2 | 48 | HCS-001 and HCS-004 (High); group gaps 6 and 8 | Focused / Focused (8 of 50 acquired clinics visited) |
 | **Total** | **35** | **243** | | |
 
 ## 3. Methods and objects
@@ -44,6 +44,18 @@ Health Care Services was sampled more heavily (6 controls) because its acquired 
   - a TLS scan of 80 endpoints and an external exposure scan of the landing zones;
   - review of 30 recorded bank-detail change calls in the insurance call center;
   - adjuster test account queries on 10 synthetic patients in the clinic EHR test environment.
+
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; they were approved on 2026-09-15, effective 2026-10-01. Controls that existed before this assessment were tested for operation. Statements that rest on the v2026 drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before this assessment and was tested on samples, configurations, records, or live systems | 230 |
+| Design | The statement rests on a draft (IR-6: the notification duties in draft POL-03 v2026, reviewed with the existing notification matrix); its design was reviewed. Operation is tested at the 2027-04 follow-up | 1 |
+| Not implemented | Nothing existed to test (identity proofing of surge adjusters, IA-12; the insurers' oversight of the holding company and the monitoring of ERP vendor support and its complementary controls, SA-9; review of legacy EHR audit records, AU-6; assessment of controls at the acquired clinics, CA-2; review of the 2025 change in benefits processing, PT-3) | 12 |
+| **Total** | | **243** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HCM and identity governance records in EV-002 and EV-014, and the surge adjuster records from EV-056).
 
 ## 4. Rules of engagement
 - No testing that could affect claims payments, payroll, bank files, or patient care. Social engineering calls used a dedicated test identity with no access, and EHR queries used synthetic patients.
@@ -60,14 +72,14 @@ Health Care Services was sampled more heavily (6 controls) because its acquired 
 | **Total** | **191** | **52** | **243** |
 
 **Common controls are mostly strong.** 112 of 129 common statements were satisfied. Cloud and network protection (CP-9, SC-7, SC-8, SC-12, CM-6), terminations (PS-4), vulnerability management (RA-5), and administrator authentication (IA-2(1), AC-6(5)) had no findings. The common findings sit in two places:
-- **Identity recovery and privilege** (AC-2, AC-6, IA-5): a division help desk test account reset a user in another division, and 2 of 3 social engineering test calls obtained an MFA reset (scenario gap 1).
-- **Cross-division incident coordination** (IR-3, IR-4, IR-6, IR-8, SI-4): no cross-division exercise, an incomplete notification matrix, and no SIEM coverage of the acquired clinics' directory (gaps 7 and 8).
+- **Identity recovery and privilege** (AC-2, AC-6, IA-5): a division help desk test account reset a user in another division, and 2 of 3 social engineering test calls obtained an MFA reset (group gap 1).
+- **Cross-division incident coordination** (IR-3, IR-4, IR-6, IR-8, SI-4): no cross-division exercise, an incomplete notification matrix, and no SIEM coverage of the acquired clinics' directory (group gaps 7 and 8).
 
-**The SCSP is where the integrity risk sits.** 14 of 30 statements failed: standing ERP superusers (AC-5, AC-6(7); gap 4), the benefits export (AC-4, PT-3; gap 3), the unapproved legacy directory trust (CA-3), the integration failover that missed its RTO (CP-4), and unmapped vendor complementary controls (SA-9).
+**The SCSP is where the integrity risk sits.** 14 of 30 statements failed: standing ERP superusers (AC-5, AC-6(7); group gap 4), the benefits export (AC-4, PT-3; group gap 3), the unapproved legacy directory trust (CA-3), the integration failover that missed its RTO (CP-4), and unmapped vendor complementary controls (SA-9).
 
 **Division samples:**
 - *Insurance:* bank-detail changes by phone verified only with knowledge questions (IA-8, all 30 sampled calls), surge adjusters not proofed (IA-12), no second site for workers' compensation (CP-2), and no oversight of the holding company as a service provider (SA-9; P03 sec. 4F).
-- *Health Care Services:* the adjuster role opened non-work visits for all 10 synthetic patients (AC-3; gap 6), and the acquired clinics lack activity review, timely patching, frequent backups, current policy, and assessment coverage (AU-6, SI-2, CP-9, PL-1, CA-2; gap 8).
+- *Health Care Services:* the adjuster role opened non-work visits for all 10 synthetic patients (AC-3; group gap 6), and the acquired clinics lack activity review, timely patching, frequent backups, current policy, and assessment coverage (AU-6, SI-2, CP-9, PL-1, CA-2; group gap 8).
 
 **Controls fully other than satisfied** (every statement failed): AC-6 and IR-3 (common), AC-6(7) and AC-4 (SCSP), IA-8 (Insurance), and AC-3 (Health Care Services). AC-6(7) has two determination statements; the others have one.
 

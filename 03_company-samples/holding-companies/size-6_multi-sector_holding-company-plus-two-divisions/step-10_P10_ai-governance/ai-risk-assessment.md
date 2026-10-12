@@ -7,8 +7,8 @@
 | Scope | The group AI governance program (group standard, inventory, regulator-specific rules) and a full assessment of the priority use case: **AI-001, the enterprise generative AI assistant across subsidiaries**. Division use cases AI-002 (claims fraud scoring) and AI-006 (triage and sepsis alert) are measured against their regulator-specific rules |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / dates | Group AI council (chaired by the Group Chief Risk Officer). Tests 2026-08-17 to 2026-08-21; council review 2026-08-27; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (10 use cases: 4 High, 4 Medium, 2 Low) |
-| Related | P01 GR-10, GR-15, GR-22, INS-008, INS-014, INS-018, HCS-007, HCS-008, HCS-016; POL-01 4.14, POL-04 4.6, POL-05 4.6; P07 POAM-023; scenario gap 9 |
+| Inventory | `ai-use-case-inventory.csv` (10 use cases: 4 High, 4 Medium, 2 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 application list and the Insurance model registry (EV-046), the assistant pilot configuration (EV-071), division model and vendor records (EV-060, EV-061, EV-070), and the HCM change record (EV-081). Not established: whether the productivity vendor's BAA covers the AI add-on (requested at intake, still open; POAM-023), and any AI tools used outside procurement and the SYS-G1 application list, which discovery cannot see |
+| Related | P01 GR-10, GR-15, GR-22, INS-008, INS-014, INS-018, HCS-007, HCS-008, HCS-016; POL-01 4.14, POL-04 4.6, POL-05 4.6; P07 POAM-023; group gap 9 |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -29,7 +29,7 @@
 5. **Regulator overlays.** Division supplements add the NAIC AI Model Bulletin elements for Insurance (adopted in North Carolina, applied group-wide by choice) and Section 1557 (45 CFR 92.210) for Health Care Services.
 6. **Approved tools only** for workforce generative AI (POL-05 4.6).
 
-**Where the program fell short in 2026.** The assistant pilot began on 2026-05-04, six weeks before the standard existed, with 6,000 users in three regulated divisions and no labels, training, or confirmation that the AI add-on was inside the productivity vendor's BAA (scenario gap 9). The HCM vendor also switched on resume screening (AI-008) in 2026-03 without review; it was turned off in 2026-06.
+**Where the program fell short in 2026.** The assistant pilot began on 2026-05-04, six weeks before the standard existed, with 6,000 users in three regulated divisions and no labels, training, or confirmation that the AI add-on was inside the productivity vendor's BAA (group gap 9). The HCM vendor also switched on resume screening (AI-008) in 2026-03 without review; it was turned off in 2026-06.
 
 ## 2. MAP
 ### 2.1 Division use cases
