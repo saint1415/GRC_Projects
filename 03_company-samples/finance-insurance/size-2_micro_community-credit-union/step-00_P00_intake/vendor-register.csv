@@ -1,0 +1,17 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Core processor,"Core processing (shares, loans, general ledger, teller, ACH, BSA module)",SYS-01,Member information (NPI),Core processing contract (renews 2027-06-30; no incident notice time frame),"SOC 1 Type 2 and SOC 2 Type 2, 12 months ending 2026-03-31",EV-028; EV-029; EV-037,Production and backup at two data centers
+V-02,Digital banking provider,"Online and mobile banking, bill pay, e-statements, fraud scoring",SYS-02,Member information (NPI),Service agreement,SOC 2 Type 2 on file,EV-004; EV-030; EV-037,
+V-03,Corporate credit union,Wire portal; settlement; alternate phone-initiated wire,SYS-03,Member information (wire instructions),Wire service agreement with maker-checker and token terms,None on file,EV-005; EV-032; EV-037,Alternate phone wire with a PIN
+V-04,Card processor,Debit card issuing and processing; fraud monitoring; stand-in authorization,SYS-07,Member information; cardholder data,Card processing agreement,SOC report on file,EV-031; EV-037,Outside the SSP boundary
+V-05,ATM vendor,Lobby ATM service,SYS-07,Cardholder data,ATM service agreement,None on file,EV-031; EV-037,
+V-06,LOS vendor,Loan origination system and AI credit scoring add-on,SYS-08,Member information (NPI); consumer report information,LOS agreement (confidentiality clause); add-on terms allow use of de-identified application data,None on file,EV-034; EV-037,Add-on switched on 2026-04-06
+V-07,Consumer reporting agencies,Credit reports for loan applications,SYS-08,Applicant identity data,Subscriber agreements,n/a,EV-037,
+V-08,Productivity suite vendor,Email and files,SYS-04,Member information (NPI),Vendor standard terms,Vendor security documentation,EV-006; EV-037; EV-038,
+V-09,Managed service provider (MSP),"Help desk, patching, antivirus, firewall and Wi-Fi, suite administration, imaging server administration",SYS-04; SYS-05; SYS-06; SYS-09,Member information (administrative access),MSP service contract (no incident notice or recovery time commitment),None on file,EV-033; EV-014; EV-037,Remote management tool reaches every computer and the imaging server; holds the imaging server's cloud account
+V-10,Cloud IaaS provider (through the MSP's account),Virtual server and snapshots for the imaging server,SYS-09,Member information (NPI),Provider terms with the MSP; none with the credit union,Provider compliance reports and shared responsibility description,EV-013; EV-038,Billed through the MSP
+V-11,Internet provider,One business fiber line (data and VoIP phones),SYS-06,Member information in transit (conduit),Service agreement,None,EV-035; EV-037,
+V-12,Payroll service,Payroll,n/a,Employee payroll data,Service agreement,None on file,EV-001; EV-037,
+V-13,Shredding vendor,Paper shredding,n/a,Member information on paper,Service agreement,Certificates of destruction (paper),EV-041; EV-037,
+V-14,Outside CPA firm,Supervisory committee audit (financial statement audit),n/a,Financial records,Engagement letter,n/a,EV-039; EV-037,Engagement does not include testing of security controls
+V-15,Alarm company,Alarm monitoring,n/a,None,Alarm monitoring contract,n/a,EV-040; EV-037,
+V-16,Fidelity bond carrier and cyber insurer,"Fidelity bond; cyber policy with breach hotline, panel breach counsel and forensics",n/a,Member information only during an incident engagement,Bond and insurance policy,n/a,EV-036; EV-037,Cyber policy renews 2026-11-01
