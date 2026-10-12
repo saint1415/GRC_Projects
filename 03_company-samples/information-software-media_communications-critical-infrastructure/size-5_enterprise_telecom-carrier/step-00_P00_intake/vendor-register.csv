@@ -27,7 +27,7 @@ V-25,ERP vendor,ERP and financial reporting,SYS-13,Financial records,Subscriptio
 V-26,Payroll service provider,Payroll for all entities except AQ-03,SYS-13,Employee personal information,Service agreement,SOC 2 report,EV-051; EV-078; EV-079,Continuity test 2026-01-15
 V-27,Productivity suite vendor,"Email, files and chat",SAAS-PROD,Incidental customer personal information,Subscription agreement,SOC 2 Type 2,EV-051; EV-077,
 V-28,Seller's managed IT provider (AQ-03),AQ-03 IT and legacy billing under the transition services agreement,SYS-01-AQ; SYS-05-L; SYS-08-AQ,CPNI; customer personal information,Transition services agreement to 2027-09-30 with administrator rights,None on file,EV-049; EV-007; EV-010,Standing VPN access
-V-29,AQ-02 and AQ-03 legacy system and inherited vendors,"Legacy billing, workforce, HR and payables vendors",SYS-01-AQ; AI-008; AI-012,CPNI; customer and employee personal information,Inherited contracts without CPNI terms,None on file,EV-049; EV-047; EV-063,
+V-29,AQ-02 and AQ-03 legacy system and inherited vendors,"Legacy billing, workforce, HR and payables vendors",SYS-01-AQ; AI-008,CPNI; customer and employee personal information,Inherited contracts without CPNI terms,None on file,EV-049; EV-047; EV-063,
 V-30,Certified media destruction vendor,Media destruction,n/a,Data on retired media,Service agreement,Certificates of destruction,EV-058,
 V-31,Penetration testing firm,Annual independent penetration tests,SYS-04; SYS-08; SYS-11-UC,Test access,Engagement letter,n/a,EV-015,
 V-32,Cyber insurer,"Cyber insurance, breach counsel and forensics panel",n/a,Incident information when a claim is made,Policy,n/a,EV-071,Approval needed before any ransom payment

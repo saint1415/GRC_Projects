@@ -59,7 +59,7 @@ This report records **observations, not findings**. Whether an observation meets
 | AQ-03 network element inventory for loading into the OSS | Vice President, Integration Management Office | 2026-05-19 | Not loaded at intake; P07 traced elements (CM-8) and POAM-010 tracks the load |
 | CPNI campaign records for AQ-02 and AQ-03 before integration | Vice President, Marketing | 2026-05-20 | Not available at intake; carried to P03 (G-017) and POAM-022 |
 | Restore test records for the AQ-02 and AQ-03 legacy billing systems | Vice President, Integration Management Office | 2026-05-21 | None provided; carried to the P01 register (R-051) |
-| AI features embedded in vendor products beyond the discovery review | CIO | 2026-05-22 | Not established at intake; the P10 inventory sweep (EV-098) found AI-012, and P10 treats further embedded features as unknown |
+| AI features embedded in vendor products beyond the discovery review | CIO | 2026-05-22 | Not established at intake; the P10 inventory sweep later found AI-012, and P10 treats further embedded features as unknown |
 | Incident records kept by AQ-02 and AQ-03 local IT | Vice President, Integration Management Office | 2026-05-19 | Partial; P07 sampled the 9 AQ incidents in SOC case management (IR-4) |
 
 ## 5. What each later step takes from intake
