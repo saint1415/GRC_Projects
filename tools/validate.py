@@ -144,6 +144,10 @@ def check_evidence_based(sd, intake):
     for p01 in sd.glob("step-04_*/risk-register*.csv"):
         if any(not r.get("likelihood_basis", "").strip() or not r.get("assessment_pass", "").startswith("Pass ") for r in rows(p01)):
             errors.append(f"{p01.relative_to(ROOT)}: every risk needs a likelihood_basis and an assessment_pass starting 'Pass 1' or 'Pass 2'")
+        for r in rows(p01):
+            m = re.match(r"Pass 2 \((\d{4}-\d{2}-\d{2})", r.get("assessment_pass", ""))
+            if m and r.get("last_reviewed", "") and r["last_reviewed"] < m.group(1):
+                errors.append(f"{p01.relative_to(ROOT)}: {next(iter(r.values()))} was last reviewed {r['last_reviewed']}, before its Pass 2 date {m.group(1)}")
 
 
 # ---- completed samples (00_company-facts.md present): definition of done
