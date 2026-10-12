@@ -7,7 +7,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **HCP**, the registry default, because it is both: it is the focus division's primary system, and it is the platform the other two divisions run on. The Payment Processing cardholder data environment and the corporate landing zone sit in SL-1 accounts, and the Managed IT DoD CUI enclave sits in a G1 tenant, all controlled through the HCP, and about 1,900 Managed IT engineers act on customer servers through the HCP partner-operator path. The HCP carries the group's top risk (P01 GR-01). Each other division keeps its own security documentation (the Payment Processing PCI DSS documentation for SYS-P1; the Managed IT system documentation for SYS-M1 and the SYS-M2 enclave SSP required by NIST SP 800-171 Rev. 2, 3.12.4), all inheriting from the same common control catalog.
 
 ## 1. System Name and Identifier
-Hosting Control Plane and Customer Portal (**HCP**), identifier CSCH-SYS-H1. It corresponds to SYS-H1 in `../00_company-facts.md`, in two partitions: commercial (HCP-C, serving regions R1 to R5) and Government (HCP-G, serving region G1).
+Hosting Control Plane and Customer Portal (**HCP**), identifier CSCH-SYS-H1. It corresponds to SYS-H1 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), in two partitions: commercial (HCP-C, serving regions R1 to R5) and Government (HCP-G, serving region G1).
 
 ## 2. System Overview
 The HCP is the set of services through which customers and operators create, change, and observe cloud resources. It supports:
@@ -41,17 +41,17 @@ The HCP is the set of services through which customers and operators create, cha
 | C-IT-R01 | FedRAMP | 44 U.S.C. 3607-3616; FedRAMP Consolidated Rules for 2026 | **Applies to the G1 partition.** G1 holds a Rev5 Class C certification (originally a legacy FedRAMP Moderate agency authorization, 2023-03-15). The 2026 rules must be followed to maintain it, on ruleset dates from 2026-12-07 to 2028-02-01 (P03) |
 | C-IT-R03 | DFARS Safeguarding CDI and Cyber Incident Reporting | 48 CFR 252.204-7012(b)(2)(ii)(D) | **Applies by contract to G1.** DIB customers that store covered defense information must ensure their cloud provider meets security requirements equivalent to the FedRAMP Moderate baseline and complies with paragraphs (c) through (g) (incident reporting, malicious software, media preservation, access, damage assessment). A DFARS addendum flows this down to the Cloud Hosting division |
 | C-IT-R05 | Bank service provider notification rule | 12 CFR 53.4 (OCC); 12 CFR 225.303 (FRB); 12 CFR 304.24 (FDIC) | **Applies.** About 260 banking organizations run covered services on SL-1 |
-| C-IT-R04 | DOJ Data Security Program | 28 CFR Part 202 | **Applies.** G1 holds government-related data (no volume threshold), and SL-1 holds bulk U.S. sensitive personal data for customers. The issue is vendor screening (scenario gap 10) |
+| C-IT-R04 | DOJ Data Security Program | 28 CFR Part 202 | **Applies.** G1 holds government-related data (no volume threshold), and SL-1 holds bulk U.S. sensitive personal data for customers. The issue is vendor screening (group gap 10) |
 | C-IT-R06 | CIRCIA (pending rule) | 6 U.S.C. 681b; proposed 6 CFR Part 226 | Not in force. No final rule as of 2026-09-25. Tracked only |
 | N54-R06 | HIPAA (as business associate) | 45 CFR 164.302-164.318, 164.410, 164.504(e) | **Applies** to the HIPAA-eligible SL-1 services offered under BAAs. The HCP can reach customer data (snapshots, run-command), so its safeguards are part of the division's business associate duties |
-| N52-R03 and PCI DSS | FTC Safeguards Rule (for Payment Processing); PCI DSS v4.0.1 Requirements 12.8 and 12.9 (contractual) | 16 CFR 314.4(f) | The CDE relies on HCP controls, so the Cloud Hosting division is an **affiliate service provider** to Payment Processing. No intercompany agreement carries these terms yet (scenario gap 6) |
+| N52-R03 and PCI DSS | FTC Safeguards Rule (for Payment Processing); PCI DSS v4.0.1 Requirements 12.8 and 12.9 (contractual) | 16 CFR 314.4(f) | The CDE relies on HCP controls, so the Cloud Hosting division is an **affiliate service provider** to Payment Processing. No intercompany agreement carries these terms yet (group gap 6; EV-033) |
 | N52-R08 | SEC cybersecurity disclosure | Reg S-K Item 106; Form 8-K Item 1.05 | An HCP incident could be material to the group (P08) |
-| FAR | Federal contract clauses for G1 | 48 CFR 52.204-21, 52.204-23, 52.204-25, 52.204-30 | Agencies order G1 under federal contracts that include these clauses (section 7 of `../00_company-facts.md`) |
+| FAR | Federal contract clauses for G1 | 48 CFR 52.204-21, 52.204-23, 52.204-25, 52.204-30 | Agencies order G1 under federal contracts that include these clauses (EV-042) |
 | State | Florida Information Protection Act (worked example) | Fla. Stat. 501.171(6) | The division is a third-party agent for customer personal information it maintains; it must notify the customer within 10 days of a breach determination. Other states are handled generically |
 | Contract | Customer agreement and SLA | Security incident notice within 72 hours of confirmation; 99.99% multi-zone and 99.9% console and API availability | Every customer |
 | Internal | Group policies POL-01 to POL-05 and the Cloud Hosting supplement | P06 | |
 
-**Not applicable:** CMMC (32 CFR Part 170) does not bind the division as a cloud provider; DIB customers that use G1 rely on its FedRAMP status for their own CMMC scope (32 CFR 170.19(c)(2)). NYDFS Part 500 (no New York license in the group).
+**Not applicable:** CMMC (32 CFR Part 170) does not bind the division as a cloud provider; DIB customers that use G1 rely on its FedRAMP status for their own CMMC scope (32 CFR 170.19(c)(2)). NYDFS Part 500 (no New York license in the group). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -109,6 +109,8 @@ CA-5 (Plan of Action and Milestones) is kept although it is not on the Class C l
 Other High-baseline controls are tracked in the division's tailoring register: most PE and MA controls are provided by Cloud Hosting data center operations and listed only where the HCP depends on them, and controls for components the HCP does not have (for example wireless access) are tailored out with a reason.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-H1 in both partitions, the SYS-H2 management interfaces and SYS-H3 fleet automation, and the shared services they inherit from) and the HCP exports and documents EV-046 to EV-049.
+
 **Inside:**
 - Both HCP partitions: console, API gateway, customer IAM, policy engine, orchestration, run-command, support tooling, partner-operator federation, metering capture, and control plane data stores.
 - The management interfaces of SYS-H2 (hypervisor managers; BMC bastions) and the SYS-H3 fleet automation service as it acts through the HCP job system.
@@ -139,7 +141,7 @@ The diagrams are in P04 `cloud-architecture.md`.
 | SYS-H2 hosts and storage | Outbound commands; inbound status | Provisioning, run-command, telemetry | Internal design documentation |
 | Managed IT legacy identity tenant | Inbound federation | Partner-operator sign-ins | **No documented interconnection terms (gap; CA-3)** |
 | SYS-M1 RMM | Bidirectional (API) | Ticket links, inventory | Internal integration record |
-| Payment Processing CDE accounts | Hosting | Card data stays inside the CDE accounts; the HCP holds account metadata | **No intercompany agreement with 314.4(f) and PCI DSS 12.8 and 12.9 terms (scenario gap 6)** |
+| Payment Processing CDE accounts | Hosting | Card data stays inside the CDE accounts; the HCP holds account metadata | **No intercompany agreement with 314.4(f) and PCI DSS 12.8 and 12.9 terms (group gap 6)** |
 | SYS-G2 SIEM | Outbound | Audit logs (G1 logs over a dedicated path) | Group logging standard |
 | Third-party model service (through SYS-G2 AI triage) | Outbound | Alert context, which can include G1 resource metadata and customer IP addresses | **Not documented as a FedRAMP third-party information resource (POAM-008)** |
 | External provider X | Outbound | Immutable backups | Provider agreement |
@@ -174,16 +176,16 @@ See `control-implementation.csv` (130 controls) and `common-control-catalog.csv`
 | System-specific | 47 |
 
 **The 23 partially implemented controls** cluster in four places:
-- **The partner-operator path** (scenario gap 1): AC-2, AC-2(12), AC-6, AC-6(5), AC-6(7), AC-12, IA-2(1), and AU-6 (shared with the AI triage gap).
-- **The FedRAMP 2026 rules transition for G1** (gap 3): CA-5, CA-7, CM-3, CM-8, PL-2, RA-5, SA-9, and SC-13.
-- **The SOC's AI triage service** (gap 4): SI-4 and IR-4.
-- **Cross-division governance** (gaps 7 and 10, and the CDE design): IR-3, IR-6, CA-3, PS-7, and CP-4.
+- **The partner-operator path** (group gap 1): AC-2, AC-2(12), AC-6, AC-6(5), AC-6(7), AC-12, IA-2(1), and AU-6 (shared with the AI triage gap).
+- **The FedRAMP 2026 rules transition for G1** (group gap 3): CA-5, CA-7, CM-3, CM-8, PL-2, RA-5, SA-9, and SC-13.
+- **The SOC's AI triage service** (group gap 4): SI-4 and IR-4.
+- **Cross-division governance** (group gaps 7 and 10, and the CDE design): IR-3, IR-6, CA-3, PS-7, and CP-4.
 
 ### 10.2 Common control inheritance by division
 The catalog lists 83 controls provided by group functions or by Cloud Hosting data center operations and the edge service.
 - **Cloud Hosting:** inheritance is documented in the G1 FedRAMP package and the SL-1 SOC 2 system description.
-- **Payment Processing:** documented in its PCI DSS responsibility matrix for group services, **but not for the SL-1 platform controls it relies on** (physical security, data center media handling, and DDoS protection; 5 controls in the catalog). That is scenario gap 6 (POAM-018).
-- **Managed IT:** **not documented at all** (scenario gap 9; POAM-017). P07 found the CA-2 statements other than satisfied for this reason.
+- **Payment Processing:** documented in its PCI DSS responsibility matrix for group services, **but not for the SL-1 platform controls it relies on** (physical security, data center media handling, and DDoS protection; 5 controls in the catalog). That is group gap 6 (POAM-018).
+- **Managed IT:** **not documented at all** (group gap 9; EV-019; POAM-017). P07 found the CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and HCP and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit (P07 `assessment-results.csv` and `poam.csv`). The G1 partition's annual FedRAMP independent assessment was completed on 2026-03-20; the next starts on 2027-02-08 and will be the first under the 2026 rules.
@@ -197,7 +199,7 @@ Assurance levels follow NIST SP 800-63.
 - **Service identities:** short-lived workload identities with mutual TLS.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **BMC:** baseboard management controller (out-of-band hardware management)

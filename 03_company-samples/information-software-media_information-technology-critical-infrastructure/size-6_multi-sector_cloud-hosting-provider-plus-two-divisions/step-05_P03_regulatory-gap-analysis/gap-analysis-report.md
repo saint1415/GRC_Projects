@@ -65,7 +65,7 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
 
 ### 1.4 Payment Processing: FTC Safeguards Rule and PCI DSS
 - **FTC Safeguards Rule.** A financial institution is any institution significantly engaged in activities that are financial in nature under section 4(k) of the Bank Holding Company Act (16 CFR 314.2(h)(1)). Group legal decided in 2023 that the division's money movement for merchants, billers, and consumers is such an activity and applies Part 314 to all consumer and cardholder information it handles. The 314.6 exceptions do not apply (about 14 million enrolled consumers). The FTC notice in 314.4(j) applies to notification events involving at least 500 consumers, no later than 30 days after discovery.
-- **The key finding is about affiliates.** The Cloud Hosting division (SL-1 hosts the CDE) and the Managed IT division (RMM agents on connected-to servers) are service providers to the division. 314.4(f) requires the division to select capable providers, bind them by contract, and assess them periodically. PCI DSS Requirement 12.8 requires the same management of third-party service providers, affiliates included. Neither is in place (scenario gap 6).
+- **The key finding is about affiliates.** The Cloud Hosting division (SL-1 hosts the CDE) and the Managed IT division (RMM agents on connected-to servers) are service providers to the division. 314.4(f) requires the division to select capable providers, bind them by contract, and assess them periodically. PCI DSS Requirement 12.8 requires the same management of third-party service providers, affiliates included. Neither is in place (group gap 6).
 - **PCI DSS is contractual,** through sponsor bank A and the card network rules. Rows list requirement numbers with short labels in our own words; the standard's text is not reproduced.
 - **Money transmission.** The division holds state money transmitter licenses where its bill-pay service requires them and none in New York. Incident notice duties vary by license and are not yet mapped (PY-G46). This analysis treats state licensing generically.
 
@@ -73,7 +73,7 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
 | Requirement | Result |
 |---|---|
 | SEC Reg S-K Item 106 and Form 8-K Item 1.05 | **Applies** to the holding company (P08 disclosure step) |
-| DOJ Data Security Program (28 CFR Part 202) | **Applies to all divisions.** G1 holds government-related data (no volume threshold); SL-1 customers and Payment Processing hold bulk personal financial data (more than 10,000 U.S. persons) and covered personal identifiers (more than 100,000). No covered data transactions are known, but vendor screening misses covered-person status (G-068; scenario gap 10) |
+| DOJ Data Security Program (28 CFR Part 202) | **Applies to all divisions.** G1 holds government-related data (no volume threshold); SL-1 customers and Payment Processing hold bulk personal financial data (more than 10,000 U.S. persons) and covered personal identifiers (more than 100,000). No covered data transactions are known, but vendor screening misses covered-person status (G-068; group gap 10) |
 | CIRCIA | **Not in force.** No final rule as of 2026-09-25. If finalized as proposed, the group would likely be covered as an entity above the SBA size standard in a critical infrastructure sector. Tracked only |
 | State breach notification laws | Each state where affected individuals reside. Florida worked example: Fla. Stat. 501.171, including the 10-day third-party agent notice (G-067) |
 | FTC Act Section 5 | Applies to all divisions' security and AI claims (P10) |
@@ -159,7 +159,7 @@ The 14 Not met rows are all FedRAMP rows with future maintain dates; none is pas
 
 Of the 27 gaps, 8 are High, 15 Moderate, and 4 Low.
 
-**SP 800-171 status: 96 of 110 requirements fully met.** The 14 not fully met are 3.1.5, 3.1.11, 3.1.12, 3.1.15, 3.2.2, 3.3.1, 3.3.5, 3.4.5, 3.5.10, 3.6.3, 3.11.2, 3.12.1, 3.12.4, and 3.13.1. Most trace to one cause: **RMM agents from the shared tenant on the enclave's management servers** (scenario gap 2). Removing them fixes 3.1.12, 3.1.15, 3.4.5, 3.13.1, and part of 3.1.5 at once. 3.12.4 must be fixed regardless, because it may not be on a POA&M.
+**SP 800-171 status: 96 of 110 requirements fully met.** The 14 not fully met are 3.1.5, 3.1.11, 3.1.12, 3.1.15, 3.2.2, 3.3.1, 3.3.5, 3.4.5, 3.5.10, 3.6.3, 3.11.2, 3.12.1, 3.12.4, and 3.13.1. Most trace to one cause: **RMM agents from the shared tenant on the enclave's management servers** (group gap 2). Removing them fixes 3.1.12, 3.1.15, 3.4.5, 3.13.1, and part of 3.1.5 at once. 3.12.4 must be fixed regardless, because it may not be on a POA&M.
 
 **Not met:** 32 CFR 170.3(e)(2) (no C3PAO assessment planned for the 2027 option periods; with Phase 2 suspended, this is now a voluntary step) and 170.19(c)(2) as an ESP (no responsibility matrix for DIB clients).
 
@@ -177,7 +177,7 @@ Of the 19 gaps, 5 are High, 11 Moderate, and 3 Low.
 **Not met:** 16 CFR 314.4(f)(2) and PCI DSS 12.8, both because the two affiliates are not managed as service providers. **High:** 314.4(c)(1) and PCI DSS Requirement 1 (RMM path into the connected-to segment), and 314.4(f)(1). The division's own controls are strong (its 2026 ROC had no open items); its gaps are about what its sister divisions do inside its scope.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | FedRAMP 2026 transition for G1 (3) | CH | VDR and VER (G-017 to G-028); MAS (G-007 to G-010); IEC (G-011 to G-016); CCM, CPO, SDR, CDS | High | Program by ruleset date; MAS before 2027-02-08 | Government Cloud compliance director | 2026-12-07 to 2027-08-01 |
 | 2 | RMM reach into other divisions (2) | MI, PP | PCI DSS 1, 7, 10, 12.5.2.1; 16 CFR 314.4(c)(1); SP 800-171 3.1.12, 3.1.15, 3.13.1; 32 CFR 170.19(c)(1) | High | Remove agents; separate internal tooling; two-person approval | Managed IT chief operating officer | 2027-01-31 |

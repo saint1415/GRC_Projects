@@ -26,7 +26,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 3. **Questionnaires** from billers and merchants are answered with the AOC, the SOC 1 report, and the group security program description.
 4. **Revisit trigger:** if a large biller or platform partner contractually requires SOC 2, or the division launches a service outside PCI DSS scope (for example, a data analytics product), assess SOC 2 again.
 
-Payment Processing still benefits from this work: the SL-1 platform controls and the group common controls that both in-scope reports carve in are the ones its PCI DSS responsibility matrix must now cover (scenario gap 6).
+Payment Processing still benefits from this work: the SL-1 platform controls and the group common controls that both in-scope reports carve in are the ones its PCI DSS responsibility matrix must now cover (group gap 6).
 
 **Other assurance considered.** ISO/IEC 27001, the vertical overlay's other assurance mechanism, is already held by the Cloud Hosting division and is kept. FedRAMP covers G1. Neither replaces SOC 2 for SL-1 customers, whose contracts require a SOC 2 report.
 
@@ -71,7 +71,7 @@ Payment Processing still benefits from this work: the SL-1 platform controls and
 
 **Why many criteria are Ready for a first report:** governance, risk assessment, HR, physical, and general IT controls come from group common controls already evidenced for the SL-1 report.
 **Not ready:** CC2.3 (no system description; inconsistent commitments), CC6.3 (one RMM tenant for all clients, access kept after transfers, agents on other divisions' systems), and CC7.2 (RMM logs kept 90 days and not monitored).
-**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.3, CC7.4, CC8.1, CC9.2, A1.3, and C1.1. Most trace to the RMM (scenario gap 2), the legacy identity tenant (gap 8), and undocumented inheritance (gap 9).
+**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.3, CC7.4, CC8.1, CC9.2, A1.3, and C1.1. Most trace to the RMM (group gap 2), the legacy identity tenant (gap 8), and undocumented inheritance (gap 9).
 
 ## 4. Remediation plan and evidence calendar
 | Quarter | Division | Criteria | Evidence to collect |

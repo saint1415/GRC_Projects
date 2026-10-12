@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's resilience team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-17
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-083 group, EV-084 Cloud Hosting, EV-085 Managed IT, EV-086 Payment Processing), FY2025 revenue by division (EV-003), customer, client and program volumes (EV-036, EV-058, EV-069), backup, contingency and recovery records (EV-022, EV-052, EV-067), and customer, client and sponsor bank terms (EV-036, EV-058, EV-069). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
+
 ## 1. Overview and purpose
 This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on (identity, the SOC, the group landing zone and backup vault, notification coordination, finance, HR, and collaboration).
@@ -18,10 +20,10 @@ The BIA supports:
 - impact ratings in the risk registers (P01) and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Corporate shared services run SYS-G1 (identity), SYS-G2 (SOC, SIEM, SOAR, EDR, and the AI triage service), SYS-G3 (the group landing zone on SL-1 and the backup vault at external provider X), and SYS-G4 (corporate SaaS). Division systems are SYS-H1 to SYS-H4 (Cloud Hosting), SYS-M1 and SYS-M2 (Managed IT), and SYS-P1 and SYS-P2 (Payment Processing). See `../00_company-facts.md` sections 3 and 7.
+Corporate shared services run SYS-G1 (identity), SYS-G2 (SOC, SIEM, SOAR, EDR, and the AI triage service), SYS-G3 (the group landing zone on SL-1 and the backup vault at external provider X), and SYS-G4 (corporate SaaS). Division systems are SYS-H1 to SYS-H4 (Cloud Hosting), SYS-M1 and SYS-M2 (Managed IT), and SYS-P1 and SYS-P2 (Payment Processing). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Cloud Hosting about $27.9 million per day, Managed IT about $13.2 million per day, and Payment Processing about $8.2 million per day in net revenue (while it moves about $1.9 billion of merchant and biller funds per business day).
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Cloud Hosting about $10.2 billion, or about $27.9 million per day; Managed IT about $4.8 billion, or about $13.2 million per day; and Payment Processing about $3.0 billion in net revenue, or about $8.2 million per day (while it moves about $1.9 billion of merchant and biller funds per business day).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -78,7 +80,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | SL-1 regions R1 and R3; G1 | Cloud Hosting | Payment Processing (CDE active-active in R1 and R3), Managed IT (ticketing and access broker on SL-1; SYS-M2 enclave in G1), corporate workloads | A two-region failure would stop card authorization. The CDE was designed for one-region loss only |
 | HCP partner-operator path | Cloud Hosting | Managed IT managed hosting (BP-M02) | About 1,900 engineers operate about 4,100 tenants through it; the same path is the top cross-division risk (P01 GR-01) |
 | Edge services (SYS-H4) | Cloud Hosting | Payment gateways, merchant and biller portals, Managed IT client portals | DNS failure looks like a full outage for every division |
-| RMM agents on division servers | Managed IT | Payment Processing settlement support (BP-P02); SYS-M2 enclave (BP-M04) | A malicious script through the RMM reaches the CDE connected-to segment and the CUI enclave (scenario gap 2) |
+| RMM agents on division servers | Managed IT | Payment Processing settlement support (BP-P02); SYS-M2 enclave (BP-M04) | A malicious script through the RMM reaches the CDE connected-to segment and the CUI enclave (group gap 2) |
 | SOC facts (SYS-G2) | Group | Every notice in P08; the SEC materiality decision | Every notice clock depends on the SOC establishing what happened, including what the AI triage service closed (P10) |
 | Backup vault (external provider X) | Group | All divisions | The only copy outside SL-1; protects against a provider-wide compromise of SL-1 |
 

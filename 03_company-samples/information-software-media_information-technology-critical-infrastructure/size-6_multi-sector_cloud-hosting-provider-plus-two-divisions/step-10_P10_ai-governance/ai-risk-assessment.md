@@ -28,7 +28,7 @@
 5. **Regulator overlays.** Each division supplement adds its own rules: FedRAMP and DFARS for Cloud Hosting, CMMC and client terms for Managed IT, card network and FTC rules for Payment Processing.
 6. **Change gate.** A material change (new model, new provider, new action class, new data source) triggers re-assessment before release.
 
-**Where the program fell short in 2026.** Three High-tier use cases were live before the standard was adopted: the SOC's AI triage (2025-11), the runbook automation agent (2026-03), and the fraud model (2024). None had been approved by the owners of the environments it acts in (scenario gap 4).
+**Where the program fell short in 2026.** Three High-tier use cases were live before the standard was adopted: the SOC's AI triage (2025-11), the runbook automation agent (2026-03), and the fraud model (2024). None had been approved by the owners of the environments it acts in (group gap 4).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

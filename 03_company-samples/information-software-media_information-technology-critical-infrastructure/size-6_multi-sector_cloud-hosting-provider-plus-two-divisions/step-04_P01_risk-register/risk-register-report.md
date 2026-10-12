@@ -13,13 +13,13 @@
 | Approved | 2026-09-17 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments and acceptances the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that holds or can reach customer, client, agency, merchant, or consumer data in the three divisions, plus the corporate shared services they depend on: SYS-G1 (identity), SYS-G2 (SOC and the AI triage service), SYS-G3 (landing zone and backup vault), and SYS-G4 (corporate SaaS). Division systems are SYS-H1 to SYS-H4, SYS-M1 and SYS-M2, and SYS-P1 and SYS-P2 (`../00_company-facts.md` section 3).
+**Scope.** Every system that holds or can reach customer, client, agency, merchant, or consumer data in the three divisions, plus the corporate shared services they depend on: SYS-G1 (identity), SYS-G2 (SOC and the AI triage service), SYS-G3 (landing zone and backup vault), and SYS-G4 (corporate SaaS). Division systems are SYS-H1 to SYS-H4, SYS-M1 and SYS-M2, and SYS-P1 and SYS-P2 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. Cloud Hosting, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each of those division risks points back to it. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating.
 
-**Who can accept risk** (POL-01 section 4.4; `../00_company-facts.md` section 7):
+**Who can accept risk** (POL-01 section 4.4; the group risk acceptance standard, EV-005):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security lead (division CISO where one exists) |
@@ -30,11 +30,12 @@
 A High risk to a federal agency's data, a bank's covered services, or cardholder data may not be accepted. It must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the gap analyses (P03), the common control assessment (P07), threat intelligence on attacks against cloud and managed service providers, and interviews with each division's leadership.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) is combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window, threat intelligence on attacks against cloud and managed service providers, and interviews with each division's leadership (EV-087 group, EV-088 Cloud Hosting, EV-089 Managed IT, EV-090 Payment Processing). The gap analyses (P03) followed in August and used these registers.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) is combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once, loss of a certification, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+6. **Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28; no risk was added after it, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 
@@ -69,11 +70,11 @@ A High risk to a federal agency's data, a bank's covered services, or cardholder
 
 ### What the results say
 The program is defined and mostly effective. There are no Very High risks, and the controls that most divisions share (identity, the SOC, EDR, immutable backups, HSM signing) are strong. The High risks cluster around **the paths that connect the divisions**, not around any one division's basics:
-1. **Tooling that reaches across divisions** (GR-01, GR-02). Two privileged paths cross division lines: the HCP partner-operator role and the single RMM tenant. Both rely on the Managed IT legacy identity tenant, so one phished engineer could reach thousands of customer systems, Payment Processing's connected-to servers, and the CUI enclave (scenario gaps 1 and 2). This is also the P08 scenario.
-2. **Automation the group cannot yet vouch for** (GR-04). The SOC's AI triage service decides which alerts a human sees and can contain hosts in every division, but its accuracy has never been validated by division (scenario gap 4).
-3. **A certification with dated rules** (GR-05). The FedRAMP 2026 rules have fixed maintain and grace dates. Missing them means losing the G1 certification, which 27 agencies and about 140 DIB customers depend on (scenario gap 3).
+1. **Tooling that reaches across divisions** (GR-01, GR-02). Two privileged paths cross division lines: the HCP partner-operator role and the single RMM tenant. Both rely on the Managed IT legacy identity tenant, so one phished engineer could reach thousands of customer systems, Payment Processing's connected-to servers, and the CUI enclave (group gaps 1 and 2). This is also the P08 scenario.
+2. **Automation the group cannot yet vouch for** (GR-04). The SOC's AI triage service decides which alerts a human sees and can contain hosts in every division, but its accuracy has never been validated by division (group gap 4).
+3. **A certification with dated rules** (GR-05). The FedRAMP 2026 rules have fixed maintain and grace dates. Missing them means losing the G1 certification, which 27 agencies and about 140 DIB customers depend on (group gap 3).
 
-Governance gaps 7, 8, 9, and 10 (notification matrix, supplement drift, Managed IT inheritance, vendor screening) are Moderate or Low at group level (GR-03, GR-12, GR-13, GR-14). They matter because they decide whether the High risks would be reported on time, which is why P07 sampled Managed IT governance controls more heavily.
+Group gaps 7, 8, 9, and 10 (notification matrix, supplement drift, Managed IT inheritance, vendor screening) are Moderate or Low at group level (GR-03, GR-12, GR-13, GR-14). They matter because they decide whether the High risks would be reported on time, which is why P07 sampled Managed IT governance controls more heavily.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q3):** partner-operator rebuild on SYS-G1 PAM (GR-01); RMM separation and two-person approval (GR-02); AI triage validation and limits (GR-04); FedRAMP 2026 transition (GR-05); CMMC Level 2 readiness (GR-06); intercompany agreements for Payment Processing (GR-08).
