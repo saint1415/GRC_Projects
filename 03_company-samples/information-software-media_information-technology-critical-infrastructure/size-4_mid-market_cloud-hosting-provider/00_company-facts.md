@@ -50,59 +50,34 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv). Suppliers are in [`step-00_P00_intake/vendor-register.csv`](step-00_P00_intake/vendor-register.csv).
+
 | ID | System | Hosting | Holds customer data? | Notes |
 |---|---|---|---|---|
-| SYS-01 | Customer portal and public API | Company-built; runs in SYS-04 | Yes (tenant metadata, customer credentials) | Two partitions: commercial and government. Customer administrator MFA is required in the government partition and optional in the commercial partition (58% of commercial customer administrators enrolled). Agency users sign in with federal credentials through federation |
+| SYS-01 | Customer portal and public API | Company-built; runs in SYS-04 | Yes (tenant metadata, customer credentials) | Two partitions: commercial and government. Customer administrator MFA is required in the government partition and optional in the commercial partition (58% of commercial customer administrators enrolled; EV-009). Agency users sign in with federal credentials through federation |
 | SYS-02 | Control plane orchestration services | Company-built; runs in SYS-04 | Yes (tenant inventory, service credentials) | Provisioning engine, job queue, tenant database, metering. Separate deployments for the commercial and government partitions in separate cloud accounts. Holds service credentials that act on every VM in its partition |
-| SYS-03 | Workforce identity provider (SSO, MFA) | SaaS (the vendor holds its own FedRAMP certification) | No (identities only) | Phishing-resistant hardware security keys for all workforce since 2025 |
+| SYS-03 | Workforce identity provider (SSO, MFA) | SaaS (the vendor holds its own FedRAMP certification) | No (identities only) | Phishing-resistant hardware security keys for all workforce since 2025 (EV-002) |
 | SYS-04 | Public cloud landing zone: 10 accounts (organization management, security tooling, log archive, identity and shared services, network hub, HCP commercial production, HCP government production, CI/CD build, non-production, backup) | Public cloud provider (vendor-agnostic; government account in regions covered by the provider's own FedRAMP certification) | Yes | Hosts SYS-01, SYS-02, build runners, and control plane backups |
-| SYS-05 | Private cloud platform | Company-owned hardware in DC-1, DC-2, DC-3 | Yes (customer VMs) | 540 hypervisor hosts in 16 clusters and 28 storage arrays. DC-1: 7 clusters, 236 hosts. DC-2: 5 clusters, 176 hosts (2 government clusters, 64 hosts). DC-3: 4 clusters, 128 hosts (1 government cluster, 32 hosts). Paid replication tier covers about 35% of commercial VMs |
+| SYS-05 | Private cloud platform | Company-owned hardware in DC-1, DC-2, DC-3 | Yes (customer VMs) | 540 hypervisor hosts in 16 clusters and 28 storage arrays. DC-1: 7 clusters, 236 hosts. DC-2: 5 clusters, 176 hosts (2 government clusters, 64 hosts). DC-3: 4 clusters, 128 hosts (1 government cluster, 32 hosts) (EV-010). Paid replication tier covers about 35% of commercial VMs (EV-011) |
 | SYS-06 | Virtualization management, out-of-band management, and privileged access | Company-owned, all three data centers; PAM is SaaS-managed software on company hosts | Yes (full control of customer VMs) | Hypervisor managers, host baseboard management controllers (BMCs), management networks, PAM with session recording and just-in-time elevation |
-| SYS-07 | Source code repository and CI/CD pipeline | SaaS code hosting plus build runners in SYS-04 | No (source, VM templates, signing keys) | Builds the control plane, portal, and VM templates. Government templates are signed with a key in a cloud hardware security module (HSM); commercial templates with a key stored as a pipeline secret |
-| SYS-08 | RMM tool | SaaS (RMM vendor) | Yes (agent access to customer servers) | Agents on about 11,200 commercial customer servers; can run scripts on any of them. Not used for Government Cloud tenants |
+| SYS-07 | Source code repository and CI/CD pipeline | SaaS code hosting plus build runners in SYS-04 | No (source, VM templates, signing keys) | Builds the control plane, portal, and VM templates. Government templates are signed with a key in a cloud hardware security module (HSM); commercial templates with a key stored as a pipeline secret (EV-020) |
+| SYS-08 | RMM tool | SaaS (RMM vendor) | Yes (agent access to customer servers) | Agents on about 11,200 commercial customer servers; can run scripts on any of them. Not used for Government Cloud tenants (EV-027) |
 | SYS-09 | Edge network and authoritative DNS | Company routers and firewalls in each data center; contracted DDoS scrubbing service | Yes (customer DNS zones) | Two upstream carriers per data center |
 | SYS-10 | Managed backup platform | Company backup software and immutable object storage in DC-2 and DC-3 | Yes (customer backup copies) | Backs up customer VMs and servers; write-once retention options for customers |
-| SYS-11 | Security operations stack | SaaS SIEM (vendor holds its own FedRAMP certification) with AI-assisted alert triage; EDR; vulnerability scanners; MDR partner | Yes (logs) | 24x7 tier-1 triage by the MDR partner; in-house SOC by day and on call. AI triage enabled in March 2026 (P10) |
+| SYS-11 | Security operations stack | SaaS SIEM (vendor holds its own FedRAMP certification) with AI-assisted alert triage; EDR; vulnerability scanners; MDR partner | Yes (logs) | 24x7 tier-1 triage by the MDR partner; in-house SOC by day and on call. AI triage enabled in March 2026 (EV-026; P10) |
 | SYS-12 | IT service management: ticketing, change management, configuration management database (CMDB), status page | SaaS | Incidental | The status page runs on a separate provider from the platform |
-| SYS-13 | Corporate IT: productivity suite, 680 laptops and 40 NOC workstations, HR, payroll, finance, and billing SaaS | SaaS and company-managed endpoints | Customer contact and billing data; employee data | EDR and full-disk encryption on all endpoints |
-| SYS-14 | FedRAMP package repository | Legacy secure repository folders shared with agencies | FedRAMP package and continuous monitoring data | A FedRAMP-compatible trust center is not yet in place (P03) |
-| SYS-15 | Third-party vendors | Various | Varies | About 260 vendors; 34 with access to customer data or production systems; 14 rated Tier 1 |
+| SYS-13 | Corporate IT: productivity suite, 680 laptops and 40 NOC workstations, HR, payroll, finance, and billing SaaS | SaaS and company-managed endpoints | Customer contact and billing data; employee data | EDR and full-disk encryption on all endpoints (EV-017) |
+| SYS-14 | FedRAMP package repository | Legacy secure repository folders shared with agencies | FedRAMP package and continuous monitoring data | A FedRAMP-compatible trust center is not yet in place (EV-029; P03) |
+| SYS-15 | Third-party vendors | Various | Varies | About 260 vendors; 34 with access to customer data or production systems; 14 rated Tier 1 (EV-043) |
 
 **SSP system (P02):** the *Hosting Control Plane and Customer Portal (HCP)*: SYS-01, SYS-02 (both partitions), SYS-03, SYS-04, SYS-06, SYS-07, and the logging in SYS-11, with the 3 government clusters of SYS-05 and the management interfaces of all SYS-05 clusters and SYS-09. The FedRAMP-certified Government Cloud is the government partition of this boundary.
 
-## 4. Current security posture: defined program with gaps in scale
+## 4. Where the evidence is
 
-**In place today:**
-- FedRAMP Rev5 Moderate certification (legacy agency path) since 2024-05-20, with annual independent assessments and monthly continuous monitoring deliverables
-- SOC 2 Type 2 report (Security, Availability) for the commercial private cloud and the backup service; latest period 2025-07-01 to 2026-06-30, unqualified opinion with 3 exceptions
-- Phishing-resistant MFA (hardware security keys) for all workforce single sign-on, the cloud consoles, the code repository, and the RMM console
-- PAM with session recording and just-in-time elevation for the government clusters and all DC-2 and DC-3 clusters
-- EDR on all endpoints and servers the company manages; SaaS SIEM with 24x7 MDR triage
-- Multi-account cloud landing zone built with infrastructure as code; pull-request review with two approvers for control plane code
-- FIPS 140-validated cryptographic modules for the government partition (TLS termination, storage encryption, HSM)
-- Immutable control plane backups in a separate backup account and second region; quarterly restore tests for the government partition
-- Monthly authenticated vulnerability scanning and an annual penetration test for the Government Cloud
-- A FedRAMP Security Inbox (since 2026-01) and a Government Cloud administrator guide (2025)
-- Change advisory board for production changes; written incident response plan (2024), tabletop in February 2026
-- Vendor risk program with tiering; background checks for all hires; annual awareness and role-based training
-- Cyber insurance with an incident response panel
-
-**Missing or weak, found in the 2026 assessments:**
-1. **Two-speed security.** Controls built for the Government Cloud were not extended to the commercial partition and DC-1. Two older DC-1 clusters (64 hosts) still use local hypervisor accounts outside PAM; DC-1 BMC firmware lags; commercial access reviews are semiannual, not quarterly.
-2. **FedRAMP 2026 rules transition not planned.** No machine-readable certification package, no FedRAMP-compatible trust center, no Ongoing Certification Reports or Quarterly Reviews, no availability status service that meets the new rules, vulnerability response still on the legacy POA&M model, and no incident reporting process built on the Potential Agency Impact N-rating (PAIN) and its 1-hour clock.
-3. **Assessment scope too narrow.** The 2024 boundary treated the shared CI/CD pipeline, the workforce identity provider tenant, the SIEM tenant, and IT service management as external services. Third-party information resources are not documented the way the 2026 Minimum Assessment Scope rules require.
-4. **RMM tool exposure.** Standing access to about 11,200 customer servers; scripts can run across all customers with no second approval; 2 shared RMM super-administrator accounts used by the on-call rotation; RMM logs are not in the SIEM.
-5. **Commercial VM template signing.** The commercial signing key is a pipeline secret, and signature verification is not enforced at deployment in the commercial partition.
-6. **Logging at scale.** Government partition logs are complete with 1 year online retention. Commercial hypervisor and BMC logs reach the SIEM from DC-2 and DC-3 but only partly from DC-1; commercial retention is 90 days online.
-7. **Vulnerability management at scale.** Commercial clusters are scanned quarterly, not monthly; 14% of DC-1 BMCs run outdated firmware; known exploited vulnerability (KEV) tracking is manual.
-8. **Recovery at scale.** DC-1 holds about 54% of commercial VMs, and only replicated VMs (about 35%) can fail over. The commercial control plane partition missed its 4-hour RTO in its only restore test (2025). DC-1 is exposed to hurricanes.
-9. **Third-party risk at scale.** Annual reviews completed for 9 of 14 Tier 1 vendors; 4 Tier 1 contracts lack incident notice terms; the RMM vendor's SOC 2 report has exceptions that were never followed up.
-10. **Customer identity.** Commercial customer administrator MFA is optional (58% enrolled).
-11. **AI adopted without governance.** SIEM AI triage auto-closes commercial alerts; a coding assistant is used by about 70 engineers; a support reply assistant drafts ticket answers; HR is piloting AI resume screening. None was reviewed before use.
-12. **Privileged access in the commercial partition.** 214 engineers hold privileged roles; just-in-time elevation exists only in the government partition and DC-2 and DC-3.
-13. **Software supply chain.** No software bill of materials (SBOM) for VM templates or control plane releases; build provenance is not recorded.
-14. **Bank notice readiness.** Bank-designated contacts verified for 31 of 38 banks; the 4-hour determination step is in the 2024 plan but has never been exercised.
-15. **Long-lived CI/CD deploy token (found during P07 testing).** A deploy token created in 2024 for a migration had write access to the government partition's deployment repository, no expiry, and was missing from the secrets inventory.
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the FedRAMP Consolidated Rules for 2026, the Rev5 Class C control list, and the other requirements for the primary business line** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -119,37 +94,40 @@ All 11 deliverables in this folder use the facts below. The company is fictitiou
 
 | Date | Event |
 |---|---|
+| 2026-06-15 to 2026-07-02 | Intake: evidence requests, exports, DC-1 and DC-2 walk-throughs, inventories, obligations register |
 | 2026-07-06 to 2026-07-31 | BIA, risk assessment, and FedRAMP transition and regulatory gap analysis fieldwork |
-| 2026-08-03 to 2026-08-21 | Control assessment fieldwork by the co-sourced internal audit firm (DC-1 walkthrough 2026-08-11; DC-2 walkthrough 2026-08-13) |
+| 2026-07-27 to 2026-07-31 | 2026 policy and standard revisions (POL-01 to POL-05; STD-02, STD-03, STD-04, STD-09) drafted from the gaps |
+| 2026-08-03 to 2026-08-21 | Control assessment fieldwork by the co-sourced internal audit firm (DC-1 walkthrough 2026-08-11; DC-2 walkthrough 2026-08-13): operating tests of controls already in place; design review of the draft policies and standards |
 | 2026-08-24 to 2026-09-11 | SOC 2 readiness assessment and AI governance assessment |
 | 2026-09-22 | Results to the board audit committee; deliverables approved by the CTO (Moderate and below) and the CEO (High and above) |
 | 2026-10-01 | Policies POL-01 to POL-05 take effect |
+| 2027-01 (planned) | Follow-up assessment: operating effectiveness of the controls the new policies and standards introduced, after one quarter of operation and before the 2027 FedRAMP assessment |
 
 ## 7. Facts added while building the deliverables
-These details were added during the build and are used consistently across P01 to P10.
+These details were added during the build and are used consistently across P01 to P10. Where a detail describes the security program, the evidence ID that records it is given.
 
 | Topic | Added fact |
 |---|---|
-| Revenue per day | About $274,000 a day company-wide; managed private cloud about $126,000; Government Cloud about $38,000; managed services about $55,000; backup and DR about $33,000 |
-| Cyber insurance | $15 million aggregate limit, $500,000 retention. The carrier's panel supplies breach counsel and forensics; the policy requires notice through the carrier hotline before incident vendors are engaged |
-| Legacy POA&M | 41 open items in the Government Cloud POA&M at 2026-07-31, 3 of them past their scheduled date |
-| Privileged population | 214 engineers with privileged roles: 86 platform, 58 managed services, 34 site reliability, 22 software engineers with production deploy rights, 14 security |
-| Workforce activity | 74 terminations and 41 internal transfers in the 12 months to 2026-06-30 |
-| SIEM volume | About 41,000 alerts in July 2026; the AI triage feature auto-closed 68% of commercial-partition alerts without human review. Auto-close is disabled for government-partition alerts |
-| RMM | The vendor keeps audit logs for 90 days; its SOC 2 report (period ending 2026-03-31) has 2 exceptions on administrator access reviews |
-| Bank contacts | Designated points of contact verified for 31 of 38 banks (last full verification 2025-11) |
-| FedRAMP Security Inbox | Established 2026-01-05. FedRAMP's April 2026 Emergency Test message reached the Director of Security, but the required action was completed after the timeframe in the message |
-| SOC 2 exceptions (2025-2026 report) | 2 of 25 sampled terminations removed late; 1 of 40 sampled changes lacked documented approval; 1 quarterly restore test for a backup service region was skipped |
+| Revenue per day | About $274,000 a day company-wide; managed private cloud about $126,000; Government Cloud about $38,000; managed services about $55,000; backup and DR about $33,000 (FY2025 revenue report, EV-057) |
+| Cyber insurance | $15 million aggregate limit, $500,000 retention. The carrier's panel supplies breach counsel and forensics; the policy requires notice through the carrier hotline before incident vendors are engaged (EV-047) |
+| Legacy POA&M | 41 open items in the Government Cloud POA&M at 2026-07-31, 3 of them past their scheduled date (EV-071) |
+| Privileged population | 214 engineers with privileged roles: 86 platform, 58 managed services, 34 site reliability, 22 software engineers with production deploy rights, 14 security (EV-007) |
+| Workforce activity | 74 terminations and 41 internal transfers in the 12 months to 2026-06-30 (EV-003) |
+| SIEM volume | About 41,000 alerts in July 2026; the AI triage feature auto-closed 68% of commercial-partition alerts without human review. Auto-close is disabled for government-partition alerts (EV-063, EV-026) |
+| RMM | The vendor keeps audit logs for 90 days; its SOC 2 report (period ending 2026-03-31) has 2 exceptions on administrator access reviews (EV-027, EV-045) |
+| Bank contacts | Designated points of contact verified for 31 of 38 banks (last full verification 2025-11) (EV-039) |
+| FedRAMP Security Inbox | Established 2026-01-05. FedRAMP's April 2026 Emergency Test message reached the Director of Security, but the required action was completed after the timeframe in the message (EV-033) |
+| SOC 2 exceptions (2025-2026 report) | 2 of 25 sampled terminations removed late; 1 of 40 sampled changes lacked documented approval; 1 quarterly restore test for a backup service region was skipped (EV-046, EV-060) |
 | P07 scope | 40 controls (the 34 base controls FedRAMP requires in each year's independent assessment for Rev5 Class C under IVV-CSF-AIA, plus 6 enhancements tied to top risks), 185 determination statements |
 | Additional role titles | VP Sales; Financial Services Account Director (relationship owner for the 38 banks); Data Center Operations Managers for DC-1, DC-2, DC-3; Director of Communications |
-| DC-1 legacy clusters | The 2 older DC-1 clusters (64 hosts, about 4,000 commercial VMs) are called clusters A and B in P02 to P10. 9 DC-1 storage controllers are past end of support |
-| Commercial volume encryption | Default since 2025-01; about 9,000 older commercial volumes are not encrypted at rest (P02 SC-28; P07) |
+| DC-1 legacy clusters | The 2 older DC-1 clusters (64 hosts, about 4,000 commercial VMs) are called clusters A and B in P02 to P10. 9 DC-1 storage controllers are past end of support (EV-011, EV-010) |
+| Commercial volume encryption | Default since 2025-01; about 9,000 older commercial volumes are not encrypted at rest (EV-012; P02 SC-28; P07) |
 | 2027 FedRAMP assessment | The next annual FedRAMP independent assessment is planned to start 2027-02-15, which ends the grace periods for the FRC, IVV, and MAS rulesets (P03) |
 | FY2027 security plan | Approved by the CEO 2026-09-22: $2.6 million one-time and $1.05 million a year, including two GRC analysts and one vendor risk analyst (P01) |
-| P07 populations | 118 new workforce accounts in the 12 months to 2026-06-30; 27 security incidents in 2025-2026; 312 machine credentials found by secret scanning and cloud APIs; 6 of 22 software engineers' production deploy rights were no longer needed (removed 2026-09-15) |
-| Deploy token (gap 15) | Reported by the assessors 2026-08-14 and revoked 2026-08-15; evaluated as not FedRAMP reportable because its audit history showed no use since 2024 |
-| FedRAMP Security Inbox routing | Read only by the Director of Security until on-call routing goes live (POAM-024) |
-| Defense reporting | The company holds no DoD-approved medium assurance certificate yet (POAM-021) |
-| Tier 1 vendors | 14 Tier 1 vendors listed as VEN-01 to VEN-14 in P09; the 4 contracts without incident notice terms are the RMM, ITSM, backup software, and hardware maintenance vendors |
+| P07 populations | 118 new workforce accounts in the 12 months to 2026-06-30 (EV-001); 27 security incidents in 2025-2026 (EV-036); 312 machine credentials found by secret scanning and cloud APIs (EV-IA-5); 6 of 22 software engineers' production deploy rights were no longer needed (removed 2026-09-15; EV-AC-6(5)) |
+| Deploy token (found in P07 testing: EV-AC-2, EV-CM-5, EV-IA-5) | Reported by the assessors 2026-08-14 and revoked 2026-08-15; evaluated as not FedRAMP reportable because its audit history showed no use since 2024 |
+| FedRAMP Security Inbox routing | Read only by the Director of Security until on-call routing goes live (EV-033; POAM-024) |
+| Defense reporting | The company holds no DoD-approved medium assurance certificate yet (EV-040; POAM-021) |
+| Tier 1 vendors | 14 Tier 1 vendors listed as VEN-01 to VEN-14 in P09; the 4 contracts without incident notice terms are the RMM, ITSM, backup software, and hardware maintenance vendors (EV-042, EV-043) |
 | AI governance | AI-005 (resume screening) paused 2026-09-22; about 1,900 applicants a year; the AI review group first meets 2026-10-13 (P10) |
 | Standards | STD-01 to STD-10 (P06 `standards-index.md`) |

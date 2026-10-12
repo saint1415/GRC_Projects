@@ -12,6 +12,8 @@
 | Sources checked | fedramp.gov Consolidated Rules for 2026 (Important Dates; Updating to 2026 Rules; Rev5 Deadlines; Rev5 rulesets), retrieved 2026-10-05; eCFR (current through 2026-09-23): 12 CFR 53.2, 53.4, 225.301, 225.303, 304.22, 304.24; 16 CFR 314.2 and 314.4; 32 CFR 170.3, 170.4, 170.19, 170.21; 48 CFR 252.204-7012 and 252.204-7019 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 At this tier the first question is not "what does the rule say?" but "which subsidiary does it bind, and in what role?"
 
 ### 1.1 Role of each division
@@ -106,10 +108,23 @@ G1 has 27 federal agency customers, so FedRAMP applies to it. FedRAMP has no siz
    - CFR rows were read from the eCFR and cite section and paragraph. NIST SP 800-171 Rev. 2 rows are one per family, citing the requirement numbers not fully met.
    - PCI DSS rows list requirement numbers with short labels in our own words, as in the industry's other samples.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5 as an **author mapping**. No official NIST mapping exists from the FedRAMP 2026 rules, 16 CFR Part 314, or PCI DSS to CSF 2.0. For SP 800-171 Rev. 2, the mapping is informed by its Appendix D.
-3. **Evidence.** Interviews; configuration exports; the G1 package and the 2026-03-20 FedRAMP assessment report; contract registers; the 2026-04-30 PCI DSS Report on Compliance; the 2024 SP 800-171 self-assessment; and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, contract registers, plans, the G1 package and the 2026-03-20 FedRAMP assessment report (EV-040), and the 2024 SP 800-171 self-assessment (EV-063), EV-001 to EV-079), the 2026-04-30 PCI DSS Report on Compliance and the SL-1 SOC 2 report for the period ending 2026-06-30 (EV-080, EV-082, intake follow-up), gap analysis interviews with each division (EV-091 Cloud Hosting, EV-095 Managed IT, EV-097 Payment Processing), fieldwork documents and searches (EV-092 to EV-094, EV-096), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale. The `related_risk_ids` column links each gap to the registers.
 
 ## 4. Results
+### 4.0 Group gaps
+Ten gaps cross divisions or sit in shared services. They are numbered here and cited as group gaps 1 to 10 across this sample.
+1. **Cross-division privileged tooling.** The HCP partner-operator role lets about 1,900 Managed IT engineers run commands on the virtual machines of about 4,100 managed-hosting tenants. The access is standing, not just in time, and it is federated from the Managed IT legacy identity tenant, which accepts push MFA and 12-hour sessions instead of SYS-G1 phishing-resistant MFA and PAM. Run-command actions are logged but there is no alert on volume across tenants (EV-047, EV-060, EV-012; P07 AC-2, AC-6, AC-12, SI-4).
+2. **RMM reach into other divisions.** One RMM tenant (SYS-M1) serves all clients and internal uses. It has agents on 140 Payment Processing settlement-support servers in the CDE's connected-to segment and on the management servers of the DoD CUI enclave (SYS-M2). A script can be sent to many clients with one approver (EV-061, EV-063, EV-072; P07 AC-17, CM-5, SC-7, AC-6).
+3. **FedRAMP 2026 rules transition (G1).** VDR and VER must be followed by 2026-12-07; IEC, SCN, CMU, and others by 2027-01-01. G1 still uses the legacy POA&M model, has no tested incident procedure based on the PAIN rating, no machine-readable Security Decision Record, and no FedRAMP-compatible trust center. The shared corporate services that handle G1 logs and identities (SYS-G1, SYS-G2 and its AI triage service) are not documented as information resources of the offering (EV-039, EV-041, EV-045, EV-093; P07 CM-8, CA-7, RA-5).
+4. **AI alert triage autonomy.** The SOC's AI triage service auto-closes about 64% of alerts and can run 7 SOAR containment actions without a human, across all divisions, including CDE and G1 logs. Its auto-close accuracy has never been validated by division, and it sends alert context to a third-party hosted model service (EV-013; P07 SI-4, IR-4, AU-6, SA-9).
+5. **CMMC Level 2 readiness.** The Managed IT division's own NIST SP 800-171 basic self-assessment in SPRS dates from 2024-02-12, 14 of the 110 requirements are not fully met in the CUI enclave, and its responsibilities as an External Service Provider to about 150 DIB clients are not documented in a responsibility matrix (EV-063, EV-095, EV-058; P07 CA-2). Section 1.3 gives the status of CMMC Phase 2.
+6. **Payment Processing affiliate oversight.** The CDE runs on SL-1 and relies on the Cloud Hosting and Managed IT divisions, but no intercompany agreement carries 16 CFR 314.4(f) safeguards terms or a PCI DSS responsibility matrix (Requirements 12.8 and 12.9) for either affiliate, and the RMM-managed connected-to servers are not in the 2026 PCI DSS scope description (EV-033, EV-071, EV-072; P07 SA-9, CM-8).
+7. **Notification matrix.** No single group matrix covers FedRAMP IEC reports, DFARS 72-hour reports, bank service provider notices (designated contacts on file for 70% of Cloud Hosting's and 64% of Managed IT's bank customers), HIPAA business associate notices, sponsor bank and card network notices, FTC Safeguards notices, and SEC materiality. It has never been exercised across divisions (EV-016, EV-037, EV-059, EV-014; P07 IR-3, IR-6, IR-8).
+8. **Division supplement drift.** The Managed IT supplement was last aligned in 2024. It allows push MFA for technicians, 12-hour sessions, and 90-day RMM log retention, which conflict with 2026 group policy (EV-062; P07 PL-1).
+9. **Common control inheritance.** Documented for Cloud Hosting (FedRAMP package and SOC 2 system description) and Payment Processing (PCI DSS responsibility matrix for group services), but not for Managed IT (EV-019; P07 CA-2).
+10. **DOJ Data Security Program screening.** Two follow-the-sun support vendors with access to support tickets and logs are screened against sanctions lists but not for covered-person ownership or control under 28 CFR Part 202 (EV-027).
+
 ### 4.1 Cloud Hosting (`gap-analysis.csv`)
 | Requirement set | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
