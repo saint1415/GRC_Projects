@@ -7,7 +7,7 @@
 | AI use case | AI-001: AI estimating and bid assistant, pilot with 4 estimators since May 2026 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Director of Preconstruction with the IT Manager and Contracts Administrator, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounts payable list, the identity provider app list, the AI vendor account review and a staff survey (EV-028, EV-037). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Preconstruction. **Decision authority:** CFO (Medium tier); the President if re-tiered High.
@@ -30,7 +30,7 @@
 
 **Is the data FCI?** It depends on the stage.
 - Public solicitation documents posted for all bidders are *not* FCI. FAR 52.204-21(a) excludes "information provided by the Government to the public".
-- Drawings and change-order packages on an **awarded** federal contract *are* FCI. Estimators uploaded FC-2 change-order drawings in June and July 2026. That put FCI on an external system the company does not control (P03 G-003, G-024).
+- Drawings and change-order packages on an **awarded** federal contract *are* FCI. Estimators uploaded FC-2 change-order drawings in June and July 2026 (EV-037). That put FCI on an external system the company does not control (P03 G-003, G-024).
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
@@ -42,7 +42,7 @@
 | FAR 52.219-8, Utilization of Small Business Concerns | **Yes** on federal jobs | It is federal policy that small, veteran-owned, service-disabled veteran-owned, HUBZone, small disadvantaged, and women-owned small businesses have "the maximum practicable opportunity" to participate in subcontracts. The contractor agrees to carry out this policy (52.219-8(b), (d)). A ranking model that disfavors such firms works against that commitment |
 | Sherman Act Section 1 (15 U.S.C. 1) | Indirectly | Bid rigging and price-fixing are illegal. Counsel reviews any vendor feature that shares or aggregates pricing across contractors |
 | FTC Act Section 5 | Indirectly | Applies to the vendor's accuracy claims. The claims the company relied on are kept in the procurement file |
-| State AI laws (e.g., Colorado SB26-189) | No | The company operates in Florida, and AI-001 does not make consequential decisions about individuals. Out of scope by decision (`../00_company-facts.md`) |
+| State AI laws (e.g., Colorado SB26-189) | No | The company operates in Florida, and AI-001 does not make consequential decisions about individuals. Out of scope by decision (intake [obligations register](../step-00_P00_intake/obligations-register.csv)) |
 
 ## 3. Risk tier
 **Tier: Medium** (repository rubric, `00_universal-framework/projects/step-10_P10_ai-governance/README.md`).

@@ -12,6 +12,8 @@
 | Assessor | IT Manager with the Contracts Administrator and outside government contracts counsel |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **FAR 52.204-21 applies now.** The clause is in all three federal contracts (FC-1 VA, FC-2 GSA, FC-3 DoD). It protects any "covered contractor information system", meaning a contractor-owned or -operated system that "processes, stores, or transmits Federal contract information" (52.204-21(a)). Drawings, submittals, schedules, daily logs, certified payrolls, and pay apps prepared for these contracts are FCI. Simple transactional information needed to process payments is excluded from the definition. There is **no size exemption**; the only exclusion is for acquisitions of commercially available off-the-shelf (COTS) items, which does not describe construction contracts. The clause must also be flowed down to subcontractors that may hold FCI (52.204-21(c)).
 
 **CMMC Level 1 applies from the next DoD award, and possibly sooner.**
@@ -44,10 +46,12 @@ Video surveillance equipment from Hytera, Hikvision, and Dahua is covered only w
    - SP 800-53 controls come from the SP 800-171 Rev. 3 tailoring tables.
    - Where NIST publishes no CSF mapping (03.01.20, 03.01.22, 03.08.03), and for the CMMC, Section 889, and DFARS rows, the mapping is the author's and is labeled so in `crosswalk_source`.
 3. **Evidence.** Current state was established from:
-   - interviews with the CFO, Accounting Manager, Contracts Administrator, VP Operations, Systems Integration Manager, IT Manager, 3 Project Managers, and 2 superintendents
-   - system exports from the identity provider, the ERP, SYS-01, and the antivirus console
-   - a review of the subcontract template and SAM record
-   - walkthroughs of the main office and 2 jobsites (2026-07-21)
+   - the intake evidence: exports, documents, the accounts payable walk-through, the SAM and SPRS records and the contract files (EV-001 to EV-039)
+   - interviews with the CFO, Accounting Manager, Contracts Administrator, VP Operations, Systems Integration Manager, IT Manager, 3 Project Managers, and the estimators (EV-042), and with 2 superintendents during the jobsite walkthroughs (EV-050)
+   - fieldwork exports and reviews: the cloud network configuration and contract files (EV-043, EV-044), the identity provider and antivirus consoles (EV-045, EV-046), the badge list and equipment inventory (EV-047, EV-048), and the website (EV-049)
+   - walkthroughs of the main office and 2 jobsites with device checks (2026-07-21, EV-050)
+
+   The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row is rated Met, Partially met, Not met, or Not applicable. For CMMC readiness, anything other than Met counts as NOT MET under 170.24(c)(1).
 
 ## 3. Results summary

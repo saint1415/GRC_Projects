@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the CFO (Moderate and below) and the President (High and Very High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Project Delivery and Payment Platform (PDPP) and the business processes in the BIA (P05). That covers every system that holds Federal Contract Information (FCI), the payment path from pay app to cash receipt and from invoice to subcontractor payment, and the vendors that support them (`../00_company-facts.md` section 3). Client-installed security systems are in scope only for the risks the company creates while installing and commissioning them.
+**Scope.** The Project Delivery and Payment Platform (PDPP) and the business processes in the BIA (P05). That covers every system that holds Federal Contract Information (FCI), the payment path from pay app to cash receipt and from invoice to subcontractor payment, and the vendors that support them ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). Client-installed security systems are in scope only for the risks the company creates while installing and commissioning them.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,10 +21,12 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, interviews with the CFO, Accounting Manager, Project Managers, Contracts Administrator, and Systems Integration Manager, and the gap analysis (P03). Business email compromise was weighted heavily: the FBI's IC3 reports it in all 50 states (PSA I-091124-PSA), and the company had a near miss in March 2026.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews with the CFO, Accounting Manager, Project Managers, Contracts Administrator, and Systems Integration Manager (EV-041), and the gap analysis (P03). Business email compromise was weighted heavily: the FBI's IC3 reports it in all 50 states (PSA I-091124-PSA), and the company had a near miss in March 2026 (EV-023).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the accounts payable walk-through (EV-023), configuration exports, the contract files, walkthroughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05). One misdirected owner payment of about $1 million is close to a year of the company's net profit, so it rates Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence, and all 34 risks come from it. Pass 2 followed the control assessment (P07): R-009 was re-rated on 2026-08-07 after testing found covered video surveillance equipment at FC-1 (EV-SR-5). The `assessment_pass` column shows the pass for each risk.
 
 ## 3. Results
 
@@ -51,7 +53,7 @@ The Very High and two of the three High risks share one theme: **money moves on 
 
 The third High risk (R-007) is a contract-eligibility risk. CMMC Level 1 allows no POA&Ms (32 CFR 170.21(a)(1)): every one of the 15 FAR requirements must be met before the President can affirm in SPRS. Most of the work that closes R-007 is the same work in P03 and P07.
 
-R-009 was re-rated on 2026-08-07 after control assessment testing (P07) found covered video surveillance equipment at the FC-1 VA clinic. The likelihood of initiation moved to High because the event had already happened once.
+R-009 was re-rated on 2026-08-07 after control assessment testing (P07) found covered video surveillance equipment at the FC-1 VA clinic (EV-SR-5). The likelihood of initiation moved to High because the event had already happened once.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 budget, $41,000):**
