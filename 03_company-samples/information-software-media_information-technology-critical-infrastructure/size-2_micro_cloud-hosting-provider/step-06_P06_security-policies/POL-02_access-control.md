@@ -18,7 +18,7 @@
 Set up the company's security program, make sure only authorized people and processes reach the tools that control customer systems, and only as far as their job requires, and tell the workforce how to use company systems. The company's tools reach about 260 customer VMs and about 310 customer servers, including two banks' systems, so one shared or stolen credential can harm every customer at once. Most rules in Part B exist to break that concentration.
 
 ## 2. Scope
-All workforce members: the Owner, employees, and any contractor. It covers every company system (SYS-01 to SYS-11 in the scenario facts), including the SaaS tools, the cloud tenant, and the management interfaces at DC-1, and every account that can act on a customer VM or server. It also covers access by vendors and the MDR provider to those systems.
+All workforce members: the Owner, employees, and any contractor. It covers every company system (SYS-01 to SYS-11 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), including the SaaS tools, the cloud tenant, and the management interfaces at DC-1, and every account that can act on a customer VM or server. It also covers access by vendors and the MDR provider to those systems.
 
 ## 3. Roles and responsibilities
 | Role | Responsibility |

@@ -132,11 +132,11 @@ If the provider cannot meet the conditions in section 6 by 2026-12-31, the Owner
 Re-assess before the management-plane logs are onboarded (POAM-009) and at least once a year. NIST released a concept note for an AI RMF Critical Infrastructure Profile on 2026-04-07; the next assessment checks whether a profile has been published.
 
 ## 7. Other AI use cases (brief)
-- **AI-002: public generative AI chatbots.** Staff have used public chatbots to draft emails and scripts.
+- **AI-002: public generative AI chatbots.** Staff have used public chatbots to draft emails and scripts (EV-038).
   - **Tier: High if customer data, credentials, or configurations are entered;** Low for generic drafting.
   - **Rule:** prohibited for any customer data, credentials, tickets, configurations, or RMM scripts (POL-02 C.2; POL-04 4.6). Generic drafting with no company or customer information is allowed.
   - **Revisit** if the Owner wants an enterprise assistant with no-training terms.
-- **AI-003: PSA vendor's AI ticket-summary feature.** The vendor added it in 2026, and it is turned off.
+- **AI-003: PSA vendor's AI ticket-summary feature.** The vendor added it in 2026, and it is turned off (EV-012).
   - **Tier: Medium.** Tickets contain customer names, server names, and sometimes credentials pasted by customers, and summaries would go to customers.
   - **Rule:** stays off until the vendor's data-use terms are reviewed under POL-02 A.5 and a short assessment is done.
   - **No bias testing is needed** for AI-002 or AI-003: neither makes decisions about people.
