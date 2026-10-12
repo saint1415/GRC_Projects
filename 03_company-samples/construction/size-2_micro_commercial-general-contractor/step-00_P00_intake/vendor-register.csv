@@ -1,2 +1,15 @@
 vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
-V-01,[FILL],[FILL],[SYS-xx],[FILL],[FILL: agreement type and date or none found],[FILL: report type and period or none found],[EV-xxx],[FILL]
+V-01,SYS-01 vendor,"Project management and pay application platform, subcontractor portal",SYS-01,FCI; owners' drawings; pay apps,Click-through subscription terms,"SOC 2 Type 2, 12 months ending 2026-03-31; bridge letter through 2026-06-30",EV-019; EV-021; EV-022,Cloud hosting provider carved out of the report
+V-02,Accounting vendor,Accounting with job costing,SYS-02,FCI (pay apps and invoices); vendor bank details,Click-through subscription terms,Vendor security documentation only,EV-019; EV-021,
+V-03,Payroll service,Payroll and direct deposit,SYS-03,Employee PII; certified payroll data,Click-through subscription terms,Vendor security documentation only,EV-019; EV-021,Can repeat a prior payroll on request (EV-047)
+V-04,Productivity suite vendor,"Email, calendar, files",SYS-04,FCI; employee PII,Subscription terms,Vendor security documentation only,EV-019; EV-021,Administered by the MSP
+V-05,Managed service provider (MSP),"Help desk, patching, antivirus, firewall and Wi-Fi, suite administration, backup administration",SYS-04; SYS-05; SYS-06; SYS-07,Administrative access to every computer and the suite,MSP service contract (renews 2026-12-31),None on file,EV-016; EV-019; EV-020,Technician list and MFA evidence requested 2026-07-09; not provided at intake
+V-06,Backup vendor (MSP subcontractor),Backup of email and files,SYS-07,FCI; employee PII (backup copies),None with the company; bought and run by the MSP,Vendor documentation supplied by the MSP,EV-015; EV-020; EV-021,
+V-07,Bank,Business online banking (ACH and wires),SYS-08,Payment instructions,Treasury management agreement,None on file,EV-007,
+V-08,AI estimating vendor,AI estimating and bid assistant (trial),SYS-09,FCI (FC-1 change-order drawings); owners' drawings; pricing,Click-through trial terms that allow use of customer data to improve models,SOC 2 Type 1 report offered by the vendor,EV-019; EV-032,Monthly subscription on a company credit card from June 2026
+V-09,Internet provider,Office internet line,SYS-06,Network traffic,Service agreement,None on file,EV-018; EV-019,One line with no failover
+V-10,Cellular carrier,Phone and tablet service,SYS-05,Network traffic,Carrier account,None on file,EV-017; EV-018; EV-019,
+V-11,Website hosting vendor,Company website,WEB-01,Public content only,Hosting agreement,None on file,EV-019; EV-030,
+V-12,Cyber insurer,Cyber liability policy with breach hotline and panel vendors,n/a,Incident details when a claim is made,Policy on file,n/a,EV-019; EV-027,Social engineering sublimit requires a recorded call-back
+V-13,Printer and plotter lessor,Leased multifunction printer and plotter,SYS-06,Scanned drawings on device storage,Lease with no storage wipe clause,None on file,EV-029,
+V-14,Subcontractors and suppliers (about 25 active; 6 on FC-1),"Trade work, materials and equipment",SYS-01 (external users); SYS-02 (bank details),FCI (FC-1 drawings); bank details; certified payrolls,Subcontract template rev. 2023; purchase orders,None on file,EV-006; EV-024; EV-038,

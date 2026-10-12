@@ -16,7 +16,7 @@
 
 **What owners and agencies actually ask for instead:**
 - **Federal agencies:** compliance with FAR 52.204-21 and 52.204-25, which are already in FC-1. For the expected DoD job, a current CMMC Level 1 (Self) status with an affirmation in SPRS (32 CFR 170.15). **CMMC is the assurance mechanism that matters for federal work** (P03).
-- **Private and institutional owners:** security questionnaires. In July 2026 a private hospital system that the company wants to work for sent its contractor security questionnaire. It must be answered by 2026-10-15 before the hospital will release facility drawings, infection-control plans, and security system layouts. The questionnaire asks about protecting confidential owner information and about payment fraud.
+- **Private and institutional owners:** security questionnaires. In July 2026 a private hospital system that the company wants to work for sent its contractor security questionnaire (EV-031). It must be answered by 2026-10-15 before the hospital will release facility drawings, infection-control plans, and security system layouts. The questionnaire asks about protecting confidential owner information and about payment fraud.
 
 SOC 2 appears here for two reasons:
 
