@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Bank, N.A. (community commercial bank; subsidiary of Cris Santos Company, a bank holding company) | **Tier:** Small (120 employees; $510 million in total assets) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Information Security Officer) with the COO, Deposit Operations Manager, Treasury Management Officer, Chief Credit Officer, Chief Financial Officer, and BSA/AML Officer, during fieldwork 2026-07-13 to 2026-07-24 | **Approved:** President and CEO, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-054), FY2025 financial statements (EV-048), customer and channel report (EV-049), wire activity report (EV-034), business continuity plan (EV-026), core processor SOC 2 report (EV-040). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the President and CEO.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the bank depends on, how long each can be down, and how much data each can lose. It supports:
@@ -12,10 +13,10 @@ This BIA identifies which business processes the bank depends on, how long each 
 - the availability commitments checked in the core processor SOC report review (P09).
 
 ## 2. System and business description
-The bank serves about 16,000 deposit customers from six Florida branches. The main office (Branch 1) also houses the operations center and the wire room. Deposits, loans, and the general ledger run on a core banking system hosted by a core processor (SYS-01). Customers and staff move money through the Wire and Digital Banking Platform (WDBP, P02): vendor-hosted online and mobile banking (SYS-02) and a vendor-hosted wire and ACH platform (SYS-03), reached from bank endpoints through the identity provider (SYS-05). Cards and ATMs run through a card processor (SYS-11). Lending runs on a SaaS loan origination system (SYS-04) with the AI credit model pilot (SYS-10) in the bank's cloud tenant (SYS-06). See `../00_company-facts.md` sections 1 to 4.
+The bank serves about 16,000 deposit customers from six Florida branches. The main office (Branch 1) also houses the operations center and the wire room. Deposits, loans, and the general ledger run on a core banking system hosted by a core processor (SYS-01). Customers and staff move money through the Wire and Digital Banking Platform (WDBP, P02): vendor-hosted online and mobile banking (SYS-02) and a vendor-hosted wire and ACH platform (SYS-03), reached from bank endpoints through the identity provider (SYS-05). Cards and ATMs run through a card processor (SYS-11). Lending runs on a SaaS loan origination system (SYS-04) with the AI credit model pilot (SYS-10) in the bank's cloud tenant (SYS-06). See `../00_company-facts.md` sections 1 to 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $20 million a year in net revenue (fictional), about $80,000 per business day.
+Dollar values are scaled to about $20 million a year in net revenue (fictional) across 250 business days, about $80,000 per business day (EV-048).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -80,7 +81,7 @@ Totals: 11 processes, 4 High, 6 Moderate, 1 Low.
 
 ## 7. Key findings
 1. **Core processor commitments meet the BIA.** The core processor's SOC 2 system description states an RTO of 4 hours and an RPO of 15 minutes (P04; reviewed in P09 on 2026-08-20). That meets the 4-hour RTO and 1-hour RPO for BP-02 and BP-06. The contract, however, sets no recovery time or incident notice terms, so the commitment is not enforceable until the 2027 renewal (R-003).
-2. **The wire alternate procedure is unproven.** The 8-hour MTD for wires depends on the alternate wire procedure and the spare payments workstation at Branch 4. Neither has been tested since 2023 (gap 10; R-010; first semiannual test 2026-11-12).
+2. **The wire alternate procedure is unproven.** The 8-hour MTD for wires depends on the alternate wire procedure and the spare payments workstation at Branch 4. Neither has been tested since 2023 (EV-026; R-010; first semiannual test 2026-11-12).
 3. **Single site for wires and operations.** The operations center and the wire room share the main office building. A hurricane or building loss would stop BP-01, BP-04, and BP-09 at once. Branch 4 is designated as the alternate site (R-014, due 2027-05-31).
 4. **Other providers not yet checked.** The recovery commitments of the digital banking provider and the payments service provider have not been compared with these RTOs and RPOs. Their SOC reports are due for review by 2026-11-30 (P02 SR-6).
 5. **Bank-managed backups share the production account.** The backup vault in the cloud tenant holds the data warehouse, the decisioning service, and monthly wire configuration exports. It is in the same account as production and is not immutable, so the 48-hour RTO for BP-07 and BP-08 is at risk in a ransomware event (R-004).

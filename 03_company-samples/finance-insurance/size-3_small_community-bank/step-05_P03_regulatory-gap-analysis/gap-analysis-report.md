@@ -10,7 +10,7 @@
 | Assessor | IT Manager (Information Security Officer) with the Compliance Officer and the outsourced internal audit firm |
 
 ## 1. Applicability
-The Guidelines **apply**. Section I.A of Appendix B says they apply to customer information maintained by or on behalf of national banks and their subsidiaries, and the bank is a national bank. They implement section 501(b) of the Gramm-Leach-Bliley Act (N52-R01) and section 39 of the Federal Deposit Insurance Act.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here. The Guidelines **apply**. Section I.A of Appendix B says they apply to customer information maintained by or on behalf of national banks and their subsidiaries, and the bank is a national bank. They implement section 501(b) of the Gramm-Leach-Bliley Act (N52-R01) and section 39 of the Federal Deposit Insurance Act.
 
 There is no size exemption. Section II.A requires a program "appropriate to the size and complexity" of the bank. That lets a $510 million bank choose simpler ways to meet each standard, but not skip one. Section III.C.1 works like an "addressable" list: the bank "must consider" each of eight security measures (III.C.1.a to h) and adopt those it concludes are appropriate. For a bank that sends wires and offers online banking, every one of the eight is appropriate, so each is assessed below as if required.
 
@@ -34,7 +34,7 @@ The ffiec.gov site could not be reached from this environment (it returned a CAP
 ## 2. Method
 1. **Requirements.** Each paragraph of Appendix B sections II and III was made one row. III.C.1.a has two parts (authentication and access; fraudulent-means controls) and gets two rows. Supplement A's response-program and customer-notice paragraphs were added because III.C.1.g requires a response program and Supplement A is the OCC's interpretation of what that program contains. Supplement A uses "should", so those rows are typed **Guidance**. Part 53 and 225.302 rows are typed **Rule**.
 2. **Crosswalk.** Each row was mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. This is an **author mapping**: no official NIST mapping of these Guidelines was found.
-3. **Evidence.** Current state came from interviews (CEO, COO, ISO, Deposit Operations Manager, Treasury Management Officer, BSA/AML Officer, Compliance Officer, and all six Branch Managers), board minutes and reports, contracts and vendor files, system exports, a sample of 25 branch-originated wires, and a walkthrough of the main office and two branches on 2026-08-05.
+3. **Evidence.** Current state came from the intake evidence (board minutes and reports, contracts and vendor files, system exports, and the walk-through of the main office and Branch 4 on 2026-07-08), the TLS scan (EV-056), a sample of 25 branch-originated wires (EV-057), and gap analysis interviews with the CEO, COO, ISO, Deposit Operations Manager, Treasury Management Officer, BSA/AML Officer, Compliance Officer, and all six Branch Managers (EV-058). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

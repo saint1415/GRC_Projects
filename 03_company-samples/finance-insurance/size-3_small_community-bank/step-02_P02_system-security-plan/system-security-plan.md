@@ -28,7 +28,7 @@ The system is a mix of **bank-managed configuration** and **vendor-hosted servic
 | State | Florida Information Protection Act (breach notification) | Fla. Stat. 501.171 |
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
-Not applicable: the FTC Safeguards Rule (N52-R03), NYDFS Part 500 (N52-R04), SEC Regulation S-P and S-ID (N52-R05, N52-R06), NAIC Model #668 (N52-R07), and SEC cybersecurity disclosure (N52-R08). The reasons are in `../00_company-facts.md` section 1. Consumer wire transfers sent through Fedwire are excluded from Regulation E's definition of electronic fund transfer (12 CFR 1005.3(c)(3)), so Regulation E error resolution does not govern the wire part of this system. It does govern consumer ACH and online bill payments, which are outside this plan's security scope.
+Not applicable: the FTC Safeguards Rule (N52-R03), NYDFS Part 500 (N52-R04), SEC Regulation S-P and S-ID (N52-R05, N52-R06), NAIC Model #668 (N52-R07), and SEC cybersecurity disclosure (N52-R08). The reasons are in the intake [obligations register](../step-00_P00_intake/obligations-register.csv). Consumer wire transfers sent through Fedwire are excluded from Regulation E's definition of electronic fund transfer (12 CFR 1005.3(c)(3)), so Regulation E error resolution does not govern the wire part of this system. It does govern consumer ACH and online bill payments, which are outside this plan's security scope.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -65,7 +65,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems. Examples: PM-series program-level controls beyond PM-1, PM-2, and PM-9.
 
 ## 7. Authorization Boundary Description
-The boundary contains bank-managed components and the bank's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains bank-managed components and the bank's configuration of vendor services:
 - **Inside:** the admin console configuration (user entitlements, limits, security settings), the wire platform configuration (roles, approval thresholds, beneficiary templates, callback fields), the identity provider tenant as it protects both, the 2 payments workstations and 5 wire-room PCs, the branch endpoints used to take and key wire requests, and the isolated payments network segment.
 - **Outside (external services, interconnected):** the digital banking provider's platform, the payments service provider's platform, the core banking system (SYS-01) at the core processor, the Federal Reserve payment services, and the MSSP.
 
@@ -112,7 +112,7 @@ Assessed 2026-08-03 to 2026-08-07. See P07 `assessment-results.csv` and `poam.cs
 **Customers.** Customers use the digital banking provider's logon with device recognition. MFA is optional today, which is **not acceptable** for business users who can add beneficiaries and send wires. The bank will require MFA for all business users by 2026-12-31 and all consumer users by 2027-03-31, and will require out-of-band confirmation of every new wire beneficiary (R-002). Until then, the Treasury Management Officer reviews new-beneficiary reports daily.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **ACH:** Automated Clearing House

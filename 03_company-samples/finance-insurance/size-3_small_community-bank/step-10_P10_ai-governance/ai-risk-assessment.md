@@ -7,12 +7,12 @@
 | AI use case | AI-001: small business credit underwriting model (SYS-10), pilot at 3 branches since May 2026 for applications under $250,000 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook |
 | Assessor / date | Chief Credit Officer and Compliance Officer, with the Information Security Officer, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-001 assessed here in full) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-001 assessed here in full), built from the accounts payable list, the vendor agreement, the LOS, the AI credit model file, the online banking fraud alert queue and a staff survey (EV-037, EV-038, EV-050, EV-052, EV-036, EV-053). How many staff use public chatbots, and what they paste, was not established (intake open request). Pilot results come from the LOS and scoring log extract (EV-060) |
 
 ## 1. GOVERN
 - **Accountable owner:** Chief Credit Officer. **Fair lending review:** Compliance Officer. **Security of the deployment:** Information Security Officer. **Decision authority:** President and CEO (High tier), with the Audit and Risk Committee informed. Expansion beyond the pilot needs the Audit and Risk Committee's review.
 - **Policies that apply:**
-  - POL-01 4.12: models that make or support credit decisions must be inventoried, independently validated, and fair lending tested before production use. **The pilot started before this policy existed and before either step was done** (gap 11 in the scenario facts).
+  - POL-01 4.12: models that make or support credit decisions must be inventoried, independently validated, and fair lending tested before production use. **The pilot started before this policy existed and before either step was done** (EV-052).
   - POL-01 4.8: service provider due diligence and contract terms apply to the model vendor.
   - POL-04 4.8 and POL-05 4.10: customer information only in approved tools.
 - **Inventory:** the Chief Financial Officer keeps the model inventory. AI-001 was added on 2026-08-25, with AI-002 and AI-003.
@@ -36,7 +36,7 @@
 | Regulation B, 12 CFR 1002.4(a) and 1002.6(b)(1) (discrimination) | **Yes** | The bank must not discriminate on a prohibited basis in any aspect of a credit transaction, and must not take a prohibited basis into account in any system of evaluating creditworthiness. A variable that works as a close proxy for race or national origin raises this risk |
 | Regulation B amendment, 91 FR 21620 (effective 2026-07-21) | **Yes, changes the test** | 1002.6(a) now states that the Act does not provide for the "effects test". Outcome disparities are therefore not by themselves a Regulation B violation. The bank still measures them, as a warning sign that a model input may be acting as a proxy for a prohibited basis |
 | CFPB Circulars 2022-03 and 2023-03 (adverse action and complex algorithms) | **No longer in effect** | The CFPB withdrew many guidance documents on 2025-05-12 (90 FR 20084); per the vertical research, these two circulars were among them. The 1002.9 duty itself is unchanged |
-| Regulation B small business data collection (subpart B) | No | The bank originates far fewer covered credit transactions than the 12 CFR 1002.105(b) threshold (see `../00_company-facts.md`) |
+| Regulation B small business data collection (subpart B) | No | The bank originates far fewer covered credit transactions than the 12 CFR 1002.105(b) threshold (see the intake [obligations register](../step-00_P00_intake/obligations-register.csv); EV-050) |
 | GLBA and the Interagency Guidelines (N52-R01, N52-R02) | **Yes** | The model processes customer information in the bank's cloud tenant, and the vendor is a service provider (III.D) |
 | State AI laws (for example, Colorado SB26-189) | No | The bank lends only to Florida businesses. State AI laws outside Florida are out of scope by decision |
 | Model risk management guidance | Program choice | The bank applies independent validation, conceptual soundness review, and outcomes analysis as a policy choice (POL-01 4.12). The current status of the agencies' model risk management guidance for community banks was not verified for this assessment |

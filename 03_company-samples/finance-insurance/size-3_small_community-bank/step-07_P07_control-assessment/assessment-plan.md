@@ -39,6 +39,17 @@ Small tier scope: 15-25 controls. **21 controls, 153 determination statements.**
   - a limit change on a test customer to check alerting (no alert)
   - deletion of a test backup by a production administrator (succeeded)
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; the Audit and Risk Committee approved them on 2026-08-27. They were reviewed as drafts, for design only: a control that a draft policy introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples, records or live systems | 97 |
+| Design | The control is introduced by a draft policy (the 15-minute reporting rule and 36-hour notice step in POL-03; the risk acceptance levels in POL-01); its design was reviewed. Operation is tested at the 2027-02 follow-up | 3 |
+| Not implemented | Nothing existed to test | 53 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 25 branch-originated wires come from the wire activity report in EV-034, and the core user list in EV-005 was compared with the 12-month separation list in EV-003).
+
 ## 3. Rules of engagement
 - No live wires or customer transactions were created. All payment and online banking tests used the providers' test environments or bank test customers, with the Deposit Operations Manager present.
 - No customer information was copied off-site. Screenshots were redacted.

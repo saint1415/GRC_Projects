@@ -22,7 +22,7 @@
 | Very High | Board of Directors only | Temporary exception of up to 90 days while treatment is under way |
 
 ### Risk appetite statements (cyber and technology)
-The board's enterprise risk appetite statement (2025) says the bank has a "low appetite" for operational and cyber risk but sets no measures (gap 1; R-012). The statements below add measurable tolerances. The Board Risk Committee reviewed them on 2026-09-15 and recommended them to the board for adoption on 2026-10-20.
+The board's enterprise risk appetite statement (2025) says the bank has a "low appetite" for operational and cyber risk but sets no measures (EV-024; R-012). The statements below add measurable tolerances. The Board Risk Committee reviewed them on 2026-09-15 and recommended them to the board for adoption on 2026-10-20.
 
 | Area | Appetite | Statement and tolerance measure |
 |---|---|---|
@@ -35,8 +35,8 @@ The board's enterprise risk appetite statement (2025) says the bank has a "low a
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 cyber insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance or the bond |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Finance and Insurance overlay, the BIA, interviews with every process owner and 8 Branch Managers, FS-ISAC and FBI advisories on business email compromise and account takeover, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Finance and Insurance overlay, the BIA, the intake evidence, interviews with every process owner and 8 Branch Managers (EV-050), FS-ISAC and FBI advisories on business email compromise and account takeover (EV-047), the gap analysis (P03), and the control assessment (P07). The gap analysis ran in the same fieldwork window, and the two shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident register (EV-028), the BSA case history (EV-029), scan and patch reports (EV-013), configuration exports, the walk-throughs, the gap analysis samples and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, customer harm, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values and fraud case history, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -52,6 +52,8 @@ The board's enterprise risk appetite statement (2025) says the bank has a "low a
 | **Total** | **50** |
 
 Treatments: 47 Mitigate, 3 Accept (R-032, R-034, R-035). Status: 25 Open, 22 In progress, 3 Accepted.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-049 was added on 2026-08-14 after testing found 2 vendor-created generic administrator accounts in the correspondent portal (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 The cyber insurance policy ($15 million limit, $500,000 retention) and the financial institution bond transfer part of the financial exposure for R-001 to R-005. Neither is recorded as the treatment for any risk, because neither lowers the likelihood of harm to customers or operations.
 
