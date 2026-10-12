@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, Inc. (publicly traded commercial and institutional building general contractor) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners, 2026-06-01 to 2026-07-15 | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** risk committee of the board, 2026-09-10
 
+**Sources:** process owner interviews 2026-06-01 to 2026-07-10 (EV-065, EV-066), dependency and contract review (EV-067), site and entity register (EV-054), FY2025 revenue report (EV-052), operational volume report (EV-053), federal contract register (EV-042), payment hub and verification records (EV-022, EV-023), DR test, drill and backup records (EV-017, EV-018, EV-014, EV-019, EV-020), client agreements (EV-047), and the SL-1 and SL-2 failover tests and jobsite cellular sample (EV-068, EV-069). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
+
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties and the two acquired businesses (AQ-1 and AQ-2). It feeds:
 - the availability rating and recovery objectives in the Project Delivery and Payment Platform (PDPP) System Security Plan (P02);
@@ -14,10 +16,10 @@ This enterprise-wide BIA identifies the business processes the company depends o
 **Results in one line:** 17 processes were analyzed; 10 are High criticality, 6 Moderate, and 1 Low. 6 processes need recovery within 8 hours. The dependency map (`dependency-map.csv`) lists 24 dependencies, 16 of them single points of failure and 6 never tested.
 
 ## 2. System and business description
-Cris Santos Company builds for health care, higher education, civic, federal and defense, aviation, data center, and commercial office clients from a Florida headquarters and nine regional offices in eight states. It runs about 300 active projects at about 140 jobsites (16 on military installations), two prefabrication and equipment yards, and two colocation data centers. It has 12,000 employees and about $4.8 billion in annual revenue. Money moves in two large monthly streams: about $400 million of owner pay apps in, and about $300 million of subcontractor and supplier payments out. The technology estate is described in `../00_company-facts.md` section 3. Two businesses were acquired recently: AQ-1 (Texas MEP contractor, 2025-10) still runs its own ERP and email; AQ-2 (Virginia federal builder, 2026-03) still holds FCI on legacy systems.
+Cris Santos Company builds for health care, higher education, civic, federal and defense, aviation, data center, and commercial office clients from a Florida headquarters and nine regional offices in eight states. It runs about 300 active projects at about 140 jobsites (16 on military installations), two prefabrication and equipment yards, and two colocation data centers. It has 12,000 employees and about $4.8 billion in annual revenue. Money moves in two large monthly streams: about $400 million of owner pay apps in, and about $300 million of subcontractor and supplier payments out. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Two businesses were acquired recently: AQ-1 (Texas MEP contractor, 2025-10) still runs its own ERP and email; AQ-2 (Virginia federal builder, 2026-03) still holds FCI on legacy systems.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($4.8 billion in FY2025 revenue, EV-052) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -58,10 +60,10 @@ Dollar thresholds are scaled to about $13.2 million of revenue per calendar day 
 ## 5. Dependency mapping and third parties
 The full map is in `dependency-map.csv`. Key findings:
 
-1. **Project management platform (DEP-01).** One SaaS platform carries every project's drawings, RFIs, and pay app workflow for about 50,000 users. The vendor's contract RTO is 24 hours, against a BIA RTO of 8 hours for BP-01, and the company has never restored its nightly export. This is P01 risk R-010 and POA&M item POAM-008.
+1. **Project management platform (DEP-01).** One SaaS platform carries every project's drawings, RFIs, and pay app workflow for about 50,000 users. The vendor's contract RTO is 24 hours, against a BIA RTO of 8 hours for BP-01, and the company has never restored its nightly export (EV-019). This is P01 risk R-010 and POA&M item POAM-008.
 2. **Payment hub (DEP-04, DEP-06).** All outbound payments pass through one file transfer gateway cluster. Files to one of the three banks carry no end-to-end integrity check (R-006, POAM-006). The bank account validation service has no tested fallback beyond call-back and no SOC report on file (POAM-012).
-3. **AQ-1 (DEP-22, DEP-23).** The AQ-1 legacy ERP has nightly backups only (real RPO 24 hours), a 72-hour vendor RTO against a 48-hour BIA RTO, and no restore test. Its payment files enter the enterprise payment hub without enterprise payee verification, which is how the 2026-04 payment fraud loss happened (R-003, POAM-003). The AQ-1 email tenant has no SIEM feed (R-044, POAM-004).
-4. **Federal enclave (DEP-09).** The FPCE depends on one government community cloud tenant. The 2026-04 restore test met the 8-hour RTO. The printed plan room sets are the workaround, which is why plan room controls matter for both availability and CUI protection (P03).
+3. **AQ-1 (DEP-22, DEP-23).** The AQ-1 legacy ERP has nightly backups only (real RPO 24 hours), a 72-hour vendor RTO against a 48-hour BIA RTO, and no restore test. Its payment files enter the enterprise payment hub without enterprise payee verification, which is how the 2026-04 payment fraud loss happened (R-003, POAM-003; EV-020, EV-024). The AQ-1 email tenant has no SIEM feed (R-044, POAM-004; EV-021).
+4. **Federal enclave (DEP-09).** The FPCE depends on one government community cloud tenant. The 2026-04 restore test met the 8-hour RTO (EV-018). The printed plan room sets are the workaround, which is why plan room controls matter for both availability and CUI protection (P03).
 5. **Industry and government dependencies (DEP-17, DEP-18).** Bid portals and SAM are single points of failure the company cannot remove; the workarounds are procedural.
 6. **Jobsite connectivity (DEP-10).** 40% of trailers rely on one cellular carrier. A second carrier is being added during the 2027 equipment refresh.
 

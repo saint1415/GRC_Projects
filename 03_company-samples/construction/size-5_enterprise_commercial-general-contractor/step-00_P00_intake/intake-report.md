@@ -1,22 +1,76 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company | Construction | Enterprise
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company, Inc. (publicly traded commercial and institutional building general contractor: HQ-1, nine regional offices, about 140 jobsites, YD-1 and YD-2, COLO-1 and COLO-2; 8 states) |
+| Intake window | 2026-05-04 to 2026-05-29 |
+| Collected by | GRC team (second line) and the CMMC Program Office, with system owners in each business unit, the Integration Management Office and Internal Audit's prior workpapers |
+| Approved | CISO and Chief Compliance Officer, 2026-05-29. Obligations register reviewed by the General Counsel's office (EV-060) |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the company's own records before the enterprise risk analysis, the BIA and the gap analysis began on 2026-06-01, and before Internal Audit's control assessment fieldwork began on 2026-07-13. It covers the organization (four business units, the two acquired businesses AQ-1 and AQ-2), the systems that hold FCI, CUI, payment data or personal information or support tier-1 processes, the vendors and subcontractors that touch them, and the rules that may bind the company and its two client service lines (SL-1 and SL-2). Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Later steps add their own fieldwork evidence (BIA interviews, risk workshops, the FPCE readiness check and plan room walkthroughs, Internal Audit tests) to the same register, so one list backs every deliverable.
+
+At this size the sources are enterprise systems of record across the business units: the identity platform and HR system, the CMDB and device management, the cloud consoles and SIEM, the payment hub and vendor master, the third-party risk register and accounts payable vendor master, the contract and federal contract registers, SPRS and the CMMC Program Office files, board and committee records, prior Internal Audit and SOX workpapers, and the General Counsel's files.
+
+Each register row names the owning business unit's system of record and owner. The [asset inventory](asset-inventory.csv) reconciles the CMDB with the cloud account inventory, the device management and EDR consoles, the FPCE inventory and the AQ-1 and AQ-2 records; the [vendor register](vendor-register.csv) reconciles the third-party risk register with the accounts payable vendor master and the contract repository.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
 
 ## 2. Sources collected
 | Area | Evidence IDs | System of record | As of |
 |---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Identity and access | EV-001 to EV-008 | Identity platform (SSO, PAM, identity governance); HR system; AQ-1 legacy directory; project management platform and ERP consoles | 2026-04-30 to 2026-05-05 |
+| Endpoints, network and vulnerability management | EV-009 to EV-012 | Device management and EDR consoles; network management and firewall exports; scanner; CMDB | 2026-04-30 to 2026-05-01 |
+| Cloud, logging, backup and recovery | EV-013 to EV-019 | Cloud consoles and posture management; backup accounts; SIEM; SOC case management; DR and drill records; SYS-01 vendor contract | 2026-04-30 to 2026-05-09 |
+| Payments and acquired businesses | EV-020 to EV-028 | AQ-1 ERP and email tenant; payment hub; vendor master and call-back records; case files; disclosure committee records; domain monitoring; SAM; service agreements | 2026-04-30 to 2026-05-15 |
+| Governance, prior assurance and disclosure | EV-029 to EV-039 | Policy portal and GRC platform; ERM register; board portal; Internal Audit and SOX workpapers; SEC filing; incident response library; learning system | 2026-01-23 to 2026-05-01 |
+| Federal contracts and CMMC | EV-040 to EV-044, EV-051 | SPRS and CMMC Program Office files; FPCE SSP and inventory; federal contract register; provider package; subcontractor register; Federal Group plan room procedure | 2026-02-27 to 2026-05-12 |
+| Third parties, service lines and facilities | EV-045 to EV-050 | Third-party risk register and AP vendor master; BTS vault and gateway; SL-1 SOC 2 report and client agreements; service line records; facilities and disposal records | 2025-12-31 to 2026-05-01 |
+| Business volume and structure | EV-052 to EV-055 | ERP financial reporting; operational reporting and badging; legal entity register and Integration Management Office tracker; insurance files | 2025-12-31 to 2026-05-01 |
+| AI | EV-056 to EV-058 | AI governance committee register; AI-001 console and contract; approved AI tools list and web filtering | 2026-05-01 to 2026-05-20 |
+| Personal information, supply chain, threats and change | EV-059 to EV-063 | Payroll SaaS; counsel memo and state matrix; Section 889 and prohibited-product screening records; threat intelligence; change system | 2026-04-30 to 2026-05-20 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Identity and access.** Workforce accounts are federated through SSO with MFA registered; the about 900 AQ-1 staff sign in through the AQ-1 legacy directory, which is not federated (EV-001, EV-006). MFA is required for every SSO application; FIDO2 keys are required for privileged users, Treasury, Payment Operations, AP and executives, while the about 2,900 project management staff and other users use number-matching push; lockout follows 10 failed attempts; session tokens are bound to compliant devices for the ERP and payment hub (EV-002). There are 38 privileged PDPP accounts, with just-in-time elevation and session recording through PAM (EV-003). Joiner, mover and leaver events flow from HR to identity governance, and quarterly certifications closed for each quarter of the last 12 months (EV-004). HR holds about 12,000 employees; AQ-1 terminations reach AQ-1 IT on a daily report and are disabled by hand (EV-005). AQ-1 staff reach SYS-01 with local accounts outside identity governance (EV-006). SYS-01 has about 9,200 workforce and 41,000 external users; external users are invited by project teams, the platform has no automatic disable for inactive external users, and download and permission events stay with the vendor for 90 days with no stream to the SIEM (EV-007). The ERP has about 3,600 users, 61 of them with vendor master or payment release rights (EV-008).
+
+**Endpoints, network and vulnerability management.** Device management lists about 11,000 laptops and desktops, 9,500 phones, 3,200 rugged tablets (about 580 not enrolled) and 400 kiosks; EDR reports on about 97% of endpoints (EV-009). SD-WAN serves 10 offices and 2 yards; 60% of about 140 trailers have a second cellular carrier; AQ-1 sites use a legacy VPN whose rules reach the integration platform subnet (EV-010). Scans run weekly with 15-day and 30-day remediation targets for critical and high findings (EV-011). The CMDB lists 24 PDPP server components (EV-012).
+
+**Cloud, logging, backup and recovery.** Both clouds use account vending, guardrails as code and daily posture scans, with customer-managed keys and a warm standby region for the ERP and payment hub (EV-013). Backups go to separate accounts with write-once retention and a weekly copy to COLO-2 (EV-014). The SIEM receives PDPP, identity and enterprise email logs and runs BEC use cases; the AQ-1 email tenant and AQ-1 ERP are not log sources (EV-015). The SOC runs 24x7 with managed security service provider overflow; the INC-2026-04 case was opened after AQ-1 finance had handled the event (EV-016). The 2026-05-09 tier-1 DR test recovered the ERP and payment hub in 19 hours against a 24-hour target (EV-017); other drills and restore tests ran from 2026-01 to 2026-04, including an enclave restore within 8 hours on 2026-04-18 (EV-018). The SYS-01 contract states a 24-hour RTO and no restore of the nightly export is on record (EV-019).
+
+**Payments and acquired businesses.** AQ-1 AP staff create payees, change bank details and release payment files in the AQ-1 ERP; the files enter the enterprise payment hub without the enterprise call-back and validation steps; the AQ-1 ERP has nightly backups only and a 72-hour vendor RTO (EV-020). The AQ-1 email tenant has no SIEM feed or inbox-rule alerting (EV-021). The payment hub requires dual approval for all wires and for ACH batches above $250,000, uses positive pay at three banks, and hashes and verifies files to banks 1 and 2; files to bank 3 go by SFTP without signing or hash verification (EV-022). Enterprise payee and bank changes are checked by call-back and the validation service, and the call-back is recorded as a free-text note (EV-023). In 2026-04 AQ-1 paid $612,000 to a fraudulent account after an emailed bank change; $455,000 was recovered (EV-024). The disclosure committee reviewed that event on 2026-05-06 and recorded it as not material; its materiality procedure has no payment fraud scenario and no guidance on related occurrences (EV-025). DMARC is at reject on all company domains and lookalike domains are monitored (EV-026). The SAM Entity Administrator has used a security key since 2026-02 (EV-027). No SOC report is on file for the bank account validation or e-signature services (EV-028).
+
+**Governance, prior assurance and disclosure.** The 2025 policy set (POL-01 to POL-05) is in force with standards, procedures and an exception register (EV-029), and an external systems register lists approved external systems (EV-030). The 2025 risk analysis rolled into the ERM register, and the board approved the risk appetite in 2026-02 (EV-031); the risk committee receives quarterly cyber reporting (EV-032). FY2025 SOX IT general control workpapers are on file (EV-033). The FY2025 Form 10-K includes Item 1C (EV-034). Incident response plan v5 and its runbooks are on file; the 2026-02-24 tabletop did not include the disclosure committee or AQ-1 (EV-035). PDPP SSP v1.1 and the common control catalog (CCP-01 to CCP-09) are on file (EV-036). Annual training, monthly phishing simulations and a role-based payment fraud course are recorded (EV-037). Organization charts, the control catalog and the fraud risk assessment are on file (EV-038, EV-039).
+
+**Federal contracts and CMMC.** SPRS shows the FPCE at Final Level 2 (Self), score 110, status date 2026-02-27; the enterprise FCI scope at Final Level 1 (Self), 2026-01-30; and AQ-2 at Final Level 1 (Self), 2025-12-12 (EV-040). The FPCE SSP v2.1, inventory and diagram describe the cloud tenant, about 1,150 users, 640 laptops and the VPN, and do not describe the 16 plan rooms or printed CUI handling (EV-041). About 38 federal contracts and task orders carry the FAR clauses; the 26 DoD contracts carry DFARS 252.204-7012, -7019 and -7020; 11 DoD awards since 2025-11-10 include 252.204-7021 (EV-042). The enclave runs on a FedRAMP Moderate offering whose package summary and customer responsibility matrix are on file (EV-043). About 640 subcontractors handle FCI and 48 handle CUI; the award workflow has no required SPRS or CMMC status check (EV-044). The Federal Group plan room procedure requires escorted visitors and a visitor log (EV-051).
+
+**Third parties, service lines and facilities.** The vendor register holds about 1,300 IT and service vendors (150 tier-1), with SOC reports on file for the main platform, cloud, colocation and managed security providers (EV-045). BTS holds credentials and layouts for about 420 client buildings in a vault with per-client approval; rotation dates vary, and 37 buildings use owner-mandated remote tools (EV-046). SL-1 issued its 2025 SOC 2 Type 2 report; SL-2 serves about 35 owners and has no SOC 2 report (EV-047, EV-048, EV-049). Badge access, colocation access lists and destruction certificates are on file (EV-050).
+
+**Business volume and structure.** Revenue was about $4.8 billion in FY2025, about $13.2 million per calendar day (EV-052). About 300 pay apps a month bill about $400 million, and about 10,500 ACH payments a month pay about $300 million to about 7,500 payees; about 28,600 people are on company jobsites each day (EV-053). AQ-1 and AQ-2 integration dates are in the Integration Management Office tracker (EV-054). The cyber tower is $60 million with a $2.5 million social engineering sublimit (EV-055).
+
+**AI.** The AI governance committee register shows completed review for 8 use cases (AI-001, AI-002, AI-004 to AI-008 and AI-011) and review pending for AI-010 and AI-012 (EV-056). About 120 estimators use AI-001, whose pooled market pricing feature is on by default and whose enterprise terms are not yet signed (EV-057). An approved AI tools list and web filtering are in place (EV-058).
+
+**Personal information, supply chain, threats and change.** Payroll holds Social Security numbers and bank accounts, and certified payroll reports are attached to pay apps in SYS-01 (EV-059). Counsel's memo records that HIPAA, PCI DSS and CCPA do not apply and that the CIRCIA final rule is not published (EV-060). BTS screens submittals by brand against an approved manufacturer list (EV-061). Threat intelligence names business email compromise and payment fraud as the most frequent campaigns against contractors (EV-062). Changes go through the change advisory board, with recorded emergency changes for approval afterward (EV-063).
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| AI features switched on inside existing vendor products (SaaS and AI feature review) | CIO | 2026-05-14 | Not established at intake; the review was requested and is recorded as an intake follow-up in the evidence register |
+| SOC reports for the bank account validation service and the e-signature and lien waiver service | Director of Third-Party Risk Management | 2026-05-12 | Not received at intake; carried to P07 SA-9 and POAM-012 |
+| Visitor logs, key inventories and equipment lists for the 16 installation plan rooms | President, Federal Group | 2026-05-15 | Held at each jobsite and not collected at intake; examined at 6 sites in the P03 walkthroughs |
+| SPRS and CMMC status records for the 48 CUI subcontractors | Vice President, Procurement and Subcontracts | 2026-05-12 | Kept case by case; checked in full in P03 |
+| Payment fraud attempts handled by AQ-1 finance | Vice President, Integration Management Office | 2026-05-13 | Partial; P07 reviewed the AQ-1 cases in SOC case management (IR-4) |
+| Workforce use of public AI tools from personal devices | CIO | 2026-05-14 | Not established at intake; P01 R-033 and P10 treat it as unknown |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Processes and owners (EV-005, EV-054), revenue and volumes (EV-052, EV-053), recovery records (EV-014, EV-017, EV-018, EV-019, EV-020), dependencies from the asset and vendor registers, and client restoration commitments (EV-047) |
+| P02 SSP | The PDPP boundary from the asset inventory; prior SSP v1.1 and the common control catalog (EV-036); as-found configuration from EV-001 to EV-016, EV-019 to EV-023 and EV-063 |
+| P04 Cloud mapping | Cloud components and guardrails (EV-013 to EV-015), provider assurance (EV-045) and the FPCE provider package (EV-043) |
+| P01 Risk register | Likelihood inputs from threat intelligence (EV-062), SOC case history (EV-016), the payment fraud case and committee records (EV-024, EV-025), coverage and configuration exports, the 2025 risk analysis and risk appetite (EV-031) |
+| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the requirements, plus SPRS, the FPCE SSP and the federal contract register (EV-040 to EV-044) |
+| P06 Policies | The 2025 policy set and exception register (EV-029) |
+| P07 Control assessment | Populations to sample from (EV-004, EV-005, EV-008, EV-011, EV-014, EV-016, EV-023, EV-063) and prior Internal Audit and SOX workpapers (EV-033) |
+| P08 IR runbook | Notification duties from the obligations register; disclosure committee records (EV-025); insurance (EV-055); contacts from the vendor register |
+| P09 SOC 2 | Vendor assurance on file (EV-045), the SL-1 2025 report and client agreements (EV-047) and service line records (EV-048, EV-049) |
+| P10 AI governance | AI tools found (EV-056, EV-057, EV-058) |
