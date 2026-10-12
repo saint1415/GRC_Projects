@@ -12,6 +12,7 @@
 | Sources checked | eCFR full text (point in time 2026-09-23); Federal Register API; govinfo; Sixth Circuit opinions 25a0002p.06 and 25a0224p.06 (all retrieved 2026-09-26) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the services the company bills (EV-052). This section gives the legal analysis behind each result.
 
 ### 1.1 The CPNI rules apply, through the voice services
 The CPNI rules bind "telecommunications carriers," defined by reference to 47 U.S.C. 153, and "shall include an entity that provides interconnected VoIP service" (47 CFR 64.2003(o)). The company is covered twice over:
@@ -55,7 +56,7 @@ No FCC rule sets general cybersecurity controls for a wireline carrier's network
 ## 2. Method
 1. **Requirements.** Each paragraph of 47 CFR 64.2005-64.2011 that imposes, permits, or limits conduct became one row, cited to the paragraph (public-domain text; short quotes only). 47 U.S.C. 222(a) is included as the statutory duty (G-001). CALEA and Part 4 rows follow the same method.
 2. **Crosswalk.** Each regulatory row was mapped to CSF 2.0 and SP 800-53 Rev. 5 controls. This is an **author mapping**; NIST has published no official mapping for 47 CFR Parts 1, 4, or 64. The benchmark rows use NIST's official CSF 2.0 to SP 800-53 reference mapping (a selection of the listed controls).
-3. **Evidence.** Interviews (COO, VP of Network Operations, Director of Customer Operations, Regulatory Affairs Manager, Billing Manager, Marketing Manager, NOC Manager, Network Engineering Manager, HR Manager); BSS and portal configuration; live tests of the portal password reset and the chatbot on 2026-07-24; a sample of 10 overflow call center recordings on 2026-07-27; the filed CPNI certification and CALEA policies; a walkthrough of CO-1, CO-2, and 3 cabinets on 2026-07-28.
+3. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-054), including BSS and portal configuration (EV-023, EV-024, EV-027) and the filed CPNI certification and CALEA policies (EV-030, EV-037); interviews with the COO, VP of Network Operations, Director of Customer Operations, Regulatory Affairs Manager, Billing Manager, Marketing Manager, NOC Manager, Network Engineering Manager, and HR Manager (EV-057 to EV-059); the data warehouse query review on 2026-07-23 (EV-060); live tests of the portal password reset and the chatbot on 2026-07-24 (EV-061); a sample of 10 overflow call center recordings on 2026-07-27 (EV-062); a walkthrough of CO-1, CO-2, and 3 cabinets on 2026-07-28 (EV-063); the firewall and routing review and the advisory comparison on 2026-07-29 (EV-064, EV-065); and the quick help change ticket of 2026-07-31 (EV-066). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale (Very Low to Very High).
 
 ## 3. Results summary

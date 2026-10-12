@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 
 ## 1. System Name and Identifier
-Network Operations and Customer Billing Platform (**OSS/BSS**), identifier CSC-OSSBSS-01. It is the company's major system and comprises SYS-01, SYS-02, SYS-03, SYS-04, SYS-05, SYS-09, SYS-13, SYS-16, and SYS-18 in `../00_company-facts.md`.
+Network Operations and Customer Billing Platform (**OSS/BSS**), identifier CSC-OSSBSS-01. It is the company's major system and comprises SYS-01, SYS-02, SYS-03, SYS-04, SYS-05, SYS-09, SYS-13, SYS-16, and SYS-18 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The OSS/BSS runs customer and network operations for about 205,000 accounts in parts of 11 Florida counties: customer accounts and billing, CPNI approvals, call detail and toll rating, service provisioning, trouble tickets and dispatch, the customer portal and app, and management of the voice and broadband network. It supports the High-criticality processes BP-01 to BP-05, BP-08, and BP-09 in the BIA (P05), directly or through the management plane.
@@ -86,6 +86,8 @@ Information types are the closest matches in NIST SP 800-60 Vol. 2 Rev. 1. Impac
 **Availability was considered for High.** BP-02 (911 facilities) has a 1-hour MTD. The team kept availability at Moderate because 911 call completion depends on the voice core and access network (SYS-07, SYS-08), which are outside this boundary and have their own redundancy (two core nodes, diverse 911 circuits, generators). Loss of the OSS/BSS slows outage response and care but does not by itself stop calls. To compensate, the tailoring adds the NOC failover to CO-4 and the PSAP notification procedure as contingency controls (CP-2, CP-7).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). User populations come from the identity provider export, the HR roster and the overflow vendor roster (EV-001, EV-003, EV-034); the network element counts come from the OSS inventory (EV-009), and the cloud accounts from the landing zone export (EV-017).
+
 **Inside the boundary:**
 - the BSS tenant configuration, user roles, and CPNI flags;
 - the identity provider tenant;
@@ -160,7 +162,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 36 | BSS vendor, identity vendor, cloud provider, MDR provider, network equipment vendors, upstream transit providers |
 | Common/Inherited | 10 | Identity vendor (for example AC-2(1), AC-7, IA-2(2)), cloud provider (CP-6, SC-12), MDR provider (IR-7), BSS vendor (AC-12, AU-12) |
 
-The Partially implemented statements trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-005, EV-011, EV-019 and EV-020) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 34 controls (234 determination statements) from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -170,7 +172,7 @@ The co-sourced internal audit firm assessed 34 controls (234 determination state
 - **Customers.** Customers are non-organizational users of the portal, the app, and the chatbot. The CPNI rules set the minimum: authentication "without the use of readily available biographical information, or account information" before online access, then a password (47 CFR 64.2010(c), (e)). The portal and app meet this with a one-time code to the telephone number or email of record. The chatbot fallback that accepted SSN4 and service address did not; it was disabled on 2026-07-24. SYS-18's business portal reset is being replaced (POAM-016). Account changes trigger notices under 64.2010(f) from SYS-01 but not from SYS-18.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); CALEA SSI policies (ILEC 2019; merged-entity amendment due 2026-10-30); NOC outage and storm plan.
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); CALEA SSI policies (ILEC 2019; merged-entity amendment due 2026-10-30); NOC outage and storm plan.
 
 ## 13. Acronym List and Glossary
 - **BSS / OSS:** business support system (billing and care) / operations support system (inventory, provisioning, tickets)
