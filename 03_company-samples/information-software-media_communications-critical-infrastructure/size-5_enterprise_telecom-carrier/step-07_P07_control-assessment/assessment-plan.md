@@ -81,6 +81,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, OSS/BSS Platforms; BSS Application Manager; Director of Network Security Engineering; Director of Security Operations; Director of Identity and Access Management; Chief Customer Officer; Director of Outsourced Care; Vice President, Marketing; General Counsel; CFO; CISO; 20 randomly selected care agents (10 in-house, 10 vendor).
 - **Test:** access tests with test accounts; a deletion attempt against the log archive; default-credential and SNMP scans of AQ-03 elements (approved by the Chief Network Officer, in a maintenance window); reachability tests from an AQ-02 site network and from the OSS adapter segment toward the lawful-intercept enclave; a rogue device test on management networks at two central offices; TLS scans and a protocol inventory of CDR feeds; AQ-02 portal reset tests with two test accounts.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-032), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 250 (213 Satisfied, 37 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test | 0 |
+| **Total** | | **250** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005; the BSS change records, EV-028; the OSS inventory, EV-017; and the SOC case records, EV-012) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect voice, 911, or broadband service. Element scans ran only in approved maintenance windows with the NOC on the bridge, and the NOC could stop any test.
 - The reachability test toward the lawful-intercept enclave was limited to connection attempts; no assessor accessed intercept content or records. The Director, Lawful Intercept Compliance, approved and observed it.

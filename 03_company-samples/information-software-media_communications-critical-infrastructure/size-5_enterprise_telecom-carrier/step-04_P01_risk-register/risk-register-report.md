@@ -11,7 +11,7 @@
 | Approved | Executive risk committee (chaired by the Chief Risk Officer), 2026-09-08; reviewed by the risk and technology committee of the board, 2026-09-10 |
 
 ## 1. Scope and risk framing
-**Scope.** All systems that hold CPNI or customer personal information, or that support tier-1 processes, across the four states: the carrier network (voice core, IP and access network, management plane), the lawful-intercept platform, the two cloud estates and two data centers, the acquired carriers AQ-01 to AQ-03, and about 1,400 vendors (230 with CPNI or customer personal information). Business processes and impact values come from the enterprise BIA (P05). The OSS/BSS is also covered at system level in the SSP (P02).
+**Scope.** All systems that hold CPNI or customer personal information, or that support tier-1 processes, across the four states: the carrier network (voice core, IP and access network, management plane), the lawful-intercept platform, the two cloud estates and two data centers, the acquired carriers AQ-01 to AQ-03, and about 1,400 vendors (230 with CPNI or customer personal information), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business processes and impact values come from the enterprise BIA (P05). The OSS/BSS is also covered at system level in the SSP (P02).
 
 **Three lines.** Risk owners in the business, network, and IT (first line) own and treat risks. The GRC team and the Chief Risk Officer (second line) run this method and roll risks up into the enterprise risk register. Internal Audit (third line) tests controls independently (P07).
 
@@ -46,8 +46,8 @@
 Public safety risks (ER-05) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the Communications sector threat picture (state-sponsored intrusion into carrier networks, pretexting for call detail, SIM and account takeover, DDoS, hurricanes), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07). The FCC's 2025 order on reconsideration records that a state-sponsored group infiltrated at least eight U.S. communications companies using publicly known vulnerabilities and avoidable weaknesses (90 FR 58006); that pattern drives R-001, R-007, R-008, and R-048.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the Communications sector threat picture (state-sponsored intrusion into carrier networks, pretexting for call detail, SIM and account takeover, DDoS, hurricanes) in the SOC's threat intelligence (EV-074), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-033), and risk workshops with the SOC, Network Security Engineering, the NOC, the Integration Management Office, customer care, Regulatory Affairs, Lawful Intercept Compliance, Third-Party Risk, Finance and the AI council (EV-089). The gap analysis (P03) ran in the same fieldwork window and the two shared findings. The Internal Audit assessment (P07) fed the second pass. The FCC's 2025 order on reconsideration records that a state-sponsored group infiltrated at least eight U.S. communications companies using publicly known vulnerabilities and avoidable weaknesses (90 FR 58006); that pattern drives R-001, R-007, R-008, and R-048.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence (EV-074), the SOC case history (EV-012), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 and P10 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -69,6 +69,8 @@ By threat source type: Adversarial 32, Structural 20, Accidental 11, Environment
 By treatment: Mitigate 55, Accept 8, Avoid 1.
 By status: In progress 41, Open 15, Closed (accepted) 8.
 **21 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-049 was added on 2026-08-28 after testing found vendor-default SNMP community strings and default administrator passwords on AQ-03 elements (EV-CM-6, EV-IA-5), and the risks that P07 testing or the P10 assessment informed were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 or P10 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

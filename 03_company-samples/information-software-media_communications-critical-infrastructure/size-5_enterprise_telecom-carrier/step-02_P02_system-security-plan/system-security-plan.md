@@ -80,6 +80,8 @@ Information types are the closest matches in NIST SP 800-60 Vol. 2 Rev. 1. Impac
 **Documented controls.** `control-implementation.csv` documents **142 controls**: 129 from the Moderate baseline, 3 privacy-baseline controls, and 10 High-baseline confidentiality supplements. The remaining Moderate-baseline enhancements are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-04 and the OSS network adapters, EV-080) and the prior SSP version 1.1 (EV-081).
+
 **Inside the boundary:** the BSS, OSS, mediation and CDR store, portal and API gateway workload accounts on Cloud provider A; the mediation collectors in DC-1 and DC-2; the OSS network adapters; and the administrator workstations used for these components.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -195,7 +197,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Phone care:** call detail is discussed only after the caller gives the account password; otherwise it is sent to the address of record or the caller is called back at the telephone number of record (64.2010(b)). Business customers with a dedicated account representative and a contract addressing CPNI follow their contract terms (64.2010(g)).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), CPNI intrusion runbook and notification matrix (P08), SOC 2 readiness (P09), AI portfolio including the chatbot (P10), OSS/BSS contingency plan v3, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), CPNI intrusion runbook and notification matrix (P08), SOC 2 readiness (P09), AI portfolio including the chatbot (P10), OSS/BSS contingency plan v3 (EV-026), enterprise common control catalog (EV-082). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **BSS / OSS:** business support system (billing and care) / operations support system (inventory, activation, assurance)
