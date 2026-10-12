@@ -20,7 +20,7 @@
 - High and Very High: must be treated with a dated plan. Not accepted as they are. A risk to patient safety is never accepted above Low.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the DEA EPCS and CSOS duties, and a walk through the counter desktop, PMS settings, store network, and SaaS accounts with the IT consultant on 2026-08-04 and 2026-08-06 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two shared findings.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the DEA EPCS and CSOS duties, and a walk through the counter desktop, PMS settings, store network, and SaaS accounts with the IT consultant on 2026-08-04 and 2026-08-06 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the PMS, desktop and network reviews (EV-001 to EV-004, EV-014, EV-016, EV-017), the relief-day records (EV-021), the vendor and chatbot records, and the owner's self-review (EV-036). A one-person pharmacy keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.

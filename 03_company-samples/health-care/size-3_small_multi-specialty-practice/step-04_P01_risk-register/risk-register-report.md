@@ -21,7 +21,7 @@
 This is the practice's first documented risk analysis since 2021.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, the intake evidence, and interviews with the Clinic Managers and Billing Manager (EV-033). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, the BIA, the intake evidence, and interviews with the Clinic Managers and Billing Manager (EV-033). The gap analysis (P03) ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the ticket history (EV-017), configuration exports, walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables, not assigned by hand.

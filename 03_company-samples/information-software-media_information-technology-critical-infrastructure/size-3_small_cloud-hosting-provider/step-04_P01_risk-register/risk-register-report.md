@@ -23,7 +23,7 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews with the platform, control plane, NOC, and managed services leads (EV-049), and the vertical's incident scenario (compromise of provider tooling affecting downstream customers). The FedRAMP readiness gap analysis (P03) ran in the same fieldwork window, and the two shared findings.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, interviews with the platform, control plane, NOC, and managed services leads (EV-049), and the vertical's incident scenario (compromise of provider tooling affecting downstream customers). The FedRAMP readiness gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
 2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports (identity provider, cloud IAM, RMM, hypervisor managers, SIEM), the incident and change tickets, contracts, documents and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. Harm to many customers at once is rated Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
