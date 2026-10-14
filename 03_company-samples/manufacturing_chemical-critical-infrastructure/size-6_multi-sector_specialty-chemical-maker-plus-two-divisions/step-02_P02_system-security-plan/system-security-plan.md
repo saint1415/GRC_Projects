@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Plant C1 PCBMS**, the focus division's primary system, because it controls the group's largest toxic inventory (up to 360,000 lb of chlorine in an RMP Program 3 process), it is reachable through the shared OT remote access gateway that carries the top group risk (P01 GR-01), and it inherits about half of its controls from corporate. The plan is paired with a **common control catalog** (`common-control-catalog.csv`, 116 controls) that every division system inherits from. Terminal T1 (SYS-D1) and the Hazmat Transport TMS (SYS-T1) keep division plans that inherit from the same catalog.
 
 ## 1. System Name and Identifier
-Plant C1 Process Control and Batch Management System (**PCBMS**), identifier CSCH-SC-C1-OT-001. Covers SYS-C1 to SYS-C5 in `../00_company-facts.md` section 3.
+Plant C1 Process Control and Batch Management System (**PCBMS**), identifier CSCH-SC-C1-OT-001. Covers SYS-C1 to SYS-C5, listed with their evidence in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PCBMS runs Plant C1, the Specialty Chemicals flagship in Florida. It controls:
@@ -42,7 +42,7 @@ Plant C1 makes about 900 tons a day and ships about 140 truckloads a day. About 
 | C-CHEMICAL-R03 | CIRCIA (proposed 6 CFR Part 226) | NPRM 89 FR 23644 (2024-04-04) | **Not in effect.** Tracked only |
 | Internal | Group policies POL-01 to POL-05, the group OT security standard, and the Specialty Chemicals supplement | P06 | All apply to the PCBMS |
 
-Not applicable: **C-CHEMICAL-R02** (USCG Subpart F) applies only to facilities that must have a 33 CFR Part 105 security plan (101.605(a)); Plant C1 is inland and rail-served. It applies to Terminal T1 (P03).
+Not applicable: **C-CHEMICAL-R02** (USCG Subpart F) applies only to facilities that must have a 33 CFR Part 105 security plan (101.605(a)); Plant C1 is inland and rail-served. It applies to Terminal T1 (P03). Applicability for each division is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -99,6 +99,8 @@ NIST SP 800-60 Vol. 2 Rev. 1 has no information type for industrial process cont
 - Other High-baseline controls that apply only to federal systems or to services the group does not run (for example, most PM controls and public-facing DNS controls) are recorded as out of scope in the tailoring register.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-C1 to SYS-C5 and the shared services they inherit from) and the Plant C1 exports EV-055 to EV-061.
+
 **Inside the boundary:** SYS-C1 to SYS-C5, the Plant C1 control, supervisory, and SIS networks, the OT DMZ and its firewalls, and the OT workstations.
 
 **Outside, inherited (common control providers):** SYS-G1 (identity, PAM, and the OT remote access gateway), SYS-G2 (SOC, SIEM, and OT monitoring console; the sensors at Plant C1 are owned by SYS-G2), and SYS-G3 (WAN and the immutable backup vault).
@@ -153,7 +155,7 @@ flowchart TB
   SEWS --> SIS
 ```
 
-Dotted lines are the paths behind scenario gaps 1 and 9. **Target design:** gateway sessions to Plant C1 only with named accounts and per-session approval by the shift superintendent; no standing hub connection; recipe and configuration transfers from SYS-C8 land in a DMZ staging share for plant MOC review; the AI-001 interface is read-only to the plant (operators enter any change by hand).
+Dotted lines are the paths behind group gaps 1 and 9. **Target design:** gateway sessions to Plant C1 only with named accounts and per-session approval by the shift superintendent; no standing hub connection; recipe and configuration transfers from SYS-C8 land in a DMZ staging share for plant MOC review; the AI-001 interface is read-only to the plant (operators enter any change by hand).
 
 **Conduit register (summary).**
 | Conduit | From | To | Status |
@@ -215,14 +217,14 @@ See `control-implementation.csv` (230 controls) and `common-control-catalog.csv`
 | System-specific | 114 |
 
 **The 41 partially implemented controls** cluster in five places:
-- **Remote access and accounts** (scenario gap 1): AC-2, AC-2(1), AC-2(12), AC-6, AC-17, AC-17(1), AC-17(4), IA-2(5), IA-5, IA-8, MA-4, MA-5.
+- **Remote access and accounts** (group gap 1): AC-2, AC-2(1), AC-2(12), AC-6, AC-17, AC-17(1), AC-17(4), IA-2(5), IA-5, IA-8, MA-4, MA-5.
 - **Change management and process safety** (gaps 3 and 9): AC-4, AC-5, CA-3, CA-9, CM-2(2), CM-3, CM-3(4), CM-4, CM-5, RA-3.
 - **Monitoring and integrity:** AU-6, IA-3, SC-8, SC-8(1), SI-2, SI-7, SI-7(1).
 - **Supply chain and third parties:** AT-3, PS-7, RA-3(1), SA-4, SA-9, SR-3, SR-6, SR-8.
 - **Exercises and notification** (gap 8): CP-4, IR-3, IR-3(2), IR-6.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists the 116 controls the PCBMS inherits fully or in part from corporate. Inheritance is **documented for Specialty Chemicals** (2025 inheritance matrix) and **for Distribution** (2026 matrix). It is **not documented for Hazmat Transport** (scenario gap 7). Until POAM-017 closes, Hazmat Transport cannot show which of its security plan and FMCSA record controls are met by group services, and P07 found CA-2 statements other than satisfied for this reason. Gateway and OT standard controls are marked not applicable to Hazmat Transport, which has no plant or terminal OT.
+The common control catalog lists the 116 controls the PCBMS inherits fully or in part from corporate. Inheritance is **documented for Specialty Chemicals** (2025 inheritance matrix) and **for Distribution** (2026 matrix). It is **not documented for Hazmat Transport** (group gap 7). Until POAM-017 closes, Hazmat Transport cannot show which of its security plan and FMCSA record controls are met by group services, and P07 found CA-2 statements other than satisfied for this reason. Gateway and OT standard controls are marked not applicable to Hazmat Transport, which has no plant or terminal OT.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and PCBMS and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit, with OT tests at Plant C1 on 2026-08-12 during a planned turnaround. See P07 `assessment-results.csv` and `poam.csv`.
@@ -233,7 +235,7 @@ Common controls were assessed once, and PCBMS and division controls sampled, fro
 - **Engineering access (EWS, SIS):** unique named accounts plus physical presence. The SIS also requires the keyswitch in program, with two-person verification. The shared SIS EWS account is being replaced by named accounts (POAM-002).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and the regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), and the Plant C1 RMP documents (process safety information, PHA 2024, operating procedures, compliance audit 2025-05-14).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md), including the Plant C1 exports EV-045 to EV-066 and the common control evidence EV-011 to EV-025), group and division risk registers (P01), gap analyses and the regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10), and the Plant C1 RMP documents (process safety information, PHA 2024, operating procedures, compliance audit 2025-05-14).
 
 ## 13. Acronym List and Glossary
 - **CVI:** Chemical-terrorism Vulnerability Information (legacy CFATS)

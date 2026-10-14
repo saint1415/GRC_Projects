@@ -20,8 +20,8 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Specialty Chemicals | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Add the AI write rule (POL-01 4.12) explicitly; confirm alignment |
-| Distribution | v2026 | 2026-05-15 | Aligned; the Terminal T1 Cybersecurity Plan annex is not written yet (scenario gap 4) | Annex with the Plan (POAM-013, 2027-05-31) |
-| Hazmat Transport | v2023 | 2023-04 | **Drifted** (scenario gap 10); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-018) |
+| Distribution | v2026 | 2026-05-15 | Aligned; the Terminal T1 Cybersecurity Plan annex is not written yet (group gap 4) | Annex with the Plan (POAM-013, 2027-05-31) |
+| Hazmat Transport | v2023 | 2023-04 | **Drifted** (group gap 10); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-018) |
 
 ## 3. What each supplement adds
 ### 3.1 Specialty Chemicals supplement (16 plants; RMP Program 3 at Plant C1, Program 2 at 4 plants)

@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel; process decisions by the Plant C1 Plant Manager as incident commander |
 | Approved | 2026-09-17 by the Group CISO, the Group General Counsel, and the Plant C1 Plant Manager |
-| Last tested | Technical OT playbooks tested in 2026. **The multi-regulator notification matrix has not been exercised** (scenario gap 8). The first cross-division tabletop, combined with the Plant C1 RMP tabletop (40 CFR 68.96(b)(2), due before 2026-12-21) and the Terminal T1 annual cyber exercise, is set for 2026-12-08 (POAM-009). Owners were named for all 38 matrix rows on 2026-09-15 |
+| Last tested | Technical OT playbooks tested in 2026. **The multi-regulator notification matrix has not been exercised** (group gap 8). The first cross-division tabletop, combined with the Plant C1 RMP tabletop (40 CFR 68.96(b)(2), due before 2026-12-21) and the Terminal T1 annual cyber exercise, is set for 2026-12-08 (POAM-009). Owners were named for all 38 matrix rows on 2026-09-15 |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

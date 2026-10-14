@@ -12,7 +12,7 @@
 | Regulatory status checked | 2026-10-05 (eCFR point-in-time 2026-09-23; Federal Register search; the vertical registry) |
 
 ## 1. Applicability
-Applicability was decided first, from each division's chemicals, quantities, sites, and operations. Citations reused from the Chemical Small sample were re-checked for this size.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here. Applicability was decided from each division's chemicals, quantities, sites, and operations. Citations reused from the Chemical Small sample were re-checked for this size.
 
 **1. CFATS (6 CFR Part 27): would apply to 7 plants, but cannot be enforced.**
 - Plant C1 holds up to 360,000 lb of chlorine (a release-toxic chemical of interest with an STQ of 2,500 lb) and about 170,000 lb of hydrogen peroxide in 50% solution (a theft and diversion chemical of interest at 35% or more, STQ 400 lb). Six other plants were also tiered before the lapse.
@@ -63,10 +63,23 @@ Applicability was decided first, from each division's chemicals, quantities, sit
 ## 3. Method
 1. **Requirements.** RBPS 8 rows come from the text of 6 CFR 27.230(a)(8) and related RBPS items, and CISA's published RBPS 8 security measures (reused from the Small sample, re-read 2026-10-05). RMP, Subpart F, HMR, FMCSA, CERCLA, and EPCRA rows follow each rule's section structure, read from eCFR (point in time 2026-09-23). Group rows use the vertical and wholesale registries.
 2. **Crosswalk.** OT benchmark rows use the official CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). All other rows carry an **author mapping**, labeled as such, because NIST publishes no mapping for 6 CFR Part 27, 40 CFR Part 68, 33 CFR Part 101, or 49 CFR.
-3. **Evidence.** Interviews, document review, configuration exports, the Plant C1 PHA and compliance audit, and P07 test results (Plant C1 on 2026-08-12, Terminal T1 on 2026-08-19, two Hazmat Transport terminals on 2026-08-25).
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, the Plant C1 walk-through on 2026-04-21, and the Terminal T1 Cybersecurity Officer's response on the Plan, EV-072), the Plant C1 PHA and compliance audit (EV-046, EV-047), gap analysis interviews (EV-095 Specialty Chemicals, EV-096 Distribution, EV-097 Hazmat Transport, EV-098 group), fieldwork documents (EV-099 to EV-102), and P07 test results (Plant C1 on 2026-08-12, Terminal T1 on 2026-08-19, two Hazmat Transport terminals on 2026-08-25). The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale. Where a row applies a process safety rule to a cyber condition, the row says "author interpretation".
 
 ## 4. Results
+### 4.0 Group gaps
+Ten gaps cross divisions, sit in shared services, or need a group decision. They are numbered here and cited as group gaps 1 to 10 across this sample.
+1. **Shared OT remote access.** The group OT remote access gateway gives 14 integrators and OEMs and the central engineering hub a path to every plant's EWS and to Terminal T1. Integrator teams use shared accounts with MFA but no per-session approval by the site, sessions are recorded at only 9 sites, and the hub keeps standing connections to all plants (EV-015; P07 AC-17, MA-4).
+2. **Seven legacy plants** are not on the OT standard: flat networks, dual-homed historians, unsupported HMIs, always-on integrator remote desktop tools at two plants, and no OT monitoring. Migration is due 2027-12-31 (EV-009, EV-016, EV-066; P07 EV-S-SC7).
+3. **Cyber is missing from process safety.** PHAs at Plant C1 and the Program 2 plants do not treat control system compromise as a cause. DCS and SIS logic and recipe changes go through MOC at Plant C1 but not at 5 legacy plants, and recipe changes pushed from the hub bypass the plant MOC screen (EV-047, EV-048, EV-049, EV-066).
+4. **Terminal T1 and the USCG cyber rule.** The Cybersecurity Plan is due by 2027-07-16 and not drafted. 23 contractor personnel with OT access were not trained by the 2026-01-12 deadline and were not accompanied or monitored. There is no approved hardware and software list, the network map is from 2022, and the loading rack and tank gauging PLCs share a network segment with the terminal office (EV-072, EV-073, EV-074).
+5. **Hazmat Transport: fleet systems and the security plan.** The security plan's risk assessment does not cover cyber threats to dispatch, electronic shipping papers, telematics, and ELDs. ELD support accounts are shared at 6 terminals. Driver-facing camera AI scores feed driver discipline without documented review (EV-082, EV-083, EV-084).
+6. **Managed inventory service.** About 2,600 cellular telemetry gateways at customer sites are managed by a vendor portal with no MFA. Water utility customers rely on automatic replenishment of hypochlorite, and the largest customers asked for a SOC 2 Type 2 report (EV-078, EV-079).
+7. **Common control inheritance** is documented for Specialty Chemicals and Distribution, not for Hazmat Transport (EV-011).
+8. **Shared incident notification.** One incident can trigger CERCLA and EPCRA release notices, Coast Guard and National Response Center reports, DOT hazmat incident reports, an SEC materiality decision, state breach notices, and customer notices. The single notification matrix has not been exercised (EV-031).
+9. **AI governance.** In 2026-06 Process Engineering switched AI-001 from advisory to automatic setpoint writes on the Plant C1 hypochlorite reactors, within bounded ranges, without an MOC or AI council approval. The Group AI Standard was adopted 2026-07-01, after the change (EV-099).
+10. **Division supplement drift.** The Hazmat Transport supplement was last aligned to group policy in 2023 (EV-010).
+
 ### 4.1 Specialty Chemicals (`gap-analysis.csv`)
 | Source | Met | Partially met | Not met | N/A | Rows |
 |---|---|---|---|---|---|
@@ -114,10 +127,10 @@ Hazmat Transport's regulatory basics are in place. Its 7 gaps are where its rule
 | Screened out or not in effect (CIRCIA, CFATS, EAR, FAR) | 0 | 0 | 0 | 4 | 4 |
 | **Total** | **6** | **6** | **0** | **4** | **16** |
 
-The group gaps are about the untested notification matrix (scenario gap 8) and two missing pieces: OT and safety factors in the SEC materiality checklist (GG-03) and vendor breach notice terms (GG-07).
+The group gaps are about the untested notification matrix (group gap 8) and two missing pieces: OT and safety factors in the SEC materiality checklist (GG-03) and vendor breach notice terms (GG-07).
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Contractor training and supervision overdue at Terminal T1 (4) | Distribution | 101.650(d)(1)-(4) | High | Train or escort all 23; onboarding gate | Distribution CySO for Terminal T1 | 2026-10-31 |
 | 2 | Always-on integrator tools at 2 legacy plants (2) | Specialty Chemicals | RBPS 8 (voluntary) | High | Remove; move to the gateway | Specialty Chemicals Vice President of Manufacturing Technology | 2026-11-30 |

@@ -17,7 +17,7 @@ Most safeguards in all three divisions come from the same corporate providers. T
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps:
    - *Specialty Chemicals:* 2 of the 7 legacy plants (segmentation and backups) and the PHA program (Plant C1 and 2 Program 2 plants).
    - *Distribution:* Terminal T1 against the USCG rule, and the managed inventory service's vendor portal.
-   - *Hazmat Transport:* governance controls, because its inheritance is undocumented (scenario gap 7) and its supplement has drifted (gap 10), plus ELD accounts at two terminals.
+   - *Hazmat Transport:* governance controls, because its inheritance is undocumented (group gap 7) and its supplement has drifted (gap 10), plus ELD accounts at two terminals.
 
 Division findings are reported to that division, not averaged into the group.
 
@@ -27,9 +27,9 @@ Division findings are reported to that division, not averaged into the group.
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, IA-2(1), IA-5, AC-6(5) | 38 | Every division's access; GR-01 | Focused / Comprehensive (all divisions sampled) |
-| Common control (SYS-G1 OT remote access gateway) | AC-17, AC-17(1), AC-17(4), MA-4 | 19 | GR-01 (High); scenario gap 1 | Comprehensive / Comprehensive (17 sites reviewed, 20 sessions sampled) |
+| Common control (SYS-G1 OT remote access gateway) | AC-17, AC-17(1), AC-17(4), MA-4 | 19 | GR-01 (High); group gap 1 | Comprehensive / Comprehensive (17 sites reviewed, 20 sessions sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC and OT desk) | SI-4, IR-4, IR-6, IR-8, IR-3, RA-5 | 54 | GR-05, GR-07; scenario gap 8 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC and OT desk) | SI-4, IR-4, IR-6, IR-8, IR-3, RA-5 | 54 | GR-05, GR-07; group gap 8 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud and WAN) | CP-9, SC-7 | 12 | GR-03; immutable backups and guardrails | Focused / Focused |
 | PCBMS (Plant C1, SSP system) | AC-3, AC-4, AC-6, CM-3, CM-4, CM-5, AU-6, CP-9, CP-4, SI-7, SC-7 | 47 | SC-001, SC-003, SC-007 (High); gaps 3 and 9 | Comprehensive / Comprehensive |
 | Division sample: Specialty Chemicals | SC-7, CP-9, RA-3 | 20 | GR-05, SC-003; gaps 2 and 3 | Focused / Focused (2 of 7 legacy plants; 3 PHAs) |
@@ -50,6 +50,17 @@ Division findings are reported to that division, not averaged into the group.
   - restores of 3 cloud workloads and the Plant C1 configuration copy from the provider B vault;
   - an administrator sign-in test on the telemetry vendor portal.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-17, effective 2026-10-01. Controls that the 2025 group policies, the OT security standard, the incident response plan v2025 and division procedures already required were tested for operation. The multi-regulator notification matrix was a draft during fieldwork, so the statement that rests on it was reviewed as a draft, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before 2026 under the 2025 group policies, the OT standard or division procedures, and was tested on samples, configurations, or live systems | 271 |
+| Design | The statement rests on a draft (IR-6: the notification matrix, approved 2026-09-17); its design was reviewed. Operation is tested at the 2027-04 follow-up | 1 |
+| Not implemented | Nothing existed to test (changing shared integrator authenticators when people leave, AC-2; a cross-division exercise, IR-3; DCS controller firmware integrity checks, SI-7; a Hazmat Transport plan of inherited controls and an assessment of its technical measures, CA-2; telemetry vendor monitoring, SA-9; tracking of contractor annual training at Terminal T1, AT-3) | 9 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-013, the 20 integrator sessions from the gateway records in EV-015, and the 15 MOCs from the MOC records in EV-049).
+
 ## 4. Rules of engagement
 - **Safety first.** No active scanning or testing of controllers, SIS, PLCs, or HMIs on a running process. Active tests at Plant C1 ran only during the turnaround, with the Plant Manager's written approval and the process in a safe state. At Terminal T1 and the legacy plants, tests on OT networks were passive. The plant or terminal could stop any test at any time.
 - No testing that could affect deliveries to water utility customers, vessel transfers, or loads in transit.
@@ -67,7 +78,7 @@ Division findings are reported to that division, not averaged into the group.
 | **Total** | **225** | **56** | **281** |
 
 **Common controls are strong, except the gateway.** 121 of 138 common statements were satisfied. Identity (IA-2(1), AC-6(5)), terminations and training (PS-4, AT-2), and cloud backups and boundaries (CP-9, SC-7) had no findings. The common findings concentrate in two places:
-- **The OT remote access gateway** (AC-17, AC-17(1), AC-17(4), MA-4, and the related AC-2 and IA-5 statements on shared integrator accounts): no per-session site approval, recording at 9 of 17 sites, standing hub connections (scenario gap 1).
+- **The OT remote access gateway** (AC-17, AC-17(1), AC-17(4), MA-4, and the related AC-2 and IA-5 statements on shared integrator accounts): no per-session site approval, recording at 9 of 17 sites, standing hub connections (group gap 1).
 - **Incident consistency and notification** (IR-3, IR-4, IR-6, IR-8): the matrix has not been exercised (gap 8), and Hazmat Transport still uses its own severity scale (gap 10).
 Monitoring at legacy plants (SI-4) and remediation speed (RA-5) were also other than satisfied.
 
