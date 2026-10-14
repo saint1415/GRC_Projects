@@ -13,7 +13,7 @@
 | Approved | Chief Operating Officer, 2026-09-15 |
 
 ## 1. Applicability
-At this size more rules come close to the company, so applicability comes first. The most useful findings are still what does **not** bind it, and which contract terms do.
+Which rules bind the company was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the contracts, records and corporate documents collected there (EV-031 to EV-038, EV-050). This section explains those decisions. At this size more rules come close to the company, so applicability comes first. The most useful findings are still what does **not** bind it, and which contract terms do.
 
 ### 1.1 No binding sector cyber rule
 Critical manufacturing has no sector-wide federal cybersecurity regulation. The vertical registry lists four requirements, and each was checked against the company's facts:
@@ -49,7 +49,7 @@ With no binding cyber rule, the company needs one yardstick that covers IT, two 
 
 **Target:** CSF Tier 3 (Repeatable) for Govern, Identify, and Protect by the end of 2027, and Plant 2 at parity with Plant 1 by 2027-06-30.
 
-**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See the intake [obligations register](../step-00_P00_intake/obligations-register.csv) (FAR-RFO-PART40).
 
 ## 2. Method
 1. **Requirements.**
@@ -59,12 +59,12 @@ With no binding cyber rule, the company needs one yardstick that covers IT, two 
 2. **Crosswalk.**
    - CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), listing a subset of the controls in `sp800_53_controls`. Three rows add controls that the SP 800-82 Rev. 3 OT guidance points to, and the `crosswalk_source` column labels them as author additions (PR.PS-03, DE.CM-09, RS.AN-07).
    - FAR, addendum, and applicability rows are **author mappings**, labeled as such. No official NIST mapping exists for them.
-3. **Evidence.**
-   - Interviews: CEO, COO, CFO, General Counsel, vCISO, IT Director, Security Manager, OT Security Engineer, Director of Manufacturing Engineering, both Plant Managers and Controls Leads, VP Engineering, Director of Digital Services, Director of Quality, Director of Supply Chain, Director of Field Service, Contracts and Trade Compliance Manager, HR Director, and the MSSP service lead.
-   - Documents: policies, the 2024 IT incident and DR plans, contracts and all 31 addenda, the 3 federal contracts, the obligations register, the Plant 1 OT DMZ design.
-   - Configuration exports: firewalls, identity provider, ERP roles, backup jobs, EDR console, SIEM sources, OT sensor inventory, build server.
-   - Walkthroughs of both plants.
-4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were drawn at random from system-generated populations, sized with the co-sourced internal audit firm's attribute sampling table (25 items for a control operating many times a year; 5 to 10 for monthly or weekly controls; the full population when it is small). The same samples were reused in P07 where the controls overlap.
+3. **Evidence.** Current state was established from the intake evidence (EV-001 to EV-051: exports, documents, contracts and the AI tool discovery) and the fieldwork evidence below. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status; P07 results refreshed through 2026-08-21 are cited by their own IDs (EV-AC-2 and so on).
+   - Interviews (EV-054, EV-055, EV-057, EV-064): CEO, COO, CFO, General Counsel, vCISO, IT Director, Security Manager, OT Security Engineer, Director of Manufacturing Engineering, both Plant Managers and Controls Leads, VP Engineering, Director of Digital Services, Director of Quality, Director of Supply Chain, Director of Field Service, Contracts and Trade Compliance Manager, HR Director, and the MSSP service lead.
+   - Documents: policies, the 2024 IT incident and DR plans, contracts and all 31 addenda, the 3 federal contracts, the obligations register, the Plant 1 OT DMZ design (EV-014, EV-020, EV-024, EV-027, EV-031 to EV-034, EV-040; contract file review EV-059).
+   - Configuration exports and inspections: firewalls, identity provider, ERP roles, backup jobs, EDR console, SIEM sources, OT sensor inventory (EV-001 to EV-023), the Plant 2 file share scan and wireless survey (EV-058), the covered equipment inquiry (EV-060), the VPN account review (EV-062), and the build server (EV-063).
+   - Walkthroughs of both plants: Plant 1 on 2026-07-14 (EV-056); Plant 2 on 2026-07-15 and 2026-07-16 (EV-057).
+4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were drawn at random from system-generated populations collected at intake (for example the 214 terminations and 236 new hires in EV-003, the 41 incidents in EV-028, and the 50 critical findings in EV-016), sized with the co-sourced internal audit firm's attribute sampling table (25 items for a control operating many times a year; 5 to 10 for monthly or weekly controls; the full population when it is small). The same samples were reused in P07 where the controls overlap.
 
    | Population (12 months to 2026-06-30 unless noted) | Size | Sample | Rows |
    |---|---|---|---|
@@ -86,7 +86,7 @@ With no binding cyber rule, the company needs one yardstick that covers IT, two 
    | TMU firmware lots received | about 60 | 20 | G-047 |
    | Media disposals | 10 | 10 | G-114 |
 
-   Each `evidence` cell names the sample and its result.
+   Each `evidence` cell names the sample and its result. The sample results are recorded as EV-061 (access lifecycle), EV-065 (operations) and EV-066 (suppliers, products and facilities).
 5. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable, as of the end of fieldwork. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

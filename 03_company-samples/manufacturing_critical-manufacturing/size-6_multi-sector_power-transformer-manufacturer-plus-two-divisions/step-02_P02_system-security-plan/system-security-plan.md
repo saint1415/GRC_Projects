@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **GEPS**, a shared corporate system, because it is the registry's primary system for this vertical (ERP and production scheduling), it serves all three divisions from one instance, it inherits most of its controls from corporate (SYS-G1 to SYS-G3), and it carries two of the group's High risks (P01 GR-01 and GR-02). Plant OT (SYS-M1, SYS-M2) and the Electric Utility's TCC (SYS-U1) keep their own plans: the plants under the group OT standard, the TCC under the NERC CIP program. Both draw on the same common control catalog where it applies.
 
 ## 1. System Name and Identifier
-Group ERP and Production Scheduling Platform (**GEPS**), identifier CSCH-SYS-G4. SYS-G4 in `../00_company-facts.md`.
+Group ERP and Production Scheduling Platform (**GEPS**), identifier CSCH-SYS-G4. Listed as SYS-G4 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The GEPS is one ERP instance with a company code for each division. It supports:
@@ -40,6 +40,8 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | NERC CIP | Electric Utility obligations | CIP-002-5.1a to CIP-013-2 | Not applicable to the GEPS: it is not a BES Cyber System, EACMS, or PACS, and the utility's BCSI is prohibited in it |
 | State law | Breach notification | Each state where affected individuals reside (Florida worked example: Fla. Stat. 501.171) | Limited: the GEPS holds names and business contact details of employees and supplier contacts, not Social Security or account numbers (those are in SYS-G5) |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | |
+
+Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -86,6 +88,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 where a type f
 Other High-baseline controls are fully inherited from the cloud providers (most PE and MP controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the group does not run for this system). CSF 2.0 subcategories in the CSV come from NIST's official CSF 2.0 to SP 800-53 mapping (control enhancements take their base control's entries); for 17 controls neither the control nor its base control has an entry, and the author mapped them (for example AU-8 to PR.PS-04 and MA-4 to PR.AA-03).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-G4 and the shared services it inherits from) and the GEPS exports and records EV-040 to EV-045.
 - **Inside:** the GEPS accounts in provider A (web, application, database, APS, integration hub, supplier portal) and the disaster recovery copy, reporting copy, and backups in provider B.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SIEM, and EDR, SYS-G3 landing zones (hub network, log archive, guardrails, keys, backup vault).
 - **Outside, interconnected:** plant MES at P1 to P7 (through each OT DMZ) and the P8 legacy MES (direct, a gap); PLM (SYS-M3); TDMS (SYS-M4); EDI network provider and two direct supplier EDI links; the Electric Utility EAM (SYS-U5); SYS-G5 HR (cost centers only).
@@ -134,13 +137,13 @@ See `control-implementation.csv` (142 controls) and `common-control-catalog.csv`
 | System-specific | 38 |
 
 **The 22 partially implemented controls** cluster in four places:
-- **The plant interface** (scenario gaps 1 and 2): AC-4, AC-6, CA-3, CM-4, CM-8, SC-7, SI-4(4).
+- **The plant interface** (group gaps 1 and 2): AC-4, AC-6, CA-3, CM-4, CM-8, SC-7, SI-4(4).
 - **Service accounts and logging:** AC-2, IA-5, AU-6, SI-4, AT-3, CA-8.
-- **Recovery of scheduling** (gap 1): CP-2, CP-2(3), CP-4, CP-9(1), CP-10.
-- **Cross-division incident handling** (gap 7) and duties: IR-3, IR-6, IR-8, AC-5.
+- **Recovery of scheduling** (group gap 1): CP-2, CP-2(3), CP-4, CP-9(1), CP-10.
+- **Cross-division incident handling** (group gap 7) and duties: IR-3, IR-6, IR-8, AC-5.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 104 controls provided by corporate. Inheritance is **documented for Transformer Manufacturing** (2025 matrix, IT systems; plant OT follows the group OT standard instead), for the **Electric Utility** (2025 matrix, IT systems only, used as CIP evidence; the TCC and substations use separate CIP-004 and CIP-005 accounts and networks), and for the **GEPS** (this plan). It is **not documented for Grid Engineering** (scenario gap 6). Until POAM-014 closes, Grid Engineering cannot show which of its client contract and SOC 2 commitments rest on group controls. 18 of the catalog controls were assessed once in 2026 (P07); the rest are on the 2027 cycle.
+The common control catalog lists 104 controls provided by corporate. Inheritance is **documented for Transformer Manufacturing** (2025 matrix, IT systems; plant OT follows the group OT standard instead), for the **Electric Utility** (2025 matrix, IT systems only, used as CIP evidence; the TCC and substations use separate CIP-004 and CIP-005 accounts and networks), and for the **GEPS** (this plan). It is **not documented for Grid Engineering** (group gap 6). Until POAM-014 closes, Grid Engineering cannot show which of its client contract and SOC 2 commitments rest on group controls. 18 of the catalog controls were assessed once in 2026 (P07); the rest are on the 2027 cycle.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and GEPS and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -152,7 +155,7 @@ Common controls were assessed once, and GEPS and division controls sampled, from
 - **Plant shop-floor users** do not sign in to the GEPS; they use the MES, which is outside this boundary.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **APS:** advanced planning and scheduling

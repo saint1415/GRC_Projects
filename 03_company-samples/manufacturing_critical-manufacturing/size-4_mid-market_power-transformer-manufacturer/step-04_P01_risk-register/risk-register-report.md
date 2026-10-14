@@ -19,7 +19,7 @@
 - the suppliers with access to company systems or data (about 190, including the MSSP, cloud provider, OEMs, and the TMU electronics supplier);
 - the obligations the company owes customers: the 31 utility Supplier Cyber Security Addenda, the FMS subscription terms, and the federal contract clauses.
 
-Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+Systems and suppliers are as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **What matters most.** The company builds equipment that utilities need to keep the grid running and to restore it after storms. Leadership ranks three outcomes above the rest:
 - nobody gets hurt at a drying oven, oil processing station, or test bay, and nothing unsafe reaches a utility substation;
@@ -48,8 +48,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C, the vertical scenario (ransomware disrupting production of grid equipment), the BIA, interviews with every process owner and both Plant Managers, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C, the vertical scenario (ransomware disrupting production of grid equipment), the BIA, the intake evidence, and risk interviews and a threat workshop with every process owner, both Plant Managers, the IT Director, the OT Security Engineer, the Security Manager and the MSSP (EV-053). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident register (EV-028), scan results (EV-016), phishing results (EV-029), configuration exports, the plant walkthroughs (EV-056, EV-057), the gap analysis samples (EV-061, EV-065, EV-066) and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, safety, regulatory and contractual, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -82,6 +82,8 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-028 | AI-003 misses an incipient fault on a utility transformer | High | Subgroup monitoring; quarterly validation; model change control | Director of Digital Services | 2027-03-31 |
 | R-038 | Takeover of a privileged account that uses push MFA | High | FIDO2 keys for all 41 privileged accounts | Security Manager | 2026-12-31 |
 | R-051 | Plant 2 MES service account with corporate Domain Admins rights (found in P07) | High | Rights removed 2026-08-19; one-way trust; retire the Plant 2 domain | Security Manager | 2027-03-31 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-051 was added on 2026-08-21 after testing found the Plant 2 MES service account in the corporate Domain Admins group with a password last set in 2019 (EV-AC-6, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **Plant 2 is the soft spot (R-001, R-003, R-006, R-009, R-010, R-033, R-051).** Plant 1 got an OT DMZ, a remote access gateway, OT monitoring, and automated OT backups in 2025. Plant 2 was acquired in 2024 and has none of them. Fixing Plant 2 lowers 15 of the 52 risks.

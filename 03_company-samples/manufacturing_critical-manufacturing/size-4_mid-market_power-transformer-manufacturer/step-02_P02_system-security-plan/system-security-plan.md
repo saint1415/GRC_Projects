@@ -23,7 +23,7 @@ The EPSP runs the order-to-shipment flow for distribution transformers (Plant 1)
 The PLM vault (SYS-04), plant control systems (SYS-06), test systems (SYS-07), historians (SYS-08), the EDI provider (SYS-10), the FMS (SYS-13), and the HR and payroll SaaS (SYS-16) connect to the EPSP as interconnected systems (section 8).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
-No federal or state law regulates the security of this system directly. Its obligations come from contracts, plus one records rule. Applicability is analyzed in P03 section 1.
+No federal or state law regulates the security of this system directly. Its obligations come from contracts, plus one records rule. Which rules apply was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and is analyzed in P03 section 1.
 
 | ID | Requirement | Citation | How it affects the EPSP |
 |---|---|---|---|
@@ -90,6 +90,8 @@ Information types were chosen with reference to NIST SP 800-60. Types that SP 80
 **Availability was considered for High.** A 5-day outage of both plants would defer about $6.8 million of shipments and slip storm-restoration orders (P05). The team kept availability at Moderate for three reasons: work can continue for about 2 shifts from MES buffers and then on paper travelers, drying ovens run stored recipes from local PLCs, and the backlog means most lost output is deferred rather than lost. To compensate, the plan adds recovery-focused tailoring (section 10.1). **Integrity was considered for High** because of certified test reports; it stays Moderate because Quality signs every report against raw test data.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The 62 kiosks are the kiosks registered in the two MES instances (EV-007); the about 180 endpoints are the planning, purchasing, quality, and finance devices among the 640 in the endpoint console (EV-008); the landing zone accounts come from the cloud organization export (EV-018).
+
 **Inside the boundary:**
 - the ERP and APS virtual machines, managed database, and integration platform in the ERP production account;
 - the management and security, shared services, and backup accounts as they serve the EPSP (guardrails, network hub, log archive, ERP backups);
@@ -166,7 +168,7 @@ The cloud architecture diagram is in P04 `cloud-architecture.md`. The Plant 1 IT
 | Hybrid | 32 | Identity vendor, cloud provider, MSSP, SD-WAN provider, ERP software vendor |
 | Common/Inherited | 10 | Identity vendor (for example AC-7, IA-2(2)), cloud provider (CP-6, SC-12, SC-5), MSSP (AU-6(1)), insurer panel and MSSP (IR-7) |
 
-Most Partially implemented statements describe a control that works at HQ, in the cloud, and at Plant 1 but not yet at Plant 2. They trace to gaps 1 to 6 in `../00_company-facts.md` section 4 and to the P07 findings.
+Most Partially implemented statements describe a control that works at HQ, in the cloud, and at Plant 1 but not yet at Plant 2. They trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-007, EV-012, EV-013 and EV-015) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm, with an OT specialist subcontractor, assessed 33 of these controls from 2026-08-03 to 2026-08-21, with OT tests in the Saturday maintenance windows on 2026-08-08 (Plant 1) and 2026-08-15 (Plant 2). See P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`. Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -181,7 +183,7 @@ Authentication assurance levels (AAL) follow the definitions in NIST SP 800-63B.
   - revisiting badge-tap MFA when Plant 2 moves to the Plant 1 MES in 2027.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); gap analysis and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **APS:** advanced planning and scheduling
