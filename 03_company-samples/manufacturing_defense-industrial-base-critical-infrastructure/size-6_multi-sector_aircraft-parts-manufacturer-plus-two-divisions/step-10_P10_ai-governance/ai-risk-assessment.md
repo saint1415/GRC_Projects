@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the rules that apply to the priority use cases: the generative AI assistant used with CUI engineering documents (AI-001, the registry default), public chatbots (AI-002), the predictive maintenance model (AI-003), AI visual inspection (AI-004), and resume screening (AI-007) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board audit and risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 4 High, 4 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 4 High, 4 Medium, 1 Low), built from AI tool discovery across procurement records, SaaS discovery and the model registry (EV-035), division records (EV-070, EV-093), the 2026-07 export review and incident files on public chatbot use (EV-096, EV-097), the provider boundary confirmation (EV-105), and the AI council's test results (EV-106). The `source_evidence` column names the source of each entry. Not established: whether workforce members outside the two Engineering Services centers use public generative AI tools (an intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure

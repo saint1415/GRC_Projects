@@ -10,7 +10,7 @@ CUI Engineering Enclave (**CEE**), identifier CSC-SYS-CEE-001. Tier-1 system in 
 ## 2. System Overview
 The CEE is where the company receives, creates, stores, and shares controlled technical information (CTI) for its DoD prime contracts and its subcontracts with Prime A to Prime D: drawings, 3D models, specifications, NC programs, additive build files, process specifications, and test data. Most of it is also ITAR technical data. About 3,600 named users hold CEE accounts at 7 sites; engineers work in CAD on workstations or virtual desktops, release data through PLM, and exchange CUI with primes, DoD, and about 380 suppliers.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-02:** CUI collaboration suite (email, file storage, chat) in a government-community cloud
 - **SYS-03:** CEE cloud subscriptions: PLM application tier, CAD virtual desktop pool (1,400 concurrent sessions), CUI exchange gateway (managed file transfer), log analytics, key management, backup vault, and the AI-001 assistant (pilot, P10)
 - **SYS-04:** CAD/PLM (about 2.4 million controlled documents; about 3,100 named PLM users)
@@ -79,6 +79,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Baseline and tailoring.** The binding requirement set is the 110 SP 800-171 Rev. 2 requirements. Each requirement's implementation statement is in `sp800-171-requirement-statements.csv` (134 rows: the 110 Level 2 requirements and the 24 Level 3 requirements, each linked to its P03 gap row). `control-implementation.csv` documents **175 SP 800-53 Rev. 5 controls**: 160 from the Moderate baseline, PM-9 tailored in for risk strategy, and **14 supplements** chosen because they support the CMMC Level 3 requirements (author mapping): AC-4(21), AT-2(1), CA-8, CA-8(1), CM-8(2), IA-3(1), IR-4(14), PM-16, PS-3(3), RA-3(3), RA-10, SC-7(21), SI-7(9), SI-7(15). The executive risk committee approved this tailoring on 2026-09-10. If the Level 3 scope decision (2026-12-15) selects the whole CEE, these supplements become required for every CEE component.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-02, SYS-03, SYS-03-VDI, SYS-03-GW, SYS-03-KV, SYS-04, SYS-05 and the CEE segments of SYS-07), the prior SSP versions and the AZ-1 scope change record (EV-044), and the provider's authorization package and CRM (EV-056).
+
 The boundary follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
 
 | Category | Assets in the CEE | Treatment |
@@ -211,7 +213,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Shared MES terminals** are covered in the MOZ SSP (badge plus PIN with SSO).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); requirement statements (`sp800-171-requirement-statements.csv`); BIA (P05); multi-cloud architecture and control map (P04); enterprise risk register (P01); gap analysis and score (P03); policy hierarchy and policies (P06); Internal Audit assessment and POA&M (P07); CUI exfiltration runbook (P08); SOC 2 readiness (P09); AI governance (P10); MOZ SSP; CEE contingency plan v3; cryptography register; cloud provider CRM and FedRAMP Marketplace record; C3PAO assessment findings report (2026-03).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); requirement statements (`sp800-171-requirement-statements.csv`); BIA (P05); multi-cloud architecture and control map (P04); enterprise risk register (P01); gap analysis and score (P03); policy hierarchy and policies (P06); Internal Audit assessment and POA&M (P07); CUI exfiltration runbook (P08); SOC 2 readiness (P09); AI governance (P10); MOZ SSP (EV-044); CEE contingency plan v3 (EV-034); cryptography register (EV-020); cloud provider CRM and FedRAMP Marketplace record (EV-056); C3PAO assessment findings report (2026-03, EV-042); enterprise common control catalog (EV-038). The `evidence` columns in `control-implementation.csv` and `sp800-171-requirement-statements.csv` cite the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **C3PAO:** CMMC Third-Party Assessment Organization

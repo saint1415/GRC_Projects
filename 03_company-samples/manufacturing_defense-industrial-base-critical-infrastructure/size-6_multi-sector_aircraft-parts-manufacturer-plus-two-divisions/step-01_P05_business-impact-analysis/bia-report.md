@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board audit and risk committee, 2026-09-15
 
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-071 group, EV-072 Aircraft Parts, EV-073 Engineering Services, EV-074 Defense Software), FY2025 revenue by division (EV-003), the GCEE contingency plan and restore tests (EV-047), backup records (EV-027, EV-054, EV-055), the SOC and reporting records (EV-017, EV-019), and the platform recovery records (EV-023, EV-066). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board audit and risk committee.
+
 ## 1. Overview and purpose
 This BIA works at two levels:
 - **Group BIA:** the corporate shared services every division depends on (identity, SOC and DoD reporting, cloud and network, ERP, the CUI collaboration suite, export compliance, finance, HR).
@@ -17,10 +19,10 @@ It supports:
 NIST SP 800-171 Rev. 2 has no contingency planning requirement, so continuity is a business need rather than a CMMC requirement. Two DFARS duties still depend on it: the 72-hour cyber incident report (252.204-7012(c)) must be filed while systems may be down, and images of affected systems must be preserved for at least 90 days from the report (252.204-7012(e)) before they are rebuilt. DFARS 252.239-7010(f) sets the same 90-day preservation duty for the DoD edition.
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP, and SYS-G5 CUI collaboration. Aircraft Parts and Engineering Services share one CAD/PLM environment, the Group CUI Engineering Enclave (GCEE), which is the SSP system in P02. Division systems are SYS-D1 (plant MES, DNC, machines, and plant networks), SYS-D2 (Engineering Services HPC, test, and field systems), SYS-D3 and SYS-D4 (the two editions of the sustainment analytics platform), and SYS-D5 (the software factory). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, SYS-G4 ERP, and SYS-G5 CUI collaboration. Aircraft Parts and Engineering Services share one CAD/PLM environment, the Group CUI Engineering Enclave (GCEE), which is the SSP system in P02. Division systems are SYS-D1 (plant MES, DNC, machines, and plant networks), SYS-D2 (Engineering Services HPC, test, and field systems), SYS-D3 and SYS-D4 (the two editions of the sustainment analytics platform), and SYS-D5 (the software factory). The systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Aircraft Parts about $45.6 million of shipments per production day, Engineering Services about $19.2 million of billable work per working day, and Defense Software about $4.9 million per calendar day.
+Dollar values use FY2025 revenue by division (EV-003): Aircraft Parts about $45.6 million of shipments per production day ($11.4 billion over about 250 production days), Engineering Services about $19.2 million of billable work per working day ($4.8 billion over about 250 working days), and Defense Software about $4.9 million per calendar day ($1.8 billion over 365 days).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -70,7 +72,7 @@ By division: group shared services 5 High and 4 Moderate; Aircraft Parts 5 High 
 - **Shared PLM** (BP-AP03) is High even though engineering itself tolerates delay, because all 9 plants and Engineering Services wait on PLM releases and engineering changes from primes. Its RPO is 1 hour because about 4.8 million controlled documents change continuously.
 - **Test events** drive Engineering Services (BP-ES02): ground and flight tests are booked with DoD ranges months ahead, so lost data means repeating a test.
 - **Customer and DoD commitments** drive Defense Software: program offices use the DoD edition for daily readiness reporting, and the industry edition's SOC 2 report includes the Availability category.
-- **Reporting clocks** drive BP-G02 and BP-AP08. The DoD report must be possible from outside the CUI environment: from a clean laptop with a DoD-approved medium assurance certificate (252.204-7012(c)(3)). Defense Software has no certificate holder today (scenario gap 8).
+- **Reporting clocks** drive BP-G02 and BP-AP08. The DoD report must be possible from outside the CUI environment: from a clean laptop with a DoD-approved medium assurance certificate (252.204-7012(c)(3)). Defense Software has no certificate holder today (group gap 8).
 
 ## 5. Cross-division dependencies and shared services
 | Dependency | From | To | Why it matters |
@@ -78,7 +80,7 @@ By division: group shared services 5 High and 4 Moderate; Aircraft Parts 5 High 
 | Sign-in (SYS-G1 government-community tenant) | Group | Every CUI process | A group identity outage stops all three divisions at once. Break-glass accounts per critical system are the fallback |
 | WAN and the provider A hub | Group | 9 plants, 4 centers, both platform editions | Plants run released jobs but cannot pull new releases; Plant 9 has a single legacy circuit |
 | GCEE PLM (BP-AP03) | Aircraft Parts (system owner: corporate) | Engineering Services design and test reports | One environment, two divisions: a GCEE incident is always a two-division incident (P08) |
-| Industry edition (BP-DS02) | Defense Software | Aircraft Parts spares forecasting; Engineering Services engineers working in prime tenants | Aircraft Parts is a customer of its sister division. If the industry edition cannot show FedRAMP Moderate equivalency, Aircraft Parts' own DFARS 252.204-7012(b)(2)(ii)(D) position is affected (scenario gap 4) |
+| Industry edition (BP-DS02) | Defense Software | Aircraft Parts spares forecasting; Engineering Services engineers working in prime tenants | Aircraft Parts is a customer of its sister division. If the industry edition cannot show FedRAMP Moderate equivalency, Aircraft Parts' own DFARS 252.204-7012(b)(2)(ii)(D) position is affected (group gap 4) |
 | SOC facts (BP-G02) | Group | DIBNet reports for all three divisions; customer notices; SEC filing | Every reporting clock in P08 depends on the SOC establishing what happened |
 | ERP (BP-G06) | Group | Aircraft Parts shipping (BP-AP06) | Spares deliveries stop without shipping documents |
 | Export compliance (BP-G07) | Group | All CUI onboarding; Aircraft Parts export shipments | U.S.-person verification gates every new CUI account |
@@ -116,8 +118,8 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 **Evidence before rebuild.** For any cyber incident affecting CUI, images of affected systems are captured before servers are wiped (252.204-7012(e)). This adds hours to recovery and is built into the P08 runbook.
 
 ## 8. Key findings
-1. **Shared services have shorter RTOs than any division process**, as they must. The identity RTO of 1 hour was met in both 2026 tests.
+1. **Shared services have shorter RTOs than any division process**, as they must. The identity RTO of 1 hour was met in both 2026 tests (EV-071).
 2. **The GCEE is High for availability across two divisions.** A single PLM outage idles engineering in both CUI divisions and, after about one shift, new work at 9 plants (P01 GR-03).
-3. **Plant 9 does not meet the BP-AP01 RPO of 4 hours.** Weekly local backups could lose up to a week of traveler status. It is outside the GCEE and the planned Level 2 assessment scope until 2027-03-31 (gap 1).
+3. **Plant 9 does not meet the BP-AP01 RPO of 4 hours.** Weekly local backups could lose up to a week of traveler status. It is outside the GCEE and the planned Level 2 assessment scope until 2027-03-31 (group gap 1).
 4. **Reporting capacity is itself a process** (BP-G02, BP-AP08, BP-DS03). If the SOC or the support desk is down, DoD and customer clocks keep running. Defense Software must name and equip its own certificate holders (POAM-012).
-5. **A sister-division dependency is also a compliance dependency.** Aircraft Parts relies on the industry edition for sustainment data; its availability is High, and its FedRAMP Moderate equivalency is unresolved (gap 4).
+5. **A sister-division dependency is also a compliance dependency.** Aircraft Parts relies on the industry edition for sustainment data; its availability is High, and its FedRAMP Moderate equivalency is unresolved (group gap 4).

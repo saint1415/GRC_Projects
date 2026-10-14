@@ -18,8 +18,8 @@ Most safeguards in all three divisions come from the same corporate providers. T
 
 Sampling choices:
 - **Aircraft Parts:** plants 2, 3, and 7, chosen to include one plant without USB device control (plant 3) and one with an outdated inventory (plant 7). Plant 9 was visited but is outside the planned Level 2 scope; its findings appear only where a common control covers it (RA-5, SC-13).
-- **Engineering Services:** governance controls (PL-1, CA-2), because its supplement has drifted (gap 9) and its HPC inheritance is undocumented (gap 6), plus field controls (AC-19, AC-20) for customer sites (gap 5).
-- **Defense Software:** change control and developer testing after the 2026-05 model change, tenant isolation, and the handling of the SYS-D4 3PAO findings (gap 4). The DoD edition's own authorization is assessed under its DoD package and is outside this plan.
+- **Engineering Services:** governance controls (PL-1, CA-2), because its supplement has drifted (group gap 9) and its HPC inheritance is undocumented (group gap 6), plus field controls (AC-19, AC-20) for customer sites (group gap 5).
+- **Defense Software:** change control and developer testing after the 2026-05 model change, tenant isolation, and the handling of the SYS-D4 3PAO findings (group gap 4). The DoD edition's own authorization is assessed under its DoD package and is outside this plan.
 
 **SP 800-53A versus SP 800-171A.** This assessment uses SP 800-53A determination statements for the SP 800-53 controls in the SSP. A C3PAO will use the SP 800-171A objectives for the 110 requirements; the P03 gap analysis already scores against those requirements, and each P07 finding is linked to the P03 rows it affects through the POA&M.
 
@@ -30,13 +30,13 @@ Sampling choices:
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1), IA-2(2), IA-5 | 45 | Every division's access control; GR-01, GR-19 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR and export compliance) | PS-3, PS-4, AT-2, AT-2(2) | 20 | U.S.-person gating, terminations, training for 45,000 users; GR-08 | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, SI-4(4), AU-6, AU-11, IR-3, IR-4, IR-6, IR-8, RA-5 | 62 | GR-01, GR-02, GR-07; scenario gaps 8 and 10 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, SI-4(4), AU-6, AU-11, IR-3, IR-4, IR-6, IR-8, RA-5 | 62 | GR-01, GR-02, GR-07; group gaps 8 and 10 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | SC-7, SC-8, SC-13, SC-28, CP-9, CM-6 | 22 | FIPS cryptography, boundary, backups | Focused / Focused |
-| Common control (Group supply chain) | SR-3, SR-6 | 5 | GR-06; scenario gap 3 | Focused / Focused (30 suppliers) |
-| GCEE | AC-3, AC-4, AC-20, CM-8, CM-11, CA-3, SA-9 | 28 | GR-01, GR-05; scenario gaps 4 and 6 | Comprehensive / Comprehensive |
-| Division sample: Aircraft Parts | AU-12, MP-7, SI-2, CM-8, CP-9 | 27 | AP-002, AP-004, AP-005, AP-013; gaps 2 and 10 | Focused / Focused (plants 2, 3, 7) |
-| Division sample: Engineering Services | AC-20, AC-19, PL-1, CA-2 | 35 | ES-002, ES-004, ES-010; gaps 5, 6, 9 | Focused / Focused (10 customer sites, 60 engineers) |
-| Division sample: Defense Software | AC-3, CM-3, SA-11, CA-5 | 22 | DS-001, DS-002, DS-003; gap 4 | Focused / Focused |
+| Common control (Group supply chain) | SR-3, SR-6 | 5 | GR-06; group gap 3 | Focused / Focused (30 suppliers) |
+| GCEE | AC-3, AC-4, AC-20, CM-8, CM-11, CA-3, SA-9 | 28 | GR-01, GR-05; group gaps 4 and 6 | Comprehensive / Comprehensive |
+| Division sample: Aircraft Parts | AU-12, MP-7, SI-2, CM-8, CP-9 | 27 | AP-002, AP-004, AP-005, AP-013; group gaps 2 and 10 | Focused / Focused (plants 2, 3, 7) |
+| Division sample: Engineering Services | AC-20, AC-19, PL-1, CA-2 | 35 | ES-002, ES-004, ES-010; group gaps 5, 6, 9 | Focused / Focused (10 customer sites, 60 engineers) |
+| Division sample: Defense Software | AC-3, CM-3, SA-11, CA-5 | 22 | DS-001, DS-002, DS-003; group gap 4 | Focused / Focused |
 | **Total** | **48** | **266** | | |
 
 ## 3. Methods and objects
@@ -53,6 +53,17 @@ Sampling choices:
   - cross-tenant access attempts in 2 SYS-D4 test tenants;
   - a field survey of 60 Engineering Services engineers.
 
+### What each test could show
+The group policies v2026 (P06) were drafted in 2026-06, before fieldwork, and approved by the board audit and risk committee on 2026-09-15, effective 2026-10-01. During fieldwork they were drafts, so they were reviewed as drafts, for design only, and no determination statement rests on them. The controls tested were those already required by the 2025 group policies and standards (EV-009), the division supplements (EV-010), and IR plan v4 (EV-018), so they were tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before 2026 and was tested on samples, configurations, or live systems | 262 |
+| Design | The statement rests on a draft whose design was reviewed | 0 |
+| Not implemented | Nothing existed to test (ongoing monitoring of SYS-D4 control compliance, SA-9; monitoring of CAD plug-in installs, CM-11; independent validation of the predictive maintenance model, SA-11; assessment of HPC and test system controls before they joined the CUI environment, CA-2) | 4 |
+
+Operation of the controls the v2026 policies introduce is tested at the 2027-04 follow-up assessment. Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 72 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-013, and the 30 suppliers from the supplier records in EV-033).
+
 ## 4. Rules of engagement
 - No testing that could affect production at the plants, test events, or platform customers. Tests used non-production projects and tenants; the download test used synthetic files in a test project inside the Program H enclave.
 - No CUI left group systems. Screenshots were redacted, and assessors were U.S. persons with existing CUI access approvals.
@@ -68,9 +79,9 @@ Sampling choices:
 | Division sample: Defense Software | 18 | 4 | 22 |
 | **Total** | **220** | **46** | **266** |
 
-**Common controls are strong.** 137 of 154 common statements were satisfied. Strong authentication (IA-2, IA-2(1), IA-2(2), AC-6(5)), U.S.-person screening and terminations (PS-3, PS-4), cloud protection (SC-7, SC-8, SC-28, CP-9, CM-6), log review and retention (AU-6, AU-11), and account disablement (AC-2(3)) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **plant monitoring coverage** (SI-4), **outbound baselines for Program H** (SI-4(4)), **cross-division incident consistency and reporting** (IR-3, IR-4, IR-6, IR-8; scenario gap 8), **Plant 9** (RA-5, SC-13), **supplier verification** (SR-3, SR-6; gap 3), and one training content item (AT-2).
+**Common controls are strong.** 137 of 154 common statements were satisfied. Strong authentication (IA-2, IA-2(1), IA-2(2), AC-6(5)), U.S.-person screening and terminations (PS-3, PS-4), cloud protection (SC-7, SC-8, SC-28, CP-9, CM-6), log review and retention (AU-6, AU-11), and account disablement (AC-2(3)) had no findings. The common findings are about **service accounts** (AC-2, IA-5), **plant monitoring coverage** (SI-4), **outbound baselines for Program H** (SI-4(4)), **cross-division incident consistency and reporting** (IR-3, IR-4, IR-6, IR-8; group gap 8), **Plant 9** (RA-5, SC-13), **supplier verification** (SR-3, SR-6; group gap 3), and one training content item (AT-2).
 
-**The GCEE is where the cross-division risk shows.** AC-4 was fully other than satisfied: the daily Aircraft Parts export to SYS-D4 is not an approved flow, and a test file from the Program H space reached a general MES queue. SA-9 and AC-20 failed for the same SYS-D4 dependency (gap 4). CM-8 failed for the thick workstations at plants 4 and 7, CA-3 for the HPC and SYS-D4 exchanges, and CM-11 for CAD plug-ins. Project-based access with export tags (AC-3) passed every test, including the account without the U.S.-person attribute.
+**The GCEE is where the cross-division risk shows.** AC-4 was fully other than satisfied: the daily Aircraft Parts export to SYS-D4 is not an approved flow, and a test file from the Program H space reached a general MES queue. SA-9 and AC-20 failed for the same SYS-D4 dependency (group gap 4). CM-8 failed for the thick workstations at plants 4 and 7, CA-3 for the HPC and SYS-D4 exchanges, and CM-11 for CAD plug-ins. Project-based access with export tags (AC-3) passed every test, including the account without the U.S.-person attribute.
 
 **Division samples:**
 - *Aircraft Parts:* USB device control missing at plant 3 with unowned drives in use (MP-7, fully other than satisfied), plant 7 MES records without user identity (AU-12), late patching at plants 7 and 3 (SI-2), and an outdated plant 7 inventory (CM-8). MES backups and restores at plant 2 passed (CP-9).

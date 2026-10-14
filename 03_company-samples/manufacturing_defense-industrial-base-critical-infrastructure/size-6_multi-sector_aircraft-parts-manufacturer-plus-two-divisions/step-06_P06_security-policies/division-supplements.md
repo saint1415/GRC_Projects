@@ -19,7 +19,7 @@
 | Division | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Aircraft Parts | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after effective date) | Confirm alignment |
-| Engineering Services | v2024 | 2024-05 | **Drifted** (scenario gap 9); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
+| Engineering Services | v2024 | 2024-05 | **Drifted** (group gap 9); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
 | Defense Software | v2025 | 2025-10 | Aligned, but missing a data-use gate for Government-related data and a CSP reporting procedure for SYS-D4 tenants | Add both by 2026-11-30 (POAM-016, POAM-012) |
 
 ## 3. What each supplement adds
@@ -64,7 +64,7 @@ The 2024 Engineering Services standards were written before the 2026 group polic
 | Cloud sync | Personal cloud sync allowed for non-CUI files | No sync clients for any CUI folder; personal cloud blocked on CUI endpoints (POL-02 4.10) | CUI synced to laptops at customer sites (ES-002) |
 | Test data media | Encryption "recommended" | Encryption required (POL-04 4.6) | 3.8.6 not met |
 | AI tools | Not addressed | Approved tools only; never CUI in public AI (POL-05 4.7, 4.8) | Public chatbot use in 2026-07 (ES-006) |
-| New systems | Division IT may connect systems to the GCEE | SSP annex and interconnection agreement first (POL-01 4.6) | HPC cluster joined without either (scenario gap 6) |
+| New systems | Division IT may connect systems to the GCEE | SSP annex and interconnection agreement first (POL-01 4.6) | HPC cluster joined without either (group gap 6) |
 | Incident reporting | Report to the customer only for incidents on customer systems | Report to the group SOC within 1 hour as well (POL-03 4.1) | ES-015 |
 
 **Why the drift happened.** The 2024 re-organization moved Engineering Services security under the Group CISO, but the supplement had no owner or review date, and the 2025 review was skipped. **Fix:** POL-01 4.5 now requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office tracks supplement versions in the policy register.

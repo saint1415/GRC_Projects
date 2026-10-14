@@ -85,6 +85,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Engineering; PLM Platform Manager; Vice President, Trade Compliance; Vice President, Contracts; Director of Security Operations; Director of Identity and Access Management; Director of OT Engineering; AZ-1 Site Director; General Counsel; CFO; CISO; 20 randomly selected CEE users.
 - **Test:** sign-in from an unmanaged device; web category test to public AI and file-sharing sites; deletion attempt on archived logs; bulk download and gateway transfer anomaly tests; rogue device tests at FL-1, FL-3, and AZ-1; reachability tests from the corporate network at every site; allowlisting test; restore observation.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork. The executive risk committee approved POL-02 to POL-05 and the hierarchy on 2026-09-10, the risk and technology committee of the board approved POL-01 the same day, and all take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the policy set in force before the revision (EV-036), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the February 2027 readiness re-check, after at least one quarter of operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations, configurations or live systems | 259 (226 Satisfied, 33 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the February 2027 readiness re-check | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test | 0 |
+| **Total** | | **259** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (identity governance and HR records, EV-004 and EV-005; PLM, EV-006; SOC cases, EV-028; vulnerability findings, EV-030; change records, EV-035; the supplier status tracker, EV-053; visitor and sanitization records, EV-060 and EV-061) and were refreshed to 2026-06-30 at kickoff; the AZ-1 build-file transfers were drawn through 2026-07-31.
+
 ## 4. Rules of engagement
 - No testing could disturb production. Network tests at plants ran outside production hours with the Director of OT Engineering present; no test touched machine or printer controllers.
 - No CUI left the CEE. Auditors worked from CEE virtual desktops and company-issued laptops, and screenshots with drawings were redacted.
