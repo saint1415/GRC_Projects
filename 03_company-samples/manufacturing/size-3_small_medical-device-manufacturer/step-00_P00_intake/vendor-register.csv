@@ -1,0 +1,13 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,IaaS/PaaS hosting for the device cloud,SYS-01,PHI,Customer agreement with subcontractor BAA,"SOC 2 Type 2, 2025-04-01 to 2026-03-31",EV-041; EV-042; EV-044,Subservice organization for the company's own SOC 2 report
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,None on file,EV-041,No PHI
+V-03,PLM vendor,Product lifecycle management,SYS-03,Design files; regulatory submissions,Subscription terms,None on file,EV-041,
+V-04,Source repository vendor,Source code hosting,SYS-04,Source code,Subscription terms,None on file,EV-041,
+V-05,ERP vendor,"Orders, shipping, traceability, payables",SYS-06,Order and traceability records,Subscription terms,None on file,EV-041,
+V-06,eQMS vendor,Quality management system,SYS-07,Complaint records with incidental patient identifiers,Subscription terms,None on file,EV-041; EV-032,
+V-07,Productivity suite vendor,"Email, files, chat",SYS-09,Email and files with incidental PHI,Subscription terms,None on file,EV-041,
+V-08,Log analytics vendor,Log analytics,SYS-10,Application logs with patient names and MRNs,Subscription terms; no BAA on file,SOC 2 report on the vendor's trust portal,EV-041; EV-042; EV-045,
+V-09,Support ticketing vendor,Customer support ticketing,SYS-12,Case notes with occasional patient identifiers,Contract with subcontractor BAA,SOC 2 report on the vendor's trust portal,EV-041; EV-042; EV-045,
+V-10,MES software vendor,MES software support,SYS-05,Production records (support access),Support agreement,None on file,EV-041,
+V-11,Payroll provider,Payroll processing,Payroll SaaS,Employee personal information,Service agreement,None on file,EV-041,
+V-12,Outside regulatory counsel,FDA regulatory advice,n/a,Regulatory and complaint information as needed,Engagement letter,n/a,EV-041,

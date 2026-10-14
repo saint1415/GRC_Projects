@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Medical Devices | v2026 | 2026-06-30 (to the 2026 draft group policies) | Aligned; update for the final 2026 policies due by 2026-12-30 (90 days after effective date) | Confirm alignment; add the IX-3 signing exception with its end date |
 | Distribution | v2025 | 2025-05 | **Not aligned** to 2026 policies (P01 GR-20, DS-007): no FCI enclave rule, no handheld account rule, no contracting officer notice path | Re-issue by 2026-12-31 |
-| Engineering and Product Testing Services | v2025 | 2025-11 | Aligned in text, but its barrier rules are not enforced (gap 5) and it has no AI tool rule (gap 8) | Add enforcement and AI rules by 2026-11-30 |
+| Engineering and Product Testing Services | v2025 | 2025-11 | Aligned in text, but its barrier rules are not enforced (EV-072) and it has no AI tool rule (EV-009, EV-078) | Add enforcement and AI rules by 2026-11-30 |
 
 ## 3. What each supplement adds
 ### 3.1 Medical Devices supplement (device manufacturer; DCC business associate)
@@ -69,10 +69,10 @@ The 2025 Distribution supplement was written before the 2026 group policies. Whe
 | Handheld accounts | Site accounts allowed | No shared accounts (POL-02 4.1) | Actions not attributable (DS-015) |
 | Visitor records | Paper logs at site discretion | Visitor system at every site (POL-02 4.12) | Incomplete logs (DS-013) |
 | Incident severity | Distribution 3-level scale | One group scale (POL-03 4.2) | Inconsistent escalation |
-| Common control inheritance | Not addressed | Division documents inheritance (POL-01 4.6) | Gap 3 (POAM-013) |
+| Common control inheritance | Not addressed | Division documents inheritance (POL-01 4.6) | No Distribution inheritance matrix (EV-010; POAM-013) |
 | Contracting officer notices | Not addressed | Notification matrix includes federal contract terms (POL-03 4.6) | Missed 1-business-day clock risk (DS-009) |
 
-**Why the drift happened.** Distribution's security lead role was vacant for 7 months in 2025-2026, and the supplement had no backup owner. **Fix:** the Group CISO's policy office now tracks supplement versions and owners in the policy register and escalates any supplement more than 90 days behind a group change.
+**Why the drift happened.** Distribution's security lead role was vacant for 7 months in 2025-2026 (EV-002), and the supplement had no backup owner. **Fix:** the Group CISO's policy office now tracks supplement versions and owners in the policy register and escalates any supplement more than 90 days behind a group change.
 
 ## 5. Attestation
 Each division security and compliance lead signs an annual statement: "The division supplement does not weaken any group policy and reflects all group policy changes made in the last 12 months." The first attestations are due 2026-12-31 (Medical Devices, Testing) and on re-issue (Distribution).

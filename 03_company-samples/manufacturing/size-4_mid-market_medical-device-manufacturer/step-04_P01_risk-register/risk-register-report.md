@@ -11,7 +11,7 @@
 | Approved | 2026-09-17: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units, the Device Lifecycle Platform (DLP, SYS-01 to SYS-09), fielded devices (SYS-12), the ERP and support apps (SYS-10, SYS-11), third parties (SYS-13), and AI tools (SYS-14). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units, the Device Lifecycle Platform (DLP, SYS-01 to SYS-09), fielded devices (SYS-12), the ERP and support apps (SYS-10, SYS-11), third parties (SYS-13), and AI tools (SYS-14), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Two kinds of harm are rated together.** Enterprise cyber risks (ransomware, PHI exfiltration, fraud) and product security risks (exploitable devices, signing and provisioning paths) sit in one register, so the board sees one list. Device risks are also assessed in the design risk management files in PLM, where FDA's guidance expects exploitability to be rated separately from safety probability. This register uses the SP 800-30 scale for both, and each product risk links to its PLM risk file.
 
@@ -38,8 +38,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $3 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Manufacturing overlay, FDA's premarket and postmarket guidance (threat modeling, multi-patient harm, uncontrolled risk), SP 800-82 Rev. 3 Appendix C (OT threats and vulnerabilities), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the Manufacturing overlay, FDA's premarket and postmarket guidance (threat modeling, multi-patient harm, uncontrolled risk), SP 800-82 Rev. 3 Appendix C (OT threats and vulnerabilities), the BIA, the intake evidence, and risk interviews and a threat workshop with the process owners, the Product Security Manager, the OT Engineering Manager, the Director of Cloud Operations and the MSSP (EV-061). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07) added one risk in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the SBOM match queue (EV-028), the release and adoption reports (EV-031), the incident log (EV-040), phishing results (EV-042), configuration exports, the walk-through and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, patient safety, reputation). Any risk that could affect many patients at once (multi-patient harm) was rated Very High impact.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -70,6 +70,8 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-009 | Malicious firmware signed through the pipeline | High | Remove standing runner administrator rights; reproducible build check | VP Engineering | 2027-03-31 |
 | R-037 | AI-002 alarm model suppresses a true alarm once released | High | Bias and edge-case test plan before design freeze | Chief Medical Officer | 2027-03-31 |
 | R-049 | IP-4 factory service mode left enabled on 1,140 pumps (found in P07) | High | Out-of-cycle firmware by 2026-10-16; CAPA on station change control | VP Engineering | 2026-10-16 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-049 was added on 2026-08-21 after device lab testing on 2026-08-19 found the IP-4 factory service mode enabled on shipped pumps behind one factory credential (EV-CM-7, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **Postmarket product security at scale (R-001 to R-004, R-014, R-015, R-038, R-049).** The company met section 524B at submission time and runs the machinery (SBOMs, CVD, ISAO), but the volume of component vulnerabilities has outgrown a 4-person team, and slow field adoption means fixes do not reach patients quickly.

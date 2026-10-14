@@ -278,3 +278,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market cloud host):** pass-1 R-017 quotes the 11% drift figure from the August scan; P07 examined "STD-04 (2026-09)" during August; two P09 vendor reviews are dated after P09 fieldwork.
 - **Size 5 (enterprise cloud host):** P07 examined IR plan v7 and SSP v3.0 approved after fieldwork; DEP-11 says the RMM vendor's SOC report was reviewed while P04 says it was not; DEP-23 counts about 1,050 AQ-1 staff against about 180 technicians in the facts; P02 AC-21 is Implemented through a trust center that is not live.
 - **Size 6:** pass-1 GR-04 and CH-005 cite August items; P10 (2026-09-04) reports approvals "since 2026-10-01"; P07 says the enclave was not assessed since 2024 while P03 cites a "2026 internal review".
+
+### Manufacturing, 2026-10-14
+
+Six samples, 569 evidence rows in all. Agent cost: about 2.4 million tokens; the longest sample took 29 minutes. (A first launch on 2026-10-12 stopped at the usage limit before any edits and was rerun.)
+
+Fixes made during this batch:
+- **Validator:** completed samples may no longer contain the incomplete P01 sentence "and the two shared findings"; size 3 had copied it again and was corrected.
+- **Sizes 1, 3 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-1, EV-RA-5-11, EV-C-AC65, EV-D-CA81, EV-M-RA511, EV-T-IA21 and others) renamed to the parenthesis form.
+- **Size 1 (CNC machine shop):** the P03 method's walk-through moved to the 2026-08-05 intake walk-through; the 2026-08-11 walk-through stays as P07 evidence.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes P08 or P10) cites regulatory checks dated after approval.
+- **Size 1:** P02 SC-28 and P04 cite a P07 encryption test that P07 never ran; P03 G-054 says no restore was ever tried while citing the successful P07 restore.
+- **Size 2 (medical device startup):** P04 (2026-07-31) cites August tests and a SOC 2 report received 2026-08-18; pass-1 R-002 cites an August finding; P09 CC1.3 cites a designation memo with no intake record.
+- **Size 3 (small medical device maker):** P03 cites P07 results from August; "last firmware release 11 months ago" appears in both July P03 and August P07.
+- **Size 4 (mid-market medical device maker):** R-042 and R-049 cite September events while last reviewed in July and August; P07 sampled 10 pumps from 410 in finished goods while the facts put 86 affected units there; TPLC metrics coverage is described three ways.
+- **Size 5 (global medical device maker):** SSP 10.2 says 44 controls assessed while the P07 plan says 45; P07 RA-5 says MN-1 has passive OT discovery while SI-4 and the SSP say no OT monitoring; P09 calls the 2027 SL-1 report the fourth while reports run since 2023.
+- **Size 6 (diversified industrial group):** P07 marks Distribution CA-2 statements Satisfied while CA-02b.01 says no assessment plan exists; the old facts listed 2026 group policies in place before their approval; facts section 8 states that a staffing vacancy explains supplement drift.

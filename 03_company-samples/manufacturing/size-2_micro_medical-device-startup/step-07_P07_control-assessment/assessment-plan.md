@@ -40,6 +40,17 @@ Micro tier scope: 10-15 controls. **13 controls, 111 determination statements.**
   - operating system version check on the 2 lab workstations and 2 laptops
   - 3 hub components checked against public vulnerability databases
 
+### What each test could show
+The policies (P06) and the incident response runbook (P08) were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before 2026-08 and was tested on samples, live systems, or lab units | 41 |
+| Design | The control is new (the draft runbook, version of 2026-08-07); its design was reviewed. Operation is tested at the 2027-02 follow-up | 17 |
+| Not implemented | Nothing existed to test | 53 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the account lists were compared with the 7 employees on the payroll roster in EV-001 and the contractor end date in EV-002, and the 7 laptops come from the MSP device list in EV-008).
+
 ### MSP evidence requested
 The MSP operates the laptops and the network, so evidence came from it. Requested on 2026-08-03 with a one-week deadline:
 

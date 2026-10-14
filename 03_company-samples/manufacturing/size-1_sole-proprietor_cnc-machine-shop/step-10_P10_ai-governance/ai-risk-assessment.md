@@ -9,10 +9,10 @@
 | Why this tool | The vertical's scenario (an AI-enabled device software function) fits a device maker, not a parts supplier. This is the one third-party AI tool the owner uses |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 for generative AI risks |
 | Assessor and decision | Owner-machinist, 2026-08-19; decision 2026-09-04 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built at intake from the owner's own accounts: the AI assistant account and chat list, the accounting SaaS settings, and the bank and card statements (EV-029, EV-004, EV-007). With no staff, there was no survey to run. Not established: what the vendor still holds from the chats before their deletion, and whether it used them for training |
 
 ## 1. What it does (Map)
-The owner types or pastes text, or uploads a file, and the assistant returns text: a draft quote or email, an explanation of a tolerance callout, or a block of G-code. It is a consumer product. The owner accepted click-through terms. Those terms promise no confidentiality to business users, and the default setting lets the vendor use chats to improve its models. A review of the chat history on 2026-08-19 found:
+The owner types or pastes text, or uploads a file, and the assistant returns text: a draft quote or email, an explanation of a tolerance callout, or a block of G-code. It is a consumer product. The owner accepted click-through terms. Those terms promise no confidentiality to business users, and the default setting lets the vendor use chats to improve its models (EV-036). A review of the chat history on 2026-08-19 found (EV-035):
 - **one OEM drawing PDF uploaded** (2026-05) to ask about a callout;
 - **notes pasted from two aerospace drawings** (FCI) to help with a quote;
 - **about 12 G-code snippets** generated or edited, 3 of which were used on the machines after the owner edited them.

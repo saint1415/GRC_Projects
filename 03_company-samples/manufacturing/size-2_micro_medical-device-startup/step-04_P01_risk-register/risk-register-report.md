@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the CEO |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business and its key vendors: the systems in `../00_company-facts.md` section 3 (SYS-01 to SYS-09), the pre-production units, the planned AI-001 function, and the vendors that hold or handle the company's code, keys, and records: the source code and CI service vendor, the eQMS vendor, the cloud provider, the productivity suite vendor, the MSP, and the contract manufacturer.
+**Scope.** The whole business and its key vendors: the systems in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-09), the pre-production units, the planned AI-001 function, and the vendors that hold or handle the company's code, keys, and records: the source code and CI service vendor, the eQMS vendor, the cloud provider, the productivity suite vendor, the MSP, and the contract manufacturer ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two kinds of harm are rated.** Most risks today hurt the business (schedule, runway, intellectual property). Some are design weaknesses that would hurt patients once WM-1 is in hospitals (R-001, R-002, R-004, R-005, R-021). Those are rated for their impact after clearance, because the design is being fixed now.
 
@@ -24,8 +24,8 @@
 This is the company's first documented risk assessment. The safety risk management file in the eQMS covers hazards to patients from the device; it is not a cybersecurity risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the cloud mapping (P04), and interviews with all 7 employees and the MSP lead technician (2026-07-20 to 2026-07-31).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), the cloud mapping (P04), the intake evidence ([evidence register](../step-00_P00_intake/evidence-register.csv)), and interviews with all 7 employees and the MSP lead technician (2026-07-20 to 2026-07-31, EV-038).
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the SaaS, cloud and MSP exports, the design records, the contracts folder, the office and lab walk-through (EV-032), the release process interview (EV-034), the build and release walk-through of 2026-07-22 (EV-040) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3). For a startup spending about $190,000 a month, a submission slip of a month or a lost signing key is High or Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -55,7 +55,9 @@ Status: 13 Open, 9 In progress, 2 Closed (R-020 and R-024 accepted).
 **Risks found or changed during the work:**
 - R-023: added on 2026-08-12 after P07 testing found the hub API key in CI build logs. The debug step was removed and the logs purged the same day.
 - R-011: the P07 assessor found a former firmware contractor's repository account still active 5 months after the engagement ended. It was removed on 2026-08-11. The repository audit log showed no pushes or clones after 2026-03-13.
-- R-022: the maintenance page was disabled by configuration on the 8 evaluation hubs, and the partner hospital's security team was told, on 2026-08-14.
+- R-022: the maintenance page was disabled by configuration on the 8 evaluation hubs, and the partner hospital's security team was told, on 2026-08-14 (EV-042).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-12 from P07 testing (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (approved by the CEO on 2026-08-31; about $41,000 one-time and $9,500 a year):**

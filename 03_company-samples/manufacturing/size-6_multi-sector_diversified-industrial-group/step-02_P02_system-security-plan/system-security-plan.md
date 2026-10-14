@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **Device Engineering and Manufacturing System (DEMS)**, the Medical Devices division's engineering and production system, because it produces the software that runs on about 215,000 fielded devices, it holds the code-signing keys that every device trusts, and it carries the group's top risk (P01 GR-01). It inherits most of its IT controls from corporate (SYS-G1 to SYS-G3) through the group common control catalog (`common-control-catalog.csv`). Distribution (SYS-D4) and Testing (SYS-D6) keep their own division system plans that inherit from the same catalog.
 
 ## 1. System Name and Identifier
-Device Engineering and Manufacturing System (**DEMS**), identifier CSCH-MD-SYS-D1. SYS-D1 in `../00_company-facts.md`.
+Device Engineering and Manufacturing System (**DEMS**), identifier CSCH-MD-SYS-D1. Listed as SYS-D1 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 DEMS turns device designs into released, signed software and built, tested devices. It supports:
@@ -20,7 +20,7 @@ About 5,200 engineers, 1,100 plant operators and technicians, 164 contract manuf
 - **PLM** (SaaS): requirements, design files, bills of materials, risk files; supplier portal for contract manufacturers
 - **Source repositories** (SaaS) with protected branches and signed commits
 - **CI/CD build pipeline:** build agents on the group cloud platform (provider A); artifact repository; security testing stages (static analysis, software composition analysis, fuzzing); automatic SBOM generation
-- **Code-signing service:** primary HSM at Plant A, backup HSM at Plant B, two-person approval for every production signature. **Exception:** IX-3 firmware is still signed with a software key on a build server at Plant D (gap 1)
+- **Code-signing service:** primary HSM at Plant A, backup HSM at Plant B, two-person approval for every production signature. **Exception:** IX-3 firmware is still signed with a software key on a build server at Plant D (EV-044)
 - **Release repository:** the only source of production firmware for the DCC update service and field service
 - **MES and test stations:** MES servers at each plant and 61 test stations (19 at Plants D and E)
 
@@ -37,7 +37,7 @@ The platform is described by service category and is vendor-agnostic (see P04).
 | Contracts | Contract manufacturer and supplier agreements; hospital customer security commitments | Contracts | Supplier SBOM and vulnerability notice clauses since 2025; customer security guides describe the update chain |
 | Internal | Group policies POL-01 to POL-05 and the Medical Devices supplement | P06 | |
 
-Not applicable to DEMS: the HIPAA Security Rule (DEMS holds no PHI; the DCC, SYS-D2, is the business associate system). DFARS 252.204-7012 and CMMC (no covered defense information or federal contract information in DEMS).
+Not applicable to DEMS: the HIPAA Security Rule (DEMS holds no PHI; the DCC, SYS-D2, is the business associate system). DFARS 252.204-7012 and CMMC (no covered defense information or federal contract information in DEMS). Applicability for each division and the group is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -82,6 +82,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 and adjusted f
 Other High-baseline controls are either fully inherited from the cloud and SaaS providers (for example, most PE controls for provider facilities, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the division does not operate).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-D1 and the shared services it inherits from) and the DEMS exports and records EV-044 to EV-052.
+
 - **Inside:** PLM tenant, source repositories, build pipeline accounts in provider A, artifact and release repositories, the HSMs at Plants A and B, the Plant D build server and software key, and the MES servers and 61 test stations at the 5 plants.
 - **Outside, inherited (common control providers):** SYS-G1 identity platform, SYS-G2 SOC, SIEM, and EDR, and the SYS-G3 landing zone, WAN, and backup vault.
 - **Outside, interconnected:** SYS-D2 DCC update service (receives signed releases), SYS-D3 eQMS (design change and CAPA links), SYS-D6 Testing LIMS (test reports for premarket submissions), SYS-G4 ERP (bills of materials and UDI data), and contract manufacturer systems through the PLM supplier portal.
@@ -92,7 +94,7 @@ The diagram is in P04 `cloud-architecture.md` (the DEMS subgraph).
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
 | SYS-D2 DCC update service | Outbound | Signed IX-4 and PM-7 firmware and hospital drug library packages | Interface agreement; release role only |
-| Field service (via release repository) | Outbound | Signed IX-3 packages for USB installation | Interface agreement; IX-3 signed at Plant D (gap 1) |
+| Field service (via release repository) | Outbound | Signed IX-3 packages for USB installation | Interface agreement; IX-3 signed at Plant D (EV-044) |
 | SYS-D3 eQMS | Two-way | Design changes, CAPA references, complaint trends | Interface agreement |
 | SYS-D6 Testing LIMS | Inbound | Test reports and findings on Medical Devices products | Intercompany testing agreement; **independence statement not required until 2026-10** (POAM-011); information barrier rules (P06) |
 | Contract manufacturers and suppliers (PLM supplier portal) | Two-way | Drawings, bills of materials, component data; supplier SBOM entries | Supply agreements with security and SBOM clauses (2025 template); export screening. **Gap:** 164 guest accounts not certified quarterly (POAM-001) |
@@ -129,13 +131,13 @@ See `control-implementation.csv` (132 controls) and `common-control-catalog.csv`
 | System-specific | 43 |
 
 **The 16 partially implemented controls** cluster in four places:
-- **Legacy IX-3 release chain** (scenario gap 1): SC-12, CM-3, CM-8, SR-4, SA-22.
-- **Acquired plants D and E** (gap 2): SC-7, AC-4, IA-2, AU-6, AU-12, SI-4, CP-9.
-- **Supplier and contract manufacturer access and transparency** (gap 9): AC-2, SR-3.
-- **Independence and cross-division response** (gaps 5 and 7): CA-8, IR-8.
+- **Legacy IX-3 release chain** (EV-040, EV-044, EV-051): SC-12, CM-3, CM-8, SR-4, SA-22.
+- **Acquired plants D and E** (EV-016, EV-048, EV-049, EV-050): SC-7, AC-4, IA-2, AU-6, AU-12, SI-4, CP-9.
+- **Supplier and contract manufacturer access and transparency** (EV-012, EV-040, EV-052): AC-2, SR-3.
+- **Independence and cross-division response** (EV-031, EV-077): CA-8, IR-8.
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 89 controls that corporate provides. Inheritance is **documented for Medical Devices** (2025 inheritance matrix, confirmed for DEMS in this plan) and for Testing's 5 federated laboratories (2026). It is **not documented for Distribution** (scenario gap 3; POAM-013), and the 4 acquired laboratories cannot inherit SYS-G1 controls until they are federated (POAM-015).
+The common control catalog lists 89 controls that corporate provides. Inheritance is **documented for Medical Devices** (2025 inheritance matrix, confirmed for DEMS in this plan) and for Testing's 5 federated laboratories (2026). It is **not documented for Distribution** (EV-010; POAM-013), and the 4 acquired laboratories cannot inherit SYS-G1 controls until they are federated (POAM-015).
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and DEMS and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -147,7 +149,7 @@ Common controls were assessed once, and DEMS and division controls sampled, from
 - **Pipeline service identities** use workload identity with short-lived tokens; signing requests require two human approvals.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **CPSO:** Chief Product Security Officer

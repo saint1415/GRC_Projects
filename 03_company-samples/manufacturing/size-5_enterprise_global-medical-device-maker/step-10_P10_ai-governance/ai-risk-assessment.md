@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, Inc. (publicly traded connected medical device manufacturer) |
 | Tier / Vertical | Enterprise / Manufacturing (NAICS 334510) |
 | Scope | Enterprise AI portfolio (11 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001, the AI-enabled device software function that estimates left ventricular ejection fraction (LVEF) from US-20 handheld ultrasound images (section 7) |
+| Inventory | `ai-use-case-inventory.csv` (11 use cases), built from the AI governance committee register (EV-077), the accounts payable vendor master for vendor AI features and subscriptions (EV-067), the consumer app documentation (EV-012), the AI-001 design history file (EV-078), the risk workshops (EV-085) and the committee's 2026-08-26 portfolio review (EV-097). Not established at intake: AI features embedded in vendor products that were switched on before the 2026-03 intake block and are not in the register (intake open request), and workforce use of public AI tools from personal devices |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1) for AI-007 and AI-008; repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Medical Officer), meeting of 2026-08-26; GRC team prepared the portfolio review |
 | Decision | Executive risk committee, 2026-09-08 (section 9) |

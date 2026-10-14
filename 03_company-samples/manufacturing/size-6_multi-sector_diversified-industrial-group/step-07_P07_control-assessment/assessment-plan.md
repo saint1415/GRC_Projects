@@ -16,21 +16,21 @@ Most IT safeguards in all three divisions come from the same corporate providers
 2. **DEMS** system-specific and hybrid controls were assessed because it is the SSP system and carries the top group risk (GR-01).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Distribution was sampled on governance and FAR-related controls (CA-2, PE-8, AC-3, MP-6, SI-3) because its inheritance is undocumented (scenario gap 3) and it needs evidence for a CMMC Level 1 self-assessment (gap 4). Testing was sampled on the information barrier (gap 5) and the acquired laboratories (gap 3).
+Distribution was sampled on governance and FAR-related controls (CA-2, PE-8, AC-3, MP-6, SI-3) because its inheritance is undocumented (EV-010) and it needs evidence for a CMMC Level 1 self-assessment (EV-062). Testing was sampled on the information barrier (EV-072) and the acquired laboratories (EV-071).
 
 ## 2. Controls selected
 **41 control assessments** (35 distinct controls; SC-7, CP-9, IA-2(1), AC-3, SC-28, and AU-6 were assessed in two scopes), **227 determination statements**.
 
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
-| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5 | 42 | Every division's access control; PLM guest accounts (gap 9) | Focused / Comprehensive (all divisions sampled) |
+| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5 | 42 | Every division's access control; PLM guest accounts (EV-012) | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR with SYS-G1) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-03, GR-04, GR-12; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-4, IR-6, IR-8, RA-5 | 53 | GR-03, GR-04, GR-12; notification matrix (EV-031) | Focused / Comprehensive |
 | Common control (SYS-G3 cloud and network) | CP-9, SC-7, SC-8, SC-28, CM-6 | 20 | GR-03; immutable backups and guardrails | Focused / Focused |
-| DEMS (SSP system) | SC-12, SC-7, IA-2, SR-3, CM-8, CP-9, CM-3, SI-7, AC-5, CA-8(1) | 45 | GR-01 (High); gaps 1, 2, 5, 9 | Comprehensive / Comprehensive (all 5 plants; lab units of each product) |
+| DEMS (SSP system) | SC-12, SC-7, IA-2, SR-3, CM-8, CP-9, CM-3, SI-7, AC-5, CA-8(1) | 45 | GR-01 (High); EV-040, EV-044, EV-048, EV-077 | Comprehensive / Comprehensive (all 5 plants; lab units of each product) |
 | Division sample: Medical Devices (DCC, PSIRT, fielded devices) | SI-2, SI-5, AU-6, RA-5(11) | 18 | MD-001, MD-011 (High); 524B(b)(1) | Focused / Focused |
-| Division sample: Distribution | CA-2, PE-8, AC-3, MP-6, SI-3 | 27 | DS-003 (High), DS-007; gaps 3 and 4 | Focused / Focused (8 of 24 distribution centers) |
-| Division sample: Testing | AC-4, IA-2(1), AC-3, SC-28, AU-6 | 7 | TS-001, TS-002 (High); gaps 3 and 5 | Focused / Focused (2 of 4 acquired laboratories) |
+| Division sample: Distribution | CA-2, PE-8, AC-3, MP-6, SI-3 | 27 | DS-003 (High), DS-007; EV-010, EV-062 | Focused / Focused (8 of 24 distribution centers) |
+| Division sample: Testing | AC-4, IA-2(1), AC-3, SC-28, AU-6 | 7 | TS-001, TS-002 (High); EV-071, EV-072 | Focused / Focused (2 of 4 acquired laboratories) |
 | **Total** | **41** | **227** | | |
 
 ## 3. Methods and objects
@@ -48,6 +48,18 @@ Distribution was sampled on governance and FAR-related controls (CA-2, PE-8, AC-
   - a vulnerability report sent through the public CVD channel;
   - access attempts with 3 Testing client accounts and a membership export of collaboration spaces.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; they were approved on 2026-09-15, effective 2026-10-01. Controls that the 2025 group policies, the incident response plan v5 (approved 2025-02) and division procedures already required were tested for operation. Statements that rest on a draft were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before fieldwork under the 2025 group policies, the incident response plan v5 or division procedures, and was tested on samples, configurations, or live systems | 223 |
+| Design | The statement rests on a draft (IR-6: the draft notification matrix, approved with the P08 runbook on 2026-09-15); its design was reviewed. Operation is tested at the 2027-04 follow-up | 1 |
+| Not implemented | Nothing existed to test (Distribution: an assessment plan that defines scope, confirmation of inherited controls, and an assessment report, CA-2) | 3 |
+| **Total** | | **227** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-012, the 164 PLM guest accounts from EV-012, and the 61 test stations from the plant inventory in EV-047).
+
 ## 4. Rules of engagement
 - No testing on production lines during a production run, on fielded devices, or on hospital networks. Device tests used lab units only.
 - The IX-3 signing key was inspected in place and never copied or used. Findings about it were reported to the Group CISO the same day.
@@ -64,13 +76,13 @@ Distribution was sampled on governance and FAR-related controls (CA-2, PE-8, AC-
 | Division sample: Testing | 4 | 3 | 7 |
 | **Total** | **194** | **33** | **227** |
 
-**Common controls are strong.** 120 of 130 common statements were satisfied. Identity (AC-2(3), AC-6(5), IA-2(1), IA-5), cloud protection (CP-9, SC-7, SC-8, SC-28, CM-6), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **guest accounts** (AC-2), **monitoring coverage of OT** (SI-4), and **cross-division incident consistency and notification** (IR-4, IR-6, IR-8), which is scenario gap 7.
+**Common controls are strong.** 120 of 130 common statements were satisfied. Identity (AC-2(3), AC-6(5), IA-2(1), IA-5), cloud protection (CP-9, SC-7, SC-8, SC-28, CM-6), training (AT-2), terminations (PS-4), and vulnerability management (RA-5) had no findings. The common findings are about **guest accounts** (AC-2), **monitoring coverage of OT** (SI-4), and **cross-division incident consistency and notification** (IR-4, IR-6, IR-8; intake evidence EV-017, EV-031).
 
 **DEMS is where the risk is.** The release chain for current products is sound (SI-7 and AC-5 fully satisfied; HSM signing works). The findings are all about the **legacy and acquired parts**: the IX-3 signing key (SC-12, both statements), the flat networks and shared logins at Plants D and E (SC-7, IA-2), their on-site backups (CP-9), IX-3 changes outside the change board (CM-3), the missing IX-3 SBOM and stations (CM-8), supplier SBOM data (SR-3), and tester independence (CA-8(1)).
 
 **Division samples:**
 - *Medical Devices:* the PSIRT, advisories, DCC access reviews, and the CVD channel all worked (SI-5, AU-6, RA-5(11)). The one finding is IX-3 update adoption at 58% (SI-2).
-- *Distribution:* inheritance never documented or confirmed (CA-2, gap 3), incomplete visitor records (PE-8), and Federal contract information in open file shares (AC-3, gap 4). Sanitization and malware protection (MP-6, SI-3) were satisfied, which helps the FAR self-assessment.
+- *Distribution:* inheritance never documented or confirmed (CA-2, EV-010), incomplete visitor records (PE-8), and Federal contract information in open file shares (AC-3, EV-093). Sanitization and malware protection (MP-6, SI-3) were satisfied, which helps the FAR self-assessment.
 - *Testing:* the information barrier fails at the application layer (AC-4) and is not monitored (AU-6), and acquired laboratory administrators sign in without MFA (IA-2(1)). Per-client encryption of findings (SC-28) and client separation in the LIMS (AC-3) passed.
 
 **Controls fully other than satisfied** (every statement failed): SC-12 and CA-8(1) (DEMS), AC-3 (Distribution), and AC-4 and IA-2(1) (Testing).

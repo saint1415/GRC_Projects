@@ -41,6 +41,17 @@ The DCS is a related system of the PM-2 cyber device under FD&C Act 524B(b)(2). 
   - **PM-2 lab tests (2026-08-12):** maintenance web interface credentials on 3 production units, loading a modified firmware image, and certificate-based connection to a staging copy of the ingestion gateway;
   - **PM-1 lab tests:** connection of 2 units with the same hospital key.
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-09-04. A control that a draft policy introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples, live systems, or lab units | 87 |
+| Design | The control comes from a draft policy (POL-02, or POL-03 and the P08 runbook); its design was reviewed. Operation is tested at the 2027-03 follow-up | 2 |
+| Not implemented | Nothing existed to test | 40 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 5 sampled terminations and 5 sampled transfers come from the 18 terminations and 9 transfers in EV-003 and EV-004, and the 5 sampled BAAs come from the 40 in EV-042).
+
 ## 3. Rules of engagement
 - No testing against production devices in hospitals or against production tenant data. Lab tests used production-build units and a staging copy of the device cloud.
 - No PHI was copied out of the device cloud. Screenshots were redacted.

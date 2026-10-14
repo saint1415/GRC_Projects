@@ -7,7 +7,7 @@
 | AI use cases | **AI-001:** AI-enabled device software function that analyzes skin images for possible pressure injuries (in development; marketing submission planned 2027 Q3). **AI-002:** enterprise generative AI coding assistant for engineers (proposed pilot) |
 | Framework | NIST AI RMF 1.0 (AI 100-1); Generative AI Profile (AI 600-1) for AI-002 |
 | Assessors / date | Clinical Affairs Manager (registered nurse) with the VP Engineering, Product Security Lead, and VP QA/RA; contracted physician medical advisor for clinical review. Completed 2026-08-26 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-003 is the prohibited use of public tools) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases; AI-003 is the prohibited use of public tools), built from the accounts payable list, the engineering AI tool survey and web filter report, the AI-001 design history file, and the AI use case review records (EV-041, EV-047, EV-048, EV-054). How many engineers use public AI assistants, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owners:**

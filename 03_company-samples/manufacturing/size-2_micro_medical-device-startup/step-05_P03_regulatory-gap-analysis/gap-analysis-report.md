@@ -11,12 +11,14 @@
 | Approved | 2026-08-31 by the CEO |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Section 524B applies to the planned 510(k).** Section 524B(a) covers any person who submits a 510(k), PMA, PDP, De Novo, or HDE for a device that meets the "cyber device" definition in 524B(c). A cyber device:
 1. includes software validated, installed, or authorized by the sponsor as a device or in a device;
 2. can connect to the internet; and
 3. has technological characteristics that could be vulnerable to cybersecurity threats.
 
-WM-1 meets all three. The sensor and hub run firmware, the hub uses Wi-Fi to reach the cloud service, and the sensor uses Bluetooth Low Energy. FDA's guidance lists Wi-Fi, Bluetooth Low Energy, and cloud connections among the features that give a device the "ability to connect to the internet" (section VII.B). The section took effect 90 days after enactment on 2022-12-29 (Pub. L. 117-328, section 3305(d)), long before this submission.
+WM-1 meets all three (EV-022, EV-016). The sensor and hub run firmware, the hub uses Wi-Fi to reach the cloud service, and the sensor uses Bluetooth Low Energy. FDA's guidance lists Wi-Fi, Bluetooth Low Energy, and cloud connections among the features that give a device the "ability to connect to the internet" (section VII.B). The section took effect 90 days after enactment on 2022-12-29 (Pub. L. 117-328, section 3305(d)), long before this submission.
 
 - **No size exemption.** The statute has no headcount or revenue threshold. The only exemption is an FDA list under 524B(d); none covers WM-1.
 - **Enforcement.** Failure to comply with 524B(b)(2) is a prohibited act under 21 U.S.C. 331(q)(3).
@@ -34,13 +36,13 @@ WM-1 meets all three. The sensor and hub run firmware, the hub uses Wi-Fi to rea
 
 **Not analyzed, with reasons:**
 - HIPAA Security Rule: the company holds no PHI today. It will become a business associate when hospital data flows into the cloud service after clearance. Planned in the P01 and P09 roadmaps, not rated here.
-- DFARS, CMMC, ITAR, EAR (N31-33-R01 to R04): see `../00_company-facts.md` section 1.
+- DFARS, CMMC, ITAR, EAR (N31-33-R01 to R04): no defense work and U.S. sales only; see the [obligations register](../step-00_P00_intake/obligations-register.csv) (EV-030, EV-031).
 - Guidance Appendix 3 (IDE documentation): no clinical investigation is planned (row G-042).
 
 ## 2. Method
 1. **Requirements.** The 524B rows follow the statute's own structure: (a), (b)(1) through (b)(4), (c), and (d). QMSR rows cite the CFR section and the ISO 13485 clause number with a short topic label in our own words (ISO 13485 is copyrighted). Guidance rows cite the section of the 2026 guidance that says what FDA expects for each element.
 2. **Crosswalk.** NIST has published no mapping for section 524B, Part 820, or the FDA guidance. Every row carries an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such.
-3. **Documentary evidence.** Each status rests on a named document or record: the regulatory strategy memo, the design input document, the radio link threat spreadsheet, the component spreadsheet, the draft MDR and complaint procedures, the quality agreement, the supplier file, the draft labeling, and walkthroughs of the build and release process (2026-07-22). Interviews covered the Head of Engineering, Firmware Engineer, Cloud Software Engineer, Verification and Test Engineer, QA/RA Manager, and the regulatory consultant.
+3. **Documentary evidence.** Each status rests on a named document or record from intake (2026-07-06 to 2026-07-17): the regulatory strategy memo and guidance checklist (EV-022, EV-023), the eQMS procedure list with the draft MDR and complaint procedures and the draft labeling (EV-007), the quality agreement and supplier file (EV-013), the pilot build transfer record (EV-014), the design, interface and design input documents (EV-015 to EV-017), the radio link threat spreadsheet and safety risk file (EV-018), the component spreadsheet (EV-019), and the verification records (EV-020). Fieldwork added interviews with the Head of Engineering, Firmware Engineer, Cloud Software Engineer, Verification and Test Engineer, QA/RA Manager, and the regulatory consultant (EV-039), and a walkthrough of the build and release process with a website review on 2026-07-22 (EV-040). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each requirement was rated Met, Partially met, Not met, or Not applicable **as of the end of fieldwork (2026-07-31)**. For a premarket company, "Not met" usually means "not yet written," and the target date is set against the submission date.
 
 ## 3. Results summary

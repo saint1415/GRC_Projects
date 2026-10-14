@@ -70,7 +70,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 **Why so many Ready criteria for a first-time report:** control environment, risk, monitoring, and most IT criteria are met by group common controls already evidenced for the DCC report.
 **Not ready:** CC2.3 (no system description or written security commitments to clients) and CC6.3 (the information barrier: client material in a collaboration space open to 212 Medical Devices engineers; P07 AC-4 other than satisfied).
-**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.2, CC7.4, CC8.1, CC9.2, and C1.1. They cluster on the acquired laboratories (gap 3), the barrier (gap 5), PHI at intake (gap 6), and the AI drafting tool (gap 8).
+**Partially ready:** CC2.1, CC3.4, CC4.1, CC5.3, CC6.1, CC6.2, CC6.7, CC7.2, CC7.4, CC8.1, CC9.2, and C1.1. They cluster on the acquired laboratories (EV-071), the barrier (EV-072), PHI at intake (EV-076), and the AI drafting tool (EV-078).
 
 **Why this matters beyond SOC 2.** For a testing laboratory whose clients are its parent's competitors, CC6.3 and C1.1 are the report. A Type 1 opinion with a barrier exception would undermine client trust more than having no report, so the Type 1 date is set after the barrier work (POAM-010) and a full division assessment are complete.
 

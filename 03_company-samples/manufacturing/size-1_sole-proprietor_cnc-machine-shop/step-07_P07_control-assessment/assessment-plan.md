@@ -31,6 +31,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 46 determination statem
 - **Test (2026-08-12):** sign-ins from a new browser; an external port check; opening the VMC share from a phone on the shop Wi-Fi; restoring a deleted program from file versions; a standard antivirus test file by download and by USB stick; comparing 10 OEM programs in VMC memory with the Jobs folder copies.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork. POL-01 was drafted afterward from these results, the risks and the gaps, and adopted on 2026-09-04, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested on the live accounts, laptop, router, programs and records | 26 |
+| Design | A new control whose design was reviewed but which had not yet operated | 0 |
+| Not implemented | Nothing existed to test | 20 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-SC-7, EV-IA-2(1) and so on), with the population each test covered: the suite and accounting accounts (EV-001, EV-004), the laptop and the shop network (EV-008, EV-010), 10 of the about 180 released OEM programs (EV-014), and the external systems and processors (EV-021, EV-029). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No testing while a machine was cutting. No customer drawing copied off shop systems; screenshots cropped to settings only.
 - The IT technician worked only under the NDA signed 2026-08-07, in sessions the owner started and watched.

@@ -49,8 +49,8 @@
 Patient-safety and product-integrity risks (ER-01, ER-02) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the medical device threat picture (exploitation of fielded devices, software supply chain attacks, ransomware against manufacturers), the BIA (P05), the gap analysis (P03), PSIRT and ISAO intelligence, and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the medical device threat picture (exploitation of fielded devices, software supply chain attacks, ransomware against manufacturers) in the SOC and PSIRT threat summary (EV-024), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-016), product security risk assessments (EV-086), PSIRT and ISAO intelligence, and risk workshops with the SOC, the PSIRT, the plants, build and release engineering, the Integration Management Office, the Privacy Office, Consumer Health, Remote Monitoring Services, the AI governance committee and Finance (EV-085). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the threat summary, the SOC case history (EV-053), coverage and configuration exports from the enterprise systems of record, the Device Software Factory and plant records, contract and vendor records, the workshops, gap analysis samples and, where Internal Audit had tested a control before 2026-07-31 or for the risk added in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). Patient harm across many hospitals is Very High.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -72,6 +72,8 @@ By threat source type: Adversarial 28, Structural 28, Accidental 7, Environmenta
 By treatment: Mitigate 55, Accept 7, Avoid 2, Share/Transfer 1.
 By status: In progress 34, Open 24, Closed (accepted) 7.
 **24 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-062 was added on 2026-08-28 after testing at MN-1 on 2026-08-11 found default vendor passwords on 6 programming fixture controllers (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

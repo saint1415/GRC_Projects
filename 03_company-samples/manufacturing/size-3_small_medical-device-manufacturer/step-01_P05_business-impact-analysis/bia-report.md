@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (connected medical device manufacturer) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Cloud Operations Lead and IT Manager, with the Director of Manufacturing Operations, VP QA/RA, and Customer Support Manager (interviews 2026-07-13 to 2026-07-24) | **Approved:** COO, 2026-09-04
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-24 (EV-049), FY2025 revenue report (EV-046), installed base report (EV-030), backup configuration and job history (EV-017), PM-2 product specification (EV-027). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the COO.
+
 ## 1. Overview and purpose
 This BIA covers every business process the company runs, from the device cloud to the factory floor. For each process it sets how long the process can be down and how much data it can lose. It feeds:
 - the device cloud contingency plan and the HIPAA contingency plan standard for the device cloud as a business associate (45 CFR 164.308(a)(7)), including the applications and data criticality analysis (164.308(a)(7)(ii)(E));
@@ -12,12 +14,12 @@ This BIA covers every business process the company runs, from the device cloud t
 - the Availability criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company designs, builds, and services the PM-2 wireless patient monitor (and supports the legacy PM-1) for 40 Florida hospitals. It runs the **Device Cloud Service (DCS)**, which gives clinicians remote viewing and secondary alarm notifications, sends results to hospital EHRs, and distributes signed PM-2 firmware (SSP, P02). Production runs on one Florida site with three lines managed by the MES. Engineering, quality, and business systems are mostly SaaS. See `../00_company-facts.md` sections 1 to 3.
+The company designs, builds, and services the PM-2 wireless patient monitor (and supports the legacy PM-1) for 40 Florida hospitals. It runs the **Device Cloud Service (DCS)**, which gives clinicians remote viewing and secondary alarm notifications, sends results to hospital EHRs, and distributes signed PM-2 firmware (SSP, P02). Production runs on one Florida site with three lines managed by the MES. Engineering, quality, and business systems are mostly SaaS. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 A key design fact bounds the safety impact of a device cloud outage: **primary alarms always sound at the bedside monitor.** A DCS outage removes remote visibility and secondary notifications. It does not silence the monitor.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $58 million in annual revenue, about $232,000 per business day.
+Dollar values are scaled to $58 million in annual revenue across 250 business days, about $232,000 per business day (EV-046).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

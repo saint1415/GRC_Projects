@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (medical device startup) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Operations Manager (Information Security Coordinator) with the Head of Engineering, the QA/RA Manager, the Cloud Software Engineer, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** CEO, 2026-08-31
+**Sources:** process owner interviews 2026-07-20 to 2026-07-22 (EV-037), financial report with operating cost and runway (EV-030), release process interview (EV-034), cloud snapshot settings (EV-006), MSP service contract (EV-011), eQMS contract and SaaS vendor documentation (EV-012), development and evaluation agreement (EV-028), pilot build records (EV-014). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CEO.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the startup, how long each can be down, and how much data each can lose. The company has no product on the market yet, so the business impact of an outage today is mostly **schedule and runway**: every week the 510(k) slips costs about $43,000 of seed funding. The BIA supports:
@@ -13,10 +14,10 @@ This BIA lists every business function of the startup, how long each can be down
 No regulation sets recovery times for a device developer. The drivers are the QMSR record requirements (design history must be kept and retrievable, 21 CFR 820.10 and ISO 13485 clause 4.2.5, incorporated by reference) and the submission schedule.
 
 ## 2. System and business description
-One Florida office suite with a small engineering lab and 7 employees. The company designs the WM-1 wireless monitoring system (sensor, bedside hub, cloud service) and outsources production to a contract manufacturer. Most systems are SaaS: the source code repository and CI/CD service (SYS-01), the eQMS and PLM (SYS-02), and the productivity suite (SYS-03). The one cloud workload is the pre-production WM-1 cloud service (SYS-04). On site are 7 laptops and 2 lab workstations (SYS-05), the office and lab network (SYS-06), the signing key on one laptop (SYS-07), and 22 of the 30 pre-production units (SYS-08). See `../00_company-facts.md` sections 3 and 7.
+One Florida office suite with a small engineering lab and 7 employees. The company designs the WM-1 wireless monitoring system (sensor, bedside hub, cloud service) and outsources production to a contract manufacturer. Most systems are SaaS: the source code repository and CI/CD service (SYS-01), the eQMS and PLM (SYS-02), and the productivity suite (SYS-03). The one cloud workload is the pre-production WM-1 cloud service (SYS-04). On site are 7 laptops and 2 lab workstations (SYS-05), the office and lab network (SYS-06), the signing key on one laptop (SYS-07), and 22 of the 30 pre-production units (SYS-08). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to a monthly operating cost of about $190,000, about $8,600 per business day.
+Dollar values are scaled to a monthly operating cost of about $190,000, about $8,600 per business day (EV-030).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

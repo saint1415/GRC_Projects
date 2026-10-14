@@ -1,0 +1,12 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Source code and CI service vendor,"Source code repository, CI/CD, hosted build runners",SYS-01,Source code; build logs; CI secrets,Subscription terms,None on file,EV-004; EV-012; EV-031,
+V-02,eQMS vendor,eQMS and PLM,SYS-02,Design history file; risk management file; supplier records,eQMS contract (daily platform backups by the vendor),None on file,EV-007; EV-012; EV-031,
+V-03,Productivity suite vendor,"Email, files, chat, identity for the suite and eQMS",SYS-03,Contracts; HR records; investor documents,Subscription terms,None on file,EV-003; EV-012; EV-031,Administered by the MSP
+V-04,Cloud provider,PaaS tenant for the WM-1 cloud service,SYS-04,Test data; firmware images,Customer agreement,"SOC 2 Type 2, 12 months ending 2026-03-31 (obtained 2026-08-18 under NDA)",EV-006; EV-012; EV-031; EV-041,
+V-05,Managed service provider (MSP),"Help desk, laptops, EDR, patching, suite administration, office network and firewall",SYS-03; SYS-05 (laptops); SYS-06,"Administrative access to laptops, the suite and the firewall",MSP service contract,None on file,EV-008; EV-009; EV-011; EV-031,"Remote management tool reaches every laptop; does not cover the lab workstations, the repository or the cloud tenant"
+V-06,Contract manufacturer,Builds units; loads signed firmware and the provisioning file at its test stations,SYS-09; SYS-08,Firmware images; hub provisioning file (contains the hub API key),Quality agreement,ISO 13485 certificate; 2025 quality audit report,EV-013; EV-014; EV-031,
+V-07,Regulatory consultant (fractional),510(k) strategy; review of cybersecurity documentation,n/a,Submission drafts; design history extracts,Consulting agreement,Not applicable,EV-022; EV-031,
+V-08,Payroll service,Biweekly payroll,n/a,Workforce personal information,Service terms,None on file,EV-001; EV-031,
+V-09,Cyber liability insurer,Cyber policy with 24x7 breach hotline and panel vendors,n/a,Incident details when a claim is made,Insurance policy,Not applicable,EV-027; EV-031,Notice through the hotline before outside firms are hired
+V-10,Third-party penetration test lab,Penetration test of the WM-1 system with one retest (planned 2026-12),SYS-04; SYS-08,"Test units, firmware and test accounts (planned)",Quote; statement of work not yet signed,None on file,EV-021,
+V-11,University lab (dataset licensor),AI-001 training video dataset,AI-001,None shared by the company,Dataset license,Not applicable,EV-036,

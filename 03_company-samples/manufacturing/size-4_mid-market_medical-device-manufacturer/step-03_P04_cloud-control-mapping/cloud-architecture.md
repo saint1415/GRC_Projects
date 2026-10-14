@@ -2,7 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. | **Tier:** Mid-Market | **Provider:** Vendor-agnostic public cloud (see section 4), plus SaaS
 **System:** Device Lifecycle Platform (DLP), as defined in the SSP (P02) | **Prepared:** 2026-07-31 by the Security Manager and the Director of Cloud Operations; updated 2026-09-17 with P07 results
-**Control map:** `cloud-control-map.csv` (57 rows, 26 components)
+**Control map:** `cloud-control-map.csv` (57 rows, 26 components) | **Sources:** the cloud organization, backup, signing and CCC configuration exports collected at intake (EV-015, EV-017, EV-018, EV-022, EV-027); the `evidence_source` column names the evidence for each row
 
 ## 1. Diagram
 
@@ -128,9 +128,9 @@ The design is independent of the provider. This table gives each provider's name
 - **SaaS** (identity provider, repositories, PLM, eQMS, SIEM): the provider also owns the application. The customer keeps identities, roles, retention, audit review, and data.
 
 ## 5. Findings from the mapping
-1. **The signing path is well separated, but its recovery is unproven.** The build and signing account, two-person signing, and the HSM are the strongest controls in the environment. HSM key recovery has never been exercised, and the VM-5 legacy key sits outside the landing zone on an offline laptop (P01 R-012). Fix: key recovery exercise and VM-5 key migration into the HSM by 2026-12-31.
-2. **Production access is broader than the design.** Just-in-time elevation covers the database but not the container platform, and 9 engineers keep standing all-tenant write access (gap 7; P01 R-007). Fix: extend the access broker to the container platform by 2026-12-31.
-3. **Recovery is designed but slow.** Backups are isolated (separate account, second region, write-once, separate credentials). Regional failover took 6 hours against a 2-hour RTO (P01 R-016). Fix: automated failover by 2027-03-31, then quarterly tests.
-4. **The plant is outside the cloud but inside the trust chain.** Test stations pull released firmware from production object storage, and the factory provisioning server issues device certificates with a software-held key (gap 6; P01 R-010). The cloud map therefore cannot show all of the signing and identity path. The SSP (P02) covers the plant side.
+1. **The signing path is well separated, but its recovery is unproven.** The build and signing account, two-person signing, and the HSM are the strongest controls in the environment. HSM key recovery has never been exercised, and the VM-5 legacy key sits outside the landing zone on an offline laptop (EV-015; P01 R-012). Fix: key recovery exercise and VM-5 key migration into the HSM by 2026-12-31.
+2. **Production access is broader than the design.** Just-in-time elevation covers the database but not the container platform, and 9 engineers keep standing all-tenant write access (EV-006; P01 R-007). Fix: extend the access broker to the container platform by 2026-12-31.
+3. **Recovery is designed but slow.** Backups are isolated (separate account, second region, write-once, separate credentials). Regional failover took 6 hours against a 2-hour RTO (EV-019; P01 R-016). Fix: automated failover by 2027-03-31, then quarterly tests.
+4. **The plant is outside the cloud but inside the trust chain.** Test stations pull released firmware from production object storage, and the factory provisioning server issues device certificates with a software-held key (EV-015; P01 R-010). The cloud map therefore cannot show all of the signing and identity path. The SSP (P02) covers the plant side.
 5. **Boundary check.** Every cloud and SaaS component in the SSP (P02 section 9) appears in the diagram. Every cloud account has at least one row in the control map, and each has controls from at least 2 of the AC, AU, CM, IA, SC, and SI families or inherits them.
 6. **Inherited controls rely on SOC 2 reports.** Rows marked Provider or Shared for the cloud provider, identity vendor, repository vendor, PLM and eQMS vendors, and the MSSP depend on their SOC 2 Type 2 reports and complementary user entity controls, reviewed each year in P09 `vendor-soc2-review.csv`.

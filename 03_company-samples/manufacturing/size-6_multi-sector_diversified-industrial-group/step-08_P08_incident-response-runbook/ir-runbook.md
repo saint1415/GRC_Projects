@@ -10,7 +10,7 @@
 | Regulatory basis | 21 CFR 820.35(a), 803.50, 803.53, 803.56, 806.10, 806.20; FDA postmarket cybersecurity guidance (December 2016, nonbinding); 21 CFR 803.18(d) (Distribution); Form 8-K Item 1.05 (N42-R07); HIPAA 164.410 if the DCC is involved (N62-R03); state breach laws if group-held personal information is involved |
 | Runbook owner | Chief Product Security Officer (product incidents); Group CISO (enterprise); notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO, the Chief Product Security Officer, and the Group General Counsel |
-| Last tested | PSIRT playbooks tested twice in 2026. **The multi-division notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-004) |
+| Last tested | PSIRT playbooks tested twice in 2026. **The multi-division notification matrix has not been exercised** (EV-031); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-004) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.
