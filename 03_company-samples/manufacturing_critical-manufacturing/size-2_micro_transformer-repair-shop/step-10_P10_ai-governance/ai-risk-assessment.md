@@ -9,7 +9,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook. AI 600-1 applies only to AI-003 (public generative AI), handled by policy |
 | Assessor / date | Office Manager (Security Coordinator) with the Field Service and Test Technician and the Shop Manager, 2026-08-25 |
 | Decision | Owner, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the AI portal account and terms, the ERP add-on settings, the vendor payments and a staff survey (EV-007, EV-008, EV-004, EV-024, EV-039). What staff have entered into public chatbots was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Owner, who sells the fleet health service to customers. **Operator:** the Field Service and Test Technician. **Decision authority:** the Owner.
@@ -20,7 +20,7 @@
 - **Approved-tools list:** kept by the Office Manager in POL-04 4.7. It has one entry, AI-001, under the conditions in section 6.
 - **Scale for a Micro shop:** there is no AI committee. The Owner, Office Manager, and Shop Manager review AI use at the monthly security meeting. A new AI tool, new data source, or new customer needs a short review like this one first (CSF GV.OC-03; SOC 2 CC3.4).
 
-**How the pilot started.** The oil laboratory offered the portal free with its testing service in 2026-04. The Field Service and Test Technician began uploading DGA results and nameplate data, including site coordinates, for 2 cooperatives and 1 municipal utility. Nobody read the vendor's terms, which allow it to use uploaded data to improve its models, and nobody asked the customers. The G&T cooperative's master service agreement treats its substation locations and equipment data as confidential information (P01 R-018).
+**How the pilot started.** The oil laboratory offered the portal free with its testing service in 2026-04. The Field Service and Test Technician began uploading DGA results and nameplate data, including site coordinates, for 2 cooperatives and 1 municipal utility. Nobody read the vendor's terms, which allow it to use uploaded data to improve its models, and nobody asked the customers (EV-007, EV-008). The G&T cooperative's master service agreement treats its substation locations and equipment data as confidential information (P01 R-018).
 
 ## 2. MAP
 | Item | Description |
@@ -51,7 +51,7 @@
 **Re-tier or re-assess if:** the portal sends recommendations to customers directly; the shop uses a score as the only basis for any recommendation; the service expands beyond 3 customers or to substation power transformers; or the vendor changes its model or data terms.
 
 ## 4. MEASURE
-The Field Service and Test Technician and the Shop Manager back-tested the scores on 2026-08-20 against the shop's own teardown findings: 40 customer units that were scored in the portal between 2026-04 and 2026-06 and later came into the shop and were opened up.
+The Field Service and Test Technician and the Shop Manager back-tested the scores on 2026-08-20 against the shop's own teardown findings (EV-051): 40 customer units that were scored in the portal between 2026-04 and 2026-06 and later came into the shop and were opened up.
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|
