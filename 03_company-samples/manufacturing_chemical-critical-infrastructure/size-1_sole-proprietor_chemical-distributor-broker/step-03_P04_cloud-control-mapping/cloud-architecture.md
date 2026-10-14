@@ -54,8 +54,8 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 One point is specific to this business: **SaaS shared responsibility stops at the supplier's dock.** No email or portal vendor can confirm that a pickup authorization is genuine. Only a business process can: the owner's call-back to a known number and the supplier's check of the driver against the pickup number (HSP-01 sections 4.2 and 4.3).
 
 ## 4. Findings from the mapping
-1. **The account that can release hazmat has the weakest login.** Email is password-only, and the password is reused on a carrier portal (P01 R-001, R-002). The accounting SaaS, which can only bill, has MFA.
-2. **No copy of the records the HMR requires.** BOL copies (two years, 172.201(e)) and registration records (three years, 107.620(a)) exist only inside the email and file suite. Provider resilience does not protect against account takeover or deletion (R-007).
-3. **The ERI provider is a SaaS dependency with a data feed.** It can meet 172.604 only for products the owner has registered. Ferric chloride was missing until 2026-09-14 (R-006).
-4. **Most partner portals offer no MFA.** Unique passwords are the only control, so they must not hold payment authority or pickup release authority without a phone confirmation.
-5. **The AI assistant's data settings were never checked.** This mapping flagged them on 2026-09-09; the P10 assessment found the model-improvement setting on and the owner turned it off on 2026-09-18 (R-012).
+1. **The account that can release hazmat has the weakest login.** Email is password-only, and the password is reused on a carrier portal (EV-001, EV-005; P01 R-001, R-002). The accounting SaaS, which can only bill, has MFA.
+2. **No copy of the records the HMR requires.** BOL copies (two years, 172.201(e)) and registration records (three years, 107.620(a)) exist only inside the email and file suite (EV-001, EV-002). Provider resilience does not protect against account takeover or deletion (R-007).
+3. **The ERI provider is a SaaS dependency with a data feed.** It can meet 172.604 only for products the owner has registered. Ferric chloride was missing until 2026-09-14 (EV-031, EV-035; R-006).
+4. **Most partner portals offer no MFA** (EV-IA-2(2)). Unique passwords are the only control, so they must not hold payment authority or pickup release authority without a phone confirmation.
+5. **The AI assistant's data settings were never checked.** This mapping flagged them on 2026-09-09 from the plan terms collected at intake (EV-024); the P10 assessment found the model-improvement setting on and the owner turned it off on 2026-09-18 (EV-037; R-012).

@@ -8,10 +8,10 @@
 | Why not the registry default | The registry default, a process-optimization model, needs a process. This business runs none. The assistant is the one AI tool the owner uses, and its hazmat-description use is the safety-relevant case |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; NIST AI 600-1 (Generative AI Profile) for the generative AI risks |
 | Assessor and decision | Owner, 2026-09-18 (the model-improvement setting was turned off that day); decision adopted 2026-10-05 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases, one tool) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases, one tool), built at intake from the bank and card statements, the assistant's account page and terms, and the 2026-05 BOL correction in the inbox (EV-019, EV-024, EV-018), then completed from the chat history review and accuracy check on 2026-09-18 (EV-037, EV-038). With no staff, there was no survey to run. Not established: what the vendor kept from chats made before the setting was turned off, and whether it used them for training |
 
 ## 1. What it does (Map)
-The owner types or pastes text into the vendor's chat service and copies the answer into an email, a quote, or, until this assessment, the BOL. The vendor's general-purpose model runs in the vendor's cloud. The owner accepted click-through terms. Until 2026-09-18 the setting that lets the vendor use chats to improve its models was **on**, so chats with customer names, prices, and SDS text may already have been used. That cannot be undone. A review of the chat history on 2026-09-18 found **no** driver license numbers, pickup numbers, schedules, or bank details.
+The owner types or pastes text into the vendor's chat service and copies the answer into an email, a quote, or, until this assessment, the BOL. The vendor's general-purpose model runs in the vendor's cloud. The owner accepted click-through terms (EV-024). Until 2026-09-18 the setting that lets the vendor use chats to improve its models was **on**, so chats with customer names, prices, and SDS text may already have been used. That cannot be undone. A review of the chat history on 2026-09-18 (EV-037) found **no** driver license numbers, pickup numbers, schedules, or bank details.
 
 **Relevant AI 600-1 risks:** confabulation (a confident but wrong packing group), data privacy (business data kept by the vendor), human-AI configuration (trusting a fluent draft), information security (the AI account itself), and value chain (the vendor can change its terms). CBRN information risk is not engaged: the owner does not ask the assistant about reactivity, mixing, or hazards beyond the SDS, and this assessment keeps it that way.
 
@@ -27,10 +27,12 @@ The owner types or pastes text into the vendor's chat service and copies the ans
 | FTC Act Section 5 | No (today) | The business makes no claims about AI to customers |
 
 ## 3. Risk screen (repository rubric)
-- **AI-002, hazmat descriptions: High.** The rubric puts AI that "can affect physical safety or critical infrastructure operations" in the High tier. A wrong description misleads carriers and emergency responders about a Division 5.1 or Class 8 load. It already happened once: in 2026-05 an AI-drafted ferric chloride entry showed Packing Group II instead of III, and only the supplier's shipping clerk caught it (P01 R-005, Moderate after the supplier's check).
+- **AI-002, hazmat descriptions: High.** The rubric puts AI that "can affect physical safety or critical infrastructure operations" in the High tier. A wrong description misleads carriers and emergency responders about a Division 5.1 or Class 8 load. It already happened once: in 2026-05 an AI-drafted ferric chloride entry (EV-018) showed Packing Group II instead of III, and only the supplier's shipping clerk caught it (P01 R-005, Moderate after the supplier's check).
 - **AI-001, office drafting: Medium.** Drafts go to customers and suppliers and can carry product facts they rely on, and the prompts hold confidential prices. The owner makes every final decision and nothing is decided about a person (P01 R-012, Low).
 
 ## 4. Tests on 2026-09-18 (Measure)
+Results are recorded as EV-037 and EV-038 in the [evidence register](../step-00_P00_intake/evidence-register.csv).
+
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|
 | Valid and reliable | All 7 hazmat descriptions the assistant drafted from 2026-03 to 2026-08, checked against the 172.101 table; the UN2014 description requested in 5 new chats | 1 of 7 wrong (ferric chloride PG II). In 1 of 5 new chats the UN2014 entry left out the subsidiary class (8) | **No** for AI-002 |

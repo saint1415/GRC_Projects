@@ -8,7 +8,7 @@
 | Categories in scope | Security (CC1-CC9) only |
 | Target report | None. Self-check only; no SOC 2 examination is planned |
 | Part A | Owner's self-check (`soc2-readiness.csv`) |
-| Part B | Review of the email and file suite provider's SOC 2 Type 2 report (`vendor-soc2-review.csv`) |
+| Part B | Review of the email and file suite provider's SOC 2 Type 2 report, received at intake (EV-023; `vendor-soc2-review.csv`) |
 | Prepared | 2026-09-11 (Part B) and 2026-09-18 (Part A) by the owner with the IT technician; adopted 2026-10-05 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report

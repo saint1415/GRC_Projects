@@ -7,7 +7,7 @@
 Brokerage Core SaaS Stack (**BCSS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The BCSS is everything the business uses to sell and ship chemicals it never touches: quotes and orders, customer and ship-to verification, bills of lading (BOLs) with hazmat descriptions, pickup authorizations to suppliers, carrier bookings, emergency response information, invoices, and supplier payments. One person, the owner, uses and runs it. Components are SYS-01 to SYS-08 in `../00_company-facts.md` section 3: an email and file suite, an accounting SaaS, the bank portal, about 9 supplier, carrier, and ERI provider portals, a laptop, a phone, the home network, and a generative AI assistant. There is no server and no IaaS. Most technical safeguards are **inherited from the SaaS vendors**. The owner is responsible for identities, data handling, devices, the home network, and vendor terms (P04).
+The BCSS is everything the business uses to sell and ship chemicals it never touches: quotes and orders, customer and ship-to verification, bills of lading (BOLs) with hazmat descriptions, pickup authorizations to suppliers, carrier bookings, emergency response information, invoices, and supplier payments. One person, the owner, uses and runs it. Components are SYS-01 to SYS-08 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): an email and file suite, an accounting SaaS, the bank portal, about 9 supplier, carrier, and ERI provider portals, a laptop, a phone, the home network, and a generative AI assistant. There is no server and no IaaS. Most technical safeguards are **inherited from the SaaS vendors**. The owner is responsible for identities, data handling, devices, the home network, and vendor terms (P04).
 
 **Why this system matters for chemical security.** A forged email from this stack can release a cargo tank of 50% hydrogen peroxide, an explosives precursor, to the wrong truck. In this business the "critical business system" that CFATS RBPS 8 talks about is the email account.
 
@@ -45,13 +45,13 @@ Operational. Planned changes: email MFA and password manager (2026-10-15); email
 | Personal identity data (driver names and license numbers) | Moderate | Low | Low | Breach notice duties under Fla. Stat. 501.171 |
 | **BCSS category (high-water mark)** | **Moderate** | **Moderate** | **Moderate** | |
 
-**Baseline:** SP 800-53B Moderate, tailored to 29 controls that carry the HMR, CFATS benchmark, and Florida duties for a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the email suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
+**Baseline:** SP 800-53B Moderate, tailored to 29 controls that carry the HMR, CFATS benchmark, and Florida duties for a one-person brokerage (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS vendors (evidence: the email suite provider's SOC 2 report, EV-023, reviewed in P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's accounts and settings in each SaaS service and portal, the bank portal user, the laptop, the phone, the home network as used for work, the AI assistant account, and paper in the home office.
 - **Outside (external services):** the SaaS platforms themselves, the bank, the ERI provider's call center, the suppliers' plants and shipping offices, the carriers and their drivers, and the AI vendor's models.
 
-Diagram: P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). Diagram: P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Party | Data | Agreement |
@@ -102,7 +102,7 @@ Self-assessed 2026-09-08 to 2026-09-11 with the on-call IT technician. See P07.
 Email is the account that can release a load, so it needs phishing-resistant or at least app-based MFA. Today it uses a password only; an authenticator app goes on by 2026-10-15, and a hardware security key is the target at the next review. The accounting SaaS enforces MFA. The bank uses text-message codes, which is weaker because of SIM-swap risk; the owner adds a carrier account PIN by 2026-10-31. Partner portals without MFA hold no payment authority and are protected by unique passwords.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01 and HSP-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01 and HSP-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **BCSS:** Brokerage Core SaaS Stack

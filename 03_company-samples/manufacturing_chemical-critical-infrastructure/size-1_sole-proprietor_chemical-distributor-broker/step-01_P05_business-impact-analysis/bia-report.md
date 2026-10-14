@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (specialty chemical distributor, broker) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner, 2026-09-09, with the on-call IT technician | **Adopted:** Owner, 2026-10-05
+**Sources:** the owner's BIA worksheet, 2026-09-09 (EV-026), the 2025 Schedule C (EV-022), the order and shipment workbook (EV-013), the receivables report (EV-025), the ERI provider contract (EV-012), and the email suite settings and contents (EV-001, EV-002). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-10-05.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the brokerage depends on, how long each can be down, and how much data it can lose. It feeds:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the brokerage depends on, ho
 - the recovery order in the incident runbook (P08).
 
 ## 2. Business description
-One person runs a drop-ship chemical brokerage from a home office in Florida. The business sells hydrogen peroxide 50%, sodium hypochlorite, sodium hydroxide, ferric chloride, and non-hazardous polymers to about 40 industrial customers. Carriers pick up at five suppliers' plants and terminals and deliver to the customer. The business never holds chemicals. Its work is information: orders, pickup authorizations, bills of lading, emergency response information, and payments, all carried by the SaaS stack (SYS-01 to SYS-08). See `../00_company-facts.md` sections 1 to 3.
+One person runs a drop-ship chemical brokerage from a home office in Florida. The business sells hydrogen peroxide 50%, sodium hypochlorite, sodium hydroxide, ferric chloride, and non-hazardous polymers to about 40 industrial customers. Carriers pick up at five suppliers' plants and terminals and deliver to the customer. The business never holds chemicals. Its work is information: orders, pickup authorizations, bills of lading, emergency response information, and payments, all carried by the SaaS stack (SYS-01 to SYS-08). See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual receipts. One bulk hydrogen peroxide load is worth about $15,000.
+Dollar values are scaled to about $180,000 in annual receipts (EV-022) across about 75 orders a year (EV-013). One bulk hydrogen peroxide load is worth about $15,000 (EV-026).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,7 +34,7 @@ Dollar values are scaled to about $180,000 in annual receipts. One bulk hydrogen
 | BP-04 Billing, collections, and supplier payments | Moderate | 120 h | 72 h | 24 h |
 | BP-05 Records and compliance administration | Low | 168 h | 120 h | 24 h |
 
-**What drives the values:** safety and the HMR drive BP-02 and BP-03. The 24-hour emergency number is the ERI provider's, so the owner's own 1-hour RTO for BP-03 is about the phone, not the emergency line. BP-01 is High because of what happens when it fails *wrongly* rather than slowly: an order or ship-to change accepted from an impostor can divert an explosive precursor. Integrity, not downtime, drives BP-04. The 4-hour and 24-hour RPOs depend on SYS-01, which **has no backup today** (P01 R-007).
+**What drives the values:** safety and the HMR drive BP-02 and BP-03. The 24-hour emergency number is the ERI provider's, so the owner's own 1-hour RTO for BP-03 is about the phone, not the emergency line. BP-01 is High because of what happens when it fails *wrongly* rather than slowly: an order or ship-to change accepted from an impostor can divert an explosive precursor. Integrity, not downtime, drives BP-04. The 4-hour and 24-hour RPOs depend on SYS-01, which **has no backup today** (EV-001; P01 R-007).
 
 **Single-person dependency (the key finding).** The owner is the only person who can take an order, release a load, change a pickup, answer a carrier, or reach the email, bank, and portals. All MFA codes go to one phone. If the owner is ill, travelling without coverage, or loses the phone while loads are on the road, BP-02 and BP-03 pass their MTD in hours. Actions (P01 R-011, due 2026-12-31):
 1. Written standing instruction to each supplier's shipping office: release only against a pickup number issued by the owner, and hold all releases if the owner cannot be reached by phone (also in HSP-01).
