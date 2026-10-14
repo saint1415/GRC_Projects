@@ -66,7 +66,7 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 
 Treatments: 49 Mitigate, 3 Accept (R-017, R-023, R-030). Status: 25 Open, 24 In progress, 3 Accepted.
 
-Cyber insurance ($15 million limit, $500,000 retention) transfers part of the financial exposure for R-001, R-002, and R-051. It is not recorded as the treatment for any risk, because it does not lower the likelihood of harm to workers, plants, or customers.
+Cyber insurance ($15 million limit, $500,000 retention; EV-042) transfers part of the financial exposure for R-001, R-002, and R-051. It is not recorded as the treatment for any risk, because it does not lower the likelihood of harm to workers, plants, or customers.
 
 ### Top risks (Very High and High)
 | Risk ID | Risk | Level | Treatment | Owner | Due |

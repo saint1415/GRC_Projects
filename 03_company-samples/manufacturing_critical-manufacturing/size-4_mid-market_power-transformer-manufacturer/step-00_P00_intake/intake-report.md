@@ -1,22 +1,82 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company | Critical Manufacturing | Mid-Market
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company, Inc. (PE-backed power and distribution transformer manufacturer: HQ and Plant 1 on the main campus, Plant 2 about 150 miles away, Florida) |
+| Intake window | 2026-06-15 to 2026-07-02 |
+| Collected by | Security Manager and the GRC analyst, with the OT Security Engineer and the vCISO |
+| Approved | Chief Operating Officer, 2026-09-15 |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the company's own records before any assessment work began on 2026-07-06. It covers the organization, the IT and plant systems at HQ, Plant 1 and Plant 2, the cloud landing zone and the Fleet Monitoring Service (FMS), the products the company supplies to utilities, the suppliers that touch them, and the rules that may bind the company. At this size the sources are systems of record: the identity provider, the HR system, the endpoint and EDR consoles, the CMDB, the Plant 1 OT monitoring sensor, the cloud organization console, the SIEM, the ERP accounts payable vendor master, the contract register, the General Counsel's obligations register, prior risk assessments and internal audit reports, scan results and the incident register. Plant 2 has no system of record for its control systems, so its device list is the Controls Lead's spreadsheet. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Later steps add their own fieldwork evidence (interviews, walkthroughs, samples, tests) to the same register, so one list backs every deliverable.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
 
 ## 2. Sources collected
 | Area | Evidence IDs | System of record | As of |
 |---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Users and access | EV-001 to EV-007 | Identity provider; HR system; privileged access broker; ERP and MES admin consoles | 2026-06-30 |
+| Devices, networks and plant systems | EV-008 to EV-017 | Endpoint and EDR consoles; CMDB; Plant 1 OT sensor; Plant 2 Controls Lead's list; SD-WAN, firewalls and directory; OT DMZ design and gateway; scanner; patch and change records | 2026-06-30 |
+| Cloud, backups and monitoring | EV-018 to EV-023 | Cloud organization console; backup service; DR plan and restore records; Plant 2 laptop listing; MSSP portal; FMS account | 2026-06-30 |
+| Programs and documents | EV-024 to EV-030 | Policy library; GRC folder; internal audit reports; security document library; service management tool; learning system; HR system and board portal | 2025-07-31 to 2026-06-30 |
+| Obligations and contracts | EV-031 to EV-038 | Obligations register; contract register; federal contract files; productivity suite admin console; trade compliance files; ERP screening; bid review log | 2026-06-30 |
+| Suppliers and insurance | EV-039 to EV-042 | ERP accounts payable and vendor system; contract files; vendor portals; insurance policy | 2026-05-31 to 2026-06-30 |
+| Products | EV-043, EV-044 | Code repository and build server; receiving records and final test procedure | 2026-06-30 |
+| Facilities and media | EV-045, EV-046 | Badge, visitor and CCTV systems; Plant 2 key register; disposal log | 2026-06-30 |
+| Business volume | EV-047, EV-048 | ERP general ledger; ERP, APS and MES reporting | 2025-12-31 to 2026-06-30 |
+| AI tools, corporate records and quality | EV-049 to EV-051 | Identity provider app list, accounts payable, applicant tracking settings and department survey; corporate and benefits files; quality management system | 2026-06-30 |
+| Late answer to an intake request | EV-068 | Email from the cyber insurance carrier | 2026-08-20 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Users and access.** The identity provider holds active named accounts for office staff, plus contractor, vendor and service accounts. Every active office user has MFA registered, and the 18 cloud, identity and domain administrators use FIDO2 keys (EV-001). Conditional access requires push MFA with number matching and checks device compliance; passwords are 14 characters minimum with a banned list (EV-002). The HR roster lists 850 employees; HR recorded 214 terminations (168 production), 71 transfers and 236 new hires in the 12 months to 2026-06-30 (EV-003). The HR feed disables identity provider accounts; transfers and last days reach IT by email, and the checklist has no step for the MES administrators or the Director of Field Service (EV-004). There are 41 privileged accounts: 18 use FIDO2 keys and 23 use push MFA. The 6 MES administrator accounts and the local administrator accounts on 24 OT engineering workstations are outside the access broker and have no MFA (EV-005). The ERP has 61 role templates and 7 super users, and its access reviews in Q1 and Q2 2026 covered ERP roles only (EV-006). About 420 MES users confirm work with badge and PIN at 62 kiosks; the Plant 2 MES has 3 shared supervisor override accounts and reuses badge numbers (EV-007).
+
+**Devices, networks and plant systems.** The EDR console lists 640 laptops and desktops and the IT servers with EDR and full-disk encryption; the Plant 2 MES server and kiosks do not appear in it (EV-008). The CMDB lists IT hardware and 46 servers and does not track plant control system devices (EV-009). The Plant 1 OT sensor lists 56 HMIs and engineering workstations, 4 of them past vendor support (EV-010). The Plant 2 list, which the Controls Lead estimates covers about half of the plant's devices, records 34 HMIs and engineering workstations, 19 of them past vendor support, plus the MES server operating system; HMIs use shared operator logins, test PCs share a local administrator account, and patches are applied case by case (EV-011). At Plant 1 the IT/OT firewall denies by default and plant zones sit behind the OT DMZ; at Plant 2 the office and plant networks are one routed space and the MES server has interfaces on both (EV-012, EV-014). The Plant 2 legacy domain has a two-way trust with the corporate domain (EV-013). Plant 1 OEMs connect only through the remote access gateway with MFA, approval and recording (212 sessions in 12 months, EV-014). Plant 2 OEMs connect through 4 cellular routers with shared logins, no MFA and no connection log (EV-015). Monthly authenticated scans cover IT and cloud systems and found 50 critical findings in Q1 and Q2 2026; the scan scope does not include Plant 2 plant systems (EV-016). ERP and cloud changes go through the change advisory board; Plant 2 MES changes are made directly by its administrators (EV-017).
+
+**Cloud, backups and monitoring.** The landing zone has 6 accounts under organization guardrails, with company-managed keys and a locked log archive; the ERP runs in a single region (EV-018). The ERP has 7-day point-in-time recovery and daily copies, the FMS daily copies and the PLM nightly copies, all to a backup account in a second region with 35-day write-once retention and separate administrator credentials. Plant 1 controller programs are backed up nightly with weekly offline copies. No backup tool covers the Plant 2 MES or Plant 2 controller programs (EV-019). The 2024 IT disaster recovery plan covers the ERP and integration platform; the restore records show a file-level ERP restore (2025-04) and a PLM restore (2025), and no full ERP, landing zone, MES or OT restore (EV-020). Plant 2 controller programs exist as hand copies on one laptop, the latest from 2026-04 (EV-021). The SIEM receives identity, cloud, ERP, firewall, VPN, EDR and Plant 1 OT sensor events; both MES instances, the historians, the integration platform, Plant 2 OT and the FMS application are not connected. The MSSP must call within 30 minutes of a high-severity alert (EV-022). The FMS serves 14 utilities and about 1,150 transformers through utility-initiated, mutually authenticated ingestion; model versions have been registered since 2026-06, model updates have no change approval records, and no FMS recovery runbook was provided (EV-023).
+
+**Programs and documents.** Five policies were adopted in 2024; standards exist for authenticators, encryption and vulnerability management (IT only), and Plant 1 has a written OT practice (2025). No configuration, logging, vendor risk, secure development, contingency, company-wide OT or AI standard was provided (EV-024). Risk assessments are dated 2024 and July 2025 (EV-025). Internal IT audits ran in 2024 and 2025 (EV-026). The 2024 IT incident response plan covers IT incidents; the 2025 tabletop recorded 6 actions, 4 closed. No OT playbook, product security incident process or crisis management team charter was provided (EV-027). The incident register holds 41 incidents in the 12 months, all categorized as IT incidents (EV-028). Office staff training is 96% complete, quarterly phishing simulations run, and the June 2026 click rate was 6.9%; production workers and field technicians receive orientation content only (EV-029). The OT Security Engineer is the only OT security specialist (EV-030).
+
+**Obligations and contracts.** The company's obligations register (2025) lists the 31 utility addenda, the federal clauses, EAR record duties and Fla. Stat. 501.171, and does not list the FMS terms or the FAR 52.204-30 quarterly review. Its 2026 event log records 2 access-revocation notices sent on business days 4 and 6 and 1 vulnerability disclosure sent on day 41 (EV-031). Of about 120 utility customers, 31 have a Supplier Cyber Security Addendum: 22 require incident notice within 48 hours and 9 within 24 hours, and all require access notice within 1 business day and vulnerability disclosure within 30 days (EV-032). The 14 FMS subscription agreements commit to 99.5% monthly availability and incident notice within 72 hours, and the two largest subscribers require a SOC 2 Type 2 report before their 2027-12-31 renewals (EV-033). Three civilian federal contracts carry FAR 52.204-21, -23, -25 and -30 and no DFARS clauses; SAM.gov FASCSA searches were logged at award and on 2026-03-02 (EV-034). FCI sits in 3 labeled project sites restricted to named members (EV-035). The 2024 acquisition review found 9 covered cameras at Plant 2, reported and replaced by 2025-06; Plant 2 bought replacement kiosks from an online marketplace in 2025 (EV-036). Products are classified EAR99 and export orders are screened in the ERP; export records are kept 7 years (EV-037). The bid review gate has been in place since 2025, and no DoD contract or subcontract is in the contract register (EV-038).
+
+**Suppliers and insurance.** About 190 suppliers have system access or company data, and their security review is recorded at onboarding only (EV-039). IT service contracts since 2025 carry security terms; OEM purchase orders and the EDI contract have none, and the TMU supply agreement sets no deadline for vulnerability or compromise notices (EV-040). SOC 2 Type 2 reports are on file for the cloud provider, the identity provider and the MSSP, whose report carves out the SIEM platform; none is on file for the SD-WAN provider, the EDI provider, the ERP software vendor or the TMU electronics supplier (EV-041). The cyber insurance policy has a $15 million limit and a $500,000 retention, with notice through the carrier hotline first (EV-042).
+
+**Products.** The TMU configuration software is built by the 6-person product software team; code review is optional, releases are signed, the code signing key is held on the build server, and no SBOM is produced. Product vulnerability reports arrive at the sales mailbox (EV-043). Supplier firmware hashes have been checked on receipt since 2025; the final test procedure has no hash re-check (EV-044).
+
+**Facilities and media.** HQ and Plant 1 server rooms and control rooms have badge readers and electronic visitor records. The Plant 2 server room uses a shared key held by 9 people, Plant 2 visitors are recorded on paper, and the Plant 2 server room is on the ground floor in a flood-prone area (EV-045). Ten media disposals in 12 months each have a certificate of destruction (EV-046).
+
+**Business volume.** FY2025 revenue was about $360 million: about $836,000 of Plant 1 shipments, $520,000 of Plant 2 shipments, $68,000 of field service and $16,000 of FMS revenue per production day over about 250 days (EV-047). Plant volumes are about 21,000 distribution units and 240 power transformers a year and about 1,350 work orders a week (EV-048).
+
+**AI tools, corporate records and quality.** Five AI uses were found: AI-001 forecasting, the AI-002 predictive maintenance pilot, AI-003 FMS analytics, the AI-004 generative AI assistant pilot and the AI-005 applicant match score, which HR turned on in 2026-05. No security or legal review record exists for AI-002 or AI-005, and staff report using personal public generative AI accounts (EV-049). The company is privately held, the employee health plan is fully insured, and customers pay by bank transfer (EV-050). Quality signs every certified test report against raw data; Plant 1 test data imports are checksummed and Plant 2 imports are not (EV-051).
+
+**Reconciliation across sources.**
+- **Workforce.** The 850 employees on the HR roster match the workforce by department used in the BIA (EV-003).
+- **Endpoints.** The EDR console total (640) is the population for P07 sampling; about 180 of them are inside the SSP boundary (EV-008).
+- **HMIs and engineering workstations.** 56 at Plant 1 (EV-010) plus 34 at Plant 2 (EV-011) give 90, of which 4 plus 19, or 23, run operating systems past vendor support.
+- **Privileged accounts.** 18 FIDO2 and 23 push MFA accounts give the 41 in the broker inventory (EV-005).
+- **Kiosks.** 40 at Plant 1 and 22 at Plant 2 give the 62 registered in the two MES instances (EV-007).
+- **Plant 2 OT devices.** The Controls Lead's list covers about half of the plant; the remainder stays an open request.
+- **Suppliers.** About 190 suppliers with system access or data (EV-039). The named vendors and a summary row in [`vendor-register.csv`](vendor-register.csv) add up to that total.
+- **AI tools.** The 5 AI uses in [`asset-inventory.csv`](asset-inventory.csv) come from EV-049; personal public generative AI use comes from the survey only.
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| A complete list of Plant 2 control system devices (the current list covers about half) | Plant 2 Controls Lead with the OT Security Engineer | 2026-06-24 | Not complete at intake; the P03 walkdown sampled 30 devices (EV-057) and POAM-008 carries it |
+| Final Plant 2 network and data flow diagram | IT Director | 2026-06-24 | Draft only at intake (EV-012); P03 G-034 |
+| Confirmation that the insurer's panel OT-capable response firm will take incidents affecting plant systems | Chief Financial Officer | 2026-06-26 | Answered by the carrier on 2026-08-20 (EV-068) |
+| SOC 2 reports or equivalent for the SD-WAN provider, the EDI provider, the ERP software vendor and the TMU electronics supplier | Security Manager | 2026-06-29 | Obtained, or replaced by questionnaires and certificates, for the P09 vendor review (2026-08 to 2026-09) |
+| Number of staff using personal public generative AI accounts, and what they enter | vCISO with department heads | 2026-07-01 | Not established at intake; P01 R-014 and P10 cover the use |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Business units and owners (EV-003), revenue (EV-047) and volumes (EV-048), contract terms (EV-032 to EV-034), backup design (EV-019), Plant 2 program copies (EV-021), and dependencies from the asset and vendor registers |
+| P02 SSP | The system boundary from the asset inventory; as-found configuration from EV-001 to EV-023 |
+| P04 Cloud mapping | Landing zone accounts (EV-018, EV-019), FMS configuration (EV-023) and provider assurance (EV-041) |
+| P01 Risk register | Likelihood inputs from the incident register (EV-028), scan results (EV-016), phishing results (EV-029), configuration exports, the 2026 notice events (EV-031) and the prior assessments (EV-025) |
+| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the requirements; sample populations (EV-003, EV-016, EV-017, EV-028, EV-039) |
+| P06 Policies | The 2024 policies and standards (EV-024) and the 2024 IR and DR plans (EV-020, EV-027) |
+| P07 Control assessment | Populations to sample from: 214 terminations, 71 transfers and 236 new hires (EV-003), 41 privileged accounts (EV-005), 212 Plant 1 OEM sessions (EV-014), 640 endpoints (EV-008), 22 Plant 2 kiosks (EV-007), ERP and Plant 2 MES changes (EV-017), 46 servers (EV-009), 50 critical findings (EV-016), 41 incidents (EV-028) |
+| P08 IR runbooks | Notification duties from the obligations register; insurer terms (EV-042); utility, subscriber and federal notice terms (EV-031 to EV-034) |
+| P09 SOC 2 | The subscribers' requirement (EV-033) and vendor assurance on file (EV-041) |
+| P10 AI governance | AI tools found (EV-049) and their vendor terms (EV-039, EV-040) |

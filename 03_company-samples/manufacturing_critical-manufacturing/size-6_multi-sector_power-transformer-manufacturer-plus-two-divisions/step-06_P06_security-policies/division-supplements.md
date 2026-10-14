@@ -21,7 +21,7 @@
 |---|---|---|---|---|
 | Transformer Manufacturing | v2026 (2026-05) | 2026-05-20 (to group policy v2026) | Aligned, but did not cover the acquired plant P8 or AI use cases (P03 G-064). Sections marked **new** below were added in this revision | Formal re-issue with the new sections by 2026-12-31 |
 | Electric Utility | v2026 (2026-02) | 2026-02-27 | Aligned. Maps each group policy to the CIP program document that implements it | Add cross-division incident criteria to the CIP-008-6 plan by 2026-12-15 (POAM-026) |
-| Grid Engineering | 2023 division standards (no supplement) | 2023-04 | **Drifted** (scenario gap 6); conflicts listed in section 4 | Replace the 2023 standards with section 3.3 by 2026-12-31 (POAM-014) |
+| Grid Engineering | 2023 division standards (no supplement) | 2023-04 | **Drifted** (group gap 6); conflicts listed in section 4 | Replace the 2023 standards with section 3.3 by 2026-12-31 (POAM-014) |
 
 ## 3. What each supplement adds
 ### 3.1 Transformer Manufacturing supplement (focus division)
@@ -73,7 +73,7 @@ The 2023 Grid Engineering standards were written before the division moved onto 
 | Field tool passwords | Shared accounts on settings tools allowed | Unique identities (POL-02 4.1) | No accountability for settings changes (ES-010) |
 | Incident severity | Division 3-level scale | One group scale (POL-03 4.2) | Inconsistent escalation (P07 IR-4 finding) |
 | Client notices | Project manager discretion | Register and SOC handoff (POL-03 4.4) | Missed contract deadlines (ES-002) |
-| Common control inheritance | Not addressed | Documented and confirmed every year (POL-01 4.6) | Gap 6 (POAM-014) |
+| Common control inheritance | Not addressed | Documented and confirmed every year (POL-01 4.6) | Group gap 6 (POAM-014) |
 
 **Why the drift happened.** Grid Engineering joined group identity and the group SOC in 2024, but its standards had no owner after the 2024 reorganization and were never compared with group policy. **Fix:** POL-01 4.5 requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office now tracks every supplement version in the policy register.
 

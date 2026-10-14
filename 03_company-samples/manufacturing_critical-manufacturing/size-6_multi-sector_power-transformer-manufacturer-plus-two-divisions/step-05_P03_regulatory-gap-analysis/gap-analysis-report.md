@@ -13,14 +13,16 @@
 | Assessors | Division security and compliance leads, the Electric Utility NERC compliance director, and the Grid Engineering contracts director, coordinated by the Group CISO; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what
 | Entity | Status | Basis |
 |---|---|---|
-| Transformer Manufacturing | **Not NERC-registered.** A supplier to about 700 utilities. NERC CIP-013-2 applies to the Responsible Entities in its section 4.1, not to their vendors, so CIP terms reach the division only through contracts: the 140 utility addenda and the 2019 intercompany supply agreement with the Electric Utility | CIP-013-2 section 4.1; contract register |
-| Electric Utility | **NERC-registered** Distribution Provider, Transmission Owner, and Transmission Operator in the SERC region. Medium impact BES Cyber Systems at the TCC and backup TCC (CIP-002-5.1a Attachment 1 criterion 2.12); low impact at 58 transmission substations (criterion 3.2) | CIP-002-5.1a categorization approved 2025-11-18 |
-| Grid Engineering | **Not NERC-registered.** A vendor to 41 client utilities whose contracts flow down CIP-004-7, CIP-011-3, CIP-013-2, and Transient Cyber Asset terms, and a vendor to the Electric Utility under its CIP-013-2 plan | Contract review 2026-07 |
+| Transformer Manufacturing | **Not NERC-registered.** A supplier to about 700 utilities. NERC CIP-013-2 applies to the Responsible Entities in its section 4.1, not to their vendors, so CIP terms reach the division only through contracts: the 140 utility addenda and the 2019 intercompany supply agreement with the Electric Utility | CIP-013-2 section 4.1; contract register (EV-050, EV-039) |
+| Electric Utility | **NERC-registered** Distribution Provider, Transmission Owner, and Transmission Operator in the SERC region. Medium impact BES Cyber Systems at the TCC and backup TCC (CIP-002-5.1a Attachment 1 criterion 2.12); low impact at 58 transmission substations (criterion 3.2) | CIP-002-5.1a categorization approved 2025-11-18 (EV-059) |
+| Grid Engineering | **Not NERC-registered.** A vendor to 41 client utilities whose contracts flow down CIP-004-7, CIP-011-3, CIP-013-2, and Transient Cyber Asset terms, and a vendor to the Electric Utility under its CIP-013-2 plan | Contract review 2026-07 (EV-110) |
 | Corporate shared services | Common control provider for all three divisions (P02). Not inside any Electronic Security Perimeter | P02 common control catalog |
-| Holding company | SEC registrant (not a smaller reporting company) | Form 8-K Item 1.05; 17 CFR 229.106 |
+| Holding company | SEC registrant (not a smaller reporting company) | Form 8-K Item 1.05; 17 CFR 229.106 (EV-004) |
 
 **Why the focus division uses a voluntary benchmark.** The vertical's registry (`02_industry-rules/manufacturing_critical-manufacturing/requirements.csv`) lists four requirements. None is a binding cyber rule for a transformer maker of this kind: CIRCIA is proposed only (C-CRITICAL-MFG-R01), the connected vehicles rule does not reach transformers (R02), EAR applies to exports but is not a cyber program rule (R03), and DFARS 252.204-7012 needs a DoD contract, which the group does not hold (R04). The group therefore measures Manufacturing against CSF 2.0 with SP 800-82 Rev. 3, and assesses the binding contract and FAR duties line by line beside it. There is no size exemption to think about: the benchmark is the group's choice, and the contract and FAR duties have no size threshold.
 
@@ -32,7 +34,7 @@
 - **Other utility registry rows** (TSA pipeline directives N22-R02, NRC 10 CFR 73.54 N22-R03, SDWA section 1433 N22-R04): no pipeline, no generation or NRC license, no water system (EU-G50 to EU-G52).
 - **Professional services registry rows** for Grid Engineering (FTC Safeguards Rule N54-R01, tax preparer rules N54-R02 and R03, HIPAA N54-R06): the division is not a financial institution, prepares no tax returns, and holds no PHI (ES-G23, ES-G24, ES-G26). N54-R07 and N54-R08 (professional conduct rules for lawyers and CPAs, both unverified in the registry) were not relied on; they do not fit an engineering firm.
 
-**Holding company and affiliate rules (context, not cyber rules).** FERC's holding company rules (18 CFR 366.2 to 366.4), its rule on affiliate purchases by a transmission-owning utility (18 CFR 35.44(b)(2)), and the Florida PSC affiliate transaction rule (Fla. Admin. Code R. 25-6.1351) govern how the Electric Utility prices and records what it buys from its sister divisions. They are not security requirements, so they are not scored here. They matter here because the intercompany agreements behind those purchases are also where the group's security terms for its sister divisions belong (see `00_company-facts.md`).
+**Holding company and affiliate rules (context, not cyber rules).** FERC's holding company rules (18 CFR 366.2 to 366.4), its rule on affiliate purchases by a transmission-owning utility (18 CFR 35.44(b)(2)), and the Florida PSC affiliate transaction rule (Fla. Admin. Code R. 25-6.1351) govern how the Electric Utility prices and records what it buys from its sister divisions. They are not security requirements, so they are not scored here. They matter here because the intercompany agreements behind those purchases are also where the group's security terms for its sister divisions belong (see `00_company-facts.md` and the obligations register row CTR-AFFILIATE).
 
 **FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
 
@@ -56,10 +58,21 @@
 ## 3. Method
 1. **Requirements.** CSF 2.0 rows use the official CSF 2.0 subcategory text; SP 800-82 Rev. 3 section numbers show where the OT guidance applies. FAR rows were read from the eCFR (current through 2026-09-23). NERC rows were read from the standard PDFs published by NERC; the FERC CEII row from 18 CFR 388.113 on the eCFR. Form DOE-417 rows use the OMB-approved form and instructions. Contract rows follow the six CIP-013-2 R1 Part 1.2 topics, because the addenda and client terms are built on them.
 2. **Crosswalk.** CSF rows use NIST's official CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/`), as a subset. Every other row carries an **author mapping**, labeled as such in the `crosswalk_source` column. SOC 2 rows list Trust Services Criteria IDs with short topic labels in our own words; no criteria text is reproduced.
-3. **Evidence.** Interviews, document review, configuration exports, plant walkthroughs at P2, P5, and P8 (2026-06-09 to 2026-06-12), the TCC walkthrough (2026-06-17), contract reviews, and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts, and inventories collected 2026-03-30 to 2026-04-24), plant walkthroughs at P2, P5, and P8 (2026-06-09 to 2026-06-12; EV-085, EV-086), the TCC walkthrough (2026-06-17; EV-088), gap analysis interviews with each division's security, OT, product, contracts, and compliance leads (EV-094 group and Transformer Manufacturing, EV-102 Electric Utility, EV-105 Grid Engineering), fieldwork document reviews, samples, and contract reviews (EV-087, EV-089 to EV-093, EV-095 to EV-101, EV-103, EV-104, EV-106 to EV-117), and P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale (Very Low to Very High).
 
 ## 4. Results
+### 4.0 Group gaps
+Eight gaps cross divisions, sit in shared services, or need a group decision. They are numbered here and cited as group gaps 1 to 8 across this sample.
+1. **GEPS reach into the plants.** The integration hub uses 6 service accounts with standing access to all 8 plant MES, and the P8 legacy MES is dual-homed. GEPS disaster recovery has been tested only for the finance modules; a full restore of APS and the integration hub has never been tested, so the 24-hour production scheduling recovery time is unproven (EV-040, EV-041, EV-044, EV-085).
+2. **The acquired plant (P8).** Flat OT network, 4 always-on OEM cellular routers with shared logins, 19 HMIs on operating systems past vendor support, a legacy directory domain with a two-way trust to the corporate domain, and no OT monitoring (EV-015, EV-016, EV-085).
+3. **TMU product security.** The firmware signing key is in a software keystore on a build server. The 30-day vulnerability disclosure term in the utility addenda was missed twice in 2026. SBOMs exist for 3 of 7 firmware lines (EV-049, EV-097, EV-098).
+4. **Affiliate relationships.** The 2019 intercompany supply agreement and the 2020 intercompany services agreement have no security schedules. Electric Utility TCC design documents (BCSI) sit on Grid Engineering's project platform outside the utility's CIP-011-3 program (2 of 20 sampled projects) (EV-039, EV-106).
+5. **Electric Utility CIP gaps.** CIP-003-9 Attachment 1 Section 6 (vendor electronic remote access for low impact, effective 2026-04-01): the detection method for known or suspected malicious communications is in place at 22 of 58 transmission substations. CIP-012-2 (effective 2026-07-01): the plan does not yet cover availability and recovery (Parts 1.2 and 1.3) (EV-061, EV-066).
+6. **Grid Engineering contract duties and inheritance.** No register of the CIP flow-down terms in 41 client contracts and no route from group SOC findings to client notices. Common control inheritance is documented for Manufacturing and the Electric Utility but not for Grid Engineering, and its 2023 standards conflict with group policy (EV-011, EV-071, EV-110, EV-116).
+7. **Cross-division incident notification.** A production-stopping ransomware incident could trigger utility addenda notices (24 and 48 hours), Grid Engineering client notices, Electric Utility CIP-008-6 and DOE-417 reports, FAR reports, state breach notices, and an SEC materiality decision at once. The group notification matrix was drafted in 2026-06 and has never been exercised (EV-021, EV-091).
+8. **AI governance lag.** The demand forecasting (AI-001) and predictive maintenance (AI-002) models went live before the Group AI Standard without independent validation. The forecast feeds the allocation of storm-reserve production slots, including slots for the affiliated Electric Utility, with no documented allocation rule. The P8 predictive maintenance connector opened an outbound internet path from the plant historian (EV-036, EV-056, EV-085).
+
 ### 4.1 Transformer Manufacturing and group-wide rows (`gap-analysis.csv`)
 | Group of rows | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -76,10 +89,10 @@
 | **Total (103)** | **51** | **47** | **1** | **4** |
 
 14 gaps are rated High. They sit in four places:
-- **The acquired plant P8** (scenario gap 2): asset inventory (G-018), identity and the legacy domain trust (G-033), OEM cellular routers (G-034), backups (G-041), and network segmentation (G-046).
-- **GEPS recovery** (gap 1): recovery plans and restore tests for APS and the integration hub (G-059, G-060).
-- **TMU product security** (gap 3): vulnerability disclosure (G-028, G-094), the firmware signing key (G-029, G-095), and SBOMs and the build environment (G-068).
-- **Notification** (gap 7): the one **Not met** row, RS.CO-02 (G-057), because the group notification matrix was drafted in 2026-06 and never adopted or exercised; and the 24- and 48-hour addendum incident notice (G-091).
+- **The acquired plant P8** (group gap 2): asset inventory (G-018), identity and the legacy domain trust (G-033), OEM cellular routers (G-034), backups (G-041), and network segmentation (G-046).
+- **GEPS recovery** (group gap 1): recovery plans and restore tests for APS and the integration hub (G-059, G-060).
+- **TMU product security** (group gap 3): vulnerability disclosure (G-028, G-094), the firmware signing key (G-029, G-095), and SBOMs and the build environment (G-068).
+- **Notification** (group gap 7): the one **Not met** row, RS.CO-02 (G-057), because the group notification matrix was drafted in 2026-06 and never adopted or exercised; and the 24- and 48-hour addendum incident notice (G-091).
 
 The Recover function has no Met rows. All five rows are partially met, because the plant recovery design, built for P1 to P7, has never been tested against a GEPS scheduling outage and does not yet cover P8.
 
@@ -121,10 +134,10 @@ The medium impact program at the TCC is mature. The 2024 audit findings (CIP-007
 | Screens: N54-R01 to R03, R05, R06, NERC registration, CIRCIA (6) | 0 | 0 | 0 | 6 |
 | **Total (28)** | **9** | **12** | **1** | **6** |
 
-Grid Engineering's gaps are about **knowing what it promised**. It has no register of the CIP terms in its 41 client contracts and no route from group SOC findings to client notices, so the 24- to 72-hour incident notice term is **Not met** (ES-G07, High; POAM-012). The other High gaps are client BCSI open to whole project teams and personal cloud storage on engineering laptops (ES-G05; POAM-013) and uneven hardening of the 700 commissioning laptops used as Transient Cyber Assets at client substations (ES-G12). Its SOC 2 gaps (90-day log retention, undocumented inheritance, drifted 2023 standards) are the same problems seen from the auditor's side (scenario gap 6).
+Grid Engineering's gaps are about **knowing what it promised**. It has no register of the CIP terms in its 41 client contracts and no route from group SOC findings to client notices, so the 24- to 72-hour incident notice term is **Not met** (ES-G07, High; POAM-012). The other High gaps are client BCSI open to whole project teams and personal cloud storage on engineering laptops (ES-G05; POAM-013) and uneven hardening of the 700 commissioning laptops used as Transient Cyber Assets at client substations (ES-G12). Its SOC 2 gaps (90-day log retention, undocumented inheritance, drifted 2023 standards) are the same problems seen from the auditor's side (group gap 6).
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Multi-party notification matrix not adopted or exercised (7) | All | CSF RS.CO-02; addendum sec. 1; client CIP-013-2 R1 Part 1.2.1 terms; CIP-008-6 R4; Form DOE-417; Form 8-K Item 1.05 | High | Adopt the P08 matrix; client terms register; cross-division tabletop | Group General Counsel | 2026-12-15 |
 | 2 | P8 segmentation, OEM access, and domain trust (2) | MF, group | CSF PR.IR-01, PR.AA-01, PR.AA-03 | High | OT DMZ at P8; disconnect cellular routers; break the trust | Director of OT engineering; Group identity director | 2027-03-31 |
