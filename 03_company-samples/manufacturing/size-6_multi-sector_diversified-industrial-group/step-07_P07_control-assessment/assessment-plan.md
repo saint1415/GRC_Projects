@@ -49,7 +49,7 @@ Distribution was sampled on governance and FAR-related controls (CA-2, PE-8, AC-
   - access attempts with 3 Testing client accounts and a membership export of collaboration spaces.
 
 ### What each test could show
-The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-15, effective 2026-10-01. Controls that the 2025 group policies, the incident response plan v5 (approved 2025-02) and division procedures already required were tested for operation. Statements that rest on a draft were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+The group policies v2026 (P06) were drafts during fieldwork; they were approved on 2026-09-15, effective 2026-10-01. Controls that the 2025 group policies, the incident response plan v5 (approved 2025-02) and division procedures already required were tested for operation. Statements that rest on a draft were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
 
 | Test type | Meaning | Statements |
 |---|---|---|
