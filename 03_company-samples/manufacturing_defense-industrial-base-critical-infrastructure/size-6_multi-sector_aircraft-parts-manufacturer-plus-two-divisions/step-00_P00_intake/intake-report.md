@@ -1,22 +1,72 @@
-# Intake Report: [FILL company and size]
+# Intake Report: Cris Santos Company Holdings | Defense Industrial Base | Multi-Sector
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company Holdings, Inc. (holding company; Aircraft Parts, Engineering Services and Defense Software and Data Services divisions; corporate shared services) |
+| Intake window | 2026-03-30 to 2026-04-24 |
+| Collected by | Group GRC team (Group CISO's office), with the Group CMMC program director, the Group export compliance director and the three division security and compliance leads |
+| Approved | Board audit and risk committee, 2026-09-15, with the other deliverables |
 
 ## 1. Purpose and scope
-[FILL: what was collected, for which organization and systems, and over what dates]
+Intake collected the group's own records before any assessment work began on 2026-05-04. It covers the legal entities and their CAGE codes, the systems that process, store or transmit CUI, FCI, export-controlled data or Government data in each division and in corporate shared services, the suppliers that touch them, and the rules that may bind each entity. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Items are grouped by division: the title of each row starts with Group, GCEE, Aircraft Parts, Engineering Services or Defense Software. Later steps add their own fieldwork evidence (interviews, walkthroughs, document reviews, tests) to the same register, so one list backs every deliverable.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analyses (P03) and the control assessment (P07).
 
 ## 2. Sources collected
-| Area | Evidence IDs | System of record | As of |
-|---|---|---|---|
-| [FILL] | [EV-xxx] | [FILL] | [YYYY-MM-DD] |
+| Division | Area | Evidence IDs | System of record | As of |
+|---|---|---|---|---|
+| Group | Entities, workforce, revenue, SEC, contracts and CMMC status | EV-001 to EV-008 | Entity management system; HR system; ERP and Form 10-K; contract management system; contracts correspondence; SPRS; CMMC program office | 2025-12-31 to 2026-03-31 |
+| Group | Policies, supplements and common controls | EV-009 to EV-011 | Policy repository; GRC tool | 2026-03-31 |
+| Group | Identity and endpoints (SYS-G1) | EV-012 to EV-016 | Identity platform, identity governance and PAM consoles; endpoint and device control consoles | 2026-03-31 |
+| Group | Security operations (SYS-G2) | EV-017 to EV-022 | SIEM; case management; certificate register; EDR; scanner and patch consoles | 2026-03-31 to 2026-04-10 |
+| Group | Cloud platform (SYS-G3) | EV-023 to EV-028 | Cloud consoles; guardrail service; firewall management; key management; backup vault; log archive | 2026-03-31 |
+| Group | Workforce, export, suppliers, AI and governance | EV-029 to EV-042 | Learning system; HR and export records; insider threat office; vendor master and SCRM plan; provider portals; procurement and SaaS discovery; board portal; facilities systems; ERP and CUI suite consoles; security office | 2025-12-31 to 2026-04-15 |
+| GCEE | Inventory, access, plans, flows, recovery, change and Program H | EV-043 to EV-049 | Cloud asset inventory; PLM console; GCEE document library and registers; continuity library; change system | 2026-03-31 |
+| Aircraft Parts | Plants, machines, plant networks, MES and DNC, USB transfer, backups, Plant 9, visitors, vendors | EV-050 to EV-057 | Plant inventories; network documentation; MES and DNC consoles; device control console; backup reports; integration program office; visitor system; vendor contracts | 2026-03-31 |
+| Engineering Services | Centers and field work, HPC and test systems, cleared centers, subconsultants | EV-058 to EV-061 | Field operations and GFE records; HPC and test records; FSO files; subcontracts files | 2026-03-31 |
+| Defense Software | Contracts, DoD edition, SOC 2, FedRAMP readiness, architecture, software factory, support, vendors, model | EV-062 to EV-070 | Contract management; authorization package; compliance office; architecture repository; pipeline and release board; PAM; model registry | 2025-09-30 to 2026-04-17 |
 
 ## 3. Observations by area
-Observations only. Findings are made in P03 and P07.
+**Entities, scale and contracts.** The holding company is an SEC registrant with three wholly owned operating subsidiaries, each with its own CAGE codes; corporate shared services sit in the parent (EV-001). The workforce is 45,000: Aircraft Parts about 25,500, Engineering Services about 10,800, Defense Software about 4,700, corporate about 4,000 (EV-002). FY2025 revenue was about $18.0 billion: Aircraft Parts $11.4 billion (about 55% defense work), Engineering Services $4.8 billion, Defense Software $1.8 billion (EV-003). The FY2025 annual report includes the Item 106 disclosure, and the disclosure committee charter covers cybersecurity materiality (EV-004). Aircraft Parts and Engineering Services contracts carry DFARS 252.204-7012, -7019 and -7020 and FAR 52.204-21; awards from 2025-11-10 also carry 252.204-7021; DoD edition contracts carry 252.239-7010 (EV-005). Program offices and Primes A to D said Level 2 (C3PAO) would be required from 2026-11-10, and Program H said to expect Level 3 (EV-006). SPRS shows the 2024 DIBCAC High Assessment of Aircraft Parts (98) and the 2025 Engineering Services Basic Assessment (101), and no CMMC status (EV-007). The CMMC program office plans one Enterprise CUI Environment scope: the GCEE, plants 1 to 8 and the Engineering Services centers (EV-008).
+
+**Policies and common controls.** The 2025 group policies are aligned to CSF 2.0; the library has no AI standard and no cyber due diligence standard for acquisitions (EV-009). The Engineering Services supplement was last aligned in 2024-05, has no owner or review date, and allows practices that differ from the group standards on removable media and cloud storage; the Defense Software supplement (2025-10) has no data-use gate for Government-related data and no CSP reporting procedure (EV-010). Inheritance of common controls is documented for Aircraft Parts, Defense Software and the Engineering Services centers, and not for the HPC cluster and test systems that joined the CUI environment in 2026 (EV-011).
+
+**Identity and endpoints.** The government-community identity tenant serves every CUI environment and requires a verified U.S.-person attribute; MFA is required for every CUI user (64% phishing-resistant, the rest number-matching push), administrators use hardware keys, and global administrator roles exist in the tenant (EV-012). Identity governance runs from HR events and disables accounts inactive for 45 days; the GCEE has about 12,600 named users and 140 service accounts (EV-013). Privileged access is just in time through PAM with recording (EV-014), and the Q1 2026 certification was completed (EV-015). Thick workstations accept only registered encrypted drives; the software catalog includes CAD plug-ins; web category blocks for public AI apply on GCEE virtual workstations but not on all company laptops (EV-016).
+
+**Security operations.** The 24x7 SOC collects GCEE, identity, gateway, EDR and platform logs and MES and DNC logs from plants 1, 2, 3 and 5; logs at plants 4, 6, 7 and 8 stay local for 30 days; HPC host logs and model service logs are not collected; plant sources have no health alert; download alerts use one group-wide threshold (EV-017). IR plan v4 is in place, playbooks are exercised quarterly, and the group notification matrix has not been exercised (EV-018). Certificate holders: Aircraft Parts 4, Engineering Services 2 at one center, Defense Software none (EV-019). EDR covers managed endpoints and servers, with Plant 9 enrolled since 2026-02 (EV-020). Scans run weekly on the GCEE and plants 1 to 8; Plant 9 is not scanned (EV-021).
+
+**Group cloud platform.** CUI workloads run only in provider A's government-community landing zone (FedRAMP High); provider B holds non-CUI workloads, and its guardrails block CUI (EV-023, EV-024). The hub denies by default and plant VPNs for plants 1 to 8 use FIPS-validated gateways (EV-025). Keys are customer-managed and HSM-backed (EV-026). Backups are immutable in a second provider A region, with hourly GCEE snapshots and nightly MES backups for plants 1 to 8 (EV-027). Logs are kept 1 year online and 3 years archived (EV-028).
+
+**Workforce, export, suppliers and AI.** Awareness training completion is 97% (EV-029). U.S.-person verification precedes CUI access; terminations disable access within 4 hours; notice-period monitoring is manual (EV-030). One entity-wide insider threat program serves the cleared entities (EV-031). Aircraft Parts and Engineering Services are registered with DDTC; project folders shared with allied partners are not tagged by agreement (EV-032). About 1,450 suppliers receive CUI; CMMC status has been verified for 38% of those that would have needed Level 2 (C3PAO); the SCRM plan does not cover machine and controller suppliers (EV-033). Provider A and the CUI suite FedRAMP packages and CRMs are on file (EV-034). AI tool discovery found an engineering assistant pilot for 300 users in the CUI suite, the predictive maintenance model, a generative design module, a coding assistant, an enterprise assistant pilot for 2,000 non-CUI users and a supplier scoring service, plus two proposals (EV-035). Facility clearances are held at 2 Engineering Services centers only (EV-042).
+
+**GCEE.** The PLM vault holds about 4.8 million controlled documents; about 1,100 thick CAD workstations sit at plants and centers, and those at plants 4 and 7 have no CMMC asset category (EV-043). PLM enforces project roles and export tags with the U.S.-person attribute (EV-044). SSP v2.0 dates from 2024, and the plant 4 and plant 7 annexes predate the 2025 MES upgrade (EV-045). A daily export of Aircraft Parts sustainment CUI to SYS-D4 has run since 2025 as an intercompany service with no CSP review, and the HPC link (2026) and the SYS-D4 export have no interconnection agreement (EV-046). PLM restore is tested twice a year, last in 2026-03, and the post-restore revision check is manual (EV-047). The Program H enclave has its own account, vault, keys and access group (EV-049).
+
+**Aircraft Parts.** About 1,140 machines at 9 plants are Specialized Assets; 212 run unsupported controller software and 61 at plants 3, 6 and 8 are loaded by USB (EV-050). Plants 6 and 8 have flat MES VLANs, and Program H machines at plant 2 share VLANs with other programs (EV-051). MES local accounts at plants 3, 6 and 8 are not disabled after inactivity; DNC accepts programs without checksum verification at 3 plants (EV-052). Transfer workstations at plants 3, 6 and 8 accept any USB drive (EV-053). Plant 9 runs its own legacy network and file server with about 6,000 CUI drawings; its VPN configuration does not confirm FIPS validation; its visitor log is on paper; it backs up weekly to an unencrypted local disk and has one internet circuit (EV-055). One MES vendor support contract covers all 9 plants (EV-057).
+
+**Engineering Services.** About 1,200 engineers work on customer sites with GFE and customer systems; GFE records do not record which CUI is held on GFE, customer systems or company laptops (EV-058). The HPC cluster and test systems joined the CUI environment in 2026 with no SSP annex, interconnection agreement or inheritance record; HPC nodes run the vendor image (EV-059). The 2 cleared centers have written FSO appointments; identity tickets exist for some adverse information reports (EV-060). Legacy subconsultants have not had SPRS checks (EV-061).
+
+**Defense Software.** 5 DoD program offices use the DoD edition; the industry edition has 77 tenant contracts, 14 with CUI, including the Aircraft Parts division (EV-062). The DoD edition holds a FedRAMP Moderate authorization and a DoD provisional authorization (EV-063). The industry edition SOC 2 Type 2 report covers the period ending 2025-09-30 (EV-064). SYS-D4 is not FedRAMP authorized, a 3PAO assessment is scheduled for 2026-06, and the proposal library describes it as "FedRAMP-ready" and "CMMC compliant" (EV-065). Tenant isolation was last tested by an outside party in 2025, and no failover test has been run in 2026 (EV-066). Pipeline secrets sit in variables for 3 legacy jobs (EV-067). PAM approvals for support access do not require a ticket number (EV-068). The predictive maintenance model was last independently validated in 2025 (EV-070).
 
 ## 4. Open requests
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
-| [FILL] | [FILL] | [YYYY-MM-DD] | [FILL] |
+| Confirmation that the Plant 9 legacy VPN uses FIPS-validated cryptography | Aircraft Parts VP of operations | 2026-04-08 | Not confirmed; carried into P03 (G-098) and P07 (SC-13, POAM-007) |
+| Updated asset inventories and diagrams for plants 4 and 7 after the 2025 MES upgrade | Aircraft Parts VP of operations | 2026-04-08 | Not updated at intake; carried into P03 (G-035) and P07 (CM-8, POAM-005) |
+| Record of which CUI is held on customer GFE, customer systems and company laptops | Engineering Services field operations director | 2026-04-09 | None exists; quantified by the P07 field survey (EV-ES-AC20) and carried into P03 (ES-G03) and POAM-010 |
+| Inheritance documentation for the HPC cluster and test systems | Engineering Services security and compliance lead | 2026-04-06 | None exists; documented in P02 (POAM-009) |
+| Evidence that SYS-D4 meets security requirements equivalent to the FedRAMP Moderate baseline | Defense Software security and compliance lead | 2026-04-07 | 3PAO assessment scheduled for 2026-06; the report (EV-092) arrived during P03 fieldwork with 23 open findings |
+| Workforce use of public generative AI tools outside the approved tools | Group CISO | 2026-04-20 | Not established at intake; cases at two Engineering Services centers found in 2026-07 (EV-096); wider use is not established (P10) |
 
 ## 5. What each later step takes from intake
 | Step | Takes |
 |---|---|
-| P05 BIA | [FILL] |
+| P05 BIA | Revenue by division (EV-003), backup and recovery records (EV-027, EV-047, EV-054, EV-055, EV-066), reporting capacity (EV-017, EV-019), and dependencies from the asset and vendor registers |
+| P02 SSP | The GCEE boundary from the asset inventory; as-found configuration from EV-012 to EV-028 and EV-043 to EV-049; common controls from EV-011 |
+| P04 Cloud mapping | Cloud and platform components (EV-023 to EV-028, EV-043 to EV-049, EV-062 to EV-067) and provider assurance (EV-034, EV-063, EV-064) |
+| P01 Risk registers | Likelihood inputs from configuration exports, inventories, contracts and plans in all three divisions and corporate (the `likelihood_basis` column) |
+| P03 Gap analyses | The obligations register (which rules apply to which entity) and every observation above, compared with the requirements |
+| P06 Policies | The 2025 group policies and standards (EV-009) and the division supplements (EV-010) |
+| P07 Control assessment | Populations to sample from (EV-002, EV-013, EV-030, EV-033, EV-050, EV-058) |
+| P08 IR runbook | Notification duties per entity from the obligations register; the group matrix (EV-018); certificate holders (EV-019); tenant notice terms (EV-062) |
+| P09 SOC 2 | The industry edition SOC 2 report (EV-064) and tenant contracts (EV-062) |
+| P10 AI governance | AI tools found (EV-035, EV-070) |
