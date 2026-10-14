@@ -61,8 +61,8 @@ All three major cloud providers' shared responsibility models (SRC-AWS-SRM, SRC-
 One point is specific to this business: **sync is not backup.** Version history protects against a deleted file; it does not protect against ransomware that encrypts the library on the laptop and syncs every changed file within minutes. The P07 test restore on 2026-08-26 also showed that the plan restores one file at a time. Offline encrypted drives (CP-9) close that gap (P01 R-001).
 
 ## 4. Findings from the mapping
-1. **Three open sharing links to customer program folders** were found during this mapping (made for OEM support desks in 2025 and 2026). They were removed on 2026-08-25 and default sharing was set to named people only. The disclosures themselves are counted under exhibit S1 (P03 G-036).
-2. **MFA is off where it is free to turn on** (accounting SaaS administrator account, router portal). Tracked with P01 R-003 and R-006.
+1. **Three open sharing links to customer program folders** were found during this mapping, from the sharing report collected at intake (EV-002; made for OEM support desks in 2025 and 2026, EV-020). They were removed on 2026-08-25 and default sharing was set to named people only. The disclosures themselves are counted under exhibit S1 (P03 G-036).
+2. **MFA is off where it is free to turn on** (accounting SaaS administrator account, router portal; EV-005, EV-012). Tracked with P01 R-003 and R-006.
 3. **The owner's router at Customer B is a cloud-managed path into a drying oven.** It is the one place where a SaaS account controls access to customer OT. Tracked as P01 R-003 (High).
-4. **The AI trial is a fourth SaaS holding customer data** under terms nobody read. Tracked as P01 R-007 and P10.
-5. **The phone is part of the security boundary.** It holds the only MFA codes and equipment photos. Losing it is a lockout risk (R-008).
+4. **The AI trial is a fourth SaaS holding customer data** under terms nobody read (EV-029, EV-030). Tracked as P01 R-007 and P10.
+5. **The phone is part of the security boundary.** It holds the only MFA codes and equipment photos (EV-001, EV-008). Losing it is a lockout risk (R-008).

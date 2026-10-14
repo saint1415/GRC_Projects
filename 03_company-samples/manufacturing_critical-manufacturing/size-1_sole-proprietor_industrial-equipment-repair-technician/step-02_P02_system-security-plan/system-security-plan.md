@@ -7,7 +7,7 @@
 Field Service Business Systems (**FSBS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The FSBS is everything the owner-technician uses to run a one-person repair business for about 10 manufacturing customers: the core SaaS stack for email, files, client and billing records, plus the tools that hold and move the **Customer Machine Library** (control programs for about 70 customer machines). Components are SYS-01 to SYS-06, SYS-08, and SYS-09 in `../00_company-facts.md` section 3: a business productivity suite, an accounting SaaS, the service laptop (with one legacy engineering virtual machine), the phone, the field connection kit, the cellular remote access router the owner installed at Customer B, the AI vibration analytics trial, and the home network.
+The FSBS is everything the owner-technician uses to run a one-person repair business for about 10 manufacturing customers: the core SaaS stack for email, files, client and billing records, plus the tools that hold and move the **Customer Machine Library** (control programs for about 70 customer machines). Components are SYS-01 to SYS-06, SYS-08, and SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): a business productivity suite, an accounting SaaS, the service laptop (with one legacy engineering virtual machine), the phone, the field connection kit, the cellular remote access router the owner installed at Customer B, the AI vibration analytics trial, and the home network.
 
 The FSBS is unusual for a small business in one way: **it connects to other companies' operational technology.** The laptop and USB sticks are plugged into PLCs, HMIs, drives, and CNC controllers at plants that build distribution transformers, power transformers, and switchgear, and into monitoring cabinets at utility substations. The customers' machines are outside the boundary, but what the FSBS carries into them is the owner's responsibility. NIST SP 800-82 Rev. 3 is used as the OT guide (P03).
 
@@ -54,6 +54,7 @@ Operational. Planned changes: MFA on the accounting SaaS and router portal (2026
 **Baseline:** SP 800-53B Moderate, tailored to 28 controls that carry the customer contract duties and the High risks for a one-person business (`control-implementation.csv`). Other Moderate controls are either inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`). The integrity rating would rise to High if the owner ever became responsible for a machine's safety functions; that would be a new contract and a new assessment.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 - **Inside:** the owner's tenant settings and accounts in the productivity suite, accounting SaaS, router cloud portal, and vibration analytics SaaS; the service laptop and its virtual machine; the phone; the field connection kit (cables, adapters, 8 USB sticks, a small switch); the router at Customer B (owner property); the home office network as the owner uses it; the paper file cabinet.
 - **Outside:** Customer A's remote access gateway (SYS-07) and media scanning station; every customer machine, plant network, and substation system; the SaaS platforms themselves; the IT consultant's and bookkeeper's own systems; OEM support desks.
 - **Where the boundary touches OT:** each time the laptop or a USB stick connects to a customer controller (POL-01 section 7). Those connections are the highest-risk points in the plan (P01 R-002).
@@ -63,13 +64,13 @@ Diagram: P04 `cloud-architecture.md`.
 ## 8. Information Exchanges Summary
 | Party | Data | Agreement |
 |---|---|---|
-| Customer A (plants and substation work) | Programs, drawings, firmware and hash values, remote sessions through its gateway | Service agreement with exhibit S1 to S8 |
-| Customers B and C | Programs, drawings, machine passwords | Mutual NDAs |
-| Seven local plants | Programs and passwords | **No written security terms** |
-| OEM support desks | Program files sent for diagnosis | **No terms; customer consent not recorded (gap, P03 G-036)** |
-| Vibration analytics vendor (AI-001) | Vibration data, machine and plant names | **Click-through terms; no Customer A consent (gap, P10)** |
-| Bookkeeper | Invoices, payments, bank feed | Engagement letter |
-| IT consultant | Watched remote sessions on the laptop | NDA (2026-08-20) |
+| Customer A (plants and substation work) | Programs, drawings, firmware and hash values, remote sessions through its gateway | Service agreement with exhibit S1 to S8 (EV-014) |
+| Customers B and C | Programs, drawings, machine passwords | Mutual NDAs (EV-016) |
+| Seven local plants | Programs and passwords | **No written security terms** (EV-016) |
+| OEM support desks | Program files sent for diagnosis | **No terms; customer consent not recorded (gap, P03 G-036; EV-020)** |
+| Vibration analytics vendor (AI-001) | Vibration data, machine and plant names | **Click-through terms; no Customer A consent (gap, P10; EV-030, EV-020)** |
+| Bookkeeper | Invoices, payments, bank feed | Engagement letter (EV-032) |
+| IT consultant | Watched remote sessions on the laptop | NDA (2026-08-20; EV-031) |
 
 ## 9. System Component Inventory
 | Component | Type | Owner |
@@ -110,7 +111,7 @@ Self-assessed 2026-08-24 to 2026-08-28 with the IT consultant (tests 2026-08-26 
 The productivity suite requires a password and an authenticator app code, which is appropriate for the account that holds the Customer Machine Library. The accounting SaaS owner account and the router cloud portal use a password only until MFA is turned on (2026-09-30); the router stays powered off except for approved sessions until then. Customer A's gateway enforces its own MFA and per-session approval, outside this boundary. Customer machine passwords are the customers' authenticators; the owner protects them (IA-5) but cannot change how the customers' controllers authenticate.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **FSBS:** Field Service Business Systems
