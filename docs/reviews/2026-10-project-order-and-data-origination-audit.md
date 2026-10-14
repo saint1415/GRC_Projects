@@ -296,3 +296,20 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market medical device maker):** R-042 and R-049 cite September events while last reviewed in July and August; P07 sampled 10 pumps from 410 in finished goods while the facts put 86 affected units there; TPLC metrics coverage is described three ways.
 - **Size 5 (global medical device maker):** SSP 10.2 says 44 controls assessed while the P07 plan says 45; P07 RA-5 says MN-1 has passive OT discovery while SI-4 and the SSP say no OT monitoring; P09 calls the 2027 SL-1 report the fourth while reports run since 2023.
 - **Size 6 (diversified industrial group):** P07 marks Distribution CA-2 statements Satisfied while CA-02b.01 says no assessment plan exists; the old facts listed 2026 group policies in place before their approval; facts section 8 states that a staffing vacancy explains supplement drift.
+
+### Chemical critical infrastructure, 2026-10-14
+
+Six samples, 583 evidence rows in all. Agent cost: about 2.5 million tokens. Sizes 2, 4, 5 and 6 stopped at the weekly usage limit with work saved and were resumed after the reset, so run times are not comparable to earlier batches.
+
+Fixes made during this batch:
+- **Size 5 (enterprise specialty chemical maker):** R-051's likelihood basis cites a P07 result, and the P01 report says the R-014 default-password finding raised it. The row is now marked "re-rated 2026-08-28 after P07 testing" with last_reviewed 2026-08-28.
+- **Size 6 (specialty chemical maker plus two divisions):** run-together P07 IDs (EV-C-IA21, EV-C-AC65, EV-C-AC171, EV-C-AC174, EV-D-IA21) renamed to the parenthesis form; DS-005, re-rated from P07 testing, now shows last_reviewed 2026-08-19; an intake claim that a restore test log was kept was removed, because the sample only records the P07 restore test.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes the SSP or P09) cites regulatory status checks dated after approval.
+- **Size 1 (chemical distributor-broker):** P03 G-002 points to benchmark rows G-033 to G-036 while they are G-030 to G-033; ferric chloride volume is "about 10 totes a year" in the product table but four totes since 2025 elsewhere; the risk register (reviewed 2026-09-11) describes events of 2026-09-14 and 2026-09-18.
+- **Size 2 (micro specialty chemical maker):** P07 cites training and a P09 review dated after its window; P07 SC-7 and POAM-006 cite P03 G-006 where G-014 looks intended.
+- **Size 3 (small specialty chemical formulator):** P03 rows G-009, G-020 and G-031 to G-036 cite P07 results without being marked as updated; G-015 (July) mentions SIS software found on 2026-08-12; P04 (2026-07-24) cites an ERP SOC 2 review of 2026-08-24.
+- **Size 4 (mid-market specialty chemical maker):** Pass 1 risks R-001, R-015, R-017, R-025, R-040 and R-043 state P07 or September facts; P07 AT-2 and IR-8 cite documents dated after the window.
+- **Size 5 (enterprise specialty chemical maker):** the facts calendar puts policy approval on 2026-09-08 while the policies say 2026-09-10; P07 PL-2 examined SSP v2.0 dated after the window; the SSP counts 2 integrators supporting PLT-01 while G-040 and P07 SA-9 count 9 OT suppliers.
+- **Size 6 (specialty chemical maker plus two divisions):** SC-013 says recipe data has no query logging while P04 AU-12 cites query logs; SSP AC-5 says one engineer makes and approves hub recipe changes while SC-008 records two-person approval; SSP AC-2(1) cites "12 of 12" monthly reconciliations in 2026 for an SSP approved 2026-09-17; P04 says portal customers sign in with MFA while DS-008 says MFA is optional.
