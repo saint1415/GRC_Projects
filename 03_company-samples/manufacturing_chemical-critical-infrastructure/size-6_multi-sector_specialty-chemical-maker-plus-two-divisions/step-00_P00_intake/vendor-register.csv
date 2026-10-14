@@ -1,0 +1,27 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS/PaaS: corporate landing zone, SYS-G6, SYS-C9, SYS-D3, SYS-T1, ERP integration services, gateway broker hosts",SYS-G3; SYS-G6; SYS-C9; SYS-D3; SYS-T1,Formulation and historian data; customer business data; driver identifiers,Customer agreement,SOC 2 Type 2,EV-020; EV-029,Group
+V-02,Cloud provider B,Disaster recovery replicas; immutable backup vault,SYS-G3,Backups of all cloud workloads and plant configuration copies,Customer agreement,SOC 2 Type 2,EV-020; EV-024; EV-029,Group
+V-03,Identity SaaS vendor,"SSO, MFA, PAM and identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-012; EV-029,Group
+V-04,SIEM and EDR vendors,"Security monitoring, endpoint protection and the SOC triage assistant feature",SYS-G2; AI-009,Security logs,Subscription terms,Not among the reports on file,EV-016; EV-018; EV-030,Group
+V-05,ERP and HR and payroll SaaS vendors,ERP services; HR and payroll,SYS-G4,Employee PII; shipping paper data,"Subscription terms (3 of 6 HR, payroll and driver records SaaS contracts have no express breach notice term)",Not among the reports on file,EV-028,Group
+V-06,Productivity suite vendor,"Email, files, chat",SYS-G5,Employee PII (incidental),Subscription terms,Not among the reports on file,EV-028,Group
+V-07,SDS authoring SaaS vendor,SDS authoring and the SDS authoring assistant,SYS-G7; AI-004,Product hazard data,Subscription terms,Not among the reports on file,EV-030; EV-034,Group
+V-08,DCS vendor,DCS and batch system support; software updates; incident response service on retainer,SYS-C1; SYS-C2,Configuration; software updates,Support agreement with vulnerability notification; response retainer,Supplier security assessment,EV-017; EV-028; EV-055; EV-064,Specialty Chemicals
+V-09,SIS vendor,SIS field service,SYS-C3,Safety logic (on site only),Support agreement,Supplier security assessment,EV-028,Specialty Chemicals
+V-10,Integrators and OEMs (14),Remote and on-site engineering through the OT remote access gateway,SYS-G1 gateway; SYS-C1 to SYS-C6; SYS-D1,Configuration; control logic; diagnostics,Service agreements; 6 of 14 have no security clauses or incident notice terms,Security assessments for 6 of 14,EV-015; EV-028,3 teams support Plant C1; 1 of their 3 agreements has no security clauses (EV-064)
+V-11,LIMS vendor,Laboratory information management,SYS-C7,Lab results; certificates of analysis,Subscription terms,SOC 2 Type 2,EV-029; EV-067,Specialty Chemicals
+V-12,Condition-monitoring platform vendor,Predictive maintenance,AI-002,Vibration and temperature data,Subscription terms,Not among the reports on file,EV-030,Specialty Chemicals
+V-13,Model provider for the formulation assistant,Hosted large language model,AI-003,Formulations (Restricted-Formulation),Contract with no-training and limited retention terms,Not among the reports on file,EV-030,Specialty Chemicals
+V-14,Enterprise generative AI service vendor,Enterprise assistant pilot,AI-008,Internal documents,Commercial data protection terms,Not among the reports on file,EV-030,Group
+V-15,Telemetry gateway vendor,"Cellular tank gateways, configuration portal and firmware updates",SYS-D3,Tank readings; gateway configuration,Contract signed 2023,None on file; no review since 2023,EV-029; EV-078; EV-079,Distribution. Portal signs in with a password only
+V-16,Cellular carrier,Gateway connectivity through a private access point name,SYS-D3,Telemetry in transit (encrypted),Not reviewed at intake,Not among the reports on file,EV-078,Distribution
+V-17,Terminal T1 OT vendors (7),Terminal automation support,SYS-D1,Configuration; control logic,3 of 7 contracts include incident notice terms,Not among the reports on file,EV-074; EV-076,Distribution
+V-18,TMS vendor,Transportation management and route optimization module,SYS-T1; AI-006,Loads; routes; driver identifiers,Subscription terms,Not among the reports on file,EV-030; EV-081,Hazmat Transport
+V-19,"Telematics, ELD and camera AI vendor","Telematics, ELDs, cargo tank sensors, driver-facing cameras",SYS-T2; AI-007,Location; hours of service; in-cab video,Subscription terms,SOC 2 Type 2,EV-029; EV-083; EV-084,Hazmat Transport
+V-20,Driver records vendor,Driver qualification and drug and alcohol testing records,SYS-T3,Driver PII; testing results,Subscription terms,SOC 2 Type 2,EV-029; EV-085,Hazmat Transport
+V-21,Fleet maintenance records vendor,Maintenance and cargo tank inspection records,SYS-T4,Maintenance records,Subscription terms,Not among the reports on file,EV-081,Hazmat Transport
+V-22,Chlorine supplier,Chlorine by rail to Plant C1,n/a,None,Supply contract naming a second origin plant,n/a,EV-054,Specialty Chemicals
+V-23,Forensic firm with OT experience,Incident response retainer,n/a,Incident data when engaged,Retainer,n/a,EV-017; EV-038,Group
+V-24,Community notification service,Community warning for Plant C1 releases,n/a,Call lists,Not reviewed at intake,n/a,EV-053,Specialty Chemicals
+V-25,Cyber insurer,"Cyber insurance tower, breach hotline and panel firms",n/a,Incident facts when a claim is made,Policy in force for 2026,n/a,EV-038,Group
+V-26,Outside counsel,State breach notification table and privacy advice,n/a,Incident facts when engaged,Engagement,n/a,EV-040; EV-098,Group

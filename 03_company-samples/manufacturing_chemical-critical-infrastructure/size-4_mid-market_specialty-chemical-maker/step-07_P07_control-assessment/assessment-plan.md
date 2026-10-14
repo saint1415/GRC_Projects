@@ -59,10 +59,21 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for co
 - **Interview:** vCISO, Information Security Manager (CySO), OT Security Engineer, Controls Engineering Manager and 2 controls engineers, Process Safety Manager, Port Plant Manager, FSO, 4 Shift Supervisors, HR Director, the DCS integrator's lead engineer, the MSSP service lead, and 15 randomly chosen staff.
 - **Test (2026-08-19, Blend Hall 1 outage):** DCS role enforcement; SIS download attempt with the keyswitch in run; default credential test on 30 OT devices; reachability tests from the supervisory zone and the business network; a simulated port scan to test OT sensor detection and response; clearing a DCS audit trail on the training station; restore of one historian client image; hash check of the latest offline backup; MFA tests on all 41 privileged accounts.
 
+### What each test could show
+The 2026 policies (P06) and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-22 and take effect on 2026-10-01. The 2024 policies, the existing standards (STD-06, STD-08), the 2024 incident response plan, the emergency response plan, the FSP, and the MOC program were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, exports, or live systems during the outage | 197 |
+| Design | The requirement comes from a 2026 draft (the quarterly OT account review and the shared password change process in POL-02, the OT contingency plan, and the OT runbook in P08); its design was reviewed. Operation is tested at the 2027-04 follow-up | 4 |
+| Not implemented | Nothing existed to test | 59 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Populations were extracted in the assessors' presence from the systems inventoried at intake: terminations and transfers from the HR system (EV-004), DCS accounts from the DCS (EV-006), gateway accounts and sessions from the remote access gateway (EV-009), Port OT devices from the sensor inventory and the asset register (EV-012, EV-069), control system MOCs from the MOC log (EV-037), firewall rules from the firewall management console (EV-014), backup job days from the OT backup server (EV-021), training populations from the training platform and the contractor badge list (EV-030, EV-031), and OT workstations from the OT workstation inventory (EV-011).
+
 ## 4. Rules of engagement
 - **Safety first.** No active testing on running units. Active tests touched only Blend Hall 1 equipment that was down for the outage, the training station, and the OT DMZ. The Ammonia and Peroxide Units and the tank farm were tested passively only. Every test had a work permit, the Shift Supervisor's approval, and a controls engineer present, following SP 800-82 Rev. 3 cautions on testing OT.
 - **SSI and CVI.** Evidence containing SSI (FSP sections, network maps) was reviewed on site and not copied into workpapers; the assessors are covered persons under the FSP for this engagement.
-- **Stop-and-notify rule:** any critical exposure is reported to the OT Security Engineer and the CySO the same day. **Used once:** on 2026-08-19 the OT specialist logged in to the radar tank gauging server with the vendor default administrator password from the supervisory zone. The password was changed on 2026-08-20 and the company logged the finding as P01 R-011 and gap 15.
+- **Stop-and-notify rule:** any critical exposure is reported to the OT Security Engineer and the CySO the same day. **Used once:** on 2026-08-19 the OT specialist logged in to the radar tank gauging server with the vendor default administrator password from the supervisory zone. The password was changed on 2026-08-20 and the company logged the finding as P01 R-011 (EV-IA-5).
 
 ## 5. Results summary
 | Result | Determination statements |
@@ -112,7 +123,7 @@ Other than satisfied statements by risk: 53 High, 40 Moderate, 5 Low.
 | PS-4 | 4 | 1 | Moderate | POAM-002 |
 | SR-8 | 0 | 1 | High | POAM-012 |
 
-**Fully satisfied (4 controls):** AC-3 (DCS roles and the SIS keyswitch held under test), IA-2(1) (MFA on all 41 privileged accounts), IR-7, and RA-3. These confirm the strengths listed in the scenario facts.
+**Fully satisfied (4 controls):** AC-3 (DCS roles and the SIS keyswitch held under test), IA-2(1) (MFA on all 41 privileged accounts), IR-7, and RA-3. These match the intake records for those controls (EV-002, EV-006, EV-022, EV-036, EV-042, EV-045).
 
 **Fully other than satisfied (8 controls):** AC-6, AU-6, AU-9, CP-4, CP-10, IA-2, IR-6, and SR-8.
 
