@@ -7,9 +7,9 @@
 | Scope | The group AI governance program (group standard, the division use-case inventory, and the rules that apply to each division), with the focus use case **demand forecasting and predictive maintenance** (AI-001 and AI-002), plus the FMS asset-health analytics (AI-003) and the Grid Engineering design assistant (AI-006) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for AI-005, AI-006, and AI-008 |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 1 High, 7 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery and the model registry (EV-036), division records (EV-052, EV-056, EV-069, EV-076), the P8 walkthrough (EV-085), and the council's monitoring results (EV-118); the `source_evidence` column names the source of each entry. Not established: how many workforce users use public generative AI tools and what they paste (web proxy logs show access from plant networks, EV-037; intake open request) |
 
-**Why the registry default fits.** The registry use case for this vertical is "demand forecasting and predictive maintenance". At this size both are real and separate models (AI-001 and AI-002) that went live before the Group AI Standard (scenario gap 8), and the forecast now steers who gets scarce storm-restoration equipment, including the affiliated utility. That makes it the right focus.
+**Why the registry default fits.** The registry use case for this vertical is "demand forecasting and predictive maintenance". At this size both are real and separate models (AI-001 and AI-002) that went live before the Group AI Standard (group gap 8), and the forecast now steers who gets scarce storm-restoration equipment, including the affiliated utility. That makes it the right focus.
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure

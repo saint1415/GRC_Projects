@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed power and distribution transformer manufacturer, Florida) |
 | Tier / Vertical | Mid-Market / Critical Manufacturing |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. AI-001 demand forecasting and AI-002 predictive maintenance are the registry use cases for this vertical; AI-003 to AI-005 were found in this assessment |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the intake AI tool discovery (identity provider app list, accounts payable vendor master, applicant tracking system feature settings, the cloud ML service, the web filter policy and a department heads survey; EV-049) and the vendor records (EV-039, EV-040). AI-001 demand forecasting and AI-002 predictive maintenance are the registry use cases for this vertical; AI-003 to AI-005 were added from the intake discovery. How many staff use personal public generative AI accounts, and what they enter, was not established at intake (open request); P01 R-014 covers that use |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for AI-004 |
 | Assessors / date | vCISO (chair), Security Manager, Director of Digital Services, General Counsel, HR Director, and the Maintenance Manager, 2026-08-24 to 2026-09-04 |
 | Decision | Chief Operating Officer, 2026-09-15; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-Three of the five AI uses started without any security, legal, or risk review (gap 11): the AI-002 pilot, the AI-005 match score that HR turned on in an existing system, and staff use of personal generative AI accounts, which AI-004 is meant to replace. None of the tools controls plant equipment. Two need firm conditions:
+Three of the five AI uses started without any security, legal, or risk review (EV-049): the AI-002 pilot, the AI-005 match score that HR turned on in an existing system, and staff use of personal generative AI accounts, which AI-004 is meant to replace. None of the tools controls plant equipment. Two need firm conditions:
 - **AI-003, FMS condition analytics,** is the company's own model, and utilities act on its advisories. It misses more faults on transformers made by other manufacturers and on units older than 25 years, and the advisories do not say so.
 - **AI-005, the applicant match score,** shows an adverse impact indicator for Hispanic applicants (selection-rate ratio 0.74, below the four-fifths ratio in 29 CFR 1607.4(D)). It was switched off on 2026-09-15.
 

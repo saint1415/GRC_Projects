@@ -9,7 +9,7 @@
 | Review cycle | Each standard is reviewed at least annually by its owner |
 
 ## 1. Why this index exists
-The 2024 policies stated intent, but there were few measurable rules for configuration, logging, OT, suppliers, or the software the company builds (gap 12 in `../00_company-facts.md`; P03 G-018; P01 R-022 and R-045). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. At mid-market size the standards also carry the plant-specific detail that does not belong in a policy, so Plant 1 practice can be applied to Plant 2.
+The 2024 policies stated intent, but there were few measurable rules for configuration, logging, OT, suppliers, or the software the company builds (intake policy and standards library review, EV-024; P03 G-018; P01 R-022 and R-045). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures and runbooks sit under the standards and are owned by the teams that run them. At mid-market size the standards also carry the plant-specific detail that does not belong in a policy, so Plant 1 practice can be applied to Plant 2.
 
 ## 2. How standards work
 - **Hierarchy:** policy (POL) to standard (STD) to procedure or runbook. A standard may not weaken its parent policy.

@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company (owner-operated industrial equipment repair service) | **Tier:** Sole Proprietorship (owner-technician only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-technician, 2026-08-24, with the on-call IT consultant (under NDA since 2026-08-20) | **Adopted:** Owner-technician, 2026-09-11
 
+**Sources:** the owner's BIA worksheet, reviewed with the IT consultant on 2026-08-24 (EV-034), the 2025 Schedule C (EV-026), the receipts by customer and job type (EV-027), the library folder and file storage settings (EV-002, EV-003), and the Customer A exhibit and NDAs (EV-014, EV-016). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's statements, reviewed with the IT consultant and approved by the owner-technician.
+
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the business depends on, how long each can be down, and how much data it can lose. It supports:
 - the availability rating in the system profile (P02);
@@ -13,10 +15,10 @@ This one-page BIA lists the five business functions the business depends on, how
 No regulation requires this business to have a BIA. Customer A's exhibit (S4) requires the owner to coordinate incident response with Customer A, which is not possible without knowing what can be restored and how fast.
 
 ## 2. Business description
-One technician repairs and maintains the electrical controls of production machinery for about 10 business customers in Florida. Three of them build grid equipment: Customer A (distribution transformers), Customer B (power transformers), and Customer C (switchgear). The owner also works at utility substations as Customer A's subcontractor. Everything runs on one service laptop, one phone, a field kit, a business email and file plan, and an accounting SaaS. The most valuable thing the business holds is the **Customer Machine Library**: the control programs for about 70 customer machines. See `../00_company-facts.md` sections 1 to 3.
+One technician repairs and maintains the electrical controls of production machinery for about 10 business customers in Florida. Three of them build grid equipment: Customer A (distribution transformers), Customer B (power transformers), and Customer C (switchgear). The owner also works at utility substations as Customer A's subcontractor. Everything runs on one service laptop, one phone, a field kit, a business email and file plan, and an accounting SaaS. The most valuable thing the business holds is the **Customer Machine Library**: the control programs for about 70 customer machines. See `../00_company-facts.md` sections 1 to 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual receipts, or about $800 per working day.
+Dollar values are scaled to about $180,000 in annual receipts (EV-026), or about $800 per working day, with about $3,500 invoiced per week (EV-027).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -35,9 +37,9 @@ Dollar values are scaled to about $180,000 in annual receipts, or about $800 per
 | BP-04 Quoting, invoicing, and administration | Moderate | 120 h | 72 h | 24 h |
 | BP-05 Scheduled preventive maintenance and vibration monitoring | Low | 168 h | 120 h | 168 h |
 
-**What drives the values:** customers' production lines drive BP-01 and BP-02. When a Customer A winding machine loses its program, the line that builds distribution transformers for utilities is down until the owner reloads the right version, so the owner must have a working laptop with the engineering software and a clean library copy within 4 hours. Safety also drives BP-02: loading a wrong or altered program into a drying oven or winding machine can damage the equipment or a transformer coil and endanger operators. BP-03 is scheduled around utility outage windows, so a day of delay is recoverable, but its contract duties are strict (exhibit S4 to S6). **The 4-hour RTO for BP-02 is not supported today:** the library exists only on the laptop and its synced cloud copy, a restore has never been tried, and ransomware would sync encrypted files to the cloud (P01 R-001).
+**What drives the values:** customers' production lines drive BP-01 and BP-02. When a Customer A winding machine loses its program, the line that builds distribution transformers for utilities is down until the owner reloads the right version, so the owner must have a working laptop with the engineering software and a clean library copy within 4 hours. Safety also drives BP-02: loading a wrong or altered program into a drying oven or winding machine can damage the equipment or a transformer coil and endanger operators. BP-03 is scheduled around utility outage windows, so a day of delay is recoverable, but its contract duties are strict (exhibit S4 to S6). **The 4-hour RTO for BP-02 is not supported today:** the library exists only on the laptop and its synced cloud copy, a restore has never been tried (EV-002, EV-006), and ransomware would sync encrypted files to the cloud (P01 R-001).
 
-**Single-person dependency (the key finding).** The owner is the only technician, the only person who knows the customers' machines, and the only person who can open the Customer Machine Library, the email account, and the accounting SaaS. The MFA codes are on the owner's one phone. If the owner is ill, injured, or without the phone, every function above exceeds its MTD at once, and customers cannot get their own programs back. Actions (P01 R-008, due 2026-12-31):
+**Single-person dependency (the key finding).** The owner is the only technician, the only person who knows the customers' machines, and the only person who can open the Customer Machine Library, the email account, and the accounting SaaS. The MFA codes are on the owner's one phone (EV-001). If the owner is ill, injured, or without the phone, every function above exceeds its MTD at once, and customers cannot get their own programs back. Actions (P01 R-008, due 2026-12-31):
 1. After each visit, give the customer an encrypted copy of its own current programs. The customers own those programs, and a customer-held copy is the fastest recovery path for everyone.
 2. Sign a written referral arrangement with another independent controls technician for breakdown calls when the owner is unavailable.
 3. Keep the email and accounting recovery codes and a one-page emergency access sheet in a sealed envelope held by the owner's attorney.

@@ -40,6 +40,17 @@ Small tier scope: 15 to 25 controls. **22 controls, 164 determination statements
   - a login check on each OEM router with the Controls Engineer;
   - a default-credential check on the web configuration pages of plant HMIs.
 
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-09-04. A control that a draft document introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples, live systems, or plant equipment | 93 |
+| Design | The control comes from a draft document (POL-03 and the P08 runbook, or SSP draft 0.1); its design was reviewed. Operation is tested at the 2027-03 follow-up | 4 |
+| Not implemented | Nothing existed to test | 67 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 10 sampled terminations come from the 19 production terminations in EV-003 and EV-004).
+
 ## 3. Rules of engagement
 - **Safety first.** All plant tests ran on 2026-08-15 in the Saturday maintenance window, with the Plant Manager's written approval and the Controls Engineer present. The drying ovens were cold and the oil fill station was shut down during the HMI checks.
 - **No active scanning of plant equipment.** Plant tests were limited to reachability checks from one workstation, configuration reviews, and manual credential checks on web pages the OEMs confirmed were safe to access. No setting was changed.

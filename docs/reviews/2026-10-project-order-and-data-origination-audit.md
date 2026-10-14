@@ -313,3 +313,22 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market specialty chemical maker):** Pass 1 risks R-001, R-015, R-017, R-025, R-040 and R-043 state P07 or September facts; P07 AT-2 and IR-8 cite documents dated after the window.
 - **Size 5 (enterprise specialty chemical maker):** the facts calendar puts policy approval on 2026-09-08 while the policies say 2026-09-10; P07 PL-2 examined SSP v2.0 dated after the window; the SSP counts 2 integrators supporting PLT-01 while G-040 and P07 SA-9 count 9 OT suppliers.
 - **Size 6 (specialty chemical maker plus two divisions):** SC-013 says recipe data has no query logging while P04 AU-12 cites query logs; SSP AC-5 says one engineer makes and approves hub recipe changes while SC-008 records two-person approval; SSP AC-2(1) cites "12 of 12" monthly reconciliations in 2026 for an SSP approved 2026-09-17; P04 says portal customers sign in with MFA while DS-008 says MFA is optional.
+
+### Critical manufacturing, 2026-10-14
+
+Six samples, 617 evidence rows in all. Agent cost: about 2.7 million tokens; the longest sample took 32 minutes.
+
+Fixes made during this batch:
+- **Agent brief:** intake rows may record only what the sample shows existed at intake, and a Pass 1 risk re-rated after P07 testing is marked as re-rated with a matching last_reviewed date.
+- **Size 2 (transformer repair shop):** intake row EV-029 no longer gives the test PC's antivirus definition date, which only P07 established; P02 AC-11 now cites EV-029 for the test PC that never locks.
+- **Size 5 (enterprise power transformer maker):** R-027, R-028 and R-032 are marked as re-rated on 2026-08-28 after P07 testing.
+- **Size 6 (power transformer maker plus two divisions):** trailing-hyphen P07 IDs (EV-C-AC2-3, EV-C-AC6-5, EV-C-IA2-1, EV-E-SI4-4, EV-M-IR6-3, EV-U-SI4-4) renamed to the parenthesis form.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes the facts header or P08) cites regulatory status checks dated after approval.
+- **Size 1 (industrial equipment repair technician):** the risk register (2026-08-28) cites the router power-off of 2026-09-03; P04, prepared 2026-08-25, cites the P07 tests of 2026-08-26 and 2026-08-27.
+- **Size 2 (transformer repair shop):** P03 G-018 (July) already records the MSP firewall login without MFA that the P07 plan calls a new finding; G-033 says nobody knew the 72-hour notice while G-057 says the Owner had read the exhibit; the BIA cites the P09 review of 2026-08-20.
+- **Size 3 (small power transformer maker):** R-008 (Pass 1, 2026-07-24) cites a follow-up sent 2026-08-03; P03 rows G-003 to G-010 and G-016 cite later approvals or reviews; G-064 says 140 office users while the workforce has 78 non-production employees.
+- **Size 4 (mid-market power transformer maker):** P02 PE-6 says cameras cover both server room doors while P03 G-076 says the Plant 2 door has none; P03 G-065 and P02 AC-11 and AU-8 cite P07 tests that P07 never ran; R-037 says the HR SaaS contract has no notice term while P09 records a 72-hour term.
+- **Size 5 (enterprise power transformer maker):** the 2026-03 tabletop is dated 03-19 in the BIA and SSP but 03-24 in the facts and P08; R-044 and R-047 give dates that disagree with P10; P07 counts 12 EPSP servers while the SSP inventory lists 6 ERP, 2 integration and 12 MES servers.
+- **Size 6 (power transformer maker plus two divisions):** P03 G-035 and G-073 cite P07 results for AC-5 and an 8-role AC-3 test that P07 never ran; MF-013 says AI-002 was trained on 18 months of data while P10 says 3 years; the P10 inventory calls the AI-001 allocation rule written while the assessment says it is due 2026-12-31.

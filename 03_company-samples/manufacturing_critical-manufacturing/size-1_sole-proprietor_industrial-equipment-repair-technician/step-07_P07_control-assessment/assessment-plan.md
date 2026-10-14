@@ -33,6 +33,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 51 determination statem
   - 2026-08-27 (Customer B, with its maintenance supervisor present): router local admin page and portal session settings. The factory default password was accepted and was changed on the spot.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT consultant challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork (EV-021). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-09-11, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested or examined on the live accounts, devices, router, field kit and supplier records | 33 |
+| Design | The control is new and only its design was reviewed. Not used here: each control tested either existed before the assessment or did not exist | 0 |
+| Not implemented | Nothing existed to test | 18 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-17 and so on), with the population each test covered: the administrator accounts in the suite, the accounting SaaS and the router portal (EV-001, EV-005, EV-012), the laptop and its virtual machine (EV-006, EV-007), the 8 USB sticks (EV-009), the 4 firmware loads of 2026 (EV-019), and the 4 SaaS suppliers (EV-001, EV-005, EV-012, EV-029). Controls that POL-01 introduces are tested for operation at the 2027-03 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No test touched a customer controller, plant network, or substation system. At Customer B only the owner's router was examined, with the maintenance supervisor present; the oven PLC and HMI were not accessed.
 - No customer program or password was copied off the devices; screenshots were cropped to settings only.
@@ -50,7 +61,7 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 51 determination statem
 **Partly satisfied:** CP-9 (1 of 6), MP-7 (1 of 2), SI-7 (2 of 6), SC-7 (1 of 6), IA-5 (5 of 10), SA-9 (2 of 6).
 
 **Findings found or confirmed by test:**
-- The router at Customer B accepted its **factory default local admin password** (AC-17a.[02], IA-05e.). Changed on 2026-08-27. With Customer B's agreement, the router has been powered off since 2026-09-03 except for sessions Customer B approves by phone.
+- The router at Customer B accepted its **factory default local admin password** (AC-17a.[02], IA-05e.). Changed on 2026-08-27. With Customer B's agreement, the router has been powered off since 2026-09-03 except for sessions Customer B approves by phone (EV-038).
 - A full restore of the library from version history is **not workable**: restore went one file at a time (CP-09d.[03]), so the 4-hour RTO in P05 cannot be met today.
 - The legacy virtual machine **reached the home network and the internet** through its bridged adapter (SC-07a.[04]).
 - The antivirus **detected and quarantined** the test file (SI-03a.[02]).

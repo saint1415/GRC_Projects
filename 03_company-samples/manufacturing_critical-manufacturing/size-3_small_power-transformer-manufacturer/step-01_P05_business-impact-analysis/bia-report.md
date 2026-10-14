@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (power and distribution transformer manufacturer, Florida) | **Tier:** Small (200 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager and Controls Engineer with the process owners, 2026-07-13 to 2026-07-22 | **Approved:** VP Operations, 2026-09-04
+**Sources:** process owner interviews 2026-07-13 to 2026-07-22 (EV-054), FY2025 revenue report (EV-047), APS backlog and storm-slot report (EV-048), backup job reports (EV-019, EV-020), the OT program copies (EV-021). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the VP Operations.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data each can lose. It covers all 10 business processes, office and plant floor. It feeds:
@@ -16,10 +17,10 @@ No law requires this company to have a contingency plan. The BIA supports the CS
 ## 2. System and business description
 The company builds liquid-filled distribution and power transformers for 38 Southeast utilities and one federal site, on one Florida campus with two production shifts. Revenue is $84 million a year, about $336,000 of shipments per production day. Utilities place emergency storm-restoration orders each hurricane season, and the company reserves production slots for them.
 
-Work flows from the ERP and APS (SYS-01) through the integration service (SYS-03) to the MES and shop-floor kiosks (SYS-05), then to the plant control systems (SYS-06) and the high-voltage test bay (SYS-07). Designs live in the PLM vault (SYS-04). See `../00_company-facts.md` sections 3 and 4 and the SSP (P02).
+Work flows from the ERP and APS (SYS-01) through the integration service (SYS-03) to the MES and shop-floor kiosks (SYS-05), then to the plant control systems (SYS-06) and the high-voltage test bay (SYS-07). Designs live in the PLM vault (SYS-04). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the SSP (P02).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $84 million in annual revenue (about $336,000 per production day).
+Dollar values are scaled to $84 million in annual revenue across 250 production days, about $336,000 per production day (EV-047).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

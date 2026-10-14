@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06). The Electric Utility's CIP-008-6 plan governs its own determinations and reports |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel; reliability reports owned by the Electric Utility NERC compliance director |
 | Approved | 2026-09-15 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The multi-party notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-005) |
+| Last tested | Technical playbooks tested quarterly. **The multi-party notification matrix has not been exercised** (group gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-005) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative. It is set in September, during hurricane season.

@@ -11,7 +11,7 @@
 | Approved | 2026-09-11 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the FSBS (SYS-01 to SYS-06, SYS-08, SYS-09), the old laptop, paper in the home office, the service van, and the contracted services (IT consultant, bookkeeper). Processes and impact levels come from the BIA (P05). Harm to customers counts as harm to the business: a stopped customer line, a damaged machine, or a broken contract term can end the customer relationship, and Customer A alone is 45% of receipts.
+**Scope.** The whole business as one system: the FSBS (SYS-01 to SYS-06, SYS-08, SYS-09), the old laptop, paper in the home office, the service van, and the contracted services (IT consultant, bookkeeper), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact levels come from the BIA (P05). Harm to customers counts as harm to the business: a stopped customer line, a damaged machine, or a broken contract term can end the customer relationship, and Customer A alone is 45% of receipts.
 
 **Risk tolerance.** The owner-technician owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules (POL-01 section 4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -19,8 +19,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as they are. Any risk that could affect safety at a customer plant, or that breaks a customer contract term, is never accepted at High.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the contract terms (P03), and a walkthrough of the laptop, phone, field kit, SaaS accounts, and the router at Customer B with the IT consultant (2026-08-26 and 2026-08-27).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the contract terms (EV-014, EV-016), and a walkthrough of the laptop, phone, field kit, SaaS accounts, and the router at Customer B with the IT consultant on 2026-08-26 and 2026-08-27 (EV-035). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and network reviews (EV-001, EV-004 to EV-012), the field records (EV-018 to EV-020), the document search (EV-021), the AI trial records (EV-029, EV-030), and the owner's self-review (EV-036). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (cost, operations, contract, safety, reputation).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -41,6 +41,8 @@
 | R-004 | Unverified firmware loaded on utility substation cabinets | Moderate | Hash check before every load (exhibit S5) | Owner-technician | 2026-09-30 |
 | R-007 | Customer A data in the AI trial without consent | Moderate | Stop uploads; consent under a no-training addendum, or deletion (P10) | Owner-technician | 2026-09-30 |
 | R-008 | Owner unavailable or phone lost (single point of failure) | Moderate | Customer-held copies; referral arrangement; sealed recovery codes | Owner-technician | 2026-12-31 |
+
+**One pass.** The register was completed on 2026-08-28 from intake and self-assessment evidence. The control tests ran on 2026-08-26 and 2026-08-27, inside the same week, so this pass already reflects them: R-003 cites the router test (EV-AC-17). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks share one cause: **the laptop and USB sticks that carry customers' programs are treated like ordinary office equipment.** One administrator account does email, web, and PLC programming; sticks go from plant to plant unscanned; the only copy of the library besides the laptop is a synced folder that ransomware would overwrite; and a router the owner installed for convenience is a door into a customer's oven. None of these needs much money to fix. Most need a habit change, written down in POL-01 section 7 and checked in P07.
 

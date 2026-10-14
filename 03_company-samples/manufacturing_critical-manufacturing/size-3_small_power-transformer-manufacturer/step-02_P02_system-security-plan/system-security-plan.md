@@ -20,7 +20,7 @@ The EPSP runs the company's order-to-shipment flow for distribution and power tr
 The cloud tenant is described by service category and is vendor-agnostic (see P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
-No federal or state law regulates the security of this system directly. Its obligations come from contracts, plus one narrow records rule. Applicability is analyzed in P03 section 1.
+No federal or state law regulates the security of this system directly. Its obligations come from contracts, plus one narrow records rule. Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv) and is analyzed in P03 section 1.
 
 | ID | Requirement | Citation | Relevance to the EPSP |
 |---|---|---|---|
@@ -80,6 +80,7 @@ Availability was held at Moderate, not High. A 2-day outage would be serious, wi
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains:
 - **Inside:** the ERP and APS virtual machines, managed database, and backups in the cloud tenant; the integration service VM; the identity provider tenant and the 2 directory servers that feed it; the MES server and its database; the 25 kiosks; about 45 planning, purchasing, sales, quality, and finance endpoints; the internet-edge firewall, the IT/OT firewall, and the site-to-site VPN.
 - **Outside (interconnected systems):** the PLM vault (SYS-04), plant control systems (SYS-06), test bay (SYS-07), historian (SYS-08), EDI network provider (SYS-10), productivity suite (SYS-11), AI services (SYS-14), and the cloud provider's infrastructure.
 - **Boundary weakness:** the MES server has a network interface on the plant network as well as the office network. Until POAM-001 closes, the plant network is reachable through a component inside this boundary.
@@ -134,7 +135,7 @@ Authentication assurance levels (AAL) follow the definitions in NIST SP 800-63B.
   - revisiting badge-tap MFA when the MES is rebuilt in the OT DMZ.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); risk register (P01); gap analysis (P03); cloud control map and diagram (P04); BIA (P05); policies POL-01 to POL-05 (P06); assessment and POA&M (P07); ransomware runbook and notification matrix (P08); security self-benchmark and MSP SOC 2 review (P09); AI risk assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); risk register (P01); gap analysis (P03); cloud control map and diagram (P04); BIA (P05); policies POL-01 to POL-05 (P06); assessment and POA&M (P07); ransomware runbook and notification matrix (P08); security self-benchmark and MSP SOC 2 review (P09); AI risk assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **APS:** advanced planning and scheduling

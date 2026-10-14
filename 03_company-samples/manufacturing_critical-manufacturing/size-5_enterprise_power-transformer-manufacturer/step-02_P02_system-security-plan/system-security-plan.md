@@ -19,7 +19,7 @@ The EPSP runs the order-to-delivery chain for plants P1 to P6. It takes utility 
 - MES application servers (2 per plant) in the OT DMZ at each of P1 to P6, and about 1,100 shop-floor kiosks and scanners
 - About 180 planning, purchasing, quality, and finance endpoints used mainly for EPSP work
 
-Users: about 5,600 workforce ERP users (including about 140 AQ-01 staff who use the enterprise ERP for customer orders and purchasing), about 420 supplier portal users, and about 3,800 MES users (badge and PIN) at P1 to P6.
+Users: about 5,600 workforce ERP users (including about 140 AQ-01 staff who use the enterprise ERP for customer orders and purchasing), about 420 supplier portal users, and about 3,800 MES users (badge and PIN) at P1 to P6 (EV-007, EV-008, EV-009).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation | How it affects the EPSP |
@@ -75,6 +75,8 @@ Information types follow NIST SP 800-60 Vol. 2 Rev. 1 where a matching type exis
 **Documented controls.** `control-implementation.csv` documents **151 controls**: 143 from the Moderate baseline and 8 High-baseline supplements. The remaining Moderate-baseline enhancements are fully inherited from the enterprise common control catalog (section 10.3) and are listed there rather than repeated here. Privacy-baseline controls are covered by the enterprise privacy program.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-01-INT, SYS-01-SUP and SYS-05) and the prior SSP version 1.1 (EV-029).
+
 **Inside the boundary:** the ERP application servers, APS engine, and database in the EPSP workload accounts (Cloud provider A); the integration platform interfaces that serve the EPSP; the supplier collaboration portal; the MES application servers in the OT DMZs at P1 to P6 and their kiosks and scanners; and the EPSP-focused endpoints.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -190,7 +192,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Supplier users:** identity is vouched for by each supplier's administrator under the supplier agreement. MFA is required by policy; enforcement for all accounts is due with POAM-002 by 2026-12-31. Shared supplier logins are prohibited.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness (P09), AI portfolio including AI-001 demand forecasting, which reads a nightly ERP extract (P10), EPSP contingency plan v5, SOX IT general controls workpapers, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness (P09), AI portfolio including AI-001 demand forecasting, which reads a nightly ERP extract (P10), EPSP contingency plan v5 (EV-029), SOX IT general controls workpapers (EV-037), enterprise common control catalog (EV-042). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **APS:** advanced planning and scheduling (finite-capacity scheduling module of the ERP)

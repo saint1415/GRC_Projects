@@ -7,7 +7,7 @@
 | AI use cases | AI-001: demand forecasting (in production since 2025-11). AI-002: predictive maintenance pilot (since 2026-04). AI-003 (public generative AI tools) is covered in section 7 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; NIST AI 600-1 for AI-003 only |
 | Assessor / date | IT Manager with the Production Planning Manager, Maintenance Manager, and Controls Engineer; completed 2026-08-26 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the cloud tenant export, the accounts payable list, the purchase and connector records, the web filter report and engineer interviews (EV-018, EV-038, EV-039, EV-040, EV-056). How many staff use public generative AI tools, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owners:**
@@ -21,7 +21,7 @@
   - POL-01 4.7: AI service vendors are Tier 1 suppliers and need security terms and an annual review.
   - POL-02 4.8: supplier connections into the plant go through the company remote access gateway.
 - **Scale for a Small company:** there is no AI committee. The owners above and the IT Manager review AI use cases quarterly with the security review (POL-01 roles). A new AI use case, a new data source, or a new connection to the plant needs a short assessment like this one before go-live.
-- **What went wrong before this assessment:** both AI-001 and AI-002 went live without a risk review, and the AI-002 connector opened a new outbound internet path from the plant historian (scenario-facts gap 14; P01 R-023).
+- **What went wrong before this assessment:** both AI-001 and AI-002 went live without a risk review, and the AI-002 connector opened a new outbound internet path from the plant historian (EV-039; P01 R-023).
 
 ## 2. MAP
 ### 2.1 AI-001 Demand forecasting

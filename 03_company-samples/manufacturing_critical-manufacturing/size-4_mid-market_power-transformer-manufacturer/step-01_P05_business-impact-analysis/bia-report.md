@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed power and distribution transformer manufacturer, Florida) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and the OT Security Engineer with the vCISO, the process owners named in `bia.csv`, and both Plant Managers | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-15 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-052), FY2025 revenue report by business line (EV-047), Q2 2026 operating volume report (EV-048), utility supply agreements and addenda (EV-032), FMS subscription agreements (EV-033), federal contracts (EV-034), backup configuration and job reports (EV-019), Plant 2 controller program copies (EV-021) and the Plant 1 OT DMZ procedures (EV-014). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Plant 1 (distribution transformers), Plant 2 (power transformers), engineering, supply chain, field service, Digital Services (the Fleet Monitoring Service, FMS), sales, and corporate functions. It rates 18 business processes and puts a dollar value on what an outage costs, along with its operational, contractual, regulatory, and safety effects.
@@ -16,10 +17,10 @@ No law requires this company to have a contingency plan. The BIA supports:
 - delivery commitments in utility supply agreements, the storm-restoration slot program, and the three federal contracts.
 
 ## 2. System and business description
-The company builds liquid-filled transformers for about 120 utilities and three federal sites, on two Florida campuses with two production shifts each. Revenue is about $360 million a year over about 250 production days. Work flows from the ERP and APS (SYS-01) through the integration platform (SYS-03) to the MES at each plant (SYS-05), then to the plant control systems (SYS-06) and test systems (SYS-07). Designs live in the PLM vault (SYS-04). The FMS (SYS-13) runs in its own cloud account. Plant 2 was acquired in 2024 and is not yet integrated: its OT network is flat and its MES is dual-homed (see `../00_company-facts.md` sections 3, 4, and 7, and the SSP in P02).
+The company builds liquid-filled transformers for about 120 utilities and three federal sites, on two Florida campuses with two production shifts each. Revenue is about $360 million a year over about 250 production days. Work flows from the ERP and APS (SYS-01) through the integration platform (SYS-03) to the MES at each plant (SYS-05), then to the plant control systems (SYS-06) and test systems (SYS-07). Designs live in the PLM vault (SYS-04). The FMS (SYS-13) runs in its own cloud account. Plant 2 was acquired in 2024 and is not yet integrated: its OT network is flat and its MES is dual-homed (see the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), EV-012 and EV-013, and the SSP in P02).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $360 million of annual revenue: about $836,000 of Plant 1 shipments and $520,000 of Plant 2 shipments per production day, about $68,000 of field service and repair, and about $16,000 of FMS subscription revenue.
+Dollar values are scaled to about $360 million of annual revenue (FY2025 revenue report, EV-047): about $836,000 of Plant 1 shipments and $520,000 of Plant 2 shipments per production day, about $68,000 of field service and repair, and about $16,000 of FMS subscription revenue.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -29,7 +30,7 @@ Dollar values are scaled to about $360 million of annual revenue: about $836,000
 | Safety | Plausible worker injury (heat, vacuum, hot oil, high voltage) or an unsafe product or advisory reaching a utility | Safety control degraded, manual safeguards in use | None |
 | Reputation | A utility suspends a supply agreement or FMS subscription, or regional media coverage during storm response | Customer complaints or a supplier scorecard downgrade | Internal only |
 
-**How loss at MTD was estimated.** The company is capacity-constrained with a long backlog, so most lost production is deferred rather than lost. Estimated loss is the part that is not recovered in the fiscal year plus extra labor, restart costs, and penalties, over the MTD. The process owners estimated that about 30% of lost Plant 1 output and 20% of lost Plant 2 output is not recovered, because both plants already run overtime. Delayed shipments and invoicing are shown separately.
+**How loss at MTD was estimated.** The company is capacity-constrained with a long backlog, so most lost production is deferred rather than lost. Estimated loss is the part that is not recovered in the fiscal year plus extra labor, restart costs, and penalties, over the MTD. The process owners estimated (EV-052) that about 30% of lost Plant 1 output and 20% of lost Plant 2 output is not recovered, because both plants already run overtime. Delayed shipments and invoicing are shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -65,11 +66,11 @@ Dollar values are scaled to about $360 million of annual revenue: about $836,000
 - **Work-in-process buffers set the production MTDs.** The MES holds about 2 shifts of released work (BP-01, 48 hours). Plant 1 has about 1 day of cut cores and coils ahead of assembly (BP-02, 48 hours); Plant 2 has about 2 days (BP-05, 72 hours).
 
 ## 5. Key findings
-1. **Plant 2 cannot meet its RPO or RTO today.** BP-05 and BP-06 assume a 24-hour RPO for PLC programs and recipes, but Plant 2 programs exist only as hand copies on the Plant 2 Controls Lead's laptop, and no OT restore has ever been tested (gap 4; P01 R-006). Plant 1 has nightly automated OT backups, but they have not been restore-tested either.
-2. **The ERP RTO of 24 hours is a target, not a demonstrated capability.** Immutable copies sit in the separate backup account, which is the strongest recovery control in the company, but only a file-level restore has been tested (2025). A full rebuild of the ERP account from the backup account has never been exercised (P01 R-002; P07 CP-4).
-3. **The Plant 2 MES is a single point of failure that bridges office and plant.** It serves BP-01, BP-05, and BP-07 and is dual-homed, so an office incident at Plant 2 can take the plant down with it (gap 1; P01 R-001).
-4. **The FMS availability commitment has no tested recovery behind it.** BP-14 needs an 8-hour RTO and 1-hour RPO. Daily backups to the backup account support neither, and the FMS has no recovery runbook (gap 9; P01 R-024; P09 A1.2 and A1.3).
-5. **There are no written OT manual-operation procedures at Plant 2.** The workarounds for BP-05 to BP-07 were described by the process owners but are not documented or exercised. Plant 1 wrote its procedures with the 2025 OT DMZ project.
+1. **Plant 2 cannot meet its RPO or RTO today.** BP-05 and BP-06 assume a 24-hour RPO for PLC programs and recipes, but Plant 2 programs exist only as hand copies on the Plant 2 Controls Lead's laptop, and no OT restore has ever been tested (EV-021, EV-020; P01 R-006). Plant 1 has nightly automated OT backups, but they have not been restore-tested either.
+2. **The ERP RTO of 24 hours is a target, not a demonstrated capability.** Immutable copies sit in the separate backup account, which is the strongest recovery control in the company, but only a file-level restore has been tested (2025; EV-020). A full rebuild of the ERP account from the backup account has never been exercised (P01 R-002; P07 CP-4).
+3. **The Plant 2 MES is a single point of failure that bridges office and plant.** It serves BP-01, BP-05, and BP-07 and is dual-homed, so an office incident at Plant 2 can take the plant down with it (EV-012; P01 R-001).
+4. **The FMS availability commitment has no tested recovery behind it.** BP-14 needs an 8-hour RTO and 1-hour RPO. Daily backups to the backup account support neither, and the FMS has no recovery runbook (EV-023; P01 R-024; P09 A1.2 and A1.3).
+5. **There are no written OT manual-operation procedures at Plant 2.** The workarounds for BP-05 to BP-07 were described by the process owners but are not documented or exercised. Plant 1 wrote its procedures with the 2025 OT DMZ project (EV-014).
 
 ## 6. Resource requirements
 | Resource | Description | Supports |

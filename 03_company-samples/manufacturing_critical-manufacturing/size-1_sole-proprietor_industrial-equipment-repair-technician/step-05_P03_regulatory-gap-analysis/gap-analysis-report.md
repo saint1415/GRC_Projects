@@ -9,11 +9,11 @@
 | Also checked | NERC CIP-013-2 direct applicability; the four vertical requirements C-CRITICAL-MFG-R01 to R04; FAR 52.204-21, -23, -25 |
 | Sources read | CIRCIA NPRM regulatory text (89 FR 23644, proposed 6 CFR 226.2); CIP-013-2 and CIP-013-3 standard PDFs from NERC; FERC Order No. 919 (FR Doc. 2026-05716, via govinfo); 13 CFR 121.201 (eCFR version 2026-09-23); the SP 800-82 Rev. 3 PDF |
 | Assessment dates | 2026-08-24 to 2026-08-28 (self-assessment) |
-| Assessor | Owner-technician, with the on-call IT consultant (under NDA since 2026-08-20). Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner-technician, with the on-call IT consultant (under NDA since 2026-08-20). Evidence is the intake record and the owner's self-review (EV-036), checked on screen where possible |
 | Adopted | 2026-09-11 |
 
 ## 1. Applicability
-The most useful finding for a one-person business is what does **not** bind it, and what binds it anyway through a customer.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for each rule and contract term analyzed here. The most useful finding for a one-person business is what does **not** bind it, and what binds it anyway through a customer.
 
 ### 1.1 No binding sector cyber rule
 | ID | Requirement | Applies? | Why |
@@ -39,7 +39,7 @@ The 35 CSF 2.0 subcategories (G-001 to G-035) were selected for a one-person bus
 ## 2. Method
 1. **Requirements.** CSF rows use the subcategory text from `00_universal-framework/frameworks/csf2_core.csv` plus the SP 800-82 Rev. 3 section. Contract rows follow the exhibit term numbers and the NDA clauses, summarized in plain words.
 2. **Crosswalk.** CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`); "subset" means only part of a long mapping is listed. Six controls were added by the author and are labeled with the reason: MP-6 on ID.AM-08; IA-2(1) and MA-4 on PR.AA-03 and SI-3 and MP-7 on DE.CM-09 (SP 800-82 Rev. 3 OT guidance); SI-7 on RC.RP-05. Contract and applicability rows are **author mappings**.
-3. **Evidence.** Self-attested by the owner and checked on screen with the IT consultant: SaaS account and sharing settings, laptop and phone settings, the field kit, the router at Customer B (2026-08-27, with its maintenance supervisor present), firmware load records, and the contract file.
+3. **Evidence.** Current state was established from the intake evidence (SaaS console and portal exports, laptop, phone and field kit reviews, the home office and van walk-through on 2026-08-19, job tickets and firmware load records, and the contract file; EV-001 to EV-033) and the owner's written self-review, checked on screen with the IT consultant on 2026-08-24 and 2026-08-25 (EV-036). Where the self-assessment tests had run (2026-08-26 at the home office and 2026-08-27 at Customer B, with its maintenance supervisor present), their results are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable, as of the end of fieldwork (2026-08-28). Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

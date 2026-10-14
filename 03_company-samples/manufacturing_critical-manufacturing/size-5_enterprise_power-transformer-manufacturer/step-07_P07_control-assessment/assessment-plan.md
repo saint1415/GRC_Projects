@@ -83,6 +83,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Vice President, Enterprise Applications; ERP Platform Manager; Vice President, Manufacturing Engineering; Director of OT Security; Director of Security Operations; Director of Identity and Access Management; Director of Network Engineering; Director of Third-Party Risk Management; Chief Compliance Officer; General Counsel; CFO; COO; CISO; the plant managers at P2, P4, and AQ-01; and 20 randomly selected plant and office staff.
 - **Test:** access tests with test accounts; an export release attempt without the Trade Compliance role; a network reachability test from the AQ-01 office network toward the AQ-01 PLC network and the corporate domain; default-credential tests on OT device web interfaces (with OEM approval, in maintenance windows); a scan of 48 engineering workstations in MES zones for unapproved remote tools; rogue device tests at P4 and AQ-01; an after-hours OT alert test at P2; TLS scans of EPSP interfaces; and a restore observation.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork. The executive risk committee approved POL-02 to POL-05 and the hierarchy on 2026-09-08, the risk committee of the board approved POL-01 on 2026-09-10, and all take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-033), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations, configurations or live systems | 282 (245 Satisfied, 37 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test | 0 |
+| **Total** | | **282** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (identity governance and HR records, EV-004 and EV-005; the ERP user export, EV-007; the EPSP change records, EV-030; the ICS advisory tracker and scan reports, EV-020 and EV-021; SOC case records, EV-027; the vendor register, EV-045) and were refreshed to 2026-06-30 at kickoff. Prior Internal Audit and SOX workpapers are in EV-037.
+
 ## 4. Rules of engagement
 - No test could affect production, process safety, or test laboratory work. OT tests ran only in Saturday maintenance windows with the plant manager's written approval and a plant controls engineer present, who could stop any test.
 - No active scanning or writes to PLCs, drives, or safety systems. OT tests were limited to HMI and engineering workstation web interfaces, passive traffic review, and the rogue device and alert tests.

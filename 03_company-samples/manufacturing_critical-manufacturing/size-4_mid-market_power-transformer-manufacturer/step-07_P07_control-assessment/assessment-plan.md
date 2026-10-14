@@ -82,6 +82,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - benchmark configuration scans of 10 servers
   - power and configuration check of the 4 Plant 2 OEM routers
 
+### What each test could show
+The 2026 policies (P06) and the new standards were drafts during fieldwork; the policies were approved on 2026-09-15 and take effect on 2026-10-01. The 2024 policies, the 2024 IT incident response and disaster recovery plans, the 2024 standards, and the Plant 1 OT practice (2025) were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 228 |
+| Design | The requirement comes from a 2026 draft (the event-type rationale in STD-02, the reportable incidents in POL-03, the annual Tier 1 review in STD-03); its design was reviewed. Operation is tested at the 2027-03 follow-up | 3 |
+| Not implemented | Nothing existed to test | 22 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: terminations, transfers and new hires from the HR report (EV-003), privileged accounts from EV-005, Plant 1 OEM sessions from the gateway log (EV-014), endpoints from the EDR console (EV-008), Plant 2 kiosks from the MES kiosk list (EV-007), ERP and Plant 2 MES changes from EV-017, servers from the CMDB (EV-009), critical findings from the scan reports (EV-016), incidents from the incident register (EV-028), the 22 Tier 1 suppliers from the about 190 in the vendor master (EV-039), and Plant 2 visitor entries from the paper visitor log (EV-045).
+
 ## 4. Rules of engagement
 - **Safety first.** No active testing of PLCs, drying ovens, oil processing, cranes, or the high-voltage test bay. OT tests were passive or limited to HMI web interfaces, switches, and kiosks, ran only in the Saturday maintenance windows with OEM approval, and stopped if a Controls Lead asked.
 - No customer, FMS, or federal data left company systems. Evidence was stored in the firm's encrypted workpaper system.

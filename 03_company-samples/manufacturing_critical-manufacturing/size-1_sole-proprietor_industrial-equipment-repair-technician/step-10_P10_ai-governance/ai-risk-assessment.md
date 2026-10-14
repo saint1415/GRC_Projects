@@ -7,12 +7,12 @@
 | AI use case | AI-001: vibration analytics SaaS with AI fault diagnosis (SYS-08), trial since 2026-05-04. Adapted from the registry default "Demand forecasting and predictive maintenance": a one-person service business has no demand to forecast with a model; predictive maintenance is the AI use it actually has |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form |
 | Assessor and decision | Owner-technician, 2026-09-02; decision 2026-09-11 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is a consumer generative AI assistant, restricted to Public information) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases; AI-002 is a consumer generative AI assistant, restricted to Public information), built at intake from the phone's app list, the vibration analytics account and its accepted terms, and the inbox (EV-008, EV-029, EV-030, EV-020), then checked in the owner's AI use self-review (EV-037). With no staff, there was no survey to run. Not established: what the vibration analytics vendor has kept or used from the trial uploads, and what the AI assistant's history holds beyond the owner's own account of it |
 
 ## 1. What it does (Map)
-Wireless sensors on customer motors send vibration and temperature readings to the vendor's cloud. A vendor-trained model flags likely faults (bearing wear, misalignment, imbalance) on a dashboard and phone app. In the trial, sensors sit on 6 motors at Customer A's plant (winding line and drying oven vacuum pumps) and 4 motors at one local plant. The owner uses the alerts to plan visits and recommend repairs; the customer decides. The model makes no decision about any person and touches no machine control.
+Wireless sensors on customer motors send vibration and temperature readings to the vendor's cloud. A vendor-trained model flags likely faults (bearing wear, misalignment, imbalance) on a dashboard and phone app. In the trial, sensors sit on 6 motors at Customer A's plant (winding line and drying oven vacuum pumps) and 4 motors at one local plant (EV-029). The owner uses the alerts to plan visits and recommend repairs; the customer decides. The model makes no decision about any person and touches no machine control.
 
-The owner accepted click-through trial terms without reading them. They let the vendor **use uploaded data to improve its service**. Uploads include machine and plant names, which Customer A's exhibit treats as Customer A information. **Customer A did not give written consent** (exhibit S1).
+The owner accepted click-through trial terms without reading them. They let the vendor **use uploaded data to improve its service** (EV-030). Uploads include machine and plant names, which Customer A's exhibit treats as Customer A information. **Customer A did not give written consent** (exhibit S1; EV-020).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
@@ -32,7 +32,7 @@ The owner accepted click-through trial terms without reading them. They let the 
 3. No program files, drawings, network lists, or passwords go into AI-001 or AI-002.
 
 ## 5. Human review of outputs (Measure and Manage)
-- **Trial results:** 3 alerts in 4 months. 2 were confirmed with handheld readings (bearing wear on a vacuum pump motor; motor misalignment on the winding line); 1 was a false positive after a sensor came loose. No missed fault is known, but 4 months is too short to judge.
+- **Trial results:** 3 alerts in 4 months. 2 were confirmed with handheld readings (bearing wear on a vacuum pump motor; motor misalignment on the winding line); 1 was a false positive after a sensor came loose (EV-037). No missed fault is known, but 4 months is too short to judge.
 - **Every alert is checked** with a handheld vibration reading or thermal image before the owner recommends work, and the check is noted on the job ticket.
 - **A quiet dashboard proves nothing.** Scheduled inspections continue as before.
 - **Monitoring:** each quarter, compare alerts with what was found on site; a missed fault or two false positives in a row trigger a review with the vendor.

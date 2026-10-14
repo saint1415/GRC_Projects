@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. (focus division: Transformer Manufacturing) | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-077 group, EV-078 Transformer Manufacturing, EV-079 Electric Utility, EV-080 Grid Engineering), FY2025 revenue by division (EV-003), the MES work order buffer and storm reserve records (EV-056), backup and DR records (EV-028, EV-044, EV-047, EV-048), reliability reporting procedures (EV-065), and client and utility notice terms (EV-050, EV-071). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -16,10 +17,10 @@ It feeds:
 - the voluntary benchmark outcomes GV.OC-04 (critical services) and ID.AM-05 (prioritization) in the gap analysis (P03).
 
 ## 2. System and business description
-Corporate runs one GEPS instance for all three divisions (see `../00_company-facts.md` section 3). Transformer Manufacturing uses it for configure-to-order, bills of materials, export screening, and the APS schedule that releases work orders to the 8 plant MES through the integration hub. The Electric Utility uses it for storm stock, materials, and finance. Grid Engineering uses it for project accounting. Plant control systems (SYS-M2) and the Electric Utility's TCC and DCC (SYS-U1, SYS-U2) do not depend on the GEPS or on group identity while they run, which is why they recover on their own tracks.
+Corporate runs one GEPS instance for all three divisions (see the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)). Transformer Manufacturing uses it for configure-to-order, bills of materials, export screening, and the APS schedule that releases work orders to the 8 plant MES through the integration hub. The Electric Utility uses it for storm stock, materials, and finance. Grid Engineering uses it for project accounting. Plant control systems (SYS-M2) and the Electric Utility's TCC and DCC (SYS-U1, SYS-U2) do not depend on the GEPS or on group identity while they run, which is why they recover on their own tracks.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 1: Transformer Manufacturing about $26.3 million per day, Electric Utility about $16.4 million per day, and Grid Engineering about $6.6 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Transformer Manufacturing about $9.6 billion, or about $26.3 million per day; Electric Utility about $6.0 billion, or about $16.4 million per day; and Grid Engineering about $2.4 billion of external revenue, or about $6.6 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

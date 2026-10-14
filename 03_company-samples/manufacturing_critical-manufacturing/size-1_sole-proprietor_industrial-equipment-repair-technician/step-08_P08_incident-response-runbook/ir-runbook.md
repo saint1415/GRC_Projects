@@ -23,7 +23,7 @@ Keep a printed copy in the van and at home. Assume the laptop, the synced librar
 | Seven local plants | Courtesy notice if their programs or passwords were exposed | Same day |
 | Referral technician (once the arrangement exists) | Cover other breakdown calls while the owner is tied up (P05) | As needed |
 | FBI (IC3 online report) and CISA | Voluntary reports; agree timing with Customer A | Day 1 |
-| General liability carrier | Only if a customer claims damage; no cyber policy today (exhibit S8 requires one from 2027-09-30) | When a claim is raised |
+| General liability carrier | Only if a customer claims damage; no cyber policy today (EV-023, EV-025; exhibit S8 requires one from 2027-09-30) | When a claim is raised |
 
 Contact numbers are kept on the printed copy only, not in this file.
 

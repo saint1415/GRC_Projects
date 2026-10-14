@@ -1,0 +1,21 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,"IaaS/PaaS for the 6-account landing zone, including the cloud ML service",LZ-01; SYS-01; SYS-03; SYS-13; AI-001,"ERP, FMS and PLM data and backups (encrypted with company-managed keys)",Customer agreement with notification terms,"SOC 2 Type 2, 12 months ending 2026-03-31; shared responsibility documentation",EV-039; EV-040; EV-041,
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,"SOC 2 Type 2, 12 months ending 2026-05-31",EV-039; EV-041,
+V-03,Managed security service provider (MSSP),"24x7 monitoring of EDR, the SIEM, identity, cloud and the Plant 1 OT sensor",SYS-14,Security logs; EDR response rights on 640 endpoints,MSSP contract; call within 30 minutes on high severity,SOC 2 Type 2 (Security); SIEM platform carved out,EV-022; EV-039; EV-040; EV-041,
+V-04,SD-WAN provider,Managed SD-WAN edges and carriers,SYS-09,Encrypted network traffic,Service agreement,None on file at intake,EV-012; EV-039; EV-041,
+V-05,EDI network provider,"Purchase orders, advance ship notices and invoices",SYS-10,Order and pricing data,Contract with no security or incident notice terms,None on file,EV-039; EV-040; EV-041,
+V-06,ERP software vendor,ERP licenses and support sessions,SYS-01,Support access through the privileged access broker,Support agreement; named guest accounts enabled per ticket,None on file at intake,EV-001; EV-039; EV-040; EV-041,
+V-07,TMU electronics supplier,Transformer monitoring units and firmware,SYS-12,Product specifications; firmware supplied to the company,Supply agreement with no deadline for vulnerability or compromise notices,None on file,EV-039; EV-040; EV-041; EV-044,Firmware hashes checked on receipt since 2025
+V-08,"HR, payroll, and applicant tracking SaaS vendor","HR, payroll and applicant tracking (including the AI-005 feature)",SYS-16; AI-005,Employee and applicant personal information,Subscription agreement,None on file at intake,EV-039; EV-040; EV-049,Reviewed at onboarding
+V-09,Productivity suite vendor,"Email, files, chat and the enterprise generative AI assistant",SYS-11; AI-004,Company documents; customer drawings; FCI,Enterprise agreement; AI terms prohibit training on company data,None on file,EV-035; EV-039; EV-040,
+V-10,Code repository SaaS vendor,Source code hosting for the TMU configuration software and the FMS,SYS-12,Source code,Subscription terms,None on file,EV-039; EV-043,
+V-11,Predictive maintenance vendor,AI-002 SaaS,AI-002; SYS-08,Historian process tags (no personal data),Subscription terms,None on file,EV-039; EV-049,No security or legal review record
+V-12,"Plant equipment OEMs (drying ovens, winding machines, core lines, cranes, test systems, weld cells)","Equipment, service and remote support",SYS-06; SYS-07,Remote access to plant systems,Purchase orders with no security terms,None on file,EV-014; EV-015; EV-039; EV-040,Plant 1 sessions through the remote access gateway; Plant 2 through 4 cellular routers
+V-13,CAD and PLM software vendors,Software licensing,SYS-04,None (licensing),License agreements,None on file,EV-009; EV-039,
+V-14,Outside tank fabricator,Standard tank fabrication,n/a,Tank drawings,Purchase orders,None on file,EV-039,
+V-15,Heavy-haul and freight carriers,Transformer transport,SYS-01 (shipping),Shipment details,Carrier agreements,None on file,EV-039,
+V-16,Bank,Treasury and payments,SYS-01,Payment files,Banking agreement with call-back verification,n/a,EV-039; EV-050,
+V-17,Cyber insurance carrier and panel firms,"Insurance; breach counsel, forensics and OT-capable incident response",n/a,Incident information when engaged,Policy with notice through the carrier hotline first,n/a,EV-042,
+V-18,Co-sourced internal audit firm and OT specialist subcontractor,Annual IT audit,All,Audit evidence,Engagement letter,n/a,EV-026,
+V-19,Media destruction vendor,Drive wiping and shredding,SYS-09,Data on retired media,Service agreement,Certificates of destruction,EV-039; EV-046,
+V-20,Other suppliers with system access or company data,Various,Various,As each contract allows,IT service contracts since 2025 include security terms; others vary,Review at onboarding only,EV-039; EV-040,Summary row so the register reconciles to the about 190 suppliers in EV-039

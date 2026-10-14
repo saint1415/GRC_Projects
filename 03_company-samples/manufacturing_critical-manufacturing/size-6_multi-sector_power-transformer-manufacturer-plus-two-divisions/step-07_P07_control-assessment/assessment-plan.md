@@ -25,12 +25,12 @@ Six controls were assessed in more than one scope because the division runs its 
 |---|---|---|---|---|
 | Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2(1), IA-5 | 42 | Every division's access; GR-07 (P8 trust); GR-02 (hub accounts) | Focused / Comprehensive (all divisions and P8 sampled) |
 | Common control (Group HR) | PS-4, AT-2 | 15 | Terminations and training for 45,000 users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-01, GR-03, GR-12; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-01, GR-03, GR-12; group gap 7 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud) | CP-9, SC-7, SC-8, SC-28, CM-6 | 20 | Immutable backups and landing-zone guardrails behind every division | Focused / Focused |
-| GEPS | AC-4, AC-6, CA-3, CP-4, CP-10, AU-6, SI-4(4) | 24 | GR-02 (High); scenario gap 1 | Comprehensive / Comprehensive |
-| Division sample: Transformer Manufacturing | SC-7, AC-17, CP-9, SA-22 (P8); SI-7, SC-12, SR-4, IR-6(3) (TMU product) | 30 | MF-001, MF-003, MF-005, MF-006 (High and Moderate); gaps 2 and 3 | Comprehensive at P8; Focused for the product |
-| Division sample: Electric Utility | AC-3, PS-3, IR-6, SR-6, SI-4(4) | 11 | EU-001 (High), EU-003, EU-006, EU-008; gaps 4 and 5 | Focused / Focused (controls touching group services and affiliates only) |
-| Division sample: Grid Engineering | AC-3, AU-11, CM-6, MP-7, IR-6, PL-1 | 29 | ES-001, ES-003 (High), ES-002, ES-007; gap 6 | Focused / Focused (20 projects, 40 laptops) |
+| GEPS | AC-4, AC-6, CA-3, CP-4, CP-10, AU-6, SI-4(4) | 24 | GR-02 (High); group gap 1 | Comprehensive / Comprehensive |
+| Division sample: Transformer Manufacturing | SC-7, AC-17, CP-9, SA-22 (P8); SI-7, SC-12, SR-4, IR-6(3) (TMU product) | 30 | MF-001, MF-003, MF-005, MF-006 (High and Moderate); group gaps 2 and 3 | Comprehensive at P8; Focused for the product |
+| Division sample: Electric Utility | AC-3, PS-3, IR-6, SR-6, SI-4(4) | 11 | EU-001 (High), EU-003, EU-006, EU-008; group gaps 4 and 5 | Focused / Focused (controls touching group services and affiliates only) |
+| Division sample: Grid Engineering | AC-3, AU-11, CM-6, MP-7, IR-6, PL-1 | 29 | ES-001, ES-003 (High), ES-002, ES-007; group gap 6 | Focused / Focused (20 projects, 40 laptops) |
 | **Total** | **44** | **225** | | |
 
 ## 3. Methods and objects
@@ -50,6 +50,17 @@ Six controls were assessed in more than one scope because the division runs its 
 - No BCSI or CEII left its authorized location. The utility's NERC compliance director selected the BCSI samples and screenshots were redacted.
 - The assessor would stop and notify the Group CISO, and for OT the plant manager, on any critical exposure or safety concern. None was found.
 
+### What each test could show
+The group policies v2026.1 (P06), the division supplements, and the multi-party notification matrix (P08) were drafts during fieldwork; they were approved on 2026-09-15, effective 2026-10-01. Controls that were already in place under the v2026 group policies (approved 2026-03-24), the group OT standard, IR plan v5, and the division CIP and contract procedures were tested for operation. The one statement that rests on the draft matrix was reviewed as a draft, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, configurations, records, or live systems | 208 |
+| Design | The statement rests on a draft (IR-6 b., common control: the draft notification matrix); its design was reviewed. Operation is tested at the 2027-04 follow-up | 1 |
+| Not implemented | Nothing existed to test: cross-division exercise (IR-3); GEPS scheduling recovery runbook and reconstitution (CP-4, CP-10); hub-to-plant traffic criteria and monitoring (SI-4(4)); internal P8 boundaries and managed external connections (SC-7); connection requirements and per-session authorization for the P8 cellular routers (AC-17); integrity protection of P8 backups (CP-9); firmware integrity check at incoming inspection (SI-7); monitoring of TMU third-party components (SR-4); CIP-013-2 assessment of the affiliates (SR-6); a route for Grid Engineering client notices (IR-6) | 16 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from: the 60 joiner-mover-leaver events and 25 terminations come from the identity governance and HR records in EV-013 and EV-002, the 20 GEPS service accounts from EV-040, the 10 firmware releases from EV-049, the 20 projects from EV-072, and the 40 commissioning laptops from EV-074.
+
 ## 5. Results summary
 | Scope | Satisfied | Other than satisfied | Total |
 |---|---|---|---|
@@ -63,9 +74,9 @@ Six controls were assessed in more than one scope because the division runs its 
 **Common controls are strong.** 113 of 131 common statements were satisfied. Cloud protection (CP-9, SC-7, SC-8, SC-28, CM-6), administrator controls (AC-6(5), IA-2(1)), terminations in SYS-G1 (PS-4), and training (AT-2) had no findings. The common findings cluster in three places:
 - **Service accounts** (AC-2, IA-5): the GEPS team manages hub and batch accounts outside identity governance with old static keys.
 - **The acquired plant P8** (AC-2, AC-2(3), RA-5, SI-4): the legacy domain still holds stale and unterminated accounts, P8 is outside regular scanning, and nothing monitors P8 or the DCC.
-- **Cross-division incident handling** (IR-3, IR-4, IR-6, IR-8): one plan exists but it does not define contract or reliability reportable incidents, the matrix is not adopted, divisions still use different scales, and nothing has been exercised (scenario gap 7).
+- **Cross-division incident handling** (IR-3, IR-4, IR-6, IR-8): one plan exists but it does not define contract or reliability reportable incidents, the matrix is not adopted, divisions still use different scales, and nothing has been exercised (group gap 7).
 
-**The GEPS is where the group risk sits.** AC-4, AC-6, and CP-10 were fully other than satisfied: the hub reaches every plant with the same over-privileged accounts, and recovery of scheduling has never been shown (scenario gap 1).
+**The GEPS is where the group risk sits.** AC-4, AC-6, and CP-10 were fully other than satisfied: the hub reaches every plant with the same over-privileged accounts, and recovery of scheduling has never been shown (group gap 1).
 
 **Division samples:**
 - *Transformer Manufacturing:* P8 is flat, dual-homed, reachable through always-on OEM routers, and not backed up in a way that would support recovery (SC-7, AC-17, CP-9, SA-22). The TMU signing key is not in a hardware security module (SC-12), SBOMs are incomplete (SR-4), and two utility advisories were late (IR-6(3)). Firmware release hashes matched for all 10 sampled releases.

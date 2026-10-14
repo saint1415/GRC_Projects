@@ -13,7 +13,7 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system and process in the group and division BIAs (P05): the corporate shared services (SYS-G1 to SYS-G6, including the GEPS), the 8 plants and their OT, the TMU product and FMS, the Electric Utility's control centers, substations, and customer systems, and Grid Engineering's project platform and field laptops (`../00_company-facts.md` section 3).
+**Scope.** Every system and process in the group and division BIAs (P05): the corporate shared services (SYS-G1 to SYS-G6, including the GEPS), the 8 plants and their OT, the TMU product and FMS, the Electric Utility's control centers, substations, and customer systems, and Grid Engineering's project platform and field laptops ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. Each division security and compliance lead maintains one. Transformer Manufacturing, the focus division, has the most detailed register.
@@ -30,8 +30,8 @@
 Risks rated High that could harm workers, crews, or the public (plant process safety, unsafe units on the grid, prolonged outages) may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the gap analyses (P03), the common control assessment (P07), CISA ICS advisories for transformer plant equipment, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, CISA ICS advisories for transformer plant equipment (EV-020), interviews with each division's leadership (EV-081 group, EV-082 Transformer Manufacturing, EV-083 Electric Utility, EV-084 Grid Engineering), the plant and TCC walkthroughs (EV-085, EV-088), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, walkthroughs, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05). Group impact reflects enterprise consequences: several plants or divisions at once, several regulators and customers, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -69,11 +69,13 @@ Risks rated High that could harm workers, crews, or the public (plant process sa
 | ES-001 | Grid Engineering | Client CEII or BCSI exposed through project-wide permissions or personal cloud storage | Grid Engineering project platform director | 2026-12-31 |
 | ES-003 | Grid Engineering | Commissioning laptop carries malware into a client substation | Grid Engineering chief operating officer | 2026-12-31 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28; it confirmed existing risks and added none, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
+
 ### What the results say
 The program is defined and mostly sound. There are no Very High risks: the 24x7 SOC, PAM, immutable backups, OT DMZs at 7 of 8 plants, and the Electric Utility's mature medium impact CIP program all hold. The High risks cluster around **what the group shares and what it bought or built most recently**:
-1. **Shared IT reaches the plants** (GR-01, GR-02, GR-07). One identity domain, one GEPS, and one integration hub serve every plant. The acquired plant P8 is the weak entry point, and the GEPS scheduling recovery has never been tested (scenario gaps 1 and 2).
-2. **The product reaches the grid** (GR-04). The TMU firmware signing key is in software on a build server. A stolen key would let an attacker sign firmware that about 700 utilities, including the affiliate, would trust (gap 3).
-3. **Affiliates are vendors** (GR-05, Moderate, and the High division risks EU-001 and ES-001). The Electric Utility's CIP duties depend on how its affiliates handle its information and access (gaps 4 and 5).
+1. **Shared IT reaches the plants** (GR-01, GR-02, GR-07). One identity domain, one GEPS, and one integration hub serve every plant. The acquired plant P8 is the weak entry point, and the GEPS scheduling recovery has never been tested (group gaps 1 and 2).
+2. **The product reaches the grid** (GR-04). The TMU firmware signing key is in software on a build server. A stolen key would let an attacker sign firmware that about 700 utilities, including the affiliate, would trust (group gap 3).
+3. **Affiliates are vendors** (GR-05, Moderate, and the High division risks EU-001 and ES-001). The Electric Utility's CIP duties depend on how its affiliates handle its information and access (group gaps 4 and 5).
 
 Notification consistency (GR-03), AI governance (GR-06), and Grid Engineering inheritance (GR-10) are Moderate at group level. They matter because a single incident would test all three at once (P08), which is why the P07 assessment sampled the incident controls across divisions.
 

@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (transformer repair and remanufacturing shop, Florida) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (Security Coordinator) with the Owner, the Shop Manager, the Field Service and Test Technician, the Lead Winder, and the MSP lead technician, 2026-07-13 to 2026-07-24 | **Approved:** Owner, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-040), FY2025 revenue and cash report (EV-022), job, customer and sales report (EV-023), ERP vendor SOC 2 report (EV-017), suite backup job report (EV-014), MSP service contract (EV-016), test PC walk-through (EV-029), shipped unit test reports (EV-030), and the oven OEM records (EV-031). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the shop, how long each can be down, and how much data each can lose. It supports:
 - the availability rating in the SSP (P02);
@@ -15,10 +17,10 @@ No regulation requires this shop to keep a contingency plan. The drivers are bus
 **Values are rated for hurricane season** (June 1 to November 30), the worst case. Outside the season, most MTDs could double.
 
 ## 2. System and business description
-One leased building in Florida with 7 employees, repairing and remanufacturing about 35 distribution transformers a month. Office work runs on SaaS: the job-shop ERP with its scheduling board (SYS-01) and the productivity suite (SYS-02), backed up by the MSP (SYS-08). On site are 6 computers and 2 tablets (SYS-03), one flat network (SYS-04), the test bay and its test PC (SYS-05), the vacuum drying oven and oil rig (SYS-06), and the coil winding machine (SYS-07). The MSP runs IT; the oven OEM and the test set vendor support their equipment. See `../00_company-facts.md` sections 3 and 7.
+One leased building in Florida with 7 employees, repairing and remanufacturing about 35 distribution transformers a month. Office work runs on SaaS: the job-shop ERP with its scheduling board (SYS-01) and the productivity suite (SYS-02), backed up by the MSP (SYS-08). On site are 6 computers and 2 tablets (SYS-03), one flat network (SYS-04), the test bay and its test PC (SYS-05), the vacuum drying oven and oil rig (SYS-06), and the coil winding machine (SYS-07). The MSP runs IT; the oven OEM and the test set vendor support their equipment. The systems and vendors are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual receipts, about $4,200 per working day.
+Dollar values are scaled to about $1.1 million in annual receipts, about $4,200 per working day (EV-022).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -44,7 +46,7 @@ Dollar values are scaled to about $1.1 million in annual receipts, about $4,200 
 - **Testing (BP-04) is the bottleneck.** Every unit ships with a test report from the test PC. If the test PC is down, nothing ships, including storm stock that is already built.
 - **Storm demand sets the 24-hour MTDs** for scheduling, testing, and shipping. After a hurricane, utilities buy from whichever shop can ship first.
 - **Safety drives BP-03.** A drying cycle in progress must be finished or stopped safely, and units cannot be filled with oil until they are dried.
-- **Billing (BP-08) tolerates 5 days** because payroll runs through an outside service and the shop holds a cash reserve of about 45 days.
+- **Billing (BP-08) tolerates 5 days** because payroll runs through an outside service and the shop holds a cash reserve of about 45 days (EV-022).
 
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
