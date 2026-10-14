@@ -12,6 +12,8 @@
 | Approved | Chief Operating Officer, 2026-09-17 |
 
 ## 1. Applicability
+Which rules bind the company was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the subcontracts, prime notices, agreements, trade compliance files and corporate records collected there (EV-030 to EV-033, EV-045). This section explains those decisions for the rules analyzed here.
+
 **DFARS 252.204-7012 applies now.** All current subcontracts with Prime A, Prime B, and Prime C include the clause, and the company receives and creates covered defense information (controlled technical information such as drawings, models, NC programs, build files, and test procedures). The clause has no small-business or size exemption and must be flowed down to any subcontract that involves covered defense information, including for commercial products or services (252.204-7012(m)(1)). It requires SP 800-171 on every covered contractor information system (252.204-7012(b)(2)(i)), which includes both plants' shop-floor systems.
 
 **DFARS 252.204-7019 and 252.204-7020 apply now.** A current SP 800-171 DoD Assessment score (not more than 3 years old) must be in SPRS. The 2025 Basic Assessment of 74 is current by date, but it covered Plant 1 only and is not accurate (section 3).
@@ -30,12 +32,12 @@
 - **NISPOM (32 CFR Part 117):** no facility clearance and no classified information (G-136).
 - **CIRCIA:** the final rule is not published; nothing is required yet.
 
-**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See `00_company-facts.md`.
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. New DoD awards under DFARS Part 240 replace DFARS 252.204-7019 and -7020 with 252.240-7997, which covers DoD-led Medium and High assessments; the rows for 7019 and 7020 still describe the contracts awarded before that change. See the intake [obligations register](../step-00_P00_intake/obligations-register.csv) (FAR-RFO-PART40).
 
 ## 2. Method
 1. **Requirements.** The 110 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and the point value from the CMMC Scoring Methodology (32 CFR 170.24(c)(2)). Requirement text is quoted from the public-domain NIST publication. The 26 clause and regulation rows cite the paragraph of each clause or section as checked on eCFR (version date 2026-09-23).
 2. **Crosswalk.** CSF 2.0 and SP 800-53 Rev. 5 mappings are derived from NIST's official mappings through the SP 800-171 Rev. 3 counterpart of each requirement (the Rev. 2 to Rev. 3 change analysis, the SP 800-171r3 CUI overlay, and the CSF 2.0 to SP 800-171r3 mapping). The route through Rev. 3 is the author's; the `crosswalk_source` column says so for each row. Clause rows use author mappings.
-3. **Evidence sampling.** At this size, each requirement was rated on sampled evidence, not on documents alone:
+3. **Evidence sampling.** At this size, each requirement was rated on sampled evidence, not on documents alone. Current state comes from the intake evidence (EV-001 to EV-046: exports, documents, contracts and the AI tool discovery), the gap analysis interviews (EV-049), the FedRAMP Marketplace check (EV-050), the samples, scans and reviews below (EV-051 to EV-058), and the P07 walkthroughs and tests, which are cited by their own IDs (EV-AC-2 and so on). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status. Samples were drawn from the populations collected at intake (EV-004, EV-013, EV-014, EV-036):
    - account lifecycle: 25 of 96 terminations, 25 of 71 new hires, 25 of 41 transfers;
    - change control: 20 change tickets; vulnerability remediation: 30 findings;
    - configuration: scans of 10 cloud servers and review of all MES and DNC servers;

@@ -78,6 +78,17 @@ Samples followed the co-sourced firm's attribute sampling table. For a control o
   - a simulated impossible-travel sign-in to test MSSP escalation
   - visitor escort observation during the walkthroughs
 
+### What each test could show
+The 2026 policies (P06) and the new standards were drafts during fieldwork; the policies were approved on 2026-09-17 and take effect on 2026-10-01. The 2024 policies and standards, the 2024 cloud disaster recovery procedure and the 2024 incident response plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 185 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02); its design was reviewed. Operation is tested at the 2027-02 readiness re-check | 1 |
+| Not implemented | Nothing existed to test (for example a contingency plan for the plants, shop-floor logging, baselines and scanning, or monitoring of additive printer vendor sessions) | 54 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export or the fieldwork records: terminations, transfers and new hires from the HR report (EV-004), privileged accounts from the access broker (EV-007), MES and DNC servers from the server inventory (EV-011), cloud servers from the cloud organization export (EV-018), change tickets from the change system (EV-014), OT devices from the asset inventory (EV-010), incidents from the incident log (EV-026), Critical and High findings from the scan reports (EV-013), suppliers that receive CUI from the supplier list (EV-036), and staff from the HR roster (EV-004). The July 2026 backup job days and gate camera visits were extracted during fieldwork (EV-CP-9, EV-PE-3).
+
 ## 4. Rules of engagement
 - No testing that could disturb production or safety. Scans of shop-floor networks ran after the last shift with machines idle; no scan touched CNC, additive, or test stand controllers. Credential tests used operator panels only, with the owner present.
 - No CUI left the enclave. Assessors worked from enclave virtual desktops and company-issued laptops, and screenshots with drawings were redacted.

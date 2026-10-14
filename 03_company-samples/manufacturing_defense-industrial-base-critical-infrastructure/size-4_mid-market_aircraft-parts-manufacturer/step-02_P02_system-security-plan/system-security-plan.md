@@ -5,7 +5,7 @@
 **Requirement set:** NIST SP 800-171 Rev. 2 (110 requirements), as required by DFARS 252.204-7012(b)(2) and CMMC Level 2 (32 CFR 170.14(c)(3)); SP 800-53 Rev. 5 Moderate baseline used for control design, with tailoring
 
 ## 1. System Name and Identifier
-CUI Engineering Enclave (**CEE**), identifier CSC-CEE-01. The CEE is the company's major system. It comprises SYS-01 to SYS-08, the company side of SYS-12, and the MSSP services in SYS-13 in `../00_company-facts.md`. This SSP satisfies SP 800-171 requirement 3.12.4 and is the SSP named in SPRS submissions under DFARS 252.204-7019 and 252.204-7020.
+CUI Engineering Enclave (**CEE**), identifier CSC-CEE-01. The CEE is the company's major system. It comprises SYS-01 to SYS-08, the company side of SYS-12, and the MSSP services in SYS-13 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). This SSP satisfies SP 800-171 requirement 3.12.4 and is the SSP named in SPRS submissions under DFARS 252.204-7019 and 252.204-7020.
 
 ## 2. System Overview
 The CEE is where the company receives, creates, stores, and uses controlled technical information (CTI) for its DoD subcontracts and the controlled technical data of its commercial customers: drawings, 3D models, specifications, NC programs, additive build files, test procedures, and the travelers and inspection records built from them. It supports engineering, manufacturing engineering, quality, testing, the services line, and shop-floor production at both plants. About 290 named users hold enclave accounts; about 500 production workers see CUI through MES terminals and printed drawings.
@@ -93,7 +93,7 @@ Information types are from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow FI
 **Integrity was considered for High.** A silently altered drawing, NC program, or test result could lead to a flight safety event. The team kept integrity at Moderate because engineering release requires checker sign-off against the source model, first article inspection catches dimensional errors before production, and PLM keeps revision history. To compensate, the tailoring adds change control and revision checks on shop-floor systems (CM-3, CM-5) and a revision check before any restored program is released (P05).
 
 ## 7. Authorization Boundary Description
-The boundary follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The 318 enclave accounts come from the identity provider export (EV-001), the 230 enclave endpoints from the EDR console (EV-009), the 60 MES terminals from the MES exports (EV-008), the OT equipment from the asset inventory and the Plant 2 spreadsheet (EV-010), and the landing zone accounts from the cloud organization export (EV-018). It follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
 
 | Category | Assets in the CEE | Treatment |
 |---|---|---|
@@ -193,7 +193,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 53 | Government-community cloud provider (37), MSSP (15), destruction vendor (1) |
 | Common/Inherited | 6 | Government-community cloud provider (AC-12, AC-17(2), IA-2(8), SC-4, SC-23, CP-6) |
 
-Hybrid and inherited statements rely on the provider's CRM and FedRAMP authorization package, and on the MSSP contract until its CRM is received. The Partially implemented statements trace to the 14 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. Most are partial because a control works in the cloud and at Plant 1 but not yet at Plant 2.
+Hybrid and inherited statements rely on the provider's CRM and FedRAMP authorization package, and on the MSSP contract until its CRM is received. The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-008, EV-012, EV-015 and EV-019) and to the P07 findings. Most are partial because a control works in the cloud and at Plant 1 but not yet at Plant 2.
 
 ### 10.2 Assessment status and score
 - Control assessment 2026-08-03 to 2026-08-21 by the co-sourced internal audit firm: see P07.
@@ -207,7 +207,7 @@ Hybrid and inherited statements rely on the provider's CRM and FedRAMP authoriza
 - **Exception until 2027-01-31:** Plant 2 MES terminals use shared logins. Compensating measures until then: terminals reachable only from the Plant 2 floor, supervisor sign-off on program changes, and camera coverage of the terminals (P07 POAM-003).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); requirement statements (`sp800-171-requirement-statements.csv`); risk register (P01); gap analysis, score, and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor assurance reviews (P09); AI governance assessment (P10); cloud provider CRM and FedRAMP Marketplace record (kept by the Security Manager).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); requirement statements (`sp800-171-requirement-statements.csv`); risk register (P01); gap analysis, score, and roadmap (P03); cloud architecture and control map (P04); BIA (P05); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor assurance reviews (P09); AI governance assessment (P10); cloud provider CRM and FedRAMP Marketplace record (kept by the Security Manager).
 
 ## 13. Acronym List and Glossary
 - **C3PAO:** CMMC Third-Party Assessment Organization

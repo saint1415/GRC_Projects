@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed aircraft parts manufacturer holding DoD subcontracts with CUI) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager and the GRC analyst with the vCISO, the process owners named in `bia.csv`, and the IT Director | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-17 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-047), FY2025 revenue report by business line (EV-042), Q2 2026 operating volume report (EV-043), services agreements (EV-032), backup configuration and job reports (EV-015, EV-016), restore test records (EV-017), network exports (EV-012) and the medium assurance certificate records (EV-027). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: Plant 1 (machining, engineering center, test lab), Plant 2 (assembly, sheet metal, additive production), the additive and engineering services line, and enterprise functions (contracts and trade compliance, supply chain, finance, HR, IT). It rates 16 business processes and quantifies what an outage costs in money, operations, contract and regulatory exposure, and product safety.
@@ -16,10 +17,10 @@ The results feed:
 NIST SP 800-171 Rev. 2 has no contingency planning requirement, so most of this BIA is a business need, not a CMMC requirement. Three contract duties depend on it: the 72-hour cyber incident report (DFARS 252.204-7012(c)) must be made even while systems are down; images of affected systems must be preserved for at least 90 days from the report (252.204-7012(e)) before they are rebuilt; and backups of CUI must be protected (SP 800-171 3.8.9).
 
 ## 2. System and business description
-The company machines, assembles, and prints aircraft parts at two Florida plants for three defense primes and two commercial aerospace customers. Engineering data lives in the CUI Engineering Enclave (CEE): an identity provider, a collaboration suite, and a 4-account landing zone in a government-community cloud; CAD/PLM; 230 enclave endpoints; MES and DNC at both plants; operational technology (90 CNC machines, 12 CMMs, 6 additive printers, 6 test stands); and the plant networks. Orders, purchasing, and shipping run on a commercial ERP outside the enclave. See `../00_company-facts.md` sections 3 and 4 and the SSP (P02).
+The company machines, assembles, and prints aircraft parts at two Florida plants for three defense primes and two commercial aerospace customers. Engineering data lives in the CUI Engineering Enclave (CEE): an identity provider, a collaboration suite, and a 4-account landing zone in a government-community cloud; CAD/PLM; 230 enclave endpoints; MES and DNC at both plants; operational technology (90 CNC machines, 12 CMMs, 6 additive printers, 6 test stands); and the plant networks. Orders, purchasing, and shipping run on a commercial ERP outside the enclave. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the SSP (P02).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $240 million in annual revenue over about 250 production days: about $528,000 of shipments per day from Plant 1, $392,000 from Plant 2, and $40,000 from the services line (about $960,000 in total).
+Dollar values are scaled to about $240 million in annual revenue over about 250 production days (FY2025 revenue report, EV-042): about $528,000 of shipments per day from Plant 1, $392,000 from Plant 2, and $40,000 from the services line (about $960,000 in total).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -29,7 +30,7 @@ Dollar values are scaled to about $240 million in annual revenue over about 250 
 | Product safety | A nonconforming flight part could reach an aircraft, or a wrong NC program could injure an operator | Defect caught at inspection; rework or scrap | None |
 | Reputation | Prime supplier rating downgrade, loss of source approval, or loss of a services customer | Corrective action request from a prime | Internal only |
 
-**How loss at MTD was estimated.** Deferred shipments are mostly recovered with overtime within about 3 weeks. The estimated loss is the part that is not recovered: overtime and expedite premiums (about 10% of the deferred value for the plants), late delivery penalties, service credits, and scrap of interrupted additive builds. Process owners supplied the recovery assumptions. Deferred revenue and delayed cash are shown separately.
+**How loss at MTD was estimated.** Deferred shipments are mostly recovered with overtime within about 3 weeks. The estimated loss is the part that is not recovered: overtime and expedite premiums (about 10% of the deferred value for the plants), late delivery penalties, service credits, and scrap of interrupted additive builds. Process owners supplied the recovery assumptions (EV-047). Deferred revenue and delayed cash are shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -64,11 +65,11 @@ Dollar values are scaled to about $240 million in annual revenue over about 250 
 - **Customer commitments** drive BP-08. The services agreements make availability and confidentiality part of what the customers buy (P09).
 
 ## 5. Key findings
-1. **Plant 2 cannot meet its RPO.** The BIA needs a 4-hour RPO for BP-02, but the Plant 2 MES and DNC back up weekly to a storage device in the same room (gap 7). A ransomware event on the flat Plant 2 network could destroy the servers and the backup together and lose up to a week of traveler, inspection, and build status (P01 R-011). Plant 1 MES and DNC back up nightly to the cloud backup account, which meets a 24-hour RPO but not 4 hours; journal shipping every 4 hours is planned.
-2. **Shop-floor recovery is unproven.** No MES restore has been tested at either plant. The 12-hour RTOs for BP-01 to BP-03 are targets, not demonstrated capabilities (P01 R-012; P07 CP-4).
-3. **PLM recovery was proven once.** The 2025-04 restore test recovered PLM in 9 hours, within the 24-hour RTO for BP-05 and BP-06. It has not been repeated since the landing zone was rebuilt in 2025, so the result needs refreshing (P07 CP-4).
-4. **The reporting capability exists but is untested.** Two medium assurance certificates are held, but there has been no DIBNet drill since 2024 and no clean reporting laptop is set aside (gap 12). BP-12 is first in the recovery order for that reason.
-5. **Evidence preservation adds time to recovery.** Images of affected systems must be captured before servers are wiped (252.204-7012(e)). The procedure covers cloud systems only; for the Plant 2 MES and OT, imaging steps and storage are not defined (P08 runbook 2).
+1. **Plant 2 cannot meet its RPO.** The BIA needs a 4-hour RPO for BP-02, but the Plant 2 MES and DNC back up weekly to a storage device in the same room (EV-015). A ransomware event on the flat Plant 2 network could destroy the servers and the backup together and lose up to a week of traveler, inspection, and build status (P01 R-011). Plant 1 MES and DNC back up nightly to the cloud backup account, which meets a 24-hour RPO but not 4 hours; journal shipping every 4 hours is planned.
+2. **Shop-floor recovery is unproven.** No MES restore has been tested at either plant (EV-017). The 12-hour RTOs for BP-01 to BP-03 are targets, not demonstrated capabilities (P01 R-012; P07 CP-4).
+3. **PLM recovery was proven once.** The 2025-04 restore test recovered PLM in 9 hours (EV-017), within the 24-hour RTO for BP-05 and BP-06. It has not been repeated since the landing zone was rebuilt in 2025, so the result needs refreshing (P07 CP-4).
+4. **The reporting capability exists but is untested.** Two medium assurance certificates are held, but there has been no DIBNet drill since 2024 and no clean reporting laptop is set aside (EV-027, EV-047). BP-12 is first in the recovery order for that reason.
+5. **Evidence preservation adds time to recovery.** Images of affected systems must be captured before servers are wiped (252.204-7012(e)). The procedure covers cloud systems only (EV-025); for the Plant 2 MES and OT, imaging steps and storage are not defined (P08 runbook 2).
 6. **The services line has no recovery commitments in writing.** Customer agreements promise turnaround times, but the company has not stated recovery objectives to the customers. The SOC 2 Availability criteria will require it (P09 A1.2, A1.3).
 
 ## 6. Resource requirements
