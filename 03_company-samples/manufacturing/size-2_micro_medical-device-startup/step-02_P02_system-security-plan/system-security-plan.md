@@ -78,7 +78,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1 (management an
 - **Inside:** the company's repository organization and CI configuration (SYS-01), eQMS tenant (SYS-02), productivity suite tenant (SYS-03), cloud tenant and everything deployed in it (SYS-04), 7 laptops and 2 lab workstations (SYS-05), the office and lab network (SYS-06), and the signing key with its release tooling (SYS-07).
 - **Outside (external services, interconnected):** the providers' own platforms and data centers; the MSP's remote management platform; the contract manufacturer's MES and test stations (SYS-09); the pre-production units (SYS-08), which are the product rather than part of the platform; the partner hospital's simulation center network; the regulatory consultant's systems.
 
-The diagram is in P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-09). The diagram is in P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Connected system or party | Direction | Data | Agreement |
@@ -120,12 +120,12 @@ By responsibility: 25 system-specific (the company), 19 hybrid (the company with
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Cloud provider | Physical security, platform patching, encryption at rest by default (SC-28), activity logging (AU-2), snapshot mechanism (CP-9) | SOC 2 Type 2 report reviewed 2026-08-24 (P09) | Complementary user entity controls: identity and roles, MFA, key management, backup settings and restore tests, log retention and review |
-| Source code and CI service vendor | Platform security, audit log (AU-2), MFA enforcement option (IA-2(1)), branch protection (AC-3) | Vendor documentation; SOC 2 report not yet requested | Organization settings, member removal, secrets handling in CI, permission review |
-| eQMS vendor | Platform security, electronic signatures, backups (CP-9) | Contract; SOC 2 report not yet requested | Role assignment, periodic export, validation of the eQMS for its intended use (ISO 13485 cl. 4.1.6) |
-| Productivity suite vendor | Platform security, sign-in lockout (AC-7), encryption in transit (SC-8) | Vendor documentation | Account management, MFA, sharing-link settings |
-| MSP | Laptop EDR (SI-3), patching (SI-2), encryption (SC-28), firewall (SC-7), suite administration | Monthly MSP report; P07 evidence requests | Oversight; add the lab workstations to the contract (P01 R-016) |
-| Contract manufacturer | Handling of firmware images and provisioning files at its test stations | Quality agreement; ISO 13485 certificate | Add security terms and review them at the supplier audit (SR-3, SR-6) |
+| Cloud provider | Physical security, platform patching, encryption at rest by default (SC-28), activity logging (AU-2), snapshot mechanism (CP-9) | SOC 2 Type 2 report (EV-041) reviewed 2026-08-24 (P09) | Complementary user entity controls: identity and roles, MFA, key management, backup settings and restore tests, log retention and review |
+| Source code and CI service vendor | Platform security, audit log (AU-2), MFA enforcement option (IA-2(1)), branch protection (AC-3) | Vendor documentation (EV-012); SOC 2 report not yet requested | Organization settings, member removal, secrets handling in CI, permission review |
+| eQMS vendor | Platform security, electronic signatures, backups (CP-9) | Contract (EV-012); SOC 2 report not yet requested | Role assignment, periodic export, validation of the eQMS for its intended use (ISO 13485 cl. 4.1.6) |
+| Productivity suite vendor | Platform security, sign-in lockout (AC-7), encryption in transit (SC-8) | Vendor documentation (EV-012) | Account management, MFA, sharing-link settings |
+| MSP | Laptop EDR (SI-3), patching (SI-2), encryption (SC-28), firewall (SC-7), suite administration | Monthly MSP report (EV-009); P07 evidence requests | Oversight; add the lab workstations to the contract (P01 R-016) |
+| Contract manufacturer | Handling of firmware images and provisioning files at its test stations | Quality agreement; ISO 13485 certificate (EV-013) | Add security terms and review them at the supplier audit (SR-3, SR-6) |
 
 **Inherited does not mean done.** The cloud provider's report lists complementary user entity controls. Three are open gaps at the company: the shared owner account (IA-2), restore testing (CP-4), and log review (AU-6).
 
@@ -136,7 +136,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Workforce users sign in to the suite, eQMS, repository, and cloud console with a password and a phone authenticator app. This is appropriate for the Moderate category. Two exceptions are tracked: the shared cloud owner account (MFA codes held on the CEO's phone) and the shared lab workstation login. Device identity (hub to cloud) is a separate product requirement: unique per-device certificates are planned before design freeze (IA-3).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and cloud provider report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and cloud provider report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BLE:** Bluetooth Low Energy

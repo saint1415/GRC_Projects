@@ -10,7 +10,7 @@
 | Assessors | VP QA/RA and Product Security Lead (524B); IT Manager and Compliance Manager (HIPAA) |
 
 ## 1. Applicability
-**Section 524B applies.** Section 524B(a) covers any person who submits a 510(k), PMA, PDP, De Novo, or HDE for a device that meets the "cyber device" definition in 524B(c). A cyber device:
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here. **Section 524B applies.** Section 524B(a) covers any person who submits a 510(k), PMA, PDP, De Novo, or HDE for a device that meets the "cyber device" definition in 524B(c). A cyber device:
 1. includes software validated, installed, or authorized by the sponsor as a device or in a device;
 2. can connect to the internet; and
 3. has technological characteristics that could be vulnerable to cybersecurity threats.
@@ -31,19 +31,21 @@ There is **no size exemption**. The only exemption route is an FDA list of exemp
   - *Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions*, issued 2026-02-03 (it supersedes the June 2025 version)
   - *Postmarket Management of Cybersecurity in Medical Devices*, December 2016
 
-**Secondary regulation: HIPAA.** The company is a business associate for the device cloud (`../00_company-facts.md` section 1). The Security Rule applies to it under 45 CFR 164.302, and 164.410 sets its breach notice duty to the hospitals. Excluded, with reasons:
+**Secondary regulation: HIPAA.** The company is a business associate for the device cloud: it holds PHI under BAAs with all 40 hospitals (EV-042; obligations register N62-R01). The Security Rule applies to it under 45 CFR 164.302, and 164.410 sets its breach notice duty to the hospitals. Excluded, with reasons:
 - 164.314(b), group health plans: the company does not administer a group health plan for the hospitals.
 - The Privacy Rule: this is a security gap analysis. Privacy duties flow through the BAAs and are handled by the Privacy Officer.
 
-**Not analyzed:** the vertical's defense and export rules (N31-33-R01 to R04). See scenario facts section 1.
+**Not analyzed:** the vertical's defense and export rules (N31-33-R01 to R04). See the obligations register.
 
 ## 2. Method
 1. **Requirements.** The 524B rows follow the statute's own structure: (a), (b)(1) through (b)(4), (c), and (d). FDA regulation rows cite the CFR section. Guidance rows cite the section of the guidance that explains what FDA expects to see for each statutory element.
 2. **Crosswalk.** NIST has published no mapping for section 524B, so every 524B and FDA row carries an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such. HIPAA rows use the Health Care vertical's crosswalk (`02_industry-rules/health-care/`), which is also an author mapping. NIST's official OLIR 110 controls are shown next to it for comparison.
 3. **Evidence.** The current state comes from:
-   - interviews with the VP QA/RA, VP Engineering, Product Security Lead, IT Manager, Cloud Operations Lead, and Compliance Manager
-   - review of the PM-2 510(k) cybersecurity section, the SBOM, the threat model, the QMS procedures, and 40 BAAs
-   - a build server walkthrough on 2026-07-16
+   - the intake evidence: the PM-2 510(k) cybersecurity section, the SBOM, the threat model, the QMS procedures, the 40 BAAs, and the configuration exports (EV-001 to EV-048)
+   - gap analysis interviews with the VP QA/RA, VP Engineering, Product Security Lead, IT Manager, Cloud Operations Lead, and Compliance Manager (EV-051)
+   - a build server walk-through on 2026-07-16 (EV-052) and an external TLS scan of the device cloud endpoints (EV-053)
+
+   The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gaps were rated on the P01 risk scale.
 
 ## 3. Results summary

@@ -81,7 +81,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems. Examples: PM-series program-level controls beyond PM-9.
 
 ## 7. Authorization Boundary Description
-The boundary contains the company-managed parts of the DCS and the company's configuration of provider services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains the company-managed parts of the DCS and the company's configuration of provider services:
 - **Inside:** the cloud tenant (ingestion gateway, container platform and its services, database, object storage, key management, secrets manager, bastion, audit logging), the identity provider tenant configuration for DCS roles, the log analytics service configuration (SYS-10), and 22 support and DevOps laptops.
 - **Outside (interconnected):**
   - the cloud provider's infrastructure (inherited controls)
@@ -139,6 +139,7 @@ Assessed 2026-08-10 to 2026-08-14. See P07 `assessment-results.csv` and `poam.cs
 
 ## 12. Referenced Artifacts
 - Scenario facts (`../00_company-facts.md`)
+- Intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md))
 - BIA (P05)
 - Cloud control map (P04)
 - Risk register (P01)

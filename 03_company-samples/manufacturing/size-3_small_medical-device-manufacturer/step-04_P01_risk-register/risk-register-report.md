@@ -11,7 +11,7 @@
 | Approved | 2026-09-04 by the COO (Moderate and below) and the CEO (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The whole organization, tied to its key systems and products (`../00_company-facts.md` section 3):
+**Scope.** The whole organization, tied to its key systems and products (intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)):
 - the device cloud (SSP system, P02) and the PHI it holds for 40 hospitals;
 - the fielded PM-2 and PM-1 monitors and the build and code-signing pipeline that produces their firmware;
 - the MES and test stations on the factory floor;
@@ -27,8 +27,8 @@ Two kinds of harm are rated together. **Enterprise harm** covers data, operation
 Product security risks are also carried in the design risk management file for each device, as the QMSR requires (21 CFR 820.10(c)). This register is the enterprise view of the same risks.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the P03 gap analysis, the BIA, the PM-2 threat model, and interviews with Engineering, Manufacturing, Quality, and Cloud Operations.
-2. **Rate likelihood.** Each risk has a likelihood of initiation (adversarial) or occurrence (non-adversarial) and a likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, the PM-2 threat model (EV-023), and interviews with Engineering, Manufacturing, Quality, and Cloud Operations (EV-050). The P03 gap analysis ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+2. **Rate likelihood.** Each risk has a likelihood of initiation (adversarial) or occurrence (non-adversarial) and a likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the product security records, the mailbox review, the incident records, walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -54,7 +54,7 @@ Product security risks are also carried in the design risk management file for e
 
 The High risks share one theme: **the company cannot yet show that its fielded devices stay cybersecure after release.** Four of the five come from gaps that section 524B addresses directly: no CVD process, no regular patch cycle, weak protection of the code-signing key, and an out-of-date SBOM. Fixing them also lowers eight Moderate risks (R-003, R-004, R-012, R-013, R-014, R-015, R-024, R-025). R-005 is the one High risk outside the product. It comes from the flat Line 2 network and shared MES logins.
 
-R-032 was added on 2026-08-12, after P07 lab testing found that every PM-2 unit accepts the same service password. The VP QA/RA is treating it as a potential uncontrolled risk under FDA's postmarket cybersecurity guidance (December 2016). The response follows the P08 runbook, including the 21 CFR 806 reporting decision.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-08-12, after P07 lab testing found that every PM-2 unit accepts the same service password (EV-IA-5). The `assessment_pass` column shows which pass produced each risk. The VP QA/RA is treating R-032 as a potential uncontrolled risk under FDA's postmarket cybersecurity guidance (December 2016). The response follows the P08 runbook, including the 21 CFR 806 reporting decision.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 H1 budget, $310,000):**

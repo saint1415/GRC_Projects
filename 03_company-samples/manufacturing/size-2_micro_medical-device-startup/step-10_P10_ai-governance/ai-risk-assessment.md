@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1); Generative AI Profile (AI 600-1) for the public-tool rule (AI-002) |
 | Assessors / date | Head of Engineering with the QA/RA Manager and the Firmware Engineer; completed 2026-08-26 |
 | Decision | CEO, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the AI-001 dataset license and documentation, the hub design records, the staff survey, the card statements and the repository settings (EV-036, EV-016, EV-035, EV-031, EV-004). How often engineers paste code into public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Head of Engineering (model development, security, and performance). **Decision authority:** the CEO.
