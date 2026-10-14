@@ -12,6 +12,8 @@
 | Approved | Chief Operating Officer, 2026-09-17 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** design, manufacture, and service of connected patient-care devices, and the Connected Care Cloud (CCC) that supports them.
 
 | Regulation | Applies? | Basis |
@@ -27,15 +29,15 @@
 **Excluded HIPAA Security Rule rows (7), with reasons:**
 - **164.308(a)(4)(ii)(A)** (isolating clearinghouse functions): the company is not a health care clearinghouse.
 - **164.314(a)(2)(ii)** (other arrangements): no governmental entity arrangements.
-- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): the employee health plan is fully insured and the company, as plan sponsor, receives only summary health and enrollment information, which 164.314(b)(1) excludes (disclosures under 164.504(f)(1)(ii) or (iii)). Confirmed with the benefits broker on 2026-07-20.
+- **164.314(b) and (b)(2)(i)-(iv)** (group health plans; 5 rows): the employee health plan is fully insured and the company, as plan sponsor, receives only summary health and enrollment information, which 164.314(b)(1) excludes (disclosures under 164.504(f)(1)(ii) or (iii)). Confirmed with the benefits broker on 2026-07-20 (EV-070, EV-052).
 
 **Not analyzed (with reasons):** DFARS 252.204-7012, CMMC, and ITAR (N31-33-R01 to R03): no defense contracts or defense articles. EAR (N31-33-R04): U.S. sales only. SEC disclosure rules: privately held. The HIPAA Privacy Rule: privacy duties flow through the BAAs and are handled by the Compliance and Privacy Officer. CIRCIA: proposed only; the proposed criteria would reach manufacturers of class II and III devices (proposed 6 CFR 226.2(b)(11)(iii)), so recheck when final. State breach laws: handled in the P08 notification matrix.
 
 ## 2. Method
 1. **Requirements.** The 524B rows follow the statute's own structure: (a), (b)(1) through (b)(4), (c), and (d). FDA regulation rows cite the CFR section (eCFR, 2026-09-23 version, verified through the eCFR API); QMSR rows name the ISO 13485 clause by number only, because the standard is copyrighted. Guidance rows cite the section of the guidance. HIPAA Security Rule rows come from NIST SP 800-66 Rev. 2 through the Health Care crosswalk (all 69 rows). Breach notification rows were decomposed from 164.402-164.414. OT rows cite SP 800-82 Rev. 3 sections.
 2. **Crosswalk.** NIST has published no mapping for section 524B or FDA regulations, so those rows carry an **author mapping** to CSF 2.0 and SP 800-53 Rev. 5, labeled as such. HIPAA rows use the Health Care crosswalk (`02_industry-rules/health-care/`), also an author mapping, with NIST's official SP 800-53 references shown alongside in `nist_official_sp800_53r5_1_1`.
-3. **Evidence.** Interviews with the VP QA/RA, VP Engineering, Product Security Manager, Director of Cloud Operations, IT Director, Plant Manager, OT Engineering Manager, and Compliance and Privacy Officer; review of the three submissions' cybersecurity sections, SBOMs, threat models, QMS procedures, and BAAs; a plant walkthrough on 2026-08-18.
-4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population, using the co-sourced internal audit firm's attribute sampling table (25 items for a moderate-risk control operating many times a year):
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, and the campus and plant walk-through on 2026-06-24, EV-001 to EV-059); gap analysis interviews with the VP QA/RA, VP Engineering, Product Security Manager, Director of Cloud Operations, IT Director, Plant Manager, OT Engineering Manager, and Compliance and Privacy Officer (EV-062); review of the three submissions' cybersecurity sections, SBOMs, threat models, QMS procedures, and BAAs (EV-024 to EV-027, EV-048); the samples below (EV-063 to EV-069); and the benefits broker confirmation (EV-070). The refresh with P07 results drew on the P07 plant walkthrough on 2026-08-18 (EV-CM-8), the device lab test on 2026-08-19 (EV-CM-7) and the R-049 records (EV-071, EV-072). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were drawn from the populations collected at intake (for example the 96 terminations and 58 transfers in EV-003, the 29 incidents in EV-040, and the BAA and supplier files in EV-047 and EV-048), using the co-sourced internal audit firm's attribute sampling table (25 items for a moderate-risk control operating many times a year):
    - matched component vulnerabilities in the SBOM queue: 25;
    - terminations: 25 of 96; transfers: 25 of 58; production access requests: 25;
    - hospital BAAs: 20 of 290; subcontractor BAAs: 16 of 16; PHI subcontractors: 18 of 18;

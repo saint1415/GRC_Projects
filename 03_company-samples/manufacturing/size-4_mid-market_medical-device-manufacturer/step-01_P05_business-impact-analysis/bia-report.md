@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (connected medical device manufacturer, NAICS 334510) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Security Manager with the vCISO, the process owners named in `bia.csv`, the Plant Manager, and the VP QA/RA | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-17 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-10 (EV-060), FY2025 revenue report by product line (EV-056), Q2 2026 operations and installed base report (EV-057), CCC service agreements (EV-050), backup configuration and job reports (EV-018), the CVD log and match queue (EV-029, EV-028) and the complaint and MDR procedures and volumes (EV-038). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: the Connected Care Cloud (CCC), product security, quality and regulatory, engineering, the four plant lines, supply chain, customer support and field service, and enterprise support functions. It rates 17 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and patient safety.
@@ -14,12 +15,12 @@ The results feed:
 - the Availability criteria in the SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company designs, builds, and services the VM-7 and legacy VM-5 vital-signs monitors, the IP-4 infusion pump, and the AI-001 skin-image analysis function for about 290 hospitals in 24 states. The CCC gives clinicians remote viewing and secondary alarm notifications, manages pump drug libraries and EHR-integrated pump programming, runs AI-001, and distributes signed firmware. Production runs at the Florida plant on four lines managed by the MES. Engineering, quality, and business systems are mostly SaaS. See `../00_company-facts.md` sections 1 to 3.
+The company designs, builds, and services the VM-7 and legacy VM-5 vital-signs monitors, the IP-4 infusion pump, and the AI-001 skin-image analysis function for about 290 hospitals in 24 states. The CCC gives clinicians remote viewing and secondary alarm notifications, manages pump drug libraries and EHR-integrated pump programming, runs AI-001, and distributes signed firmware. Production runs at the Florida plant on four lines managed by the MES. Engineering, quality, and business systems are mostly SaaS. See `../00_company-facts.md` sections 1 to 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 A design fact bounds the safety impact of a CCC outage: **primary alarms always sound at the bedside monitor or pump, and pumps keep running on their last drug library.** A CCC outage removes remote visibility, secondary notifications, and auto-programming. It does not silence a device or stop an infusion.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $240 million in annual revenue over about 250 business days, or about $960,000 a day: monitors $472,000, pumps $248,000, subscriptions $136,000, and service $104,000 (facts section 7).
+Dollar values are scaled to about $240 million in annual revenue over about 250 business days, or about $960,000 a day: monitors $472,000, pumps $248,000, subscriptions $136,000, and service $104,000 (FY2025 revenue report, EV-056).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -29,7 +30,7 @@ Dollar values are scaled to about $240 million in annual revenue over about 250 
 | Patient safety | Plausible patient harm from a device or CCC failure (delayed response to an alarm, wrong-dose risk) | Clinicians lose remote tools but bedside functions work | None |
 | Reputation | Public advisory or media coverage naming a product; loss of a health system or group purchasing contract | Complaints from several hospitals | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is unrecovered revenue, service credits, overtime and expediting, and quarantine or retest costs, over the MTD. The process owners supplied the recovery assumptions: finished goods buffers (3 weeks of monitors, 2 weeks of pumps) protect shipments, overtime recovers about 3 days of lost output per line, and CCC outages longer than the 99.9% monthly commitment earn service credits of up to 25% of monthly fees. For shipping (BP-13), revenue is delayed rather than lost, so the delayed value is shown separately.
+**How loss at MTD was estimated.** Estimated loss is unrecovered revenue, service credits, overtime and expediting, and quarantine or retest costs, over the MTD. The process owners supplied the recovery assumptions in the BIA interviews (EV-060): finished goods buffers (3 weeks of monitors, 2 weeks of pumps) protect shipments, overtime recovers about 3 days of lost output per line, and CCC outages longer than the 99.9% monthly commitment earn service credits of up to 25% of monthly fees. For shipping (BP-13), revenue is delayed rather than lost, so the delayed value is shown separately.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -65,10 +66,10 @@ Dollar values are scaled to about $240 million in annual revenue over about 250 
 - **Revenue with buffers** drives the plant lines. Finished goods make them Moderate rather than High.
 
 ## 5. Key findings
-1. **The CCC's 2-hour RTO is not demonstrated.** The 2025 regional failover test took 6 hours (gap 11). The 15-minute RPO is supported by point-in-time recovery with a 5-minute log interval. Action: automate failover and rerun the test quarterly (P01 R-016; P07 CP-4).
+1. **The CCC's 2-hour RTO is not demonstrated.** The 2025 regional failover test took 6 hours (EV-019). The 15-minute RPO is supported by point-in-time recovery with a 5-minute log interval. Action: automate failover and rerun the test quarterly (P01 R-016; P07 CP-4).
 2. **The MES cannot meet its 1-hour RPO.** The MES database is backed up nightly to a plant file server on the same OT network. A ransomware event could destroy both the database and its only backup, and up to a day of device history records (P01 R-021).
-3. **Every firmware fix depends on the signing keys, and key recovery has never been tested.** The HSM-backed keys for current products have a documented recovery procedure that has never been exercised. The VM-5 legacy key has one backup copy on media in the same safe (gap 3; P01 R-012).
-4. **One plant event can stop both pump production and board supply.** Line 1 and Line 3 share a flat OT segment with a persistent vendor VPN (gap 4). Line 1 feeds all products, so the 3-day board buffer becomes the real limit (P01 R-005, R-020).
+3. **Every firmware fix depends on the signing keys, and key recovery has never been tested.** The HSM-backed keys for current products have a documented recovery procedure that has never been exercised. The VM-5 legacy key has one backup copy on media in the same safe (EV-014, EV-015; P01 R-012).
+4. **One plant event can stop both pump production and board supply.** Line 1 and Line 3 share a flat OT segment with a persistent vendor VPN (EV-012, EV-013). Line 1 feeds all products, so the 3-day board buffer becomes the real limit (P01 R-005, R-020).
 5. **Regulatory clocks do not stop during an outage.** The eQMS vendor's stated RTO of 24 hours and RPO of 4 hours meet BP-06, but the paper fallback for complaints has never been exercised (P08).
 6. **Traceability supports targeted field actions.** The ERP vendor's stated RPO of 1 hour meets BP-13, which matters because 806.10(c) reports need device identifiers and counts.
 

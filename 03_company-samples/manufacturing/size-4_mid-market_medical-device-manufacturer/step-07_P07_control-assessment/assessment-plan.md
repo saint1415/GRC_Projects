@@ -71,6 +71,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - a restore of one CCC table snapshot into the non-production account;
   - a review of 90 days of vendor VPN logs.
 
+### What each test could show
+The 2026 policies (POL-01 to POL-05), the new standards and the P08 runbooks were drafts during fieldwork; they were approved on 2026-09-17 and take effect on 2026-10-01. The 2024 policies, the existing standards and procedures (STD-06, STD-08, STD-09, the SPDF, the 2024 incident response plan and the PSIRT procedure) were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems or production units | 179 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02 4.5, brokered vendor access in POL-02 4.8, and the single severity scale in POL-03 4.4 and the P08 runbooks); its design was reviewed. Operation is tested at the 2027-03 follow-up | 3 |
+| Not implemented | Nothing existed to test | 30 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). The sample populations in section 2 come from intake exports where intake collected them: terminations and transfers from the HR report (EV-003), privileged accounts from EV-006, product and station change records from EV-035, critical cloud patch tickets from EV-016, laptops from the endpoint console (EV-009), incidents from the incident log (EV-040), PHI subcontractors and critical software suppliers from EV-046 and EV-047, and staff from the HR roster (EV-003). The open matched vulnerabilities (612), the new accounts (140) and the finished goods lots were extracted during fieldwork.
+
 ## 4. Rules of engagement
 - No testing on the production CCC beyond read-only configuration review. No active scanning of plant OT while lines were running; the passive capture used a mirror port approved by the Plant Manager.
 - Device tests ran in the independent lab on units pulled from finished goods, which were then quarantined and reworked. No PHI was on the units.
@@ -129,7 +140,7 @@ Other than satisfied statements by risk: 40 High, 36 Moderate.
 | SI-7 | 6 | 0 | n/a | n/a |
 | SR-3 | 2 | 2 | Moderate | POAM-014 |
 
-**Fully satisfied (5 controls):** CM-14 and SI-7 (every unsigned or wrongly signed image was rejected by VM-7 and IP-4 units), IA-2(1) (hardware-key MFA on all 25 sampled privileged accounts), RA-5(11) (the public reporting channel works), and SC-28 (encryption at rest for the CCC and 30 of 30 laptops). These confirm the strengths in the scenario facts: the company's code integrity chain is sound.
+**Fully satisfied (5 controls):** CM-14 and SI-7 (every unsigned or wrongly signed image was rejected by VM-7 and IP-4 units), IA-2(1) (hardware-key MFA on all 25 sampled privileged accounts), RA-5(11) (the public reporting channel works), and SC-28 (encryption at rest for the CCC and 30 of 30 laptops). These confirm what the intake evidence showed (EV-002, EV-009, EV-015, EV-017, EV-025, EV-029): the company's code integrity chain is sound.
 
 **Fully other than satisfied (6 controls):** AC-6, AC-6(5), CP-10, IA-2, IA-3, and SC-12.
 

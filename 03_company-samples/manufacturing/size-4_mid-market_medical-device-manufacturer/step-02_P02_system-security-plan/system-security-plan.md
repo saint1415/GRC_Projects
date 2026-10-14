@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-17
 
 ## 1. System Name and Identifier
-Device Lifecycle Platform (**DLP**), identifier CSC-DLP-01. The DLP is the company's major system. It comprises SYS-01 to SYS-09 in `../00_company-facts.md`: everything the company uses to design, build, sign, manufacture, release, update, and operate its connected devices.
+Device Lifecycle Platform (**DLP**), identifier CSC-DLP-01. The DLP is the company's major system. It comprises SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): everything the company uses to design, build, sign, manufacture, release, update, and operate its connected devices.
 
 ## 2. System Overview
 The DLP supports the device side of every process in the BIA (P05): the Connected Care Cloud (CCC) services for about 290 hospitals, product security and regulatory reporting, software build and code signing, and production on the four plant lines. It serves about 600 workforce users (engineering, plant, quality, support, and IT) and holds PHI for about 2.4 million patients on behalf of hospital customers.
@@ -94,6 +94,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Integrity was considered for High.** A compromised signing key or provisioning server could affect every device shipped, which is a multi-patient harm scenario in FDA's terms. The team kept integrity at Moderate for three reasons: devices verify signatures before install, release signing needs two approvers in the HSM, and pumps enforce dose limits in the device. To compensate, the plan adds integrity tailoring (section 10.1) and treats the signing and provisioning paths as the highest-value assets in P01.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The endpoint count (920) is the endpoint console total (EV-009); the plant OT count is the OT Engineering Manager's estimate of about 310 networked assets, of which the OT spreadsheet lists about 70% (EV-011).
+
 **Inside the boundary:**
 - the 7 cloud accounts and the CCC workloads, keys, and backups;
 - the identity provider tenant configuration;
@@ -124,7 +126,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Line equipment vendor | Inbound remote support | Equipment diagnostics and programs | Persistent VPN appliance with a shared account (**gap**, R-020) |
 | MSSP | Inbound logs; remote response actions | Security logs that can contain PHI fragments | Subcontractor BAA; SOC 2 Type 2 |
 | ISAO | Bidirectional | Vulnerability and threat information, customer communications | Membership terms |
-| Call-recording and field service scheduling vendors | Inbound support data | Case notes with occasional patient identifiers | **No subcontractor BAA (gap 10)** |
+| Call-recording and field service scheduling vendors | Inbound support data | Case notes with occasional patient identifiers | **No subcontractor BAA (EV-047)** |
 
 ## 9. System Component Inventory
 | Component | Type | Location / provider | Owner |
@@ -173,7 +175,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 33 | Cloud provider, identity vendor, repository vendor, MSSP, hospital identity providers |
 | Common/Inherited | 9 | Identity vendor (AC-2(1), AC-7, IA-2(1), IA-2(2)), cloud provider (AU-9, CP-6, SC-5, SC-13), MSSP (IR-7) |
 
-The Partially implemented statements trace to the 15 gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-007, EV-012, EV-015 and EV-028) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 36 controls from 2026-08-10 to 2026-08-28 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -185,7 +187,7 @@ The co-sourced internal audit firm assessed 36 controls from 2026-08-10 to 2026-
 - **Devices.** VM-7 and IP-4 authenticate with unique certificates. VM-5's shared per-hospital key does not meet this statement and is tracked in R-013. The factory provisioning key gap (R-010) affects the assurance of every device certificate until the key moves into the HSM.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); design history files, threat models, and SBOMs (PLM).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10); design history files, threat models, and SBOMs (PLM).
 
 ## 13. Acronym List and Glossary
 - **AOI:** automated optical inspection

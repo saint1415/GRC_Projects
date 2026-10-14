@@ -4,7 +4,7 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed connected medical device manufacturer) |
 | Tier / Vertical | Mid-Market / Manufacturing (NAICS 334510) |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv` |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, the eQMS feature settings, the web proxy categories, a department heads survey and the PLM design records (EV-046, EV-058, EV-037, EV-059). How many staff use public AI assistants, and what they enter, was not established at intake (open request); the August 2026 traffic figure in section 4 counts sessions from company devices only |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-004, AI-005, and AI-006 |
 | Assessors / date | Chief Medical Officer and Director of Clinical Affairs (clinical), VP Engineering and Product Security Manager (model and security), VP QA/RA (regulatory and QMS), vCISO and Security Manager (enterprise security), Compliance and Privacy Officer (privacy); 2026-08-24 to 2026-09-09 |
 | Decision | Chief Operating Officer and Chief Medical Officer, 2026-09-17; High-tier decisions noted by the CEO |
@@ -15,7 +15,7 @@ AI appears in three different places at this company, and each needs a different
 - **In production and quality** (AI-003 optical inspection, AI-005 complaint summarization). These are QMS and production software, so the QMSR's software validation expectations apply (ISO 13485 clauses 7.5.6 and 4.1.6).
 - **In the workforce** (AI-004 coding assistant, AI-006 public tools). These are enterprise tools under POL-05 and STD-05.
 
-Only AI-001 had a governance process before this assessment (gap 13). The main findings:
+Only AI-001 had a governance process before this assessment (EV-058). The main findings:
 - **AI-001:** postmarket sensitivity for the darkest skin tones has fallen below the company's threshold at hospitals using a new camera model.
 - **AI-005:** switched on by Quality without validation, and the eQMS vendor's own SOC 2 report is qualified on the release of this feature (P09).
 - **AI-006:** public AI tools are prohibited but not blocked.
