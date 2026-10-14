@@ -11,7 +11,7 @@
 | Approved | Executive risk committee (chaired by the Chief Risk Officer), 2026-09-08; reviewed by the risk committee of the board, 2026-09-10 |
 
 ## 1. Scope and risk framing
-**Scope.** All systems that support tier-1 processes across the 7 plants, the 9 service centers, the 3 spare yards, the two cloud estates and two colocation data centers, the acquired Ohio plant (AQ-01), the products and services supplied to utilities (TMU firmware, FMS, STRS), and the roughly 2,400 suppliers (410 with system access or data). Business processes and impact values come from the enterprise BIA (P05). The EPSP is also covered at system level in the SSP (P02).
+**Scope.** All systems that support tier-1 processes across the 7 plants, the 9 service centers, the 3 spare yards, the two cloud estates and two colocation data centers, the acquired Ohio plant (AQ-01), the products and services supplied to utilities (TMU firmware, FMS, STRS), and the roughly 2,400 suppliers (410 with system access or data), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business processes and impact values come from the enterprise BIA (P05). The EPSP is also covered at system level in the SSP (P02).
 
 **Three lines.** Risk owners in the business, IT, and manufacturing (first line) own and treat risks. The GRC team and the Chief Risk Officer (second line) run this method and roll risks up into the enterprise risk register. Internal Audit (third line) tests controls independently (P07).
 
@@ -47,8 +47,8 @@
 Process safety risks (ER-07) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C, the critical manufacturing threat picture (ransomware that reaches plant floors, supplier compromise, theft of designs), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C, the critical manufacturing threat picture (ransomware that reaches plant floors, supplier compromise, theft of designs) in the SOC's threat intelligence (EV-069), the BIA (P05), the intake evidence, the 2025 risk analysis and risk appetite (EV-034), and risk workshops with the SOC, OT Security, plant controls engineering, the Integration Management Office, Product Security, Supply Chain, Digital Services, Spares and Services, Finance, Human Resources and Maintenance (EV-087). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-027), coverage and configuration exports from the enterprise systems of record, the AQ-01 status report (EV-077), contract and supplier records, the workshops, the gap analysis samples, and, for risks added or re-rated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -70,6 +70,8 @@ By threat source type: Adversarial 35, Accidental 17, Structural 13, Environment
 By treatment: Mitigate 54, Accept 10, Avoid 2.
 By status: In progress 50, Open 4, Closed (accepted) 10, Closed (avoided) 2.
 **25 risks are outside tolerance** and each has a dated treatment plan. Five risks were added or re-rated after the Internal Audit fieldwork (R-008, R-009, R-027, R-028, R-032; last reviewed 2026-08-28).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork, including P07 results available by then. Pass 2 followed the Internal Audit assessment (P07): R-008 and R-009 were added on 2026-08-28 after testing found an OEM remote tool on a P4 engineering workstation (EV-AC-17) and OEM default passwords on 5 drying oven HMIs (EV-IA-5), and R-027, R-028 and R-032 were re-rated on 2026-08-28 with the P07 results (EV-CM-3, EV-AC-5, EV-AC-2(3), EV-IA-8, EV-CP-9). The `assessment_pass` column shows which pass produced each risk, and the `likelihood_basis` column cites the evidence behind each rating.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

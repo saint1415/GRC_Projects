@@ -7,6 +7,7 @@
 | Scope | Enterprise AI portfolio (14 use cases in `ai-use-case-inventory.csv`), with full assessments of AI-001 demand forecasting (section 5) and AI-002 predictive maintenance (section 6). The registry default "demand forecasting and predictive maintenance" is kept and split into two use cases because at this size they have different owners, data, and risks |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for the generative use cases (section 7); repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Technology Officer), portfolio review meeting of 2026-08-26; GRC team prepared the review; data science lead ran the tests |
+| Inventory | `ai-use-case-inventory.csv` (14 use cases), built from the AI governance committee register (EV-082), a review of vendor release notes, the SSO application catalog, feature settings in the ERP, applicant tracking and security tooling, and procurement records (EV-083), and the accounts payable vendor master (EV-048). The `source_evidence` column names the source of each entry. Not established at intake: AI features embedded in vendor products beyond the reviewed tier-1 SaaS (intake open request), and workforce use of public AI tools outside the web gateway, for example on personal devices |
 | Decision | Executive risk committee, 2026-09-08 (section 9) |
 
 ## 1. Portfolio summary
