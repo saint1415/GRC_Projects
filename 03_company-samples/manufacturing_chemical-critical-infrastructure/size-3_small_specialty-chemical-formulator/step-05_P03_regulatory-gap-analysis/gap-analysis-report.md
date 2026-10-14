@@ -12,7 +12,7 @@
 | Regulatory status checked | 2026-09-26 (eCFR point-in-time 2026-09-23, Federal Register, cisa.gov, uscode.house.gov, csrc.nist.gov) |
 
 ## 1. Applicability
-Applicability was decided first, from the plant's chemicals and quantities (`../00_company-facts.md`, threshold math). Four results:
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the plant's chemicals and maximum intended inventories in the process safety information (EV-030) and the legacy CFATS records (EV-028). The threshold math is in `../00_company-facts.md`. This section restates the results for the rules analyzed here. Four results:
 
 **1. CFATS (6 CFR Part 27): would apply, but cannot be enforced.**
 - The plant holds about 35,000 lb of hydrogen peroxide in 50% solution. Hydrogen peroxide is an Appendix A chemical of interest for theft and diversion at a minimum concentration of 35%, with a screening threshold quantity of 400 lb.
@@ -44,7 +44,7 @@ Applicability was decided first, from the plant's chemicals and quantities (`../
 ## 2. Method
 1. **Requirements.** RBPS 8 was decomposed into its text in 6 CFR 27.230(a)(8) (G-002 to G-006), CISA's published RBPS 8 security measures (G-007 to G-020), and related RBPS items that support cyber: (a)(12) personnel surety, (a)(15) and (a)(16) incident reporting and records, (a)(17) officials and organization, and 27.400 CVI (G-021 to G-025). The OT benchmark rows use CSF 2.0 subcategories with the matching SP 800-82 Rev. 3 section (G-026 to G-040). RMP rows follow the Part 68 section structure (G-041 to G-058).
 2. **Crosswalk.** CFATS and RMP rows are mapped to CSF 2.0 and SP 800-53 Rev. 5 by the author; no official NIST mapping exists for 6 CFR Part 27 or 40 CFR Part 68. OT benchmark rows use the official CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`).
-3. **Evidence.** Interviews (Plant Manager, EHS Manager, Controls Engineer, Process Engineer, IT Manager, 3 Shift Supervisors, and the DCS integrator), document review, firewall and DCS exports, and the plant walkthrough.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents and records collected 2026-06-29 to 2026-07-10), the plant walkthrough on 2026-07-15 (EV-050), the firewall rule export and business network scan (EV-051), the TLS scan (EV-052), and gap analysis interviews with the Plant Manager, EHS Manager, Controls Engineer, Process Engineer, IT Manager, HR Manager, 3 Shift Supervisors, and the DCS integrator (EV-049). Some rows also cite control assessment evidence from P07 testing (EV-CM-5 and others). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

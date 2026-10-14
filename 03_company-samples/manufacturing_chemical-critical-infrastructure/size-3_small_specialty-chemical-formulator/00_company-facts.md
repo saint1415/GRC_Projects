@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Chemical | Small
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. Where a fact comes from a statute, regulation, or NIST publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23), the Federal Register, uscode.house.gov, and cisa.gov on 2026-09-26.
+All 11 deliverables in this folder use the facts below. The company is fictitious. Where a fact comes from a statute, regulation, or NIST publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23), the Federal Register, uscode.house.gov, and cisa.gov on 2026-09-26.
 
 ## 1. The organization
 
@@ -12,12 +12,12 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Workforce | 162 employees: 64 production (blend operators on three shifts), 22 packaging, 18 warehouse and shipping, 12 maintenance and instrumentation (including 2 instrument and electrical technicians), 10 quality and laboratory, 8 engineering and EHS, 10 sales and customer service, 18 general and administrative (finance, HR, purchasing, and a 3-person IT team) |
 | Revenue | $74 million a year (fictional). The SBA size standard for NAICS 325998 is 650 employees (13 CFR 121.201), so the company is SBA-small |
 | Operations | Blending runs 24 hours a day, Monday to Friday, with weekend packaging overtime. About 420 active formulations and 1,150 packaged SKUs. About 35 batches and 25 outbound truckloads a day |
-| Customers | About 600 business customers in the Southeast. The largest private-label customer (about 18% of revenue) sent a supplier security questionnaire in 2026 (see P09) |
+| Customers | About 600 business customers in the Southeast. The largest private-label customer (about 18% of revenue) sent a supplier security questionnaire in 2026 (EV-043; see P09) |
 | Regulated inventory | See the table below. Maximum intended inventories are the limits written into the RMP safety information (40 CFR 68.48(a)(2)) and the tank level alarms |
-| CFATS status | The plant holds 50% hydrogen peroxide, a CFATS chemical of interest. The company filed a Top-Screen in 2008, was assigned a risk tier, and operated under an approved CFATS Site Security Plan until the statutory authority expired on **July 28, 2023** (CISA CFATS page, read 2026-09-26; 6 U.S.C. 621-629 shown as omitted at uscode.house.gov). CFATS has **not been reauthorized** as of 2026-09-26. CISA states it cannot enforce CFATS or require facilities to implement their Site Security Plans. The company kept most physical measures and treats RBPS 8 as a **voluntary benchmark** (P03) |
-| EPA RMP status | **Covered.** The aqueous ammonia process holds more than the threshold quantity (math below). **Program 2** (40 CFR 68.10(k)): Program 1 is not available because the 2024 worst-case release analysis reaches public receptors (68.10(j)(2)), and Program 3 does not apply because NAICS 325998 is not in the 68.10(l)(1) list and the process is not covered by OSHA PSM (68.10(l)(2)). **Non-responding stationary source** (68.90(b)): employees evacuate and the county fire rescue hazardous materials team responds. RMP five-year update submitted 2024-03-18. Compliance audit completed 2025-06-12 |
-| OSHA PSM status | **Not covered** (29 CFR 1910.119(a)(1)). No chemical is at a listed concentration and threshold (math below) |
-| Not in scope | USCG MTSA cybersecurity rule (33 CFR Part 101 Subpart F): applies only to facilities required to have a security plan under 33 CFR Part 105 (101.605(a)); the plant has no marine transfer. CIRCIA: proposed rule only, not in effect; as proposed, the company would be below the SBA size criterion and the CFATS sector criterion is moot while CFATS is lapsed. EAR: the company ships only to U.S. customers and holds no controlled technology. Federal contracts: none. SEC rules: privately held |
+| CFATS status | The plant holds 50% hydrogen peroxide, a CFATS chemical of interest. The company filed a Top-Screen in 2008, was assigned a risk tier, and operated under an approved CFATS Site Security Plan until the statutory authority expired on **July 28, 2023** (CISA CFATS page, read 2026-09-26; 6 U.S.C. 621-629 shown as omitted at uscode.house.gov). CFATS has **not been reauthorized** as of 2026-09-26. CISA states it cannot enforce CFATS or require facilities to implement their Site Security Plans. The company kept most physical measures (EV-016, EV-028) and treats RBPS 8 as a **voluntary benchmark**, as decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (C-CHEMICAL-R01) and analyzed in P03 |
+| EPA RMP status | **Covered**, determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (EPA-RMP) from the process safety information (EV-030). The aqueous ammonia process holds more than the threshold quantity (math below). **Program 2** (40 CFR 68.10(k)): Program 1 is not available because the 2024 worst-case release analysis reaches public receptors (68.10(j)(2)), and Program 3 does not apply because NAICS 325998 is not in the 68.10(l)(1) list and the process is not covered by OSHA PSM (68.10(l)(2)). **Non-responding stationary source** (68.90(b)): employees evacuate and the county fire rescue hazardous materials team responds. RMP five-year update submitted 2024-03-18 (EV-029). Compliance audit completed 2025-06-12 (EV-032) |
+| OSHA PSM status | **Not covered** (29 CFR 1910.119(a)(1)), determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (OSHA-PSM). No chemical is at a listed concentration and threshold (math below) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): USCG MTSA cybersecurity rule (33 CFR Part 101 Subpart F): applies only to facilities required to have a security plan under 33 CFR Part 105 (101.605(a)); the plant has no marine transfer. CIRCIA: proposed rule only, not in effect; as proposed, the company would be below the SBA size criterion and the CFATS sector criterion is moot while CFATS is lapsed. EAR: the company ships only to U.S. customers and holds no controlled technology. Federal contracts: none. SEC rules: privately held |
 | Regulatory driver IDs | **C-CHEMICAL-R01** (CFATS RBPS 8, voluntary benchmark), **C-CHEMICAL-R02** (USCG MTSA rule, not applicable), **C-CHEMICAL-R03** (CIRCIA, proposed). EPA RMP (40 CFR Part 68), CERCLA and EPCRA release reporting (40 CFR 302.6, 355.40-355.43), and the OT benchmark (NIST CSF 2.0 with SP 800-82 Rev. 3) are cited directly because the vertical registry has no ID for them |
 | State law approach | Florida law is cited only where unavoidable: breach notice for employee personal information (Fla. Stat. 501.171). The samples otherwise stay federal |
 
@@ -56,60 +56,35 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Hosting | Sensitive data | Notes |
 |---|---|---|---|---|
-| SYS-01 | Distributed control system (DCS) | On premises, control room and Blend Hall A | Setpoints, alarm limits, process data | Redundant controllers and server pair; 3 operator stations; 1 engineering workstation (EWS). Controls the tank farm, the aqueous ammonia process, and Blend Hall A. Two major releases behind the vendor's current release |
+| SYS-01 | Distributed control system (DCS) | On premises, control room and Blend Hall A | Setpoints, alarm limits, process data | Redundant controllers and server pair; 3 operator stations; 1 engineering workstation (EWS). Controls the tank farm, the aqueous ammonia process, and Blend Hall A. Two major releases behind the vendor's current release (EV-015) |
 | SYS-02 | Batch management system | On premises (DCS server pair) | About 420 master recipes (trade secrets) | Recipe management and batch execution. Receives production orders from SYS-08 through the order interface in SYS-10 |
-| SYS-03 | Safety instrumented system (SIS) | On premises, separate safety controller | Safety logic | Independent logic solver: aqueous ammonia tank high level and high pressure trips, remote isolation valve, ammonia gas detection, hydrogen peroxide tank high-temperature trip. Proof-tested yearly |
+| SYS-03 | Safety instrumented system (SIS) | On premises, separate safety controller | Safety logic | Independent logic solver: aqueous ammonia tank high level and high pressure trips, remote isolation valve, ammonia gas detection, hydrogen peroxide tank high-temperature trip. Proof-tested yearly (EV-035) |
 | SYS-04 | Packaging line PLCs (4) and the truck loading rack automation | On premises | Load records | Loading rack PLC with meters, ground verification, and a driver card reader |
-| SYS-05 | Process historian | On premises, **dual-homed** on the business and control networks | 3 years of process data | Feeds operator reports and the replica used by AI-001 |
-| SYS-06 | OT network and IT/OT firewall | On premises | n/a | Control network and supervisory network behind one firewall. Rules include "any" rules for the integrator and the historian |
-| SYS-07 | Remote access | On premises and SaaS | n/a | Employees: VPN with MFA. DCS integrator: a **remote desktop tool installed on the EWS**, always on, one shared account, no MFA |
-| SYS-08 | Enterprise resource planning (ERP) | Vendor SaaS | Orders, inventory (including hydrogen peroxide), bills of materials, customer data | A critical business system in RBPS 8 terms. The vendor has a SOC 2 Type 2 report (reviewed in P09) |
+| SYS-05 | Process historian | On premises, **dual-homed** on the business and control networks (EV-011) | 3 years of process data | Feeds operator reports and the replica used by AI-001 |
+| SYS-06 | OT network and IT/OT firewall | On premises | n/a | Control network and supervisory network behind one firewall. Rules include "any" rules for the integrator and the historian (EV-011) |
+| SYS-07 | Remote access | On premises and SaaS | n/a | Employees: VPN with MFA. DCS integrator: a **remote desktop tool installed on the EWS**, always on, one shared account, no MFA (EV-012) |
+| SYS-08 | Enterprise resource planning (ERP) | Vendor SaaS | Orders, inventory (including hydrogen peroxide), bills of materials, customer data | A critical business system in RBPS 8 terms. The vendor has a SOC 2 Type 2 report (EV-039; reviewed in P09) |
 | SYS-09 | Laboratory information management system (LIMS) | Cloud tenant (SYS-10) | QC results, certificates of analysis | |
 | SYS-10 | Cloud tenant (IaaS/PaaS) | Public cloud provider (vendor-agnostic) | Formulation data, historian replica | Hosts the LIMS, the order interface service, the historian replica and analytics store, the AI-001 model service, the file shares, the backup vault, and the log workspace |
-| SYS-11 | Identity provider (single sign-on and MFA) and the on-premises directory | SaaS and on premises | Identities | Covers the SaaS apps, the cloud console, and the VPN. The OT systems use **separate local accounts** |
+| SYS-11 | Identity provider (single sign-on and MFA) and the on-premises directory | SaaS and on premises | Identities | Covers the SaaS apps, the cloud console, and the VPN. The OT systems use **separate local accounts** (EV-001, EV-006) |
 | SYS-12 | Productivity suite (email, files, chat) | SaaS | Incidental | |
-| SYS-13 | Endpoints | On premises | Incidental | 118 office laptops and desktops with EDR; 16 OT workstations (HMIs, EWS, historian clients) **without EDR** |
-| SYS-14 | Physical security systems | On premises | Video, badge records | Badge access, 42 networked cameras, and a video recorder on the business network. Legacy CFATS measures |
+| SYS-13 | Endpoints | On premises | Incidental | 118 office laptops and desktops with EDR; 16 OT workstations (HMIs, EWS, historian clients) **without EDR** (EV-009) |
+| SYS-14 | Physical security systems | On premises | Video, badge records | Badge access, 42 networked cameras, and a video recorder on the business network (EV-016, EV-051). Legacy CFATS measures |
 | SYS-15 | HR and payroll | Vendor SaaS | Employee PII | Background check results and payroll data for 162 employees |
-| SYS-16 | AI-001 process-optimization model | Cloud tenant (SYS-10) | Historian replica | Pilot on 2 Blend Hall A tanks since May 2026 (see P10) |
+| SYS-16 | AI-001 process-optimization model | Cloud tenant (SYS-10) | Historian replica | Pilot on 2 Blend Hall A tanks since May 2026 (EV-045; see P10) |
 
 **SSP system (P02):** the *Process Control and Batch Management System (PCBMS)*: SYS-01, SYS-02, SYS-03, SYS-05, the OT network and IT/OT firewall (SYS-06), the integrator and employee remote access paths into OT (SYS-07), and the 16 OT workstations in SYS-13, with interfaces to the ERP order interface and historian replica in SYS-10.
 
-## 4. Current security posture: partially compliant
+## 4. Where the evidence is
 
-**In place today:**
-- An IT/OT firewall between the business and control networks (rules too broad; see gap 2)
-- Redundant DCS controllers and servers; UPS on the DCS, SIS, and control room
-- An independent SIS for the aqueous ammonia and hydrogen peroxide tanks, proof-tested yearly (last test 2025-10-21)
-- MFA through the identity provider for email, the ERP, the cloud console, and employee VPN
-- EDR on office endpoints
-- Nightly DCS configuration exports (stored on the EWS; see gap 8)
-- Perimeter fence, badge access, cameras, and a day-shift gate guard (kept from the CFATS Site Security Plan)
-- Background checks at hire (kept from CFATS RBPS 12 practice; terrorist-ties vetting through CISA stopped with the lapse)
-- Annual security awareness training for office staff
-- RMP Program 2 elements: hazard review (2024), operating procedures, training, maintenance, 2025 compliance audit, annual coordination with county fire rescue, and a 2025-11-06 notification exercise
-- A written management of change (MOC) procedure for process chemistry and equipment
-- Legacy CVI kept in a locked cabinet and a restricted folder
-- Daily cloud backups of the LIMS and file shares, copied to a second region
-
-**Missing or weak, found in the 2026 assessments:**
-1. No OT asset inventory. The newest OT network diagram is from the 2019 CFATS Site Security Plan.
-2. The historian is dual-homed on the business and control networks, and the IT/OT firewall has "any" rules for the DCS integrator and the historian.
-3. The DCS integrator has always-on remote access through a remote desktop tool on the EWS, with one shared account, no MFA, no session approval, and no session logging.
-4. Operators share one account per HMI, and engineers share one DCS engineering account. There are no unique IDs in the DCS.
-5. DCS, SIS, PLC, and recipe changes are outside the MOC procedure. There is no configuration baseline or change log, and the Process Engineer can release recipe changes without a second approval.
-6. OT patches are applied only at the annual turnaround, the DCS is two major releases behind, and nobody monitors OT vulnerabilities or CISA's Known Exploited Vulnerabilities (KEV) catalog.
-7. No security monitoring of the OT network. DCS, SIS, and firewall logs are not collected.
-8. DCS backups sit on the EWS and one USB drive in the control room. They have never been restore-tested, there is no offline copy, and the SIS program copy has never been compared with the running logic.
-9. The incident response plan covers office IT only. Cyber causes are not in the RMP hazard review or the emergency action plan, and there has never been an OT tabletop exercise.
-10. Removable media are used freely on HMIs for recipe files and vendor updates. There is no scanning station.
-11. Operators, maintenance staff, and contractors get no cybersecurity training.
-12. DCS local accounts and the loading rack driver cards are not part of terminations or access reviews. Two active DCS accounts and one driver card belong to people who have left.
-13. Legacy CVI, the old Site Security Plan, and formulation files sit in a shared folder open to 40 users. There is no data classification policy.
-14. Third parties: the DCS integrator and data science contractor agreements have no security clauses, the ERP vendor's SOC 2 report has never been reviewed, and the AI-001 pilot started without a risk assessment or an approved-tools list.
-15. The SIS keyswitch was found in the remote program position, and SIS engineering software is installed on the DCS EWS (found during P07 testing on 2026-08-12).
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the CFATS RBPS 8 benchmark, the OT benchmark, and EPA RMP Program 2** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07), including the OT tests on the 2026-08-12 maintenance day. Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -129,8 +104,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 | Date | Event |
 |---|---|
-| 2026-07-13 to 2026-07-24 | Risk assessment and gap analysis fieldwork (plant walkthrough 2026-07-15) |
-| 2026-08-10 to 2026-08-14 | Control assessment fieldwork (OT testing 2026-08-12 during a planned Blend Hall A maintenance day) |
+| 2026-06-29 to 2026-07-10 | Intake: evidence requests, exports, inventories, obligations register |
+| 2026-07-13 to 2026-07-24 | BIA interviews, risk assessment and gap analysis fieldwork (plant walkthrough 2026-07-15) |
+| 2026-07-27 to 2026-08-07 | Policies drafted from the gaps |
+| 2026-08-10 to 2026-08-14 | Control assessment fieldwork (OT testing 2026-08-12 during a planned Blend Hall A maintenance day): operating tests of controls already in place; design review of the draft policies |
 | 2026-08-24 | SOC 2 security self-benchmark completed |
 | 2026-08-26 | AI risk assessment completed |
-| 2026-09-04 | Deliverables approved by the VP Operations (Moderate and below) and the CEO (High) |
+| 2026-09-04 | Deliverables and policies approved by the VP Operations (Moderate and below) and the CEO (High) |
+| 2027-03 (planned) | Follow-up assessment: operating effectiveness of the controls the new policies introduced, after at least one quarter of operation |

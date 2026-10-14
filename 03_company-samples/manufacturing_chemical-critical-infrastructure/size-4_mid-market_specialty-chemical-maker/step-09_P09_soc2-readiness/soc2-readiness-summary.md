@@ -49,9 +49,9 @@ A chemical maker is usually not a SOC 2 service organization: it sells products,
 **Ready (18):** governance and oversight (CC1.1, CC1.2, CC1.5, CC2.2), risk assessment (CC3.1, CC3.2), monitoring (CC4.1, CC4.2), control design (CC5.1), access and boundary protection (CC6.2, CC6.4, CC6.6, CC6.7), detection and triage (CC7.2, CC7.3), capacity (A1.1), and processing objectives and stored data (PI1.1, PI1.5). The corporate program built since 2023 (audit committee reporting, P01, P07, MSSP) carries most of these.
 
 **Not ready (4):**
-- **CC8.1** change management: replenishment rules and code change with no peer review, test evidence, or release approval (gap 11; P01 R-023).
+- **CC8.1** change management: replenishment rules and code change with no peer review, test evidence, or release approval (EV-055; P01 R-023).
 - **CC7.5 and A1.3** recovery: TTRS runs in one region, and no restore or failover has been tested (P01 R-021).
-- **CC9.2** vendor management: only 3 of 11 key cloud and SaaS vendor reports have been reviewed (gap 7).
+- **CC9.2** vendor management: only 3 of 11 key cloud and SaaS vendor reports have been reviewed (EV-046, EV-058).
 
 Each maps to POA&M items POAM-012 and POAM-021 (P07). The 21 Partially ready criteria mostly depend on standards being issued (P06), gateway hardening (CC6.1, CC6.8, CC7.1), and documenting checks that exist informally (PI1.2 to PI1.4).
 

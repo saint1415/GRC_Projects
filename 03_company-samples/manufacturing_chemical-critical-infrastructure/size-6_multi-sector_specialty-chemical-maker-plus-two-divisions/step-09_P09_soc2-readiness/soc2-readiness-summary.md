@@ -50,7 +50,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 **Not ready:**
 - **CC2.3:** no system description, no written security commitments, and no defined complementary user entity controls.
-- **CC9.2:** the telemetry gateway vendor portal has no MFA and the vendor has not been reviewed since 2023 (P07 SA-9 and IA-2(1); scenario gap 6). A service auditor would treat this vendor as a key subservice organization.
+- **CC9.2:** the telemetry gateway vendor portal has no MFA and the vendor has not been reviewed since 2023 (P07 SA-9 and IA-2(1); group gap 6). A service auditor would treat this vendor as a key subservice organization.
 
 **Partially ready:** CC2.1 (component inventory), CC3.4 and CC8.1 (gateway firmware changes outside change review), CC4.1 (no separate evaluation of the service), CC5.3 (service procedures), CC6.2 (vendor portal users outside identity governance), CC6.8 (firmware integrity), CC7.1 (gateway configuration drift), CC7.4 (customer notice path not exercised), A1.3 (manual fallback untested), PI1.2 (no reconciliation of utility readings), and PI1.4 (no order-to-release match).
 

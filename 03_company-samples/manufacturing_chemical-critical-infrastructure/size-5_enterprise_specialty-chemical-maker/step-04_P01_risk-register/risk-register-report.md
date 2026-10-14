@@ -11,7 +11,7 @@
 | Approved | Executive risk committee (chaired by the Chief Risk Officer), 2026-09-08; reviewed by the risk committee of the board, 2026-09-10 |
 
 ## 1. Scope and risk framing
-**Scope.** All 14 plants (OT and IT), the 9 distribution centers and 2 R&D centers, the two cloud estates and two colocation data centers, the SL-1 and SL-2 service lines, the three plants acquired in 2025, and about 2,600 vendors (about 180 with OT or remote access). Business processes and impact values come from the enterprise BIA (P05). The PLT-01 Gulf Coast Complex Process Control and Batch Management System (GC-PCBMS) is also covered at system level in the SSP (P02).
+**Scope.** All 14 plants (OT and IT), the 9 distribution centers and 2 R&D centers, the two cloud estates and two colocation data centers, the SL-1 and SL-2 service lines, the three plants acquired in 2025, and about 2,600 vendors (about 180 with OT or remote access). Systems and vendors come from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business processes and impact values come from the enterprise BIA (P05). The PLT-01 Gulf Coast Complex Process Control and Batch Management System (GC-PCBMS) is also covered at system level in the SSP (P02).
 
 **Three lines.** Risk owners in operations, process safety, and IT (first line) own and treat risks. The GRC team and the Chief Risk Officer (second line) run this method and roll risks up into the enterprise risk register. Internal Audit (third line) tests controls independently (P07).
 
@@ -46,8 +46,8 @@
 Process safety risks (ER-01) at Moderate or above cannot be accepted without a dated treatment plan and the concurrence of the Vice President, Process Safety and EHS. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the chemical sector threat picture (OT-capable state actors, ransomware that spreads from IT to OT, compromised integrators, insiders, theft and diversion of chemicals of interest), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Independent safety layers (SIS, mechanical relief, manual emergency shutdown) lower the likelihood of adverse impact; they do not lower the likelihood of initiation.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the chemical sector threat picture (OT-capable state actors, ransomware that spreads from IT to OT, compromised integrators, insiders, theft and diversion of chemicals of interest) in the SOC's threat intelligence (EV-062), the BIA (P05), the intake evidence, the 2025 risk analysis (EV-034), and risk workshops with the SOC, the OT Center of Excellence, process safety, the Integration Management Office, Global Logistics, Digital Services, Third-Party Risk, Corporate Security and Finance (EV-082). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Independent safety layers (SIS, mechanical relief, manual emergency shutdown) lower the likelihood of adverse impact; they do not lower the likelihood of initiation. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-018), coverage and configuration exports from the IT and OT systems of record, process safety records, contract and vendor records, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3). Very High impact is reserved for events that could plausibly cause a release reaching the public or stop several plants for days.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -70,6 +70,8 @@ By threat source type: Adversarial 30, Structural 23, Accidental 9, Environmenta
 By treatment: Mitigate 50, Accept 10, Avoid 2, Share/Transfer 2.
 By status: In progress 43, Open 9, Closed (accepted) 10, Closed (avoided) 2.
 **23 risks are outside tolerance** and each has a dated treatment plan. This count includes R-026 (closed-loop AI pilot), which is rated on the design as proposed; the avoidance decision removes the exposure as long as the pilot stays unapproved.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-014 was added on 2026-08-28 after testing found default vendor passwords on the PLT-01 tank gauging server and two truck rack PLC web interfaces (EV-IA-5), and the risks that P07 tested were updated with the results (their `last_reviewed` date is 2026-08-28; their `likelihood_basis` cites the P07 evidence ID). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -114,7 +116,7 @@ By status: In progress 43, Open 9, Closed (accepted) 10, Closed (avoided) 2.
 3. **The MTSA rule sets the clock at PLT-01 (ER-05).** The KEV backlog (R-005) is a current obligation, while the Cybersecurity Assessment and Plan (R-009) are due 2027-07-16. Both are tracked in the P03 roadmap.
 4. **Acquired plants (ER-04).** PLT-12 to PLT-14 are outside the common services (R-010, R-011, R-060). Going forward, deal approvals must include OT due diligence and integration funding (R-059).
 5. **Disclosure of OT incidents (ER-05).** The materiality process has never been tested on an event where the harm is lost production and safety exposure rather than stolen data (R-012).
-6. **New finding from P07 (closing the loop).** Internal Audit found default vendor passwords on the PLT-01 tank gauging server and two truck rack PLC web interfaces on 2026-08-12. This was added as **R-014** and POAM-013 on 2026-08-28. It also raised the likelihood of R-051 and R-052.
+6. **New finding from P07 (closing the loop).** Internal Audit found default vendor passwords on the PLT-01 tank gauging server and two truck rack PLC web interfaces on 2026-08-12. This was added as **R-014** and POAM-013 on 2026-08-28 (EV-IA-5). It also raised the likelihood of R-051 and R-052.
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q2), about $7.3 million:** OT security at the acquired plants, including OT DMZs, gateway and vault onboarding, and named accounts ($3.1M); Blend Hall 1 console upgrade ($1.6M); OT monitoring extension to 5 plants and the PLT-01 terminal network ($0.9M); notification kits for 11 plants ($0.25M); automated configuration and SIS comparison tooling ($0.6M); MTSA Cybersecurity Assessment support and OT penetration test ($0.45M); restore test outages and vendor services ($0.35M); outside counsel for the disclosure tabletop ($0.04M); and contract amendments for OT suppliers (internal effort). Items map to the POA&M in P07.

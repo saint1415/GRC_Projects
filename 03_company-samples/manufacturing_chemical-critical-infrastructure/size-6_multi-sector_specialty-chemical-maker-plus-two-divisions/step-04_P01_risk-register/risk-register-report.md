@@ -13,7 +13,7 @@
 | Approved | 2026-09-17 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system in the three divisions that controls a chemical process, stores or moves hazardous materials, produces shipping papers, or holds sensitive data, plus the corporate shared services they depend on: SYS-G1 (identity and the OT remote access gateway), SYS-G2 (SOC and OT desk), SYS-G3 (cloud and WAN), SYS-G4 (ERP), and SYS-G6 and SYS-G7. Division systems are SYS-C1 to SYS-C9, SYS-D1 to SYS-D4, and SYS-T1 to SYS-T4 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system in the three divisions that controls a chemical process, stores or moves hazardous materials, produces shipping papers, or holds sensitive data, plus the corporate shared services they depend on: SYS-G1 (identity and the OT remote access gateway), SYS-G2 (SOC and OT desk), SYS-G3 (cloud and WAN), SYS-G4 (ERP), and SYS-G6 and SYS-G7. Division systems are SYS-C1 to SYS-C9, SYS-D1 to SYS-D4, and SYS-T1 to SYS-T4 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. Specialty Chemicals, the focus division, has the most detailed register.
@@ -21,7 +21,7 @@
 
 **Safety consequences set the impact scale.** For OT risks, impact was rated on the worst credible physical consequence with the existing safeguards, as the PHA would, not on the IT asset. A manipulated chlorine feed setpoint is Very High impact even though the SIS lowers the likelihood that the attack causes harm. That is why several OT risks show Moderate likelihood of adverse impact and still rate High.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (ERM risk acceptance standard, EV-005):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -32,8 +32,8 @@
 Process safety and public safety risks rated High must be treated, not accepted.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIAs (P05), the gap analyses (P03), the common control assessment and OT tests (P07), the Plant C1 PHA (2024) and RMP compliance audit (2025-05-14), and interviews with plant, terminal, and fleet leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the BIAs (P05), the intake evidence, the Plant C1 PHA (2024) and RMP compliance audit (2025-05-14) (EV-047, EV-046), interviews with group, plant, terminal, and fleet leadership (EV-091 group, EV-092 Specialty Chemicals, EV-093 Distribution, EV-094 Hazmat Transport), the gap analyses (P03), and the first results of the common control assessment and OT tests (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, process safety records, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to the BIA impact categories (P05), including the safety category.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -76,9 +76,11 @@ Process safety and public safety risks rated High must be treated, not accepted.
 | HT-001 | Hazmat Transport | Attacker in dispatch changes routes or consignees to divert hazmat loads | Hazmat Transport dispatch director | 2026-12-31 |
 | HT-004 | Hazmat Transport | Ransomware stops electronic shipping papers and dispatch | Hazmat Transport dispatch director | 2027-03-31 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): DS-005 was added on 2026-08-19 after testing at Terminal T1 found default vendor passwords on 4 tank gauging interface units (EV-D-IA5). The `assessment_pass` column shows which pass produced each risk.
+
 ### What the results say
 The program has a mature core: a 24x7 SOC with an OT desk, PAM, an OT security standard at 9 plants and Terminal T1, independent SIS on every RMP-covered process, and immutable backups. There are no Very High risks. The High risks cluster around **what connects the divisions and the plants**, not around any one site's basics:
-1. **Shared paths into OT** (GR-01, GR-05). The gateway and the engineering hub reach every plant. A single weakness (shared integrator accounts, standing connections) repeats at 17 sites (scenario gap 1). The 7 legacy plants add flat networks and always-on remote tools (gap 2).
+1. **Shared paths into OT** (GR-01, GR-05). The gateway and the engineering hub reach every plant. A single weakness (shared integrator accounts, standing connections) repeats at 17 sites (group gap 1). The 7 legacy plants add flat networks and always-on remote tools (gap 2).
 2. **Process safety does not yet see cyber** (GR-02, GR-04). PHAs do not treat control system compromise as a cause, recipe pushes skip the plant MOC screen (gap 3), and an AI model wrote setpoints for three months without MOC (gap 9).
 3. **Shared IT drives every division's hazmat shipping** (GR-03). One ERP outage stops shipping papers for all three divisions.
 4. **Customers' public health depends on a vendor portal** (GR-08; gap 6).

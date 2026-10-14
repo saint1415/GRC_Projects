@@ -5,15 +5,15 @@
 | Organization | Cris Santos Company, LLC (specialty chemical maker) |
 | Tier / Vertical | Micro / Chemical |
 | AI use case | AI-001: the integrator's AI batch-optimization feature in its cloud portal (SYS-12). It recommends heat-up and mixing settings for T-1. Pilot since 2026-05-11; advisory only; write-back to the PLC exists in the portal and is switched off |
-| Why not the registry default | The registry default is a "process-optimization model" built by the company. A 7-person blender builds no models. Its real AI exposure is a vendor feature switched on inside the integrator's portal, which is the same use case bought instead of built (`../00_company-facts.md` section 3) |
+| Why not the registry default | The registry default is a "process-optimization model" built by the company. A 7-person blender builds no models. Its real AI exposure is a vendor feature switched on inside the integrator's portal, which is the same use case bought instead of built (intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), SYS-12) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook, with OT context from NIST SP 800-82 Rev. 3. AI 600-1 (Generative AI Profile) applies only to AI-002 and AI-003 |
-| Assessor / date | Office Manager (Security Coordinator) with the Operations Manager, the Owner, and the independent consultant, 2026-08-21. The integrator answered written questions on 2026-08-18 |
+| Assessor / date | Office Manager (Security Coordinator) with the Operations Manager, the Owner, and the independent consultant, 2026-08-21. The integrator answered written questions on 2026-08-18 (EV-053) |
 | Decision | Owner and President, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the portal feature settings, the SDS service account page, the vendor payments list and a staff survey (EV-006, EV-005, EV-042, EV-041). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** the Operations Manager, who owns the batch control system. **Decision authority:** the Owner, because AI-001 is High tier and only the Owner may decide on Moderate or higher risks (POL-02 A.3).
-- **How the pilot started.** The integrator switched the feature on in May 2026 as part of a portal upgrade, without telling the Owner or assessing it (gap 12). The Operations Manager saw the dashboard through the shared portal login and began trying some of its recommendations. Nobody decided to adopt AI. That is the governance failure this assessment fixes (P01 R-010).
+- **How the pilot started.** The integrator switched the feature on in May 2026 as part of a portal upgrade, without telling the Owner or assessing it (EV-006, EV-040). The Operations Manager saw the dashboard through the shared portal login and began trying some of its recommendations. Nobody decided to adopt AI. That is the governance failure this assessment fixes (P01 R-010).
 - **Policies that apply:**
   - POL-04 4.6: approved AI tools only. AI-001 may receive T-1 process data only under the conditions in section 6. Write-back stays off.
   - POL-02 A.11: no recipe, setpoint, or alarm limit change without the Owner's written approval. **This also covers any change suggested by AI-001.**
@@ -29,11 +29,11 @@
 | Users | The Operations Manager reads recommendations on the portal dashboard. Blend Operators do not see them |
 | Affected people | Blend Operators and anyone in the blend room if a recommendation led to an unsafe batch; customers if product quality drifted. No decisions are made about any person |
 | Data | **Inputs:** the T-1 process data stream sent through the cellular gateway: temperatures, load cell weights, dosing pump run times, mixer speed, step times, and the recipe number. **Outputs:** recommended settings with a predicted batch time. **No personal data.** The data is **Restricted** (POL-04) because dose weights and step times reveal formulations |
-| Build or buy | Buy: a feature of the integrator's portal, supplied by the portal platform vendor. The integrator could not say what data the model was trained on, or whether the vendor uses the company's data to train models for other customers. **Neither the integrator agreement nor the portal terms address this** |
+| Build or buy | Buy: a feature of the integrator's portal, supplied by the portal platform vendor. The integrator could not say what data the model was trained on, or whether the vendor uses the company's data to train models for other customers (EV-053). **Neither the integrator agreement nor the portal terms address this** |
 | How output reaches the process | Today: the Operations Manager reads a recommendation and, if it is adopted, edits the recipe on the HMI by hand. **A write-back option in the portal could send settings straight to the PLC.** It is off, but anyone with the shared portal login could switch it on (P04 finding 2) |
 | Not intended | Dosing amounts of any raw material; alarm limits; the hardwired high-temperature cutout; T-2; closed-loop control; evaluating operators. These uses are **excluded**, and enabling any of them requires a new assessment |
 
-**What the review found.** On 2026-08-21 the Operations Manager confirmed that the 2 batch tickets that did not match the HMI recipe in P07 testing (CM-3) were trials of AI-001 recommendations on a non-peroxide degreaser in June 2026. They were made without the Owner's approval and left no record. QC passed both batches. The recipes are being reconciled (POAM-009).
+**What the review found.** On 2026-08-21 the Operations Manager confirmed that the 2 batch tickets that did not match the HMI recipe in P07 testing (CM-3) were trials of AI-001 recommendations on a non-peroxide degreaser in June 2026 (EV-052). They were made without the Owner's approval and left no record. QC passed both batches. The recipes are being reconciled (POAM-009).
 
 **Applicable laws and rules:**
 | Rule | Applies? | Why |
@@ -61,7 +61,7 @@
 **Escalation triggers (new assessment before any of these):** write-back switched on; recommendations for peroxide recipes or for T-2; any input or output beyond heat-up and mixing; a new model version that the integrator flags as significant; or the portal vendor changing its data-use terms.
 
 ## 4. MEASURE
-The consultant and the Operations Manager reviewed the portal's history of 160 T-1 batches from 2026-05-11 to 2026-08-14 against the **safe-limit envelope** that the Owner and the Operations Manager wrote down on 2026-08-20: the maximum product temperature and hot-water setpoint stated on each recipe's written safe limits.
+The consultant and the Operations Manager reviewed the portal's history of 160 T-1 batches from 2026-05-11 to 2026-08-14 against the **safe-limit envelope** that the Owner and the Operations Manager wrote down on 2026-08-20: the maximum product temperature and hot-water setpoint stated on each recipe's written safe limits (EV-052).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|

@@ -1,0 +1,15 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Control system integrator,"PLC, HMI and recipe software support; remote access gateway and portal",SYS-01; SYS-02; SYS-03; SYS-12,Process data; recipes; the PLC program and HMI project copy,"Service agreement (no security, incident notice or data-use terms)",None on file,EV-010; EV-020; EV-042,Holds the only copy of the PLC program and HMI project (2023)
+V-02,Portal platform vendor (the integrator's supplier),Cloud portal and the AI batch-optimization model,SYS-03; SYS-12,T-1 process data,None with the company; reached through the integrator,None on file; the integrator could not supply one (EV-053),EV-006; EV-053,Data-use terms not known
+V-03,Managed service provider (MSP),"Office computers, firewall and Wi-Fi, suite administration, patching, antivirus, cloud backup operation",SYS-04; SYS-05; SYS-06; SYS-09; EXT-01,Administrative access to office systems,Service contract (no security terms or incident notice term),None on file,EV-015; EV-019; EV-042,The contract excludes the batch control system
+V-04,Productivity suite vendor,"Email, files and shared drive",SYS-06,Formulations; employee files; customer correspondence,Subscription terms,Vendor security documentation,EV-021; EV-042,
+V-05,Accounting and inventory vendor,"Orders, inventory, invoicing, bills of lading, payables",SYS-07,Orders; customers; lots; bills of lading; bank details,Subscription terms,"SOC 2 Type 2, 12 months ending 2026-05-31",EV-022; EV-042,Hosting provider carved out of the report
+V-06,SDS and label service vendor,SDS and GHS label authoring,SYS-08,Formulation summaries and hazard data,Standard terms,Vendor documentation only,EV-005; EV-021; EV-042,Offers a drafting assistant (AI-002)
+V-07,Backup vendor (MSP subcontractor),Cloud backup,SYS-09,Copies of the productivity suite and shared drive,None with the company; resold by the MSP,Vendor documentation (through the MSP),EV-017; EV-021; EV-042,
+V-08,Payroll service,Biweekly payroll,SYS-10,Employee personal information,Service terms,None on file,EV-001; EV-021; EV-042,
+V-09,Alarm and video service,Alarm monitoring and cloud video,SYS-11,Video; alarm events,Service agreement,None on file,EV-032; EV-042,
+V-10,Internet and phone provider,One business internet line; office phone service,SYS-04,Traffic in transit; calls,Service agreement,None,EV-033; EV-042,"One line, no failover"
+V-11,24-hour ERI provider,Emergency response telephone number on shipping papers,n/a (SDSs sent by email from SYS-08),SDSs for shipped products,ERI contract,n/a,EV-023; EV-042,Required for hazmat offered for transport (49 CFR 172.604)
+V-12,LTL carriers,Transport of packaged products,n/a,Shipping papers,Carrier terms,n/a,EV-026; EV-042,
+V-13,"Insurers (cyber, general liability, pollution liability)",Insurance; cyber breach hotline and panel vendors,n/a,Incident information during a claim,Insurance policies,n/a,EV-034; EV-042,The cyber policy requires hotline notice before outside firms are hired
+V-14,Independent assessor,Control assessment (P07),n/a,Assessment evidence,Engagement letter,n/a,EV-038,

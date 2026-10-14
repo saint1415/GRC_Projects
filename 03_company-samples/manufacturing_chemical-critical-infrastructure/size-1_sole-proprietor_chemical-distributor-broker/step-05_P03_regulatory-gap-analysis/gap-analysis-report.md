@@ -8,17 +8,19 @@
 | Benchmark (voluntary) | CFATS risk-based performance standards 6 CFR 27.230(a)(5), (a)(6), (a)(8), (a)(15)-(16) (C-CHEMICAL-R01) |
 | State law | Fla. Stat. 501.171 (driver identity data and customer records) |
 | Assessment dates | 2026-09-08 to 2026-09-11 (self-assessment); G-011 updated 2026-09-14 after the ERI provider call |
-| Assessor | Owner, with the on-call IT technician. Evidence is self-attested, checked on screen where possible |
+| Assessor | Owner, with the on-call IT technician. Evidence is the intake record and the owner's self-review (EV-028), checked on screen where possible |
 | Regulatory status checked | 2026-09-25 to 2026-10-02 (eCFR point-in-time 2026-09-23, Federal Register, Florida Legislature statutes site) |
 | Adopted | 2026-10-05 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Why not CFATS RBPS 8 as the primary regulation.** The vertical registry names CFATS RBPS 8 (a voluntary benchmark) as the default. It cannot be the primary rule here. CFATS reaches a "chemical facility", an establishment that possesses a chemical of interest (6 CFR 27.105). A drop-ship broker possesses nothing, and CFATS authority lapsed on 2023-07-28 in any case. The rule that binds this business today is the DOT HMR. RBPS items are kept as a short voluntary benchmark (G-030 to G-033), because the theft and diversion thinking behind them fits a seller of 50% hydrogen peroxide.
 
 **1. DOT HMR: applies.**
-- **Offeror.** The owner determines the hazard class, prepares the shipping paper, and provides emergency response information for every drop shipment. Those are pre-transportation functions (171.1(b)(1), (7), (8)), so the business is an offeror (171.8). The supplier is also an offeror for filling, marking, labeling, placarding, and loading. "There may be more than one offeror," and each is responsible for the functions it performs (171.2(b)).
+- **Offeror.** The owner determines the hazard class, prepares the shipping paper, and provides emergency response information for every drop shipment. Those are pre-transportation functions (171.1(b)(1), (7), (8)), so the business is an offeror (171.8; EV-013, EV-016, EV-028). The supplier is also an offeror for filling, marking, labeling, placarding, and loading. "There may be more than one offeror," and each is responsible for the functions it performs (171.2(b)).
 - **Training.** The owner is treated as a self-employed hazmat employee of a hazmat employer that causes hazmat to be transported (171.8). This is an **author interpretation** of the self-employed wording in 171.8, applied conservatively. The training rules in 172.702 and 172.704 follow.
-- **Security plan: required.** 172.800(b)(10) covers "a large bulk quantity of a Division 5.1 material in Packing Groups I and II", and "large bulk quantity" means more than 3,000 liters in a single packaging such as a cargo tank. The business offers about 6 cargo tank loads a year of UN2014, hydrogen peroxide 50%, Division 5.1, PG II, at about 15,140 L each. Totes (about 1,041 L) would not trigger the plan on their own. The Class 8 products are not listed, because Class 8 appears only for PG I in large bulk (172.800(b)(16)).
+- **Security plan: required.** 172.800(b)(10) covers "a large bulk quantity of a Division 5.1 material in Packing Groups I and II", and "large bulk quantity" means more than 3,000 liters in a single packaging such as a cargo tank. The business offers about 6 cargo tank loads a year of UN2014, hydrogen peroxide 50%, Division 5.1, PG II, at about 15,140 L each (EV-013). Totes (about 1,041 L) would not trigger the plan on their own. The Class 8 products are not listed, because Class 8 appears only for PG I in large bulk (172.800(b)(16)).
 - **Registration: required.** Bulk packagings of 13,248 L (3,500 gal) or more and placarded quantities (107.601(a)(4), (a)(6)).
 - **There is no size exemption.** The only exception in 172.800(c) is for certain farmers.
 
@@ -29,14 +31,14 @@
 - **CIRCIA** (G-005): it is only proposed. As proposed, the business would be far below the SBA standard of 175 employees.
 - **172.804** (G-029): the option to use another plan is not used.
 
-**3. Florida: applies.** Fla. Stat. 501.171(1)(b) names a sole proprietorship as a covered entity. About 140 driver names with license numbers sit in email, so 501.171(2) (reasonable security), (3) to (6) (breach notice), and (8) (disposal) apply.
+**3. Florida: applies.** Fla. Stat. 501.171(1)(b) names a sole proprietorship as a covered entity. About 140 driver names with license numbers sit in email (EV-032), so 501.171(2) (reasonable security), (3) to (6) (breach notice), and (8) (disposal) apply.
 
 **Also checked, not applicable:** DEA listed chemicals. The product line excludes 21 CFR 1310.02 chemicals; hydrochloric acid, sulfuric acid, and potassium permanganate are listed there, and the owner declined to add the two acids.
 
 ## 2. Method
 1. **Requirements.** HMR rows follow the regulation's own section and paragraph structure (public-domain CFR text, short quotes). CFATS benchmark rows use the 27.230(a) paragraph text. Florida rows follow the statute's subsections.
 2. **Crosswalk.** Every CSF 2.0 and SP 800-53 mapping is an **author mapping**. No official NIST mapping exists for 49 CFR, 6 CFR Part 27, or Fla. Stat. 501.171.
-3. **Evidence.** Self-attested. Where possible it was checked on screen with the IT technician: a sample of 10 BOLs from 2026, the ERI product list, training and registration certificates, email security settings, and the 2026 near-miss messages.
+3. **Evidence.** Current state was established from the intake evidence (account and device settings, the inbox and file storage, the order workbook, certificates, agreements, and the home office walk-through on 2026-09-02) and the owner's written self-review, checked on screen with the IT technician on 2026-09-08 (EV-028). On 2026-09-09 fieldwork added a sample of 10 BOLs from 2026 (EV-029), the records folder review (EV-030), the ERI product list (EV-031), the driver data search (EV-032), and the workbook review (EV-033). The 2026-09-14 calls (EV-034, EV-035) and the regulatory status checks (EV-036) followed. Where the self-assessment tests had run (2026-09-10), their results are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps are rated with the P01 scale.
 
 ## 3. Results summary

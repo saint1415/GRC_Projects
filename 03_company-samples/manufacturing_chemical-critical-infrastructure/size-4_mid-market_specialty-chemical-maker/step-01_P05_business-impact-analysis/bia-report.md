@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, Inc. (PE-backed specialty chemical formulator and packager) | **Tier:** Mid-Market (850 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, with OT recovery considerations from NIST SP 800-82 Rev. 3 (sec. 6.2.4.3 Backups; sec. 6.5.1 Recovery Planning)
 **Prepared by:** GRC Analyst with the vCISO, the Information Security Manager, and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-22 (presented to the audit committee the same day)
 
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-059), FY2025 revenue report by product line and site (EV-052), Q2 2026 operations and customer report (EV-053), HR roster (EV-004), OT and cloud backup records (EV-021, EV-020), the Inland plant's PLC program storage (EV-007), the ERP vendor's SOC 2 report (EV-046), the TTRS agreements (EV-045), the emergency response plan (EV-039) and the operating procedures (EV-036). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
+
 ## 1. Overview and purpose
 This BIA covers every business unit: the Port plant (including the marine terminal), the Inland plant, the Distribution center, the Tank Telemetry and Replenishment Service (TTRS), and corporate functions. It rates 18 business processes and quantifies what an outage costs in money, operations, regulatory exposure, and process safety.
 
@@ -15,7 +17,7 @@ The results feed:
 - the Availability and Processing Integrity criteria in the TTRS SOC 2 readiness assessment (P09).
 
 ## 2. System and business description
-The company makes and delivers about $410 million a year of specialty chemicals from two Florida plants (see `../00_company-facts.md` sections 1 to 3).
+The company makes and delivers about $410 million a year of specialty chemicals from two Florida plants (see the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 - **Port plant:** about 70% of revenue. Its production runs on the Process Control and Batch Management System (PCBMS), described in the SSP (P02): the DCS, the batch management system, two SIS controllers, terminal and loading automation, and the historian. It is an MTSA-regulated facility, an RMP Program 3 stationary source, and a PSM site.
 - **Inland plant:** about 22% of revenue. It runs a PLC and SCADA batch system on a nearly flat network.
 - **Business systems:** a SaaS ERP, a 5-account cloud landing zone (LIMS, file services, data platform, TTRS), SaaS identity, email, HR, and fleet systems.
@@ -23,7 +25,7 @@ The company makes and delivers about $410 million a year of specialty chemicals 
 **Safety comes before recovery time.** In an OT outage the first objective is a safe state, not a fast restart. The SIS is independent of the DCS, so the Ammonia and Peroxide Units can be held safe while the DCS is down. Restarting a unit on an untrusted DCS is not an acceptable workaround.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $410 million in annual revenue over 250 shipping days, about $1.64 million per shipping day. By process: Blend Hall 1 about $420,000, the Ammonia Unit about $260,000, the Peroxide Unit about $230,000, bulk acid and caustic resale about $240,000, and the Inland plant about $360,000 per shipping day. The remaining $130,000 is toll blending, terminal services, and TTRS fees (about $18,000).
+Dollar values are scaled to about $410 million in annual revenue over 250 shipping days, about $1.64 million per shipping day (EV-052). By process: Blend Hall 1 about $420,000, the Ammonia Unit about $260,000, the Peroxide Unit about $230,000, bulk acid and caustic resale about $240,000, and the Inland plant about $360,000 per shipping day. The remaining $130,000 is toll blending, terminal services, and TTRS fees (about $18,000).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,7 +35,7 @@ Dollar values are scaled to about $410 million in annual revenue over 250 shippi
 | Process safety | Plausible toxic release, decomposition, fire, or injury that could reach workers or the public | Degraded safeguards with compensating manual measures | None |
 | Reputation | Community shelter-in-place or evacuation, regional media, loss of a top-10 customer or a water utility contract | Customer complaints or late deliveries | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is the share of lost shipments that is not recovered, plus extra costs (overtime, third-party supply, demurrage, service credits), over the MTD. The process owners supplied the recovery assumptions: about 30% of lost blended product, 20% of aqua ammonia, 25% of peroxide, 50% of bulk resale, and 30% of Inland output are not recovered, because customers buy elsewhere.
+**How loss at MTD was estimated.** Estimated loss is the share of lost shipments that is not recovered, plus extra costs (overtime, third-party supply, demurrage, service credits), over the MTD. The process owners supplied the recovery assumptions (EV-059): about 30% of lost blended product, 20% of aqua ammonia, 25% of peroxide, 50% of bulk resale, and 30% of Inland output are not recovered, because customers buy elsewhere.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -72,10 +74,10 @@ Dollar values are scaled to about $410 million in annual revenue over 250 shippi
 - **The 1-hour RPOs** for BP-08, BP-14, and BP-15 come from the ERP vendor's replication (stated in its SOC 2 report, P09 Part B) and the TTRS database's point-in-time recovery.
 
 ## 5. Key findings
-1. **The 12-hour RTO for the Ammonia Unit and Blend Hall 1 is unproven.** Weekly offline copies of the DCS, batch, and SIS configurations sit in the Port plant fire safe, which is a real strength. Only one operator station has ever been restored, and no full DCS restore has been tested (gap 5; P01 R-006; P07 CP-4, CP-10). Until a full restore is done on spare hardware, the realistic recovery time after a destructive attack is several days.
-2. **The Inland plant could lose its PLC programs.** The only current copies of 14 PLC programs are on one controls engineer's laptop (gap 5; P01 R-007). If that laptop is lost or encrypted, the integrator would have to rebuild the programs from 2023 project files. That would take weeks, well beyond the 48-hour MTD for BP-12.
+1. **The 12-hour RTO for the Ammonia Unit and Blend Hall 1 is unproven.** Weekly offline copies of the DCS, batch, and SIS configurations sit in the Port plant fire safe, which is a real strength. Only one operator station has ever been restored, and no full DCS restore has been tested (EV-021; P01 R-006; P07 CP-4, CP-10). Until a full restore is done on spare hardware, the realistic recovery time after a destructive attack is several days.
+2. **The Inland plant could lose its PLC programs.** The only current copies of 14 PLC programs are on one controls engineer's laptop (EV-007; P01 R-007). If that laptop is lost or encrypted, the integrator would have to rebuild the programs from 2023 project files. That would take weeks, well beyond the 48-hour MTD for BP-12.
 3. **Emergency notification depends partly on the business network.** The control room uses VoIP phones on the business network, and the community notification system is launched from a web console. Radios and cellular phones exist, but the printed call list is out of date (P01 R-014; P03 68.95 rows).
-4. **TTRS has no tested failover.** The TTRS account runs in one cloud region. Its 99.5% availability commitment is not measured, and the manual workaround (phone readings for 160 water utility sites) has never been drilled (gap 11; P01 R-021; P09 A1.2, A1.3).
+4. **TTRS has no tested failover.** The TTRS account runs in one cloud region. Its 99.5% availability commitment is not measured, and the manual workaround (phone readings for 160 water utility sites) has never been drilled (EV-054; P01 R-021; P09 A1.2, A1.3).
 5. **ERP vendor objectives meet the BIA.** The ERP vendor's SOC 2 system description states RTO 8 hours and RPO 1 hour, which meets BP-08, BP-13, and BP-15. The weak point is access: if the identity provider is down, nobody can sign in. Break-glass ERP accounts are needed (P01 R-020; P04).
 6. **The historian, AI-001, and AI-003 are not on the recovery path.** The plants run without them. They are restored last, from clean media, after integrity checks (P10).
 

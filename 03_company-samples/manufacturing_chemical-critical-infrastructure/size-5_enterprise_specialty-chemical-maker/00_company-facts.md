@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Chemical | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a statute, regulation, or NIST publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23) and the Federal Register API on 2026-10-05; CFATS status relies on the CISA CFATS page and uscode.house.gov as read on 2026-09-26 for the Small sample, plus a Federal Register search on 2026-10-05 that found no CFATS documents in 2026.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a statute, regulation, or NIST publication, the citation is given. Regulatory text was read from eCFR (point-in-time 2026-09-23) and the Federal Register API on 2026-10-05; CFATS status relies on the CISA CFATS page and uscode.house.gov as read on 2026-09-26 for the Small sample, plus a Federal Register search on 2026-10-05 that found no CFATS documents in 2026.
 
 ## 1. The organization
 
@@ -15,14 +15,14 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Customers | About 38,000 business customers in the United States and 40 other countries, including about 1,900 municipal water utilities. About 2,900 customers use the tank telemetry and VMI service (SL-1) and about 85 use toll manufacturing (SL-2) |
 | Ownership and governance | Publicly traded; board with an audit committee and a risk committee. The risk committee oversees cybersecurity and process safety risk. Not a smaller reporting company |
 | Growth by acquisition | Three plants acquired in 2025: PLT-12 (Ohio, March 2025), PLT-13 (Tennessee, July 2025), and PLT-14 (North Carolina, November 2025). About 960 workforce members in total |
-| Regulated inventory | See the tables below. Maximum intended inventories are the limits written into the RMP and PSM process safety information (40 CFR 68.65(c)(1)(iii); 29 CFR 1910.119(d)(2)(i)(C)) and enforced by tank level alarms and cylinder caps |
-| CFATS status | Nine plants filed Top-Screens because they held 50% hydrogen peroxide, a CFATS chemical of interest for theft and diversion (minimum concentration 35%, screening threshold quantity 400 lb; 72 FR 65396, Nov. 20, 2007), and six were tiered, including PLT-01. The statutory authority expired on **July 28, 2023** (6 U.S.C. 621-629 shown as omitted at uscode.house.gov), and CFATS has **not been reauthorized**. CISA states it cannot enforce CFATS. The company kept its Site Security Plan measures and uses RBPS 8 as a **voluntary enterprise benchmark** (P03) |
-| USCG MTSA status | **Covered at PLT-01 only.** The marine terminal can transfer oil (petroleum base oils) in bulk to or from tank barges with a capacity of 250 barrels or more, so 33 CFR Part 154 applies (154.100(a)). A facility subject to Part 154 must have a Facility Security Plan under 33 CFR Part 105 (105.105(a)(1)), and the cybersecurity rule in 33 CFR Part 101 Subpart F applies to every facility required to have a security plan under Part 105 (101.605(a)). Key dates: cybersecurity training by January 12, 2026 and annually (101.650(d)(4)); Cybersecurity Assessment and Cybersecurity Plan submission no later than July 16, 2027 (101.650(e)(1); 101.655). No other plant has a marine transfer |
-| EPA RMP status | **Covered at 8 plants.** Program 3 at PLT-01, PLT-04 (Louisiana), and PLT-05 (Texas), because those processes are also covered by OSHA PSM (40 CFR 68.10(l)(2)); NAICS 325998 is not in the 68.10(l)(1) list. Program 2 at PLT-02, PLT-03, PLT-06, PLT-07, and PLT-09 (29% aqueous ammonia above the 20,000 lb threshold quantity; worst-case release reaches public receptors, so Program 1 is not available, 68.10(j)(2)). PLT-01 is a **responding stationary source** with its own hazardous materials team (68.90(a); 68.95). The 2024 amendments add requirements with a May 10, 2027 compliance date (68.10(g)), including safer technology and alternatives analysis for NAICS 325 processes (68.67(c)(9)) |
-| OSHA PSM status | **Covered processes at PLT-01, PLT-04, and PLT-05** (29 CFR 1910.119(a)(1)(i)). Math below |
-| DOT hazmat security plan | **Required.** The company offers large bulk quantities (more than 3,000 liters in one packaging) of Class 3 Packing Group II solvent blends and of 50% hydrogen peroxide (Division 5.1, Packing Group II) in cargo tanks and rail cars (49 CFR 172.800(b)(6) and (b)(10)). The enterprise security plan covers personnel security, unauthorized access, and en route security (172.802(a)), is reviewed annually (172.802(c)), and requires security awareness and in-depth security training (172.704(a)(4)-(5)). Senior official: Vice President, Global Logistics |
-| SEC | Form 8-K Item 1.05 (material cybersecurity incidents, within 4 business days after the materiality determination) and Regulation S-K Item 106 (annual risk management, strategy, and governance disclosure in the 10-K) apply. SOX IT general controls cover the ERP and payroll |
-| Not in scope | **CIRCIA:** proposed rule only (89 FR 23644, 2024-04-04); no final rule in the Federal Register as of 2026-10-05. As proposed, the company would be covered (above the SBA size standard, and PLT-01 is an MTSA facility). **FAR clauses:** no federal prime contracts or subcontracts; government customers buy through distributors. **EAR:** exports are handled by the export compliance program; EAR-controlled technology is classified Restricted (POL-04) but export licensing is not analyzed here. **HIPAA:** the employee health plan is a separate covered entity handled by the benefits program |
+| Regulated inventory | See the tables below, taken from the threshold worksheets in the process safety information (EV-028). Maximum intended inventories are the limits written into the RMP and PSM process safety information (40 CFR 68.65(c)(1)(iii); 29 CFR 1910.119(d)(2)(i)(C)) and enforced by tank level alarms and cylinder caps |
+| CFATS status | Nine plants filed Top-Screens because they held 50% hydrogen peroxide, a CFATS chemical of interest for theft and diversion (minimum concentration 35%, screening threshold quantity 400 lb; 72 FR 65396, Nov. 20, 2007), and six were tiered, including PLT-01. The statutory authority expired on **July 28, 2023** (6 U.S.C. 621-629 shown as omitted at uscode.house.gov), and CFATS has **not been reauthorized**. CISA states it cannot enforce CFATS. The company kept its Site Security Plan measures and uses RBPS 8 as a **voluntary enterprise benchmark** (P03). Status determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (C-CHEMICAL-R01; EV-055, EV-057) |
+| USCG MTSA status | **Covered at PLT-01 only.** The marine terminal can transfer oil (petroleum base oils) in bulk to or from tank barges with a capacity of 250 barrels or more, so 33 CFR Part 154 applies (154.100(a)). A facility subject to Part 154 must have a Facility Security Plan under 33 CFR Part 105 (105.105(a)(1)), and the cybersecurity rule in 33 CFR Part 101 Subpart F applies to every facility required to have a security plan under Part 105 (101.605(a)). Key dates: cybersecurity training by January 12, 2026 and annually (101.650(d)(4)); Cybersecurity Assessment and Cybersecurity Plan submission no later than July 16, 2027 (101.650(e)(1); 101.655). No other plant has a marine transfer. Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (C-CHEMICAL-R02; EV-029) |
+| EPA RMP status | **Covered at 8 plants.** Program 3 at PLT-01, PLT-04 (Louisiana), and PLT-05 (Texas), because those processes are also covered by OSHA PSM (40 CFR 68.10(l)(2)); NAICS 325998 is not in the 68.10(l)(1) list. Program 2 at PLT-02, PLT-03, PLT-06, PLT-07, and PLT-09 (29% aqueous ammonia above the 20,000 lb threshold quantity; worst-case release reaches public receptors, so Program 1 is not available, 68.10(j)(2)). PLT-01 is a **responding stationary source** with its own hazardous materials team (68.90(a); 68.95). The 2024 amendments add requirements with a May 10, 2027 compliance date (68.10(g)), including safer technology and alternatives analysis for NAICS 325 processes (68.67(c)(9)). Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (EPA-RMP; EV-026, EV-028) |
+| OSHA PSM status | **Covered processes at PLT-01, PLT-04, and PLT-05** (29 CFR 1910.119(a)(1)(i)). Math below. Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (OSHA-PSM; EV-028) |
+| DOT hazmat security plan | **Required.** The company offers large bulk quantities (more than 3,000 liters in one packaging) of Class 3 Packing Group II solvent blends and of 50% hydrogen peroxide (Division 5.1, Packing Group II) in cargo tanks and rail cars (49 CFR 172.800(b)(6) and (b)(10)). The enterprise security plan covers personnel security, unauthorized access, and en route security (172.802(a)), is reviewed annually (172.802(c)), and requires security awareness and in-depth security training (172.704(a)(4)-(5)). Senior official: Vice President, Global Logistics. Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (DOT-HMSP; EV-056) |
+| SEC | Form 8-K Item 1.05 (material cybersecurity incidents, within 4 business days after the materiality determination) and Regulation S-K Item 106 (annual risk management, strategy, and governance disclosure in the 10-K) apply. SOX IT general controls cover the ERP and payroll. Determined in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (SEC-8K-1.05, SEC-SK-106, SOX-404; EV-039) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (C-CHEMICAL-R03, FAR-52.204, EAR, HIPAA; EV-044, EV-057, EV-058). **CIRCIA:** proposed rule only (89 FR 23644, 2024-04-04); no final rule in the Federal Register as of 2026-10-05. As proposed, the company would be covered (above the SBA size standard, and PLT-01 is an MTSA facility). **FAR clauses:** no federal prime contracts or subcontracts; government customers buy through distributors. **EAR:** exports are handled by the export compliance program; EAR-controlled technology is classified Restricted (POL-04) but export licensing is not analyzed here. **HIPAA:** the employee health plan is a separate covered entity handled by the benefits program |
 | Regulatory driver IDs | **C-CHEMICAL-R01** (CFATS RBPS 8, voluntary benchmark), **C-CHEMICAL-R02** (USCG MTSA cybersecurity rule, binding at PLT-01), **C-CHEMICAL-R03** (CIRCIA, proposed). EPA RMP (40 CFR Part 68), OSHA PSM (29 CFR 1910.119), DOT hazmat security plans (49 CFR 172.800-172.804), CERCLA and EPCRA release reporting (40 CFR 302.6; 355.40-355.43), SEC rules, and the OT benchmark (NIST CSF 2.0 with SP 800-82 Rev. 3) are cited directly because the vertical registry has no ID for them |
 
 ### Regulated inventory and threshold math (PLT-01 Gulf Coast Complex)
@@ -55,56 +55,35 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
-| SYS-01 | PLT-01 Gulf Coast Complex process control: DCS, batch management system, two safety instrumented systems (SIS), terminal automation and emergency shutdown, process historian, and the PLT-01 OT network and OT DMZ | The P02 system. One DCS platform with 22 redundant controller pairs, 6 redundant server pairs, 38 operator stations, and 6 engineering workstations (EWS); about 1,900 master recipes and about 260 batches a day |
-| SYS-02 | Process control at the other 13 plants | 3 DCS platforms and about 420 PLCs; SIS at 8 plants. OT DMZs at 10 of 14 plants (not at PLT-12 to PLT-14 and PLT-08) |
-| SYS-03 | Enterprise OT security services | Central remote access gateway (session approval, MFA, recording) at 11 of 14 plants; passive OT network monitoring at 9 of 14 plants; OT backup vault (offline and immutable copies); OT patch and media staging |
-| SYS-04 | Identity platform (SSO, MFA, privileged access management, identity governance) | Covers IT, cloud, and the OT remote access gateway. Each plant's OT uses a separate OT directory or local accounts |
+| SYS-01 | PLT-01 Gulf Coast Complex process control: DCS, batch management system, two safety instrumented systems (SIS), terminal automation and emergency shutdown, process historian, and the PLT-01 OT network and OT DMZ | The P02 system. One DCS platform with 22 redundant controller pairs, 6 redundant server pairs, 38 operator stations, and 6 engineering workstations (EWS); about 1,900 master recipes and about 260 batches a day (EV-012, EV-052) |
+| SYS-02 | Process control at the other 13 plants | 3 DCS platforms and about 420 PLCs; SIS at 8 plants. OT DMZs at 10 of 14 plants (not at PLT-12 to PLT-14 and PLT-08) (EV-012, EV-013) |
+| SYS-03 | Enterprise OT security services | Central remote access gateway (session approval, MFA, recording) at 11 of 14 plants; passive OT network monitoring at 9 of 14 plants; OT backup vault (offline and immutable copies); OT patch and media staging (EV-007, EV-016, EV-019) |
+| SYS-04 | Identity platform (SSO, MFA, privileged access management, identity governance) | Covers IT, cloud, and the OT remote access gateway. Each plant's OT uses a separate OT directory or local accounts (EV-001, EV-006) |
 | SYS-05 | ERP (global SaaS) and plant manufacturing execution systems (MES) | SOX-relevant; order, inventory, and bill-of-materials records, including hydrogen peroxide inventory |
 | SYS-06 | Laboratory information management system (LIMS) | Enterprise LIMS on Cloud provider A; certificates of analysis for every batch |
 | SYS-07 | Multi-cloud estate plus 2 colocation data centers | Cloud provider A: ERP integration, LIMS, data platform, historian replicas, AI/ML platform. Cloud provider B: the SL-1 telemetry platform. Colocation DC-1 (Florida) and DC-2 (Ohio) |
 | SYS-08 | Enterprise network | SD-WAN to 40 sites; IT/OT boundary firewalls at every plant |
-| SYS-09 | Endpoints | About 14,500 IT endpoints (EDR on 98%); about 2,300 OT workstations and servers (EDR or application allowlisting on 61%) |
-| SYS-10 | Tank telemetry and VMI platform (SL-1) | About 41,000 cellular tank sensors at about 6,800 customer sites; customer portal with about 9,500 user accounts; about 1,400 automatic replenishment orders a week into the ERP |
+| SYS-09 | Endpoints | About 14,500 IT endpoints (EDR on 98%); about 2,300 OT workstations and servers (EDR or application allowlisting on 61%) (EV-010, EV-011) |
+| SYS-10 | Tank telemetry and VMI platform (SL-1) | About 41,000 cellular tank sensors at about 6,800 customer sites; customer portal with about 9,500 user accounts; about 1,400 automatic replenishment orders a week into the ERP (EV-069) |
 | SYS-11 | Transportation management system and fleet telematics | Hazmat shipments, about 220 company tank trucks, and contract carriers; supports the DOT security plan's en route measures |
 | SYS-12 | Physical security systems | Badge access and video at 14 plants; TWIC readers at the PLT-01 marine terminal (legacy CFATS and MTSA measures) |
-| SYS-13 | Third parties | About 2,600 vendors; about 180 with OT or remote access, including 6 DCS and PLC integrators |
-| SYS-14 | AI portfolio (12 use cases) | Governed by an AI governance committee formed in 2025 (P10) |
+| SYS-13 | Third parties | About 2,600 vendors; about 180 with OT or remote access, including 6 DCS and PLC integrators (EV-042) |
+| SYS-14 | AI portfolio (12 use cases) | Governed by an AI governance committee formed in 2025 (P10; EV-074, EV-075, EV-096) |
 | SYS-15 | HR and payroll SaaS | Employee PII for 12,000 employees and former employees |
 | SYS-16 | Productivity suite (email, files, chat) | SaaS |
 
 **SSP system (P02):** the *Gulf Coast Complex Process Control and Batch Management System (GC-PCBMS)*: the PLT-01 DCS and batch management system, the Ammonia Unit SIS and Chlor Unit SIS, the marine terminal automation and emergency shutdown system, the process historian, the PLT-01 control and supervisory networks and OT DMZ, and the OT workstations at PLT-01, inheriting common controls from the enterprise OT security services, identity platform, SOC, and cloud landing zone.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
+## 4. Where the evidence is
 
-**In place today:**
-- A mature IT security program aligned to CSF 2.0, with a CISO, a dedicated GRC team, and a three lines model
-- An OT Security Center of Excellence formed in 2024, with enterprise OT standards based on NIST SP 800-82 Rev. 3
-- Annual enterprise risk analysis tied to ERM (NIST IR 8286 Rev. 1)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- A 24x7 SOC with OT monitoring analysts
-- PAM and quarterly access certification for IT
-- Immutable IT backups and annual disaster recovery tests for tier-1 IT systems
-- OT DMZs at 10 of 14 plants; the central OT remote access gateway at 11 of 14 plants; passive OT monitoring at 9 of 14 plants
-- Independent SIS at all PSM and RMP Program 3 processes, proof-tested on schedule
-- A corporate process safety management program: an electronic MOC system, PHAs, compliance audits, and a responding hazardous materials team at PLT-01
-- An approved MTSA Facility Security Plan at PLT-01, and an enterprise DOT hazmat security plan
-- Tiered third-party risk reviews
-- An annual SOC 2 Type 2 report (Security and Availability) for the SL-1 telemetry platform since 2025
-- SEC Item 106 disclosure in the 10-K
-
-**Targeted gaps found in the 2026 assessments:**
-1. **Acquired plants.** PLT-12, PLT-13, and PLT-14 still run flat IT/OT networks, integrator remote access outside the central gateway, shared DCS and PLC accounts, and no OT monitoring. Their OT logs do not reach the SIEM.
-2. **MTSA cybersecurity rule readiness at PLT-01.** The Cybersecurity Plan and Cybersecurity Assessment are not done (due 2027-07-16). 94% of PLT-01 personnel completed the cybersecurity training by the January 12, 2026 deadline; 212 contractor personnel did not and are escorted instead. The approved hardware and software list (101.650(b)(1)) and the network map (101.650(b)(4)) are incomplete.
-3. **OT change control.** Control logic, alarm limit, and recipe changes at PLT-01 are not always routed through the MOC system: 7 of 40 sampled DCS changes had no MOC record. Five other plants have the same pattern.
-4. **Known exploited vulnerabilities in OT.** At PLT-01, 37 KEV findings on OT assets were older than 30 days without documented compensating controls, which the MTSA rule requires "without delay" (101.650(e)(3)(i)).
-5. **OT recovery.** Offline OT backups exist, but only 1 of 3 DCS areas at PLT-01 has had a restore test, and comparison of the running SIS programs with the approved copies is manual and irregular.
-6. **Disclosure readiness for OT incidents.** The materiality playbook covers data breaches only, the disclosure committee has no operations or process safety member, and it has never exercised an OT scenario.
-7. **Third parties with OT access.** Two of 6 DCS and PLC integrators have no security clauses; third-party remote connections at the acquired plants are not monitored.
-8. **AI.** 12 use cases, but only 8 have completed committee review. The AI-001 process-optimization model gives advisory setpoints at 6 plants, and a closed-loop pilot is proposed for PLT-01.
-9. **Service line assurance.** SL-2 toll manufacturing has no SOC 2 report; two large customers require one with Confidentiality and Processing Integrity by 2027.
-10. **OT logging.** OT logs from 5 plants (PLT-08 and PLT-11 to PLT-14) do not reach the SIEM.
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across IT, OT, and process safety (identity platform, OT directories and DCS configuration, the OT security services, SIEM, MOC and PSM records), prior Internal Audit and SOX workpapers, the FSO's MTSA records, regulator correspondence, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office.
+- **Gaps against the MTSA cybersecurity rule, RMP, PSM, and the other applicable rules** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -126,13 +105,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 | Date | Event |
 |---|---|
+| 2026-04-06 to 2026-04-30 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
 | 2026-05-04 to 2026-07-10 | Enterprise BIA interviews and workshops |
 | 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (evidence sampling completed 2026-08-14) |
-| 2026-07-13 to 2026-08-28 | Control assessment by Internal Audit (OT testing at PLT-01 on 2026-08-11 to 2026-08-13 during a planned ammonia unit outage) |
+| 2026-06-22 to 2026-07-10 | 2026 annual revision of POL-01 to POL-05 drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment by Internal Audit (OT testing at PLT-01 on 2026-08-11 to 2026-08-13 during a planned ammonia unit outage): operating tests of controls in force under the 2025 policy set; design review of the draft 2026 revisions |
 | 2026-08-24 | SOC 2 readiness assessment completed |
 | 2026-08-26 | AI governance committee portfolio review |
 | 2026-09-08 | Executive risk committee approvals |
-| 2026-09-10 | Results to the board risk committee and audit committee |
+| 2026-09-10 | Results to the board risk committee and audit committee; 2026 revisions of POL-01 to POL-05 approved (effective 2026-10-01) |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
@@ -185,11 +167,11 @@ These facts were added while building the deliverables. They do not change secti
 | Vice President, Investor Relations | Investor communications; member of the disclosure committee |
 | Vice President, Corporate Communications | Media and community communications during incidents |
 
-**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Adding the Senior Vice President, Manufacturing and the Vice President, Process Safety and EHS is a POA&M action (gap 6).
+**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, and Vice President, Investor Relations, advised by outside securities counsel. Adding the Senior Vice President, Manufacturing and the Vice President, Process Safety and EHS is a POA&M action (POAM-004; EV-038, EV-IR-8).
 
-**PLT-01 GC-PCBMS figures.** About 412 OT user accounts (about 310 operators, 26 shift supervisors, 22 controls engineers and I&E technicians, and the rest maintenance, lab, and integrator accounts). 64 PLCs (packaging, truck rack, and terminal). About 140 tanks with radar level gauging. The Ammonia Unit SIS and Chlor Unit SIS are separate safety logic solvers; the terminal emergency shutdown uses a safety PLC. Production orders come from the ERP through an order relay in the OT DMZ. Historian data is replicated one way to Cloud provider A for analytics and AI-001.
+**PLT-01 GC-PCBMS figures.** About 412 OT user accounts (about 310 operators, 26 shift supervisors, 22 controls engineers and I&E technicians, and the rest maintenance, lab, and integrator accounts). 64 PLCs (packaging, truck rack, and terminal). About 140 tanks with radar level gauging. The Ammonia Unit SIS and Chlor Unit SIS are separate safety logic solvers; the terminal emergency shutdown uses a safety PLC. Production orders come from the ERP through an order relay in the OT DMZ. Historian data is replicated one way to Cloud provider A for analytics and AI-001 (EV-006, EV-012, EV-066).
 
-**Service lines offered to external customers (P09).** SL-1: tank telemetry and VMI on Cloud provider B, with an annual SOC 2 Type 2 report (Security and Availability) since 2025. SL-2: toll manufacturing and contract formulation at PLT-01, PLT-03, PLT-06, and PLT-09, where customer-owned formulations run in the plant batch systems and customers receive batch records and certificates of analysis through a customer portal. No SOC 2 report yet.
+**Service lines offered to external customers (P09).** SL-1: tank telemetry and VMI on Cloud provider B, with an annual SOC 2 Type 2 report (Security and Availability) since 2025. SL-2: toll manufacturing and contract formulation at PLT-01, PLT-03, PLT-06, and PLT-09, where customer-owned formulations run in the plant batch systems and customers receive batch records and certificates of analysis through a customer portal. No SOC 2 report yet (EV-046, EV-047).
 
 **Recording and monitoring.** Fleet telematics records vehicle location and driving events, not audio or video. No AI use case records conversations.
 
@@ -205,7 +187,7 @@ These facts were added while building the deliverables. They do not change secti
 | Senior Vice President, Commercial | Customer and technical service, SDS distribution (P05 BP-16) |
 | Operations superintendent (PLT-01) | Backup incident commander for process safety on shift (P08) |
 
-**Workforce by state.** About 4,600 of the 12,000 employees work in Florida (headquarters, PLT-01, PLT-08, and Florida distribution centers). This drives the Florida worked example in P08.
+**Workforce by state.** About 4,600 of the 12,000 employees work in Florida (headquarters, PLT-01, PLT-08, and Florida distribution centers) (EV-005). This drives the Florida worked example in P08.
 
 **Events after fieldwork (used in the deliverables).** The 3 shared integrator accounts on the remote access gateway were disabled on 2026-09-15 (POAM-005). AI-012, a closed-loop model inherited at PLT-13, was switched to advisory mode and AI-011 resume ranking was suspended on 2026-08-27 (P10).
 

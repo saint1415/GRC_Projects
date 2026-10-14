@@ -1,0 +1,29 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,PLT-01 DCS vendor,"DCS and batch software, spares, emergency support, remote support through the gateway, patch qualification",SYS-01; SYS-03,Configuration and diagnostics (support access),Support contract with no vulnerability or incident notification clause,None on file,EV-044; EV-045; EV-050,Tier 1
+V-02,SIS vendor,Safety logic solvers and proof-test support,SYS-01-SIS,Proof-test data,Service agreement,None on file,EV-025; EV-042,
+V-03,DCS and PLC integrators (6 enterprise integrators; 2 support PLT-01),Configuration changes and after-hours support through the gateway,SYS-01; SYS-02,Configuration and diagnostics (gateway sessions),Integrator contracts; 2 of 6 (legacy) without security clauses,Assessment records for 4 of 6,EV-044; EV-042; EV-007,61 integrator accounts with PLT-01 targets on the gateway
+V-04,Legacy integrators at PLT-12 to PLT-14 (3),OT support at the acquired plants through their own remote tools,SYS-02-ACQ,Configuration and diagnostics,Inherited contracts (in the 31 inherited contracts),None on file,EV-008; EV-044,Always-on remote tools outside the gateway
+V-05,"Rack, terminal automation and other DCS platform vendors","PLC, rack automation, terminal automation and DCS software at the other plants",SYS-01-PLC; SYS-01-TERM; SYS-02,Configuration (support access),Support agreements,Per vendor register,EV-042; EV-044,
+V-06,Cloud provider A,"IaaS and PaaS for the LIMS, data platform, historian replicas, AI/ML platform and SL-2 portal",SYS-06; SYS-07; SYS-07-DP; SYS-07-SL2,Restricted data; customer data,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-045; EV-081,Subservice organization for SL-2
+V-07,Cloud provider B,"PaaS, IoT connectivity and AI services for SL-1",SYS-10; AI-007; AI-010,Tank data; business contact data,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-045; EV-081,Subservice organization for SL-1
+V-08,Colocation providers (DC-1 and DC-2),"Data center space, power and physical security for the gateway and vault",SYS-03; SYS-07,Hosted equipment,Colocation agreements,SOC 2 Type 2 reports,EV-045; EV-048,DC-1 in Florida; DC-2 in Ohio
+V-09,ERP SaaS vendor,"ERP, including the demand forecasting feature",SYS-05; AI-009,Orders; inventory; finance,"Subscription with 10-day breach notice; RTO 8 h, RPO 1 h",SOC 1 and SOC 2 reports,EV-044; EV-045; EV-081; EV-075,SOX-relevant
+V-10,HR and payroll SaaS vendor,"HR, payroll and recruiting, including resume ranking",SYS-15; AI-011,Employee and applicant personal information,Subscription with 10-day breach notice,SOC 2 Type 2,EV-044; EV-045; EV-075,
+V-11,TMS and fleet telematics SaaS vendor,Transportation management and telematics,SYS-11,Hazmat routing and vehicle location,Subscription agreement,Per vendor register,EV-068; EV-042,Vendor failover test 2026-02
+V-12,Productivity suite vendor,"Email, files, chat and the enterprise AI assistant",SYS-16; AI-004,Email; documents,Subscription with no-training terms for the AI service,SOC 2 Type 2,EV-045; EV-071,
+V-13,MOC and PSM records SaaS vendor,"MOC, PHA and mechanical integrity records",SAAS-MOC,Process safety records,Subscription; RTO 24 h,Per vendor register,EV-023; EV-081,
+V-14,SDS authoring SaaS vendor and emergency response information provider,SDS authoring (including AI-005) and shipping emergency response numbers,SAAS-SDS; AI-005,Formulations; hazard data,Subscription with no-training terms; RTO 24 h,Per vendor register,EV-043; EV-081,
+V-15,MSSP with an OT practice,SOC overflow analysis,SIEM,Security logs,Services agreement,Per vendor register,EV-018; EV-044,Access through PAM
+V-16,SIEM vendor,"SIEM, including the AI alert triage feature",SIEM; AI-006,Security logs,Subscription agreement,Per vendor register,EV-016; EV-093,
+V-17,Industrial analytics vendor,Predictive maintenance models,AI-002,Equipment sensor data,Subscription agreement,Per vendor register,EV-043; EV-074,
+V-18,Video analytics vendor,PPE and exclusion-zone detection,AI-003,Video of workers,License agreement,Per vendor register,EV-043; EV-074,
+V-19,QC instrument vendor,Spectrometers and chemometric model,AI-008,Spectra; lot data,Purchase and service agreement,Per vendor register,EV-074; EV-042,
+V-20,Cellular carriers,Telemetry sensor connectivity (one carrier about 80%); emergency cellular phones,SYS-10; SAAS-NOTIFY,Sensor data in transit,Carrier contracts,n/a,EV-069; EV-027,Dual-SIM on about 20% of sensors
+V-21,Mass notification service,Emergency and community notification,SAAS-NOTIFY,Contact lists,Subscription agreement,Per vendor register,EV-027,
+V-22,Anhydrous ammonia supplier,All anhydrous ammonia for PLT-01 and PLT-04,n/a,Orders,Supply contract,n/a,EV-054,Single source
+V-23,Chlorine supplier,All chlorine ton containers for PLT-01 and PLT-05,n/a,Orders,Supply contract,n/a,EV-054,Single source
+V-24,"Barge operator, rail carrier and contract hazmat carriers",Base oil receipts; about 30% of outbound volume by rail; about 70% of truck shipments,SYS-11,Shipment data,Contracts with carrier security requirements,n/a,EV-044; EV-052; EV-054,
+V-25,Inherited acquisition vendors (31 contracts),Various services at PLT-12 to PLT-14,Various,Possibly personal information,31 contracts with no review record,None on file,EV-044,Review requested at intake
+V-26,Certified media destruction vendors,Drive and device destruction,SYS-09-IT; SYS-09-OT,Data on media,Service agreements,Certificates of destruction,EV-049,
+V-27,Banks and treasury services,Payments and payroll funding,SYS-05; SYS-15,Payment data,Banking agreements; second bank relationship,n/a,EV-043,
+V-28,Cyber and property insurers,"Cyber, property and business interruption insurance",n/a,Incident information when notified,Policies,n/a,EV-061,

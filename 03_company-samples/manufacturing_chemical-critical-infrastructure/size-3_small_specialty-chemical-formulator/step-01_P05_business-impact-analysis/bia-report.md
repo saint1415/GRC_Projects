@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (specialty chemical formulator and packager) | **Tier:** Small (162 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, with OT recovery considerations from NIST SP 800-82 Rev. 3 (sec. 6.2.4.3 Backups; sec. 6.5.1 Recovery Planning)
 **Prepared by:** IT Manager with the Plant Manager, EHS Manager, Controls Engineer, Quality Manager, and Controller | **Approved:** VP Operations, 2026-09-04
+**Sources:** process owner interviews 2026-07-13 to 2026-07-14 (EV-047), FY2025 revenue report (EV-041), production and shipping volume report (EV-042), DCS backup job log (EV-013), ERP vendor SOC 2 report (EV-039), emergency action plan and phone system design (EV-033, EV-036). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the VP Operations.
 
 ## 1. Overview and purpose
 This BIA identifies the business processes the plant depends on, how long each can be down, and how much data it can lose. It supports:
@@ -17,7 +18,7 @@ One Florida plant with 162 employees blends about 35 batches a day and ships abo
 **Safety comes before recovery time.** In an OT outage the first objective is a safe state, not a fast restart. The SIS is independent of the DCS, so the ammonia and peroxide tanks can be held safe while the DCS is down. Restarting Blend Hall A on an untrusted DCS is not an acceptable workaround.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $74 million in annual revenue, about $296,000 of shipments per production day (250 production days).
+Dollar values are scaled to $74 million in annual revenue across 250 production days, about $296,000 of shipments per production day (EV-041).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -48,7 +49,7 @@ Dollar values are scaled to $74 million in annual revenue, about $296,000 of shi
 - **BP-01 is limited by recipes and configuration, not hardware.** Spare DCS hardware is on site. What cannot be replaced quickly is a clean, verified DCS configuration and the 420 master recipes.
 - **BP-07 and BP-08 RPO of 1 hour** come from the ERP vendor's replication, which the SOC 2 report states (P09 Part B).
 
-**Key finding: the 12-hour RTO for BP-01 is unproven.** DCS backups exist only on the engineering workstation and one USB drive in the control room. Both are on the same network as the DCS, and neither has ever been restored (gap 8; risk R-006; POAM-004 and POAM-005). A ransomware event that reaches the EWS could destroy the running system and its backups together. Until an offline copy exists and a restore has been tested on spare hardware, the realistic recovery time for Blend Hall A after a destructive attack is **measured in weeks** (rebuild by the DCS integrator from its own project files, which are two releases old).
+**Key finding: the 12-hour RTO for BP-01 is unproven.** DCS backups exist only on the engineering workstation and one USB drive in the control room. Both are on the same network as the DCS, and neither has ever been restored (EV-013; risk R-006; POAM-004 and POAM-005). A ransomware event that reaches the EWS could destroy the running system and its backups together. Until an offline copy exists and a restore has been tested on spare hardware, the realistic recovery time for Blend Hall A after a destructive attack is **measured in weeks** (rebuild by the DCS integrator from its own project files, which are two releases old).
 
 ## 5. Resource requirements
 | Resource | Description | Supports |

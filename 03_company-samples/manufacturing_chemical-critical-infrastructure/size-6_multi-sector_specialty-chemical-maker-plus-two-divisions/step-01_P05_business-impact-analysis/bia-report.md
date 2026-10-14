@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level, with OT recovery guidance from NIST SP 800-82 Rev. 3
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads, the Group Process Safety Director, and the Group ERC manager | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-17
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-087 group, EV-088 Specialty Chemicals, EV-089 Distribution, EV-090 Hazmat Transport), FY2025 revenue by division (EV-003), Plant C1 production and supply (EV-054), shipping volumes (EV-070, EV-081), backup and restore records (EV-024, EV-060, EV-066), the ERP shipping paper fallback (EV-033) and the Group ERC (EV-032). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -16,12 +17,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services SYS-G1 to SYS-G7. Division systems are SYS-C1 to SYS-C9 (Specialty Chemicals: the Plant C1 control systems, the other 15 plants, the LIMS, the central engineering hub, and the AI-001 service), SYS-D1 to SYS-D4 (Distribution: Terminal T1 automation, branches, the managed inventory service, and terminal access control), and SYS-T1 to SYS-T4 (Hazmat Transport: TMS, telematics and ELDs, driver records, and maintenance records). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services SYS-G1 to SYS-G7. Division systems are SYS-C1 to SYS-C9 (Specialty Chemicals: the Plant C1 control systems, the other 15 plants, the LIMS, the central engineering hub, and the AI-001 service), SYS-D1 to SYS-D4 (Distribution: Terminal T1 automation, branches, the managed inventory service, and terminal access control), and SYS-T1 to SYS-T4 (Hazmat Transport: TMS, telematics and ELDs, driver records, and maintenance records). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What makes this BIA different from an IT-only BIA.** At a chemical plant the worst outcome of an outage is not lost revenue. It is losing the ability to see and control a toxic inventory. Plant C1 can hold 360,000 lb of chlorine on its unloading manifold. The BIA therefore separates the **safety functions** that must never wait (the SIS, gas detection, release notification, the ERC number) from the **production functions** that can stop safely and restart later.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Specialty Chemicals about $31.2 million per day, Distribution about $15.3 million per day of third-party sales, and Hazmat Transport about $2.7 million per day of third-party revenue.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Specialty Chemicals about $11.4 billion, or about $31.2 million per day; Distribution about $5.6 billion of third-party sales, or about $15.3 million per day; and Hazmat Transport about $1.0 billion of third-party revenue, or about $2.7 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

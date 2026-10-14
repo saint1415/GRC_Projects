@@ -7,11 +7,11 @@
 | AI use case | AI-001: machine learning model that recommends setpoints (jacket temperature, agitation speed, and addition timing) for Blend Hall A batches to shorten cycle time and cut energy use. Pilot on 2 of the 8 blend tanks since May 2026 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook. AI 600-1 (Generative AI Profile) applies to AI-002 only. OT context from NIST SP 800-82 Rev. 3 and the joint CISA-led guidance "Principles for the Secure Integration of Artificial Intelligence in Operational Technology" (Dec. 3, 2025) |
 | Assessor / date | Process Engineer (business owner) with the IT Manager, Controls Engineer, and EHS Manager, 2026-08-26 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the accounts payable list, the identity provider app list, the cloud console and a staff survey (EV-037, EV-045, EV-017). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Process Engineer. **Safety authority:** Plant Manager (RMP qualified person). **Decision authority:** the CEO, because AI-001 is High tier (POL-01 4.4 reserves High risks for the CEO).
-- **How the pilot started:** the data science contractor and the Process Engineer built AI-001 without a risk assessment, security review, or approved-tools list (gap 14; P01 R-018). This assessment closes that gap.
+- **How the pilot started:** the data science contractor and the Process Engineer built AI-001 without a risk assessment, security review, or approved-tools list (EV-045; P01 R-018). This assessment closes that gap.
 - **Policies that apply:**
   - POL-05 4.8: approved AI tools only; AI-001 recommendations are advisory
   - POL-04 4.8: Restricted data (recipes, process data) only in approved tools

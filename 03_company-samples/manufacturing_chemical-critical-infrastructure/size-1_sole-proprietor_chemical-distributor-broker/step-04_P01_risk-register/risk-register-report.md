@@ -20,10 +20,12 @@
 - High and Very High: must be treated with a dated plan and are never accepted as they are. Any risk that could put hazmat in the wrong hands is treated, whatever its rating.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the two 2026 near misses (the lookalike-domain request and the AI-drafted packing group), the gap analysis (P03), and a walk through every account and device with the IT technician on 2026-09-10.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence (the [asset inventory](../step-00_P00_intake/asset-inventory.csv), [vendor register](../step-00_P00_intake/vendor-register.csv) and [evidence register](../step-00_P00_intake/evidence-register.csv)), the BIA, the two 2026 near misses (the lookalike-domain request and the AI-drafted packing group, EV-017 and EV-018), and a walk through every account and device with the IT technician on 2026-09-10 (EV-027). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account and device reviews (EV-001, EV-005 to EV-008), the shipment and inbox records (EV-016 to EV-018), and the gap analysis fieldwork (EV-031, EV-032). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories. A diverted hydrogen peroxide load is rated Very High because it combines safety, regulatory, and business harm.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
+
+**One pass.** The register was completed on 2026-09-11 from intake and self-assessment evidence. The control tests ran on 2026-09-10, inside the same week, so this pass already reflects them. No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 ## 3. Results
 | Risk level | Count |

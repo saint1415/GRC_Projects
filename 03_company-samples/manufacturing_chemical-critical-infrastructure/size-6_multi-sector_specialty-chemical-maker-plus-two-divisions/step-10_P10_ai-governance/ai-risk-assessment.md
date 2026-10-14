@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the rules that bear on two priority use cases: the Plant C1 process-optimization model (AI-001) and the driver-facing camera AI (AI-007) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and its Playbook; the Generative AI Profile (AI 600-1) for AI-003, AI-004, and AI-008; OT context from NIST SP 800-82 Rev. 3 and the CISA-led joint guidance "Principles for the Secure Integration of Artificial Intelligence in Operational Technology" (2025-12-03, voluntary, as cited in the Chemical Small sample) |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-02; presented to the board risk committee 2026-09-17 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low), built from AI tool discovery across procurement records, SaaS discovery, the SYS-G1 app list and the data platform model registry (EV-030), division records (EV-068 AI-001, EV-078 managed inventory platform, EV-084 driver camera AI), and the AI-001 change records found in gap analysis fieldwork (EV-099). The `source_evidence` column names the source of each row. Not established: whether staff use public generative AI tools outside the enterprise assistant pilot (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Decisions about people.** AI output may not be the sole basis for discipline, hiring, or pay. A trained person reviews the evidence and records the decision.
 6. **Change gate.** A material change (new model, new data source, new write path, new decision role) triggers re-assessment before release.
 
-**Where the program fell short in 2026.** The standard was adopted on 2026-07-01, **after** Process Engineering switched AI-001 to automatic setpoint writes in 2026-06 without MOC or council approval (scenario gap 9). The driver camera AI (AI-007) was feeding discipline since 2025 with no documented review (scenario gap 5). Both are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted on 2026-07-01, **after** Process Engineering switched AI-001 to automatic setpoint writes in 2026-06 without MOC or council approval (group gap 9). The driver camera AI (AI-007) was feeding discipline since 2025 with no documented review (group gap 5). Both are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

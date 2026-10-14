@@ -30,6 +30,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 41 determination statem
 - **Test (2026-09-10):** sign-ins from a new browser to the email suite, accounting SaaS, bank, and all 9 partner portals; a software install from the laptop's daily account; a restore of a BOL deleted in 2025; a scan of the email account for forwarding rules.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen.
 
+### What each test could show
+No written policy or security plan existed during fieldwork. POL-01 and HSP-01 were drafted afterward from these results and the gaps, and adopted on 2026-10-05, so none of their new rules had operated yet and none was tested here. The first risk assessment (P01) was completed on 2026-09-11, inside the assessment window, so it could be reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, laptop, training records and vendor records | 12 |
+| Design | The control is new (the 2026 risk assessment); its design was reviewed. Operation is checked at the September 2027 annual review | 6 |
+| Not implemented | Nothing existed to test | 23 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-RA-3 and so on), with the population each test covered: the 12 accounts (EV-001, EV-003 to EV-005), the laptop (EV-006), the training record (EV-011), and the vendors paid in the last 12 months (EV-019). Controls that POL-01 and HSP-01 introduce are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - Tests ran outside business hours, with no load in transit, so no pickup authorization could be disturbed.
 - No customer, supplier, or driver data was copied off the systems. Screenshots were cropped to settings only.

@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed specialty chemical formulator and packager) |
 | Tier / Vertical | Mid-Market / Chemical |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv` |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the accounts payable vendor master, the identity provider app list, web proxy logs and the data team's model list (EV-043, EV-056), then owner interviews and model records (EV-072). How many staff use public generative AI sites, and what they enter, was not established (intake open request) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) with the AI RMF Playbook, and the Generative AI Profile (NIST AI 600-1) for AI-002 and AI-005 |
 | Assessors / date | Director of Data and Analytics (models), Information Security Manager (security), Process Safety Manager (process safety), General Counsel (legal), Director of Customer Solutions (AI-004), 2026-08-24 to 2026-09-11 |
 | Decision | Chief Operating Officer, 2026-09-22, with the Port Plant Manager for AI-001; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-Before this assessment, the only AI rule was the acceptable use policy (gap 12). AI-001 and AI-004 went live without a risk assessment, and staff used public generative AI tools. None of the five uses is out of control, and none can act on a control system, but two need conditions before they grow:
+Before this assessment, the only AI rule was the acceptable use policy (EV-032). AI-001 and AI-004 went live without a risk assessment, and staff used public generative AI tools. None of the five uses is out of control, and none can act on a control system, but two need conditions before they grow:
 - **AI-001, process optimization:** recommendations are not checked against the safe operating limits before an operator sees them, and model changes are outside MOC.
 - **AI-004, TTRS replenishment:** creates orders automatically for water utilities with no human review for new tanks, and its forecast error is checked only weekly.
 

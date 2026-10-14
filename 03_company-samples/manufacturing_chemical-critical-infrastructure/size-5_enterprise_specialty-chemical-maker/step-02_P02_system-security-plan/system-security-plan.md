@@ -9,7 +9,7 @@ Gulf Coast Complex Process Control and Batch Management System (**GC-PCBMS**), i
 ## 2. System Overview
 The GC-PCBMS runs the PLT-01 Gulf Coast Complex in Florida, the company's flagship plant (about 19% of company production volume, about $2.5 million of production a day; P05 BP-01). It controls three blend halls and the additives unit, the anhydrous ammonia unit, the chlorine and sodium hypochlorite unit (the "Chlor Unit"), a tank farm of about 140 tanks, packaging lines, a 12-bay truck rack, rail loading, and a marine terminal with two barge docks that receives petroleum base oils. It executes about 260 batches a day from about 1,900 master recipes, including customer-owned recipes for the SL-2 toll manufacturing service line.
 
-**Why integrity and safety come first.** A changed setpoint, alarm limit, recipe, or safety function can overfill the anhydrous ammonia vessel, release chlorine, or mix incompatible chemicals. The ammonia unit and the Chlor Unit are covered by OSHA PSM and EPA RMP Program 3, and their worst-case releases reach public receptors (`../00_company-facts.md` section 1). The safety instrumented systems (SIS) are the last automated safeguard, so their programs must always match the copy approved through management of change (P05 BP-02, RPO "approved logic").
+**Why integrity and safety come first.** A changed setpoint, alarm limit, recipe, or safety function can overfill the anhydrous ammonia vessel, release chlorine, or mix incompatible chemicals. The ammonia unit and the Chlor Unit are covered by OSHA PSM and EPA RMP Program 3, and their worst-case releases reach public receptors (RMP submissions and threshold worksheets, EV-026 and EV-028). The safety instrumented systems (SIS) are the last automated safeguard, so their programs must always match the copy approved through management of change (P05 BP-02, RPO "approved logic").
 
 **Users:** about 412 OT user accounts: about 310 operators, 26 shift supervisors, 22 controls engineers and I&E technicians, and maintenance, laboratory, and integrator accounts. Two of the six enterprise DCS and PLC integrators support PLT-01 through the central remote access gateway.
 
@@ -98,6 +98,8 @@ NIST SP 800-60 Vol. 2 Rev. 1 has no information type for industrial process cont
 - **Tailored out (4):** AC-22 (no public content), CP-7 (a chemical process cannot move to an alternate site; volume transfer to PLT-03 and PLT-06 is the equivalent), PE-17 (no alternate work site), and SC-15 (no collaborative computing devices on OT hosts).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 and its component rows SYS-01-SIS, SYS-01-TERM, SYS-01-PLC, SYS-01-HIST and SYS-01-DMZ) and the prior SSP version 1.1 (EV-073).
+
 **Inside the boundary:** the PLT-01 DCS and batch management system, the Ammonia Unit SIS and Chlor Unit SIS, the marine terminal automation, tank gauging, and terminal safety PLC, the packaging and truck rack PLCs, the process historian, the PLT-01 control, supervisory, SIS, and terminal networks with their zone firewalls, the PLT-01 OT DMZ, and the OT workstations at PLT-01.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -252,7 +254,7 @@ Common and hybrid controls are inherited from enterprise providers. Each provide
 - **Local panel HMIs (truck rack and terminal):** role logons with compensating physical controls and video (EXC-OT-011).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), OT intrusion runbook (P08), SOC 2 readiness (P09), AI-001 assessment (P10), PLT-01 OT contingency plan v2, PLT-01 OT configuration management plan v3, MTSA Facility Security Plan and draft Cybersecurity Plan (SSI, held by the FSO and CySO), PHA and process safety information (Process Safety Manager), enterprise common control catalog, exception register.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA and dependency map (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), OT intrusion runbook (P08), SOC 2 readiness (P09), AI-001 assessment (P10), PLT-01 OT contingency plan v2 and OT configuration management plan v3 (EV-022), MTSA Facility Security Plan and draft Cybersecurity Plan (SSI, held by the FSO and CySO; EV-029, EV-031), PHA and process safety information (Process Safety Manager; EV-024, EV-028), enterprise common control catalog (EV-063), exception register (EV-032). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

@@ -80,6 +80,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** PLT-01 Plant Manager; PLT-01 Controls Engineering Manager; PLT-01 CySO; PLT-01 Facility Security Officer; Process Safety Manager, PLT-01; 3 shift supervisors; Director of OT Security; Director of Security Operations; Director of Identity and Access Management; Director of Third-Party Risk Management; General Counsel; CFO; CISO; 20 randomly selected PLT-01 staff.
 - **Test:** test logons against DCS roles; a reverse-path test from Cloud provider A toward the OT DMZ; default-credential tests on OT devices; USB device tests on EWS and operator stations; generation of 6 audit event types and a test alarm limit change on a non-safety tag; a communication-loss test on one controller pair; reachability tests from the business network.
 
+
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set and OT standards, which were in force (EV-032, EV-033), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations, or live systems (OT tests during the planned outage) | 332 (296 Satisfied, 36 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: reconciliation of DCS change logs to MOC records (CM-03f.[02]) and integrity verification of toll customer recipes (SI-07a.[03]) | 2 |
+| **Total** | | **334** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example the OT directory and gateway exports, EV-006 and EV-007, the DCS change log and MOC records, EV-023, and the KEV reports, EV-017) and were refreshed to 2026-06-30 at kickoff.
 ## 4. Rules of engagement
 - **Safety first.** No active test touched a running process. OT tests ran only during the planned ammonia unit outage (2026-08-11 to 2026-08-13), on equipment released by the PLT-01 Plant Manager under a work permit, with a controls engineer and the shift supervisor present. The test alarm limit change used a non-safety tag in the outage area and was reversed under MOC.
 - No active scanning of controllers or SIS logic solvers; vulnerability data came from passive monitoring and vendor-approved methods.

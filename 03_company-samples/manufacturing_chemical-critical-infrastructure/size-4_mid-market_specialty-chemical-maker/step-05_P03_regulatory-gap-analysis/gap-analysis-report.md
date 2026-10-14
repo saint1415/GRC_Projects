@@ -13,7 +13,7 @@
 | Regulatory text checked | 2026-10-05: eCFR point-in-time 2026-09-23 for 33 CFR Parts 6, 101, 105, 154; 40 CFR Parts 68, 302, 355; 29 CFR 1910.119; 49 CFR Part 172; 46 CFR Part 153. Federal Register: the USCG final rule (FR Doc. 2025-00708) and searches for later amendments (none found), CIRCIA (no final rule), and the 2026 RMP proposal |
 
 ## 1. Applicability
-Applicability was decided first, rule by rule, from the company's sites, chemicals, and quantities (`../00_company-facts.md`, threshold math).
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), rule by rule, from the company's sites, chemicals, and quantities (the Part 154 operations manual, EV-027; the RMP registration and the maximum intended inventories in the process safety information, EV-034; DOT shipping records, EV-040; legacy CFATS records, EV-041). This section restates the result for each rule analyzed here.
 
 **1. USCG cybersecurity rule (33 CFR Part 101 Subpart F): applies to the Port plant. Binding.**
 - Subpart F applies to "the owners and operators of U.S.-flagged vessels, facilities, and OCS facilities required to have a security plan under 33 CFR parts 104, 105, and 106" (101.605(a)).
@@ -42,7 +42,7 @@ Applicability was decided first, rule by rule, from the company's sites, chemica
 ## 2. Method
 1. **Requirements.** Subpart F was decomposed to the paragraph level, following the rule's own structure (101.620, 101.625, 101.630, 101.635, 101.640, 101.645, 101.650(a) to (i), 101.655). RMP, PSM, release reporting, and DOT rows follow their section structure and cover only the elements that depend on the control system or on cyber measures. CFATS rows reuse the RBPS text (27.230(a)(5), (6), (8); 27.400).
 2. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. These are author mappings; NIST publishes no mapping for 33 CFR Part 101, 40 CFR Part 68, 29 CFR 1910.119, 49 CFR Part 172, or 6 CFR Part 27.
-3. **Evidence.** Interviews with 24 people (including all 4 shift supervisors and the three OT vendors), document review (FSP, plan draft, HAZOPs, MOC log, contracts), firewall and DCS exports, the OT sensor inventory, and the site walkthroughs. P07 test results were folded in on 2026-08-28.
+3. **Evidence.** Current state was established from the intake evidence (document review of the FSP, plan draft, HAZOPs, MOC log and contracts; firewall and DCS exports; the OT sensor inventory: EV-001 to EV-058), interviews with 24 people including all 4 shift supervisors and the three OT vendors (EV-060), the site walkthroughs (Port plant EV-061, Inland plant EV-063, Distribution center EV-064), the wireless survey (EV-062), the OT vendor contract review (EV-066) and two samples (EV-067, EV-068). Records dated after fieldwork are cited as follow-up evidence (EV-069 to EV-071). P07 test results were folded in on 2026-08-28. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. "Not met" for a requirement whose date has not passed means the work has not started; the gap description says "not yet late". Gaps are rated with the P01 risk scale.
 
 ## 3. Results summary

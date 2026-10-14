@@ -11,7 +11,7 @@
 | Approved | 2026-09-22: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** Every business unit (the Port plant and marine terminal, the Inland plant, the Distribution center, TTRS, and corporate functions), all systems SYS-01 to SYS-20, the 52 vendors with system or data access, and the AI portfolio. Processes and impact values come from the BIA (P05). Vulnerabilities come from the gap analysis (P03), the SSP (P02), the cloud mapping (P04), and the control assessment (P07).
+**Scope.** Every business unit (the Port plant and marine terminal, the Inland plant, the Distribution center, TTRS, and corporate functions), all systems SYS-01 to SYS-20 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv), the 52 vendors with system or data access ([vendor register](../step-00_P00_intake/vendor-register.csv); EV-044), and the AI portfolio. Processes and impact values come from the BIA (P05). Vulnerabilities come from the gap analysis (P03), the SSP (P02), the cloud mapping (P04), and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,11 +35,13 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the chemical sector threat themes in CISA advisories (ransomware reaching OT through IT, abuse of remote access tools, default credentials on OT devices), the BIA, interviews with every process owner, site walkthroughs (Port 2026-07-14, Inland 2026-07-16, Distribution center 2026-07-21), P03, and P07.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the chemical sector threat themes in CISA advisories (ransomware reaching OT through IT, abuse of remote access tools, default credentials on OT devices), the BIA, the intake evidence, interviews with every process owner and a threat workshop (EV-059, EV-065), site walkthroughs (Port 2026-07-14, EV-061; Inland 2026-07-16, EV-063; Distribution center 2026-07-21, EV-064), P03, and P07. The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the OT sensor and scan records, the incident register (EV-025), the 2026-05 Area Maritime Security Committee threat briefing (EV-026), walkthroughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA categories (cost, operations, regulatory, process safety, reputation). Any plausible toxic release that reaches the public is Very High.
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-011 was added on 2026-08-28 after testing on 2026-08-19 found the vendor default administrator password on the radar tank gauging server (EV-IA-5). The `assessment_pass` column shows which pass produced each risk. R-024 and R-038 to R-042 come from Pass 1; their later `last_reviewed` dates record the updates after P09 and P10.
 
 ## 3. Results
 | Risk level | Count |

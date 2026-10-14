@@ -35,7 +35,7 @@ The company owns very little infrastructure. A managed service provider (MSP) ru
 
 Not applicable:
 - **C-CHEMICAL-R02**, the USCG MTSA cybersecurity rule (33 CFR Part 101 Subpart F), applies only to facilities required to have a security plan under 33 CFR Part 105 (101.605(a)). The site has no marine transfer.
-- **EPA RMP** (40 CFR Part 68) and **OSHA PSM** (29 CFR 1910.119): no chemical is held above a threshold quantity or at a listed concentration (`../00_company-facts.md`, threshold math).
+- **EPA RMP** (40 CFR Part 68) and **OSHA PSM** (29 CFR 1910.119): no chemical is held above a threshold quantity or at a listed concentration (intake [obligations register](../step-00_P00_intake/obligations-register.csv), from the chemical quantities in EV-027).
 - **DOT transportation security plan** (49 CFR 172.800): no shipment is a large bulk quantity or an any-quantity material.
 
 ## 4. System Status
@@ -88,6 +88,8 @@ The judgment is serious injury to people in the blend room, not loss of life or 
 - **Inherited or tailored out.** Other Moderate-baseline controls are inherited from the SaaS vendors (physical, platform, and application controls), with the accounting vendor's SOC 2 report as the main evidence (P09), or tailored out because they assume dedicated IT staff or federal program management.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - the PLC, field devices, HMI and recipe PC, and the cellular gateway (SYS-01 to SYS-03), including the company's account and settings in the integrator's portal;
 - the office network, 7 endpoints, and the 4 SaaS services with their company tenants and settings (SYS-04 to SYS-08);
@@ -127,7 +129,7 @@ flowchart TB
   SUITE --> BK
 ```
 
-Dotted lines are the unmanaged paths found in 2026 (gaps 1, 2, 13, and 15 in `../00_company-facts.md`). **Target design (2026-12-31):** the HMI PC on its own firewall segment with only printing allowed to the office; the gateway powered on only for approved sessions with named MFA accounts; recipe files moved through one scanned USB stick until an approved file path exists.
+Dotted lines are the unmanaged paths found in 2026 (EV-006, EV-016, EV-040, EV-047, and the P07 network test EV-SC-7). **Target design (2026-12-31):** the HMI PC on its own firewall segment with only printing allowed to the office; the gateway powered on only for approved sessions with named MFA accounts; recipe files moved through one scanned USB stick until an approved file path exists.
 
 ## 8. Information Exchanges Summary
 | Connected system or party | Direction | Data | Agreement |
@@ -167,10 +169,10 @@ By responsibility: 22 system-specific (the company), 21 hybrid (the company with
 ### 10.2 Inherited, MSP-provided, and integrator-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Accounting and inventory vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit logs (AU-2) | SOC 2 Type 2 report reviewed 2026-08-19 (P09) | Complementary user entity controls: user provisioning and removal, MFA for all users, review of user access |
-| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout (AC-7), audit logging (AU-2) | Vendor documentation | Account management, sharing settings, log review |
-| SDS and label service vendor | Hosting, backups, encryption (SC-28) | Vendor documentation only | Account management; send SDS updates to the ERI provider |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP report; P07 evidence requests | Oversight: approve exceptions, review reports monthly, add security terms at renewal (P01 R-016) |
+| Accounting and inventory vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit logs (AU-2) | SOC 2 Type 2 report (EV-022) reviewed 2026-08-19 (P09) | Complementary user entity controls: user provisioning and removal, MFA for all users, review of user access |
+| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-021) | Account management, sharing settings, log review |
+| SDS and label service vendor | Hosting, backups, encryption (SC-28) | Vendor documentation only (EV-021) | Account management; send SDS updates to the ERI provider |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), backup operation (CP-9), device lock (AC-11) | Monthly MSP report (EV-015); P07 evidence requests | Oversight: approve exceptions, review reports monthly, add security terms at renewal (P01 R-016) |
 | Control system integrator | PLC program and HMI project custody, remote support (MA-4), advisories for the PLC and gateway (RA-5, planned) | None today | Approve and watch every session (AC-17); require named accounts with MFA, current backups, and notice of security incidents in the agreement (P01 R-007) |
 
 **Inherited does not mean done.** The accounting vendor's SOC 2 report assumes the customer enforces MFA and removes departed users. Both were open gaps at the company during fieldwork (IA-2(1), PS-4).
@@ -182,7 +184,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 Workforce users sign in to the productivity suite with a password and a phone authenticator app. MFA is being extended to the accounting service for all users, the integrator portal, the firewall management login, and the backup console (P07 POAM-002). The HMI uses local logins; named logins replace the shared operator login by 2026-11-30, and the HMI is reachable only from the blend room and approved integrator sessions. This is appropriate for a Moderate system once the planned changes are in place.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and accounting vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and accounting vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BBP:** Blending and Business Platform

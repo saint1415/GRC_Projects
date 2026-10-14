@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026), with OT guidance from NIST SP 800-82 Rev. 3 | **Version:** 1.0, 2026-09-22
 
 ## 1. System Name and Identifier
-Process Control and Batch Management System (**PCBMS**), identifier CSC-PCBMS-01. The PCBMS is the Port plant's process control system: SYS-01 to SYS-07 and the 52 Port plant OT workstations in SYS-15 (`../00_company-facts.md` section 3).
+Process Control and Batch Management System (**PCBMS**), identifier CSC-PCBMS-01. The PCBMS is the Port plant's process control system: SYS-01 to SYS-07 and the 52 Port plant OT workstations in SYS-15 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The PCBMS runs every production unit at the Port plant: the bulk tank farm and marine terminal, the Ammonia Unit, the Peroxide Unit, Blend Hall 1 (12 blend reactors), packaging, and the 6 truck loading bays. It executes about 55 batches a day from about 600 master recipes. It supports 7 of the 10 High-criticality processes in the BIA (P05: BP-02 to BP-06, BP-08, and BP-10 in support), the Moderate recipe process BP-16, and about 70% of company revenue.
@@ -101,6 +101,8 @@ NIST SP 800-60 Vol. 2 Rev. 1 has no information type for industrial process cont
 - **Deferred:** High-baseline controls for software development (for example SA-11, SA-15, SA-17), because the company does not develop control system software; and federal-only PM controls. Recorded as tailoring decisions and reviewed yearly.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The OT workstation count (52 at the Port plant) is from the OT workstation inventory (EV-011); the OT device count is the sensor inventory (EV-012).
+
 **Inside the boundary:** SYS-01 to SYS-07 and the 52 Port OT workstations, including the OT DMZ (historian replica, remote access gateway, order relay, OT backup server, antivirus and patch staging server) and the passive OT sensor.
 
 **Outside, interconnected:** the business network and its users; the ERP (SaaS); the cloud data platform and AI-001 and AI-003 model services (SYS-11); the identity provider (SYS-13), used for gateway MFA only; the SIEM and MSSP (SYS-16); physical security systems (SYS-17); the vendors' own networks; and the Inland plant batch control system (SYS-08, separate SSP planned for 2027).
@@ -188,7 +190,7 @@ flowchart TB
 | National Response Center, Captain of the Port, FBI, CISA, county fire rescue, LEPC, SERC | Outbound (phone, radio) | Release and incident notifications | FSP; emergency response plan (68.95); P08 notification matrix |
 
 ## 9. System Component Inventory
-This is the summary inventory. The full register (412 assets found by the OT sensor; 340 reconciled) is in the controls team's asset register. Firmware versions for 72 devices and the critical system designations required by 101.650(b)(3) are due 2026-12-31 (CM-8).
+This is the summary inventory. The full register (412 assets found by the OT sensor, EV-012; 340 reconciled by 2026-08-01, EV-069) is in the controls team's asset register. Firmware versions for 72 devices and the critical system designations required by 101.650(b)(3) are due 2026-12-31 (CM-8).
 
 | Component | Type | Location | Owner | Critical OT system (draft) |
 |---|---|---|---|---|
@@ -225,7 +227,7 @@ See `control-implementation.csv`. Summary of the 110 documented controls:
 | Hybrid | 11 | Identity provider vendor, MSSP, training platform |
 | Common/Inherited | 6 | Identity provider (IA-2(1), IA-2(2), PS-4), MSSP and insurer panel (IR-7), HR screening (PS-3), corporate contracts (SR-8) |
 
-Most controls are Partially implemented because the 2023-2024 investments (OT DMZ, gateway, named engineering accounts, allowlisting, offline backups) cover the core of the PCBMS but not the terminal equipment, the operators, or the evidence the USCG rule expects (documented lists, logs reviewed, tests done). The gaps trace to `../00_company-facts.md` section 4 (gaps 1 to 9, 14, 15).
+Most controls are Partially implemented because the 2023-2024 investments (OT DMZ, gateway, named engineering accounts, allowlisting, offline backups) cover the core of the PCBMS but not the terminal equipment, the operators, or the evidence the USCG rule expects (documented lists, logs reviewed, tests done). The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-006, EV-012, EV-021 and EV-022) and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm, with an OT specialist subcontractor, assessed 36 controls (32 PCBMS controls and 4 inherited common controls) from 2026-08-10 to 2026-08-28, with OT testing on 2026-08-19 during a planned Blend Hall 1 outage. See P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`. Weaknesses are tracked in the POA&M (22 items, 15 High) and reported to the audit committee each quarter.
@@ -237,7 +239,7 @@ The co-sourced internal audit firm, with an OT specialist subcontractor, assesse
 - **Separate credentials:** OT accounts never reuse IT credentials (101.650(a)(6)).
 
 ## 12. Referenced Artifacts
-- Scenario facts (`../00_company-facts.md`)
+- Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md))
 - BIA (P05), risk register (P01), gap analysis and roadmap (P03), cloud control map (P04)
 - Policies and standards index (P06)
 - Assessment, results, and POA&M (P07)
