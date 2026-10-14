@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the President |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business and its key vendors: every system that holds CUI, whether it should or not (SYS-01 to SYS-10 in `../00_company-facts.md`), printed drawings, the shop floor, and the vendors that handle CUI or protect it: the government-community cloud provider, the MSP and its backup subcontractor, the commercial suite and ERP vendors, Prime A's portal, and the 2 outside processors.
+**Scope.** The whole business and its key vendors: every system that holds CUI, whether it should or not (SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), printed drawings, the shop floor, and the vendors that handle CUI or protect it: the government-community cloud provider, the MSP and its backup subcontractor, the commercial suite and ERP vendors, Prime A's portal, and the 2 outside processors ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
@@ -23,8 +23,8 @@
 This is the company's first documented risk assessment.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the SSP and cloud mapping (P02, P04), and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the SSP and cloud mapping (P02, P04), the intake evidence, and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24, EV-040). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the SYS-01, SYS-02 and MSP exports, the contracts folder, the walk-throughs, the account comparison of 2026-07-15 (EV-041) and the interviews.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a shop with about $4,400 of shipments per production day, losing Prime A (about 40% of revenue) or all DoD work is Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -55,9 +55,11 @@ Status: 14 Open, 10 In progress, 1 Closed (R-015 accepted). Treatment: 23 Mitiga
 **The second theme is that the company cannot see or report an incident.** No alerts, no log review, and no DoD certificate (R-006, R-022) mean an exfiltration like the P08 scenario would be found by a customer, not by the shop.
 
 **Risks found or changed during the work:**
-- R-013: the former part-time programmer's commercial suite account and Prime A portal access were disabled on 2026-07-15, the day they were found. Sign-in logs showed no use after his last day. The offboarding gap remains open.
-- R-023: added on 2026-08-12 after P07 testing found one MSP technician's RMM console login without MFA. The MSP enabled MFA the same day; evidence is pending.
-- R-004: counsel advised on 2026-07-28 that the 110 score must be corrected promptly.
+- R-013: the former part-time programmer's commercial suite account and Prime A portal access were disabled on 2026-07-15, the day the account comparison found them (EV-041). Sign-in logs showed no use after his last day. The offboarding gap remains open.
+- R-023: added on 2026-08-12 after P07 testing found one MSP technician's RMM console login without MFA (EV-IA-2(1)). The MSP enabled MFA the same day; evidence is pending.
+- R-004: counsel advised on 2026-07-28 that the 110 score must be corrected promptly (EV-050).
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-023 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (approved by the President on 2026-08-31; about $36,000 one-time and $13,000 a year):**

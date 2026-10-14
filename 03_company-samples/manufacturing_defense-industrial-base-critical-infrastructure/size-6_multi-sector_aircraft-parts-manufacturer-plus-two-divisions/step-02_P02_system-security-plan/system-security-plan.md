@@ -7,11 +7,11 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the **GCEE**, a shared corporate system, because both CUI divisions keep their drawings, models, specifications, and test reports in one PLM environment; it inherits most of its controls from corporate (SYS-G1, SYS-G2, SYS-G3, SYS-G5); and it carries the group's top risk (P01 GR-01). Each plant keeps a plant enclave SSP for its MES, DNC, and machines (SYS-D1), and Defense Software keeps its own plans for SYS-D3 (DoD authorization package) and SYS-D4. All of them inherit from the same common control catalog (`common-control-catalog.csv`).
 
 ## 1. System Name and Identifier
-Group CUI Engineering Enclave (**GCEE**), identifier CSCH-SYS-G3-CEE. It is the core of the **Enterprise CUI Environment**, the planned CMMC Level 2 assessment scope that also includes plants 1 to 8 and the Engineering Services centers (`../00_company-facts.md` section 6). This SSP satisfies SP 800-171 requirement 3.12.4 for the GCEE and is named in SPRS submissions under DFARS 252.204-7019 and 252.204-7020.
+Group CUI Engineering Enclave (**GCEE**), identifier CSCH-SYS-G3-CEE. Listed as GCEE in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It is the core of the **Enterprise CUI Environment**, the planned CMMC Level 2 assessment scope that also includes plants 1 to 8 and the Engineering Services centers (EV-008). This SSP satisfies SP 800-171 requirement 3.12.4 for the GCEE and is named in SPRS submissions under DFARS 252.204-7019 and 252.204-7020.
 
 ## 2. System Overview
 The GCEE is where the group receives, creates, stores, and releases controlled technical information (CTI) for its DoD contracts and subcontracts: drawings, 3D models, specifications, NC programs and additive build files, stress and test reports, and the inspection plans built from them. It supports:
-- **Aircraft Parts:** design, change control, and release to 9 plants (Plant 9 is not yet connected; scenario gap 1).
+- **Aircraft Parts:** design, change control, and release to 9 plants (Plant 9 is not yet connected; group gap 1).
 - **Engineering Services:** design, analysis, and test reporting for DoD program offices and primes.
 - **Program H:** a separate project enclave inside the GCEE with tighter access and monitoring, the intended Level 3 (DIBCAC) scope (32 CFR 170.19(e)).
 
@@ -41,7 +41,7 @@ Engineering laptops that reach CAD only through the virtual desktop service are 
 | N51-R08 | SEC cybersecurity disclosure | Reg S-K Item 106; Form 8-K Item 1.05 | A GCEE incident may be material to the group (P08) |
 | Internal | Group policies POL-01 to POL-05 and division supplements | P06 | Program rules |
 
-Not applicable to the GCEE: NISPOM (C-DIB-R07, 32 CFR Part 117) governs only the classified systems at the two cleared Engineering Services centers, which are outside this boundary (their reporting and insider threat duties are in P03 and P08); CIRCIA (final rule not published).
+Not applicable to the GCEE: NISPOM (C-DIB-R07, 32 CFR Part 117) governs only the classified systems at the two cleared Engineering Services centers, which are outside this boundary (their reporting and insider threat duties are in P03 and P08); CIRCIA (final rule not published). Applicability for each division and the group is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -85,7 +85,7 @@ Information types are from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow FI
 **Baseline.** The binding requirement set is the 110 SP 800-171 Rev. 2 requirements; each one's GCEE implementation is in `sp800-171-requirement-statements.csv` (110 rows, linked to the P03 gap rows). `control-implementation.csv` documents **137 SP 800-53 Rev. 5 controls**: 136 from the Moderate baseline plus PM-9 (tailored in). Other Moderate controls are either fully inherited from cloud provider A under its customer responsibility matrix (most PE controls for data centers) or tailored out in the group tailoring register.
 
 ## 7. Authorization Boundary Description
-The boundary follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (GCEE, GCEE-TW, GCEE-PH and the shared services they inherit from) and the GCEE exports and registers EV-043 to EV-049. It follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
 
 | Category | Assets | Treatment |
 |---|---|---|
@@ -148,15 +148,15 @@ The diagram is in P04 `cloud-architecture.md` (section 2.2).
 | System-specific | 11 |
 
 **The 15 partially implemented controls** cluster in four places:
-- **The SYS-D4 dependency and other external flows** (scenario gap 4): AC-4, AC-20, CA-3, SA-9.
+- **The SYS-D4 dependency and other external flows** (group gap 4): AC-4, AC-20, CA-3, SA-9.
 - **Inventory, software, and service accounts:** AC-2, CM-8, CM-11, IA-5.
-- **Plans and sharing:** PL-2 (HPC and Engineering Services inheritance, gap 6), AC-21 (foreign-person sharing tags).
-- **Group functions inherited by the GCEE:** IR-3 and IR-6 (cross-division exercise and Defense Software reporters, gap 8), SI-4(4) (Program H egress baseline), SR-3 and SR-6 (supplier CMMC verification, gap 3).
+- **Plans and sharing:** PL-2 (HPC and Engineering Services inheritance, group gap 6), AC-21 (foreign-person sharing tags).
+- **Group functions inherited by the GCEE:** IR-3 and IR-6 (cross-division exercise and Defense Software reporters, group gap 8), SI-4(4) (Program H egress baseline), SR-3 and SR-6 (supplier CMMC verification, group gap 3).
 
 The 2 planned controls (IA-3 device authentication and SR-11 component authenticity) also prepare for Level 3.
 
 ### 10.2 Common control inheritance by division
-`common-control-catalog.csv` lists 123 controls provided by corporate: SYS-G1 (31), SYS-G2 (27), SYS-G3 (22), the group security governance office (18), group HR (10), the group supply chain risk office (7), group facilities security (5), and the group CMMC program office (3). Inheritance is **documented for Aircraft Parts** (2025 inheritance matrix and plant enclave SSPs), for **Defense Software** (DoD edition SSP and the industry edition SOC 2 system description), and for the **GCEE** (this plan). For **Engineering Services** it is documented for the engineering centers but **not for the HPC cluster and test systems** that joined the CUI environment in 2026 (scenario gap 6, POAM-009). Until that closes, a C3PAO cannot trace which requirements those systems inherit, and P07 found CA-2 statements other than satisfied for this reason.
+`common-control-catalog.csv` lists 123 controls provided by corporate: SYS-G1 (31), SYS-G2 (27), SYS-G3 (22), the group security governance office (18), group HR (10), the group supply chain risk office (7), group facilities security (5), and the group CMMC program office (3). Inheritance is **documented for Aircraft Parts** (2025 inheritance matrix and plant enclave SSPs), for **Defense Software** (DoD edition SSP and the industry edition SOC 2 system description), and for the **GCEE** (this plan). For **Engineering Services** it is documented for the engineering centers but **not for the HPC cluster and test systems** that joined the CUI environment in 2026 (group gap 6, POAM-009). Until that closes, a C3PAO cannot trace which requirements those systems inherit, and P07 found CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Assessment status and score
 - Common controls were assessed once, and GCEE and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit (P07).
@@ -170,7 +170,7 @@ The 2 planned controls (IA-3 device authentication and SR-11 component authentic
 - **Level 3 preparation:** bidirectional, certificate-based device authentication for thick workstations is planned by 2027-03-31 (IA-3; SP 800-172 3.5.1e).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); requirement statements (`sp800-171-requirement-statements.csv`); common control catalog (`common-control-catalog.csv`); group and division risk registers (P01); gap analyses and regulation-by-division matrix (P03); cloud architecture and control map (P04); BIA (P05); group policies and division supplements (P06); assessment and POA&M (P07); incident response runbook and notification matrix (P08); SOC 2 readiness (P09); AI governance (P10); cloud provider CRMs and FedRAMP Marketplace records (kept by the Group CMMC program director).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); requirement statements (`sp800-171-requirement-statements.csv`); common control catalog (`common-control-catalog.csv`); group and division risk registers (P01); gap analyses and regulation-by-division matrix (P03); cloud architecture and control map (P04); BIA (P05); group policies and division supplements (P06); assessment and POA&M (P07); incident response runbook and notification matrix (P08); SOC 2 readiness (P09); AI governance (P10); cloud provider CRMs and FedRAMP Marketplace records (kept by the Group CMMC program director).
 
 ## 13. Acronym List and Glossary
 - **C3PAO:** CMMC Third-Party Assessment Organization

@@ -10,7 +10,7 @@ CUI Engineering Enclave (**CEE**), identifier CSC-SYS-CEE-01. This SSP satisfies
 ## 2. System Overview
 The CEE is where the company receives, creates, stores, and uses controlled technical information (CTI) for its DoD subcontracts: controlled drawings, 3D models, specifications, NC programs, and the travelers and work instructions built from them. It supports engineering, manufacturing engineering, quality, and shop-floor production for Prime A and Prime B parts, some of which are ITAR defense articles. About 50 named users hold enclave accounts; about 40 machine operators see CUI through MES terminals and printed drawings.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-01:** enclave identity provider (single sign-on, MFA, device compliance), government-community cloud
 - **SYS-02:** enclave collaboration suite (CUI email, file storage, chat), government-community cloud
 - **SYS-03:** enclave cloud subscription (PLM VMs, virtual desktops, SFTP gateway, log workspace, key vault, backup vault)
@@ -75,7 +75,7 @@ Information types are from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow FI
 **Requirement baseline.** The binding requirement set is the 110 SP 800-171 Rev. 2 requirements. Each requirement's implementation statement is in `sp800-171-requirement-statements.csv` (110 rows, linked to the gap analysis in P03). `control-implementation.csv` documents 100 SP 800-53 Rev. 5 controls (99 from the Moderate baseline, plus PM-9 by tailoring). They are the controls NIST's SP 800-171 Rev. 3 CUI overlay maps to those requirements, plus contingency, inventory, supply chain, and policy controls the company needs. Other Moderate-baseline controls are either inherited from the cloud provider (per its customer responsibility matrix) or outside this tier's scope.
 
 ## 7. Authorization Boundary Description
-The boundary follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
 
 | Category | Assets in the CEE | Treatment |
 |---|---|---|
@@ -145,7 +145,7 @@ Enclave users authenticate to SYS-01 with a password and a phishing-resistant or
 **Exception until 2026-11-30:** MES terminals use shared local logins without MFA. The planned fix is MES sign-in through SYS-01 with badge plus PIN at the terminal (P07 POAM-003).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); requirement statements (`sp800-171-requirement-statements.csv`); risk register (P01); gap analysis and score (P03); cloud control map and diagram (P04); BIA (P05); policies (P06); assessment and POA&M (P07); incident response runbook (P08); SOC 2 readiness (P09); AI assessment (P10); cloud provider CRM and FedRAMP Marketplace record (kept by the IT Manager).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); requirement statements (`sp800-171-requirement-statements.csv`); risk register (P01); gap analysis and score (P03); cloud control map and diagram (P04); BIA (P05); policies (P06); assessment and POA&M (P07); incident response runbook (P08); SOC 2 readiness (P09); AI assessment (P10); cloud provider CRM and FedRAMP Marketplace record (kept by the IT Manager).
 
 ## 13. Acronym List and Glossary
 - **C3PAO:** CMMC Third-Party Assessment Organization

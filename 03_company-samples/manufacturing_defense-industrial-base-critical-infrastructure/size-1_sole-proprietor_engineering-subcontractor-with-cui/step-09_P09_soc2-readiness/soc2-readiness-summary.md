@@ -11,7 +11,7 @@
 | Prepared | 2026-08-24 (Part B) and 2026-08-26 (Part A) by the owner, with the CMMC consultant's comments; adopted 2026-08-31 |
 
 ## 1. Why SOC 2 here, and why not a SOC 2 report
-**A one-person engineering firm would not obtain a SOC 2 report.** SOC 2 reports on a service organization's controls for business customers that rely on its systems. The owner's customers rely on engineering work, not on the owner's systems, and a CPA examination would cost more than a month of revenue. For defense work the assurance that counts is **CMMC**: a Level 2 (Self) assessment posted in SPRS with an affirmation (P03). A commercial customer sent a security questionnaire in July 2026, and the owner answers it with a short self-attestation that this checklist supports.
+**A one-person engineering firm would not obtain a SOC 2 report.** SOC 2 reports on a service organization's controls for business customers that rely on its systems. The owner's customers rely on engineering work, not on the owner's systems, and a CPA examination would cost more than a month of revenue. For defense work the assurance that counts is **CMMC**: a Level 2 (Self) assessment posted in SPRS with an affirmation (P03). A commercial customer sent a security questionnaire in July 2026 (EV-026), and the owner answers it with a short self-attestation that this checklist supports.
 
 The Security criteria are still useful in two ways:
 - **A. Owner's self-check.** The CC series is a structured list of questions that cross-checks the SP 800-171 work. Criteria that assume a board, staff, or software development are marked N/A or are satisfied by the owner's direct oversight, with the reason written in the checklist.
@@ -39,6 +39,7 @@ The Security criteria are still useful in two ways:
 **Crosswalk to CMMC.** Every Not ready criterion matches an SP 800-171 requirement that is Not met or Partially met in P03, so one remediation plan (the P07 POA&M) serves both. The self-attestation to the commercial customer will state the recalculated SPRS score and the POA&M dates, not a claim of compliance (POL-01 4.7).
 
 ## 4. Planned CUI cloud evidence (Part B)
+Source: the provider and reseller documents reviewed on 2026-08-24 (EV-036).
 - **Authorization:** the SYS-10 offering is listed on the FedRAMP Marketplace as authorized at the High baseline, which satisfies the Moderate-or-higher test in 32 CFR 170.16(c)(2)(i) and the DFARS cloud requirement.
 - **Incident duties:** the provider's service terms commit to DFARS 252.204-7012(c) to (g).
 - **CRM:** a summary was provided; the full matrix comes at onboarding and will be referenced in the SSP.

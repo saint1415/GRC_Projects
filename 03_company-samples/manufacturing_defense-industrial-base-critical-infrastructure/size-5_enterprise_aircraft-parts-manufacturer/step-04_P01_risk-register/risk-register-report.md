@@ -47,8 +47,8 @@
 **Never accepted, at any level:** a known failure to meet a DFARS 252.204-7012 duty (adequate security, reporting, flowdown), processing CUI for a contract that requires a CMMC status on a system without that status, an affirmation the company cannot support, or an unauthorized export. These are treated, not accepted. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, threat intelligence on campaigns against aerospace suppliers (DoD, prime, and commercial sources), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, threat intelligence on campaigns against aerospace suppliers from DoD, prime, and commercial sources (EV-029), the BIA (P05), the intake evidence, the 2025 risk assessment and the board-approved risk appetite (EV-039), and risk workshops with the SOC, Engineering and PLM, Trade Compliance, Supply Chain, the Integration Management Office, AZ-1, OT Engineering, Contracts, the General Counsel and Finance, Human Resources and Corporate Security, and the AI governance committee (EV-083). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, configuration and coverage exports from the enterprise systems of record, the KS-1 survey, contract and supplier records, the gap analysis samples, the workshops, and, for risks updated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3), including flight safety, export control, and contract eligibility harm.
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -71,6 +71,8 @@ By threat source type: Adversarial 17, Structural 30, Accidental 15, Environment
 By treatment: Mitigate 50, Accept 12, Avoid 1, Share/Transfer 1.
 By status: In progress 47, Open 4, Closed (accepted) 12, Closed (avoided) 1.
 **27 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. No risk was added in a second pass. After the Internal Audit assessment (P07) and the gap analysis samples that closed on 2026-08-14, the risks whose ratings rest on those results were re-rated on 2026-08-28 (R-004, R-013, R-015, R-029, R-031, R-052); their `last_reviewed` date is 2026-08-28 and their `likelihood_basis` cites the P07 or gap analysis evidence ID. The `assessment_pass` column shows the pass that produced each risk and any re-rating.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
@@ -110,10 +112,10 @@ By status: In progress 47, Open 4, Closed (accepted) 12, Closed (avoided) 1.
 ## 6. Themes from the 2026 analysis
 1. **Drift after certification (ER-02).** Final Level 2 (C3PAO) status was earned in 2026-03, but sampling found operating exceptions in the six certified sites that would score 80 today (P03). The COO cannot make the 2027-03-20 affirmation until they close (R-013, R-017, R-020).
 2. **New and acquired sites (ER-06).** AZ-1 joined after the assessment and KS-1 remains outside the scope. Both carry segmentation, baseline, logging, and backup gaps (R-022, R-023, R-043, R-046, R-047, R-049), and a contract routing error put 7021 work on KS-1 (R-015).
-3. **Export control inside the enclave (ER-01).** A data migration dropped ITAR attributes on 14 PLM folders, and an EAR-licensed foreign-person engineer opened ITAR files (R-004). The Senior Empowered Official filed an initial voluntary disclosure notification on 2026-08-19 (R-051).
-4. **Supply chain (ER-04).** Only 46% of CUI suppliers have a verified CMMC status, and 4 of 60 sampled purchase orders lacked the DFARS clauses (R-029, R-031). CMMC Phase 2 (planned for 2026-11-10) is suspended, but CUI suppliers still owe SP 800-171 Rev. 2 under DFARS 252.204-7012, so verification continues.
+3. **Export control inside the enclave (ER-01).** A data migration dropped ITAR attributes on 14 PLM folders, and an EAR-licensed foreign-person engineer opened ITAR files (R-004; EV-AC-4). The Senior Empowered Official filed an initial voluntary disclosure notification on 2026-08-19 (R-051).
+4. **Supply chain (ER-04).** Only 46% of CUI suppliers have a verified CMMC status, and 4 of 60 sampled purchase orders lacked the DFARS clauses (R-029, R-031; EV-088). CMMC Phase 2 (planned for 2026-11-10) is suspended, but CUI suppliers still owe SP 800-171 Rev. 2 under DFARS 252.204-7012, so verification continues.
 5. **Level 3 (ER-02).** 10 of 24 requirements are met. Penetration testing, threat hunting records, supply chain planning, and specialized asset segregation are the main gaps (R-014).
-6. **Disclosure readiness (ER-07).** The materiality playbook was tested only with ransomware. A data theft with no outage, and an 8-K draft that must not reveal CUI or classified details, are not covered (R-050).
+6. **Disclosure readiness (ER-07).** The materiality playbook was tested only with ransomware. A data theft with no outage, and an 8-K draft that must not reveal CUI or classified details, are not covered (R-050; EV-046).
 
 ## 7. Treatment summary
 - **Funded (2026 Q4 to 2027 Q3), about $7.4 million:** KS-1 migration and decommissioning ($2.9M), AZ-1 segmentation, transfer service, and baselines ($850K), Level 3 readiness including penetration testing and the DIBCAC preparation ($1.2M), supplier CMMC verification program ($420K), 802.1X and discovery at FL-3 and AZ-1 ($610K), insider risk program for all CEE users ($540K), managed file transfer hardening and virtual patching ($180K), PLM export attribute analytics ($260K), outside counsel for the disclosure tabletop and export matters ($440K). Items map to the POA&M in P07.

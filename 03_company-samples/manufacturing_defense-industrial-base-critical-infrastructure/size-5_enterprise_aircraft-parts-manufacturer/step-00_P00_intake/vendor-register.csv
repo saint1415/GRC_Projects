@@ -1,0 +1,29 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Government-community cloud provider,"CUI collaboration suite, CEE IaaS/PaaS, SIEM hosting, AI-001 add-on",SYS-02; SYS-03; SYS-08; AI-001,CUI; Security Protection Data,"Contract with DFARS 252.204-7012(b)(2)(ii)(D) terms (reporting, malware, preservation, access)",FedRAMP authorized at Moderate or higher (Marketplace record checked 2026-03); customer responsibility matrix reviewed 2026-03,EV-056,External service provider handling CUI; U.S. regions and U.S.-person support
+V-02,Cloud provider A,"IaaS/PaaS for SL-1, SL-2 and the corporate data platform",SYS-11; SYS-11-SL1; SYS-11-SL2,Customer repair records; operator sensor data (no CUI),Customer agreement,SOC 2 Type 2,EV-024; EV-057,Subservice organization for SL-1 and SL-2 (carve-out)
+V-03,Identity platform vendor,"SSO, MFA, PAM, identity governance (commercial SaaS components)",SYS-01,Workforce identities,Subscription agreement,None on file,EV-001; EV-052,Security Protection Data
+V-04,Managed file transfer software vendor,Gateway software for the CEE gateway and the corporate instance,SYS-03-GW; SYS-10-MFT,None (software only),License and support contract with no vulnerability notification term,None on file,EV-058; EV-008,One product in two instances
+V-05,PLM software vendor,PLM application,SYS-04,None by default (support by request),License and support contract with no vulnerability notification term,None on file,EV-058,
+V-06,CAD and CAM software vendors,CAD and CAM applications,SYS-04; SYS-05,None by default,License contracts with no vulnerability notification term,None on file,EV-058,
+V-07,Machine tool and other equipment manufacturers (5 with remote support),Remote support for plant equipment,SYS-06-MCH,Security Protection Data during sessions,Service agreements,None on file,EV-021; EV-052,Sessions through the PAM vendor gateway with company MFA and recording
+V-08,AZ-1 printer manufacturer,"Printers, build-prep image, optimization software and remote support",SYS-06-AM; SYS-06-BP; AI-010,Build files during support sessions,Service agreement,None on file,EV-021; EV-015; EV-052,Remote support through the manufacturer's own tool reached by a firewall rule
+V-09,Autoclave manufacturer,Autoclave controllers and support,SYS-06-AC,None,Service agreement,None on file,EV-016; EV-052,Controllers past vendor support
+V-10,SD-WAN carriers (two per site),Network transport,SYS-07,Encrypted traffic,Carrier contracts,None on file,EV-018,
+V-11,DC-2 colocation provider,"Data center space, power and physical security",DC-2,Hosted equipment and backups,Colocation agreement,SOC 2 Type 2 (reviewed 2026-04),EV-057; EV-067,
+V-12,Payroll and HR SaaS vendor,"Payroll, HR records, recruiting",HR-PAY; AI-009,Employee and applicant personal information,Subscription agreement,SOC 2 Type 2 (vendor attestation 2025-12-05),EV-057; EV-052,Holds employee personal information
+V-13,Benefits administrator,Employee benefits administration,Benefits program,Employee benefits data,Administration agreement,None on file,EV-069; EV-052,
+V-14,Forensic retainer firm,Incident response and forensics,SYS-08,Incident data,Retainer contract,None on file,EV-048,
+V-15,"Outside counsel (securities, export and breach)",Legal advice,n/a,Incident and disclosure information,Engagement letters,n/a,EV-068; EV-040,
+V-16,C3PAO,CMMC Level 2 certification assessment,CEE; MOZ,CUI viewed on site,Assessment contract,n/a,EV-042,Assessed 2026-02-09 to 2026-02-20
+V-17,Sole-source titanium forging supplier,About 70% of titanium forgings for Prime A parts,SYS-14,CUI drawings,Purchase orders with DFARS flowdowns,No cyber assurance evidence on file,EV-059,
+V-18,CUI suppliers and outside processors (380),"Machining, processing and parts made to company drawings",SYS-14; SYS-03-GW,CUI drawings and specifications,Purchase orders with DFARS flowdowns from the ERP clause library,CMMC status tracked in the supplier status tracker,EV-052; EV-053; EV-055,SPRS check in the award workflow since 2025-11
+V-19,Prime A to Prime D supplier portals,"Drawing exchange, delivery and quality portals (prime-hosted)",SYS-03-VDI,CUI,"Subcontracts with DFARS 252.204-7012 and, from 2025-11-10, 252.204-7021",n/a (customer-operated),EV-054; EV-022,
+V-20,Freight carriers and approved couriers,Shipping and CUI courier service,SYS-09,Shipping data; sealed physical CUI,Carrier and courier agreements,None on file,EV-061; EV-052,
+V-21,Certified destruction vendor,Media destruction,SYS-05; SYS-06,Media holding CUI,Service agreement,Certificates of destruction,EV-061,
+V-22,Supply chain analytics SaaS vendor,Supplier analytics with risk scoring,AI-007,"Supplier delivery, quality, financial and questionnaire data",Subscription agreement,None on file,EV-075; EV-052,
+V-23,Contract management SaaS vendor,Contract repository with clause extraction,AI-012,Contracts and purchase orders (CUI attachments excluded),Subscription agreement,None on file,EV-075; EV-054,
+V-24,Commercial productivity suite vendor,"Corporate email, files, chat and AI assistant",SYS-10; AI-002,Corporate data; employee personal information,Subscription agreement,None on file,EV-076; EV-052,No CUI by policy
+V-25,ERP vendor,ERP software and forecasting module,SYS-09; AI-008,FCI (support by request),License and support agreement,None on file,EV-052,
+V-26,KS-1 legacy MES vendor,Legacy MES support,SYS-12,None by default,Support agreement (end of support 2027-06),None on file,EV-045; EV-016,
+V-27,Notification messaging service,Customer notifications for SL-1,SYS-11-SL1,Customer contact data,Subscription agreement,SOC 2 Type 2,EV-057; EV-072,Subservice organization for SL-1 (carve-out)
+V-28,SL-2 data feed providers (3),Aircraft data feeds,SYS-11-SL2,Operator sensor data,Data agreements,None on file,EV-073; EV-052,Subservice organizations for SL-2 (carve-out)

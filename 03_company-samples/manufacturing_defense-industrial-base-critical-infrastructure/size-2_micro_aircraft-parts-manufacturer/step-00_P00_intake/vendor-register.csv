@@ -1,0 +1,15 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Government-community cloud provider,"CUI suite: email, files, identity and MFA",SYS-01,CUI,Subscription terms,FedRAMP Marketplace listing (Moderate or higher); customer responsibility matrix not on file,EV-031; EV-033,
+V-02,Managed service provider (MSP),"Help desk, patching, antivirus, firewall, Wi-Fi, backups, tenant administration for both suites",SYS-01; SYS-02; SYS-03; SYS-04; SYS-05; SYS-07; SYS-08,Administrator access (Security Protection Data); CUI in backup images,"MSP service contract with a confidentiality clause; no CMMC responsibility matrix, U.S.-person or incident notice terms",None at intake; SOC 2 Type 2 report (12 months ending 2026-04-30) received 2026-08-05 (EV-SA-9),EV-012; EV-018; EV-SA-9,External Service Provider; RMM agent on every computer
+V-03,Commercial cloud backup provider (MSP subcontractor),Nightly image backup of SYS-03 and SYS-04,SYS-08,CUI in backup images,None with the company (engaged by the MSP),Not FedRAMP authorized (EV-048),EV-015; EV-018; EV-048,
+V-04,Commercial productivity suite vendor,Business email and files,SYS-02,FCI; CUI found in the orders mailbox and old folders,Subscription terms,None on file,EV-008; EV-031,
+V-05,ERP vendor,Job-shop ERP,SYS-09,FCI; CUI on 31 job records,Subscription terms,None on file,EV-009; EV-031,
+V-06,CAM software vendor,"CAM software, including a cloud AI toolpath feature",SYS-03,Part models if the AI feature is used,License terms,None on file,EV-031; EV-049,
+V-07,Machine tool builders and CMM service vendor,On-site service of the CNC machines and the CMM,SYS-06; SYS-04,Physical access to machines and posted drawings,Service agreements with next-day response,None on file,EV-019; EV-037,A foreign-national builder engineer visited in May 2026
+V-08,Payroll service,Weekly payroll,SYS-11,Employee personal information,Service terms,None on file,EV-001; EV-031,
+V-09,Accounting SaaS vendor,Bookkeeping,SYS-11,Financial records,Subscription terms,None on file,EV-030; EV-031,
+V-10,Internet provider,One business internet line,SYS-07,Network traffic,Service agreement,None on file,EV-032,No failover
+V-11,Hosted VoIP provider,Desk phones,SYS-07,Call data,Service agreement,None on file,EV-031; EV-032,
+V-12,Cyber insurer,Cyber liability policy with a breach hotline and panel counsel and forensics,n/a,Incident information,Cyber liability policy,n/a,EV-022,
+V-13,Alarm monitoring company,After-hours alarm monitoring,n/a,None,Monitoring contract,n/a,EV-021,
+V-14,"Outside processors (anodizing, heat treat)",Finishing of parts,n/a,Paper copies of drawings sent with parts (CUI),Commercial purchase order template without DFARS clauses,None on file,EV-026; EV-036,2 processors

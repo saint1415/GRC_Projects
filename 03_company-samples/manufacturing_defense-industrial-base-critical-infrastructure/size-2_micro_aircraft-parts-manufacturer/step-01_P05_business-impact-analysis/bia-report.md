@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (aircraft parts machine shop holding DoD subcontracts with CUI) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** Office Manager (Security and Compliance Coordinator) with the President, CNC Programmer, Quality Inspector, Lead Machinist, and the MSP lead technician | **Fieldwork:** 2026-07-13 to 2026-07-24 | **Approved:** President, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-039), FY2025 revenue and cash report (EV-030), payroll roster (EV-001), customer purchase order terms (EV-023), backup job report (EV-015), MSP service contract (EV-018), MSP ticket history (EV-016), machine list and service records (EV-019), internet service agreement (EV-032). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the President.
 
 ## 1. Overview and purpose
 This BIA lists every business function of the shop, how long each can be down, and how much data each can lose. It feeds:
@@ -13,10 +14,10 @@ This BIA lists every business function of the shop, how long each can be down, a
 NIST SP 800-171 Rev. 2 has no contingency planning requirement, so this BIA is a business need, not a CMMC requirement. Two DFARS duties still depend on it: the 72-hour cyber incident report (DFARS 252.204-7012(c)) must be possible while systems are down, and images of affected systems must be preserved for at least 90 days (252.204-7012(e)) before they are rebuilt.
 
 ## 2. System and business description
-One leased Florida unit, 7 employees, 5 CNC machines and 1 CMM. CUI drawings and models live in the CUI suite (SYS-01, a government-community cloud SaaS) and sync to the CAM workstation (SYS-03), the quality PC (SYS-04), and two laptops (SYS-05). Programs go to 3 machines over the shop network and to 2 older machines by USB (SYS-06). Orders, purchasing, and invoicing run in a job-shop ERP SaaS (SYS-09); business email is in a commercial suite (SYS-02). The MSP runs IT. See `../00_company-facts.md` sections 3 and 7.
+One leased Florida unit, 7 employees, 5 CNC machines and 1 CMM (EV-001, EV-035). CUI drawings and models live in the CUI suite (SYS-01, a government-community cloud SaaS) and sync to the CAM workstation (SYS-03), the quality PC (SYS-04), and two laptops (SYS-05). Programs go to 3 machines over the shop network and to 2 older machines by USB (SYS-06). Orders, purchasing, and invoicing run in a job-shop ERP SaaS (SYS-09); business email is in a commercial suite (SYS-02). The MSP runs IT. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue over about 250 production days, or about $4,400 of shipments per production day.
+Dollar values are scaled to about $1.1 million in annual revenue over about 250 production days, or about $4,400 of shipments per production day (EV-030).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

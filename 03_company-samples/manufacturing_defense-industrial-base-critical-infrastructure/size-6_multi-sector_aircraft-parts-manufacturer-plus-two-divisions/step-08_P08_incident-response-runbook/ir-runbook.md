@@ -10,7 +10,7 @@
 | Contract and legal basis | DFARS 252.204-7012(b)(2)(ii)(D), (c) to (g), (m)(2)(ii); DFARS 252.239-7010(d) to (f); 32 CFR 117.8; 22 CFR 127.12; 15 CFR 764.5; Form 8-K Item 1.05; Fla. Stat. 501.171 (worked example for state law). Text checked on eCFR (version date 2026-09-23) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-15 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The multi-regulator matrix has not been exercised** (scenario gap 8); the first cross-division tabletop with a DIBNet drill for every division is on 2026-11-18 (POAM-019) |
+| Last tested | Technical playbooks tested quarterly. **The multi-regulator matrix has not been exercised** (group gap 8); the first cross-division tabletop with a DIBNet drill for every division is on 2026-11-18 (POAM-019) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

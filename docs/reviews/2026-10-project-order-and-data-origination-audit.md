@@ -332,3 +332,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market power transformer maker):** P02 PE-6 says cameras cover both server room doors while P03 G-076 says the Plant 2 door has none; P03 G-065 and P02 AC-11 and AU-8 cite P07 tests that P07 never ran; R-037 says the HR SaaS contract has no notice term while P09 records a 72-hour term.
 - **Size 5 (enterprise power transformer maker):** the 2026-03 tabletop is dated 03-19 in the BIA and SSP but 03-24 in the facts and P08; R-044 and R-047 give dates that disagree with P10; P07 counts 12 EPSP servers while the SSP inventory lists 6 ERP, 2 integration and 12 MES servers.
 - **Size 6 (power transformer maker plus two divisions):** P03 G-035 and G-073 cite P07 results for AC-5 and an 8-role AC-3 test that P07 never ran; MF-013 says AI-002 was trained on 18 months of data while P10 says 3 years; the P10 inventory calls the AI-001 allocation rule written while the assessment says it is due 2026-12-31.
+
+### Defense industrial base, 2026-10-14
+
+Six samples, 590 evidence rows in all. Agent cost: about 2.8 million tokens; the longest sample took 32 minutes.
+
+Fixes made during this batch:
+- **Size 3 (small aircraft parts maker):** intake row EV-019 now records both the MES login records that P02 AU-3 relies on and the missing audit logging that P02 AU-12 cites.
+- **Size 5 (enterprise aircraft parts maker):** six risks re-rated on 2026-08-28 (R-004, R-013, R-015, R-029, R-031, R-052) are now marked as re-rated, and the P01 report no longer calls them a second pass.
+- **Sizes 2 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-1, EV-C-AC23, EV-C-AC65, EV-C-IA21, EV-C-IA22, EV-C-AT22, EV-C-SI44) renamed to the parenthesis form.
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes P01 or P09) cites regulatory checks, approvals or P07 results dated after the deliverable.
+- **Size 1 (engineering subcontractor with CUI):** P02, P03 G-046 and P04 cite P07 sign-in tests that P07 never ran; the facts say the authenticator app covers SYS-05 while the SSP says it covers SYS-01 and the Prime A portal; POAM-010 is due 2026-09-15 with milestones to 2026-10-01.
+- **Size 2 (micro aircraft parts maker):** P07 PS-04d cites a key sign-out sheet while P03 G-079 says no key record exists; P03, P04 and P05 treat the backup provider as not FedRAMP authorized before the MSP named it on 2026-08-07.
+- **Size 3 (small aircraft parts maker):** P02 AU-12 says audit logging is not configured on MES while AU-3 says MES records show shared logins; P04 dates the firewall rule review 2026-07-21 while P02 and P03 say 2026-07-22; POAM-001 says both accounts were disabled 2026-08-07 while the P07 plan says 2026-08-05.
+- **Size 4 (mid-market aircraft parts maker):** eight Pass 1 risks (R-004, R-006, R-015, R-019, R-027, R-033, R-036, R-044) state results established after 2026-07-31; BP-07 counts 25 file exchange partners while P04 and the SSP count 27.
+- **Size 5 (enterprise aircraft parts maker):** R-047 and R-051 (last reviewed 2026-07-31) describe findings of 2026-08-06 and 2026-08-11; the P03 report, approved 2026-08-21, cites status checks as of 2026-09-25.
+- **Size 6 (aircraft parts maker plus two divisions):** P01 AP-004 and P03 G-071 count 4 unowned drives at plants 3 and 6 while P07 MP-7 counts 2 at plant 3; P07 SA-9 cites a POL-01 clause that was still a draft; DS-019 (last reviewed 2026-07-31) describes a scope change of 2026-08.

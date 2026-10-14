@@ -11,7 +11,7 @@
 | Approved | 2026-09-17: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, risk appetite, budget); presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** Both plants, the services line, and enterprise functions; the CUI Engineering Enclave (CEE, SSP in P02); the systems outside the enclave that could affect it or the company's defense contracts (corporate network, ERP, payroll and HR, the MSSP, suppliers that receive CUI); and the AI portfolio (P10). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07). See `../00_company-facts.md` sections 3 and 4.
+**Scope.** Both plants, the services line, and enterprise functions; the CUI Engineering Enclave (CEE, SSP in P02); the systems outside the enclave that could affect it or the company's defense contracts (corporate network, ERP, payroll and HR, the MSSP, suppliers that receive CUI); and the AI portfolio (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -36,8 +36,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews with every process owner and both plant managers, the plant walkthroughs, the gap analysis (P03), and the control assessment (P07). Threats from foreign intelligence services and contracted actors were included because the company holds controlled technical information for military aircraft.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, and risk interviews and a threat workshop with every process owner, both plant managers, the IT Director, the Manufacturing Systems Manager and the MSSP (EV-048). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07), including the plant walkthroughs, added one risk in a second pass. Threats from foreign intelligence services and contracted actors were included because the company holds controlled technical information for military aircraft.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-026), scan reports (EV-013), phishing results (EV-028), configuration exports, the gap analysis samples (EV-051, EV-053, EV-054, EV-056) and interviews (EV-048, EV-049). A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory and contract, product safety, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -54,7 +54,7 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 
 By threat source type: 19 Adversarial, 14 Accidental, 13 Structural, 4 Environmental. Treatments: 44 Mitigate, 3 Accept (R-024, R-035, R-041), 2 Avoid (R-031, R-032), 1 Transfer (R-038). Status: 25 Open, 22 In progress, 3 Accepted.
 
-Cyber insurance ($15 million limit, $500,000 retention) transfers part of the financial exposure for R-002, R-004, and R-010. It is not recorded as the treatment for any of them, because it does not lower the likelihood of losing CUI, contract eligibility, or production.
+Cyber insurance ($15 million limit, $500,000 retention; EV-039) transfers part of the financial exposure for R-002, R-004, and R-010. It is not recorded as the treatment for any of them, because it does not lower the likelihood of losing CUI, contract eligibility, or production.
 
 ### Top risks (Very High and High)
 | Risk ID | Risk | Level | Treatment | Owner | Due |
@@ -71,6 +71,8 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-029 | Machine-vision model passes a defective flight assembly | High | Version lock; 10% re-inspection of passes; escape review | Director of Quality | 2026-12-31 |
 | R-047 | A requirement that cannot be on a CMMC POA&M is still open at the assessment | High | Close 3.1.20, 3.10.3, 3.10.4, 3.12.4 first | Security Manager | 2026-10-31 |
 | R-050 | Prior owner's contractor account active on the Plant 2 MES server (found in P07) | High | Disabled on discovery; full account review; close remote desktop | Manufacturing Systems Manager | 2026-10-31 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-050 was added on 2026-08-14 after testing found an active local administrator account of the prior owner's IT contractor on the Plant 2 MES server (EV-AC-2, EV-CM-7). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **The acquisition (R-004 to R-007, R-011, R-013 to R-016, R-019, R-040, R-046, R-050).** Plant 2 came with a flat network, shared logins, unsupported servers, and a forgotten contractor account. It costs 84 points of the CMMC score on its own (P03) and drives both Very High risks. R-048 makes sure the next acquisition does not repeat it.

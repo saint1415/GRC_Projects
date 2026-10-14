@@ -10,11 +10,11 @@ CUI Machining Enclave (**CME**), identifier CSC-SYS-CME-01. This is the company'
 **Why the name differs from the registry default.** The registry suggests a "CUI engineering enclave (CAD/PLM)". A 7-person build-to-print shop has no PLM system: the controlled job folders in the CUI suite (SYS-01) and the CAM workstation (SYS-03) do that job.
 
 ## 2. System Overview
-The CME is where the shop receives, stores, and uses controlled technical information (CTI) for its DoD subcontracts: drawings, 3D models, and specifications from Prime A and Supplier B, and the CAM files, NC programs, setup sheets, and CMM inspection programs made from them. About 25 of the 60 CUI part numbers are ITAR defense articles. Four people hold CUI suite accounts; the Lead Machinist and 2 machinists see CUI on printed drawings and at the machine controls.
+The CME is where the shop receives, stores, and uses controlled technical information (CTI) for its DoD subcontracts: drawings, 3D models, and specifications from Prime A and Supplier B, and the CAM files, NC programs, setup sheets, and CMM inspection programs made from them. About 25 of the 60 CUI part numbers are ITAR defense articles (EV-029). Four people hold CUI suite accounts; the Lead Machinist and 2 machinists see CUI on printed drawings and at the machine controls.
 
 The company owns almost no IT infrastructure and has no IT staff. The CUI suite is a government-community cloud SaaS, and a managed service provider (MSP) runs the computers, firewall, and backups. This plan therefore says, for each control, what the company does itself, what the MSP does for it, and what it inherits from the cloud provider.
 
-**Major components** (IDs from `../00_company-facts.md` section 3):
+**Major components** (IDs from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)):
 - **SYS-01:** CUI suite: email, controlled job folders, identity and MFA (government-community cloud, FedRAMP authorized at Moderate or higher)
 - **SYS-03:** CAD/CAM programming workstation, with the DNC software that sends programs to 3 machines
 - **SYS-04:** quality PC with CMM software, and the CMM
@@ -75,7 +75,7 @@ Information types are from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow FI
 **Requirement baseline.** The binding set is the 110 SP 800-171 Rev. 2 requirements. Their implementation statements are in P03 `gap-analysis.csv` (current_state column, rows G-001 to G-110) and are part of this plan by reference. `control-implementation.csv` documents 55 SP 800-53 Rev. 5 controls from the Moderate baseline that carry those requirements, plus contingency, inventory, and supplier controls the shop needs. The CSF 2.0 column uses the NIST CSF 2.0 to SP 800-53 crosswalk in `00_universal-framework/crosswalks/`; for 9 controls with no entry there (AC-11, MA-4, MA-5, MP-2, MP-6, MP-7, PL-4, PS-3, PS-4) the mapping is the author's. Other Moderate-baseline controls are inherited from the cloud provider through its FedRAMP authorization or are outside what a 7-person shop needs (for example, separate development environments and configuration change boards); these are tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and follows the CMMC Level 2 asset categories in 32 CFR 170.19(c)(1):
 
 | Category | Assets | Treatment |
 |---|---|---|
@@ -139,9 +139,9 @@ By responsibility: 28 system-specific (the company, often performed by the MSP u
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Government-community cloud provider (SYS-01) | Data center and platform security, encryption at rest and in transit (SC-8, SC-28), account lockout (AC-7), audit record generation (AU-2), incident duties under 252.204-7012(c) to (g) | FedRAMP Marketplace listing (Moderate or higher). CRM due 2026-09-30 | Users and roles, MFA settings, external sharing settings, audit retention and review, device rules |
-| MSP (External Service Provider) | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), remote maintenance (MA-4), tenant administration | Monthly MSP report; MSP SOC 2 Type 2 report (P09); P07 evidence | Direct and check the work: approve exceptions, review the monthly report, named MSP admin accounts with MFA, written responsibility matrix, U.S.-person confirmation for technicians |
-| Commercial backup vendor (MSP subcontractor) | Image backups of SYS-03 and SYS-04 (CP-9) | Backup job report | **Retire it.** It stores CUI outside a FedRAMP-authorized cloud |
+| Government-community cloud provider (SYS-01) | Data center and platform security, encryption at rest and in transit (SC-8, SC-28), account lockout (AC-7), audit record generation (AU-2), incident duties under 252.204-7012(c) to (g) | FedRAMP Marketplace listing (Moderate or higher) (EV-033). CRM due 2026-09-30 | Users and roles, MFA settings, external sharing settings, audit retention and review, device rules |
+| MSP (External Service Provider) | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), backup operation (CP-9), remote maintenance (MA-4), tenant administration | Monthly MSP report (EV-012); MSP SOC 2 Type 2 report (P09); P07 evidence | Direct and check the work: approve exceptions, review the monthly report, named MSP admin accounts with MFA, written responsibility matrix, U.S.-person confirmation for technicians |
+| Commercial backup vendor (MSP subcontractor) | Image backups of SYS-03 and SYS-04 (CP-9) | Backup job report (EV-015) | **Retire it.** It stores CUI outside a FedRAMP-authorized cloud |
 
 **Inherited does not mean done.** The cloud provider's controls protect the job folders only when the company's side is in place: today external sharing is at the default, audit logs are never reviewed, and one phone reads CUI email with no device controls.
 
@@ -154,7 +154,7 @@ By responsibility: 28 system-specific (the company, often performed by the MSP u
 CUI suite users sign in with a password and an authenticator app; the MSP administrator account and the break-glass account also require MFA. This meets SP 800-171 3.5.3 for network access to SYS-01 and is appropriate for Moderate confidentiality. **Exceptions until 2026-10-31:** local sign-in to SYS-03 and SYS-04 (including local administrator) has no MFA, and the quality PC uses a shared login (P07 POAM-002). Planned fix: named accounts that sign in with the suite identity and MFA on both PCs, and removal of the shared login.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud control map and diagram (P04); risk register (P01); gap analysis, requirement statements, and score (P03); policies (P06); assessment and POA&M (P07); incident response runbook (P08); SOC 2 readiness and MSP report review (P09); AI assessment (P10); cloud provider FedRAMP listing and CRM, and MSP contract (kept by the Office Manager).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud control map and diagram (P04); risk register (P01); gap analysis, requirement statements, and score (P03); policies (P06); assessment and POA&M (P07); incident response runbook (P08); SOC 2 readiness and MSP report review (P09); AI assessment (P10); cloud provider FedRAMP listing (EV-033) and CRM, and MSP contract (EV-018), kept by the Office Manager.
 
 ## 13. Acronym List and Glossary
 - **C3PAO:** CMMC Third-Party Assessment Organization

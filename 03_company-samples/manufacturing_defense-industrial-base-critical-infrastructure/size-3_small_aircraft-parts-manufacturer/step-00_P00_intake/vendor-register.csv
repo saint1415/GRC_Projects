@@ -1,0 +1,14 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Government-community cloud provider,"Identity provider, collaboration suite and IaaS/PaaS subscription",SYS-01; SYS-02; SYS-03; SYS-12c; SYS-13,CUI; ITAR and EAR technical data,Customer agreement for the government-community offering,Customer responsibility matrix; FedRAMP authorization at Moderate or higher (Marketplace record),EV-042; EV-043; EV-054,U.S.-person support staff stated in provider documentation
+V-02,CAD and PLM software vendor,CAD and PLM licenses and support,SYS-04,None routinely,License and support terms,None on file,EV-042,
+V-03,MES software vendor,MES and DNC software support,SYS-06,CUI visible during supervised remote sessions,Support agreement,None on file,EV-042; EV-046,Remote support through a guest virtual desktop account with MFA
+V-04,Machine tool vendors,CNC and CMM maintenance and repair,SYS-07,NC programs on controllers; controller storage sent for repair,Service terms,None on file,EV-042; EV-046,Technicians escorted on site
+V-05,Managed service provider (MSP),After-hours help desk and patching for the corporate network,SYS-09,Corporate data (no enclave access),MSP service agreement,None on file,EV-044; EV-042,No enclave accounts
+V-06,Commercial productivity suite provider,"Commercial email, files and chat",SYS-09,Corporate email and files,Subscription terms,None on file,EV-042,
+V-07,ERP SaaS provider,ERP,SYS-10,Order data including DoD purchase order data (FCI),Subscription terms,None on file,EV-042; EV-051,
+V-08,Payroll and HR SaaS provider,Payroll and HR,SYS-11,Employee personal information,Subscription terms,None on file,EV-042; EV-004,
+V-09,"Outside processors (plating, heat treat, nondestructive testing)",Outside processing of parts,SYS-12b,CUI drawings (SFTP and paper copies),Purchase orders under standard purchase terms; no DFARS 252.204-7012 or 252.204-7020 clause,No SPRS score or CMMC status on file,EV-040; EV-041; EV-042,3 suppliers
+V-10,Internet service provider,Plant internet circuit,SYS-08,Encrypted traffic only,Service terms,None on file,EV-042; EV-013,One circuit
+V-11,Alarm monitoring company,After-hours alarm monitoring,Plant,None,Alarm monitoring contract,None on file,EV-034; EV-042,
+V-12,Cyber and property insurers,"Cyber, property and business interruption insurance",n/a,Claim information,Insurance policies,n/a,EV-045; EV-042,Claims start with the carrier hotline
+V-13,Freight carriers,Shipping of finished parts,n/a,Shipping documents,Carrier terms,None on file,EV-042,

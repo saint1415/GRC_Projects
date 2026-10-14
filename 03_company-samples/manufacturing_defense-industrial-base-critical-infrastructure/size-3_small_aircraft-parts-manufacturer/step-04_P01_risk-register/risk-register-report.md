@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the Vice President of Operations (Moderate and below) and the President (High and Very High) |
 
 ## 1. Scope and risk framing
-**Scope.** The CUI Engineering Enclave (CEE) defined in the SSP (P02), the printed CUI on the shop floor, the business processes in the BIA (P05), and the systems outside the enclave that could affect it or the company's defense contracts (corporate network, ERP, MSP). See `../00_company-facts.md` sections 3 and 4.
+**Scope.** The CUI Engineering Enclave (CEE) defined in the SSP (P02), the printed CUI on the shop floor, the business processes in the BIA (P05), and the systems outside the enclave that could affect it or the company's defense contracts (corporate network, ERP, MSP), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -22,8 +22,8 @@
 This is the company's first documented risk assessment since the 2024 SSP.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, interviews with the Plant Manager, Quality Manager, Director of Engineering, and Contracts Manager, the plant walkthrough, and the gap analysis (P03). Threats to aerospace suppliers from foreign intelligence services and contracted actors were included because the company holds controlled technical information for military aircraft.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence (including the plant walk-through on 2026-07-08, EV-036), and interviews with the Plant Manager, Quality Manager, Director of Engineering, and Contracts Manager (EV-056). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. Threats to aerospace suppliers from foreign intelligence services and contracted actors were included because the company holds controlled technical information for military aircraft.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the walk-through, the records request (EV-027), and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3), including flight safety and export control harm.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -53,7 +53,7 @@ By threat source type: 16 Adversarial, 9 Accidental, 6 Structural, 1 Environment
 
 The High and Very High risks share one theme: **the company's contract eligibility depends on proving controls it has not yet evidenced.** R-001 and R-003 are compliance risks with direct revenue impact: Prime A is about 40% of revenue. R-002, R-005, and R-014 are the ways CUI is most likely to leave the company today, and R-008 means that if it did, the company could not meet its DFARS reporting duty. Fixing R-002 and R-016 (log review) also reduces R-015 and R-032.
 
-R-032 was added on 2026-08-07 after control assessment testing (P07) found two departed employees' enclave accounts still enabled, 19 and 45 days after departure.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-08-07 after testing found two departed employees' enclave accounts still enabled, 19 and 45 days after departure (EV-AC-2). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Mitigate (25 risks).** Funded in the 2026 Q4 and 2027 Q1 budget ($185,000 approved by the President on 2026-08-31):

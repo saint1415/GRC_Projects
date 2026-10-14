@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed aircraft parts manufacturer, DoD subcontractor) |
 | Tier / Vertical | Mid-Market / Defense Industrial Base |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry use case for this sample is AI-001, a generative AI assistant used with CUI engineering documents |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry use case for this sample is AI-001, a generative AI assistant used with CUI engineering documents. The inventory was built from the intake AI tool discovery (identity provider app lists, the accounts payable vendor master, suite and applicant tracking feature settings, the web filter policy and a department heads survey; EV-044), the vendor agreements (EV-038), the gateway traffic capture (EV-055) and the prompt log review (EV-057). How many staff use public chatbots on personal devices, and what they enter, was not established at intake (open request); P01 R-032 covers that use |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-004, and AI-006 |
 | Assessors / date | Director of Engineering (engineering), Director of Quality (product), vCISO and Security Manager (security), Director of Trade Compliance and Contracts (export and contracts), General Counsel and HR Director (employment), 2026-08-17 to 2026-09-10 |
 | Decision | Chief Operating Officer, 2026-09-17; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-Five of the six use cases were adopted or switched on without a security or legal review (gap 11 in `../00_company-facts.md`). AI-006 is the prohibited one. None is out of control, but each needs conditions:
+Five of the six use cases were adopted or switched on without a security or legal review (EV-044). AI-006 is the prohibited one. None is out of control, but each needs conditions:
 - **AI-001, the enclave assistant:** an engineering pilot ran on real CUI for four months before anyone confirmed the assistant sits inside the provider's FedRAMP-authorized boundary. It is switched off until that is confirmed in writing.
 - **AI-002, machine-vision inspection:** it touches flight safety. The vendor changed the model twice without notice, and only 2% of passes are re-inspected.
 - **AI-003, predictive maintenance:** a gateway inside the enclave sends program names (part numbers) to a commercial cloud. That is a CUI boundary problem, not an AI problem.
