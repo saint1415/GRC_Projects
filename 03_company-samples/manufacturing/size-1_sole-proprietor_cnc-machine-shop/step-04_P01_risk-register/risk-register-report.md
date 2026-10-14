@@ -12,7 +12,7 @@
 | Approved | 2026-09-04 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the Shop Business Systems (SYS-01 to SYS-06 and SYS-09), the CNC controllers, paper travelers and records in the bay, the external services the owner uses (customer portals, the AI assistant), and the contracted services (IT technician, bookkeeper, outside processors, machine service technician). Business functions come from the BIA (P05).
+**Scope.** The whole business as one system: the Shop Business Systems (SYS-01 to SYS-06 and SYS-09), the CNC controllers, paper travelers and records in the bay, the external services the owner uses (customer portals, the AI assistant), and the contracted services (IT technician, bookkeeper, outside processors, machine service technician), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business functions come from the BIA (P05).
 
 **Risk tolerance.** The owner-machinist owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules (POL-01 4.4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan and are never accepted as they are. Any risk that could put a nonconforming part into a medical device, or cost the shop a main customer, is treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the FAR 52.204-21 requirements (P03), and a walk through the laptop, router, machines, and SaaS accounts with the IT technician.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, the FAR 52.204-21 requirements (P03), and a walk through the laptop, router, machines, and SaaS accounts with the IT technician on 2026-08-10 (EV-032). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and network reviews (EV-001, EV-004, EV-008, EV-010), the bay walk-through (EV-011), the program records (EV-013, EV-014), the contract and contractor records, the AI account records, and the owner's self-review (EV-033). A one-person shop keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (cost, operations, contract, safety, reputation).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -42,6 +42,8 @@
 | R-002 | Payment fraud through email or the accounting SaaS | Moderate | App-based MFA; phone verification of bank changes | Owner-machinist | 2026-09-30 |
 | R-005 | VMC controller reached through the flat network or a service laptop | Moderate | Separate segment; guest Wi-Fi; share password; media check | Owner-machinist | 2026-10-31 |
 | R-008 | Customer drawing content in a consumer AI assistant | Moderate | Stop for customer content; opt out; delete; G-code review rule (P10) | Owner-machinist | 2026-09-30 |
+
+**One pass.** The register was completed on 2026-08-14 from intake and self-assessment evidence. The control tests ran on 2026-08-11 and 2026-08-12, inside the same week, so this pass already reflects them: R-005, R-006, R-007, R-010 and R-013 cite P07 test evidence (EV-SC-7, EV-SI-7, EV-AC-17, EV-MP-6, EV-AC-22). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 The three High risks have different causes but one lesson: **the shop's value is in customer drawings and programs, and today one laptop on one flat network holds all of it with no copy it cannot overwrite and no check that a program is the approved one.** R-003 is different in kind: it is certain to happen unless the owner acts, because Level 1 allows no plan of action. Each FAR 52.204-21 gap in P03 must be closed, not just scheduled, before the owner affirms in SPRS.
 

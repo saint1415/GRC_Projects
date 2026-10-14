@@ -7,7 +7,7 @@
 Shop Business Systems (**SBS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The SBS is everything the shop uses to quote, program, machine, inspect, ship, and bill small lots of precision parts for about 12 business customers. One person, the owner-machinist, uses and runs it. Components are SYS-01 to SYS-06 and SYS-09 in `../00_company-facts.md` section 3: a business email and file plan (SaaS), an accounting SaaS, one laptop with CAD/CAM software, a phone, two CNC machine controllers, the shop network, and the shop website. There is no server and no IaaS. Most back-end safeguards are **inherited from the SaaS providers**; the owner is responsible for identities, data handling, devices, the shop network, and contracts (P04).
+The SBS is everything the shop uses to quote, program, machine, inspect, ship, and bill small lots of precision parts for about 12 business customers. One person, the owner-machinist, uses and runs it. Components are SYS-01 to SYS-06 and SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv): a business email and file plan (SaaS), an accounting SaaS, one laptop with CAD/CAM software, a phone, two CNC machine controllers, the shop network, and the shop website. There is no server and no IaaS. Most back-end safeguards are **inherited from the SaaS providers**; the owner is responsible for identities, data handling, devices, the shop network, and contracts (P04).
 
 The SBS is also the shop's **covered contractor information system** under FAR 52.204-21, because aerospace drawings (FCI) are received by email, stored in the file plan, opened on the laptop, and turned into programs for the VMC. For CMMC Level 1 scoping, the CNC controllers are **specialized assets** (operational technology): they are not assessed at Level 1 (32 CFR 170.19(b)(2)(ii)), but the shop still protects them because they hold programs made from customer drawings.
 
@@ -51,6 +51,7 @@ Operational. Planned changes: separate network for the VMC and laptop (2026-10-3
 **Baseline:** SP 800-53B Moderate, tailored to 28 controls (`control-implementation.csv`) that carry the 15 FAR 52.204-21 requirements, the OEM contract terms, and the CSF 2.0 benchmark for a one-person shop. Other Moderate controls are inherited from the SaaS providers (evidence: the productivity suite provider's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal system. AC-5, AU-9, CM-3, and CA-2(1) are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). The customer portals (SYS-07) and the AI assistant (SYS-08) are external services.
 - **Inside:** the productivity suite account and its settings, the accounting SaaS account settings and users, the laptop, the phone, the router and shop Wi-Fi, the website account, the VMC and turning center controllers (as specialized assets), USB sticks, and paper travelers and records in the bay.
 - **Outside (external services):** the SaaS providers' platforms, customer portals (customer-owned), the AI assistant (consumer service), outside processors, the calibration lab, and the machine service technician's laptop.
 
@@ -103,7 +104,7 @@ Self-assessed 2026-08-10 to 2026-08-14 with the IT technician; tests on 2026-08-
 The productivity suite requires a password and a text-message code, which is acceptable today for a Moderate system but weaker than an authenticator app; the owner moves to app-based codes with the accounting change (2026-09-30). The accounting SaaS uses a password only until then. The aerospace portal's identity controls belong to the customer and sit outside this boundary. The laptop uses a local password; a separate standard user account for daily work is planned (POL-01 7.2).
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **CAM:** computer-aided manufacturing (software that turns a model into a CNC program)

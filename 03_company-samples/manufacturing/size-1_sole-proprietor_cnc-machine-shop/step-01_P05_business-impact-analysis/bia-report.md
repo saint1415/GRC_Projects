@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (owner-operated CNC machine shop) | **Tier:** Sole Proprietorship (owner-machinist only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-machinist, 2026-08-11, with the on-call IT technician (under NDA since 2026-08-07) | **Adopted:** Owner-machinist, 2026-09-04
+**Sources:** the owner's BIA worksheet, 2026-08-10 to 2026-08-11 (EV-031), the 2025 Schedule C (EV-006), the accounting SaaS sales by customer report (EV-005), the productivity suite retention settings (EV-002), the VMC controller and released-program records (EV-013, EV-014), and the OEM agreements (EV-015). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-09-04.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the shop depends on, how long each can be down, and how much data it can lose. No regulation requires a BIA from this shop. It is done because the medical OEM supplier quality agreements (SQAs) expect the shop to protect quality records and deliver on time, and because the NIST CSF 2.0 benchmark (RC.RP, ID.RA-04) asks for it. It feeds:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the shop depends on, how lon
 - the contingency section of the consolidated policy (P06, POL-01 section 11).
 
 ## 2. Business description
-One owner-machinist quotes, programs, machines, inspects, and ships small lots of precision parts in a leased bay in Florida. About 65% of receipts come from three medical device OEMs, 20% from an aerospace supplier on a DoD program, and 15% from local industrial customers. The work runs on the Shop Business Systems (P02): a business email and file plan (SYS-01), an accounting SaaS (SYS-02), one laptop with CAD/CAM software (SYS-03), a phone (SYS-04), two CNC machine controllers (SYS-05), and one flat shop network (SYS-06). See `../00_company-facts.md` sections 1 to 3.
+One owner-machinist quotes, programs, machines, inspects, and ships small lots of precision parts in a leased bay in Florida. About 65% of receipts come from three medical device OEMs, 20% from an aerospace supplier on a DoD program, and 15% from local industrial customers (EV-005). The work runs on the Shop Business Systems (P02): a business email and file plan (SYS-01), an accounting SaaS (SYS-02), one laptop with CAD/CAM software (SYS-03), a phone (SYS-04), two CNC machine controllers (SYS-05), and one flat shop network (SYS-06). See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual receipts, or about $3,500 a week.
+Dollar values are scaled to about $180,000 in annual receipts (EV-006), or about $3,500 a week.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -33,7 +34,7 @@ Dollar values are scaled to about $180,000 in annual receipts, or about $3,500 a
 | BP-04 Invoicing, payments, and purchasing | Moderate | 168 h | 72 h | 24 h |
 | BP-05 Shop administration and compliance | Low | 240 h | 120 h | 24 h |
 
-**What drives the values:** receipts and OEM scorecards drive BP-01 and BP-02. The VMC and turning center keep running programs already in controller memory, which is why the MTD is three days and not one. Customers accept a short slip when told early, but three lost production days usually means a missed ship date. The 8-hour RPO for BP-01 (one shift of CAM work) and the 24-hour RPO for BP-02 depend on the productivity suite's sync and its 30-day version history, which has **never been test-restored**, and ransomware on the laptop would sync encrypted files to the cloud (P01 R-001). Until a separate backup exists (POAM-002), these RPOs are **not proven**.
+**What drives the values:** receipts and OEM scorecards drive BP-01 and BP-02. The VMC and turning center keep running programs already in controller memory, which is why the MTD is three days and not one. Customers accept a short slip when told early, but three lost production days usually means a missed ship date. The 8-hour RPO for BP-01 (one shift of CAM work) and the 24-hour RPO for BP-02 depend on the productivity suite's sync and its 30-day version history, which has **never been test-restored** (EV-002), and ransomware on the laptop would sync encrypted files to the cloud (P01 R-001). Until a separate backup exists (POAM-002), these RPOs are **not proven**.
 
 **Integrity matters as much as uptime.** For OEM parts, a program restored from the wrong version is worse than a late part. Any program restored after an incident must be compared with the released copy before it runs (P08; P01 R-006).
 

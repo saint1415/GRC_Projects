@@ -18,7 +18,7 @@ Keep a printed copy in the office and at home. Assume the laptop and the product
 |---|---|---|
 | On-call IT technician (NDA) | Isolate the laptop, save evidence, check the phone, router, and VMC | Hour 0 |
 | Business attorney (with data-breach experience) | Contract notice wording, ransom questions, what to tell customers | Hours 0-4 |
-| Insurance agent | No cyber policy today. Ask whether the general liability policy covers anything *before* paying any outside firm | Hours 0-4 |
+| Insurance agent | No cyber policy today (EV-007, EV-026; the coverage question is an open intake request). Ask whether the general liability policy covers anything *before* paying any outside firm | Hours 0-4 |
 | Productivity suite provider support | Lock out the attacker, restore file versions from before the attack, pull sign-in and sharing history | Hours 1-4 |
 | Aerospace customer (buyer and security contact) | Contract notice within 72 hours if its drawings may be affected; it has its own duties up the chain | By hour 72 |
 | Each affected OEM quality contact | Contract notice within 5 business days; hold on any lot whose program cannot be verified | Within 5 business days; product holds before any shipment |
