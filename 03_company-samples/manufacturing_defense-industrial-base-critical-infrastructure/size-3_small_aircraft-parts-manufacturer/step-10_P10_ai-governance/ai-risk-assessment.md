@@ -7,7 +7,7 @@
 | AI use cases | AI-001: the enclave collaboration suite's integrated generative AI assistant (proposed, not enabled). AI-002: public generative AI chatbots (observed in use; prohibited) |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Director of Engineering with the IT Manager and the Contracts Manager, 2026-08-26 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the provider's service documentation, the suite settings, the web filter policy, the accounts payable list and the gap analysis interviews (EV-043, EV-022, EV-024, EV-042, EV-057). How many other staff use public chatbots, and with what data, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Director of Engineering (CUI data owner). **Decision authority:** Vice President of Operations for Medium-tier use cases; the President if a use case is re-tiered High.
@@ -18,7 +18,7 @@
   - POL-01 4.3 and 4.10: enclave boundary changes need an SSP update; cloud services holding CUI must meet FedRAMP Moderate or equivalent
 - **Approved-tools list:** kept by the IT Manager and the Director of Engineering. Today it lists **no** generative AI tool for CUI. AI-001 is added only when the conditions in section 6 are met.
 - **Scale for a Small company:** no AI committee. The Director of Engineering, IT Manager, and Contracts Manager review AI use cases quarterly and before any new AI feature is turned on in an enclave service.
-- **Trigger for this assessment.** On 2026-07-16, interviews found that 3 engineers had pasted CUI specification text into public chatbots to summarize or reword it (AI-002). Engineers asked for an approved tool instead, and the enclave suite offers an integrated assistant (AI-001).
+- **Trigger for this assessment.** On 2026-07-16, interviews (EV-057) found that 3 engineers had pasted CUI specification text into public chatbots to summarize or reword it (AI-002). Engineers asked for an approved tool instead, and the enclave suite offers an integrated assistant (AI-001).
 
 ## 2. MAP
 ### AI-001: enclave suite assistant (proposed)
@@ -43,7 +43,7 @@ Engineers pasted specification text into free public chatbots from enclave deskt
 | ITAR, 22 CFR 120.56 and 120.54(a)(5) | **Yes, condition** | **Assess** | Giving a foreign person access to technical data is a release. The encrypted-data carve-out needs end-to-end encryption with FIPS 140-2 (or successor) modules and no storage in a 126.1 country. A public chatbot reads the text unencrypted, so the carve-out cannot apply. The Empowered Official decides whether a voluntary disclosure (22 CFR 127.12) is warranted |
 | EAR, 15 CFR 734.18(a)(5) and 764.5 | **Yes, condition** | **Assess** | Same logic for EAR-controlled technology on commercial parts (Customer C) |
 | FTC Act Section 5 | Indirectly | Indirectly | Governs the provider's claims about data use and accuracy. Keep the provider's written statements in the procurement file |
-| State AI laws (for example Colorado SB26-189, Texas TRAIGA) | No | No | No consequential decisions about individuals; the company operates only in Florida. State AI law analysis is otherwise out of scope by decision (`../00_company-facts.md`) |
+| State AI laws (for example Colorado SB26-189, Texas TRAIGA) | No | No | No consequential decisions about individuals; the company operates only in Florida. State AI law analysis is otherwise out of scope by decision ([obligations register](../step-00_P00_intake/obligations-register.csv), STATE-AI) |
 
 ## 3. Risk tier
 **AI-001 tier: Medium** (repository rubric, `00_universal-framework/projects/step-10_P10_ai-governance/README.md`).
@@ -61,7 +61,7 @@ Engineers pasted specification text into free public chatbots from enclave deskt
 **AI-002 tier: High.** CUI and export-controlled data leave company control. It is prohibited, not managed.
 
 ## 4. MEASURE
-AI-001 is not enabled, so the tests below are **pre-deployment tests** run in a provider-supplied trial space loaded with 40 released, non-ITAR documents, plus readiness checks on the live enclave. Results are from 2026-08-17 to 2026-08-21.
+AI-001 is not enabled, so the tests below are **pre-deployment tests** run in a provider-supplied trial space loaded with 40 released, non-ITAR documents, plus readiness checks on the live enclave. Results are from 2026-08-17 to 2026-08-21 (EV-065).
 
 | Trustworthy characteristic | Test / metric | Result | Pass? |
 |---|---|---|---|

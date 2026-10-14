@@ -6,18 +6,20 @@
 | Tier / Vertical | Small / Defense Industrial Base |
 | Regulation analyzed | NIST SP 800-171 Rev. 2 (110 requirements), as required by DFARS 252.204-7012(b)(2) and assessed for CMMC Level 2 (32 CFR 170.14(c)(3)) |
 | Secondary requirements | DFARS 252.204-7012 incident, cloud, and flowdown paragraphs; DFARS 252.204-7019, 252.204-7020, 252.204-7021; 32 CFR Part 170 scoping; FAR 52.204-21 |
-| Assessment dates | 2026-07-13 to 2026-07-24 (plant walkthrough 2026-08-05) |
+| Assessment dates | 2026-07-13 to 2026-07-24 (plant walk-through at intake, 2026-07-08) |
 | Assessor | IT Manager with the Contracts Manager and Manufacturing Systems Engineer |
 | Working file | `gap-analysis.csv` (128 rows: G-001 to G-110 for the 110 requirements, G-111 to G-128 for clause and regulation duties) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **DFARS 252.204-7012 applies now.** Both current subcontracts (Prime A and Prime B) include the clause, and the company receives and creates covered defense information (controlled technical information such as drawings, models, and NC programs). The clause has no small-business exemption and must be flowed down to any subcontract that involves covered defense information, including for commercial products or services (252.204-7012(m)(1)). It requires SP 800-171 on every covered contractor information system (252.204-7012(b)(2)(i)).
 
 **DFARS 252.204-7019 and 252.204-7020 apply now.** A current SP 800-171 DoD Assessment score (not more than 3 years old) must be in SPRS. The 2024 Basic Assessment of 96 is current by date, but it is not accurate (section 3).
 
 **CMMC Level 2 (C3PAO) was due from the next Prime A awards, and is now suspended.** Current subcontracts predate 2025-11-10 and do not include DFARS 252.204-7021. Prime A told suppliers that solicitations issued from 2026-11-10 (Phase 2, 32 CFR 170.3(e)(2)) would flow down Level 2 (C3PAO). The DoD (Department of War) CIO memorandum of 2026-07-13 suspended CMMC Phase 2. Until 2028-11-09 DoD includes 252.204-7021 only when a program office requires a specific CMMC level, and during the suspension requiring activities may require Level 1 (Self) or Level 2 (Self) (DoD Class Deviation 2026-O0025, Revision 3, DFARS 240.371-5). SP 800-171 Rev. 2 under DFARS 252.204-7012 still applies, so the company keeps preparing and keeps the C3PAO assessment as a voluntary choice. A subcontractor that processes CUI under a prime contract requiring Level 2 (C3PAO) needs at least that status (32 CFR 170.23(a)(3)). There is no size exemption. The company's Affirming Official is the President (32 CFR 170.22).
 
-**Scope.** The assessment covers the CUI Engineering Enclave defined in the SSP (P02), using the CMMC Level 2 asset categories in 32 CFR 170.19(c). The CNC machines and CMMs are Specialized Assets. The corporate network, payroll, and the MSP are Out-of-Scope Assets, separated by the enclave firewall (the MSP has no enclave accounts, confirmed 2026-07-16). ERP holds DoD purchase order data (FCI) and its scoping position is open (G-125).
+**Scope.** The assessment covers the CUI Engineering Enclave defined in the SSP (P02), using the CMMC Level 2 asset categories in 32 CFR 170.19(c). The CNC machines and CMMs are Specialized Assets. The corporate network, payroll, and the MSP are Out-of-Scope Assets, separated by the enclave firewall (the MSP has no enclave accounts, confirmed 2026-07-16, EV-057). ERP holds DoD purchase order data (FCI) and its scoping position is open (G-125).
 
 **Not applicable, with reasons:**
 - **3.13.14 (VoIP):** no VoIP components in the assessment scope. Scored as Met (32 CFR 170.24(b)(3)).
@@ -31,7 +33,7 @@
 ## 2. Method
 1. **Requirements.** The 110 rows follow the official structure of NIST SP 800-171 Rev. 2 (families 3.1 to 3.14), with the CMMC identifier and the point value from the CMMC Scoring Methodology (32 CFR 170.24(c)(2)). Requirement text is quoted from the public-domain NIST publication. The 18 clause rows cite the paragraph of each clause or section as checked on eCFR (version date 2026-09-23).
 2. **Crosswalk.** CSF 2.0 and SP 800-53 Rev. 5 mappings are derived from NIST's official mappings through the SP 800-171 Rev. 3 counterpart of each requirement (the Rev. 2 to Rev. 3 change analysis, the SP 800-171r3 CUI overlay, and the CSF 2.0 to SP 800-171r3 mapping). The route through Rev. 3 is the author's; the `crosswalk_source` column says so for each row.
-3. **Evidence.** Interviews, configuration exports (identity provider, sharing policy, firewall, SFTP, backup and logging settings), document review, and the plant walkthrough.
+3. **Evidence.** Current state was established from the intake evidence (configuration exports for the identity provider, sharing policy, firewall, SFTP, backup and logging settings, document review, and the plant walk-through on 2026-07-08, EV-036), the FedRAMP Marketplace check (EV-054), the TLS scan (EV-055), fieldwork exports and configuration reviews (EV-058 to EV-064), and gap analysis interviews with the IT Manager, Systems Administrators, Director of Engineering, Contracts Manager, HR Manager, Plant Manager, and Manufacturing Systems Engineer (EV-057). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. For CMMC scoring, a requirement is NOT MET if any objective is not satisfied (32 CFR 170.24(b)(2)), so every Partially met row below counts as NOT MET in the score.
 
 ## 3. Results summary

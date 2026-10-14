@@ -13,11 +13,11 @@
 ## 1. Why SOC 2 for this organization
 A 7-person machine shop is **not** a SOC 2 service organization. It makes parts; it does not provide services that affect its customers' financial reporting or systems. CMMC Level 2 is the assurance that matters for its DoD work (32 CFR Part 170), and this summary does not replace it. The Trust Services Criteria are used here for two practical reasons.
 
-**A. Answering a commercial questionnaire.** On 2026-07-08 Customer C, a commercial aerospace tier-1 supplier, sent a supplier security questionnaire organized by the Trust Services Criteria. Customer C shares drawings (some EAR-controlled) and wants to know they are kept confidential. It accepts a self-assessment; the response is due 2026-09-30. The company will answer with this self-assessment, the POA&M (P07), and the Office Manager as security contact. Most of the evidence is the same evidence CMMC needs, so the work is reused, not repeated.
+**A. Answering a commercial questionnaire.** On 2026-07-08 Customer C, a commercial aerospace tier-1 supplier, sent a supplier security questionnaire organized by the Trust Services Criteria (EV-025). Customer C shares drawings (some EAR-controlled) and wants to know they are kept confidential. It accepts a self-assessment; the response is due 2026-09-30. The company will answer with this self-assessment, the POA&M (P07), and the Office Manager as security contact. Most of the evidence is the same evidence CMMC needs, so the work is reused, not repeated.
 
 **The company will not get a SOC 2 audit.** A Type 2 report needs controls that have operated over a period, usually 6 to 12 months, and most of the company's controls were defined in August 2026. The money is better spent on the CMMC roadmap.
 
-**B. Relying on the MSP.** The MSP runs most technical controls (P02 section 10.2) and holds the keys to every system. Its SOC 2 Type 2 report is the main outside evidence of how it protects those keys. Reviewing it each year is part of supplier oversight (SA-9; POL-02 A.5).
+**B. Relying on the MSP.** The MSP runs most technical controls (P02 section 10.2) and holds the keys to every system. Its SOC 2 Type 2 report (received with the P07 evidence request, EV-SA-9) is the main outside evidence of how it protects those keys. Reviewing it each year is part of supplier oversight (SA-9; POL-02 A.5).
 
 **Why Confidentiality and not another category.** Customer C's concern is its drawings. Confidentiality (C1.1, C1.2) covers identifying and disposing of confidential information, which maps directly onto the shop's CUI problems: drawings in the wrong systems and in the trash. Availability is covered by the BIA (P05) and was not requested; Processing Integrity and Privacy do not fit the business.
 

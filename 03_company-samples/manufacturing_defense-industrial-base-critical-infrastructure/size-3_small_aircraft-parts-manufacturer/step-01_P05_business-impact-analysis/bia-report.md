@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (aircraft parts manufacturer holding DoD subcontracts with CUI) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager with the Plant Manager, Quality Manager, Director of Engineering, Contracts Manager, and Controller | **Fieldwork:** 2026-07-13 to 2026-07-24 | **Approved:** Vice President of Operations, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-17 (EV-053), FY2025 revenue report (EV-049), PLM release report (EV-050), PLM backup job reports (EV-018), MES and DNC backup log (EV-019). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Vice President of Operations.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the plant depends on, how long each can be down, and how much data each can lose. It feeds:
@@ -13,10 +14,10 @@ This BIA identifies which business processes the plant depends on, how long each
 SP 800-171 Rev. 2 has no contingency planning requirement, so this BIA is a business need, not a CMMC requirement. Two DFARS duties still depend on it: the 72-hour cyber incident report (252.204-7012(c)) must be made while systems may be down, and images of affected systems must be preserved for at least 90 days (252.204-7012(e)) before they are rebuilt.
 
 ## 2. System and business description
-The company machines structural fittings, brackets, and hydraulic manifolds on 38 CNC machines in one Florida plant. Engineering data lives in the CUI Engineering Enclave (CEE): an identity provider, a collaboration suite, and a cloud subscription in a government-community cloud; CAD/PLM; 40 enclave endpoints; MES and DNC servers on the shop-floor VLAN; and the plant enclave network. Orders, purchasing, and shipping run on a commercial ERP SaaS outside the enclave. See `../00_company-facts.md` sections 3 and 4 and the SSP (P02).
+The company machines structural fittings, brackets, and hydraulic manifolds on 38 CNC machines in one Florida plant. Engineering data lives in the CUI Engineering Enclave (CEE): an identity provider, a collaboration suite, and a cloud subscription in a government-community cloud; CAD/PLM; 40 enclave endpoints; MES and DNC servers on the shop-floor VLAN; and the plant enclave network. Orders, purchasing, and shipping run on a commercial ERP SaaS outside the enclave. See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the SSP (P02).
 
 ## 3. Impact categories and values
-Dollar values are scaled to $68 million in annual revenue over about 250 production days, or about $272,000 of shipments per production day.
+Dollar values are scaled to $68 million in annual revenue over about 250 production days, or about $272,000 of shipments per production day (EV-049).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -49,9 +50,9 @@ From `bia.csv` (10 processes: 4 High, 5 Moderate, 1 Low).
 - Engineering (BP-03) tolerates a longer outage because released jobs keep running and customer change deadlines are usually measured in days.
 
 **Key findings:**
-1. **MES and DNC backups do not meet the 4-hour RPO for BP-01.** They are weekly, to a local disk in the same server room (SSP CP-9). A ransomware event on the shop-floor VLAN could destroy both the servers and the backup and lose up to a week of traveler status. NC programs can be re-sent from PLM, but traveler and inspection status would be rebuilt from paper (P01 R-011).
-2. **PLM daily backups meet the 24-hour RPO for BP-03 and BP-04**, but no restore has ever been tested, so the 24-hour RTO is unproven. A restore test is planned with the contingency plan (2026-12-31).
-3. **No contingency plan exists.** Recovery steps are in people's heads. The contingency plan is due 2026-12-31 (SSP CP-2 and CP-10).
+1. **MES and DNC backups do not meet the 4-hour RPO for BP-01.** They are weekly, to a local disk in the same server room (EV-019; SSP CP-9). A ransomware event on the shop-floor VLAN could destroy both the servers and the backup and lose up to a week of traveler status. NC programs can be re-sent from PLM, but traveler and inspection status would be rebuilt from paper (P01 R-011).
+2. **PLM daily backups meet the 24-hour RPO for BP-03 and BP-04**, but no restore has ever been tested (EV-018, EV-027), so the 24-hour RTO is unproven. A restore test is planned with the contingency plan (2026-12-31).
+3. **No contingency plan exists** (EV-027). Recovery steps are in people's heads. The contingency plan is due 2026-12-31 (SSP CP-2 and CP-10).
 4. **Evidence preservation comes before rebuild.** For a cyber incident affecting CUI, images of affected systems must be captured before servers are wiped (DFARS 252.204-7012(e)). This adds time to recovery and is built into the P08 runbook.
 
 ## 5. Resource requirements

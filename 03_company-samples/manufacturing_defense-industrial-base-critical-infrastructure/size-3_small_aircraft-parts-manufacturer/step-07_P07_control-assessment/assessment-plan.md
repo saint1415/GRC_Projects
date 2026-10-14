@@ -45,6 +45,17 @@ Small tier scope: 15-25 controls. **20 controls, 131 determination statements.**
   - external port scan of the SFTP gateway
   - visitor escort observation during the walkthrough
 
+### What each test could show
+The new policies (P06), SSP v2.0 and the P08 runbook were drafts during fieldwork; they were approved on 2026-08-31. They were reviewed as drafts, for design only: a control that a draft document introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples, live systems, or the shop floor | 74 |
+| Design | The control comes from a draft document (POL-03 and the P08 runbook, or the SSP v2.0 cryptography table); its design was reviewed. Operation is tested at the 2027-01 readiness re-check | 3 |
+| Not implemented | Nothing existed to test | 54 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 64 accounts in EV-001, and the HR terminations in EV-004, extended to July 2026 for the account test).
+
 ## 3. Rules of engagement
 - No testing that could disturb production. The shop-floor port scan ran on 2026-08-07 after the last shift, with machines idle, under the Manufacturing Systems Engineer's supervision. No scan touched CNC controllers.
 - No CUI left the enclave. The assessor worked from an enclave virtual desktop and a company-issued laptop, and screenshots with drawings were redacted.

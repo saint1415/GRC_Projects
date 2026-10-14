@@ -9,7 +9,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (Security and Compliance Coordinator) with the CNC Programmer, 2026-08-26 |
 | Decision | President, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the CNC Programmer's gap analysis interview, the CAM software settings review, the bank and card statements and the provider documentation (EV-043, EV-049, EV-031, EV-055). The June 2026 paste is known from the CNC Programmer's own statement. Whether other employees have used public chatbots with company data was not established |
 
 ## 1. GOVERN
 - **Accountable owner:** the CNC Programmer, who asked for the tool. **Decision authority:** the President, who is also the CMMC Affirming Official and the ITAR Empowered Official.
@@ -21,7 +21,7 @@
 - **Approved-tools list:** kept by the CNC Programmer and the President in POL-04 4.6. It lists no AI tool for CUI.
 - **Scale for a Micro shop:** no AI committee. The President, CNC Programmer, and Office Manager review AI use at the monthly security meeting and before any AI feature is turned on in any company software.
 
-**How this started.** On 2026-07-14, during gap analysis interviews, the CNC Programmer said that in June 2026 he had pasted paragraphs of a Prime A material specification into a free public chatbot to get a plain-language summary (AI-002). The specification carries a CUI marking and a distribution statement. He asked for an approved tool instead, and the CUI suite offers an integrated assistant (AI-001). The same review found that the CAM software has a cloud AI toolpath feature that uploads part models to the CAM vendor's commercial cloud (AI-003); it was switched off on 2026-08-12.
+**How this started.** On 2026-07-14, during gap analysis interviews, the CNC Programmer said that in June 2026 he had pasted paragraphs of a Prime A material specification into a free public chatbot to get a plain-language summary (AI-002; EV-043). The specification carries a CUI marking and a distribution statement. He asked for an approved tool instead, and the CUI suite offers an integrated assistant (AI-001). The same review found that the CAM software has a cloud AI toolpath feature that uploads part models to the CAM vendor's commercial cloud (AI-003; EV-049); it was switched off on 2026-08-12 (EV-054).
 
 ## 2. MAP
 ### AI-001: CUI suite assistant (proposed)
@@ -62,7 +62,7 @@ Uploading a CUI part model to the CAM vendor's commercial cloud would put CUI in
 **AI-003 tier: High** for CUI jobs. Disabled.
 
 ## 4. MEASURE
-AI-001 is not enabled, so these are **pre-deployment tests** in a provider trial space loaded with 15 released Customer C documents that are neither CUI nor export controlled, plus readiness checks on the live CUI suite. Results are from 2026-08-17 to 2026-08-19.
+AI-001 is not enabled, so these are **pre-deployment tests** in a provider trial space loaded with 15 released Customer C documents that are neither CUI nor export controlled, plus readiness checks on the live CUI suite. Results are from 2026-08-17 to 2026-08-19 (EV-055, EV-056).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|
@@ -113,6 +113,6 @@ AI-001 is not enabled, so these are **pre-deployment tests** in a provider trial
 
 **Why not sooner.** Turning on a new CUI feature changes the assessment boundary. The President decided not to change the boundary while the shop prepares for the Level 2 self-assessment (target 2027-03-15).
 
-**AI-002: rejected.** Public chatbots may never be used with CUI or FCI (POL-04 4.6). For the June 2026 paste, the President, as Empowered Official, and counsel reviewed it on 2026-07-28: the specification was CUI but carried no ITAR or EAR export control marking, so no DDTC or BIS disclosure is planned. Because a disclosure to an unauthorized party fits the cyber incident definition in 252.204-7012(a), the President chose the conservative path: tell Prime A in writing (sent 2026-08-31) and file a DIBNet report as soon as a medium assurance certificate is issued (POAM-008, 2026-10-31), noting that the 72-hour window was missed because the paste was found weeks later and the company had no certificate. The CNC Programmer completed a one-to-one CUI handling briefing on 2026-07-15.
+**AI-002: rejected.** Public chatbots may never be used with CUI or FCI (POL-04 4.6). For the June 2026 paste, the President, as Empowered Official, and counsel reviewed it on 2026-07-28 (EV-051): the specification was CUI but carried no ITAR or EAR export control marking, so no DDTC or BIS disclosure is planned. Because a disclosure to an unauthorized party fits the cyber incident definition in 252.204-7012(a), the President chose the conservative path: tell Prime A in writing (sent 2026-08-31) and file a DIBNet report as soon as a medium assurance certificate is issued (POAM-008, 2026-10-31), noting that the 72-hour window was missed because the paste was found weeks later and the company had no certificate. The CNC Programmer completed a one-to-one CUI handling briefing on 2026-07-15.
 
 **AI-003: rejected for CUI jobs.** The feature stays disabled; it may be considered later for commercial jobs that are neither CUI nor export controlled, after its own assessment.
