@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company (engineering subcontractor handling CUI drawings) | **Tier:** Sole Proprietorship (owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner, 2026-07-14 | **Adopted:** Owner, 2026-08-31
 
+**Sources:** the owner's BIA worksheet, 2026-07-13 to 2026-07-14 (EV-028), the 2025 revenue by customer report (EV-018), the 2025 Schedule C (EV-019), the Prime A master purchase order (EV-001), the CAD license page (EV-022), and the productivity suite settings (EV-009). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
+
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the business depends on, how long each can be down, and how much data it can lose. It supports:
 - the availability rating in the system security plan (P02);
@@ -11,10 +13,10 @@ This one-page BIA lists the five business functions the business depends on, how
 - the incident response capability that SP 800-171 3.6.1 requires ("preparation, detection, analysis, containment, recovery") and the 72-hour DoD reporting duty in DFARS 252.204-7012(c).
 
 ## 2. Business description
-One engineer works from a home office in Florida. About 70% of the work is for Prime A, a defense prime contractor, and all of it involves CUI drawings and models. The rest is commercial design work. Everything runs on one laptop with desktop CAD, a personal phone, the home network, a commercial productivity suite, an accounting SaaS, and Prime A's file-exchange portal. See `../00_company-facts.md` sections 1 to 3.
+One engineer works from a home office in Florida. About 70% of the work is for Prime A, a defense prime contractor, and all of it involves CUI drawings and models. The rest is commercial design work. Everything runs on one laptop with desktop CAD, a personal phone, the home network, a commercial productivity suite, an accounting SaaS, and Prime A's file-exchange portal. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual revenue, or about $720 per working day.
+Dollar values are scaled to about $180,000 in annual revenue (EV-018, EV-019), or about $720 per working day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

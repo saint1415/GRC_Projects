@@ -1,0 +1,15 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Commercial productivity suite provider,"Email, cloud file storage and sync, calendar",SYS-01,CUI; FCI,Standard commercial business plan terms,None on file; offering not listed on the FedRAMP Marketplace (EV-033),EV-009; EV-010; EV-020; EV-033,Provider manages the encryption keys
+V-02,Accounting SaaS vendor,Accounting and invoicing,SYS-05,FCI,Subscription terms,None on file,EV-017; EV-020,
+V-03,Prime A (customer),Master purchase order and task orders; supplier file-exchange portal,SYS-06,CUI; FCI,"Master purchase order with DFARS 252.204-7012, -7019, -7020 and FAR 52.204-21 and 52.204-25",Not applicable (customer),EV-001; EV-002; EV-006; EV-007,Receives the DoD incident report number if the owner reports a cyber incident
+V-04,Internet service provider,Home internet and the router with Wi-Fi,SYS-04,Network traffic in transit,Residential service terms,None on file,EV-015; EV-020,
+V-05,Mobile carrier,Mobile service,SYS-03,Calls and texts in transit,Customer agreement,None on file,EV-020,
+V-06,CAD software vendor,Desktop CAD and analysis licenses and maintenance,SYS-02,None (licenses only),License and maintenance terms,None on file,EV-020; EV-022,Licenses are node-locked to the laptop
+V-07,Commercial generative AI chatbot provider,"Generative AI chatbot, individual paid plan",SYS-09,CUI text excerpts were pasted (EV-032),Individual plan terms,None on file,EV-020; EV-027; EV-032; EV-037,
+V-08,On-call IT consultant,"Hourly on-site help with the laptop, router and printer",SYS-02; SYS-04; SYS-08,None by design (on site with the owner present),Hourly invoices,None on file,EV-020; EV-021,Set up the current laptop in 2025-05
+V-09,Independent CMMC consultant,Outside review of the self-assessment,None (screenshots and documents with no CUI),None,Hourly engagement,Not applicable,EV-035,Reviewed the self-assessment by video on 2026-07-22 and 2026-07-23
+V-10,Web host,Public portfolio website hosting,OTH-01,Public portfolio content,Hosting terms,None on file,EV-020; EV-030,
+V-11,Professional liability insurer,Professional liability insurance,n/a,None,Policy declarations,Not applicable,EV-020; EV-025,Whether cyber events are covered is an open request
+V-12,Accountant,Year-end tax preparation from year-end reports,n/a (no system access),Year-end financial reports,Not recorded (paid yearly),Not applicable,EV-019; EV-020,
+V-13,Cleaning service,"Household cleaning every two weeks, including the home office",Home office,None by design; physical presence near printed CUI,Not recorded,Not applicable,EV-016,Visits every two weeks
+V-14,Government-community cloud provider (through an authorized reseller),Government-community cloud productivity suite (planned),SYS-10,CUI; FCI (planned),Reseller order 2026-08-31; provider service terms,"FedRAMP Marketplace listing (High); SOC 2 Type 2, period ending 2026-06-30; customer responsibility matrix summary",EV-036; EV-038,Selected after intake; reviewed in P09 Part B

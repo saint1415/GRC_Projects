@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the Engineering Office Systems (SYS-01 to SYS-08, planned SYS-10), the home office and printed CUI, the commercial AI chatbot (SYS-09), and the outside parties (Prime A, the IT consultant, SaaS providers). Processes come from the BIA (P05).
+**Scope.** The whole business as one system: the Engineering Office Systems (SYS-01 to SYS-08, planned SYS-10), the home office and printed CUI, the commercial AI chatbot (SYS-09), and the outside parties (Prime A, the IT consultant, SaaS providers), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes come from the BIA (P05).
 
 **Risk tolerance.** The owner owns and accepts every risk. Because the same person proposes and approves, three fixed rules apply (POL-01 4.4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Never accepted as they are. Any risk that could make an SPRS entry or CMMC affirmation untrue is treated as High or above.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), and a walk through the laptop, phone, router, and SaaS accounts.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, and a walk through the laptop, phone, router, and SaaS accounts on 2026-07-21 (EV-034). The gap analysis (P03) ran in the same self-assessment window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account, device and network reviews (EV-009 to EV-016), the SPRS record and 2025 template (EV-003, EV-005), the P03 self-review findings (EV-031, EV-032, EV-035), and the risk walk-through (EV-034). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3). Loss of the Prime A relationship, or personal liability for a false statement, is rated Very High because either could end the business.
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -45,6 +45,8 @@
 | R-007 | CUI pasted into a commercial AI chatbot | Moderate | Avoid: no CUI in the chatbot; incident decision with counsel and Prime A (P10) | Owner | 2026-09-30 |
 
 The High and Very High risks share one cause: **the business took on a DFARS 252.204-7012 subcontract with the IT setup of an ordinary home office, and then reported full compliance.** The cheapest and most urgent fix is honesty: correct the SPRS score (R-003), which costs nothing. The most important technical fix is moving CUI to a FedRAMP-authorized service (R-002), which also removes most of R-001 and R-010.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and self-assessment evidence. Pass 2 followed the control assessment (P07): R-015 was added on 2026-08-05 after testing found the router's factory default administrator password (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Free fixes first (by 2026-09-30):** corrected SPRS score; MFA on the accounting SaaS; password manager; standard user account; office locking and visitor log; router firmware and settings; encrypted backup drive; stop CUI in the chatbot.

@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company (engineering subcontractor handling CUI drawings) |
 | Tier / Vertical | Sole Proprietorship / Defense Industrial Base |
-| AI use case | AI-001: a commercial generative AI chatbot on an individual paid plan (SYS-09). CUI text excerpts from two Prime A specifications, one ITAR-marked, were pasted on 6 occasions between 2026-03 and 2026-07. Found in the P03 self-review on 2026-07-16; CUI use stopped that day |
+| AI use case | AI-001: a commercial generative AI chatbot on an individual paid plan (SYS-09). CUI text excerpts from two Prime A specifications, one ITAR-marked, were pasted on 6 occasions between 2026-03 and 2026-07. Found in the P03 self-review on 2026-07-16 (EV-032); CUI use stopped that day |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form; AI 600-1 for generative AI risks |
 | Assessor and decision | Owner, 2026-08-26, with the CMMC consultant's comments; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases: AI-001 and the deferred AI-002) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases: AI-001 and the deferred AI-002), built at intake from the card statements and the chatbot account page (EV-020, EV-027), the conversation history review in P03 fieldwork (EV-032), and the SYS-10 provider documents for the proposed add-on (EV-036). With no staff, there was no survey to run. Not established: what the provider still holds from the deleted conversations, and whether its staff or storage gave a foreign person access to the ITAR-marked excerpt. Section 6 records how the reporting and disclosure questions are decided with counsel and Prime A |
 
 ## 1. What it does (Map)
-The owner types or pastes text into the chatbot's web page and gets back drafts: report wording, emails, rewordings of dense specification paragraphs, and answers to general engineering questions. The provider processes and stores the conversation in its commercial cloud. On the individual plan, conversations could be used to train the provider's models unless the owner turned that off (the owner turned it off and deleted the history on 2026-07-17). No drawings or models were uploaded. Outputs never went into a drawing directly, but two reworded specification summaries were used to plan design work.
+The owner types or pastes text into the chatbot's web page and gets back drafts: report wording, emails, rewordings of dense specification paragraphs, and answers to general engineering questions. The provider processes and stores the conversation in its commercial cloud. On the individual plan, conversations could be used to train the provider's models unless the owner turned that off (the owner turned it off and deleted the history on 2026-07-17, EV-037). No drawings or models were uploaded. Outputs never went into a drawing directly, but two reworded specification summaries were used to plan design work.
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |

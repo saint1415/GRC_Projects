@@ -31,6 +31,17 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 41 determination statem
 - **Test (2026-08-05, with the IT consultant on site):** sign-in to the router administrator page with the factory default password; whether a household tablet can reach the printer; whether the backup drive opens without a password; the laptop FIPS policy setting; a one-folder restore from the backup; an attempt to open DIBNet; the laptop administrators group membership.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the CMMC consultant challenged each answer against the screenshots.
 
+### What each test could show
+POL-01 was a draft during fieldwork; it was drafted from the gaps on 2026-07-27 to 2026-07-31 and adopted on 2026-08-31. A control that the draft introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on the live accounts, devices, backup drive and router | 21 |
+| Design | The control is new (a rule in the draft POL-01); its design was reviewed. Operation is tested at the January 2027 self-assessment, after at least one quarter of operation | 3 |
+| Not implemented | Nothing existed to test | 17 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-SA-9 and so on), with the population each test covered: the SaaS services (EV-009, EV-017, EV-020, EV-027), and the laptop, phone, backup drive, router and printer (EV-012 to EV-015).
+
 ## 3. Rules of engagement
 - No CUI was shown to either consultant. Screenshots were cropped to settings; file lists were shown by count, not by name.
 - The IT consultant worked on site with the owner present, and every change made during testing was entered in the change log.

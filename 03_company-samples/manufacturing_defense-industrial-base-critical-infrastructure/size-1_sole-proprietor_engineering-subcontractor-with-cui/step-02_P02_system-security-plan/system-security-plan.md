@@ -6,12 +6,14 @@
 This plan is also the system security plan that NIST SP 800-171 Rev. 2 requirement 3.12.4 and the CMMC Level 2 self-assessment require (32 CFR 170.24(c)(2)(i)(B)(5)). At this size the requirement-by-requirement statements are kept in one place: the `current_state` column of the P03 gap analysis (`../step-05_P03_regulatory-gap-analysis/gap-analysis.csv`, rows G-001 to G-110). This document and that table together form the SSP.
 
 ## 1. System Name and Identifier
-Engineering Office Systems (**EOS**), identifier CSC-SYS-001. CAGE code on file in SAM.gov.
+Engineering Office Systems (**EOS**), identifier CSC-SYS-001. CAGE code on file in SAM.gov (EV-004).
 
 ## 2. System Overview
-The EOS is everything the owner uses to deliver engineering work: desktop CAD on one laptop, email and synced project files, client and billing records, and the Prime A portal. One person, the owner, uses and runs it. Components are SYS-01 to SYS-08 and the planned SYS-10 in `../00_company-facts.md` section 3. There is no server and no IaaS. About 320 CUI files (Prime A drawings, models, and the owner's derived work) are held on the laptop and in the commercial productivity suite (SYS-01). Most service-side safeguards are inherited from SaaS providers; the owner is responsible for identities, data placement, devices, the home network, and the home office (P04).
+The EOS is everything the owner uses to deliver engineering work: desktop CAD on one laptop, email and synced project files, client and billing records, and the Prime A portal. One person, the owner, uses and runs it. Components are SYS-01 to SYS-08 and the planned SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). There is no server and no IaaS. About 320 CUI files (Prime A drawings, models, and the owner's derived work) are held on the laptop and in the commercial productivity suite (SYS-01) (EV-011). Most service-side safeguards are inherited from SaaS providers; the owner is responsible for identities, data placement, devices, the home network, and the home office (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
+Applicability was decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
+
 | ID | Requirement | Citation | Applies? |
 |---|---|---|---|
 | C-DIB-R01 | DFARS Safeguarding Covered Defense Information and Cyber Incident Reporting | 48 CFR 252.204-7012 (MAY 2024) | Yes, in the Prime A subcontract. SP 800-171 Rev. 2 on every covered contractor information system; FedRAMP Moderate-equivalent cloud; 72-hour DoD reporting |
@@ -50,6 +52,7 @@ Operational. Planned changes: SYS-10 go-live and CUI migration out of SYS-01 (20
 **Baseline:** the 110 security requirements of NIST SP 800-171 Rev. 2 (all apply; four have no in-scope component today and are scored as Met under 32 CFR 170.24(b)(3), see P03). For P07 and the risk register, those requirements are traced to a tailored set of 34 SP 800-53 Rev. 5 Moderate controls in `control-implementation.csv`.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside (CMMC Level 2 assessment scope, 32 CFR 170.19(c)):** CUI Assets: SYS-02 laptop, SYS-07 USB backup drive, SYS-08 printer and scanner, SYS-01 (until CUI leaves it on 2026-11-30), SYS-03 phone (until CUI is removed from it), SYS-10 (after go-live). Security Protection Assets: SYS-04 home router and Wi-Fi; SYS-03 phone as the MFA device; the password manager (planned). Also inside: the owner, the home office room, and printed CUI.
 - **FCI only:** SYS-05 accounting SaaS. Its CMMC scoping position is open under DFARS 252.204-7021(d)(2), so it is kept inside this boundary and protected to FAR 52.204-21 and MFA (P03 G-125).
 - **Outside:** SYS-06 Prime A portal (Prime A's system), SYS-09 commercial AI chatbot (prohibited for CUI), household devices on the home network (to be separated), and the commercial customers' systems.
@@ -105,7 +108,7 @@ Self-assessed 2026-07-13 to 2026-08-07, with outside review by the CMMC consulta
 SYS-01 and the Prime A portal require a password and an authenticator app code, which meets SP 800-171 3.5.3 for network access but is not phishing resistant (P01 R-001). Local administrator sign-in on the laptop uses a password only (gap). SYS-10 will require a hardware security key for the owner's accounts, with a spare key in the home safe. SYS-05 moves from password only to MFA by 2026-09-15.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis (requirement statements and score), P04 SaaS control map and diagram, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 readiness self-check and SYS-10 evidence review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis (requirement statements and score), P04 SaaS control map and diagram, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 readiness self-check and SYS-10 evidence review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **CAGE:** Commercial and Government Entity code
