@@ -10,7 +10,7 @@
 ## 1. Purpose and scope
 Intake collected the company's own records before any assessment work began on 2026-07-06. It covers the organization, the IT, OT and cloud systems at all four sites, the suppliers that touch them, and the rules that may bind the company. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Later steps add their own fieldwork evidence (interviews, walkthroughs, samples, tests) to the same register, so one list backs every deliverable.
 
-This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the regulatory analysis (P03) and the control assessment (P07).
 
 Records that are SSI (the Facility Security Plan sections) were reviewed on site with the Facility Security Officer and are described here only at the level needed to cite them.
 
@@ -66,7 +66,7 @@ Records that are SSI (the Facility Security Plan sections) were reviewed on site
 | P02 SSP | The PCBMS boundary from the asset inventory; as-found OT configuration from EV-006, EV-009, EV-011 to EV-014, EV-021, EV-024 and EV-036 |
 | P04 Cloud mapping | Cloud and SaaS components (EV-019, EV-020, EV-047 to EV-049, EV-054) and provider assurance (EV-046, EV-058) |
 | P01 Risk register | Likelihood inputs from the configuration exports, the OT sensor and scan records, the incident register (EV-025) and the threat briefing record (EV-026) |
-| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the requirements |
+| P03 Regulatory analysis | The obligations register (which rules apply) and every observation above, compared with the requirements |
 | P06 Policies | The 2024 policy set and the existing standards (EV-032) |
 | P07 Control assessment | Populations to sample from (EV-004, EV-006, EV-009, EV-012, EV-014, EV-021, EV-030, EV-031) |
 | P08 IR runbooks | Notification duties from the obligations register; FSP reporting (EV-026); contacts and contract terms from the vendor register and EV-045 |
