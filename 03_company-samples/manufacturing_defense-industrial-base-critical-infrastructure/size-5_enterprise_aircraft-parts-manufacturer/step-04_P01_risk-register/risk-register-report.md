@@ -72,7 +72,7 @@ By treatment: Mitigate 50, Accept 12, Avoid 1, Share/Transfer 1.
 By status: In progress 47, Open 4, Closed (accepted) 12, Closed (avoided) 1.
 **27 risks are outside tolerance** and each has a dated treatment plan.
 
-**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07) and the gap analysis samples that closed on 2026-08-14: the risks whose ratings rest on those results were updated on 2026-08-28 (R-004, R-013, R-015, R-029, R-031, R-052); their `last_reviewed` date is 2026-08-28 and their `likelihood_basis` cites the P07 or gap analysis evidence ID. The `assessment_pass` column shows which pass produced each risk.
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. No risk was added in a second pass. After the Internal Audit assessment (P07) and the gap analysis samples that closed on 2026-08-14, the risks whose ratings rest on those results were re-rated on 2026-08-28 (R-004, R-013, R-015, R-029, R-031, R-052); their `last_reviewed` date is 2026-08-28 and their `likelihood_basis` cites the P07 or gap analysis evidence ID. The `assessment_pass` column shows the pass that produced each risk and any re-rating.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |
