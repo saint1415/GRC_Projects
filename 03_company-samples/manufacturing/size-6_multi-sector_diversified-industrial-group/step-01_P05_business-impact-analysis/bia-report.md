@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-15
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-080 group, EV-081 Medical Devices, EV-082 Distribution, EV-083 Testing), FY2025 revenue by division (EV-003), customer, site and installed base volumes (EV-037, EV-061, EV-065), backup, recovery and key records (EV-023, EV-044, EV-046, EV-050, EV-056, EV-066, EV-079), and the asset and vendor registers. The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -16,10 +17,10 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud, network, and colocation data center, and SYS-G4 ERP and HR services. Division systems are SYS-D1 (DEMS: PLM, build and signing, MES and test stations; the P02 SSP system), SYS-D2 (the Device Connectivity Cloud), SYS-D3 (the device eQMS), SYS-D4 and SYS-D5 (Distribution's order-to-cash platform and distribution center automation), SYS-D6 (Testing LIMS, client portal, and test networks), and SYS-D7 (devices in the field). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud, network, and colocation data center, and SYS-G4 ERP and HR services. Division systems are SYS-D1 (DEMS: PLM, build and signing, MES and test stations; the P02 SSP system), SYS-D2 (the Device Connectivity Cloud), SYS-D3 (the device eQMS), SYS-D4 and SYS-D5 (Distribution's order-to-cash platform and distribution center automation), SYS-D6 (Testing LIMS, client portal, and test networks), and SYS-D7 (devices in the field). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Medical Devices about $29.6 million per day, Distribution about $17.3 million per day, and Testing about $2.5 million per day.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Medical Devices about $10.8 billion, or about $29.6 million per day; Distribution about $6.3 billion, or about $17.3 million per day; and Testing about $0.9 billion, or about $2.5 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -73,14 +74,14 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Sign-in (SYS-G1) | Group | Every process except MES local operator accounts and the 4 acquired laboratories | A group identity outage stops all three divisions at once. Break-glass accounts per critical system are the fallback |
 | WAN and colocation data center | Group | Distribution centers (ERP), plants (PLM, release repository), laboratories | Distribution's ERP is only as available as the link to the colocation data center |
 | SOC facts | Group | PSIRT, Distribution recalls, SEC filing | Every notice clock in P08 depends on the SOC and the PSIRT establishing what happened |
-| Build and signing (BP-MD04) | Medical Devices | DCC update service (BP-MD02); field service (BP-MD08) | No signed fix, no patch. IX-3 depends on the Plant D build server (gap 1) |
+| Build and signing (BP-MD04) | Medical Devices | DCC update service (BP-MD02); field service (BP-MD08) | No signed fix, no patch. IX-3 depends on the Plant D build server (EV-044) |
 | Medical Devices products and corrections | Medical Devices | Distribution recall and hold (BP-DS04) | Distribution holds IX-3 and IX-4 stock and customer lot data needed for corrections |
 | Distribution complaints | Distribution | Medical Devices eQMS (BP-MD06) | Device complaints Distribution receives on Medical Devices products must reach the manufacturer's complaint file |
-| Testing of Medical Devices products | Testing | Medical Devices submissions and fixes | Testing verifies fixes and runs premarket penetration tests; independence must be documented (gap 5) |
+| Testing of Medical Devices products | Testing | Medical Devices submissions and fixes | Testing verifies fixes and runs premarket penetration tests; independence must be documented (EV-077) |
 | Supplier EDI | Medical Devices as supplier | Distribution replenishment | Same EDI gateway; an EDI outage delays Medical Devices disposables to hospitals |
 | Financial close (BP-G05) | Group | Disclosure committee | A Form 8-K Item 1.05 filing needs facts from every division |
 
-**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly); the Plant D build server for IX-3 firmware (gap 1; no backup HSM path; P01 MD-003); one colocation data center for the distribution ERP (P01 DS-006, disaster recovery replica in provider B planned for 2027).
+**Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly); the Plant D build server for IX-3 firmware (EV-044; no backup HSM path; P01 MD-003); one colocation data center for the distribution ERP (P01 DS-006, disaster recovery replica in provider B planned for 2027).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -88,7 +89,7 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | SYS-G1 identity platform (SaaS) | All | Vendor multi-region service; configuration exported daily |
 | SYS-G3 landing zones, keys, logs, backup vault | Cloud-hosted processes | Infrastructure as code; immutable backups in provider B |
 | SYS-D2 DCC | BP-MD01, BP-MD02 | Database point-in-time recovery (15 minutes); warm standby in provider B |
-| SYS-D1 build pipeline and HSMs | BP-MD04 | Pipeline defined as code; primary HSM at Plant A, backup HSM at Plant B; key ceremonies documented. Plant D software key has no backup (gap 1) |
+| SYS-D1 build pipeline and HSMs | BP-MD04 | Pipeline defined as code; primary HSM at Plant A, backup HSM at Plant B; key ceremonies documented. Plant D software key has no backup (EV-044) |
 | SYS-D1 PLM and repositories | BP-MD07 | SaaS vendor replication; nightly export to the group vault |
 | SYS-D1 MES | BP-MD03 | Nightly backups at each plant; Plants D and E copies stay on site (P07 CP-9 finding) |
 | SYS-D3 eQMS | BP-MD06, BP-DS04 | SaaS vendor replication; weekly export |
@@ -109,7 +110,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 15. to 25. Hospital technical support, Testing client portal and cybersecurity practice, supplier EDI, field service, laboratory testing, financial close, design and development, procurement, payroll, and intercompany testing.
 
 ## 8. Key findings
-1. **Shared services must recover first and fastest.** The group identity RTO of 1 hour was met in two tests in 2026. Every division process depends on it.
+1. **Shared services must recover first and fastest.** The group identity RTO of 1 hour was met in two tests in 2026 (EV-080). Every division process depends on it.
 2. **The Plant D build server is a single point of failure for IX-3 fixes.** If it failed during an IX-3 incident, no signed fix could be produced until a new key is generated and trusted by fielded pumps, which IX-3 may not support without a field visit (P01 MD-003; POAM-003).
 3. **Distribution is the fastest path to hospitals during a device incident.** Its lot trace data and customer lists are needed within hours for holds and customer notices, so BP-DS04 is High even though it is not a revenue process.
 4. **Testing is a confidentiality business.** Its availability MTDs are long, but P01 and P02 treat the findings vault and client data as the main exposure.

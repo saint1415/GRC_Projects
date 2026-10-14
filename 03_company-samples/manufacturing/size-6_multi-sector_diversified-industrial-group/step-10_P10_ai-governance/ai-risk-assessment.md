@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: group standards, the division use-case inventory, and the regulator-specific rules for the priority use cases: AI-001 (AI-enabled device software function for US-2 ultrasound image analysis, the focus), AI-008 (applicant screening), and AI-006 (Testing report drafting on client data) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board risk committee 2026-09-15 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 2 High, 6 Medium, 1 Low), built from AI discovery across procurement, SaaS discovery, the SYS-G1 app list and Group AI council records (EV-030), the AI-001 design history file (EV-060), DCC configuration records (EV-056) and the Testing pilot records (EV-078, EV-106). Not established: workforce use of public generative AI tools outside the approved tools (intake open request; P01 MD-019) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Change gate.** A material change (new model, new vendor, new data source, new decision role) triggers re-assessment before release. For AI-001, planned model updates are handled through a predetermined change control plan (PCCP) if FDA authorizes one.
 6. **Approved tools only** for workforce generative AI (POL-05 4.8).
 
-**Where the program fell short in 2026.** The standard was adopted after the Testing drafting tool (AI-006) was piloted, and that pilot skipped the change gate and client consent (scenario gap 8). AI-001 was registered on time but its bias testing is incomplete. Both are under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after the Testing drafting tool (AI-006) was piloted, and that pilot skipped the change gate and client consent (EV-078). AI-001 was registered on time but its bias testing is incomplete. Both are under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

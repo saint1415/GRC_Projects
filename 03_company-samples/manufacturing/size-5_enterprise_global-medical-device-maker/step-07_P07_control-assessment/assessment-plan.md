@@ -85,6 +85,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Chief Technology Officer; Director of Build and Release Engineering; Vice President, Manufacturing Systems; MN-1 plant director; VP Product Security; CQRO; Director of Identity and Access Management; Director of Security Operations; General Counsel; CFO; CISO; 20 randomly selected engineers and plant supervisors.
 - **Test:** access tests with auditor test accounts; a signing request observed end to end; token scope tests; an unsigned test image presented to 30 programming stations; default-credential tests on MN-1 fixtures and stations; reachability tests from the MN-1 and FL-1 office networks to MES; TLS scans and a packet capture on the MN-1 MES segment; generated audit events.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-015), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 269 (228 Satisfied, 41 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: reconciliation of artifact promotion logs to PLM approvals (CM-03f.[02]) | 1 |
+| **Total** | | **270** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-028 and EV-004; repository, signing and MES users, EV-030; the CMDB, EV-033; scan reports, EV-039; the HSM key inventory, EV-042; PLM release records, EV-046; and SOC cases, EV-053) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect production or product quality. Station tests ran during scheduled changeovers with the plant director's approval, used a test image that could not be released, and every tested station was verified afterward by plant quality staff before production resumed.
 - No test touched the HSM signing keys. The signing test used a dedicated test key partition.

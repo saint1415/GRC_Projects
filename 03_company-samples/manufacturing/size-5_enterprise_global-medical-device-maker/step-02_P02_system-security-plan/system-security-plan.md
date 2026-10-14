@@ -34,7 +34,7 @@ DSF-MES is the path every line of device code takes from an engineer's commit to
 | State | State breach laws | Each state where affected individuals reside (Florida worked example) | Only if workforce personal information in the system is breached |
 | Internal | POL-01 to POL-05 and standards | P06 | Enterprise policy hierarchy, including STD-01.8 Secure Product Development |
 
-Not applicable: N62-R01 and N62-R03 (DSF-MES stores no PHI; the DDC and RCM platform are covered in their own plans), N62-R06 (no consumer health data), N31-33-R01 to R04 (see `../00_company-facts.md` section 1).
+Not applicable: N62-R01 and N62-R03 (DSF-MES stores no PHI; the DDC and RCM platform are covered in their own plans), N62-R06 (no consumer health data), N31-33-R01 to R04 (see the intake [obligations register](../step-00_P00_intake/obligations-register.csv)).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -80,6 +80,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1 where one fits; the com
 **Documented controls.** `control-implementation.csv` documents **141 controls**: 129 from the Moderate baseline and 12 integrity supplements. The other 158 Moderate-baseline controls and enhancements (83 enhancements, mostly in AC, IA, SC, and CM, plus base controls such as physical and environmental protection, media protection, and maintenance) are fully inherited from the common control catalog (section 10.3) and are listed there rather than repeated here.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-04-REPO to SYS-04-PKI, SYS-05 and SYS-06-FL1 to SYS-06-MN1) and the prior SSP version 1.1 (EV-022).
+
 **Inside the boundary:** the source repository tenant and code review configuration, the build orchestrator and build cluster at DC-1, the cloud runner pool on Cloud provider B, the HSM signing service at DC-1 and DC-2 and its signing portal, the legacy IV-300 signing workstation, the artifact repository and SBOM service, the PLM release workflow configuration, the manufacturing PKI, the MES servers and plant image caches at FL-1, MN-1, and TX-1, and the test and programming stations.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -207,7 +209,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Devices and stations:** programming stations authenticate with certificates from the manufacturing PKI; devices receive unique identity certificates at programming.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), fielded-device incident runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), DSF-MES contingency plan v3, key ceremony records, manufacturing PKI certificate policy, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), fielded-device incident runbook (P08), SOC 2 readiness (P09), AI portfolio (P10), DSF-MES contingency plan v3 (EV-048), key ceremony records (EV-042), manufacturing PKI certificate policy (EV-047), enterprise common control catalog (EV-022). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **CCP:** common control provider

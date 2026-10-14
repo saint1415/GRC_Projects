@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (publicly traded connected medical device manufacturer, NAICS 334510) | **Tier:** Enterprise (12,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, informed by NIST IR 8286D
 **Prepared by:** GRC team with process owners (interviews 2026-05-18 to 2026-06-26) | **Approved:** Chief Operating Officer and Chief Risk Officer, 2026-08-14 | **Reported to:** risk and technology committee of the board, 2026-09-10
+**Sources:** process owner interviews 2026-05-18 to 2026-06-26 (EV-082), dependency and contract review (EV-083), the FL-1 and TX-1 MES failover test (EV-084), FY2025 revenue report (EV-001), shipments and inventory coverage (EV-002, EV-003), workforce roster (EV-004), customer agreements (EV-005), installed base (EV-008), RCM census (EV-056), and DR test, contingency and backup records (EV-049, EV-081, EV-048, EV-054). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Chief Operating Officer and the Chief Risk Officer.
 
 ## 1. Overview and purpose
 This enterprise-wide BIA identifies the business processes the company depends on, how long each can be down, how much data each can lose, and what each depends on, including third parties, contract manufacturers, and the acquired infusion business. It feeds:
@@ -14,7 +15,7 @@ This enterprise-wide BIA identifies the business processes the company depends o
 **Results in one line:** 17 processes were analyzed; 6 are High criticality, 9 Moderate, and 2 Low. 2 processes need recovery within 2 hours. The dependency map (`dependency-map.csv`) lists 26 dependencies, 13 of them single points of failure and 2 never tested.
 
 ## 2. System and business description
-Cris Santos Company designs, builds, and services connected medical devices for about 2,300 hospitals, about 5,200 physician practices, and about 900,000 consumers. It has 12,000 employees, three plants (FL-1 Florida, MN-1 Minnesota, TX-1 Texas), two R&D centers, two RCM monitoring centers, two colocation data centers (DC-1 and DC-2), and about $4.8 billion in annual revenue. The technology estate is described in `../00_company-facts.md` section 3: the DDC (SYS-01), the RCM platform (SYS-02), the Consumer Health Platform (SYS-03), the Device Software Factory (SYS-04), PLM and eQMS (SYS-05), MES and plant OT (SYS-06), ERP (SYS-07), the identity platform (SYS-08), the enterprise estate (SYS-09), about 2,400 suppliers (SYS-10), and the fielded device fleet (SYS-11). The infusion pump business and plant MN-1 were acquired in 2024 and are still being integrated.
+Cris Santos Company designs, builds, and services connected medical devices for about 2,300 hospitals, about 5,200 physician practices, and about 900,000 consumers. It has 12,000 employees, three plants (FL-1 Florida, MN-1 Minnesota, TX-1 Texas), two R&D centers, two RCM monitoring centers, two colocation data centers (DC-1 and DC-2), and about $4.8 billion in annual revenue. The technology estate is listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): the DDC (SYS-01), the RCM platform (SYS-02), the Consumer Health Platform (SYS-03), the Device Software Factory (SYS-04), PLM and eQMS (SYS-05), MES and plant OT (SYS-06), ERP (SYS-07), the identity platform (SYS-08), the enterprise estate (SYS-09), about 2,400 suppliers (SYS-10), and the fielded device fleet (SYS-11). The infusion pump business and plant MN-1 were acquired in 2024 and are still being integrated.
 
 **Design facts that bound safety impact:**
 - Primary alarms always sound at the bedside monitor or pump. A DDC outage removes remote visibility and secondary notifications. It does not silence a device.
@@ -22,7 +23,7 @@ Cris Santos Company designs, builds, and services connected medical devices for 
 - The CR-100 phone gateway app buffers about 24 hours of ECG, but urgent findings reach a physician only after a technician reviews them, so an RCM outage is a direct patient safety event.
 
 ## 3. Impact categories and values
-Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($19.2 million per business day) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
+Dollar thresholds are scaled to about $13.2 million of revenue per calendar day ($19.2 million per business day; $4.8 billion in FY2025 revenue, EV-001) and to the company's materiality framework (P08 section 6). Values are per 24 hours of outage unless stated.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

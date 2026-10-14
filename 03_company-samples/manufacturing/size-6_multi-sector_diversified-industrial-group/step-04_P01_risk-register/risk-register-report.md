@@ -13,7 +13,7 @@
 | Approved | 2026-09-15 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Enterprise IT and OT in all three divisions, the software release chain and fielded devices of the Medical Devices division, and the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud, network, and colocation data center, and SYS-G4 ERP and HR. Division systems are SYS-D1 to SYS-D7 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Enterprise IT and OT in all three divisions, the software release chain and fielded devices of the Medical Devices division, and the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud, network, and colocation data center, and SYS-G4 ERP and HR. Division systems are SYS-D1 to SYS-D7 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Product risk and enterprise risk together.** For Medical Devices, a cybersecurity risk to a fielded device is also a patient safety risk. This register rates the cybersecurity side with SP 800-30. The safety side (hazard analysis and risk control under the QMSR design controls) stays in each product's risk management file, and each device risk here names the product. Exploitability-based scoring for premarket submissions follows FDA's guidance and lives in the product security risk assessments, not in this register.
 
@@ -21,7 +21,7 @@
 - **Division registers** hold risks each division owns and can treat itself. Medical Devices, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back. Group risks are rated on their own group-level likelihood and impact. They are not simply the highest division rating.
 
-**Risk tolerance and who can accept risk** (`../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (group ERM risk acceptance standard, EV-005):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -32,11 +32,12 @@
 Patient-safety risks rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment and DEMS testing (P07), PSIRT case history, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, PSIRT case history (EV-039), interviews with each division's leadership (EV-084 group, EV-085 Medical Devices, EV-086 Distribution, EV-087 Testing), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, samples, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Device risks with plausible patient harm are rated Very High. Group impact reflects enterprise consequences: several regulators at once, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+6. **Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. P07 testing continued to 2026-08-28; no risk was added after it, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
 
 ## 3. Results
 
@@ -74,9 +75,9 @@ Patient-safety risks rated High may not be accepted. They must be treated.
 
 ### What the results say
 The group program is mature: there are no Very High risks, common controls are strong, and Medical Devices already runs a PSIRT, a published CVD policy, ISAO membership, automated SBOMs, and HSM signing for its current products. The High risks cluster in three places:
-1. **Legacy and acquired assets** (GR-01, GR-02, GR-03). IX-3 predates section 524B and still depends on a software signing key at Plant D, and the 2024 acquisitions brought flat plant networks. These are the "legacy" residual gaps expected at this size (scenario gaps 1 and 2).
-2. **Conflicts between divisions** (GR-05). Owning a testing business that serves competitors creates a confidentiality duty the rest of the group does not have. The barrier is policy only (gap 5).
-3. **Contract eligibility** (DS-003). Distribution has federal contract clauses but has never measured itself against them (gap 4). This is rated High at division level and Moderate at group level (GR-06), because the group exposure is one contract.
+1. **Legacy and acquired assets** (GR-01, GR-02, GR-03). IX-3 predates section 524B and still depends on a software signing key at Plant D, and the 2024 acquisitions brought flat plant networks. These are the "legacy" residual gaps expected at this size (EV-043, EV-044, EV-048).
+2. **Conflicts between divisions** (GR-05). Owning a testing business that serves competitors creates a confidentiality duty the rest of the group does not have. The barrier is policy only (EV-072).
+3. **Contract eligibility** (DS-003). Distribution has federal contract clauses but has never measured itself against them (EV-062). This is rated High at division level and Moderate at group level (GR-06), because the group exposure is one contract.
 
 Shared-service governance gaps (inheritance, notification, AI) are Moderate at group level (GR-04, GR-09, GR-10) but matter because they decide whether the High risks are handled on time. That is why P07 sampled Distribution and Testing controls and P08 builds one multi-regulator matrix.
 

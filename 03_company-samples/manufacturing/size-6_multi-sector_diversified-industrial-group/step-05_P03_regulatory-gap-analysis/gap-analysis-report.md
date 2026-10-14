@@ -11,6 +11,8 @@
 | Assessors | Medical Devices: VP QA/RA and the Chief Product Security Officer (524B, FDA), the DCC HIPAA security official and privacy officer (HIPAA). Distribution: federal contracts compliance director and VP quality and regulatory. Testing: division security and compliance lead and laboratory quality director. Coordinated by the Group Chief Risk Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Medical Devices: section 524B and FDA regulations
 Section 524B(a) covers any person who submits a 510(k), PMA, PDP, De Novo, or HDE for a device that meets the "cyber device" definition in 524B(c): a device that (1) includes software validated, installed, or authorized by the sponsor, (2) can connect to the internet, and (3) has technological characteristics that could be vulnerable to cybersecurity threats. The section took effect 90 days after enactment on 2022-12-29 (Pub. L. 117-328 section 3305(d)).
 
@@ -41,7 +43,7 @@ There is **no size exemption**; the only route is an FDA exemption list under 52
 The Testing division was checked against each rule in the three vertical files:
 - **Federal work and CUI:** none. It holds no federal contracts or subcontracts, so FAR 52.204-21, DFARS 252.204-7012, and CMMC do not apply (decision confirmed by the Group General Counsel on 2026-06-30).
 - **FTC Safeguards Rule (N54-R01):** does not apply. It covers financial institutions, such as tax preparers; the division is not one.
-- **HIPAA (N54-R06):** does not apply by design. Client contracts prohibit PHI. Gap 6 (PHI found in 3 submissions) is analyzed as a risk of becoming a subcontractor business associate without agreeing to it.
+- **HIPAA (N54-R06):** does not apply by design. Client contracts prohibit PHI. PHI found in 3 submissions in 2026 (EV-076) is analyzed as a risk of becoming a subcontractor business associate without agreeing to it.
 - **What does bind it:** client NDAs, its accreditation's confidentiality duties, EAR for client technical data, state breach laws for employee data, and the FTC Act.
 
 With no binding security rule, the division benchmarks itself against **NIST CSF 2.0**, using 24 subcategories chosen for its risks (client confidentiality, the information barrier, the test range, acquired laboratories). Its SP 800-53 references come from NIST's official CSF 2.0 to SP 800-53 mapping.
@@ -62,7 +64,7 @@ With no binding security rule, the division benchmarks itself against **NIST CSF
 | 21 CFR 803 | Manufacturer MDRs (803.50, 803.53) | Distributor complaint files (803.18(d)); importer reports (803.40) | Not applicable | n/a |
 | 21 CFR 806 | Manufacturer corrections and removals | Importer corrections; executes manufacturers' holds | Not applicable | n/a |
 | 21 CFR 807 | Registered manufacturer | Initial importer registration (807.20(a)(5)) | Not applicable | n/a |
-| N62-R01 HIPAA Security Rule; N62-R03 Breach Notification | Applies to the DCC (business associate) | Not applicable (no PHI) | Not applicable by design; gap 6 is a risk | Supports the DCC (common controls) |
+| N62-R01 HIPAA Security Rule; N62-R03 Breach Notification | Applies to the DCC (business associate) | Not applicable (no PHI) | Not applicable by design; PHI found in submissions (EV-076) is a risk | Supports the DCC (common controls) |
 | N42-R04 FAR 52.204-21; N42-R02 CMMC Level 1 | Not applicable (no federal contracts) | **Primary for the division.** VA and DoD contracts | Not applicable (no federal work) | Common controls help meet it |
 | N31-33-R01 / N42-R03 DFARS 252.204-7012 | Not applicable | Clause present; **not triggered** (no CDI) | Not applicable | n/a |
 | N42-R05 FAR 52.204-25 | Not applicable | Applies | Not applicable | Procurement supports it |
@@ -76,7 +78,7 @@ With no binding security rule, the division benchmarks itself against **NIST CSF
 ## 3. Method
 1. **Requirements.** Section 524B rows follow the statute's structure, read from the U.S. Code on 2026-09-26: (a), (b)(1) to (b)(4), (c), (d), and the construction note. FDA regulation rows cite the eCFR (current through 2026-09-23). Guidance rows cite the guidance section. HIPAA rows and their Required or Addressable designations come from NIST SP 800-66 Rev. 2 via the Health Care crosswalk. FAR, DFARS, and CMMC rows use the clause and regulation paragraphs read from the eCFR; CMMC Level 1 identifiers and their SP 800-171 R2 objectives come from 32 CFR 170.15.
 2. **Crosswalk.** NIST has published no mapping for 524B, FDA regulations, or FAR 52.204-21 to CSF 2.0 and SP 800-53, so those rows carry an **author mapping**, labeled as such. HIPAA rows use the Health Care crosswalk (also an author mapping), with NIST's official OLIR controls shown for comparison. Testing rows use NIST's **official** CSF 2.0 to SP 800-53 mapping.
-3. **Evidence.** Interviews with each division's security, regulatory, contracts, and quality leads; document review (submissions, procedures, BAAs, contracts, NDAs); configuration exports; and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts and inventories, EV-001 to EV-079), gap analysis interviews with each division's security, regulatory, contracts, and quality leads (EV-088 Medical Devices, EV-089 Distribution, EV-090 Testing), fieldwork documents and samples (EV-091 to EV-099), and P07 test results (EV-100 and the P07 evidence IDs such as EV-D-SC12). The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gaps rated on the P01 risk scale.
 
 ## 4. Results
@@ -113,21 +115,21 @@ The 11 unmet or partially met rows break down by gap risk as 2 High, 7 Moderate,
 
 The 13 unmet or partially met rows break down by gap risk as 3 High, 8 Moderate, and 2 Low.
 
-**Not met:** PR.AA-05 (the information barrier is broken by a collaboration space open to 212 Medical Devices engineers) and DE.CM-03 (no monitoring of cross-division access). Both are gap 5 and GR-05 in P01.
+**Not met:** PR.AA-05 (the information barrier is broken by a collaboration space open to 212 Medical Devices engineers) and DE.CM-03 (no monitoring of cross-division access). Both trace to the shared collaboration space (EV-072) and GR-05 in P01.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+| # | Gap (evidence) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
-| 1 | IX-3 signing key outside the HSM service (1) | MD | 21 CFR 820.10(c); SPDF procedure | High | HSM signing or planned key transition (POAM-003) | VP Engineering | 2027-03-31 |
-| 2 | IX-3 legacy lifecycle: no SBOM, end of support June 2027, 58% update adoption (1) | MD, DS | FDA postmarket guidance; 21 CFR 806 | High | End-of-support plan, SBOM by binary analysis, field campaign with Distribution (POAM-008, POAM-012, POAM-020) | Medical Devices division president | 2027-06-30 |
-| 3 | No CMMC Level 1 self-assessment; FCI boundary undefined (4) | DS | 48 CFR 52.204-21; 32 CFR 170.15 | High | FCI enclave; close FAR rows; self-assess and affirm in SPRS (POAM-021) | Distribution federal contracts compliance director | 2027-02-28 |
-| 4 | Testing information barrier not enforced (5) | TS, MD | CSF 2.0 PR.AA-05, DE.CM-03; client NDAs | High | Close the shared space; barrier groups; SOC alerts (POAM-010) | Testing division president | 2026-12-31 |
-| 5 | Independence of intercompany tests not documented (5) | TS, MD | FDA premarket guidance V.C; CSF ID.IM-01 | Moderate | Signed independence statements; outside tester for the IX-3 fix (POAM-011) | VP Quality and Regulatory Affairs | 2026-11-30 |
-| 6 | Device-to-breach decision point and BAA terms register (7) | MD | 164.308(a)(6)(ii); 164.314(a)(2)(i); 164.410; 820.35(a); 803.50 | Moderate | Joint PSIRT and complaint workflow; 164.402 step; complete the register (POAM-023) | VP Quality and Regulatory Affairs | 2026-12-31 |
-| 7 | Cyber complaints not captured by the distributor and importer (7) | DS | 803.18(d)(1); 803.40 | Moderate | Intake prompts; daily importer review (POAM-022) | Distribution VP quality and regulatory | 2026-12-31 |
-| 8 | PHI in client submissions (6) | TS | CSF ID.AM-07, GV.OC-03 | Moderate | Intake scanning and quarantine (POAM-017) | Testing laboratory quality director | 2026-12-31 |
-| 9 | Generative AI drafting tool on client data (8) | TS | CSF GV.SC-05, PR.DS-10 | Moderate | Client consent clause; restrict use (POAM-018) | Testing laboratory quality director | 2026-11-30 |
-| 10 | Supplier SBOM data and hospital administrator MFA (9) | MD | 524B(b)(1), (b)(2), (b)(3) | Moderate | Supplier SBOM enforcement (POAM-007); MFA for hospital administrators (MD-028) | Chief Product Security Officer | 2027-06-30 |
+| 1 | IX-3 signing key outside the HSM service (EV-044) | MD | 21 CFR 820.10(c); SPDF procedure | High | HSM signing or planned key transition (POAM-003) | VP Engineering | 2027-03-31 |
+| 2 | IX-3 legacy lifecycle: no SBOM, end of support June 2027, 58% update adoption (EV-040, EV-042, EV-043) | MD, DS | FDA postmarket guidance; 21 CFR 806 | High | End-of-support plan, SBOM by binary analysis, field campaign with Distribution (POAM-008, POAM-012, POAM-020) | Medical Devices division president | 2027-06-30 |
+| 3 | No CMMC Level 1 self-assessment; FCI boundary undefined (EV-062, EV-093) | DS | 48 CFR 52.204-21; 32 CFR 170.15 | High | FCI enclave; close FAR rows; self-assess and affirm in SPRS (POAM-021) | Distribution federal contracts compliance director | 2027-02-28 |
+| 4 | Testing information barrier not enforced (EV-072) | TS, MD | CSF 2.0 PR.AA-05, DE.CM-03; client NDAs | High | Close the shared space; barrier groups; SOC alerts (POAM-010) | Testing division president | 2026-12-31 |
+| 5 | Independence of intercompany tests not documented (EV-077) | TS, MD | FDA premarket guidance V.C; CSF ID.IM-01 | Moderate | Signed independence statements; outside tester for the IX-3 fix (POAM-011) | VP Quality and Regulatory Affairs | 2026-11-30 |
+| 6 | Device-to-breach decision point and BAA terms register (EV-039, EV-053) | MD | 164.308(a)(6)(ii); 164.314(a)(2)(i); 164.410; 820.35(a); 803.50 | Moderate | Joint PSIRT and complaint workflow; 164.402 step; complete the register (POAM-023) | VP Quality and Regulatory Affairs | 2026-12-31 |
+| 7 | Cyber complaints not captured by the distributor and importer (EV-064, EV-095) | DS | 803.18(d)(1); 803.40 | Moderate | Intake prompts; daily importer review (POAM-022) | Distribution VP quality and regulatory | 2026-12-31 |
+| 8 | PHI in client submissions (EV-076) | TS | CSF ID.AM-07, GV.OC-03 | Moderate | Intake scanning and quarantine (POAM-017) | Testing laboratory quality director | 2026-12-31 |
+| 9 | Generative AI drafting tool on client data (EV-078) | TS | CSF GV.SC-05, PR.DS-10 | Moderate | Client consent clause; restrict use (POAM-018) | Testing laboratory quality director | 2026-11-30 |
+| 10 | Supplier SBOM data and hospital administrator MFA (EV-040, EV-055) | MD | 524B(b)(1), (b)(2), (b)(3) | Moderate | Supplier SBOM enforcement (POAM-007); MFA for hospital administrators (MD-028) | Chief Product Security Officer | 2027-06-30 |
 
 High and Moderate gaps are carried into the registers (P01) and the POA&M (P07; POAM-017, POAM-018, and POAM-020 to POAM-023 trace directly to this analysis).
 

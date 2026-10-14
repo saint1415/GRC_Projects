@@ -1,0 +1,32 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS/PaaS: landing zone, DCC, Testing client portal and findings vault, DEMS build agents and repositories",SYS-G3; SYS-D1; SYS-D2; SYS-D6,PHI (DCC); client confidential data; build artifacts,Customer agreement; subcontractor BAA for the DCC,SOC 2 Type 2,EV-020; EV-029; EV-053,Group
+V-02,Cloud provider B,DCC disaster recovery; immutable backup vault,SYS-G3; SYS-D2,PHI (DCC); backups,Customer agreement; subcontractor BAA for the DCC,SOC 2 Type 2,EV-020; EV-023; EV-029; EV-053,Group
+V-03,Identity SaaS vendor,"SSO, MFA, PAM, identity governance",SYS-G1,Workforce and guest identities,Subscription terms,SOC 2 Type 2,EV-028; EV-029,Group
+V-04,SIEM and EDR vendors,Security monitoring and endpoint protection,SYS-G2,Security logs,Subscription terms,Not among the reports on file,EV-028,Group
+V-05,Forensic retainer firm,Incident response support,SYS-G2,Incident data when engaged,Retainer agreement,Not among the reports on file,EV-028,Group
+V-06,Carriers,WAN links and cellular failover,NET-WAN,Encrypted traffic,Carrier contracts,Not among the reports on file,EV-021; EV-028,Group
+V-07,Colocation data center provider,Hosting for the distribution ERP and warehouse database,NET-WAN; SYS-D4,FCI and order data on hosted equipment,Colocation agreement,Not among the reports on file,EV-021; EV-066,Group and Distribution
+V-08,ERP and HR SaaS vendors; payroll provider; SEC filing agent,"Finance, procurement, HR, payroll, SEC filings",SYS-G4,Financial and workforce data,Subscription and service terms,Not among the reports on file,EV-028,Group
+V-09,PLM vendor,Product lifecycle management (SaaS) with supplier portal,SYS-D1,Design files; EAR-controlled technical data,Subscription terms,"SOC 2 Type 2, reviewed each year",EV-028; EV-029,Medical Devices
+V-10,Source hosting vendor,Source repositories (SaaS),SYS-D1,Source code,Subscription terms,"SOC 2 Type 2, reviewed each year",EV-028; EV-029,Medical Devices
+V-11,HSM vendor,Hardware security modules at Plants A and B,SYS-D1,None (keys stay in the HSMs),Purchase and support terms,Validated cryptographic module certificates,EV-044,Medical Devices
+V-12,MES vendor,MES software and remote support,SYS-D1-MES,MES data,Support agreement; access only through PAM,Not among the reports on file,EV-013; EV-028,Medical Devices
+V-13,Contract manufacturers and component suppliers,Contract manufacturing; software and electronic components,SYS-D1,Drawings; bills of materials; component and SBOM data,Supply agreements (2025 template with SBOM and vulnerability notice clauses),Supplier assessments every 2 years for critical suppliers,EV-012; EV-028; EV-040; EV-052,Medical Devices. 164 PLM guest accounts; access last reviewed 2024
+V-14,eQMS SaaS vendor,Electronic quality management system,SYS-D3,"Complaint, MDR and correction records",Subscription terms,Not among the reports on file,EV-058; EV-064,Medical Devices and Distribution
+V-15,Support ticketing vendor,DCC and hospital technical support desk,SYS-D2,PHI in tickets,Subcontractor BAA,Carve-out subservice organization in the DCC SOC 2 report,EV-053; EV-054,Medical Devices
+V-16,Log analytics vendor,DCC log analytics,SYS-D2,PHI in logs,Subcontractor BAA,Carve-out subservice organization in the DCC SOC 2 report,EV-053; EV-054,Medical Devices
+V-17,ISAO (health sector),Vulnerability and threat information sharing,n/a,Vulnerability information,Membership since 2023,n/a,EV-039,Medical Devices
+V-18,AI-001 partner sites (11),Cardiac ultrasound clips for AI-001 training and testing,AI-001,De-identified clips,De-identification attestations from all 11 sites,n/a,EV-060,Medical Devices
+V-19,EDI network provider,Value-added network for supplier and customer EDI,SYS-D4,Orders; invoices; advance ship notices,Connection agreements,"SOC report, reviewed each year",EV-028; EV-029; EV-066,Distribution
+V-20,Distribution center automation vendor,"Automation support (remote, through PAM)",SYS-D5,Sortation control data,Support agreement,Not among the reports on file,EV-013; EV-068,Distribution
+V-21,Regional courier subcontractors (2),Deliveries to federal facilities,SYS-D4,Delivery schedules for federal facilities (FCI),Subcontracts without a FAR 52.204-21 flowdown clause,Not among the reports on file,EV-094,Distribution
+V-22,Foreign manufacturers (6 importer product lines),Imported product lines,n/a,Product and complaint data,Supply agreements,n/a,EV-063,Distribution
+V-23,LIMS vendor,Laboratory information management system (SaaS),SYS-D6,Client test data,Subscription terms with security terms,SOC 2 Type 2,EV-028; EV-029,Testing
+V-24,Calibration vendors,Calibration of laboratory test equipment,SYS-D6,Instrument data,Service agreements,Not among the reports on file,EV-028,Testing
+V-25,Coding assistant vendor,Engineering coding assistant,AI-003,Source code,Enterprise terms with no training on company data,Not among the reports on file,EV-030,Medical Devices
+V-26,Conversational AI vendor,Ordering portal chatbot,AI-005,Customer contacts; order data,Service terms,Not among the reports on file,EV-030,Distribution
+V-27,Supply chain planning SaaS vendor,Demand forecasting module,AI-004,Order history; supplier lead times,Subscription terms,Not among the reports on file,EV-030,Distribution
+V-28,Generative AI service vendor (Testing),Report drafting tool,AI-006,Client test data and findings,Enterprise terms with no training on customer data; no client consent terms,Not among the reports on file,EV-030; EV-078,Testing
+V-29,Enterprise AI assistant vendor,Workforce generative AI assistant,AI-009,Internal documents,Enterprise terms with no training on customer data,Not among the reports on file,EV-030,Group
+V-30,HR technology vendor,Applicant screening and ranking (proposed),AI-008,Applicant personal information,Not contracted (proposed),Not among the reports on file,EV-030,Group
+V-31,Cyber insurer,Cyber insurance,n/a,Incident facts when a claim is made,Policy in force for 2026,n/a,EV-034,Group
