@@ -13,7 +13,7 @@
 | Approved | 2026-08-31 by the Owner |
 
 ## 1. Applicability
-Applicability comes first, because for a 7-person shop the most useful finding is which duties are real and which are not.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result and the reasoning for the rules analyzed here. Applicability comes first, because for a 7-person shop the most useful finding is which duties are real and which are not.
 
 ### 1.1 No binding sector cyber rule
 Critical manufacturing has no sector-wide federal cybersecurity regulation. The vertical registry lists four requirements, and each was checked against the shop's facts:
@@ -60,7 +60,7 @@ With no binding cyber rule, the shop needs a yardstick that covers both the offi
 2. **Crosswalk.**
    - CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). Where only part of a long mapping is listed, the `crosswalk_source` column says "subset." Where an OT control was added from the SP 800-82 Rev. 3 overlay (for example MA-4 on PR.AA-03), the column names it as an author addition.
    - FAR, exhibit, Florida, and applicability rows are **author mappings**, labeled as such.
-3. **Documentary evidence.** Each status rests on a named document or record: the federal purchase order and the cooperative agreement, the ERP user and role lists, the suite user export, sharing report, and permission report, the MSP's device list, patch report, antivirus export, encryption report, and backup job report, the firewall rule export, the Wi-Fi settings, the reasonable inquiry worksheet, and the leaver record for the former Field Service Technician. Interviews covered all 7 employees and the MSP lead technician.
+3. **Documentary evidence.** Each status rests on a named document or record from intake (2026-06-29 to 2026-07-10): the federal purchase order and the cooperative agreement and exhibit (EV-021, EV-019), the ERP user and role lists and settings (EV-003, EV-004), the suite user and settings exports (EV-005, EV-006), the MSP's device list, policy and encryption report, monthly report, antivirus export, network and Wi-Fi settings, backup job report and ticket history (EV-009 to EV-015), the MSP contract (EV-016), the test PC walk-through (EV-029), the leaver record for the former Field Service Technician (EV-002), the designation letter (EV-026) and the key list (EV-035). Fieldwork added the account comparison of 2026-07-15 (EV-042), the cooperative notice of 2026-07-16 (EV-043), interviews with all 7 employees and the MSP lead technician (EV-044), the shop walkthrough and the FAR 52.204-25 reasonable inquiry on 2026-07-14 (EV-045, EV-046), the contract folder review and the sharing and permission report on 2026-07-15 (EV-047, EV-048), the camera replacement record (EV-049), and the MSP's confirmation of 2026-07-21 that no backup had been tested (EV-050). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable **as of the end of fieldwork (2026-07-24)**. One exception: G-049 (FAR (b)(1)(xi)) was re-rated on 2026-08-12 after P07 testing found the test PC exposed to the internet. Actions completed since fieldwork are noted in the remediation column but do not change the status. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary
