@@ -11,7 +11,7 @@
 | Also supports | CISA RBPS 8 measure "conduct recurring audits" (P03 G-013, voluntary benchmark); POL-01 4.9 |
 
 ## 1. Scope and controls selected
-Small tier scope: 15-25 controls. **22 controls, 181 determination statements.** Controls were chosen because they address the four High risks in P01 (R-001, R-002, R-006, R-007), the High gaps in P03, or the OT gaps listed in `../00_company-facts.md` section 4.
+Small tier scope: 15-25 controls. **22 controls, 181 determination statements.** Controls were chosen because they address the four High risks in P01 (R-001, R-002, R-006, R-007), the High gaps in P03, or the OT observations recorded at [intake](../step-00_P00_intake/intake-report.md).
 
 | Control | Why selected | Depth | Coverage |
 |---|---|---|---|
@@ -38,6 +38,17 @@ Small tier scope: 15-25 controls. **22 controls, 181 determination statements.**
   - default credential test on the loading rack PLC, with the rack idle
   - a call test from the control room with the business network switch unplugged
   - a harmless antivirus test file on an office PC and a historian client
+
+### What each test could show
+The new policies (P06) and the P08 runbook were drafts during fieldwork; they were approved on 2026-09-04. They were reviewed as drafts, for design only. A control that a draft policy introduces has not operated yet, so it can only be reviewed for design. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples, live systems, or the maintenance-day OT tests | 64 |
+| Design | The control is new (the 2026 BIA, or the draft POL-03 and P08 runbook); its design was reviewed. Operation is tested at the next annual review (BIA) or the 2027-03 follow-up (runbook) | 2 |
+| Not implemented | Nothing existed to test, including every statement of the 10 fully other-than-satisfied controls | 115 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 6 sampled termination tickets come from the 14 terminations in EV-003 and EV-004, and the DCS accounts and rack cards were checked against the full lists in EV-006 and EV-007).
 
 ## 3. Rules of engagement
 - **No active scanning of the control or SIS networks.** Only passive capture, per SP 800-82 Rev. 3 guidance that active scans can disrupt OT devices.

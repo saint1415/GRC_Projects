@@ -1,0 +1,19 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,"IaaS/PaaS for the 5-account landing zone, LIMS, TTRS and backups",SYS-10; SYS-11; SYS-12,Formulations; SSI on file services; TTRS data; backups,Customer agreement,"SOC 2 Type 2, 12 months ending 2026-03-31 (reviewed 2026-06-18)",EV-043; EV-044; EV-046,Sub-service organization for TTRS
+V-02,ERP vendor,Enterprise resource planning,SYS-09,Orders; inventory; shipping papers; customer data,Subscription agreement,"SOC 2 Type 2, 12 months ending 2026-03-31 (reviewed 2026-06-20); RTO 8 hours and RPO 1 hour stated",EV-043; EV-044; EV-046,
+V-03,Identity provider vendor,SSO and MFA,SYS-13,Workforce identities,Subscription terms,"SOC 2 Type 2, 12 months ending 2026-04-30 (review completed 2026-07-08)",EV-043; EV-046; EV-058,
+V-04,Managed security service provider (MSSP),SIEM and 24x7 IT monitoring,SYS-16,Security logs,Contract and statement of work (OT excluded); call within 30 minutes on high severity,None reviewed at intake,EV-022; EV-043; EV-045,
+V-05,Productivity suite vendor,"Email, files, chat and the generative AI assistant (AI-002)",SYS-14,Internal documents; employee data,Subscription terms,None reviewed at intake,EV-043; EV-049,
+V-06,HR and payroll vendor,HR and payroll SaaS,SYS-18,Employee personal information,Contract with breach notice within 72 hours,None reviewed at intake,EV-043; EV-045,Third-party agent under Fla. Stat. 501.171(6)
+V-07,Fleet and transportation management vendor,Dispatch and telematics,SYS-19,Routes; telematics,Subscription terms,None reviewed at intake,EV-043; EV-044,
+V-08,TTRS gateway maker,Device management service for the cellular gateways,SYS-12,Gateway telemetry and configuration,Supply and service agreement,None on file,EV-043; EV-054,
+V-09,Cellular carrier,Connectivity for the 420 TTRS gateways,SYS-12,Telemetry in transit,Carrier terms,None on file,EV-043; EV-054,
+V-10,Community notification service vendor,Shelter-in-place and evacuation messages (SaaS),n/a,Community contact lists,Subscription terms,None reviewed at intake,EV-039; EV-043,
+V-11,AI-005 regulatory authoring tool vendor,SDS drafting with a generative AI feature,SYS-20 (AI-005),Formulations; hazard classification data,Subscription terms,None reviewed at intake,EV-043; EV-056,Pilot since 2026-05
+V-12,DCS vendor,"DCS software, spares, security notices and OT incident response service",SYS-01; SYS-02,DCS configuration during support,Supply agreement; incident response service schedule,Not applicable (OT supplier),EV-016; EV-043; EV-045,
+V-13,DCS integrator,Remote (gateway) and on-site DCS support,SYS-01; SYS-02; SYS-07,Configuration; logic; diagnostics,Service agreement,Not applicable (OT service provider); no review after onboarding,EV-009; EV-043; EV-044; EV-066,
+V-14,SIS vendor,SIS diagnostics remotely; logic changes on site under MOC,SYS-03; SYS-07,SIS diagnostics,Service agreement,Not applicable (OT service provider); no review after onboarding,EV-009; EV-043; EV-044; EV-066,
+V-15,Tank gauging vendor,Radar tank gauging configuration and diagnostics,SYS-04; SYS-07,Gauge configuration,Service agreement,Not applicable (OT service provider); no review after onboarding,EV-009; EV-043; EV-044; EV-066,
+V-16,Inland plant controls integrator,PLC and SCADA support for the Inland plant,SYS-08,PLC programs (2023 project files),Service agreement,Not applicable (OT service provider); no review after onboarding,EV-007; EV-015; EV-043; EV-066,Always-on remote desktop tool on the SCADA server
+V-17,Cyber insurer,Cyber insurance with a forensics and breach counsel panel,n/a,Incident information when a claim is made,"Policy: $15 million limit, $500,000 retention",n/a,EV-042,
+V-18,Co-sourced internal audit firm (with an OT specialist subcontractor),Annual IT audit; control assessment (P07),n/a,Audit evidence,Engagement letter,n/a,EV-033,

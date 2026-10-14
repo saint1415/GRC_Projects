@@ -75,6 +75,8 @@ NIST SP 800-60 Vol. 2 Rev. 1 has no information type for industrial process cont
 - **Not documented at this tier.** Other High-baseline controls are either inherited from the cloud and SaaS providers for the interfaces in section 8 (P04, P09) or recorded as out of scope because they apply only to federal systems (for example, PM-series controls beyond PM-2 and PM-9).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - the DCS (SYS-01) and batch management system (SYS-02)
 - the SIS (SYS-03)
@@ -125,7 +127,7 @@ flowchart TB
   CLOUD -->|production orders| FW
 ```
 
-Dotted lines are the unmanaged paths found in 2026 (gaps 2, 3, and 15). **Target design (2027-01-31):** an OT DMZ between the firewall and the supervisory network holds the remote access gateway, a historian replica, and the order interface relay. No direct business-to-control traffic. The historian's second network card is removed.
+Dotted lines are the unmanaged paths found in 2026 (EV-011, EV-012, and EV-CM-5). **Target design (2027-01-31):** an OT DMZ between the firewall and the supervisory network holds the remote access gateway, a historian replica, and the order interface relay. No direct business-to-control traffic. The historian's second network card is removed.
 
 **Connection register (summary).** This register was built during fieldwork; the full version with ports and owners is due 2026-11-30 (CA-9).
 
@@ -185,6 +187,7 @@ See `control-implementation.csv`. Summary of 68 controls:
 
 ## 12. Referenced Artifacts
 - Scenario facts (`../00_company-facts.md`)
+- Intake evidence, inventories, and obligations register ([step-00](../step-00_P00_intake/intake-report.md))
 - Risk register (P01)
 - Gap analysis (P03)
 - Cloud control map (P04)

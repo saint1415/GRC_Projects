@@ -11,7 +11,7 @@
 | Approved | 2026-09-04 by the VP Operations (Moderate and below) and the CEO (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The whole plant: the Process Control and Batch Management System (PCBMS, P02), the business systems in the BIA (P05), the cloud tenant (P04), and the vendors with access to them (`../00_company-facts.md` section 3).
+**Scope.** The whole plant: the Process Control and Batch Management System (PCBMS, P02), the business systems in the BIA (P05), the cloud tenant (P04), and the vendors with access to them ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept, with the Controls Engineer for OT risks.
@@ -22,8 +22,8 @@
 **How impact was rated for OT.** Impact follows Table H-3 and the BIA categories. For the aqueous ammonia process, the worst credible outcome is a toxic release. The independent SIS lowers the *likelihood of adverse impact* (it trips on high level and high pressure regardless of the DCS). It does not lower the *impact* if the SIS itself is defeated. That is why R-007 is rated Very High impact.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and safety considerations, sec. 5.3.1), the P08 scenario (intrusion into process control systems), interviews with the Plant Manager, Controls Engineer, EHS Manager, Process Engineer, and Shift Supervisors, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 (OT threats and safety considerations, sec. 5.3.1), the P08 scenario (intrusion into process control systems), the intake evidence, risk interviews with the Plant Manager, Controls Engineer, EHS Manager, Process Engineer, and Controller (EV-048), and the Shift Supervisor interviews held for the gap analysis (EV-049). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, document reviews, the walkthrough and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -48,7 +48,7 @@
 
 The four High risks share one theme: **an attacker who reaches the business network can reach the process controls, and the plant could not rebuild them quickly.** The remote access path (R-001) and the dual-homed historian (R-002) are the ways in. The SIS engineering path (R-007) is the way to defeat the last safeguard. The untested backups (R-006) mean there is no fast way back. Fixing these four also reduces seven related Moderate risks (R-004, R-005, R-008, R-009, R-010, R-029, R-030).
 
-R-007 was added on 2026-08-14 after control assessment testing (P07) found the SIS keyswitch in the remote program position. The Controls Engineer returned it to run and locked it on 2026-08-12, the day it was found.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-007 was added on 2026-08-14 after testing found the SIS keyswitch in the remote program position (EV-CM-5). The Controls Engineer returned it to run and locked it on 2026-08-12, the day it was found. The `assessment_pass` column shows which pass produced each risk.
 
 **Inherently safer option noted (not chosen).** Switching from 29% to 19% aqueous ammonia would take the process out of RMP coverage (the listing is "Ammonia (conc 20% or greater)", 40 CFR 68.130). The Process Engineer found it would require reformulating 60 products and nearly double deliveries. It stays on the 2027 review list.
 

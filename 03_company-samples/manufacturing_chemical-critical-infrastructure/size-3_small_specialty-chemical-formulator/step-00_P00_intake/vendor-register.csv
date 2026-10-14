@@ -1,0 +1,16 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,ERP SaaS vendor,Enterprise resource planning,SYS-08,Orders; inventory; bills of materials; customer data,Subscription agreement with confidentiality terms; no incident notice clause,"SOC 2 Type 2, 12 months ending 2026-03-31",EV-037; EV-038; EV-039,Critical business system; reviewed in P09 Part B
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-11,Workforce identities,Subscription terms,None on file,EV-037,
+V-03,Productivity suite vendor,"Email, files, chat",SYS-12,Email; files,Subscription terms,None on file,EV-037,
+V-04,Public cloud provider,"IaaS/PaaS for the LIMS, order interface, historian replica, AI-001, file shares, backups and logs",SYS-09; SYS-10; SYS-16,Formulation data; historian replica; files including legacy CVI,Customer agreement,SOC 2 report and shared responsibility documentation from the provider portal,EV-037; EV-040,
+V-05,HR and payroll SaaS vendor,"HR, payroll and background check records",SYS-15,Employee personal information,Contract,None on file,EV-037; EV-038,
+V-06,LIMS software vendor,LIMS application and quarterly updates,SYS-09,QC results (through updates and support),Support terms,None on file,EV-037,
+V-07,DCS vendor,"DCS and batch management software, updates and support",SYS-01; SYS-02,Configuration (through support cases and update media),Support contract,None on file,EV-015; EV-037; EV-038,Security notices go to a former employee's mailbox
+V-08,DCS integrator (contracted),Remote and on-site support of the DCS and batch management system,SYS-01; SYS-02; SYS-07,Configuration; logic; diagnostics,"Service agreement with a confidentiality clause; no security, remote access, screening or incident notice terms",None on file,EV-012; EV-037; EV-038,Always-on remote desktop tool on the EWS with one shared login
+V-09,Data science contractor,Built and supports AI-001,SYS-10; SYS-16,Historian replica data; batch records; QC results,Agreement with no security clauses,None on file,EV-037; EV-038; EV-045,
+V-10,SIS vendor field service,SIS support and proof test assistance,SYS-03,Safety logic (on site),Service terms,None on file,EV-035; EV-037,
+V-11,Security guard contractor,Day-shift gate guard,SYS-14,Badge and visitor records (on site),Guard services contract,None on file,EV-016; EV-037,
+V-12,Paper shredding vendor,Office paper destruction,n/a,Paper records,Service agreement,Monthly certificates of destruction,EV-037; EV-046,
+V-13,Internet provider,Single internet connection for the plant,SYS-08; SYS-09; SYS-10; SYS-12,Network traffic,Service agreement,None on file,EV-037,Only internet provider
+V-14,Cellular carrier,Mobile phone service,BP-09 notification path,Calls,Service agreement,None on file,EV-037,
+V-15,Cyber insurer,"Cyber insurance; breach hotline, panel counsel and forensic firms",n/a,Incident details if a claim is made,Insurance policy,n/a,EV-037; EV-044,

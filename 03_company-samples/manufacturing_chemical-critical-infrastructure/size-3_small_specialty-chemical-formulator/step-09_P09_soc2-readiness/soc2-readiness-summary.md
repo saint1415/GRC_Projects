@@ -21,7 +21,7 @@ SOC 2 still matters for two reasons:
 - **Availability and Confidentiality** were considered and left out because the customer did not ask for them. Supply continuity is covered by the BIA (P05), and formulations by the supply agreement and POL-04.
 - **Processing Integrity and Privacy** do not apply.
 
-**B. Third-party risk management (vendor report review).** The ERP is a critical business system: it holds orders, inventory (including hydrogen peroxide), and bills of materials. The ERP vendor is a service organization, and its SOC 2 Type 2 report is the evidence for the controls the company inherits (P02, P04). The report had never been reviewed before this project (gap 14). It is now reviewed every year (POL-01 4.8; SA-9).
+**B. Third-party risk management (vendor report review).** The ERP is a critical business system: it holds orders, inventory (including hydrogen peroxide), and bills of materials. The ERP vendor is a service organization, and its SOC 2 Type 2 report is the evidence for the controls the company inherits (P02, P04). The report had never been reviewed before this project (EV-039). It is now reviewed every year (POL-01 4.8; SA-9).
 
 ## 2. System description (scope)
 - **Services:** manufacture, packaging, and delivery of specialty chemical products, including private-label and toll blending for about 600 business customers.
