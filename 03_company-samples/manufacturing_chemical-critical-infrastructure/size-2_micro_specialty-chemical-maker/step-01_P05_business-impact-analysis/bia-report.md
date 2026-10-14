@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (specialty chemical maker) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, with OT recovery considerations from NIST SP 800-82 Rev. 3 (sec. 6.2.4.3 Backups; sec. 6.5.1 Recovery Planning)
 **Prepared by:** Office Manager (Security Coordinator) with the Owner, the Operations Manager, the QC Technician, the Warehouse and Shipping Lead, the MSP lead technician, and the control system integrator, 2026-07-13 to 2026-07-24 | **Approved:** Owner and President, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-043), FY2025 revenue, customer and cash report (EV-035), Q2 2026 order and invoice report (EV-036), integrator statement on its 2023 copy (EV-010), recipe export log (EV-011), emergency action plan (EV-029), accounting vendor SOC 2 report (EV-022), MSP service contract (EV-019), integrator service agreement (EV-020), internet and phone agreements (EV-033). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner and President.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It supports:
 - the recovery and contingency expectations of CFATS RBPS 8 guidance and NIST CSF 2.0 (RC.RP), used here as a voluntary benchmark (P03);
@@ -11,15 +13,15 @@ This BIA lists every business function of the company, how long each can be down
 - impact ratings in the risk register (P01);
 - the recovery order in the incident response runbook (P08).
 
-No federal rule requires this company to have a contingency plan. EPA RMP and OSHA PSM do not apply (`../00_company-facts.md`, threshold math), and CFATS is lapsed. The BIA is done because the company cannot ship without its systems, and because its largest customer asked about continuity of supply (P09).
+No federal rule requires this company to have a contingency plan. EPA RMP and OSHA PSM do not apply (intake [obligations register](../step-00_P00_intake/obligations-register.csv), from the chemical quantities in EV-027), and CFATS is lapsed. The BIA is done because the company cannot ship without its systems, and because its largest customer asked about continuity of supply (P09).
 
 ## 2. System and business description
-One Florida unit with 7 employees blends about 4 batches a day and ships 2 to 4 LTL loads a day. Batching runs on one PLC with an HMI and recipe PC (SYS-01, SYS-02), supported remotely by the control system integrator through a cellular gateway and cloud portal (SYS-03). The business runs on SaaS: the productivity suite (SYS-06), the accounting and inventory service (SYS-07), and the SDS and label service (SYS-08). The MSP runs the office network, endpoints, and the cloud backup (SYS-04, SYS-05, SYS-09). See `../00_company-facts.md` sections 1 to 3.
+One Florida unit with 7 employees blends about 4 batches a day and ships 2 to 4 LTL loads a day. Batching runs on one PLC with an HMI and recipe PC (SYS-01, SYS-02), supported remotely by the control system integrator through a cellular gateway and cloud portal (SYS-03). The business runs on SaaS: the productivity suite (SYS-06), the accounting and inventory service (SYS-07), and the SDS and label service (SYS-08). The MSP runs the office network, endpoints, and the cloud backup (SYS-04, SYS-05, SYS-09). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **Safety comes before recovery time.** If the HMI or PLC cannot be trusted, the first objective is a safe state: dosing pumps off, the T-1 heater off, and any partial batch held. The hardwired emergency stop and high-temperature cutout work without the PLC. Restarting automatic dosing of hydrogen peroxide on an untrusted HMI is not an acceptable workaround.
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 of shipments per production day.
+Dollar values are scaled to about $1.1 million in annual revenue across 250 production days, about $4,400 of shipments per production day (EV-035).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -47,7 +49,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 o
 - **BP-04 drives revenue.** Finished goods on the shelf can ship for about 3 days without blending, but only if shipping papers can be produced and the ERI provider holds current SDS information.
 - **BP-01 is limited by recipes and configuration, not hardware.** A replacement panel PC can be bought in 2 days. What cannot be replaced quickly is a clean, verified copy of the PLC program, HMI project, and 85 recipes.
 
-**Key finding: the 24-hour RTO for BP-01 is unproven.** The only copies of the PLC program and HMI project are the integrator's 2023 files on its own laptop, and the newest recipe copy is a monthly USB export. Nothing has ever been restored (gap 4; risk R-005; POAM-004). After a destructive attack on the HMI PC, the realistic recovery time today is **1 to 2 weeks**: the integrator would rebuild from its 2023 files, and the Owner would re-enter changed recipes from the paper formulation binder.
+**Key finding: the 24-hour RTO for BP-01 is unproven.** The only copies of the PLC program and HMI project are the integrator's 2023 files on its own laptop, and the newest recipe copy is a monthly USB export. Nothing has ever been restored (EV-010, EV-011; risk R-005; POAM-004). After a destructive attack on the HMI PC, the realistic recovery time today is **1 to 2 weeks**: the integrator would rebuild from its 2023 files, and the Owner would re-enter changed recipes from the paper formulation binder.
 
 ## 5. Resource requirements and vendor dependencies
 | Resource | Description | Recovery method behind the RPO | Supports |
@@ -58,7 +60,7 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 o
 | SYS-04 Office network and phones | Firewall, Wi-Fi, internet line, phone service | MSP keeps the firewall configuration | All; BP-07 call list |
 | SYS-05 Endpoints | 4 laptops, 2 desktops, 1 tablet | No unique data by design; MSP reimages | All |
 | SYS-06 Productivity suite | Email, shared drive, formulations folder | Vendor resilience plus daily copy to SYS-09 | BP-03, BP-05, BP-06 |
-| SYS-07 Accounting and inventory service | Orders, lots, invoices, bills of lading | Vendor replication (SOC 2 report states RPO 1 h, RTO 8 h; see P09) | BP-03, BP-04, BP-08, BP-09 |
+| SYS-07 Accounting and inventory service | Orders, lots, invoices, bills of lading | Vendor replication (SOC 2 report states RPO 1 h, RTO 8 h, EV-022; see P09) | BP-03, BP-04, BP-08, BP-09 |
 | SYS-08 SDS and label service | SDSs and labels for 85 products | Vendor backups; SDS PDFs also held by the ERI provider | BP-02, BP-04, BP-06 |
 | SYS-09 Cloud backup (MSP-operated) | Daily copy of the suite, 30 days of versions | **Never restore-tested** | BP-06 |
 | People | 7 employees; the Operations Manager is the only person who can run the HMI's engineering functions | Cross-training: the Owner can run simple batches; the integrator for anything else | All |
@@ -66,12 +68,12 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $4,400 o
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Evidence of recovery capability |
 |---|---|---|
-| Control system integrator | Recovery of SYS-01 and SYS-02 | No written support commitment; the service agreement has no response or recovery time |
-| MSP | Recovery of the office network and endpoints; operates the backup | Contract has a 4-business-hour response time and no recovery time commitment |
-| Accounting and inventory service vendor | BP-03, BP-04, BP-08 | SOC 2 Type 2 report reviewed (P09); stated RTO 8 h and RPO 1 h meet this BIA |
+| Control system integrator | Recovery of SYS-01 and SYS-02 | No written support commitment; the service agreement has no response or recovery time (EV-020) |
+| MSP | Recovery of the office network and endpoints; operates the backup | Contract has a 4-business-hour response time and no recovery time commitment (EV-019) |
+| Accounting and inventory service vendor | BP-03, BP-04, BP-08 | SOC 2 Type 2 report (EV-022) reviewed (P09); stated RTO 8 h and RPO 1 h meet this BIA |
 | SDS and label service vendor | BP-02, BP-06 | Standard terms only |
 | 24-hour ERI provider | BP-04 (legally required emergency number) | Contract; the provider must receive current SDS information before product is offered (172.604(b)(2)) |
-| Internet and phone provider | Every SaaS function and the office phones | None; one line, no failover |
+| Internet and phone provider | Every SaaS function and the office phones | None; one line, no failover (EV-033) |
 | Cellular carrier | BP-07 fallback; integrator gateway | Not contracted for availability |
 
 **Key findings:**

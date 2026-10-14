@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner and President |
 
 ## 1. Scope and risk framing
-**Scope.** The whole company and its key vendors: every system in `../00_company-facts.md` section 3 (SYS-01 to SYS-12), the site, and the vendors that run or reach those systems: the control system integrator, the MSP, the accounting and inventory vendor, the SDS service vendor, the backup vendor, the payroll vendor, and the ERI provider.
+**Scope.** The whole company and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-12), the site, and the vendors that run or reach those systems: the control system integrator, the MSP, the accounting and inventory vendor, the SDS service vendor, the backup vendor, the payroll vendor, and the ERI provider ([vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **What makes this business different from an office.** A cyber event here can move a dosing pump. The register therefore rates safety impact alongside cost, and it treats the integrator's remote access as a safety risk, not only an IT risk.
 
@@ -24,8 +24,8 @@
 This is the company's first documented security risk assessment. The emergency action plan and the 2009 CFATS Top-Screen were reviewed for context, but neither rates cyber risk.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), CISA's RBPS 8 security measures, and interviews with all 7 employees, the MSP lead technician, and the integrator (2026-07-13 to 2026-07-24, site walkthrough 2026-07-15).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, CISA's RBPS 8 security measures, and interviews with all 7 employees, the MSP lead technician, and the integrator (2026-07-13 to 2026-07-24, EV-044; site walkthrough 2026-07-15, EV-047). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the SaaS console, portal, HMI and MSP exports, the contracts folder, the DOT files, the walk-throughs, the account comparison of 2026-07-16 (EV-045) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a company with about $4,400 of shipments a day, a week without blending or shipping is High, and an event that could injure people in the blend room is High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,9 +53,11 @@ Status: 12 In progress, 8 Open, 3 Closed (R-023 treated; R-020 and R-021 accepte
 **The common theme is the batch control system's exposure.** One shared login reaches the PLC from the internet (R-001), the HMI PC is reachable from every office computer and, until fixed, from the guest Wi-Fi (R-002, R-011), and nothing can be restored if it is damaged (R-005). The treatments for these three also reduce R-003, R-006, R-007, and R-010.
 
 **Risks that were fixed or found during the work:**
-- R-004 and R-017: the former bookkeeper's accounting login was disabled on 2026-07-16, the day it was found. The accounting audit log showed no sign-in after the bookkeeper's last day. The process gap remains open.
-- R-011: added on 2026-08-11 after P07 testing found that the guest Wi-Fi is not separated and that the HMI's remote desktop service answered from a guest device.
+- R-004 and R-017: the former bookkeeper's accounting login was disabled on 2026-07-16, the day the account comparison found it (EV-045). The accounting audit log showed no sign-in after the bookkeeper's last day. The process gap remains open.
+- R-011: added on 2026-08-11 after P07 testing found that the guest Wi-Fi is not separated and that the HMI's remote desktop service answered from a guest device (EV-SC-7).
 - R-023: the operator hired on 2026-04-20 completed DOT security awareness training on 2026-08-14, after the gap analysis found the 90-day deadline had passed. The risk is closed; the onboarding step is in POL-02 B.4.
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-011 was added on 2026-08-11 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q3 and Q4, approved by the Owner; about $11,700 one-time and $1,100 a year):**
