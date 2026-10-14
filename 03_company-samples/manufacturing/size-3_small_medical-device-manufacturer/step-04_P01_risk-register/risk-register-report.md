@@ -27,7 +27,7 @@ Two kinds of harm are rated together. **Enterprise harm** covers data, operation
 Product security risks are also carried in the design risk management file for each device, as the QMSR requires (21 CFR 820.10(c)). This register is the enterprise view of the same risks.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, the PM-2 threat model (EV-023), and interviews with Engineering, Manufacturing, Quality, and Cloud Operations (EV-050). The P03 gap analysis ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two shared findings.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA, the intake evidence, the PM-2 threat model (EV-023), and interviews with Engineering, Manufacturing, Quality, and Cloud Operations (EV-050). The P03 gap analysis ran in the same fieldwork window, as is usual for a HIPAA risk analysis, and the two steps shared findings.
 2. **Rate likelihood.** Each risk has a likelihood of initiation (adversarial) or occurrence (non-adversarial) and a likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, the product security records, the mailbox review, the incident records, walk-throughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.

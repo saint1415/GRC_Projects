@@ -163,6 +163,8 @@ for facts in S.rglob("00_company-facts.md"):
             errors.append(f"{where}: unfinished template marker in a completed sample")
         if "\u2014" in text:
             errors.append(f"{where}: em dash (house style uses a period or comma)")
+        if "and the two shared findings" in text:  # sentence with no verb, copied from the pilot reference before it was fixed
+            errors.append(f"{where}: incomplete sentence 'and the two shared findings' (write 'and the two steps shared findings')")
         for line in text.splitlines():  # known clock error found in Phase 5: 52.204-23 is 3 business days
             if "52.204-23" in line and re.search(r"\b(1|one) business day", line) and not re.search(r"\b(3|three)[ -]business[ -]days?", line):
                 errors.append(f"{where}: FAR 52.204-23 given a 1-business-day clock (it is 3 business days)")
