@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the Owner |
 
 ## 1. Scope and risk framing
-**Scope.** The whole shop and its key vendors: every system in `../00_company-facts.md` section 3 (SYS-01 to SYS-10), the building and yard, and the vendors that hold shop data or can reach shop systems: the ERP vendor, the productivity suite vendor, the MSP and its backup service, the drying oven OEM, the test set vendor, and the oil laboratory's AI portal. It also covers the shop's duties to others: the G&T cooperative's Vendor Cyber Security Exhibit, the federal purchase order clauses, and Florida's breach law for employee data.
+**Scope.** The whole shop and its key vendors: every system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01 to SYS-10), the building and yard, and the vendors in the intake [vendor register](../step-00_P00_intake/vendor-register.csv) that hold shop data or can reach shop systems: the ERP vendor, the productivity suite vendor, the MSP and its backup service, the drying oven OEM, the test set vendor, and the oil laboratory's AI portal. It also covers the shop's duties to others: the G&T cooperative's Vendor Cyber Security Exhibit, the federal purchase order clauses, and Florida's breach law for employee data.
 
 **Risk tolerance and who can accept risk (POL-02 A.3):**
 - Low and Very Low: the Office Manager may accept.
@@ -21,8 +21,8 @@
 This is the shop's first documented risk assessment. Nothing earlier rated likelihood or impact.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the gap analysis (P03), a shop walkthrough on 2026-07-14, and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the BIA (P05), the intake evidence, a shop walkthrough on 2026-07-14 (EV-045), and interviews with all 7 employees and the MSP lead technician (2026-07-13 to 2026-07-24, EV-041). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the ERP, suite and MSP exports, the contracts folders, the shop equipment records, the walk-throughs, the account comparison of 2026-07-15 (EV-042) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3). For a shop with about $4,200 of output per working day, a week without shipments in storm season, the loss of the cooperative contract, or an oven overheating event is rated High or Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -52,10 +52,12 @@ Status: 8 In progress, 16 Open. Treatment: 23 Mitigate, 1 Accept (R-022, Low).
 **Why R-003 is High despite Low likelihood.** An outsider changing oven settings is unlikely, but the impact is rated Very High because an overheating event could damage customers' transformers and injure staff. The oven's hard-wired over-temperature trip is the main reason the rating is not higher. Under POL-02 A.3, a risk with a safety impact is not accepted above Low.
 
 **Risks found or changed during the work:**
-- R-005: the former Field Service Technician's suite and ERP accounts were disabled on 2026-07-15, the day they were found. Sign-in logs showed no use after his last day. The process gap remains open.
-- R-006: the Office Manager notified the cooperative on 2026-07-16 and sent a written corrective plan on 2026-07-20.
-- R-007: the camera recorder was disconnected on 2026-07-17 pending replacement.
-- R-024: added on 2026-08-12 after P07 testing found the port-forwarding rule; the MSP removed it on 2026-08-11.
+- R-005: the former Field Service Technician's suite and ERP accounts were disabled on 2026-07-15, the day the account comparison found them (EV-042). Sign-in logs showed no use after his last day. The process gap remains open.
+- R-006: the Office Manager notified the cooperative on 2026-07-16 and sent a written corrective plan on 2026-07-20 (EV-043).
+- R-007: the camera recorder was disconnected on 2026-07-17 pending replacement (EV-049).
+- R-024: added on 2026-08-12 after P07 testing found the port-forwarding rule (EV-SC-7); the MSP removed it on 2026-08-11 (EV-AC-17).
+
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-024 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q3 to 2027 Q2, approved by the Owner; about $6,100 one-time and $3,900 a year):**

@@ -73,7 +73,7 @@ Information types were chosen with reference to NIST SP 800-60. Types that SP 80
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with IT staff (for example, change control boards, separate development environments, and alternate processing sites). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the shop controls or pays someone to control on its behalf:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the shop controls or pays someone to control on its behalf:
 - **Inside:** the shop's ERP tenant configuration and user roles (SYS-01), the suite tenant and shared drive (SYS-02), 8 devices (SYS-03), the firewall, Wi-Fi, and internet line (SYS-04), the test PC (SYS-05), and the backup subscriptions (SYS-08).
 - **Outside, interconnected over the same network:** the drying oven PLC and HMI with the OEM cellular modem (SYS-06), the winding machine (SYS-07, connected only by USB stick), and the camera recorder (SYS-09). They are outside because the EJSP does not depend on them to run, but they share its network today, which is the main boundary weakness (SC-7; P01 R-001, R-003).
 - **Outside, external services:** the vendors' own platforms, the MSP's RMM platform, the oil laboratory's AI portal (SYS-10; assessed in P10), and the payroll service.
@@ -117,11 +117,11 @@ By responsibility: 16 system-specific (the shop), 24 hybrid (the shop with a ven
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the shop relies on | Evidence | What the shop must still do |
 |---|---|---|---|
-| ERP vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit trail (AU-2), TLS (SC-8) | SOC 2 Type 2 report reviewed 2026-08-20 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, MFA enforcement, review of user access and audit reports, and protecting its own export of data |
-| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation | Account management, MFA settings, sharing settings, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), suite backup (CP-9), screen lock (AC-11) | Monthly MSP reports; P07 evidence requests | Direct the work, approve exceptions, review reports monthly, add security terms to the contract (P01 R-009) |
-| Backup service (MSP account) | Storage of suite backups (CP-9) | MSP backup job report | Restore test due 2026-09-30; separate MFA-protected login for deletion |
-| Test set vendor | Test software support and calibration | Calibration certificate | Locate media and license key; attended support sessions only |
+| ERP vendor | Platform security, encryption, backups (CP-9), lockout (AC-7), audit trail (AU-2), TLS (SC-8) | SOC 2 Type 2 report (EV-017) reviewed 2026-08-20 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, MFA enforcement, review of user access and audit reports, and protecting its own export of data |
+| Productivity suite vendor | Platform security, encryption at rest and in transit (SC-8, SC-28), lockout (AC-7), audit logging (AU-2) | Vendor documentation (EV-018) | Account management, MFA settings, sharing settings, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall and Wi-Fi (SC-7, AC-18), laptop encryption (SC-28), suite backup (CP-9), screen lock (AC-11) | Monthly MSP reports (EV-011); P07 evidence requests | Direct the work, approve exceptions, review reports monthly, add security terms to the contract (P01 R-009) |
+| Backup service (MSP account) | Storage of suite backups (CP-9) | MSP backup job report (EV-014) | Restore test due 2026-09-30; separate MFA-protected login for deletion |
+| Test set vendor | Test software support and calibration | Calibration certificate (EV-028) | Locate media and license key; attended support sessions only |
 
 **Inherited does not mean done.** Two of the ERP vendor's complementary user entity controls are open gaps at the shop: MFA enforcement (IA-2(1)) and account removal (AC-2, PS-4).
 
@@ -135,7 +135,7 @@ Authentication assurance levels (AAL) follow the definitions in NIST SP 800-63B.
 - **Shared logins:** the shop-floor PC "shop" login and the test PC administrator account identify no individual. Accepted only until named accounts replace them (shop-floor PC by 2026-10-31; test PC when it is replaced or rebuilt, by 2026-12-31).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and ERP vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and ERP vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **DGA:** dissolved gas analysis (oil test that shows transformer condition)
