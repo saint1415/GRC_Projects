@@ -19,7 +19,7 @@
 - the suppliers with access to company systems (MSP, OEMs, cloud and AI vendors);
 - the obligations the company owes customers: the 12 utility Supplier Cyber Security Addenda and the federal contract clauses.
 
-Business processes and recovery times come from the BIA (P05). Systems are listed in `../00_company-facts.md` section 3.
+Business processes and recovery times come from the BIA (P05). Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **What matters most.** The company builds equipment that utilities need to keep the grid running and to restore it after storms. The two things leadership cares about most are:
 - keeping the lines producing, especially during hurricane season, when emergency transformer orders arrive;
@@ -37,9 +37,10 @@ This is the company's first documented cybersecurity risk assessment.
 1. **Identify.**
    - Threat sources and events come from SP 800-30 Appendices D and E and SP 800-82 Rev. 3 Appendix C.
    - The vertical scenario (ransomware disrupting production of grid equipment) and the BIA were also inputs.
-   - Interviews covered the Plant Manager, Controls Engineer, Production Planning Manager, Quality Manager, Field Service Manager, and Contracts and Compliance Manager.
-   - The gap analysis (P03) supplied the vulnerabilities.
-2. **Rate likelihood.** Two ratings were made for each risk: the likelihood of initiation (adversarial) or occurrence (non-adversarial), and the likelihood that the event causes adverse impact. They were combined with **Table G-5**.
+   - The intake evidence (exports, contracts, supplier and training records) and the plant walkthrough on 2026-07-16 (EV-065) were also inputs.
+   - Interviews covered the Plant Manager, Controls Engineer, Production Planning Manager, Quality Manager, Field Service Manager, and Contracts and Compliance Manager (EV-055).
+   - The gap analysis (P03) ran in the same fieldwork window and supplied the vulnerabilities, so the two steps shared findings.
+2. **Rate likelihood.** Two ratings were made for each risk: the likelihood of initiation (adversarial) or occurrence (non-adversarial), and the likelihood that the event causes adverse impact. They were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports, contract and supplier records, the walkthrough, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the P05 impact categories: cost, operations, safety, regulatory and contractual, and reputation.
 4. **Determine risk.** **Table I-2** gives the risk level. The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed by script from the two tables, not assigned by hand.
 
@@ -75,7 +76,7 @@ Closing the IT/OT boundary and the remote access paths also lowers five Moderate
 
 **The other two top risks are about customers.** R-005 and R-006 are the risks utilities care about under their CIP-013 programs. They are cheap to fix (procedures, hashes, a register) and are due first.
 
-R-034 was added on 2026-08-15 after the control assessment (P07) found the OEM default password on the drying oven HMI's web configuration page.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-034 was added on 2026-08-15 after testing found the OEM default password on the drying oven HMI's web configuration page (EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 to 2027 Q2 budget, $186,000, approved 2026-09-04):**

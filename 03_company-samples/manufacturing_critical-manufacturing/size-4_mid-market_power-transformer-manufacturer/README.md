@@ -3,9 +3,9 @@
 
 > Cris Santos Company, Inc. is a privately held mid-market company with 850 employees, operating as a power transformer manufacturer.
 
-This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-01 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
+This folder is a self-contained scenario. Read this page first, then open the project folders in step order (step-00 to step-10). Each project folder has a `_context.md` explaining what that deliverable looks like for this company.
 
-> **Completed sample.** All 10 deliverables in this folder are filled in. The detailed company facts they share (locations, systems, current security posture) are in [00_company-facts.md](00_company-facts.md). Read it second.
+> **Completed sample, built from evidence.** All 11 deliverables in this folder are filled in. [00_company-facts.md](00_company-facts.md) says who the company is. What its records show is in [step-00 intake](step-00_P00_intake/intake-report.md), and every later finding cites an evidence ID from there.
 
 ## At a glance
 | | |
@@ -38,13 +38,14 @@ SRMA: Department of Homeland Security (CISA); Department of Commerce BIS (EAR; I
 | [EAR (Export Administration Regulations)](https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C) | 15 CFR Parts 730-774 (encrypted-data carve-out 15 CFR 734.18(a)(5)) | No size threshold. |
 | [DFARS 252.204-7012 Safeguarding Covered Defense Information and Cyber Incident Reporting](https://www.ecfr.gov/current/title-48/section-252.204-7012) | 48 CFR 252.204-7012 (MAY 2024) | No small-business exemption; flowdown required to subcontracts involving CDI/operationally critical support, including commercial products/services. |
 
-Whether each requirement applies at this size is decided at the start of P03, the gap analysis (build step 5).
+Whether each requirement applies at this size is decided in the intake obligations register (step 0) and analyzed in P03 (step 5).
 
-## The 10 projects for this company, in build order
+## The 10 projects for this company, in build order, after intake
 Each step reuses what the earlier steps produced. Why this order works, and how it changes with company size: [how-to-build-the-10-projects.md](../../../docs/how-to-build-the-10-projects.md).
 
 | Step | Project | What it covers here | Builds on |
 |---|---|---|---|
+| 0 | [P00 Intake: Evidence, Inventories, and Obligations](step-00_P00_intake/_context.md) | CMDB or endpoint console; HR system; AP vendor master; contract register; prior audits; scans; incident tickets. Evidence register with owners and as-of dates; inventories reconciled across sources; obligations register. | Nothing: it collects the evidence every later step cites |
 | 1 | [P05 Business Impact Analysis (BIA)](step-01_P05_business-impact-analysis/_context.md) | All business units and processes. Quantified impact (financial; operational; regulatory). | Company facts only |
 | 2 | [P02 System Security Plan (SSP)](step-02_P02_system-security-plan/_context.md) | A major system (Moderate impact). Full SSP with baseline tailoring and inherited controls. System: ERP and Production Scheduling Platform (EPSP). | P05: which systems matter and how long they can be down |
 | 3 | [P04 Control-to-Cloud Architecture Mapping](step-03_P04_cloud-control-mapping/_context.md) | Multi-account/subscription cloud environment. Landing zone and workload layers; shared responsibility per service. | P02: the system boundary and its controls |

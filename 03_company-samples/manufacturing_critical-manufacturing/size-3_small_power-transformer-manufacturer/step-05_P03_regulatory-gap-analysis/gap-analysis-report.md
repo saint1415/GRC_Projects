@@ -12,7 +12,7 @@
 | Assessors | IT Manager and Controls Engineer, with the Contracts and Compliance Manager, VP Engineering, and Field Service Manager |
 
 ## 1. Applicability
-Applicability comes first, because for this company the most useful finding is what does **not** bind it.
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates and explains the result. Applicability comes first, because for this company the most useful finding is what does **not** bind it.
 
 ### 1.1 No binding sector cyber rule
 Critical manufacturing has no sector-wide federal cybersecurity regulation. The vertical registry lists four requirements, and each was checked against the company's facts:
@@ -56,11 +56,15 @@ The 62 CSF 2.0 subcategories (G-001 to G-062) were selected for a transformer pl
 2. **Crosswalk.**
    - CSF rows use the **official** NIST CSF 2.0 to SP 800-53 Rev. 5.2.0 mapping (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`). Where only part of a long mapping is listed, the `crosswalk_source` column says "subset." Where an OT control from the SP 800-82 Rev. 3 overlay was added (for example MA-4 on PR.AA-03), the column names it as an author addition.
    - FAR, addendum, and applicability rows are **author mappings**, labeled as such. No official NIST mapping exists for them.
-3. **Evidence.**
-   - Interviews: President, VP Operations, VP Engineering, IT Manager, Controls Engineer, Plant Manager, Production Planning Manager, Quality Manager, Contracts and Compliance Manager, Field Service Manager, and HR Manager.
-   - Documents: contracts and addenda, the 2021 IT handbook, the IT call list, and work instructions.
-   - Configuration exports: firewall, identity provider, ERP roles, backup jobs, EDR console.
-   - The plant walkthrough on 2026-07-16.
+3. **Evidence.** Current state was established from:
+   - the intake evidence (EV-001 to EV-053): identity provider, device management, EDR, cloud and backup exports; contracts and addenda; the 2021 IT handbook, the IT call list, and work instructions;
+   - the contract file review and the NERC registration check on 2026-07-15 (EV-057, EV-058);
+   - configuration reviews and exports during fieldwork: ERP roles and suppliers, logging settings, cloud network rules, the EDR alert mailbox, file shares, the TMU firmware library, the advisory mailbox, field laptops, and the website (EV-059 to EV-063, EV-068 to EV-072), and the TLS scan (EV-064);
+   - the plant walkthrough on 2026-07-16, with the IT/OT firewall export and the OT account and router configuration review (EV-065 to EV-067);
+   - the covered telecommunications inquiry on 2026-07-20 and the report to the contracting officer (EV-073 to EV-075);
+   - interviews with the President, VP Operations, VP Engineering, IT Manager, Controls Engineer, Plant Manager, Production Planning Manager, Quality Manager, Contracts and Compliance Manager, Field Service Manager, Controller, and HR Manager (EV-056).
+
+   The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable, as of the end of fieldwork. Gaps were rated with the P01 risk scale.
 
 ## 3. Results summary

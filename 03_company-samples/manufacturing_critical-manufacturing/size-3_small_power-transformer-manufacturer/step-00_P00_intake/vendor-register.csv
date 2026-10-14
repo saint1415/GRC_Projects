@@ -1,0 +1,17 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider,"IaaS/PaaS for the ERP, APS, integration service, backups and the AI-001 ML service",SYS-01; SYS-03; SYS-14,FCI; employee personal information; export records,Customer agreement,Shared responsibility documentation; SOC 2 report not downloaded,EV-038; EV-042,Report to be obtained (P04)
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-02,Workforce identities,Subscription terms,None on file,EV-038,
+V-03,ERP software vendor,ERP and APS licenses and support,SYS-01,FCI and business data during support sessions,License and support agreement,None on file,EV-015; EV-038,Connects through a VPN account enabled per support ticket
+V-04,MES software vendor,"MES licenses, support and on-site updates",SYS-05,Production data during support visits,Support agreement,None on file,EV-011; EV-038,MES server and kiosks are not in the MSP patch scope
+V-05,Managed service provider (MSP),"After-hours help desk, server patching, firewall management, backup monitoring, external scans",SYS-09; SYS-01 (guest OS patching),Administrative access to IT servers and endpoints,Service agreement (no incident notice deadline),"SOC 2 Type 2 (Security), 12 months ending 2026-03-31",EV-014; EV-041,RMM tool has administrator rights on IT servers and endpoints; RMM vendor carved out of the report
+V-06,EDI network provider,EDI exchange with utilities and suppliers,SYS-10,Orders; ship notices; invoices,Contract with confidentiality and availability terms,None on file,EV-038; EV-043,
+V-07,Productivity suite vendor,"Email, files, chat",SYS-11,FCI; customer drawings; designs,Subscription terms,None on file,EV-038; EV-044,
+V-08,Predictive maintenance SaaS vendor (AI-002),Predictive maintenance pilot,SYS-08; SYS-14,About 140 historian process tags,Click-through terms,None on file,EV-038; EV-039,Connector on the historian with an outbound internet path
+V-09,TMU electronics supplier,Transformer monitoring units and firmware through the supplier portal,SYS-12; SYS-07,Order quantities; firmware downloads,Supply agreement (no SBOM or vulnerability notice terms),None on file,EV-034; EV-038,
+V-10,"Plant equipment OEMs with remote access (drying oven, core cutting line 1, welding cell 2)",Service and remote support through OEM cellular routers,SYS-06,Equipment programs and settings,OEM service agreements (no security terms),None on file,EV-034; EV-067,Each router has one shared OEM login
+V-11,Other plant equipment and test equipment OEMs,"Service visits for winding machines, test bay systems and other equipment",SYS-06; SYS-07,Equipment programs and settings during visits,Purchase terms and service agreements,None on file,EV-034; EV-038,
+V-12,CAD software vendor,CAD licensing,SYS-04,License data,License terms,None on file,EV-038,
+V-13,Payroll provider,Payroll SaaS,Payroll SaaS,Employee personal information,Service agreement,None on file,EV-038,
+V-14,Cyber insurer,Cyber insurance with breach coach and forensic panel,n/a,Incident information when a claim is made,Insurance policy,n/a,EV-028,
+V-15,Heavy-haul carrier (federal deliveries),Transport of transformers to the federal site,n/a,Agency delivery schedule and site drawings (FCI),Purchase order with standard terms (no FAR 52.204-21 clause),None on file,EV-033; EV-038,
+V-16,Drive recycler,Disposal of retired drives,SYS-09,Data on retired drives,Not established at intake,No certificates of destruction,EV-029,
