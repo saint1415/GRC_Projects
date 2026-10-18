@@ -85,7 +85,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1, which gives p
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration control boards and separate development environments). These are tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
-The boundary contains what the company controls or pays someone to control for it:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains what the company controls or pays someone to control for it:
 - **Inside:** the SCADA host and field office network, all field controllers, radios, and modems, the 7 computers and 5 phones, the main-office network, the company's tenants and settings in production accounting, the productivity suite, the cloud backup, and the SCADA vendor's cloud service, and the integrator's remote access path.
 - **Outside (external services, interconnected):** the SaaS vendors' own platforms and data centers, the cellular carrier's network, the bank portal (SYS-10), the crude purchaser's systems, the payroll service, the MSP's remote management platform, and the integrator's own network and laptops.
 
@@ -119,7 +119,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | SCADA cloud service account (SYS-08) | SaaS | SCADA vendor | Field Superintendent |
 | Integrator remote access tool (SYS-09) | Third-party software | Installed on the SCADA host (**gap**) | Field Superintendent |
 
-The field controllers, radios, and modems are not yet listed by model and firmware (gap 1; POAM-010).
+The field controllers, radios, and modems are not yet listed by model and firmware (EV-009, EV-020; POAM-010).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -134,10 +134,10 @@ By responsibility: 26 system-specific (the company), 16 hybrid (the company with
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the company relies on | Evidence | What the company must still do |
 |---|---|---|---|
-| Production accounting vendor | Platform security, encryption, backups, MFA enforcement, audit records | SOC 2 Type 2 report reviewed 2026-08-20 (P09) | Complementary user entity controls: user removal, role assignment, review of owner bank detail changes |
-| Productivity suite vendor | Platform security, encryption at rest and in transit, MFA enforcement, audit logging | Vendor documentation | Account management, sharing settings (Geology folder), log review |
-| SCADA vendor (SYS-08) | Alarm delivery, mobile viewer, connector software | Security whitepaper only | Account removal, MFA settings, keep the connector send-only, contract terms |
-| MSP | Office patching (SI-2), antivirus (SI-3), firewall (SC-7), laptop encryption (SC-28), phone management (AC-19), cloud backup (CP-9) | Monthly MSP report; P07 evidence requests | Oversight: review the monthly report, approve exceptions, extend scope to the SCADA host |
+| Production accounting vendor | Platform security, encryption, backups, MFA enforcement, audit records | SOC 2 Type 2 report (EV-056) reviewed 2026-08-20 (P09) | Complementary user entity controls: user removal, role assignment, review of owner bank detail changes |
+| Productivity suite vendor | Platform security, encryption at rest and in transit, MFA enforcement, audit logging | Vendor documentation (EV-046) | Account management, sharing settings (Geology folder), log review |
+| SCADA vendor (SYS-08) | Alarm delivery, mobile viewer, connector software | Security whitepaper only (EV-025) | Account removal, MFA settings, keep the connector send-only, contract terms |
+| MSP | Office patching (SI-2), antivirus (SI-3), firewall (SC-7), laptop encryption (SC-28), phone management (AC-19), cloud backup (CP-9) | Monthly MSP report (EV-012); P07 evidence requests | Oversight: review the monthly report, approve exceptions, extend scope to the SCADA host |
 | SCADA integrator | SCADA host configuration and rebuild knowledge | None | Named accounts, MFA, session approval, a written rebuild procedure |
 
 **Inherited does not mean done.** Two of the production accounting vendor's complementary user entity controls are open gaps at the company: account removal (AC-2, PS-4) and verification of owner bank detail changes (P01 R-004).
@@ -151,7 +151,7 @@ Assessed 2026-08-10 to 2026-08-12 by an independent consultant. See P07 `assessm
 - **Mobile viewer users** have individual accounts; MFA, which the vendor supports, will be turned on by 2026-09-30.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **FSPA:** Field SCADA and Production Accounting System
