@@ -7,11 +7,11 @@
 | AI use case | AI-001: predictive maintenance model for rod pumps and electric submersible pumps (ESPs), in pilot on 60 wells since May 2026 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. The Generative AI Profile (AI 600-1) is not used for AI-001, which is not generative; it informs the rules for AI-002 |
 | Assessor / date | Production Engineering Manager with the IT Manager and the SCADA and Automation Supervisor, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the cloud account inventory, the accounts payable list, the statements of work and a staff survey (EV-020, EV-039, EV-052, EV-051). How many staff use public chatbots, and what they paste, was not established (intake open request) |
 
 ## 1. GOVERN
 - **Accountable owner:** Production Engineering Manager. **Decision authority:** CFO (Medium tier), with the VP Operations' agreement because the model shapes field work. The majority owner decides if the use case is re-tiered High.
-- **How the pilot started:** the Production Engineering Manager hired a data science firm and started the pilot in May 2026 without a security review or an AI risk review (gap 14 in `../00_company-facts.md`). This assessment is that review, done late.
+- **How the pilot started:** the Production Engineering Manager hired a data science firm and started the pilot in May 2026 without a security review or an AI risk review (EV-026, EV-052). This assessment is that review, done late.
 - **Policies that apply:**
   - POL-01 4.9: supplier security schedule before a supplier receives company data
   - POL-04 4.7: no Restricted or Confidential data in AI tools without approval

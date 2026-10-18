@@ -76,7 +76,7 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1, which gives p
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems (for example, PIV acceptance, IA-2(12), which the overlay itself limits to federal organizations).
 
 ## 7. Authorization Boundary Description
-The boundary contains company-managed components and the company's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains company-managed components and the company's configuration of vendor services:
 - **Inside:** the OCC server room and HMIs, the SCADA network, all field controllers and communications equipment, the IT/OT firewall, the four FSPA workloads in the cloud tenant, the production accounting tenant configuration and user roles, the identity provider tenant (for FSPA users), the 70 rugged tablets, and the vendor remote access path.
 - **Outside (external services, interconnected):** the production accounting vendor's platform, the cloud provider's infrastructure, the cellular carrier's network, the third-party gas gathering system and its sales meter data, the crude purchaser's systems, the SCADA integrator's own network, and the corporate network beyond the IT/OT firewall.
 
@@ -108,7 +108,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Rugged tablets (70) | Mobile endpoints | Lease operators | IT Manager |
 | Integrator remote access tool | Third-party software | Installed on the SCADA primary server (**gap**) | SCADA and Automation Supervisor |
 
-The field controller list is not yet itemized by model and firmware (gap 1; POAM-006).
+The field controller list is not yet itemized by model and firmware (EV-008; POAM-006).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -128,7 +128,7 @@ Assessed 2026-08-03 to 2026-08-07. See P07 `assessment-results.csv` and `poam.cs
 - **SCADA users** authenticate with local SCADA accounts. Today the OCC uses one shared operator login and the integrator uses one shared account without MFA. The target, consistent with the SP 800-82 Rev. 3 overlay discussion of IA-2: named accounts for engineers and administrators; for Production Controllers, either named accounts with fast user switching or a documented compensating control (badge-controlled OCC, shift sign-in log, SCADA event log review); and for all remote access, individual identification with MFA at the jump host before any shared account is used.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and vendor review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **DMZ:** demilitarized zone, a buffer network between IT and OT

@@ -12,7 +12,7 @@
 | Regulatory driver label | `N21-BM` in the other deliverables points to this benchmark (see `../00_company-facts.md` section 5) |
 
 ## 1. Applicability
-The vertical's research names three candidate federal requirements (`02_industry-rules/mining-oil-gas/requirements.csv`). **None of them applies to this company today.** Each was checked against the rule text; the result is recorded as a Not applicable row in `gap-analysis.csv` (G-113 to G-116).
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result and the rule text behind it. The vertical's research names three candidate federal requirements (`02_industry-rules/mining-oil-gas/requirements.csv`). **None of them applies to this company today.** Each was checked against the rule text; the result is recorded as a Not applicable row in `gap-analysis.csv` (G-113 to G-116).
 
 | Requirement | Applicability test (rule text) | Decision for Cris Santos Company |
 |---|---|---|
@@ -32,7 +32,7 @@ The vertical's research names three candidate federal requirements (`02_industry
 1. **Requirements.** Every CSF 2.0 subcategory (106) is one row, quoted from the CSF 2.0 core. The Florida rows follow the statute's subsections.
 2. **OT guidance.** Each CSF row cites the SP 800-82 Rev. 3 section used to judge the OT side (column `sp800_82r3_reference`). SP 800-82 Rev. 3 organizes its framework guidance by CSF 1.1 categories (section 6), so the link from each CSF 2.0 subcategory to an SP 800-82 section is an **author mapping**.
 3. **Crosswalk.** SP 800-53 Rev. 5 controls come from NIST's official CSF 2.0 informative references (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), kept in full in column `nist_official_sp800_53r5`. Column `sp800_53_controls` is the author's selection of the key controls from that official list. Florida rows use an author mapping.
-4. **Evidence.** Interviews (CFO, VP Operations, IT Manager, SCADA and Automation Supervisor, Network Administrator, Production Accounting Manager, HR Manager, 4 Production Controllers, 2 automation technicians, the SCADA integrator's lead engineer), document review, the IT/OT firewall rule export, SCADA account lists, and walkthroughs of the OCC, 2 tank batteries, the injection plant, and 3 well pads.
+4. **Evidence.** Current state was established from the intake evidence (identity provider, SCADA, endpoint, network and cloud exports, the document request, contracts and records), the IT/OT firewall rule export (EV-054), the TLS scan (EV-055), walkthroughs of the OCC (EV-056) and of 2 tank batteries, the injection plant, and 3 well pads (EV-057), and gap analysis interviews with the CFO, VP Operations, IT Manager, SCADA and Automation Supervisor, Network Administrator, Production Accounting Manager, HR Manager, 4 Production Controllers, 2 automation technicians, and the SCADA integrator's lead engineer (EV-059). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 5. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary
