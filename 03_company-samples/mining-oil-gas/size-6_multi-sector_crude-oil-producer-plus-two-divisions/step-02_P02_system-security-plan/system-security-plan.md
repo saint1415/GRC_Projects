@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the focus division's primary system, the **Field SCADA and Production Accounting System**, because it carries most of the group's revenue (about $38.9 million per day), its alarms support safety and SPCC duties, and it sits at both ends of the top group risks (P01 GR-01 and GR-02): its OT DMZ is where the shared historian connector and the shared jump servers land. It inherits most IT controls from corporate (SYS-G1 to SYS-G3), which is how every division system is built. The other divisions keep their own system plans that inherit from the same common control catalog (`common-control-catalog.csv`): the Power Generation CIP-003-9 low impact cyber security plans and the Crude Logistics pipeline SCADA plan.
 
 ## 1. System Name and Identifier
-Field SCADA and Production Accounting System (**FSPA**), identifier CSCH-PRD-FSPA. It covers SYS-P1, SYS-P2, SYS-P4, and the company's configuration of SYS-P3 in `../00_company-facts.md` section 3.
+Field SCADA and Production Accounting System (**FSPA**), identifier CSCH-PRD-FSPA. It covers SYS-P1, SYS-P2, SYS-P4, and the company's configuration of SYS-P3, as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The FSPA monitors and controls about 16,800 operated wells, 410 central tank batteries, 95 associated gas compression stations, and 38 water injection plants in the Permian Basin and Florida, and turns field measurements into allocated volumes, state production reports, and royalty payments. It supports:
@@ -35,7 +35,7 @@ The FSPA monitors and controls about 16,800 operated wells, 410 central tank bat
 | N21-R03 | CIRCIA (proposed) | Proposed 6 CFR Part 226 | Tracked only. Not in effect; if finalized as proposed the group would be covered because it exceeds the SBA size standard |
 | Internal | Group policies POL-01 to POL-05 and the Production supplement | P06 | |
 
-**Not applicable** (P03 section 1): PHMSA Part 195, because flow lines and production facility piping are excepted (195.1(b)(8)) and the FSPA control rooms are not pipeline control rooms (the Crude Logistics PCC is); USCG 33 CFR Part 101 Subpart F (no MTSA or OCS facilities); TSA pipeline Security Directives (no TSA notice); NERC CIP (no BES Cyber Systems in Production).
+**Not applicable** (P03 section 1): PHMSA Part 195, because flow lines and production facility piping are excepted (195.1(b)(8)) and the FSPA control rooms are not pipeline control rooms (the Crude Logistics PCC is); USCG 33 CFR Part 101 Subpart F (no MTSA or OCS facilities); TSA pipeline Security Directives (no TSA notice); NERC CIP (no BES Cyber Systems in Production). Applicability for each division is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -83,6 +83,8 @@ Other High-baseline controls are either fully inherited from the cloud and SaaS 
 CSF 2.0 subcategories in `control-implementation.csv` come from NIST's official CSF 2.0 to SP 800-53 crosswalk. For 13 controls that NIST does not map (for example AC-8, CP-12, PS-3, SI-17), the subcategory is an author mapping.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-P1 to SYS-P4 and the shared services they inherit from) and the configuration exports EV-040 to EV-054.
+
 - **Inside:** SYS-P1 (SCADA servers, historians, HMIs, and engineering workstations at the IOC, BCC, and Florida control room); SYS-P2 (field devices, private LTE core, radio network, cellular modems); the Production OT DMZs and IT/OT firewalls; the FSPA cloud workloads in provider A (SYS-P4 and the historian replica feed); and the company's configuration of SYS-P3.
 - **Outside, inherited (common control providers):** SYS-G1 identity platform and PAM (including the shared OT support jump servers), SYS-G2 SOC, SIEM, EDR, and OT monitoring console, and the SYS-G3 landing zone, WAN, and backup vault.
 - **Outside, interconnected:** SYS-G6 group data platform (historian replica and the connector into the OT DMZ); SYS-P5 Mid-Continent legacy SCADA (until migration); SYS-M2 and SYS-M3 (LACT data and run tickets from Crude Logistics); SYS-G4 ERP (work orders); the hydrocarbon accounting vendor's platform; carriers.
@@ -134,15 +136,15 @@ See `control-implementation.csv` (125 controls) and `common-control-catalog.csv`
 | System-specific | 42 |
 
 **The 21 partially implemented controls** cluster in four places:
-- **The IT/OT seams** (scenario gap 1): AC-4, AC-6, AC-17, SC-7, CA-3.
+- **The IT/OT seams** (P03 gap 1; EV-008, EV-009): AC-4, AC-6, AC-17, SC-7, CA-3.
 - **Field device and OT hygiene:** AC-2, AC-18, IA-3, IA-5, CM-3, CM-7(5), CM-8, SA-22, RA-5, SI-2, SR-6.
 - **Recovery of field devices:** CP-4, CP-9.
-- **Monitoring and incident governance** (scenario gap 7): AU-6, IR-3, IR-6.
+- **Monitoring and incident governance** (P03 gap 7; EV-010, EV-025): AU-6, IR-3, IR-6.
 
 **The 2 planned controls** are CA-8 (an OT boundary penetration test in 2027-Q1, during a maintenance window) and SC-8(1) (cryptographic protection for the remaining licensed radio links, by 2027-12-31).
 
 ### 10.2 Common control inheritance by division
-The common control catalog lists 81 controls provided by corporate. Inheritance is **documented for Production** and for **Power Generation** (2025 inheritance matrices; Power Generation maps them to its CIP-003-9 low impact plans) and for the FSPA (this plan). It is **not documented for Crude Logistics** (scenario gap 6). Until POAM-019 closes, Crude Logistics cannot show its shippers, its SOC 2 auditor (P09), or PHMSA and state inspectors which of its controls are met by group services, and P07 found CA-2 statements other than satisfied for this reason.
+The common control catalog lists 81 controls provided by corporate. Inheritance is **documented for Production** and for **Power Generation** (2025 inheritance matrices; Power Generation maps them to its CIP-003-9 low impact plans) and for the FSPA (this plan). It is **not documented for Crude Logistics** (P03 gap 6; EV-018). Until POAM-019 closes, Crude Logistics cannot show its shippers, its SOC 2 auditor (P09), or PHMSA and state inspectors which of its controls are met by group services, and P07 found CA-2 statements other than satisfied for this reason.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and FSPA and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit, with OT tests at Permian field sites on 2026-08-13. See P07 `assessment-results.csv` and `poam.csv`.
@@ -154,7 +156,7 @@ Common controls were assessed once, and FSPA and division controls sampled, from
 - **Integrators and vendors** authenticate as named external identities in SYS-G1 before reaching PAM.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **BCC:** Backup Control Center (Mid-Continent Operations Center)

@@ -12,7 +12,7 @@
 | Approved | 2026-09-17 by the board risk committee (group register and all High risks); division presidents approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** The corporate shared services (SYS-G1 to SYS-G6) and every division system in `../00_company-facts.md` section 3: the Production field SCADA, field devices, accounting, and legacy Mid-Continent SCADA (SYS-P1 to SYS-P6); the Power Generation plant control systems, Generation Control Center, and market systems (SYS-E1 to SYS-E3); and the Crude Logistics pipeline SCADA, measurement, shipper platform, and fleet systems (SYS-M1 to SYS-M4).
+**Scope.** The corporate shared services (SYS-G1 to SYS-G6) and every division system in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv): the Production field SCADA, field devices, accounting, and legacy Mid-Continent SCADA (SYS-P1 to SYS-P6); the Power Generation plant control systems, Generation Control Center, and market systems (SYS-E1 to SYS-E3); and the Crude Logistics pipeline SCADA, measurement, shipper platform, and fleet systems (SYS-M1 to SYS-M4).
 
 **OT changes what "impact" means.** In these divisions the worst outcomes are physical: an uncontrolled release, H2S exposure, an overpressured pipeline, or a tripped unit during a grid emergency. Impact ratings therefore weigh safety and environmental harm first, then reliability obligations, then money (P05 section 3). Hardwired shutdowns and relief systems that act without SCADA are treated as existing controls that cap the worst case; they do not lower the likelihood of an attack.
 
@@ -20,7 +20,7 @@
 - **Division registers** hold risks a division owns and can treat itself. Each division security and compliance lead maintains one. Crude Oil Production, the focus division, has the most detailed register.
 - **The group register** holds enterprise risks: risks that cross divisions, sit in shared services, or need group funding or a board decision. Each group risk lists the division risks it rolls up in `related_risk_ids`, and each linked division risk points back to its group risk. Group risks are rated on their own group-level likelihood and impact, not copied from the highest division rating.
 
-**Risk tolerance and who can accept risk** (recorded in `../00_company-facts.md` section 7):
+**Risk tolerance and who can accept risk** (recorded in `../00_company-facts.md` section 7 and in the group risk management strategy, EV-028):
 | Level | Who may accept |
 |---|---|
 | Very Low and Low | Division security and compliance lead |
@@ -31,11 +31,13 @@
 Safety and environmental risks rated High may not be accepted. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), OT threat advisories tracked by the SOC OT desk, and interviews with each division's operations and compliance leaders.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, the gap analyses (P03), the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window, OT threat advisories tracked by the SOC OT desk (EV-014), and interviews with each division's operations and compliance leaders (EV-076 group, EV-077 Crude Oil Production, EV-078 Power Generation, EV-079 Crude Logistics).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, plans, records, interviews and the P07 results available by then. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA categories (P05). Group impact reflects enterprise consequences: harm in more than one division, several regulators at once, and SEC disclosure.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads proposed roll-ups. The Group Chief Risk Officer decided which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence, including the P07 results available by then (for example the route test to the jump servers, EV-C-AC17, and the KEV backlog, EV-C-RA5). Pass 2 followed the control assessment (P07): PD-003 was added on 2026-08-14 after testing on 2026-08-13 found default vendor passwords on field devices (EV-F-IA5), and it was last reviewed on 2026-09-15, when the passwords were changed (EV-089). The `assessment_pass` column shows which pass produced each risk. Other P07 findings confirmed existing risks and were tracked in the POA&M against them.
 
 ## 3. Results
 
@@ -75,13 +77,13 @@ Safety and environmental risks rated High may not be accepted. They must be trea
 
 ### What the results say
 There are no Very High risks. Each division's own basics are mostly in place: a 24x7 SOC with an OT desk, PAM with MFA, immutable cloud backups, a clean NERC CIP audit, and written control room procedures. The High risks cluster in three places:
-1. **The seams between shared IT and division OT** (GR-01, GR-02, GR-13, PG-004, ML-001). Two shared paths, the data platform historian connector and the shared OT jump servers, reach all three divisions' OT DMZs (scenario gap 1). One compromised corporate identity could touch field SCADA, the Generation Control Center, and the Pipeline Control Center. This is the top group risk and the subject of the P08 runbook.
-2. **Legacy and acquired OT** (PD-001, PD-002, PD-007, GR-16). The Mid-Continent legacy SCADA carries about 22% of production with always-on integrator access, no logging, and untested backups (scenario gap 2).
-3. **Rules that apply to only one division** (PG-001, ML-002). Plant P3's vendor remote access does not meet CIP-003-9 Attachment 1 Section 6.3 (gap 3), and the backup PCC test is past the 195.446(c)(4) interval (gap 4). Both are compliance failures as well as security risks, so their treatment dates are the earliest in the register.
+1. **The seams between shared IT and division OT** (GR-01, GR-02, GR-13, PG-004, ML-001). Two shared paths, the data platform historian connector and the shared OT jump servers, reach all three divisions' OT DMZs (P03 gap 1; EV-008, EV-009). One compromised corporate identity could touch field SCADA, the Generation Control Center, and the Pipeline Control Center. This is the top group risk and the subject of the P08 runbook.
+2. **Legacy and acquired OT** (PD-001, PD-002, PD-007, GR-16). The Mid-Continent legacy SCADA carries about 22% of production with always-on integrator access, no logging, and untested backups (P03 gap 2; EV-049).
+3. **Rules that apply to only one division** (PG-001, ML-002). Plant P3's vendor remote access does not meet CIP-003-9 Attachment 1 Section 6.3 (P03 gap 3; EV-057), and the backup PCC test is past the 195.446(c)(4) interval (P03 gap 4; EV-062). Both are compliance failures as well as security risks, so their treatment dates are the earliest in the register.
 
-AI governance (GR-05, PD-009) is High because the predictive maintenance model was already changing rod pump speeds in the field before anyone reviewed it (scenario gap 8). Royalty owner data on file shares (GR-10) is High because about 190,000 owners in all 50 states would need notices.
+AI governance (GR-05, PD-009) is High because the predictive maintenance model was already changing rod pump speeds in the field before anyone reviewed it (P03 gap 8; EV-086). Royalty owner data on file shares (GR-10) is High because about 190,000 owners in all 50 states would need notices.
 
-Governance gaps 6, 7, and 9 (inheritance, the unexercised notification matrix, and the stale Crude Logistics supplement) are Moderate (GR-04, GR-06, GR-07). They matter because they hide whether Crude Logistics controls actually operate, which is why P07 sampled Crude Logistics most heavily.
+P03 gaps 6, 7, and 9 (inheritance, the unexercised notification matrix, and the stale Crude Logistics supplement; EV-018, EV-025, EV-017) are Moderate (GR-04, GR-06, GR-07). They matter because they hide whether Crude Logistics controls actually operate, which is why P07 sampled Crude Logistics most heavily.
 
 ## 4. Treatment summary
 - **Group-funded programs (2026 Q4 to 2027 Q2):** split the shared OT jump servers by division and replace the historian connector with one-way, read-only pushes (GR-01, GR-02); extend OT monitoring to the Mid-Continent fields and all plants (GR-13); accelerate the Mid-Continent SCADA migration (PD-001, PD-002); group AI governance program (GR-05); remove royalty owner exports from file shares (GR-10).

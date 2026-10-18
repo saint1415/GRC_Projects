@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Mining, Quarrying, and Oil and Gas Extraction | Enterprise
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation or standard, the citation is given.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation or standard, the citation is given.
 
 ## 1. The organization
 | Item | Fact |
@@ -15,8 +15,8 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Revenue | About $4.8 billion a year (fictional), about $13.2 million per calendar day |
 | Owners and partners | Operator for about 1,400 non-operating working interest owners (joint interest billing) and pays about 68,000 royalty owners monthly, who live in all 50 states |
 | Size status | Not small. 12,000 employees is above the SBA standard of 1,250 employees for NAICS 211120 (13 CFR 121.201) |
-| Added at this size | SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106, 17 CFR 229.106); SOX IT general controls over production and revenue accounting; PHMSA gathering line duties; growth by acquisition (Mid-Continent operator acquired 2025-10) |
-| Not in scope | Offshore, Outer Continental Shelf, and MTSA facilities (none). TSA-notified pipelines (none). Federal or tribal onshore leases (none; all leases are fee or state). EAR-controlled technology (none identified). SSI under 49 CFR Part 1520 (none held). Federal contracts (none). Payment cards (not accepted). Gas pipelines under 49 CFR Part 192 (none owned) |
+| Added at this size | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): SEC cybersecurity disclosure (Form 8-K Item 1.05; Reg S-K Item 106, 17 CFR 229.106); SOX IT general controls over production and revenue accounting; PHMSA gathering line duties (EV-034, EV-048, EV-051). Growth by acquisition (Mid-Continent operator acquired 2025-10; EV-008) |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv) (EV-047, EV-051): offshore, Outer Continental Shelf, and MTSA facilities (none). TSA-notified pipelines (none). Federal or tribal onshore leases (none; all leases are fee or state). EAR-controlled technology (none identified). SSI under 49 CFR Part 1520 (none held). Federal contracts (none). Payment cards (not accepted). Gas pipelines under 49 CFR Part 192 (none owned) |
 | State law approach | Breach notification and data security: the law of each state where affected individuals reside, with Florida (Fla. Stat. 501.171) as the worked example. State oil and gas commission rules (permits, production reports, flaring) are operational, not cybersecurity rules, and are treated generically where they bear on cyber-physical safety |
 
 ## 2. People (role titles only)
@@ -33,50 +33,33 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Disclosure committee | 8-K materiality decisions (General Counsel chairs) |
 
 ## 3. Systems
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv).
+
 | ID | System | Notes |
 |---|---|---|
-| SYS-01 | Enterprise SCADA platform: SCADA master servers at the IOC with hot standby at the BCC, regional SCADA servers at the Florida regional control room, historians, about 140 HMIs, 40 engineering workstations | One SCADA software platform for the Permian, the legacy Mid-Continent assets, and Florida. The Florida servers and 18 Florida HMIs run an operating system past end of vendor support |
-| SYS-02 | Field control devices and communications: about 11,000 RTUs, PLCs, pump controllers, and flow computers; about 1,800 ESP variable speed drives; private LTE in the Permian core; licensed radio in the Mid-Continent and Florida; about 6,500 cellular modems | Safety shutdowns (gas detection, tank high-level, compressor emergency shutdown, gathering line high-pressure shutdown) are hardwired or run in separate safety controllers and do not depend on SCADA |
+| SYS-01 | Enterprise SCADA platform: SCADA master servers at the IOC with hot standby at the BCC, regional SCADA servers at the Florida regional control room, historians, about 140 HMIs, 40 engineering workstations | One SCADA software platform for the Permian, the legacy Mid-Continent assets, and Florida. The Florida servers and 18 Florida HMIs run an operating system past end of vendor support (EV-011) |
+| SYS-02 | Field control devices and communications: about 11,000 RTUs, PLCs, pump controllers, and flow computers; about 1,800 ESP variable speed drives; private LTE in the Permian core; licensed radio in the Mid-Continent and Florida; about 6,500 cellular modems | Safety shutdowns (gas detection, tank high-level, compressor emergency shutdown, gathering line high-pressure shutdown) are hardwired or run in separate safety controllers and do not depend on SCADA (EV-012) |
 | SYS-03 | Hydrocarbon accounting and revenue distribution (commercial software, customer-managed on Cloud provider A) | Volumes, allocations, run tickets, state production and severance tax reports, revenue distribution, joint interest billing. SOX-relevant |
 | SYS-04 | Multi-cloud estate (two public cloud providers, vendor-agnostic) plus 2 colocation data centers (DC-1 Florida, DC-2 Texas) | Cloud A: hydrocarbon accounting, historian replica, volume integration, owner and partner portal (SL-1). Cloud B: data platform, machine learning platform (P10), water services portal (SL-2). Two clouds share one landing zone design |
-| SYS-05 | Identity platform (SSO, MFA, privileged access management, identity governance) | The OT identity domain (directory in the OT DMZ) is separate and not under identity governance; the acquired Mid-Continent assets still use the seller's directory |
+| SYS-05 | Identity platform (SSO, MFA, privileged access management, identity governance) | The OT identity domain (directory in the OT DMZ) is separate and not under identity governance; the acquired Mid-Continent assets still use the seller's directory (EV-004, EV-005, EV-007) |
 | SYS-06 | ERP (finance, supply chain, maintenance work orders, payroll) | Vendor SaaS; SOX IT general controls tested annually |
-| SYS-07 | Enterprise network (MPLS and SD-WAN to 60 field offices and yards), IT/OT boundary | OT DMZs at the IOC and BCC. The Florida regional control room has no OT DMZ, and the acquired Mid-Continent network is flat and reaches the enterprise WAN over a site-to-site VPN |
-| SYS-08 | About 14,000 corporate endpoints, 3,500 rugged field tablets, 9,000 managed phones | EDR on 97% of corporate endpoints |
+| SYS-07 | Enterprise network (MPLS and SD-WAN to 60 field offices and yards), IT/OT boundary | OT DMZs at the IOC and BCC. The Florida regional control room has no OT DMZ, and the acquired Mid-Continent network is flat and reaches the enterprise WAN over a site-to-site VPN (EV-007, EV-012) |
+| SYS-08 | About 14,000 corporate endpoints, 3,500 rugged field tablets, 9,000 managed phones | EDR on 97% of corporate endpoints (EV-009, EV-010) |
 | SYS-09 | Seismic and reservoir data platform (geoscience applications and high-performance computing on Cloud B) | Trade secret data |
-| SYS-10 | About 1,600 third-party vendors (210 with remote access to IT or OT) | Tiered third-party risk program; one cellular carrier serves 88% of field modems; the ESP vendor monitors its drives through its own cloud service |
+| SYS-10 | About 1,600 third-party vendors (210 with remote access to IT or OT) | Tiered third-party risk program; one cellular carrier serves 88% of field modems; the ESP vendor monitors its drives through its own cloud service (EV-015, EV-017, EV-037) |
 | SYS-11 | Fleet telematics and HSE systems | Vehicle locations of field employees, gas detector data, HSE incident and spill reporting |
-| SYS-12 | AI portfolio (11 use cases) | Governed by an AI council formed in 2025 |
-| SYS-13 | Acquired Mid-Continent assets (AQ-MC): the seller's legacy SCADA (a different vendor platform) for 1,700 wells, its own control room in Oklahoma, legacy directory and flat network | Migration to the enterprise SCADA platform due 2027-06-30 |
+| SYS-12 | AI portfolio (11 use cases) | Governed by an AI council formed in 2025 (P10; EV-072, EV-091) |
+| SYS-13 | Acquired Mid-Continent assets (AQ-MC): the seller's legacy SCADA (a different vendor platform) for 1,700 wells, its own control room in Oklahoma, legacy directory and flat network | Migration to the enterprise SCADA platform due 2027-06-30 (EV-007, EV-008) |
 
 **SSP system (P02):** the *Field SCADA and Production Accounting System (FSPA)*: the enterprise SCADA platform (SYS-01) at the IOC, BCC, and Florida regional control room; the field devices and communications connected to it (SYS-02); the OT DMZs and IT/OT boundary of SYS-07; the FSPA workloads on Cloud provider A (historian replica, volume integration service, field data capture app); and the hydrocarbon accounting system (SYS-03). It inherits common controls from the enterprise platform. The AQ-MC legacy SCADA (SYS-13) is an interconnected system outside the boundary until migration.
 
 **Data flow in one line:** field devices (SYS-02) report to the SCADA servers (SYS-01); historians push data through the OT DMZ to the historian replica on Cloud A; field staff enter tank gauges and run tickets on tablets in the field data capture app; LACT flow computers send custody transfer tickets; the volume integration service sends daily volumes to hydrocarbon accounting (SYS-03), which pays owners and bills partners.
 
-## 4. Current security posture: mostly compliant, with targeted gaps
-**In place today:**
-- A mature program aligned to CSF 2.0, with an OT security program aligned to NIST SP 800-82 Rev. 3 since 2024
-- Annual risk analysis tied to ERM (NIST IR 8286)
-- A policy hierarchy of policies, standards, procedures, and exceptions
-- 24x7 SOC with OT analysts; passive OT network monitoring at the IOC, the BCC, and about 70% of Permian facilities
-- PAM, including a remote access gateway for OT vendors (Permian and BCC)
-- Quarterly access certification for IT systems
-- Immutable backups for cloud and data center workloads
-- Annual DR tests for tier-1 systems
-- Tiered vendor reviews
-- Annual SOC 2 Type 2 for the owner and partner portal (since 2025)
-- SEC Item 106 disclosure in its 10-K
-
-**Targeted gaps:**
-1. **Acquisition integration.** The 2025 Mid-Continent acquisition (AQ-MC) still runs the seller's legacy SCADA for 1,700 wells on a flat network that reaches the enterprise WAN over a site-to-site VPN, with shared operator logins and an always-on integrator remote access tool. Migration is due 2027-06-30.
-2. **Florida legacy.** The Florida regional control room has no OT DMZ (corporate-to-SCADA rules on one firewall), and its SCADA servers and 18 HMIs run an operating system past end of vendor support.
-3. **Field device visibility.** The field device inventory is 82% complete. Devices on cellular backhaul are not seen by passive monitoring, 12% of modems are still on the carrier's public network, and firmware is not tracked for about 40% of controllers.
-4. **Vendor remote access.** The ESP vendor monitors about 1,800 drives through its own cloud service, outside the enterprise remote access gateway, with a remote setpoint-write feature enabled on 260 drives.
-5. **OT recovery.** The 2026 failover test from the IOC to the BCC took 9 hours against a 4-hour RTO. PLC and RTU programs are backed up centrally only for the Permian.
-6. **Materiality.** The SEC materiality playbook has never been exercised for an OT scenario, and it has no agreed method to quantify deferred production quickly.
-7. **AI.** 11 AI use cases, 7 with completed council review. The predictive maintenance model (AI-001) was expanded across the Permian before its fairness review by well group was repeated, and a proposal to let an optimization model write setpoints (AI-005) is pending.
-8. **Carrier concentration.** One cellular carrier serves 88% of field modems, and about 70% of cellular sites have no second path.
-9. **OT identity.** The OT identity domain and local SCADA accounts are outside quarterly access certification.
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates. At this size the sources are enterprise systems of record across IT, OT, and field operations (identity platform, OT directory, PAM, OT asset inventory and passive monitoring, SIEM, SCADA configuration, hydrocarbon accounting), prior Internal Audit and SOX workpapers, pipeline and HSE compliance files, regulator correspondence, and board and committee records.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv), reviewed by the General Counsel's office with outside counsel (EV-051).
+- **Gaps against the NIST CSF 2.0 and SP 800-82 Rev. 3 benchmark and the binding rules** are judged in the gap analysis (P03), and **whether controls work** is tested by Internal Audit in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -93,9 +76,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 ## 6. Assessment calendar (fictional)
 | Date | Event |
 |---|---|
-| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (IOC, BCC, Florida control room, and field site walkthroughs in June and July) |
-| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line; GRC team supported scoping) |
-| 2026-09-10 | Results to the risk committee of the board |
+| 2026-05-04 to 2026-05-29 | Intake: evidence requests, exports from systems of record, inventories, obligations register (reviewed by counsel) |
+| 2026-06-01 to 2026-07-15 | BIA interviews and dependency review |
+| 2026-06-01 to 2026-07-31 | Enterprise risk analysis and gap analysis (IOC, BCC, Florida control room, and field site walkthroughs in June and July; gap analysis evidence sampling completed 2026-08-14) |
+| 2026-06-22 to 2026-07-10 | 2026 annual revision of POL-01 to POL-05 drafted from the intake evidence and early risk and gap results |
+| 2026-07-13 to 2026-08-28 | Control assessment (Internal Audit, third line; GRC team supported scoping): operating tests of controls in force under the 2025 policy set; design review of the draft 2026 revisions |
+| 2026-09-10 | Results to the risk committee of the board; 2026 revisions of POL-01 to POL-05 approved (effective 2026-10-01) |
+| 2027-03 (planned) | Internal Audit follow-up: operating effectiveness of the controls the 2026 revisions and POA&M items introduced, after at least one quarter of operation |
 
 ## 7. Facts added for the deliverables
 These facts were added while building the deliverables. They do not change sections 1-6.
@@ -130,17 +117,17 @@ These facts were added while building the deliverables. They do not change secti
 | Vice President, Investor Relations; Vice President, Corporate Communications | Investor and public communications; Investor Relations sits on the disclosure committee |
 | SCADA integrators (2, contracted) | Integrator A supports the enterprise SCADA platform; Integrator B supports the AQ-MC legacy SCADA under a transition services agreement |
 
-**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, COO, and Vice President, Investor Relations, advised by outside securities counsel. The COO joined in 2026 so that operational impact is in the room.
+**Disclosure committee membership (P08).** General Counsel (chair), CFO, Controller, CISO, Chief Risk Officer, COO, and Vice President, Investor Relations, advised by outside securities counsel. The COO joined in 2026 so that operational impact is in the room (EV-033).
 
-**Volumes and money.** Oil sales about $9.6 million per day; Permian about 74% of revenue. Royalty and partner distributions about $520 million a month. Water services (SL-2) revenue about $95 million a year from about 35 third-party operators.
+**Volumes and money.** Oil sales about $9.6 million per day; Permian about 74% of revenue. Royalty and partner distributions about $520 million a month. Water services (SL-2) revenue about $95 million a year from about 35 third-party operators (EV-045).
 
-**Service lines offered to outside parties (P09).** SL-1: owner and partner services (owner and partner portal on Cloud A, monthly revenue and joint interest billing statements, direct deposit payments) for about 68,000 royalty owners and 1,400 non-operating partners. SL-1 has had a SOC 2 Type 2 report (Security, Availability, Confidentiality) since 2025. SL-2: produced water gathering and disposal for about 35 third-party operators in the Permian (SCADA-measured volumes, the water services portal on Cloud B, monthly invoices). SL-2 has no SOC 2 report yet.
+**Service lines offered to outside parties (P09).** SL-1: owner and partner services (owner and partner portal on Cloud A, monthly revenue and joint interest billing statements, direct deposit payments) for about 68,000 royalty owners and 1,400 non-operating partners. SL-1 has had a SOC 2 Type 2 report (Security, Availability, Confidentiality) since 2025. SL-2: produced water gathering and disposal for about 35 third-party operators in the Permian (SCADA-measured volumes, the water services portal on Cloud B, monthly invoices). SL-2 has no SOC 2 report yet (EV-041, EV-042).
 
-**Operating areas and control.** The IOC controls the Permian and the legacy Mid-Continent assets on the enterprise platform; the BCC can take over all IOC functions; the Florida regional control room controls Florida and can be monitored (not controlled) from the IOC. AQ-MC is controlled from the seller's former control room in Oklahoma, staffed by company employees since closing.
+**Operating areas and control.** The IOC controls the Permian and the legacy Mid-Continent assets on the enterprise platform; the BCC can take over all IOC functions; the Florida regional control room controls Florida and can be monitored (not controlled) from the IOC. AQ-MC is controlled from the seller's former control room in Oklahoma, staffed by company employees since closing (EV-008).
 
-**SPCC high-level alarm option.** 31 tank batteries (Mid-Continent and Florida) meet the overfill prevention requirement of 40 CFR 112.9(c)(4) by the high-level alarm option in (c)(4)(iv); the rest rely on container capacity or overflow equalizing lines.
+**SPCC high-level alarm option.** 31 tank batteries (Mid-Continent and Florida) meet the overfill prevention requirement of 40 CFR 112.9(c)(4) by the high-level alarm option in (c)(4)(iv); the rest rely on container capacity or overflow equalizing lines (EV-049).
 
-**Personal information held.** Royalty owners: names, addresses, taxpayer identification numbers (most are Social Security numbers), bank account numbers for direct deposit. Employees: Social Security numbers, driver license and commercial driver license numbers, health plan identifiers, vehicle geolocation from telematics.
+**Personal information held.** Royalty owners: names, addresses, taxpayer identification numbers (most are Social Security numbers), bank account numbers for direct deposit. Employees: Social Security numbers, driver license and commercial driver license numbers, health plan identifiers, vehicle geolocation from telematics (EV-060).
 
 **Risk program and funding (P01).** Eight enterprise risks (ER-01 to ER-08) with board-approved tolerance thresholds. Treatment funding approved for 2026 Q4 to 2027 Q2: about $14.6 million.
 
@@ -148,8 +135,8 @@ These facts were added while building the deliverables. They do not change secti
 
 **Internal Audit team for P07.** An IT audit manager, three IT auditors, and a contracted OT security specialist under the Chief Audit Executive.
 
-**Recent operating history used as samples (P03).** 2025-01-01 to 2026-06-30: 3 severity-1 security incidents (none material), 7 gathering line accidents reported under 49 CFR 195.50, 1 immediate notice under 195.52, and 4 reportable oil discharges under 40 CFR 110.6. None was caused by a cyber event.
+**Recent operating history used as samples (P03).** 2025-01-01 to 2026-06-30: 3 severity-1 security incidents (none material), 7 gathering line accidents reported under 49 CFR 195.50, 1 immediate notice under 195.52, and 4 reportable oil discharges under 40 CFR 110.6. None was caused by a cyber event (EV-085).
 
-**SOC 2 plans (P09).** SL-1 adds Processing Integrity and Privacy for its 2027 report (period 2027-01-01 to 2027-12-31). SL-2's first Type 2 report covers Security, Availability, Confidentiality, and Processing Integrity (period 2027-04-01 to 2027-09-30). SL-2 customer agreements require notice within 24 hours of a service outage and 72 hours of a security incident affecting customer data.
+**SOC 2 plans (P09).** SL-1 adds Processing Integrity and Privacy for its 2027 report (period 2027-01-01 to 2027-12-31). SL-2's first Type 2 report covers Security, Availability, Confidentiality, and Processing Integrity (period 2027-04-01 to 2027-09-30). SL-2 customer agreements require notice within 24 hours of a service outage and 72 hours of a security incident affecting customer data (EV-042).
 
-**AI portfolio (P10).** 11 use cases: AI-001 predictive maintenance (Medium), AI-002 production forecasting, AI-003 seismic interpretation assistant, AI-004 drilling optimization advisory, AI-005 production optimization (High; advisory pilot, closed loop refused), AI-006 methane and leak detection analytics, AI-007 invoice coding, AI-008 owner chatbot on the SL-1 portal, AI-009 telematics driver scoring (High; suspended), AI-010 enterprise generative AI assistant, AI-011 SOC triage assistant. Not yet reviewed by the council: AI-006, AI-008, AI-009, AI-011.
+**AI portfolio (P10).** 11 use cases: AI-001 predictive maintenance (Medium), AI-002 production forecasting, AI-003 seismic interpretation assistant, AI-004 drilling optimization advisory, AI-005 production optimization (High; advisory pilot, closed loop refused), AI-006 methane and leak detection analytics, AI-007 invoice coding, AI-008 owner chatbot on the SL-1 portal, AI-009 telematics driver scoring (High; suspended), AI-010 enterprise generative AI assistant, AI-011 SOC triage assistant. Not yet reviewed by the council: AI-006, AI-008, AI-009, AI-011 (EV-091).

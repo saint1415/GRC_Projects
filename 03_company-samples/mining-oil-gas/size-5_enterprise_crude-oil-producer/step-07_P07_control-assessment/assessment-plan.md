@@ -84,6 +84,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** Chief Operating Officer; Vice President, Operations Technology and Automation; Director of OT Security; Director of Security Operations; Director of Identity and Access Management; Director of Network Engineering; Director of Third-Party Risk Management; Vice President, Production and Revenue Accounting; General Counsel; CFO; CISO; regional operations leads at Florida and AQ-MC; 20 randomly selected Production Controllers and field staff.
 - **Test:** credential tests on LACT flow computers and AQ-MC modems (with operations approval); reachability tests from the AQ-MC network and from the internet; controller mode reads through the SCADA platform (read-only); detection tests at 2 Permian facilities; a restore observation; failover test evidence review.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 (P06) were drafts during fieldwork; they were approved on 2026-09-10 and take effect on 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set and OT standards, which were in force (EV-027, EV-028), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-03 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations, or live systems (read-only through the SCADA platform) | 299 (246 Satisfied, 53 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-03 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: an alert when volume data changes after allocation close (SI-07b.[03]) | 1 |
+| **Total** | | **300** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example the OT directory and HR records, EV-005 and EV-006, the OT change records, EV-059, and the OT vulnerability register, EV-020), were refreshed to 2026-06-30 at kickoff, and reused the P03 samples where noted (EV-081, EV-082).
+
 ## 4. Rules of engagement (OT safety first)
 - No test could change a setpoint, controller logic, or safety function. Controller tests were read-only and ran through the SCADA platform, not directly against devices.
 - Credential tests on LACT flow computers ran only during scheduled proving windows with the Vice President, Midstream and Water's approval and a measurement technician present; modem tests were limited to the management interface.

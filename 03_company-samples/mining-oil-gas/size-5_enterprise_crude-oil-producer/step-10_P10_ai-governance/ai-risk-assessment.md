@@ -8,6 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook; the Generative AI Profile (NIST AI 600-1) for AI-008 and AI-010; repository risk tier rubric |
 | Assessor / date | AI council (chaired by the Vice President, Data and Analytics), meeting of 2026-08-19; GRC team prepared the portfolio review |
 | Decision | Executive risk committee, 2026-09-10 (section 8) |
+| Inventory | `ai-use-case-inventory.csv` (11 use cases), built from the AI council register at intake (EV-072), the accounts payable vendor master (EV-038), the enterprise AI assistant settings (EV-065), the fleet safety report in the P01 risk workshops of the telematics driver scoring feature (EV-078), and the council register and portfolio review pack of 2026-08-19 (EV-091), which lists AI-006, AI-008 and AI-011 that were not in the intake register. The `source_evidence` column names the records behind each use case. Not established: AI features embedded in other vendor products that no record surfaced (intake open request), and how many staff use the public generative AI sites reachable from some field office networks (EV-065) |
 
 ## 1. Portfolio summary
 | Measure | Result |

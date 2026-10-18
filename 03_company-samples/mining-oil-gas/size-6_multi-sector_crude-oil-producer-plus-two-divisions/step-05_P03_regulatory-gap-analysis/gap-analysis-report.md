@@ -13,6 +13,8 @@
 | Regulatory driver labels | `N21-BM (...)` points to the Production benchmark; `N22-R01 (CIP-...)` to NERC CIP; `PHMSA 195.xx` and `HMR 172.xxx` to the Crude Logistics rules; `N48-49-R08` to SEC disclosure (see `../00_company-facts.md` section 5) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per rule for each division and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Regulation-by-division matrix
 | Requirement | Crude Oil Production | Power Generation | Crude Logistics | Group (corporate) |
 |---|---|---|---|---|
@@ -40,7 +42,7 @@ No binding federal sector cybersecurity rule applies to an onshore producer. Par
 - **Registration:** Generator Owner and Generator Operator. **Impact:** low only. The largest plant is 640 MW and the GCC dispatches 1,180 MW, below the 1,500 MW bright lines in CIP-002-5.1a criteria 2.1 and 2.11; no planner designation (2.3) or IROL identification (2.6) exists; so no high (criterion 1.4) or medium rating applies. All four assets (P1, P2, P3, and the GCC with its backup function) contain low impact BES Cyber Systems (criteria 3.1 and 3.3).
 - **CIP-012-2 applies** because the GCC is a Control Center operated by a Generator Operator, and it sends real-time data about plants it is not co-located with (so the 4.2.3 exemption does not apply). CIP-012-2 became enforceable on 2026-07-01.
 - **DOE-417:** the instructions name Balancing Authorities, Reliability Coordinators, electric utilities (entities with distribution facilities), and Generating Entities with 300 MW or more dedicated to end-use customers. The division is none of these, because all its output is sold in wholesale markets. It gives its Balancing Authorities the information they need, and EOP-004-4 accepts a DOE-417 form as the event report format.
-- **Possible noncompliance (scenario gap 3).** Since CIP-003-9 took effect on 2026-04-01, Plant P3's turbine vendor has had a standing remote access path with no method to detect malicious communications (Attachment 1 Section 6.3, EG-21), and reviews of OEM transient cyber assets have not been recorded (Section 5.2, EG-16 and EG-17). **Decision (CIP Senior Manager with the Group General Counsel, 2026-09-17):** self-report both issues to the Regional Entity with a mitigation plan, rather than wait for an audit. Reasons: the gap is known and documented here, it began on the effective date, and the fix (moving the P3 path into group PAM with OT sensor rules) is scheduled for 2026-12-31 (POAM-013, POAM-014).
+- **Possible noncompliance (gap 3; EV-057, EV-058).** Since CIP-003-9 took effect on 2026-04-01, Plant P3's turbine vendor has had a standing remote access path with no method to detect malicious communications (Attachment 1 Section 6.3, EG-21), and reviews of OEM transient cyber assets have not been recorded (Section 5.2, EG-16 and EG-17). **Decision (CIP Senior Manager with the Group General Counsel, 2026-09-17):** self-report both issues to the Regional Entity with a mitigation plan, rather than wait for an audit. Reasons: the gap is known and documented here, it began on the effective date, and the fix (moving the P3 path into group PAM with OT sensor rules) is scheduled for 2026-12-31 (POAM-013, POAM-014).
 
 ### 1.4 Crude Logistics: which lines and which rules
 - **Trunk line (140 miles, 16 inch, intrastate):** a gathering line under 195.2 is 8 5/8 inch or less, so the trunk line is a regulated pipeline covered in full (195.1(a)(3)). Its Pipeline Control Center and backup PCC are control rooms under 195.446. As an intrastate line, its procedures are submitted to the state pipeline safety agency on request (195.446(i)).
@@ -52,12 +54,12 @@ No binding federal sector cybersecurity rule applies to an onshore producer. Par
 ### 1.5 Group-wide screens
 USCG Subpart F does not apply (no vessel, MTSA facility, or OCS facility; 33 CFR 101.605(a)). CIRCIA is not in effect; if finalized as proposed, the group would be covered because 45,000 employees exceeds the 1,250-employee SBA standard for NAICS 211120 (13 CFR 121.201). FAR safeguarding and covered-article clauses do not apply (no federal contracts).
 
-**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `../00_company-facts.md` section 1.
 
 ## 2. Method
 1. **Requirements.** Production rows are the 106 CSF 2.0 subcategories, quoted from the CSF 2.0 core, plus two EPA rows. NERC rows follow each standard's requirement and Attachment 1 structure (CIP-002-5.1a, CIP-003-9, CIP-012-2, EOP-004-4, read from the NERC standard documents). Part 195, HMR, and FMCSA rows follow the CFR section structure (eCFR, current through 2026-09-23). Group rows follow 17 CFR 229.106, Form 8-K Item 1.05, and Fla. Stat. 501.171.
 2. **Crosswalk.** For CSF rows, SP 800-53 Rev. 5 controls come from NIST's official CSF 2.0 informative references (column `nist_official_sp800_53r5`); `sp800_53_controls` is the author's key-control selection, and the SP 800-82 Rev. 3 section (`sp800_82r3_reference`) is an author mapping because SP 800-82 Rev. 3 is organized by CSF 1.1 categories. All NERC, PHMSA, HMR, FMCSA, SEC, and state rows carry an **author mapping**.
-3. **Evidence.** Interviews with each division's operations, compliance, and security leaders; document review; firewall and PAM configuration exports; the CIP-003-9 evidence binder; control room procedures and training records; the hazmat security plan; and P07 test results.
+3. **Evidence.** The intake evidence and inventories ([step-00](../step-00_P00_intake/intake-report.md), EV-001 to EV-071); gap analysis interviews with each division's operations, compliance, and security leaders (EV-080 group, EV-081 Crude Oil Production, EV-082 Power Generation, EV-083 Crude Logistics); documents collected during fieldwork (EV-084 to EV-088); firewall and PAM configuration exports; the CIP-003-9 evidence binder; control room procedures and training records; the hazmat security plan; and P07 test results (the EV-C, EV-F, EV-P, EV-G and EV-L IDs). The `evidence` column of each gap table names the evidence ID behind each row.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results
@@ -109,21 +111,23 @@ Of the 16 unmet rows, 1 is High (LG-09, the overdue backup SCADA test), 8 are Mo
 | Applicability screens (USCG, CIRCIA, FAR) (3) | 0 | 0 | 0 | 3 |
 | **Total (12)** | **3** | **6** | **0** | **3** |
 
-All 6 unmet group rows are partially met: 3 Moderate and 3 Low. The SEC disclosures are in place, but the materiality process and the state notice process have never been rehearsed for an incident that crosses divisions (scenario gap 7), and royalty owner exports on file shares weaken the reasonable-measures duty (GG-05).
+All 6 unmet group rows are partially met: 3 Moderate and 3 Low. The SEC disclosures are in place, but the materiality process and the state notice process have never been rehearsed for an incident that crosses divisions (gap 7; EV-025, EV-026), and royalty owner exports on file shares weaken the reasonable-measures duty (GG-05).
 
 ## 4. Group roadmap
-| # | Gap (scenario gap) | Divisions | Citation | Risk | Action | Owner | Target |
+Ten gaps cross divisions or need a group decision. They are numbered here and cited as gaps 1 to 10 (or P03 gaps 1 to 10) across this sample.
+
+| # | Gap (evidence) | Divisions | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
-| 1 | Shared IT/OT paths: historian connector and jump servers (1) | All | CSF PR.AA-05, PR.IR-01; CIP-003-9 Att. 1 Sec. 3.1; 195.446(f) | High | Division-only jump servers; one-way read-only historian push | Group OT Security Director; Group data platform director | 2027-03-31 |
-| 2 | Mid-Continent legacy SCADA (2) | Production | CSF PR.AA-01, DE.CM-06, PR.DS-11 | High | Integrator access through PAM; logging; offline backups; migration by 2027-09-30 | Production Vice President of Operations Technology | 2026-12-31 (interim) |
-| 3 | Plant P3 vendor access and transient cyber asset records (3) | Power Generation | CIP-003-9 R2, Att. 1 Sec. 5.2, 6.3 | High | Self-report; PAM path with OT sensor rules; recorded reviews | CIP Senior Manager | 2026-12-31 |
-| 4 | Backup PCC test overdue; training, point-to-point records (4) | Crude Logistics | 195.446(c)(2), (c)(4), (h) | High | Test by 2026-10-31; re-verify points; add SCADA loss and manipulation to training | Pipeline Control Center Manager | 2027-03-31 |
-| 5 | Hazmat security plan lacks cyber en route risks; camera AI in discipline (5) | Crude Logistics | 172.802(a), (a)(3); 172.704(a)(5); 49 CFR 390.36 | Moderate | Plan and training update; human review of AI scores | Fleet Safety Director | 2027-03-31 |
-| 6 | Crude Logistics inheritance undocumented (6) | Crude Logistics | CSF GV.RR-02; 172.802(b)(2) | Moderate | Inheritance matrix | Crude Logistics security and compliance lead | 2026-12-31 |
-| 7 | Notification matrix not exercised (7) | All | 195.52; 40 CFR 110.6; CIP-003-9 Att. 1 Sec. 4.2; Form 8-K Item 1.05; state laws | Moderate | Cross-division tabletop with the disclosure committee | Group General Counsel | 2026-12-15 |
-| 8 | Predictive maintenance model without safety review (8) | Production | CSF ID.RA-07, GV.RM-07 | High | Advisory mode; safety management of change; council approval (P10) | Production Vice President of Operations Technology | 2026-12-31 |
-| 9 | Crude Logistics supplement drift (9) | Crude Logistics | CSF GV.PO-02 | Moderate | Re-issue supplement | Crude Logistics security and compliance lead | 2026-11-30 |
-| 10 | Royalty owner exports on file shares | Production; group | Fla. Stat. 501.171(2); state laws | Moderate | Stop exports; state-of-residence report | Production Accounting Vice President | 2026-12-31 |
+| 1 | Shared IT/OT paths: historian connector and jump servers (EV-008, EV-009, EV-F-AC4) | All | CSF PR.AA-05, PR.IR-01; CIP-003-9 Att. 1 Sec. 3.1; 195.446(f) | High | Division-only jump servers; one-way read-only historian push | Group OT Security Director; Group data platform director | 2027-03-31 |
+| 2 | Mid-Continent legacy SCADA (EV-049, EV-010) | Production | CSF PR.AA-01, DE.CM-06, PR.DS-11 | High | Integrator access through PAM; logging; offline backups; migration by 2027-09-30 | Production Vice President of Operations Technology | 2026-12-31 (interim) |
+| 3 | Plant P3 vendor access and transient cyber asset records (EV-057, EV-058) | Power Generation | CIP-003-9 R2, Att. 1 Sec. 5.2, 6.3 | High | Self-report; PAM path with OT sensor rules; recorded reviews | CIP Senior Manager | 2026-12-31 |
+| 4 | Backup PCC test overdue; training, point-to-point records (EV-062, EV-063, EV-064) | Crude Logistics | 195.446(c)(2), (c)(4), (h) | High | Test by 2026-10-31; re-verify points; add SCADA loss and manipulation to training | Pipeline Control Center Manager | 2027-03-31 |
+| 5 | Hazmat security plan lacks cyber en route risks; camera AI in discipline (EV-066, EV-067) | Crude Logistics | 172.802(a), (a)(3); 172.704(a)(5); 49 CFR 390.36 | Moderate | Plan and training update; human review of AI scores | Fleet Safety Director | 2027-03-31 |
+| 6 | Crude Logistics inheritance undocumented (EV-018) | Crude Logistics | CSF GV.RR-02; 172.802(b)(2) | Moderate | Inheritance matrix | Crude Logistics security and compliance lead | 2026-12-31 |
+| 7 | Notification matrix not exercised (EV-025, EV-011) | All | 195.52; 40 CFR 110.6; CIP-003-9 Att. 1 Sec. 4.2; Form 8-K Item 1.05; state laws | Moderate | Cross-division tabletop with the disclosure committee | Group General Counsel | 2026-12-15 |
+| 8 | Predictive maintenance model without safety review (EV-086) | Production | CSF ID.RA-07, GV.RM-07 | High | Advisory mode; safety management of change; council approval (P10) | Production Vice President of Operations Technology | 2026-12-31 |
+| 9 | Crude Logistics supplement drift (EV-017) | Crude Logistics | CSF GV.PO-02 | Moderate | Re-issue supplement | Crude Logistics security and compliance lead | 2026-11-30 |
+| 10 | Royalty owner exports on file shares (EV-036) | Production; group | Fla. Stat. 501.171(2); state laws | Moderate | Stop exports; state-of-residence report | Production Accounting Vice President | 2026-12-31 |
 
 High and Moderate gaps are carried into the registers (P01) and the POA&M (P07). The P07 assessment confirmed several of them (POAM-013 to POAM-018 and POAM-021 cite both sources); POAM-022, POAM-023, and POAM-025 come from this analysis alone.
 

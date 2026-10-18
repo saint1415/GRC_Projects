@@ -82,6 +82,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1, which gives provisiona
 **OT overlay tailoring register (TR-01 to TR-07):** TR-01 PIV not used (IA-2(12)); TR-02 HMI session lock replaced by staffed, badge-only rooms (AC-11); TR-03 no lockout on HMI operator logins, failed attempts alert the SOC (AC-7); TR-04 vulnerability scanning in OT is passive or vendor-approved only (RA-5); TR-05 MFA at the HMI console replaced by named accounts and physical access control (IA-2(2)); TR-06 legacy serial and radio protocols without encryption are compensated by private networks and monitoring until replaced (SC-8); TR-07 patches only after vendor qualification on the test rack (SI-2).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-01-FL, SYS-02, SYS-03, SYS-04-A, SYS-05-OT and SYS-07) and the prior SSP version 2.0 (EV-067).
+
 **Inside the boundary:** the IOC and BCC SCADA servers, historians, HMIs, and engineering workstations; the Florida regional SCADA servers and HMIs; field devices and communications connected to the enterprise platform (Permian, legacy Mid-Continent, Florida); the OT DMZs and the Florida IT/OT firewall; the FSPA workloads on Cloud provider A; and the hydrocarbon accounting system.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -210,7 +212,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Owners and partners** do not use the FSPA directly. They use the SL-1 portal, which has its own identity controls (P09).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 (P10), FSPA contingency plan v3, OT tailoring register, enterprise common control catalog.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), ransomware runbook (P08), SOC 2 readiness for SL-1 and SL-2 (P09), AI portfolio including AI-001 (P10), FSPA contingency plan v3 (EV-026), OT tailoring register (EV-028), enterprise common control catalog (EV-056). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official
