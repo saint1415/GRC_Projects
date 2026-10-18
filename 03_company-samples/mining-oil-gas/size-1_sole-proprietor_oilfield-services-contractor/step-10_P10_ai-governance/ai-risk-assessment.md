@@ -8,12 +8,12 @@
 | Why this tool | The registry's default use case is a predictive maintenance model for well equipment. A one-person contractor cannot build one, so this assessment covers the third-party predictive maintenance tool the owner actually uses |
 | Framework | NIST AI RMF 1.0 (Govern, Map, Measure, Manage), short form |
 | Assessor and decision | Owner-operator, 2026-08-25; decision 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built at intake from the bank and card statements, the dynamometer service account and terms, the inbox search for customer consent, the phone's apps, and the chatbot account history (EV-017, EV-022 to EV-025, EV-007). With no staff, there was no survey to run. Not established: what the dynamometer provider and the chatbot provider kept from earlier uploads and chats, and whether either used them to train models |
 
 ## 1. What it does (Map)
 The owner downloads dynamometer cards (load against position for each pump stroke) and run times from customers' rod pump controllers, by cable on site or through Customer A's SCADA exports, and uploads them to the service. A machine learning model classifies each card (for example fluid pound, gas interference, worn pump, rod part) and scores the chance of a pump failure in the next 30 days. The owner uses the results to recommend pump changes or well servicing; the customer decides whether to send a pulling unit, which costs the customer thousands of dollars per job. The service also offers an **automatic optimization feature** that can push setpoint changes (for example pump-off idle time) to the controllers from the cloud. It has never been turned on.
 
-The inputs are customer production data, confidential under the MSAs. The provider's standard terms allow it to use uploaded data to improve its models; a paid tier offers a no-training option. **Customer A never gave written consent** for the uploads, which its MSA requires (MSA-A (5)).
+The inputs are customer production data, confidential under the MSAs. The provider's standard terms allow it to use uploaded data to improve its models; a paid tier offers a no-training option. **Customer A never gave written consent** for the uploads, which its MSA requires (MSA-A (5); EV-023, EV-024).
 
 ## 2. Rules that apply
 | Rule | Applies? | Why |
