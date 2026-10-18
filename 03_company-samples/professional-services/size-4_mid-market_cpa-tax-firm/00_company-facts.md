@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Professional, Scientific, and Technical Services | Mid-Market
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation, IRS publication, or standard, the citation is given.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Where a fact comes from a regulation, IRS publication, or standard, the citation is given.
 
 ## 1. The organization
 
@@ -14,11 +14,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Clients | About 38,000 individual income tax returns (Form 1040 series) a year, covering about 61,000 individual consumers (spouses counted separately); about 9,400 business, trust, and exempt-organization returns; about 1,050 attest engagements, including about 55 SOC examinations; CAS bookkeeping for about 340 business clients and payroll for about 210 business clients with about 8,600 client employees. About 19% of individual clients live outside Florida for part or all of the year |
 | Customer information held | Records on about 205,000 consumers (current and former individual clients whose files go back to 2012). The DMS and CAS platform also hold personal information on about 90,000 other individuals (dependents, client employees in payroll and audit files) |
 | Revenue | $100.0 million a year (fictional): tax $55 million, assurance $22 million (billed by the Attest Firm, with administrative service fees paid to the Company), CAS $13 million, advisory $10 million. About 250 business days a year, so about $400,000 per business day on average. About 50% of tax receipts are billed from February 1 to April 15. Above the SBA standard of $26.5 million for NAICS 541211 (13 CFR 121.201), so not small |
-| GLBA status | **Financial institution under the FTC Safeguards Rule.** 16 CFR 314.2(h)(2)(viii) names "an accountant or other tax preparation service that is in the business of completing income tax returns." Individuals who become tax clients have a customer relationship (314.2(e)(2)(i)(H)). The Company holds customer information on far more than 5,000 consumers, so the 314.6 exception does **not** apply |
-| IRS status | Tax return preparer under IRC 7216 (26 CFR 301.7216-1(b)(2)). Authorized IRS e-file Provider acting as an Electronic Return Originator (ERO), with one EFIN for each of its 6 offices. The Director of Tax Operations is the Responsible Official on all six. About 300 PTIN holders, including seasonal preparers. Returns are transmitted through the tax software vendor, itself an Authorized IRS e-file Provider |
-| HIPAA status | **Business associate** for 44 health care clients: audits of hospitals and physician groups by the Attest Firm, revenue cycle advisory engagements, and CAS for 9 physician practices. Business associate agreements (BAAs) are on file for all 44. 45 CFR 164.302 makes the Security Rule apply to the Company and the Attest Firm for the ePHI they hold for these clients |
-| Not in scope | FAR 52.204-21, DFARS 252.204-7012, and CMMC: no federal contracts or subcontracts. PCAOB: the Attest Firm is not registered and audits no issuers. SEC: the Company is private and is not a registered investment adviser. ABA Model Rules: not a law firm. CIRCIA: proposed rule only. Florida Digital Bill of Rights: a controller must exceed $1 billion in global gross annual revenue and meet one of three business tests (online advertising revenue, a smart speaker service, or an app store), so the Company is not a controller. Payment cards: client payments run through the practice management vendor's hosted payment page and are not assessed |
-| Professional standards | The AICPA Code of Professional Conduct (confidential client information and independence, including the rules for alternative practice structures) applies to the CPAs and the Attest Firm as professional standards adopted through state licensing. They are noted but not assessed, because their text was not verified from the source for this sample |
+| GLBA status | **Financial institution under the FTC Safeguards Rule**, determined in the intake obligations register (N54-R01; EV-041, EV-042). 16 CFR 314.2(h)(2)(viii) names "an accountant or other tax preparation service that is in the business of completing income tax returns." Individuals who become tax clients have a customer relationship (314.2(e)(2)(i)(H)). The Company holds customer information on far more than 5,000 consumers, so the 314.6 exception does **not** apply |
+| IRS status | Tax return preparer under IRC 7216 (26 CFR 301.7216-1(b)(2)); obligations register N54-R02 and N54-R03 (EV-041). Authorized IRS e-file Provider acting as an Electronic Return Originator (ERO), with one EFIN for each of its 6 offices. The Director of Tax Operations is the Responsible Official on all six. About 300 PTIN holders, including seasonal preparers. Returns are transmitted through the tax software vendor, itself an Authorized IRS e-file Provider |
+| HIPAA status | **Business associate** for 44 health care clients: audits of hospitals and physician groups by the Attest Firm, revenue cycle advisory engagements, and CAS for 9 physician practices. Business associate agreements (BAAs) are on file for all 44 (EV-049; obligations register N54-R06). 45 CFR 164.302 makes the Security Rule apply to the Company and the Attest Firm for the ePHI they hold for these clients |
+| Not in scope | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv): FAR 52.204-21, DFARS 252.204-7012, and CMMC: no federal contracts or subcontracts. PCAOB: the Attest Firm is not registered and audits no issuers. SEC: the Company is private and is not a registered investment adviser. ABA Model Rules: not a law firm. CIRCIA: proposed rule only. Florida Digital Bill of Rights: a controller must exceed $1 billion in global gross annual revenue and meet one of three business tests (online advertising revenue, a smart speaker service, or an app store), so the Company is not a controller. Payment cards: client payments run through the practice management vendor's hosted payment page and are not assessed |
+| Professional standards | Obligations register N54-R08. The AICPA Code of Professional Conduct (confidential client information and independence, including the rules for alternative practice structures) applies to the CPAs and the Attest Firm as professional standards adopted through state licensing. They are noted but not assessed, because their text was not verified from the source for this sample |
 | State law approach | Clients and remote staff are in many states. Florida law is the worked example (Fla. Stat. 501.171). Other states are handled generically: "each state where affected individuals reside" |
 | FAR overhaul clause numbers | Background fact, not scored in P03. Contracts awarded before the contracting agency adopted its FAR Part 40 class deviation keep the clauses this sample cites (FAR 52.204-21, 52.204-23 and 52.204-25) until they are modified. New awards under the deviation carry FAR 52.240-93, which has the same 15 safeguarding requirements as FAR 52.204-21, and FAR 52.240-91, which replaces the separate Kaspersky, Section 889 and FASCSA reports with one report within 72 hours. Sources: SRC-FAR-RFO-PART40 |
 
@@ -32,7 +32,7 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Chief Operating Officer | Executive sponsor of the security program; accepts Moderate risk; owns business continuity |
 | Chief Financial Officer | Cyber insurance; finance processes; payment controls |
 | Chief Information Officer | Runs IT (infrastructure, service desk, applications); owner of shared infrastructure |
-| Director of Information Security | **Qualified Individual** under 16 CFR 314.4(a), designated in writing on 2024-03-01. HIPAA Security Officer for the business associate work. Leads 3 security engineers and works with the MSSP |
+| Director of Information Security | **Qualified Individual** under 16 CFR 314.4(a), designated in writing on 2024-03-01 (EV-031). HIPAA Security Officer for the business associate work. Leads 3 security engineers and works with the MSSP |
 | GRC Manager and GRC Analyst | Risk register, policies and standards, vendor reviews, evidence collection; report to the Director of Information Security |
 | General Counsel | Legal; contracts; breach determinations with outside counsel; chairs the AI review group |
 | Privacy Officer (reports to the General Counsel) | IRC 7216 consent program; HIPAA privacy for business associate work; privacy notices; decision log for breach determinations |
@@ -52,13 +52,15 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 ## 3. Systems
 
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv). Suppliers are in [`step-00_P00_intake/vendor-register.csv`](step-00_P00_intake/vendor-register.csv).
+
 | ID | System | Hosting | Holds customer information? | Notes |
 |---|---|---|---|---|
 | SYS-01 | Professional tax preparation and e-file software | Vendor SaaS | Yes | System of record for returns. Vendor transmits to the IRS and states; vendor SOC 2 Type 2. Includes the AI document extraction feature (AI-001) |
-| SYS-02 | Client portal with e-signature and secure file exchange | Vendor SaaS | Yes | Uploads, Forms 8879, engagement letters, return delivery, IRC 7216 consents. Client MFA optional |
+| SYS-02 | Client portal with e-signature and secure file exchange | Vendor SaaS | Yes | Uploads, Forms 8879, engagement letters, return delivery, IRC 7216 consents. Client MFA settings in EV-027 |
 | SYS-03 | Document management system (DMS) | Firm-managed servers in SYS-04 | Yes | Scanned source documents, returns, and correspondence back to 2012 |
 | SYS-04 | Cloud landing zone with 5 accounts | Public cloud (vendor-agnostic) | Yes | Management and security account, shared services (network) account, workloads account, restricted data enclave account, and backup account (see P04) |
-| SYS-05 | Identity provider (SSO, MFA, conditional access) | SaaS | No (identities only) | MFA with number matching for all staff; privileged access management only for cloud administration |
+| SYS-05 | Identity provider (SSO, MFA, conditional access) | SaaS | No (identities only) | Authentication and privileged access settings in EV-002, EV-003 and EV-007 |
 | SYS-06 | Productivity suite (email, files, chat, calendar) | SaaS | Yes | Includes the enterprise generative AI assistant (AI-002) |
 | SYS-07 | Practice management, time and billing, and CRM | Vendor SaaS | Yes | Hosted payment page |
 | SYS-08 | CAS platform: cloud accounting, bill pay, and payroll processing services | Vendor SaaS | Yes | Used by CAS staff to run clients' books, payables, and payroll |
@@ -69,42 +71,16 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | SYS-13 | HR, firm payroll, and applicant tracking | Vendor SaaS | Employee and applicant data | Applicant tracking includes an AI resume-screening module (AI-005) |
 | SYS-14 | AI tools | Various | Yes | AI-001 to AI-006 (P10) |
 
-About 85 service providers hold or can reach customer information (P09 vendor program).
+About 85 service providers hold or can reach customer information (EV-043; P09 vendor program).
 
 **SSP system (P02):** the *Tax and Client Data Platform (TCDP)*: SYS-01, SYS-02, SYS-03, SYS-04, SYS-05, SYS-06, SYS-10, SYS-11, and SYS-12, and their interfaces to the IRS and state e-file systems through the tax software vendor.
 
-## 4. Current security posture: defined program with gaps in scale
+## 4. Where the evidence is
 
-**In place today:**
-- A written information security program (WISP) adopted in 2024, with POL-01 to POL-05; the Qualified Individual designated in writing (2024-03-01)
-- Annual written risk assessment (last completed July 2025)
-- MFA with number matching for all staff on every federated system; legacy authentication blocked; external auto-forwarding blocked
-- EDR on all managed endpoints, monitored 24x7 by the MSSP; SIEM collecting identity, email, EDR, firewall, and cloud logs
-- Annual external and internal penetration test (last 2025-11) and quarterly authenticated vulnerability scans
-- Full-disk encryption on all laptops; provider encryption at rest for every SaaS service and cloud storage
-- Daily backups of SYS-03 and SYS-09 to an immutable vault in a separate backup account in a second region; DMS restore tested in 2025
-- Annual security training and quarterly phishing simulations
-- A first written report by the Qualified Individual to the board (2025-10)
-- Cyber insurance ($15 million limit, $500,000 retention) with a breach hotline and panel vendors
-- A records retention schedule (adopted 2024), engagement letters with IRC 7216 consent language, and BAAs with all 44 health care clients
-- Weekly checks of returns filed per EFIN and per PTIN in filing season
-
-**Missing or weak, found in the 2026 assessments:**
-1. Mailbox takeover by token theft is not mitigated: there is no phishing-resistant MFA for partners, administrators, or finance staff, no device-compliance requirement for mail access, and inbox-rule alerts were suppressed by the MSSP during the 2026 filing season because of noise.
-2. Client portal MFA is optional (about 58% of individual clients have enabled it), and staff still email returns and source documents as plain attachments on request.
-3. Privileged access management covers only cloud administration. 14 IT staff hold standing directory or productivity suite administrator rights, and 9 service accounts have non-expiring passwords.
-4. The offshore preparation program does not meet 26 CFR 301.7216-3(b)(4): SSNs are masked in the tax software but not in the scanned source documents that offshore staff open in the DMS, and 4 of 25 sampled offshore returns had no signed consent before disclosure.
-5. Third-party risk: 31 of about 85 service providers have no security terms in their contracts; reviews happen only at onboarding; contractor staff with access have not received the written notice that 301.7216-2(d)(2) requires.
-6. Activity in the tax software, client portal, DMS, and CAS platform is not sent to the SIEM, and bulk exports raise no alert (314.4(c)(8)).
-7. The 2024 retention schedule has never been executed: client files older than the 7-year retention period, covering about 95,000 former-client consumers, are still in the DMS (314.4(c)(6)).
-8. Change management covers infrastructure but not SaaS configuration: the tax practice turned on the tax software's AI drafting feature without review.
-9. Recovery: no tested plan for a tax software vendor outage near a deadline; the CAS platform and payroll dependencies have never been exercised; the audit workpaper server restore is untested.
-10. SaaS inventory is incomplete: SaaS discovery found 41 unapproved applications, 6 of them holding client data.
-11. Seasonal workforce: 18% of seasonal staff got access before completing training, and seasonal accounts were disabled an average of 3 business days after their end date.
-12. AI governance: no AI policy or review process; AI tools were turned on by practice leaders; SaaS discovery found client data pasted into public chatbots.
-13. PHI from health care engagements sits in the general DMS and workpaper folders instead of a restricted area, and no HIPAA risk analysis covers it.
-14. Policies exist, but supporting standards (configuration, logging, vendor risk, retention, AI) are thin or missing.
-15. The 2025 report to the board did not cover service provider oversight or penetration test results, as 314.4(i)(2) expects.
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps against the FTC Safeguards Rule, IRC 7216, the IRS e-file rules, Fla. Stat. 501.171 and the HIPAA Security Rule (as business associate)** are judged in the gap analysis (P03), and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 
@@ -121,11 +97,16 @@ About 85 service providers hold or can reach customer information (P09 vendor pr
 
 | Date | Event |
 |---|---|
+| 2026-06-15 to 2026-07-02 | Intake: evidence requests, exports, walk-throughs at Offices 1, 4 and 6, inventories, obligations register |
 | 2026-07-06 to 2026-07-31 | BIA, risk assessment, and gap analysis fieldwork |
-| 2026-08-03 to 2026-08-21 | Control assessment by the co-sourced internal audit firm |
+| 2026-07-27 to 2026-07-31 | 2026 policy revisions (POL-01 to POL-05), standards drafts and the P08 runbooks drafted from the gaps |
+| 2026-08-03 to 2026-08-21 | Control assessment by the co-sourced internal audit firm: operating tests of controls already in place; design review of the draft policies |
+| 2026-08-24 to 2026-09-12 | AI governance assessment (P10) |
 | 2026-09-22 | Deliverables approved by the Chief Operating Officer (Moderate and below) and the Chief Executive Officer (High and above); presented to the audit committee the same day (after the September 15 business-return extension deadline) |
+| 2026-10-01 | 2026 policies take effect |
 | 2026-10-27 | Qualified Individual's annual written report to the board (after the October 15 extension deadline) |
 | 2027-01-15 | Target for High-risk treatments that must be in place before the 2027 filing season |
+| 2027-05 (planned) | Follow-up assessment: operating effectiveness of the controls the 2026 policies and standards introduced, after at least one quarter of operation and after the filing season |
 
 ## 7. Facts added during the build (fictional; used across P01 to P10)
 
@@ -133,19 +114,17 @@ These details were added so the deliverables could be specific. They do not chan
 
 | Topic | Added fact |
 |---|---|
-| Offices and networks | Office 1 (headquarters) holds the document processing center (12 high-volume scanners) and has dual ISPs. Offices 2-6 have a single ISP with untested cellular failover at 3 of them. Network closets at Offices 4 and 6 use keys without a log. Pull printing exists at Offices 1-3 only |
-| Remote staff | 58 employees live in 9 other states, including 4 in Colorado and none in California |
-| Offshore program | About 30 vendor staff prepare about 5,500 individual return first drafts a season (about 15% of individual returns) through a firm-hosted virtual desktop pool launched in 2025-12. SSNs are masked in the tax software's offshore role but not in DMS images. The vendor holds an ISO/IEC 27001 certificate and has no SOC 2 report |
-| Identity | 41 privileged accounts across all admin planes; 14 IT staff with standing directory or productivity suite admin rights; 9 service accounts with non-expiring passwords; 12 scanning stations share one local administrator password; break-glass accounts exist only for the cloud organization; about 220 high-risk users are due for security keys |
-| Workforce activity | 96 terminations, 58 transfers, and 412 new accounts in the 12 months to 2026-06-30; 131 seasonal accounts ended in 2026-04 and 2026-05; June 2026 phishing click rate 6.1%; 96% of staff signed the annual acknowledgment; the security team is 4 people (the Director of Information Security and 3 engineers) |
-| Testing and monitoring | Last penetration test 2025-11 (scope excluded the portal configuration, virtual desktops, and CAS tenant); 40 critical findings in Q1-Q2 2026, 6 fixed late; 31 configuration deviations on 12 sampled servers; 7 laptops with unapproved remote access tools; the MSSP suppressed inbox-rule alerts from 2026-02-02 to 2026-04-20; in 2026 the MSSP reported token-theft and help desk impersonation attempts against the Company that did not lead to data access |
-| SaaS and change | SaaS discovery found 41 unapproved applications, 6 holding client data; 312 change tickets in 2026; the tax practice enabled the AI drafting feature in 2026-03 and it was used on about 2,100 returns until it was turned off on 2026-08-28; two software vendors use their own remote support tools |
-| Data handling samples | About 4,800 outbound emails with tax attachments in a sampled March 2026 week (31 of 60 sampled unencrypted); about 1,900 lender and adviser releases a year (2 of 25 sampled preceded consent); 31 security incidents logged in 2025-2026; about 95,000 former-client consumers held past the 7-year retention period |
-| Vendors | About 85 service providers: 14 Tier 1, about 40 Tier 2, the rest Tier 3; 31 have no security terms. Tax software vendor SOC 2: RTO 8 h, RPO 1 h, service degraded about 3 hours on 2026-04-14, 72-hour incident notice. Payroll service: SOC 1 and SOC 2 Type 2, RTO 4 h. Accounting service: RTO 24 h, RPO 4 h; bill-pay bridge letter overdue. Portal vendor: RTO 12 h. MSSP: no BAA |
-| Contracts | 11 of the 44 BAAs set breach notice terms of 5 to 10 business days; the CAS agreement template sets a 72-hour incident notice; the Company has a credit agreement with lenders and a private equity sponsor operating partner |
-| CAS operations | About 40 payroll runs per business day; about 2,600 vendor payments a week; second review documented for 15 of 25 sampled payrolls; 3 former CAS staff local accounts in the payroll and bill-pay services were found active on 2026-08-14 and disabled that day |
-| AI tools | AI-001 extraction used on about 21,400 returns in 2026; AI-002 licensed to 250 users since 2026-04; AI-003 used by 120 tax professionals since 2026-06; AI-004 used on 140 engagements by 22 named analysts; AI-005 screened about 6,800 applicants in 2026 for 9 recruiters; AI-006 found in use by 9 staff (3 sanctioned) |
-| Program history and budget | The 2025 risk register had 34 risks. FY2027 security plan approved 2026-09-22: $815,000 one-time (including $210,000 for SOC 2 readiness and the Type 2 examination) and $360,000 a year |
+| Offices and networks | Office 1 (headquarters) holds the document processing center (12 high-volume scanners). ISPs and failover, network closet locks and pull printing by office are recorded in EV-015, EV-016 and EV-053 |
+| Remote staff | 58 employees live in 9 other states, including 4 in Colorado and none in California (EV-004) |
+| Offshore program | About 30 vendor staff prepare about 5,500 individual return first drafts a season (about 15% of individual returns) through a firm-hosted virtual desktop pool launched in 2025-12 (EV-047). What the offshore desktops show and the vendor's assurance are recorded in EV-045, EV-047 and EV-053 |
+| Security-relevant details | Privileged and service accounts, workforce activity, testing and monitoring, SaaS and change, data handling, vendor terms, CAS operations and AI tool use are recorded from the systems of record in the evidence register, not stated here: identity (EV-001 to EV-008), workforce activity and training (EV-004, EV-005, EV-036, EV-039), testing and monitoring (EV-017 to EV-019, EV-024, EV-025), SaaS and change (EV-010, EV-028, EV-060), data handling (EV-030, EV-042, EV-050; P03 samples EV-066 to EV-068), vendors and contracts (EV-044 to EV-046, EV-049, EV-051; P09 review EV-071), CAS operations (EV-011, EV-057; P09 samples EV-072; P07 EV-AC-2), and AI tools (EV-028, EV-058, EV-059; P10 review EV-073) |
+| Workforce activity | Counts of terminations, transfers, new accounts and seasonal accounts, training and acknowledgment results, and the size of the security team are in EV-004, EV-005, EV-036 and EV-039 |
+| SaaS and change | The tax practice's AI drafting feature was turned off on 2026-08-28 (P10). Discovery results and change records are in EV-010, EV-028 and EV-060 |
+| Vendors | About 85 service providers (EV-043): 14 Tier 1, about 40 Tier 2, the rest Tier 3 under the P09 tiering. Contract terms, recovery objectives and assurance are in EV-044 to EV-046 and EV-071 |
+| Contracts | The Company has a credit agreement with lenders and a private equity sponsor operating partner. BAA and CAS agreement notice terms are in EV-049 and EV-051 |
+| CAS operations | Volumes are in EV-057. Payroll review samples are in EV-072, and the former CAS staff accounts found and disabled on 2026-08-14 are in EV-AC-2 |
+| AI tools | AI-001 to AI-006 usage is recorded in EV-010, EV-028, EV-058 and EV-059; the review of the public chatbot cases is EV-073 |
+| Program history and budget | The 2025 risk register had 34 risks (EV-032). FY2027 security plan approved 2026-09-22: $815,000 one-time (including $210,000 for SOC 2 readiness and the Type 2 examination) and $360,000 a year |
 | Exercises and tests scheduled | Workpaper application restore test 2026-11-17; BEC tabletop with counsel 2026-11-19; deadline-week vendor outage tabletop 2027-01-12; ransomware executive tabletop 2027-02-24 |
 | Terminology | "Tax and Client Data Platform (TCDP)" is the SSP system in P02, identifier CSC-TCDP-01. The Attest Firm is Cris Santos Assurance, LLP |
 | Additional role titles | IT Operations Manager; security engineers (3); GRC Analyst; recruiters (9) |

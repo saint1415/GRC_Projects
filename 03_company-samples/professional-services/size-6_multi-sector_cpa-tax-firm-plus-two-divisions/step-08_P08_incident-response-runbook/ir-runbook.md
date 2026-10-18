@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; POL-05 4.5 call-back rule; division supplements (P06). With POL-03, this runbook is part of Tax and Advisory's written incident response plan (16 CFR 314.4(h)) and Wealth's response program (17 CFR 248.30(a)(3)) |
 | Runbook owner | Group CISO; notifications owned by the Group General Counsel |
 | Approved | 2026-09-10 by the Group CISO and the Group General Counsel |
-| Last tested | Technical playbooks tested quarterly. **The combined notification matrix has not been exercised** (scenario gap 6); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-005) |
+| Last tested | Technical playbooks tested quarterly. **The combined notification matrix has not been exercised** (group gap 6); the first cross-division tabletop, using this scenario, is due 2026-12-15 (POAM-005) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative. Day 0 is a Thursday in late February, in the middle of the filing season.

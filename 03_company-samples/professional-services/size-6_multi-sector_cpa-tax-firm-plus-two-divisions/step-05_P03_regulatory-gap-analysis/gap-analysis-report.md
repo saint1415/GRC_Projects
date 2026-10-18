@@ -11,6 +11,8 @@
 | Assessors | Division security and compliance leads, the Wealth Chief Compliance Officer, and the Practice Cloud trust and assurance director, coordinated by the Group Chief Privacy Officer; reviewed by group internal audit |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), with one row per requirement for each entity and the group. This section restates the results for the rules analyzed here.
+
 ### 1.1 Who is what
 | Entity | Role under the rules | Basis |
 |---|---|---|
@@ -78,10 +80,20 @@ The IRS Section 7216 Information Center lists no guidance on artificial intellig
 ## 3. Method
 1. **Requirements.** Each paragraph of 16 CFR 314.3 and 314.4 became one row, split to the lowest level that states its own duty, including 314.4(a)(1) to (3) because the Qualified Individual is an affiliate's employee. IRC 7216 rows follow each permission or condition that governs how Tax and Advisory shares tax return information. Regulation S-P rows follow 248.30(a) and (b) paragraph by paragraph; S-ID and Advisers Act rows cover the program elements. Practice Cloud rows follow its legal duties and the SOC 2 and contract commitments it has made. Text was read from the eCFR (current through 2026-09-23).
 2. **Crosswalk.** Each row was mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. These are **author mappings**: no official NIST mapping of 16 CFR 314, 26 CFR 301.7216, or 17 CFR 248 and 275 was found. SOC 2 criteria are listed by ID only, with short topic labels.
-3. **Evidence.** Interviews with each division's leadership, privacy and compliance staff, and counsel; document and contract review; configuration exports; a sample of 80 integrated planning referrals (consent content, timing, and fields sent); and P07 test results.
+3. **Evidence.** Current state was established from the intake evidence (exports, documents, contracts, and compliance reviews, EV-001 to EV-074, with a late answer in EV-075), gap analysis interviews with each unit's leadership, privacy and compliance staff, and counsel (EV-085 Tax and Advisory and CPA Partners, EV-089 Wealth, EV-090 Practice Cloud), other fieldwork documents and samples (EV-084, EV-086 to EV-088, EV-091 to EV-093), the sample of 80 integrated planning referrals traced in P07 (consent content, timing, and fields sent; EV-P-AC4, EV-P-PT4), and other P07 test results. The `evidence` column in each gap table cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 4. Results
+### 4.0 Group gaps
+Seven gaps cross divisions or sit where divisions meet. They are numbered here and cited as group gaps 1 to 7 across this sample.
+1. **Tax-to-wealth data sharing (IRC 7216).** The referral interface sends tax return information to the Wealth CRM without reading a consent record; the 2022 consent describes "financial planning and investment services" generally; Wealth analytics builds statistical compilations from the fields; 9 of 80 traced transfers preceded the recorded consent (EV-044, EV-045, EV-065; EV-P-PT4).
+2. **Seasonal workforce identity.** 14% of 2026 seasonal accounts were activated before training and background checks were complete, and seasonal accounts were disabled an average of 9 days after the season ended (EV-007, EV-075).
+3. **Email and refund-diversion exposure in the tax offices.** Legacy authentication on the 1,150 office intake mailboxes and external forwarding for 212 mailboxes under 2019 exceptions; no inbox-rule alerting for tax office mailboxes; no call-back recorded for 11 of 60 sampled refund bank-account changes (EV-023, EV-010, EV-046).
+4. **Tax division generative AI.** No accuracy or bias monitoring by document type for AI-001, and the AI-002 drafting pilot started without the IRC 7216 and Circular 230 review (EV-047, EV-049).
+5. **Practice Cloud AI feature.** AI document intake launched 2026-02-02 without updates to the SOC 2 system description, the sub-processor list and customer contracts, or the information customers need for their own IRC 7216 basis (EV-068, EV-067, EV-066).
+6. **Cross-division incident notification.** Each division has its own notification matrix; no combined matrix has been exercised (EV-024).
+7. **Attest practice under the administrative services agreement.** CPA Partners inherits group controls without documented inheritance; the 2021 agreement has no security or incident notice terms; its supplement dates from 2023 (EV-017, EV-004, EV-016).
+
 ### 4.1 CPA and Tax Services (`gap-analysis.csv`)
 | Section | Met | Partially met | Not met | N/A |
 |---|---|---|---|---|
@@ -130,10 +142,10 @@ Of the 9 partially met rows, 7 are Moderate and 2 Low. Wealth adopted its amende
 | State, FTC Act, DOJ, CCPA, COPPA and FedRAMP (5) | 3 | 1 | 0 | 1 |
 | **Total (21)** | **7** | **9** | **4** | **1** |
 
-Of the 13 unmet or partially met rows, 5 are High, 5 Moderate, and 3 Low. **All four Not met rows trace to the AI document intake feature** (scenario gap 5): no recorded IRC 7216 basis for sending customers' client documents to the model provider, no system description or customer communication of the change for the SOC 2 period, and no sub-processor notice.
+Of the 13 unmet or partially met rows, 5 are High, 5 Moderate, and 3 Low. **All four Not met rows trace to the AI document intake feature** (group gap 5): no recorded IRC 7216 basis for sending customers' client documents to the model provider, no system description or customer communication of the change for the SOC 2 period, and no sub-processor notice.
 
 ## 5. Group roadmap
-| # | Gap (scenario gap) | Units | Citation | Risk | Action | Owner | Target |
+| # | Gap (group gap) | Units | Citation | Risk | Action | Owner | Target |
 |---|---|---|---|---|---|---|---|
 | 1 | Tax-to-wealth sharing without compliant consent (1) | Tax, Wealth | 301.7216-3(a)(3)(i)(B), (b)(1)-(3); 301.7216-1(b)(3)(i)(B); 301.7216-2(o) | High | Consent register enforced by the interface; new consent at engagement start; stop compilations; re-consent | Chief Tax Officer; Group Chief Privacy Officer | 2026-12-31 (interface); 2027-03-31 (consents) |
 | 2 | Legacy authentication and monitoring gaps in tax office email (3) | Tax, group | 314.4(c)(5), (c)(8) | High | Block legacy authentication; tax office inbox-rule alerts; portal upload | Group collaboration services director; Group SOC director | 2027-01-04 |

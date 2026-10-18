@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the division continuity leads (Tax and Advisory, CPA Partners, Wealth, Practice Cloud) | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-10
+**Sources:** process owner interviews by unit, 2026-05-04 to 2026-05-29 (EV-076 group, EV-077 Tax and Advisory and CPA Partners, EV-078 Wealth, EV-079 Practice Cloud), FY2025 revenue by division (EV-003) and Tax and Advisory revenue by month (EV-039), client and household volumes (EV-040, EV-055, EV-059, EV-067), backup and recovery records (EV-022, EV-051, EV-071), and vendor recovery terms (EV-055). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,12 +16,12 @@ It supports:
 - impact ratings in the risk registers (P01), the availability rating in the SSP (P02), and the recovery order in the incident runbook (P08).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and office network, and SYS-G4 email. Division systems are SYS-T1 (tax preparation and e-file), SYS-T2 (client accounting services), SYS-T3 (attest platform), SYS-W1 (Wealth platform), and SYS-S1 (Practice Cloud, which also hosts Tax and Advisory's client portal). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and office network, and SYS-G4 email. Division systems are SYS-T1 (tax preparation and e-file), SYS-T2 (client accounting services), SYS-T3 (attest platform), SYS-W1 (Wealth platform), and SYS-S1 (Practice Cloud, which also hosts Tax and Advisory's client portal). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **The tax calendar drives the focus division.** About 62% of Tax and Advisory revenue is billed from February through April. The values for tax processes are **peak-season** values (mid-January to April 15, and October 1 to 15). Outside those windows the MTD for BP-T01 and BP-T02 relaxes to 72 hours. Wealth runs on market hours all year. Practice Cloud's peak follows its customers' filing season.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Tax and Advisory about $92 million per business day in season (about $38 million on average), Wealth about $21 million per business day, and Practice Cloud about $14 million per business day.
+Dollar values use FY2025 revenue by division (EV-003) and Tax and Advisory's revenue by month (EV-039). Tax and Advisory bills about 62% of its revenue from February through April: about $92 million per business day in season (about $38 million on average). Wealth's about $5.2 billion is about $21 million per business day, and Practice Cloud's about $3.4 billion is about $14 million per business day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -77,11 +78,11 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Office network (SYS-G3) | Group | Tax offices; Wealth branches | SYS-T1 is only as available as office connectivity. Cellular failover exists at every tax office |
 | Email (SYS-G4) | Group | All divisions | One tenant for every division and seasonal staff. Moderate for availability but the main entry point for business email compromise (P08) |
 | Practice Cloud service (BP-S01) | Practice Cloud | Tax and Advisory document intake and e-signature (BP-T03, BP-T04) | The tax division's client portal is a tenant of the group's own product. A Practice Cloud outage is a tax division outage in season |
-| Referral interface (BP-T09) | Tax and Advisory | Wealth CRM (BP-W03) | Low for availability; high for confidentiality and IRC 7216 (gap 1) |
+| Referral interface (BP-T09) | Tax and Advisory | Wealth CRM (BP-W03) | Low for availability; high for confidentiality and IRC 7216 (group gap 1) |
 | Integrated planning data | Wealth | Tax and Advisory | Wealth sends custodial statements for 210,000 integrated planning households; Tax and Advisory holds them for Wealth (Regulation S-P service provider) |
 | SOC facts (BP-G02) | Group | Every notice in P08 | Every notice clock depends on the SOC establishing what happened |
-| Group services for CPA Partners | Group | Attest engagements (BP-CP01) | Provided under the 2021 administrative services agreement; inheritance not documented (gap 7) |
-| HR events (BP-G06) | Group | SYS-G1 accounts | Seasonal onboarding and offboarding drive access for about 11,000 accounts (gap 2) |
+| Group services for CPA Partners | Group | Attest engagements (BP-CP01) | Provided under the 2021 administrative services agreement; inheritance not documented (group gap 7) |
+| HR events (BP-G06) | Group | SYS-G1 accounts | Seasonal onboarding and offboarding drive access for about 11,000 accounts (group gap 2) |
 
 **Single points of failure found:** SYS-G1 (mitigated by break-glass accounts, tested quarterly); the tax engine vendor's transmitter for e-file (no second transmitter; accepted, P01 TX-019); one payroll SaaS vendor for 21,000 client payrolls (P01 TX-015).
 
@@ -111,7 +112,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 Recovery order changes by season: from May to December, Wealth trading and Practice Cloud move ahead of tax preparation.
 
 ## 8. Key findings
-1. **Shared services must recover first.** The group identity RTO of 1 hour was met in two tests in 2026.
+1. **Shared services must recover first.** The group identity RTO of 1 hour was met in two tests in 2026 (EV-076).
 2. **Practice Cloud is both a division and a dependency.** Its 2-hour RTO protects outside customers and Tax and Advisory together; a Practice Cloud outage in season stops tax document intake and e-signature.
 3. **Email is Moderate for availability but central to the top risk.** Its recovery can wait a day; its protection against business email compromise cannot (P01 GR-02; P08).
 4. **The referral interface is Low for availability and High for confidentiality.** It can stop for days with little effect, but every transfer must follow an IRC 7216 consent (P03).

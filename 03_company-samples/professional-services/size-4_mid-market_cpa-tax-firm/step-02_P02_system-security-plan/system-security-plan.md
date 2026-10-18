@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-22
 
 ## 1. System Name and Identifier
-Tax and Client Data Platform (**TCDP**), identifier CSC-TCDP-01. The TCDP is the Company's major system for customer information. It comprises SYS-01 to SYS-06 and SYS-10 to SYS-12 in `../00_company-facts.md`.
+Tax and Client Data Platform (**TCDP**), identifier CSC-TCDP-01. The TCDP is the Company's major system for customer information. It comprises SYS-01 to SYS-06 and SYS-10 to SYS-12 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The TCDP supports the tax practice end to end: client document intake and scanning, return preparation and review (including the offshore preparation program and AI-assisted data entry), e-signature of Forms 8879, IRC 7216 consents, electronic filing through the tax software vendor, return delivery, and storage of prior-year files. It also provides the shared identity, email, endpoint, network, cloud, and monitoring services that the CAS platform (SYS-08) and the Attest Firm's engagement platform (SYS-09) rely on. It serves 600 workforce members, about 130 seasonal staff and interns, about 30 offshore vendor staff, and clients filing about 47,400 returns a year.
@@ -35,7 +35,7 @@ The CAS platform (SYS-08), the audit and SOC engagement platform (SYS-09), and t
 | Contract | CAS client agreements and BAAs | Contracts | CAS availability and confidentiality commitments (P09); BAA terms for PHI |
 | Internal | Security policies POL-01 to POL-05 and the standards index | P06 | Policy basis for every control |
 
-Not applicable (reasons in `../00_company-facts.md` section 1):
+Not applicable (reasons in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)):
 - FAR 52.204-21 and DFARS 252.204-7012 with CMMC (N54-R04, N54-R05): no federal contracts.
 - ABA Model Rules (N54-R07): not a law firm.
 - CIRCIA (N54-R09): proposed rule only.
@@ -89,6 +89,8 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels follow F
 **Confidentiality was considered for High.** A breach of the whole DMS would affect about 205,000 consumers plus about 90,000 other individuals. The team kept confidentiality at Moderate because the harm to each person is financial and largely recoverable (IRS Identity Protection PINs, credit monitoring, corrected returns), which fits the FIPS 199 "serious adverse effect" description, and because the Company would survive such an event. To compensate for the volume, the plan adds tailoring aimed at bulk exposure: SA-9(5) for processing location, CA-8 for annual penetration testing, and AU-6(1) for bulk-export detection.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 **Inside the boundary:**
 - the Company's tax software tenant configuration, user roles, and AI feature settings;
 - the client portal tenant;
@@ -163,7 +165,7 @@ The diagram is in P04 `cloud-architecture.md`.
 | Hybrid | 37 | Identity vendor, tax software vendor, portal vendor, cloud provider, MSSP, CAS platform vendors |
 | Common/Inherited | 14 | Identity vendor (for example AC-7, IA-2(1)), cloud provider (CP-6, SC-12), SaaS vendors (AC-12, SI-7), MSSP and insurer panel (IR-7) |
 
-The Partially implemented statements trace to the 15 known gaps in `../00_company-facts.md` section 4 and to the P07 findings.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` and to the P07 findings.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). The assessment supports 16 CFR 314.4(d)(1) (regular testing of key controls). It does not replace the annual penetration test and the vulnerability assessments every six months required by 314.4(d)(2). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -175,7 +177,7 @@ The co-sourced internal audit firm assessed 34 controls from 2026-08-03 to 2026-
 - **CAS platform local accounts.** The payroll and bill-pay services use local accounts with SMS codes. They move to SSO with phishing-resistant MFA by 2026-12-31 (P01 R-051).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BAA:** business associate agreement

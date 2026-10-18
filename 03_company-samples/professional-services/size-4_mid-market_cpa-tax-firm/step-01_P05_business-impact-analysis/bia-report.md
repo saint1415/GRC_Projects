@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, Inc. (PE-backed CPA, tax, and advisory firm, with its attest affiliate Cris Santos Assurance, LLP) | **Tier:** Mid-Market (600 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** GRC Manager with the Director of Information Security and the process owners named in `bia.csv` | **Fieldwork:** 2026-07-06 to 2026-07-31 | **Approved:** Chief Operating Officer, 2026-09-22 (presented to the audit committee the same day)
+**Sources:** process owner interviews 2026-07-06 to 2026-07-17 (EV-061), FY2025 revenue report by service line (EV-056), 2026 operating volume report (EV-057), vendor SOC 2 reports on file at intake (EV-045), backup job reports (EV-022), disaster recovery and restore records (EV-023), the offshore program records (EV-047), and the payroll service's SOC reports obtained for the P09 review (EV-071). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits and recovery assumptions are the owners' statements, reviewed and approved by the Chief Operating Officer.
 
 ## 1. Overview and purpose
 This BIA covers every business unit: the tax practice, tax operations (document processing, e-file, and the offshore preparation program), the Attest Firm, client accounting services (CAS), advisory, and enterprise support functions. It rates 18 business processes and puts a dollar, operational, and regulatory value on an outage of each.
@@ -16,12 +17,12 @@ The results feed:
 - the Availability and Processing Integrity criteria in the SOC 2 readiness assessment for the CAS service (P09).
 
 ## 2. System and business description
-The Company runs 6 Florida offices and a central document processing center, with 600 employees plus about 130 seasonal staff and interns from January to April. It files about 47,400 returns a year, the Attest Firm performs about 1,050 engagements, and CAS runs payroll for about 210 business clients. Tax work runs on the Tax and Client Data Platform (TCDP) described in the SSP (P02): the vendor-hosted tax software, the client portal, the DMS, the 5-account cloud landing zone, the identity provider, the productivity suite, 6 office networks, 776 endpoints, and the MSSP-operated security tooling. CAS runs on vendor SaaS (SYS-08), and the Attest Firm on the audit and SOC engagement platform (SYS-09). See `../00_company-facts.md` sections 3 and 4.
+The Company runs 6 Florida offices and a central document processing center, with 600 employees plus about 130 seasonal staff and interns from January to April. It files about 47,400 returns a year, the Attest Firm performs about 1,050 engagements, and CAS runs payroll for about 210 business clients. Tax work runs on the Tax and Client Data Platform (TCDP) described in the SSP (P02): the vendor-hosted tax software, the client portal, the DMS, the 5-account cloud landing zone, the identity provider, the productivity suite, 6 office networks, 776 endpoints, and the MSSP-operated security tooling. CAS runs on vendor SaaS (SYS-08), and the Attest Firm on the audit and SOC engagement platform (SYS-09). Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **The calendar drives everything.** About half of tax receipts are billed from February 1 to April 15. The March 15, April 15, September 15, and October 15 deadlines are the peak risk windows. The tax values below are **peak-season** values. Outside those windows the MTD for BP-01 to BP-03 relaxes to 72 hours. CAS payroll (BP-10) has a different rhythm: pay dates come every week of the year, so its values do not change with the season.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $100 million in annual revenue over about 250 business days: about $400,000 per business day on average, and about $530,000 of tax work alone per business day in peak season (individual about $340,000, business about $190,000).
+Dollar values are scaled to $100 million in annual revenue over about 250 business days (EV-056): about $400,000 per business day on average, and about $530,000 of tax work alone per business day in peak season (individual about $340,000, business about $190,000).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -31,7 +32,7 @@ Dollar values are scaled to $100 million in annual revenue over about 250 busine
 | Safety | Not applicable. The Company has no processes that affect physical safety. Harm to clients and their employees is financial and is scored under Regulatory, Reputation, and the `client_harm_impact` column | | |
 | Reputation | Regional media coverage, loss of referral sources, or loss of CAS or attest clients | Client complaints or online reviews | Internal only |
 
-**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered, plus penalty reimbursements and extra labor, over the MTD. The process owners supplied the recovery assumptions: about 30% of tax work lost in peak season is not recovered before the deadline (clients go on extension and some leave), about 15% of attest work and 10% of advisory and bookkeeping work is not recovered, and CAS payroll losses are mostly reimbursed client penalties and emergency processing fees. Billing delays are shown as delayed cash, not loss.
+**How loss at MTD was estimated.** Estimated loss is revenue that is not recovered, plus penalty reimbursements and extra labor, over the MTD. The process owners supplied the recovery assumptions (EV-061): about 30% of tax work lost in peak season is not recovered before the deadline (clients go on extension and some leave), about 15% of attest work and 10% of advisory and bookkeeping work is not recovered, and CAS payroll losses are mostly reimbursed client penalties and emergency processing fees. Billing delays are shown as delayed cash, not loss.
 
 ## 4. Process criticality and downtime (from `bia.csv`)
 | Priority | Process | Unit | Criticality | MTD (h) | RTO (h) | RPO (h) | Estimated loss at MTD |
@@ -68,11 +69,11 @@ Dollar values are scaled to $100 million in annual revenue over about 250 busine
 - **Identity is the first dependency.** Every SaaS system signs in through the identity provider, so BP-15 has the shortest MTD (4 hours).
 
 ## 5. Key findings
-1. **The tax software vendor's recovery objective has no margin.** The vendor's SOC 2 system description states an RTO of 8 hours and an RPO of 1 hour (P09 vendor review). That just meets the peak-season RTO for BP-01 to BP-03. On 2026-04-14 the vendor's service was degraded for about 3 hours, and the Company had no written procedure for a vendor outage near a deadline (gap 9; P01 R-017; P08 vendor outage variant).
+1. **The tax software vendor's recovery objective has no margin.** The vendor's SOC 2 system description states an RTO of 8 hours and an RPO of 1 hour (EV-045; P09 vendor review). That just meets the peak-season RTO for BP-01 to BP-03. On 2026-04-14 the vendor's service was degraded for about 3 hours, and the Company had no written procedure for a vendor outage near a deadline (EV-046, EV-023; P01 R-017; P08 vendor outage variant).
 2. **Identity is a single point of failure without a full break-glass design.** Break-glass accounts exist for the cloud organization but not for the identity provider or the productivity suite. An attacker who changes administrator MFA during an incident could stop every process (P01 R-007).
-3. **Practice-managed recovery is partly unproven.** The DMS restore was tested in 2025. The audit workpaper server (BP-08) has never been restored, and the CAS payroll fallback (repeat payroll through the vendor) has never been exercised (gap 9; P01 R-018).
-4. **CAS payroll is the fastest route to harm outside the Company.** Its 8-hour RTO depends on the payroll vendor (SOC 2 RTO 4 hours) and on CAS staff reaching the vendor through the identity provider (P01 R-019; P09 Availability criteria).
-5. **The offshore program adds both capacity and exposure.** It produces about 15% of individual return first drafts. Losing it costs capacity (BP-06), and running it without SSN masking breaches 26 CFR 301.7216-3(b)(4) (gap 4; P01 R-011; P03).
+3. **Practice-managed recovery is partly unproven.** The DMS restore was tested in 2025. The audit workpaper server (BP-08) has never been restored, and the CAS payroll fallback (repeat payroll through the vendor) has never been exercised (EV-023; P01 R-018).
+4. **CAS payroll is the fastest route to harm outside the Company.** Its 8-hour RTO depends on the payroll vendor (SOC 2 RTO 4 hours; EV-071) and on CAS staff reaching the vendor through the identity provider (P01 R-019; P09 Availability criteria).
+5. **The offshore program adds both capacity and exposure.** It produces about 15% of individual return first drafts. Losing it costs capacity (BP-06), and running it without SSN masking breaches 26 CFR 301.7216-3(b)(4) (EV-047, EV-053; P01 R-011; P03).
 
 ## 6. Resource requirements
 | Resource | Description | Supports |
