@@ -8,7 +8,7 @@
 | Service lines | SL-1 client accounting and payroll services (about 3,100 client businesses, about 410,000 client employees); SL-2 tax compliance outsourcing with the corporate client tax portal (about 380 corporate clients, about 38,000 global mobility assignees) |
 | Categories in scope | SL-1: Security, Availability, Confidentiality, and (new for 2027) Processing Integrity. SL-2: Security, Availability, and Confidentiality |
 | Target reports | SL-1: Type 2, period 2027-01-01 to 2027-12-31 (fourth annual report). SL-2: first Type 2, period 2027-04-01 to 2027-09-30 |
-| Service auditor | An unaffiliated CPA firm. The firm's own SOC examination practice may not examine the firm (scenario facts section 1) |
+| Service auditor | An unaffiliated CPA firm. The firm's own SOC examination practice may not examine the firm; the SL-1 reports are issued by an unaffiliated CPA firm (EV-039) |
 | Files | `soc2-readiness.csv` (every criterion for each service line: 122 rows); `soc2-evidence-map.csv` (26 evidence items) |
 | Prepared | 2026-08-21 by the GRC team with the two service line leaders; reviewed by the CISO and the Chief Audit Executive. Updated 2026-09-04 for the Internal Audit results (P07) |
 
