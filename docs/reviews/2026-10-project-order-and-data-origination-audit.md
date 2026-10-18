@@ -368,3 +368,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market crude oil producer):** P03 G-018 gives a 91% acknowledgment rate while P09 CC1.1 gives 96%; the P03 method presents its samples as July work while the P07 plan says P07 drew them in August.
 - **Size 5 (enterprise crude oil producer):** P02 IR-3 describes the 2026-03-19 tabletop as ransomware reaching OT while the P08 runbook says it had no OT scenario; the P07 IA-2 finding cites an exception dated after fieldwork.
 - **Size 6 (crude oil producer plus two divisions):** POAM-023 cites P03 G-036 where G-037 is meant; the OT sensor locations differ between the SSP, P03, P04 and P07; P08 and GR-04 put offline binders at every control center while P07 found none at the backup PCC.
+
+### Professional services, 2026-10-18
+
+Six samples, 561 evidence rows in all. Agent cost: about 2.3 million tokens; the longest resumed sample took 12 minutes. All six agents stopped twice at the session limit and were resumed from WIP checkpoint commits; from this batch on, at most three agents run at a time.
+
+Fixes made during this batch:
+- **Sizes 1, 2, 3, 5 and 6:** trailing-hyphen P07 IDs (EV-IA-2-1, EV-IA-2-2, EV-AC-2-3, EV-C-AC2-3, EV-C-AC6-5, EV-C-IA2-1) renamed to the parenthesis form.
+- **Sizes 3 and 4:** P03 walk-through dates that fell inside the P07 window moved to the intake walk-through.
+- **Sizes 4 and 5:** Pass 1 risks re-rated after P07 testing are marked as such (R-028 in size 4; 12 risks in size 5).
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes P08) cites eCFR text current through 2026-09-23 or checks dated 2026-09-25, after approval.
+- **Size 1 (sole proprietor CPA tax firm):** P02 and P03 cite IRS Pub. 4557 Rev. 6-2024 while the requirements file says Rev. 5-2024; P04 cites a P07 review of laptop encryption that P07 never ran.
+- **Size 2 (micro CPA tax firm):** P03 G-030 says the tax software SOC 2 report had never been requested, while the BIA and P04 already quote its recovery figures; the BIA says the MSP backs up the firewall configuration while P07 CP-09b says it does not.
+- **Size 3 (small CPA tax firm):** the BIA puts the vendor's RTO at 8 hours while the P09 review says 4 hours; P03 and P07 cite the P09 vendor review signed 2026-08-12 before it happened.
+- **Size 4 (mid-market CPA tax firm):** P07 AT-2 calls 5 of 25 "18%"; SSP AC-5 requires a second CAS approver while R-020 and P09 CC6.3 say one; R-048 and P03 G-063 disagree on workpaper folder access.
+- **Size 5 (enterprise CPA tax firm):** P03 G-046 says the AI drafting features are disabled before R-043's disablement date of 2026-08-25; P09 CC3.1 is Ready on a draft system description that CC2.3 says does not exist; P01 counts about 9,000 push MFA users while P07 says about 8,900.
+- **Size 6 (CPA tax firm plus two divisions):** the Qualified Individual was designated 2025-02-03 but board reports run since 2024; the 2,300 opt-in count dated 2026-08-31 is used by P10 (2026-08-27) and the BIA; P03 G-032 says tier 1 SOC reports are reviewed yearly while P07 SA-09c finds two providers without one.
