@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (CPA and tax preparation firm) | **Tier:** Small (60 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template
 **Prepared by:** IT Manager (Qualified Individual) with the Tax Partner, Assurance Partner, and Client Services Supervisor | **Approved:** Firm Administrator, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-14 (EV-046), FY2025 receipts and engagement report (EV-041), backup job reports (EV-020), HR seasonal staff report (EV-005), the tax software vendor's SOC 2 report (EV-033) and portal documentation (EV-035). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Firm Administrator.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the firm depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,12 +12,12 @@ This BIA identifies which business processes the firm depends on, how long each 
 - impact ratings in the risk register (P01), and the asset prioritization in 314.4(c)(2) ("in accordance with their relative importance to business objectives").
 
 ## 2. System and business description
-The firm runs two Florida offices with 60 employees, plus about 6 seasonal preparers from January to April. It files about 5,750 returns a year and performs about 180 assurance engagements. Tax work runs on the Tax Preparation and Client Portal Platform (TPCP): vendor-hosted tax software, a client portal, a cloud-hosted DMS and workpaper server, an identity provider, the productivity suite, office networks, and endpoints. See `../00_company-facts.md` sections 3 and 4.
+The firm runs two Florida offices with 60 employees, plus about 6 seasonal preparers from January to April. It files about 5,750 returns a year and performs about 180 assurance engagements. Tax work runs on the Tax Preparation and Client Portal Platform (TPCP): vendor-hosted tax software, a client portal, a cloud-hosted DMS and workpaper server, an identity provider, the productivity suite, office networks, and endpoints. See `../00_company-facts.md` section 3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 **The calendar drives everything.** About 55% of annual receipts are billed from February to April. The April 15 deadline for individual returns and the October 15 extension deadline are the peak risk windows. The values below are **peak-season** values (February 1 to April 15, and October 1 to 15). Outside those windows, the MTD for BP-01 and BP-02 relaxes to 72 hours.
 
 ## 3. Impact categories and values
-Dollar values are scaled to $15.9 million in annual revenue: about $61,000 per business day on average and about $145,000 per business day in peak season.
+Dollar values are scaled to $15.9 million in annual revenue: about $61,000 per business day on average and about $145,000 per business day in peak season (EV-041).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -61,7 +62,7 @@ Dollar values are scaled to $15.9 million in annual revenue: about $61,000 per b
 | SYS-03 and SYS-04 DMS and workpaper servers | Scanned documents and prior-year files; workpapers. Daily immutable backups in a second region (RPO 24 h) | BP-03, BP-06, BP-07, BP-08 |
 | SYS-06 Productivity suite | Email, files, calendar | BP-05, BP-07, BP-08 |
 | SYS-07 Practice management | Time, billing, payment page | BP-09 |
-| SYS-08 Office networks and internet | Firewalls, Wi-Fi; primary and backup ISP at Main office; single ISP at Branch office | All in-office work |
+| SYS-08 Office networks and internet | Firewalls, Wi-Fi; primary and backup ISP at Main office; single ISP at Branch office (EV-017) | All in-office work |
 | SYS-09 Endpoints | 62 laptops (staff can work remotely), 12 desktops, 4 printer-scanners | All |
 | SYS-10 Payroll SaaS | Firm payroll | BP-10 |
 | People | Preparers, reviewers, intake staff, e-file coordinator, IT Manager, MSP | All |

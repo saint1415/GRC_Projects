@@ -30,7 +30,7 @@ The cloud tenant is described by service category and is vendor-agnostic (see P0
 | State | Florida Information Protection Act (data security, disposal, breach notification) | Fla. Stat. 501.171 |
 | Internal | Security policies POL-01 to POL-05 | P06 |
 
-Not applicable (reasons in `../00_company-facts.md` section 1):
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)):
 - HIPAA as a business associate (N54-R06): the firm does not receive PHI on behalf of covered entities.
 - FAR 52.204-21 and DFARS 252.204-7012 with CMMC (N54-R04, N54-R05): no federal contracts.
 - ABA Model Rules (N54-R07): not a law firm.
@@ -73,7 +73,7 @@ The firm chose Moderate, not High, for confidentiality. A breach would cause ser
 - **Out of scope for this tier**, recorded as a tailoring decision, where the control's purpose applies only to federal systems (for example, most PM-series and PT-series controls).
 
 ## 7. Authorization Boundary Description
-The boundary contains firm-managed components and the firm's configuration of vendor services:
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). It contains firm-managed components and the firm's configuration of vendor services:
 - **Inside:** the tax software tenant configuration and user roles, the client portal tenant, the DMS and workpaper servers and storage, the cloud tenant (VPN gateway, backup vault), the identity provider and productivity suite tenants, both office networks, 74 laptops and desktops, and 4 printer-scanners.
 - **Outside (external services, interconnected):** the tax software vendor's platform and its AI sub-processor, the IRS and state e-file systems (reached only through the vendor), the portal vendor's platform, the cloud provider's infrastructure, the practice management SaaS, the payroll SaaS, and the MSP's remote management platform.
 
@@ -119,7 +119,7 @@ Assessed 2026-08-03 to 2026-08-07 by an independent assessor. See P07 `assessmen
 - **Clients:** clients use the portal vendor's sign-in with identity checks at enrollment. MFA becomes mandatory for all client accounts by 2027-01-15. Clients who sign Forms 8879 electronically go through the identity verification that IRS Pub. 1345 requires for electronic signatures in remote transactions, provided by the tax software.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), risk register (P01), gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), risk register (P01), gap analysis (P03), cloud control map (P04), BIA (P05), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 self-benchmark and vendor review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BEC:** business email compromise

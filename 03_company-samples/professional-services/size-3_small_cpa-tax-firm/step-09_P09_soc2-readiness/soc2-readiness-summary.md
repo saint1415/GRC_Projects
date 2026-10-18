@@ -12,7 +12,7 @@
 | Prepared | 2026-08-20 by the IT Manager (Qualified Individual), with the Tax Partner for Part B |
 
 ## 1. Why SOC 2 for this organization
-**The firm is not a SOC 2 service organization.** A SOC 2 report describes a system that a service organization runs for its customers, where the customers rely on that system's controls. The firm delivers professional services: tax returns, audits, reviews, compilations, and advice. Clients do not operate their business on a firm system. The client portal is a delivery channel run by a vendor, not a service the firm offers to others. The firm's assurance practice also does not perform SOC examinations (scenario facts section 1). A formal SOC 2 audit of the firm would therefore answer a question no client is asking and would cost far more than the requests below justify.
+**The firm is not a SOC 2 service organization.** A SOC 2 report describes a system that a service organization runs for its customers, where the customers rely on that system's controls. The firm delivers professional services: tax returns, audits, reviews, compilations, and advice. Clients do not operate their business on a firm system. The client portal is a delivery channel run by a vendor, not a service the firm offers to others. The firm's assurance practice also does not perform SOC examinations (EV-037). A formal SOC 2 audit of the firm would therefore answer a question no client is asking and would cost far more than the requests below justify.
 
 SOC 2 is still useful here, in two ways:
 

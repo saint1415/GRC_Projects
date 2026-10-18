@@ -74,6 +74,8 @@ Information types were selected from NIST SP 800-60 Vol. 2 Rev. 1. Impact levels
 - **Tailored out** for this tier, where the control addresses federal program management or organizations with dedicated IT staff (for example, configuration control boards and separate development environments). These are recorded as tailoring decisions, not gaps.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
+
 - **Inside:** the firm's tax software tenant, users, and roles (SYS-01); the portal account and its client accounts (SYS-02); the suite tenant, mailboxes, and client folders (SYS-03); 8 computers and the MFP, plus the suite app on staff phones (SYS-06); the office network (SYS-07); and the firm's backup subscription (SYS-08).
 - **Outside (external services, interconnected):** the vendors' own platforms and data centers, the IRS and state e-file systems (reached through the tax software vendor), the MSP's remote management platform, SYS-04, SYS-05, and the AI assistant (SYS-09, assessed separately in P10).
 
@@ -114,10 +116,10 @@ By responsibility: 18 system-specific (the firm), 23 hybrid (the firm with a ven
 ### 10.2 Inherited and MSP-provided controls
 | Provider | What the firm relies on | Evidence | What the firm must still do |
 |---|---|---|---|
-| Tax software vendor | Platform security, encryption, backups (CP-9), session timeout (AC-12), audit records (AU-2, AU-11), MFA enforcement, e-file transmission | SOC 2 Type 2 report reviewed 2026-08-12 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, review of user activity, protection of credentials, prompt notice of suspected account compromise |
-| Portal vendor | Encryption in transit and at rest (SC-8, SC-28), session timeout, e-signature identity check (IA-8) | Vendor documentation only | Staff account management; require client MFA; deliver returns only through the portal |
-| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout, audit logging (AU-2) | Vendor documentation | Account management, MFA settings, forwarding and sharing settings, alerts, log review |
-| MSP | Patching (SI-2), antivirus (SI-3), firewall (SC-7), laptop encryption (SC-28), backup operation (CP-9), screen lock (AC-11) | Monthly MSP reports; P07 evidence requests | Oversight: approve changes, review reports monthly, written 7216 notice to technicians, annual MSP review (P01 R-006) |
+| Tax software vendor | Platform security, encryption, backups (CP-9), session timeout (AC-12), audit records (AU-2, AU-11), MFA enforcement, e-file transmission | SOC 2 Type 2 report (EV-025) reviewed 2026-08-12 (P09) | Complementary user entity controls: user provisioning and removal, role assignment, review of user activity, protection of credentials, prompt notice of suspected account compromise |
+| Portal vendor | Encryption in transit and at rest (SC-8, SC-28), session timeout, e-signature identity check (IA-8) | Vendor documentation only (EV-009, EV-026) | Staff account management; require client MFA; deliver returns only through the portal |
+| Productivity suite vendor | Platform security, encryption at rest and in transit, lockout, audit logging (AU-2) | Vendor documentation (EV-026) | Account management, MFA settings, forwarding and sharing settings, alerts, log review |
+| MSP | Patching (SI-2), antivirus (SI-3), firewall (SC-7), laptop encryption (SC-28), backup operation (CP-9), screen lock (AC-11) | Monthly MSP reports (EV-017); P07 evidence requests | Oversight: approve changes, review reports monthly, written 7216 notice to technicians, annual MSP review (P01 R-006) |
 | Backup service (MSP subcontractor) | Storage of suite copies (CP-9) | None yet; full restore test due 2026-09-30 | Confirm retention, MFA, and subcontractor terms through the MSP |
 
 **Inherited does not mean done.** Two of the tax software vendor's complementary user entity controls are open gaps at the firm: prompt removal of users (AC-2, PS-4) and review of user activity (AU-6).
@@ -129,7 +131,7 @@ Assessed 2026-08-03 to 2026-08-05 by an independent consultant. See P07 `assessm
 Staff sign in to the tax software and the suite with a password and a second factor (a phone authenticator app). That fits access to customer information at the Moderate category and meets 314.4(c)(5) once number matching is on and the "scanner" mailbox stops using legacy authentication (P01 R-001, R-024). Clients sign in to the portal with their own accounts; MFA is optional today and will be required before the 2027 filing season (R-010). Forms 8879 are signed electronically with the portal's knowledge-based identity check, as Pub. 1345 requires.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and tax software vendor report review (P09), AI assessment (P10).
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), cloud control map (P04), risk register (P01), gap analysis (P03), policies (P06), assessment and POA&M (P07), incident response runbook (P08), SOC 2 readiness and tax software vendor report review (P09), AI assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BEC:** business email compromise

@@ -7,7 +7,7 @@
 | AI use cases | **AI-001:** the tax software's generative AI document extraction and return-drafting feature, pilot with 8 preparers since June 2026. **AI-002:** the enterprise generative AI assistant in the productivity suite, used to draft client letters and IRS notice responses, pilot with 15 users since May 2026 |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Risk and Quality Partner (chair of AI use reviews) with the Tax Partner and the IT Manager, 2026-08-25 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the tax software settings, the accounts payable list, and the identity provider app list and license report (EV-009, EV-030, EV-045), plus the gap analysis staff interviews (EV-049). Not established: how many staff beyond the 3 found in interviews use public chatbots (intake open request), and the identity and location of the AI extraction sub-processor |
 
 ## 1. GOVERN
 - **Accountable owners:** Tax Partner for AI-001 (business owner of the tax practice and the IRC 7216 consent process). Risk and Quality Partner for AI-002.
@@ -51,7 +51,7 @@
 | Fla. Stat. 501.171 | **Yes, indirectly** | The duty to take reasonable measures to protect personal information (501.171(2)) covers data sent to AI vendors. A vendor that maintains or processes the data is a third-party agent that must report a breach to the firm within 10 days (501.171(6)(a)) |
 | FTC Act Section 5 | Indirectly | Applies to the vendors' accuracy and data-use claims and to anything the firm tells clients about its use of AI. Keep the vendor claims the firm relied on in the procurement file |
 | Colorado SB26-189 and the California CCPA ADMT rules | **No** | Tax preparation is not one of the consequential or significant decision categories, and the firm makes no decision about a person with these tools. The firm is also not a CCPA "business" (receipts below the $26,625,000 threshold and no sale of personal information) |
-| AICPA Code of Professional Conduct, confidentiality | Noted, not assessed | Professional standard; its text was not verified from the source for this sample (scenario facts section 1) |
+| AICPA Code of Professional Conduct, confidentiality | Noted, not assessed | Professional standard; its text was not verified from the source for this sample (intake obligations register, N54-R08) |
 
 ### 2.4 IRC 7216 analysis
 1. **Extraction by the vendor may fit the preparer-to-preparer permission.** 301.7216-2(d)(1) lets a preparer disclose tax return information without consent to another tax return preparer **located in the United States** for auxiliary services, including having that preparer "transfer that information to, and compute the tax liability on, a tax return" by electronic processing, **so long as** the services are not substantive determinations. The vendor is itself a tax return preparer (a software developer and Authorized IRS e-file Provider, 301.7216-1(b)(2)(i)(B)). **Open point:** the sub-processor's location and role are unknown, so the firm cannot yet show the condition is met (P03 G-045).
