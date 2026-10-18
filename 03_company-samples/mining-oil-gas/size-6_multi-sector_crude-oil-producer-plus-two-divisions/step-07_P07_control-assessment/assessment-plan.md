@@ -15,7 +15,7 @@ Most IT safeguards in all three divisions come from the same corporate providers
 2. **The FSPA's** system-specific and hybrid controls were assessed because it is the SSP system and sits where the top group risks land (GR-01, GR-02).
 3. **Division samples** covered controls each division operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division, not averaged into the group.
 
-Crude Logistics was sampled most heavily (CA-2, PL-1, and four operational controls) because its inheritance is undocumented (scenario gap 6) and its supplement has drifted (gap 9). Power Generation was sampled on the new CIP-003-9 obligations (gap 3); its NERC program is also audited by its Regional Entities.
+Crude Logistics was sampled most heavily (CA-2, PL-1, and four operational controls) because its inheritance is undocumented (P03 gap 6; EV-018) and its supplement has drifted (gap 9; EV-017). Power Generation was sampled on the new CIP-003-9 obligations (gap 3; EV-057, EV-058); its NERC program is also audited by its Regional Entities.
 
 ## 2. Controls selected
 **36 control assessments** (32 distinct controls; AC-17 was assessed in three scopes, and CP-9 and CP-4 in two), **242 determination statements**.
@@ -24,12 +24,12 @@ Crude Logistics was sampled most heavily (CA-2, PL-1, and four operational contr
 |---|---|---|---|---|
 | Common control (SYS-G1) | AC-2, AC-6(5), IA-2(1), AC-17, PS-4 | 37 | Every division's access and the jump servers; GR-02, GR-08 | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | AT-2 | 10 | Awareness for 45,000 users | Focused / Focused |
-| Common control (SYS-G2) | SI-4, RA-5, IR-4, IR-6, IR-8, IR-3 | 54 | Detection, response, and notices for all divisions; GR-03, GR-04, GR-13; scenario gap 7 | Focused / Comprehensive |
+| Common control (SYS-G2) | SI-4, RA-5, IR-4, IR-6, IR-8, IR-3 | 54 | Detection, response, and notices for all divisions; GR-03, GR-04, GR-13; gap 7 (EV-025) | Focused / Comprehensive |
 | Common control (SYS-G3) | CP-9, SC-7, SC-8 | 13 | Backups and the OT DMZ boundary; GR-01, GR-03 | Focused / Focused |
 | FSPA (P02 SSP system) | AC-4, CM-3, CM-8, CP-4, IA-3, IA-5, SI-7, CM-7(5), AU-6 | 45 | SSP system; PD-003, PD-006, PD-007, PD-009, PD-014; Permian field test 2026-08-13 | Comprehensive / Focused (6 Permian well pads, 3 field areas) |
-| Division sample: Crude Oil Production (Mid-Continent SYS-P5) | AC-17, SR-6, CP-9 | 11 | PD-001, PD-002 (High); scenario gap 2 | Focused / Focused (2 field offices) |
-| Division sample: Power Generation | AC-17, MA-3, PE-3 | 20 | PG-001 (High); CIP-003-9 Sections 2, 5, 6; scenario gap 3; P2 outage test 2026-08-11 | Focused / Focused (P2, P3, and the GCC) |
-| Division sample: Crude Logistics | CP-4, CM-4, AT-3, CA-2, PL-1, RA-3 | 52 | ML-002 (High), ML-003, ML-004, ML-007, ML-012, ML-013; scenario gaps 4, 5, 6, 9 | Focused / Comprehensive (heaviest sample, because inheritance is undocumented) |
+| Division sample: Crude Oil Production (Mid-Continent SYS-P5) | AC-17, SR-6, CP-9 | 11 | PD-001, PD-002 (High); gap 2 (EV-049) | Focused / Focused (2 field offices) |
+| Division sample: Power Generation | AC-17, MA-3, PE-3 | 20 | PG-001 (High); CIP-003-9 Sections 2, 5, 6; gap 3 (EV-057, EV-058); P2 outage test 2026-08-11 | Focused / Focused (P2, P3, and the GCC) |
+| Division sample: Crude Logistics | CP-4, CM-4, AT-3, CA-2, PL-1, RA-3 | 52 | ML-002 (High), ML-003, ML-004, ML-007, ML-012, ML-013; gaps 4, 5, 6, 9 (EV-062, EV-066, EV-018, EV-017) | Focused / Comprehensive (heaviest sample, because inheritance is undocumented) |
 | **Total** | **36** | **242** | | |
 
 ## 3. Methods and objects
@@ -43,6 +43,17 @@ Crude Logistics was sampled most heavily (CA-2, PL-1, and four operational contr
   - an application allowlisting execution test on IOC and Florida HMIs;
   - a restore of 2 SCADA server images and 1 SYS-M3 database from the provider B vault, and an attempted restore of a SYS-P5 HMI image;
   - a badge walk test at Plant P2 during its planned outage (2026-08-11) and at the GCC.
+
+### What each test could show
+The group policies v2026 (P06) and the group IR plan v2026 were drafts during fieldwork; the board risk committee approved them on 2026-09-17, effective 2026-10-01. Controls that the 2025 group policies, the division supplements and the existing plans already required were tested for operation. Statements that rest on the v2026 drafts were reviewed as drafts, for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control operated before 2026-10-01 under the 2025 group policies, the division supplements or the existing plans, and was tested on samples, configurations, records or live systems | 220 |
+| Design | The statement rests on a draft (IR-8: the group IR plan v2026); its design was reviewed. Operation is tested at the 2027-04 follow-up | 17 |
+| Not implemented | Nothing existed to test (usage restrictions and implementation guidance for the SYS-P5 integrator connection, AC-17; an assessment of the legacy SCADA integrator, SR-6; a field device restore test, CP-4; assessment of division-operated parts of hybrid controls at Crude Logistics, CA-2) | 5 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-006, the 40 field logic changes from the OT change records in EV-046, the 3 Permian field areas from the OT inventory in EV-044, and the KEV list from EV-013).
 
 ## 4. Rules of engagement
 - **No active testing of live control.** No scans, logins, or configuration changes on devices that were controlling a process. Field credential tests were made only on devices the shift lead had placed in local or manual mode, with an automation technician present. Plant tests ran only during the P2 planned outage.
@@ -63,7 +74,7 @@ Crude Logistics was sampled most heavily (CA-2, PL-1, and four operational contr
 | Division sample: Crude Logistics | 40 | 12 | 52 |
 | **Total** | **194** | **48** | **242** |
 
-**Common controls are mostly strong.** 101 of 114 common statements were satisfied. Privileged access (AC-6(5), IA-2(1)), terminations (PS-4), awareness training (AT-2), backups (CP-9), and WAN encryption (SC-8) had no findings. The common findings are about **the shared paths into OT** (AC-2, AC-17, SC-7: the jump servers and the historian connector), **patching** (RA-5), **OT monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8; scenario gap 7).
+**Common controls are mostly strong.** 101 of 114 common statements were satisfied. Privileged access (AC-6(5), IA-2(1)), terminations (PS-4), awareness training (AT-2), backups (CP-9), and WAN encryption (SC-8) had no findings. The common findings are about **the shared paths into OT** (AC-2, AC-17, SC-7: the jump servers and the historian connector), **patching** (RA-5), **OT monitoring coverage** (SI-4), and **cross-division incident consistency and notification** (IR-3, IR-4, IR-6, IR-8; gap 7).
 
 **The FSPA:** the historian connector can write into the OT DMZ (AC-4); default credentials on field devices (IA-5) and unauthenticated radio links (IA-3); field logic changes without prior review and a model that changed setpoints without change control (CM-3); an incomplete OT inventory (CM-8) and program comparison (SI-7); no allowlisting on Florida HMIs (CM-7(5)); and untested field device restore (CP-4).
 

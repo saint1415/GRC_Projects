@@ -15,7 +15,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 | Division | Service line | Service organization? | Decision | Categories | Report |
 |---|---|---|---|---|---|
-| Crude Logistics | Gathering, trunk line, and trucking for about 85 third-party shippers, with the shipper services platform (SYS-M3): nominations, run tickets, measurement and allocation statements | **Yes.** Shippers rely on its run tickets, measurement, and statements for their own revenue, royalty, and tax reporting. About 120 security questionnaires were answered in 2025, and the three largest shippers asked for a SOC 2 Type 2 report by the end of 2027 | **In scope.** First readiness assessment | Security, Availability, Processing Integrity, Confidentiality | Type 1 as of 2027-03-31, then Type 2 |
+| Crude Logistics | Gathering, trunk line, and trucking for about 85 third-party shippers, with the shipper services platform (SYS-M3): nominations, run tickets, measurement and allocation statements | **Yes.** Shippers rely on its run tickets, measurement, and statements for their own revenue, royalty, and tax reporting. About 120 security questionnaires were answered in 2025, and the three largest shippers asked for a SOC 2 Type 2 report by the end of 2027 (EV-070) | **In scope.** First readiness assessment | Security, Availability, Processing Integrity, Confidentiality | Type 1 as of 2027-03-31, then Type 2 |
 | Crude Oil Production | Crude and gas sales; operator of wells for about 2,600 non-operating working interest owners | **No SOC 2.** Purchasers and the gas processor buy commodities, not a service. Non-operating partners rely on the division's joint interest billing, which is a financial reporting matter they audit under their operating agreements' audit clauses | **Out of scope** | n/a | n/a |
 | Power Generation | Wholesale electricity sales | **No.** Market operators and counterparties buy energy, not an outsourced service; reliability assurance comes from NERC standards and Regional Entity audits | **Out of scope** | n/a | n/a |
 
@@ -49,7 +49,7 @@ SOC 2 reports on controls at a **service organization** for the **user entities*
 
 **Not ready:** CC2.3. There is no system description and no written statement of service commitments to shippers, and the notification matrix does not include shipper notice terms.
 
-**Partially ready (13):** CC1.3, CC3.2, CC3.4, CC4.1, CC5.3, CC6.3, CC7.4, CC9.2, A1.3, C1.1, C1.2, PI1.1, PI1.3. Most trace to the division's governance gaps (supplement drift and undocumented inheritance, scenario gaps 6 and 9) and to data handling outside the portal (emailed statements, no offboarding deletion).
+**Partially ready (13):** CC1.3, CC3.2, CC3.4, CC4.1, CC5.3, CC6.3, CC7.4, CC9.2, A1.3, C1.1, C1.2, PI1.1, PI1.3. Most trace to the division's governance gaps (supplement drift and undocumented inheritance, P03 gaps 6 and 9; EV-017, EV-018) and to data handling outside the portal (emailed statements, no offboarding deletion).
 
 ## 4. Remediation plan and evidence calendar
 | Quarter | Criteria | Evidence to collect |
