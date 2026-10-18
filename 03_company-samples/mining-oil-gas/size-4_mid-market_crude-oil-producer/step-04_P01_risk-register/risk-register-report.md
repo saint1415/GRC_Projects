@@ -7,11 +7,11 @@
 | Vertical | Mining, Quarrying, and Oil and Gas Extraction |
 | Method | NIST SP 800-30 Rev. 1 (Tables G-2 to G-5, H-3, I-2, and the Appendix I semi-quantitative values); OT threat guidance from NIST SP 800-82 Rev. 3 (section 4.1.2, Appendix C); enterprise roll-up per NIST IR 8286 Rev. 1 |
 | Also supports | CSF 2.0 GV.RM and ID.RA outcomes (P03 benchmark); the hazard analysis behind the gathering system emergency procedures (49 CFR Part 195, P03 section 1) |
-| Prepared | 2026-07-31 by the GRC Analyst and the Security Manager, with the OT Security Engineer; R-052 added 2026-08-14 from P07 testing |
+| Prepared | 2026-07-31 by the GRC Analyst and the Security Manager, with the OT Security Engineer; R-010 re-rated 2026-08-04 and R-052 added 2026-08-14 from P07 testing |
 | Approved | 2026-09-16: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, risk appetite); field-operations items agreed by the VP Operations; presented to the board audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (3 operating areas, the control room, gathering and measurement, production accounting, finance, engineering, and corporate support), the Field SCADA and Production Accounting System (FSPA, P02), the cloud landing zone (P04), the SaaS applications, the 64 vendors with system or data access, and the AI portfolio (P10). Processes and impact values come from the BIA (P05); vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units (3 operating areas, the control room, gathering and measurement, production accounting, finance, engineering, and corporate support), the Field SCADA and Production Accounting System (FSPA, P02), the cloud landing zone (P04), the SaaS applications, the 64 vendors with system or data access, and the AI portfolio (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05); vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -36,8 +36,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $3 million need a treatment that reduces likelihood, not only insurance |
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources and vulnerabilities), the BIA, interviews with every process owner and all 3 Field Superintendents, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources and vulnerabilities), the BIA, the intake evidence, and risk interviews with every process owner and all 3 Field Superintendents plus a threat workshop with the Security Manager, the OT Security Engineer, the SCADA and Automation Manager and the MDR service lead (EV-062). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07) re-rated one risk and added one in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood of adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident log (EV-042), scan results (EV-025), phishing results (EV-043), configuration exports, the walkthroughs (EV-061) and interviews (EV-062, EV-063). A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, safety and environment, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range from the BIA values, used for the enterprise risk roll-up (NIST IR 8286 Rev. 1). The ranges are estimates for prioritizing, not actuarial figures.
@@ -53,6 +53,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | **Total** | **52** |
 
 Treatments: 41 Mitigate, 9 Accept, 1 Share/Transfer (R-018), 1 Avoid (R-034). Status: 26 Open, 17 In progress, 9 Accepted.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. R-010 was re-rated on 2026-08-04, after P07 testing found 4 of 25 sampled leavers still active in SCADA local accounts (EV-AC-2, EV-PS-4); its `likelihood_basis` cites that result and its `last_reviewed` date is the re-rating date. Pass 2 followed the control assessment: R-052 was added on 2026-08-14 after the external scan found 2 of 4 packager gateways accepting inbound internet connections with a shared password (EV-SC-7, EV-AC-17). The `assessment_pass` column shows which pass produced each risk.
 
 Cyber insurance ($15 million limit, $500,000 retention) transfers part of the financial exposure for R-001, R-002, and R-018. It is the recorded treatment only for R-018, a vendor breach whose likelihood the company cannot change much; for the others it does not lower the likelihood of harm to people, the environment, or operations.
 

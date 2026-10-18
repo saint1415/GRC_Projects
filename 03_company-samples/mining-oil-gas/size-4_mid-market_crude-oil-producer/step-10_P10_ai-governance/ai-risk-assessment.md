@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed independent crude oil producer with a Panhandle gathering system) |
 | Tier / Vertical | Mid-Market / Mining, Quarrying, and Oil and Gas Extraction |
-| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`. AI-001, the predictive maintenance model for well equipment, is the registry use case and gets the deepest review |
+| Scope | Portfolio of 5 AI use cases (AI-001 to AI-005), inventory in `ai-use-case-inventory.csv`, built from the identity provider app list, the ERP vendor list, the productivity suite license report, the ERP and HR feature settings, the OCC historian add-on list and a department heads survey (EV-058, EV-049, EV-031). No completed bias test for AI-001 was provided at intake, so section 4.1 reports the testing done for this assessment; the HR vendor supplied no adverse impact data for AI-004. AI-001, the predictive maintenance model for well equipment, is the registry use case and gets the deepest review |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook, with the Generative AI Profile (NIST AI 600-1) for AI-002 |
 | Assessors / date | Production Engineering Manager (AI review chair), Security Manager, OT Security Engineer, General Counsel, with the Control Room Manager and Pipeline Compliance Manager for AI-003 and the HR Director for AI-004; 2026-08-24 to 2026-09-10 |
 | Decision | Chief Operating Officer, with the VP Operations agreeing for AI-001 and AI-003, 2026-09-16; High-tier decisions noted by the CEO |
 
 ## 1. Summary
-The company had AI policy statements (2026) but no AI inventory before this assessment (gap 13 in `../00_company-facts.md`). The inventory found 5 use cases. None of them can command field equipment, but two touch safety or employment closely enough to be rated High:
+The company had AI policy statements (2026) but no AI inventory before this assessment (EV-032, EV-058). The inventory found 5 use cases. None of them can command field equipment, but two touch safety or employment closely enough to be rated High:
 - **AI-001, predictive maintenance:** went into production in the Panhandle and Alabama without completed bias testing. Testing now shows it serves South Florida wells much worse than the rest.
 - **AI-002, the enterprise generative AI assistant:** works as designed, but it can surface files that were over-shared years ago, including 6 folders with Restricted data.
 - **AI-003, gathering line leak analytics:** is advisory, but controllers dismissed almost all of its alerts, and they were never trained on how to use it.

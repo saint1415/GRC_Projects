@@ -58,7 +58,7 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
 
 ## 3. Methods and objects
 - **Examine:**
-  - POL-01 to POL-05 (2024 versions and the 2026 drafts) and the draft standards
+  - POL-01 to POL-05 (2024 versions in force, and the 2026 drafts reviewed for design only) and the draft standards
   - the SSP draft and the P04 diagram
   - IdP, OT directory, SCADA local account, cloud, and data platform permission exports
   - OT DMZ, site firewall, and cloud firewall rule exports
@@ -82,6 +82,18 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - a simulated suspicious sign-in to test MDR escalation (escalated in 18 minutes)
   - physical counts of field devices at 6 pads, compared with the inventory
   - observation of HMI sign-in at a shift change at the OCC, the South Florida office, and the BCC
+
+### What each test could show
+The 2026 policies (P06), the draft standards, the draft OT recovery and BCC failover procedures, and the P08 runbooks and OT annex were drafts during fieldwork; they were approved on 2026-09-16 and the policies take effect on 2026-10-01. The 2024 policies, standards and plans were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples, live systems or records | 204 |
+| Design | The requirement comes from a 2026 draft (the quarterly OT account review in POL-02; the OT recovery and BCC failover procedures; the OT annex and the containment and pipeline links in the P08 runbooks); its design was reviewed. Operation is tested at the 2027-04 follow-up | 6 |
+| Not implemented | Nothing existed to test | 41 |
+| **Total** | | **251** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 was extracted from the system of record named at intake: terminations, transfers and hires from the HR report (EV-003), privileged accounts from EV-006, jump host sessions from the jump host recordings (EV-018), CAB changes and controller work orders from EV-020 and EV-021, field devices from the SCADA configuration and area spreadsheets (EV-014, EV-016), critical vulnerability findings from the scan reports (EV-025), incidents from EV-042, contracts with access from EV-049 and EV-050, and field crew training records from EV-043.
 
 ## 4. Rules of engagement
 - **Safety first and no active scanning of OT.** SP 800-82 Rev. 3 advises caution with active scanning on an operational OT network because it can disrupt devices, so OT evidence came from configuration exports, passive sensor data, observation, and management-page logins only. No test touched a safety shutdown.
@@ -137,7 +149,7 @@ Other than satisfied statements by risk: 3 Very High, 68 High, 37 Moderate, 5 Lo
 | SI-7 | 2 | 4 | Moderate | POAM-007; POAM-012 |
 | SR-6 | 0 | 1 | High | POAM-012 |
 
-**Fully satisfied (2 controls):** IA-2(1) and SI-3. MFA protected all 25 sampled privileged accounts, and EDR and allowlisting stopped every test file. These confirm the strengths in the scenario facts.
+**Fully satisfied (2 controls):** IA-2(1) and SI-3. MFA protected all 25 sampled privileged accounts, and EDR and allowlisting stopped every test file. These confirm what the intake exports showed (EV-002, EV-013).
 
 **Fully other than satisfied (8 controls):** AC-6, AC-6(5), AU-11, CP-10, IA-2, IR-3, MP-7, and SR-6.
 
