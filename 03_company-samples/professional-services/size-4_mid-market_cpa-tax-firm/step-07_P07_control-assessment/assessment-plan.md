@@ -90,6 +90,17 @@ Samples followed the co-sourced firm's attribute sampling table: 25 items for a 
   - an external scan of the VPN and virtual desktop gateways
   - encryption spot checks on 5 desktops and 4 printers
 
+### What each test could show
+The 2026 policies (P06), the new standards and the P08 runbooks were drafts during fieldwork; the policies and runbooks were approved on 2026-09-22 and the policies take effect on 2026-10-01. The 2024 WISP, policies, standards and incident response plan were in force, so controls built on them were tested for operation. A requirement that only a draft introduces has not operated yet, so the drafts were reviewed for design only. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in place before fieldwork and was tested on samples or live systems | 180 |
+| Design | The requirement comes from a 2026 draft (the quarterly access review in POL-02; the one-year log retention in POL-03 and STD-02); its design was reviewed. Operation is tested at the 2027-05 follow-up | 2 |
+| Not implemented | Nothing existed to test | 21 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on). Each sample population in section 2 comes from an intake export: seasonal accounts, terminations and transfers from the HR report (EV-004), new accounts from the provisioning logs (EV-005), privileged accounts from EV-007, offshore returns from the program records (EV-047), lender and adviser releases from the consent records (EV-050), service provider contracts from the contract register (EV-044), critical findings from the scan reports (EV-017), change tickets from the change system (EV-060), incidents from the incident queue (EV-034), staff and seasonal training records from EV-004 and EV-036, and destruction certificates from EV-055.
+
 ## 4. Rules of engagement
 - No testing that could interrupt client work or change client data: tests ran after 18:00, test accounts and test files only, and no change to any return or CAS client record.
 - No client data left Company systems. Screenshots were redacted, and workpapers are held in the internal audit firm's encrypted repository under its confidentiality terms.
@@ -142,7 +153,7 @@ Other than satisfied statements by risk: 22 High, 36 Moderate, 9 Low.
 | SI-12 | 2 | 2 | Moderate | POAM-020 |
 | SR-6 | 0 | 1 | High | POAM-017 |
 
-**Fully satisfied (4 controls):** CP-9 (isolated, write-once, encrypted backups; the test restore worked), IA-2 (every user, including offshore vendor staff, has a unique account), IA-2(1) (MFA on all 25 sampled privileged sign-ins), and RA-3 (the 2026 risk assessment meets every statement). These confirm the strengths in the scenario facts.
+**Fully satisfied (4 controls):** CP-9 (isolated, write-once, encrypted backups; the test restore worked), IA-2 (every user, including offshore vendor staff, has a unique account), IA-2(1) (MFA on all 25 sampled privileged sign-ins), and RA-3 (the 2026 risk assessment meets every statement). These confirm what the intake evidence showed (EV-001, EV-002, EV-022, EV-032).
 
 **Fully other than satisfied (8 controls):** AC-6, AC-21, AU-11, CA-8, IA-8, SC-8, SC-28, and SR-6. Most are single-statement controls, so one weakness fails the whole control.
 
