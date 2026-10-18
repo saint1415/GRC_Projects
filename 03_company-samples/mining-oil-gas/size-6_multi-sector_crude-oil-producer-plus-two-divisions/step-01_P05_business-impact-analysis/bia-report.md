@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company Holdings, Inc. | **Tier:** Multi-Sector (45,000 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, applied at group and division level
 **Prepared by:** Group Chief Risk Officer's continuity team with the three division continuity leads and the Group OT Security Director | **Fieldwork:** 2026-05-04 to 2026-07-31 | **Approved:** board risk committee, 2026-09-17
+**Sources:** process owner interviews by division, 2026-05-04 to 2026-05-29 (EV-072 group, EV-073 Crude Oil Production, EV-074 Power Generation, EV-075 Crude Logistics), FY2025 revenue by division (EV-003), production scale (EV-040), SPCC alarm records (EV-041), recovery records (EV-023, EV-047, EV-048, EV-049), and the asset and vendor registers in [step-00](../step-00_P00_intake/intake-report.md). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the board risk committee.
 
 ## 1. Overview and purpose
 This BIA works at two levels:
@@ -15,12 +16,12 @@ It feeds:
 - the availability commitments the Crude Logistics shipper services platform will make in its SOC 2 report (P09).
 
 ## 2. System and business description
-Three divisions share corporate services: SYS-G1 identity (including the shared OT support jump servers), SYS-G2 SOC with its OT desk, SYS-G3 cloud and WAN, SYS-G4 ERP and HR, SYS-G5 productivity, and SYS-G6 the group data platform. Each division runs its own control systems on premises: Production's enterprise field SCADA (SYS-P1, SYS-P2) and the Mid-Continent legacy SCADA (SYS-P5); Power Generation's plant control systems and Generation Control Center (SYS-E1, SYS-E2); and Crude Logistics' pipeline SCADA and Pipeline Control Center (SYS-M1) with measurement (SYS-M2). See `../00_company-facts.md` sections 3 and 7.
+Three divisions share corporate services: SYS-G1 identity (including the shared OT support jump servers), SYS-G2 SOC with its OT desk, SYS-G3 cloud and WAN, SYS-G4 ERP and HR, SYS-G5 productivity, and SYS-G6 the group data platform. Each division runs its own control systems on premises: Production's enterprise field SCADA (SYS-P1, SYS-P2) and the Mid-Continent legacy SCADA (SYS-P5); Power Generation's plant control systems and Generation Control Center (SYS-E1, SYS-E2); and Crude Logistics' pipeline SCADA and Pipeline Control Center (SYS-M1) with measurement (SYS-M2). See the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 **Control does not depend on corporate IT.** Every control room keeps local logons and its own OT network, so the loss of SYS-G1 or the WAN does not stop control. What stops is everything around control: volumes, tickets, market offers, and the facts the SOC needs.
 
 ## 3. Impact categories and values
-Dollar values use the fictional revenue split in `../00_company-facts.md` section 7: Production about $38.9 million per day (about $1.6 million per hour), Power Generation about $5.8 million per day, and Crude Logistics about $4.7 million per day from third parties.
+Dollar values use FY2025 revenue by division (EV-003) spread over 365 days: Production about $14.2 billion, or about $38.9 million per day (about $1.6 million per hour), Power Generation about $2.1 billion, or about $5.8 million per day, and Crude Logistics about $1.7 billion from third parties, or about $4.7 million per day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -72,15 +73,15 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | Dependency | From | To | Why it matters |
 |---|---|---|---|
 | Sign-in (SYS-G1) | Group | Every business process | A group identity outage stops accounting, dispatch, and bidding in all three divisions at once. Control rooms are unaffected because they use local logons |
-| Shared OT support jump servers (SYS-G1) | Group | OT DMZs of all three divisions | Convenient for support; also a single path into three divisions' OT (gap 1). P08 treats it as a spread path |
-| Group data platform historian connector (SYS-G6) | Group | Historian brokers in all three OT DMZs | One service account reads from and can write to all three (gap 1). Not needed for control, so Moderate; still a top risk path (P01 GR-01) |
+| Shared OT support jump servers (SYS-G1) | Group | OT DMZs of all three divisions | Convenient for support; also a single path into three divisions' OT (EV-008). P08 treats it as a spread path |
+| Group data platform historian connector (SYS-G6) | Group | Historian brokers in all three OT DMZs | One service account reads from and can write to all three (EV-009). Not needed for control, so Moderate; still a top risk path (P01 GR-01) |
 | SOC facts (SYS-G2) | Group | Every notice in P08; NERC, PHMSA, EPA, SEC | Every notice clock depends on the SOC establishing what happened |
 | Trunk line and gathering (BP-ML01, BP-ML02) | Crude Logistics | Production takeaway (BP-PD01) | About 40% of Permian crude moves on the trunk line |
 | Trucks and run tickets (BP-ML04) | Crude Logistics | Production leases without pipeline connections; volumes in SYS-P3 | Custody records for trucked crude |
 | Residue gas | Third-party processor (from Production associated gas) | Power Generation plants (BP-PG01) | A long Production shut-in reduces associated gas supply; plants can switch to pipeline gas |
 | Water hauling | Crude Logistics | Production water disposal (BP-PD03) | Workaround when injection plants are down |
 
-**Single points of failure found:** SYS-G1 sign-in for business processes (mitigated by break-glass accounts, tested twice in 2026); the shared OT jump servers (to be split by division, P01 GR-02); the Mid-Continent legacy SCADA servers, whose backups sit on a local device and have never been restored (P01 PD-002); and the trunk line as the main Permian takeaway (accepted for capacity reasons; contracts with a third-party pipeline cover part of the volume).
+**Single points of failure found:** SYS-G1 sign-in for business processes (mitigated by break-glass accounts, tested twice in 2026, EV-072); the shared OT jump servers (to be split by division, P01 GR-02); the Mid-Continent legacy SCADA servers, whose backups sit on a local device and have never been restored (P01 PD-002); and the trunk line as the main Permian takeaway (accepted for capacity reasons; contracts with a third-party pipeline cover part of the volume).
 
 ## 6. Resource requirements
 | Resource | Supports | RPO method |
@@ -88,10 +89,10 @@ Dollar values use the fictional revenue split in `../00_company-facts.md` sectio
 | SYS-G1 identity platform (SaaS) | All business processes | Vendor multi-region service; configuration exported daily |
 | SYS-G3 landing zones, keys, logs | Cloud-hosted processes | Infrastructure as code; immutable backups in provider B |
 | SYS-P1 enterprise field SCADA | BP-PD01, BP-PD02, BP-PD03 | Hot standby servers at the BCC; historian replication; nightly offline configuration copies |
-| SYS-P5 Mid-Continent legacy SCADA | BP-PD06 | Nightly backup to a local network storage device (gap 2) |
+| SYS-P5 Mid-Continent legacy SCADA | BP-PD06 | Nightly backup to a local network storage device (EV-049) |
 | SYS-E1 plant control systems | BP-PG01 | Redundant controllers; daily configuration backups to an offline store at each plant |
 | SYS-E2 GCC | BP-PG02 | Backup GCC function in the P1 control room |
-| SYS-M1 pipeline SCADA | BP-ML01, BP-ML02 | Backup PCC with replicated SCADA servers (backup test overdue, gap 4) |
+| SYS-M1 pipeline SCADA | BP-ML01, BP-ML02 | Backup PCC with replicated SCADA servers (backup test overdue, EV-062) |
 | SYS-M3 shipper services platform | BP-ML04, BP-ML05 | Managed database replicas; daily immutable backups |
 | People | All | Cross-trained controllers; manual operations crews; remote work for business staff |
 
@@ -110,7 +111,7 @@ Recovery order across the group (full list in `bia.csv`, `recovery_priority`):
 13. to 26. OT remote support access (rebuilt first), measurement, market bidding, telematics, field data capture, plant maintenance, NERC evidence, the group data platform, shipper portal, financial close, well servicing, hydrocarbon accounting, payroll, and seismic data.
 
 ## 8. Key findings
-1. **Control rooms are more resilient than the business around them.** Local logons and separate OT networks mean a corporate ransomware event does not stop control directly. The risk is the paths that connect IT to OT: the group data platform connector and the shared jump servers (gap 1).
-2. **The Mid-Continent legacy SCADA has the weakest recovery** (RPO 24 hours, local backups, never restored). It carries about 22% of production.
-3. **The backup PCC is unproven.** Its last test was 2025-04-22, and 195.446(c)(4) requires a test of backup SCADA systems at least once each calendar year at intervals not over 15 months (gap 4).
+1. **Control rooms are more resilient than the business around them.** Local logons and separate OT networks mean a corporate ransomware event does not stop control directly. The risk is the paths that connect IT to OT: the group data platform connector and the shared jump servers (EV-008, EV-009).
+2. **The Mid-Continent legacy SCADA has the weakest recovery** (RPO 24 hours, local backups, never restored; EV-049). It carries about 22% of production.
+3. **The backup PCC is unproven.** Its last test was 2025-04-22, and 195.446(c)(4) requires a test of backup SCADA systems at least once each calendar year at intervals not over 15 months (EV-062).
 4. **Notification capacity is itself a process** (BP-G02, BP-PG05, BP-G06). NERC, PHMSA, and EPA notices can be due within an hour, so the P08 runbook keeps contact lists and forms offline at each control center.

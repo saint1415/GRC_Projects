@@ -7,7 +7,7 @@
 Field Service Business Systems (**FSBS**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The FSBS is everything the owner-operator uses to run contract pumping rounds on 34 wells and automation service on about 60 customer field devices: the business email and file account (SYS-01), the accounting service (SYS-02), the rugged field laptop with configuration software (SYS-03), the smartphone (SYS-04), USB drives and programming cables (SYS-06), the home office network (SYS-07), the dynamometer analysis service (SYS-08), and the owner's credentials and client software for the customer remote access paths (SYS-05). Component details are in `../00_company-facts.md` section 3. There is no server and no IaaS. One person uses and runs it.
+The FSBS is everything the owner-operator uses to run contract pumping rounds on 34 wells and automation service on about 60 customer field devices: the business email and file account (SYS-01), the accounting service (SYS-02), the rugged field laptop with configuration software (SYS-03), the smartphone (SYS-04), USB drives and programming cables (SYS-06), the home office network (SYS-07), the dynamometer analysis service (SYS-08), and the owner's credentials and client software for the customer remote access paths (SYS-05). Component details, with the evidence behind each, are in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). There is no server and no IaaS. One person uses and runs it.
 
 **Why this small system matters to critical infrastructure:** the laptop is both a business computer and an OT engineering workstation for two producers. It holds their control programs, network details, and passwords, and it connects to their controllers by cable and remotely. The customers' SCADA and field devices are outside this boundary, but the FSBS is a path into them.
 
@@ -51,6 +51,8 @@ Operational. Planned changes: standard daily laptop account and password manager
 ## 7. Authorization Boundary Description
 - **Inside:** the owner's SaaS accounts and their settings (SYS-01, SYS-02, SYS-08), the laptop and phone, USB drives and cables, the home office network, and the owner's credentials and client software for customer remote access.
 - **Outside (external systems):** customers' SCADA, controllers, modems, and VPN gateways; the Customer B remote-desktop tool; the SaaS providers' platforms; the free AI chatbot (use stopped).
+
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). Customer field devices (OTH-02) and the customers' remote access gateways are customer-owned and outside it.
 
 Diagram: P04 `cloud-architecture.md`.
 
@@ -103,7 +105,7 @@ Self-assessed 2026-07-20 to 2026-07-24 with the IT technician. See P07.
 Email and files use a password plus a text-message code, acceptable for now but weaker than an authenticator app, which is planned by 2026-09-30. The accounting service uses a password only until MFA is turned on (2026-09-15). Customer A's VPN uses Customer A's own MFA. The Customer B path uses a shared password with no MFA; it is outside the owner's control and is tracked as P01 R-003 until Customer B issues named accounts.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and provider report review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook and notification matrix, P09 SOC 2 self-check and provider report review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **FSBS:** Field Service Business Systems

@@ -10,13 +10,13 @@
 | Target report | SOC 2 **Type 2**, observation period 2027-04-01 to 2027-09-30 (6 months), report expected by 2027-11-30 |
 | Part A | Company readiness assessment (`soc2-readiness.csv`) |
 | Part B | Vendor SOC 2 review program (`vendor-soc2-review.csv`) |
-| Prepared | 2026-09-16 by the Security Manager and the GRC Analyst with the Measurement Supervisor, using P02, P05, P06, and P07 evidence |
+| Prepared | 2026-09-16 by the Security Manager and the GRC Analyst with the Measurement Supervisor, using intake evidence ([evidence register](../step-00_P00_intake/evidence-register.csv)) and P02, P05, P06, and P07 evidence |
 
 ## 1. Why SOC 2 for this organization
 A crude oil producer is not usually a service organization. Its gathering system makes it one:
 - The company gathers crude for **5 third-party shippers** (about 1,400 barrels per day), measures it at **6 LACT units**, and publishes **daily volume statements** on the shipper portal. Shippers nominate, sell, and pay royalties on those numbers, so the company's controls affect their financial reporting and operations.
-- The **largest shipper asked for a SOC 2 Type 2 report** on gathering and measurement services, covering Security, Availability, Processing Integrity, and Confidentiality (gap 11 in `../00_company-facts.md`).
-- The gathering agreements are silent on security and incident notice (gap 8), so a SOC 2 report plus the agreement amendments is how the company will show its commitments.
+- The **largest shipper asked for a SOC 2 Type 2 report** on gathering and measurement services, covering Security, Availability, Processing Integrity, and Confidentiality (EV-053).
+- The gathering agreements are silent on security and incident notice (EV-050), so a SOC 2 report plus the agreement amendments is how the company will show its commitments.
 
 **Why Type 2, and why not now.** A Type 2 report tests whether controls operated over a period. P07 found that the controls this service depends on most (change control over pump station setpoints and flow computers, the vendor modem at the Central Facility, the BCC path around the OT DMZ, and SCADA recovery) are not yet in place. Starting the observation period now would produce exceptions or a qualified opinion. The plan is to remediate through 2027 Q1 and observe from 2027-04-01. The risk appetite sets that date as the target for the measurement integrity risks (P01 R-007, R-021, and R-051 at Low by 2027-04-01).
 

@@ -1,6 +1,6 @@
 # Scenario facts: Cris Santos Company | Mining, Quarrying, and Oil and Gas Extraction | Multi-Sector
 
-All 10 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Regulatory facts were checked against eCFR (point in time 2026-09-23), the NERC standards documents (CIP-002-5.1a, CIP-003-9, EOP-004-4), the Form DOE-417 instructions (OMB 1901-0288), TSA Security Directive Pipeline-2021-01G and 02G, and the Federal Register between 2026-09-26 and 2026-10-04.
+All 11 deliverables in this folder use the facts below. The company is fictitious. This scenario is independent of the other sizes. Regulatory facts were checked against eCFR (point in time 2026-09-23), the NERC standards documents (CIP-002-5.1a, CIP-003-9, EOP-004-4), the Form DOE-417 instructions (OMB 1901-0288), TSA Security Directive Pipeline-2021-01G and 02G, and the Federal Register between 2026-09-26 and 2026-10-04.
 
 ## 1. The organization
 | Item | Fact |
@@ -38,19 +38,22 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Group AI council | Approves High-tier AI use cases |
 
 ## 3. Systems
+
+The full inventory, with the evidence behind each entry, is in [`step-00_P00_intake/asset-inventory.csv`](step-00_P00_intake/asset-inventory.csv). Suppliers are in the [vendor register](step-00_P00_intake/vendor-register.csv).
+
 | ID | System | Owner | Notes |
 |---|---|---|---|
-| SYS-G1 | Group identity platform (SSO, MFA, PAM, identity governance) and the shared OT support jump servers | Corporate | All divisions federate to it. Five jump servers are shared by the OT support staff of all three divisions (gap 1) |
+| SYS-G1 | Group identity platform (SSO, MFA, PAM, identity governance) and the shared OT support jump servers | Corporate | All divisions federate to it. Five jump servers are shared by the OT support staff of all three divisions (EV-007, EV-008) |
 | SYS-G2 | Group SOC, SIEM, EDR (24x7), and the OT monitoring console | Corporate | EDR on all IT servers and workstations. Passive OT monitoring sensors at the Permian IOC, the Pipeline Control Center, and the Generation Control Center |
 | SYS-G3 | Group cloud platform (providers A and B, vendor-agnostic), landing zones, WAN, and immutable backup vault | Corporate | Provider A primary; provider B for disaster recovery and the backup vault |
 | SYS-G4 | Group ERP (finance, supply chain, maintenance work orders), HR and payroll (SaaS) | Corporate | |
 | SYS-G5 | Productivity suite (email, files, chat) | Corporate | |
-| SYS-G6 | Group data platform (historian replicas from all three divisions, engineering analytics, machine learning workspace) | Corporate | Pulls data from historian brokers in each division's OT DMZ (gap 1). Hosts the predictive maintenance model (P10) |
+| SYS-G6 | Group data platform (historian replicas from all three divisions, engineering analytics, machine learning workspace) | Corporate | Pulls data from historian brokers in each division's OT DMZ (EV-009). Hosts the predictive maintenance model (P10) |
 | SYS-P1 | Enterprise field SCADA platform: SCADA servers, historians, HMIs, and engineering workstations at the Permian Integrated Operations Center (IOC), the Backup Control Center (BCC) at the Mid-Continent Operations Center, and the Florida regional control room | Production | 24x7. About 140 production controllers |
 | SYS-P2 | Field control devices and communications: about 38,000 RTUs, PLCs, rod pump controllers, ESP variable speed drives, and flow computers; private LTE and licensed radio networks; about 9,000 cellular modems | Production | Safety shutdowns at central facilities and compressor stations are independent of SCADA |
 | SYS-P3 | Hydrocarbon accounting and revenue distribution (vendor SaaS) | Production | About 190,000 royalty owners (names, Social Security or taxpayer numbers, bank accounts) and about 2,600 non-operating working interest owners |
 | SYS-P4 | Field data capture app (tablets) and the volume integration service | Production | Runs in provider A |
-| SYS-P5 | Legacy SCADA at the Mid-Continent fields acquired 2025-09-30 | Production | On-premises servers at two field offices; flat network; always-on integrator remote access; not in the group SIEM (gap 2). Migration to SYS-P1 due 2027-09-30 |
+| SYS-P5 | Legacy SCADA at the Mid-Continent fields acquired 2025-09-30 | Production | On-premises servers at two field offices; flat network; always-on integrator remote access; not in the group SIEM (EV-049, EV-010). Migration to SYS-P1 due 2027-09-30 |
 | SYS-P6 | Seismic and reservoir data platform | Production | Trade secret data |
 | SYS-E1 | Plant control systems at P1, P2, and P3: distributed control systems (DCS), turbine control systems, and plant historians | Power Generation | **Low impact BES Cyber Systems** (CIP-002-5.1a Attachment 1, criterion 3.3) |
 | SYS-E2 | Generation Control Center (GCC): dispatch, unit commitment interface to the market operators and Balancing Authorities, and plant monitoring | Power Generation | A NERC Control Center (Generator Operator for generation at two or more locations); **low impact** (criterion 3.1). Backup GCC function in the P1 control room |
@@ -64,28 +67,11 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 
 **Registry defaults kept.** The primary system (field SCADA and production accounting), the P08 incident (ransomware spreading from business IT toward field SCADA), and the P10 use case (predictive maintenance model for well equipment) all fit this business. At this size the P08 incident starts in a shared service so that it reaches all three divisions' OT boundaries, and P10 covers the group AI program with the predictive maintenance model as the priority use case.
 
-## 4. Current security posture: varies by division
-**In place today:**
-- Group policies aligned to CSF 2.0 and a common control catalog (2025)
-- 24x7 group SOC with EDR on all IT servers and workstations; an OT desk in the SOC since 2025
-- MFA for all workforce on SSO applications; phishing-resistant MFA and just-in-time PAM for IT administrators
-- Immutable backups of cloud workloads in the provider B vault
-- OT DMZs and passive OT monitoring at the Permian IOC, the PCC, and the GCC
-- Power Generation: a NERC CIP low impact program (CIP-002-5.1a categorization, CIP-003 policy and plans) audited by its Regional Entities without findings in 2024
-- Crude Logistics: written control room management procedures (195.446) and a hazardous materials transportation security plan (172.802)
-- Hardwired safety shutdowns independent of SCADA at central facilities, compressor stations, pump stations, and plants
-- SEC Reg S-K Item 106 disclosure in the annual report
-
-**Gaps:**
-1. **Shared services cross the IT/OT seams.** The group data platform (SYS-G6) pulls historian data from all three divisions' OT DMZs with one service account that can also write to the historian brokers. Five shared OT support jump servers (SYS-G1) can reach the OT DMZs of all three divisions and are reachable from the corporate virtual desktop pool.
-2. **Mid-Continent acquired fields.** Legacy SCADA (SYS-P5) on a flat network, always-on integrator remote access with a shared account, unsupported operating systems on HMIs, and no logs in the group SIEM. Migration due 2027-09-30.
-3. **Power Generation: CIP-003-9 vendor remote access.** Attachment 1 Section 6 has been in force since 2026-04-01. Plant P3's turbine vendor still has a standing remote access path with no method to detect malicious communications, and transient cyber asset reviews of OEM laptops are not recorded. Possible noncompliance (self-report decision in P03).
-4. **Crude Logistics: control room management.** The backup SCADA test at the backup PCC is overdue (last 2025-04-22), point-to-point verification records are incomplete after the 2026-03 SCADA expansion, and controller training does not cover loss or manipulation of SCADA as an abnormal operating condition.
-5. **Crude Logistics: hazmat security plan and fleet systems.** The security plan's risk assessment does not cover cyber threats to dispatch, run tickets, and telematics (en route security), and in-depth security training covers only physical threats. Driver-facing camera AI scores feed driver discipline without review.
-6. **Common control inheritance** is documented for Production and Power Generation, not for Crude Logistics.
-7. **Shared incident notification.** One incident can trigger E-ISAC and EOP-004 reports, PHMSA and EPA notices, an SEC materiality decision, state breach notices in many states, and shipper and market notices. The single notification matrix has not been exercised.
-8. **AI governance.** The predictive maintenance model (P10) began automatically reducing rod pump speeds at 640 Permian wells in 2026-06 without a safety review or AI council approval (the Group AI Standard was adopted 2026-07-01, after the change).
-9. **Division supplement drift.** The Crude Logistics supplement was last aligned to group policy in 2023.
+## 4. Where the evidence is
+This file says who the company is. It does not say how well its security works. That is established from evidence:
+- **What the records show** is in the [intake report](step-00_P00_intake/intake-report.md) and the [evidence register](step-00_P00_intake/evidence-register.csv). Rows are grouped by division (Group, Crude Oil Production, Power Generation, Crude Logistics). Every item has a source system, an owner, and as-of and collected dates.
+- **Which rules apply** to each division and to the group is in the [obligations register](step-00_P00_intake/obligations-register.csv).
+- **Gaps** against the Production benchmark, NERC CIP, PHMSA Part 195, the hazmat security rules, SEC disclosure and state breach laws are judged in the gap analyses (P03), which also number the ten roadmap gaps cited across this sample, and **whether controls work** is tested in the control assessment (P07). Both cite evidence IDs.
 
 ## 5. Scenario choices
 | Deliverable | Choice |
@@ -101,10 +87,13 @@ All 10 deliverables in this folder use the facts below. The company is fictitiou
 | Date | Event |
 |---|---|
 | 2026-04-01 | CIP-003-9 effective (vendor electronic remote access for low impact assets) |
-| 2026-05-04 to 2026-07-31 | Group and division BIAs, risk analyses, and gap analyses |
-| 2026-07-06 to 2026-08-28 | Common control assessment (group internal audit) plus division samples. OT tests at Plant P2 during a planned outage on 2026-08-11 and at Permian field sites on 2026-08-13 |
+| 2026-04-06 to 2026-04-30 | Intake: evidence requests, exports, walk-throughs, inventories, obligations register |
+| 2026-05-04 to 2026-07-31 | Group and division BIAs (BIA interviews in May), risk analyses (interviews in June), and gap analyses |
+| 2026-06-01 to 2026-06-12 | Group policies v2026 drafted from the gaps found so far (P06); the Production supplement was aligned to the drafts on 2026-06-15 |
+| 2026-07-06 to 2026-08-28 | Common control assessment (group internal audit) plus division samples: operating tests of controls already in place; design review of the draft group IR plan v2026. OT tests at Plant P2 during a planned outage on 2026-08-11 and at Permian field sites on 2026-08-13 |
 | 2026-08-31 to 2026-09-04 | SOC 2 readiness self-assessment (P09) and Group AI council review (P10, 2026-09-02) |
-| 2026-09-17 | Results to the board risk committee; deliverables approved |
+| 2026-09-17 | Results to the board risk committee; deliverables and group policies v2026 approved (policies effective 2026-10-01) |
+| 2027-04 (planned) | Follow-up assessment: operating effectiveness of the controls the v2026 policies introduced, after at least one quarter of operation |
 
 ## 7. Facts added while building the deliverables
 These facts were added so the deliverables could be completed. They do not change sections 1 to 6.
@@ -114,21 +103,21 @@ These facts were added so the deliverables could be completed. They do not chang
 | Risk acceptance | Very Low and Low: division security and compliance lead. Moderate: division president. High: Group Chief Risk Officer with the Group CISO, reported to the board risk committee. Very High: board risk committee only. Safety and environmental risks rated High must be treated, not accepted |
 | Revenue split (fictional) | Crude Oil Production about $14.2 billion (about $38.9 million per day); Power Generation about $2.1 billion (about $5.8 million per day); Crude Logistics about $1.7 billion from third parties (about $4.7 million per day), plus about $0.9 billion of intercompany revenue eliminated in consolidation |
 | Production scale | About 16,800 operated wells (11,200 producing, 4,300 water injection, 600 saltwater disposal, 700 shut-in), 410 central tank batteries, 95 associated gas compression stations, and 38 water injection plants. About 520,000 barrels of oil per day gross operated plus associated gas. Associated gas is sold at central facility outlets to a third-party gas processor; the Power Generation division buys residue gas from that processor under a netback contract |
-| Tank batteries and SPCC | About 250 of the 410 central tank batteries use the high-level sensor option of 40 CFR 112.9(c)(4)(iv): high-level alarms are transmitted to the field SCADA |
+| Tank batteries and SPCC | About 250 of the 410 central tank batteries use the high-level sensor option of 40 CFR 112.9(c)(4)(iv): high-level alarms are transmitted to the field SCADA (EV-041) |
 | Power Generation details | Largest single plant 640 MW; the GCC dispatches 1,180 MW in total. Both are below the 1,500 MW bright lines of CIP-002-5.1a criteria 2.1 and 2.11, and no planner has designated a plant under criterion 2.3, so all four assets (P1, P2, P3, and the GCC) contain low impact BES Cyber Systems only. Turbine OEM remote monitoring and tuning service at all three plants |
 | Crude Logistics details | Gathering lines are all 8 5/8 inch nominal outside diameter or smaller, in rural areas. 120 miles are regulated rural gathering lines (195.11(a)); about 2,180 miles are reporting-regulated-only (195.15). The trunk line is regulated under Part 195 as an intrastate pipeline (not a gathering line, because it is larger than 8 5/8 inch). 4 pump stations; breakout tanks at the Central Terminal. 18 pipeline controllers. TSA has not notified the division that any of its pipelines is critical |
 | Trucking | About 1,150 cargo tank motor vehicles (about 8,400 gallons each) and about 3,900 drivers. Most crude hauled is classed UN1267 Packing Group I or II, so a security plan is required (172.800(b)(6), large bulk quantity of Class 3) |
-| Shippers | About 85 third-party shippers and producers. About 120 shipper and customer security questionnaires were answered in 2025; the three largest shippers asked for a SOC 2 Type 2 report by the end of 2027 |
-| Royalty owners | About 190,000 royalty owners in all 50 states (about 21,000 in Florida). Owner decks and payment files are exported from SYS-P3 to a finance file share each month |
+| Shippers | About 85 third-party shippers and producers. About 120 shipper and customer security questionnaires were answered in 2025; the three largest shippers asked for a SOC 2 Type 2 report by the end of 2027 (EV-070) |
+| Royalty owners | About 190,000 royalty owners in all 50 states (about 21,000 in Florida). Owner decks and payment files are exported from SYS-P3 to a finance file share each month (EV-036) |
 | Cloud | Provider A hosts the corporate landing zone, SYS-G6, SYS-P4, SYS-M3, and the SYS-E3 servers. Provider B hosts disaster recovery replicas and the immutable backup vault. SYS-P1, SYS-E1, SYS-E2, and SYS-M1 are on premises at their control centers and plants |
-| Cyber insurance | Group cyber insurance tower with a breach hotline and a panel of forensic firms and breach counsel |
-| Out of scope by fact | No offshore, Outer Continental Shelf, or MTSA-regulated facilities. No federal contracts. No payment card acceptance. No operations, employees, or consumers in California or Colorado. No EAR-controlled technology identified. No Sensitive Security Information held |
-| P07 new finding | Default vendor passwords on 2 cellular modem web interfaces and 1 rod pump controller at Permian well pads, reachable from the field LTE management network (found 2026-08-13; changed 2026-09-15) |
-| AI (P10) | The predictive maintenance model's automatic speed reduction was switched back to advisory mode on 2026-09-03. Inventory also lists production optimization recommendations, seismic interpretation assistance, turbine anomaly detection (OEM), computational leak detection with machine learning, driver-facing camera AI, route and load optimization, an enterprise generative AI assistant piloted with 3,000 users, and a SOC triage assistant |
-| CIP-012-2 | The GCC is a Generator Operator Control Center that sends real-time data to Balancing Authority and market operator Control Centers, so CIP-012-2 (enforceable 2026-07-01) applies. The plan covers Parts 1.1 to 1.4; responsibilities with the other entities (Part 1.5) are agreed only by email |
+| Cyber insurance | Group cyber insurance tower with a breach hotline and a panel of forensic firms and breach counsel (EV-035) |
+| Out of scope by fact | Decided in the intake [obligations register](step-00_P00_intake/obligations-register.csv). No offshore, Outer Continental Shelf, or MTSA-regulated facilities. No federal contracts. No payment card acceptance. No operations, employees, or consumers in California or Colorado. No EAR-controlled technology identified. No Sensitive Security Information held |
+| P07 new finding | Default vendor passwords on 2 cellular modem web interfaces and 1 rod pump controller at Permian well pads, reachable from the field LTE management network (found 2026-08-13, EV-F-IA5; changed 2026-09-15, EV-089) |
+| AI (P10) | The predictive maintenance model's automatic speed reduction was switched back to advisory mode on 2026-09-03 (EV-091). Inventory also lists production optimization recommendations, seismic interpretation assistance, turbine anomaly detection (OEM), computational leak detection with machine learning, driver-facing camera AI, route and load optimization, an enterprise generative AI assistant piloted with 3,000 users, and a SOC triage assistant (EV-034, EV-090) |
+| CIP-012-2 | The GCC is a Generator Operator Control Center that sends real-time data to Balancing Authority and market operator Control Centers, so CIP-012-2 (enforceable 2026-07-01) applies. The plan covers Parts 1.1 to 1.4; responsibilities with the other entities (Part 1.5) are agreed only by email (EV-087) |
 | Self-report decision (P03) | On 2026-09-17 the CIP Senior Manager, with the Group General Counsel, decided to self-report the Plant P3 vendor access gap (CIP-003-9 Attachment 1 Section 6.3) and the unrecorded transient cyber asset reviews (Section 5.2) to the Regional Entity with a mitigation plan |
 | Additional roles | Production HSE director (process safety and EPA notices); Production field services director; Mid-Continent operations manager; Crude Logistics measurement manager, commercial director, and trucking operations director; group identity, SOC, cloud platform, and data platform directors |
 | Field scale (P02) | About 1,800 field tablets; about 2,900 wells in the Mid-Continent fields on SYS-P5 |
 | Shipper services (P09) | About 300 Crude Logistics staff work in commercial, dispatch, and measurement roles on SYS-M3 |
 | P08 exercise scenario | The stolen exports cover about 168,000 royalty owners in all 50 states (about 19,000 in Florida). Counts are illustrative |
-| Other P07 findings | 12 of 40 sampled field logic changes recorded after the fact; 41 field devices missing from the inventory in 3 Permian areas; a SYS-P5 HMI test restore failed; the jump servers were reachable from a corporate virtual desktop |
+| Other P07 findings | 12 of 40 sampled field logic changes recorded after the fact (EV-F-CM3); 41 field devices missing from the inventory in 3 Permian areas (EV-F-CM8); a SYS-P5 HMI test restore failed (EV-P-CP9); the jump servers were reachable from a corporate virtual desktop (EV-C-AC17) |

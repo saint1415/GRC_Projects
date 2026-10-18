@@ -30,6 +30,16 @@ Sole Proprietorship scope: 6-10 controls. **10 controls, 49 determination statem
 - **Test (2026-07-23):** sign-ins from a new browser to each SaaS account; a software install attempt from the daily account; a restore of one program file from the file version history; download of a standard antivirus test file and a copy of it to a USB drive.
 - **Interview:** replaced by a written **self-review**, because the only person to interview is the assessor. The owner answered the SP 800-53A interview questions in writing, and the IT technician challenged each answer against what was on screen.
 
+### What each test could show
+No written policy existed during fieldwork (EV-020). POL-01 was drafted afterward from these results and the gaps, and adopted on 2026-08-31, so none of its new rules had operated yet and none was tested here. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or practice existed before the assessment and was tested or examined on the live accounts, the laptop, the USB drives, the 4 MSAs, and the 23 Customer A changes | 33 |
+| Not implemented | Nothing existed to test | 16 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-IA-2(1) and so on), with the population each test covered: the SaaS accounts (EV-001, EV-003, EV-022), the laptop (EV-006), the 3 USB drives (EV-008), the 4 MSAs (EV-010, EV-011), and the Customer A changes (EV-014, EV-030). Controls that POL-01 introduces are tested for operation at the 2027-02 follow-up, after at least one quarter of use.
+
 ## 3. Rules of engagement
 - No test touched a customer controller's logic or setpoints. Field device settings were only viewed, during routine visits, with the customer's permission.
 - No customer data was copied off the laptop; screenshots were cropped to settings only. The password spreadsheet was viewed, not copied.

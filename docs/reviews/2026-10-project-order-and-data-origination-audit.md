@@ -350,3 +350,21 @@ Pre-existing inconsistencies exposed by dating the evidence:
 - **Size 4 (mid-market aircraft parts maker):** eight Pass 1 risks (R-004, R-006, R-015, R-019, R-027, R-033, R-036, R-044) state results established after 2026-07-31; BP-07 counts 25 file exchange partners while P04 and the SSP count 27.
 - **Size 5 (enterprise aircraft parts maker):** R-047 and R-051 (last reviewed 2026-07-31) describe findings of 2026-08-06 and 2026-08-11; the P03 report, approved 2026-08-21, cites status checks as of 2026-09-25.
 - **Size 6 (aircraft parts maker plus two divisions):** P01 AP-004 and P03 G-071 count 4 unowned drives at plants 3 and 6 while P07 MP-7 counts 2 at plant 3; P07 SA-9 cites a POL-01 clause that was still a draft; DS-019 (last reviewed 2026-07-31) describes a scope change of 2026-08.
+
+### Mining, oil and gas, 2026-10-18
+
+Six samples, 560 evidence rows in all. Agent cost: about 2.5 million tokens for the completed runs; the longest sample took 29 minutes. A first launch on 2026-10-14 stopped at the session limit and its uncommitted edits were lost when the container was recycled, so the batch was relaunched on 2026-10-18; five of those agents paused at the limit again and were resumed from WIP checkpoint commits.
+
+Fixes made during this batch:
+- **Agent brief:** any Pass 1 risk whose likelihood basis cites later evidence is marked as re-rated, the P01 "Two passes" note must match the CSV, an intake row must not contradict any deliverable that cites it, and cells with commas are written with a CSV writer.
+- **Sizes 1 and 6:** trailing-hyphen and run-together P07 IDs (EV-IA-2-1, EV-IA-2-2, EV-AC-6-2, EV-C-AC65, EV-C-IA21, EV-F-CM75) renamed to the parenthesis form.
+- **Sizes 2, 4 and 5:** Pass 1 risks re-rated after P07 testing or the P10 review are marked as such (R-022 in size 2; R-010 in size 4; 16 risks in size 5).
+
+Pre-existing inconsistencies exposed by dating the evidence:
+- **All sizes:** P03 (and in most sizes P08) cites eCFR versions of 2026-09-23 or status "as of 2026-09-25", after approval.
+- **Size 1 (oilfield services contractor):** P07 CP-09d.[01] says the SOC 2 report had no exceptions while P09 reports one; R-012 and R-015 are Closed with a 2026-08-31 due date but last reviewed 2026-07-24.
+- **Size 2 (micro crude oil producer):** P07 SA-09b.[01], POAM-013 and P03 G-045 and G-078 cite a vendor write-back found on 2026-08-25, after P07 fieldwork; the BIA and P04 cite the vendor's SOC 2 recovery figures before the report was obtained.
+- **Size 3 (small crude oil producer):** the P01 report and POAM-016 call R-030 the insurance risk while the CSV has it as R-031; P04 says cloud administrators are not on phishing-resistant MFA while P07 tested hardware keys for them.
+- **Size 4 (mid-market crude oil producer):** P03 G-018 gives a 91% acknowledgment rate while P09 CC1.1 gives 96%; the P03 method presents its samples as July work while the P07 plan says P07 drew them in August.
+- **Size 5 (enterprise crude oil producer):** P02 IR-3 describes the 2026-03-19 tabletop as ransomware reaching OT while the P08 runbook says it had no OT scenario; the P07 IA-2 finding cites an exception dated after fieldwork.
+- **Size 6 (crude oil producer plus two divisions):** POAM-023 cites P03 G-036 where G-037 is meant; the OT sensor locations differ between the SSP, P03, P04 and P07; P08 and GR-04 put offline binders at every control center while P07 found none at the backup PCC.

@@ -1,0 +1,26 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Public cloud provider A,"IaaS/PaaS: landing zone, SYS-G6, SYS-P4, SYS-P6, SYS-M3, SYS-E3 servers",SYS-G3; SYS-G6; SYS-P4; SYS-P6; SYS-M3; SYS-E3,Royalty owner data in exports to workloads; shipper data; process history,Customer agreement,SOC 2 Type 2,EV-019; EV-033; EV-032,Group
+V-02,Public cloud provider B,Disaster recovery replicas and the immutable backup vault,SYS-G3,Backups of cloud workloads and SCADA server images,Customer agreement,SOC 2 Type 2,EV-023; EV-033,Group
+V-03,Identity SaaS vendor,"SSO, MFA and identity governance",SYS-G1,Workforce identities,Subscription terms,SOC 2 Type 2,EV-005; EV-033,Group
+V-04,PAM vendor,Privileged access management and jump server access,SYS-G1; SYS-G1-JMP,Privileged sessions,Subscription terms,None on file,EV-007; EV-032,Group
+V-05,SIEM and EDR vendors,"Security monitoring, endpoint protection, SOC triage feature",SYS-G2,Security logs,Subscription terms,SOC 2 Type 2 (SIEM vendor),EV-010; EV-033,Group
+V-06,ERP and payroll SaaS vendors,"Finance, supply chain, work orders, HR and payroll",SYS-G4,Employee personal information; financial records,Subscription terms; payroll agreement,None on file,EV-032; EV-004,Group
+V-07,Productivity suite vendor,"Email, files and chat",SYS-G5,Email and files,Subscription terms,None on file,EV-024,Group
+V-08,SCADA vendor,Enterprise field SCADA software and quarterly updates,SYS-P1,Process data during support,Contract with the group OT security schedule,Onboarding assessment (tier 1 OT supplier),EV-032; EV-013,Crude Oil Production
+V-09,Controller vendors,"RTUs, PLCs, rod pump controllers, drives and firmware",SYS-P2,Device programs,3 contracts signed before 2025 without the group OT security schedule,Onboarding assessments for tier 1 suppliers,EV-032,Crude Oil Production
+V-10,Mid-Continent legacy SCADA integrator,Support of SYS-P5 with always-on remote access,SYS-P5,Process data; administrative access,Contract inherited with the 2025-09-30 acquisition; no security or notice terms,None (no assessment recorded),EV-032; EV-004; EV-049,Crude Oil Production
+V-11,Private LTE and cellular carriers,Field communications and WAN links,SYS-P2; SYS-G3,Telemetry in transit,Carrier agreements,None on file,EV-045; EV-022,Group and Crude Oil Production
+V-12,Hydrocarbon accounting SaaS vendor,Hydrocarbon accounting and revenue distribution,SYS-P3,"Royalty owner names, Social Security or taxpayer numbers, bank accounts",SaaS agreement with no breach notice or cooperation terms,"SOC 2 Type 2, reviewed each year",EV-051; EV-033; EV-004,Crude Oil Production
+V-13,Production analytics vendor,Production optimization recommendations (AI-002),AI-002,Historian data; well tests,Contract with the group OT security schedule,None on file,EV-034,Crude Oil Production
+V-14,Interpretation software vendor,Seismic interpretation software with machine learning features (AI-003),SYS-P6; AI-003,Seismic data (trade secret),Vendor terms,None on file,EV-034,Crude Oil Production
+V-15,Turbine OEM,"Remote monitoring, tuning and anomaly detection at P1, P2 and P3",SYS-E1; AI-004,Turbine sensor data; remote sessions,OEM service agreements,None on file,EV-057; EV-004,Power Generation. P3 path is standing and outside group PAM
+V-16,DCS vendor,Plant distributed control systems,SYS-E1,Control logic during support,Vendor contract,None on file,EV-060,Power Generation
+V-17,Bidding SaaS vendor,Market bidding and settlement,SYS-E3,Offers and settlements,Subscription terms,SOC 2 Type 2,EV-060; EV-033,Power Generation
+V-18,Third-party gas processor,Buys associated gas; sells residue gas to the plants under a netback contract,SYS-P1 (meter data),Gas volumes,Gas purchase contract; netback contract,None (commodity counterparty),EV-004; EV-060,Crude Oil Production and Power Generation
+V-19,Leak detection vendor,Computational leak detection with machine learning (AI-005),SYS-M1; AI-005,Pipeline SCADA data,Vendor contract,None on file,EV-034; EV-062,Crude Logistics
+V-20,Flow computer vendor,Flow computers and measurement data system support,SYS-M2,Custody volumes,Vendor contract,None on file,EV-069,Crude Logistics
+V-21,Telematics vendor,"Telematics, ELDs and driver-facing cameras with AI scoring",SYS-M4; AI-006,"Driver location, hours and video",SaaS agreement with no breach notice or cooperation terms,SOC 2 Type 2,EV-067; EV-033; EV-004,Crude Logistics
+V-22,Customer identity vendor,Shipper sign-in for the shipper portal,SYS-M3,Shipper user identities,Subscription terms,None on file,EV-068,Crude Logistics
+V-23,Enterprise generative AI service,Workforce generative AI assistant pilot (AI-008),AI-008,Internal documents,No-training and retention terms,None on file,EV-034,Group
+V-24,"Cyber insurer, panel forensic firms and breach counsel","Breach hotline, forensics with OT capability, breach counsel",All,Incident data when engaged,Cyber insurance policy; forensic retainer,n/a,EV-035,Group
+V-25,Independent penetration test firm,Business IT and landing zone penetration test (2026-04),SYS-G3,Test findings,Engagement letter,n/a,EV-015,Group

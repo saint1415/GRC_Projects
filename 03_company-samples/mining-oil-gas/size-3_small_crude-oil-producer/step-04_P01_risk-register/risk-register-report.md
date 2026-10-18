@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the CFO (Moderate and below), the majority owner (High), and the VP Operations (all field-operations risks) |
 
 ## 1. Scope and risk framing
-**Scope.** The Field SCADA and Production Accounting System (FSPA, P02), the business IT systems that connect to it, and the business processes in the BIA (P05). That covers the OCC, all field devices and communications, the cloud tenant, the SaaS applications that hold production, royalty, and employee data, and the vendors with access to them (`../00_company-facts.md` section 3).
+**Scope.** The Field SCADA and Production Accounting System (FSPA, P02), the business IT systems that connect to it, and the business processes in the BIA (P05). That covers the OCC, all field devices and communications, the cloud tenant, the SaaS applications that hold production, royalty, and employee data, and the vendors with access to them ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept, or the SCADA and Automation Supervisor for OT-only items.
@@ -22,8 +22,8 @@
 This is the company's first documented cybersecurity risk assessment that includes the SCADA system.
 
 ## 2. Method
-1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, walkthroughs of the OCC and 6 field sites (2026-07-15 and 2026-07-16), and interviews with Production Controllers, both Field Superintendents, the Production Accounting Manager, and the SCADA integrator.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events were identified from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA, the intake evidence, walkthroughs of the OCC and 6 field sites (2026-07-15 and 2026-07-16; EV-056, EV-057), and interviews with Production Controllers, both Field Superintendents, the Production Accounting Manager, and the SCADA integrator (EV-058). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: SCADA and system configuration exports, backup logs, the document request, contracts, walkthroughs and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3). The hardwired safety shutdowns were counted as an existing control: they limit the physical consequences of a SCADA compromise, which is why most SCADA risks rate High impact rather than Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables with a script, not assigned by hand.
 
@@ -52,7 +52,7 @@ The three High risks share one theme: **a ransomware or remote-access attack on 
 - R-030 (insurance coverage dispute), which depends on MFA for vendor access.
 - R-014 (single OCC room) and R-024 (cloud administrator compromise), which depend on the backup redesign.
 
-R-032 was added on 2026-08-07 after control assessment testing (P07) found three well-pad cellular modems reachable from the internet with default passwords. The fix was already under way when this report was approved.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-032 was added on 2026-08-07 after testing found three well-pad cellular modems reachable from the internet with default passwords (EV-IA-5, EV-SC-7). The `assessment_pass` column shows which pass produced each risk. The fix was already under way when this report was approved.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4 and 2027 Q1 budget, $195,000):**

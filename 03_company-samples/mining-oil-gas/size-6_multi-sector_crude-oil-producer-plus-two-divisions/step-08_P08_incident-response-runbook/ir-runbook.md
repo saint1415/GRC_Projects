@@ -9,7 +9,7 @@
 | Policy basis | Group POL-03 Incident Response Policy; division supplements (P06), including the Power Generation CIP-003-9 incident response plan and the Crude Logistics emergency procedures under 49 CFR 195.402 |
 | Runbook owner | Group CISO; OT response led by the Group OT Security Director; notifications owned by the Group General Counsel |
 | Approved | 2026-09-17 by the Group CISO and the Group General Counsel |
-| Last tested | SOC technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (scenario gap 7); the first cross-division tabletop is due 2026-12-15 (POAM-010) |
+| Last tested | SOC technical playbooks tested quarterly. **The multi-regulator notification matrix has not been exercised** (P03 gap 7; EV-025, EV-C-IR6); the first cross-division tabletop is due 2026-12-15 (POAM-010) |
 
 ## 0. Scenario used to build and test this runbook
 An exercise scenario, not a real event. Counts are illustrative.

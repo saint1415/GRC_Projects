@@ -4,7 +4,7 @@
 **Outline:** NIST SP 800-18 Rev. 2, System Security Plan Outline Example (June 2026) | **Version:** 1.0, 2026-09-16
 
 ## 1. System Name and Identifier
-Field SCADA and Production Accounting System (**FSPA**), identifier CSC-FSPA-01. The FSPA is the company's major system. Its components are listed in `../00_company-facts.md` section 3 (SSP system line).
+Field SCADA and Production Accounting System (**FSPA**), identifier CSC-FSPA-01. The FSPA is the company's major system. Its components are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-12 and SYS-14, with the parts of SYS-03, SYS-04, SYS-05, SYS-08, SYS-09 and SYS-13 named in section 2).
 
 ## 2. System Overview
 The FSPA lets the company watch and control its oil fields and gathering system, measure what it delivers, and turn production into sales, shipper statements, royalty payments, and partner billings. It covers 3 operating areas (640 wells, 16 tank batteries, 3 injection plants, 4 compression stations) and the 92-mile Panhandle gathering system with its pump station and 6 LACT units. It is staffed around the clock from the Operations Control Center (OCC), with a Backup Control Center (BCC) at the Alabama field office, and used by about 420 people: Production Controllers, lease operators and gaugers, gathering operators, automation technicians, engineers, measurement staff, and production accounting staff.
@@ -14,7 +14,7 @@ The FSPA lets the company watch and control its oil fields and gathering system,
 |---|---|---|
 | SYS-01 | SCADA control centers: primary server pair, historian, 12 HMIs, 4 engineering workstations (OCC); 3 HMIs (South Florida office); standby server and 4 HMIs (BCC) | On-premises OT |
 | SYS-02 | Field devices and communications: about 610 RTUs and PLCs, 130 ESP drives, 260 flow meters, 6 LACT flow computers, pump station PLC, licensed radio, 180 cellular modems, 2 microwave links | Field sites |
-| SYS-12 | OT remote access: jump host in the OT DMZ (plus the vendor exceptions in gap 3) | On-premises |
+| SYS-12 | OT remote access: jump host in the OT DMZ (plus the vendor exceptions in EV-018) | On-premises |
 | SYS-14 | Crude measurement and shipper services: flow computer polling, measurement data service, shipper portal | SCADA network; cloud OT data and business workloads accounts |
 | SYS-08 (part) | OT DMZ at the OCC; SCADA network segments; site firewalls at the South Florida office and BCC | On-premises |
 | SYS-04 (part) | OT data account (historian replica, measurement data service); business workloads account (field data capture app, volume integration service, shipper portal); backup account | Public cloud IaaS/PaaS, vendor-agnostic (P04) |
@@ -33,7 +33,7 @@ The FSPA lets the company watch and control its oil fields and gathering system,
 | Federal | Oil discharge notice | 40 CFR 110.6 | Applies if a SCADA failure or attack leads to a discharge that reaches water; drives the P08 notification matrix |
 | State | Florida Information Protection Act (worked example; other states generically) | Fla. Stat. 501.171(2)-(6) | Royalty owner and employee personal information in production accounting and the data platform |
 | Contract | Gathering agreements with 5 shippers | Contract | Measurement accuracy, statement timeliness, confidentiality of shipper data; SOC 2 Type 2 requested by the largest shipper (P09) |
-| Contract | Cyber insurance policy | Contract | MFA required on all remote access (gap 3 puts this at risk) |
+| Contract | Cyber insurance policy | Contract | MFA required on all remote access (EV-054); the vendor paths without MFA in EV-018 put this at risk |
 | Internal | Security policies POL-01 to POL-05 and standards STD-01 to STD-10 | P06 | Policy basis for every control |
 
 **Not applicable** (see P03 section 1):
@@ -108,19 +108,19 @@ Information types come from NIST SP 800-60 Vol. 2 Rev. 1, which gives provisiona
 - the MDR provider's platform;
 - the corporate network beyond the OT DMZ and site firewalls.
 
-The diagram is in P04 `cloud-architecture.md`.
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). The device counts are those in the SCADA configuration (EV-014), the 240 tablets are from the endpoint console (EV-012), and the field device list outside the Panhandle is the partial area spreadsheet set (EV-016). The diagram is in P04 `cloud-architecture.md`.
 
 ## 8. Information Exchanges Summary
 | Connected system / party | Direction | Data | Agreement |
 |---|---|---|---|
-| Corporate network (SYS-08) | Through the OT DMZ at the OCC; through site firewalls at South Florida and the BCC | Historian replica feed; jump host sessions; patch staging | Internal rule sets; **broad rules at South Florida and the BCC (gap 1)** |
+| Corporate network (SYS-08) | Through the OT DMZ at the OCC; through site firewalls at South Florida and the BCC | Historian replica feed; jump host sessions; patch staging | Internal rule sets; **broad rules at South Florida and the BCC (EV-017)** |
 | OT data account (SYS-04) | Outbound from the historian and measurement collector through the OT DMZ | Process data; LACT tickets and proving records | Internal |
 | Production accounting SaaS (SYS-03) | Outbound from the volume integration service | Daily allocated volumes, run tickets, LACT tickets | SaaS agreement; SOC 2 Type 2 |
-| Shippers (5) | Outbound statements on the shipper portal | Daily volumes and quality | Gathering agreements; **no data handling or incident notice terms (gap 8)** |
+| Shippers (5) | Outbound statements on the shipper portal | Daily volumes and quality | Gathering agreements; **no data handling or incident notice terms (EV-050)** |
 | Third-party transmission pipeline | Bidirectional (LACT data, nominations) | Delivered volumes; pressure at the receipt point | Connection agreement |
 | SCADA integrator (SYS-12) | Inbound remote access through the jump host | SCADA administration | Master services agreement; security schedule added 2025 |
-| Compressor packager | Inbound always-on cellular gateways at 4 stations | Compressor control and diagnostics | Service agreement; **no security terms; bypasses the jump host (gap 3)** |
-| Flow computer vendor | Inbound support modem at the Central Facility | Flow computer configuration | Support agreement; **bypasses the jump host (gap 3)** |
+| Compressor packager | Inbound always-on cellular gateways at 4 stations | Compressor control and diagnostics | Service agreement; **no security terms; bypasses the jump host (EV-018, EV-050)** |
+| Flow computer vendor | Inbound support modem at the Central Facility | Flow computer configuration | Support agreement; **bypasses the jump host (EV-018)** |
 | Cellular carrier | Transport (private network) | RTU polling for 180 sites | Carrier contract |
 | MDR provider | Inbound logs; remote isolation of IT hosts | Security events | Contract; SOC 2 Type 2; OT excluded |
 
@@ -129,9 +129,9 @@ The diagram is in P04 `cloud-architecture.md`.
 |---|---|---|---|
 | Primary SCADA server pair, historian | Servers (supported OS since 2025) | OCC server room | SCADA and Automation Manager |
 | HMIs (12) and engineering workstations (4) | Workstations | OCC | Control Room Manager; SCADA and Automation Manager |
-| HMIs (3) | Workstations (unsupported OS, **gap 4**) | South Florida field office | SCADA and Automation Manager |
-| Standby SCADA server and HMIs (4) | Server and workstations (unsupported OS, **gap 4**) | BCC, Alabama field office | Control Room Manager |
-| Offline SCADA image storage | Removable encrypted drives | BCC safe (reachable network location for staging, **gap 1**) | SCADA and Automation Manager |
+| HMIs (3) | Workstations (unsupported OS, **EV-015**) | South Florida field office | SCADA and Automation Manager |
+| Standby SCADA server and HMIs (4) | Server and workstations (unsupported OS, **EV-015**) | BCC, Alabama field office | Control Room Manager |
+| Offline SCADA image storage | Removable encrypted drives | BCC safe (reachable network location for staging, **EV-017, EV-CP-9**) | SCADA and Automation Manager |
 | RTUs and PLCs (about 610), ESP drives (130), flow meters (260) | Field controllers | Well pads and facilities | SCADA and Automation Manager |
 | LACT units (6) with flow computers; pump station PLC | Measurement and control | Panhandle Central Facility | Measurement Supervisor; Pipeline Compliance Manager |
 | Licensed radio, microwave links, cellular modems (180) | Communications | Field sites and towers | SCADA and Automation Manager |
@@ -144,9 +144,9 @@ The diagram is in P04 `cloud-architecture.md`.
 | Production accounting tenant | SaaS | Production accounting vendor | Production Accounting Director |
 | Identity provider tenant | SaaS | Identity vendor | VP IT |
 | Rugged tablets (240) | Mobile endpoints | Lease operators and gaugers | VP IT |
-| Compressor packager gateways (4); flow computer vendor modem (1) | Vendor remote access devices (**gap 3**) | Compression stations; Central Facility | SCADA and Automation Manager |
+| Compressor packager gateways (4); flow computer vendor modem (1) | Vendor remote access devices (**EV-018**) | Compression stations; Central Facility | SCADA and Automation Manager |
 
-Field devices in South Florida and Alabama are not yet itemized by model and firmware (gap 2; POAM-006).
+Field devices in South Florida and Alabama are not yet itemized by model and firmware (EV-016; POAM-006).
 
 ## 10. Control Implementation Details
 ### 10.1 Control implementation status
@@ -175,7 +175,7 @@ The `csf2_subcategories` column uses NIST's official CSF 2.0 informative referen
 | Hybrid | 24 | Identity provider, cloud provider, production accounting vendor, MDR provider, SCADA integrator, cellular carrier, privileged access management vendor |
 | Common/Inherited | 11 | Identity provider (AC-2(1), AC-7, IA-2(1), IA-2(2), IA-8), cloud provider (AU-12 with the identity provider, SC-5, SC-12), MDR provider (AU-3, AU-9, IR-7) |
 
-The Partially implemented statements trace to the 14 known gaps in `../00_company-facts.md` section 4 and to the P07 findings. The pattern is a defined program whose controls stop at the edge of the Panhandle: the OCC is segmented, monitored, patched, and under change control, while the South Florida office, the BCC, field controllers outside the Panhandle, and vendor paths are not.
+The Partially implemented statements trace to the intake observations cited in the `evidence` column of `control-implementation.csv` (for example EV-017, EV-018 and EV-030) and to the P07 findings. The pattern is a defined program whose controls stop at the edge of the Panhandle: the OCC is segmented, monitored, patched, and under change control, while the South Florida office, the BCC, field controllers outside the Panhandle, and vendor paths are not.
 
 ### 10.2 Control assessment status
 The co-sourced internal audit firm assessed 36 controls from 2026-08-03 to 2026-08-21 (P07 `assessment-plan.md`, `assessment-results.csv`, and `poam.csv`). Weaknesses are tracked in the POA&M and reported quarterly to the audit committee.
@@ -183,11 +183,11 @@ The co-sourced internal audit firm assessed 36 controls from 2026-08-03 to 2026-
 ## 11. Digital Identity Acceptance Statement
 - **Corporate, cloud, and SaaS users** (including production accounting, the field data capture app, and the jump host) authenticate through the identity provider with a password and push MFA with number matching; administrators use phishing-resistant hardware keys. This is appropriate for the Moderate categorization.
 - **Shipper portal users** (5 shippers, about 20 people) authenticate as guests through the identity provider with MFA (IA-8).
-- **SCADA users at the OCC** use named accounts synchronized from the OT directory. Production Controllers sign in once per shift with fast user switching, consistent with the SP 800-82 Rev. 3 overlay discussion of IA-2. **South Florida and BCC HMIs** still use a shared engineering account (gap 9); the target is named accounts by 2027-03-31, with a shift sign-in log tied to badge records as the compensating control until then.
+- **SCADA users at the OCC** use named accounts synchronized from the OT directory. Production Controllers sign in once per shift with fast user switching, consistent with the SP 800-82 Rev. 3 overlay discussion of IA-2. **South Florida and BCC HMIs** still use a shared engineering account (EV-005); the target is named accounts by 2027-03-31, with a shift sign-in log tied to badge records as the compensating control until then.
 - **Vendor access** must use named accounts with MFA at the jump host. The packager gateways' shared password does not meet this statement and is a condition of the operating decision (section 4.2).
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
+Scenario facts (`../00_company-facts.md`); intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)); BIA (P05); cloud architecture and control map (P04); risk register (P01); gap analysis and roadmap (P03); policies and standards index (P06); assessment and POA&M (P07); incident runbooks and notification matrix (P08); SOC 2 readiness and vendor reviews (P09); AI governance assessment (P10).
 
 ## 13. Acronym List and Glossary
 - **BCC / OCC:** Backup Control Center / Operations Control Center

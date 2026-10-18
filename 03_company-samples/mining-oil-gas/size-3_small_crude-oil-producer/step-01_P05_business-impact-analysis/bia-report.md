@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company, LLC (independent crude oil producer) | **Tier:** Small (250 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, with the OT availability considerations of NIST SP 800-82 Rev. 3 (sections 3.3.9 and 5.3.2)
 **Prepared by:** IT Manager with the SCADA and Automation Supervisor, both Field Superintendents, and the Production Accounting Manager | **Approved:** CFO and VP Operations, 2026-08-31
+**Sources:** process owner interviews 2026-07-13 to 2026-07-15 (EV-053), well, facility and production report (EV-047), FY2025 revenue report (EV-048), royalty owner and partner records (EV-049), SCADA and cloud backup logs (EV-010, EV-022), and the production accounting vendor's SOC 2 report (EV-043). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the CFO and the VP Operations.
 
 ## 1. Overview and purpose
 This BIA identifies which business processes the company depends on, how long each can be down, and how much data it can lose. It supports:
@@ -13,10 +14,10 @@ This BIA identifies which business processes the company depends on, how long ea
 For an oil producer, "downtime" has two layers. The SCADA system can be down while the wells keep running, because field controllers work locally and the safety shutdowns are hardwired. The real limit is how long people can run the fields by hand before wells must be shut in. The values below reflect that.
 
 ## 2. System and business description
-The company operates 118 wells and 8 facilities in two Florida operating areas, producing about 1,600 barrels of oil per day and reinjecting or disposing of about 55,000 barrels of produced water per day. Field controllers (RTUs, PLCs, drives, flow meters) report over radio and cellular links to the SCADA servers at the 24x7 Operations Control Center (OCC). Lease operators record tank gauges and run tickets on rugged tablets. Daily volumes flow through the cloud tenant to the production accounting SaaS, which pays about 2,300 royalty owners each month. See `../00_company-facts.md` sections 1-4.
+The company operates 118 wells and 8 facilities in two Florida operating areas, producing about 1,600 barrels of oil per day and reinjecting or disposing of about 55,000 barrels of produced water per day. Field controllers (RTUs, PLCs, drives, flow meters) report over radio and cellular links to the SCADA servers at the 24x7 Operations Control Center (OCC). Lease operators record tank gauges and run tickets on rugged tablets. Daily volumes flow through the cloud tenant to the production accounting SaaS, which pays about 2,300 royalty owners each month. See `../00_company-facts.md` sections 1-3 and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $42 million in annual revenue and about $104,000 of oil sales per day.
+Dollar values are scaled to about $42 million in annual revenue and about $104,000 of oil sales per day (EV-048).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -47,7 +48,7 @@ Dollar values are scaled to about $42 million in annual revenue and about $104,0
 - BP-04 has the only short RPO (4 hours), because run tickets are the basis for sales and royalty payments. The tablet app caches entries offline, and paper run tickets are the fallback.
 
 **Key findings:**
-1. **The SCADA recovery point is unproven.** SCADA servers are backed up nightly to a storage device in the same room, and PLC and RTU programs are not backed up centrally (gap 6 in `../00_company-facts.md`). A ransomware event that reaches the OCC could destroy both the servers and the backups, leaving no copy to meet the 24-hour RPO for BP-01 to BP-03 (P01 R-003).
+1. **The SCADA recovery point is unproven.** SCADA servers are backed up nightly to a storage device in the same room, and PLC and RTU programs are not backed up centrally (EV-010). A ransomware event that reaches the OCC could destroy both the servers and the backups, leaving no copy to meet the 24-hour RPO for BP-01 to BP-03 (P01 R-003).
 2. **The 12-hour RTO for BP-03 has never been tested.** No restore of a SCADA server has been attempted. The SCADA integrator estimates 2 to 3 days to rebuild from installation media without a good backup.
 3. **The OCC is a single point of failure.** Primary and standby SCADA servers share one room at the Panhandle field office, which sits in a hurricane evacuation zone (P01 R-014).
 4. **The production accounting vendor's commitments meet BP-06.** Its SOC 2 report (P09) states an RTO of 24 hours and an RPO of 1 hour, inside the 72-hour and 24-hour targets.

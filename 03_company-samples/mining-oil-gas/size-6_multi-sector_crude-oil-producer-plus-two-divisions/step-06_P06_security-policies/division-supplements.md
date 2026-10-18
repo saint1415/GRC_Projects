@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | Crude Oil Production | v2026 | 2026-06-15 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due 2026-12-30 (90 days after the effective date) | Add the model write-path gate (section 3.1 item 3) |
 | Power Generation | v2026 | 2026-03-10 (with the CIP-003-9 policy approval) | Aligned. The CIP-003-9 policy and plans are part of the supplement and keep their own 15-month NERC cycle | Add the transient cyber asset checklist and P3 vendor path changes (POAM-013, POAM-014) |
-| Crude Logistics | v2023 | 2023-05 | **Drifted** (scenario gap 9); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
+| Crude Logistics | v2023 | 2023-05 | **Drifted** (P03 gap 9; EV-017); conflicts listed in section 4 | Re-issue by 2026-11-30 (POAM-020) |
 
 ## 3. What each supplement adds
 ### 3.1 Crude Oil Production supplement (focus division; FSPA)
@@ -66,12 +66,12 @@ The 2023 Crude Logistics standards were written before the 2025 common control c
 | Vendor remote access | SCADA vendor may keep a standing VPN for support | No persistent vendor paths; PAM only (POL-02 4.10) | Vendor path outside SOC visibility |
 | Incident severity | Division 3-level scale | One group scale (POL-03 4.2) | Inconsistent escalation |
 | Termination | Next business day | Within 4 hours; local OT accounts the same day (POL-02 4.6) | Longer exposure window |
-| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | Scenario gap 6 (POAM-019) |
+| Common control inheritance | Not addressed | Division must document inheritance (POL-01 4.6) | P03 gap 6; EV-018 (POAM-019) |
 | Change management | Field and display changes only | Security changes affecting OT included (POL-01 4.7) | 195.446(f) gap (P03 LG-13) |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.13) | Camera AI in discipline without review (ML-008) |
 | Notification | PHMSA and NRC only | Multi-regulator matrix with named owners (POL-03 4.5) | Missed SEC and state duties possible |
 
-**Why the drift happened.** The 2023 supplement had no owner after the division's compliance lead changed roles, and the group's policy register did not track supplement versions. **Fix:** POL-01 4.5 now requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office tracks supplement versions.
+**Why the drift happened.** The 2023 supplement had no owner after the division's compliance lead changed roles, and the group's policy register did not track supplement versions (EV-017). **Fix:** POL-01 4.5 now requires re-alignment within 90 days of any group change and an annual attestation, and the Group CISO's policy office tracks supplement versions.
 
 ## 5. Attestation
 Each division security and compliance lead signs an annual statement: "The division supplement does not weaken any group policy and reflects all group policy changes made in the last 12 months." The first attestations are due 2026-12-31 (Production, Power Generation) and on re-issue (Crude Logistics).

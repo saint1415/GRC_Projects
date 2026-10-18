@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the rules that bear on each use case, with the **predictive maintenance model for well equipment (AI-001)** as the priority use case. Also assessed in depth: computational leak detection (AI-005) and driver-facing camera AI (AI-006) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1) for AI-008 and AI-009, and the AI RMF Playbook; NIST SP 800-82 Rev. 3 for AI that touches OT |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-09-02; presented to the board risk committee 2026-09-17 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 3 High, 5 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 3 High, 5 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery and the SYS-G6 machine learning workspace registry at intake (EV-034), division configuration records (EV-067, EV-062), the model change log collected in P03 fieldwork (EV-086), and the council review of 2026-09-02, which added the SOC triage assistant (EV-090). Not established: workforce use of public generative AI tools outside the enterprise pilot (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -28,7 +28,7 @@
 5. **Change gate.** A new model, retraining on new data sources, new thresholds, or a new decision role triggers re-assessment before release.
 6. **Approved tools only** for workforce generative AI (POL-05 4.7).
 
-**Where the program fell short in 2026.** The standard was adopted after the priority use case was already acting on equipment. From 2026-06 the predictive maintenance model sent rod pump speed changes automatically at 640 Permian wells, through the SCADA interface, with no safety review, no change record, and no council approval (scenario gap 8). The camera AI scores were feeding driver discipline with no human review (gap 5). Both are now under conditions (section 6).
+**Where the program fell short in 2026.** The standard was adopted after the priority use case was already acting on equipment. From 2026-06 the predictive maintenance model sent rod pump speed changes automatically at 640 Permian wells, through the SCADA interface, with no safety review, no change record, and no council approval (P03 gap 8; EV-086). The camera AI scores were feeding driver discipline with no human review (P03 gap 5; EV-067). Both are now under conditions (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Status |

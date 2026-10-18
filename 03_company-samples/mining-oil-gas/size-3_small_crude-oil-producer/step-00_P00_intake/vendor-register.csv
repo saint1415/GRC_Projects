@@ -1,0 +1,18 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Production accounting vendor,"Production accounting, allocations, royalty distribution, joint interest billing",SYS-03,Royalty owner personal information; volumes; revenue,SaaS agreement (no breach notice deadline),"SOC 2 Type 2, 12 months ending 2026-03-31",EV-039; EV-040; EV-043,Check printing and ACH file service is a carved-out subservice organization
+V-02,Identity provider vendor,Single sign-on and MFA,SYS-05,Workforce identities,Subscription terms,SOC 2 report from the provider portal,EV-039; EV-044,
+V-03,Productivity suite vendor,"Email, files, chat",SYS-07,Incidental personal information; reservoir files,Subscription terms,None on file,EV-039,
+V-04,Public cloud provider,IaaS/PaaS for the cloud tenant,SYS-04,Process data; run tickets; reservoir data; backups,Customer agreement,SOC 2 report from the provider portal,EV-039; EV-044,
+V-05,ERP vendor,"General ledger, payables, purchasing, work orders",SYS-06,Financials; vendor banking,Subscription terms,None on file,EV-039,
+V-06,HR and payroll vendor,"HR, payroll, training records",SYS-10,Employee personal information,Service agreement (no security or breach notice terms),None on file,EV-039; EV-040,
+V-07,Fleet telematics vendor,Vehicle GPS tracking,SYS-11,Employee geolocation,Service agreement (no security or breach notice terms),None on file,EV-038; EV-039; EV-040,
+V-08,Endpoint management and EDR vendor,Device management and endpoint detection,SYS-09,Endpoint telemetry,Subscription terms,None on file,EV-016; EV-039,
+V-09,SCADA integrator,SCADA configuration and remote support,SYS-01; SYS-02; SYS-12,Full SCADA administration,Master services agreement (no security requirements),None on file,EV-011; EV-014; EV-039; EV-040,Always-on remote access tool with one shared account (EV-014)
+V-10,Cellular carrier,Cellular service for 46 field modems,SYS-02,RTU polling traffic,Carrier contract (no security requirements),None on file,EV-037; EV-039; EV-040,
+V-11,Radio tower lessor,Tower space for the 900 MHz radio network,SYS-02,None,Lease,None on file,EV-039,
+V-12,Field data capture app developer,Built the field data capture app,SYS-04,App code,Statement of work,None on file,EV-039; EV-052,
+V-13,Data science firm,Builds and pilots the predictive maintenance model,SYS-04 (machine learning workspace),Historian data; work order history,"Statement of work, April 2026 (no security, data use or deletion terms)",None on file,EV-020; EV-039; EV-052,Contributor role on the workspace only (EV-020)
+V-14,Cyber insurer,Cyber insurance with ransomware coverage,n/a,Incident information on a claim,Insurance policy (MFA condition for remote access),n/a,EV-039; EV-045,Forensic panel available on a claim; no retainer
+V-15,Outside tax preparer,Royalty owner tax reporting (1099 files),n/a,Royalty owner personal information,None located,None on file,EV-025; EV-039,Owner export files sent by email attachment (EV-025)
+V-16,Crude purchaser and its trucking carrier,Buys crude at the lease tank batteries,n/a,Run tickets; sales statements,Crude purchase contract,n/a,EV-040; EV-048,"Customer, not a supplier"
+V-17,Gas gathering company,Buys associated gas at the lease sales meter,n/a,Sales meter volumes,Gas purchase contract (no data security terms),n/a,EV-040; EV-048,"Customer, not a supplier"

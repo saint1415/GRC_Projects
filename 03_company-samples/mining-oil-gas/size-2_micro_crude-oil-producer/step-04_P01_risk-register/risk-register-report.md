@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 by the Owner, with the Field Superintendent's agreement for field-operations risks |
 
 ## 1. Scope and risk framing
-**Scope.** The whole company and its key vendors: the Field SCADA and Production Accounting System (FSPA, P02), which at this size is nearly all of the company's technology, the business processes in the BIA (P05), and the vendors that hold data or have access: the MSP, the SCADA integrator, the SCADA vendor, the production accounting vendor, the productivity suite vendor, the bank, and the payroll service (`../00_company-facts.md` sections 2 and 3).
+**Scope.** The whole company and its key vendors: the Field SCADA and Production Accounting System (FSPA, P02), which at this size is nearly all of the company's technology, the business processes in the BIA (P05), and the vendors that hold data or have access: the MSP, the SCADA integrator, the SCADA vendor, the production accounting vendor, the productivity suite vendor, the bank, and the payroll service (SYS-01 to SYS-10 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and the [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept, or the Field Superintendent for field-only items.
@@ -23,8 +23,8 @@
 This is the company's first documented cybersecurity risk analysis. Earlier risk work covered only spills, fire, H2S, and storms (the emergency response plan).
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA (P05), the gap analysis (P03), a walkthrough of the field office, tank battery, SWD facility, and 3 well sites on 2026-07-22, and interviews with all 7 staff, the MSP lead technician, and the SCADA integrator.
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, SP 800-82 Rev. 3 Appendix C (OT threat sources, vulnerabilities, and incidents), the BIA (P05), the gap analysis (P03), the intake evidence, a walkthrough of the field office, tank battery, SWD facility, and 3 well sites on 2026-07-22 (EV-050), and interviews with all 7 staff, the MSP lead technician, and the SCADA integrator (2026-07-20 to 2026-07-24, EV-048). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the SCADA host screenshots, the contracts folder, the walkthroughs, the account comparison of 2026-07-22 (EV-049) and the interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (P05 section 3). The hardwired safety shutdowns were counted as an existing control: they limit the physical consequences of a SCADA compromise, which is why the SCADA risks rate High impact rather than Very High. Daily well visits by the Lease Operators were counted the same way.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,9 +53,11 @@ Status: 9 In progress, 13 Open, 3 Closed (R-025 treated; R-013 and R-016 accepte
 **The common theme is the field office network.** One flat network joins the office PCs, the Wi-Fi, and the SCADA host, and two outside paths reached the host with no MFA (the integrator's tool and, until 2026-08-11, an open remote desktop port). The only backup sits plugged into the host it protects. The treatments for R-001 to R-003 also reduce R-006, R-011, R-017, R-020, and R-021.
 
 **Risks that were fixed or found during the work:**
-- R-007: the former Lease Operator's mobile viewer account was disabled on 2026-07-22, the day it was found. The viewer log showed no sign-ins after his last day. The process gap (no checklist, unchanged shared passwords) remains open.
-- R-025: added on 2026-08-12 after P07 testing found the remote desktop port forward on 2026-08-11. The Field Superintendent removed it the same afternoon and the assessor's rescan on 2026-08-12 confirmed it closed. The level shown is the level as found.
-- R-022: updated on 2026-08-26, when the Owner found during the P10 review that the vendor had enabled write-back to 2 pilot wells, and turned it off.
+- R-007: the former Lease Operator's mobile viewer account was disabled on 2026-07-22, the day it was found (EV-049). The viewer log showed no sign-ins after his last day. The process gap (no checklist, unchanged shared passwords) remains open.
+- R-025: added on 2026-08-12 after P07 testing found the remote desktop port forward on 2026-08-11 (EV-AC-17). The Field Superintendent removed it the same afternoon and the assessor's rescan on 2026-08-12 confirmed it closed. The level shown is the level as found.
+- R-022: updated on 2026-08-26, when the Owner found during the P10 review that the vendor had enabled write-back to 2 pilot wells, and turned it off (EV-057).
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence; one Pass 1 risk, R-022, was updated on 2026-08-26 after the P10 review. Pass 2 followed the control assessment (P07): R-025 was added on 2026-08-12 from P07 testing. The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner; about $11,500 one-time and $4,100 a year):**

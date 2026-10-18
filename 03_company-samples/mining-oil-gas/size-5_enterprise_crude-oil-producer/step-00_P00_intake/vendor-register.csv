@@ -1,0 +1,24 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Cloud provider A,"IaaS and PaaS: hydrocarbon accounting, historian replica, volume integration, SL-1 portal",SYS-03; SYS-04; SVC-SL1,Owner and partner personal information; volumes,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-038; EV-040,
+V-02,Cloud provider B,"IaaS and PaaS: data platform, machine learning platform, seismic platform, SL-2 portal",SYS-04; SYS-09; SVC-SL2,Seismic data; customer volumes,Customer agreement; machine learning service terms with no training on company data,SOC 2 Type 2; shared responsibility documentation,EV-038; EV-039; EV-040,
+V-03,"Colocation providers (DC-1 Florida, DC-2 Texas)",Data center facilities; offline backup copies,SYS-04,Backups (encrypted),Colocation agreements,SOC 2 Type 2,EV-040; EV-043,Cage access lists reviewed quarterly
+V-04,Hydrocarbon accounting software vendor,Software and support (customer-managed),SYS-03,Support access only,Support agreement,SOC 2 Type 2 (reviewed 2026-03),EV-040,
+V-05,ERP and payroll SaaS vendor,"ERP, maintenance, supply chain and payroll",SYS-06,Employee personal information; financial data,SaaS agreement; vendor failover observed 2026-03-14,SOC 1 and SOC 2 Type 2,EV-039; EV-040,
+V-06,SCADA platform vendor,"SCADA software, patches and EDR certification",SYS-01,None,License and support agreement,Security certification and questionnaire,EV-037,
+V-07,SCADA Integrator A,Enterprise SCADA platform support,SYS-01; SYS-02,Remote engineering access,Master services agreement with security schedule and incident notice,Tier-1 OT supplier assessment,EV-016; EV-037; EV-039,Works through the OT remote access gateway
+V-08,SCADA Integrator B,AQ-MC legacy SCADA support,SYS-13,Remote engineering access,Transition services agreement without an incident notice term,No assessment record,EV-007; EV-037; EV-039,Always-on remote access tool
+V-09,ESP vendor,ESP drive monitoring through the vendor cloud,SYS-02-ESP,Drive data; setpoint commands on 260 drives,Service agreement without a security schedule,No assessment record; no SOC report,EV-017; EV-037; EV-039; EV-040,Outside the OT remote access gateway
+V-10,Primary cellular carrier,Field modem connectivity and private APN,SYS-02,Polling traffic,Carrier contract without a priority restoration term,None in the intake file,EV-015; EV-039,88% of field modems
+V-11,WAN and SD-WAN carriers,Enterprise WAN circuits,SYS-07,Network traffic,Carrier contracts,None in the intake file,EV-014,"Dual carriers at the IOC, BCC and HQ"
+V-12,MSSP,SOC overflow,SEC-01,Security logs,Services agreement,None in the intake file,EV-019; EV-039,
+V-13,OT-capable incident response retainer firm,Incident response and forensics,SEC-01,Incident data when engaged,Retainer agreement,None in the intake file,EV-035; EV-039,Took part in the 2026-03-19 tabletop
+V-14,Bank,Owner and partner direct deposits,SYS-03,Payment files with bank details,Bank agreement,SOC 1,EV-040,
+V-15,Print and mail vendor,Owner statements and tax forms,SVC-SL1,Owner personal information,Service agreement,SOC report on file,EV-038; EV-040,
+V-16,Fleet telematics SaaS vendor,Vehicle telematics,SYS-11,Employee geolocation,SaaS agreement with a breach notice term,None in the intake file,EV-039; EV-062,
+V-17,Rig data aggregation SaaS vendor,Real-time drilling data,SYS-04,Drilling data,SaaS agreement,Questionnaire only; no SOC report,EV-037; EV-040,
+V-18,HSE software vendor,HSE incident and spill reporting,SYS-11,HSE records; employee names,SaaS agreement,None in the intake file,EV-062,
+V-19,Productivity suite vendor,"Email, files and chat",SYS-08,Internal data,SaaS agreement,None in the intake file,EV-038; EV-065,
+V-20,Enterprise generative AI service vendor,Enterprise AI assistant (AI-010),AI-010,Internal and Confidential data,Terms with no training on company data and deletion,None in the intake file,EV-038; EV-065,
+V-21,Geoscience software vendors,Seismic interpretation software (AI-003),SYS-09,Seismic data,License agreements with no training on company data,None in the intake file,EV-038; EV-061,
+V-22,Rig contractor software vendor,Drilling optimization advisory (AI-004),AI-004,Drilling data,Rig contract,None in the intake file,EV-038,
+V-23,Crude purchasers (3 major),Crude purchase and ticket data exchange,SYS-03,LACT and run tickets; nominations,Purchase and transportation agreements; 1 of 3 ticket exchanges without security terms,None in the intake file,EV-039; EV-046,About 80% of volume

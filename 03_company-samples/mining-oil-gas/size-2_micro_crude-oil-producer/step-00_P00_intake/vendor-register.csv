@@ -1,0 +1,16 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Managed service provider (MSP),"Help desk, patching, antivirus, main-office firewall, suite administration, cloud backup",SYS-04; SYS-05; SYS-06 (main office); SYS-07,"Administrative access to office computers, email and backups",Service contract (no security or incident notice terms),None on file,EV-012; EV-023; EV-028,Not contracted for the SCADA host or the field office network
+V-02,SCADA integrator,Remote support of the SCADA host and controller programs,SYS-01; SYS-02; SYS-09,Full SCADA host administration,Service agreement (2019; no security terms),None on file,EV-019; EV-024; EV-028,Always-on remote tool with one shared account
+V-03,SCADA vendor,"Alarm call-out, mobile viewer, host connector, predictive maintenance add-on (trial)",SYS-08; AI-001,"Alarms, well status and pump-off controller data",Subscription terms (aggregated data use allowed; no change-notice terms),Security whitepaper only,EV-025; EV-026; EV-028,Add-on trial accepted May 2026
+V-04,Production accounting vendor,Production accounting and revenue distribution,SYS-03,Royalty owner personal information; volumes; revenue,SaaS agreement (no breach notice term),SOC 2 Type 2 available on request at intake; report received 2026-08-05 (EV-056),EV-027; EV-028; EV-056,
+V-05,Productivity suite vendor,"Email, files, chat",SYS-04,Royalty owner exports; licensed seismic data; reservoir files,Subscription terms,Vendor security documentation,EV-028; EV-046,Administered by the MSP
+V-06,Cloud backup vendor (through the MSP),Nightly backup of main-office computers and the shared drive,SYS-07,Copies of office files and email,None with the company; subscription held by the MSP,Vendor security documentation (through the MSP),EV-015; EV-023; EV-046,
+V-07,Bank,Business online banking; ACH royalty and payables files,SYS-10,Company bank data; owner bank account numbers in ACH files,Bank agreement,None on file,EV-006; EV-028,Second approver required for every ACH batch
+V-08,Payroll service,Biweekly payroll,n/a,Employee personal information,Service agreement,None on file,EV-001; EV-028,
+V-09,Cellular carrier,Cellular modems at 3 well sites,SYS-02,Polling traffic on the carrier's private network,Carrier contract,None,EV-020; EV-028,
+V-10,Field office internet provider,One internet line at the field office,SYS-06,Traffic in transit,Service agreement,None,EV-028; EV-042,No second line
+V-11,Radio tower lease,Site for the 900 MHz base radio antenna,SYS-02,None,Lease,None,EV-020; EV-028,
+V-12,Cyber insurer and panel vendors,Cyber liability policy; breach hotline; panel breach counsel and forensics,n/a,Incident information during an engagement,Insurance policy,n/a,EV-028; EV-029,Policy requires prompt notice and use of panel vendors
+V-13,Seismic data licensor,Licensed 3D seismic data,SYS-04,None sent; license limits who may access the data,Seismic data license,n/a,EV-030,License renews 2026-12-31
+V-14,Crude purchaser and its carrier,Crude purchase at the lease tank battery; tank truck hauling,n/a,Run ticket copies; sales statements,Crude purchase contract,n/a,EV-031; EV-040,
+V-15,Outside accountant,Bookkeeping and annual financial reports,n/a,Company financial data,Engagement terms,n/a,EV-034,

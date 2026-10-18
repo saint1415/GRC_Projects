@@ -38,6 +38,17 @@ Small tier scope: 15-25 controls. **21 controls, 191 determination statements.**
   - comparison of 6 field sites against the integrator's drawings
   - review of HMI sign-in practice during a shift change at the OCC
 
+### What each test could show
+The new policies (P06), the P08 runbook and the SSP (P02) were drafts during fieldwork; they were approved on 2026-08-31. They were reviewed as drafts, for design only. A control that a draft introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the assessment and was tested on samples, live systems, records, or field sites | 106 |
+| Design | The control comes from a draft document (POL-02, POL-03 with the P08 runbook, or the SSP); its design was reviewed. Operation is tested at the 2027-02 follow-up | 4 |
+| Not implemented | Nothing existed to test | 81 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 8 sampled terminations come from the 21 in EV-003 and EV-004, and the 12 sampled modems from the 46 in EV-037).
+
 ## 3. Rules of engagement
 - **No active scanning of the SCADA network or field controllers.** SP 800-82 Rev. 3 (Appendix E.2.3) advises extreme caution with active scanning on an operational OT network because it can cause device instability, so OT evidence came from configuration exports, observation, and passive review. The only tests touching field equipment were logins to modem management pages, not to the controllers behind them.
 - Modem and HMI tests ran with a Production Controller watching the affected sites on SCADA, and the SCADA and Automation Supervisor could stop testing at any time.

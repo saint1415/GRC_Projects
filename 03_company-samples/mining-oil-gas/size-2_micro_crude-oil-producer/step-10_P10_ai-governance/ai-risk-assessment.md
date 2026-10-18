@@ -8,13 +8,13 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the AI RMF Playbook. The Generative AI Profile (AI 600-1) is not used for AI-001, which is not generative; it informs the rules for AI-002 |
 | Assessor / date | Office Manager (Security Coordinator) with the Owner and the Field Superintendent, 2026-08-25 |
 | Decision | Owner, 2026-08-31, with the Field Superintendent's agreement |
-| Inventory | `ai-use-case-inventory.csv` (2 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (2 use cases), built from the SCADA vendor portal trial record and subscription terms, the card statements, and a staff questionnaire (EV-026, EV-025, EV-028, EV-045), then updated with this review's settings check (EV-057). How many staff use public chatbots, and what they enter, was not established (intake open request) |
 
 **Adapted to this size.** The registry default for this vertical is a predictive maintenance model for well equipment. A 7-person producer does not build models, so here the same use case is a **vendor add-on** to the SCADA cloud service the company already uses (SYS-08). The questions change from "is our model good" to "what does the vendor's model see, what can it do, and what did we agree to".
 
 ## 1. GOVERN
 - **Accountable owner and decision authority:** the Owner, who started the pilot. The Field Superintendent must agree to anything that affects field operations.
-- **How the pilot started:** in May 2026 the Owner accepted the SCADA vendor's offer of a free 6-month trial of the add-on for 8 wells, in the vendor's web portal, with no review and no change to the subscription terms (gap 13 in `../00_company-facts.md`). During this review, on 2026-08-25, the Owner found that the vendor had also enabled its "auto-optimize idle time" feature on 2 of the 8 wells. The feature changed pump-off idle-time setpoints 11 times in July, within limits the vendor set, through the connector on the SCADA host. Nobody at the company had approved it. The Owner turned it off on 2026-08-26.
+- **How the pilot started:** in May 2026 the Owner accepted the SCADA vendor's offer of a free 6-month trial of the add-on for 8 wells, in the vendor's web portal, with no review and no change to the subscription terms (EV-026). During this review, on 2026-08-25, the Owner found that the vendor had also enabled its "auto-optimize idle time" feature on 2 of the 8 wells. The feature changed pump-off idle-time setpoints 11 times in July, within limits the vendor set, through the connector on the SCADA host. Nobody at the company had approved it. The Owner turned it off on 2026-08-26 (EV-057).
 - **Policies that apply:**
   - POL-02 A.5: no security terms, no vendor access or Restricted data
   - POL-02 B.10: no cloud service may send commands or setpoints to field controllers

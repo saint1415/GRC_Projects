@@ -13,6 +13,8 @@
 | Regulatory driver labels | `N21-BM` points to the benchmark rows and `N21-P195` to the Part 195 rows (see `../00_company-facts.md` section 5) |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** crude oil production in 3 onshore operating areas, with a Panhandle gathering system that carries the company's and 5 shippers' crude to a third-party transmission pipeline.
 
 The vertical's research names three candidate federal cyber requirements (`02_industry-rules/mining-oil-gas/requirements.csv`). **None of them applies to this company today.** Each was checked against the rule text; the result is recorded as a Not applicable row in `gap-analysis.csv` (G-122 to G-124).
@@ -20,11 +22,11 @@ The vertical's research names three candidate federal cyber requirements (`02_in
 | Requirement | Applicability test (rule text) | Decision for Cris Santos Company |
 |---|---|---|
 | **N21-R01** USCG Cybersecurity in the Marine Transportation System, 33 CFR Part 101, Subpart F | 101.605(a): owners and operators of U.S.-flagged vessels, facilities, and OCS facilities required to have a security plan under 33 CFR parts 104, 105, and 106. No size threshold | **Not applicable.** All operations are onshore in Florida and Alabama. No vessel, no MTSA-regulated waterfront facility, no OCS facility |
-| **N21-R02** TSA Security Directive Pipeline-2021-02G | Owners and operators of hazardous liquid and natural gas pipelines or LNG facilities that TSA has notified are critical | **Not applicable today.** The company does operate a crude gathering system, so this is a live question at this size, unlike the smaller samples. TSA has not notified the company, and General Counsel confirmed on 2026-07-22 that no notice was received. A notice would make the directive apply; the quarterly regulatory watch (G-003) checks for one |
+| **N21-R02** TSA Security Directive Pipeline-2021-02G | Owners and operators of hazardous liquid and natural gas pipelines or LNG facilities that TSA has notified are critical | **Not applicable today.** The company does operate a crude gathering system, so this is a live question at this size, unlike the smaller samples. TSA has not notified the company, and General Counsel confirmed on 2026-07-22 that no notice was received (EV-064). A notice would make the directive apply; the quarterly regulatory watch (G-003) checks for one |
 | **N21-R03** CIRCIA, proposed 6 CFR Part 226 | Proposed 226.2: a critical infrastructure entity that (a) exceeds the SBA size standard for its NAICS code, or (b) meets a sector-based criterion | **Not applicable, and not in effect.** No final rule as of 2026-09-25. As proposed: 850 employees is below the 1,250-employee standard for NAICS 211120 (13 CFR 121.201), so the size test is not met, and no sector criterion that could reach an oil producer is met (MTSA facility, (b)(15); TSA-identified pipeline, (b)(14)(iv); NERC CIP or OE-417 reporting, (b)(6)). Growth past 1,250 employees or a TSA notice would change this |
 
 **Binding rule that does apply: 49 CFR Part 195 for the gathering system.** Part 195 covers onshore gathering lines used to transport petroleum when they are regulated rural gathering lines (195.1(a)(4)(ii)), and requires every other gathering line to meet the Subpart B reporting requirements (195.1(a)(5), 195.15). The text was verified on eCFR (2026-09-23 version):
-- **Regulated rural gathering line (195.11(a)):** an onshore gathering line in a rural area with a nominal diameter from 6 5/8 to 8 5/8 inches, located in or within one-quarter mile of an unusually sensitive area (195.6), operating above 20% of specified minimum yield strength (or above 125 psi gage where the stress level is unknown). The company's **14-mile 8-inch trunk line** meets all three criteria because it runs within one-quarter mile of a drinking water unusually sensitive area.
+- **Regulated rural gathering line (195.11(a)):** an onshore gathering line in a rural area with a nominal diameter from 6 5/8 to 8 5/8 inches, located in or within one-quarter mile of an unusually sensitive area (195.6), operating above 20% of specified minimum yield strength (or above 125 psi gage where the stress level is unknown). The company's **14-mile 8-inch trunk line** meets all three criteria because it runs within one-quarter mile of a drinking water unusually sensitive area (segment identification record, EV-045).
 - **Requirements that apply to it (195.11(b)):** written procedures; segment identification; design and construction rules for lines changed after July 3, 2009; Subpart B reporting; MOP under 195.406; line markers; public education (195.440); damage prevention (195.442); corrosion control; an internal corrosion program; and operator qualification processes (195.505). Record retention follows 195.11(d).
 - **Reporting-regulated-only lines (195.15):** the other **78 miles** must meet the annual, accident, and safety-related condition reporting requirements of Subpart B, except the immediate telephone notice (195.52) and certain other reports (195.15(c)(2)).
 - **What does not apply:** 195.11(b) does not list control room management (195.446) or the procedural manual (195.402), and the gathering lines are not transmission lines. Production facilities and flow lines (195.1(b)(8)) and tank truck movements (195.1(b)(9)(i)) are excluded. The company applies parts of 195.446 and 195.402(e) voluntarily (G-125).
@@ -41,19 +43,19 @@ Only the **cyber-relevant** Part 195 duties are analyzed (G-107 to G-114): segme
 1. **Requirements.** Every CSF 2.0 subcategory (106) is one row, quoted from the CSF 2.0 core. Part 195 rows follow the sections of the rule; state rows follow the statute's subsections.
 2. **OT guidance.** Each CSF row cites the SP 800-82 Rev. 3 section used to judge the OT side (column `sp800_82r3_reference`). SP 800-82 Rev. 3 organizes its framework guidance by CSF 1.1 categories (section 6), so the link from each CSF 2.0 subcategory to an SP 800-82 section is an **author mapping**.
 3. **Crosswalk.** SP 800-53 Rev. 5 controls come from NIST's official CSF 2.0 informative references (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), kept in full in column `nist_official_sp800_53r5`. Column `sp800_53_controls` is the author's selection of the key controls from that official list. Part 195 and state rows use an author mapping.
-4. **Evidence.** Interviews (COO, VP Operations, VP IT, Security Manager, OT Security Engineer, SCADA and Automation Manager, Control Room Manager, Pipeline Compliance Manager, Measurement Supervisor, Production Accounting Director, HR Director, General Counsel, the 3 Field Superintendents, 4 Production Controllers, 6 automation technicians, and the SCADA integrator's lead engineer), document review, firewall and account exports, and walkthroughs of the OCC, the BCC, the South Florida office, the Panhandle Central Facility and pump station, 4 tank batteries, 2 injection plants, 2 compression stations, and 6 well pads.
-5. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were chosen at random from system-generated populations, using the co-sourced internal audit firm's attribute sampling table (25 items for a control that operates many times a year, 15 for weekly or monthly controls). Each `evidence` cell names the sample and its result:
-   - terminations: 25 of 96 (4 still active in SCADA local accounts);
-   - new hires: 25 of 110 (all background-checked);
-   - Panhandle CAB changes: 15 of 44 (all approved);
-   - South Florida and Alabama controller changes from work orders: 20 of 58 (13 without a change record);
-   - contracts with system or data access: 20 of 64 (9 with security terms);
-   - privileged accounts: 25 of 38 (all with MFA);
-   - jump host sessions in July 2026: 25 of 212 (all recorded and approved);
-   - backup job days: 31 of 31 (July 2026);
-   - incidents: 10 of 31 (all triaged);
-   - OT devices at 6 sampled pads: 41 found, 12 missing from the area spreadsheets;
-   - OQ qualification records: 15 (all current).
+4. **Evidence.** Current state was established from the intake evidence (exports and documents EV-001 to EV-058, and the late field briefing report EV-059), interviews (COO, VP Operations, VP IT, Security Manager, OT Security Engineer, SCADA and Automation Manager, Control Room Manager, Pipeline Compliance Manager, Measurement Supervisor, Production Accounting Director, HR Director, General Counsel, the 3 Field Superintendents, 4 Production Controllers, 6 automation technicians, and the SCADA integrator's lead engineer; EV-063), the General Counsel's confirmation (EV-064), a TLS scan (EV-065), and walkthroughs of the OCC, the BCC, the South Florida office, the Panhandle Central Facility and pump station, 4 tank batteries, 2 injection plants, 2 compression stations, and 6 well pads (EV-061). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
+5. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were chosen at random from system-generated populations, using the co-sourced internal audit firm's attribute sampling table (25 items for a control that operates many times a year, 15 for weekly or monthly controls). The populations are the intake exports (for example the 96 terminations in EV-003 and the 31 incidents in EV-042). Most samples are the ones the control assessment used (P07 section 2), so their results cite the P07 evidence IDs; the OQ records and IT/OT meeting minutes were sampled for this analysis only (EV-066). Each `evidence` cell names the sample and its result:
+   - terminations: 25 of 96 (4 still active in SCADA local accounts; EV-AC-2);
+   - new hires: 25 of 110 (all background-checked; EV-AC-2);
+   - Panhandle CAB changes: 15 of 44 (all approved; EV-CM-3);
+   - South Florida and Alabama controller changes from work orders: 20 of 58 (13 without a change record; EV-CM-3);
+   - contracts with system or data access: 20 of 64 (9 with security terms; EV-SA-9);
+   - privileged accounts: 25 of 38 (all with MFA; EV-IA-2(1));
+   - jump host sessions in July 2026: 25 of 212 (all recorded and approved; EV-AC-17);
+   - backup job days: 31 of 31 (July 2026; EV-CP-9);
+   - incidents: 10 of 31 (all triaged; EV-IR-4);
+   - OT devices at 6 sampled pads: 41 found, 12 missing from the area spreadsheets (EV-CM-8);
+   - OQ qualification records: 15 (all current; EV-066).
 6. **Status.** Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary
