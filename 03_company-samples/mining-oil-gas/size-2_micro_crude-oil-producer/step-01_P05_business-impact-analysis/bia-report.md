@@ -3,6 +3,8 @@
 **Organization:** Cris Santos Company, LLC (independent crude oil producer, one field) | **Tier:** Micro (7 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, with the OT availability considerations of NIST SP 800-82 Rev. 3 (sections 3.3.9 and 5.3.2)
 **Prepared by:** Office Manager (Security Coordinator) with the Field Superintendent, the Field Technician, the Production Accountant, and the MSP lead technician, 2026-07-20 to 2026-07-31 | **Approved:** Owner, 2026-08-31
 
+**Sources:** process owner interviews 2026-07-20 to 2026-07-21 (EV-047), FY2025 revenue and cash report (EV-034), production and disposal report (EV-033), royalty owner master (EV-032), route sheets (EV-040), integrator drawings (EV-020), SCADA backup drive listing (EV-017), cloud backup job report (EV-015), MSP service contract (EV-023), integrator email (EV-022), production accounting vendor SOC 2 report (EV-056). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owners' statements, reviewed and approved by the Owner.
+
 ## 1. Overview and purpose
 This BIA lists every business function of the company, how long each can be down, and how much data each can lose. It supports:
 - the contingency and recovery planning that the voluntary benchmark calls for (CSF 2.0 RC.RP; SP 800-82 Rev. 3 section 3.3.9);
@@ -15,10 +17,10 @@ No binding federal rule requires a BIA from this company (P03 section 1). It is 
 For a small oil field, "downtime" has two layers. The SCADA host can be down while the wells keep pumping, because each pump-off controller runs its own logic and the safety shutdowns are hardwired. The real limit is how long 4 field staff can watch the field by hand. The values below reflect that.
 
 ## 2. System and business description
-One Florida Panhandle field: 16 producing rod-pumped wells, 2 SWD wells, 4 shut-in wells, one tank battery, and one SWD facility. The field makes about 55 barrels of oil per day and about 1,400 barrels of produced water per day. The SCADA host at the field office (SYS-01) polls 18 field controllers by licensed radio and cellular (SYS-02) and pushes alarms to the SCADA vendor's cloud service (SYS-08), which calls the on-call phone. Production accounting (SYS-03), email and files (SYS-04), and online banking (SYS-10) are SaaS. The MSP runs office IT; the SCADA integrator supports the SCADA host. See `../00_company-facts.md` sections 1 to 4.
+One Florida Panhandle field: 16 producing rod-pumped wells, 2 SWD wells, 4 shut-in wells, one tank battery, and one SWD facility. The field makes about 55 barrels of oil per day and about 1,400 barrels of produced water per day. The SCADA host at the field office (SYS-01) polls 18 field controllers by licensed radio and cellular (SYS-02) and pushes alarms to the SCADA vendor's cloud service (SYS-08), which calls the on-call phone. Production accounting (SYS-03), email and files (SYS-04), and online banking (SYS-10) are SaaS. The MSP runs office IT; the SCADA integrator supports the SCADA host. Systems and suppliers are listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 per day net to the company.
+Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 per day net to the company (EV-034).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
@@ -63,17 +65,17 @@ Dollar values are scaled to about $1.1 million in annual revenue, about $3,000 p
 **Vendor dependencies:**
 | Vendor | Functions that stop without it | Evidence of recovery capability |
 |---|---|---|
-| SCADA integrator | Rebuild of the SCADA host and recovery of controller programs | No written commitment; estimates 2 to 3 days to rebuild from installation media without a good backup |
+| SCADA integrator | Rebuild of the SCADA host and recovery of controller programs | No written commitment; estimates 2 to 3 days to rebuild from installation media without a good backup (EV-022) |
 | SCADA vendor (cloud alarm service) | BP-01 after-hours call-out; mobile viewing | Security whitepaper only; no availability commitment in the subscription terms |
-| MSP | Recovery of main-office computers, email administration, cloud backup restores | Contract has a 4-business-hour response time, which is not a recovery time; does not cover the SCADA host |
-| Production accounting vendor | BP-05 | SOC 2 Type 2 report reviewed (P09): RTO 24 h and RPO 1 h meet this BIA |
+| MSP | Recovery of main-office computers, email administration, cloud backup restores | Contract has a 4-business-hour response time, which is not a recovery time; does not cover the SCADA host (EV-023) |
+| Production accounting vendor | BP-05 | SOC 2 Type 2 report (EV-056) reviewed (P09): RTO 24 h and RPO 1 h meet this BIA |
 | Cellular carrier and radio tower lease | Polling of the 3 cellular sites and the radio base | None |
 | Electric utility | Field office (30-minute UPS, no generator), SWD pumps, well motors | None |
 | Crude purchaser and its carrier | BP-04 | Contract terms only |
 | Payroll service and bank | BP-06, BP-07 | Standard service terms |
 
 **Key findings:**
-1. **The SCADA recovery point is unproven.** The only SCADA host backup is a USB drive that stays plugged into the host, so ransomware or a failure of the host would take both (gap 5; P01 R-003). Without a good copy, the integrator needs 2 to 3 days, which is past the 24-hour RTO for BP-03 and the 2-hour RTO for BP-01.
+1. **The SCADA recovery point is unproven.** The only SCADA host backup is a USB drive that stays plugged into the host, so ransomware or a failure of the host would take both (EV-017; P01 R-003). Without a good copy, the integrator needs 2 to 3 days, which is past the 24-hour RTO for BP-03 and the 2-hour RTO for BP-01.
 2. **Controller programs exist in one place.** They live only on the Field Technician's engineering laptop, which is not managed or backed up by the MSP (P01 R-020).
 3. **After-hours alarms depend on a chain of 4 links:** the SCADA host, the field office internet line, the vendor's cloud service, and the on-call phone. Any one failing silences BP-01. Patrols are the only fallback (P01 R-024).
 4. **The production accounting vendor meets the BIA.** Its stated RTO (24 h) and RPO (1 h) are inside the 120-hour RTO and 24-hour RPO for BP-05.
