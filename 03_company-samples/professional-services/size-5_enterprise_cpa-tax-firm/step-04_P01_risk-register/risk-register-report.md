@@ -11,7 +11,7 @@
 | Approved | Executive risk committee (chaired by the Chief Risk Officer), 2026-09-08; reviewed by the Audit and Risk Committee of the Partnership Board, 2026-09-15 |
 
 ## 1. Scope and risk framing
-**Scope.** All systems that create, receive, maintain, or transmit customer information, tax return information, PHI held as a business associate, or Federal Contract Information, or that support tier-1 processes: the 64 offices and 12 processing hubs, both cloud estates and both colocation data centers, the six acquired firms (AF-01 to AF-06), the offshore tax outsourcing provider, and the roughly 1,400 vendors (about 260 with client data). Business processes and impact values come from the enterprise BIA (P05). The Tax Engagement Platform is also covered at system level in the SSP (P02).
+**Scope.** All systems that create, receive, maintain, or transmit customer information, tax return information, PHI held as a business associate, or Federal Contract Information, or that support tier-1 processes: the 64 offices and 12 processing hubs, both cloud estates and both colocation data centers, the six acquired firms (AF-01 to AF-06), the offshore tax outsourcing provider, and the roughly 1,400 vendors (about 260 with client data), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Business processes and impact values come from the enterprise BIA (P05). The Tax Engagement Platform is also covered at system level in the SSP (P02).
 
 **Three lines.** Risk owners in the service lines and IT (first line) own and treat risks. The GRC team and the Chief Risk Officer (second line) run this method and roll risks up into the enterprise risk register. Internal Audit (third line) tests controls independently (P07).
 
@@ -46,8 +46,8 @@
 Risks under ER-05 (fraud) and ER-06 (regulatory) at High or above cannot be accepted without a dated treatment plan. Any acceptance expires after 12 months.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the tax professional threat picture (business email compromise, refund diversion, filing-season phishing described in IRS Pub. 4557), the BIA (P05), the gap analysis (P03), and the Internal Audit assessment (P07).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the tax professional threat picture (business email compromise, refund diversion, filing-season phishing described in IRS Pub. 4557) in the SOC's threat intelligence (EV-058), the BIA (P05), the intake evidence, the 2025 risk assessment (EV-024), and risk workshops with the SOC, Identity, Tax Technology, e-file Operations, the Integration Management Office, Third-Party Risk, the two service lines, the Privacy Office and data science (EV-073). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The Internal Audit assessment (P07) fed the second pass.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial), and likelihood of adverse impact, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: threat intelligence, the SOC case history (EV-018), coverage and configuration exports from the enterprise systems of record, contract and vendor records, the workshops, and, for risks re-rated in the second pass, the P07 test results. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** **Table H-3**, calibrated to the BIA impact values (P05 section 3).
 4. **Determine risk.** **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the tables, not assigned by hand.
 5. **Integrate with ERM (NIST IR 8286 Rev. 1).**
@@ -71,6 +71,8 @@ By threat source type: Adversarial 30, Structural 20, Accidental 12, Environment
 By treatment: Mitigate 50, Accept 12, Avoid 2.
 By status: In progress 43, Open 7, Closed (accepted) 12, Closed (avoided) 2.
 **22 risks are outside tolerance** and each has a dated treatment plan.
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from the intake evidence and the June and July fieldwork. Pass 2 followed the Internal Audit assessment (P07): R-064 was added on 2026-08-28 after testing found default administrator passwords on 14 of 60 sampled printer-scanners (EV-IA-5). The Pass 1 risks whose ratings rest on P07 results were re-rated on 2026-08-28 (R-001, R-006, R-007, R-008, R-009, R-010, R-027, R-034, R-035, R-036, R-038, R-049); their `last_reviewed` date is 2026-08-28 and their `likelihood_basis` cites the P07 evidence ID. The `assessment_pass` column shows the pass that produced each risk and any re-rating.
 
 ## 4. Enterprise risk profile (roll-up for the board)
 | ID | Enterprise risk | ERM category | Risks | Very High | High | Moderate | Low | Exposure (highest) | Tolerance | Outside tolerance |

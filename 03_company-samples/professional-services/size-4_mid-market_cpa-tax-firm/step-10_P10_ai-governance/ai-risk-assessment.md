@@ -4,13 +4,13 @@
 |---|---|
 | Organization | Cris Santos Company, Inc. (PE-backed CPA, tax, and advisory firm, with its attest affiliate) |
 | Tier / Vertical | Mid-Market / Professional, Scientific, and Technical Services |
-| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`. The registry use case, generative AI for tax and document preparation, is AI-001 and AI-002 |
+| Scope | Portfolio of 6 AI use cases (AI-001 to AI-006), inventory in `ai-use-case-inventory.csv`, built from SaaS discovery, the accounts payable vendor master, the tax software and enclave settings and the applicant tracking system (EV-028, EV-043, EV-010, EV-012, EV-058, EV-059). How many other staff use public chatbots, and what they enter, was not established (intake open request); AI-006 treats it as unknown. The registry use case, generative AI for tax and document preparation, is AI-001 and AI-002 |
 | Framework | NIST AI RMF 1.0 (AI 100-1), with the Generative AI Profile (NIST AI 600-1) for AI-001, AI-002, AI-003, and AI-006 |
 | Assessors / date | AI review group: General Counsel (chair), Director of Information Security, Privacy Officer, National Tax Practice Leader, Chief People Officer, and Attest Firm Quality and Independence Partner, 2026-08-24 to 2026-09-12 |
 | Decision | Chief Operating Officer, 2026-09-22; High-tier decisions noted by the Chief Executive Officer |
 
 ## 1. Summary
-Every one of the six tools reached the Company without a security, privacy, or IRC 7216 review (gap 12). None is out of control, but three need conditions before they grow or continue:
+Every one of the six tools reached the Company without a security, privacy, or IRC 7216 review (EV-059). None is out of control, but three need conditions before they grow or continue:
 - **AI-001, tax software AI:** extraction works well on typed forms. The drafting-suggestions feature was turned on by the tax practice without review and sent tax return information for what the regulation calls substantive determinations. It was turned off on 2026-08-28.
 - **AI-005, resume screening:** it ranks applicants, and recruiters advanced only the top-ranked third in 2026. The selection rate for two groups fell below four-fifths of the highest group's rate. From 2027-01-01, Colorado law adds duties for Colorado-resident applicants.
 - **AI-006, public chatbots:** 9 staff pasted client names and notice text into public tools.

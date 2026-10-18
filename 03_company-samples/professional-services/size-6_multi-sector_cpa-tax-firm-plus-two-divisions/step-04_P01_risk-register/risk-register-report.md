@@ -13,7 +13,7 @@
 | Approved | 2026-09-10 by the board risk committee (group register and all High risks); division presidents and the CPA Partners managing partner approved their Moderate treatments the same week |
 
 ## 1. Scope and risk framing
-**Scope.** Every system that creates, receives, maintains, or transmits tax return information, customer information, client funds instructions, or customer firms' data, in the three divisions and CPA Partners, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, and SYS-G4 email. Division systems are SYS-T1 to SYS-T3, SYS-W1, and SYS-S1 (`../00_company-facts.md` sections 3 and 7).
+**Scope.** Every system that creates, receives, maintains, or transmits tax return information, customer information, client funds instructions, or customer firms' data, in the three divisions and CPA Partners, plus the corporate shared services they depend on: SYS-G1 identity, SYS-G2 SOC, SYS-G3 cloud and network, and SYS-G4 email. Division systems are SYS-T1 to SYS-T3, SYS-W1, and SYS-S1 ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Two levels of register.**
 - **Division registers** hold risks a division owns and can treat itself. CPA and Tax Services, the focus division, has the most detailed register; CPA Partners' risks are in it (TX-023 to TX-025).
@@ -30,8 +30,8 @@
 Risks that could cause direct financial loss to clients (refund diversion, fraudulent transfers) may not be accepted at High. They must be treated.
 
 ## 2. Method
-1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the gap analyses (P03), the common control assessment (P07), IRS security alerts for tax professionals, and interviews with each division's leadership.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**.
+1. **Identify.** Threat sources and events come from SP 800-30 Appendices D and E, the group and division BIAs (P05), the intake evidence, IRS security alerts for tax professionals, interviews with each unit's leadership (EV-080 group, EV-081 Tax and Advisory and CPA Partners, EV-082 Wealth, EV-083 Practice Cloud), the gap analyses (P03), and the first results of the common control assessment (P07), which began on 2026-07-06 inside the fieldwork window. The gap analyses ran in the same window, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was combined with the likelihood of adverse impact using **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column of all four registers: configuration exports, inventories, contracts, plans, compliance reviews, and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact uses **Table H-3**, scaled to each division's BIA impact categories (P05). Group impact reflects enterprise consequences: several regulators at once (FTC, IRS, SEC, states), customer firms, SEC disclosure, and effects on more than one division.
 4. **Determine risk.** Risk level comes from **Table I-2**. The `overall_likelihood` and `risk_level` columns in all four registers were computed by script from the two tables, not assigned by hand.
 5. **Roll up (NIST IR 8286 Rev. 1).** Division leads propose roll-ups. The Group Chief Risk Officer decides which risks become group risks, using three tests: the risk crosses divisions, sits in a shared service, or needs a group decision.
@@ -71,9 +71,11 @@ These scales are the "criteria for the evaluation and categorization of identifi
 | SW-001 | Practice Cloud | A tenant isolation defect exposes one customer firm's client documents to another | Practice Cloud chief technology officer | 2027-03-31 |
 | SW-002 | Practice Cloud | The AI document intake feature runs without SOC 2, sub-processor, contract, and IRC 7216 updates | Practice Cloud division president | 2026-12-31 |
 
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence dated on or before that day. P07 testing continued to 2026-08-28; no risk was added or re-rated after Pass 1, so every risk in the four registers is Pass 1 (`assessment_pass`). Later test findings were tracked in the POA&M and linked to the risks they affect (`related_risk_ids`).
+
 ### What the results say
 The program is defined and mostly sound. There are no Very High risks, and the common platforms are strong: one identity platform with phishing-resistant administrator MFA, a 24x7 SOC, PAM, immutable backups, and annual penetration tests. The High risks cluster where **divisions meet**:
-1. **Data moving from tax to wealth** (GR-01). IRC 7216 makes the preparer's disclosure or use of tax return information a crime unless a permission or a specific, prior, written consent covers it. The referral interface does not check consent, and the consent itself is too general (scenario gap 1).
+1. **Data moving from tax to wealth** (GR-01). IRC 7216 makes the preparer's disclosure or use of tax return information a crime unless a permission or a specific, prior, written consent covers it. The referral interface does not check consent, and the consent itself is too general (group gap 1).
 2. **One email tenant for every division** (GR-02). Business email compromise is the leading threat to tax professionals, and a hijacked tax office mailbox sends trusted internal mail to Wealth advisers (gaps 3 and 6).
 3. **AI deployed faster than governance** (GR-04) in two divisions (gaps 4 and 5).
 4. **Ransomware in the filing season** (GR-06), when an outage costs about $92 million of tax work per business day.

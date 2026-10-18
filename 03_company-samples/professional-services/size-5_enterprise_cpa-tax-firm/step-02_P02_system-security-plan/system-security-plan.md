@@ -76,6 +76,8 @@ Information types are modeled on NIST SP 800-60 Vol. 2 Rev. 1 categories, using 
 **Documented controls.** `control-implementation.csv` documents **248 controls**: 238 from the Moderate baseline and 10 High-baseline supplements. The other 49 Moderate-baseline controls (mostly physical and environmental protection, media transport, maintenance tools, personnel, acquisition, and supply chain enhancements) are fully inherited from the common control catalog (CCP-03, CCP-07, CCP-08, and CCP-09; section 10.3) and are listed there rather than repeated here.
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-01, SYS-02, SYS-03, SYS-03-WF, AI-PIPE, OFF-VDI and MFP-HUB) and the prior SSP version 2.0 (EV-062).
+
 **Inside the boundary:** the tax application servers and database, the client and corporate tax portals, the tax workflow and e-file queue, the DMS connector and DMS tax repositories, the ingestion and AI extraction pipeline (orchestration, queues, and the contracted AI service endpoint configuration), the offshore provider secure workspace, and the processing hub printer-scanners.
 
 **Outside the boundary (common control providers and interconnected systems):**
@@ -199,7 +201,7 @@ Common and hybrid controls are inherited from the enterprise platform. Each prov
 - **Offshore provider staff:** named accounts in the firm's identity platform, MFA required, access only through the firm's virtual desktops from the provider's registered network.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), business email compromise runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-001 (P10), TEP contingency plan v3, enterprise common control catalog, IRC 7216 consent procedures.
+Company facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), BIA (P05), multi-cloud architecture and control map (P04), enterprise risk register (P01), regulatory gap analysis (P03), policy hierarchy and policies (P06), Internal Audit assessment and POA&M (P07), business email compromise runbook (P08), SOC 2 readiness for SL-2 (P09), AI portfolio including AI-001 (P10), TEP contingency plan v3 (EV-020), prior SSP v2.0 (EV-062), enterprise common control catalog (EV-061), IRC 7216 consent procedures (EV-042). The `evidence` column in `control-implementation.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each statement.
 
 ## 13. Acronym List and Glossary
 - **AO:** authorizing official

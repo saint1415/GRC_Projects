@@ -10,12 +10,13 @@
 | Assessor | IT Manager (Qualified Individual) with the Risk and Quality Partner and the Tax Partner |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here, with the reasoning behind it.
 
 ### 1.1 FTC Safeguards Rule: applies in full
 - **The firm is a financial institution under the rule.** 16 CFR 314.2(h)(2)(viii) gives this example: "An accountant or other tax preparation service that is in the business of completing income tax returns is a financial institution because tax preparation services is a financial activity listed in 12 CFR 225.28(b)(6)(vi)." 314.1(b) also lists "tax preparation firms" among the entities the rule covers.
 - **Its individual tax clients are customers.** Under 314.2(e)(2)(i)(H), a consumer has a continuing customer relationship when he or she "becomes your client for the purpose of obtaining tax preparation" services. Customer information is any record of nonpublic personal information about a customer, in any form (314.2(d)). The rule applies to all customer information in the firm's possession (314.1(b)).
 - **Business clients are outside the definition, but their owners are not.** Corporations, partnerships, and trusts are not "consumers" (314.2(b)(1) covers individuals obtaining services for personal, family, or household purposes). Business return files still hold owners' and employees' personal data, so the firm protects them under the same program and under IRC 7216.
-- **The small-institution exception does not apply.** Section 314.6 says that 314.4(b)(1) (written risk assessment), (d)(2) (continuous monitoring or annual penetration testing and six-month vulnerability assessments), (h) (written incident response plan), and (i) (annual written report to the board) "do not apply to financial institutions that maintain customer information concerning fewer than five thousand consumers." The firm prepares returns for about 7,400 individual consumers a year. Because it has never disposed of old files, it maintains customer information on about 21,000 consumers. **No element is exempt.** Even if a future disposal program (314.4(c)(6)) cut the count, current clients alone exceed 5,000.
+- **The small-institution exception does not apply.** Section 314.6 says that 314.4(b)(1) (written risk assessment), (d)(2) (continuous monitoring or annual penetration testing and six-month vulnerability assessments), (h) (written incident response plan), and (i) (annual written report to the board) "do not apply to financial institutions that maintain customer information concerning fewer than five thousand consumers." The firm prepares returns for about 7,400 individual consumers a year. Because it has never disposed of old files, it maintains customer information on about 21,000 consumers (EV-040). **No element is exempt.** Even if a future disposal program (314.4(c)(6)) cut the count, current clients alone exceed 5,000.
 - **The FTC notification duty is in force.** 314.4(j) took effect on 2024-05-13 (314.5). It applies to notification events involving at least 500 consumers.
 
 ### 1.2 IRC 7216: applies (secondary regulation)
@@ -29,14 +30,14 @@ The IRS has not issued guidance specific to artificial intelligence under sectio
 - **Pubs. 4557 (Rev. 6-2024) and 5708 (Rev. 8-2024)** are guidance. They explain the Safeguards Rule for tax professionals and give a WISP template. The legal duty comes from 16 CFR 314. Pub. 4557's recommendations are rated only where the firm adopted them.
 
 ### 1.4 Considered and excluded
-- HIPAA as a business associate (N54-R06), FAR and DFARS with CMMC (N54-R04, N54-R05), and ABA Model Rules (N54-R07): not applicable (scenario facts section 1).
+- HIPAA as a business associate (N54-R06), FAR and DFARS with CMMC (N54-R04, N54-R05), and ABA Model Rules (N54-R07): not applicable (intake obligations register; EV-037).
 - 314.4(a)(1)-(3) (Qualified Individual provided by a service provider): not applicable, because the Qualified Individual is a firm employee.
 - The AICPA confidentiality rule (N54-R08): a professional standard, not verified from its source for this analysis.
 
 ## 2. Method
 1. **Requirements.** Each paragraph of 314.3 and 314.4 became one row, split to the lowest lettered or numbered level that states its own duty. 314.4(h)(1)-(7) got one row each because the plan must address all seven areas. The 314.6 exception is a row, to record the applicability decision. For IRC 7216, each permission or condition that governs how the firm shares data (inside the firm, with other preparers, with contractors, and by consent) became a row. IRS program duties are typed separately from regulations, and Pub. 4557 guidance is typed "not binding."
 2. **Crosswalk.** Each row was mapped to CSF 2.0 subcategories and SP 800-53 Rev. 5 controls. This is an **author mapping**: no official NIST mapping of 16 CFR 314 or 26 CFR 301.7216 was found.
-3. **Evidence.** Current state came from interviews (Managing Partner, Firm Administrator, Tax Partner, Risk and Quality Partner, IT Manager, Client Services Supervisor, the MSP account lead, and 10 staff chosen at random), policy and contract review, system exports, a sample of 25 lender releases for consent timing, and a walkthrough of both offices on 2026-08-05.
+3. **Evidence.** Current state came from the intake evidence (system exports, policy and contract documents, and the walk-through of both offices on 2026-07-09, EV-042), the TLS scan (EV-048), interviews with 10 staff chosen at random (EV-049), gap analysis interviews with the Managing Partner, Firm Administrator, Tax Partner, Risk and Quality Partner, IT Manager, Client Services Supervisor, and the MSP account lead (EV-050), a sample of 25 lender releases for consent timing (EV-051), and a sample of 10 signed Forms 8879 (EV-052). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Each row was rated Met, Partially met, Not met, or Not applicable. Gap risk uses the P01 scale.
 
 ## 3. Results summary

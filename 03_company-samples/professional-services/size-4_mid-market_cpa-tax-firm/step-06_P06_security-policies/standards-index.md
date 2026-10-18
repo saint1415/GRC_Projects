@@ -9,7 +9,7 @@
 | Review cycle | Each standard is reviewed at least annually by its owner |
 
 ## 1. Why this index exists
-The 2024 WISP had policies but few measurable standards, so staff, practice administrators, and vendors had no fixed rules for SaaS settings, logging, vendors, retention, AI, or the offshore program (gap 14 in `../00_company-facts.md`; P03 G-001; P01 R-029 and R-040). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures (how-to steps) sit under the standards and are owned by the teams that run them.
+The 2024 WISP had policies but few measurable standards, so staff, practice administrators, and vendors had no fixed rules for SaaS settings, logging, vendors, retention, AI, or the offshore program (intake library review, EV-029; P03 G-001; P01 R-029 and R-040). Policies say **what** must happen. Standards set the **measurable minimums**: settings, frequencies, and thresholds. Procedures (how-to steps) sit under the standards and are owned by the teams that run them.
 
 ## 2. How standards work
 - **Hierarchy:** policy (POL) → standard (STD) → procedure or runbook. A standard may not weaken its parent policy.

@@ -40,6 +40,17 @@ Small tier scope: 15-25 controls. **22 controls, 125 determination statements.**
   - a TLS scan of external services and a sample of 50 outbound emails with attachments (content redacted)
   - encryption spot checks on 5 desktops and 2 printer-scanners
 
+### What each test could show
+The new policies (P06) and the incident response runbook (P08) were drafts during fieldwork; they were approved on 2026-08-31. They were reviewed as drafts, for design only. A control that a draft introduces has not operated yet. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before the 2026 assessments and was tested on samples or live systems | 61 |
+| Design | The control is new (the first written risk assessment, or a draft policy or runbook); its design was reviewed. Operation is tested at the 2027-05 follow-up, or at the next annual risk assessment review for RA-3 | 14 |
+| Not implemented | Nothing existed to test | 50 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from (for example, the 10 sampled account changes come from the HR roster and tickets in EV-005 and EV-006).
+
 ## 3. Rules of engagement
 - No testing that could interrupt client work: scans and sign-in tests ran after 18:00, and no test changed a client record or a return in the tax software.
 - No tax return information left the firm. Screenshots and email samples were redacted before they entered the workpapers.

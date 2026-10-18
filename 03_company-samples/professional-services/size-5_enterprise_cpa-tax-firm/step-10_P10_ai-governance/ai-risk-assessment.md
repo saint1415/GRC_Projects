@@ -5,6 +5,7 @@
 | Organization | Cris Santos Company, LLP (national CPA and tax firm; 64 offices in 14 states; privately owned by its partners) |
 | Tier / Vertical | Enterprise / Professional, Scientific, and Technical Services |
 | Scope | Enterprise AI portfolio (12 use cases in `ai-use-case-inventory.csv`), with a full assessment of AI-001, generative AI for tax and document preparation, in section 7 |
+| Inventory | `ai-use-case-inventory.csv` (12 use cases), built from the AI governance committee register (EV-066), the intake follow-up review of AI features in licensed vendor products (EV-069), the accounts payable vendor master (EV-036), the web gateway policy and SSO application catalog (EV-068) and the committee's 2026-08-26 portfolio review (EV-080). The follow-up review listed AI-004, AI-007, AI-010 and AI-012, which had no committee review record. The `source_evidence` column names the evidence for each use case. Not established: AI features in other vendors' products that the review did not surface, and staff use of public AI tools from personal devices |
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (NIST AI 600-1); repository risk tier rubric |
 | Assessor / date | AI governance committee (chaired by the Chief Risk Officer), meeting of 2026-08-26; the GRC team prepared the portfolio review and Internal Audit observed |
 | Decision | Executive risk committee, 2026-09-08 (section 9) |
@@ -65,7 +66,7 @@
 | Illinois HB 3773 (Public Act 103-0804) | Likely, AI-010 for Illinois roles | Notice to employees and applicants when AI is used, and no zip codes as a proxy for protected classes. Only partly verified from the source; counsel to confirm |
 | State call recording laws | Yes, AI-006 | Laws differ by state, so the firm applies all-party prior consent on every call (POL-05 4.8). Florida worked example: interception is lawful when all parties have given prior consent (Fla. Stat. 934.03(2)(d)) |
 | FTC Act Section 5 | Indirectly, AI-003 and AI-011 | Accuracy of what the firm tells assignees and clients about AI, and of marketing based on AI insights |
-| California CPPA ADMT rules (11 CCR 7200 and following) | Tracked by the Office of General Counsel | Part of the firm's state privacy program, which is outside these deliverables (scenario facts section 1). Relevant to AI-010 if California applicants are screened when it is re-enabled |
+| California CPPA ADMT rules (11 CCR 7200 and following) | Tracked by the Office of General Counsel | Part of the firm's state privacy program, which is outside these deliverables (obligations register, STATE-PRIVACY). Relevant to AI-010 if California applicants are screened when it is re-enabled |
 | Colorado SB26-189 for the other 11 use cases | No | None makes or materially influences a decision on employment, education, financial or lending services, housing, insurance, health care, or essential government services |
 
 ## 4. Risk tiering

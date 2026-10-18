@@ -11,6 +11,8 @@
 | Approved | CISO (Qualified Individual) and General Counsel, 2026-08-21; roadmap reviewed by the Audit and Risk Committee, 2026-09-15 |
 
 ## 1. Applicability
+Which rules bind the firm was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv), from the firm's own records and the Office of General Counsel's applicability memo (EV-054). This section restates those results for the rules analyzed here.
+
 | Regulation | Applies? | Basis |
 |---|---|---|
 | FTC Safeguards Rule (N54-R01) | **Yes, in full** | 16 CFR 314.2(h)(2)(viii): "An accountant or other tax preparation service that is in the business of completing income tax returns is a financial institution." Individual tax clients have a customer relationship (314.2(e)(2)(i)(H)). The 314.6 exception covers institutions with customer information on fewer than 5,000 consumers; the firm holds about 2.9 million, so no element is exempt |
@@ -29,12 +31,12 @@
 
 **Considered and excluded within the analyzed rules:** 314.4(a)(1)-(3) (the Qualified Individual is a firm employee) and 314.6 (consumer count far above 5,000) are rated Not applicable.
 
-**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both. See `00_company-facts.md`.
+**FAR overhaul numbering.** The requirements analyzed here as FAR 52.204-21 appear as FAR 52.240-93 in awards made under an agency's FAR Part 40 class deviation. The 15 requirements are the same, so these results apply to both (obligations register N54-R04).
 
 ## 2. Method
 1. **Decompose.** Each paragraph of 16 CFR 314.3 and 314.4 became one row, split to the lowest level that states its own duty; 314.4(h)(1)-(7) got one row each. For IRC 7216, each permission or condition that governs how the firm shares data became a row. HIPAA rows use the requirement text and types from the Health Care crosswalk (NIST SP 800-66 Rev. 2 wording) plus the eCFR text of 164.308(b), 164.410, and 164.502(a)(3) (retrieved for 2026-09-23). FAR rows follow the clause text of 52.204-21(b)(1)(i)-(xv) and (c). Florida rows follow the statute text.
 2. **Crosswalk.** Each row maps to CSF 2.0 and SP 800-53 Rev. 5. These are **author mappings**: no official NIST mapping of 16 CFR 314, 26 CFR 301.7216, IRS publications, FAR 52.204-21, or Fla. Stat. 501.171 was found. HIPAA rows use the repository's Health Care crosswalk (also an author mapping).
-3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key manual controls with populations over 250 used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and smaller populations used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random. **21 rows were tested by sampling or full-population analytics; 17 found exceptions.**
+3. **Evidence sampling.** Where a requirement operates on a population, the team tested a sample and recorded the population, sample size, and exceptions in the CSV. Key manual controls with populations over 250 used 60 items (95% confidence, 5% tolerable deviation, zero expected deviations); lower-risk controls and smaller populations used 25 to 40 items; configuration and account data were checked in full with analytics. Selections were random. **21 rows were tested by sampling or full-population analytics; 17 found exceptions.** Current state comes from the intake evidence (EV-001 to EV-068) and the intake follow-up (EV-069), owner interviews (EV-074), the gap analysis samples and contract reviews (EV-075 to EV-078), the external TLS scan (EV-079), the web gateway change record (EV-083) and, where a row cites them, the Internal Audit results from P07 (EV-AC-2 and so on). The `evidence` column in `gap-analysis.csv` cites the evidence register ID behind each row.
 4. **Rate.** Met, Partially met, Not met, or Not applicable. Each gap is rated with the P01 scale and carries an owner and date. High gaps are in the P01 register and the P07 POA&M.
 
 ## 3. Results summary

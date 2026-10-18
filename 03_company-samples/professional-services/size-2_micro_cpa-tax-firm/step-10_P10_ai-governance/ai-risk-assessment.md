@@ -8,7 +8,7 @@
 | Framework | NIST AI RMF 1.0 (AI 100-1) and the Generative AI Profile (AI 600-1) |
 | Assessor / date | Office Manager (Qualified Individual) with the Senior Tax Accountant, 2026-08-25 |
 | Decision | Owner CPA, 2026-08-31 |
-| Inventory | `ai-use-case-inventory.csv` (3 use cases) |
+| Inventory | `ai-use-case-inventory.csv` (3 use cases), built from the card statements, the AI assistant's terms and seat list, the tax software settings, the Owner CPA intake interview and the AI use interviews (EV-023, EV-027, EV-002, EV-044, EV-050). Use of AI tools other than AI-001 and the one personal chatbot use found in the interviews was not established (intake open request) |
 
 **Why this use case.** The registry default for this industry is generative AI for tax and document preparation. At this size the firm does not use the tax software's AI document extraction; it is turned off (AI-002 in the inventory). What the firm actually uses is a general-purpose AI assistant, bought on the Owner CPA's card, so that is the use case assessed here.
 
@@ -22,7 +22,7 @@
 - **Approved-tools list:** kept by the Office Manager in POL-04 4.7. It has one entry: AI-001, for the 3 enrolled users only, under the rules in section 5.
 - **Scale for a Micro firm:** there is no AI committee. The Owner CPA, the Senior Tax Accountant, and the Office Manager review AI use at the monthly program review (POL-02 A.10).
 
-**How the use started.** The Owner CPA subscribed on 2026-03-02 to save time in the filing season. Three staff used it to draft letters and notice responses and, to get better drafts, uploaded IRS notices for about 40 clients and Forms W-2 for 3 clients. No one checked the vendor's terms or the IRC 7216 basis first (P01 R-013; P03 G-043, G-048, G-051).
+**How the use started.** The Owner CPA subscribed on 2026-03-02 to save time in the filing season. Three staff used it to draft letters and notice responses and, to get better drafts, uploaded IRS notices for about 40 clients and Forms W-2 for 3 clients. No one checked the vendor's terms or the IRC 7216 basis first (EV-044; EV-050; P01 R-013; P03 G-043, G-048, G-051).
 
 ## 2. MAP
 | Item | Description |
@@ -31,7 +31,7 @@
 | Users | Owner CPA, Senior Tax Accountant, Tax Accountant (enrolled agent) |
 | Affected people | Clients who receive letters or whose notices are answered; people named in uploaded documents |
 | Data | Prompts and uploads. From March to July 2026 they included client names, notice text (tax return information under 26 CFR 301.7216-1(b)(3), which covers information received from the IRS in connection with processing a return), and 3 Forms W-2 with full SSNs. Outputs: draft text |
-| Vendor terms (business plan) | Inputs are not used to train models by default; inputs are kept up to 30 days for abuse monitoring and may be reviewed by vendor staff if flagged; no commitment to U.S.-only processing; MFA available but not enforced (2 of 3 users had it on) |
+| Vendor terms (business plan) | Inputs are not used to train models by default; inputs are kept up to 30 days for abuse monitoring and may be reviewed by vendor staff if flagged; no commitment to U.S.-only processing; MFA available but not enforced (2 of 3 users had it on) (EV-027; EV-056) |
 | Build or buy | Buy: general-purpose vendor SaaS, not integrated with any firm system |
 | Not intended | Tax positions or research conclusions without a human check of every cited authority; return preparation; anything sent without a signature; client-facing chat |
 
@@ -54,7 +54,7 @@
 **Re-tier to High and reassess if:** drafts are sent without a signature; the tool is used to decide tax positions or penalty abatement arguments without a human check of authorities; it is connected to the suite, the tax software, or the portal; client-facing chat is added; or the vendor's terms change to allow training on firm data.
 
 ## 4. MEASURE
-The Senior Tax Accountant and the Office Manager reviewed 24 drafts from June and July 2026 (16 English, 8 Spanish) and 30 prompts from the conversation history on 2026-08-20.
+The Senior Tax Accountant and the Office Manager reviewed 24 drafts from June and July 2026 (16 English, 8 Spanish) and 30 prompts from the conversation history on 2026-08-20 (EV-056).
 
 | Trustworthy characteristic | Test or metric | Result | Pass? |
 |---|---|---|---|

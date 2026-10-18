@@ -7,7 +7,7 @@
 | Scope | The group AI governance program: the Group AI Standard, the division use-case inventory, and the regulator-specific rules for the priority use cases: generative AI for tax and document preparation (AI-001, AI-002, AI-003), Practice Cloud's AI document intake feature (AI-007), and Wealth's adviser meeting assistant (AI-005) |
 | Framework | NIST AI RMF 1.0 (AI 100-1), the Generative AI Profile (AI 600-1), and the AI RMF Playbook |
 | Assessors / date | Group AI council (chaired by the Group Chief Risk Officer), 2026-08-27; presented to the board risk committee 2026-09-10 |
-| Inventory | `ai-use-case-inventory.csv` (9 use cases: 0 High, 8 Medium, 1 Low) |
+| Inventory | `ai-use-case-inventory.csv` (9 use cases: 0 High, 8 Medium, 1 Low), built from AI tool discovery across procurement, SaaS discovery, the SYS-G1 application list and model provider contracts (EV-033), division records (EV-047, EV-049, EV-062, EV-068, EV-069) and Wealth risk interviews (EV-082). The `source_evidence` column names the evidence for each use case. Not established: workforce use of public generative AI tools outside the approved tools (intake open request) |
 
 ## 1. GOVERN (group program)
 ### 1.1 Structure
@@ -29,7 +29,7 @@
 6. **Change gate.** A new model, a new model provider, a new data type, or a new decision role triggers re-assessment before release.
 7. **Practitioners stay responsible.** A CPA or enrolled agent is responsible for every figure and statement in a return or client communication drafted with AI assistance (POL-05 4.8; 31 CFR 10.22).
 
-**Where the program fell short in 2026.** The standard was adopted after three priority use cases were already running. The tax drafting assistant pilot (AI-002) started without the IRC 7216 and Circular 230 review (scenario gap 4), Practice Cloud launched AI document intake (AI-007) without the change gate (gap 5), and the audit analytics tool (AI-004) was registered late. All three are now under conditions or have been registered (section 6).
+**Where the program fell short in 2026.** The standard was adopted after three priority use cases were already running. The tax drafting assistant pilot (AI-002) started without the IRC 7216 and Circular 230 review (group gap 4), Practice Cloud launched AI document intake (AI-007) without the change gate (gap 5), and the audit analytics tool (AI-004) was registered late. All three are now under conditions or have been registered (section 6).
 
 ## 2. MAP (division use cases and applicable rules)
 | ID | Use case | Division | Tier | Priority | Status |
@@ -89,7 +89,7 @@ The IRS Section 7216 Information Center has no guidance on artificial intelligen
 **Re-tier triggers:** any AI output sent to a client or filed without practitioner review (AI-001 to AI-003 to High); AI used to approve accounts, transfers, or suitability (Wealth, High); AI-007 marketed as producing filing-ready data without customer review (High).
 
 ## 4. MEASURE
-Results are from a baseline test and pilot reviews run for this assessment between 2026-06 and 2026-08. Ongoing monitoring does not exist yet (scenario gap 4); POAM-011 builds it before the 2027 season.
+Results are from a baseline test and pilot reviews run for this assessment between 2026-06 and 2026-08. Ongoing monitoring does not exist yet (group gap 4); POAM-011 builds it before the 2027 season.
 
 ### 4.1 AI document extraction assistant (AI-001)
 | Characteristic | Test / metric | Result | Pass? |

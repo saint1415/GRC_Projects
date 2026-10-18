@@ -1,0 +1,76 @@
+# Intake Report: Cris Santos Company | Professional, Scientific, and Technical Services | Enterprise
+
+| Field | Value |
+|---|---|
+| Organization | Cris Santos Company, LLP (national CPA and tax firm; 64 offices in 14 states; privately owned by its partners) |
+| Intake window | 2026-05-04 to 2026-05-29 |
+| Collected by | GRC team (second line), with system owners in Tax, Assurance, Advisory, IT and Security, the Integration Management Office, the Office of General Counsel and Internal Audit's files |
+| Approved | CISO (Qualified Individual), 2026-05-29. Obligations register reviewed by the Office of General Counsel (EV-054) |
+
+## 1. Purpose and scope
+Intake collected the firm's own records before the enterprise risk analysis, the BIA and the gap analysis began on 2026-06-01, and before Internal Audit's control assessment fieldwork began on 2026-07-13. It covers the organization (64 offices, 12 processing hubs, the two service lines SL-1 and SL-2, and the six acquired firms AF-01 to AF-06), the systems that create, receive, maintain or transmit customer information, tax return information, PHI or Federal Contract Information, the vendors that touch them, and the rules that may bind the firm. Each item has an ID in [`evidence-register.csv`](evidence-register.csv). Later steps add their own fieldwork evidence (BIA interviews, risk workshops, gap analysis samples, Internal Audit tests, the AI portfolio review) to the same register, so one list backs every deliverable.
+
+At this size the sources are enterprise systems of record: the identity platform and HR system, the CMDB and endpoint consoles, the cloud consoles and SIEM, the third-party risk register and accounts payable vendor master, the contract repository, the tax application, portal and DMS administration consoles, board and committee records, Internal Audit's files, and the Office of General Counsel's records.
+
+Each register row names the owning system of record and owner. The [asset inventory](asset-inventory.csv) reconciles the CMDB with the cloud account inventory, the endpoint consoles and the AI governance committee register; the [vendor register](vendor-register.csv) reconciles the third-party risk register with the accounts payable vendor master and the contract repository.
+
+This report records **observations, not findings**. Whether an observation meets a requirement is decided in the gap analysis (P03) and the control assessment (P07).
+
+## 2. Sources collected
+| Area | Evidence IDs | System of record | As of |
+|---|---|---|---|
+| Identity and access | EV-001 to EV-008 | Identity platform (SSO, PAM, identity governance); HR system; AF-05 and AF-06 directories; tax application and portal consoles | 2026-04-30 to 2026-05-06 |
+| Endpoints and network | EV-009 to EV-013 | EDR and endpoint consoles; CMDB and data map; network management; scanner and penetration test report; attack surface management | 2026-04-30 to 2026-05-01 |
+| Cloud, logging, backup and recovery | EV-014 to EV-022 | Cloud consoles and posture management; backup accounts; key management; SIEM; SOC case management; DR records; contingency plan; transmitter and AF contracts | 2026-03-31 to 2026-05-09 |
+| Governance and prior assurance | EV-023 to EV-029 | GRC platform; ERM register; board portal; General Counsel's office; Internal Audit files; incident response library; outside counsel matrix | 2025-07-31 to 2026-05-01 |
+| Workforce, privacy and records | EV-030 to EV-034 | Learning system; Privacy Office tracker; records office and DMS reporting; DMS administration; data lake | 2026-04-30 to 2026-05-01 |
+| Third parties, contracts and service lines | EV-035 to EV-045 | Third-party risk register; AP vendor master; contract repository; vendor portals; service auditor reports; offshore workflow; consent program; e-file program records | 2025-12-31 to 2026-05-01 |
+| Facilities and disposal | EV-046 | Physical access system; facilities library; IT asset disposition | 2026-04-30 |
+| Business volume and structure | EV-047 to EV-050 | ERP financial reporting; production reporting; entity register; Integration Management Office tracker | 2025-12-31 to 2026-05-01 |
+| Obligations and regulatory status | EV-051 to EV-057 | Contract repository; practice management; counsel memo; benefits, finance and insurance files | 2026-01-01 to 2026-05-15 |
+| Other operating records | EV-058 to EV-065 | Threat intelligence; productivity suite; change system and CI/CD; GRC platform; Tax Technology library; payroll engine; ERP; telecom records | 2025-09-12 to 2026-05-01 |
+| AI | EV-066 to EV-068; EV-069 (intake follow-up) | AI governance committee site; data science files; web gateway and SSO application catalog; CIO response on vendor AI features | 2026-04-30 to 2026-06-12 |
+
+## 3. Observations by area
+**Identity and access.** Workforce and contractor identities outside AF-05 and AF-06 are federated through SSO with MFA registered. FIDO2 keys are registered for privileged users and partners, and about 8,900 non-privileged staff use push MFA with number matching (EV-001). Conditional access requires MFA for every SSO application and permits browser sessions to email from unmanaged devices; 9 service mailboxes are listed as legacy authentication exclusions (EV-002). Privileged access is just in time through PAM with session recording; there are 46 privileged TEP and database accounts (EV-003). Joiner, mover and leaver events flow from the HR system, and quarterly certifications cover 12 privileged groups. For 2026 seasonal terminations, part of the accounts were disabled after the HR end date (EV-004). HR holds 12,000 employees, and about 1,500 seasonal staff worked from January to April 2026 (EV-005). The about 410 staff at AF-05 and AF-06 sign in through their own directories and tenants, run by their managed service providers; AF-05 has no EDR and sends no logs to the SIEM (EV-006). The tax application has about 6,300 workforce accounts in season and about 410 offshore provider accounts, with e-file release separated from preparation and review (EV-007). The client portal has about 760,000 accounts; MFA is optional for individual clients and 64% are enrolled, and no inactivity rule applies to client accounts. About 9,000 of the 38,000 assignee accounts sign in with a password only (EV-008).
+
+**Endpoints and network.** The endpoint consoles list about 14,800 laptops with full-disk encryption and EDR reporting on 99% of enterprise endpoints and servers, plus about 900 printer-scanners, about 140 of them at the processing hubs (EV-009). The CMDB lists about 4,900 TEP cloud resources, and the data map traces tax return information across the estate (EV-010). SD-WAN reaches 64 offices; 13 have a single carrier, and AF-05 and AF-06 offices run legacy firewalls (EV-011). Scans run monthly with a 15-day target for critical and high findings, and an outside firm ran the 2026-04 penetration tests (EV-012). There are 38 external endpoints of tier-1 systems, 14 of them for the TEP; the legacy SL-2 file transfer endpoint serves 12 corporate clients behind IP allow lists (EV-013).
+
+**Cloud, logging, backup and recovery.** Both clouds use account vending, guardrails as code (including a U.S.-regions-only rule) and daily posture scans (EV-014). Backups sit in separate immutable accounts with weekly offline copies to DC-2 (EV-015). Keys are customer-managed with deletion protection, and stores are encrypted at rest (EV-016). The SIEM keeps logs 1 year online and 7 years in a write-once archive; it has one bulk export threshold for all roles, no use case for session token replay, and no AF-05 log source (EV-017). The SOC runs 24x7 with provider overflow; AF-05 and AF-06 incidents were handled by their providers and opened in case management afterward (EV-018). In the 2026-05-09 DR test, the tax workflow and e-file queue recovered in 9.5 hours against the 8-hour RTO, and the tax database met its 1-hour RPO (EV-019). The TEP contingency plan v3 is on file (EV-020). The tax software vendor transmits all enterprise e-files under a contract RTO of 12 hours, and no second transmitter agreement is on file (EV-021). AF-05 and AF-06 back up nightly, have no restore test record, and their provider contracts state a 24-hour restore (EV-022).
+
+**Governance and prior assurance.** The 2025 policy hierarchy, aligned to CSF 2.0, and the exception register are in the policy portal; the 9 legacy authentication exclusions carry no written approval by the Qualified Individual (EV-023). Enterprise risk assessments were done in 2024 and 2025 and roll into the ERM register (EV-024). The Partnership Board approved the risk appetite in 2026-02 and received the Qualified Individual's written reports in 2024 and 2025 (EV-025). The CISO was designated Qualified Individual in writing on 2024-01-15 (EV-026). Internal Audit's charter and 2026 plan are on file (EV-027). The incident response plan includes a business email compromise and data theft runbook with no exercise record; the ransomware runbook was exercised on 2026-02-24; 3 Incident Disclosure Committee members joined since 2025 (EV-028). The state notification matrix is dated 2024-11, and client contract notice terms are held by account teams with no central register (EV-029).
+
+**Workforce, privacy and records.** Annual training, role-based modules and monthly phishing simulations are recorded; the seasonal click rate was 9.8% against 3.1% firm-wide, and part of the seasonal staff received TEP access before completing initial training (EV-030). The Privacy Office keeps breach and sanctions logs (EV-031). The records schedule keeps tax files 7 years; files go back to 2004, about 2.1 million former-client consumer records are past the schedule, and no electronic disposal run is recorded (EV-032). Of about 516,000 DMS tax repositories, 31% are open to whole office tax teams, and repositories carry no PHI or FCI tag (EV-033). Data lake raw tables keep SSNs (EV-034).
+
+**Third parties, contracts and service lines.** The vendor register lists about 1,400 vendors, about 260 with client data, and 31 tier-1 and tier-2 TEP vendors; the identity verification service has no SOC report on file (EV-035, EV-036). About 240 business associate agreements are on file, 22 on legacy templates; no subcontractor agreement was located for 2 consulting data room providers; 4 of 19 federal subcontracts lack the FAR 52.204-21 flow-down (EV-037). SOC 2 reports are on file for the main providers (EV-038). SL-1 issued its 2025 SOC 2 Type 2 report with one exception, late access removal (EV-039). SL-1 serves about 3,100 client businesses, and 37 former clients' data is past the 90-day contract deletion date; SL-2 serves about 380 corporate clients, whose vendor programs ask for a SOC 2 Type 2 report (EV-040). The offshore provider drafts about 22% of business returns in season; the consent check before release is a manual step (EV-041). Lender releases wait for a signed consent in the portal (EV-042). The AF-05 and AF-06 providers have no IRC 6713 and 7216 notice acknowledgment on file (EV-043). The firm holds 30 EFINs; e-Services credentials at 2 EFINs are tied to personal email (EV-044). One identity verification service supports every electronic Form 8879 (EV-045).
+
+**Facilities and disposal.** Badge access, visitor management, shredding certificates and device destruction records are on file (EV-046).
+
+**Business volume and structure.** Receipts were about $4.8 billion in FY2025, about $19.0 million per business day (EV-047). The firm prepares about 420,000 individual and 96,000 business returns a year, and about 15% of individual clients' source documents arrive by email (EV-048). It has 64 offices in 14 states (EV-049). AF-01 to AF-04 are integrated; AF-05 and AF-06 are not (EV-050).
+
+**Obligations and regulatory status.** About 30 federal civilian contracts carry FAR 52.204-21, with no DoD work (EV-051). About 240 health care clients have business associate agreements, and no risk analysis specific to business associate PHI was provided (EV-052). The firm audits about 140 SEC issuers (EV-053). Counsel's view on each candidate rule is in EV-054; the results are in [`obligations-register.csv`](obligations-register.csv).
+
+**AI.** The AI governance committee register holds review records for 7 use cases, with AI-011 proposed, and IRC 7216 memos for 5 (EV-066). The AI-001 season report shows 99.6% accuracy on typed fields and 96.1% on photographed or handwritten fields, with 2 of 4 tested client groups flagged (EV-067). Public generative AI sites are reachable from firm devices (EV-068). The intake follow-up listed four AI features in licensed products with no committee review record: AI-004, AI-007, AI-010 and AI-012 (EV-069).
+
+## 4. Open requests
+| Request | Asked of | Asked on | Status |
+|---|---|---|---|
+| AI features embedded in licensed vendor products | CIO | 2026-05-14 | Answered after the window on 2026-06-12 (EV-069, intake follow-up); P10 treats features the review did not surface as unknown |
+| SOC report or security questionnaire from the e-signature identity verification service | Director of Third-Party Risk Management | 2026-05-12 | Not received at intake; carried to P01 (R-037) and POAM-015 |
+| Restore test records for the AF-05 and AF-06 servers | Chief Integration Officer | 2026-05-08 | No record provided at intake; carried to P01 (R-015) and POAM-005 |
+| Incident records kept by the AF-05 and AF-06 managed service providers | Chief Integration Officer | 2026-05-08 | Partial; P07 sampled all 9 AF incidents in SOC case management (IR-4) |
+| Staff use of public generative AI tools and what is pasted into them | CISO | 2026-05-12 | Not established at intake; P01 (R-041) and P10 treat it as unknown |
+
+## 5. What each later step takes from intake
+| Step | Takes |
+|---|---|
+| P05 BIA | Processes and owners (EV-005, EV-049), receipts and volumes (EV-047, EV-048), recovery records (EV-015, EV-019, EV-020, EV-022), the transmitter contract (EV-021), service line agreements (EV-040) and dependencies from the asset and vendor registers |
+| P02 SSP | The TEP boundary from the asset inventory; prior SSP v2.0 (EV-062); as-found configuration from EV-001 to EV-017, EV-033, EV-041 and EV-059 |
+| P04 Cloud mapping | Cloud components and guardrails (EV-014 to EV-017) and provider assurance (EV-038) |
+| P01 Risk register | Likelihood inputs from threat intelligence (EV-058), SOC case history (EV-018), coverage and configuration exports, the prior risk assessment (EV-024) and the risk appetite (EV-025) |
+| P03 Gap analysis | The obligations register (which rules apply) and every observation above, compared with the requirements |
+| P06 Policies | The 2025 policy set and exception register (EV-023) |
+| P07 Control assessment | Populations to sample from (EV-004, EV-005, EV-007, EV-008, EV-010, EV-012, EV-018, EV-041, EV-060) |
+| P08 IR runbook | Notification duties from the obligations register; the incident response plan and committee records (EV-028); the state matrix and notice terms (EV-029); contacts from the vendor register |
+| P09 SOC 2 | Vendor assurance on file (EV-038), the SL-1 2025 reports (EV-039) and service line agreements (EV-040) |
+| P10 AI governance | AI tools found (EV-066 to EV-069) |

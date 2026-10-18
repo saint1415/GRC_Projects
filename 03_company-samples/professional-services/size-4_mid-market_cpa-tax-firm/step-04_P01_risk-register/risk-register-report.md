@@ -7,11 +7,11 @@
 | Vertical | Professional, Scientific, and Technical Services |
 | Method | NIST SP 800-30 Rev. 1 (Tables G-2 to G-5, H-3, I-2, and the Appendix I semi-quantitative values); enterprise roll-up per NIST IR 8286 Rev. 1 |
 | Also satisfies | FTC Safeguards Rule written risk assessment, 16 CFR 314.4(b)(1) (criteria in section 2); HIPAA risk analysis input for the business associate ePHI, 45 CFR 164.308(a)(1)(ii)(A) (completed by the enclave-specific analysis due 2027-03-31) |
-| Prepared | 2026-07-31 by the GRC Manager and the Director of Information Security (Qualified Individual); R-051 added 2026-08-14 from P07 testing |
+| Prepared | 2026-07-31 by the GRC Manager and the Director of Information Security (Qualified Individual); R-028 re-rated 2026-08-12 and R-051 added 2026-08-14 from P07 testing |
 | Approved | 2026-09-22: Chief Operating Officer (Moderate and below), Chief Executive Officer (High and Very High, and the risk appetite); presented to the audit committee the same day |
 
 ## 1. Scope and risk framing
-**Scope.** All business units (tax practice, tax operations, the Attest Firm, CAS, advisory, and enterprise functions), the Tax and Client Data Platform (TCDP, SSP in P02), the CAS platform (SYS-08), the audit and SOC engagement platform (SYS-09), about 85 service providers including the offshore preparation support vendor, and the AI tools (P10). Processes and impact values come from the BIA (P05). Vulnerabilities come from the gap analysis (P03) and the control assessment (P07).
+**Scope.** All business units (tax practice, tax operations, the Attest Firm, CAS, advisory, and enterprise functions), the Tax and Client Data Platform (TCDP, SSP in P02), the CAS platform (SYS-08), the audit and SOC engagement platform (SYS-09), about 85 service providers including the offshore preparation support vendor, and the AI tools (P10), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact values come from the BIA (P05). Vulnerabilities come from the intake evidence, the gap analysis (P03) and the control assessment (P07).
 
 **Who can accept risk (tolerance).**
 | Risk level | Who may accept | Conditions |
@@ -35,8 +35,8 @@ Approved by the Chief Executive Officer and noted by the audit committee on 2026
 | Financial loss from cyber events | **Moderate** | Single-event losses up to the $500,000 insurance retention are tolerable. Scenarios above $2 million need a treatment that lowers likelihood, not only insurance |
 
 ## 2. Method and 16 CFR 314.4(b)(1) criteria
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the IRS Security Summit warnings in Pub. 4557 (phishing, account takeover, fraudulent returns), the BIA, interviews with every process owner, the gap analysis (P03), and the control assessment (P07).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the IRS Security Summit warnings in Pub. 4557 (phishing, account takeover, fraudulent returns), the BIA, the intake evidence, and risk interviews with every process owner plus a threat workshop with the Director of Information Security, the security engineers and the MSSP service lead (EV-062). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings. The control assessment (P07) re-rated one risk and added one in a second pass.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) and the likelihood that the event causes adverse impact were each rated, then combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the incident queue (EV-034), scan reports (EV-017), phishing results (EV-036), MSSP reports (EV-025), configuration exports, the walk-throughs, the gap analysis samples (EV-066 to EV-070) and interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact used **Table H-3**, anchored to the BIA impact categories (cost, operations, regulatory, client harm, reputation).
 4. **Determine risk.** Risk level came from **Table I-2**. The `overall_likelihood` and `risk_level` columns were computed by script from the two tables, not assigned by hand.
 5. **Semi-quantitative view.** `semi_quant_score` gives each risk level its SP 800-30 Appendix I semi-quantitative value (Very High 10, High 8, Moderate 5, Low 2, Very Low 0). `exposure_estimate_usd` gives an order-of-magnitude single-event loss range built from the BIA values and the notification population, used for the enterprise roll-up (NIST IR 8286 Rev. 1). The ranges are for prioritizing, not actuarial figures.
@@ -77,6 +77,8 @@ Cyber insurance ($15 million limit, $500,000 retention) transfers part of the fi
 | R-020 | Fraudulent bank change diverts CAS client funds | High | Call-back on every bank change; second approver; hold on first payments | CAS Practice Leader | 2026-12-31 |
 | R-035 | AI resume screening with adverse impact | High | Suspend auto-ranking; adverse impact testing; Colorado notices and human review from 2027-01-01 | Chief People Officer | 2026-12-31 |
 | R-051 | Former CAS staff accounts outside SSO (found in P07) | High | Federate payroll and bill pay to SSO; monthly reconciliation | CAS Practice Leader | 2026-12-31 |
+
+**Two passes.** Pass 1 was completed on 2026-07-31 from intake and fieldwork evidence. R-028 was re-rated on 2026-08-12, after P07 testing found 6 of 40 critical findings remediated after the 30-day target (EV-RA-5, EV-SI-2); its `likelihood_basis` cites that result and its `last_reviewed` date is the re-rating date. Pass 2 followed the control assessment: R-051 was added on 2026-08-14 after testing found 3 former CAS staff with active local accounts in the payroll and bill-pay services (EV-AC-2, EV-PS-4). The `assessment_pass` column shows which pass produced each risk.
 
 **Themes.**
 - **Identity is the front door (R-001, R-006, R-007, R-050, R-051).** MFA is everywhere, but the methods in use do not stop token theft, help desk impersonation, or accounts that live outside SSO.

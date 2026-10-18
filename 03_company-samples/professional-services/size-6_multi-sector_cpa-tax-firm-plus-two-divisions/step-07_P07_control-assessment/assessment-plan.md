@@ -16,23 +16,23 @@ All three divisions and CPA Partners rely on the same corporate identity, SOC, c
 2. **The TPCP's** system-specific controls were assessed because it is the SSP system and carries two of the group's High risks (GR-01 tax-to-wealth sharing and GR-02 business email compromise).
 3. **Division samples** covered controls each division or CPA Partners operates itself, chosen from its High risks and its P03 gaps. Division findings are reported to that division and are not averaged into the group result.
 
-CPA Partners was sampled on governance controls (PL-1, CA-2) because its inheritance of group controls is undocumented and its supplement has drifted (scenario gap 7).
+CPA Partners was sampled on governance controls (PL-1, CA-2) because its inheritance of group controls is undocumented and its supplement has drifted (group gap 7).
 
 ## 2. Controls selected
 **45 control assessments** (37 distinct controls), **270 determination statements**. Seven controls were assessed in more than one scope because each division operates its own version: SA-9 (three scopes), and AC-3, AC-4, CM-4, IA-8, IR-8, and SA-11 (two scopes each).
 
 | Scope | Controls | Statements | Why selected | Depth / coverage |
 |---|---|---|---|---|
-| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1) | 34 | GR-05, GR-18; scenario gap 2 (seasonal identity) | Focused / Comprehensive (all divisions sampled) |
+| Common control (SYS-G1 identity) | AC-2, AC-2(3), AC-6(5), IA-2, IA-2(1) | 34 | GR-05, GR-18; group gap 2 (seasonal identity) | Focused / Comprehensive (all divisions sampled) |
 | Common control (Group HR) | PS-3, PS-4, AT-2 | 18 | GR-05; 45,000 permanent and about 11,000 seasonal users | Focused / Focused |
-| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-11; scenario gaps 3 and 6 | Focused / Comprehensive |
+| Common control (SYS-G2 SOC) | SI-4, IR-3, IR-4, IR-6, IR-8, RA-5 | 54 | GR-02, GR-03, GR-11; group gaps 3 and 6 | Focused / Comprehensive |
 | Common control (SYS-G3 cloud and network) | CP-9, SC-7, SC-8, SC-12, SC-28, CM-6 | 22 | GR-06, GR-15; immutable backups and guardrails | Focused / Focused |
-| Common control (SYS-G4 email) | AC-4 | 1 | GR-02; the forwarding exception list (scenario gap 3) | Focused / Comprehensive (all 212 exceptions) |
-| TPCP (SSP system) | AC-3, AC-6, AC-4, AC-21, PT-4, AU-6, CM-4, SA-11, CP-4, IA-8 | 26 | GR-01 and GR-02 (High); TX-002, TX-003, TX-004, TX-008, TX-009, TX-014; scenario gaps 1 and 4 | Comprehensive / Comprehensive |
+| Common control (SYS-G4 email) | AC-4 | 1 | GR-02; the forwarding exception list (group gap 3) | Focused / Comprehensive (all 212 exceptions) |
+| TPCP (SSP system) | AC-3, AC-6, AC-4, AC-21, PT-4, AU-6, CM-4, SA-11, CP-4, IA-8 | 26 | GR-01 and GR-02 (High); TX-002, TX-003, TX-004, TX-008, TX-009, TX-014; group gaps 1 and 4 | Comprehensive / Comprehensive |
 | Division sample: Tax and Advisory | SA-9, MP-6, CP-2 | 34 | TX-010, TX-015, TX-021; P03 G-032 | Focused / Focused (4 tier 1 vendors; 40 lease returns) |
-| Division sample: CPA Partners | PL-1, CA-2 | 28 | GR-09, TX-024, TX-025; scenario gap 7 | Focused / Focused |
+| Division sample: CPA Partners | PL-1, CA-2 | 28 | GR-09, TX-024, TX-025; group gap 7 | Focused / Focused |
 | Division sample: Wealth | SA-9, IR-8, AU-11, IA-8 | 25 | WM-001, WM-003, WM-006, WM-017; P03 WM-G06, WM-G10, WM-G16 | Focused / Focused |
-| Division sample: Practice Cloud | SA-9, CM-3, CM-4, SA-11, AC-3 | 28 | SW-001, SW-002, SW-003 (High and Moderate); scenario gap 5 | Focused / Focused |
+| Division sample: Practice Cloud | SA-9, CM-3, CM-4, SA-11, AC-3 | 28 | SW-001, SW-002, SW-003 (High and Moderate); group gap 5 | Focused / Focused |
 | **Total** | **45** | **270** | | |
 
 ## 3. Methods and objects
@@ -50,6 +50,17 @@ CPA Partners was sampled on governance controls (PL-1, CA-2) because its inherit
   - a step-up authentication test for a Wealth portal transfer request;
   - cross-tenant access attempts in 4 Practice Cloud test tenants.
 
+### What each test could show
+The group policies v2026 (P06) were drafts during fieldwork; the board risk committee approved them on 2026-09-10, effective 2026-10-01, after fieldwork ended on 2026-08-28. They were reviewed as drafts, for design only: the P06 statements marked `assessed_in_P07` in `policy-control-map.csv` were read against the controls tested here, and no determination statement rests on a draft. Every statement below was assessed against the controls, plans, and agreements in place before v2026 (the group policies in force at intake, EV-015; incident response plan v6, EV-024). The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control or document existed before v2026 and was tested on samples, configurations, records, or live systems | 261 |
+| Design | The statement rests on a draft whose design was reviewed. None in this assessment; operation of the controls the v2026 policies introduce is tested at the 2027-05 follow-up | 0 |
+| Not implemented | Nothing existed to test (consent register for referral sharing, AC-21; AI extraction fairness and accuracy test plans, SA-11; monitoring of the AI-001 model provider and the tax engine vendor, of the AI intake model provider, and of Tax and Advisory as Wealth's service provider, and Wealth's affiliate oversight, SA-9; prompt-injection testing of AI document intake, SA-11; confirmation of controls CPA Partners inherits, CA-2) | 9 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-C-AC2 and so on), with the population each sample was drawn from (for example, the 60 joiner-mover-leaver events and 25 terminations come from the HR and identity governance records in EV-002 and EV-006, the 120 seasonal staff from the seasonal onboarding report in EV-007, the 212 forwarding exceptions from EV-023, and the 80 referral records from the interface and consent records in EV-044 and EV-045).
+
 ## 4. Rules of engagement
 - No testing during market hours on Wealth trading systems, and no testing that could delay a client return, payroll, or transfer. Tests ran in non-production tenants where possible. The mailbox detection test used a dedicated test mailbox.
 - No tax return information, customer information, or PHI left group systems. Screenshots were redacted. Referral records were reviewed in place by an auditor who had completed IRC 7216 training.
@@ -66,7 +77,7 @@ CPA Partners was sampled on governance controls (PL-1, CA-2) because its inherit
 | Division sample: Practice Cloud | 23 | 5 | 28 |
 | **Total** | **222** | **48** | **270** |
 
-**Common controls are sound where they were built once for everyone.** 110 of 129 common statements were satisfied. Privileged access (AC-6(5)), administrator MFA (IA-2(1)), inactive accounts (AC-2(3)), cloud protection (CP-9, SC-7, SC-8, SC-12, SC-28), and vulnerability management (RA-5) had no findings. The common findings are about **seasonal staff** (AC-2, PS-3, PS-4, AT-2; scenario gap 2), **tax office email** (IA-2, SI-4, and the SYS-G4 forwarding exceptions under AC-4; gap 3), and **cross-division incident handling and notification** (IR-3, IR-4, IR-6, IR-8; gap 6).
+**Common controls are sound where they were built once for everyone.** 110 of 129 common statements were satisfied. Privileged access (AC-6(5)), administrator MFA (IA-2(1)), inactive accounts (AC-2(3)), cloud protection (CP-9, SC-7, SC-8, SC-12, SC-28), and vulnerability management (RA-5) had no findings. The common findings are about **seasonal staff** (AC-2, PS-3, PS-4, AT-2; group gap 2), **tax office email** (IA-2, SI-4, and the SYS-G4 forwarding exceptions under AC-4; gap 3), and **cross-division incident handling and notification** (IR-3, IR-4, IR-6, IR-8; gap 6).
 
 **The TPCP is where the risk is.** 11 of its 26 statements were other than satisfied. The referral interface sends tax return information to Wealth without checking a recorded consent (AC-4, AC-21, PT-4: 9 of 80 transfers preceded the consent), office managers and coordinators see more than they need (AC-6), portal bulk downloads and refund bank-field changes are not reviewed (AU-6), and the AI tools were changed and tested without the reviews the Group AI Standard requires (CM-4, SA-11). Role-based access (AC-3) and client portal MFA (IA-8) were satisfied.
 

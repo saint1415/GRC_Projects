@@ -7,7 +7,7 @@
 | Criteria | AICPA 2017 Trust Services Criteria (With Revised Points of Focus, 2022). Criteria are listed by ID with short topic labels in our own words |
 | Scoping | Per division and service line (section 1). Two readiness reports: Practice Cloud (`soc2-readiness.csv`) and Tax and Advisory's client accounting services (`soc2-readiness-client-accounting.csv`). Tax preparation, Wealth, and the CPA Partners attest practice are out of scope |
 | Prepared | 2026-09-10 by the Group Chief Risk Officer's assurance team with the Practice Cloud trust and assurance director and the client accounting services director |
-| Service auditor | An unaffiliated CPA firm for both reports. CPA Partners sells SOC examinations to outside service organizations, but it does not examine the holding company or any group entity (`../00_company-facts.md` section 1), so it cannot be the service auditor here |
+| Service auditor | An unaffiliated CPA firm for both reports. CPA Partners sells SOC examinations to outside service organizations, but it does not examine the holding company or any group entity (EV-057), so it cannot be the service auditor here |
 
 ## 1. Scoping decisions per division
 A SOC 2 report covers controls at a **service organization** for the **user entities** that rely on its service. For each service line the question is whether other organizations rely on its controls as part of their own.
@@ -39,7 +39,7 @@ A SOC 2 report covers controls at a **service organization** for the **user enti
 ### 2.1 Practice Cloud
 - **Services:** client portal with secure document exchange and e-signature (including IRS Form 8879), document management, workflow, time and billing, and invoice payment through a payment processor's hosted page; the **AI document intake** feature for 2,300 opt-in customer firms (launched 2026-02-02).
 - **Infrastructure and software:** SYS-S1 on cloud provider B (container platform, managed database, primary and warm standby regions); group identity (SYS-G1), SOC (SYS-G2), and the backup vault (SYS-G3) as internal shared services.
-- **Subservice organizations (carve-out):** cloud provider B; the payment processor (hosted page); **the third-party model provider for AI document intake** (not yet in the description, scenario gap 5).
+- **Subservice organizations (carve-out):** cloud provider B; the payment processor (hosted page); **the third-party model provider for AI document intake** (not yet in the description, group gap 5).
 - **People:** about 5,500 Practice Cloud employees plus the group SOC and identity teams.
 - **Data:** customer firms' client documents and contact data (about 41 million end-client contacts across all tenants).
 - **Complementary user entity controls:** customers enforce MFA for their staff (31% do not today, SW-004), provision and remove their users, decide their own IRC 7216 basis for using AI document intake, and review the report.

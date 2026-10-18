@@ -7,7 +7,7 @@
 Tax Practice Systems Profile (**TPSP**), identifier CSC-SYS-001.
 
 ## 2. System Overview
-The TPSP is everything the practice uses to prepare and file about 425 returns a year, keep the books for 12 small businesses, and answer IRS notices. One person, the CPA-owner, uses and runs it. Its core is the registry's primary system, the **tax preparation software and client document portal** (SYS-01 and SYS-02), both hosted by one tax software vendor. Around that core sit the business email and file suite (SYS-03), practice management and billing (SYS-04), the laptop and printer-scanner (SYS-05), the owner's phone (SYS-06), the home office network (SYS-07), a generative AI assistant (SYS-08; client data stopped 2026-07-27, see P10), and accounting SaaS (SYS-09). Components are listed in `../00_company-facts.md` section 3. There is no server and no IaaS. Most safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, where client data goes, devices, the home network, and vendor contracts (P04).
+The TPSP is everything the practice uses to prepare and file about 425 returns a year, keep the books for 12 small businesses, and answer IRS notices. One person, the CPA-owner, uses and runs it. Its core is the registry's primary system, the **tax preparation software and client document portal** (SYS-01 and SYS-02), both hosted by one tax software vendor. Around that core sit the business email and file suite (SYS-03), practice management and billing (SYS-04), the laptop and printer-scanner (SYS-05), the owner's phone (SYS-06), the home office network (SYS-07), a generative AI assistant (SYS-08; client data stopped 2026-07-27, see P10), and accounting SaaS (SYS-09). Components are SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv). There is no server and no IaaS. Most safeguards are **inherited from the SaaS vendors**; the owner is responsible for identities, where client data goes, devices, the home network, and vendor contracts (P04).
 
 ## 3. Laws, Regulations, and Policies Affecting the System
 | ID | Requirement | Citation |
@@ -19,7 +19,7 @@ The TPSP is everything the practice uses to prepare and file about 425 returns a
 | Practice | Due diligence of a practitioner before the IRS | 31 CFR 10.22 (Circular 230) |
 | Internal | Information Security Policy (the firm's WISP with P01, P02, and P08) | POL-01 (P06) |
 
-Not applicable: HIPAA as a business associate (N54-R06), FAR and DFARS with CMMC (N54-R04, N54-R05), ABA Model Rules (N54-R07), and CIRCIA (N54-R09, proposed only). The AICPA confidentiality rule (N54-R08) is noted, not assessed.
+Not applicable (decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv)): HIPAA as a business associate (N54-R06), FAR and DFARS with CMMC (N54-R04, N54-R05), ABA Model Rules (N54-R07), and CIRCIA (N54-R09, proposed only). The AICPA confidentiality rule (N54-R08) is noted, not assessed.
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -49,6 +49,7 @@ Operational. Planned changes: scan-to-folder replaces scan-to-email and MFA goes
 **Baseline:** SP 800-53B Moderate, tailored to 30 controls that carry the Safeguards Rule elements for a one-person practice (`control-implementation.csv`). Other Moderate controls are inherited from the SaaS vendors (evidence: the tax software vendor's SOC 2 report, P09) or tailored out because they assume staff, servers, or a federal program. AC-5, AU-9, CM-3, and CA-2(1) assume a second person but are kept with compensating controls (see `control-implementation.csv`).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 - **Inside:** the owner's accounts and settings in SYS-01 to SYS-04, SYS-08, and SYS-09; the laptop, printer-scanner, and phone; the home office's use of the home network and router; paper files in the home office.
 - **Outside (external services):** the tax software vendor's platform and its hosting provider, the IRS and state e-file systems, the email suite, practice management, accounting, and AI assistant platforms, clients' own accounting and payroll services, the phone's personal photo backup service (to be emptied of client documents), and the internet provider.
 
@@ -103,7 +104,7 @@ Self-assessed 2026-07-27 to 2026-07-31 with the IT consultant (tests on 2026-07-
 The tax software requires a password and an authenticator app on the owner's phone, which fits a Moderate categorization and remote access to taxpayer data. The email suite and practice management SaaS use a password only until MFA goes on (2026-09-15); the email account is also the suite's administrator account, so it is the most exposed identity in the practice. Clients sign Forms 8879 through the portal's e-signature with identity verification provided by the vendor (Pub. 1345 sets the requirements; P03 G-045); portal MFA for clients becomes mandatory on 2027-01-15.
 
 ## 12. Referenced Artifacts
-Scenario facts, P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
+Scenario facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), P01 risk register, P03 gap analysis, P04 SaaS control map, P05 BIA, P06 POL-01, P07 assessment and POA&M, P08 runbook, P09 SOC 2 self-check and vendor review, P10 AI use assessment.
 
 ## 13. Acronym List and Glossary
 - **EFIN / PTIN:** Electronic Filing Identification Number / Preparer Tax Identification Number

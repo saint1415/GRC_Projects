@@ -12,6 +12,8 @@
 | Approved | Chief Operating Officer, 2026-09-22 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules analyzed here.
+
 **Primary business line:** individual and business tax preparation, which is about 55% of receipts and the activity that makes the Company a financial institution. CAS and advisory share the same systems and customer information.
 
 | Regulation | Applies? | Basis |
@@ -41,7 +43,7 @@
    - IRS program duties are typed separately from regulations, and Pub. 4557 guidance is typed "not binding."
    - HIPAA standards use the NIST SP 800-66 Rev. 2 requirement text from the Health Care crosswalk; 164.308(b)(2) and 164.410 were decomposed from the eCFR text.
 2. **Crosswalk.** Each row is mapped to CSF 2.0 and SP 800-53 Rev. 5. These are **author mappings**: no official NIST mapping of 16 CFR 314, 26 CFR 301.7216, IRS publications, or the Florida statute was found, and the HIPAA rows use the repository's Health Care crosswalk, itself an author mapping.
-3. **Evidence.** Interviews with every process owner, document and contract review, system exports, and walkthroughs at 3 of 6 offices (Office 1 with the document processing center, Office 4, and Office 6).
+3. **Evidence.** Current state was established from the intake evidence (system exports, documents and contracts, and walk-throughs at 3 of 6 offices, Office 1 with the document processing center, Office 4, and Office 6, on 2026-06-23 to 2026-06-25, EV-053), gap analysis interviews with every process owner (EV-064), the external TLS scan (EV-065), and the samples below (EV-066 to EV-070). The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Evidence sampling.** Where a requirement operates many times, a sample was tested rather than the whole population. Samples were chosen at random from system-generated populations, using the co-sourced internal audit firm's attribute sampling table (25 items for a control that operates many times a year; 10 to 20 for less frequent ones):
    - seasonal accounts: 25 of 131;
    - terminations: 25 of 96;

@@ -19,7 +19,7 @@
 | Unit | Supplement version | Last aligned to group policy | Status | Action |
 |---|---|---|---|---|
 | Tax and Advisory | v2026 | 2026-06-15 (to the 2026 draft group policies) | Aligned; minor update for the final 2026 policies due by 2026-12-30 (90 days after the effective date) | Confirm alignment |
-| CPA Partners | v2023 | 2023-04 | **Drifted** (scenario gap 7); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-015) |
+| CPA Partners | v2023 | 2023-04 | **Drifted** (group gap 7); conflicts listed in section 4 | Re-issue by 2026-12-31 (POAM-015) |
 | Wealth | v2025 | 2025-11 (with the Regulation S-P program) | Aligned, but missing affiliate service provider oversight and the AI notes records rule | Add both by 2026-12-31 (POAM-018, POAM-019) |
 | Practice Cloud | v2025 | 2025-10 | Aligned, but missing the AI and sub-processor change gate required by POL-01 4.9 and 4.13 | Add the gate by 2026-10-31 (POAM-020) |
 
@@ -74,7 +74,7 @@ The 2023 CPA Partners supplement was written before the 2026 group policies and 
 
 | Topic | CPA Partners supplement (2023) | Group policy (2026) | Effect |
 |---|---|---|---|
-| Common control inheritance | Not addressed | Each unit documents inheritance every year (POL-01 4.6) | CPA Partners cannot show which group controls protect PHI (gap 7; POAM-016) |
+| Common control inheritance | Not addressed | Each unit documents inheritance every year (POL-01 4.6) | CPA Partners cannot show which group controls protect PHI (group gap 7; POAM-016) |
 | Subcontractor terms | Not addressed | Written intercompany terms, including HIPAA subcontractor terms (POL-01 4.6) | No business associate agreement with the holding company (POAM-023) |
 | Incident notices | CPA Partners partner decides alone | Combined matrix; counsel approves (POL-03 4.5) | Notices outside the group process |
 | AI use | Not addressed | AI inventory and approval (POL-01 4.13) | Audit analytics tool (AI-004) registered late |

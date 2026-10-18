@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (CPA and tax preparation practice) | **Tier:** Sole Proprietorship (CPA-owner only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** CPA-owner, 2026-07-27, with the on-call IT consultant (services agreement and IRC 7216 notice since 2026-07-23) | **Adopted:** CPA-owner, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-27 (EV-028), the 2025 Schedule C (EV-016), the 2025 fee report from practice management (EV-017), the tax software return reports (EV-002), and the tax software vendor's SOC 2 system description (EV-024). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the practice depends on, how long each can be down, and how much data each can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the practice depends on, how
 - the recovery order in the incident runbook (P08).
 
 ## 2. Business description
-One CPA prepares about 380 individual returns and 45 business, trust, and estate returns a year, keeps the books for 12 small businesses, and answers IRS notices for clients, from a home office in Florida. About 60% of the year's fees are earned from February to April. The tax software and client portal (SYS-01, SYS-02) are vendor-hosted. Everything else runs on one laptop, one phone, a printer-scanner, a business email and file suite, and the home network. See `../00_company-facts.md` sections 1 to 3.
+One CPA prepares about 380 individual returns and 45 business, trust, and estate returns a year, keeps the books for 12 small businesses, and answers IRS notices for clients, from a home office in Florida. About 60% of the year's fees are earned from February to April. The tax software and client portal (SYS-01, SYS-02) are vendor-hosted. Everything else runs on one laptop, one phone, a printer-scanner, a business email and file suite, and the home network. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual fees: about $1,700 per business day in filing season and about $400 per business day in the rest of the year.
+Dollar values are scaled to about $180,000 in annual fees (EV-016, EV-017): about $1,700 per business day in filing season and about $400 per business day in the rest of the year (EV-017).
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|

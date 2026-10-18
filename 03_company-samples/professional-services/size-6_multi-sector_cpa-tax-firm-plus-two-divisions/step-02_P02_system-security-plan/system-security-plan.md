@@ -6,7 +6,7 @@
 > **Why this system.** At this tier the SSP can cover one system per division or a shared corporate system. The group chose the focus division's primary system, the **TPCP**, because it holds tax return information for about 9 million people a year, it is where the three divisions meet (its client portal is a tenant of the group's own Practice Cloud product, and its referral interface feeds the Wealth CRM), and it carries two of the group's High risks (P01 GR-01 and GR-02). It inherits most controls from corporate (SYS-G1 to SYS-G4). Wealth (SYS-W1) and Practice Cloud (SYS-S1) keep their own plans, which inherit from the same common control catalog. Practice Cloud's plan is the basis of its SOC 2 system description.
 
 ## 1. System Name and Identifier
-Tax Preparation and Client Portal Platform (**TPCP**), identifier CSCH-TAX-TPCP. It covers SYS-T1 and the Tax and Advisory tenant of SYS-S1 in `../00_company-facts.md`.
+Tax Preparation and Client Portal Platform (**TPCP**), identifier CSCH-TAX-TPCP. It covers SYS-T1 and the Tax and Advisory tenant of SYS-S1, listed as SYS-T1, SYS-T1-REF, SYS-T1-TEN and END-TAX in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv).
 
 ## 2. System Overview
 The TPCP is how Tax and Advisory prepares and files about 5.6 million individual returns and 380,000 business, trust, and exempt organization returns a year. It supports:
@@ -39,7 +39,7 @@ About 27,000 permanent and 11,000 seasonal workforce users and 41 service accoun
 | Professional | Circular 230 due diligence | 31 CFR 10.22 | Practitioners remain responsible for returns prepared with AI assistance (P10) |
 | Internal | Group policies POL-01 to POL-05 and the Tax division supplement | P06 | |
 
-Not applicable: HIPAA (the TPCP holds no PHI; CPA Partners' business associate work runs on SYS-T3), FAR and DFARS (no federal contracts).
+Not applicable: HIPAA (the TPCP holds no PHI; CPA Partners' business associate work runs on SYS-T3), FAR and DFARS (no federal contracts). Applicability for each entity is decided in the intake [obligations register](../step-00_P00_intake/obligations-register.csv).
 
 ## 4. System Status
 ### 4.1 System Security Plan Approval
@@ -84,6 +84,7 @@ Information types were chosen with NIST SP 800-60 Vol. 2 Rev. 1 as a guide; impa
 Other High-baseline controls are either fully inherited from the cloud providers (for example, most PE controls, evidenced by their SOC 2 Type 2 reports) or tailored out with a reason in the group tailoring register (for example, PE controls for facilities the group does not operate).
 
 ## 7. Authorization Boundary Description
+The boundary was drawn from the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) (SYS-T1, SYS-T1-REF, SYS-T1-TEN and END-TAX, and the shared services they inherit from) and the platform records EV-042 to EV-053.
 - **Inside:** SYS-T1 in the Tax division's provider A accounts (tax engine, workflow and review tools, return data store, AI extraction service, e-file gateway, referral interface), Tax and Advisory's tenant configuration and data in SYS-S1, and office endpoints and scanners.
 - **Outside, inherited (common control providers):** SYS-G1 identity, SYS-G2 SOC, SIEM, EDR, and email gateway, SYS-G3 landing zones and SD-WAN, and SYS-G4 email (including office intake mailboxes).
 - **Outside, internal service provider:** the SYS-S1 Practice Cloud platform (multi-tenant service, provider B), evidenced by its SOC 2 Type 2 report.
@@ -133,13 +134,13 @@ See `control-implementation.csv` (145 controls) and `common-control-catalog.csv`
 | System-specific | 33 |
 
 **The 19 partially implemented controls** cluster in four places:
-- **IRC 7216 consent and permitted purpose** (scenario gap 1): AC-4, AC-6, AC-21, PT-2, PT-3, PT-4.
+- **IRC 7216 consent and permitted purpose** (group gap 1): AC-4, AC-6, AC-21, PT-2, PT-3, PT-4.
 - **Seasonal workforce identity** (gap 2): AC-2, AT-2, PS-3, PS-4.
 - **Email and refund-diversion detection** (gap 3): IA-2, SI-4, AU-6.
 - **AI, vendors, and cross-division response** (gaps 4 and 6): CM-4, SA-11, SA-9, CP-4, IR-3, IR-6.
 
 ### 10.2 Common control inheritance by division
-The catalog lists 111 controls provided by corporate (110 that the TPCP inherits in full or in part, plus the SYS-G4 mail-flow control, AC-4, that reaches the TPCP only through its email settings). Inheritance is **documented for Tax and Advisory** (2025 inheritance matrix, now replaced for the TPCP by this plan), **for Wealth** (its 2025 Regulation S-P program maps its safeguards to group controls), and **for Practice Cloud** (its SOC 2 system description carves in the group services). It is **not documented for CPA Partners** (scenario gap 7). Until POAM-016 closes, CPA Partners cannot show which safeguards for its engagement files and HIPAA business associate work are met by group controls under the administrative services agreement.
+The catalog lists 111 controls provided by corporate (110 that the TPCP inherits in full or in part, plus the SYS-G4 mail-flow control, AC-4, that reaches the TPCP only through its email settings). Inheritance is **documented for Tax and Advisory** (2025 inheritance matrix, now replaced for the TPCP by this plan), **for Wealth** (its 2025 Regulation S-P program maps its safeguards to group controls), and **for Practice Cloud** (its SOC 2 system description carves in the group services). It is **not documented for CPA Partners** (group gap 7). Until POAM-016 closes, CPA Partners cannot show which safeguards for its engagement files and HIPAA business associate work are met by group controls under the administrative services agreement.
 
 ### 10.3 Control assessment status
 Common controls were assessed once, and TPCP and division controls sampled, from 2026-07-06 to 2026-08-28 by group internal audit. See P07 `assessment-results.csv` and `poam.csv`.
@@ -151,7 +152,7 @@ Common controls were assessed once, and TPCP and division controls sampled, from
 - **Office intake mailboxes** are the exception: legacy authentication without MFA is still allowed for them until POAM-002 closes.
 
 ## 12. Referenced Artifacts
-Scenario facts (`../00_company-facts.md`), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
+Company facts (`../00_company-facts.md`), intake evidence, inventories and obligations register ([step-00](../step-00_P00_intake/intake-report.md)), group and division risk registers (P01), gap analyses and regulation-by-division matrix (P03), cloud architecture and control map (P04), BIA (P05), group policies and division supplements (P06), assessment and POA&M (P07), incident response runbook and notification matrix (P08), SOC 2 readiness (P09), AI governance (P10).
 
 ## 13. Acronym List and Glossary
 - **EFIN / PTIN:** Electronic Filing Identification Number / Preparer Tax Identification Number

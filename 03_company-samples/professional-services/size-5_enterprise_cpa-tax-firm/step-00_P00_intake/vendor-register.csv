@@ -1,0 +1,31 @@
+vendor_id,vendor,service,systems,data_shared,agreement_on_file,assurance_on_file,source_evidence,notes
+V-01,Tax software vendor (Authorized IRS e-file transmitter and software developer),Tax preparation software and e-file transmission,SYS-01,Tax return information,License and transmission agreement; contract RTO 12 h,SOC 2 Type 2 reviewed; vendor failover report 2026-03,EV-021; EV-038; EV-036,Transmits all enterprise e-files; subservice organization for SL-2
+V-02,Cloud provider A,"IaaS and PaaS for the TEP, data lake and offshore workspace",SYS-01; SYS-02; SYS-03-WF; AI-PIPE; OFF-VDI; SYS-06-DL,Tax return information,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-038; EV-036,Subservice organization for SL-2
+V-03,Cloud provider B,"IaaS, PaaS and AI services for SL-1, the audit platform and AI-003",SYS-07; SYS-08; AI-003,GLBA customer information; PHI,Customer agreement,SOC 2 Type 2; shared responsibility documentation,EV-038; EV-036,Subservice organization for SL-1
+V-04,Colocation providers (DC-1 and DC-2),"Data center space, power and physical security",SYS-06; SYS-03-AR,Hosted equipment (data at rest),Colocation agreements,SOC 2 Type 2 reports,EV-038; EV-046,DC-1 generator fuel contract 72 h
+V-05,DMS vendor,Document management system,SYS-03,Tax return information; PHI; FCI,Enterprise agreement; subcontractor business associate agreement,SOC 2 Type 2 reviewed 2026-03,EV-037; EV-038,Subservice organization for SL-2
+V-06,Productivity suite vendor,"Email, files, chat and the enterprise AI assistant",SYS-05; AI-002,Tax return information (incidental); FCI,Enterprise agreement,SOC 2 Type 2 reviewed 2026-04,EV-038; EV-059,
+V-07,Identity platform vendor,"SSO, MFA, PAM and identity governance components",SYS-04,Workforce identities,Subscription agreement,Per vendor register,EV-035; EV-036,
+V-08,Offshore tax outsourcing provider,Draft business return preparation from a delivery center outside the United States,OFF-VDI,"Tax return information with masked SSNs, under taxpayer consent",Services agreement with IRC 7216 terms,SOC 2 report reviewed,EV-041; EV-038; EV-036,Subservice organization for SL-2
+V-09,Identity verification service,Client identity verification before electronic signature,SAAS-IDV,GLBA customer information,Contract; RTO 24 h,No SOC report on file,EV-045; EV-035,
+V-10,AI model provider (cloud AI service),Model service for AI-001 extraction,AI-PIPE; AI-001,Tax return information (document images),Contract,Per vendor register,EV-036; EV-062,
+V-11,Accounting SaaS provider,Per-client accounting instances for SL-1 and invoice coding (AI-008),SYS-08; AI-008,GLBA customer information,Subscription agreement,SOC 2 Type 2 reviewed 2026-03,EV-038; EV-063,Subservice organization for SL-1
+V-12,ACH originating bank,Direct deposits for SL-1 payroll,SYS-08,Client employee bank details,Banking agreement,Per vendor register,EV-063; EV-039,One bank for all SL-1 direct deposits; subservice organization for SL-1
+V-13,Payroll tax filing and deposit service,Payroll tax deposits and filings for SL-1,SYS-08,Client employee payroll and tax data,Service agreement,Per vendor register,EV-063; EV-039,Subservice organization for SL-1
+V-14,Audit software vendor,"Audit platform software, hosting support and the AI-007 feature",SYS-07; AI-007,PHI; client confidential information,License; subcontractor business associate agreement for the host,Per vendor register,EV-037; EV-036; EV-069,
+V-15,Managed security service provider,SOC overflow and incident response retainer,SIEM,Security logs,Services agreement and retainer,Per vendor register,EV-018; EV-028,
+V-16,Print and mail vendors (primary and second),Paper returns and breach notice letters,n/a,Names and addresses; returns,Master agreements,Per vendor register,EV-065; EV-036,
+V-17,Telephony and contact center platform vendor,Contact center and call transcription (AI-006),SAAS-TEL; AI-006,Tax return information (spoken),Subscription agreement,Per vendor register,EV-065; EV-036,
+V-18,Notice management SaaS vendor,Notice handling and the AI-004 drafting feature,AI-004,Tax return information,Subscription agreement,Per vendor register,EV-036; EV-069,
+V-19,HR software suite vendor,"Recruiting, including the AI-010 feature",SYS-11; AI-010,Applicant PII,Subscription agreement,Per vendor register,EV-036; EV-069,
+V-20,HR and payroll SaaS vendor (firm payroll),Firm payroll and HR,SYS-11,Employee PII,Subscription agreement,Per vendor register,EV-036,
+V-21,Security tooling vendor,SOC tooling and the AI-009 triage feature,AI-009,Security logs,Subscription agreement,Per vendor register,EV-036; EV-066,
+V-22,AF-05 and AF-06 managed service providers,"Directory, email, server and desktop support at the acquired firms",AF-ENV,Tax return information (administrative access),Inherited contracts; 24-hour restore,None on file,EV-006; EV-022; EV-043,No IRC 6713 and 7216 notice acknowledgment on file
+V-23,AF-05 and AF-06 tax software vendor,Legacy tax software and transmission under the 2 AF EFINs,AF-ENV,Tax return information,Inherited license,None on file,EV-022; EV-036,
+V-24,Consulting data room providers (2),Data rooms for health care consulting engagements,n/a,PHI,No subcontractor business associate agreement located,None on file,EV-037,
+V-25,Payment processor,Hosted payment page for client payments,n/a,Card and ACH data (on the processor's page),Processing agreement,Per vendor register,EV-056,Card data not entered on firm systems
+V-26,Outside breach counsel and forensics firms,Incident response retainers,n/a,Incident information,Retainers,n/a,EV-028; EV-057,Engaged through counsel and the insurer panel
+V-27,Cyber and professional liability insurers,Insurance,n/a,Incident information when notified,Policies,n/a,EV-057,Insurer approval needed before any extortion payment
+V-28,Outside testing firm,Annual external and internal penetration tests,SYS-06,Test findings,Engagement letter,n/a,EV-012,
+V-29,Certified media destruction and paper shredding vendors,"Drive, device and paper destruction",SYS-10,Tax return information on media and paper,Service agreements,Certificates of destruction,EV-046,
+V-30,SL-1 service auditor (unaffiliated CPA firm),SOC 1 and SOC 2 examinations of SL-1,SYS-08,SL-1 evidence,Engagement letter,n/a,EV-039,The firm's own SOC practice does not examine the firm

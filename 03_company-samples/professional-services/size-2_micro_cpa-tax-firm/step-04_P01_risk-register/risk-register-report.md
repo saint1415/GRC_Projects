@@ -12,18 +12,18 @@
 | Approved | 2026-08-31 by the Owner CPA |
 
 ## 1. Scope and risk framing
-**Scope.** The whole firm and its key vendors: every system that holds client tax return information or customer information (SYS-01 to SYS-09 in `../00_company-facts.md`), the office suite, and the vendors that handle that information for the firm: the tax software vendor, the portal vendor, the productivity suite vendor, the payroll platform vendor, the MSP and its backup subcontractor, the MFP lessor, and the AI assistant vendor.
+**Scope.** The whole firm and its key vendors: every system that holds client tax return information or customer information (SYS-01 to SYS-09 in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv)), the office suite, and the vendors that handle that information for the firm ([vendor register](../step-00_P00_intake/vendor-register.csv)): the tax software vendor, the portal vendor, the productivity suite vendor, the payroll platform vendor, the MSP and its backup subcontractor, the MFP lessor, and the AI assistant vendor.
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the Office Manager may accept.
 - Moderate: only the Owner CPA may accept, with a treatment plan or a written reason.
 - High and Very High: not accepted. The Owner CPA approves a dated treatment plan instead, due before the next filing season.
 
-This is the firm's first risk assessment. The 2024 WISP listed threats from the IRS Pub. 5708 template but did not rate likelihood or impact, so it is not relied on.
+This is the firm's first risk assessment. The 2024 WISP (EV-032) listed threats from the IRS Pub. 5708 template but did not rate likelihood or impact, so it is not relied on.
 
 ## 2. Method
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the threats IRS Pub. 4557 describes for tax professionals (phishing, account takeover, refund fraud), the BIA (P05), the gap analysis (P03), and interviews with all 7 employees and the MSP lead technician (2026-07-06 to 2026-07-17).
-2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the threats IRS Pub. 4557 describes for tax professionals (phishing, account takeover, refund fraud), the BIA (P05), the intake evidence, and interviews with all 7 employees and the MSP lead technician (2026-07-06 to 2026-07-17, EV-047). The gap analysis (P03) ran in the same fieldwork window, and the two steps shared findings.
+2. **Rate likelihood.** The likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the vendor console and MSP exports, the contracts folder, the walk-through, the account comparison of 2026-07-08 (EV-048), the AI use interviews (EV-050) and the risk interviews. A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories. For a firm with about $10,500 billed per business day in season and records on about 3,300 consumers, theft of most client files or a week-long outage in a deadline week is rated High or Very High.
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -53,9 +53,11 @@ Status: 16 Open, 7 In progress, 2 Closed (R-016 and R-023 accepted).
 **The common theme is email.** Clients send their tax documents by email, the firm sends returns back the same way, and the suite has the weakest sign-in of any system that holds them. A BEC attacker needs no access to the tax software to steal what a refund fraudster wants (R-001), and the same mailbox lets the attacker ask for bank account changes (R-002, R-003). The treatments for R-001 also reduce R-008, R-009, and R-024.
 
 **Risks that were fixed or found during the work:**
-- R-001: the MSP blocked automatic forwarding to external addresses for every mailbox on 2026-07-20, at the Office Manager's request.
-- R-007: the seasonal assistant's accounts were disabled on 2026-07-08, the day they were found. Tax software and suite sign-in logs showed no use after the assistant's last day (2026-04-17), so the Office Manager documented that no unauthorized access occurred. The process gap remains open.
-- R-024: added on 2026-08-05 after P07 testing found the MFP's legacy-authentication mailbox and default administration password. The password was changed on 2026-08-05.
+- R-001: the MSP blocked automatic forwarding to external addresses for every mailbox on 2026-07-20, at the Office Manager's request (EV-055).
+- R-007: the seasonal assistant's accounts were disabled on 2026-07-08, the day they were found (EV-048). Tax software and suite sign-in logs showed no use after the assistant's last day (2026-04-17), so the Office Manager documented that no unauthorized access occurred. The process gap remains open.
+- R-024: added on 2026-08-05 after P07 testing found the MFP's legacy-authentication mailbox and default administration password (EV-IA-2(2)). The password was changed on 2026-08-05.
+
+**Two passes.** Pass 1 was completed on 2026-07-17 from intake and fieldwork evidence, and 24 of the 25 risks come from it. Pass 2 followed the control assessment (P07): R-024 was added on 2026-08-05 from P07 testing (EV-IA-2(2)). The `assessment_pass` column shows which pass produced each risk.
 
 ## 4. Treatment summary
 - **Funded (2026 Q4, approved by the Owner CPA; about $6,900 one-time and $2,930 a year):**

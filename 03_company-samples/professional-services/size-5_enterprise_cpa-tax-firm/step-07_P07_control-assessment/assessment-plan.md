@@ -83,6 +83,18 @@ Random selections used the audit software's seeded random number generator; seed
 - **Interview:** National Tax Leader; Director of Tax Technology; Director of e-file Operations; Director of Security Operations; Director of Identity and Access Management; Director of Endpoint Engineering; Director of Third-Party Risk Management; Chief Privacy Officer; General Counsel; CISO; 20 randomly selected tax staff.
 - **Test:** access tests with test accounts; sign-in tests from an unmanaged device; a purple-team replay of a stolen session token against a test mailbox; default-credential tests on printer-scanners (with the Director of Endpoint Engineering's approval); TLS scans; a restore observation.
 
+### What each test could show
+The 2026 revisions of POL-01 to POL-05 and the policy hierarchy (P06) were drafts during fieldwork; POL-02 to POL-05 were approved on 2026-09-08 and POL-01 on 2026-09-17, all effective 2026-10-01. Internal Audit therefore tested each control as it operated under the 2025 policy set, which was in force (EV-023), and reviewed the draft 2026 statements for design only. Any statement the 2026 revision adds has not operated yet; its operation is tested at the 2027-05 follow-up. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control was in force during the period and was tested on samples, full populations or live systems | 262 (220 Satisfied, 42 Other than satisfied) |
+| Design | The control is new (a draft 2026 policy statement); only its design was reviewed. Operation is tested at the 2027-05 follow-up | 0 (the draft statements were reviewed against the policy text, not scored as determination statements) |
+| Not implemented | Nothing existed to test: the 2026 refund diversion module for reviewers and e-file operations had not been delivered (AT-03a.01[03]) | 1 |
+| **Total** | | **263** |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each sample was drawn from. Populations came from the intake exports where the period allowed (for example identity governance and HR records, EV-004 and EV-005, the tax application and portal exports, EV-007 and EV-008, and the change records, EV-060) and were refreshed to 2026-06-30 at kickoff.
+
 ## 4. Rules of engagement
 - No testing could affect client returns or e-file transmission. Tests ran outside the September 15 and October 15 deadline weeks.
 - The token replay test used a test mailbox and a test DMS folder with synthetic data, pre-approved by the CISO; the SOC was not told in advance so detection could be measured.

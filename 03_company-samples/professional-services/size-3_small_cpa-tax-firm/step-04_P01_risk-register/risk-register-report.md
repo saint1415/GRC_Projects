@@ -11,7 +11,7 @@
 | Approved | 2026-08-31 by the Firm Administrator (Moderate and below) and the Managing Partner (High) |
 
 ## 1. Scope and risk framing
-**Scope.** The Tax Preparation and Client Portal Platform (TPCP), the practice management and payroll services, and the business processes in the BIA (P05). That covers every system that stores, processes, or transmits customer information or tax return information, plus the service providers that handle it for the firm (`../00_company-facts.md` section 3).
+**Scope.** The Tax Preparation and Client Portal Platform (TPCP), the practice management and payroll services, and the business processes in the BIA (P05). That covers every system that stores, processes, or transmits customer information or tax return information, plus the service providers that handle it for the firm ([asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv)).
 
 **Risk tolerance and who can accept risk:**
 - Low and Very Low: the IT Manager may accept.
@@ -21,8 +21,8 @@
 This is the firm's first written risk assessment. The 2023 WISP listed threats but had no rating criteria.
 
 ## 2. Method and 16 CFR 314.4(b)(1) criteria
-1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the IRS Security Summit warnings in Pub. 4557 (phishing, account takeover, fraudulent returns), the BIA, interviews with the Tax Partner, Client Services Supervisor, and MSP, and the gap analysis (P03).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**.
+1. **Identify.** Threat sources and events came from SP 800-30 Appendices D and E, the IRS Security Summit warnings in Pub. 4557 (phishing, account takeover, fraudulent returns), the BIA, the intake evidence, interviews with the Tax Partner, Client Services Supervisor, and MSP (EV-047), and the gap analysis (P03), which ran in the same fieldwork window.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (non-adversarial) was rated, along with the likelihood that the event causes adverse impact. The two were combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: configuration exports (EV-001, EV-002, EV-011, EV-013), the ticket history (EV-028), the document request response (EV-022), and interviews (EV-047, EV-049, EV-050). A rating with no evidence behind it would be a guess, so none was made.
 3. **Rate impact.** Impact was rated with **Table H-3**, using the BIA impact categories (cost, operations, regulatory, client harm, reputation).
 4. **Determine risk.** Risk level comes from **Table I-2**. The overall likelihood and risk level columns in `risk-register.csv` were computed from the tables by script, not assigned by hand.
 
@@ -56,7 +56,7 @@ How this method meets the written risk assessment content in 314.4(b)(1):
 
 The five High risks share one theme: **an attacker who gets one privileged or trusted foothold (a mailbox, an admin account, the VPN, or the MSP tool) can reach every client's tax data, and nobody is watching after hours.** Treating them also lowers eight related Moderate risks (R-003, R-005, R-006, R-009, R-024, R-026, R-027, R-033).
 
-R-033 was added on 2026-08-07 after control assessment testing (P07) found that the shared intake mailbox password was known to 6 staff and still worked over legacy authentication without MFA.
+**Two passes.** Pass 1 was completed on 2026-07-24 from intake and fieldwork evidence. Pass 2 followed the control assessment (P07): R-033 was added on 2026-08-07 after testing found that the shared intake mailbox password was known to 6 staff and still worked over legacy authentication without MFA (EV-AC-2, EV-IA-2, EV-IA-5). The `assessment_pass` column shows which pass produced each risk.
 
 The deadline calendar drives the due dates. Every High-risk treatment except R-004 closes before 2027-01-15, when the filing season and its phishing wave begin; the 24x7 monitoring for R-004 goes live by that date.
 

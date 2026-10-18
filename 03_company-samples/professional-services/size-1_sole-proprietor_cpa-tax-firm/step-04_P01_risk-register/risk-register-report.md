@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: SYS-01 to SYS-09, paper files in the home office, and the outside parties that touch client data (tax software vendor, IT consultant, SaaS vendors, AI assistant vendor). Processes and impact levels come from the BIA (P05).
+**Scope.** The whole business as one system: SYS-01 to SYS-09, paper files in the home office, and the outside parties that touch client data (tax software vendor, IT consultant, SaaS vendors, AI assistant vendor), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Processes and impact levels come from the BIA (P05).
 
 **Risk tolerance.** The CPA-owner owns and accepts every risk. Because the same person proposes and approves, the owner applies three fixed rules (POL-01 4.4):
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan and are never accepted as they are. Every High and Moderate treatment is due before the 2027 filing season (2027-01-15), except the first file purge, which waits until after the season.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the two 2026 near misses (section 7 of the facts), IRS Pub. 4557's warning signs of data theft, and a walk through the laptop, phone, router, and SaaS accounts with the IT consultant.
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence in the [evidence register](../step-00_P00_intake/evidence-register.csv), the BIA, the two 2026 near misses (EV-022), IRS Pub. 4557's warning signs of data theft, and a walk through the laptop, phone, router, and SaaS accounts with the IT consultant on 2026-07-31 (EV-033).
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale, combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account and device reviews (EV-001, EV-004, EV-008, EV-009, EV-011), the inbox search (EV-022), the vendor and AI records (EV-012, EV-013, EV-025, EV-029), the document search (EV-020), the owner's self-review (EV-031), and the control tests of 2026-07-29 (EV-AC-2, EV-SC-8, EV-SA-9). A one-person practice keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (P05 section 3).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -42,6 +42,8 @@
 | R-006 | Client tax return information disclosed to the AI assistant vendor without an IRC 7216 basis | Moderate | No client data in the tool; counsel review (P10) | CPA-owner | 2026-10-31 |
 | R-005 | Forgotten 2025 contract preparer account in the tax software (P07 finding) | Moderate | Disabled 2026-07-29; quarterly user review; weekly EFIN and PTIN counts in season | CPA-owner | 2026-10-31 |
 | R-004 | Client documents by plain email and text photos synced to a personal photo backup | Moderate | Portal-only exchange; required client portal MFA; photo cleanup | CPA-owner | 2027-01-15 |
+
+**One pass.** The register was completed on 2026-07-31 from intake and self-assessment evidence. The control tests ran on 2026-07-29, inside the same week, so this pass already reflects them: R-005 came from the account test (EV-AC-2), and R-004 uses the counts from the transmission test (EV-SC-8). The `assessment_pass` column records the pass for each risk.
 
 **One setting drives the top risk.** R-001 is High because the mailbox that holds years of client W-2s, 1099s, and prior returns is protected only by a password that is reused elsewhere, and MFA was switched off so the printer-scanner could email scans. Moving the scanner to scan-to-folder costs nothing and lets MFA go back on. R-002 and R-005 show the other half of the tax preparer threat: the attacker's goal is a fraudulent refund, so the firm's controls must also stop bank account changes and misuse of its accounts, not only data theft.
 
