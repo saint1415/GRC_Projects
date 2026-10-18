@@ -36,6 +36,17 @@ Micro tier scope: 10-15 controls. **15 controls, 80 determination statements.** 
   - encryption status on 2 desktops and 1 laptop
   - 15 emails with returns sent during the 2026 season, checked for encryption
 
+### What each test could show
+The new policies (P06) were drafts during fieldwork; they were approved on 2026-08-31, after fieldwork ended. The drafts were therefore reviewed for design only. A control that a draft policy introduces has not operated yet, so it cannot be tested for operation. The `test_type` column in `assessment-results.csv` says which kind of conclusion each determination statement supports:
+
+| Test type | Meaning | Statements |
+|---|---|---|
+| Operating effectiveness | The control existed before 2026 and was tested on samples or live systems | 34 |
+| Design | The control is new (the 2026 risk assessment, or a draft policy); its design was reviewed. Operation is tested at the next annual review (risk assessment) or the 2027-02 follow-up (draft policy) | 9 |
+| Not implemented | Nothing existed to test | 37 |
+
+Evidence for every statement is listed in the [evidence register](../step-00_P00_intake/evidence-register.csv) under the `evidence_ref` IDs (EV-AC-2 and so on), with the population each test was drawn from (for example, the user lists were compared with the 7 employees and the seasonal assistant's 2026-04-17 departure in EV-001, and the 8 computers come from the MSP device list in EV-014).
+
 ### MSP evidence requested
 The MSP operates most technical controls, so evidence came from it. Requested on 2026-07-27 with a one-week deadline:
 
@@ -65,9 +76,9 @@ The MSP operates most technical controls, so evidence came from it. Requested on
 **Largely satisfied:** RA-3 (the 2026 risk assessment meets every objective except the update cycle, which has never run). CP-9 is half met: the daily backup runs and is encrypted, but its integrity and availability are not protected.
 
 **New findings from testing:**
-1. The MFP sends scans through a suite mailbox ("scanner") that signs in with an app password over legacy authentication, which bypasses MFA, and the MFP's administration page still had the default password (IA-02(02); AC-02k.[01]). Added to the risk register as R-024 and to POAM-002. The administration password was changed on 2026-08-05.
-2. The portal still listed the seasonal assistant's staff account after the suite and tax software accounts were disabled (AC-02i.01). Its log showed no sign-in after the assistant's last day. Removed on 2026-08-04.
-3. The backup console and the firewall management login accept a password alone (IA-02(01)). POAM-003.
+1. The MFP sends scans through a suite mailbox ("scanner") that signs in with an app password over legacy authentication, which bypasses MFA, and the MFP's administration page still had the default password (IA-02(02); AC-02k.[01]; EV-IA-2(2)). Added to the risk register as R-024 and to POAM-002. The administration password was changed on 2026-08-05.
+2. The portal still listed the seasonal assistant's staff account after the suite and tax software accounts were disabled (AC-02i.01; EV-AC-2). Its log showed no sign-in after the assistant's last day. Removed on 2026-08-04.
+3. The backup console and the firewall management login accept a password alone (IA-02(01); EV-IA-2(1)). POAM-003.
 
 All 15 controls have at least one weakness and a POA&M item in `poam.csv`. The High items are POAM-002, POAM-005, POAM-008, and POAM-009: email sign-in, monitoring, and backup, the same BEC and ransomware themes as P01.
 

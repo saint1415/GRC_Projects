@@ -45,7 +45,7 @@ This report records **observations, not findings**. Whether an observation meets
 | Request | Asked of | Asked on | Status |
 |---|---|---|---|
 | Written designation of the person who coordinates the information security program | Owner CPA | 2026-06-29 | Received 2026-07-06 (EV-045) |
-| What client content has been entered into the AI assistant and any other AI tool | Owner CPA | 2026-07-01 | Not established at intake; answered in the P03 interviews (EV-050) and the P10 review (EV-056) |
+| What client content has been entered into the AI assistant and any other AI tool | Owner CPA | 2026-07-01 | Not established at intake. The P03 interviews (EV-050) and the P10 review (EV-056) established the AI assistant uploads and one personal chatbot use; use of other tools was not established |
 | MSP technician list and evidence of MFA on the remote management platform | MSP lead technician | 2026-07-01 | Not provided; asked again in P07 on 2026-07-27 (EV-SA-9) and carried into POAM-012 |
 | Backup subcontractor terms and immutable retention setting | MSP lead technician | 2026-07-01 | Not provided; asked again in P07 (EV-SA-9, EV-CP-9) and carried into POAM-008 and POAM-012 |
 
