@@ -13,6 +13,8 @@
 | Adopted | 2026-08-31 |
 
 ## 1. Applicability
+Applicability was decided at intake in the [obligations register](../step-00_P00_intake/obligations-register.csv). This section restates the result for the rules and contracts analyzed here.
+
 **Step 1 was to find what binds a one-person contractor. No federal cybersecurity rule does; a customer contract does.**
 
 | Candidate | Applies? | Why (citation) |
@@ -21,7 +23,7 @@
 | **N21-R02** TSA Security Directive Pipeline-2021-02G | **No** | Applies to owners and operators of pipelines or LNG facilities that TSA has notified are critical. The owner operates no pipeline. A TSA-notified customer could pass requirements down by contract; none has |
 | **N21-R03** CIRCIA, proposed 6 CFR Part 226 | **No (proposed)** | No final rule as of 2026-09-25. As proposed, the size test is the SBA standard for the entity's NAICS code: about $180,000 in receipts against $47.0 million for NAICS 213112 (13 CFR 121.201). No proposed sector criterion is met |
 | PHMSA pipeline safety, 49 CFR Parts 192 and 195, including operator qualification | **No** | Part 195 does not apply to transportation through "onshore production (including flow lines)" facilities (195.1(b)(8)). Operator qualification covers individuals performing covered tasks on a pipeline facility (195.501(b)) under the operator's program (195.505); gas gathering status is the operator's determination (192.8). The owner works only on production facilities |
-| **Customer A MSA security schedule** | **Yes, by contract** | Customer A (about 45% of receipts) requires 8 security items, listed in `../00_company-facts.md` section 1. This is the business's main binding security duty, and Customer A's questionnaire is organized by CSF 2.0 |
+| **Customer A MSA security schedule** | **Yes, by contract** | Customer A (about 45% of receipts) requires 8 security items in its 2025 MSA security schedule (EV-010; obligations register MSA-A). This is the business's main binding security duty, and Customer A's questionnaire is organized by CSF 2.0 |
 | **Fla. Stat. 501.171** | **Yes, narrowly** | A "covered entity" includes a sole proprietorship that maintains personal information (501.171(1)(b)). The business holds W-9 forms (names and Social Security numbers) for 2 helpers. The 500-person and 1,000-person notice rows cannot be reached; the disposal duty covers only "customer records" (501.171(1)(c)), which the business does not hold, so POL-01 applies it voluntarily |
 | Customers B, C, and D MSAs | Background | Confidentiality clauses only; covered by the CSF rows and POL-01 |
 | FTC Act Section 5 | Background | Applies to any security promise the owner makes to customers (for example in questionnaire answers). Not decomposed into rows |
@@ -31,7 +33,7 @@
 ## 2. Method
 1. **Requirements.** The 106 CSF 2.0 subcategory IDs and outcome text come from `00_universal-framework/frameworks/csf2_core.csv`. Florida rows follow the 2026 statute's subsections, with short quotes. Customer A rows follow the security schedule item numbers. Applicability screens cite eCFR text current as of 2026-09-23.
 2. **Crosswalk.** CSF 2.0 to SP 800-53 Rev. 5 uses the **official NIST informative reference** (`00_universal-framework/crosswalks/csf2_to_sp800-53r5.csv`), kept in full in `nist_official_sp800_53r5`; `sp800_53_controls` is a key-control subset chosen by the author. Florida, contract, and screen rows use an author mapping.
-3. **Evidence.** Self-attested by the owner, checked on screen with the IT technician where possible: SaaS security pages, laptop account and encryption settings, the password spreadsheet (reviewed, not copied), USB drives, router settings, Customer A emails, provider terms, and a walkthrough of the home office and truck (2026-07-21).
+3. **Evidence.** Current state was established from the intake evidence (SaaS settings, laptop and phone settings, USB drives, the home network app, the MSAs and Customer A emails, statements, provider terms, and the AI service records, EV-001 to EV-027), the walkthrough of the laptop, phone, truck, home office and SaaS accounts with the IT technician on 2026-07-21 and 2026-07-22 (EV-029; the password spreadsheet was reviewed, not copied), and the owner's written self-review, checked on screen with the IT technician (EV-030). Where the control tests had run (2026-07-23), their results are cited too. The `evidence` column in `gap-analysis.csv` cites the [evidence register](../step-00_P00_intake/evidence-register.csv) ID behind each status.
 4. **Status.** Met, Partially met, Not met, or Not applicable, as of fieldwork. Gap risk uses the P01 scale.
 
 ## 3. Results summary

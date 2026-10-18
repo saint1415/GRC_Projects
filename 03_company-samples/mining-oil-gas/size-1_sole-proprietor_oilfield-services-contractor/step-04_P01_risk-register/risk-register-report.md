@@ -12,7 +12,7 @@
 | Approved | 2026-08-31 |
 
 ## 1. Scope and risk framing
-**Scope.** The whole business as one system: the Field Service Business Systems (SYS-01 to SYS-08), the paper gauge book, and the business's touch points with customer field equipment (remote sessions, cables, USB drives). Customer SCADA and controllers are in scope only as **assets the owner can harm**, not as systems the owner runs. Functions come from the BIA (P05).
+**Scope.** The whole business as one system: the Field Service Business Systems (SYS-01 to SYS-08), the paper gauge book, the providers that hold business data, and the business's touch points with customer field equipment (remote sessions, cables, USB drives), as listed in the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv). Customer SCADA and controllers are in scope only as **assets the owner can harm**, not as systems the owner runs. Functions come from the BIA (P05).
 
 **Risk tolerance.** The owner-operator owns and accepts every risk. Because the same person proposes and approves, three fixed rules apply:
 - Low and Very Low: may be accepted, with the reason written in the register.
@@ -20,8 +20,8 @@
 - High and Very High: must be treated with a dated plan. Not accepted as-is. A risk that could cause a release or unsafe condition at a customer site is never accepted above Low.
 
 ## 2. Method
-1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the missing-controls list in `../00_company-facts.md` section 4, the gap analysis (P03), Customer A's security schedule, and a walkthrough of the laptop, phone, truck, home office, and SaaS accounts with the IT technician (2026-07-21 and 2026-07-22).
-2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**.
+1. **Identify.** Threat sources and events from SP 800-30 Appendices D and E, the intake evidence, the BIA, Customer A's security schedule (EV-010), and a walkthrough of the laptop, phone, truck, home office, and SaaS accounts with the IT technician (2026-07-21 and 2026-07-22, EV-029). The gap analysis (P03) ran in the same self-assessment week, and the two steps shared findings.
+2. **Rate likelihood.** Likelihood of initiation (adversarial) or occurrence (other sources), and likelihood of adverse impact, each on the 5-level scale. Combined with **Table G-5**. Each rating rests on evidence named in the `likelihood_basis` column: the account and device reviews (EV-001, EV-003, EV-006 to EV-009), the customer access and contract records (EV-010, EV-013, EV-014), the AI service records (EV-022 to EV-025), the walkthrough (EV-029), and the owner's self-review (EV-030). A one-person business keeps no ticket or incident log to count, so a rating with no evidence behind it would be a guess, and none was made.
 3. **Rate impact.** Table H-3 levels, using the BIA impact categories (cost, operations, contract, safety and environment, reputation).
 4. **Determine risk.** **Table I-2.** The `overall_likelihood` and `risk_level` columns in `risk-register.csv` were computed from the two tables by script, not assigned by hand.
 
@@ -32,6 +32,8 @@
 | Moderate | 8 |
 | Low | 3 |
 | **Total** | **15** |
+
+**One pass.** The register was completed on 2026-07-24 from intake and self-assessment evidence. The control tests ran on 2026-07-23, inside the same week, so this pass already reflects them: R-003 and R-004 cite the authenticator review (EV-IA-5). No risk was added after P07 testing. The `assessment_pass` column records the pass for each risk.
 
 ### Top risks
 | Risk ID | Risk | Level | Treatment | Owner | Due |

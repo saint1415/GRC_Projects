@@ -2,6 +2,7 @@
 
 **Organization:** Cris Santos Company (owner-operated oilfield services contractor, NAICS 213112) | **Tier:** Sole Proprietorship (owner-operator only, 0 employees) | **Method:** NIST SP 800-34 Rev. 1 BIA template, short form
 **Prepared by:** Owner-operator, 2026-07-21, with the on-call IT technician | **Adopted:** Owner-operator, 2026-08-31
+**Sources:** the owner's BIA worksheet, 2026-07-20 to 2026-07-21 (EV-028), the accounting service's sales and invoice reports (EV-004), the 2025 Schedule C (EV-005), the Customer A MSA (EV-010), the customer site packets (EV-016), and the daily gauge records (EV-026). The `source_evidence` column in `bia.csv` names the source of each process's values. Downtime limits are the owner's own statements, adopted by the owner on 2026-08-31.
 
 ## 1. Overview and purpose
 This one-page BIA lists the five business functions the contractor depends on, how long each can be down, and how much data it can lose. It supports:
@@ -11,10 +12,10 @@ This one-page BIA lists the five business functions the contractor depends on, h
 - CSF 2.0 GV.OC-04, ID.AM-05, and RC.RP subcategories in the voluntary benchmark (P03), and the business continuity questions in Customer A's annual security questionnaire.
 
 ## 2. Business description
-One person pumps 34 wells for 4 small producers every day and programs and troubleshoots field controllers for 2 of them. The work is physical, but it now runs on a phone, a rugged laptop with licensed configuration software, a business email and file account, an accounting service, and two customer remote access paths. The owner has no SCADA of its own; the field equipment belongs to the customers. See `../00_company-facts.md` sections 1 to 3.
+One person pumps 34 wells for 4 small producers every day and programs and troubleshoots field controllers for 2 of them. The work is physical, but it now runs on a phone, a rugged laptop with licensed configuration software, a business email and file account, an accounting service, and two customer remote access paths. The owner has no SCADA of its own; the field equipment belongs to the customers. See `../00_company-facts.md` and the intake [asset inventory](../step-00_P00_intake/asset-inventory.csv) and [vendor register](../step-00_P00_intake/vendor-register.csv).
 
 ## 3. Impact categories and values
-Dollar values are scaled to about $180,000 in annual receipts, or about $720 per working day.
+Dollar values are scaled to about $180,000 in annual receipts (EV-004, EV-005), or about $720 per working day.
 
 | Category | Severe | Moderate | Minimal |
 |---|---|---|---|
